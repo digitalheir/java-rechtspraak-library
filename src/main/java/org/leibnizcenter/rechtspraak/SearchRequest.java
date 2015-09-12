@@ -331,18 +331,27 @@ public class SearchRequest {
         @Override
         public String toString() {
             return "JudgmentMetadata{" +
-                    "id='" + id + '\'' +
-                    ", title='" + title + '\'' +
-                    ", summary='" + summary + '\'' +
-                    ", updated=" + updated +
-                    ", link=" + link +
-                    '}';
+                    "\n  id='" + id + '\'' +
+                    ", \n  title='" + title + '\'' +
+                    ", \n  summary='" + summary + '\'' +
+                    ", \n  updated=" + updated +
+                    ", \n  link=" + link +
+                    "\n}";
         }
 
         public static class Link {
             public final String rel;
             public final String type;
             public final String href;
+
+            @Override
+            public String toString() {
+                return "Link{" +
+                        "\n  rel='" + rel + '\'' +
+                        ", \n  type='" + type + '\'' +
+                        ", \n  href='" + href + '\'' +
+                        "\n}";
+            }
 
             public Link(String rel, String type, String href) {
                 this.rel = rel;
