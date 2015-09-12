@@ -6,7 +6,6 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.xpath.XPathExpressionException;
 import java.io.IOException;
 import java.text.ParseException;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -29,7 +28,7 @@ public class Test {
 
             new DocumentRequest(list.get(0).id).execute();
         } catch (IOException | ParserConfigurationException | SAXException | ParseException | XPathExpressionException e) {
-            e.printStackTrace();
+            throw new Error(e);
         }
     }
 

@@ -69,8 +69,8 @@ public class SearchRequest {
      */
     public static class Builder {
         private final HttpUrl.Builder mBuilder;
-        static final DateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
-        static final DateFormat MODIFIED_FORMAT = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+        public static final DateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
+        public static final DateFormat MODIFIED_FORMAT = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
 
         public Builder() {
             mBuilder = new HttpUrl.Builder()
@@ -326,6 +326,17 @@ public class SearchRequest {
             this.summary = summary;
             this.updated = updated;
             this.link = link;
+        }
+
+        @Override
+        public String toString() {
+            return "JudgmentMetadata{" +
+                    "id='" + id + '\'' +
+                    ", title='" + title + '\'' +
+                    ", summary='" + summary + '\'' +
+                    ", updated=" + updated +
+                    ", link=" + link +
+                    '}';
         }
 
         public static class Link {

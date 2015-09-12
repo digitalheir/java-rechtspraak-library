@@ -67,9 +67,10 @@ public class DocumentRequest {
         final XPath xpath = xpathFactory.newXPath();
         xpath.setNamespaceContext(namespaces);
         final InputSource xml = new InputSource(response.body().byteStream());
-        Node rdfTag = getRdfTag(xpath, xml);
 
-        MetadataParser metadataParser = new MetadataParser(rdfTag,xpath);
+        //TODO
+        // Node rdfTag = getRdfTag(xpath, xml);
+        // MetadataParser metadataParser = new MetadataParser(rdfTag,xpath);
 
         return;
     }
