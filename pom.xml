@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.lebinizcenter</groupId>
+    <groupId>org.leibnizcenter</groupId>
     <artifactId>rechtspraak</artifactId>
     <version>0.9.0</version>
     <packaging>jar</packaging>
@@ -53,11 +53,11 @@
             <artifactId>junit</artifactId>
             <version>4.12</version>
         </dependency>
-        <dependency>
-            <groupId>org.apache.jena</groupId>
-            <artifactId>jena</artifactId>
-            <version>3.0.0</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.apache.jena</groupId>-->
+            <!--<artifactId>jena</artifactId>-->
+            <!--<version>3.0.0</version>-->
+        <!--</dependency>-->
         <!--<dependency>&lt;!&ndash; jsoup HTML parser library @ http://jsoup.org/ &ndash;&gt;-->
         <!--<groupId>org.jsoup</groupId>-->
         <!--<artifactId>jsoup</artifactId>-->
@@ -83,12 +83,14 @@
                     <source>1.7</source>
                     <target>1.7</target>
                 </configuration>
+                <version>3.3</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
+                <version>2.4</version>
                 <configuration>
-                    <encoding>UTF-8</encoding>
+                    <!--<encoding>UTF-8</encoding>-->
                 </configuration>
                 <executions>
                     <execution>
@@ -102,6 +104,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.10.3</version>
                 <executions>
                     <execution>
                         <id>attach-javadocs</id>
