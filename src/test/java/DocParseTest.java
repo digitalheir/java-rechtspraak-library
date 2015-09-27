@@ -2,8 +2,9 @@ import com.squareup.okhttp.HttpUrl;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
-import generated.ObjectFactory;
 import generated.OpenRechtspraak;
+import nl.rechtspraak.schema.rechtspraak_1.Para;
+import nl.rechtspraak.schema.rechtspraak_1.TRechtspraakMarkup;
 import org.junit.Test;
 import org.leibnizcenter.rechtspraak.DocumentRequest;
 import org.leibnizcenter.rechtspraak.SearchRequest;
@@ -11,11 +12,13 @@ import org.w3._1999._02._22_rdf_syntax_ns_.Description;
 import org.xml.sax.SAXException;
 
 import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBElement;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.xpath.XPathExpressionException;
 import java.io.IOException;
+import java.io.Serializable;
 import java.net.URI;
 import java.text.ParseException;
 import java.util.List;
@@ -37,7 +40,13 @@ public class DocParseTest {
         Request req = new Request.Builder().url(HttpUrl.get(URI.create(url))).build();
         try {
             Response res = client.newCall(req).execute();
-            JAXBContext context = JAXBContext.newInstance(OpenRechtspraak.class, ObjectFactory.class, org.purl.dc.terms.ObjectFactory.class);
+            JAXBContext context = JAXBContext.newInstance(
+                    OpenRechtspraak.class,
+                    org.purl.dc.terms.ObjectFactory.class,
+                    nl.rechtspraak.psi.ObjectFactory.class,
+                    org.w3._1999._02._22_rdf_syntax_ns_.ObjectFactory.class,
+                    generated.ObjectFactory.class
+            );
             Unmarshaller um = context.createUnmarshaller();
             OpenRechtspraak doc = (OpenRechtspraak) um.unmarshal(res.body().byteStream());
 
@@ -58,11 +67,32 @@ public class DocParseTest {
             assertNull(doc.getConclusie());
             assertNotNull(doc.getUitspraak());
 
-            assertEquals(doc.getUitspraak().getId(), "ECLI:NL:GHSHE:2014:1641:DOC");
-            assertEquals(doc.getUitspraak().getSpace(), "preserve");
+//            assertEquals(doc.getUitspraak().getId(), "ECLI:NL:GHSHE:2014:1641:DOC");
+//            assertEquals(doc.getUitspraak().getSpace(), "preserve");
+
+            int markups = assertAllRechtspraakMarkup(doc.getUitspraak().getContent(), 0);
+            assertTrue(markups > 0);
         } catch (JAXBException | IOException e) {
             throw new Error(e);
         }
+    }
+
+    private int assertAllRechtspraakMarkup(List<Object> content, int i) {
+        i++;
+        for (Object o : content) {
+            //System.out.println(o.getClass());
+            if (o instanceof TRechtspraakMarkup) {
+                TRechtspraakMarkup markup = (TRechtspraakMarkup) o;
+                i += assertAllRechtspraakMarkup(markup.getContent(), 0);
+                if(markup instanceof Para){
+                    Para p = (Para) markup;
+                    //System.out.println(p.getContent());
+                }
+//            }else if(o instanceof String){
+//                System.out.println(o);
+            }
+        }
+        return i;
     }
 
     public void testList() {

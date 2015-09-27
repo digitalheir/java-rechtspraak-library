@@ -1,5 +1,7 @@
-<bindings xmlns="http://java.sun.com/xml/ns/jaxb" version="2.1">
-    <bindings schemaLocation="rechtspraak-pseudo-schema2.xsd" version="1.0">
+<bindings 
+xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+xmlns="http://java.sun.com/xml/ns/jaxb" version="2.1">
+    <bindings schemaLocation="rechtspraak-fake-schema2.xsd" version="1.0">
         <bindings node="//xs:attribute[@ref='psi:resourceIdentifier']">
             <property name="psiResourceIdentifier"/>
         </bindings>

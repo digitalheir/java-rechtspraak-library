@@ -33,8 +33,8 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "")
-@XmlRootElement(name = "itemizedlist")
-public class Itemizedlist
+@XmlRootElement(name = "nr")
+public class Nr
     extends TRechtspraakMarkup
 {
 
