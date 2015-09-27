@@ -28,24 +28,18 @@ import java.util.regex.Pattern;
  * Created by maarten on 31-7-15.
  */
 public class SearchRequest {
+    final SAXParserFactory factory = SAXParserFactory.newInstance();
     private final Request mRequest;
-    SAXParserFactory factory = SAXParserFactory.newInstance();
     /**
      * Client for doing HTTP requests
      */
-    private OkHttpClient sHttpClient = new OkHttpClient();
+    private final OkHttpClient sHttpClient = new OkHttpClient();
 
     private SearchRequest(HttpUrl url) {
         mRequest = new Request.Builder()
                 .url(url)
                 .build();
     }
-
-    public enum ReturnType {META, DOC}
-
-    public enum Sort {ASC, DESC}
-
-    public enum Type {Conclusie, Uitspraak}
 
     public Request getRequest() {
         return mRequest;
@@ -64,13 +58,19 @@ public class SearchRequest {
         return handler.judgments;
     }
 
+    public enum ReturnType {META, DOC}
+
+    public enum Sort {ASC, DESC}
+
+    public enum Type {Conclusie, Uitspraak}
+
     /**
      * See https://www.rechtspraak.nl/Uitspraken-en-Registers/Uitspraken/Open-Data/Documents/Technische-documentatie-Open-Data-van-de-Rechtspraak.pdf for documentation on the Rechtspraak.nl web service
      */
     public static class Builder {
-        private final HttpUrl.Builder mBuilder;
         public static final DateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
         public static final DateFormat MODIFIED_FORMAT = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+        private final HttpUrl.Builder mBuilder;
 
         public Builder() {
             mBuilder = new HttpUrl.Builder()
@@ -202,8 +202,9 @@ public class SearchRequest {
 
     public static class ResultHandler extends DefaultHandler {
         private static final Pattern SUBTITLE_PATTERN = Pattern.compile("([0-9]*)\\s*\\.?\\s*$");
+        public final List<JudgmentMetadata> judgments = new ArrayList<>();
+        private final Stack<String> elementStack = new Stack<>();
         public int results = -1;
-        public List<JudgmentMetadata> judgments = new ArrayList<JudgmentMetadata>();
         private String id;
         private String title;
         private String summary;
@@ -211,7 +212,6 @@ public class SearchRequest {
         private String linkRel;
         private String linkType;
         private String linkHref;
-        private Stack<String> elementStack = new Stack<String>();
         private String subtitle;
 
 
@@ -276,7 +276,7 @@ public class SearchRequest {
             String value = new String(ch, start, length).trim();
             if (value.length() == 0) return; // ignore white space
 
-            if (currentElementParent() == "entry") {
+            if (Objects.equals(currentElementParent(), "entry")) {
                 switch (currentElement()) {
                     case "id":
                         id = (id != null ? id : "") + value;
@@ -344,6 +344,12 @@ public class SearchRequest {
             public final String type;
             public final String href;
 
+            public Link(String rel, String type, String href) {
+                this.rel = rel;
+                this.type = type;
+                this.href = href;
+            }
+
             @Override
             public String toString() {
                 return "Link{" +
@@ -351,12 +357,6 @@ public class SearchRequest {
                         ", \n  type='" + type + '\'' +
                         ", \n  href='" + href + '\'' +
                         "\n}";
-            }
-
-            public Link(String rel, String type, String href) {
-                this.rel = rel;
-                this.type = type;
-                this.href = href;
             }
         }
     }

@@ -1,0 +1,1 @@
+xjc -d generated ./rechtspraak-pseudo-schema.xsd -b jaxb-bindings.xml

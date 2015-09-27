@@ -18,15 +18,21 @@ import java.rmi.UnexpectedException;
 import java.util.HashMap;
 
 /**
+ * For quering a particular Rechtspraak XML document.
+ *
  * Created by maarten on 31-7-15.
  */
 public class DocumentRequest {
 
+    private static final HashMap<String, String> prefMap = new HashMap<String, String>() {{
+        put("rdf", "http://www.w3.org/1999/02/22-rdf-syntax-ns#");
+    }};
+    private static final SimpleNamespaceContext namespaces = new SimpleNamespaceContext(prefMap);
     private final Request request;
     /**
      * Client for doing HTTP requests
      */
-    private OkHttpClient httpClient = new OkHttpClient();
+    private final OkHttpClient httpClient = new OkHttpClient();
 
     public DocumentRequest(String ecli, SearchRequest.ReturnType type) {
         HttpUrl url = new HttpUrl.Builder()
@@ -52,11 +58,6 @@ public class DocumentRequest {
         return httpClient.newCall(request).execute();
     }
 
-    private static final HashMap<String, String> prefMap = new HashMap<String, String>() {{
-        put("rdf", "http://www.w3.org/1999/02/22-rdf-syntax-ns#");
-    }};
-    private static final SimpleNamespaceContext namespaces = new SimpleNamespaceContext(prefMap);
-
     public void execute() throws IOException, XPathExpressionException {
         Response response = getResponse();
 
@@ -69,7 +70,6 @@ public class DocumentRequest {
         // Node rdfTag = getRdfTag(xpath, xml);
         // MetadataParser metadataParser = new MetadataParser(rdfTag,xpath);
 
-        return;
     }
 
 
