@@ -42,8 +42,8 @@ import javax.xml.bind.annotation.XmlValue;
 public class Title {
 
     @XmlValue
-    @XmlSchemaType(name = "anyURI")
     protected String value;
+
     @XmlAttribute(name = "language", namespace = "http://www.w3.org/1999/02/22-rdf-syntax-ns#", required = true)
     protected String language;
 

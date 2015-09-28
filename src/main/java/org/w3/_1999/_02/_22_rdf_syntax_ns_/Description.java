@@ -18,6 +18,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
+
 import nl.rechtspraak.psi.Procedure;
 import nl.rechtspraak.psi.Zaaknummer;
 import org.purl.dc.terms.Abstract;
@@ -37,76 +38,41 @@ import org.purl.dc.terms.Type;
 
 
 /**
- * <p>Java class for anonymous complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * 
- * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;choice>
- *         &lt;element ref="{http://purl.org/dc/terms/}abstract"/>
- *         &lt;element ref="{http://purl.org/dc/terms/}accessRights"/>
- *         &lt;element ref="{http://purl.org/dc/terms/}coverage"/>
- *         &lt;element ref="{http://purl.org/dc/terms/}creator"/>
- *         &lt;element ref="{http://purl.org/dc/terms/}date"/>
- *         &lt;element ref="{http://purl.org/dc/terms/}format"/>
- *         &lt;element ref="{http://purl.org/dc/terms/}hasVersion"/>
- *         &lt;element ref="{http://purl.org/dc/terms/}identifier"/>
- *         &lt;element ref="{http://purl.org/dc/terms/}issued"/>
- *         &lt;element ref="{http://purl.org/dc/terms/}language"/>
- *         &lt;element ref="{http://purl.org/dc/terms/}modified"/>
- *         &lt;element ref="{http://purl.org/dc/terms/}publisher"/>
- *         &lt;element ref="{http://purl.org/dc/terms/}references" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element ref="{http://purl.org/dc/terms/}replaces" maxOccurs="unbounded"/>
- *         &lt;element ref="{http://purl.org/dc/terms/}relation" maxOccurs="unbounded"/>
- *         &lt;element ref="{http://purl.org/dc/terms/}spatial" minOccurs="0"/>
- *         &lt;element ref="{http://purl.org/dc/terms/}subject" maxOccurs="unbounded"/>
- *         &lt;element ref="{http://purl.org/dc/terms/}temporal"/>
- *         &lt;element ref="{http://purl.org/dc/terms/}title"/>
- *         &lt;element ref="{http://purl.org/dc/terms/}type"/>
- *         &lt;element ref="{http://psi.rechtspraak.nl/}zaaknummer"/>
- *         &lt;element ref="{http://psi.rechtspraak.nl/}procedure" maxOccurs="unbounded"/>
- *       &lt;/choice>
- *       &lt;attribute name="about" type="{http://www.w3.org/2001/XMLSchema}anyURI" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
- * </pre>
- * 
- * 
+ * <p>Java class for "RDF" metadata. RDF in quotes because Rechtspraak.nl XML
+ * does not provide well-formed RDF.
+ * See <a href="http://www.data-mining-dutch-case-law.tk/rechtspraak-nl">http://www.data-mining-dutch-case-law.tk/rechtspraak-nl</a>.
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "_abstract",
-    "accessRights",
-    "coverage",
-    "creator",
-    "date",
-    "format",
-    "hasVersion",
-    "identifier",
-    "issued",
-    "language",
-    "modified",
-    "publisher",
-    "references",
-    "replaces",
-    "relation",
-    "spatial",
-    "subject",
-    "temporal",
-    "title",
-    "type",
-    "zaaknummer",
-    "procedure"
+        "_abstract",
+        "accessRights",
+        "coverage",
+        "creator",
+        "date",
+        "format",
+        "hasVersion",
+        "identifier",
+        "issued",
+        "language",
+        "modified",
+        "publisher",
+        "references",
+        "replaces",
+        "relation",
+        "spatial",
+        "subject",
+        "temporal",
+        "title",
+        "type",
+        "zaaknummer",
+        "procedure"
 })
 @XmlRootElement(name = "Description")
 public class Description {
 
     @XmlElement(name = "abstract", namespace = "http://purl.org/dc/terms/")
     protected Abstract _abstract;
+
     @XmlElement(namespace = "http://purl.org/dc/terms/")
     protected String accessRights;
     @XmlElement(namespace = "http://purl.org/dc/terms/")
@@ -156,12 +122,10 @@ public class Description {
     protected String about;
 
     /**
-     * Gets the value of the abstract property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Abstract }
-     *     
+     * Short summary. May consist of a single dash, and is thus uninformative.
+     *
+     * @return possible object is
+     * {@link Abstract }
      */
     public Abstract getAbstract() {
         return _abstract;
@@ -169,23 +133,19 @@ public class Description {
 
     /**
      * Sets the value of the abstract property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Abstract }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Abstract }
      */
     public void setAbstract(Abstract value) {
         this._abstract = value;
     }
 
     /**
-     * Gets the value of the accessRights property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * Fixed to "public". Some manifestations may be non-public, like ones with
+     * their names unredacted, but we don't have access to those.
+     *
+     * @return Fixed to "public"
      */
     public String getAccessRights() {
         return accessRights;
@@ -193,11 +153,9 @@ public class Description {
 
     /**
      * Sets the value of the accessRights property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setAccessRights(String value) {
         this.accessRights = value;
@@ -205,11 +163,9 @@ public class Description {
 
     /**
      * Gets the value of the coverage property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCoverage() {
         return coverage;
@@ -217,11 +173,9 @@ public class Description {
 
     /**
      * Sets the value of the coverage property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCoverage(String value) {
         this.coverage = value;
@@ -229,11 +183,9 @@ public class Description {
 
     /**
      * Gets the value of the creator property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Creator }
-     *     
+     *
+     * @return possible object is
+     * {@link Creator }
      */
     public Creator getCreator() {
         return creator;
@@ -241,11 +193,9 @@ public class Description {
 
     /**
      * Sets the value of the creator property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Creator }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Creator }
      */
     public void setCreator(Creator value) {
         this.creator = value;
@@ -253,11 +203,9 @@ public class Description {
 
     /**
      * Gets the value of the date property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Date }
-     *     
+     *
+     * @return possible object is
+     * {@link Date }
      */
     public Date getDate() {
         return date;
@@ -265,11 +213,9 @@ public class Description {
 
     /**
      * Sets the value of the date property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Date }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Date }
      */
     public void setDate(Date value) {
         this.date = value;
@@ -277,11 +223,9 @@ public class Description {
 
     /**
      * Gets the value of the format property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getFormat() {
         return format;
@@ -289,11 +233,9 @@ public class Description {
 
     /**
      * Sets the value of the format property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setFormat(String value) {
         this.format = value;
@@ -301,11 +243,9 @@ public class Description {
 
     /**
      * Gets the value of the hasVersion property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link HasVersion }
-     *     
+     *
+     * @return possible object is
+     * {@link HasVersion }
      */
     public HasVersion getHasVersion() {
         return hasVersion;
@@ -313,11 +253,9 @@ public class Description {
 
     /**
      * Sets the value of the hasVersion property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link HasVersion }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link HasVersion }
      */
     public void setHasVersion(HasVersion value) {
         this.hasVersion = value;
@@ -325,11 +263,9 @@ public class Description {
 
     /**
      * Gets the value of the identifier property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getIdentifier() {
         return identifier;
@@ -337,11 +273,9 @@ public class Description {
 
     /**
      * Sets the value of the identifier property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setIdentifier(String value) {
         this.identifier = value;
@@ -349,11 +283,9 @@ public class Description {
 
     /**
      * Gets the value of the issued property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Issued }
-     *     
+     *
+     * @return possible object is
+     * {@link Issued }
      */
     public Issued getIssued() {
         return issued;
@@ -361,23 +293,18 @@ public class Description {
 
     /**
      * Sets the value of the issued property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Issued }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Issued }
      */
     public void setIssued(Issued value) {
         this.issued = value;
     }
 
     /**
-     * Gets the value of the language property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * Likely fixed to {@code nl}.
+     *
+     * @return Document language
      */
     public String getLanguage() {
         return language;
@@ -385,11 +312,9 @@ public class Description {
 
     /**
      * Sets the value of the language property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setLanguage(String value) {
         this.language = value;
@@ -397,11 +322,9 @@ public class Description {
 
     /**
      * Gets the value of the modified property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getModified() {
         return modified;
@@ -409,23 +332,19 @@ public class Description {
 
     /**
      * Sets the value of the modified property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setModified(XMLGregorianCalendar value) {
         this.modified = value;
     }
 
     /**
-     * Gets the value of the publisher property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Publisher }
-     *     
+     * Publishing court. Assumed to be one single object.
+     *
+     * @return possible object is
+     * {@link Publisher }
      */
     public Publisher getPublisher() {
         return publisher;
@@ -433,11 +352,9 @@ public class Description {
 
     /**
      * Sets the value of the publisher property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Publisher }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Publisher }
      */
     public void setPublisher(Publisher value) {
         this.publisher = value;
@@ -445,25 +362,23 @@ public class Description {
 
     /**
      * Gets the value of the references property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the references property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getReferences().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link References }
-     * 
-     * 
      */
     public List<References> getReferences() {
         if (references == null) {
@@ -473,26 +388,7 @@ public class Description {
     }
 
     /**
-     * Gets the value of the replaces property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the replaces property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getReplaces().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link Replaces }
-     * 
-     * 
+     * @return List of (LJN) numbers that this ECLI replaces
      */
     public List<Replaces> getReplaces() {
         if (replaces == null) {
@@ -503,25 +399,23 @@ public class Description {
 
     /**
      * Gets the value of the relation property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the relation property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getRelation().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Relation }
-     * 
-     * 
      */
     public List<Relation> getRelation() {
         if (relation == null) {
@@ -532,11 +426,9 @@ public class Description {
 
     /**
      * Gets the value of the spatial property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Spatial }
-     *     
+     *
+     * @return possible object is
+     * {@link Spatial }
      */
     public Spatial getSpatial() {
         return spatial;
@@ -544,11 +436,9 @@ public class Description {
 
     /**
      * Sets the value of the spatial property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Spatial }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Spatial }
      */
     public void setSpatial(Spatial value) {
         this.spatial = value;
@@ -556,25 +446,23 @@ public class Description {
 
     /**
      * Gets the value of the subject property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the subject property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getSubject().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Subject }
-     * 
-     * 
      */
     public List<Subject> getSubject() {
         if (subject == null) {
@@ -585,11 +473,9 @@ public class Description {
 
     /**
      * Gets the value of the temporal property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Temporal }
-     *     
+     *
+     * @return possible object is
+     * {@link Temporal }
      */
     public Temporal getTemporal() {
         return temporal;
@@ -597,23 +483,20 @@ public class Description {
 
     /**
      * Sets the value of the temporal property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Temporal }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Temporal }
      */
     public void setTemporal(Temporal value) {
         this.temporal = value;
     }
 
     /**
-     * Gets the value of the title property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Title }
-     *     
+     * Document title. Most often, this is a concatenation of the ECLI number
+     * with the court name and date.
+     *
+     * @return Document title. Possible object is
+     * {@link Title }
      */
     public Title getTitle() {
         return title;
@@ -621,11 +504,9 @@ public class Description {
 
     /**
      * Sets the value of the title property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Title }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Title }
      */
     public void setTitle(Title value) {
         this.title = value;
@@ -633,11 +514,9 @@ public class Description {
 
     /**
      * Gets the value of the type property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Type }
-     *     
+     *
+     * @return possible object is
+     * {@link Type }
      */
     public Type getType() {
         return type;
@@ -645,11 +524,9 @@ public class Description {
 
     /**
      * Sets the value of the type property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Type }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Type }
      */
     public void setType(Type value) {
         this.type = value;
@@ -657,11 +534,9 @@ public class Description {
 
     /**
      * Gets the value of the zaaknummer property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Zaaknummer }
-     *     
+     *
+     * @return possible object is
+     * {@link Zaaknummer }
      */
     public Zaaknummer getZaaknummer() {
         return zaaknummer;
@@ -669,11 +544,9 @@ public class Description {
 
     /**
      * Sets the value of the zaaknummer property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Zaaknummer }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Zaaknummer }
      */
     public void setZaaknummer(Zaaknummer value) {
         this.zaaknummer = value;
@@ -681,25 +554,23 @@ public class Description {
 
     /**
      * Gets the value of the procedure property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the procedure property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getProcedure().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Procedure }
-     * 
-     * 
      */
     public List<Procedure> getProcedure() {
         if (procedure == null) {
@@ -710,11 +581,9 @@ public class Description {
 
     /**
      * Gets the value of the about property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getAbout() {
         return about;
@@ -722,11 +591,9 @@ public class Description {
 
     /**
      * Sets the value of the about property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setAbout(String value) {
         this.about = value;

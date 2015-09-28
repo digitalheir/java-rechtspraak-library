@@ -36,7 +36,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "")
 @XmlRootElement(name = "abstract")
 public class Abstract {
-
     @XmlAttribute(name = "resourceIdentifier", required = true)
     protected String resourceIdentifier;
 
