@@ -8,26 +8,19 @@
 
 package nl.rechtspraak.schema.rechtspraak_1;
 
+import javax.xml.bind.annotation.*;
+import javax.xml.namespace.QName;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAnyAttribute;
-import javax.xml.bind.annotation.XmlElementRef;
-import javax.xml.bind.annotation.XmlElementRefs;
-import javax.xml.bind.annotation.XmlMixed;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.namespace.QName;
 
 
 /**
  * <p>Java class for T_Rechtspraak_Markup complex type.
- * 
+ * <p/>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p/>
  * <pre>
  * &lt;complexType name="T_Rechtspraak_Markup">
  *   &lt;complexContent>
@@ -68,99 +61,96 @@ import javax.xml.namespace.QName;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "T_Rechtspraak_Markup", propOrder = {
-    "content"
+        "content"
 })
 @XmlSeeAlso({
-    Inhoudsindicatie.class,
-    Inlinemediaobject.class,
-    UitspraakInfo.class,
-    ConclusieInfo.class,
-    Informaltable.class,
-    Itemizedlist.class,
-    FootnoteRef.class,
-    Orderedlist.class,
-    Mediaobject.class,
-    Imageobject.class,
-    Bridgehead.class,
-    Uitspraak.class,
-    Paragroup.class,
-    Parablock.class,
-    Imagedata.class,
-    Conclusie.class,
-    Listitem.class,
-    Footnote.class,
-    Emphasis.class,
-    Section.class,
-    Colspec.class,
-    Tgroup.class,
-    Title.class,
-    Tbody.class,
-    Entry.class,
-    Para.class,
-    Row.class,
-    Alt.class,
-    Nr.class
+        Inhoudsindicatie.class,
+        Inlinemediaobject.class,
+        UitspraakInfo.class,
+        ConclusieInfo.class,
+        Informaltable.class,
+        Itemizedlist.class,
+        FootnoteRef.class,
+        Orderedlist.class,
+        Mediaobject.class,
+        Imageobject.class,
+        Bridgehead.class,
+        Uitspraak.class,
+        Paragroup.class,
+        Parablock.class,
+        Imagedata.class,
+        Conclusie.class,
+        Listitem.class,
+        Footnote.class,
+        Emphasis.class,
+        Section.class,
+        Colspec.class,
+        Tgroup.class,
+        Title.class,
+        Tbody.class,
+        Entry.class,
+        Para.class,
+        Row.class,
+        Alt.class,
+        Nr.class
 })
 public class TRechtspraakMarkup {
-
     @XmlElementRefs({
-        @XmlElementRef(name = "imagedata", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Imagedata.class, required = false),
-        @XmlElementRef(name = "tbody", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Tbody.class, required = false),
-        @XmlElementRef(name = "itemizedlist", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Itemizedlist.class, required = false),
-        @XmlElementRef(name = "alt", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Alt.class, required = false),
-        @XmlElementRef(name = "mediaobject", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Mediaobject.class, required = false),
-        @XmlElementRef(name = "conclusie.info", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = ConclusieInfo.class, required = false),
-        @XmlElementRef(name = "tgroup", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Tgroup.class, required = false),
-        @XmlElementRef(name = "paragroup", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Paragroup.class, required = false),
-        @XmlElementRef(name = "inhoudsindicatie", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Inhoudsindicatie.class, required = false),
-        @XmlElementRef(name = "uitspraak.info", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = UitspraakInfo.class, required = false),
-        @XmlElementRef(name = "parablock", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Parablock.class, required = false),
-        @XmlElementRef(name = "section", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Section.class, required = false),
-        @XmlElementRef(name = "orderedlist", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Orderedlist.class, required = false),
-        @XmlElementRef(name = "colspec", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Colspec.class, required = false),
-        @XmlElementRef(name = "bridgehead", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Bridgehead.class, required = false),
-        @XmlElementRef(name = "nr", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Nr.class, required = false),
-        @XmlElementRef(name = "para", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Para.class, required = false),
-        @XmlElementRef(name = "row", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Row.class, required = false),
-        @XmlElementRef(name = "footnote-ref", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = FootnoteRef.class, required = false),
-        @XmlElementRef(name = "uitspraak", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Uitspraak.class, required = false),
-        @XmlElementRef(name = "imageobject", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Imageobject.class, required = false),
-        @XmlElementRef(name = "listitem", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Listitem.class, required = false),
-        @XmlElementRef(name = "emphasis", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Emphasis.class, required = false),
-        @XmlElementRef(name = "entry", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Entry.class, required = false),
-        @XmlElementRef(name = "inlinemediaobject", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Inlinemediaobject.class, required = false),
-        @XmlElementRef(name = "conclusie", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Conclusie.class, required = false),
-        @XmlElementRef(name = "informaltable", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Informaltable.class, required = false),
-        @XmlElementRef(name = "footnote", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Footnote.class, required = false),
-        @XmlElementRef(name = "title", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Title.class, required = false)
+            @XmlElementRef(name = "imagedata", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Imagedata.class, required = false),
+            @XmlElementRef(name = "tbody", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Tbody.class, required = false),
+            @XmlElementRef(name = "itemizedlist", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Itemizedlist.class, required = false),
+            @XmlElementRef(name = "alt", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Alt.class, required = false),
+            @XmlElementRef(name = "mediaobject", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Mediaobject.class, required = false),
+            @XmlElementRef(name = "conclusie.info", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = ConclusieInfo.class, required = false),
+            @XmlElementRef(name = "tgroup", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Tgroup.class, required = false),
+            @XmlElementRef(name = "paragroup", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Paragroup.class, required = false),
+            @XmlElementRef(name = "inhoudsindicatie", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Inhoudsindicatie.class, required = false),
+            @XmlElementRef(name = "uitspraak.info", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = UitspraakInfo.class, required = false),
+            @XmlElementRef(name = "parablock", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Parablock.class, required = false),
+            @XmlElementRef(name = "section", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Section.class, required = false),
+            @XmlElementRef(name = "orderedlist", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Orderedlist.class, required = false),
+            @XmlElementRef(name = "colspec", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Colspec.class, required = false),
+            @XmlElementRef(name = "bridgehead", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Bridgehead.class, required = false),
+            @XmlElementRef(name = "nr", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Nr.class, required = false),
+            @XmlElementRef(name = "para", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Para.class, required = false),
+            @XmlElementRef(name = "row", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Row.class, required = false),
+            @XmlElementRef(name = "footnote-ref", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = FootnoteRef.class, required = false),
+            @XmlElementRef(name = "uitspraak", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Uitspraak.class, required = false),
+            @XmlElementRef(name = "imageobject", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Imageobject.class, required = false),
+            @XmlElementRef(name = "listitem", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Listitem.class, required = false),
+            @XmlElementRef(name = "emphasis", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Emphasis.class, required = false),
+            @XmlElementRef(name = "entry", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Entry.class, required = false),
+            @XmlElementRef(name = "inlinemediaobject", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Inlinemediaobject.class, required = false),
+            @XmlElementRef(name = "conclusie", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Conclusie.class, required = false),
+            @XmlElementRef(name = "informaltable", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Informaltable.class, required = false),
+            @XmlElementRef(name = "footnote", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Footnote.class, required = false),
+            @XmlElementRef(name = "title", namespace = "http://www.rechtspraak.nl/schema/rechtspraak-1.0", type = Title.class, required = false)
     })
     @XmlMixed
     protected List<Object> content;
     @XmlAnyAttribute
-    private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+    private Map<QName, String> otherAttributes = new HashMap<>();
 
     /**
      * Gets the value of the content property.
-     * 
-     * <p>
+     * <p/>
+     * <p/>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the content property.
-     * 
-     * <p>
+     * <p/>
+     * <p/>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getContent().add(newItem);
      * </pre>
-     * 
-     * 
-     * <p>
+     * <p/>
+     * <p/>
+     * <p/>
      * Objects of the following type(s) are allowed in the list
      * {@link Imagedata }
      * {@link Tbody }
@@ -192,32 +182,43 @@ public class TRechtspraakMarkup {
      * {@link Informaltable }
      * {@link Footnote }
      * {@link Title }
-     * 
-     * 
      */
     public List<Object> getContent() {
         if (content == null) {
-            content = new ArrayList<Object>();
+            content = new ArrayList<>();
         }
         return this.content;
     }
 
     /**
      * Gets a map that contains attributes that aren't bound to any typed property on this class.
-     * 
-     * <p>
-     * the map is keyed by the name of the attribute and 
+     * <p/>
+     * <p/>
+     * the map is keyed by the name of the attribute and
      * the value is the string value of the attribute.
-     * 
+     * <p/>
      * the map returned by this method is live, and you can add new attribute
      * by updating the map directly. Because of this design, there's no setter.
-     * 
-     * 
-     * @return
-     *     always non-null
+     *
+     * @return always non-null
      */
     public Map<QName, String> getOtherAttributes() {
         return otherAttributes;
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        for (Object o : content) {
+            if (o instanceof String) {
+                sb.append(o);
+            } else if (o instanceof TRechtspraakMarkup) {
+                sb.append(o.toString());
+            } else {
+                System.err.println("Could not handle " + o.getClass());
+                //sb.append(o.toString());
+            }
+        }
+        return sb.toString();
+    }
 }

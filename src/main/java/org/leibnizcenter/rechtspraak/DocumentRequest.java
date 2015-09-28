@@ -4,22 +4,17 @@ import com.squareup.okhttp.HttpUrl;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
+import generated.OpenRechtspraak;
 import org.leibnizcenter.helpers.SimpleNamespaceContext;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-import org.xml.sax.InputSource;
 
-import javax.xml.xpath.XPath;
-import javax.xml.xpath.XPathConstants;
+import javax.xml.bind.JAXBException;
 import javax.xml.xpath.XPathExpressionException;
-import javax.xml.xpath.XPathFactory;
 import java.io.IOException;
-import java.rmi.UnexpectedException;
 import java.util.HashMap;
 
 /**
  * For quering a particular Rechtspraak XML document.
- *
+ * <p/>
  * Created by maarten on 31-7-15.
  */
 public class DocumentRequest {
@@ -33,6 +28,9 @@ public class DocumentRequest {
      * Client for doing HTTP requests
      */
     private final OkHttpClient httpClient = new OkHttpClient();
+    {
+        httpClient.setFollowRedirects(false);
+    }
 
     public DocumentRequest(String ecli, SearchRequest.ReturnType type) {
         HttpUrl url = new HttpUrl.Builder()
@@ -47,8 +45,8 @@ public class DocumentRequest {
         request = (new Request.Builder().url(url)).build();
     }
 
-    public DocumentRequest(String id) {
-        this(id, SearchRequest.ReturnType.DOC);
+    public DocumentRequest(String ecli) {
+        this(ecli, SearchRequest.ReturnType.DOC);
     }
 
     /**
@@ -58,27 +56,11 @@ public class DocumentRequest {
         return httpClient.newCall(request).execute();
     }
 
-    public void execute() throws IOException, XPathExpressionException {
+    public OpenRechtspraak execute() throws IOException, XPathExpressionException, JAXBException {
         Response response = getResponse();
-
-        final XPathFactory xpathFactory = XPathFactory.newInstance();
-        final XPath xpath = xpathFactory.newXPath();
-        xpath.setNamespaceContext(namespaces);
-        final InputSource xml = new InputSource(response.body().byteStream());
-
-        //TODO
-        // Node rdfTag = getRdfTag(xpath, xml);
-        // MetadataParser metadataParser = new MetadataParser(rdfTag,xpath);
-
-    }
-
-
-    private Node getRdfTag(XPath xpath, InputSource xml) throws XPathExpressionException, UnexpectedException {
-        final NodeList list = (NodeList) xpath.evaluate("/open-rechtspraak/rdf:RDF", xml, XPathConstants.NODESET);
-        if (list.getLength() != 1) {
-            throw new UnexpectedException("Expected just one RDF tag");
-        }
-        return list.item(0);
+        if (response.code() != 200)
+            throw new IllegalStateException("URL " + request.url() + " returned code " + response.code());
+        return RechtspraakNlInterface.parseDocument(response.body().byteStream());
     }
 
     public Request getRequest() {

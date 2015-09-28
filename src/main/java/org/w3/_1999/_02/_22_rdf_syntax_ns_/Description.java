@@ -467,7 +467,7 @@ public class Description {
      */
     public List<References> getReferences() {
         if (references == null) {
-            references = new ArrayList<References>();
+            references = new ArrayList<>();
         }
         return this.references;
     }
@@ -496,7 +496,7 @@ public class Description {
      */
     public List<Replaces> getReplaces() {
         if (replaces == null) {
-            replaces = new ArrayList<Replaces>();
+            replaces = new ArrayList<>();
         }
         return this.replaces;
     }
@@ -525,7 +525,7 @@ public class Description {
      */
     public List<Relation> getRelation() {
         if (relation == null) {
-            relation = new ArrayList<Relation>();
+            relation = new ArrayList<>();
         }
         return this.relation;
     }
@@ -578,7 +578,7 @@ public class Description {
      */
     public List<Subject> getSubject() {
         if (subject == null) {
-            subject = new ArrayList<Subject>();
+            subject = new ArrayList<>();
         }
         return this.subject;
     }
@@ -703,7 +703,7 @@ public class Description {
      */
     public List<Procedure> getProcedure() {
         if (procedure == null) {
-            procedure = new ArrayList<Procedure>();
+            procedure = new ArrayList<>();
         }
         return this.procedure;
     }
