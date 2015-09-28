@@ -164,7 +164,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://purl.org/dc/terms/", name = "coverage")
     public JAXBElement<String> createCoverage(String value) {
-        return new JAXBElement<String>(_Coverage_QNAME, String.class, null, value);
+        return new JAXBElement<>(_Coverage_QNAME, String.class, null, value);
     }
 
     /**
@@ -173,7 +173,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://purl.org/dc/terms/", name = "identifier")
     public JAXBElement<String> createIdentifier(String value) {
-        return new JAXBElement<String>(_Identifier_QNAME, String.class, null, value);
+        return new JAXBElement<>(_Identifier_QNAME, String.class, null, value);
     }
 
     /**
@@ -182,7 +182,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://purl.org/dc/terms/", name = "format")
     public JAXBElement<String> createFormat(String value) {
-        return new JAXBElement<String>(_Format_QNAME, String.class, null, value);
+        return new JAXBElement<>(_Format_QNAME, String.class, null, value);
     }
 
     /**
@@ -191,7 +191,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://purl.org/dc/terms/", name = "modified")
     public JAXBElement<XMLGregorianCalendar> createModified(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_Modified_QNAME, XMLGregorianCalendar.class, null, value);
+        return new JAXBElement<>(_Modified_QNAME, XMLGregorianCalendar.class, null, value);
     }
 
     /**
@@ -200,7 +200,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://purl.org/dc/terms/", name = "language")
     public JAXBElement<String> createLanguage(String value) {
-        return new JAXBElement<String>(_Language_QNAME, String.class, null, value);
+        return new JAXBElement<>(_Language_QNAME, String.class, null, value);
     }
 
     /**
@@ -209,7 +209,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://purl.org/dc/terms/", name = "accessRights")
     public JAXBElement<String> createAccessRights(String value) {
-        return new JAXBElement<String>(_AccessRights_QNAME, String.class, null, value);
+        return new JAXBElement<>(_AccessRights_QNAME, String.class, null, value);
     }
 
 }

@@ -69,7 +69,7 @@ public class List {
      */
     public java.util.List<String> getLi() {
         if (li == null) {
-            li = new ArrayList<String>();
+            li = new ArrayList<>();
         }
         return this.li;
     }

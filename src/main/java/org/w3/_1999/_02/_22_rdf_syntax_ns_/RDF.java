@@ -43,12 +43,15 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "RDF")
 public class RDF {
 
+    /**
+     * List size guaranteed to be equal to 2
+     */
     @XmlElement(name = "Description", required = true)
     protected List<Description> description;
 
     /**
-     * Gets the value of the description property.
-     * 
+     * Gets the value of the description property. List size is guaranteed to be equal to 2.
+     *
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
@@ -70,7 +73,7 @@ public class RDF {
      */
     public List<Description> getDescription() {
         if (description == null) {
-            description = new ArrayList<Description>();
+            description = new ArrayList<>();
         }
         return this.description;
     }

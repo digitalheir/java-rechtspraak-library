@@ -70,7 +70,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.w3.org/1999/02/22-rdf-syntax-ns#", name = "li")
     public JAXBElement<String> createLi(String value) {
-        return new JAXBElement<String>(_Li_QNAME, String.class, null, value);
+        return new JAXBElement<>(_Li_QNAME, String.class, null, value);
     }
 
 }
