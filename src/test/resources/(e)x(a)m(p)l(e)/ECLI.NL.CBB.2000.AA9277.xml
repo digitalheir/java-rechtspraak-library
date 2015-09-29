@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:tr="http://tuchtrecht.overheid.nl/" xmlns:eu="http://publications.europa.eu/celex/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:CBB:2000:AA9277</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2014-04-13T10:28:01</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">AA9277</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/College_van_Beroep_voor_het_bedrijfsleven" scheme="overheid.RechterlijkeMacht">College van Beroep voor het bedrijfsleven</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">2000-12-21</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">AWB 99/216</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#eersteAanlegEnkelvoudig">Eerste aanleg - enkelvoudig</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht">Bestuursrecht</dcterms:subject>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0005662&amp;artikel=86&amp;g=2000-12-21">Gezondheids- en welzijnswet voor dieren 86</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0005662&amp;artikel=87a&amp;g=2000-12-21">Gezondheids- en welzijnswet voor dieren 87a</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0005662&amp;artikel=87b&amp;g=2000-12-21">Gezondheids- en welzijnswet voor dieren 87b</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0005662&amp;artikel=87c&amp;g=2000-12-21">Gezondheids- en welzijnswet voor dieren 87c</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0005662&amp;artikel=88&amp;g=2000-12-21">Gezondheids- en welzijnswet voor dieren 88</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0005662&amp;artikel=89&amp;g=2000-12-21">Gezondheids- en welzijnswet voor dieren 89</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0005662&amp;artikel=90&amp;g=2000-12-21">Gezondheids- en welzijnswet voor dieren 90</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0005662&amp;artikel=91&amp;g=2000-12-21">Gezondheids- en welzijnswet voor dieren 91</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0008921&amp;g=2000-12-21">Subsidieregeling fokverbod varkens 1997</dcterms:references>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:2000:AA9277">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:2000:AA9277</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-04T16:17:57</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2003-01-09</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:CBB:2000:AA9277 College van Beroep voor het bedrijfsleven , 21-12-2000 / AWB 99/216</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:CBB:2000:AA9277:INH" lang="nl" xml:space="preserve">
+      <para>-</para>
+    </inhoudsindicatie>
+  <uitspraak xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:CBB:2000:AA9277:DOC" lang="nl" xml:space="preserve">
+      <parablock>
+        <para>AM	</para>
+        <para>College van Beroep voor het bedrijfsleven</para>
+        <para>(vijfde enkelvoudige kamer)</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para/>
+      <parablock>
+        <para>No. AWB 99/216						21 december 2000</para>
+        <para>	11200</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para/>
+      <para>Uitspraak in de zaak van:</para>
+      <para/>
+      <parablock>
+        <para>A, handelend in maatschapsverband, appellanten,</para>
+        <para>gemachtigde: mr G.R.A.G. Goorts, advocaat te Roermond,</para>
+        <para>tegen</para>
+        <para>de Staatssecretaris van Landbouw, Natuurbeheer en Visserij, verweerder,</para>
+        <para>gemachtigde: mr G. de Goede, werkzaam bij verweerder.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para/>
+      <para/>
+      <parablock>
+        <para>1.	De procedure</para>
+        <para>Op 5 maart 1999 heeft het College van appellanten een beroepschrift ontvangen, waarbij beroep wordt ingesteld tegen een </para>
+        <para>besluit van verweerder van 25 januari 1999.</para>
+        <para>Bij schrijven van 19 mei 1999 hebben appellanten de gronden van hun beroep uiteengezet.</para>
+        <para>Op 23 augustus 1999 heeft verweerder een verweerschrift en op de zaak betrekking hebbende stukken ingediend.</para>
+        <para>Bij brief van 12 april 2000 heeft verweerder antwoord gegeven op een vanwege het College gestelde vraag.</para>
+        <para>Het College heeft de zaak behandeld ter zitting van 9 november 2000, waar partijen hun standpunten hebben doen toelichten.</para>
+        <para>2.	De grondslag van het geschil</para>
+        <para>2.1	In de artikelen 86 tot en met 90 van de Gezondheids- en welzijnswet voor dieren (hierna: Gwd) zijn voorschriften gegeven, </para>
+        <para>betreffende het verlenen van een tegemoetkoming in nader omschreven vormen van schade die voor eigenaren van de </para>
+        <para>betrokken dieren voortvloeit uit maatregelen, als bedoeld in Afdeling 3 van Hoofdstuk II van de Gwd, ter voorkoming en </para>
+        <para>bestrijding van ingevolge artikel 15 aangewezen besmettelijke dierziekten.</para>
+        <para>Te dier zake is in artikel 86, eerste lid, aanhef en onder a, van de Gwd bepaald dat uit </para>
+        <para>'s Rijks kas aan de eigenaar een tegemoetkoming in de schade wordt uitgekeerd, indien de dieren krachtens het bepaalde in </para>
+        <para>artikel 22, eerste lid, onderdeel f, worden gedood.</para>
+        <para>Ingevolge artikel 86, tweede lid, bedraagt de tegemoetkoming in de schade (a) voor verdachte dieren: de waarde in gezonde </para>
+        <para>toestand en (b) voor zieke dieren: het bij algemene maatregel van bestuur te bepalen gedeelte van de waarde in gezonde </para>
+        <para>toestand.</para>
+        <para>Krachtens artikel 87 wordt, voordat de dieren ingevolge artikel 22, eerste lid, onderdeel f, worden gedood, de waarde daarvan </para>
+        <para>vastgesteld.</para>
+        <para>Bedoelde waardevaststelling geschiedt op grond van artikel 88, eerste lid, door een be‰digd deskundige, die wordt aangewezen </para>
+        <para>door een door de minister aangewezen ambtenaar.</para>
+        <para>Indien evenbedoelde ambtenaar of de eigenaar van de dieren geen genoegen neemt met de waardevaststelling, verzoekt de </para>
+        <para>minister - zo bepaalt het tweede lid van artikel 88 - de kantonrechter in het kanton waar de dieren zijn gedood, drie </para>
+        <para>deskundigen te benoemen, onder wie de krachtens het eerste lid aangewezen deskundige.</para>
+        <para>Indien over de waardevaststelling geen overeenstemming wordt bereikt, geldt ingevolge artikel 88, derde lid, het bedrag dat het </para>
+        <para>gemiddelde is van de verschillende waarderingen.</para>
+        <para>Ingevolge artikel 91 kan schade, veroorzaakt door de toepassing van maatregelen, als bedoeld in artikel 17 of artikel 21, voor </para>
+        <para>zover deze niet uit hoofde van artikel 86 voor vergoeding in aanmerking komt, in door de minister te bepalen bijzondere </para>
+        <para>gevallen geheel of gedeeltelijk uit 's Rijks kas worden vergoed.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <parablock>
+        <para>Op grond van de hem bij laatstgenoemd artikel toegekende discretionaire bevoegdheid voert verweerder een beleid dat, kort </para>
+        <para>gezegd, inhoudt dat bij preventieve ruiming van fokvarkensbedrijven een bijzondere tegemoetkoming in de vorm van een </para>
+        <para>normbedrag per zeug wordt toegekend, in dier voege dat het normbedrag afhankelijk is gesteld van de ondernemingscategorie </para>
+        <para>waartoe het desbetreffende fokvarkensbedrijf kan worden gerekend. In dat verband is een onderscheid gemaakt tussen </para>
+        <para>topfokbedrijven, subfokbedrijven en vermeerderingsbedrijven.</para>
+        <para>Voor zeugen in preventief geruimde bedrijven, behorend tot een der genoemde categorie‰n golden normbedragen van </para>
+        <para>onderscheidenlijk fl. 1.900,--, fl. 1.800,-- en fl. 1.500,--.</para>
+        <para>Bij preventieve ruiming van een fokvarkensbedrijf wordt de taxatiewaarde op grond van artikel 86, vervangen door de waarde </para>
+        <para>die voortvloeit uit bedoelde normbedragen, indien het aldus bepaalde bedrag hoger is dan de taxatiewaarde. Zulks is meestal </para>
+        <para>het geval.</para>
+        <para>2.2	Op grond van de stukken en het onderzoek ter zitting zijn in deze zaak de volgende feiten komen vast te staan.</para>
+        <para>-	Bij besluit van 2 september 1997 zijn alle varkens op het fokvarkensbedrijf van appellanten verdacht verklaard, welke </para>
+        <para>verklaring betrekking had op de klassieke varkenspest.</para>
+        <para>-	Op 9 september 1997 zijn bedoelde dieren besmet verklaard en zijn bestrijdingsmaatregelen aangekondigd, onder meer </para>
+        <para>inhoudende het doden van de besmet verklaarde varkens.</para>
+        <para>-	Bij besluit van 25 september 1997 is aan appellanten een tegemoetkoming toegekend van fl. 272.257,35, zulks op grond </para>
+        <para>van eerdergenoemd artikel 86, tweede lid, aanhef en onder b, in verbinding met artikel 8, eerste lid, onderdeel c, van het </para>
+        <para>Besluit bescherming tegen bepaalde zo”nosen en bestrijding besmettelijke dierziekten.</para>
+        <para>- Tegen dat besluit hebben appellanten een bezwaarschrift ingediend.</para>
+        <para>Hierop heeft verweerder, na appellanten te hebben gehoord, het bestreden besluit genomen.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para/>
+      <parablock>
+        <para>3.	Het bestreden besluit</para>
+        <para>Bij het bestreden besluit, dat strekt tot handhaving van eerdergenoemd primair besluit van 25 september 1997, heeft </para>
+        <para>verweerder onder meer het volgende in aanmerking genomen:</para>
+        <para>"	Het is juist dat bepaalde preventief geruimde bedrijven een zogenaamde normprijs voor zeugen ontvangen op basis </para>
+        <para>van artikel 91 van de Wet. Hieromtrent merk ik het volgende op.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Schade als gevolg van preventief ruimen moet, met uitzondering van de schade welke is voorzien in de artikelen 86 </para>
+        <para>of 90 van de Wet, in beginsel worden gerekend tot normaal bedrijfsrisico. Op dit uitgangspunt wordt in het kader </para>
+        <para>van de bestrijding van de huidige varkensepestepidemie ‚‚n nuancering toegepast. Bij preventief geruimde </para>
+        <para>bedrijven worden zogenoemde normprijzen voor zeugen uitgekeerd.</para>
+        <para>De vergaande consequenties voor de bedrijfsvoering bij ruiming van zeugenbedrijven worden zogenoemde </para>
+        <para>normprijzen voor zeugen uitgekeerd.</para>
+        <para>De vergaande consequenties voor de bedrijfsvoering bij ruiming van zeugenbedrijven, in combinatie met de </para>
+        <para>bijzondere situatie waarin preventief geruimde bedrijven zich bevinden (zoals hiervoor is aangegeven), leveren in </para>
+        <para>de huidige situatie en naar de huidige inzichten ten aanzien van zeugenbedrijven een zodanig bijzonder geval op </para>
+        <para>dat ervoor is gekozen op basis van artikel 91 van de Wet in bepaalde gevallen een aanvullende tegemoetkoming te </para>
+        <para>verstrekken. Deze keuze dient mede te worden bezien in het licht van de omstandigheid dat preventief ruimen voor </para>
+        <para>het eerst op grote schaal wordt toegepast bij de bestrijding van varkenspest in Nederland.</para>
+        <para>Aangezien uw bedrijf zich niet in voornoemde bijzondere positie bevindt, zijn de normprijzen terecht niet toegepast </para>
+        <para>bij uw tegemoetkoming in de schade.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Dat de normprijzen niet worden uitgekeerd bij bedrijven die zijn geruimd vanwege een besmetting acht ik, anders </para>
+        <para>dan u, niet in strijd met het gelijkheidsbeginsel. Hierover merk ik het volgende op.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Er bestaat een aanzienlijk verschil in situatie tussen de bedrijven die preventief geruimd worden en de bedrijven die </para>
+        <para>geruimd worden omdat een besmetting met varkenspest op het bedrijf is vastgesteld. Immers, indien door klinische </para>
+        <para>verschijnselen en aanvullend laboratoriumonderzoek wordt bevestigd dat op een bedrijf sprake is van besmetting </para>
+        <para>met klassieke varkenspest is ruiming van het bedrijf de enige aangewezen bestrijdingsmaatregel, die dan ook </para>
+        <para>Europees dwingend wordt voorgeschreven. Bij bedrijven die preventief worden geruimd is er geen sprake van een </para>
+        <para>door onderzoek bevestigd vermoeden van de aanwezigheid van varkenspest. In dergelijke gevallen is "slechts" </para>
+        <para>sprake van een verdenking van besmetting van varkenspest en bestaat er geen zekerheid hieromtrent. In dit geval </para>
+        <para>bestaat de bevoegdheid, doch niet de verplichting om het desbetreffende bedrijf geheel te ruimen, en kunnen </para>
+        <para>minder dratische maatregelen worden getroffen. Dit neemt niet weg dat in de gevallen waarin preventief geruimd </para>
+        <para>is, het gelet op het feitelijk verloop van de epidemie de meest aangewezen weg was om over te gaan tot ruiming en </para>
+        <para>terecht is besloten tot preventieve ruiming van verdachte bedrijven. Het plaatst de desbetreffende preventief </para>
+        <para>geruimde bedrijven echter wel in een andere situatie dan de bedrijven die vanwege besmetting zijn geruimd. Uit het </para>
+        <para>voorgaande moge blijken dat er geen sprake is van gelijke gevallen die gelijk behandeld dienen te worden.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>U stelt dat uw bedrijf in een eerder stadium preventief had moeten worden geruimd. Preventief ruimen is een </para>
+        <para>maatregel ter bestrijding van besmettelijke dierziektes als de varkenspest. Deze maatregel is met name gericht op </para>
+        <para>de bescherming van de gezamenlijke veehouders tegen een besmettelijke ziekte als de varkenspest. De maatregel is </para>
+        <para>niet bedoeld om bepaalde, individueel aan te wijzen, varkenshouders te beschermen. Van de overheid kan immers </para>
+        <para>niet worden verwacht dat zij iedere ondernemers vrijwaart van het optreen van besmetting met een besmettelijke </para>
+        <para>dierziekte. Hieruit volgt dat geen recht bestaat op preventieve ruiming.</para>
+        <para>De Inspecteur-Districtshoofd van de Veterinaire Dienst van mijn ministerie is aangewezen om te bepalen welke </para>
+        <para>maatregel dienen te worden getroffen ter bestrijding van de varkenspest. Hiertoe wordt een prioritering aangebracht </para>
+        <para>in de bedrijven die voor een preventieve ruiming in aanmerking komen. De verdachte bedrijven waarbij de </para>
+        <para>verdenking concreter is, of waar de kans op een besmetting groter is worden daarbij als eerste geruimd. In die </para>
+        <para>afweging kan dan bijvoorbaald voorrang worden gegeven aan preventieve ruiming in geval van verdachte </para>
+        <para>contactadressen boven preventieve ruiming bij buurtbedrijven.</para>
+        <para>Aangezien niet alle bedrijven op hetzelfde moment kunnen worden geruimd, en bij het treffen van maatregelen de </para>
+        <para>hierboven beschreven afweging noodzakelijk is, kan het voorkomen dat niet alle buurtbedrijven rond een </para>
+        <para>besmettingshaard preventief worden geruimd.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>U stelt dat het achterwege laten van de preventieve ruiming ten aanzien van uw bedrijf er, in combinatie met de </para>
+        <para>ligging van uw bedrijf, toe geleid heeft dat uw bedrijf is geconfronteerd met uitbraak van klassieke varkenspest.</para>
+        <para>Aangezien, zoals hiervoor al is aangegeven, geen recht bestaat op preventieve ruiming betekent het achterwege </para>
+        <para>blijven van preventieve ruiming niet dat, in geval van een alsnog opgetreden besmetting met varkenspest, het niet </para>
+        <para>preventief geruimde bedrijf anders zou moeten worden behandeld dan andere besmette bedrijven.</para>
+        <para>Het beleid was dat vanaf eind april tot begin juli preventief ruimen in het zgn. kerngebied vrijwel niet werd </para>
+        <para>uitgevoerd. Het kerngebied omvatte Volkel, Boekel en Odiliapeel en daaraan grenzende randen. Besmette haarden </para>
+        <para>werden wel direct geruimd.</para>
+        <para>Door het grote aantal positieve bedrijven in genoemde periode en de destructiecapaciteit kwam de prioriteit voor </para>
+        <para>preventief ruimen rondom besmette bedrijven buiten het kerngebied te liggen. Om die reden is toen besloten om </para>
+        <para>preventieve ruimingen van buurtbedrijven bij haarden rondom </para>
+      </parablock>
+      <para/>
+      <para/>
+      <parablock>
+        <para>onder andere Elsendorp, Erp en Zeeland en in het kerngebied uit te stellen. Bedrijven gelegen in het kerngebied </para>
+        <para>met een directe relatie met een besmet bedrijf werden wel preventief geruimd (dit betrof echter slechts een gering </para>
+        <para>aantal).</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Uw bedrijf lag in het kerngebied maar zonder een directe relatie met een besmet bedrijf en gelegen op een grotere </para>
+        <para>afstand dan 1 kilometer ten opzichte van besmette bedrijven, waardoor uw bedrijf in de bovengenoemde periode </para>
+        <para>niet preventief geruimd is.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Gelet op Uw stelling dat er vanwege het voor Uw bedrijf geldende fokverbod meer guste zeugen dan normaal op </para>
+        <para>Uw bedrijf aanwezig waren en dat deze zeugen door de taxateur lager gewaardeerd worden dan drachtige of </para>
+        <para>zogende zeugen, merk ik het volgende op.</para>
+        <para>Ingevolge de Wet wordt bij het vergoeden van gedode varkens en vernietigde producten en voorwerpen uitgegaan </para>
+        <para>van de bij taxatie vastgestelde waarde en wordt deze waarde van onder andere de dieren door de taxateur </para>
+        <para>vastgesteld naar de waarde van de dieren op het moment van taxatie. Dat er ten tijde van de taxatie als gevolg van </para>
+        <para>het fokverbod naar verhouding meer guste zeugen op het bedrijf waren dan normaal het geval is, is een feitelijke </para>
+        <para>omstandigheid als gevogl van een algemene bestrijdingsmaatregel die voor rekening en risico van de ondernemer </para>
+        <para>zelf komt."</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>4.	Het standpunt van appellanten</para>
+        <para>Appellanten hebben in beroep, samengevat weergegeven, het volgende aangevoerd.</para>
+        <para>Aangezien de betrokken overheidsinstellingen in het kader van de bestrijding van de klassiek varkenspest zijn vergeten het </para>
+        <para>fokvarkensbedrijf van appellanten preventief te ruimen, behoort hun een schadeloosstelling te worden toegekend, als ware hun </para>
+        <para>bedrijf preventief geruimd. Zulks zou hebben geleid tot een aanzienlijk hogere schadeloosstelling dan bij het - in bezwaar </para>
+        <para>gehandhaafde - besluit van 25 september 1997 is toegekend in verband met ruiming vanwege besmetting.</para>
+        <para>De conclusie dat het bedrijf van appellanten is vergeten, kan worden getrokken aan de hand van de ligging van in de nabijheid </para>
+        <para>gelegen varkensbedrijven die wel preventief zijn geruimd. Hetgeen van de zijde van verweerder naar voren is gebracht, houdt </para>
+        <para>geen verklaring in voor het niet preventief ruimen van het bedrijf van appellanten.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <parablock>
+        <para>Het achterwege laten van een preventieve ruiming heeft er, in verband met de onmiddellijke nabijheid van pesthaarden, toe </para>
+        <para>geleid dat  het bedrijf van appellanten werd geconfronteerd met een uitbraak van klassieke varkenspest.</para>
+        <para>In verband met het voorafgaande moet worden geoordeeld dat ten aanzien van appellanten een strikte toepassing van de </para>
+        <para>geldende voorschriften in zodanige mate in strijd komt met enig algemeen rechtsbeginsel, dat zulk een toepassing geen </para>
+        <para>rechtsplicht meer kan zijn.</para>
+        <para>Voorts is bij de schadeloosstelling ten onrechte geen rekening gehouden met de omstandigheid dat op het bedrijf van </para>
+        <para>appellanten als gevolg van het destijds geldende fokverbod verhoudingsgewijs meer guste (d.w.z. niet drachtige) zeugen </para>
+        <para>aanwezig waren dan normaal het geval zou zijn geweest. De daaraan verbonden nadelige gevolgen zouden door verweerder </para>
+        <para>behoren te worden gecompenseerd.</para>
+        <para>Bovendien zijn de dieren lager getaxeerd, omdat werd aangenomen dat appellanten in aanmerking zouden komen voor een </para>
+        <para>bijdrage ingevolge de Subsidieregeling fokverbod varkens 1997. Een dergelijke bijdrage is echter niet aan appellanten </para>
+        <para>toegekend.</para>
+        <para>5.	De beoordeling van het geschil</para>
+        <para>Het College overweegt in de eerste plaats, zoals reeds in eerdere uitspraken van het College tot uitdrukking is gebracht, dat niet </para>
+        <para>kan worden staande gehouden dat verweerder bij de toekenning van tegemoetkomingen ter zake van schade in verband met </para>
+        <para>ruiming vanwege de klassieke varkenspest, niet in redelijkheid heeft kunnen komen tot het maken van een onderscheid tussen </para>
+        <para>preventief en besmet geruimde bedrijven, in dier voege dat bij preventieve ruiming van fokvarkensbedrijven in het kader van </para>
+        <para>het op grond van artikel 91 van de Gwd ontwikkelde beleid bijzondere tegemoetkomingen als hiervoor omschreven, worden </para>
+        <para>verstrekt.</para>
+        <para>Vaststaat dat ten tijde van eerdergenoemd besluit tot ruiming d.d. 9 september 1997, op het bedrijf van appellanten sprake was </para>
+        <para>van besmetting met klassieke varkenspest. Voor de vaststelling van de tegemoetkoming betekende zulks dat van toepassing </para>
+        <para>was het bepaalde bij en krachtens artikel 86, tweede lid, aanhef en onder b, van de Gwd. Verweerder heeft dienovereenkomstig </para>
+        <para>aan appellanten een tegemoetkoming verstrekt.</para>
+        <para>Hetgeen appellanten hebben aangevoerd, stelt in de eerste plaats de vraag aan de orde of er grond aanwezig is te achten voor </para>
+        <para>het oordeel dat verweerder door bij de in het geding zijnde toekenning van een schadeloosstelling toepassing te geven aan </para>
+        <para>evenbedoelde voorschriften en geen aanleiding heeft gezien op grond van de aanwezigheid van een bijzonder geval </para>
+        <para>meergenoemde, krachtens artikel 91 gegeven, beleidsregels in afwijking van de daarin neergelegde criteria op de door </para>
+        <para>appellanten gewenste wijze ten aanzien van hen toe te passen, een beschikking heeft gegeven, waartoe hij bij afweging van de </para>
+        <para>ter zake dienende belangen niet in redelijkheid heeft kunnen komen.</para>
+        <para>Het College overweegt in dit verband in de eerste plaats dat in de beschikbare gegevens geen grond kan worden gevonden </para>
+        <para>eerdergenoemd besluit tot ruiming onrechtmatig te achten.</para>
+        <para>Evenmin vermag het College in te zien dat verweerder rechtens kan worden tegengeworpen dat niet is overgegaan tot </para>
+        <para>preventieve ruiming van het bedrijf van appellanten. Daarbij moet in aanmerking worden genomen dat het bij de toepassing </para>
+        <para>van de ter zake geldende voorschriften van de Gwd gaat om maatregelen, welk dienen te berusten op veterinaire gronden en </para>
+        <para>behoren te strekken ter voorkoming van de verspreiding van besmettelijke dierziekten.</para>
+        <para>Het College heeft noch in hetgeen van de zijde van appellanten naar voren is gebracht, noch in de - overige - gedingstukken </para>
+        <para>grond kunnen vinden voor de opvatting dat aan de zijde van verweerder bij de bestrijding van de varkenspest ter plaatse waar </para>
+        <para>appellanten hun bedrijf uitoefenen, de uit de Gwd voortvloeiende verplichtingen tot het treffen van bestrijdingsmaatregelen, </para>
+        <para>gelet op de daarvoor geldende criteria, in die mate zijn verzaakt, dat het niet preventief ruimen van het bedrijf van appellanten </para>
+        <para>kan worden aangemerkt als een nalatigheid van zodanige ernst, dat verweerder bij het toekennen van schadeloosstelling aan </para>
+        <para>appellanten had behoren uit te gaan van een preventieve ruiming van hun bedrijf. Het College verwijst in dit verband voorts </para>
+        <para>naar hetgeen verweerder, zoals hiervoor onder rubriek 3. is weergegeven, bij het bestreden besluit heeft opgemerkt omtrent het </para>
+        <para>treffen van bestrijdingsmaatregelen in het gebied waar het bedrijf van appellanten is gelegen.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Het College acht voorts de door appellanten gestelde omstandigheid dat ten tijde van de ruiming in verband met het toen </para>
+        <para>geldende fokverbod tamelijk veel guste zeugen op hun bedrijf aanwezig waren, niet dermate klemmend en zwaarwegend, dat </para>
+        <para>verweerder daarin aanleiding had moeten vinden voor het aanwezig achten van een bijzonder geval, in verband waarmede een </para>
+        <para>hogere, dan de thans overeenkomstig de geldende voorschriften verstrekte, tegemoetkoming had behoren te worden toegekend.</para>
+        <para>Van de zijde van verweerder is ter zitting opgemerkt dat wordt gewerkt aan een regeling betreffende het verstrekken van </para>
+        <para>subsidie aan varkenshouders die geen beroep kunnen doen op de Subsidieregeling fokverbod varkens 1997.</para>
+        <para>Ten slotte overweegt het College, onder verwijzing naar de in artikel 88, tweede lid, van de Gwd genoemde procedure bij de </para>
+        <para>kantonrechter, dat de bezwaren van appellanten over de wijze waarop de waardevaststelling van hun varkens heeft </para>
+        <para>plaatsgevonden, niet aan de orde kunnen komen, nu het desbetreffende taxatieformulier vanwege appellanten voor akkoord is </para>
+        <para>getekend en appellanten destijds niet aan verweerder te kennen hebben gegeven dat zij </para>
+        <para>- desondanks - geen genoegen namen met de waardevaststelling.</para>
+        <para>In verband met het vorenoverwogene moet worden geconcludeerd dat het beroep niet kan slagen</para>
+        <para>Het College acht geen termen aanwezig voor een proceskostenveroordeling met toepassing van artikel 8:75 van de Algemene </para>
+        <para>wet bestuursrecht.</para>
+        <para>6.	De beslissing</para>
+        <para>Het College verklaart het beroep ongegrond.</para>
+        <para>Aldus gewezen door mr H.C. Cusell in tegenwoordigheid van mr J.A. Hoovers-Backaert, als griffier, en uitgesproken in het </para>
+        <para>openbaar op 21 december 2000.</para>
+      </parablock>
+      <para/>
+      <para>w.g. H.C. Cusell	w.g. J.A. Hoovers-Backaert</para>
+    </uitspraak>
+</open-rechtspraak>

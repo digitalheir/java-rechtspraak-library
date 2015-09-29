@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:tr="http://tuchtrecht.overheid.nl/" xmlns:eu="http://publications.europa.eu/celex/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:CBB:1998:AA3411</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2014-04-13T10:19:55</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">AA3411</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/College_van_Beroep_voor_het_bedrijfsleven" scheme="overheid.RechterlijkeMacht">College van Beroep voor het bedrijfsleven</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">1998-12-28</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">98/1314/32030</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#voorlopigeVoorziening">Voorlopige voorziening</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht">Bestuursrecht</dcterms:subject>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0005537&amp;artikel=7:10&amp;g=1998-12-28">Algemene wet bestuursrecht 7:10</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0005537&amp;artikel=8:83&amp;g=1998-12-28">Algemene wet bestuursrecht 8:83</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0002380&amp;artikel=5&amp;g=1998-12-28">Bestrijdingsmiddelenwet 1962 5</dcterms:references>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:1998:AA3411">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:1998:AA3411</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-04T15:52:15</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">1998-12-28</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:CBB:1998:AA3411 College van Beroep voor het bedrijfsleven , 28-12-1998 / 98/1314/32030</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:CBB:1998:AA3411:INH" lang="nl" xml:space="preserve">
+      <para>-</para>
+    </inhoudsindicatie>
+  <uitspraak xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:CBB:1998:AA3411:DOC" lang="nl" xml:space="preserve">
+      <para>De president van het College van Beroep voor het bedrijfsleven</para>
+      <para/>
+      <para>Uitspraak op het verzoek om voorlopige voorziening in de zaak van:</para>
+      <para/>
+      <para>A te B verzoekster, gemachtigde:</para>
+      <para/>
+      <para>tegen</para>
+      <para/>
+      <para>de Staatssecretaris van Volksgezondheid, Welzijn en Sport, zetelend te 'sGravenhage, verweerder,</para>
+      <para/>
+      <para>1. De procedure </para>
+      <para/>
+      <parablock>
+        <para>Bij besluit van 14 augustus 1998 heeft het College voor de Toelating van Bestrijdingsmiddelen (hierna: CTB) namens verweerder aan onder meer verzoekster meegedeeld de toelating van de nader in dit besluit vermelde middelen na 1 september 1998 niet verder te verlengen, als bedoeld in artikel 5, eerste lid, van de Bestrijdingsmiddelenwet 1962 (hierna: de Wet).</para>
+        <para>Op 18 augustus 1998 heeft verzoekster bij verweerder tegen voorbedoeld besluit een bezwaarschrift ingediend. Tevens heeft verzoekster zich die dag tot de president van het College gewend met het verzoek het besluit van 14 augustus 1998 te schorsen en verzoekster te behandelen als ware zij in het bezit van een toelating die na 1 september 1998 geldig is.</para>
+        <para>Dit verzoek is behandeld ter zitting van 27 augustus 1998. Bij uitspraak van 28 augustus 1998 heeft de president dit verzoek afgewezen.</para>
+        <para>Bij brief van 18 december 1998, ter griffie ontvangen op 21 december 1998, heeft verzoekster zich wederom tot de president gewend met het verzoek om een voorlopige voorziening te treffen, houdende dat verweerder wordt verplicht om v¢¢r 31 december 1998 een hoorzitting te doen plaatsvinden en uiterlijk 15 januari 1999 een beslissing zal nemen op de ingediende bezwaarschriften, een en ander met verweerders veroordeling in de proceskosten.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <parablock>
+        <para>2. De vaststaande feiten</para>
+        <para>Bij de beoordeling van het verzoek om een voorlopige voorziening gaat de president allereerst uit van de feiten en omstandigheden, zoals vastgesteld in zijn aan partijen bekende uitspraak van 28 augustus 1998, in de zaken nrs. AWB 98/854, 98/855, 98/863, 98/882 en 98/883.</para>
+        <para>Voorts gaat de president uit van de volgende feiten en omstandigheden.</para>
+        <para> Bij schrijven van 21 augustus 1998 heeft verzoekster haar op 18 augustus 1998 ingediende bezwaarschrift aangevuld.</para>
+        <para> Bij brief van 27 augustus 1998 heeft verweerder verzoekster bericht dat hij zich terzake zal laten adviseren door de VWS-commissie bezwaarschriften Awb (hierna ook: de bezwaarschriftencommissie) en dat de termijn voor de beslissing op het bezwaarschrift is verlengd tot 1 december 1998.</para>
+        <para> Bij brief van 3 september 1998 heeft de bezwaarschriftencommissie verzoekster bericht dat de hoorzitting is bepaald op dinsdag 27 oktober 1998.</para>
+        <para> Verzoekster heeft bij brief van 13 oktober 1998 wederom een aanvullend bezwaar-schrift ingediend. Zij heeft daarbij te kennen gegeven de gronden in de door Bayer B.V., Bayer AG, Sumitomo Benelux B.V. en Sumitomo Chemical Company Ltd. op 5 oktober 1998 ingediende aanvullende bezwaarschiften, welke waren voorzien van tientallen bijlagen, tot de hare te maken, en als herhaald en ingelast te willen beschouwen.  Bij brief van 15 oktober 1998 heeft de bezwaarschriftencommissie verzoekster te kennen gegeven dat vanwege de gecompliceerde technische aard van de door verzoekster toegezonden aanvullende stukken, het CTB niet in staat is een verweerschrift op te stellen. Tevens is verzoekster medegedeeld dat de commissie de geplande  hoorzitting van 27 oktober 1998 wenst te benutten voor overleg omtrent de  verdere procedurele gang van zaken.</para>
+        <para> Verzoekster heeft bij brief van 20 oktober 1998 aangegeven dat wat haar betreft de hoorzitting van 27 oktober 1998 doorgaat, mits daar ook een inhoudelijke behandeling van het bezwaarschrift plaatsvindt.</para>
+        <para> Bij brief van 22 oktober 1998 is verzoekster te kennen gegeven dat tijdens de zitting van 27 oktober 1998 uitsluitend procedurele aspecten zullen worden besproken en dat de inhoudelijke kanten van de zaak in een latere hoorzitting zullen worden behandeld.</para>
+        <para>  In het door voorzitter en secretaris van de bezwaarschriftencommissie ondertekende verslag van de hoorzitting van 27 oktober 1998 is onder meer het volgende opgenomen:</para>
+        <para>"  De partijen komen uiteindelijk ter zitting overeen dat de inhoudelijke aspecten van de onderhavige bezwaarschriften ter hoorzitting van 2 februari 1999 zullen kunnen worden besproken."</para>
+        <para> Bij brief van 2 november 1998 heeft verzoekster de bezwaarschriftencommissie verzocht de termijn voor de inhoudelijke behandeling van het bezwaarschrift in te korten.</para>
+        <para> Bij brief van 10 november 1998 heeft de bezwaarschriftencommissie gereageerd door te wijzen op de tussen partijen ter hoorzitting gemaakte afspraken.</para>
+        <para> Bij brief van 18 december 1998 heeft verzoekster bij verweerder een bezwaarschrift ingediend tegen de fictieve weigering om voor 1 december 1998 een beslissing op het bezwaarschrift te nemen, met verzoek de toelating van de onderwerpelijke bestrijdingsmiddelen met ingang van 1 september 1998 alsnog te verlengen.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>3. De brief van 10 november 1998 </para>
+        <para>Bij de hiervoor vermelde brief van 10 november 1998 is verzoekster onder meer het volgende meegedeeld:</para>
+        <para>"  Op 27 oktober 1998 heeft een zitting van de VWScommissie bezwaarschriften Awb plaatsgehad, waarin procedurele aspecten van uw bezwaarschrift, alsmede dat van Vemedia B.V., Bayer B.V., Bayer AG, Sumitomo Chemical Company Ltd. en Sumitomo Benelux B.V. aan de orde zijn gekomen. Per dezelfde datum ontving ik van u een telefax, waarin u verklaart dat de advocaat van het kantoor Van Wijmen Nouwen in Breda, mr. van den Veen, mede namens u de zitting zal bijwonen.</para>
+        <para>Tijdens deze bijeenkomst is in overleg met appellanten en het College voor toelating bestrijdingsmiddelen besloten om de inhoudelijke hoorzitting op 2 februari 1999 te doen plaatsvinden. Deze datum is mede gekozen gezien het door appellanten op 5 oktober jl. ingediende omvangrijke materiaal dat nadere bestudering vergt. Met nadruk wijs ik u erop dat deze datum in samenspraak met en met goedkeuring van de aanwezige partijen is bepaald. Gelet op uw telefax van 27 oktober jl., ben ik van oordeel dat u op voorhand akkoord bent gegaan met het besprokene door mr. van den Veen. De VWS commissie bezwaarschriften Awb heeft hierin als partij geen deel gehad, doch heeft slechts de conclusies van de partijen overgenomen.</para>
+        <para>Nu de datum van de zitting met instemming van de indieners van de bezwaarschriften is vastgelegd, wordt ingevolge artikel 7:10, vierde lid, Awb de termijn voor de beslissing op bezwaar overeenkomstig uitgesteld. De commissie heeft toegezegd te zullen streven naar gereedmaking van de beslissing op bezwaar ‚‚n maand na de hoorzitting van 2 februari a.s."</para>
+      </parablock>
+      <para/>
+      <para/>
+      <parablock>
+        <para>4. Het standpunt van verweerder </para>
+        <para>Verweerder heeft niet voor 1 december 1998 beslist. Kennelijk is het oordeel van verweerder dat hij ook niet in staat is te beslissen voordat advies is uitgebracht door de bezwaarschriftencommissie.</para>
+        <para>Uit het verslag van de hoorzitting van 27 oktober 1998 blijkt dat de vertegenwoordiger van de CTB, die aldaar namens verweerder optrad, heeft gesteld dat, onder meer, verzoekster in een zeer late fase nieuwe gegevens heeft overgelegd met specialistisch materiaal, waarover alleen TNO advies aan het CTB kan uitbrengen. Dan moet vervolgens het CTB zich een oordeel vormen en tenslotte een verweerschrift namens verweerder schrijven. Hiermee zullen enkele maanden gemoeid zijn.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <parablock>
+        <para>5. Het standpunt van verzoekster</para>
+        <para>Het door verzoekster aangevoerde spoedeisend belang laat zich als volgt samenvatten.</para>
+        <para>Als gevolg van een uitstel van de hoorzitting tot 2 februari 1999 dreigt verzoekster de verkoop van de onderhavige bestrijdingsmiddelen over 1999 mis te lopen. De afspraken met de toeleveranciers moeten namelijk uiterlijk in januari 1999 worden gemaakt teneinde aan het begin van het seizoen (april/mei) het product in de schappen te kunnen hebben.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <parablock>
+        <para>6. De beoordeling van het geschil</para>
+        <para>Ingevolge het bepaalde bij artikel 8:81 Algemene wet bestuursrecht (hierna: Awb) juncto artikel 19, eerste lid, van de Wet bestuursrechtspraak bedrijfsorganisatie kan, hangende een beslissing op bezwaar en indien van de beslissing daarop beroep bij het College openstaat, de president van het College op verzoek een voorlopige voorziening treffen, indien onverwijlde spoed, gelet op de betrokken belangen, dat vereist.</para>
+        <para>Ten aanzien van de spoedeisendheid van het door verzoekster gestelde belang overweegt de president als volgt. Hetgeen door verzoekster dienaangaande naar voren is gebracht betreft een louter financieel belang, hetgeen op zichzelf geen reden is om te oordelen dat sprake is van onverwijlde spoed. Gesteld noch gebleken is dat dit belang op het totaal van handelsactiviteiten van verzoekster zodanig zwaarwegend is dat het mogelijke mislopen van de verkoop van de onderhavige bestrijdingsmiddelen over 1999 voor verzoekster continuïteitsproblemen met zich brengt. Daar komt bij dat, mocht verzoekster in een eventueel volgende hoofdzaak in het gelijk worden gesteld, zij een vordering tot schadevergoeding kan instellen.</para>
+        <para>Ten aanzien van de spoedeisendheid overweegt de president voorts dat verzoekster reeds op 16 oktober 1998 bekend was met het feit dat de hoorzitting op 27 oktober 1998 een procedureel, en geen inhoudelijk karakter zou hebben. Niet gezegd kan worden dat het eerst op 21 december 1998 indienen van een verzoek tot het treffen van een voorlopige voorziening de spoedeisendheid van verzoeksters belang beklemtoont.</para>
+        <para>Ten aanzien van de door verzoekster geuite bezwaren tegen de uitgestelde datum voor een inhoudelijke behandeling van de zaak is de president van oordeel dat verzoekster dit uitstel over zichzelf heeft afgeroepen. Immers, nadat verzoekster reeds op 21 augustus 1998 een aanvullend bezwaarschrift bij verweerder had ingediend, heeft zij op 13 oktober 1998 wederom een aanvullend bezwaarschrift ingediend waarbij zij verwees naar twee aanvullende bezwaarschriften van Bayer en Sumitomo, van 12, respectievelijk 35 pagina's met tientallen producties, deels nieuwe, van  technisch-wetenschappelijke aard, alles bij elkaar op zichzelf een vuistdik dossier, dat niet eerder dan op 5 oktober 1998 door verweerder, althans het CTB is ontvangen. Het komt de president onder deze omstandigheden alleszins redelijk voor dat verweerder de gelegenheid diende te krijgen om deze stukken op zorgvuldige wijze te bestuderen, te (doen) onderzoeken en op inhoud te evalueren. </para>
+        <para>Door verzoeksters proceshouding was opschorting van de inhoudelijke behandeling van de zaak onvermijdelijk. </para>
+        <para>Bovendien blijkt uit het verslag van de hoorzitting van 27 oktober 1998 dat de gemachtigde van verzoekster akkoord is gegaan met een afzonderlijke behandeling van de inhoudelijke kant van de zaak op 2 februari 1999. Weliswaar wordt de weergave van deze afspraken in een later stadium door verzoekster betwist, echter naar voorlopig oordeel komt aan de verslaglegging van hetgeen tijdens de hoorzitting is besproken en afgesproken een doorslaggevende betekenis toe. De president mag immers in de omstandigheden van dit geval zonder concrete en harde aanwijzingen niet aannemen dat de voorzitter en de secretaris van de VWS-commissie bezwaarschriften Awb een verslag ondertekenen dat onwaarheden bevat.</para>
+        <para>Aangezien zich dus in wezen de situatie voordoet, als geregeld bij artikel 7:10, vierde lid, van de Awb en ook overigens hetgeen zijdens verzoekster naar voren is gebracht geen aanknopingspunt biedt voor het oordeel dat de belangen van verzoekster nopen tot een voorziening als door haar gevraagd, komt de president tot het oordeel dat het verzoek kennelijk ongegrond is en dat er aanleiding is om met toepassing van artikel 8:83, derde lid, van de Awb uitspraak te doen.</para>
+        <para>De president acht geen grond aanwezig voor een veroordeling in de kosten van deze procedure met toepassing van het bepaalde bij en krachtens artikel 8:75 van de Awb.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <parablock>
+        <para>7. De beslissing</para>
+        <para>De president wijst het verzoek om een voorlopige voorziening af.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Aldus gewezen door mr B. van Wagtendonk, fungerend president, </para>
+        <para>in tegenwoordigheid van mr A.J. Medze, als griffier, </para>
+        <para>en uitgesproken in het openbaar op 28 december 1998.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para/>
+      <para/>
+      <para>w.g. B. van Wagtendonk                   w.g. A.J. Medze</para>
+    </uitspraak>
+</open-rechtspraak>

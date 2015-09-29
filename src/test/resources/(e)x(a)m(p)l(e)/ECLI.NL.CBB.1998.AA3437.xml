@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:tr="http://tuchtrecht.overheid.nl/" xmlns:eu="http://publications.europa.eu/celex/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:CBB:1998:AA3437</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2014-04-13T10:19:59</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">AA3437</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/College_van_Beroep_voor_het_bedrijfsleven" scheme="overheid.RechterlijkeMacht">College van Beroep voor het bedrijfsleven</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">1998-11-18</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">98/0875/14860</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#voorlopigeVoorziening">Voorlopige voorziening</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht">Bestuursrecht</dcterms:subject>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0005537&amp;artikel=1:2&amp;g=1998-11-18">Algemene wet bestuursrecht 1:2</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0005537&amp;artikel=1:3&amp;g=1998-11-18">Algemene wet bestuursrecht 1:3</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0005537&amp;artikel=8:81&amp;g=1998-11-18">Algemene wet bestuursrecht 8:81</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0005537&amp;artikel=8:83&amp;g=1998-11-18">Algemene wet bestuursrecht 8:83</dcterms:references>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+          <rdf:li>GST 1999, 9506 met annotatie door H.Ph.J.A.M. Hennekens</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:1998:AA3437">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:1998:AA3437</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-04T15:52:24</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">1998-11-18</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:CBB:1998:AA3437 College van Beroep voor het bedrijfsleven , 18-11-1998 / 98/0875/14860</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:CBB:1998:AA3437:INH" lang="nl" xml:space="preserve">
+      <para>-</para>
+    </inhoudsindicatie>
+  <uitspraak xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:CBB:1998:AA3437:DOC" lang="nl" xml:space="preserve">
+      <parablock>
+        <para>De president van het College van Beroep voor het bedrijfsleven </para>
+        <para>No. AWB 98/875  </para>
+        <para>18 november 1998 14860</para>
+      </parablock>
+      <para/>
+      <para>Uitspraak op het verzoek om voorlopige voorziening in de zaken van:</para>
+      <para/>
+      <para>A t/m E, allen wonende te F, verzoekers,</para>
+      <para/>
+      <para>tegen</para>
+      <para/>
+      <para>Gedeputeerde Staten van Limburg, verweerders, gemachtigden: mr R.J.H. Munnich, A.H.J.M. van der Tier en I.T.J. Scherders.</para>
+      <para/>
+      <para/>
+      <para>1. Het verloop van de procedure</para>
+      <para/>
+      <parablock>
+        <para>Op 24 augustus 1998 heeft het College van verzoekers een beroepschrift ontvangen, waarbij beroep wordt ingesteld tegen een besluit van verweerders van 21 juli 1998, verzonden op 3 augustus 1998.  In dit besluit hebben verweerders de bezwaren van verzoekers sub 1 tot en met 5, gericht tegen de vaststelling van de dienstregeling 1998-1999 van Hermes Openbaar Vervoer B.V. (hierna: Hermes) te Weert, voor het verrichten van interlokaal openbaar vervoer in de provincie Limburg alsmede vervoer als bedoeld in artikel 19, derde lid, van de Wet personenvervoer (hierna: de Wet), ongegrond verklaard. In voormeld beroepschrift hebben verzoekers tevens de president van het College verzocht, bij wege van voorlopige voorziening, het bestreden besluit te schorsen.</para>
+        <para>Verweerders hebben op 23 september 1998 schriftelijk op het verzoek om voorlopige voorziening gereageerd.</para>
+        <para>Bij brief van 2 november 1998 is Hermes in de gelegenheid gesteld als partij aan het geding deel te nemen. Op deze brief is geen reactie gevolgd.</para>
+        <para>Het verzoek om voorlopige voorziening is door de president behandeld ter zitting van 11 november 1998, waar verzoeker sub 2 in persoon is verschenen en voor de overige verzoekers als gemachtigde is opgetreden. Verweerders hebben bij monde van hun gemachtigden hun standpunt nader toegelicht. Hermes heeft zich daar niet doen vertegenwoordigen.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para>2. De grondslag van het geschil</para>
+      <para/>
+      <parablock>
+        <para>2.1 Artikel 4 van de Wet personenvervoer (hierna: de Wet) luidt als volgt:</para>
+        <para>"Bij de uitvoering van deze wet dient een afweging te worden gemaakt tussen de omvang en het gebruik van goed functionerend openbaar vervoer, de noodzaak van openbaar vervoervoorzieningen voor degenen die op dit vervoer zijn aangewezen, het gebruik van particulier personenvervoer per auto, verkeersveiligheid, ruimtelijke ordening, milieubeheer, energiegebruik en de beschikbare financiële middelen."</para>
+        <para>Artikel 19 van de Wet luidt, voor zover hier van belang, als volgt:</para>
+        <para>"1. Gedeputeerde Staten stellen ten minste een maal per jaar de dienstregeling voor interlokaal openbaar vervoer vast met inachtneming van het bepaalde in artikel 4.</para>
+        <para>2. Zij stellen belanghebbenden in de gelegenheid wensen kenbaar te maken ten aanzien van de dienstregeling voor interlokaal openbaar vervoer."</para>
+        <para>2.3 Bij de beoordeling van het verzoek om voorlopige voorziening gaat de president uit van de volgende feiten en omstandigheden.</para>
+        <para>Verzoekers wonen aan de […]weg, op respectievelijk de nummers 3, 5, 9, 13 en 11. De […]weg vervult ter plaatse de functie van ontsluitingsweg en is door middel van een groenstrook van ongeveer 6 meter breed gescheiden van de provinciale weg N[…]. Bij besluit van 28 april 1998, gepubliceerd op 8 mei 1998, hebben verweerders vastgesteld de dienstregeling van Hermes voor het verrichten van interlokaal openbaar vervoer in de provincie Limburg, alsmede vervoer als bedoeld in artikel 19, derde lid, van de Wet, voor de periode van 24 mei 1998 tot 30 mei 1999.</para>
+        <para>Voorafgaand aan de vaststelling van deze dienstregeling hebben verweerders via advertenties in de regionale dagbladen belanghebbenden opgeroepen wensen en suggesties kenbaar te maken. De binnengekomen reacties zijn aan Hermes ter beschikking gesteld met het verzoek deze te betrekken bij het opstellen van een dienstregelingsvoorstel. Voorts hebben verweerders overleg gevoerd met betrokken bestuursorganen als bedoeld in artikel 20 van de Wet. In de door verweerders vastgestelde dienstregeling 1998- 1999 voor interlokaal openbaar vervoer is voorzien in een nieuwe bushalte, aangeduid als "Hulsberg centrum", ter vervanging van drie bestaande haltes in Hulsberg. De nieuwe halte is opgenomen als onderdeel van vier buslijnen en is tevens bedoeld als overstaplocatie. Om als zodanig te kunnen functioneren betreft het hier een "verlengde" bushalte van ongeveer 70 meter, die tevens voorzien zal zijn van een abri.</para>
+        <para>Op 16 juni 1998 zijn verzoekers geconfronteerd met de feitelijke voorbereidingen van de werkzaamheden voor de aanleg van de nieuwe halte die, naar hen toen bleek, gesitueerd zou worden op de groenstrook tussen de […]weg en de provinciale weg N[…],  ter hoogte van de woningen van verzoekers. De provincie is wegbeheerder van de N[…]. Door overleg met de gemeente hebben verzoekers uitstel van deze werkzaamheden kunnen bewerkstelligen.</para>
+        <para>Bij brief van 18 juni 1998 is namens verzoekers sub 1 tot en met 4 tegen voormeld besluit tot vaststelling van de dienstregeling een bezwaarschrift ingediend bij verweerders.</para>
+        <para>Bij brief van 6 juli 1998, door verzoekers ontvangen op 7 juli 1998, zijn verzoekers uitgenodigd voor een hoorzitting op 8 juli 1998 in het kader van de behandeling van hun bezwaarschrift. De mogelijkheid om stukken in te zien sloot, blijkens die brief, op 7 juli 1998, om 16.00 uur. Ten tijde van de hoorzitting is door de toenmalige advocaat van verzoekers medegedeeld dat verzoeker sub 5 eveneens bezwaar maakt tegen het besluit van verweerders van 28 april 1998. Wegens verblijf in het buitenland was verzoeker sub 5 hiertoe niet eerder in staat geweest.</para>
+        <para>Bij het bestreden besluit hebben verweerders de bezwaren van verzoekers ongegrond verklaard.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para>3. Het bestreden besluit en het standpunt van verweerders</para>
+      <para/>
+      <parablock>
+        <para>Bij het bestreden besluit is ten aanzien van de bezwaren van verzoekers onder meer het volgende overwogen:</para>
+        <para>"Korte samenvatting van de inhoud van de bezwaren: Mr G.J.F.M. Linders maakt namens een aantal omwonenden van de nieuwe overstaplocatie in Hulsberg-centrum bezwaar tegen de vaststelling van de dienstregeling omdat men het niet eens is met de locatie van deze overstaphalte. Ook de gemeente Nuth maakt bezwaar tegen deze locatie. Reclamanten zijn met name ontstemd over de gevolgde procedure.</para>
+        <para>Reclamanten krijgen volgens dhr. Linders een overstapvoorziening, met alle negatieve aspecten zoals stank- en geluidsoverlast , voor hun deur. Men is niet in de gelegenheid gesteld wensen kenbaar te maken of zienswijzen naar voren te brengen. Men vreest een verkeersaantrekkende werking en het ontstaan van een rondhangplek van jongeren. Daarnaast moeten er bomen worden gekapt. Tenslotte is volgens reclamanten gehandeld in strijd met de wettelijke regels op het gebied van de ruimtelijke ordening (bestemmingsplan). Men oppert een alternatief voor de huidige geplande halten.</para>
+        <para>(...)</para>
+        <para>Ten aanzien van de bezwaren wordt als volgt overwogen: Bij de ontwerp-dienstregeling die ter vaststelling aan gedeputeerde staten wordt aangeboden is een lijst van halteplaatsen gevoegd. Deze lijst geeft slechts een indicatie waar reizigers kunnen in-, uit-, dan wel overstappen. De exacte ligging van de halten, en daarmee ook alle daaraan verbonden procedures en consequenties, is een zaak die geregeld moet worden tussen vervoerder en wegbeheerder. Dit maakt geen onderdeel uit van de vaststelling van de dienstregeling en de daarbij behorende belangenafweging.</para>
+        <para>(...)</para>
+        <para>De bezwaren zijn derhalve ongegrond." Ten aanzien van de suggestie om de haltevoorziening te verplaatsen wordt in het bestreden besluit in een overweging ten overvloede opgemerkt dat meerdere opties nader bekeken zijn, maar dat deze niet haalbaar dan wel ongeschikt zijn bevonden.</para>
+        <para>In het verweerschrift hebben verweerders hieraan toegevoegd dat in het licht van het wettelijk kader waarbinnen de vaststelling van een dienstregeling plaatsvindt, niet staande kan worden gehouden dat door middel van het vaststellingsbesluit de exacte locatie van de halte wordt bepaald. De halte waar verzoekers bezwaar tegen maken wordt aangeduid als halte "Hulsberg Centrum". Het is naar de opvatting van verweerders evident dat met een dergelijke omschrijving geen exacte ligging van de halte wordt vastgesteld. Het gaat er slechts om dat het voor de reizigers duidelijk is dat er een interlokale openbaar vervoervoorziening is vanuit het centrum van Hulsberg. De exacte ligging van de halte wordt vervolgens door Het vervoerbedrijf en de wegbeheerder bepaald. Verweerders hebben toegegeven dat verzoekers pas in een zeer laat stadium op de hoogte zijn gesteld van de datum van de hoorzitting en de mogelijkheid tot het inzien van stukken. Voor zover dit als een schending van een vormvoorschrift zou moeten worden gezien, zijn verweerders van mening dat verzoekers hierdoor niet in hun belangen zijn geschaad en menen dat het besluit te gelegener tijd met toepassing van artikel 6:22 van de Algemene wet bestuursrecht (hierna: Awb) in stand zal kunnen worden gelaten.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para>4. Het standpunt van verzoekers</para>
+      <para/>
+      <parablock>
+        <para>Verzoekers hebben - samengevat - het volgende aangevoerd. </para>
+        <para>Verzoekers hebben bezwaren tegen het voornemen van Hermes om drie bestaande bushaltes in Hulsberg samen te voegen tot één grote bushalte, welke gepland is pal voor de woningen van verzoekers. Naar de opvatting van verzoekers hebben verweerders gehandeld in strijd met de zorgvuldigheid door op geen enkele wijze aan de omwonenden kenbaar te maken welke ingrijpende wijziging voor hun deur zou plaatsvinden, laat staan tijdig in de gelegenheid te stellen hun wensen en bedenkingen kenbaar te maken.</para>
+        <para>Verzoekers zijn het niet eens met de stelling van verweerders dat de bij de dienstregeling gevoegde lijst van halteplaatsen slechts een indicatie geeft waar reizigers kunnen in- dan wel uit- of overstappen, en dat het aanwijzen van een halte geen onderdeel uitmaakt van de vaststelling van een dienstregeling en van de daarbij behorende belangenafweging. In ieder geval is voor de specifieke situatie in Hulsberg sprake van een exacte, van de dienstregeling deel uitmakende, aanwijzing. Dat de exacte ligging van de halte louter een zaak zou zijn tussen de vervoerder en de wegbeheerder is in de ogen van verzoekers onjuist. De halteplaats is tegenover de woningen van verzoekers gepland en zij zijn dus belanghebbenden bij de bepaling van de locatie van de halteplaats. In dit kader hebben verzoekers, die vrezen voor ernstige stank- en geluidsoverlast van af- en aanrijdende bussen en verstoring van hun vrije uitzicht door op elkaar wachtende bussen vlak voor hun deur, drie alternatieven voorgesteld. Ten onrechte hebben verweerders deze alternatieven afgewezen.</para>
+        <para>Verzoekers zijn van mening dat sprake is van onzorgvuldige besluitvorming doordat zij de uitnodiging voor de hoorzitting pas één dag van tevoren ontvingen, op welk moment de termijn voor het inzien van stukken reeds was verstreken. Het bestreden besluit is bovendien slecht gemotiveerd.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para>5. De beoordeling van het geschil</para>
+      <para/>
+      <parablock>
+        <para>Ingevolge het bepaalde in artikel 8:81 van de Awb juncto artikel 19, eerste lid, van de Wet bestuursrechtspraak bedrijfsorganisatie kan, indien tegen een besluit bij het College beroep is ingesteld, de president van het College op verzoek een voorlopige voorziening treffen, indien onverwijlde spoed, gelet op de betrokken belangen, dat vereist.</para>
+        <para>Namens verzoeker sub 5 is tijdens de hoorzitting van 8 juli 1998, en derhalve tardief, mondeling bezwaar gemaakt tegen het besluit van verweerders van 28 april 1998. Deze mededeling is kennelijk niet gevolgd door de schriftelijke indiening van een bezwaarschrift dat aan de eisen van artikel 6:5 Awb voldoet, met daarbij een opgave van de redenen voor die termijnoverschrijding.</para>
+        <para>Naar voorlopig oordeel van de president hebben verweerders verzoeker sub 5 derhalve ten onrechte in zijn bezwaar ontvangen, zodat de gerede kans bestaat dat het besluit van verweerders, voor zover dat is genomen ten aanzien van verzoeker sub 5, deswege in beroep zal worden vernietigd. Gelet hierop is voor het treffen van een voorziening ten behoeve van verzoeker sub 5 geen plaats. In verband hiermede wordt in het navolgende met "verzoekers" telkenmale bedoeld verzoekers sub 1 tot en met 4.</para>
+        <para>Gelet op hetgeen verweerders in het bestreden besluit hebben overwogen en hetgeen zij daaromtrent ter toelichting hebben aangevoerd, dient in de eerste plaats de vraag te worden beantwoord of de vaststelling van de onderhavige dienstregeling hier mede de vaststelling omvat van de gewraakte halte, gesitueerd op de hiervoor in rubriek 2 aangeduide locatie. Dienaangaande overweegt de president als volgt. Ter zitting hebben verweerders erkend dat zij bij het voorbereiden en nemen van hun besluit van 28 april 1998 op de hoogte waren van de wens van de vervoerder de onderhavige halte in deze omvang, met deze functie en op de gewraakte locatie in te leggen. Tevens hebben zij ter zitting bevestigd dat de thans vastgestelde dienstregeling dient ter verbetering van de overstapmogelijkheden in Hulsberg en voor wat betreft aankomst-, vertrek- en overstaptijden reeds uitgaat van een overstaphalte op deze locatie. In deze omstandigheden moet, naar voorlopig oordeel van de president, worden aangenomen dat de aanduiding van de locatie van de nieuwe halteplaats met de omschrijving "Hulsberg Centrum" ten tijde van de totstandkoming en vaststelling van de dienstregeling reeds zodanig was geconcretiseerd dat deze de vaststelling van de concrete halteplaats aan de Parallelweg Zuid omvatte.</para>
+        <para>De hiervoor opgeworpen vraag moet naar voorlopig oordeel derhalve bevestigend worden beantwoord.</para>
+        <para>De enkele omstandigheid dat de vaststelling van de dienstregeling hier tevens de vaststelling van een concrete halteplaats omvat is op zich zelf evenwel niet beslissend voor het antwoord op de vraag of verzoekers door een zodanige vaststelling rechtstreeks in hun belang worden getroffen.</para>
+        <para>In dat verband verwijst de president naar een uitspraak van het College d.d. 23 januari 1996, no. 95/0049/090/155, AB 1996 no. 182, in welk geval het evenzeer de vaststelling van een dienstregeling betrof. Het College overwoog in die uitspraak onder meer als volgt:</para>
+        <para>"Het College kan appellant in dit betoog niet volgen en overweegt daartoe als volgt.</para>
+        <para> Het College stelt voorop dat het begrip "rechtstreeks" in de definitie, vervat in artikel 1:2, eerste lid, van de Awb, accentueert dat er in voldoende mate een onlosmakelijk en direct verband moet bestaan tussen het persoonlijk belang, waarin betrokkene zich getroffen acht, en de beslissing die daaraan debet zou zijn. In de situatie van appellant kan evenwel niet met vrucht staande worden gehouden, dat de bij zijn woning optredende overlast het rechtstreeks - in vorenbedoelde zin - gevolg is van het vaststellingsbesluit. Het betreft hier, blijkens de stukken, een drukke, voor alle verkeer openstaande, openbare weg, die ook intensief wordt gebruikt door auto-, (ander) autobus- en vrachtverkeer, dat niet wordt gereguleerd door de bestreden dienstregeling. Niet is gesteld dat de onderhavige dienstregeling een zodanige wijziging heeft ondergaan, dat de door de verkeersintensiteit ondervonden overlast daardoor in doorslaggevende mate is toegenomen. Onder deze omstandigheden komt aan bedoeld besluit met betrekking tot de door appellant ondervonden overlast geen zodanig zelfstandige betekenis toe, dat op grond daarvan geoordeeld kan worden dat appellant daardoor rechtstreeks is getroffen in zijn belang om van die overlast zoveel mogelijk gevrijwaard te blijven."</para>
+      </parablock>
+      <para/>
+      <para>De president is van oordeel dat het in het geval van verzoekers anders ligt. Weliswaar bevindt zich in de nabijheid van de woningen van verzoekers de doorgaande provinciale weg N[…], maar gelet op het ter zitting geproduceerde kaart- en fotomateriaal, de daarbij gegeven toelichtingen, zulks in samenhang bezien met de specifieke functie die de geprojecteerde, verlengde, bushalte zal vervullen, acht de president voorshands aannemelijk dat de aan verzoekers aldus toe te voegen overlast - onder meer bestaande in geluidshinder en verstoring van hun vrije uitzicht - substantieel zal zijn. Daarmee is, gelet op de hiervoor aangehaalde jurisprudentie van het College, naar voorlopig oordeel, gegeven dat verzoekers aldus door de vaststelling van dit onderdeel van de dienstregeling rechtstreeks in hun belangen worden getroffen.</para>
+      <para/>
+      <para> Uit het voorgaande volgt dat verweerders onder deze omstandigheden verzoekers vanaf het moment dat de vervoerder te kennen gaf dat hij deze nieuwe halte op de gewraakte locatie wilde inleggen als belanghebbenden hadden moeten herkennen en behandelen. Dat hebben verweerders, uitgaande van hun te beperkte opvatting omtrent de inhoud van de vaststelling van de dienstregeling - waarbij, ook blijkens de geschiedenis van de totstandkoming van de Wet (MvT, TK, 1984-1985, 18985, nrs. 1-3, artikelsgewijze toelichting bij de toenmalige artikelen 58 en 59) ook de bepaling van halteplaatsen aan de orde kan komen - voor zover het de locatie "Hulsberg Centrum" betreft, niet gedaan.</para>
+      <para/>
+      <para> Het voorgaande voert tot de conclusie dat de belangen van verzoekers bij het voorbereiden en nemen van het besluit van 28 april 1998 onbelicht zijn gebleven.</para>
+      <para/>
+      <para> Gelet op de door verweerders in het bestreden besluit ontvouwde redenering zou het, uitgaande van hun opvatting, in de rede hebben gelegen dat zij verzoekers (toen bezwaarden) deswege niet-ontvankelijk zouden hebben verklaard. Verweerders hebben de bezwaren evenwel ongegrond verklaard, hetgeen op zichzelf weer een aanwijzing zou kunnen zijn dat op dit punt niettemin enige inhoudelijke beoordeling aan het bestreden besluit ten grondslag heeft gelegen. Het verhandelde ter zitting en de inhoud van de ten overvloede aan het bestreden besluit ten grondslag gelegde overweging geven mede voedsel aan deze gedachte. Met betrekking tot de wijze waarop verweerders de voor het verrichten van die beoordeling noodzakelijke gegevens hebben verzameld overweegt de president als volgt.</para>
+      <para/>
+      <para>Verweerders hebben, naar uit de stukken valt af te leiden, kennelijk wel de specifieke omstandigheden ter plaatse beoordeeld maar hebben, naar zij ter zitting hebben medegedeeld, zich daarbij uitsluitend laten voorlichten door ambtenaren van de gemeente Nuth die, aldus verweerders, zouden hebben verklaard dat er geen problemen te verwachten waren over de aanleg van de nieuwe bushalte.</para>
+      <para/>
+      <para>Een zodanige wijze van voorbereiding doet hier echter onvoldoende recht wedervaren aan het - in artikel 19, tweede lid, van de Wet weerspiegelde - vereiste dat besluiten met de nodige zorgvuldigheid worden voorbereid en genomen.</para>
+      <para/>
+      <para>In de bezwaarschriftfase zijn verweerders er, naar voorlopig oordeel, niet voldoende in geslaagd de op dit punt aan de voorbereiding van het besluit van 28 april 1998 klevende gebreken te herstellen.</para>
+      <para/>
+      <para>Vaststaat immers dat verzoekers eerst daags voor het houden van de hoorzitting opmerkzaam zijn gemaakt op het feit dat die zou plaatsvinden en dat zij pas toen hebben kunnen constateren dat op diezelfde dag de termijn verstreek waarbinnen de stukken konden worden ingezien.</para>
+      <para/>
+      <para>Zelfs als zou moeten worden aangenomen dat in feite mogelijk een deel van de nadelige effecten voortvloeiend uit de onvoldoende zorgvuldige voorbereiding van het besluit van 28 april 1998, tijdens de bezwaarschriftprocedure zou zijn geneutraliseerd, dan nog moet bepaald niet uitgesloten worden geacht dat verzoekers door de gehele gang van zaken in hun belangen zijn geschaad en dat een juiste en tijdige afweging van die belangen - waarvan die betreffende ruimtelijke ordeningsaspecten hier, gelet op het bepaalde bij artikel 4 van de Wet evenzeer een rol kunnen spelen - op enigerlei wijze een voor verzoekers gunstiger besluit zou hebben opgeleverd.</para>
+      <para/>
+      <para>Gelet op het vorenoverwogenen ziet de president aanleiding een voorziening te treffen als na te melden.</para>
+      <para/>
+      <para>De president acht voorts aangaande de proceskosten termen aanwezig voor nadere beslissingen als hierna in het dictum van deze uitspraak vermeld.</para>
+      <para/>
+      <para/>
+      <para> 6. Beslissing</para>
+      <para/>
+      <para>De president:</para>
+      <para/>
+      <parablock>
+        <para>- schorst het besluit van verweerders van 28 april 1998 tot vaststelling van de dienstregeling 1998-1999 van Hermes Openbaar Vervoer B.V. te Weert, voor het verrichten van interlokaal openbaar vervoer, zoals gehandhaafd bij het besluit van verweerders van 21 juli 1998, voor zover dit besluit de aanwijzing inhoudt van de locatie van een nieuwe bushalte "Hulsberg centrum" aan de provinciale weg N[…] tegenover, c.q. schuin tegenover de woningen van verzoekers sub 1 tot en met 4 en voorzover daarmee verband houdt de wijziging van de dienstregeling van de buslijnen 36, 50, 52 en 63 ten opzichte van de betreffende dienstregeling geldend tot 24 mei 1998;</para>
+        <para>- - bepaalt dat eerderbedoelde buslijnen gebruik blijven maken van de bushaltes in Hulsberg als voorzien in laatstgenoemde dienstregeling;</para>
+        <para>- bepaalt dat deze voorzieningen vervallen, nadat op het beroep in hoofdzaak is beslist, of zoveel eerder als het geschil op een andere wijze tot een einde is gekomen;</para>
+        <para>-  gelast dat de Provincie Limburg aan verzoekers sub 1 tot en met 4 het door hen gestorte griffierecht ad fl. 210,- (zegge: tweehonderd en tien gulden) terugbetaalt;</para>
+        <para>- veroordeelt verweerders tot vergoeding aan verzoekers van de kosten van deze procedure, begroot op fl. 786,10 (zegge: zevenhonderdzesentachtig gulden en tien cent) en wijst de Provincie Limburg aan als de rechtspersoon die dit bedrag moet vergoeden;</para>
+        <para>- wijst het door verzoekers sub 1 tot en met 4 anders of meer gevorderde af;</para>
+        <para>- wijst het verzoek om voorlopige voorziening van verzoeker sub 5 af.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para/>
+      <parablock>
+        <para> Aldus gewezen door mr R.R. Winter, fungerend president, </para>
+        <para>in aanwezigheid van mr M.M. Smorenburg, als griffier, </para>
+        <para>en uitgesproken in het openbaar op 18 november 1998.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para> w.g. R.R. Winter                                       w.g. M.M. Smorenburg</para>
+    </uitspraak>
+</open-rechtspraak>

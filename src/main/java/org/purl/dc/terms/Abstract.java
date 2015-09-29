@@ -8,6 +8,8 @@
 
 package org.purl.dc.terms;
 
+import com.google.gson.annotations.SerializedName;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -17,9 +19,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for anonymous complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType>
  *   &lt;complexContent>
@@ -29,8 +31,6 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "")
@@ -39,13 +39,16 @@ public class Abstract {
     @XmlAttribute(name = "resourceIdentifier", required = true)
     protected String resourceIdentifier;
 
+    protected String abstractXml;
+
+    @SerializedName("@value")
+    private String abstractSimple;
+
     /**
      * Gets the value of the resourceIdentifier property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getResourceIdentifier() {
         return resourceIdentifier;
@@ -53,14 +56,27 @@ public class Abstract {
 
     /**
      * Sets the value of the resourceIdentifier property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setResourceIdentifier(String value) {
         this.resourceIdentifier = value;
     }
 
+    public void setAbstractXml(String anAbstract) {
+        this.abstractXml = anAbstract;
+    }
+
+    public String getAbstractXml() {
+        return abstractXml;
+    }
+
+    public void setAbstractSimple(String abstractSimple) {
+        this.abstractSimple = abstractSimple;
+    }
+
+    public String getAbstractSimple() {
+        return abstractSimple;
+    }
 }

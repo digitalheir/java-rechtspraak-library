@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:tr="http://tuchtrecht.overheid.nl/" xmlns:eu="http://publications.europa.eu/celex/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:CBB:2000:AA9101</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2014-04-21T04:30:44</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">AA9101</dcterms:replaces>
+      <dcterms:replaces rdfs:label="Vervangt">AN6576</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/College_van_Beroep_voor_het_bedrijfsleven" scheme="overheid.RechterlijkeMacht">College van Beroep voor het bedrijfsleven</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">2000-11-28</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">AWB 98/226</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#eersteAanlegMeervoudig">Eerste aanleg - meervoudig</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht">Bestuursrecht</dcterms:subject>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0005537&amp;artikel=3:4&amp;g=2000-11-28">Algemene wet bestuursrecht 3:4</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0005537&amp;artikel=7:13&amp;g=2000-11-28">Algemene wet bestuursrecht 7:13</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0007820&amp;g=2000-11-28">Besluit bescherming tegen bepaalde zoönosen en bestrijding besmettelijke dierziekten</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0005662&amp;artikel=86&amp;g=2000-11-28">Gezondheids- en welzijnswet voor dieren 86</dcterms:references>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+          <rdf:li>AB 2001, 45 met annotatie door J.H. Veen</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:2000:AA9101">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:2000:AA9101</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-04T16:17:11</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2003-01-09</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:CBB:2000:AA9101 College van Beroep voor het bedrijfsleven , 28-11-2000 / AWB 98/226</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:CBB:2000:AA9101:INH" lang="nl" xml:space="preserve">
+      <para>-</para>
+    </inhoudsindicatie>
+  <uitspraak xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:CBB:2000:AA9101:DOC" lang="nl" xml:space="preserve">
+      <para>College van Beroep voor het bedrijfsleven</para>
+      <para/>
+      <para/>
+      <parablock>
+        <para>No. AWB 98/226						28 november 2000</para>
+        <para>	11200</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para/>
+      <para>Uitspraak in de zaak van:</para>
+      <para/>
+      <parablock>
+        <para>A, appellant,</para>
+        <para>gemachtigde: mr J.A.J.H. van Houtum, werkzaam bij de Stichting Rechtsbijstand te Tilburg,</para>
+        <para>tegen</para>
+        <para>de Minister van Landbouw, Natuurbeheer en Visserij, te 's-Gravenhage, verweerder,</para>
+        <para>gemachtigden: mr G. de Goede, werkzaam bij verweerder.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para/>
+      <para/>
+      <parablock>
+        <para>1.	De procedure</para>
+        <para>Op 19 maart 1998 heeft het College van appellant een beroepschrift ontvangen, waarbij beroep wordt ingesteld tegen een besluit van verweerder van 10 februari 1998.</para>
+        <para>Bij dat besluit heeft verweerder beslist op het bezwaar dat appellant heeft gemaakt tegen de beslissing waarbij een tegemoetkoming in de schade als bedoeld in artikel 86 van de Gezondheids- en welzijnswet voor dieren is vastgesteld, na verlaging van het berekende bedrag met 70%.</para>
+        <para>Verweerder heeft op 28 mei 1998 een verweerschrift ingediend.</para>
+        <para>Op 11 juli 2000 heeft het onderzoek ter zitting plaatsgevonden, waarbij verweerder zijn standpunt nader heeft toegelicht. Appellant heeft, zoals hij voorafgaand had bericht, zich niet ter zitting doen vertegenwoordigen.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>2.	De grondslag van het geschil</para>
+        <para>2.1	Regelgeving</para>
+        <para>Gezondheids- en welzijnswet voor dieren, zoals deze laatstelijk is gewijzigd bij Wet van 6 februari 1997, Stb. 630 (hierna: GWD)</para>
+        <para>"	Artikel 21</para>
+        <para>	1. Een door Onze minister aangewezen ambtenaar deelt de burgemeester (.) zo spoedig mogelijk mede welke maatregelen tot bestrijding van de ziekte door hem nodig worden geacht.</para>
+        <para>	2. De burgemeester neemt de nodig geachte maatregelen zo spoedig mogelijk.</para>
+        <para>	3. In spoedeisende gevallen neemt de in het eerste lid bedoelde ambtenaar deze maatregelen zelf en stelt hij de burgemeester daarvan onmiddellijk in kennis.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>	Artikel 22</para>
+        <para>	1. De in artikel 21 bedoelde maatregelen kunnen zijn:</para>
+        <para>	(.)</para>
+        <para>	f. het doden van zieke en verdachte dieren;</para>
+        <para>	g. het onschadelijk maken van gedode of gestorven, zieke en verdachte dieren, en van produkten en voorwerpen, die besmet zijn of ervan worden verdacht gevaar op te leveren voor de verspreiding van smetstof;</para>
+        <para>	(.)</para>
+        <para>	2. (.)</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>	Artikel 86</para>
+        <para>	1. Uit 's Rijks kas wordt aan de eigenaar een tegemoetkoming in de schade uitgekeerd, indien:</para>
+        <para>	a. dieren krachtens het bepaalde in artikel 22, eerste lid, onderdeel f, worden gedood;</para>
+        <para>	b. produkten en voorwerpen krachtens het bepaalde in artikel 22, eerste lid, onderdeel g, onschadelijk worden gemaakt;</para>
+        <para>	c. maatregelen krachtens het bepaalde in artikel 22, tweede lid,  onderdeel f en g, zijn toegepast.</para>
+        <para>	2. De tegemoetkoming in de schade bedraagt:</para>
+        <para>	a. voor verdachte dieren: de waarde in gezonde toestand,</para>
+        <para>	b. voor zieke dieren: het bij algemene maatregel van bestuur te bepalen gedeelte van de waarde in gezonde toestand,</para>
+        <para>	c. voor produkten en voorwerpen: de waarde op het moment van de maatregel, met dien verstande, dat het aldus bepaalde bedrag met bij algemene maatregel van bestuur vast te stellen percentages kan worden verlaagd. Deze percentages verschillen naar gelang aan de in de laatste zinsnede bedoelde maatregel gestelde eisen ter zake van de inrichting van het bedrijf is voldaan en door de eigenaar in die maatregel bedoelde maatregelen zijn genomen om de </para>
+        <para>gezondheid van de dieren op het bedrijf te waarborgen.</para>
+        <para>	(.)</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>	Artikel 91</para>
+        <para>	Schade veroorzaakt door de toepassing van maatregelen, als bedoeld in artikel 17 of 21, kan voor zover deze niet uit hoofde van de artikelen 86 of 90 voor vergoeding in aanmerking komt, in door Onze Minister te bepalen bijzondere </para>
+        <para>gevallen geheel of gedeeltelijk uit 's Rijks kas worden vergoed."</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Besluit bescherming tegen bepaalde zo”nosen en bestrijding besmettelijke dierziekten, Stb. 1996, 156 (hierna: het Besluit)</para>
+        <para>"	Artikel 8</para>
+        <para>	1. De in artikel 86, tweede lid, onderdeel c, van de wet bedoelde percentages tot verlaging van de tegemoetkoming in de schade bedragen bij het uitbreken van varkenspest bij varkens:</para>
+        <para>	a. indien op een bedrijf varkens afkomstig van vier of meer andere bedrijven aanwezig zijn: 35%;</para>
+        <para>	b. indien de houder op de eerste vordering van een aangewezen ambtenaar niet kan aantonen van welke bedrijven de op zijn bedrijf aanwezige varkens afkomstig zijn: 100%;</para>
+        <para>	c. indien door een  aangewezen ambtenaar is geconstateerd dat niet alle varkens op het bedrijf overeenkomstig de door bedrijfslichamen als bedoeld in artikel 66 Wet op de Bedrijfsorganisatie vastgestelde regelen of overeenkomstig het bepaalde bij of krachtens artikel 9 Veewet, behoudens het geval waarin artikel 9a, tweede lid, Veewet van toepassing is, of artikel 96 van de wet van een merk zijn voorzien of zijn geregistreerd: 35%;</para>
+        <para>	d. (. tot en met i .)</para>
+        <para>	2. Voor de bepaling of de in het eerste lid, onderdeel a of b, bedoelde situatie zich voordoet, worden varkens waarvan de houder op eerste vordering van een aangewezen ambtenaar aantoont dat zij langer dan vier maanden </para>
+        <para>ononderbroken op zijn bedrijf aanwezig zijn, buiten beschouwing gelaten.</para>
+        <para>	3. Indien op een bedrijf meer dan een der onderdelen a tot en met i van het eerste lid van toepassing zijn, worden de toepasselijke percentages bij elkaar opgeteld tot een maximum van 100."</para>
+      </parablock>
+      <para/>
+      <para>Verordening van het Landbouwschap inzake de identificatie en registratie van varkens 1995, PBO-blad, jaargang 45, nummer 83, L67, 29 december 1995 (hierna: I&amp;R-verordening).</para>
+      <para/>
+      <para/>
+      <para/>
+      <parablock>
+        <para>"	Artikel 9</para>
+        <para>	1. De ondernemer is verplicht binnen 2 werkdagen alle mutaties in zijn varkensstapel met uitzondering van geboorten, aan het I &amp; R bureau te melden.</para>
+        <para>	2. Het melden wordt volledig en naar waarheid gedaan volgens de door de Afdeling te stellen regels en heeft in ieder geval betrekking op:</para>
+        <para>	a. het UBN van betrokken vestiging;</para>
+        <para>	b. het UBN van de vestiging of van het bedrijf waaraan afgestaan of waarvan ontvangen is;</para>
+        <para>	c. indien dit afwijkt van de in onderdeel b. bedoelde UBN's, het nummer op het merk dat is aangebracht op het  varken waarop de mutatie betrekking heeft;</para>
+        <para>	d. het aantal varkens en de soort varkens waarop de mutatie betrekking heeft;</para>
+        <para>	e. de datum van mutatie;</para>
+        <para>	f. in voorkomend geval het nummers van het gezondheidscertificaat; en</para>
+        <para>	g. de wijze van vervoer."</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>2.2	De vaststaande feiten</para>
+        <para>Op grond van de stukken en het onderzoek ter zitting zijn in deze zaak de volgende feiten en omstandigheden voor het College komen vast te staan.</para>
+        <para>-	Het bedrijf van appellant is in verband met de uitbraak van klassieke varkenspest besmet verklaard.</para>
+        <para>-	Op 27 februari 1997 is de varkensstapel van appellants bedrijf getaxeerd en vervolgens is het bedrijf geruimd.</para>
+        <para>-	Blijkens een rapport van 4 maart 1997 heeft de Algemene Inspectiedienst van verweerders ministerie (hierna: AID) ten behoeve van de schaderegeling op </para>
+        <para>appellants bedrijf een onderzoek ingesteld naar de naleving van voor dat bedrijf geldende voorschriften, als bedoeld in artikel 8 van het Besluit. Uit dat onderzoek blijkt dat op het bedrijf van appellant van meer dan 3 andere varkenshouderijen varkens zijn aangevoerd (op respectievelijk 4 november 1996, 12 december 1996, 27 december 1996 en 4 februari 1997) en dat appellant enkele malen de aanvoer van varkens niet binnen 2 werkdagen heeft gemeld aan het I &amp; R bureau.</para>
+        <para>-	Bij besluit van 18 maart 1997 heeft verweerder appellant - zakelijk weergegeven - meegedeeld dat op grond van dat onderzoek op het bedrag van de getaxeerde waarde van de varkensstapel een korting van 70% is toegepast en dat appellant als tegemoetkoming in de schade een bedrag van fl. 31.045,84 zal worden uitbetaald.</para>
+        <para>-	Op het hiertegen gemaakte bezwaar heeft verweerder het bestreden besluit genomen.</para>
+        <para>3.	Het bestreden besluit</para>
+        <para>3.1 Verweerder heeft bij het bestreden besluit het bezwaar van appellant tegen de verlaging van 70% van de tegemoetkoming in de schade ongegrond verklaard.</para>
+        <para>3.2 De overwegingen van verweerder ten aanzien van de bezwaren van appellant tegen de verlaging van de tegemoetkoming, voorzover die verlaging haar grond vindt in het bepaalde bij artikel 86, tweede lid, GWD juncto artikel 8, eerste lid, onder c, van het Besluit wegens een aantal malen niet melden van de aanvoer van varkens bij het I&amp;R bureau Varkens zijn, voorzover hier van belang, gelijkluidend aan die welke verweerder ten grondslag heeft gelegd aan zijn beslissing op het bezwaar dat ter beoordeling stond in de - aan partijen door het College toegezonden - uitspraak AWB 97/1599. Deze beslissing is aan die uitspraak gehecht en wordt geacht daarvan deel uit te maken, zodat het College voor de overwegingen van verweerder ten aanzien van bedoelde bezwaren naar de inhoud van genoemde uitspraak verwijst.</para>
+        <para>3.3 De overwegingen die verweerder ten grondslag heeft gelegd aan zijn beslissing tot ongegrondverklaring van appellants bezwaren tegen de taxatie en tegen de verlaging van de tegemoetkoming in de schade voorzover die haar grond vindt in het bepaalde bij artikel 86, tweede lid, GWD juncto artikel 8, eerste lid, onder a, van het Besluit juncto artikel 8, derde lid, van het Besluit, luiden, voorzover hier van belang, als volgt:</para>
+        <para>"	Op grond van artikel 87 van de Wet zijn Uw varkens, alvorens te worden gedood, en de voorwerpen en producten, alvorens te worden vernietigd, gewaardeerd. Zoals dit is voorgeschreven in artikel 88, eerste lid, van de Wet, is de waardevaststelling uitgevoerd door een be‰digd deskundige. Deze was vergezeld van een medewerker van de Rijksdienst voor de keuring van vee en vlees (hierna te noemen: de RVV). Uw varkens en voorwerpen en producten zijn gewaardeerd naar de omstandigheden van Uw bedrijf en de specifieke kenmerken van de varkens en voorwerpen en producten.</para>
+        <para>U heeft de waardevaststelling ondertekend. Daarmee heeft U ingestemd met de vastgestelde waarde en afgezien van inschakeling van de kantonrechter om een hertaxatie te laten uitvoeren, zoals voorzien in artikel 88, tweede lid, van de Wet.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>U heeft in Uw bezwaarschrift gesteld dat U zich niet kunt verenigen met de waardevaststelling, dat U zich niet bewust was van hetgeen U ondertekende omdat U zich in een emotionele toestand bevond en dat U min of meer gedwongen de taxatie voor akkoord heeft getekend. Hierover merk ik het volgende op.</para>
+        <para>Mij is niet gebleken dat de taxatie op een onjuiste wijze heeft plaatsgevonden. </para>
+        <para>Zoals gezegd, is de taxatie uitgevoerd door een daartoe be‰digd deskundige, die door ervaring en kennis op juiste wijze de waarde van de op Uw bedrijf aanwezige varkens en voorwerpen en producten heeft vastgesteld. Mij is niet gebleken dat de taxatie procedureel of inhoudelijk onjuist is geschied. </para>
+        <para>Overigens heeft U in Uw bezwaarschrift niet concreet aangegeven waarom de waardevaststelling niet juist zou zijn, doch heeft U zich beperkt tot een algemene stelling.</para>
+        <para>Het is voorstelbaar dat U zich ten tijde van de taxatie in een emotionele toestand bevond. Mij is echter niet gebleken dat deze toestand dermate ernstig was, dat U ten aanzien van de vastgestelde waarde en de ondertekening, waarbij U zich akkoord verklaarde met deze vastgestelde waarde, niet Uw wil kon bepalen en zich niet bewust was van de situatie. Daarbij neem ik in aanmerking dat op grond van de regelgeving en op grond van het feit dat taxatie ten behoeve van een tegemoetkoming in de schade reeds enige jaren </para>
+        <para>praktijk is, het als algemeen bekend mag worden verondersteld dat men zich niet hoeft neer te leggen bij een (eerste) taxatie.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Ook U had op de hoogte kunnen zijn, althans op de hoogte behoren te zijn, dat ten tijde van de taxatie bezwaar kan worden gemaakt tegen de vastgestelde waarde en dat in dat geval de kantonrechter ingeschakeld wordt.</para>
+        <para>De juistheid van Uw stelling dat U (anderszins) min of meer gedwongen werd de waarde vaststelling voor akkoord te tekenen is door U niet aannemelijk gemaakt. Evenmin is dit mij op enigerlei wijze gebleken.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>U heeft verzocht alsnog de kantonrechter in te schakelen voor een hertaxatie. </para>
+        <para>Aan dit verzoek kan echter niet tegemoet worden gekomen. U heeft immers door ondertekening zonder voorbehoud ten aanzien van de waardevaststelling genoegen genomen met de aldus bepaalde waarde. Inschakeling van de kantonrechter ten behoeve van een hertaxatie is derhalve niet aan de orde.</para>
+      </parablock>
+      <para/>
+      <para>Tegemoetkoming in de schade en de toegepaste korting</para>
+      <para/>
+      <para>Een gesloten systeem van tegemoetkomingen.</para>
+      <para/>
+      <para>De Wet kent een gesloten systeem van tegemoetkomingen in de schade. De wetgever heeft beoogd slechts een beperkt aantal vormen van schade voor een tegemoetkoming in aanmerking te doen komen. Deze zijn concreet omschreven in de bepalingen omtrent tegemoetkomingen in de schade in de Wet, zijnde de artikelen 85 tot en met 90. Ten aanzien van andere vormen van voorzienbare schade heeft de wetgever de bedoeling gehad dat deze in principe niet uit 's Rijks kas worden vergoed.</para>
+      <para/>
+      <para>(.)</para>
+      <para/>
+      <para/>
+      <para>De schadevergoeding zoals deze aan U wordt uitgekeerd, is niet meer dan een tegemoetkoming in de door U geleden schade. Indien Uw bedrijf de schade die niet door mij vergoed wordt niet kan dragen, is dat een omstandigheid die voor Uw rekening komt. Ten aanzien van de uitingen van bewindslieden merk ik op, dat aan U geen concrete toezeggingen zijn gedaan dat Uw schade geheel vergoed zou worden. Van enig opgewekt vertrouwen dat gehonoreerd dient te worden is in Uw geval dan ook geen sprake.</para>
+      <para/>
+      <para>(.)</para>
+      <para/>
+      <parablock>
+        <para>U wijst in Uw bezwaarschrift op de tekst van het tweede lid van artikel 86 van de Wet en betoogt dat het opleggen van een korting een discretionarie bevoegdheid van de minister is. Naar Uw mening dient, alvorens een korting op te leggen, de afweging te worden gemaakt in hoeverre een korting redelijk en billijk moet worden geacht en zo ja, hoe groot die korting onder de gegeven </para>
+        <para>omstandigheden mag zijn. De in het besluit genoemde percentages zouden maximumpercentages zijn.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Uw stellingen acht ik niet juist. Hoewel in de formulering van het tweede lid van artikel 86 van de Wet het woord "kan" is gebruikt, heeft deze formulering niet de betekenis van een discretionarie bevoegdheid van de minister die in zou houden dat in elk individueel geval zou mogen of zou moeten worden gewogen of een korting wel of niet wordt toegepast. De bepaling dient zo te worden gelezen, dat als het noodzakelijk wordt geacht dat bij een bepaalde besmettelijke dierziekte een korting op de tegemoetkoming wordt toegepast, de </para>
+        <para>wetgever heeft gemeend dat dit dan bij algemene maatregel van bestuur dient te worden geregeld. Door het vaststellen van een algemene maatregel van bestuur (in casu het Besluit) is gebruik gemaakt van voornoemde bevoegdheid, zodat in de daarin genoemde gevallen deze korting toegepast moet worden.</para>
+      </parablock>
+      <para/>
+      <para>(.)</para>
+      <para/>
+      <para>Is eenmaal besloten tot de introductie van een kortingsregime, dan dienen de in de algemene maatregel van bestuur bepaalde kortingen in de in de algemene maatregel van bestuur bepaalde gevallen onverkort te worden toegepast. De algemene maatregel van bestuur biedt geen ruimte tot individuele afweging.</para>
+      <para/>
+      <para>(.)</para>
+      <para/>
+      <para>E‚n van de in het Besluit genoemde maatregelen waarvan het belang zo groot is dat de naleving wordt versterkt door de toepassing van een kortings-percentage, is het identificeren en registreren van de varkens.</para>
+      <para/>
+      <para>(.)</para>
+      <para/>
+      <para/>
+      <parablock>
+        <para>Het voorgaande geldt eveneens voor het opleggen van een korting indien op het bedrijf varkens aanwezig zijn afkomstig van vier of meer verschillende bedrijven. Contacten tussen varkens van verschillende bedrijven is de belangrijkste besmettings- en verspreidingsbron van varkenspest. Met het opleggen van een korting wordt het verhoogde risico dat gepaard gaat met het aanvoeren van varkens van meer dan een bepaald aantal bedrijven, gedragen </para>
+        <para>door degene die een dergelijk risico neemt. Hiermee wordt de varkenshouder gestimuleerd om van maximaal drie bedrijven varkens te betrekken.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Evenredigheid van het kortingsregime.</para>
+        <para>U acht de kortingen van 35-70%, zoals deze worden toegepast op grond van artikel 8 van het Besluit, onevenredig. U acht artikel 8 van het Besluit in strijd met hetgeen de formele wetgever in artikel 86 van de Wet heeft beoogd, nu de kortingsbepalingen ongenuanceerd en niet wezenlijk gedifferentieerd zouden </para>
+        <para>zijn en een hardheidsclausule ontbreekt. Zoals hierboven reeds is uiteengezet zijn de desbetreffende kortingspercentages dwingend voorgeschreven in een algemene maatregel van bestuur. Het Besluit voorziet niet in de mogelijkheid daarvan af te wijken. Zoals gezegd, dienen de tegemoetkomingen in de schade overeenkomstig de percentages en de gevallen, die in artikel 8 van het Besluit </para>
+        <para>zijn bepaald, te worden gekort. Gelet op het voorgaande zijn Uw verwijzingen naar de uitspraken niet relevant. De door U genoemde jurisprudentie heeft immers betrekking op kortingen die niet bij algemeen verbindend voorschrift waren geregeld.</para>
+        <para>Overigens acht ik het desbetreffende kortingsregime niet onevenredig. Door middel van de kortingen dragen degenen, die door hun handelwijze extra risico veroorzaken met betrekking tot het verspreiden van dierziekten, zelf de consequenties. In artikel 8 van het Besluit wordt in het algemeen de korting hoger naarmate het risico met betrekking tot het verspreiden van dierziekten </para>
+        <para>groter is door de desbetreffende handelwijze of bedrijfsomstandigheden. Zo houden de kortingen onder andere verband met de mate waarin het zogenaamde traceringsonderzoek wordt belemmerd.</para>
+        <para>Evenmin valt in te zien dat het kortingsregime in strijd komt met hetgeen de wetgever in artikel 86 van de Wet heeft beoogd. Daarbij neem ik in aanmerking dat het desbetreffende kortingsregime nagenoeg hetzelfde is als eerder was opgenomen in de Veewet zelf, en dat dit kortingsregime als voorloper op de bepaling onder de huidige Wet in de Veewet was opgenomen. De evenredigheid van het stelsel is derhalve destijds ook beoordeeld door de formele wetgever. Uit de parlementaire geschiedenis van de Wet blijkt niet dat de wetgever een wijziging ten opzichte van de destijds geldende Veewet heeft </para>
+        <para>beoogd. Zoals uit het voorgaande moge blijken, is Uw stelling dat in de Veewet niet was voorzien in een korting op de tegemoetkoming feitelijk onjuist. Ik merk hier nog op dat het kortingsregime, zoals dat is neergelegd in het Besluit, de resultante is van een evaluatie van het onder de Veewet geldende kortingsregime. Deze evaluatie heeft slechts tot kleine aanpassingen geleid van hetgeen onder de Veewet geldend recht was. Bovendien is omtrent het kortingsregime overleg geweest met het georganiseerde bedrijfsleven.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <parablock>
+        <para>Kortingen indien op het bedrijf varkens van vier of meer bedrijven aanwezig zijn.</para>
+        <para>Ingevolge artikel 8, eerste lid, onder a, van het Besluit, wordt de </para>
+        <para>tegemoetkoming in de schade (op grond van artikel 86) met 35% gekort, indien is geconstateerd dat op het bedrijf varkens van vier of meer bedrijven aanwezig zijn. Hierbij geldt op grond van artikel 8, tweede lid, van het Besluit, dat varkens waarvan de houder op eerste vordering van een aangewezen ambtenaar aantoont dat zij langer dan vier maanden ononderbroken op zijn bedrijf aanwezig zijn, buiten beschouwing worden gelaten. Varkens die langer dan 4 </para>
+        <para>maanden op een bedrijf aanwezig zijn spelen geen rol bij de insleep van varkenspest op het bedrijf.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Uit de toelichting op artikel 8, eerste lid, van het Besluit, blijkt dat de kortingsregeling zoals deze was opgenomen in de Veewet, is overgenomen. Dit omvat eveneens de hiervoor vermelde kortingsgrond, zoals bedoeld in artikel 8,</para>
+        <para>eerste lid, onderdeel a, van het Besluit. Uit de Memorie van Toelichting en Memorie van Antwoord van de kortingsregeling in de Veewet (TK 1988-1989, 21 243, nrs 3 en 6) blijkt dat deze kortingsgrond is gebaseerd op de omstandigheid dat varkenspest met name door contacten tussen varkens van verschillende bedrijven verspreid wordt. Het risico op een mogelijke insleep van het varkenspestvirus op het bedrijf wordt groter naarmate er van meer </para>
+        <para>bedrijven varkens worden betrokken. Indien een varkenshouder door van meer dan een bepaald aantal bedrijven varkens te betrekken, dit extra risico neemt met betrekking tot het uitbreken of verspreiden van dierziekten, wordt een deel van de gevolgen van de bestrijding van de dierziekte voor zijn rekening gebracht. Dit wordt gerealiseerd door het opleggen van een 35% korting op de </para>
+        <para>schadeloosstelling. Deze maatregel heeft tevens een preventieve werking aangezien de varkenshouder hierdoor wordt gestimuleerd om zijn varkens te betrekken van een beperkt aantal bedrijven, te weten maximaal drie. Heeft een varkenshouder varkens op zijn bedrijf aanwezig afkomstig van vier of meer bedrijven dan wordt er een korting opgelegd. Het Besluit is naar aanleiding van </para>
+        <para>de evaluatie van de kortingsregeling versoepeld. De evaluatie richtte zich op de praktische haalbaarheid van en de veterinaire risico's die zijn verbonden aan de criteria van de kortingsregeling. Werd onder de Veewet nog een korting opgelegd van 35% indien er op een bedrijf varkens aanwezig zijn van drie bedrijven of meer, waarbij varkens die langer dan zes maanden op het bedrijf </para>
+        <para>aanwezig zijn buiten beschouwing worden gelaten; thans ligt de kortingsgrens bij vier of meer bedrijven en vier maanden.</para>
+        <para>De wetgever heeft blijkens het voorgaande, derhalve zeer bewust de grens bij vier of meer gelegd.</para>
+      </parablock>
+      <para/>
+      <para>(.)</para>
+      <para/>
+      <para>Aangezien U varkens afkomstig van vier bedrijven op Uw bedrijf aanwezig had, is op grond van artikel 8, eerste lid, onder a, van het Besluit, terecht een korting van 35% toegepast op Uw tegemoetkoming in de schade.</para>
+      <para/>
+      <parablock>
+        <para>Aangezien U eveneens niet voldaan heeft aan artikel 9 van de Verordening van het Landbouwschap, is op grond van artikel 8, eerste lid, onder c, van het Besluit eveneens terecht een tweede korting van 35% toegepast op Uw tegemoetkoming in de schade. Op grond van artikel 8, derde lid, van het Besluit zijn de twee voormelde kortingen opgeteld tot een totaal kortingspercentage van 70%.</para>
+        <para>Op grond van artikel 86, tweede lid, van de Wet, juncto artikel 8, eerste lid, onder c, van het Besluit worden kortingen toegepast op het gehele bedrag van de tegemoetkoming in de schade, derhalve ook op de tegemoetkoming in de schade aan producten en voorwerpen. Uw stelling dat ten onrechte een korting op laatstbedoelde tegemoetkoming is toegepast, is derhalve niet juist.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>U heeft gesteld dat in de beslissing betreffende de schadeloosstelling niet is gemotiveerd waarom er tweemaal een korting van 35% werd toegepast.</para>
+        <para>Aangezien echter de kortingspercentages direct uit het Besluit voortvloeien, is een weergave van de door de AID geconstateerde tekortkomingen en een verwijzing naar de toepasselijke bepalingen, alsmede een weergave van het Besluit voldoende motivering van het toepassen van een korting van in totaal 70%. Uw stelling dat de korting van tweemaal 35% niet voldoende is gemotiveerd, acht ik niet gegrond.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>U acht een korting van tweemaal 35% onevenredig in verhouding tot de in Uw geval geconstateerde tekortkomingen, te weten het driemaal niet melden van een aanvoer van varkens en het op het bedrijf aanwezig zijn van varkens afkomstig van vier andere bedrijven.</para>
+        <para>Met betrekking tot de evenredigheid van de toegepaste korting ten algemene merk ik het volgende op. Nadelige gevolgen van besluiten mogen, ingevolge het tweede lid van artikel 3:4 van de Algemene wet bestuursrecht, niet onevenredig zijn in verhouding tot de met het besluit te dienen doelen. Zoals reeds naar voren is gekomen, is het kortingsregime als zodanig niet onevenredig. Het cumulatief toepassen van meer kortingsgronden, zoals in Uw geval, is inherent aan dit systeem.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Met betrekking tot de evenredigheid van de kortingsgrond, zoals bepaald in artikel 8, eerste lid, onderdeel a, van het Besluit (varkens op het bedrijf afkomstig van vier of meer bedrijven), merk ik op dat de wetgever in artikel 8, eerste lid, onderdeel a, van het Besluit, zelf het aantal toeleverende bedrijven heeft bepaald waarbij een korting zal worden toegepast, namelijk bij vier of </para>
+        <para>meer. Dit criterium is geobjectiveerd.</para>
+        <para>Dit wil zeggen dat de subjectieve omstandigheden van het geval niet van belang zijn: maatgevend is slechts het feit ¢f er op het bedrijf varkens zijn afkomstig van vier of meer bedrijven. Is er derhalve sprake van een situatie waarin op een bedrijf varkens aanwezig zijn afkomstig van vier of meer andere bedrijven dan wordt de schadeloosstelling met 35% gekort.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Aangezien echter in het geheel niet is voorzien in een hardheids- of </para>
+        <para>overmachtsclausule, ben ik van mening dat, ondanks het feit dat de </para>
+        <para>desbetreffende regelgeving dwingend voorschrijft dat een korting van 35% dient te worden toegepast indien varkens van vier of meer bedrijven op het bedrijf aanwezig zijn, door mij dient te worden bezien of de toepassing van de korting niet tot zodanige resultaten leidt dat gesproken moet worden van onevenredigheid in de toepassing van de op zichzelf niet onevenredige kortingsgrond, zoals gesteld in artikel 8, eerste lid, onderdeel a, van het Besluit.</para>
+        <para>In Uw geval waren op Uw bedrijf varkens aanwezig afkomstig van vier andere bedrijven. Zoals uit het voorgaande blijkt, is aan het aanhouden van dit door de wetgever bepaalde aantal, geen onevenredigheid te ontlenen. Dermate bijzondere andere omstandigheden die eventueel de conclusie zouden rechtvaardigen dat in strijd met de eis van evenredigheid is gehandeld, zijn gesteld noch gebleken.</para>
+        <para>Ik ben dan ook van mening dat het toepassen van 35% korting op grond van artikel 8, eerste lid, onderdeel a, van het Besluit, op de schadeloosstelling in Uw geval niet in strijd is met de eis van evenredigheid. Ik acht Uw stelling dienaangaande dan ook ongegrond.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Met betrekking tot de kortingsgrond, zoals bepaald in artikel 8, eerste lid, onderdeel c, van het Besluit merk ik het volgende op.</para>
+        <para>Hiervoor is reeds het grote belang van een juiste I &amp; R-registratie die up-to-date is, uiteengezet. Het is daarbij niet van belang dat U, ondanks het niet melden van mutaties, de herkomst van Uw varkens kunt aantonen. Melding op ‚‚n centraal punt is essentieel.</para>
+      </parablock>
+      <para/>
+      <para>(.)</para>
+      <para/>
+      <parablock>
+        <para>Indien er echter sprake is van ‚‚n fout of vergissing waardoor geen melding of een te late melding plaatsvindt, brengt de eis van evenredigheid met zich mee dat geen korting op de schadeloosstelling wordt toegepast. Gelet op de veel voorkomende praktijk dat men ‚‚n keer per week de administratie bijwerkt en daarbij de meldingen deed, leidt het evenredigheidsbeginsel er in de huidige </para>
+        <para>situatie eveneens toe dat geen korting wordt toegepast indien de aanvoer van varkens later dan twee dagen maar binnen ‚‚n week na de aanvoer is gemeld. </para>
+        <para>Wel dienen de vervoersdocumenten van de betreffende transporten in orde te zijn.</para>
+        <para>In Uw geval is er niet sprake van ‚‚n fout, maar is driemaal de aanvoer van varkens door U niet gemeld. Van deze transporten ontbraken tevens op de desbetreffende vervoersdocumenten sommige gegevens.</para>
+      </parablock>
+      <para/>
+      <para>(.)"</para>
+      <para/>
+      <parablock>
+        <para>4.	Het standpunt van appellant</para>
+        <para>4.1 Appellant heeft in zijn beroepschrift tegen het bestreden besluit een groot aantal grieven aangevoerd. Deze grieven hebben onder meer betrekking op procesrechtelijke aspecten van strafrechtelijke en bestuursrechtelijke aard, de uitleg van artikel 86, tweede lid, GWD juncto artikel 8, eerste lid, onder c, van het Besluit, het in verband daarmee toegepaste kortingsstelsel en de opvatting van verweerder over de toepassing van het evenredig-heidsbeginsel en het gelijkheidsbeginsel - dit laatste meer in het bijzonder in verband met het beleid van verweerder ten aanzien van preventief geruimde bedrijven - en de I&amp;R-regeling. Deze grieven zijn naar inhoud en strekking dezelfde als de grieven welke zijn aangevoerd in het beroep dat heeft geleid tot de hiervoor genoemde uitspraak AWB 97/1599. Het desbetreffende beroepschrift - aan partijen bekend - is aan die uitspraak gehecht en maakt daarvan deel uit. Om die reden volstaat het College hier met verwijzing naar die uitspraak voor die grieven en blijft weergave daarvan in deze rubriek achterwege.</para>
+        <para>4.2 Met betrekking tot de verlaging van de tegemoetkoming in de schade van appellant met 70%, en meer in het bijzonder de beslissing van verweerder om toepassing te geven aan het bepaalde bij artikel 8, eerste lid, onder a, van het Besluit en aan artikel 8, derde lid, van het Besluit heeft appellant het volgende, voorzover hier van belang, aangevoerd:</para>
+        <para>"	(.)</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Beweerdelijk zouden op het bedrijf varkens afkomstig zijn van 4 andere bedrijven. Appellant acht een dubbele korting van 2x 35% absoluut onevenredig. De minister toetst feitelijk niet op evenredigheid; hij overweegt (blz 29) dat "moet worden bezien of de toepassing van de korting niet tot zodanige resultaten leidt dat gesproken moet worden van onevenredigheid in de toepassing van de . kortingsgrond . in onderdeel a" maar doet daar vervolgens niets mee. Van enige wezenlijke evenredigheidstoetsing blijkt niets.</para>
+        <para>Schaamteloos beweert de minister dat appellant geen bijzondere </para>
+        <para>omstandigheden zou hebben gesteld.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>In dit verband zij opgemerkt dat verweerder niet consistent is in zijn redeneerwijze. Enerzijds lijkt hij toepassing te geven aan het beginsel van evenredigheid en anderzijds maakt hij inbreuk op dit beginsel. Zo stelt hij: </para>
+        <para>"Uitgaande van de uiteindelijke verantwoordelijkheid van de veehouders om besmetting en verspreiding van varkenspest te voorkomen, worden via de vastgestelde kortingspercentages de tegemoetkomingen in de schade gekort naar de mate waarin de bedrijfsomstandigheden en de bedrijfsvoering van de </para>
+        <para>desbetreffende varkenshouder hebben bijgedragen aan een extra risico voor het verspreiden van de varkenspest.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Tevens wordt met de kortingen voorkomen, dat een tegemoetkoming in de schade in zijn geheel dient te worden betaald aan ondernemers die in onvoldoende mate hun eigen verantwoordelijkheid hebben genomen". Even verder in het besluit stelt verweerder: "In artikel 8 van het Besluit wordt in het algemeen de korting hoger naarmate het risico met betrekking tot het verspreiden van dierziekten groter is door de desbetreffende handelwijze of bedrijfsomstandigheden. Zo houden de kortingen onder andere verband met de mate waarin het zogenaamde traceringsonderzoek wordt belemmerd."</para>
+        <para>Verweerder kan toch moeilijk volhouden dat appellant door het begaan van de geconstateerde overtredingen heeft bijgedragen aan een extra risico voor verspreiding van de varkenspest.</para>
+        <para>Appellant heeft immers, zoals reeds gesteld, voldaan aan nagenoeg alle voor hem geldende voorschriften om de gezondheid van de dieren op zijn bedrijf te waarborgen. Verder waren de varkens op de juiste wijze gemerkt en was het bedrijfsregister naar behoren bijgehouden. Het traceringsonderzoek werd door appellant dan ook niet belemmerd: Eventuele besmette dieren konden zonder problemen worden getraceerd. Overigens beperkt verweerder zich in deze tot een algemene stelling. Hij geeft op geen enkele wijze aan in hoeverre 'het laakbare handelen' van appellant heeft bijgedragen aan frustrering van het </para>
+        <para>tracerings-onderzoek en aan een extra risico voor verspreiding van de varkenspest. Verweerder wordt dezerzijds verweten dat hij geen </para>
+        <para>belangenafweging heeft gemaakt, geen evenredigheidstoets heeft toegepast en aan zijn besluit geen draagkrachtige motivering ten grondslag heeft gelegd."</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Voorts heeft appellant met betrekking tot de meer specifiek voor zijn situatie geldende omstandigheden nog het volgende aangevoerd:</para>
+        <para>"	VI opmerkingen/kanttekeningen en onvolkomenheden in het besluit van de Minister van Landbouw, Natuurbeheer en Visserij d.d. 10.02.1998</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>-blz 5 Ingevolge artikel 21, tweede lid Welzijnswet zou de burgemeester zo spoedig mogelijk de nodig geacht maatregelen moeten nemen.</para>
+        <para>Dat is i.c. niet geschied, de varkenspest is immers feitelijk reeds d.d. 03.02.1997 vastgesteld. Had de burgemeester tijdig maatregelen genomen dan zou appellant d.d. 04.02.1997 geen biggen geleverd gekregen hebben.</para>
+      </parablock>
+      <para/>
+      <para>-blz 12 bij de ruiming was behalve de door de minister genoemde heren Bastiaansen, Osta en Vrielink van RVV een AID ook de heer Westerlaken als be‰digd taxateur aanwezig.</para>
+      <para/>
+      <parablock>
+        <para>-blz 13/14 nogmaals wordt benadrukt dat de ruiming onder emotionele </para>
+        <para>omstandigheden geschiedde. De minister stelt simpelweg dat "niet is gebleken dat de taxatie op een onjuiste wijze heeft plaatsgevonden". Dit is achteraf niet te controleren. Betwist wordt nadrukkelijk dat appellant zou hebben afgezien van inschakeling van een kantonrechter voor hertaxatie.</para>
+        <para>Appellant is bij de taxatie en ruiming geenszins geduid op eventuele hertaxatie door tussenkomst van de kantonrechter.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>-blz 15  Door de heren Bastiaansen en van Osta van de AID werd persoonlijk verklaard dat appellant maximaal 4 herkomsten mocht hebben, aan welk maximum werd voldaan. De echtgenote van appellant alsmede de heer Westerlaken waren hierbij aanwezig. Ook de heer Vrielink bevestigde zulks.</para>
+        <para>'s Middags om ca 16.30 uur belde de AID met de boodschap dat de heren zich vergist hadden en het maximaal 3 herkomsten mochten zijn. Toen was echter het totale bedrijf reeds geruimd. Overigens, over I en R werd niet gesproken. </para>
+        <para>Appellant heeft er recht en belang bij op de uitspraken van RVV en AID te mogen vertrouwen.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>-blz 15-17-18 het bedrijf van C is d.d. 10.02.1998 preventief geruimd. Bij het ministerie was op dat moment bekend dat hij biggen had geleverd aan het bedrijf van appellant; die levering was correct bij I en R gemeld.</para>
+        <para>Evenwel is het bedrijf van appellant op dat moment niet preventief geruimd terwijl op dat moment reeds 2 bedrijven met biggen uit Venhorst besmet waren gebleken, Van Genugten Best en Van de Berg Rijsbergen?!"</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>5.	De beoordeling</para>
+        <para>5.1	Appellant heeft in zijn beroepschrift, naar aanleiding van hetgeen door verweerder in het bestreden besluit is overwogen over zijn bezwaren tegen gang van zaken bij de taxatie, geen nieuwe argumenten naar voren gebracht, doch volstaan met verwijzing naar hetgeen hij in de bezwaarfase naar voren heeft gebracht, onder benadrukking dat de ruiming onder emotionele omstandigheden geschiedde en onder betwisting dat appellant zou hebben afgezien van hertaxatie. </para>
+        <para>Het College ziet in hetgeen appellant heeft aangevoerd geen aanknopingspunt voor het oordeel dat verweerder zich in het bestreden besluit ten onrechte op het standpunt heeft gesteld dat appellants bezwaren op dit punt ongegrond zijn. In verband met de ondertekening door appellant van het taxatieformulier moet er van worden uitgegaan dat hij genoegen heeft genomen met de waardevaststelling. Appellant heeft geen feiten of omstandigheden aangevoerd, op grond waarvan kan worden aangenomen dat hij destijds niet bij machte was zijn wil te bepalen.</para>
+        <para>5.2	De grieven van algemene aard van appellant, welke samenhangen met zijn stelling dat de in artikel 86, tweede lid, GWD neergelegde bevoegdheid tot verlaging van de tegemoetkoming, bedoeld in het tweede lid van dat artikel, het opleggen van een punitieve sanctie betreft, verschillen inhoudelijk niet van de desbetreffende grieven die o.m. in de hiervoor genoemde zaak 97/1599 zijn aangevoerd. Deze grieven zijn door het College in de uitspraak in genoemde zaak verworpen. Het College ziet in hetgeen appellant heeft aangevoerd op dit punt, geen grond om van  het aldaar - met name onder 5.2 in genoemde uitspraak - overwogene terug te komen.</para>
+        <para>Ook de grieven van algemene aard, die appellant heeft aangevoerd inzake de verbindendheid van artikel 8, eerste lid, van het Besluit en van de voorschriften waarnaar in die bepaling wordt verwezen, zijn  in de meergenoemde zaak 97/1599 aan de orde geweest en zijn door het College verworpen. Het College verwijst daartoe naar het overwogene onder 5.3.1 en - inzake de verbindendheid van de I&amp;R-Verordening - naar het overwogene onder 5.3.2 van die uitspraak. </para>
+        <para>Ditzelfde geldt voor het beroep op het gelijkheidsbeginsel dat appellant heeft gedaan in verband met het feit dat verweerder bij de toepassing van de kortingsbevoegdheid een onderscheid heeft gemaakt tussen preventief en besmet geruimde bedrijven. Het College verwijst voor zijn overwegingen dienaangaande naar rubriek 5.5.1 en 5.5.2 van genoemde uitspraak.</para>
+        <para>5.3	Derhalve komt het College thans toe aan de bespreking van appellants grieven die betrekking hebben op de uitvoering van de toepasselijke voorschriften in zijn geval.</para>
+        <para>Het College stelt voorop dat het, zoals ook is overwogen in onder meer de uitspraak in zaak 97/1599, verweerder niet kan volgen in zijn betoog dat hem niet de bevoegdheid toekomt om per geval te overwegen of een bij en krachtens het bepaalde in artikel 86, tweede lid, GWD voorziene korting daadwerkelijk wordt opgelegd. Zoals het College onder 5.4 van genoemde uitspraak heeft overwogen, is slechts de hoogte van de korting door wet en Besluit sluitend vastgesteld en heeft de wetgever ter mitigering, door de "kan-bepaling" van artikel 86, tweede lid, enige ruimte gelaten om wegens de bijzondere </para>
+        <para>omstandigheden van het geval, van zo'n korting af te zien.</para>
+        <para>Zoals het College in zijn meergenoemde uitspraak heeft overwogen, heeft verweerder, in weerwil van zijn stellingname in het bestreden besluit, bij het toepassen van het kortingsstelsel op de schade ten gevolge van de begin 1997 uitgebroken varkenspest wel degelijk, op onderdelen, een bepaald beleid gevoerd, zoals het beleid inzake het niet toepassen van het kortingsregiem ingeval van preventieve ruiming en het beleid om bij het niet melden van mutaties in de varkensstapel in bepaalde gevallen af te zien van toepassing van de korting. Het College heeft geoordeeld dat deze beleidskeuzen in overeenstemming zijn met het stelsel van de wet.</para>
+        <para>5.4.1	Het College heeft in genoemde uitspraak onder 5.6. geoordeeld dat verweerders beleid inzake de toepassing van het kortingsstelsel ingeval van niet tijdige melding van de mutaties in de varkensstapel de rechterlijke toets kan doorstaan. Appellant heeft in zijn beroep geen andere nieuwe argumenten ter ondersteuning van zijn grieven tegen verweerders beleid ter zake aangevoerd. Het College ziet geen grond om van genoemd oordeel terug te komen.</para>
+        <para>Door appellant is de feitelijke juistheid van verweerders constatering dat hij driemaal de aanvoer van varkens niet heeft gemeld, niet betwist. Gelet op verweerders beleid om slechts in geval van een enkele fout en voorts bij melding binnen een week (in plaats van binnen twee dagen, zoals de I&amp;R regeling voorschrijft) niet tot korting over te gaan, heeft verweerder, wanneer de toepassing van deze categorie op zichzelf wordt bezien, niet ten onrechte geconcludeerd dat in appellants geval de in artikel 8, onder c, van het Besluit voorziene korting diende te worden toegepast.</para>
+        <para>5.4.2	De juistheid van verweerders constatering dat op appellants bedrijf varkens, afkomstig van vier bedrijven, aanwezig waren heeft appellant evenmin betwist. Verweerder heeft overwogen dat de wetgever in artikel 8, eerste lid, aanhef en onder a, van het Besluit voor de daarin voorziene verlaging van 35% de grens zeer bewust bij vier of meer bedrijven heeft gelegd. Gelet hierop heeft verweerder geoordeeld dat de korting van 35% terecht is toegepast in appellants geval.</para>
+        <para>Verweerder heeft vervolgens, blijkens het bestreden besluit, bezien of de toepassing van de korting tot zodanige resultaten leidt dat gesproken moet worden van onevenredigheid en overwogen dat niet van dermate bijzondere omstandigheden is gebleken dat een dergelijke conclusie gerechtvaardigd zou zijn.</para>
+        <para>In het licht van hetgeen door appellant hiertegen is aangevoerd overweegt het College het volgende </para>
+        <para>5.5	Indien de op dit punt bij appellant geconstateerde tekortkoming op zichzelf wordt bezien, is verweerders beleid om de vraag of  van toepassing van de vermindering van 35% in de in meergenoemd artikel 8, eerste lid, onder a, bedoelde gevallen moet worden afgezien slechts bevestigend te beantwoorden indien van bijzondere omstandigheden is gebleken, niet rechtens onaanvaardbaar te achten, en is voorts zijn conclusie dat van zodanige bijzondere omstandigheden niet is gebleken, niet onjuist te achten.</para>
+        <para>Echter, verweerder heeft ten onrechte omtrent de vraag of het tweemaal toepassen van een korting van 35 % niet onevenredig is in verhouding tot het daarmee nagestreefde doel volstaan met de stelling dat het cumulatief toepassen van meer kortingsgronden inherent is aan het door de wetgever gekozen systeem. Dit ontslaat verweerder evenwel niet van de verplichting om na te gaan of  er gronden zijn om, indien zich, zoals hier aan de orde, een situatie voordoet dat het derde lid van artikel 8 van het Besluit in beginsel van toepassing is, ter vermijding van evenbedoelde onevenredigheid van de toepassing van een der onderdelen a of c van het eerste lid van genoemd artikel af te zien.</para>
+        <para>De ruimte die artikel 86, tweede lid, aan verweerder biedt om een beleid dienaangaande te voeren, verplicht hem, zeker bij mogelijke cumulatie, een nadere afweging te maken omtrent de toepassing van - in casu -  meergenoemd onderdeel a of c.</para>
+        <para>Daartoe overweegt het College meer in het bijzonder het volgende.</para>
+        <para>Zoals het College in zijn eerdere uitspraken over deze materie heeft overwogen, is de in het wettelijk systeem gekozen risicoverdeling het resultaat van een globale schatting van de risico's, die ontstaan in de onderscheiden gevallen, bedoeld in de onderdelen a. tot en met i. van artikel 8, eerste lid, van het Besluit. Bij het aldus gekozen systeem is aanvaardbaar te achten, dat binnen een bepaalde categorie, als bedoeld in onderdeel a tot en met i geen verdere differentiatie is aangebracht naar de mate waarin door de betrokken veehouder in afwijking van de in deze artikelonderdelen neergelegde normen is gehandeld. Daarom is het rechtens toelaatbaar geoordeeld, dat bijvoorbeeld de verlaging van de tegemoetkoming, voorzien in onderdeel c van het eerste lid van artikel 8 van het Besluit, bij het in verregaande mate niet voldoen aan de verplichting tot het melden van mutaties met eenzelfde percentage plaatsvindt als in de situatie dat het aantal niet-meldingen net valt binnen de door verweerder in zijn beleid geformuleerde minimum-norm. </para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Gegeven de discretionaire bevoegdheid van verweerder ter zake, valt niet in te zien dat het hiervoor bedoelde wettelijk stelsel zich ertegen verzet dat, in geval van samenloop van twee of meer categorie‰n, als bedoeld in de onderdelen a tot en met i, verweerder bij de afweging of, gelet op de bijzonderheden van het geval, toepassing van de korting onevenredig is, de omstandigheid dat er volgens het per categorie ontwikkelde beleid in beginsel sprake is van de in het derde lid van artikel 8 bedoelde cumulatie, als zwaarwegende omstandigheid betrekt. </para>
+        <para>Het College is voorts van oordeel dat, indien ingevolge het besluit de mogelijkheid van de toepassing van een gecumuleerde korting aan de orde is, verweerder in verband met artikel 3:4, tweede lid, van de Awb dient na te gaan of de ernst van de risico's welke door de onderscheiden overtredingen in het leven worden geroepen, een dergelijke cumulatie kan rechtvaardigen, en dat verweerder bij een besluit, waarbij een gecumuleerde korting wordt </para>
+        <para>opgelegd, een op de omstandigheden van het individuele geval toegesneden motivering geeft.</para>
+        <para>Deze motivering ontbreekt in casu geheel.</para>
+        <para>Het bestreden besluit kan dan ook niet in stand blijven wegens strijd met het bepaalde bij artikel 7:12, eerste lid, Algemene wet bestuursrecht (hierna Awb).</para>
+        <para>5.6 Ook op andere grond dient het bestreden besluit te worden vernietigd. Daartoe overweegt het College het volgende.</para>
+        <para>Wat betreft de totstandkoming van het bestreden besluit is namens appellant aangevoerd dat in strijd met het bepaalde in artikel 7:13, vijfde lid, Awb voor de behandeling van de zaak ter hoorzitting van de adviescommissie niet een vertegenwoordiger van verweerder is uitgenodigd om een toelichting te geven op diens standpunt. </para>
+        <para>Verweerder heeft, zo is in eerdere zaken over dit onderwerp gebleken, nadat enige hoorzittingen in zaken als deze waren gehouden, te kennen heeft gegeven dat de aanwezigheid van een vertegenwoordiger zijnerzijds als regel niet meer zinvol werd geacht, nu de commissie over zijn standpunt voldoende was voorgelicht. Hierop heeft de commissie nog slechts een uitnodiging aan verweerder doen uitgaan indien de bijzondere omstandigheden van het geval daartoe aanleiding gaven.</para>
+        <para>Met appellant is het College van oordeel dat die gedragslijn niet strookt met het in genoemd artikellid neergelegde vormvoorschrift en dat de commissie aldus zichzelf en de indiener van het bezwaar de mogelijkheid heeft onthouden om op de hoorzitting een op de zaak toegespitste mondelinge reactie van verweerder op het bezwaarschrift te vernemen. </para>
+        <para>Gelet op het onder 5.5 overwogene ziet het College, anders dan in, onder meer, zijn genoemde uitspraak 97/1599, geen plaats voor het oordeel dat in dit geval met toepassing van artikel 6:22 Awb vernietiging van het bestreden besluit op deze grond achterwege kan worden gelaten.</para>
+        <para>5.7	Het beroep van appellant is dus gegrond.</para>
+        <para>Het bestreden besluit dient te worden vernietigd, met bepaling dat verweerder opnieuw op het bezwaar van appellant dient te beslissen met inachtneming van hetgeen in deze uitspraak is overwogen.</para>
+        <para>Tevens acht het College termen aanwezig voor een veroordeling van verweerder, met toepassing van artikel 8:75 Awb, in de proceskosten van appellant, welke op de voet van et bepaalde bij het Besluit proceskosten bestuursrecht worden begroot op (1 punt  ad fl. 710,-- voor het indienen van een beroepschrift maal (wegingsfactor: zwaar) 1,5 voor door een derde beroepsmatig verleende rechtsbijstand =:) fl. 1065,-- .</para>
+        <para>Het vorenstaande leidt tot het volgende dictum.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para/>
+      <parablock>
+        <para>6.	De beslissing</para>
+        <para>	Het College: </para>
+        <para>-	verklaart het beroep van appellant gegrond;</para>
+        <para>-	vernietigt het bestreden besluit;</para>
+        <para>-	bepaalt dat verweerder opnieuw op het bezwaarschrift van appellant beslist met inachtneming van het in deze uitspraak overwogene;</para>
+        <para>- bepaalt dat verweerder het door appellant betaalde griffierecht ten bedrage van fl. 210,-- (zegge: tweehonderdtien gulden) aan hem vergoedt;</para>
+        <para>- veroordeelt verweerder in de proceskosten van appellant welke worden vastgesteld op fl. 1065,-- (zegge: eenduizendvijfenzestig gulden);</para>
+        <para>-	wijst de Staat aan als de rechtspersoon die genoemde kosten moet vergoeden;</para>
+        <para>-	wijst af het anders of meer gevorderde. </para>
+      </parablock>
+      <para/>
+      <para>Aldus gewezen door mr B. Verwayen, mr H.C. Cusell en mr M. Vlasblom, in tegenwoordigheid van mr M.M. Smorenburg, als griffier, en uitgesproken in het openbaar op 28 november 2000.</para>
+      <para/>
+      <para/>
+      <para>w.g. B. Verwayen 	de griffier is verhinderd deze uitspraak te ondertekenen</para>
+    </uitspraak>
+</open-rechtspraak>

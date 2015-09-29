@@ -10,11 +10,12 @@ import org.leibnizcenter.helpers.SimpleNamespaceContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.xpath.XPathExpressionException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.HashMap;
 
 /**
  * For quering a particular Rechtspraak XML document.
- * <p/>
+ * <p>
  * Created by maarten on 31-7-15.
  */
 public class DocumentRequest {
@@ -28,25 +29,16 @@ public class DocumentRequest {
      * Client for doing HTTP requests
      */
     private final OkHttpClient httpClient = new OkHttpClient();
+
     {
         httpClient.setFollowRedirects(false);
     }
 
-    public DocumentRequest(String ecli, SearchRequest.ReturnType type) {
-        HttpUrl url = new HttpUrl.Builder()
-                .scheme("http")
-                .host("data.rechtspraak.nl")
-                .addPathSegment("uitspraken")
-                .addPathSegment("content")
-                .addQueryParameter("id", ecli)
-                .addQueryParameter("return", type.toString())
-                .build();
-
+    public DocumentRequest(HttpUrl url, SearchRequest.ReturnType type) {
         request = (new Request.Builder().url(url)).build();
     }
-
-    public DocumentRequest(String ecli) {
-        this(ecli, SearchRequest.ReturnType.DOC);
+    public DocumentRequest(HttpUrl url) {
+        this(url, SearchRequest.ReturnType.DOC);
     }
 
     /**
@@ -56,11 +48,15 @@ public class DocumentRequest {
         return httpClient.newCall(request).execute();
     }
 
-    public OpenRechtspraak execute() throws IOException, XPathExpressionException, JAXBException {
+    public Response execute() throws IOException, XPathExpressionException, JAXBException {
         Response response = getResponse();
         if (response.code() != 200)
-            throw new IllegalStateException("URL " + request.url() + " returned code " + response.code());
-        return RechtspraakNlInterface.parseDocument(response.body().byteStream());
+            throw new IllegalStateException("code " + response.code() + ", URL: " + request.url());
+        return response;
+    }
+
+    public OpenRechtspraak executeAndParse() throws IOException, XPathExpressionException, JAXBException {
+        return RechtspraakNlInterface.parseEcliXml(execute().body().byteStream());
     }
 
     public Request getRequest() {

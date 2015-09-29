@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:tr="http://tuchtrecht.overheid.nl/" xmlns:eu="http://publications.europa.eu/celex/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:CBB:2000:ZG2018</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2015-06-08T22:42:25</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-08</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">ZG2018</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/College_van_Beroep_voor_het_bedrijfsleven" scheme="overheid.RechterlijkeMacht">College van Beroep voor het bedrijfsleven</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">2000-09-08</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">AWB 00/599,AWB 00/658,AWB 00/662,AWB 00/666,AWB 00/670,AWB 00/656,AWB 00/660,AWB 00/664,A en meer...</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#eersteAanlegEnkelvoudig">Eerste aanleg - enkelvoudig</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht">Bestuursrecht</dcterms:subject>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0007214&amp;artikel=3a&amp;g=2000-09-08">Besluit milieutoelatingseisen bestrijdingsmiddelen 3a</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0007214&amp;artikel=5&amp;g=2000-09-08">Besluit milieutoelatingseisen bestrijdingsmiddelen 5</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0007214&amp;artikel=7&amp;g=2000-09-08">Besluit milieutoelatingseisen bestrijdingsmiddelen 7</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0007214&amp;artikel=7&amp;g=2000-09-08">Besluit milieutoelatingseisen bestrijdingsmiddelen 7</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0007214&amp;artikel=7&amp;g=2000-09-08">Besluit milieutoelatingseisen bestrijdingsmiddelen 7</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0007214&amp;artikel=7&amp;g=2000-09-08">Besluit milieutoelatingseisen bestrijdingsmiddelen 7</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0007214&amp;artikel=10&amp;g=2000-09-08">Besluit milieutoelatingseisen bestrijdingsmiddelen 10</dcterms:references>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+          <rdf:li>M en R 2000, 248K</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:2000:ZG2018">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:2000:ZG2018</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-08T15:26:28</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2002-12-12</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:CBB:2000:ZG2018 College van Beroep voor het bedrijfsleven , 08-09-2000 / AWB 00/599,AWB 00/658,AWB 00/662,AWB 00/666,AWB 00/670,AWB 00/656,AWB 00/660,AWB 00/664,A en meer...</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:CBB:2000:ZG2018:INH" lang="nl" xml:space="preserve">
+      <para>-</para>
+    </inhoudsindicatie>
+  <uitspraak xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:CBB:2000:ZG2018:DOC" lang="nl" xml:space="preserve">
+      <parablock>
+        <para>AM</para>
+        <para>De president van het College van Beroep voor het bedrijfsleven</para>
+        <para>Nrs. AWB 00/599, 00/656,                8 september 2000</para>
+        <para>00/658, 00/660,</para>
+        <para>00/662, 00/664,</para>
+        <para>00/666, 00/668</para>
+        <para>00/670, 00/672</para>
+        <para>32030</para>
+        <para>Uitspraak op het verzoek om voorlopige voorziening in de zaak van:</para>
+        <para>1. de Stichting Zuid-Hollandse Milieufederatie, zetelend te Rotterdam,</para>
+        <para>2. de Stichting Natuur en Milieu, zetelend te Utrecht,</para>
+        <para>verzoeksters,</para>
+        <para>gemachtigden voor beide verzoeksters: mr drs J. Rutteman, prof dr L. Reijnders en</para>
+        <para>drs H.G. Muilerman</para>
+        <para>tegen</para>
+        <para>Het College voor de Toelating van Bestrijdingsmiddelen ( CTB), zetelend te Wageningen,</para>
+        <para>verweerder,</para>
+        <para>gemachtigden: mr J.H. Geerdink, advocate te 's-Gravenhage en mw mr E. Hazeleger,</para>
+        <para>werkzaam bij verweerder,</para>
+        <para>waaraan voorts als partijen deelnemen:</para>
+        <para>3. Zeneca Agro B.V., gevestigd te Ridderkerk,</para>
+        <para>gemachtigden: mr N.H. van den Biggelaar, advocate te 's -Gravenhage,  J.J.R.M. Vet en</para>
+        <para>ir B.P. Anema,</para>
+        <para>4. Agrevo Nederland B.V., gevestigd te Haren,</para>
+        <para>gemachtigde: H.J. Messelink en</para>
+        <para>5. Bayer B.V., gevestigd te Mijdrecht.</para>
+        <para>1.      De procedure</para>
+        <para>Bij besluit van 22 juni 2000, heeft verweerder verzoeksters bezwaren gericht tegen zijn</para>
+        <para>besluiten van 3 december 1999 strekkende tot verlenging op de voet van het bepaalde bij</para>
+        <para>artikel 5, eerste lid, derde volzin van de Bestrijdingsmiddelenwet 1962, verder ook: de</para>
+        <para>Wet, juncto artikel 7, vijfde lid, van de Regeling toelating bestrijdingsmiddelen 1995</para>
+        <para>(verder onder meer: de Rtb 1995) van een tiental toelatingen van bestrijdingsmiddelen met</para>
+        <para>als werkzame stof chloorthalonil, gedeeltelijk ongegrond verklaard.</para>
+        <para>Tegen dat besluit hebben verzoeksters bij beroepschrift - ter griffie ontvangen op 7 juli</para>
+        <para>2000 - beroep ingesteld bij het College. Voorts hebben zij bij verzoekschrift</para>
+        <para>binnengekomen op dezelfde datum, en ingenomen onder nr. Awb 00/599, aan de president</para>
+        <para>van het College verzocht een voorlopige voorziening te treffen, strekkende tot schorsing</para>
+        <para>van de verlengingsbesluiten onder bepaling dat de betreffende middelen in afwachting van</para>
+        <para>de uitspraak in de bodemprocedure, dan wel totdat een volledige toets aan de artikelen 3 en</para>
+        <para>3a van de Wet heeft plaatsgevonden, als niet toegelaten worden beschouwd.</para>
+        <para>Bij griffiersbrief van 10 augustus 2000 is aan partijen meegedeeld dat het onder nr. Awb</para>
+        <para>00/599 ingenomen verzoek om voorlopige voorziening is gesplitst in tien afzonderlijke en</para>
+        <para>als zodanig geregistreerde zaken.</para>
+        <para>Verweerder heeft op 31 juli 2000 schriftelijk op het verzoek om voorlopige voorziening</para>
+        <para>gereageerd.</para>
+        <para>De president heeft het verzoek behandeld ter zitting van 1 september 2000, alwaar partijen</para>
+        <para>bij monde van hun gemachtigden hun standpunt nader uiteen hebben gezet.</para>
+        <para>Mr Van den Biggelaar heeft bericht van verhindering gestuurd. Bij een, tot de stukken</para>
+        <para>behorende, brief van 25 augustus 2000 heeft zij schriftelijk het standpunt van Zeneca Agro</para>
+        <para>BV uiteengezet.</para>
+        <para>2.      De grondslag van het geschil</para>
+        <para>2.1     De toepasselijke regelgeving</para>
+        <para>Sinds 1 februari 1995 is in de Wet, voorzover hier van belang, als volgt bepaald:</para>
+        <para>"       Artikel 3</para>
+        <para>1.      Een bestrijdingsmiddel wordt slechts toegelaten indien:</para>
+        <para>a.      op grond van de stand van de wetenschappelijke en technische kennis en</para>
+        <para>aan de hand van onderzoek van de gegevens, bedoeld in artikel 4, tweede lid,</para>
+        <para>met inachtneming van de bij of krachtens artikel 3a vastgestelde regels en</para>
+        <para>beginselen voor de beoordeling, is vastgesteld dat het bestrijdingsmiddel en</para>
+        <para>zijn omzettingsprodukten, wanneer het overeenkomstig het bepaalde bij of</para>
+        <para>krachtens deze wet wordt gebruikt: (.)</para>
+        <para>(.)</para>
+        <para>3.      geen schadelijke uitwerking heeft op de gezondheid van de mens, hetzij</para>
+        <para>direct, hetzij indirect;</para>
+        <para>4.      geen schadelijke uitwerking heeft op de gezondheid van dieren, hetzij</para>
+        <para>direct, hetzij indirect;</para>
+        <para>5.      de gezondheid niet schaadt of de veiligheid niet in gevaar brengt van degene</para>
+        <para>die het middel toepast; (.)</para>
+        <para>(.)</para>
+        <para>10. geen voor het milieu onaanvaardbaar effect heeft, (.).</para>
+        <para>Artikel 3a</para>
+        <para>1.      Bij of krachtens algemene maatregel van bestuur kunnen nadere regelen</para>
+        <para>worden gesteld met betrekking tot de toelatingscriteria als bedoeld in artikel 3,</para>
+        <para>eerste lid, onderdeel a, en kunnen beginselen voor de beoordeling worden</para>
+        <para>vastgesteld.</para>
+        <para>Artikel 5</para>
+        <para>1. De toelating van een bestrijdingsmiddel geldt voor een in het besluit tot</para>
+        <para>toelating te bepalen termijn van ten hoogste tien jaren. De toelating kan ‚‚n of</para>
+        <para>meerdere malen met ten hoogste tien jaren worden verlengd indien is gebleken</para>
+        <para>dat nog steeds aan de voorwaarden voor toelating is voldaan. Zonodig kan de</para>
+        <para>toelating worden verlengd voor de periode die met de beoordeling van de</para>
+        <para>aanvraag tot verlenging gemoeid is."</para>
+        <para>Bij algemene maatregel van bestuur van 23 januari 1995 is ter uitvoering van artikel 3a van</para>
+        <para>de Wet vastgesteld het Besluit milieutoelatingseisen bestrijdingsmiddelen, Stb. 37, verder</para>
+        <para>ook: Bmb.</para>
+        <para>In de Regeling toelating bestrijdingsmiddelen 1995, (Stcrt. 41), is het volgende bepaald:</para>
+        <para>"       Art. 7.-1.      Aanvragen tot toelating van een bestrijdingsmiddel, tot verlenging</para>
+        <para>van de toelating van een bestrijdingsmiddel en tot wijziging van de</para>
+        <para>samenstelling of uitbreiding van het gebruiksgebied van een toegelaten</para>
+        <para>bestrijdingsmiddel worden ingediend bij het college onder gebruikmaking van</para>
+        <para>aldaar verkrijgbare formulieren.</para>
+        <para>(.)</para>
+        <para>-3. Een aanvraag tot verlenging van een toelating wordt tenminste 14 maanden</para>
+        <para>voor de afloop van de toelating ingediend.</para>
+        <para>(.)</para>
+        <para>-4. Binnen twee weken na ontvangst van het aanvraagformulier wordt de</para>
+        <para>ontvangst van de aanvraag onder mededeling van een aanvraagnummer aan de</para>
+        <para>aanvrager schriftelijk bevestigd. Binnen acht weken na de ontvangst van zowel</para>
+        <para>het aanvraagformulier als de op grond van het tweede lid verschuldigde</para>
+        <para>aanvraagkosten wordt de aanvrager meegedeeld of de aanvraag in behandeling</para>
+        <para>is genomen (.).</para>
+        <para>-5. Het college kan indien de besluitvorming met betrekking tot een aanvraag</para>
+        <para>tot verlenging van een toelating niet tijdig kan zijn afgerond de betreffende</para>
+        <para>toelating verlengen voor de duur die benodigd is voor de afronding van deze</para>
+        <para>besluitvorming."</para>
+        <para>"       Art. 10</para>
+        <para>1. Zo spoedig mogelijk, doch uiterlijk vierendertig weken na ontvangst van het</para>
+        <para>op grond van artikel 38 verschuldigde bedrag, wordt de aanvrager een opgave</para>
+        <para>gedaan van door hem alsnog te leveren dan wel aanvullend te leveren gegevens</para>
+        <para>en van te verrichten onderzoekingen ...</para>
+        <para>2. Binnen acht weken na de ontvangst van zowel de gegevens, bedoeld in het</para>
+        <para>eerste lid, als het verschuldigde bedrag wordt de aanvrager meegedeeld of de</para>
+        <para>gegevens in behandeling zijn genomen.</para>
+        <para>(...)</para>
+        <para>4. Op schriftelijk verzoek van de aanvrager kan, indien de overgelegde</para>
+        <para>gegevens aanleiding zouden kunnen zijn voor een besluit houdende gehele dan</para>
+        <para>wel gedeeltelijke afwijzing van de aanvraag, de procedure overeenkomstig het</para>
+        <para>eerste en tweede lid ‚‚nmaal worden herhaald. De aanvrager dient aannemelijk</para>
+        <para>te maken dat de door hem alsnog te leveren gegevens voor het college</para>
+        <para>aanleiding kunnen zijn voor het nemen van een ander besluit dan bedoeld in de</para>
+        <para>eerste volzin."</para>
+        <para>In de toelichting bij artikel 7, lid 5, van de Regeling wordt vermeld dat indiening van een</para>
+        <para>aanvraag tot verlenging van een toelating na het in het derde lid genoemde tijdvak van 14</para>
+        <para>maanden tot gevolg kan hebben dat de toelating expireert voordat de besluitvorming op de</para>
+        <para>verlengingsaanvraag is afgerond. Indien in zo'n geval de besluitvorming niet tijdig kan zijn</para>
+        <para>afgerond en dit niet aan nalatigheid van de aanvrager is te wijten (bijvoorbeeld omdat het</para>
+        <para>college aanvullende vragen stelt) zal het college de toelating verlengen voor de duur die</para>
+        <para>benodigd is voor de afronding van de besluitvorming, aldus deze toelichting.</para>
+        <para>Besluiten tot verlenging van een toelating die zijn genomen met toepassing van het</para>
+        <para>bepaalde bij artikel 5, eerste lid, derde volzin van de Wet, in samenhang gelezen met</para>
+        <para>artikel 7, vijfde lid, van de Rtb 1995, zullen in het navolgende onder meer worden</para>
+        <para>aangeduid als "procedurele verlengingen".</para>
+        <para>2.2     Bij de beoordeling van het verzoek om voorlopige voorziening gaat de president uit van de</para>
+        <para>volgende feiten en omstandigheden.</para>
+        <para>-       Naar aanleiding van de uitspraak van het College van 29 januari 1998,</para>
+        <para>nr. 95/0995/060/029, heeft verweerder bij beslissing van 7 juli 1998 de toelating van</para>
+        <para>een aantal chloorthalonilhoudende bestrijdingsmiddelen op grond van het bepaalde</para>
+        <para>bij artikel 5, eerste lid, van de Wet, juncto artikel 7, vijfde lid, Rtb 1995, procedureel</para>
+        <para>verlengd tot 1 november 1999. Het betreft de volgende toelatingen:</para>
+        <para>Daconil 500 vloeibaar (7827 N)</para>
+        <para>Klaverblad-Chloorthalonil (10151 N) en</para>
+        <para>Tattoo C (11429 N).</para>
+        <para>-       Voormelde procedurele verlengingen zijn het voorwerp geweest van een verzoek om</para>
+        <para>voorlopige voorziening van verzoeksters, strekkende tot vaststelling van een kortere</para>
+        <para>verlengingstermijn dan tot 1 november 1999. De president heeft dat verzoek bij</para>
+        <para>uitspraak van 11 december 1998 (no.98/857) afgewezen.</para>
+        <para>-       Op 15 juli 1999 heeft verweerder aan de betrokken toelatinghouders zijn voornemen</para>
+        <para>kenbaar gemaakt om alle toepassingen van bestrijdingsmiddelen op basis van</para>
+        <para>chloorthalonil te be‰indigen met ingang van 1 november 1999.</para>
+        <para>-       Op dit voornemen hebben de toelatinghouders - bij monde van de derde partij in dit</para>
+        <para>geding, Zeneca Agro B.V. (verder onder meer Zeneca) - bij brief van 2 september</para>
+        <para>1999, aangevuld bij brief van 14 oktober 1999 gereageerd. Bij monde van Zeneca</para>
+        <para>hebben de toelatinghouders vervolgens verzocht door middel van wijziging van het</para>
+        <para>wettelijke gebruiksvoorschrift een aantal toepassingen te be‰indigen. Deze op 15 juli</para>
+        <para>1999 door verweerder ingezette procedure zal in het navolgende worden aangeduid</para>
+        <para>als "de voornemen-procedure".</para>
+        <para>-       Deze verzoeken zijn bij besluiten van 3 december 1999 ingewilligd en hebben</para>
+        <para>geresulteerd in een wijziging/aanpassing van het wettelijk gebruiksvoorschrift en de</para>
+        <para>gebruiksaanwijzing.</para>
+        <para>-       Verweerder heeft voorts bij tien onderscheiden besluiten van - eveneens -</para>
+        <para>3 december 1999 de hiervoorvermelde, en de volgende toelatingen voor de resterende</para>
+        <para>toepassingen met toepassing van artikel 5, eerste lid, van de wet, jo. artikel 7, vijfde lid van de Rtb 1995 met terugwerkende kracht vanaf 1 november 1999</para>
+        <para>- procedureel - verlengd tot 1 november 2000:</para>
+        <para>Agrichem Chloorthalonil flowable (9286 N)</para>
+        <para>Chloorthalonil vlb. (9696 N)</para>
+        <para>Holland Fyto Chloorthalonil vlb (10776 N)</para>
+        <para>Allure vloeibaar (11585 N)</para>
+        <para>VISCLOR 500 FL (11816 N)</para>
+        <para>ROVER (11942 N)</para>
+        <para>Schimmelweg (11977 N)</para>
+        <para>-       Verzoeksters hebben op 12 januari 2000 op nader aan te voeren gronden een</para>
+        <para>bezwaarschrift ingediend tegen de procedurele verlengingsbesluiten als gepubliceerd</para>
+        <para>in de Staatscourant van 31 december 1999. Hun brief van 18 februari 2000 bevat de</para>
+        <para>gronden van het bezwaar.</para>
+        <para>-       Op 17 mei 2000 zijn verzoeksters naar aanleiding van hun bezwaren gehoord door de</para>
+        <para>bezwarencommissie CTB, welke commissie op 19 juni 2000 aan verweerder ter zake</para>
+        <para>advies heeft uitgebracht.</para>
+        <para>-       Vervolgens heeft verweerder op 22 juni 2000 op het bezwaarschrift beslist. Dit</para>
+        <para>besluit vormt het voorwerp van de gevraagde voorlopige voorziening.</para>
+        <para>3.      Het bestreden besluit en het standpunt van verweerder</para>
+        <para>Verweerder heeft overeenkomstig het advies van de bezwarencommissie CTB aan de hand</para>
+        <para>van een opsomming van de in verband met zijn voornemen tot be‰indiging van alle</para>
+        <para>chloorthaloniltoepassingen door de toelatinghouders overgelegde gegevens een nadere</para>
+        <para>onderbouwing gegeven van de verlengingstermijn. In zoverre heeft hij de bezwaren van</para>
+        <para>verzoeksters tegen de motivering van het bestreden besluit gegrond verklaard.</para>
+        <para>Voor het overige heeft hij verzoeksters bezwaren - eveneens in overeenstemming met</para>
+        <para>meergenoemd advies - ongegrond verklaard. Hij heeft die beslissing als volgt toegelicht.</para>
+        <para>De nader door de toelatinghouders aangeleverde gegevens hebben in oktober 1999 zijn</para>
+        <para>inzichten met betrekking tot de mogelijkheden tot een voortgezette toepassing gewijzigd.</para>
+        <para>Daardoor moest tot dan toe nog niet uitgevoerd onderzoek op het gebied van arbeids-</para>
+        <para>toxiciteit, de volksgezondheid en de "overige milieu-aspecten" alsnog worden</para>
+        <para>ge‰ntameerd. Het is in die omstandigheden de toelatinghouders niet te verwijten dat de</para>
+        <para>betreffende gegevens  nog niet beoordeeld zijn. Verweerder is van mening dat de gegeven</para>
+        <para>verlenging in een situatie als deze gerechtvaardigd is.</para>
+        <para>Naar aanleiding van de opmerkingen en nader door de toelatinghouders in het kader van de</para>
+        <para>voornemenprocedure ingediende stukken, is verweerder ingegaan op hun voorstel tot</para>
+        <para>wijziging/beperking van het wettelijk gebruiksvoorschrift van toegelaten bestrijdings-</para>
+        <para>middelen op basis van chloorthalonil. Voor de resterende toepassingen zijn de toelatingen</para>
+        <para>vervolgens procedureel verlengd.</para>
+        <para>In de schriftelijke reactie op het verzoek om voorlopige voorziening en ter zitting heeft</para>
+        <para>verweerder nader betoogd dat verzoeksters geen spoedeisend belang hebben bij de</para>
+        <para>gevraagde voorziening, aangezien binnenkort, te weten in de vergadering van het CTB van</para>
+        <para>begin oktober a.s. over de verdere toelaatbaarheid van de middelen zal worden beslist. Ter</para>
+        <para>zitting is door verweerders gemachtigden desgevraagd bevestigd dat alsdan ter zake een</para>
+        <para>inhoudelijke beslissing op de voet van het bepaalde van de artikelen 3 en 3a van de Wet zal</para>
+        <para>worden genomen. Bovendien worden de onderhavige middelen voornamelijk in de</para>
+        <para>maanden mei tot en met augustus toegepast, zodat ook daarom een spoedeisend belang aan</para>
+        <para>de zijde van verzoeksters ontbreekt.</para>
+        <para>4.      Het standpunt van verzoeksters</para>
+        <para>Verzoeksters hebben - zakelijk weergegeven - het volgende aangevoerd.</para>
+        <para>Op zichzelf bestaan geen overwegende bezwaren tegen een aanpassing van de beoordeling</para>
+        <para>aan nieuwe inzichten. De wet vereist een dergelijke aanpassing zelfs. Maar verzoeksters</para>
+        <para>betwijfelen of het CTB op basis van de hier door de toelatinghouders verschafte gegevens</para>
+        <para>een verlenging had mogen geven voor een nadere beoordeling. Immers, uit de gegevens,</para>
+        <para>die bij de aanvragen om verlenging zijn ingediend kan geen andere conclusie worden</para>
+        <para>getrokken dan dat niet aan de milieucriteria als gesteld in het Bmb werd voldaan. Het CTB</para>
+        <para>heeft destijds een beoordelingsstrategie gekozen, waarbij, omdat aanvankelijk vaststond</para>
+        <para>dat alle toelatingen op basis van chloorthalonil zouden worden be‰indigd wegens het niet</para>
+        <para>voldoen aan de milieueisen, geen verdere toetsing aan andere criteria werd uitgevoerd. In</para>
+        <para>principe is wel voldoende tijd beschikbaar geweest voor een volledige herbeoordeling. De</para>
+        <para>toelating-houders zelf zijn verantwoordelijk wanneer het ontstaan van nieuwe inzichten bij</para>
+        <para>verweerder het gevolg is van het feit dat zijzelf de nieuwe gegevens zo laat hebben</para>
+        <para>ingediend.</para>
+        <para>Verzoeksters menen overigens dat zij via hun beroep tegen de onderhavige procedurele</para>
+        <para>verlengingen, ook kunnen opkomen tegen het inhoudelijke element dat aan deze</para>
+        <para>procedurele verlengingsbesluiten ten grondslag ligt. Het is, aldus verzoeksters, z¢ evident</para>
+        <para>dat toelatingen van bestrijdingsmiddelen op basis van chloorthalonil niet voldoen aan de</para>
+        <para>milieucriteria dat dit op zich zelf al aan een procedurele verlenging gericht op het doen van</para>
+        <para>nader onderzoek in de weg staat en dat zulks ook in een voorlopige voorzieningsprocedure</para>
+        <para>kan worden vastgesteld. Verzoeksters hebben in hun pleitnota uiteengezet welke manifeste</para>
+        <para>gebreken er aan de nadere beoordeling van verweerder kleven. Er is sprake van een</para>
+        <para>combinatie van niet voldoende onderbouwde aannames en het niet gebruiken van gegevens</para>
+        <para>over de meest gevoelige organismen. Daarnaast wordt de door het RIVM berekende MTR</para>
+        <para>genegeerd en worden nog onbewezen effecten maar vast aangenomen.</para>
+        <para>Met betrekking tot de spoedeisendheid hebben verzoeksters aangevoerd dat weliswaar het</para>
+        <para>leeuwendeel van chloorthalonilhoudende bestrijdingsmiddelen in het zomerseizoen worden</para>
+        <para>gebruikt, maar dat het gebruik ook daarna wel degelijk plaatsvindt.</para>
+        <para>5.      Het standpunt van de derde belanghebbende partijen</para>
+        <para>Deze partijen hebben zich aangesloten bij verweerders standpunt, zoals dat in het bestreden</para>
+        <para>besluit is neergelegd en in het verweerschrift en ter zitting nader is toegelicht. De</para>
+        <para>gemachtigden van Zeneca Agro hebben daartoe in hoofdzaak verwezen naar het in rubriek</para>
+        <para>1 genoemde schrijven van mr van den Biggelaar, waarin wordt benadrukt dat een</para>
+        <para>spoedeisend belang bij de gevraagde voorziening ontbreekt. Voorts, dat de gegeven</para>
+        <para>procedurele verlenging nodig was, voor een nadere beoordeling in verband met</para>
+        <para>verweerders nieuwe inzichten. Deze kon worden gegeven omdat het aanleveren van de</para>
+        <para>nieuwe gegevens in de door verweerder in gang gezette voornemenprocedure voor de hand</para>
+        <para>ligt en dat de aldus ontstane vertraging niet aan de toelatinghouders kan worden tegen-</para>
+        <para>geworpen.</para>
+        <para>6.      De beoordeling</para>
+        <para>Ingevolge het bepaalde bij artikel 8:81 van de Algemene wet bestuursrecht (hierna: de</para>
+        <para>Awb) kan, indien, zoals hier, tegen een besluit beroep is ingesteld bij het College, op</para>
+        <para>verzoek een voorlopige voorziening worden getroffen, indien onverwijlde spoed, gelet op</para>
+        <para>de betrokken belangen dat vereist. Dienaangaande overweegt de president het volgende.</para>
+        <para>Gelet op het hiervoor vermelde in rubriek 2.2, 3 en 4 en gehoord het debat ter zitting gaat</para>
+        <para>de president er van uit dat de onderlinge verhouding tussen de procedurele verlengings-</para>
+        <para>besluiten van 3 december 1999 en de besluiten, van dezelfde datum, tot wijziging/</para>
+        <para>aanpassing van het wettelijk gebruiksvoorschrift en de gebruiksaanwijzing, aldus moet</para>
+        <para>worden begrepen dat verweerder eerst door middel van wijziging/aanpassing van het</para>
+        <para>wettelijk gebruiksvoorschrift c.q. de gebruiksaanwijzing een aantal toepassingen heeft</para>
+        <para>be‰indigd en vervolgens voor de nog resterende toepassingen heeft besloten tot procedurele</para>
+        <para>verlengingen.</para>
+        <para>Van de zijde van verzoekster is ter zitting bevestigd, dat het verzoek om voorlopige</para>
+        <para>voorziening louter betrekking heeft op deze procedurele verlengingsbeslissingen.</para>
+        <para>Ten aanzien van die beslissingen hebben verzoeksters zich in de eerste plaats op het</para>
+        <para>standpunt gesteld dat de inhoudelijke aspecten, die in de op zichzelf hier niet voorliggende</para>
+        <para>besluiten tot wijziging van het wettelijk gebruiksvoorschrift, c.q. de gebruiksaanwijzing</para>
+        <para>aan de orde zijn gekomen, niettemin in het kader van deze procedure kunnen worden</para>
+        <para>getoetst.</para>
+        <para>De president deelt dat standpunt niet. Het specifieke karakter van de procedurele</para>
+        <para>verlenging, die naar zijn aard slechts een termijn geeft met het oog op het verkrijgen van</para>
+        <para>inzicht in de vraag of nog steeds aan de voorwaarden voor toelating wordt voldaan, verzet</para>
+        <para>zich daar, naar voorlopig oordeel, tegen. Dit karakter valt af te leiden uit het bepaalde bij</para>
+        <para>artikel 5, eerste lid, derde volzin, van de Wet, waaruit blijkt dat de toelating kan worden</para>
+        <para>verlengd voor de periode, die met de beoordeling van de aanvraag tot verlenging is</para>
+        <para>gemoeid. De uitkomst van die beoordeling is, blijkens het bepaalde bij artikel 5, eerste lid,</para>
+        <para>tweede volzin, van de Wet, beslissend voor het antwoord op de vraag of ten aanzien van</para>
+        <para>het betrokken middel nog steeds aan die voorwaarden voor toelating is voldaan.</para>
+        <para>Aan verzoeksters kan in dit verband op zichzelf wel worden toegegeven dat wanneer de</para>
+        <para>wel voorhanden gegevens reeds zouden dwingen tot het oordeel dat niet of niet langer aan</para>
+        <para>het bepaalde bij en krachtens artikel 3 en 3a van de Wet wordt voldaan, de ruimte ontbreekt</para>
+        <para>voor een procedurele verlenging.</para>
+        <para>Op grond van de stukken en het verhandelde ter zitting kan de president evenwel niet tot</para>
+        <para>het oordeel komen dat zulks hier het geval is. De op dit punt door partijen, onder</para>
+        <para>verwijzing naar allerhande gegevens, gevoerde discussie vertoont de trekken van een</para>
+        <para>wetenschappelijk debat en gaat het bestek van deze voorlopige voorzieningsprocedure te</para>
+        <para>buiten.</para>
+        <para>Kern van het tussen partijen bestaande geschil wordt gevormd door de vraag of verweerder</para>
+        <para>met zijn procedurele verlengingsbeslissingen van 3 december 1999 - die tot gevolg hebben</para>
+        <para>dat eerdere procedurele verlengingen van toelatingen van chloorthalonilhoudende</para>
+        <para>bestrijdingsmiddelen tot 1 november 1999 met een jaar, te weten tot 1 november 2000,</para>
+        <para>worden verlengd - te ruim de tijd heeft genomen.</para>
+        <para>Dienaangaande overweegt de president in het voetspoor van de in rubriek 2 vermelde</para>
+        <para>uitspraak van 11 december 1998 op het verzoek om voorlopige voorziening van dezelfde partijen, dat een voorziening als hier aan de orde strekkende tot het vaststellen van een</para>
+        <para>kortere beoordelingstermijn ingrijpend van aard is. Daarvoor zou, aldus die uitspraak,</para>
+        <para>slechts grond bestaan indien "uit de gegeven verlengingstermijn, afgezet tegen in de</para>
+        <para>wettelijke regeling voorziene beslistermijnen, kan worden afgeleid dat (verweerder) geen</para>
+        <para>enkele voortvarendheid betracht, (te) ruim de tijd neemt en/of in het geheel niet kan</para>
+        <para>motiveren waarom de gegeven termijn van verlenging nodig is".</para>
+        <para>Geplaatst tegen de achtergrond van het in voormelde uitspraak van 11 december 1998</para>
+        <para>aangegeven toetsingskader is, naar voorlopig oordeel van de president, hier van belang dat</para>
+        <para>verweerder in ieder geval tot begin oktober 1999, het tijdstip dat hij de reactie van de</para>
+        <para>toelatinghouders op het voornemen tot be‰indiging ontving, en dus tot een moment dat nog</para>
+        <para>slechts ‚‚n maand resteerde alvorens de tot 1 november 1999 geldende procedurele</para>
+        <para>verlengingsbeslissingen hun werking zouden verliezen, uitging van de gedachte om op</para>
+        <para>chloorthalonil gebaseerde bestrijdingsmiddelen niet langer toe te laten. Om die reden heeft</para>
+        <para>verweerder, naar ter zitting is toegegeven, de reeds door de toelatinghouders in het kader</para>
+        <para>van de verlengingsprocedure aangeleverde gegevens tot dat moment niet beoordeeld en</para>
+        <para>nadere gegevens betrekking hebbende op de milieucomponent niet opgevraagd.</para>
+        <para>Het gevolg van een en ander was dat toen verweerder zijn koers uiteindelijk wijzigde en</para>
+        <para>kennelijk alsnog ruimte zag voor een nadere beoordeling, de daarvoor resterende tijd,</para>
+        <para>geboden door de eerste procedurele verlenging, inmiddels te kort was en een nieuwe</para>
+        <para>verlenging noodzakelijk bleek.</para>
+        <para>Naar voorlopig oordeel van de president kan aldus worden betwijfeld of verweerder, door</para>
+        <para>in deze omstandigheden de eerste procedurele verlengingen van een jaar opnieuw te doen</para>
+        <para>volgen door een procedurele verlenging van ‚‚n jaar, nog buiten het toepassingsbereik van</para>
+        <para>de hiervoor in de uitspraak van 11 december 1998 neergelegde, en uitzicht op een</para>
+        <para>voorlopige voorziening biedende, criteria is gebleven.</para>
+        <para>Verweerders gemachtigden hebben ter zitting evenwel meegedeeld dat begin oktober 2000</para>
+        <para>een inhoudelijke beslissing op de aanvragen om verlenging van de toelating van</para>
+        <para>chloorthalonil houdende bestrijdingsmiddelen zal worden genomen. De president heeft</para>
+        <para>geen aanleiding om te veronderstellen dat die beslissingen er uiterlijk medio oktober 2000</para>
+        <para>niet zullen zijn. Alsdan - en derhalve op korte termijn - zullen de hier voorliggende -</para>
+        <para>procedurele - verlengingsbeslissingen zijn achterhaald. Aldus beschouwd is er, wat er zij</para>
+        <para>van de hiervoor geuite twijfel, thans onvoldoende spoedeisend belang bij de gevraagde</para>
+        <para>voorziening.</para>
+        <para>De verzoeken om voorlopige voorziening worden dan ook afgewezen.</para>
+        <para>De president acht geen  termen aanwezig om artikel 8:75 van de Awb toe te passen. Beslist</para>
+        <para>wordt als volgt.</para>
+        <para>7.      De beslissing</para>
+        <para>De president wijst de verzoeken om voorlopige voorziening af.</para>
+        <para>Aldus gewezen door mr R.R. Winter, president, in tegenwoordigheid van mr A. Bruining,</para>
+        <para>als griffier, en in het openbaar uitgesproken op 8 september 2000.</para>
+        <para>w.g. R.R. Winter                                                        w.g. A. Bruining</para>
+        <para>Verzonden op:</para>
+        <para>12</para>
+        <para>12</para>
+        <para>Nrs. 00/599, 00/656 enz.</para>
+        <para>12</para>
+      </parablock>
+    </uitspraak>
+</open-rechtspraak>

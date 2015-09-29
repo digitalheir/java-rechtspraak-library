@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:tr="http://tuchtrecht.overheid.nl/" xmlns:eu="http://publications.europa.eu/celex/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:CBB:1999:AA3720</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2014-04-13T10:20:31</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">AA3720</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/College_van_Beroep_voor_het_bedrijfsleven" scheme="overheid.RechterlijkeMacht">College van Beroep voor het bedrijfsleven</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">1999-09-02</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">99/610/26400</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#hogerBeroep">Hoger beroep</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht">Bestuursrecht</dcterms:subject>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0005537&amp;artikel=6:16&amp;g=1999-09-02">Algemene wet bestuursrecht 6:16</dcterms:references>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:1999:AA3720">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:1999:AA3720</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-04T15:53:26</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">1999-09-02</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:CBB:1999:AA3720 College van Beroep voor het bedrijfsleven , 02-09-1999 / 99/610/26400</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:CBB:1999:AA3720:INH" lang="nl" xml:space="preserve">
+      <para>-</para>
+    </inhoudsindicatie>
+  <uitspraak xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:CBB:1999:AA3720:DOC" lang="nl" xml:space="preserve">
+      <para>421 / De president van het College van Beroep voor het bedrijfsleven</para>
+      <para/>
+      <para>No. AWB 99/610 2 september 1999</para>
+      <para/>
+      <parablock>
+        <para>26400</para>
+        <para>Uitspraak op het verzoek om voorlopige voorziening in de</para>
+        <para>zaak van:</para>
+        <para>Stichting voor Educatie en Beroepsonderwijs Zadkine, te Rotterdam, verzoekster,</para>
+        <para>gemachtigde: mr  H.H. Luigies, advocaat te Rotterdam,</para>
+        <para>tegen</para>
+        <para>de Regionale Directie van de Arbeidsvoorzieningsorganisatie Rijnmond,</para>
+        <para>verweerder, gemachtigden: mr . M.F.A. van Marken, mr J.H. Roovers en mr R.M.</para>
+        <para>van  Dam.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>1.      De procedure</para>
+        <para>Bij brief van 26 april 1999 heeft verzoekster een bezwaarschrift ingediend tegen het</para>
+        <para>besluit van de Regionale Directie van de Arbeidsvoorzieningsorganisatie Rijnmond</para>
+        <para>(verder onder meer: de Regionale Directie) van 17 maart 1999 tot intrekking van</para>
+        <para>verleende subsidies en in verband daarmee tot terugvordering van een bedrag van</para>
+        <para>fl. 2.502.625,--.</para>
+        <para>Op 20 juli 1999 heeft verzoekster zich tot de president gewend met het verzoek bij</para>
+        <para>wege van voorlopige voorziening te bepalen dat de terugbetalingsverplichting wordt</para>
+        <para>opgeschort.</para>
+        <para>Bij brief van 28 juli 1999 heeft verzoekster de president verzocht verweerder te</para>
+        <para>vragen de beslissing op het verzoek om voorlopige voorziening af te wachten en</para>
+        <para>niet reeds tot invordering over te gaan. Verweerder heeft op een daartoe strekkend</para>
+        <para>verzoek van de president afwijzend gereageerd.</para>
+        <para>Op 29 juli 1999 heeft verweerder schriftelijk op het verzoek om voorlopige</para>
+        <para>voorziening gereageerd.</para>
+        <para>Het verzoek om voorlopige voorziening is door de president behandeld ter zitting</para>
+        <para>van 26 augustus 1999, waar partijen bij monde van hun gemachtigden hun</para>
+        <para>standpunten nader hebben toegelicht. Tevens zijn aan de zijde van verzoekster</para>
+        <para>verschenen E. Slagter en ir J. Willems, beiden werkzaam voor verzoekster.</para>
+        <para>2.      De grondslag van het geschil</para>
+        <para>2.1     Ingevolge artikel 6:16 van de Algemene wet bestuursrecht (hierna: Awb)</para>
+        <para>schorst het bezwaar of beroep niet de werking van het besluit waartegen het is</para>
+        <para>gericht, tenzij bij of krachtens wettelijk voorschrift anders is bepaald.</para>
+        <para>In artikel 15, vierde lid, van de Regeling Europees Sociaal Fonds (CBA, 1994; Stcrt.</para>
+        <para>1994, 239, laatstelijk gewijzigd Stcrt. 1997, 248; hierna: Regeling ESF) is het</para>
+        <para>volgende bepaald:</para>
+        <para>"       4. Een verleende subsidie wordt ingetrokken indien de aanvrager bij de</para>
+        <para>aanvraag onjuiste of onvolledige informatie heeft verschaft en de subsidie bij juiste</para>
+        <para>of volledige informatie niet of slechts gedeeltelijk zou zijn toegekend. Intrekking</para>
+        <para>vindt eveneens plaats indien de aanvrager de aan de subsidie verbonden</para>
+        <para>voorwaarden niet of onvoldoende naleeft."</para>
+        <para>2.2     Bij de beoordeling van het verzoek om voorlopige voorziening gaat de</para>
+        <para>president uit van de volgende feiten en omstandigheden.</para>
+        <para>-       Verzoekster ontvangt ter realisering van haar doelstelling gelden van het</para>
+        <para>ministerie van Onderwijs, Cultuur en Wetenschappen.</para>
+        <para>-       Aan verzoekster zijn in het kader van het project "Futuro Laboral 1995-1997"</para>
+        <para>subsidies verleend door de Arbeidsvoorzieningsorganisatie. Bij beschikking van</para>
+        <para>16 augustus 1995 onder projectnummer 9520125 is een subsidie toegekend van</para>
+        <para>fl. 1.147.500,-- en bij beschikking van 26 april 1996 onder projectnummer 96130265</para>
+        <para>is een subsidie toegekend van fl. 1.030.000,--. Op 2 juli 1996 is ten aanzien van</para>
+        <para>eerstgenoemde subsidie de beschikking op de einddeclaratie genomen. De</para>
+        <para>einddeclaratie was voorzien van een goedkeurende accountantsverklaring, waarin</para>
+        <para>op één onderdeel een voorbehoud was gemaakt. Ten aanzien van de in 1996</para>
+        <para>verleende subsidie is nog geen beschikking op de einddeclaratie genomen.</para>
+        <para>-       Bij besluit van 17 maart 1999 heeft verweerder besloten tot intrekking van</para>
+        <para>voornoemde subsidies. Bij separaat schrijven van eveneens 17 maart 1999 heeft</para>
+        <para>verweerder de betaalde voorschotten teruggevorderd, en verzoekster gesommeerd</para>
+        <para>het bedrag binnen 30 dagen te betalen.</para>
+        <para>-       Bij brief van 26 april 1999 heeft verzoekster zowel tegen de intrekking als</para>
+        <para>tegen de terugvordering bezwaar gemaakt. Hierbij heeft verzoekster verzocht de</para>
+        <para>invordering van het totale bedrag van fl. 2.502.625,-- alsmede de verschuldigdheid</para>
+        <para>van de wettelijke rente op te schorten tot zes weken na de beslissing op het</para>
+        <para>bezwaar- respectievelijk beroepschrift.</para>
+        <para>-       Bij brief van 20 mei 1999 heeft verweerder aan verzoekster bericht dat bij</para>
+        <para>gebreke van argumenten vooralsnog geen basis bestaat het verzoek tot opschorting</para>
+        <para>van de betalingsverplichting te honoreren, waarna verzoekster bij brief van 11 juni</para>
+        <para>1999 alsnog argumenten heeft aangevoerd.</para>
+        <para>-       Bij brief van 28 juni 1999 heeft verweerder voornoemd verzoek afgewezen en</para>
+        <para>verzoekster gesommeerd binnen 8 dagen tot betaling van het totale bedrag over te</para>
+        <para>gaan.</para>
+        <para>-       Op 20 juli 1999 heeft verzoekster zich tot de president gewend met het</para>
+        <para>verzoek bij wege van voorlopige voorziening te bepalen dat de</para>
+        <para>terugbetalingsverplichting wordt opgeschort.</para>
+        <para>-       Op 23 juli 1999 heeft verweerder aan verzoekster een mededeling gestuurd</para>
+        <para>omtrent de behandeling van het bezwaarschrift en er daarbij op gewezen dat de</para>
+        <para>betalings-termijn is verstreken en dat nu ook aanspraak wordt gemaakt op de</para>
+        <para>wettelijke rente.</para>
+        <para>-       Bij brief van 30 juli 1999 heeft verweerder aan verzoekster een herinnering</para>
+        <para>gestuurd dat het te betalen bedrag nog niet is ontvangen en dat - ondanks het door</para>
+        <para>verzoekster ingediende verzoek om voorlopige voorziening - onverkort wordt</para>
+        <para>vastgehouden aan de verplichting tot terugbetaling. Verzoekster dient per</para>
+        <para>ommegaande het bedrag over te maken.</para>
+        <para>3.      De beslissingen van 17 maart 1999 en het standpunt van verweerder</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>In het intrekkingsbesluit van 17 maart 1999 is onder meer het volgende overwogen:</para>
+        <para>"       Intrekking van de subsidieverlening heeft plaatsgevonden omdat feitelijk is</para>
+        <para>geconstateerd dat de projectadministratie niet voldoet aan de administratie</para>
+        <para>voorschriften conform artikel 10 van de regeling Europees Sociaal Fonds (CBA</para>
+        <para>1994). Meer in het bijzonder de co-financiering van de publiekrechtelijke instelling</para>
+        <para>("inkomen deelnemers") is onvoldoende gewaarborgd met bewijsstukken van</para>
+        <para>uitkerende instanties.</para>
+        <para>(…)</para>
+        <para>Dit betekent dat, gezien het bepaalde in artikel 15 vierde lid laatste alinea van de</para>
+        <para>Regeling Europees Sociaal Fonds (CBA 1994), alsmede het gestelde in de</para>
+        <para>beschikking tot subsidieverlening, intrekking van betaalde voorschotten moet</para>
+        <para>plaatsvinden."</para>
+        <para>Bij separaat schrijven is aan verzoekster medegedeeld dat zij conform de intrekking</para>
+        <para>subsidieverlening d.d. 17 maart 1999 de betaalde voorschotten voor het project</para>
+        <para>Futuro Laboral 1995/1996 aan de Arbeidsvoorziening dient te retourneren. Dit</para>
+        <para>betekent dat het te vorderen bedrag van fl. 2.502.625,-- binnen 30 dagen na</para>
+        <para>dagtekening van het besluit dient te worden overgemaakt.</para>
+        <para>In zijn reactie op het verzoek om voorlopige voorziening heeft verweerder voorop</para>
+        <para>gesteld dat van de zijde van verzoekster slechts verzocht is een voorlopige</para>
+        <para>voorziening te treffen met betrekking tot de op verzoekster rustende verplichting tot</para>
+        <para>terugbetaling van uitbetaalde gelden, zodat de reactie dan ook uitsluitend daarop is</para>
+        <para>gericht.</para>
+        <para>Allereerst is verweerder van mening dat verzoekster onvoldoende spoedeisend</para>
+        <para>belang heeft bij het treffen van een voorlopige voorziening, aangezien de hoorzitting</para>
+        <para>in het kader van de bezwarenprocedure medio september 1999 zal plaatsvinden en</para>
+        <para>het vervolgens mogelijk moet zijn om uiterlijk 10 oktober 1999 een beslissing op het</para>
+        <para>bezwaarschrift te nemen.</para>
+        <para>Voorts ziet verweerder geen reden af te wijken van de algemene beleidslijn dat de</para>
+        <para>financiële afwikkeling van genomen beschikkingen direct dient te volgen.</para>
+        <para>Verweerder wijst in dit verband op artikel 6:16 van de Awb, waarin als hoofdregel is</para>
+        <para>bepaald dat het indienen van bezwaar geen schorsende werking heeft. Aangezien</para>
+        <para>in casu geen afwijkende bepalingen van toepassing zijn, geldt de hoofdregel.</para>
+        <para>Verweerder gaat voorshands uit van de rechtmatigheid van het besluit van 17 maart</para>
+        <para>1999. Het is niet aan verweerder om aan te tonen welk spoedeisend belang bestaat</para>
+        <para>bij de invordering, maar aan verzoekster om aan te tonen op grond van welk belang</para>
+        <para>invordering zou moeten worden opgeschort. De door verzoekster in dat kader</para>
+        <para>aangevoerde argumenten zijn door verweerder gewogen en te licht bevonden.</para>
+        <para>Daarbij komt dat verweerder zich dient te verantwoorden bij het ministerie van</para>
+        <para>Sociale Zaken en Werkgelegenheid en bij de Europese Commissie, welke instanties</para>
+        <para>een snelle inning van onterecht genoten subsidiegelden eisen.</para>
+        <para>Ter zitting heeft verweerder hieraan toegevoegd dat als zwaarwegend belang geldt</para>
+        <para>dat de Europese Commissie momenteel geen middelen uit het ESF aan Nederland</para>
+        <para>beschikbaar stelt wegens onregelmatigheden die de Commissie bij een aantal</para>
+        <para>projecten heeft geconstateerd. Dit betekent dat de middelen die via</para>
+        <para>terugvorderingsprocedures als de onderhavige worden verworven onmiddellijk weer</para>
+        <para>ter beschikking kunnen worden gesteld aan andere ESF-projecten, waardoor de</para>
+        <para>voortgang van die projecten is gewaarborgd en een efficiënte inzet van ESF-gelden</para>
+        <para>mogelijk is.</para>
+        <para>Tenslotte heeft verweerder opgemerkt dat verzoekster de verschuldigde bedragen</para>
+        <para>kan terugvorderen van de uitvoerder van het bewuste ESF-project. Voorts zijn de</para>
+        <para>kosten verbonden aan het lenen van "vreemd" geld beperkt en derhalve niet om die</para>
+        <para>reden doorslaggevend.</para>
+        <para>4.      Het standpunt van verzoekster</para>
+        <para>Verzoekster heeft ter ondersteuning van haar verzoek om voorlopige voorziening,</para>
+        <para>dat zij heeft beperkt tot de beslissing van verweerder om tot terugvordering over te</para>
+        <para>gaan,- samengevat - het volgende aangevoerd.</para>
+        <para>Naar de mening van verzoekster dient, nu nog niet onherroepelijk vaststaat dat er</para>
+        <para>een terugbetalingsverplichting bestaat, te worden afgewogen welk spoedeisend</para>
+        <para>belang verweerder heeft om thans reeds over het terug te vorderen bedrag te</para>
+        <para>kunnen beschikken tegenover het belang van verzoekster om het bedrag van ruim</para>
+        <para>2,5 miljoen gulden thans nog niet te hoeven betalen.</para>
+        <para>Volgens verzoekster staat vast dat het betreffende bedrag ten behoeve van de</para>
+        <para>betreffende projecten volledig is aangewend. Het is verzoekster niet bekend dat op</para>
+        <para>verweerder een verplichting rust het betreffende bedrag op enigerlei wijze af te</para>
+        <para>dragen, zodat geen urgente noodzaak bestaat het bedrag reeds thans terug te</para>
+        <para>betalen, nog daargelaten dat dit uit liquiditeitsoverwegingen op dit moment niet</para>
+        <para>mogelijk is. Verzoekster is een stichting zonder winst-oogmerk en heeft zowel in</para>
+        <para>1997 als 1998 een exploitatieverlies geleden van structureel 2 à 3 miljoen gulden,</para>
+        <para>hetgeen uit de lopende middelen gefinancierd moet worden. Verzoekster zou</para>
+        <para>derhalve vreemd geld moeten aantrekken tegen marktwaarderente. Nu niet is</para>
+        <para>aangetoond dat verweerder het betreffende bedrag op enigerlei wijze moet</para>
+        <para>afdragen, is dit een last welke in dit stadium in redelijkheid niet van verzoekster kan</para>
+        <para>worden verlangd. Het is overigens nog maar de vraag of verzoekster, gezien haar</para>
+        <para>financiële positie, vreemd geld zal kunnen aantrekken. Invordering zal ernstige</para>
+        <para>consequenties hebben voor verzoekster.</para>
+        <para>Ter zitting heeft verzoekster de vraag opgeworpen of het schrijven van 17 maart</para>
+        <para>1999 als een zelfstandig, bij het College beroepbaar, terugvorderingsbesluit valt aan</para>
+        <para>te merken, of dat de terugvordering besloten ligt in de intrekkingsbeschikking.</para>
+        <para>Verzoekster heeft in dat verband gewezen op een uitspraak van de Afdeling</para>
+        <para>bestuursrechtspraak van de Raad van State van 21 oktober 1996, AB 1996/496.</para>
+        <para>Volgens verzoekster is nauwelijks sprake van een formeel terugvorderingsbesluit –</para>
+        <para>waarbij nog betwijfeld kan worden of het besluit door de juiste instantie is genomen – en is niet voldaan aan de terzake in de jurisprudentie ontwikkelde criteria, die</para>
+        <para>inhouden dat aan de besluitvorming een afzonderlijke belangen-afweging vooraf</para>
+        <para>dient te gaan en dat het besluit duidelijk moet worden gemotiveerd.</para>
+        <para>5.      De beoordeling van het verzoek</para>
+        <para>Ingevolge het bepaalde bij artikel 8:81 van de Awb kan, indien tegen een besluit,</para>
+        <para>voorafgaand aan een mogelijk beroep, bezwaar is gemaakt, op verzoek door de</para>
+        <para>president van het College een voorlopige voorziening worden getroffen indien</para>
+        <para>onverwijlde spoed, gelet op de betrokken belangen, dat vereist. Dienaangaande</para>
+        <para>overweegt de president als volgt.</para>
+        <para>Naar aanleiding van de door verzoekster opgeworpen vraag omtrent het</para>
+        <para>rechtskarakter van verweerders schriftelijke mededeling dat tot terugvordering wordt</para>
+        <para>overgegaan overweegt de president dat een zodanige - van een bedrijfslichaam</para>
+        <para>afkomstige - mededeling blijkens jurisprudentie van het College (zie CBb 27</para>
+        <para>december 1977, AB 1978, 334; CBb 15 januari 1990, AB 1991, 301) een in het</para>
+        <para>kader van de toen vigerende Wet administratieve rechtspraak bedrijfsorganisatie bij</para>
+        <para>het College beroepbaar besluit opleverde.</para>
+        <para>De president heeft geen aanknopingspunten om te komen tot het, voorlopige,</para>
+        <para>oordeel dat die jurisprudentie hier thans niet evenzeer gelding zou hebben.</para>
+        <para>De door verzoekster geuite twijfel of het besluit ten aanzien waarvan thans om een</para>
+        <para>voorlopige voorziening wordt gevraagd bevoegdelijk is genomen is naar voorlopig</para>
+        <para>oordeel van de president ongegrond.</para>
+        <para>Het betrokken besluit is blijkens de ondertekening kennelijk genomen namens de</para>
+        <para>Regionale Directie, die, onder meer gelet op het bepaalde in artikel 39 van de</para>
+        <para>Arbeidsvoorzieningswet 1996, hier het beslissingsbevoegde orgaan is.</para>
+        <para>Naar aanleiding van de inhoudelijke kant van het verzoek om voorlopige voorziening</para>
+        <para>overweegt de president in het voetspoor van eerdere uitspraken dat voor het treffen</para>
+        <para>van een voorlopige voorziening in een zaak als de onderhavige, waar het gaat om</para>
+        <para>een financieel belang als de betaling van een geldsom, in beginsel slechts plaats</para>
+        <para>kan zijn indien, ook zonder een diepgaand onderzoek met betrekking tot de</para>
+        <para>relevante feiten en/of het recht, ernstig betwijfeld moet worden of het gevorderde</para>
+        <para>bedrag verschuldigd is en bovendien verzoekster feiten en omstandigheden</para>
+        <para>aanwijst die meebrengen dat haar belang vordert dat het verzoek om schorsing van</para>
+        <para>de terugbetalingsverplichting aan verweerder bij wege van onverwijlde voorziening</para>
+        <para>bij voorraad wordt ingewilligd.</para>
+        <para>Omstandigheden, als hiervoor omschreven, waarvan sprake moet zijn wil de</para>
+        <para>president termen aanwezig kunnen achten om bij wijze van voorlopige voorziening</para>
+        <para>een uitzondering op artikel 6:16 van de Awb toe te staan, doen zich hier naar zijn</para>
+        <para>oordeel niet voor.</para>
+        <para>De door verzoekster in het onderhavige geding aangevoerde argumenten zijn</para>
+        <para>beperkt tot de beslissing tot terugvordering en meer in het bijzonder tot de weigering</para>
+        <para>van verweerder om de uitvoering van die beschikking op te schorten. In hetgeen</para>
+        <para>verzoekster op dat punt heeft aangevoerd ziet de president geen, althans</para>
+        <para>onvoldoende, aanleiding voor ernstige twijfel omtrent de rechtmatigheid van de</para>
+        <para>gewraakte terugvordering.</para>
+        <para>Ook hetgeen overigens door verzoekster is aangevoerd, noopt naar het oordeel van</para>
+        <para>de president niet tot het treffen van de gevraagde voorlopige voorziening. De</para>
+        <para>financiële positie van verzoekster kan in dit verband, ondanks de beweerdelijk</para>
+        <para>geleden exploitatieverliezen, niet van doorslaggevend belang worden geacht.</para>
+        <para>Teminder nu verzoekster ter zitting heeft verklaard dat zij jaarlijks circa 180 miljoen</para>
+        <para>aan inkomsten ontvangt en onvoldoende valt in te zien waarom zij niet eventueel</para>
+        <para>vreemd geld kan aantrekken om - in afwachting van de uitkomst van de</para>
+        <para>bodemprocedure - aan de haar opgelegde verplichting te voldoen.</para>
+        <para>Vorenstaande overwegingen leiden de president tot het oordeel dat het verzoek om</para>
+        <para>voorlopige voorziening dient te worden afgewezen.</para>
+        <para>De president acht geen termen aanwezig toepassing te geven aan artikel 8:75 van</para>
+        <para>de Awb.</para>
+        <para>6.      De beslissing</para>
+        <para>De president wijst het verzoek om een voorlopige voorziening af.</para>
+        <para>Aldus gewezen door mr R.R. Winter, president, in tegenwoordigheid van</para>
+        <para>mr M.M. Smorenburg, als griffier, en uitgesproken in het openbaar op 2 september</para>
+        <para>1999.</para>
+        <para>w.g. R.R. Winter        w.g. M.M. Smorenburg</para>
+        <para>Verzonden op:</para>
+        <para>$$N UITSPRAAK</para>
+      </parablock>
+    </uitspraak>
+</open-rechtspraak>

@@ -19,9 +19,9 @@ import javax.xml.bind.annotation.XmlValue;
 
 /**
  * <p>Java class for anonymous complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType>
  *   &lt;simpleContent>
@@ -34,12 +34,10 @@ import javax.xml.bind.annotation.XmlValue;
  *   &lt;/simpleContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "value"
+        "value"
 })
 @XmlRootElement(name = "creator")
 public class Creator {
@@ -59,11 +57,9 @@ public class Creator {
 
     /**
      * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getValue() {
         return value;
@@ -71,11 +67,9 @@ public class Creator {
 
     /**
      * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setValue(String value) {
         this.value = value;
@@ -83,11 +77,9 @@ public class Creator {
 
     /**
      * Gets the value of the label property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getLabel() {
         return label;
@@ -95,11 +87,9 @@ public class Creator {
 
     /**
      * Sets the value of the label property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setLabel(String value) {
         this.label = value;
@@ -107,23 +97,24 @@ public class Creator {
 
     /**
      * Gets the value of the resourceIdentifier property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getResourceIdentifier() {
+//        if (resourceIdentifier == null || resourceIdentifier.trim().length() <= 0) {
+//            return psiResourceIdentifier;
+//        } else if (psiResourceIdentifier != null && psiResourceIdentifier.length() > 0) {
+//            System.err.println("WARNING: Also found psiResourceIdentifier");
+//        }
         return resourceIdentifier;
     }
 
     /**
      * Sets the value of the resourceIdentifier property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setResourceIdentifier(String value) {
         this.resourceIdentifier = value;
@@ -131,11 +122,9 @@ public class Creator {
 
     /**
      * Gets the value of the scheme property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getScheme() {
         return scheme;
@@ -143,11 +132,9 @@ public class Creator {
 
     /**
      * Sets the value of the scheme property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setScheme(String value) {
         this.scheme = value;
@@ -155,11 +142,9 @@ public class Creator {
 
     /**
      * Gets the value of the psiResourceIdentifier property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getPsiResourceIdentifier() {
         return psiResourceIdentifier;
@@ -167,11 +152,9 @@ public class Creator {
 
     /**
      * Sets the value of the psiResourceIdentifier property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setPsiResourceIdentifier(String value) {
         this.psiResourceIdentifier = value;

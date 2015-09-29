@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:tr="http://tuchtrecht.overheid.nl/" xmlns:eu="http://publications.europa.eu/celex/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:CBB:2000:AU1266</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2014-04-13T11:42:49</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">AU1266</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/College_van_Beroep_voor_het_bedrijfsleven" scheme="overheid.RechterlijkeMacht">College van Beroep voor het bedrijfsleven</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">2000-06-20</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">AWB 98/88, 98/89, 98/90, 98/91m 98/92 en 98/93</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#eersteAanlegMeervoudig">Eerste aanleg - meervoudig</psi:procedure>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#proceskostenveroordeling">Proceskostenveroordeling</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht">Bestuursrecht</dcterms:subject>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0005537&amp;artikel=3:4&amp;g=2000-06-20">Algemene wet bestuursrecht 3:4</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0005537&amp;artikel=8:73&amp;g=2000-06-20">Algemene wet bestuursrecht 8:73</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0003356&amp;artikel=17a&amp;g=2000-06-20">Wet tarieven gezondheidszorg 17a</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0003356&amp;artikel=17b&amp;g=2000-06-20">Wet tarieven gezondheidszorg 17b</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0003356&amp;artikel=17c&amp;g=2000-06-20">Wet tarieven gezondheidszorg 17c</dcterms:references>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:2000:AU1266">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:2000:AU1266</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-04T22:35:44</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2005-08-22</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:CBB:2000:AU1266 College van Beroep voor het bedrijfsleven , 20-06-2000 / AWB 98/88, 98/89, 98/90, 98/91m 98/92 en 98/93</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:CBB:2000:AU1266:INH" lang="nl" xml:space="preserve">
+      <parablock>
+        <para>Wet tarieven gezondheidszorg</para>
+        <para>Overige met organen voor gezondheidszorg</para>
+        <para>gelijkgestelde instellingen</para>
+      </parablock>
+    </inhoudsindicatie>
+  <uitspraak xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:CBB:2000:AU1266:DOC" lang="nl" xml:space="preserve">
+      <para>College van Beroep voor het bedrijfsleven</para>
+      <para/>
+      <para/>
+      <parablock>
+        <para>No. AWB 98/88, 98/89, 98/90, 98/91, 98/92 en 98/93			20 juni 2000</para>
+        <para>13745 Wet tarieven gezondheidszorg</para>
+        <para>            Overige met organen voor gezondheidszorg</para>
+        <para>             gelijkgestelde instellingen</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para/>
+      <para>Uitspraak in de zaak van:</para>
+      <para/>
+      <parablock>
+        <para>1. Onderlinge waarborgmaatschappij Nuts Zorgverzekering U.A., te 's-Gravenhage</para>
+        <para>2. Nuts Ziektekosten N.V., te 's-Gravenhage,</para>
+        <para>3. Stichitng Medisch Centrum Jan van Goyen, te Amsterdam</para>
+        <para>4. Oogzorg West B.V., te Roosendaal en Rijswijk,</para>
+        <para>appellanten,</para>
+        <para>gemachtigde: mr J. Ekelmans jr., advocaat te 's-Gravenhage, </para>
+        <para>tegen</para>
+        <para>het College tarieven gezondheidzorg ,voorheen: het Centraal orgaan tarieven gezondheidszorg, verweerder,</para>
+        <para>gemachtigde: mr G.R.J. de Groot, advocaat te 's-Gravenhage,</para>
+      </parablock>
+      <para/>
+      <para> </para>
+      <para/>
+      <parablock>
+        <para>1.	De procedure</para>
+        <para>Op 26 januari 1998 heeft het College van appellanten een beroepschrift ontvangen, waarbij beroep is ingesteld tegen een besluit van verweerder d.d. 22 december 1997.</para>
+        <para>Bij dat besluit heeft verweerder, beslissende op bezwaren van appellanten tegen een fictieve afwijzing van door hen ingediende aanvragen om goedkeuring van tarieven voor verrichtingen in niet-klinische behandelcentra, met toepassing van artikel 17c, derde lid, van de Wet tarieven gezondheidszorg (hierna: Wtg) onder meer de maximumtarieven voor evenbedoelde verrichtingen vastgesteld op 100% van de neventarieven voor de ziekenhuizen, met dien verstande dat de tarieven ingaan op 1 april 1997, gelden tot 1 januari 1999 en slechts in rekening mogen worden gebracht aan Nuts-verzekerden (ziekenfonds en particulier).</para>
+        <para>Bij schrijven van 29 april 1998 hebben appellanten de gronden voor het beroep uiteengezet.</para>
+        <para>Verweerder heeft onder dagtekening 8 september 1998 een verweerschrift ingediend en daarbij de op de zaak betrekking hebbende stukken overgelegd.</para>
+        <para>Op 28 maart 2000 heeft het onderzoek ter zitting plaatsgevonden, waarbij partijen hun standpunten nader hebben doen toelichten.</para>
+        <para>Appellanten hebben het College bij brief van 18 april 2000 medegedeeld dat de bezwaren van appellanten tegen de gelding van voornoemde tarieven tot 1 januari 1999, niet langer worden gehandhaafd.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>2.	De grondslag van het geschil</para>
+        <para>2.1	Bij de Wtg is, in de tekst zoals die luidde ten tijde hier van belang, onder meer het volgende bepaald:</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>"Artikel 17a.</para>
+        <para>1. Voor bij algemene maatregel van bestuur aan te wijzen prestaties en voor prestaties van bij algemene maatregel van bestuur aan te wijzen categorieën van organen voor gezondheidszorg zijn de artikelen 2, 4, 5, 7, 8, eerste en tweede lid, en 9 niet van toepassing.</para>
+        <para>(…)</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Artikel 17b.</para>
+        <para>1. Het is verboden voor een prestatie ten aanzien waarvan artikel 17a is toegepast, een tarief in rekening te brengen indien voor die prestatie niet overeenkomstig deze wet een maximumtarief is goedgekeurd of vastgesteld.</para>
+        <para>(…)</para>
+        <para>Artikel 17c</para>
+        <para>1. Indien overleg tussen de representatieve organisatie van organen voor gezondheidszorg en een representatieve organisatie van ziektekostenverzekeraars over het maximumtarief voor een prestatie ten aanzien waarvan artikel 17a is toegepast, tot overeenstemming heeft geleid, kunnen zij het Centraal orgaan verzoeken dat maximumtarief goed te keuren.</para>
+        <para>(…)</para>
+      </parablock>
+      <para/>
+      <para>3. Indien voor een prestatie ten aanzien waarvan artikel 17a is toegepast, geen maximumtarief is tot stand gekomen en bij het Centraal orgaan geen verzoek als bedoeld in het eerste of tweede lid in behandeling is, kunnen een of meer organenvoor gezondheidszorg samen met een of meer ziektekostenverzekeraars het Centraal orgaan verzoeken een maximumtarief vast te stellen. Daarbij wordt bepaald in welke gevallen het vastgestelde maximumtarief geldt."</para>
+      <para/>
+      <parablock>
+        <para>2.2	Op grond van de stukken en het onderzoek ter zitting zijn in deze zaak de volgende feiten en omstandigheden voor het College komen vast te staan.</para>
+        <para>- Appellanten sub 3 en 4, privé-klinieken, hebben op respectievelijk 13 december 1993 en 8 november 1994 tezamen met appellanten sub 1 en 2, ziektekosten-verzekeraars, bij verweerder verzoeken ingediend om goedkeuring van tarieven, door hen in rekening te brengen als neventarieven voor een aantal nader vermelde medisch-specialistische verrichtingen ten behoeve van verzekerden van appellanten sub 1 en 2.</para>
+        <para>- Bij schrijven van 5 juli 1995 hebben appellanten een bezwaarschrift ingediend tegen de fictieve weigering van verweerder van genoemde goedkeuring.</para>
+        <para>- Bij besluit van 21 december 1995, heeft verweerder genoemd bezwaarschrift ongegrond verklaard.</para>
+        <para>- Tegen dat besluit van hebben (onder meer) appellanten beroep ingesteld bij het College.</para>
+        <para>- Bij uitspraak van 12 december 1996, nrs. 96/0116/074/089 en 96/0128/074/089, heeft het College dat beroep gegrond verklaard en evengenoemd besluit vernietigd. Daartoe heeft het College onder meer het volgende overwogen:</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>"Het College acht verweerders betoog dat de tariefverzoeken betrekking hebben op prestaties ten aanzien waarvan een maximumtarief , als bedoeld in artikel 17b van de Wet is totstandgekomen, onjuist. Voor de specialistische verrichtingen, indien extramuraal uitgevoerd, gelden wel maximumtarieven,, doch onvoldoende is aannemelijk dat de specifieke faciliteiten en nevenverrichtingen, beschikbaar gesteld door niet klinische behandelcentra, vallen onder dan wel gelijk te stellen zijn met de prestaties waarvoor een maximumtarief is tot stand gekomen. Zowel uit de stukken, alsook uit het verhandelde ter zitting is gebleken dat ook verweerder van oordeel is dat de buitenziekenhuistoeslag, die appellanten in rekening mogen brengen naast de algemeen vastgestelde maximumtarieven niet geacht kan worden betrekking te hebben op de kosten van de specifieke faciliteiten en nevenverrichtingen, waarvoor appellanten tarieven vastgesteld wensen te zien. Hierdoor is naar het oordeel van het College ook niet de mogelijkheid uitgesloten voor appellanten sub 1 t/m 4 om op de voet van het bepaalde bij artikel 17c, derde lid, van de Wet tariefverzoeken in te dienen.</para>
+        <para>Aan de vraag of, indien zou worden vastgesteld dat sprake is van specifieke faciliteiten en nevenverrichtingen waaroor een maximumtarief tot stand kan worden gebracht, voor zodanig tarief aansluiting is te zoeken bij de neventarieven voor ziekenhuizen, die appellanten wensen, komt het College thans niet toe. </para>
+        <para>De slotsom moet zijn dat het bestreden besluit een voldoende draagkrachtige motivering ontbeert en derhalve vernietigd moet worden."</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>- Bij besluit van 26 maart 1997 heeft verweerder, opnieuw beslissende op voormeld bezwaarschrift van 5 juli 1995, het verzoek om vaststelling van de gevraagde neventarieven afgewezen en besloten over te gaan tot de vaststelling van tarieven op grond van artikel 17c, derde lid, van de Wtg op 70% van de neventarieven, zoals die gelden voor ziekenhuizen voor de desbetreffende verrichtingen, met dien verstande dat de tarieven zouden ingaan op 1 april 1997 en gelden tot 1 januari 1998 en slechts in rekening zouden mogen worden gebracht aan Nuts-verzekerden.</para>
+        <para>- Bij dit besluit is onder meer het volgende overwogen:</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>"Ten aanzien van de ingangsdatum van de individuele tariefbeschikkingen van 1 april 1997, overweegt het COTG als volgt.</para>
+        <para>Het gedoogbeleid van de overheid voor wat betreft privé-klinieken is altijd gebaseerd geweest op het feit dat het bestaan van privé-klinieken niet tot macromeerkosten mag leiden. De gedachte hierachter is, dat het bij privé-klinieken ging - en nog steeds gaat - om niet-geplande infrastructuur die niet aan wettelijke voorschriften terzake geboden is. De infrastructurele kosten dienen derhalve niet voor vergoeding in aanmerking te komen. Het COTG heeft in dat kader als beleid gevoerd dat privé-klinieken (A32-instellingen ingevolge de WTG, zoals ook door het CBB in zijn uitspraak van 12 december 1996 is bepaald) slechts de vigerende maximumtarieven, welke ook gelden voor medisch specialisten, in rekening mogen brengen. Door de uitspraak van de CBB zal dit beleid door het COTG voor de toekomst niet langer meer gecontinueerd worden.</para>
+        <para>In het licht van en rekening houdend met het geschetste overheidsbeleid inzake privé-klinieken van de afgelopen jaren, heeft het COTG besloten tot vaststelling van de genoemde tarieven met ingang van 1 april 1997. De tarieven gelden tot 1 januari 1998, in afwachting van een meer collectieve benadering van de onderhavige kwestie, waaronder een nadere screening van de in privé-klinieken te verrichte medische prestaties."</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>- Tegen het besluit van 26 maart 1997 en de daarmee samenhangende tariefbeschikkingen hebben (onder meer) appellanten beroep bij het College ingesteld.</para>
+        <para>- Bij uitspraak van 4 november 1997, nrs. AWB 97/586 t/m 572 en AWB 97/574 en 575, heeft het College de beroepen gegrond verklaard en evenbedoelde besluiten vernietigd. Daartoe is het volgende overwogen:</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>"De hier bestreden besluiten zijn genomen naar aanleiding van de uitspraak van het College van 12 december 1996.</para>
+        <para>Uit die uitspraak vloeide voort dat verweerder allereerst op basis van een onderzoek naar door de in privé-klinieken aangeboden prestaties van gezondheidszorg diende vast te stellen óf door appellanten gewenste tarieven, betrekking hebben op specifieke faciliteiten en nevenverrichtingen, waarvoor maximumtarieven als bedoeld in titel 4 a, van de Wtg van toepassing zijn, kunnen worden vastgesteld. Verweerder heeft evenwel dat onderzoek niet verricht. Er aldus impliciet van uitgaande dat maximumtarieven voor de faciliteiten en nevenverrichtingen konden worden vastgesteld, heeft verweerder vervolgens eveneens nagelaten de feitelijke gegevens te verzamelen, die noodzakelijk zijn om te komen tot een gefundeerde waardering van de aanvaarde kosten waarop het tarief betrekking zou moeite hebben. Verweerder heeft volstaan met een niet op enige cijfermatige analyse gebaseerde vergelijking tussen ziekenhuizen en privé-klinieken en op basis daarvan de neventarieven forfaitair vastgesteld op 70% van de voor de ziekenhuizen geldende tarieven.</para>
+        <para>Naar zijn mening heeft verweerder op deze wijze, mede gelet op de maatschappelijke ontwikkelingen rondom het verschijnsel privé-kliniek, een pragmatische oplossing gevonden, in afwachting van de ontwikkeling van een meer structurele plaatsbepaling van de privé-kliniek in het stelsel van de (gezondheids)zorg. De bestreden besluiten zijn aldus door verweerder gepresenteerd als een "noodverband", dat zowel een forfaitair als een tijdelijk karakter heeft.</para>
+        <para>Deze prestatie evenwel zou de gebrekkige grondslag van het bestreden besluit slechts kunnen rechtvaardigen, indien op grond van de stukken en het verhandelde ter zitting aannemelijk zou zijn dat intussen, tegelijkertijd, daadwerkelijk pogingen zijn of worden ondernomen om alsnog te komen tot een genoegzame feitelijke grondslag voor het vaststellen van de aanvaardbare kosten, als basis voor het al dan niet vaststellen van tarieven voor de hier in het geding zijnde verrichtingen. Immers, alleen langs die weg kan het voorlopig karaktervan verweerders tijdelijke voorziening worden ondervangen en kan het komen tot een meer fundamentele besluitvorming. Het Besluit gegevensverstrekking voorziet, gelet  op de daarin opgenomen in rubriek 2. weergegeven bepalingen, in de mogelijkheid om de ter zake relevante gegevens te vergaren</para>
+        <para>De gemachtigde van verweerder heeft evenwel, daarnaar ter zitting gevraagd, meegedeeld niet te kunnen bevestigen dat van die mogelijkheid gebruik zal worden gemaakt om een onderzoek in te stellen naar gegevens die een beter inzicht kunnen verschaffen in de bij privé-klinieken aanvaardbare kosten. Gelet hierop, en ook overigens, is op grond van de stukken en het verhandelde ter zitting voor het College onvoldoende aannemelijk geworden dat de bestreden besluiten daadwerkelijk het karakter dragen van een noodvoorziening ter overbrugging van de tijd die noodzakelijk is voor een onderzoek naar ter zake relevante gegevens die een genoegzame feitelijke grondslag kunnen bieden voor nadere besluitvorming. Daarom dienen zij bij gebreke van een voldoende draagkrachtige motivering te worden vernietigd."</para>
+      </parablock>
+      <para/>
+      <para>- Bij het thans bestreden besluit van 22 december 1997 heeft verweerder andermaal, op de hiervoor onder rubriek 1 vermelde wijze, beslist op meergenoemd bezwaarschrift van 5 juli 1995.</para>
+      <para/>
+      <parablock>
+        <para>3.	Het bestreden besluit</para>
+        <para>Het bestreden besluit berust op de volgende overwegingen:</para>
+      </parablock>
+      <para/>
+      <para>"Ten aanzien van uw bezwaren tegen de vaststelling van tarieven ter hoogte van 70% van de neventarieven voor ziekenhuizen en het daaraan gekoppelde verzoek tot vaststelling van de neventarieven, zoals deze gelden voor de ziekenhuizen, heeft het COTG besloten hier voor wat betreft de hoogte van de tarieven aan tegemoet te komen. In het kader van de beslissing op bezwaarschrift stelt het COTG ingevolge artikel 17c, lid 3 van de Wet tarieven gezondheidszorg (WTG) voor de betreffende verrichtingen de maximumtarieven voorlopig vast op 100% van de neventarieven voor de ziekenhuizen. Het COTG gaat hiertoe over in afwachting van de resultaten van een voor te nemen onderzoek naar de noodzaak en onderbouwing van kostentarieven bij niet-klinische behandelcentra.</para>
+      <para/>
+      <para>Tevens heeft het COTG besloten het in de beroepsprocedure bij het CBB en in de hoorzitting d.d. 5 december 1997 aan de orde gestelde M10-tarief (dagverpleging) toe te wijzen. De reden hiervoor is dat dit tarief direct gerelateerd is aan de kosten die voor dagverpleging gemaakt worden.</para>
+      <para/>
+      <para>Voorts wordt aan de tarieven een beperkte geldigheidsduur en een beperkte werkingssfeer gegeven. Het COTG heeft ingevolge artikel 17c, lid 3 van de WTG besloten dat deze tarieven slechts in rekening kunnen worden gebracht aan Nuts-verzekerden (ziekenfonds en particulier). Tevens gelden de tarieven tot 1 januari 1999.</para>
+      <para/>
+      <para>De overige in het bezwaarschrift aangevoerde bezwaren worden door het COTG afgewezen.</para>
+      <para/>
+      <para>De bovengenoemde maximumtarieven hebben en ingangsdatum van 1 april 1997 en worden niet met de gevraagde terugwerkende kracht vastgesteld. Voor de motivering ter zake wordt verwezen naar pagina 2, vierde alinea, van de beslissing op bezwaarschrift van 26 maart 1997. De nadien door het CBB gegeven uitspraak van 4 november 1997 doet daar niets aan af."</para>
+      <para/>
+      <parablock>
+        <para>4.	Het standpunt van appellanten</para>
+        <para>De vanwege appellanten tegen het bestreden besluit naar voren gebrachte bezwaren betreffen de datum van ingang van de bij dat besluit vastgestelde tarieven, alsmede de beperking dat genoemde tarieven slechts in rekening mogen worden gebracht aan Nutsverzekerden</para>
+        <para>Met betrekking tot genoemde ingangsdatum is van de zijde van appellanten het volgende naar voren gebracht.</para>
+        <para>Aangezien verweerder binnen acht weken na indiening van de verzoeken om goedkeuring van tarieven daarop een beslissing had behoren te geven, had de ingangsdatum van de onderhavige tarieven vóór 1 januari 1995 dienen te worden gesteld. Daarbij moet in aanmerking worden genomen dat verweerder geen goede grond had om niet tijdig op bedoelde verzoeken te beslissen. Bij een tijdige beslissing op de tariefverzoeken had die beslissing, wat de tariefvaststelling betreft, dienen te luiden, zoals het thans bestreden besluit.</para>
+        <para>In elk geval had verweerder – zo hebben appellanten subsidiair gesteld – de ingangsdatum dienen te stellen op het tijdstip van verzending van zijn eerste, op bezwaar genomen besluit, zijnde 21 december 1995.</para>
+        <para>Voorts getuigt, naar de opvatting van appellanten, de keuze van de ingangsdatum 1 april 1997 niet van een juiste afweging van de betrokken belangen.</para>
+        <para>Immers, de onderhavige tarieven zijn van meet af aan door de betrokken klinieken in rekening gebracht en moesten ook in rekening worden gebracht, daar een verantwoorde exploitatie zonder hantering van deze tarieven uitgesloten was. Het door middel van goedkeuren of vaststellen van tarieven mogelijk maken van een kostendekkende exploitatie behoort – aldus appellanten - tot de plicht van verweerder.</para>
+        <para>De inmiddels in rekening gebrachte tarieven zijn door het ziekenfonds als kosten verantwoord bij de Ziekenfondsraad, thans het College voor Zorgverzekeringen, welk college alleen kosten accepteert die door een tariefbeschikking worden gedekt. Daarnaast kan een tariefbeschikking van belang zijn, omdat daarmee het eventuele risico wordt weggenomen van een terugvordering van betalingen door patiënten of van het ingevolge een strafrechtelijke procedure moeten vergoeden van wederrechtelijk genoten voordeel.</para>
+        <para>Naar de mening van appellanten kan verweerder hun niet tegenwerpen dat zij met het in rekening brengen van kostendekkende tarieven niet hebben gewacht op tariefbeschikkingen die daarvoor een grondslag boden. Daarmee zet verweerder – aldus appellanten – de zaken op hun kop, daar immers verweerder verwijtbaar heeft getalmd met het vaststellen van de juiste tarieven.</para>
+        <para>Ten onrechte heeft verweerder nagelaten in het kader van de onderhavige besluitvorming te onderzoeken welke belangen voor appellanten spelen bij het tijdstip van ingang van de onderhavige tarieven.</para>
+        <para>Vanwege appellanten is tegen de beperking dat de bij het bestreden besluit vastgestelde tarieven slechts aan Nuts-verzekerden in rekening mogen worden gebracht, aangevoerd:</para>
+        <para>- dat uit de wetsgeschiedenis kan worden afgeleid dat, waar artikel 17c, derde lid, laatste volzin, spreekt van het bepalen in welke gevallen het vastgestelde maxi-mumtarief geldt, is gedacht aan het type verrichting en niet aan de kring van verzekerden;</para>
+        <para>- dat de ontoelaatbaarheid van een beperking van het maximumtarief naar de kring van verzekerden, tevens kan worden afgeleid uit de omstandigheid dat een uitdrukkelijke bepaling van die strekking ontbreekt, terwijl een dergelijke beperking wel elders in de wet – in artikel 8, derde lid – is opgenomen;</para>
+        <para>- dat verweerder geen redelijk belang heeft bij het stellen van de onderhavige beperking, nu hij bereid is gebleken tot inwilliging van verzoeken om vaststelling van maximumtarieven welke door de onderhavige privé-klinieken en andere verzekeraars gezamenlijk worden gedaan;</para>
+        <para>- dat zulks betekent dat er sprake is van een nodeloze administratieve belasting, die haaks staat op het uitgangspunt van de wetgever, dat de gang naar verweerder in het kader van artikel 17, derde lid, weinig zou worden gemaakt.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>5.	Het standpunt van verweerder</para>
+        <para>In het verweerschrift en ter zitting is van de zijde van verweerder betoogd dat de onderhavige besluitvorming niet is gebaseerd op nader onderzoek naar gegevens die een beter inzicht kunnen verschaffen in de kosten van privé-klinieken, maar dat uit pragmatische overwegingen de voorkeur is gegeven aan een voorlopige oplossing. Deze bestond hieruit, dat voorshands in afwachting van nader onderzoek naar de noodzaak en de onderbouwing van kostentarieven in privé-klinieken is besloten de afzonderlijke maximumtarieven van zulke klinieken vast te stellen op 100% van de neventarieven voor de ziekenhuizen.</para>
+        <para>Intussen zijn in verband met een wijziging van regelgeving en beleid de tarieven van de zelfstandige behandelcentra gelijk aan de tarieven voor nevenverrichtingen van de ziekenhuizen. Voor de zelfstandige behandelcentra zullen geen individueel vastgestelde maar landelijk toepasselijke maximumtarieven gelden. In dit verband is wel besloten om, als bekend is welke zelfstandige behandelcentra met ingang van 1 januari 2000 een vergunning hebben verkregen, alsnog onderzoek bij deze instellingen te verrichten voor een mogelijke nadere onderbouwing van de maximumkostentarieven.</para>
+        <para>Bij het bestreden besluit is, evenals bij eerdervermeld besluit van 26 maart 1997 als ingangsdatum 1 april 1997 aangehouden. Hierbij is in aanmerking genomen dat de gronden waarop voornoemde uitspraak van het College d.d. 12 december 1996 berust, niet dwongen tot een heroverweging met een uitkomst als door appellanten gewenst, alsmede dat de Wtg geen bepalingen bevat ter zake van het tijdstip van het van kracht worden van een door verweerder vastgesteld tarief. Voorts geldt als gedragslijn dat een tarief van kracht wordt verklaard op enig tijdstip, gelegen na de datum waarop het tarief is goedgekeurd of vastgesteld. Deze gedragslijn berust mede op de overweging dat het onwenselijk is achteraf wijziging te brengen in de rechten en verplichtingen van de partijen die bij de verlening gezondheidszorg zijn betrokken. Een uitzondering is denkbaar als het gaat om een wijziging die voor partijen voorzienbaar is.</para>
+        <para>Verweerder is voorts van oordeel dat appellanten geen redelijk belang hebben bij een eerder ingangsdatum.</para>
+        <para>Immers, als de betrokken privé-klinieken zich voor 1 april 1997 hebben gehouden aan het wettelijk verbod op het in rekening brengen van hogere tarieven dan de ingevolge de Wtg goedgekeurde of vastgestelde maximumtarieven, ontbreekt het belang omdat onaannemelijk is dat in reeds afgewikkelde privaatrechtelijke verhoudingen met terugwerkende kracht hogere tarieven in rekening kunnen worden gebracht.</para>
+        <para>Indien de betrokken klinieken zich niet hebben gehouden aan genoemd wettelijk verbod, zou (verdere) terugwerkende kracht neerkomen op legalisatie van handelen in strijd met de wet.</para>
+        <para>Met betrekking tot de beperking dat de bij het bestreden besluit vastgestelde tarieven slechts aan Nuts-verzekerden in rekening mogen worden gebracht, is van de zijde van verweerder het volgende aangevoerd.</para>
+        <para>In deze zaken gaat het om gezamenlijke verzoeken van appellanten sub 1 en 2 enerzijds en appellanten sub 3 en 4 anderzijds. In de desbetreffende tariefverzoeken is uitdrukkelijk gewezen op de tussen partijen gelden overeenkomsten.</para>
+        <para>Voor verweerder bestond te minder aanleiding de tarieven een bredere personele werkingssfeer te geven, daar het gaat om de toepassing van artikel 17c, derde lid. Deze bepaling vormt een uitzondering op de hoofdregel dat voor prestaties waarop Titel 4a van Hoofdstuk 2 van de Wtg van toepassing is, slechts landelijk geldende, uniforme maximumtarieven worden goedgekeurd of vastgesteld op verzoek of met betrokkenheid van de representatieve organisaties. Uit de wetsgeschiedenis kan worden afgeleid dat een restrictieve toepassing van genoemd artikellid werd beoogd. Voorts moet in aanmerking worden genomen dat de betrokkenheid van de in die bepaling genoemde ziektekostenverzekeraar(s) irrelevant zou zijn, voor zover het gaat om tarieven die aan anderen dan die ziektekostenverzekeraar(s) of degenen die daarbij verzekerd zijn, in rekening worden gebracht. Derhalve ligt de conclusie voor de hand dat de vaststelling van maximumtarieven met toepassing van artikel 17c, derde lid, in beginsel slechts is bedoeld voor tarieven die in rekening zullen worden gebracht aan de ziektekostenverzekeraar (of diens verzekerden) die mede het tariefverzoek heeft gedaan</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>6.	De beoordeling van het geschil</para>
+        <para>De geschilpunten die partijen verdeeld houden, betreffen de bij het bestreden besluit bepaalde ingangsdatum van de maximumtarieven, zijnde 1 april 1997, alsmede eerdergenoemde beperking dat die tarieven slechts aan Nuts-verzekerden in rekening mogen worden gebracht.</para>
+        <para>Ten aanzien van het standpunt van appellanten, inhoudende dat verweerder genoemde ingangsdatum had behoren te baseren op het tijdstip van indiening van de verzoeken om vaststelling van tarieven, merkt het College op dat appellanten niet, zo spoedig als dat mogelijk was, gebruik hebben gemaakt van de rechtsmiddelen die de Algemene wet bestuursrecht (hierna: Awb) bood in verband met het niet binnen een redelijke termijn nemen van een besluit op bedoelde verzoeken (zoals het indienen van een bezwaarschrift en het vragen van een voorlopige voorziening) doch daarmee hebben gewacht tot 5 juli 1995, alsmede dat appellanten evenmin gebruik hebben gemaakt van de bij de Awb geboden rechtsmiddelen in verband met het niet tijdig nemen van een besluit op hun bezwaarschrift  doch er kennelijk voor hebben gekozen een reëel besluit op het bezwaarschrift af te wachten.</para>
+        <para>Reeds hierom dient vorenomschreven standpunt van appellanten te worden verworpen. De stelling dat verweerder zich niet heeft gehouden aan de in de Awb gestelde termijnen, kan appellanten onder deze omstandigheden niet baten.</para>
+        <para>Met betrekking tot de vraag of het, in verband met de zich in deze zaken voordoende feiten en omstandigheden, rechtens geboden is het tijdstip van ingang van de tarieven te stellen op een latere dan de door appellanten gewenste datum doch op een eerdere datum dan 1 april 1997, overweegt het College het volgende.</para>
+        <para>Aangaande de opvatting van verweerder dat tarieven, een nader genoemde uitzondering daargelaten, eerst van kracht dienen te worden op een tijdstip gelegen na de datum van goedkeuring of vaststelling, merkt het College op dat deze, in gangbare gevallen van goedkeuring of vaststelling te hanteren, benadering onvoldoende recht doet wedervaren aan de specifieke omstandigheden van de voorliggende gevallen.</para>
+        <para>Daarbij moet in aanmerking worden genomen dat het blijkens de beschikbare gegevens voor de betrokken privé-klinieken uitgesloten was te komen tot een verantwoorde exploitatie, daar de destijds toegestane tarieven bij lange na niet kostendekkend waren. De voor appellanten ongewisse situatie met betrekking tot de tarieven, waarbij de mogelijkheid tot voortzetting van de werkzaamheden van de privé-klinieken aan de orde was, heeft, gezien de gang van zaken omschreven onder voormelde rubrieken 1 en 2, lange tijd geduurd.</para>
+        <para>Nadat verweerder bij eerdergenoemd besluit van 26 maart 1997 zonder een onderzoek naar gegevens voor een mogelijke nadere onderbouwing van de tarieven, op grond van pragmatische overwegingen de maximumtarieven per 1 april 1997 had vastgesteld op 70% van de voor ziekenhuizen geldende neventarieven, heeft hij na vernietiging van dat besluit bij eerdervermelde uitspraak van 4 november 1997 wederom zonder een nader onderzoek als evenbedoeld en, naar zijnerzijds is gesteld, op grond van praktische overwegingen de tarieven vastgesteld per evengenoemde datum.</para>
+        <para>Daar het, gezien het reeds door appellanten gestelde, duidelijk was dat zij in verband met hun belangenpositie bezwaar hadden tegen meergenoemde ingangsdatum, kon verweerder daaraan niet voorbij gaan bij de onderhavige besluitvorming.</para>
+        <para>Het kennelijk door verweerder ingenomen standpunt dat, gezien de verplichting van betrokkenen zich te houden aan het wettelijke regime inzake de tarieven, er in dit verband voor appellanten geen rechtens te eerbiedigen belangen aan de orde zijn, wijst het College in verband met eerderomschreven bijzondere omstandigheden als onjuist van de hand.</para>
+        <para>Evenmin kan de motivering van verweerders besluit d.d. 26 maart 1997, waarnaar in het bestreden besluit op dit punt is verwezen, als voldoende draagkrachtig worden aangemerkt voor verweerders beslissing om de ingangsdatum vast te stellen op 1 april 1997. Het geschetste overheidsbeleid inzake privé-klinieken kan er niet aan afdoen dat bij verweerders beslissingen ingevolge de Wtg belangen als hier aan de orde, genoegzaam worden meegewogen.</para>
+        <para>Het College is, nu verweerder voormelde, van betekenis te achten, belangen van appellanten niet heeft meegewogen, van oordeel dat het bestreden besluit, voor zover het de ingangsdatum van de tarieven betreft, is genomen in strijd met artikel 3:4, eerste lid, van de Awb.</para>
+        <para>Derhalve kan het bestreden besluit, in zoverre het genoemd onderdeel betreft, niet in stand blijven.</para>
+        <para>Onder de gegeven omstandigheden acht het College, alle bij het bestreden besluit betrokken belangen in aanmerking nemend en oordelend naar redelijkheid en billijkheid, het rechtens verantwoord en geraden onder toepassing van artikel 8:73, derde lid, van de Awb in dier voege in deze zaak te voorzien, dat de ingangsdatum van de maximumtarieven voor appellanten wordt gesteld op 21 december 1995, zijnde de datum van het eerste besluit op het bezwaarschrift van appellanten tegen de fictieve weigering betreffende verzoeken om een tariefsvaststelling.</para>
+        <para>Daarbij is in aanmerking genomen dat verweerder bij de twee achtereenvolgende besluiten op genoemd bezwaarschrift, op praktische/pragmatische overwegingen, beslissingen aangaande de tarieven heeft genomen, zonder voldoende acht te slaan op de relevante feiten en omstandigheden. Evenzeer is het van belang dat er een einde komt aan de langdurige rechtstrijd tussen partijen, die is voortgevloeid uit de besluitvorming van verweerder.</para>
+        <para>Het College is van oordeel dat de onderhavige maximumtarieven niet behoren te gelden zonder de bij het bestreden besluit gestelde beperking naar de kring der verzekerden. Daartoe overweegt het College dat het hier gaat om een tariefvaststelling die op grond van de hiervoor bedoelde bijzondere omstandigheden terugwerkende kracht heeft. Voorts is met name ook in aanmerking te nemen hetgeen van de zijde van appellanten in het verleden aan verweerder te kennen is gegeven omtrent de door hen gewenste tarieven.</para>
+        <para>Meer in het bijzonder wordt met betrekking tot het laatste overwogen dat vanwege NUTS-AEGON Ziektekosten N.V. en Nuts Zorgverzekering (hierna: Nuts-verzekeringen) bij aan verweerder gericht schrijven van 13 december 1993 is medegedeeld:</para>
+        <para>- dat Nuts-verzekeringen met ingang van 1 januari 1992 als experiment met een aantal privé-klinieken contracten heeft gesloten, waarbij het ging om specialismen waarvoor belangrijke wachttijden bestonden;</para>
+        <para>- dat de Ziekenfondsraad heeft opgemerkt dat de klinieken goedgekeurde COTG-tarieven in rekening moeten brengen;</para>
+        <para>- dat echter nog steeds niet duidelijk is of de klinieken goedkeuring nodig hebben van de specifiek van toepassing zijnde COTG-tarieven;</para>
+        <para>- dat in verband met de opmerking van de Ziekenfondsraad toch een tarief aanvraag wordt ingediend voor de door Nuts-verzekeringen gecontracteerde klinieken;</para>
+        <para>- dat het daarbij gaat om de COTG-neventarieven voor specifieke behandelingen zoals die met de klinieken zijn afgesproken;</para>
+        <para>- dat de gevraagde goedkeuring alleen van toepassing is op Nuts-verzekerden.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Bij genoemd schrijven is overgelegd een gezamenlijke tariefaanvraag van Nuts-verzekeringen en appellante sub 3.</para>
+        <para>Nadien is bij schrijven van Nuts-verzekeringen d.d. 8 november 1994 een gezamenlijke tariefaanvraag ingediend van Nuts-verzekeringen en appellante sub 4, waarbij is medegedeeld dat het tarief in rekening zou kunnen worden gebracht bij Nuts-verzekeringen. Deze tariefaanvraag kan in verband worden gebracht met hetgeen is vermeld in de brief van 13 december 1993, waaronder begrepen voornoemde mededeling dat de gevraagde goedkeuring alleen van toepassing is op Nuts-verzekerden.</para>
+        <para>Uit het voorafgaande volgt dat het bestreden besluit, voor zover het meergenoemde beperking betreft, dient te worden gehandhaafd nu de tekst van de Wtg, in het bijzonder artikel 17c, derde lid, laatste volzin, en de strekking van die wet zich niet zonder meer verzetten tegen het onder bepaalde omstandigheden opnemen van een zodanige beperking.</para>
+        <para>In deze conclusie ligt dus niet besloten dat wordt onderschreven voormeld standpunt van verweerder dat de vaststelling van maximumtarieven met toepassing van artikel 17c, derde lid, van de Wtg in beginsel slechts is bedoeld voor tarieven die in rekening zullen worden gebracht aan de ziektekostenverzekeraar (of diens verzekerden) die mede het tariefverzoek heeft gedaan.</para>
+        <para>In verband met het vorenoverwogene stelt het College vast dat het door appellanten betaalde griffierecht door verweerder dient te worden vergoed.</para>
+        <para>Voorts acht het College termen aanwezig verweerder met toepassing van artikel 8:75 van de Awb te veroordelen in de hierna te noemen kosten die appellanten in verband met dit geding hebben moeten maken.</para>
+        <para>Gezien het vorenoverwogene dient te worden beslist zoals hierna is vermeld.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>7. De beslissing</para>
+        <para>Het College:</para>
+        <para>- verklaart het beroep gegrond;</para>
+        <para>- vernietigt het bestreden besluit, voor zover is bepaald dat de daarbij vastgestelde maximumtarieven ingaan op 1 april 1997;</para>
+        <para>- bepaalt dat de bij het bestreden besluit vastgestelde maximumtarieven voor appellanten ingaan op 21 december 1995;</para>
+        <para>- bepaalt dat het door appellanten betaalde griffierecht, ten bedrage van ƒ 420,-- (zegge vierhonderdentwintig gulden), aan</para>
+        <para>  hen wordt vergoed;</para>
+        <para>- veroordeelt verweerder in de proceskosten van appellanten, welke kosten worden vastgesteld op ƒ 2.130,--(zegge:</para>
+        <para>  tweeduizendhonderdendertig gulden);</para>
+        <para>- wijst af het anders of meer gevorderde.</para>
+      </parablock>
+      <para/>
+      <para>Aldus gewezen door mr B. Verwayen, mr H.C. Cusell en mr M.J. Kuiper in tegenwoordigheid van mr M.M. Smorenburg, als griffier en uitgesproken in het openbaar op 20 juni 2000. </para>
+      <para/>
+      <para>w.g B. Verwayen				w.g. M.M. Smorenburg</para>
+    </uitspraak>
+</open-rechtspraak>

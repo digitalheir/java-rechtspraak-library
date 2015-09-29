@@ -8,19 +8,21 @@
 
 package nl.rechtspraak.schema.rechtspraak_1;
 
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonPrimitive;
+
 import javax.xml.bind.annotation.*;
 import javax.xml.namespace.QName;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 
 /**
  * <p>Java class for T_Rechtspraak_Markup complex type.
- * <p/>
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <p/>
+ * <p>
  * <pre>
  * &lt;complexType name="T_Rechtspraak_Markup">
  *   &lt;complexContent>
@@ -136,21 +138,21 @@ public class TRechtspraakMarkup {
 
     /**
      * Gets the value of the content property.
-     * <p/>
-     * <p/>
+     * <p>
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the content property.
-     * <p/>
-     * <p/>
+     * <p>
+     * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getContent().add(newItem);
      * </pre>
-     * <p/>
-     * <p/>
-     * <p/>
+     * <p>
+     * <p>
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Imagedata }
      * {@link Tbody }
@@ -192,11 +194,11 @@ public class TRechtspraakMarkup {
 
     /**
      * Gets a map that contains attributes that aren't bound to any typed property on this class.
-     * <p/>
-     * <p/>
+     * <p>
+     * <p>
      * the map is keyed by the name of the attribute and
      * the value is the string value of the attribute.
-     * <p/>
+     * <p>
      * the map returned by this method is live, and you can add new attribute
      * by updating the map directly. Because of this design, there's no setter.
      *
@@ -209,16 +211,43 @@ public class TRechtspraakMarkup {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        for (Object o : content) {
-            if (o instanceof String) {
-                sb.append(o);
-            } else if (o instanceof TRechtspraakMarkup) {
-                sb.append(o.toString());
-            } else {
-                System.err.println("Could not handle " + o.getClass());
-                //sb.append(o.toString());
+        if (content != null) {
+            for (Object o : content) {
+                if (o instanceof String) {
+                    sb.append(o);
+                } else if (o instanceof TRechtspraakMarkup) {
+                    sb.append(o.toString());
+                } else {
+                    System.err.println("Could not handle " + o.getClass());
+                    //sb.append(o.toString());
+                }
             }
+        } else {
+            System.out.println();
         }
         return sb.toString();
+    }
+
+    public JsonElement toJson() {
+        JsonObject o = new JsonObject();
+
+        JsonArray children = new JsonArray();
+
+        for (Object child : getContent()) {
+            if (child instanceof CharSequence) {
+                if (child.toString().trim().length() > 0) {
+                    children.add(new JsonPrimitive(child.toString().trim()));
+                }
+            } else if (child instanceof TRechtspraakMarkup) {
+                children.add(((TRechtspraakMarkup) child).toJson());
+            } else {
+                throw new IllegalStateException("Unable to serialize child with class " + child.getClass().getSimpleName());
+            }
+        }
+
+        Class<? extends TRechtspraakMarkup> c = getClass();
+        XmlRootElement ann = c.getAnnotation(XmlRootElement.class);
+        o.add(ann.name(), children);
+        return o;
     }
 }

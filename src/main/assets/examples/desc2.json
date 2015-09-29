@@ -1,0 +1,41 @@
+{
+  "abstract": {
+    "resourceIdentifier": "../../rs:inhoudsindicatie",
+    "abstractXml": "\u003c?xml version\u003d\"1.0\" encoding\u003d\"UTF-8\" standalone\u003d\"yes\"?\u003e\u003cns8:inhoudsindicatie xml:space\u003d\"preserve\" id\u003d\"ECLI:NL:GHSHE:2014:1641:INH\" lang\u003d\"nl\" xmlns:ns6\u003d\"bwb-dl\" xmlns:ns5\u003d\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\" xmlns:ns8\u003d\"http://www.rechtspraak.nl/schema/rechtspraak-1.0\" xmlns:ns7\u003d\"https://e-justice.europa.eu/ecli\" xmlns:ns2\u003d\"http://purl.org/dc/terms/\" xmlns:ns4\u003d\"http://psi.rechtspraak.nl/\" xmlns:ns3\u003d\"http://www.w3.org/2000/01/rdf-schema#\"\u003e\n      \u003cns8:para\u003edwaling over pensioenrechten bij beëindiging arbeidsovereenkomst\u003c/ns8:para\u003e\n    \u003c/ns8:inhoudsindicatie\u003e",
+    "@value": "dwaling over pensioenrechten bij beëindiging arbeidsovereenkomst"
+  },
+  "accessRights": "public",
+  "format": "text/html",
+  "identifier": "http://deeplink.rechtspraak.nl/uitspraak?id\u003dECLI:NL:GHSHE:2014:1641",
+  "issued": {
+    "value": {
+      "year": 2014,
+      "month": 6,
+      "day": 5,
+      "timezone": -2147483648,
+      "hour": -2147483648,
+      "minute": -2147483648,
+      "second": -2147483648
+    },
+    "label": "Publicatiedatum"
+  },
+  "language": "nl",
+  "modified": {
+    "year": 2014,
+    "month": 6,
+    "day": 5,
+    "timezone": -2147483648,
+    "hour": 10,
+    "minute": 23,
+    "second": 38
+  },
+  "publisher": {
+    "value": "Raad voor de Rechtspraak",
+    "resourceIdentifier": "http://rechtspraak.nl/"
+  },
+  "title": {
+    "value": "ECLI:NL:GHSHE:2014:1641 Gerechtshof \u0027s-Hertogenbosch , 03-06-2014 / HD 200.132.399_01",
+    "language": "nl"
+  },
+  "about": "http://deeplink.rechtspraak.nl/uitspraak?id\u003dECLI:NL:GHSHE:2014:1641"
+}

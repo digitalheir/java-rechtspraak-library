@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:tr="http://tuchtrecht.overheid.nl/" xmlns:eu="http://publications.europa.eu/celex/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:CBB:2000:AA9102</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-04T16:17:11</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">AA9102</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/College_van_Beroep_voor_het_bedrijfsleven" scheme="overheid.RechterlijkeMacht">College van Beroep voor het bedrijfsleven</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">2000-12-05</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">AWB 99/414</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#eersteAanlegMeervoudig">Eerste aanleg - meervoudig</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht">Bestuursrecht</dcterms:subject>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0005662&amp;artikel=87">Gezondheids- en welzijnswet voor dieren 87</dcterms:references>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:2000:AA9102">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:2000:AA9102</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-04T16:17:11</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2003-01-09</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:CBB:2000:AA9102 College van Beroep voor het bedrijfsleven , 05-12-2000 / AWB 99/414</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:CBB:2000:AA9102:INH" lang="nl" xml:space="preserve">
+      <para>-</para>
+    </inhoudsindicatie>
+  <uitspraak xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:CBB:2000:AA9102:DOC" lang="nl" xml:space="preserve">
+      <para>College van Beroep voor het bedrijfsleven</para>
+      <para/>
+      <para/>
+      <parablock>
+        <para>No. AWB 99/414						5 december 2000</para>
+        <para>	11230</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para/>
+      <para>Uitspraak in de zaak van:</para>
+      <para/>
+      <parablock>
+        <para>A, appellant,</para>
+        <para>gemachtigde: mr J.J.J. de Rooy, advocaat te Tilburg, </para>
+        <para>tegen</para>
+        <para>de Staatssecretaris van Landbouw, Natuurbeheer en Visserij en de Inspecteur-districtshoofd van de Veterinaire Dienst, verweerders,</para>
+        <para>gemachtigde: mr G. de Goede.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para/>
+      <para/>
+      <parablock>
+        <para>1.	De procedure</para>
+        <para>Op 28 april 1999 heeft het College van appellant een beroepschrift ontvangen, waarbij beroep wordt ingesteld tegen een besluit van verweerder van 25 maart 1999.</para>
+        <para>Bij dat besluit hebben verweerders de bezwaren van appellant tegen het besluit van de Inspecteur-districtshoofd van de Veterinaire Dienst (hierna: de Inspecteur) van 20 mei 1997, waarbij alle varkens op het bedrijf van appellant als verdacht zijn aangemerkt, en tegen het besluit van de Minister van Landbouw, Natuurbeheer en Visserij </para>
+        <para>(hierna: de Minister) van 19 juni 1997, waarbij aan appellant een tegemoetkoming in de door hem geleden schade is toegekend, ongegrond verklaard.</para>
+        <para>Op 5 oktober 1999 heeft appellant de gronden van zijn beroep aangevuld.</para>
+        <para>Verweerders hebben op 1 december 1999 een verweerschrift ingediend.</para>
+        <para>Het onderzoek ter zitting heeft plaatsgevonden op 17 oktober 2000. Bij die gelegenheid, waar appellant in persoon is verschenen, hebben partijen hun standpunt nader toegelicht.</para>
+        <para>2.	De grondslag van het geschil</para>
+        <para>2.1	De Gezondheids- en welzijnswet voor dieren (hierna: de Wet) biedt in artikel 21 grondslag voor maatregelen tot bestrijding van (in dit geval) klassieke varkenspest. Artikel 22, eerste lid, onderdeel f en g, van de Wet bepaalt dat die maatregelen onder meer kunnen zijn het doden van zieke en verdachte dieren en het onschadelijk maken van gedode of gestorven, zieke en verdachte dieren, en van produkten en voorwerpen, die besmet zijn of ervan </para>
+        <para>worden verdacht gevaar op te leveren voor verspreiding van smetstof.</para>
+        <para>In de Wet is voorts onder meer bepaald:</para>
+        <para>"	Artikel 86</para>
+        <para>1.	Uit 's Rijks kas wordt aan de eigenaar een tegemoetkoming in de schade uitgekeerd, indien:</para>
+        <para>a.	dieren krachtens het bepaalde in artikel 22, eerste lid, onderdeel f, worden gedood;</para>
+        <para>b.	produkten en voorwerpen krachtens het bepaalde in artikel 22, eerste lid, onderdeel g, onschadelijk worden gemaakt;</para>
+        <para>c.	(.).</para>
+        <para>2.	De tegemoetkoming in de schade bedraagt:</para>
+        <para>a.	voor verdachte dieren: de waarde in gezonde toestand,</para>
+        <para>b.	(.),</para>
+        <para>c.	voor produkten en voorwerpen:de waarde op het moment van de maatregel,</para>
+        <para>(.)</para>
+        <para>(.)</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Artikel 87</para>
+        <para>Alvorens dieren krachtens het bepaalde in artikel 22, eerste lid, onderdeel f, worden gedood of produkten en voorwerpen krachtens het bepaalde in artikel 22, eerste lid, onderdeel g, worden onschadelijk gemaakt, (.) wordt de waarde daarvan vastgesteld.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Artikel 88</para>
+        <para>1.	De in artikel 87 bedoelde waardevaststelling geschiedt door een be‰digd deskundige, welke wordt aangewezen door een door Onze Minister aangewezen ambtenaar.</para>
+        <para>(.)</para>
+      </parablock>
+      <para/>
+      <para/>
+      <parablock>
+        <para>Artikel 89</para>
+        <para>Terstond nadat de waarde is vastgesteld deelt Onze Minister aan de eigenaar het bedrag van de waardevaststelling mee."</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>2.2	Op grond van de stukken en het onderzoek ter zitting zijn in deze zaak de volgende feiten en omstandigheden voor het College komen vast te staan.</para>
+        <para>- Op 7 mei 1997 is op het bedrijf van de heer Van Bragt te Someren klassieke varkenspest geconstateerd.</para>
+        <para>- Op 15 mei 1997 heeft appellant, wiens bedrijf te B en </para>
+        <para>daarmee vlak bij dat van C ligt, van C vernomen dat diens bedrijf </para>
+        <para>verdacht zou worden verklaard. Door of namens appellant is op diezelfde dag contact opgenomen met de Commissie preventieve ruiming.</para>
+        <para>- Bij besluit van 16 mei 1997 zijn de varkens op het bedrijf van de heer C aan de B verdacht verklaard.</para>
+        <para>- Op 20 mei 1997 is de waarde van de varkens op het bedrijf van C vastgesteld.</para>
+        <para>- Op eveneens 20 mei 1997 zijn de varkens op het bedrijf van appellant, dat bij inventarisatie aanvankelijk over het hoofd was gezien, verdacht verklaard.</para>
+        <para>- Op 30 mei 1997 is de waarde van de varkens op het bedrijf van appellant vastgesteld op Ÿ 395.634,-. Op diezelfde dag is het bedrijf preventief geruimd.</para>
+        <para>- Op 31 mei 1997 heeft appellant tegen de taxatie geprotesteerd; hierop is namens de Minister op 17 december 1997 gereageerd.</para>
+        <para>- Bij brief van 19 juni 1997 is namens de Minister aan appellant bericht dat opdracht is gegeven aan hem een bedrag van Ÿ 395.634,- over te maken.</para>
+        <para>- Bij brieven van 2 en 16 juli 1997 heeft appellant kennelijk beoogd bezwaar te maken dat de vaststelling van de waarde van zijn varkens, die ten grondslag ligt aan de tegemoetkoming bij besluit van 19 juni 1997, eerst op 30 mei 1997 heeft plaats gevonden als gevolg van de omstandigheid dat de varkens op het bedrijf van appellant eerst op 20 mei 1997 verdacht zijn verklaard.</para>
+        <para>- Vervolgens heeft verweerder het bestreden besluit genomen.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para/>
+      <parablock>
+        <para>3.	Het bestreden besluit</para>
+        <para>Het bestreden besluit houdt - samengevat - onder meer het volgende in.</para>
+        <para>In het geval van appellant is het middel van preventief ruimen onontkoombaar gebleken. </para>
+        <para>De varkens op diens bedrijf zijn op juiste gronden verdacht verklaard en er konden geen vergelijkbare, effectieve maatregelen worden getroffen.</para>
+        <para>Appellant maakt geen bezwaar tegen de totstandkoming en de inhoud van de waardevaststelling zoals deze op 30 mei 1997 heeft plaatsgevonden. De bezwaren richten zich tegen het feit dat de taxatie te lang op zich heeft laten wachten. Omdat de prijzen </para>
+        <para>inmiddels waren gedaald, werd de waarde op een lager niveau vastgesteld dan bij een eerdere taxatie het geval zou zijn geweest.</para>
+        <para>Er bestaat geen recht op preventieve ruiming. Niet alle bedrijven kunnen op hetzelfde moment worden geruimd. De Inspecteur dient af te wegen in welke volgorde de diverse maatregelen worden getroffen. De volgorde kan van invloed zijn op de taxatiewaarde, </para>
+        <para>omdat daarbij wordt uitgegaan van varkensprijzen die per dag kunnen verschillen. Die omstandigheid brengt evenwel niet mee dat de Minister rechtens gehouden is een eventueel daaruit voortvloeiend negatief verschil te vergoeden. De vergissing bij de inventarisatie </para>
+        <para>heeft niet noodzakelijk tot gevolg dat daaruit een negatief verschil in de waardevaststelling voortvloeit.</para>
+        <para>4.	Het standpunt van appellant</para>
+        <para>Appellant heeft ter ondersteuning van het beroep - samengevat - onder meer het volgende tegen het bestreden besluit aangevoerd.</para>
+        <para>Uit de systematiek van de Wet volgt dat uitgangspunt voor de waardevaststelling dient te zijn het tijdstip waarop het besluit tot vernietiging wordt genomen. De waarde had dus moeten worden bepaald per 20 mei 1997.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Appellant is door onzorgvuldig handelen van het bestuur in een nadelige positie gebracht. </para>
+        <para>Eerst was men hem als eigenaar van het bedrijf aan de B kwijt en later heeft de taxatie veel te lang op zich laten wachten, terwijl appellant in verband met de daling van de varkensprijzen op een snelle taxatie aandrong.</para>
+        <para>5.	De beoordeling van het geschil</para>
+        <para>Het College stelt voorop dat door appellant niet zijn bestreden en daardoor niet in geschil zijn: de noodzaak om tot preventieve ruiming van zijn bedrijf over te gaan alsmede de juistheid van de waardevaststelling op 30 mei 1997 tegen de prijzen zoals die op die dag golden. Wel in geschil is het moment waarop het besluit tot verdachtverklaring is genomen, de vraag op welk moment dient te worden getaxeerd en de vraag voor wiens rekening de waardevermindering als gevolg van een latere taxatie dient te komen.</para>
+        <para>Het besluit tot verdachtverklaring is op 20 mei 1997 genomen. Dat is binnen twee weken nadat de varkenspest in B was geconstateerd en vier dagen na de verdachtverklaring </para>
+        <para>van de varkensstapel van appellants buurman Verberne. De besluiten zijn genomen vanwege besmettingsgevaar. In hetgeen appellant heeft aangevoerd ziet het College geen grond voor het oordeel dat het besluit tot verdachtverklaring onrechtmatig is. De dagprijs </para>
+        <para>van de varkens kan geen rol spelen bij de beoordeling van een dergelijk besluit, waarbij - voor zover in dit verband van belang - aan de orde is het op veterinaire gronden treffen van een maatregel ter voorkoming van de verspreiding van een besmettelijke dierziekte.</para>
+        <para>Aangezien het bestreden besluit, voor zover het de handhaving van het primaire besluit van 20 mei 1997 betreft, de toetsing aan de daarvoor geldende maatstaven kan doorstaan, bestaat er geen grond voor toekenning van schade als gevolg van dit besluit.</para>
+        <para>Wat betreft de dagprijzen die bij de taxatie in aanmerking moeten worden genomen, kan het College appellant niet volgen in zijn betoog dat maatgevend zijn de prijzen op de dag waarop tot het doden van de dieren wordt besloten. De Wet zelf geeft geen directe maatstaf, zodat verweerder terzake beleidsvrijheid heeft.</para>
+        <para>Gebleken is dat verweerder een consistent beleid voert, namelijk dat wordt getaxeerd zo kort mogelijk voor de ruiming en naar de dagprijs op de dag van taxatie. Het College acht dit beleid niet kennelijk onredelijk.</para>
+        <para>Bijzondere omstandigheden die tot afwijking van dit beleid noopten zijn niet gebleken. Dat de prijzen dalende waren, is niet zo'n omstandigheid, omdat de mogelijkheid van stijgende of dalende prijzen inherent is aan de gemaakte beleidskeuze.</para>
+        <para>Het College acht voorts ongegrond de opvatting van appellant dat bij de vaststelling van de tegemoetkoming in de schade rekening had moeten worden gehouden met de daling van de varkensprijzen in de periode van tien dagen, gelegen tussen de verdachtverklaring en de </para>
+        <para>taxatie, daarbij in aanmerking genomen dat genoemd tijdverloop het gevolg is van onachtzaamheid aan de kant van verweerders.</para>
+        <para>Het College baseert voornoemd oordeel in de eerste plaats op hetgeen hiervoor is overwogen met betrekking tot het besluit inzake de verdachtverklaring en het beleid betreffende het tijdstip van taxatie. In dit verband overweegt het College voorts dat, gelet </para>
+        <para>op de ter zake dienende feiten en omstandigheden, niet kan worden staande gehouden dat genoemde periode dermate lang was, dat reeds om die reden een compensatie als door appellant beoogd, zou moeten plaatsvinden. Hierbij moet in aanmerking worden genomen </para>
+        <para>dat partijen beide hebben verklaard dat het een hectische periode was en dat verweerder onweersproken heeft gesteld dat zowel het aantal taxateurs als de destructiecapaciteit beperkt was, terwijl de prioriteit werd gelegd bij het ruimen van besmette bedrijven. </para>
+        <para>Op grond van het vorenstaande dient het beroep ongegrond te worden verklaard.</para>
+        <para>Het College acht geen termen aanwezig voor een proceskostenveroordeling met toepassing </para>
+        <para>van artikel 8:75 van de Algemene wet bestuursrecht.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para/>
+      <para/>
+      <para/>
+      <parablock>
+        <para>6.	De beslissing</para>
+        <para>Het College verklaart het beroep ongegrond.</para>
+      </parablock>
+      <para/>
+      <para>Aldus gewezen door mr H.C. Cusell, mr M.J. Kuiper en mr J.A. Hagen, in tegenwoordigheid van mr A.J. Medze, als griffier, en uitgesproken in het openbaar op 5 december 2000.</para>
+      <para/>
+      <para/>
+      <para>w.g. H.C. Cusell						w.g. A.J. Medze</para>
+    </uitspraak>
+</open-rechtspraak>

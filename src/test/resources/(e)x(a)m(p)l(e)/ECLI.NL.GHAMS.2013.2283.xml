@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="utf-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:tr="http://tuchtrecht.overheid.nl/" xmlns:eu="http://publications.europa.eu/celex/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:GHAMS:2013:2283</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2014-07-16T03:32:31</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-07-29</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Gerechtshof_Amsterdam" scheme="overheid.RechterlijkeMacht">Gerechtshof Amsterdam</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">2013-07-04</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">12/00440 12/00443 12/00444 12/00445</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#hogerBeroep">Hoger beroep</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:temporal rdfs:label="Periode">
+        <start rdfs:label="van">2005</start>
+        <end rdfs:label="tot">2008</end>
+      </dcterms:temporal>
+      <dcterms:spatial rdfs:label="Zittingsplaats">Amsterdam</dcterms:spatial>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht_belastingrecht">Bestuursrecht; Belastingrecht</dcterms:subject>
+      <dcterms:relation rdfs:label="Formele relatie" ecli:resourceIdentifier="ECLI:NL:RBHAA:2012:BX9136" psi:type="http://psi.rechtspraak.nl/hogerBeroep" psi:aanleg="http://psi.rechtspraak.nl/eerdereAanleg" psi:gevolg="http://psi.rechtspraak.nl/gevolg#bekrachtiging/bevestiging">Eerste aanleg: ECLI:NL:RBHAA:2012:BX9136, Bekrachtiging/bevestiging</dcterms:relation>
+      <dcterms:relation rdfs:label="Formele relatie" ecli:resourceIdentifier="ECLI:NL:HR:2014:425" psi:type="http://psi.rechtspraak.nl/cassatie" psi:aanleg="http://psi.rechtspraak.nl/latereAanleg">Cassatie: ECLI:NL:HR:2014:425</dcterms:relation>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+          <rdf:li>FutD 2013-1975</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:GHAMS:2013:2283">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:GHAMS:2013:2283</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-07-29T12:47:47</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-07-29</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:GHAMS:2013:2283 Gerechtshof Amsterdam , 04-07-2013 / 12/00440 12/00443 12/00444 12/00445</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:GHAMS:2013:2283:INH" lang="nl" xml:space="preserve">
+      <parablock>
+        <para>Naheffingsaanslagen omzetbelasting en loonheffingen. Correctie omzet. Correctie loon.</para>
+        <para>De door belanghebbende gepresenteerde administratie kan niet dienen als grondslag voor de bepaling van de door belanghebbende verschuldigde omzetbelasting en evenmin voor de vaststelling van de winst van de vennoten van belanghebbende. De inspecteur heeft de omzet op aanvaardbare wijze bepaald.</para>
+      </parablock>
+    </inhoudsindicatie>
+  <uitspraak xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" id="ECLI:NL:GHAMS:2013:2283:DOC" lang="nl" xml:space="preserve">
+      <uitspraak.info>
+        <bridgehead role="bold">GERECHTSHOF AMSTERDAM</bridgehead>
+        <para>kenmerken 12/00440, 12/00443, 12/00444 en 12/00445 </para>
+        <para>4 juli 2013</para>
+        <para/>
+        <parablock>
+          <para>
+            <emphasis role="bold">uitspraken van de tweede meervoudige belastingkamer </emphasis>
+          </para>
+        </parablock>
+        <para/>
+        <parablock>
+          <para>op het hoger beroep van</para>
+        </parablock>
+        <para/>
+        <parablock>
+          <para>
+            <emphasis role="bold">de vennootschap onder firma [Y] </emphasis>te [Z], belanghebbende,</para>
+          <para>gemachtigde: drs. F.J. van Dijk (Li &amp; Van Wieringen, Advocaten en Belastingadviseur)</para>
+        </parablock>
+        <para/>
+        <parablock>
+          <para>tegen de uitspraken in de zaken met kenmerken AWB 11/1655 en 11/1658 tot en met 11/1660 van de rechtbank Haarlem (hierna: de rechtbank) in het geding tussen </para>
+        </parablock>
+        <para/>
+        <parablock>
+          <para>belanghebbende </para>
+        </parablock>
+        <para/>
+        <parablock>
+          <para>en </para>
+        </parablock>
+        <para/>
+        <parablock>
+          <para>
+            <emphasis role="bold">de inspecteur van de Belastingdienst/Holland-Noord, kantoor Alkmaar,</emphasis>
+          </para>
+          <para>de inspecteur.</para>
+        </parablock>
+        <para/>
+        <para/>
+      </uitspraak.info>
+      <section role="procesverloop">
+        <title>
+          <nr>1</nr>Ontstaan en loop van het geding</title>
+        <para/>
+        <parablock>
+          <para>
+            <emphasis role="italic">Naheffingsaanslag omzetbelasting 2005-2008 (kenmerk 12/00440)</emphasis>
+          </para>
+        </parablock>
+        <paragroup>
+          <nr>1.1.</nr>
+          <parablock>
+            <para>De inspecteur heeft met dagtekening 15 juni 2009 aan belanghebbende over het tijdvak 1 januari 2005 tot en met 31 maart 2008 een naheffingsaanslag opgelegd in de omzetbelasting ten bedrage van € 68.095. Voorts is een boete opgelegd van € 34.047 en is € 7.098 aan heffingsrente in rekening gebracht. </para>
+            <para>Na daartegen gemaakt bezwaar heeft de inspecteur bij uitspraak, gedagtekend 25 februari 2011, de naheffingsaanslag, de boetebeschikking en de beschikking heffingsrente gehandhaafd.</para>
+          </parablock>
+          <para/>
+          <parablock>
+            <para>
+              <emphasis role="italic">Naheffingsaanslag loonheffingen 2006 (kenmerk 12/00443)</emphasis>
+            </para>
+          </parablock>
+        </paragroup>
+        <paragroup>
+          <nr>1.2.</nr>
+          <parablock>
+            <para>De inspecteur heeft met dagtekening 15 juni 2009 aan belanghebbende over het tijdvak 1 januari 2006 tot en met 31 december 2006 een naheffingsaanslag in de loonbelasting/premie volksverzekeringen opgelegd ten bedrage van € 156.736. Voorts is een boete opgelegd van € 78.368 en is € 19.128 aan heffingsrente in rekening gebracht.</para>
+            <para>Na daartegen gemaakt bezwaar heeft de inspecteur bij uitspraak, gedagtekend 10 februari 2011, de naheffingsaanslag, de boetebeschikking en de beschikking heffingsrente gehandhaafd.</para>
+          </parablock>
+          <para/>
+          <parablock>
+            <para>
+              <emphasis role="italic">Naheffingsaanslag loonheffingen 2007 (kenmerk 12/00444)</emphasis>
+            </para>
+          </parablock>
+        </paragroup>
+        <paragroup>
+          <nr>1.3.</nr>
+          <parablock>
+            <para>De inspecteur heeft met dagtekening 15 juni 2009 aan belanghebbende over het tijdvak 1 januari 2007 tot en met 31 december 2007 een naheffingsaanslag in de loonbelasting/premie volksverzekeringen opgelegd ten bedrage van € 148.988. Voorts is een boete opgelegd van € 74.494 en is € 10.602 aan heffingsrente in rekening gebracht.</para>
+            <para>Na daartegen gemaakt bezwaar heeft de inspecteur bij uitspraak, gedagtekend 10 februari 2011, de naheffingsaanslag, de boetebeschikking en de beschikking heffingsrente gehandhaafd.</para>
+          </parablock>
+          <para/>
+          <parablock>
+            <para>
+              <emphasis role="italic">Naheffingsaanslag loonheffingen 2008 (kenmerk 12/00445)</emphasis>
+            </para>
+          </parablock>
+        </paragroup>
+        <paragroup>
+          <nr>1.4.</nr>
+          <parablock>
+            <para>De inspecteur heeft met dagtekening 15 juni 2009 aan belanghebbende over het tijdvak 1 januari 2008 tot en met 31 december 2008 een naheffingsaanslag in de loonbelasting/premie volksverzekeringen opgelegd ten bedrage van € 57.582. Voorts is een boete opgelegd van € 28.791 en is € 1.125 aan heffingsrente in rekening gebracht.</para>
+            <para>Na daartegen gemaakt bezwaar heeft de inspecteur bij uitspraak, gedagtekend 10 februari 2011, de naheffingsaanslag, de boetebeschikking en de beschikking heffingsrente gehandhaafd.</para>
+          </parablock>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr>1.5.</nr>
+          <para>Belanghebbende heeft tegen de onder 1.1. tot en met 1.4. genoemde uitspraken op bezwaar beroep ingesteld. Bij uitspraken van 4 mei 2012, heeft de rechtbank: </para>
+          <itemizedlist mark="-">
+            <listitem>
+              <para>het beroep inzake de naheffingsaanslag omzetbelasting 2005-2008 ongegrond verklaard; </para>
+            </listitem>
+            <listitem>
+              <para>de beroepen inzake de naheffingsaanslagen loonheffingen 2006, 2007 en 2008 gegrond verklaard;</para>
+            </listitem>
+            <listitem>
+              <para>de uitspraken op bezwaar inzake de naheffingsaanslagen loonheffingen 2006, 2007 en 2008 vernietigd;</para>
+            </listitem>
+            <listitem>
+              <para>de naheffingsaanslag loonheffingen 2006 verminderd tot een naheffingsaanslag berekend naar een niet-verantwoord loonbedrag van € 32.132;</para>
+            </listitem>
+            <listitem>
+              <para>de naheffingsaanslag loonheffingen 2007 verminderd tot een naheffingsaanslag berekend naar een niet-verantwoord loonbedrag van € 110.107;</para>
+            </listitem>
+            <listitem>
+              <para>de naheffingsaanslag loonheffingen 2008 verminderd tot een naheffingsaanslag berekend naar een niet-verantwoord loonbedrag van € 47.603.</para>
+            </listitem>
+          </itemizedlist>
+          <parablock>
+            <para>De rechtbank heeft voorts de ter zake van de verminderde naheffingsaanslagen opgelegde boeten en in rekening gebrachte heffingsrente dienovereenkomstig verminderd en voorts</para>
+            <para>de inspecteur veroordeeld in de proceskosten van belanghebbende ten bedrage van € 1.311, en hem gelast het door belanghebbende betaalde griffierecht ten bedrage van € 302 te vergoeden.</para>
+          </parablock>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr>1.6.</nr>
+          <para>Het tegen deze uitspraken ingestelde hoger beroep is bij het Hof ingekomen op 14 juni 2012, aangevuld bij brief van 10 juli 2012. De inspecteur heeft twee verweerschriften ingediend, een met betrekking tot de omzetbelasting en een met betrekking tot de loonheffingen.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr>1.7.</nr>
+          <para>Op 21 mei 2013 is een nader stuk ontvangen van de inspecteur met betrekking tot de zaken met kenmerken 12/00443, 12/00444 en 12/00445. Dit stuk is in afschrift verstrekt aan de wederpartij.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr>1.8.</nr>
+          <para>Het onderzoek ter zitting heeft plaatsgevonden op 23 mei 2013. Het onderzoek heeft gelijktijdig plaatsgevonden met het onderzoek in de zaak met kenmerk 12/00446 en de zaken met kenmerken 12/00447 en 12/00448. Van het verhandelde ter zitting is een proces-verbaal opgemaakt dat met deze uitspraak wordt meegezonden.</para>
+          <para/>
+          <para/>
+        </paragroup>
+      </section>
+      <section>
+        <title>
+          <nr>2</nr>Feiten</title>
+        <para/>
+        <paragroup>
+          <nr>2.1.</nr>
+          <para>De rechtbank heeft de navolgende feiten vastgesteld. Belanghebbende wordt daarin aangeduid als ‘eiseres’ en de inspecteur als ‘verweerder’.</para>
+          <para/>
+          <parablock>
+            <para>“2.1. De vennoten van eiseres zijn [vennoot 1] en [vennoot 2]. Zij zijn beiden gelijkelijk tot de winst gerechtigd. </para>
+          </parablock>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr>2.2.</nr>
+          <para>De ondernemingsactiviteiten van eiseres bestaan uit de exploitatie van een Japans restaurant. Het restaurant beschikt over negentig zitplaatsen en is dagelijks geopend van 16.00 uur tot 23.00 uur. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr>2.3.</nr>
+          <para>De kasadministratie wordt verzorgd door vennoot [vennoot 2] op een elektronische kassa. Op deze kassa wordt maandelijks een Excel-blad ingevuld dat ten behoeve van de administratie wordt uitgeprint en opgestuurd naar het administratiekantoor van eiseres. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr>2.4.</nr>
+          <para>Tijdens diverse controles van de Arbeidsinspectie bij eiseres zijn in 2006 en 2007 onrechtmatig in Nederland verblijvende personen werkend bij eiseres aangetroffen. Eiseres stelde ook woonruimte aan deze personen ter beschikking. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr>2.5.</nr>
+          <para>Op 20 mei 2008 heeft op het bedrijfsadres van eiseres een doorzoeking ter inbeslagneming plaatsgevonden door de Sociale Inlichtingen- en Opsporingsdienst en de regiopolitie Noord-Holland. Tijdens deze doorzoeking is onder meer een usb-stick in beslag genomen waarop Excel-overzichten van de ontvangsten en uitgaven per kas staan. Bij de verschillende kolommen van de Excel-overzichten staan in het Chinees de volgende omschrijvingen: “Datum”, “Verkoop”, “Per Bank”, “Uitgave”, “Maaltijd periodiek”, “Cadeaubonnen”, “Kortingen”, “Rekening sturen”, “Contant ontvangen” en “Loonkosten en overige uitgave”. Uit de kolom “Datum” blijkt dat de overzichten betrekking hebben op juni 2006, september 2006, december 2006, januari tot en met mei 2007, juli tot en met december 2007 en januari tot en met april 2008. </para>
+          <para/>
+          <paragroup>
+            <nr>2.6.1.</nr>
+            <para>Op 21 mei 2008 heeft op bevel van de officier van justitie de uitlevering plaatsgevonden van de inhoud van drie safeloketten in de Rabobankkantoren in [plaats] en [plaats]. Het betroffen onder meer safeloket nr. [* 1] in [plaats], waarin een geldbedrag van € 67.400 is aangetroffen en safeloket nr. [* 1] in Alkmaar, waarin een geldbedrag van € 50.000 is aangetroffen. Deze safeloketten behoren toe aan de vennoten. </para>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr>2.6.2.</nr>
+            <para>Vennoot [vennoot 2] heeft ten aanzien van deze geldbedragen het volgende verklaard: </para>
+            <para/>
+            <parablock>
+              <para>(…) </para>
+              <para> 	Antwoord: “Dit is geld dat ik opgespaard heb, hier heb ik een aantal jaren over gedaan”. </para>
+              <para> Vraag: “Wanneer heeft u voor het laatst geld in deze kluis gedeponeerd”? </para>
+              <para> 	Antwoord: “Om 2006”. </para>
+              <para>Vraag: “Als dit uw gespaard contant geld is moet dit aangegeven zijn in uw aangiften  inkomstenbelasting bij uw vermogen in box 3”? </para>
+              <para> Antwoord: “Weet ik niet”. </para>
+              <para>Vraag: “Waarom heeft u deze contanten niet op een bankrekening gezet, het is veiliger en u krijgt dan  rente”? </para>
+              <para> Antwoord: “Ik vertrouw de banken niet”. </para>
+              <para> (…) </para>
+            </parablock>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr>2.6.3.</nr>
+            <parablock>
+              <para>De vennoten beschikken zowel zakelijk als privé over meerdere bankrekeningen. Het kasboeksaldo bedraagt op 27 februari 2006 € 5.838. </para>
+              <para>In de aangiften ib/pvv 2005 tot en met 2007 van beide vennoten is in de rubriek “inkomen uit sparen en beleggen” (box 3) niets ingevuld inzake contant geld. </para>
+            </parablock>
+            <para/>
+          </paragroup>
+        </paragroup>
+        <paragroup>
+          <nr>2.7.</nr>
+          <para>Op 28 mei 2008 heeft de officier van justitie aan de Belastingdienst toestemming gegeven om alle boeken, bescheiden en andere gegevensdragers die op eiseres betrekking hadden, in te zien. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr>2.8.</nr>
+          <para>In oktober 2008 heeft bij eiseres een boekenonderzoek plaatsgevonden waarbij de aanvaardbaarheid van de door eiseres gedane aangiften lb/pvv en ob over de tijdvakken 1 januari 2003 tot en met 31 maart 2008 is onderzocht. Tevens heeft verweerder de aanvaardbaarheid van de aangiften ib/pvv voor de jaren 2003 tot en met 2007 van de vennoten onderzocht. </para>
+          <para/>
+          <paragroup>
+            <nr>2.9.1.</nr>
+            <para>Verweerder heeft geconstateerd dat de omzet en contante ontvangsten die op de in 2.5 genoemde usb-stick staan vermeld niet overeen komen met de bedragen die op de door [vennoot 2] bijgehouden Excel-bladen voorkomen. </para>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr>2.9.2.</nr>
+            <parablock>
+              <para>Over de maanden juni 2006, september 2006 en december 2006 is een omzet aangegeven van in totaal € 166.064,91, terwijl op de usb-stick over dezelfde periodes onder de noemer “Verkoop” een bedrag van in totaal € 230.723,36 is vermeld. Tussen beide bedragen zit een verschil van € 64.658,45. </para>
+              <para>Voorts zijn over dezelfde periodes de ontvangsten per kas aangegeven tot een bedrag van in totaal € 13.095,87, terwijl op de usb-stick onder de noemer “Contant” een bedrag van in totaal € 70.688,28 is vermeld. Tussen beide bedragen zit een verschil van € 57.592,41. </para>
+            </parablock>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr>2.9.3.</nr>
+            <parablock>
+              <para>Over de periodes januari 2007 tot en met mei 2007 en juli 2007 tot en met december 2007 is een omzet aangegeven van in totaal € 560.828,10, terwijl op de usb-stick over dezelfde periodes onder de noemer “Verkoop” een bedrag van in totaal € 785.619,71 is vermeld. Tussen beide bedragen zit een verschil van € 224.791,61. </para>
+              <para>Voorts zijn over dezelfde periodes de ontvangsten per kas aangegeven tot een bedrag van in totaal € 40.210,36, terwijl op de usb-stick onder de noemer “Contant” een bedrag van in totaal € 237.971,52. Tussen beide bedragen zit een verschil van € 197.761,16. </para>
+            </parablock>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr>2.9.4.</nr>
+            <parablock>
+              <para>Over de periodes januari tot en met maart 2008 is een omzet aangegeven van in totaal € 158.969,25, terwijl op de usb-stick over dezelfde periodes onder de noemer “Verkoop” een bedrag van in totaal € 223.882,60 is vermeld. Tussen beide bedragen zit een verschil van € 64.913,35. </para>
+              <para>Voorts zijn over dezelfde periodes de ontvangsten per kas aangegeven tot een bedrag van in totaal € 11.780,24, terwijl op de usb-stick over dezelfde periodes een bedrag van in totaal € 68.845,32 is vermeld. Tussen beide bedragen zit een verschil van € 57.065, 08. </para>
+            </parablock>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr>2.9.5.</nr>
+            <para>Vennoot [vennoot 2] heeft tijdens het boekenonderzoek ten aanzien van deze verschillen het volgende verklaard: </para>
+            <para/>
+            <parablock>
+              <para>“Deze staten heb ik gemaakt om leningen los te krijgen van familie en vrienden. Op deze staten lijkt het  dat wij een beter draaiend restaurant zijn dan in werkelijkheid is. De leningen zijn nodig omdat wij het  restaurant willen verbouwen. De familie denkt dat ik twee restaurants heb. De ontvangsten op de  kasstaten zijn door mij verzonnen.” </para>
+            </parablock>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr>2.10.1.</nr>
+            <para>Op de onder de noemer “Verkoop” vermelde bedragen van de usb-stick heeft verweerder de zogenoemde chi-kwadraattoets toegepast. De toets is toegepast op ééntallen (euro’s), tientallen en honderdtallen van 547 getallen. De uitkomst van de toets op de ééntallen bedraagt 7,46, de uitkomst op de tientallen bedraagt 4,19 en de uitkomst op de honderdtallen bedraagt 4. </para>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr>2.10.2.</nr>
+            <para>Voorts heeft verweerder tijdens het boekenonderzoek een schrijfblok aangetroffen waarop alcoholhoudende dranken zijn gerubriceerd. Boven de rubrieken staat veelal vermeld hoeveel glazen uit een fles of liter gaan. Achter de verschillende soorten alcohol is steeds een getal geschreven. Vennoot [vennoot 2] heeft op 7 oktober 2008 verklaard dat de aantekeningen in het schrijfblok betrekking hebben op bestellijsten van dranken die besteld dienen te worden. Verweerder heeft de op het schrijfblok vermelde getallen vergeleken met de verkochte aantallen glazen/flessen alcoholhoudende dranken die in het geheugen van de kassa voor 2007 zijn vermeld en daarbij geconstateerd dat de aantallen die op het schrijfblok staan vermeld veelal hoger zijn dan de in het geheugen van de kassa vermelde aantallen. </para>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr>2.10.3.</nr>
+            <para>Verder heeft verweerder aan de hand van overzichten van de leveranciers van eiseres het aantal ingekochte flessen alcoholhoudende drank in 2007 bepaald en die aantallen vergeleken met de aantallen die volgens het geheugen van de kassa in 2007 zijn verkocht. Daarbij heeft verweerder geconstateerd dat in 2007 bepaalde dranken verkocht zijn die volgens de overzichten van de leveranciers niet in 2007 zijn ingekocht. Verweerder heeft geen voorraadlijsten bij eiseres aangetroffen. </para>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr>2.10.4.</nr>
+            <para>Op de Excel-lijsten van de usb-stick staat onder de uitgaven voor de maanden september 2006, december 2006, april 2007, september 2007, maart 2008 en april 2008 “zwart alcoholische drank” vermeld met daarachter een bedrag. Ook komen op de usb-stick de omschrijvingen “zwart koffie” en “zwart vlees” voor. </para>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr>2.11.1.</nr>
+            <para>Tijdens een controle van de Arbeidsinspectie op 18 september 2006 zijn drie personen werkend aangetroffen in het bedrijf van eiseres, terwijl zij onrechtmatig in Nederland bleken te verblijven. Deze personen hebben de volgende namen opgegeven: [A], [B] en [C]. Verweerder heeft geconstateerd dat geen van deze drie personen in de loonadministratie van eiseres voorkwam, maar dat op de overzichten van de usb-stick wel loonbetalingen staan vermeld aan de personen “[AA]”, “[BB]” en “[CC]”. </para>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr>2.11.2.</nr>
+            <para>Tijdens een controle van de Arbeidsinspectie op 30 september 2007 zijn tien personen werkend aangetroffen in het bedrijf van eiseres, van wie drie personen onrechtmatig in Nederland bleken te verblijven. Deze personen hebben de volgende namen opgegeven: [D], [E] en [F]. Verweerder heeft geconstateerd dat deze drie personen niet in de loonadministratie van eiseres voorkwamen, maar dat op de usb-stick wel loonbetalingen staan vermeld aan de personen “[DD]”, “[FF]” en “[EE]. </para>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr>2.11.3.</nr>
+            <para>[F] en [E] hebben tegenover de Arbeidsinspectie verklaard tegen betaling, al dan niet in natura in de vorm van kost en inwoning, in het restaurant werkzaam te zijn. </para>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr>2.11.4.</nr>
+            <para>Tijdens het boekenonderzoek zijn de namen in de loonadministratie vergeleken met die op de usb-stick. Daarbij heeft verweerder geconstateerd dat de namen van de personen op de Excel-staten van de usb-stick niet voorkomen op de verzamelloonstaten en dat de bedragen die vermeld staan op de usb-stick niet als loonbetalingen zijn verantwoord in de loonadministratie. </para>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr>2.11.5.</nr>
+            <para>Tijdens de doorzoeking zijn voorts “bierkladbonnetjes” aangetroffen waarop namen van personen met daarbij data en bedragen staan vermeld. Verweerder heeft geconstateerd dat deze gegevens exact overeenstemmen met de als loonkosten vermelde bedragen op de usb-stick. </para>
+            <para/>
+          </paragroup>
+        </paragroup>
+        <paragroup>
+          <nr>2.12.</nr>
+          <para>Naar aanleiding van het boekenonderzoek heeft verweerder geconstateerd dat eiseres in de jaren 2002 tot en met 2006 in totaal zesentwintig cadeaubonnen heeft afgegeven van welke cadeaubonnen in de jaren 2003 tot en met 2006 drieëntwintig zijn gebruikt. Op de kasstaten waarop de administratie is gebaseerd komen geen aantekeningen voor van ingeleverde cadeaubonnen. Wel staan op de usb-stick drie boekingen van ingeleverde cadeaubonnen, één boeking in 2005 en twee boekingen in 2006. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr>2.13.</nr>
+          <para>Verweerder heeft het aantal reserveringen in 2007 vergeleken met de kassabonnen en daarbij geconstateerd dat op diverse dagen het aantal reserveringen in 2007 hoger was dan het aantal uitgedraaide kassabonnen zonder dat er reserveringen waren doorgehaald. </para>
+          <para/>
+          <paragroup>
+            <nr>2.14.1.</nr>
+            <para>Ten aanzien van de betalingen heeft vennoot [vennoot 2] het volgende verklaard: </para>
+            <para/>
+            <parablock>
+              <para>“Van de tien klanten betalen er gemiddeld acht met pin/creditcard en twee contant.” </para>
+            </parablock>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr>2.14.2.</nr>
+            <para>Uit een rapportage van Koelewijn &amp; Partners van 18 april 2007 in opdracht van Stichting Bevorderen Efficiënt Betalen is verweerder gebleken dat de verdeling pin- en contantbetalingen in de horeca 20/80 is. </para>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr>2.14.3.</nr>
+            <para>Uit de administratie van eiseres blijkt dat in 2002 van de totale ontvangsten twintig procent contant is betaald en de rest via pin of bank. In 2003 is zesentwintig procent van de ontvangsten contant betaald, in 2004 drieëntwintig procent, in 2005 elf procent, in 2006 acht procent en in 2007 zeven procent. </para>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr>2.14.4.</nr>
+            <para>Verweerder heeft de betalingen per bank die in de administratie zijn verwerkt, vergeleken met de bankbetalingen op de usb-stick en geconstateerd dat deze bedragen exact overeenkomen. </para>
+            <para/>
+          </paragroup>
+        </paragroup>
+        <paragroup>
+          <nr>2.15.</nr>
+          <para>Verweerder is uit de grootboekadministratie van eiseres gebleken dat het brutowinstpercentage van eiseres 381,09 bedroeg voor het jaar 2003, 416,25 voor het jaar 2004, 259,48 voor het jaar 2005 en 256,67 voor het jaar 2006. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr>2.16.</nr>
+          <para>Tijdens de doorzoeking is een planningstaat van de maanden januari tot en met april 2003 aangetroffen. Op deze staat staan de namen van tien personen, onder wie de beide vennoten. Verweerder heeft eiseres verzocht de overige personeelsplanninglijsten en urenstaten te overleggen. Eiseres heeft in een brief van 23 maart 2009 meegedeeld dat er geen personeelsplanninglijsten en urenstaten apart werden bijgehouden. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr>2.17.</nr>
+          <para>In de administratie komt de omschrijving “10% TT-rekening” voor bij grote gezelschappen. Aan verweerder heeft vennoot [vennoot 2] meegedeeld dat dit betekent dat 10% naar de totaalrekening ging. Op de vraag waar de overige 90% naar toe ging, kon vennoot [vennoot 2] geen antwoord geven.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr>2.18.</nr>
+          <para>Verweerder heeft over de jaren 2003 tot en met 2006 vermogensvergelijkingen gemaakt die de volgende uitkomst hebben: </para>
+          <para/>
+          <parablock>
+            <para>-  2003 negatief netto privé  € 33.799; </para>
+            <para>-  2004 positief netto privé  € 27.878; </para>
+            <para>-  2005 negatief netto privé  € 76.848; </para>
+            <para>-  2006 negatief netto privé  € 120.271. </para>
+          </parablock>
+          <para/>
+          <paragroup>
+            <nr>2.19.1.</nr>
+            <para>Tijdens een vorig boekenonderzoek over de jaren 1997 tot en met 2000 heeft verweerder geconstateerd dat eiseres essentiële onderdelen van de administratie niet had bewaard, namelijk: </para>
+            <para/>
+            <parablock>
+              <para>-  	De afspraken/reserveringsagenda’s over alle jaren tot 2002; </para>
+              <para>-  	De keukenbestellingsprints; </para>
+              <para>-  	De factureringsadministratie; </para>
+              <para>-  	De menu- en wijnkaartprijslijsten uit diverse periodes; </para>
+              <para>-  	De complete computerhardware en software tot op of omstreeks 3 februari 2000; </para>
+              <para>-  	Back-ups van de belangrijke computerbestanden; </para>
+              <para>-  	Een voornaam deel van de huidige computerkasontvangstgegevens, waaronder de daadwerkelijke kas, en in mindere mate de pin- en creditcardgegevens; </para>
+              <para>-  	De administratie van het cadeaubonnensysteem, waaronder ook de freedinerbonnen en/of vouchers; </para>
+              <para>-  	De kopiefacturen en/of de kopie-prints welke zijn geproduceerd ten behoeve van de factuuropmaak. </para>
+            </parablock>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr>2.19.2.</nr>
+            <para>In het rapport van het boekenonderzoek over 1997 tot en met 2000 heeft verweerder vermeld dat eiseres meerdere malen nadrukkelijk op de bewaar- en administratieplicht is gewezen en dat zij in verband daarmee gewaarschuwd is inzake de bewaarplicht en administratieplicht. </para>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr>2.20.1.</nr>
+            <para>Op grond van de volgende constateringen tijdens het boekenonderzoek heeft verweerder geconcludeerd dat de administratie van eiseres onbetrouwbaar is en niet kan dienen voor het vaststellen van de omzet en de uitbetaalde lonen: </para>
+            <para/>
+            <parablock>
+              <para>-  	Op de usb-stick is een schaduw-kasadministratie aangetroffen waarop meer ontvangsten en uitgaven staan vermeld dan in de administratie zijn verantwoord; </para>
+              <para>-  	De grootboekrekening kas sluit op 31 december 2006 met een negatief saldo van € 22.273,44; </para>
+              <para>-  	Er is een verschil geconstateerd in de saldi van de grootboekrekening kas en het kasboek op 30 november 2005 en 31 mei 2006; </para>
+              <para>-  	Er is een verschil geconstateerd in het aantal reserveringen en het aantal kassabonnen op die dag; </para>
+              <para>-  	De vermogensvergelijkingen geven een negatieve uitkomst; </para>
+              <para>-  	De privé-kasopstellingen over 2005 en 2006 geven blijk van negatieve saldi waaruit verweerder concludeert dat de vennoten over contanten beschikten die niet blijken uit de administratie en niet van bankopnamen afkomstig waren; </para>
+              <para>-  	De brutowinstpercentages over de jaren 2003 tot en met 2006 fluctueren zonder dat er een verklaring voor gegeven is; </para>
+              <para>-  	In 2006 en 2007 zijn onrechtmatig in Nederland verblijvende personen werkend aangetroffen bij eiseres, terwijl zij niet in de loonadministratie voorkwamen; </para>
+              <para>-  	Het niet in de administratie verantwoorden van de ontvangsten behorende bij een reservering van een gezelschap met als contactpersoon [klant] op 9 mei 2007; </para>
+              <para>-  	Een schaduwadministratie in een schrift van de verkopen alcoholhoudende dranken in 2007 die afwijkt van de in de administratie opgenomen verkoop van alcoholhoudende dranken in 2007; </para>
+              <para>-  	Aangetroffen geld in safeloketten; </para>
+              <para>-  	Een verandering in de verhouding betalingen per pin en contante betalingen waarvoor geen verklaring is gegeven; </para>
+              <para>-  	Het niet aantreffen van ontvangsten inzake cadeaubonnen in de administratie; </para>
+              <para>-  	Het niet bewaren van prints met keukenbestellingen; </para>
+              <para>-  	Het ontbreken van voorraadlijsten; </para>
+              <para>-  	Het ontbreken van planninglijsten met betrekking tot het personeel; </para>
+              <para>-  	Het ontbreken van urenstaten met betrekking tot het personeel; </para>
+              <para>-  	Het ontbreken van de vastleggingen met betrekking tot de fooien. </para>
+            </parablock>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr>2.20.2.</nr>
+            <para>Verweerder heeft daarop de administratie van eiseres verworpen en omkering en verzwaring van de bewijslast gesteld. </para>
+            <para/>
+          </paragroup>
+        </paragroup>
+        <paragroup>
+          <nr>2.21.</nr>
+          <para>Naar aanleiding van het boekenonderzoek heeft verweerder de voornoemde naheffingsaanslagen lb/pvv over 2005 tot en met 2008 opgelegd. Daarbij heeft verweerder de in de administratie van eiseres vermelde personen vergeleken met de personen die op de usb-stick staan vermeld en de conclusie getrokken dat aan de op de usb-stick vermelde personen, die niet in de administratie van eiseres voorkwamen, nettoloonbetalingen zijn gedaan buiten de loonadministratie om. Verweerder heeft vervolgens de nettoloonbetalingen gebruteerd omdat de identiteitgegevens van de op de usb-stick voorkomende personen ontbraken dan wel die personen illegaal in Nederland verbleven. </para>
+          <para/>
+          <paragroup>
+            <nr>2.22.1.</nr>
+            <para>Voorts heeft verweerder naar aanleiding van het boekenonderzoek de voornoemde naheffingsaanslagen ob over 2003 en het tijdvak 1 januari 2005 tot en met 31 maart 2008 opgelegd. Daarbij heeft verweerder voor het jaar 2003 op basis van de vermogensvergelijking (zie 2.18) een omzetcorrectie berekend van € 45.257. </para>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr>2.22.2.</nr>
+            <para>Voor het tijdvak 1 januari 2005 tot en met 31 maart 2008 heeft verweerder de ontvangsten per kas in de administratie vergeleken met de “Verkopen” op de usb-stick. Op basis daarvan is voor het jaar 2005 een omzetcorrectie berekend van € 232.004, voor het jaar 2006 een omzetcorrectie van € 232.004, voor het jaar 2007 een omzetcorrectie van € 233.009 en voor het jaar 2008 (eerste kwartaal) een omzetcorrectie van € 60.216.” </para>
+            <para/>
+            <para/>
+          </paragroup>
+        </paragroup>
+      </section>
+      <section>
+        <title>
+          <nr>3</nr>Het oordeel van de rechtbank</title>
+        <para/>
+        <parablock>
+          <para>De rechtbank heeft – voor zover hier van belang – het beroep inzake de naheffingsaanslag in de omzetbelasting ongegrond en het beroep inzake de naheffingsaanslagen in de loonbelasting/premie volksverzekeringen gegrond verklaard, waarbij zij heeft overwogen: </para>
+        </parablock>
+        <para/>
+        <parablock>
+          <para>“4.3. De rechtbank overweegt dat een ondernemer in de zin van artikel 7 van de Wet op de omzetbelasting 1968 (hierna: Wet OB) op grond van artikel 34 van de Wet OB aantekening dient te houden van de door hem en aan hem verrichte leveringen van goederen en verleende diensten, alsmede van andere gegevens die van belang zijn met betrekking tot de heffing van de belasting in Nederland, een en ander met inachtneming van de daartoe in artikel 31 van de Uitvoeringsbeschikking omzetbelasting 1968 gestelde regels. </para>
+        </parablock>
+        <para/>
+        <paragroup>
+          <nr>4.4.</nr>
+          <para>Voorts bepaalt artikel 52, eerste lid, van de Algemene wet inzake rijksbelastingen (hierna: AWR) dat administratieplichtigen gehouden zijn van hun vermogenstoestand en van alles betreffende hun bedrijf, zelfstandig beroep of werkzaamheid naar de eisen van dat bedrijf, dat zelfstandig beroep of die werkzaamheid op zodanige wijze een administratie te voeren en de daartoe behorende boeken, bescheiden en andere gegevensdragers op zodanige wijze te bewaren, dat te allen tijde hun rechten en verplichtingen alsmede de voor de heffing van belasting overigens van belang zijnde gegevens hieruit duidelijk blijken. </para>
+          <para/>
+          <paragroup>
+            <nr>4.5.1.</nr>
+            <para>Door onder meer geen voorraadlijsten bij te houden, afschriften van keukenbestellingen niet bewaard te hebben en reserveringen niet goed te hebben bijgehouden, heeft eiseres naar het oordeel van de rechtbank niet voldaan aan het bepaalde in artikel 34 van de Wet OB. Uit de administratie van eiseres kan de doorstroom van de ingekochte ingrediënten naar aan gasten geserveerde maaltijden niet worden gevolgd, zodat onvoldoende inzicht kan worden verkregen in de compleetheid van de verantwoorde omzet. Als gevolg hiervan is onvoldoende aantekening gehouden van de door eiseres verrichte leveringen. Eiseres heeft ter zitting van de rechtbank weliswaar gesteld dat de kassa ook goederenstromen bijhoudt, maar dit betreft uitsluitend de door eiseres vanuit het restaurant geleverde bereide maaltijden aan de gasten. Voorts zijn in de afsprakenagenda doorhalingen aangetroffen waarvoor eiseres geen dan wel een ongeloofwaardige verklaring heeft gegeven. Tot slot vormen de onder 2.10, 2.12 en 2.13 beschreven constateringen sterke aanwijzingen dat de verantwoorde omzet niet betrouwbaar is. </para>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr>4.5.2.</nr>
+            <para>Verder heeft eiseres geen planningslijsten en urenstaten bijgehouden met betrekking tot het voor haar werkzame personeel en ontbreken vastleggingen van de fooien. Hiermee heeft eiseres niet voldaan aan het bepaalde in artikel 52 van de AWR. </para>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr>4.5.3.</nr>
+            <para>Tevens geven de uitgevoerde vermogensvergelijking, de in de bankkluizen aangetroffen contanten en de chi-kwadraattoets aanleiding om aan de volledigheid en de betrouwbaarheid van de administratie te twijfelen. Deze gegevens vormen een sterke aanwijzing dat de vennoten van eiseres meer inkomsten moeten hebben genoten dan in de administratie van eiseres zijn vermeld. </para>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr>4.5.4.</nr>
+            <para>Gelet op het voorgaande moet de conclusie zijn dat eiseres relevante administratieve bescheiden ten onrechte niet heeft bewaard en dat verweerder met de door hem aangevoerde gronden over gebreken in de administratie en de aangetroffen informatie op de usb-stick en de “bierkladbonnetjes” alsmede de in het schrift aangetroffen verkopen alcoholhoudende dranken, terecht de administratie heeft verworpen. </para>
+            <para/>
+          </paragroup>
+        </paragroup>
+        <paragroup>
+          <nr>4.6.</nr>
+          <para>Nu eiseres niet dan wel niet volledig heeft voldaan aan de verplichtingen welke zijn opgelegd bij of krachtens de 4.3 en 4.4 genoemde bepalingen en dus niet de vereiste aangiften ob en lb/pvv heeft gedaan, worden op grond van artikel 27e van de AWR (mede in verband met artikel 36 van de Wet OB) de uitspraken op bezwaar gehandhaafd, tenzij gebleken is dat en in hoeverre deze onjuist zijn (verzwaring en omkering van de bewijslast). Thans dient dan ook met toepassing van het bepaalde in artikel 27e van de AWR de hoogte van de door verweerder geschatte omzet en loonbetalingen te worden beoordeeld. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr>4.7.</nr>
+          <para>Verweerder heeft onder meer geconstateerd dat de brutowinstpercentages over de jaren 2003 tot en met 2006 fluctueren, dat de vermogensvergelijkingen een negatieve uitkomst geven, dat onrechtmatig in Nederland verkerende personen werkend voor eiseres zijn aangetroffen en dat in een schrift een schaduwadministratie is bijgehouden van de verkopen alcoholhoudende dranken in 2007 die afwijkt van de in de administratie opgenomen verkoop van alcoholhoudende dranken in 2007. Tevens heeft verweerder een usb-stick aangetroffen waarop een schaduwboekhouding is bijgehouden waarvan de bankbetalingen overeenkomen met de officiële administratie, maar de kasbetalingen significant afwijken. Ook zijn tijdens de doorzoeking “bierkladbonnetjes” aangetroffen, waarop namen van personen met daarbij data en bedragen staan vermeld, waarvan verweerder heeft geconstateerd dat die gegevens exact overeenstemmen met de als loonkosten vermelde bedragen op de usb-stick. De loonkosten die zijn aangetroffen op de usb-stick wijken af van die in de officiële administratie. Aan de hand van onder meer de aangetroffen usb-stick, de “bierkladbonnen”, het schrift met verkopen alcoholhoudende drank, de brutowinstpercentages en de vermogensvergelijkingen heeft verweerder een theoretische omzetberekening en een theoretische loonkostenberekening gemaakt. </para>
+          <para/>
+          <paragroup>
+            <nr>4.8.1.</nr>
+            <para>Eiseres heeft hiertegen aangevoerd dat zij wel voldaan heeft aan haar administratieplicht met betrekking tot de omzetbelasting en stelt daartoe dat de vermogensvergelijkingen niet negatief zijn omdat verweerder ten onrechte de bij de bank gestorte contante stortingen, welke volgens eiseres afkomstig zijn uit zwarte omzetten over eerdere jaren, niet heeft meegeteld en verweerder ten onrechte contante betalingen van familie van de vennoten niet heeft meegeteld die waren bestemd als bijdrage in de woonlasten van de ouders van vennoot [vennoot 2]. Voorts is volgens eiseres ten onrechte voor het jaar 2005 een bedrag van € 31.822 als privé-uitgave aangemerkt omdat dit bedrag een betaling voor premies zou zijn geweest en is tevens een bedrag van € 10.715 ten onrechte aangemerkt als aflossing omdat dit een privé-opname zou zijn. Ten aanzien van de vermogensvergelijking voor het jaar 2006 stelt eiseres dat ten onrechte het in de kluis aangetroffen bedrag van € 50.000 niet als beginvermogen in aanmerking is genomen. </para>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr>4.8.2.</nr>
+            <para>Verder stelt eiseres dat zij voldaan heeft aan haar loonbelastingverplichtingen omdat de aangetroffen illegalen wel in de loonadministratie zijn verantwoord, behalve de persoon [E]. Eiseres stelt deze persoon niet in loondienst is geweest. Bovendien zouden, voor zover daar sprake van is, de niet verantwoorde loonbetalingen volgens eiseres slechts een gering bedrag vertegenwoordigen. </para>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr>4.9.1.</nr>
+            <para>Ten aanzien van de ob overweegt de rechtbank het volgende. Verweerder heeft naar aanleiding van een vorig boekenonderzoek over de jaren 1997 tot en met 2000 belastingaanslagen opgelegd tot een bedrag van in totaal ongeveer € 450.000. Eiseres heeft voor de betaling van dit bedrag met verweerder een betalingsregeling getroffen omdat onvoldoende geld aanwezig was ter betaling van deze aanslagen. Voorts komt het opmerkelijk voor dat eiseres, nadat zij jarenlang zwart geld heeft achtergehouden, op een later tijdstip deze bedragen in diverse porties is gaan storten op een bankrekening. Gelet hierop acht de rechtbank de stelling van eiseres dat de contante stortingen afkomstig zijn uit zwarte omzetten van eerdere jaren niet aannemelijk. </para>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr>4.9.2.</nr>
+            <para>De gestelde contante betalingen van familieleden heeft eiseres nader onderbouwd met zogenoemde “woonlastenverklaringen” van vier familieleden van vennoot [vennoot 2]. Deze verklaringen zijn evenwel niet gedagtekend en evenmin voorzien van data waarop of perioden waarin de desbetreffende betalingen zouden hebben plaatsgevonden. Dat de betalingen van de familieleden van vennoot [vennoot 2] in 2005 en 2006 zouden hebben plaatsgevonden, blijkt derhalve niet uit de verklaringen. </para>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr>4.9.3.</nr>
+            <para>Ten aanzien van het bedrag van € 31.822 overweegt de rechtbank dat eiseres niet nader heeft onderbouwd dat dit bedrag betrekking heeft op de betaling van premies. Verweerder heeft ter zitting echter onweersproken verklaard dat van dit bedrag € 30.000 betrekking heeft op inkomstenbelasting voor het jaar 2002 en € 1.822 op interest loonbelasting over 2004. </para>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr>4.9.4.</nr>
+            <para>Dat het door eiseres gestelde bedrag van € 10.715 betrekking zou hebben op een privé-opname acht de rechtbank niet aannemelijk nu uit de administratie van eiseres is gebleken dat dit bedrag geboekt is met de omschrijving “aflossing [* 2]”. Dat dit bedrag niettemin een privé-opname zou zijn, heeft eiseres niet nader onderbouwd. Voorts heeft eiseres slechts gesteld, maar niet nader onderbouwd dat daadwerkelijk op 1 januari 2006 een bedrag van € 50.000 in de kluis aanwezig was. De overige bevindingen van verweerder over de administratie heeft eiseres niet gemotiveerd bestreden. </para>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr>4.9.5.</nr>
+            <para>Naar het oordeel van de rechtbank heeft eiseres met hetgeen zij aanvoert dan ook niet voldaan aan de op haar rustende bewijslast dat de naheffingsaanslag ob over 1 januari 2005 tot en met 31 maart 2008 te hoog is. </para>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr>4.9.6.</nr>
+            <para>Ten aanzien van de lb/pvv overweegt de rechtbank het volgende. Niet alleen in 2007 zijn illegalen werkend bij eiseres aangetroffen, maar ook in 2006. Met betrekking tot de in 2006 aangetroffen personen heeft verweerder geconstateerd dat deze personen niet in de administratie van eiseres zijn verantwoord. Eiseres heeft zich op het standpunt gesteld dat zij niet inhoudelijk op de controle van de Arbeidsinspectie in 2006 kan reageren vanwege het ontbreken van een verslag van deze controle. De rechtbank overweegt hierover dat verweerder zich op het standpunt stelt dat eiseres dit verslag heeft ontvangen, maar zelfs indien eiseres het verslag niet zou hebben ontvangen had zij de mogelijkheid het verslag op te vragen bij haar advocaat dan wel bij de officier van justitie. Naar het oordeel van de rechtbank had eiseres dan ook de mogelijkheid om in het bezit van voornoemd verslag te komen. Dat zij die mogelijkheid niet heeft benut dient voor haar rekening en risico te blijven. </para>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr>4.9.7.</nr>
+            <para>Ten aanzien van de controle in 2007 heeft eiseres gesteld dat [A] en [F] wel op de loonlijst stonden, zij het onder andere namen. Eiseres heeft evenwel niet nader onderbouwd onder welke namen deze personen dan in de administratie waren opgenomen. Het is wel opvallend dat de naam “[F1]” op de usb-stick voorkomt. </para>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr>4.9.8.</nr>
+            <para>Voorts overweegt de rechtbank dat [E] tegenover de Arbeidsinspectie heeft verklaard dat hij zeven dagen in de week voor eiseres heeft gewerkt voor € 900 netto per maand. Deze persoon komt niet in de administratie van eiseres voor, maar wel is op de usb-stick de naam “[E1]” aangetroffen met daarbij voor de maanden juli, augustus en september van het jaar 2007 een bedrag van € 900 per maand vermeld. </para>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr>4.9.9.</nr>
+            <para>De stelling van eiseres dat de op de usb-stick aangetroffen administratie bedoeld was om leningen van familieleden van de vennoten los te krijgen, acht de rechtbank in het licht van het voorgaande ongeloofwaardig, te meer nu eiseres niet heeft kunnen aangeven van welke familieleden de vennoten geld wilden lenen, behalve van een oom in Australië van wie de vennoten de woonplaats niet wisten te vertellen. </para>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr>4.9.10.</nr>
+            <para>Naar het oordeel van de rechtbank heeft eiseres dan ook niet aannemelijk gemaakt, laat staan dat zij heeft doen blijken, dat alle lonen in de administratie zijn verantwoord zodat niet voldaan is aan de op eiseres rustende bewijslast dat de naheffingsaanslagen lb/pvv over de tijdvakken 2005 tot en met 2008 te hoog zijn. </para>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr>4.10.1.</nr>
+            <para>Dat eiseres er niet in geslaagd is aan te tonen dat en in hoeverre de uitspraken op bezwaar (en daarmee de naheffingsaanslagen) onjuist zijn, betekent echter niet dat deze mogen berusten op een willekeurige schatting van de te belasten omzet en lonen. Verweerder dient de naheffingsaanslagen vast te stellen aan de hand van een redelijke schatting. Door bij de berekening van de omzet en de loonkosten de gegevens op de usb-stick, de “bierkladbonnen” en het schrift met verkopen alcoholhoudende dranken tot uitgangspunt te nemen is verweerder naar het oordeel van de rechtbank uitgegaan van een alleszins redelijke schatting. </para>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr>4.10.2.</nr>
+            <para>De rechtbank ziet evenwel geen aanleiding om, zoals verweerder gedaan heeft, in aanvulling op voornoemde gegevens uit te gaan van veronderstellingen ten aanzien van de loonkosten. De rechtbank acht het onredelijk ervan uit te gaan dat er meer lonen zouden zijn uitbetaald dan de op de usb-stick vermelde lonen zodat verweerders schatting op dit punt de toets der redelijkheid niet kan doorstaan. Gelet op het voorgaande ziet de rechtbank aanleiding de door verweerder geschatte lonen alsmede de naheffingsaanslagen lb/pvv te beperken tot de op de usb-stick aangetroffen loonbedragen. Dit betekent dat voor het jaar 2005 de correctie loonheffing dient te vervallen nu op de usb-stick geen loonbedragen voor 2005 zijn aangetroffen, dat voor het jaar 2006 moet worden uitgegaan van een bedrag van € 32.132 aan niet verantwoorde lonen, voor het jaar 2007 van een bedrag van € 110.107 en voor het jaar 2008 van een bedrag van € 47.603. </para>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr>4.11.1.</nr>
+            <para>Met betrekking tot de boetes acht de rechtbank door verweerder genoegzaam aangetoond dat over de in geding zijnde belastingjaren, met uitzondering van het belastingjaar 2003, te weinig omzetbelasting en, met uitzondering van het belastingjaar 2005, te weinig loonbelasting is geheven en dat zulks is te wijten aan opzet van eiseres. De opgelegde boetes van 50% acht de rechtbank, ook indien rekening wordt gehouden met de omstandigheid dat deze zijn vastgesteld na omkering en verzwaring van de bewijslast, passend en geboden. </para>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr>4.11.2.</nr>
+            <para>Wel dienen de boetes over de naheffingsaanslag ob 2003 en de naheffingsaanslagen lb/pvv 2005 tot en met 2008 te worden verminderd nu de beroepen tegen deze naheffingsaanslagen slagen en de grondslag van de boete wordt gevormd door het bedrag van de naheffingsaanslagen. De boetes over de naheffingsaanslag ob 2003 en de naheffingsaanslag lb/pvv 2005 komen te vervallen. De boetes over de naheffingsaanslagen lb/pvv 2006 tot en met 2008 dienen te worden verminderd tot 50% van de door verweerder te verminderen naheffingsaanslagen. </para>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr>4.11.3.</nr>
+            <para>Voorts heeft de Hoge Raad in het arrest van 22 april 2005, nr. 37.984, LJN AO9006, geoordeeld dat, behoudens bijzondere omstandigheden, de berechting van een boetezaak door de rechtbank niet binnen een redelijke termijn geschiedt als de rechtbank niet binnen twee jaar uitspraak doet en dat in voorkomend geval overschrijding van de redelijke termijn behoort te leiden tot vermindering van de boete. </para>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr>4.11.4.</nr>
+            <para>De redelijke termijn ter zake van de boetes is aangevangen met de ontvangst door eiseres van het rapport van het boekenonderzoek van 9 juni 2009, aangezien eiseres hieraan redelijkerwijs de verwachting heeft kunnen ontlenen dat er boetes zouden worden opgelegd. Tussen dit tijdstip en het tijdstip waarop de rechtbank uitspraak doet is een periode van twee jaar en elf maanden verstreken. Uit het dossier blijkt de rechtbank evenwel dat eiseres met haar pro forma bezwaarschrift van 19 juni 2009 verzocht heeft om in verband met de vakantieperiode uitstel te verlenen voor de nadere motivering tot 15 september 2009. Op 11 september 2009 heeft eiseres haar bezwaarschrift inzake de naheffingsaanslagen ob van een nadere motivering voorzien en op 28 oktober 2009 het bezwaarschrift inzake de naheffingsaanslagen lb/pvv. De verleende uitstelperiode dient naar het oordeel van de rechtbank voor rekening van eiseres te blijven. Gedurende de bezwaarprocedure heeft eiseres voorts nog diverse malen om stukken verzocht en is eiseres ook tijdens de hoorzitting van 14 april 2010 de gelegenheid gegeven om haar standpunten en stellingen nader te onderbouwen waarna de hoorzitting op 9 juni 2010 is hervat. Gelet op de omstandigheid dat eiseres zelf invloed heeft gehad op de duur van de behandeling alsmede gezien de omvang en de complexiteit van de zaak is de rechtbank van oordeel dat sprake is van bijzondere omstandigheden als bedoeld in voornoemd arrest van de Hoge Raad van 22 april 2005 die in het onderhavige geval een langere termijn dan twee jaar rechtvaardigen. Gezien het voorgaande is de rechtbank van oordeel dat de redelijke termijn niet is overschreden. Voor een verdergaande matiging van de boete ziet de rechtbank in het onderhavige geval dan ook geen aanleiding. </para>
+            <para/>
+          </paragroup>
+        </paragroup>
+        <paragroup>
+          <nr>4.12.</nr>
+          <para>Het beroep tegen de heffingsrentebeschikkingen heeft eiseres niet afzonderlijk onderbouwd. Omdat de beroepsgronden tegen de naheffingsaanslagen ob 2003 en lb/pvv 2005 tot en met 2008 doel treffen, zullen de beroepen tegen de daarmee samenhangende heffingsrentebeschikkingen eveneens gegrond worden verklaard. Het beroep tegen de naheffingsaanslag ob 2005 tot en met 2008 treft geen doel zodat de daarmee samenhangende heffingsrentebeschikking in stand blijft.” </para>
+          <para/>
+          <para/>
+        </paragroup>
+      </section>
+      <section>
+        <title>
+          <nr>4</nr>Geschil in hoger beroep</title>
+        <para/>
+        <parablock>
+          <para>Evenals bij de rechtbank is bij het Hof in geschil of de in geding zijnde naheffingsaanslagen en boeten terecht en tot het juiste bedrag zijn opgelegd. </para>
+        </parablock>
+        <para/>
+      </section>
+      <section role="overwegingen">
+        <title>
+          <nr>5</nr>Beoordeling van het geschil</title>
+        <para/>
+        <parablock>
+          <para>
+            <emphasis role="italic">Omzet </emphasis>
+          </para>
+        </parablock>
+        <para/>
+        <paragroup>
+          <nr>5.1.</nr>
+          <para>De inspecteur heeft gesteld dat de door belanghebbende gepresenteerde administratie niet ten grondslag kan worden gelegd aan de berekening van de door belanghebbende verschuldigde omzetbelasting en loonheffingen en ook niet voor de berekening van de door de vennoten van belanghebbende behaalde winst. Belanghebbende heeft dit betwist.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr>5.2.</nr>
+          <para>De inspecteur heeft ter onderbouwing van zijn stelling in hoofdzaak aangevoerd, dat op een bij belanghebbende gevonden USB-stick een schaduwadministratie is opgenomen, die een aanzienlijk hogere omzet in de desbetreffende perioden bevat en waarop loonbetalingen zijn opgenomen die in de gepresenteerde loonadministratie niet zijn opgenomen. In dit verband heeft de inspecteur erop gewezen dat het geconstateerde verschil in omzet met name ligt in de contante uitgaven en dat het aandeel van de contante betalingen in de jaren 2003 tot en met 2007 volgens de administratie is gedaald van 26% tot 7% van de totale ontvangsten, terwijl in horecabedrijven 80% normaal is. Voorts heeft de inspecteur aangevoerd dat er een onverklaarbare daling heeft plaatsgevonden in de door belanghebbende behaalde brutowinstpercentages: van circa 400% van de inkopen in 2003 en 2004 tot circa 260% in 2005 tot en met 2007 en circa 300% in 2008. Daarnaast heeft de inspecteur aangevoerd dat op basis van de door belanghebbende verantwoorde winst de vennoten een negatief bedrag voor onbenoemde privé-uitgaven ter beschikking hadden in de jaren 2005 en 2006.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr>5.3.</nr>
+          <para>Tussen partijen is de inhoud van de evenvermelde USB-stick niet in geschil. Vaststaat dat op die stick voor drie maanden in het jaar 2006, elf maanden in het jaar 2007 en de eerste vier maanden van het jaar 2008 omzetgegevens zijn vermeld die, op jaarbasis omgerekend, meer dan € 200.000 per jaar hoger zijn dan in de administratie is verantwoord. Belanghebbende heeft dienaangaande gesteld dat de vennoten een afzonderlijke, gefingeerde omzetadministratie hebben opgezet met (veel) hogere bedragen dan werkelijk zijn ontvangen, met het doel een potentiële geldschieter te misleiden door de resultaten van het bedrijf veel gunstiger voor te stellen dan zij in werkelijkheid zijn. Ter zitting heeft belanghebbende verklaard dat er nog steeds aan deze gefingeerde administratie wordt gewerkt en dat dit de reden is dat de gegevens niet van alle maanden van de jaren 2006 en 2007 op de stick waren opgenomen. De inspecteur heeft hiertegenover gesteld dat belanghebbende desgevraagd niet heeft kunnen aangeven wie de potentiële geldschieter is, dat het niet geloofwaardig is dat de gegevens op de stick gefingeerd zijn, te meer niet nu toepassing van de chi-kwadraattoets tot een resultaat leidt op basis waarvan moet worden geconcludeerd dat het uiterst onwaarschijnlijk is dat die gegevens zijn gefingeerd en op grond van die gegevens het brutowinstpercentage komt op het niveau van de het in de jaren 2003 en 2004 verantwoorde percentage. In dit verband acht het Hof ook van belang dat het verschil in omzet tussen de administratie en de USB-stick geheel of nagenoeg geheel bestaat uit contante ontvangsten, terwijl het aandeel van de contante betalingen in de administratie in de jaren 2005 tot en met 2007 gemiddeld daalt tot nog geen 10% en de inspecteur onbestreden heeft gesteld dat in de horeca normaal circa 80% van de betalingen contant geschiedt. Belanghebbende heeft naar het oordeel van het Hof voor dit zeer aanzienlijke verschil geen toereikende verklaring gegeven.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr>5.4.</nr>
+          <para>Gelet op het onder 5.3. overwogene acht het Hof de verklaring van belanghebbende omtrent de inhoud van de USB-stick niet geloofwaardig. Ook ter zitting heeft belanghebbende niet aangegeven wie er met de daarop vermelde gegevens misleid moest worden en ook overigens is niet gebleken van een aan belanghebbende op die basis verstrekte lening. Belanghebbende heeft de door de inspecteur gestelde resultaten van de chi-kwadraattoets niet althans onvoldoende gemotiveerd betwist. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr>5.5.</nr>
+          <para>Ter zitting heeft belanghebbende desgevraagd verklaard dat de aanzienlijke daling van het brutowinstpercentage in de jaren vanaf 2005 te wijten is aan een stelselwijziging in de administratie: van kasstelsel naar factuurstelsel. De inspecteur heeft deze verklaring betwist. Het Hof acht deze verklaring niet aannemelijk, dit te minder nu een stelselwijziging niet verklaart dat het brutowinstpercentage structureel wordt verlaagd, ook in de jaren na 2005.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr>5.6.</nr>
+          <para>Met betrekking tot het voor privédoeleinden van de vennoten van belanghebbende beschikbare bedragen heeft belanghebbende gesteld dat de inspecteur ten onrechte geen rekening heeft gehouden met aan het begin en het einde van de jaren 2005 en 2006 aanwezige contanten. In dit verband heeft belanghebbende aangevoerd dat begin 2005 aanzienlijke bedragen in contanten aanwezig waren die verkregen zijn uit in vorige jaren niet verantwoorde ontvangsten. De inspecteur heeft de aanwezigheid van een substantieel bedrag aan contanten betwist en daartoe aangevoerd dat de vennoten van belanghebbende nimmer een dergelijk bedrag aan contanten hebben verantwoord in hun aangiften inkomstenbelasting en dat de ontvanger een betalingsregeling heeft moeten treffen voor het op grond van een vaststellingsovereenkomst voor de jaren 1997 tot en met 2000 te betalen bedrag van € 450.000. Tegenover de betwisting door de inspecteur heeft belanghebbende naar het oordeel van het Hof niet aannemelijk gemaakt dat aan het begin van het jaar 2005 een bedrag aan contanten aanwezig was waarmee het tekort op de door de inspecteur berekende benoemde privé-uitgaven alsmede de onbenoemde privé-uitgaven in de jaren 2005 en 2006 kon worden bestreden. Dit is ook niet het geval indien bij de berekening van de ruimte voor privé-uitgaven geen rekening wordt gehouden met een bedrag van € 50.000 in de kluis per einde 2006.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr>5.7.</nr>
+          <para>Op grond van de vorenvermelde feiten en omstandigheden, in onderling verband bezien, is het Hof met de rechtbank van oordeel dat de door belanghebbende gepresenteerde administratie voor de jaren 2005 tot en met 2007 en het eerste kwartaal 2008 niet kan dienen als grondslag voor de bepaling van de door belanghebbende verschuldigde omzetbelasting en evenmin voor de vaststelling van de winst van de vennoten van belanghebbende. De inspecteur heeft voor de jaren 2005 tot en met 2007 en voor het eerste kwartaal 2008 een theoretische omzet berekend, uitgaande van de op de USB-stick vermelde gegevens voor zeventien maanden in die periode. Voor de jaren 2005 en 2006 is hij uitgegaan van de gemiddelde maandomzet op basis van de gegevens van evenbedoelde zeventien maanden. Voor het jaar 2007 is hij uitgegaan van een gemiddelde maandomzet op basis van de gegevens van elf maanden in dat jaar zoals die op de USB-stick waren vermeld. Voor het eerste kwartaal 2008 is hij uitgegaan van de gegevens van die maanden zoals die op de USB-stick waren vermeld. Naar het oordeel van het Hof heeft de inspecteur aldus de omzet op aanvaardbare wijze bepaald. Belanghebbende heeft het tegendeel niet aangetoond.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr>5.8.</nr>
+          <para>Uit al het vorenoverwogene volgt dat de inspecteur terecht omzetbelasting heeft nageheven ter zake van door belanghebbende niet verantwoorde omzet. Nu de in de naheffingsaanslag begrepen tariefcorrectie tussen partijen niet in geschil is, is de naheffingsaanslag terecht en tot het juiste bedrag opgelegd.</para>
+          <para/>
+          <para/>
+          <para/>
+          <parablock>
+            <para>
+              <emphasis role="italic">Loon</emphasis>
+            </para>
+          </parablock>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr>5.9.</nr>
+          <para>Meerbedoelde USB-stick bevat ook bedragen aan uitbetaalde lonen in de achttien maanden waarvan gegevens op de stick zijn opgenomen. Het gaat daarbij om meer dan dertig personen die gedurende kortere of langere tijd loon hebben ontvangen in genoemde maanden. Gemiddeld betrof het maandelijks 8,7 personen. De USB-stick bevat voor het jaar 2006 veertien, voor het jaar 2007 twintig en in het eerste kwartaal 2008 dertien namen van personen die gedurende kortere of langere tijd loon hebben ontvangen. Vaststaat dat niet alle personen in de loonadministratie zijn opgenomen. Die administratie omvat in het jaar 2006 elf, in het jaar 2007 zestien en in het eerste kwartaal 2008 negen namen van personen die gedurende kortere of langere tijd loon hebben ontvangen. Daarmee staat tevens vast dat de loonadministratie van belanghebbende in die mate onvolledig is dat zij niet kan dienen voor de bepaling van de door belanghebbende verschuldigde loonheffingen.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr>5.10.</nr>
+          <para>Hetgeen partijen met betrekking tot de bepaling van de uitbetaalde lonen met name verdeeld houdt is of voor de desbetreffende maanden de op de USB-stick vermelde lonen het totaal van de uitbetaalde lonen aangeeft dan wel de lonen die niet verantwoord zijn in de loonadministratie. Naar het oordeel van het Hof heeft belanghebbende tegenover de gemotiveerde betwisting door de inspecteur niet aannemelijk gemaakt dat de op de USB-stick vermelde lonen ook de in de administratie verantwoorde lonen omvatten. Uit de vergelijking van de gegevens in de stukken van het geding valt dit niet af te leiden. Belanghebbende heeft dienaangaande ook geen nader inzicht verschaft. Ook heeft belanghebbende geen gegevens verschaft omtrent het bedrag van de lonen in relatie tot de omzet. Belanghebbende heeft gesteld dat de toevoeging van de op de USB-stick vermelde lonen aan de verantwoorde lonen leidt tot een onwaarschijnlijk hoog aantal werknemers, maar de inspecteur heeft daartegenover gesteld dat de meeste werknemers slechts voor een (zeer) korte periode in dienst zijn geweest dan wel in deeltijd hebben gewerkt, zodat het totale aantal werknemers, omgerekend in fte’s, veel lager is. Dienaangaande heeft belanghebbende geen nadere gegevens verstrekt. Uit de gedingstukken kan alleen worden opgemaakt dat blijkens de loonadministratie in de jaren 2006 tot en met 2008 is gewerkt met 6,6 respectievelijk 5,4 en 6,5 fte’s op basis van 260 gewerkte dagen. Vaststaat dat het door belanghebbende geëxploiteerde restaurant 365 dagen per jaar open is en dat bij waarnemingen ter plaatse op twee zondagen in 2006 en 2007 is geconstateerd dat buiten de vennoten van belanghebbende zeven of acht personen in het restaurant werkzaam waren. Uit voormelde feiten en omstandigheden, ook in hun onderling verband bezien, is niet op te maken dat toevoeging van de op de USB-stick vermelde lonen aan de in de administratie verantwoorde lonen tot een onaanvaardbaar resultaat leidt.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr>5.11.</nr>
+          <para>De inspecteur aanvaardt de beslissing van de rechtbank dat alleen de op de USB-stick vermelde lonen als niet verantwoord in aanmerking worden genomen, zodat van extrapolatie naar andere maanden in de tijdvakken waarop de naheffingsaanslagen betrekking hebben geen sprake is. Gelet op het vorenoverwogene dient de uitspraak van de rechtbank met betrekking tot die naheffingsaanslagen te worden bevestigd.</para>
+          <para/>
+          <parablock>
+            <para>
+              <emphasis role="italic">Boete</emphasis>
+            </para>
+          </parablock>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr>5.12.</nr>
+          <para>Belanghebbende heeft gesteld dat van een boete geen sprake kan zijn, nu de omzet en de loonbetalingen in de administratie op de juiste wijze zijn verantwoord. Die stelling is blijkens het vorenoverwogene ongegrond. Belanghebbende heeft voorts gesteld dat ook indien meer omzet c.q. loonbetalingen in aanmerking moeten worden genomen geen sprake is van opzet of grove schuld dienaangaande. De inspecteur heeft gesteld dat een boete van 50% van de verschuldigde belasting eerder te laag dan te hoog is, nu belanghebbende van de onjuistheid van de administratie heeft geweten en bovendien sprake is van recidive nu ook over de jaren 1997 tot en met 2000 aanzienlijke bedragen aan omzetbelasting en loonheffingen zijn nageheven.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr>5.13.</nr>
+          <para>Met betrekking tot de gerechtvaardigdheid en de hoogte van de boete heeft de rechtbank naar het oordeel van het Hof een juiste beslissing genomen. Het Hof maakt de daaraan ten grondslag liggende overwegingen tot de zijne. Dat geldt ook voor de overwegingen van de rechtbank inzake het overschrijden van de redelijke termijn. Op dit punt heeft belanghebbende overigens in hoger beroep geen grieven aangevoerd. De omstandigheid dat de omzet voor bepaalde tijdvakken is benaderd door extrapolatie van gegevens uit andere tijdvakken doet daaraan niet af, omdat er in dit geval naar het oordeel van het Hof onvoldoende reden is voor twijfel aan de juistheid van die benadering.</para>
+          <para/>
+          <parablock>
+            <para>
+              <emphasis role="italic">Slotsom</emphasis>
+            </para>
+          </parablock>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr>5.14.</nr>
+          <para>Uit al het vorenoverwogene volgt dat de uitspraken van de rechtbank met betrekking tot de in geding zijnde naheffingsaanslagen, boetebeschikkingen en beschikkingen heffingsrente dienen te worden bevestigd.</para>
+          <para/>
+          <para/>
+        </paragroup>
+      </section>
+      <section>
+        <title>
+          <nr>6</nr>Kosten</title>
+        <para/>
+        <parablock>
+          <para>Het Hof acht geen termen aanwezig voor een veroordeling in de kosten op de voet van artikel 8:75 van de Algemene wet bestuursrecht. </para>
+        </parablock>
+        <para/>
+        <para/>
+      </section>
+      <section>
+        <title>
+          <nr>7</nr>Beslissing</title>
+        <para/>
+        <parablock>
+          <para>Het Hof bevestigt de uitspraken van de rechtbank<emphasis role="italic">.</emphasis></para>
+        </parablock>
+        <para/>
+        <para/>
+        <parablock>
+          <para>De uitspraken zijn gedaan door mrs. D.B. Bijl, voorzitter, E.M. Vrouwenvelder en B.A. van Brummelen, leden van de belastingkamer, in tegenwoordigheid van mr. A.H. van Dapperen, als griffier. De beslissing is op 4 juli 2013 in het openbaar uitgesproken.</para>
+        </parablock>
+        <para/>
+        <para/>
+        <para/>
+        <para/>
+        <para/>
+        <para/>
+        <parablock>
+          <para>Tegen deze uitspraak kan binnen zes weken na de verzenddatum beroep in cassatie worden ingesteld bij de Hoge Raad der Nederlanden (belastingkamer), Postbus 20303, 2500 EH Den Haag. Daarbij moet het volgende in acht worden genomen:</para>
+        </parablock>
+        <orderedlist numeration="arabic">
+          <listitem>
+            <para>bij het beroepschrift wordt een afschrift van deze uitspraak overgelegd.</para>
+          </listitem>
+          <listitem>
+            <para>het beroepschrift moet ondertekend zijn en ten minste het volgende vermelden:</para>
+          </listitem>
+          <listitem>
+            <para>a. de naam en het adres van de indiener;</para>
+          </listitem>
+          <listitem>
+            <para>b. een dagtekening;</para>
+          </listitem>
+          <listitem>
+            <para>c. een omschrijving van de uitspraak waartegen het beroep in cassatie is gericht;</para>
+          </listitem>
+          <listitem>
+            <para>d. de gronden van het beroep in cassatie.</para>
+          </listitem>
+        </orderedlist>
+        <parablock>
+          <para>Voor het instellen van beroep in cassatie is griffierecht verschuldigd. Na het instellen van beroep in cassatie ontvangt de indiener een nota griffierecht van de griffier van de Hoge Raad.</para>
+          <para>In het cassatieberoepschrift kan de Hoge Raad verzocht worden om de wederpartij te veroordelen in de proceskosten.</para>
+        </parablock>
+      </section>
+    </uitspraak>
+</open-rechtspraak>

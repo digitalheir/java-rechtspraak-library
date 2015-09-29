@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:tr="http://tuchtrecht.overheid.nl/" xmlns:eu="http://publications.europa.eu/celex/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:CBB:1999:AA3582</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2014-04-13T10:20:11</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">AA3582</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/College_van_Beroep_voor_het_bedrijfsleven" scheme="overheid.RechterlijkeMacht">College van Beroep voor het bedrijfsleven</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">1999-01-20</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">97/114/14840</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#eersteAanlegMeervoudig">Eerste aanleg - meervoudig</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht">Bestuursrecht</dcterms:subject>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0005537&amp;g=1999-01-20">Algemene wet bestuursrecht</dcterms:references>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:1999:AA3582">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:1999:AA3582</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-04T15:52:51</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2003-04-03</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:CBB:1999:AA3582 College van Beroep voor het bedrijfsleven , 20-01-1999 / 97/114/14840</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:CBB:1999:AA3582:INH" lang="nl" xml:space="preserve">
+      <para>-</para>
+    </inhoudsindicatie>
+  <uitspraak xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:CBB:1999:AA3582:DOC" lang="nl" xml:space="preserve">
+      <parablock>
+        <para>College van Beroep voor het bedrijfsleven</para>
+        <para>Nrs. AWB 97/115 en AWB 97/321   20 januari 1999</para>
+        <para>14840</para>
+      </parablock>
+      <para/>
+      <para>Uitspraak in de zaak van:</para>
+      <para/>
+      <parablock>
+        <para>de coöperatie Coöperatieve Taxionderneming […] U.A.,</para>
+        <para>gevestigd te Amsterdam, appellante,</para>
+        <para>gemachtigde: mr W.A. van Overbeek de Meyer, advocaat te Amsterdam,</para>
+      </parablock>
+      <para/>
+      <para>tegen</para>
+      <para/>
+      <parablock>
+        <para>het dagelijks bestuur van het openbaar lichaam Taxivervoer Amsterdam, Zaanstreek, Amstelland en Meerlanden, zetelend te Amsterdam, verweerder,</para>
+        <para>gemachtigde: mr E. van der Schans, advocaat te Amsterdam.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>1.      De procedure</para>
+        <para> Op 3 januari 1997 heeft het College een beroepschrift ontvangen, waarbij appellante beroep instelt tegen een besluit van verweerder van 12 december 1996. Bij voormeld besluit heeft verweerder het bezwaar van appellante tegen de intrekking op grond van de Wet personenvervoer (hierna: de Wet) van de aan appellante verleende vergunning voor het verrichten van taxivervoer met vijf auto's, onder taxinummers 21, 184, 434, 506 en 592, ongegrond verklaard.</para>
+        <para> Op 27 februari 1997 heeft het College van appellante een beroepschrift ontvangen, waarbij beroep wordt ingesteld tegen een besluit van verweerder van 16 januari 1997. Bij dat besluit heeft verweerder het bezwaar van appellante tegen een schrijven van verweerder van 25 november 1995 niet-ontvankelijk verklaard.</para>
+        <para> Verweerder heeft op 24 oktober 1997 in beide zaken een verweerschrift ingediend.</para>
+        <para> Het onderzoek ter zitting heeft plaatsgevonden op 9 december 1998, waarbij partijen, appellante vertegenwoordigd door Th. Hensen en haar gemachtigde en verweerder vertegenwoordigd door zijn secretaris J.Chr. Groot en zijn gemachtigde, hun</para>
+        <para>standpunten nader hebben toegelicht.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>2.      De vaststaande feiten</para>
+        <para> Bij uitspraak van 12 februari 1997 heeft de president van het College het verzoek van appellante om het besluit van 12 december 1996 te schorsen afgewezen.</para>
+        <para>De uitspraak van de president wordt aan deze uitspraak gehecht. De onder punt 2 van die uitspraak weergegeven feiten en omstandigheden worden als hier ingelast en ook in dit geding als vaststaand beschouwd.</para>
+        <para> Op grond van de gedingstukken en het onderzoek ter zitting zijn met betrekking tot het besluit van 16 januari 1997 voorts de volgende feiten en omstandigheden komen vast te staan.</para>
+        <para>-       Bij brief van 3 oktober 1996 heeft appellante verweerder de vraag voorgelegd of het bespreekbaar is "dat de intrekkingsprocedure met betrekking tot de taxivergunning nr. 21 wordt beëindigd".</para>
+        <para>-       Verweerder heeft appellante bij brief van 25 november 1996 onder meer het volgende meegedeeld:</para>
+        <para>         "Voor de goede orde vestig ik uw aandacht erop, dat geen sprake is van een (separate) taxivergunning voor taxinummer 21. Taxinummer 21 maakt deel uit van de capaciteit als vermeld in de (ingetrokken) vergunning nr. 1051/OLT/94 (vergunningbewijs 8 juli 1994), waarop als capaciteit ook nog andere taxinummers vermeld staan.</para>
+        <para>Bij het Openbaar Lichaam bestaat, zo moet ik u voorts mededelen, niet de bereidheid om de intrekkingsprocedure met betrekking tot de onderhavige taxivergunning te beëindigen."</para>
+        <para>-       Bij brief van 24 december 1996 heeft appellante tegen voormeld schrijven bezwaar gemaakt. Vervolgens heeft verweerder het advies van de bezwaarschriftencommissie, het bezwaar van appellante niet-ontvankelijk verklaard.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para>3.      De bestreden besluiten</para>
+      <para/>
+      <parablock>
+        <para> Verweerder heeft de bestreden besluiten genomen in overeenstemming met de aan hem uitgebrachte adviezen van de bezwaarschriftencommissie. Afschriften van deze adviezen zijn aan deze uitspraak gehecht.</para>
+        <para> Verweerder heeft ter zitting voorts nog aangevoerd dat intrekking van een vergunning niet in de weg staat aan de overdracht van een bedrijf en aan het aanvragen van een nieuwe vergunning ten behoeve van het overgenomen bedrijf. Een nieuwe aanvraag wordt steeds op zichzelf beoordeeld. Bij verweerder is nooit een aanvraag om vergunning ingediend door de beweerde kopers van het bedrijf van appellante.</para>
+        <para> Een tijdelijke intrekking van de taxivergunning kan in het onderhavige geval, anders dan in de zaak van El Haddar, niet aan de orde zijn. El Haddar had een jong bedrijf, terwijl voorts niet is vastgesteld dat over de gehele linie op basis van de verboden loonpacht is gereden.</para>
+        <para> Ten slotte merkt verweerder nog op dat ingevolge het bepaalde bij artikel 6, vierde lid, van de Wet de mogelijkheid bestaat om na twee jaar opnieuw een vergunning aan te vragen.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para>4.      De argumenten van appellante</para>
+      <para/>
+      <para> Appellante heeft ter ondersteuning van het beroep - samengevat - het volgende tegen de bestreden besluiten aangevoerd.</para>
+      <para/>
+      <parablock>
+        <para>4.1             Het bezwaar tegen de weigering de intrekkingsprocedure met betrekking tot taxivergunning nummer 21 te beëindigen is ten onrechte niet-ontvankelijk verklaard. Naar aanleiding van het onderzoek van Regionaal Interdisciplinair Fraudeteam (hierna: RIF) is appellante geconfronteerd met aanslagen van de Belastingdienst en het GAK. Alleen de verkoop van één van de taxinummers bood appellante de mogelijkheid om deze aanslagen te betalen. Appellante heeft daarop verweerder verzocht de intrekkingsprocedure met betrekking tot taxinummer 21 te beëindigen. Op dit verzoek heeft verweerder gereageerd met de brief van 25 november 1996. Bij dit schrijven heeft verweerder toepassing gegeven aan artikel 91 van de Wet, zodat deze brief</para>
+        <para>moet worden opgevat als een besluit in de zin van de Algemene wet bestuursrecht (Awb).</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>4.2             Verweerder stelt zich ten onrechte op het standpunt dat appellante structureel en stelselmatig het verboden pachtsysteem heeft gehanteerd.</para>
+        <para> Het onderzoek van het RIF geeft een onjuist beeld van de aard en de omvang van de aan appellante verweten gedragingen. Met zowel de Belastingdienst als het GAK is een compromis bereikt, waaruit een minder grote omvang van de bij appellante geconstateerde onregelmatigheden valt af te leiden, maar het onjuiste beeld van een omvangrijke fraude is achteraf nimmer gecorrigeerd. Verweerder heeft zijn beslissing derhalve gegrond op gegevens die achteraf onjuist blijken te zijn, zodat definitieve intrekking van de bedrijfsvergunningen van appellante niet op zijn plaats is.</para>
+        <para> Uit de gegevens van het RIF-onderzoek kan niet blijken dat appellante stelselmatig over een langere periode de loonpachtconstructie gebruikte. De verklaringen van Hensen, mevrouw Vorst, en de taxichauffeurs bieden geen grondslag voor de conclusie dat structureel en stelselmatig gedurende een langere periode die constructie is gehanteerd. Hensen heeft tijdens het aan zijn verklaring ten grondslag liggende verhoor erkend dat hij de pachtconstructie hanteerde, maar dit was slechts een momentopname.</para>
+        <para>De taxichauffeurs die zijn gehoord, waren bijna zonder uitzondering kortstondig bij appellante in dienst en bovendien part-time werkzaam.</para>
+        <para> Appellante wil benadrukken dat de verboden pachtconstructie in de taxiwereld veelvuldig voorkwam. Verweerder heeft acht jaren lang die constructie gedoogd. De radicale en ingrijpende maatregel van een definitieve intrekking van de bedrijfsvergunning past niet bij dit passieve beleid van verweerder. Maatregelen als tijdelijke intrekking en/of boete waren redelijker geweest. Gedurende de bezwarenprocedure en de voorlopige voorzieningsprocedure kon appellante gebruik blijven maken van de bedrijfsvergunning, zodat ook de urgentie van een definitieve intrekking ontbreekt.</para>
+        <para> De gevolgen van de intrekking staan in geen verhouding tot de gepleegde onregelmatigheden. De intrekking van de vergunning leidde tot staking van het bedrijf, zodat Hensen geen inkomsten meer heeft. Aangezien appellante niet meer aan haar financiële verplichtingen kan voldoen, zijn ook anderen de dupe zijn van voornoemde maatregel van verweerder.</para>
+        <para> Voorts doet appellante een beroep op het gelijkheidsbeginsel. Het geval van El Haddar is gelijk te stellen met de zaak van appellante. Gelet hierop zou een tijdelijke intrekking op zijn plaats zijn geweest. Een andere beslissing getuigt van willekeur.</para>
+        <para>Appellante heeft getracht het bedrijf te verkopen. De vergunning vertegenwoordigt een aanzienlijke waarde. De marktwaarde per taxi beloopt circa fl. 300.000,--. Uiteindelijk is een koopovereenkomst tot stand gekomen met drie personen die bereid waren om voor de vergunning en de taxi's fl. 1.250.000,-- te betalen. Appellante heeft een mondeling verzoek tot verweerder gericht, maar verweerder heeft niet mee willen werken aan die transactie. De reden hiervoor was dat geen samenwerkingsovereenkomst meer bestond met de TCA. De TCA had evenwel de samenwerkingsovereenkomst beëindigd als gevolg van de intrekking van de vergunning door verweerder. Zo is de cirkel rond.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para>5.      De beoordeling</para>
+      <para/>
+      <parablock>
+        <para>5.1             Het College staat in de eerste plaats voor de vraag of verweerder het bezwaar van appellante tegen zijn schrijven van 25 november 1996 bij zijn besluit van 16 januari 1997 terecht niet-ontvankelijk heeft verklaard. Het College beantwoordt die vraag bevestigend en overweegt daartoe als volgt.</para>
+        <para> De gevolgen voor de exploitatie van taxi 21 maken onderdeel uit van het besluit van 4 januari 1996, strekkende tot intrekking van de op naam van appellante staande vergunning tot het verrichten van taxivervoer en waartegen door appellante reeds bezwaar was gemaakt. Voorzover appellante meende dat zij door het besluit tot intrekking onevenredig werd benadeeld en dat ter voorkoming hiervan maatregelen dienden te worden genomen nog voordat op het reeds ingediende bezwaar werd beslist, stond voor haar de weg van het doen van een verzoek om een voorlopige voorziening open. Voor het definitief wegnemen van bepaalde gevolgen van het intrekkingsbesluit, zoals appellante met haar schrijven van 3 oktober 1996 in wezen beoogde, stond aan appellante evenwel niet wederom een zelfstandige bezwaar- c.q. beroepsprocedure ter beschikking. Een en ander moet aan de orde worden gesteld binnen het kader van de reeds aanhangige procedure.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>5.2             Vervolgens staat het College voor de vraag of verweerder bij het bestreden besluit van 12 december 1996 terecht de intrekking van de taxivergunning van appellante heeft gehandhaafd. Dienaangaande overweegt het College als volgt.</para>
+        <para> Niet in geschil is dat appellante de voorschriften heeft overtreden als vermeld op pagina 8 van het advies van de bezwarencommissie.</para>
+        <para>Bij het bepalen van de zwaarte van de op te leggen maatregel heeft verweerder zich in het bijzonder laten leiden door het feit dat en de mate waarin appellante het zogenoemde "verpachtverbod" heeft overtreden als neergelegd in artikel 23, tweede lid onder a, van de Taxiverordening Amsterdam, Zaanstreek en Meerlanden, zoals vastgesteld op 12 september 1991. Ingevolge deze bepaling is het een vervoerder verboden om de in zijn bedrijf gebezigde taxi's aan derden in bruikleen, huur of anderszins af te staan, waardoor het taxivervoer niet langer voor zijn rekening en risico plaatsvindt.</para>
+        <para> Met betrekking tot de zwaarte van de opgelegde sanctie overweegt het College dat hem niet is kunnen blijken dat het onderzoek van het RIF een onjuist beeld zou geven van de aard en de omvang van de door appellante begane overtredingen. De enkele omstandigheid dat Belastingdienst en GAK hun vorderingen op appellante sterk hebben gereduceerd, biedt geen grondslag voor het oordeel dat door appellante de verboden pachtconstructie niet systematisch zou zijn toegepast. Ook hetgeen appellante in dit verband naar voren heeft gebracht met betrekking tot de door Hensen, Vorst en de taxichauffeurs afgelegde verklaringen werpt geen ander licht op de zaak. Met name de verklaringen van Hensen en Vorst geven met redenen omkleed aan dat en waarom besloten is de verboden pachtconstructie structureel toe te passen. Gelet op het vorenstaande ziet het College geen grond voor het oordeel dat verweerder zich een te negatief beeld heeft gevormd van de schaal van de door appellante gepleegde overtredingen. Het belang van verweerder dat de binnen zijn regio opererende taxi-ondernemers de geldende CAO-verplichtingen (doen) naleven en zich ervan onthouden aan de arbeidsverhoudingen een zodanig karakter te geven dat het verbod van artikel 5 van de Wet personenvervoer wordt overtreden, is groot en de bewaking van dit belang kan verweerder naar het oordeel van het College in voorkomende ernstige gevallen zoals het onderhavige nopen tot het intrekken van een verleende taxi-vergunning.</para>
+        <para> De stelling van appellante dat de verboden loonpachtconstructie veelvuldig voorkwam en dat die constructie gedoogd werd, welke stelling overigens wijst in de richting van een structurele toepassing van de constructie door - in ieder geval - appellante, kan naar het oordeel van het College evenmin slagen. Niet aannemelijk is gemaakt dat verweerder in het verleden welbewust het gebruik door taxi-ondernemingen van een loonpachtconstructie als door appellante in de relevante periode toegepast, op zijn beloop heeft gelaten. Appellante heeft erkend dat de verboden loonpachtconstructie door haar is toegepast. Dat dit besef is samengegaan met vertrouwen op een gedooghouding van verweerder is niet aannemelijk, mede gezien het feit dat appellante over de gehele linie op basis van de verboden loonpacht heeft gereden en haar toevlucht heeft genomen tot fraudes in de bedrijfsadministratie en de kilometerregistratie om het gebruik van de loonpachtconstructie toe te dekken voor - onder andere - verweerder.</para>
+        <para> De stelling van appellante dat sprake is van willekeur nu verweerder in de zaak van El Haddar tot een tijdelijke intrekking van de taxivergunning heeft beslist, heeft verweerder naar het oordeel van het College met de ter zitting genoemde argumenten voldoende weerlegd.</para>
+        <para> Het College acht ook overigens niet gebleken van grond voor het oordeel dat de door verweerder opgelegde maatregel niet in een passende verhouding zou staan tot de ernst van de door appellante gepleegde overtredingen. Het feit dat Hensen strafrechtelijk is vervolgd en veroordeeld tot 240 uren dienstverlening wegens valsheid in geschrifte staat niet aan handhaving van de intrekking van de vergunning in de weg.</para>
+        <para> Ook anderszins is niet gebleken dat de bestreden besluiten in rechte geen stand zouden kunnen houden. De beroepen van appellante dienen derhalve ongegrond te worden verklaard.</para>
+        <para> Het College acht geen termen aanwezig voor een kostenveroordeling met toepassing van artikel 8:75 van de Awb.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para>6.      Beslissing</para>
+      <para/>
+      <para> Het College verklaart de beroepen ongegrond.</para>
+      <para/>
+      <para>Aldus gegeven door mr P. Lourens, mr D. Roemers en mr H.G. Lubberdink, in tegenwoordigheid van mr H.J. Dullaart, als griffier, en uitgesproken in het openbaar op 20 januari 1999.</para>
+      <para/>
+      <para>                 w.g. P. Lourens </para>
+      <para/>
+      <para/>
+      <para>                 w.g. H.J. Dullaart</para>
+    </uitspraak>
+</open-rechtspraak>

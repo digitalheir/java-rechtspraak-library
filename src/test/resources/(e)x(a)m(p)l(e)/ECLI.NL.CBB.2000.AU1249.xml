@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:tr="http://tuchtrecht.overheid.nl/" xmlns:eu="http://publications.europa.eu/celex/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:CBB:2000:AU1249</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2014-04-13T11:42:47</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">AU1249</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/College_van_Beroep_voor_het_bedrijfsleven" scheme="overheid.RechterlijkeMacht">College van Beroep voor het bedrijfsleven</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">2000-09-14</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">AWB 98/329</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#eersteAanlegMeervoudig">Eerste aanleg - meervoudig</psi:procedure>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#eersteEnEnigeAanleg">Eerste en enige aanleg</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht">Bestuursrecht</dcterms:subject>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0005537&amp;artikel=4:2&amp;g=2000-09-14">Algemene wet bestuursrecht 4:2</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0008404&amp;artikel=1&amp;g=2000-09-14">Besluit subsidies bedrijfsgerichte technologische samenwerkingsprojecten 1</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0008404&amp;artikel=9&amp;g=2000-09-14">Besluit subsidies bedrijfsgerichte technologische samenwerkingsprojecten 9</dcterms:references>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:2000:AU1249">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:2000:AU1249</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-04T22:35:40</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2005-08-22</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:CBB:2000:AU1249 College van Beroep voor het bedrijfsleven , 14-09-2000 / AWB 98/329</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:CBB:2000:AU1249:INH" lang="nl" xml:space="preserve">
+      <parablock>
+        <para>Kaderwet EZ-subsidies</para>
+        <para>Besluit subsidies technologische samenwerkingsprojecten</para>
+      </parablock>
+    </inhoudsindicatie>
+  <uitspraak xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:CBB:2000:AU1249:DOC" lang="nl" xml:space="preserve">
+      <para>College van Beroep voor het bedrijfsleven</para>
+      <para/>
+      <para/>
+      <parablock>
+        <para>No. AWB 98/329				14 september 2000</para>
+        <para>27365 Kaderwet EZ-subsidies</para>
+        <para>            Besluit subsidies technologische samenwerkingsprojecten</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para/>
+      <para>Uitspraak in de zaak van:</para>
+      <para/>
+      <parablock>
+        <para>A, handelend onder de naam B, te X, appellant,</para>
+        <para>tegen</para>
+        <para>de Minister van Economische Zaken, te ’s-Gravenhage, verweerder, </para>
+        <para>gemachtigde: mr M. Wignand.</para>
+      </parablock>
+      <para/>
+      <para> </para>
+      <para/>
+      <parablock>
+        <para>1.	De procedure</para>
+        <para>Op 23 april 1998 heeft het College van appellant een beroepschrift ontvangen, waarbij beroep wordt ingesteld tegen een besluit van verweerder van 25 maart 1998.</para>
+        <para>Bij dit besluit heeft verweerder beslist op het bezwaar van appellant tegen de afwijzing van zijn aanvraag om subsidie op grond van het Besluit subsidies bedrijfsgerichte technologische samenwerking.</para>
+        <para>Op 25 juni 1998 heeft verweerder een verweerschrift ingediend.</para>
+        <para>Op 14 april 2000 heeft appellant een nader stuk overgelegd.</para>
+        <para>Op 11 mei 2000 heeft het onderzoek ter zitting plaats gehad, waarbij partijen hun standpunt nader hebben uiteengezet. Aan de zijde van verweerder is tevens verschenen ir M. van Hattem. </para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>2.	De grondslag van het geschil</para>
+        <para>2.1	Bij het Besluit subsidies bedrijfsgerichte technologische samenwerking (hierna: het Besluit) is onder meer het volgende bepaald:</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>"Artikel 1</para>
+        <para>1. In dit besluit en de daarop berustende bepalingen wordt verstaan onder:</para>
+        <para>a. (...)</para>
+        <para>b. fundamenteel onderzoek: het uitbreiden van de algemene wetenschappelijke en technische kennis, zonder industriële of commerciële doelstellingen;</para>
+        <para>c. industrieel onderzoek: het opdoen van nieuwe kennis met het doel deze te gebruiken bij de ontwikkeling van nieuwe producten, processen of diensten of om bestaande producten, processen of diensten aanmerkelijk te verbeteren;</para>
+        <para>(…)</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Artikel 2</para>
+        <para>1. Onze Minister verstrekt op aanvraag een subsidie aan:</para>
+        <para>a. de deelnemers in een samenwerkingsverband die voor gezamenlijke rekening en risico een samenwerkingsproject uitvoeren of</para>
+        <para>b. (…)</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Artikel 9</para>
+        <para>1. Onze Minister beslist in ieder geval afwijzend op een aanvraag:</para>
+        <para>a. indien de aanvraag niet voldoet aan dit besluit en de daarop berustende bepalingen;</para>
+        <para>b. indien hij de projectkosten die rechtstreeks toe te rekenen zijn aan fundamenteel en industrieel onderzoek raamt op minder dan de helft van de totale projectkosten; </para>
+        <para>(…)</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Artikel 10</para>
+        <para>1. Onze Minister wint omtrent de aanvragen (…) het advies in van de Adviescommissie technologische samenwerkingsprojecten.</para>
+        <para>2. (…)</para>
+        <para>3. De commissie rangschikt per categorie van aanvragen waarvoor een subsidieplafond geldt de aanvragen waaromtrent zij positief adviseert zodanig, dat een project hoger gerangschikt wordt naar mate het meer bijdraagt aan bij de regeling van onze minister vast te stellen doelstellingen.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Artikel 11</para>
+        <para>1. Onze Minister verdeelt het beschikbare bedrag in de volgorde van rangschikking van de aanvragen door de Adviescommissie technologische samenwerkingsprojecten. "</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>2.2	Op grond van de stukken en het onderzoek ter zitting zijn in deze zaak de volgende feiten en omstandigheden voor het College komen vast te staan.</para>
+        <para>- Appellant heeft bij daartoe bestemd aanvraagformulier, ondertekend op 23 april 1997, bij verweerder een aanvraag ingediend om een subsidie op grond van artikel 2, eerste lid, onder a, van het Besluit, en daarbij onder meer het volgende aangegeven:</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>"Korte omschrijving van de activiteiten van de aanvrager</para>
+        <para>Ontwikkeling en levering van automatiseringssystemen.</para>
+      </parablock>
+      <para/>
+      <para>(…)</para>
+      <para/>
+      <parablock>
+        <para>Projecttitel 		Integratie van strategische processen, applicatiespecificatie en </para>
+        <para>		automatische systeemgeneratie voor informatiesystemen.</para>
+        <para>Startdatum 		1-1-1996</para>
+        <para>Einddatum 		31-12-1999</para>
+        <para>Trefwoorden (max. 8 woorden)</para>
+        <para>		AI, Management Decision Support System, Informatie-</para>
+        <para>		systeem generatie.</para>
+        <para>Korte samenvatting van het project (incl. probleemstelling/doelstelling/verwachte resultaten)</para>
+        <para>		1. Doelstelling</para>
+        <para>		a. Gebruikers mogelijk maken om in hun eigen bedrijfstaal </para>
+        <para>		hun informatiesysteem zelf te kunnen:</para>
+        <para>		- specificeren	- tot executie brengen</para>
+        <para>		- automatisch genereren</para>
+        <para>		b. Ook strategische processen onderdeel te doen zijn van </para>
+        <para>		zo'n systeem specificatie en generatie proces.</para>
+        <para>		2. Verwachte resultaten</para>
+        <para>		Opbouw van grootschalige, internationale positie bij levering en support van dit type 			ondersteunende IT systemen. "</para>
+      </parablock>
+      <para/>
+      <para>- Op 11 december 1997 heeft de Adviescommissie technologische samenwerkingsprojecten een advies omtrent dit project aan verweerder uitgebracht, dat onder meer als volgt luidt: </para>
+      <para/>
+      <para>"De Commissie Technologische Samenwerkingsprojecten adviseert negatief over deze aanvraag aangezien er geen sprake is van minimaal 50% onderzoek in het project (artikel 9, lid 1 onder sub b van het Besluit BTS).</para>
+      <para/>
+      <para>Het project is erop gericht om een vermarktbaar software pakket te ontwikkelen waarmee klanten zelf (automatisch) hun kennis(informatie)systeem kunnen definiëren, genereren en onderhouden. Het automatisch genereren van kennisinformatiesystemen kan bereikt worden door het definiëren van een "standaard architectuur". In het huidige projectplan wil men de verkregen resultaten van eerder onderzoek, naar onder andere de architectuur, samenvoegen in al dan niet bestaande B software.</para>
+      <para/>
+      <para>Het project is in twee fases verdeeld. De eerste fase betreft het nader specificeren van het project, waarin vooral aandacht wordt gegeven aan de specificaties van de softwarecomponenten die in het pakket moeten worden geïntegreerd. Het tweede deel betreft de implementatie-fase waarbij de componenten uit de voorgaande fase conform de specificaties tot stand worden gebracht, geïntegreerd en getest. De beschrijving van de taken laat de rol van de samenwerkenden zien. Hierin valt op dat er gesproken wordt over "ontwikkeling", "implementatie" en "integratie" van (delen van) het softwarepakket. Tevens laten de laatste twee taken in het projectplan zien dat het om productontwikkeling gaat en het op de markt brengen van het product.</para>
+      <para/>
+      <para>Dat het project voor het grootste deel ontwikkeling is blijkt ook uit andere stukken van de aanvraag. Meest sprekende voorbeelden om dit te illustreren zijn Artikelen 1, 2, 3b en 4 van het samenwerkingscontract van B en een aantal softwarehuizen, en een contract van B met de VU-Amsterdam waarin voorzieningen worden getroffen voor een marktsituatie, en het bestaan van een betalingsregeling.</para>
+      <para/>
+      <para>Naar de mening van de adviescommissie is er sprake van een typisch ontwikkelingsproject waarin een nieuw product tot stand wordt gebracht. "</para>
+      <para/>
+      <parablock>
+        <para>- Bij besluit van 19 december 1997 heeft verweerder op deze aanvraag afwijzend beslist aangezien hij de projectkosten die rechtstreeks zijn toe te rekenen aan fundamenteel en industrieel onderzoek op minder dan de helft van de totale projectkosten heeft geraamd.</para>
+        <para>- Op 16 januari 1998 heeft appellant tegen dit besluit bezwaar gemaakt.</para>
+        <para>- Op 23 februari 1998 is appellant ter zake van haar bezwaar door verweerders agentschap Senter gehoord. </para>
+        <para>- Vervolgens heeft verweerder het bestreden besluit genomen.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>3.	Het bestreden besluit</para>
+        <para>Bij het bestreden besluit heeft verweerder zijn eerdere, afwijzende beslissing gehandhaafd op grond van onder meer de volgende overwegingen:</para>
+      </parablock>
+      <para/>
+      <para>"Mij is dan ook gebleken dat u naast de ontwikkelingswerkzaamheden tevens onderzoek verricht op een breed terrein van het modelleren van informatiesystemen. Echter, de werkzaamheden waarvoor de subsidie is aangevraagd, omvatten naar mijn mening dat gedeelte van de werkzaamheden dat er op gericht is de (tussentijdse) resultaten van het door u gedane onderzoek te vertalen naar een geautomatiseerd systeem. De aanvraag spreekt immers nadrukkelijk van de ontwikkeling van een verkoopbaar product, gebaseerd op B's modelling procedure. De omschrijving van de werkzaamheden in het projectplan geven duidelijk aan dat deze gericht zijn op de ontwikkeling van de diverse benodigde software-items.</para>
+      <para/>
+      <para>De door u in uw bezwaarschrift en tijdens de hoorzitting aangedragen onderzoekswerkzaamheden zijn naar mijn mening niet in deze aanvraag opgenomen. Het feit dat u tijdens de hoorzitting heeft aangegeven dat de werkzaamheden van de vijf hoogleraren waarmee u samenwerkt, geen onderdeel van de aanvraag vormen, ondersteunt deze visie. De door u aangedragen onderzoekswerkzaamheden geven mij derhalve geen aanleiding mijn conclusie dat er enkel sprake is van ontwikkeling te herzien. Voor zover er bij de werkzaamheden, zoals genoemd in de aanvraag, sprake is van het verkrijgen van nieuwe algemeen toepasbare technische of wetenschappelijke kennis heeft u dit niet aannemelijk kunnen maken "</para>
+      <para/>
+      <parablock>
+        <para>4.	Het standpunt van appellant</para>
+        <para>Appellant heeft bij zijn beroepschrift onder meer het volgende tegen het bestreden besluit aangevoerd:</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>"Inhoudelijke Aspecten</para>
+        <para>Er is door SENTER geen enkele poging gedaan, via opvraag van achterliggende documenten of door ruggespraak met mijn samenwerkingspartners, om mijn stellingname te toetsen dat er een wezenlijk onderzoekkarakter in het project is opgenomen. Het zou zeer eenvoudig mogelijk zijn geweest om met de belangrijkste hoogleraren, waarmee ik samenwerk, telefonisch contact op te nemen voor een dergelijke toetsing. (…)</para>
+      </parablock>
+      <para/>
+      <para>Het betreft een vijftal hoogleraren die ik als adviseur raadpleeg bij mijn onderzoek. Het onderzoek wordt geheel door mij uitgevoerd en regelmatig leg ik de resultaten van het onderzoek aan hen voor, ter beoordeling vanuit hun respectievelijke specialismen. (…)</para>
+      <para/>
+      <parablock>
+        <para>Het contact met de vijf hoogleraren betreft dus grotendeels de normale overlegpatronen met vakspecialisten zoals die in elk onderzoek van enig nivo gebruikelijk is. Het leidt vaak tot een vermelding in het eindverslag van een 'acknowledgement sectie', met dank aan alle adviseurs, waarbij dan nog veelal vermeld wordt dat de verantwoordelijkheid voor alle gerapporteerde resultaten uitsluitend bij de auteur ligt.</para>
+        <para>Het is niet juist om te stellen, als SENTER doet, dat het onderzoeksdeel van het project dus niet tot het project behoort aangezien het, onbetaalde, werk van deze hoogleraren niet in het project is opgenomen.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Formele Aspecten</para>
+        <para>Uit het bovenstaande en uit het projectvoorstel volgt dat het onderzoek en het ontwikkelen van het softwarepakket één organisch geheel vormen. De complexiteit van het onderzoek maakt het noodzakelijk om de diverse onderzoeksresultaten vast te leggen in een dergelijk ondersteunend softwarepakket.</para>
+        <para>Het is ook niet juist om te stellen, als SENTER doet, dat in de oorspronkelijke projectformulering geen vermelding van het bovengenoemde onderzoek is opgenomen. De bewoording daarvan was, onvermijdelijk, wel aangepast aan de specifiek door SENTER voorgeschreven wijze van projectformulering. (…)</para>
+      </parablock>
+      <para/>
+      <para>Het is overduidelijk dat de drie (…) aangegeven functies, gezien als standaard beschikbare faciliteiten voor een willekeurig informatiesysteem, een hogelijk complexe functie betreft waarvoor geen standaard beschikbare systemen beschikbaar zijn en die dus nog veel onderzoek vergen om tot een systeemconcept te kunnen komen dat zich ook nog dient te lenen voor een automatische systeemgeneratie. Deze complexe aard van het voorgenomen onderzoek laat zich ook goed afleiden uit de voorbereidende analyses van de serie publicaties "The Information System Man", waarnaar regelmatig verwezen wordt in de aanvraag. Uit deze achterliggende documentatie blijkt duidelijk dat het nog onvoltooide manuscripten betreft, waarbij de completering juist tot het project behoort. Dit deel van het project is een belangrijk deel van de onderzoeksactiviteiten van zowel B als C. (…)</para>
+      <para/>
+      <para>Samengevat kan men stellen dat het softwarepakket, met zijn datavulling, in feite het eindresultaat van het onderzoek is. "</para>
+      <para/>
+      <parablock>
+        <para>5.	De beoordeling van het geschil</para>
+        <para>Ingevolge artikel 4:2, tweede lid, van de Algemene wet bestuursrecht dient de aanvrager de gegevens en bescheiden te verschaffen die voor de beslissing nodig zijn. Het heeft derhalve op de weg van appellant gelegen bij zijn aanvraag zichtbaar te maken dat de kosten van het project voor het merendeel zijn toe te rekenen aan fundamenteel en industrieel onderzoek in de zin van de artikelen 1 en 9 van het Besluit. Zulks klemt te meer waar het Besluit voorziet in een stelsel, door verweerder ter zitting aangeduid en toegelicht als tendersysteem, waarbij verlening van subsidie mede afhankelijk is gesteld van een relatieve beoordeling en rangschikking ten opzichte van de verschillende andere aanvragen die in een bepaalde periode zijn ingediend. Tegen de achtergrond hiervan is het geschil dat thans voorligt dan ook in beginsel beperkt tot de vraag of de nieuwe gegevens en argumenten die appellant in bezwaar heeft aangevoerd, verweerder tot het oordeel hadden moeten brengen dat hij op basis van de bij de aanvraag verstrekte gegevens ten onrechte afwijzend heeft beslist. Het College beantwoordt die vraag ontkennend en overweegt daartoe als volgt.</para>
+        <para>Zowel de omschrijving van zijn activiteiten als titel, korte omschrijving en samenvatting van het project, die appellant bij zijn aanvraag heeft opgegeven en die hiervoor zijn aangehaald, wijzen niet op fundamenteel of industrieel onderzoek als bedoeld in het Besluit, maar veeleer op de ontwikkeling van geautomatiseerde informatiesystemen. </para>
+        <para>Voor zover appellant heeft beoogd te betogen dat hij in de bewoording van zijn aanvraag beperkt is geweest door voorschriften van verweerder, kan het College hem in dit betoog niet volgen. De voorgedrukte rubrieken in het aanvraagformulier waaronder hij evenbedoelde opgaven heeft gedaan, bieden naar hun formulering alle ruimte het onderzoekskarakter van het project, dat appellant in bezwaar en beroep heeft gesteld, reeds bij zijn aanvraag te formuleren. </para>
+        <para>Niet valt in te zien dat de formulering waarmee appellant in zijn aanvraag zijn activiteiten en het project heeft aangeduid, op zich zelf aanleiding voor verweerder had behoren te zijn bij de voorbereiding van het primaire besluit nadere informatie in te winnen.  De nadien in bezwaar door appellant gegeven toelichting dat de ontwikkeling van software noodzakelijk was om de resultaten van het complexe onderzoek vast te leggen, kan hieraan niet afdoen.</para>
+        <para>Nu ook overigens niet is gebleken van enige grond voor het oordeel dat verweerder ten onrechte de beslissing op appellants aanvraag heeft gehandhaafd, moet het beroep ongegrond worden verklaard.</para>
+        <para>Het College acht geen termen aanwezig voor een proceskostenveroordeling met toepassing van artikel 8:75 van de Algemene wet bestuursrecht.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>6. De beslissing</para>
+        <para>Het College verklaart het beroep ongegrond.</para>
+      </parablock>
+      <para/>
+      <para>Aldus gewezen door mr B. Verwayen, mr C.M. Wolters en mr M.J. Kuiper, in tegenwoordigheid van mr J.A. Hoovers-Backaert, als griffier, en uitgesproken in het openbaar op 14 september 2000.</para>
+      <para/>
+      <para>w.g. B. Verwayen				w.g. J.A. Hoovers-Backaert</para>
+    </uitspraak>
+</open-rechtspraak>

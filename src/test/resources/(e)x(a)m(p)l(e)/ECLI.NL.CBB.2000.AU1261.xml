@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:tr="http://tuchtrecht.overheid.nl/" xmlns:eu="http://publications.europa.eu/celex/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:CBB:2000:AU1261</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2014-04-13T11:42:48</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">AU1261</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/College_van_Beroep_voor_het_bedrijfsleven" scheme="overheid.RechterlijkeMacht">College van Beroep voor het bedrijfsleven</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">2000-12-28</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">AWB 97/1645</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#eersteAanlegEnkelvoudig">Eerste aanleg - enkelvoudig</psi:procedure>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#eersteEnEnigeAanleg">Eerste en enige aanleg</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht">Bestuursrecht</dcterms:subject>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0005537&amp;artikel=8:47&amp;g=2000-12-28">Algemene wet bestuursrecht 8:47</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0007746&amp;artikel=1&amp;g=2000-12-28">Wet vermindering afdracht loonbelasting en premie voor de volksverzekeringen 1</dcterms:references>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:2000:AU1261">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:2000:AU1261</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-04T22:35:43</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2005-08-22</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:CBB:2000:AU1261 College van Beroep voor het bedrijfsleven , 28-12-2000 / AWB 97/1645</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:CBB:2000:AU1261:INH" lang="nl" xml:space="preserve">
+      <para>Kaderwet EZ-subsidies</para>
+    </inhoudsindicatie>
+  <uitspraak xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:CBB:2000:AU1261:DOC" lang="nl" xml:space="preserve">
+      <parablock>
+        <para>College van Beroep voor het bedrijfsleven</para>
+        <para>(vijfde enkelvoudige kamer)</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>No. AWB 97/1645				28 december 2000</para>
+        <para>27000 Kaderwet EZ-subsidies</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para/>
+      <para>Uitspraak in de zaak van:</para>
+      <para/>
+      <parablock>
+        <para>OHRA Dienstverlening B.V., te Arnhem, appellante,</para>
+        <para>gemachtigde: P. Stolte, consultant te Hengelo, </para>
+        <para>tegen</para>
+        <para>de Minister van Economische Zaken, te ’s-Gravenhage, verweerder, </para>
+        <para>gemachtigde: drs C.M. van der Draaij, werkzaam bij Senter.</para>
+      </parablock>
+      <para/>
+      <para> </para>
+      <para/>
+      <parablock>
+        <para>1.	De procedure</para>
+        <para>Op 19 december 1997 heeft het College van appellante een beroepschrift ontvangen waarbij beroep wordt ingesteld tegen een besluit van verweerder van 12 november 1997.</para>
+        <para>Bij dit besluit heeft verweerder beslist op het bezwaar van appellante tegen de weigering haar een verklaring als bedoeld in de Wet vermindering afdracht loonbelasting en premie voor de volksverzekeringen af te geven.</para>
+        <para>Op 28 april 1998 heeft appellante de gronden van haar beroep aangevuld.</para>
+        <para>Op 3 november 1998 heeft verweerder een verweerschrift ingediend.</para>
+        <para>Op 15 januari 1999 heeft appellante schriftelijk van repliek op dit verweerschrift gediend. </para>
+        <para>Op 15 maart 1999 heeft verweerder zijn conclusie van dupliek ingediend.</para>
+        <para>Op 16 maart 2000 heeft het onderzoek ter zitting plaats gehad, waarbij partijen hun standpunt nader hebben uiteengezet. Aan de zijde van verweerder zijn tevens ter zitting verschenen ing. G. Gorter en ing. A. Tiemersma. </para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>2.	De grondslag van het geschil</para>
+        <para>2.1	Bij de Wet vermindering afdracht loonbelasting en premie voor de volksverzekeringen (hierna: de WVA) is onder meer het volgende bepaald:</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>"Artikel 1</para>
+        <para>1. In deze wet en de daarop berustende bepalingen wordt verstaan onder:</para>
+        <para> (…)</para>
+        <para>l. speur- en ontwikkelingswerk: door een S&amp;O-inhoudingsplichtige, dan wel een S&amp;O-belastingplichtige, systematisch georganiseerde en in Nederland verrichte werkzaamheden, direct en uitsluitend gericht op technisch-weten-schappelijk onderzoek of de ontwikkeling van voor de S&amp;O-inhoudings-plichtige onderscheidenlijk de S&amp;O-belastingplichtige technisch nieuwe :</para>
+        <para>1°. fysieke producten; </para>
+        <para>2°. onderdelen van fysieke producten;</para>
+        <para>3°. fysieke producktieprocessen;</para>
+        <para>4°. onderdelen van fysieke productieprocessen;</para>
+        <para>5°. programmatuur of</para>
+        <para>6°. onderdelen van programmatuur, alsmede </para>
+        <para>daaraan voorafgaand in Nederland verricht haalbaarheidsonderzoek;.</para>
+        <para>(...)</para>
+        <para>3. Voor de toepassing van het eerste lid, onderdeel l, wordt niet tot  speur- en ontwikkelingswerk gerekend:</para>
+        <para>a. (…);</para>
+        <para>b. door onze Minister van Economische Zaken bij ministeriële regeling aangewezen andere werkzaamheden."</para>
+      </parablock>
+      <para/>
+      <para>Op grond van laatstvermelde bepaling is de Afbakeningsregeling speur- en ontwikkelingswerk 1997 vastgesteld, waarbij onder meer het volgende is bepaald:</para>
+      <para/>
+      <parablock>
+        <para>"Artikel 1</para>
+        <para>Tot speur- en ontwikkelingswerk worden niet gerekend:</para>
+        <para>a. (…);</para>
+        <para>b. de volgende activiteiten in relatie tot programmatuur:</para>
+        <para>1º onderhoud van programmatuur;</para>
+        <para>2º het geschikt maken van bestaande programmatuur voor een ander hardware- of software-platform;</para>
+        <para>c. het bouwen of inrichten van apparatuur of programmatuur bestemd voor toepassing in de praktijk;</para>
+        <para>d. het invoeren in een bestaande bedrijfssituatie en aanpassen van aangekochte technologie, producten, processen of programmatuur, dan wel onderdelen daarvan;</para>
+        <para>(…)."</para>
+      </parablock>
+      <para/>
+      <para>Bij brief van 15 december 1997 met bijlage aan de Voorzitter van de vaste commissie voor economische Zaken van de Tweede Kamer der Staten-Generaal heeft verweerder onder meer het volgende kenbaar gemaakt:</para>
+      <para/>
+      <para>"Een zo duidelijk mogelijke voorlichting over de positie van software in de wet is van het grootste belang. De FENIT voert dat terecht aan. Er zijn twee punten die de voorlichting bemoeilijken. Ten eerste ontbreekt een geautoriseerd begrippenkader, zodat spraakverwarring snel ontstaat. Ten tweede wil de wet technische programmatuur stimuleren, die voor de aanvrager nieuw is. Het is dus onmogelijk absolute criteria te maken en uitspraken te doen over wat wel en wat niet past binnen de wet. Wat voor het ene bedrijf technisch nieuw is hoeft dat voor het andere bedrijf niet te zijn. Mede naar aanleiding van commentaar van de FENIT en VNO/NCW zijn de hoofdpunten voor de beoordeling uiteengezet (zie bijlage bij deze brief).</para>
+      <para/>
+      <para>(…)</para>
+      <para/>
+      <parablock>
+        <para>Er kan sprake zijn van technisch nieuwe programmatuur:</para>
+        <para>1. als de aanvrager een nieuw principe (verder) ontwikkelt;</para>
+        <para>Een principe is een grondbeginsel uit de informatietechnologie dat vaak binnen de wetenschap is ontwikkeld en dat toegepast kan worden bij de ontwikkeling of analyse van programmatuur.</para>
+        <para>2. als de aanvrager een nieuwe methode (verder) ontwikkelt;</para>
+        <para>Een methode is een systematische werkwijze om programmatuur te ontwikkelen of te analyseren. Vaak is een methode gebaseerd op een principe.</para>
+        <para>3. als de aanvrager een nieuwe techniek (verder) ontwikkelt;</para>
+        <para>Een techniek lijkt sterk op een methode, maar betreft meestal vrij gedetailleerde en meer technische werkwijzen.</para>
+        <para>4. als de aanvrager methoden en technieken op een niet-triviale wijze combineert, waardoor een nieuwe methode of techniek ontstaat."</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>2.2	Op grond van de stukken en het onderzoek ter zitting zijn in deze zaak de volgende feiten en omstandigheden voor het College komen vast te staan.</para>
+        <para>- Appellante heeft bij daartoe strekkend aanvraagformulier, getekend 6 maart 1997 bij verweerder een aanvraag ingediend om een S&amp;O-verklaring als bedoeld in artikel 24 van de WVA met betrekking tot vijf projecten, waarvan twee onder meer als volgt zijn aangeduid:.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>"Projecttitel		: VIP-2000/electronisch kantoor</para>
+        <para>Type project		: Ontwikkelingsproject</para>
+        <para>Zwaartepunt v/d Ontw.	: Technisch nieuwe programmatuur</para>
+        <para>Projectnummer		: 01</para>
+        <para>(…)</para>
+        <para>Omschrijving:</para>
+        <para>Met VIP-2000 heeft OHRA een beslissing genomen een omvangrijke omwenteling op IT gebied in gang te zetten, die van strategisch belang is voor de positie van OHRA naar een klant- en procesgerichte benadering van haar IT-omgeving. Dit vereist een compleet andere architectuur, datastructuur, communicatie, interfacing, ontwikkelomgeving en -hulpmiddelen. Ambities zijn : electronisch kantoor aan electr. snelweg, zoveel mogelijk verwerking zonder menselijke tussenkomst, 7 dgn/24 uur, worldwide bereikbaar, flexibele integratie nwe prod.vormen, multimedia, hoge snelheid, hoge mate van instelbaarheid, lage onderhoudsgraad. Onderzoek en ontw. vindt plaats m.n. mbt nieuwe workflow georienteerde architectuur waarbij concepten als entreelaag, portaalsysteem, fire wall, image processing, meerlagenconcept, integratie van gegevens de vernieuwende kern vormen t.o.v. de "oude" productgerichte systemen. Belangrijk onderdeel v/h project wordt gevormd door een 3 jarig (ESPRIT) onderzoek met o.a. de Kath. Univ. Nijmegen mbt document routing engine technologie. Verder onderzoek mbt wijze van integratie data warehouse technologie, m.n. verzameling, koppeling met callcentres en datamining technologie.</para>
+        <para>(…)</para>
+        <para>Technische nieuwheid van programmatuur in project:</para>
+        <para>Architectuur (Bus. Process/workflow georient., meerlagenstructuur, stabiele gegevens in dynamische markt/proces, DORO engine); datastructuur (datamining, nwe algor.); communicatie (zowel via ext. multimedia, als interfacing); hulpmiddelen; compon. based ontw.; intell. integr. componenten; bouwsteen techn. /reuse; o.o. concepten; image processing.</para>
+      </parablock>
+      <para/>
+      <para>(…)</para>
+      <para/>
+      <parablock>
+        <para>Projecttitel		: Euro-problematiek</para>
+        <para>Type project		: Ontwikkelingsproject</para>
+        <para>Zwaartepunt v/d Ontw.	: Technisch nieuwe programmatuur</para>
+        <para>Projectnummer		: 02</para>
+        <para>(…)</para>
+        <para>Omschrijving:</para>
+        <para>Doel van onderhavige project is alle applicaties van OHRA voor te bereiden op de overgang van Nederlandse guldens naar Euro's. T.a.v. deze problematiek zal OHRA in 1997 onderzoek verrichten naar de ontwikkeling van een tool, waarmee bedragen geconverteerd kunnen worden van 2 naar 4 decimalen en schermen en prints in 1 van beide valuta afgehandeld en/of getoond worden, afhankelijk van de wens van de klant. Het onderzoek zal met name gericht zijn op moglijkheid tot conversie van databasedefinities, schermen, outputs en programma's binnen de randvoorwaarden van het tijdsbestek waarbinnen de problematiek opgelost moet worden.</para>
+        <para>(…)</para>
+        <para>Technische nieuwheid van programmatuur in project:</para>
+        <para>Gezien het eenmalige karakter van de te ontw. tool kent het project veel technische nieuwheidsaspecten t.a.v. te ontwikkelen algoritme (4 decimalen opslaan afhankelijk van politieke en businesskeuzes, 2, 3 of 4 decimalen tonen, in guldens opslaan en in Euro's tonen en vice versa); externe interfacing, schermen voorzien van "hot-key" voor "toggle" tussen guldens en Euro; te gebruiken methodiek welke specifiek voor de situatie ontwikkeld zal worden.</para>
+      </parablock>
+      <para/>
+      <para>(…)."</para>
+      <para/>
+      <parablock>
+        <para>- Bij besluit van 14 mei 1997 heeft verweerder op deze aanvraag afwijzend beslist. </para>
+        <para>- Bij brief van 23 juni 1997, aangevuld bij brief van 17 juli 1997, heeft appellante tegen dit besluit bezwaar gemaakt.</para>
+        <para>- Bij brief van 21 augustus 1997 heeft verweerder appellante verzocht om bepaalde aanvullende gegevens en met name om uitgebreid aan te geven wat de technische/technologische knelpunten en oplossingen zijn, en wat er in technische zin nieuw is aan het te ontwikkelen algoritme.</para>
+        <para>- In antwoord hierop heeft appellante bij brief van 4 september 1997 aanvullende informatie verstrekt.</para>
+        <para>- Op 17 september 1997 is appellante ter zake van haar bezwaar door verweerder gehoord.</para>
+        <para>- Vervolgens heeft verweerder het bestreden besluit genomen.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>3.	Het bestreden besluit</para>
+        <para>Bij het bestreden besluit heeft verweerder zijn eerdere afwijzing van bedoeld projecten gehandhaafd en dit onder meer als volgt gemotiveerd.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>"Voor technisch nieuwe programmatuur geldt dat het ontwikkelingswerk zoals bedoeld in de zin van de Wet eindigt zodra het werkingsprincipe is aangetoond. Dit houdt in dat er sprake kan zijn van S&amp;O, zolang onderzoek en ontwikkeling van experimentele aard aan de orde zijn.</para>
+        <para>(…)</para>
+        <para>Het toepassen, samenstellen en implementeren van programma-onderdelen waarvan de werking per onderdeel reeds is aangetoond, waarbij geen sprake is van een onderzoeks- of ontwikkelings- component, is geen S&amp;O. Het bouwen of inrichten van programmatuur bestemd voor toepassing in de praktijk wordt immers op grond van artikel 1, letter c van de Afbakeningsregeling niet tot S&amp;O gerekend. Ontwikkeling van nieuwe functionaliteit in de vorm van nieuwe toepassingen of modules is geen S&amp;O omdat daarbij geen sprake is van technische nieuwheid van het product. </para>
+        <para>(…)</para>
+        <para>Enkele kenmerken van de ontwikkeling van technisch nieuwe programmatuur (maar ook technisch nieuwe fysieke producten of productieprocessen) zijn de technische onzekerheid, de kennistoename en een werking waartoe te voren technisch nog niet de mogelijkheid bestond.</para>
+      </parablock>
+      <para/>
+      <para>(…)</para>
+      <para/>
+      <para>(…) Het bouwen van applicaties met behulp van hulpmiddelen (tools) zonder dat sprake is van technische nieuwheid voor de betrokkene valt niet onder de Wet. Het traject van een ontwikkeling eindigt daar waar het werkingsprincipe in een functiemodel of prototype zonder gebruikerswaarde is aangetoond.</para>
+      <para/>
+      <para>(…)</para>
+      <para/>
+      <para>Indien onderzoeks- of ontwikkelingswerkzaamheden worden verricht met betrekking tot de (niet-limitatieve) aspecten van technologie in relatie tot programmatuur en er een andere werking, waartoe te voren technisch nog niet de mogelijkheid bestond, aanwezig is, is er wat betreft het gehele iteratieve proces van onderzoeken, construeren, bouwen en testen - voor zover dit nodig is om dit technische nieuwe werkingsprincipe aan te tonen - sprake van de ontwikkeling van technische nieuwe programmatuur of onderdelen van programmatuur in de zin van de Wet en Afbakeningsregeling speur- en ontwikkelingswerk 1997, ook al zou gebruik worden gemaakt van reeds bestaande onderdelen. Het bovenstaande geldt ook voor producten, productieprocessen of onderdelen daarvan.</para>
+      <para/>
+      <para>(…)</para>
+      <para/>
+      <parablock>
+        <para>Het gebruik van een nieuwe programmeertaal of database technologie, de introductie van nieuwe algoritmen en de overgang van een traditionele ontwikkelwijze naar een nieuwe ontwikkelwijze leveren op grond van het bovenstaande geen technisch nieuwe programmatuur op. De aanvrager zal hier zelf iets aan moeten toevoegen waardoor er sprake is van technische innovatie, (…). Het louter en alleen gebruiken of toepassen van bestaande technologie levert geen technisch nieuwe programmatuur op. Bestaande technologie heeft immers haar (technische) werkingsprincipe reeds bewezen.</para>
+        <para>(…)</para>
+      </parablock>
+      <para/>
+      <para>Overwegingen ten aanzien van de technisch inhoudelijke beoordeling van uw projecten</para>
+      <para/>
+      <para>Project 01 VIP-2000/electronische kantoor</para>
+      <para/>
+      <para>(…). De nadruk ligt in het onderhavige project met name op de koppeling van bestaande technologieën in een nieuwe architectuur. Gelet op het bovenstaande ben ik van mening dat u niet aannemelijk heeft gemaakt dat uw werkzaamheden gericht zijn op de ontwikkeling van technisch nieuwe programmatuur. U maakt gebruik van bestaande technologieën en integreert bestaande technologieën zonder dat u daarbij in technische zin iets nieuws toevoegt. Uw activiteiten zijn naar mijn mening niet gericht op de ontwikkeling van voor u nieuwe technologie, het verder ontwikkelen van bestaande technologie of het ontwikkelen van een technische oplossing voor een specifieke informatietechnologisch probleem. Ik kwalificeer de door u te verrichten werkzaamheden dan ook als het bouwen van programmatuur bestemd voor toepassing in de praktijk hetwelk op grond van artikel 1, letter c van de Afbakeningsregeling speur- en ontwikkelingswerk 1997 niet tot speur- en ontwikkelingswerk gerekend wordt. (…).</para>
+      <para/>
+      <para>Project 02 Euro problematiek</para>
+      <para/>
+      <para>(…). Ik ben van mening dat u niet aannemelijk heeft gemaakt dat uw werkzaamheden gericht zijn op de ontwikkeling van technische nieuwe programmatuur. In technische zin wordt er geen nieuw rekenalgoritme ontwikkeld. De bovenstaande werkzaamheden bevatten ook geen onderzoek- of ontwikkelcomponent in de programmatuurontwikkeling. Uw activiteiten zijn naar mijn mening niet gericht op de ontwikkeling van voor u nieuwe technologie, het verder ontwikkelen van bestaande technologie of het ontwikkelen van een technische oplossing voor een specifiek informatietechnologisch probleem. Het feit dat de tool die u voor ogen staat nog nergens te koop is wil nog niet zeggen dat de ontwikkeling van deze tool in technische zin nieuw is. Ik kwalificeer de door u te verrichten werkzaamheden dan ook als het bouwen van programmatuur bestemd voor toepassing in de praktijk (…) "</para>
+      <para/>
+      <para>Bij conclusie van dupliek is voorts het volgende door verweerder aangevoerd:</para>
+      <para/>
+      <parablock>
+        <para>"(…) dat een prototype zonder gebruikerswaarde onderdeel kan uitmaken van een S&amp;O-traject. Het doel van dit prototype is het aantonen van het werkings-principe, met andere woorden het gaat om een experimenteel prototype. Een functioneel prototype daarentegen is geen S&amp;O zoals bedoeld in de wet omdat niet de werking van een nieuwe technische oplossing aangetoond moet worden maar het functioneren van de verschillende systeemonderdelen op zich en in relatie tot elkaar. Bij deze gevallen van systeemontwikkeling wordt de gewenste functionaliteit gebouwd en het tussenresultaat van iedere vooruitgang krijgt het etiket ‘prototype’. Er is dan van meet af aan sprake van realisatie van programmatuur met een gebruikerswaarde. (…)</para>
+        <para>Appellante heeft gelijk waar zij stelt dat daar waar sprake is van een experimenteel prototype slechts die werkzaamheden in aanmerking komen die zijn gericht op het oplossen van een informatietechnologisch probleem. Dit volgt uit de wet en de Afbakeningsregeling en is uiteengezet op het inlegvel dat bij de brochure van 1998 is gevoegd. Ik bestrijd dat ik hiermee de ontwikkeling van technisch nieuwe programmatuur op een andere wijze beoordeel dan de ontwikkeling van technisch nieuwe producten of processen. Ook bij de ontwikkeling van een technisch nieuw product of -proces komen, in het geval het gaat om een product/proces met gebruikswaarde, alleen die ontwikkelings-werkzaamheden in aanmerking die benodigd zijn om het werkingsprincipe aan te tonen. De door appellante genoemde testwerkzaamheden, worden in het kader van het oplossen van een informatietechnologisch probleem overigens wel degelijk in aanmerking genomen.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Appellante raakt met deze stellingen echter de kern van het meningsverschil. </para>
+        <para>Volgens appellante dient de gehele ontwikkeling van een nieuw systeem in aanmerking te komen voor de WBSO, en zij spreekt over het iteratieve proces waarin de bouw is opgenomen. Echter, bij de WBSO gaat het steeds (of het nu gaat om de ontwikkeling van technisch nieuwe programmatuur of de ontwikkeling van technisch nieuwe producten of -processen) om het aantonen van het werkingsprincipe. Daar waar sprake is van doorontwikkelen van een prototype tot marktrijp product of bedrijfsmiddel, is het werkingsprincipe echter al bekend. Ook bij het toepassen van nieuwe technologie of het combineren van systemen op basis van bestaande en bewezen componenten, is de technologie reeds bewezen. Daarbij kan sprake zijn van de noodzaak tot het ontwikkelen van technisch nieuwe programmatuur, dat onderken ik. Dit zal dan echter door de aanvrager moeten worden aangegeven. Vandaar dat in deze procedure telkens is gevraagd naar die technische knelpunten die appellante moet oplossen, die onderdelen waarvan het werkingsprincipe nog niet bekend was. Appellante is er naar mijn mening niet ingeslaagd dit aan te geven. Ik ben het dan ook niet eens met appellante daar waar zij stelt (onder 6) dat zij uitvoerig onderbouwd deze technische knelpunten heeft aangegeven. Hierop ga ik hieronder, bij de bespreking van de projecten, nog verder in.</para>
+      </parablock>
+      <para/>
+      <para>Met betrekking tot de stelling van de heer Klint (paragraaf 2.1) dat Senter-adviseurs niet in staat zijn om de aard van het project te doorgronden merk ik op dat ik dit punt voldoende weersproken acht door de conclusies uit het rapport aan de Tweede Kamer van 17 oktober 1997.</para>
+      <para/>
+      <para>Project VIP2000/electronisch kantoor</para>
+      <para/>
+      <parablock>
+        <para>(…) Al deze aspecten spelen inderdaad een grote rol bij moderne informatie-sytemen. Met alleen het noemen van de aspecten bij de vraag over “techtnische nieuwheid” wordt niet beschreven waarom deze aspecten als technisch nieuw en waarom de aangevraagde werkzaamheden als ontwikkelwerkzaamheden in de zin van de WBSO beschouwd moeten worden. Wat wel uit de omschrijving duidelijk wordt, is dat er sprake is van het vervangen van de oude maatwerk-systemen door nieuwe, moderne maatwerksytemen met veel meer mogelijk-heden. In de toelichting of de fasering geeft men te kennen dat in 1997 nagedacht gaat worden over de structuur en interactie van de nieuwe systemen. Uit de voorliggende projectomschrijving en de toelichting daarop wordt in ieder geval niet duidelijk of appellante zelf technisch nieuwe programmatuur gaat ontwikkelen. Omdat de omschrijving van dit project niet verder gaat dan het noemen van wat het nieuwe systeem moet kunnen en welke aspecten daarbij een rol zullen spelen, is de conclusie getrokken dat hier sprake is van het vervangen van bestaande, in mogelijkheden beperkte, systemen door nieuwe, met meer mogelijkheden uitgeruste, systemen, zonder dat wordt aangetoond dat er sprake is van speur- en ontwikkelingswerk.</para>
+        <para>Uit het daarop volgende gesprek en de schriftelijke reactie volgt inhoudelijk ook geen informatie die aanleiding geeft tot het herzien van het afwijzings-standpunt. (…)</para>
+      </parablock>
+      <para/>
+      <para>Tijdens de hoorzitting is herhaaldelijk verzocht dieper in te gaan op technische problemen en aan te geven welke oplossingen appellante daarvoor zelf ontwikkelt. De antwoorden gaan echter niet verder dan het vermelden dat geleverde onderdelen niet zonder meer met elkaar en andere onderdelen samenwerken en dat de integratie en het afstemmen van de onderdelen op elkaar een complexe aangelegenheid is.</para>
+      <para/>
+      <parablock>
+        <para>Ook ten aanzien van het onderdeel DORO blijkt dat appellante in feite zelf geen ontwikkeling pleegt. Appellante geeft aan dat zij gegevens levert waarmee DORO getest kan worden. De daadwerkelijke ontwikkeling van DORO vindt plaats bij de universiteit van Nijmegen.</para>
+        <para>Ik erken dat de achterliggende principes, methodes en technieken waarmee de beschreven systemen worden opgezet modern en innovatief zijn. Echter, het zijn door derden ontwikkelde en beschreven principes, methoden, technieken en programmatuur. De werkzaamheden die appellante uitvoert in het kader van </para>
+        <para>dit project betreffen het opstellen van het programma van eisen (meerlagen-concept, raamwerk, architectuur), waaraan uiteindelijk de sytemen moeten voldoen en het samenvoegen (integreren, koppelen, interfacen) van systeem-delen tot één werkend geheel alsmede het bouwen van de gewenste functionaliteit.</para>
+      </parablock>
+      <para/>
+      <para>Project Euro problematiek.</para>
+      <para/>
+      <parablock>
+        <para>(…) uit de voorliggende omschrijving is niet op te maken waarom de genoemde aspecten als ontwikkelingen aangemerkt dienen te worden. Er worden geen principes, methoden en technieken genoemd of beschreven die (verder) ontwikkeld moeten worden omdat ze op dit moment niet bestaan of onoverkomelijke beperkingen vertonen. De beschreven aspecten zijn alle aspecten die juist gekozen zijn vanwege hun potentie om de doelstellingen van dit project te realiseren. Bovendien is een aantal aspecten kopieën van reeds bij appellante in de programmatuur aanwezige aspecten. Immers</para>
+        <para>- er is al een databasedefinitie voor getallen in gulden,</para>
+        <para>- er is al programmatuur voor het opslaan en weer opvragen van getallen in guldens en </para>
+        <para>- er zijn al schermen waarop bedragen in gulden worden afgebeeld.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Ook de beschreven oplossingsrichting is niet technisch nieuw. Er is gekozen voor een praktische oplossing voor een complex probleem. Praktisch, omdat men de programmatuur aanpast op die plaatsen waar de in- en uitvoer van gegevens plaatsvindt. Men vangt de in- en uitvoer af en zet deze, indien noodzakelijk om naar guldens. Op deze wijze wordt het aantal omzettingen sterk beperkt. De grote voordelen zijn:</para>
+        <para>- er treedt ten hoogste 1 maal een afrondingsverschil op,</para>
+        <para>- er wordt vermeden dat alle nu correct werkende modules nageplozen en aangepast moeten worden.</para>
+        <para>Mijn conclusie is dat het project gericht is op, op basis van bekende technieken, onderhouden en functioneel uitbreiden van de bestaande programmatuur, zonder dat aantoonbaar sprake is van S&amp;O.</para>
+      </parablock>
+      <para/>
+      <para>(…)</para>
+      <para/>
+      <para>- Ten aanzien van de opmerking van de heer van Hee, dat de Euro-problematiek vergelijkbaar is met de jaar 2000 problematiek het volgende: ik onderschrijf dat de problematiek in vele aspecten hetzelfde is. (…) Ik bestrijd echter dat het herschrijven als technisch nieuw beschouwd moet worden. Dat er nu herschreven moet worden is een gevolg van keuzes die in het verleden bij het opzetten van de programmatuur zijn gemaakt. Deze keuzes zijn in het verleden gebaseerd op kosten van apparatuur en de verwachtte levensduur van de systemen."</para>
+      <para/>
+      <parablock>
+        <para>4.	Het standpunt van appellante</para>
+        <para>Appellante heeft bij haar aanvullend beroepschrift, ondersteund door rapporten van prof. dr P. Klint en prof. dr K.M. van Hee, het volgende tegen het bestreden besluit aangevoerd.</para>
+      </parablock>
+      <para/>
+      <para>"(…) De IT-technologische oplossing van de aanvrager dient, in de opvatting van Senter, (…) af te wijken van al bekende oplossingen. Echter, van deze vooronderstelling wordt niet uitgegaan in het kader van de toetsing van aanvragen voor de ontwikkeling van technisch nieuwe fysieke product(ieprocess)en. Bovendien kan deze eis niet op de WBSO worden gebaseerd. (…) Bij ontwikkelingswerk doet het er niet toe of een soortgelijk product, proces of systeem ook al elders op de wereld of in Nederland door een ander is ontwikkeld. De aanvrager wordt slechts op zijn eigen in het verleden verrichte activiteiten getoetst. Het ontwikkelen van wat in de marketing ‘me-too’-producten heet, is dus geen beletsel voor het verkrijgen van een S&amp;O-verklaring.(…)</para>
+      <para/>
+      <para>De conclusie is dat Senter, hoewel niet expliciet vermeld, in het geval van IT-projecten een andere maatstaf aanlegt dan zij voor projecten met betrekking tot fysieke producten of productieprocessen doet. Deze afwijkende benaderingswijze volgt niet uit de aard der materie of de WBSO. (…)</para>
+      <para/>
+      <para>Echter, appellante is van opvatting dat Senter een onjuiste interpretatie van S&amp;O geeft als ontwikkelingswerk ten behoeve van technisch nieuwe programmatuur, waarbij die programmatuur wel bedoeld is om gebruikerswaarde te hebben (bijvoorbeeld voor verkoop bij derden, of eigen toepassing als “bedrijfsmiddel”) in het geheel wordt uitgesloten, omdat het wordt aangemerkt als bouw. Lang niet in alle gevallen - bij product- en procesontwikkeling, noch bij programmatuurontwikkeling - wordt ontwikkeld aan de hand van een prototype zonder gebruikerswaarde (dummy, testexemplaar of hoe ook genaamd).</para>
+      <para/>
+      <para>(…)</para>
+      <para/>
+      <parablock>
+        <para>Systeem versus programmatuur</para>
+        <para>Uit de bezwaarfase is naar voren gekomen dat er - samenhangend met de voorgaande problematiek - wellicht onenigheid kan bestaan over het antwoord op de vraag wat als programmatuur in de zin van de WBSO moet worden gezien in het geval deze tevens als systeem zou kunnen worden aangeduid (zie artikel 1, eerste lid, onder m, WBSO). Naar de opvatting van appellante dient een systeem als programmatuur te worden aangeduid, indien deze als zodanig logischerwijs niet splitsbaar is in deelsystemen (of experimentele prototypen) en de op te lossen informatietechnologische problemen juist met het geheel samenhangen. (…)</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Project 01 VIP-2000/electronisch kantoor</para>
+        <para>(…)</para>
+      </parablock>
+      <para/>
+      <para>Zoals uit de reactie van prof. Klint op de beschikking op bezwaar van 15 maart 1998 blijkt, is het beoogde systeem als geheel innovatief; de reden waarom het als onderwerp van programmatuur in de betekenis van de WBSO is gekozen (zie ook de opmerkingen onder ‘Systeem versus programmatuur’). De technische nieuwheid van dit op maat (van OHRA) ontwikkelde virtuele kantoor is juist gelegen in de nieuwe, bepaald niet triviale, combinatie van bestaande technologieën, zoals prof. Klint ook reeds in zijn conclusies heeft beschreven (die in de bezwaarfase zijn overgelegd). Het betreft innnovatieve architectuur om de hele backoffice en het portaal naar de buitenwereld te organiseren, aldus prof. Klint (…)</para>
+      <para/>
+      <parablock>
+        <para>Project 02 Euro problematiek</para>
+        <para>(…)</para>
+      </parablock>
+      <para/>
+      <para>Zoals prof. Klint heeft vastgesteld, zijn de overwegingen waarop Senter haar beschikking heeft gestoeld feitelijk onjuist: er worden in het kader van dit project wel degelijk nieuwe algoritmen ontwikkeld. In de procedure was dit al eerder onderbouwd door prof. Klint in zijn conclusies kenbaar gemaakt.</para>
+      <para/>
+      <para>(…)</para>
+      <para/>
+      <para>Ook de in de beroepsfase ingeschakelde IT-deskundige prof. Van Hee laat zien dat het standpunt van Senter onhoudbaar is."</para>
+      <para/>
+      <para>Bij conclusie van repliek heeft appellante haar standpunt onder meer als volgt toegelicht: </para>
+      <para/>
+      <para>"Naar de opvatting van appellanten is de redenering van Senter (…) niet houdbaar. Omdat daarin een ongeoorloofd onderscheid wordt gemaakt tussen IT-projecten mét en zónder de fase van experimentele prototypering, kunnen in het eerste geval veel meer soorten activiteiten in de aanvraag worden meegenomen dan in het tweede geval.</para>
+      <para/>
+      <parablock>
+        <para>(…)</para>
+        <para>Het standpunt van Senter leidt er met andere woorden toe, dat (ten dele) voor het "ontwikkeldeel" ten behoeve van technisch nieuwe programmatuur, waarbij de fase van experimentele prototyping wordt overgeslagen (meestal), geen WBSO-bijdrage kan worden ontvangen. Dat lijkt in strijd met de teksten van de regeling. (…)</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Helder is gemaakt dat de feitelijke aard van het project OHRA-1: VIP-2000 de integratie is van nieuwe technologieën in een geheel nieuwe kantoor-architectuur (= programmatuur). Eveneens is onderbouwd duidelijk gemaakt dat het ontwerp van de nieuwe architectuur, het beproeven en uitontwikkelen van deze technologieën in proeftuinen en de integratie van de verschillende technologieën niet-triviale informatietechnologische problemen zijn die niet op een standaard wijze kunnen worden opgelost. Senter gaat hieraan volstrekt voorbij en bombardeert het project eenvoudigweg tot ‘investeringsproject’. Dat de desbetreffende (door Senter enigszins eufemistisch aangeduid als) ‘aanpassingen’ in dit geval wellicht kunnen worden gekwalificeerd als technisch nieuwe oplossingen voor concrete informatietechnologische problemen met behulp van een niet-triviale combinatie van bestaande technieken - zoals appellante OHRA uitvoerig onderbouwd heeft betoogd - wordt door Senter niet gemotiveerd weersproken.</para>
+        <para>(…)</para>
+      </parablock>
+      <para/>
+      <para>Ook wat betreft de beoordeling van het project OHRA-2: Euro problematiek kan appellante OHRA zich niet aan de indruk onttrekken dat Senter, wat betreft de bepaling van de inhoud van het project, de plank misslaat. Het moge duidelijk zijn dat appellante OHRA geen rekeninstrumenten ontwikkelt voor de omrekening van de guldenkoers naar de Euro-koers. Prof. Klint heeft in zijn rapport van 15 maart 1998 duidelijk en onderbouwd aangegeven dat technisch nieuwe algoritmen worden ontwikkeld."</para>
+      <para/>
+      <para>Ter zitting heeft appellante onder meer het volgende aangevoerd:</para>
+      <para/>
+      <para>"Tenminste is sprake van een niet-triviale combinatie van methoden en technieken.</para>
+      <para/>
+      <parablock>
+        <para>P. Klint over VIP2000: “De technische nieuwheid is juist gelegen in nieuwe combinaties van bestaande technologieën”, en “…….het hier gaat om het doorontwikkelen van bestaande technologie……”.</para>
+        <para>Van Hee over VIP2000: “….. het gaat erom, dat het integreren van bestaande technologie op zich een nieuwe technologie kan zijn! Ik ben er absoluut van overtuigd, dat dit project een hoge graad van innovativiteit in de zin van de wet heeft…..”.</para>
+      </parablock>
+      <para/>
+      <para>Ten aanzien van het deelproject in VIP2000, dat betrekking heeft op DORO (Document Routing), gaat Senter volstrekt voorbij aan bestaande jurisprudentie over het samenwerkingsaspect. Op basis van onder andere de uitspraak van het CBB inzake Hercules (20 mei 1997), later gevolgd door onder meer R&amp;H Systems (18 november 1997) en Elgerplant (20 juli 1999), dient in geval van een samenwerkingsproject ook het werk van appellante te worden aangemerkt als S&amp;O, aangezien het uitsluitend dienstbaar en onlosmakelijk verbonden is aan het technisch wetenschappelijk onderzoeksproject dat door het samenwerkingsverband, bestaande uit o.a. de Katholieke Universiteit Nijmegen, Rank Xerox en OHRA wordt uitgevoerd."</para>
+      <para/>
+      <para>Naar aanleiding van hetgeen het College in eerdere uitspraken heeft overwogen over de term 'technisch nieuwe programmatuur' heeft appellante ter zitting het volgende opgemerkt:</para>
+      <para/>
+      <parablock>
+        <para>"Ten eerste is daar het element van de technische onzekerheid. Hiervan is, getuige de aanvraag en de uitspraken van de deskundigen, zeker sprake.</para>
+        <para>Een tweede element heeft betrekking op het begrip “een werking waartoe tevoren technisch nog niet de mogelijkheid bestond”. Dit stuk tekst is afgeleid uit de memorie van toelichting en sloeg toen niet op programmatuur maar op fysieke producten en processen. Je kunt het element “technisch en werking” hieruit op twee manieren interpreteren:</para>
+        <para>a) Met de stand der techniek tot dan toe was een bepaalde (functionele) werking niet te realiseren;</para>
+        <para>b) Voorheen was de (functionele) werking wel al mogelijk, maar de techniek daarachter, de technische werking, verandert.</para>
+        <para>Tot nu toe lijkt het er op dat in de argumentatie steeds wordt uitgegaan van situatie a), maar wij hechten eraan om op te merken dat ook situatie b) tot technische nieuwheid leidt.</para>
+      </parablock>
+      <para/>
+      <para>(…)</para>
+      <para/>
+      <para>Voor programmatuur is de brief van de Minister van EZ van 15 december 1997 met bijlage meer relevant als het gaat om het begrip krijgen voor hetgeen bedoeld is met “technisch nieuwe programmatuur”. Volgens deze brief kan het daarbij onder andere gaan om een niet-triviale combinatie van methoden en technieken. Onbetwist is dat het onderhavige project hieraan voldoet.</para>
+      <para/>
+      <para>Een derde element is dat niet alleen door middel van aankoop van bestaande technologie het probleem mag worden opgelost. Dit is evident. Appellante heeft naast de aankoop van bestaande technologie nu juist zelf de architectuur ontwikkeld, zelf de technische structuur voor het portaalsysteem ontwikkeld, verricht medewerking aan een onderzoeksproject waarvan de uitkomst, kennisvergroting, weer toegepast kan worden bij de ontwikkeling van dat portaalsysteem, besteedt zelf ontwikkeltijd om integratie en communicatie technisch mogelijk te maken; allemaal aspecten die door twee vooraanstaande deskundigen zijn aangemerkt als “bepaald niet-triviaal, zeer innovatief, en vanuit wetenschappelijk perspectief voldoende uitdagend om een promotie-onderzoek in de toegepaste informatica te rechtvaardigen.” "</para>
+      <para/>
+      <para>Tenslotte heeft appellante ter zitting verzocht om op de voet van artikel 8:47 van de Algemene wet bestuursrecht een deskundige te benoemen voor de beoordeling van de vraag of in project 1 sprake is van een niet-triviale combinatie van methoden en technieken.</para>
+      <para/>
+      <parablock>
+        <para>5.	De beoordeling van het geschil</para>
+        <para>5.1	Hetgeen partijen verdeeld houdt betreft ten eerste de vraag of de werkzaamheden van appellante als door haar omschreven, direct en uitsluitend zijn gericht op de ontwikkeling van voor appellante technisch nieuwe programmatuur of onderdelen van programmatuur, als bedoeld in artikel 1, eerste lid, onder l van de WVA. </para>
+        <para>Verweerder meent van niet. Hetgeen verweerder daartoe onder meer heeft aangevoerd, verstaat het College aldus dat het in de WVA bedoelde ontwikkelingswerk wordt gekenmerkt door technische onzekerheid en een werking ten doel heeft, waarvan de mogelijkheid in technisch opzicht niet bij voorbaat vaststaat. Zulks geldt volgens verweerder niet per definitie voor de ontwikkeling van programmatuur met behulp van (voor de aanvrager) technisch nieuwe hulpmiddelen.</para>
+        <para>Naar het oordeel van het College heeft verweerder in zoverre maatstaven gehanteerd die, mede gelet op de geschiedenis van de totstandkoming van de WVA, niet met deze wet in strijd zijn. Daarbij begrijpt het College onder de in het bestreden besluit gebruikte term "een werking waartoe te voren technisch nog niet de mogelijkheid bestond", niet het werkingsprincipe van programmatuur waarvan de aanvrager redelijkerwijs het bestaan had kunnen kennen, en waarvan in redelijkheid van de aanvrager het gebruik zou kunnen worden gevergd mede gezien zijn positie in de markt. </para>
+        <para>Anders dan appellante oordeelt het College dat de WVA voor het aldus begrepen standpunt van verweerder grondslag biedt. Immers, tekst noch doelstelling van de WVA nopen er toe de wettelijk maatstaf dat te ontwikkelen programmatuur "technisch nieuw" is voor de aanvrager, zodanig uit te leggen dat verweerder de mate van beschikbaarheid op de markt van (onderdelen van) de programmatuur die de aanvrager zelf wenst te ontwikkelen, zonder meer buiten beschouwing behoort te laten bij de beoordeling van diens aanvraag. </para>
+        <para>5.2	Appellante heeft verzocht op de voet van artikel 8:47 van de Algemene wet bestuursrecht (hierna: de Awb) een deskundige te benoemen nu naar haar mening project 1 een niet-triviale combinatie van methoden en technieken betreft.</para>
+        <para>Ten algemene overweegt het College dienaangaande dat het in gedingen als het onderhavige voor de vraag staat of verweerder op grond van de gegevens en bescheiden die zijn overgelegd bij de aanvraag en toegelicht in bezwaar, heeft kunnen concluderen dat het desbetreffende project niet voldoet aan artikel 1 van de WVA. Het oordeel dat een deskundige zich op grond van de hem ter beschikking staande gegevens en van zijn opvattingen over technologische ontwikkeling, heeft gevormd over dat project, kan niet in de plaats treden van de verplichting van de aanvrager ingevolge artikel 4:2 van de Algemene wet bestuursrecht om verweerder alle gegevens en bescheiden te verschaffen, die nodig zijn voor de beslissing die artikel 24 van de WVA aan verweerder opdraagt.</para>
+        <para>Voorts en meer in het bijzonder overweegt het College dat verweerder niet heeft gesteld dat de met project 1 beoogde oplossingen triviaal, namelijk zonder wezenlijk betekenis, zouden zijn. Dat appellante, naar zij heeft aangevoerd, in project 1 methoden en technieken op niet-trivale wijze combineert, is tussen partijen derhalve niet in geschil en kan naar het oordeel van het College ook niet van belang zijn voor de beslechting van hetgeen wel tussen partijen in geschil is. Immers, indien wordt uitgegaan van de voorlichting die verweerder over de term technische nieuwe programmatuur heeft gegeven en die hiervoor in paragraaf 2.2 is aangehaald, "kan" aan deze term zijn voldaan als de aanvrager methoden en technieken op niet-trivale wijze combineert, maar vormt zodanige combinatie geen absoluut criterium gelet op aard, tekst en strekking van bedoelde voorlichting van verweerder. </para>
+        <para>Een deskundig antwoord op de vraag of project 1 een niet-triviale combinatie van methoden en technieken behelst, is derhalve niet noodzakelijk voor een beslissing op het beroep. Het College heeft derhalve geen gevolg gegeven aan het verzoek van appellante voor de beantwoording van deze vraag een deskundige te benoemen.</para>
+        <para>5.3	Uit hetgeen appellante bij haar aanvraag heeft vermeld en in bezwaar heeft aangevoerd, heeft verweerder kunnen concluderen dat de werkzaamheden als door appellante omschreven en in bezwaar toegelicht, niet voldoen aan de hiervoor, in paragraaf 5.1 bedoelde maatstaven. Daartoe overweegt het College als volgt.</para>
+        <para>Als hiervoor overwogen is het aan de aanvrager bij zijn aanvraag verweerder alle gegevens te verstrekken die kunnen leiden tot afgifte van de daarbij beoogde S&amp;O-verklaring. </para>
+        <para>Bij haar aanvraag heeft appellante onder de rubriek "Technische nieuwheid van programmatuur van het project" volstaan met een opsomming van de technische aspecten van haar werkzaamheden, zonder daarbij concrete technische knelpunten te noemen en de door haar beoogde oplossingen hiervan aan te geven. Uit deze opsomming volgt niet zonder meer dat appellante ook heeft beoogd zelf nieuwe programmatuur te ontwikkelen waarvan het werkingsprincipe haar tevoren redelijkerwijs nog niet bekend kon zijn.</para>
+        <para>Dat verweerder, naar hij heeft gesteld, ook op zijn vervolgens hiernaar gestelde vragen geen specifieke antwoorden heeft gekregen, is door appellante niet met redenen en concrete voorbeelden van het tegendeel bestreden. Appellantes stelling dat nieuwe algoritmen moeten worden ontwikkeld die efficiënt, numeriek stabiel en identiek werkend op alle platforms zijn, is niet toegesneden op verweerders schriftelijke, voorafgaand aan de hoorzitting gestelde vraag wat in technische zin nieuw is aan het te ontwikkelen algoritme. </para>
+        <para>Gelijk het College hiervoor heeft overwogen is de omstandigheid dat appellante methoden en technieken op een niet-triviale en nieuwe wijze combineert, op zich zelf niet beslissend voor het antwoord op de vraag of zodanige combinatie gepaard gaat met de ontwikkeling van technisch nieuwe programmatuur. </para>
+        <para>Dat, naar appellante gedocumenteerd heeft aangevoerd, haar werkzaamheden innovatief, complex en gericht op een nieuwe kantoorarchitectuur en een nieuw portaalsysteem zijn, kan op zich zelf evenmin leiden tot de door haar gewenste conclusie dat de door haar omschreven werkzaamheden direct en uitsluitend zijn gericht op voor haar technisch nieuwe programmatuur in de zin van artikel 1, onderdeel l, van de WVA. </para>
+        <para>5.4	Voor zover appellante heeft betoogd dat de bouw van een prototype met gebruikerswaarde op zich zelf nog niet uitsluit dat een deel van de hiermee gemoeide werkzaamheden zou zijn aan te merken als (speur- en) ontwikkelingswerk, kan het College haar in dit betoog volgen.</para>
+        <para>Zonder meer - en gelijk het College overwoog in zijn uitspraak van 25 mei 2000 in de zaak no. 97/1588, Technisch Beheer en Onderhoud Deventer - valt immers niet in te zien dat de enkele omstandigheid dat een bepaald product een gebruikerswaarde heeft, dit product ongeschikt maakt om tevens een werkingsprincipe aan te tonen. </para>
+        <para>Dat het bouwen of inrichten van programmatuur bestemd voor toepassing in de praktijk, als bedoeld in artikel 1, onder c, van de Afbakeningsregeling speur- en ontwikkelingswerk 1997, praktisch uitsluit dat daarbij ook werkzaamheden zouden kunnen worden verricht, die bestemd en nodig zijn om het werkingsprincipe van die technisch nieuwe programmatuur aan te tonen, heeft verweerder niet gesteld en is voor het College ook niet zonder meer aannemelijk.</para>
+        <para>Echter, deze overwegingen baten appellante niet in dit geding nu geen grond bestaat voor het oordeel dat verweerder ten onrechte heeft vastgesteld dat geen sprake is van technisch nieuwe programmatuur. </para>
+        <para>5.5	Appellante heeft tenslotte nog aangevoerd dat project 1 uitsluitend dienstbaar en onlosmakelijk verbonden is aan bepaald technisch wetenschappelijk onderzoek, uitgevoerd in samenwerking met onder meer de Katholieke universiteit Nijmegen. Dienaangaande overweegt het College als volgt.</para>
+        <para>Als speurwerk in de zin van de begripsbepaling bij artikel 1 van de WVA zijn werkzaamheden aan te merken die "direct en uitsluitend" zijn gericht op technisch-wetenschappelijk onderzoek.</para>
+        <para>Appellante heeft bij haar aanvraag project 1 getypeerd als ontwikkelingsproject met als zwaartepunt technisch nieuwe programmatuur Het College ziet in hetgeen voorts is gebleken en gesteld, geen aanleiding om te twijfelen aan de juistheid van deze typering. </para>
+        <para>Met deze typering is, naar vaste rechtspraak van het College, niet te verenigen dat de onderhavige werkzaamheden tevens direct en uitsluitend zouden zijn gericht op technisch-wetenschappelijk onderzoek in de zin van bedoelde begripsbepaling van speur- en ontwikkelingswerk. In deze begripsbepaling heeft de wetgever immers onderscheid gemaakt tussen onderzoek en ontwikkeling. Met recht kan verweerder onderzoek bij de ontwikkeling van programmatuur of een product, aanmerken als te zijn gericht op concrete programmatuur of producten (vergelijk uitspraken van het College van 15 december 1998 in de zaken no. AWB 97/314, Bureau Meeuws, en no. AWB 97/413, Etko).</para>
+        <para>Ook overigens biedt hetgeen appellante op dit punt heeft aangevoerd, onvoldoende aanknopingspunten voor het oordeel dat verweerder in het licht van jurisprudentie over samenwerkingsprojecten appellantes werkzaamheden in project 1 had behoren aan te merken als deel van gezamenlijk uitgevoerd technisch-wetenschappelijk onderzoek. </para>
+        <para>Immers, appellantes werkzaamheden dienen hiertoe te worden bezien in het geheel van de activiteiten ter verwezenlijking van het technisch-wetenschappelijk onderzoeksproject dat appellante heeft gesteld  in samenwerkingsverband  uit te voeren, en dienen in een systematisch verband te staan met het S&amp;O-werk van haar partners in dit samenwerkingsverband (vergelijk de uitspraken van het College van 18 november 1997, no. 96/0107/062/231, R&amp;H Systems, en van 8 augustus 2000, no. AWB 97/627, ABN AMRO). </para>
+        <para>Appellantes beroep op bedoelde jurisprudentie over samenwerkingsprojecten kan haar derhalve niet baten.</para>
+        <para>5.6	Nu gelet op hetgeen hiervoor is overwogen, verweerder op goede gronden heeft kunnen concluderen dat appellante niet heeft aangetoond dat haar werkzaamheden moesten worden aangemerkt als speur- en ontwikkelingswerk in de zin van de WVA, kan hetgeen verweerder overigens aan het bestreden besluit ten grondslag heeft gelegd buiten beoordeling blijven en dient het beroep ongegrond te worden verklaard.</para>
+        <para>Het College acht geen termen aanwezig voor een proceskostenveroordeling met toepassing van artikel 8:75 van de Algemene wet bestuursrecht.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>6. De beslissing</para>
+        <para>Het College verklaart het beroep ongegrond.</para>
+      </parablock>
+      <para/>
+      <para>Aldus gewezen door mr M.J. Kuiper, in tegenwoordigheid van mr J.A. Hoovers-Backaert, als griffier en uitgesproken in het openbaar op 28 december 2000.</para>
+      <para/>
+      <para>w.g. M.J. Kuiper				w.g. J.A. Hoovers-Backaert</para>
+    </uitspraak>
+</open-rechtspraak>

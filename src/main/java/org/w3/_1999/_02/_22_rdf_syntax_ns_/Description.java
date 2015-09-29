@@ -19,6 +19,7 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 
+import com.google.gson.annotations.SerializedName;
 import nl.rechtspraak.psi.Procedure;
 import nl.rechtspraak.psi.Zaaknummer;
 import org.purl.dc.terms.Abstract;
@@ -70,6 +71,7 @@ import org.purl.dc.terms.Type;
 @XmlRootElement(name = "Description")
 public class Description {
 
+    @SerializedName("abstract")
     @XmlElement(name = "abstract", namespace = "http://purl.org/dc/terms/")
     protected Abstract _abstract;
 

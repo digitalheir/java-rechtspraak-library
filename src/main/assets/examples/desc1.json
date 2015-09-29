@@ -1,0 +1,263 @@
+{
+  "_id": "ECLI:NL:CBB:2000:AA7087",
+  "owl:sameAs": "http://deeplink.rechtspraak.nl/uitspraak?id\u003dECLI:NL:CBB:2000:AA7087",
+  "@context": [
+    "https://rechtspraak.cloudant.com/assets/assets/context.jsonld",
+    {
+      "Vervangt": "http://purl.org/dc/terms/replaces",
+      "Procedure": "http://psi.rechtspraak.nl/procedure",
+      "Instantie": "http://purl.org/dc/terms/creator",
+      "Zaaknr": "http://psi.rechtspraak.nl/zaaknummer"
+    }
+  ],
+  "ecli": "ECLI:NL:CBB:2000:AA7087",
+  "corpus": "Rechtspraak.nl",
+  "@type": "frbr:LegalWork",
+  "source": "http://data.rechtspraak.nl/uitspraken/content?id\u003dECLI:NL:CBB:2000:AA7087",
+  "abstract": {
+    "resourceIdentifier": "../../rs:inhoudsindicatie"
+  },
+  "accessRights": "public",
+  "coverage": {
+    "@id": "nl",
+    "rdfs:label": [
+      {
+        "@value": "Nederland",
+        "@language": "nl"
+      }
+    ]
+  },
+  "hasVersion": [
+    "Rechtspraak.nl"
+  ],
+  "zaaknummer": [
+    "AWB 98/473"
+  ],
+  "subject": [
+    {
+      "rdfs:label": [
+        {
+          "@value": "Bestuursrecht",
+          "@language": "nl"
+        }
+      ],
+      "@id": "http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht"
+    }
+  ],
+  "metadataModified": "2014-04-13T10:25:09.000+02:00",
+  "contentModified": "2013-04-04T16:08:15.000+02:00",
+  "issued": "2013-04-04T00:00:00.000+02:00",
+  "htmlIssued": "2001-07-04T00:00:00.000+02:00",
+  "page": "http://rechtspraak.lawreader.nl/ecli/ECLI:NL:CBB:2000:AA7087",
+  "creator": {
+    "scheme": "overheid.RechterlijkeMacht",
+    "rdfs:label": [
+      {
+        "@value": "College van Beroep voor het bedrijfsleven",
+        "@language": "nl"
+      }
+    ],
+    "@id": "http://standaarden.overheid.nl/owms/terms/College_van_Beroep_voor_het_bedrijfsleven"
+  },
+  "date": "2000-06-09T00:00:00.000+02:00",
+  "language": {
+    "rdfs:label": [
+      {
+        "@value": "Nederlands",
+        "@language": "nl"
+      }
+    ],
+    "@id": "nl"
+  },
+  "publisher": {
+    "rdfs:label": [
+      {
+        "@value": "Raad voor de Rechtspraak",
+        "@language": "nl"
+      }
+    ],
+    "@id": "http://rechtspraak.nl/"
+  },
+  "couchDbUpdated": "2015-09-29T21:24:21.345+02:00",
+  "about": "http://deeplink.rechtspraak.nl/uitspraak?id\u003dECLI:NL:CBB:2000:AA7087",
+  "title": {
+    "@value": "ECLI:NL:CBB:2000:AA7087 College van Beroep voor het bedrijfsleven , 09-06-2000 / AWB 98/473",
+    "language": "nl"
+  },
+  "procedure": [],
+  "replaces": [
+    "AA7087"
+  ],
+  "type": {
+    "rdfs:label": [
+      {
+        "@value": "Uitspraak",
+        "@language": "nl"
+      }
+    ],
+    "@id": "http://psi.rechtspraak.nl/uitspraak"
+  },
+  "simplifiedContent": {
+    "uitspraak": [
+      {
+        "para": [
+          "College van Beroep voor het bedrijfsleven"
+        ]
+      },
+      {
+        "para": []
+      },
+      {
+        "parablock": [
+          {
+            "para": [
+              "No. AWB 98/473"
+            ]
+          },
+          {
+            "para": [
+              "Verzonden op: 9 juni 2000"
+            ]
+          },
+          {
+            "para": [
+              "Beschikking op grond van artikel 8:29, derde lid, van de Algemene wet bestuursrecht in de zaak van:"
+            ]
+          }
+        ]
+      },
+      {
+        "para": []
+      },
+      {
+        "para": [
+          "[appellant], te [woonplaats], appellant,"
+        ]
+      },
+      {
+        "para": []
+      },
+      {
+        "para": [
+          "tegen"
+        ]
+      },
+      {
+        "para": []
+      },
+      {
+        "para": [
+          "de Minister van Economische Zaken, te \u0027s-Gravenhage, verweerder."
+        ]
+      },
+      {
+        "para": []
+      },
+      {
+        "para": []
+      },
+      {
+        "para": [
+          "1. Bij een op 8 juni 1998 ter griffie ingekomen beroepschrift heeft appellant beroep ingesteld tegen een besluit van verweerder van 28 april 1998, met het kenmerk WJA/JZ 98027653. Bij dit besluit heeft verweerder zich onbevoegd verklaard te beslissen op het bezwaar van appellant, dat was gericht tegen verweerders besluit van 14 november 1997 tot afwijzing van appellants verzoek om op grond van de artikelen 19 en 24 van de Wet economische mededinging maatregelen te nemen jegens A.F.C. Ajax te Amsterdam."
+        ]
+      },
+      {
+        "para": []
+      },
+      {
+        "para": [
+          "2. Bij besluit van 3 augustus 1999 heeft verweerder, opnieuw beslissende op het bezwaar van appellant en onder intrekking van zijn besluit van 28 april 1998, het bezwaarschrift van appellant ongegrond verklaard. Desgevraagd heeft appellant het College te kennen gegeven zijn beroep te willen handhaven. Ingevolge artikel 6:19 van de Algemene wet bestuursrecht (Awb) wordt het beroep van appellant geacht mede te zijn gericht tegen het besluit van 3 augustus 1999."
+        ]
+      },
+      {
+        "para": []
+      },
+      {
+        "para": [
+          "3. Verweerder heeft - onder overlegging van de op de zaak betrekking hebbende stukken - op 27 oktober 1999 een verweerschrift ingediend. Door verweerder is meegedeeld, met een beroep op artikel 8:29 Awb, dat alleen het College zal mogen kennis nemen van de bij het verweerschrift, in gesloten envelop, aan het College toegestuurde stukken."
+        ]
+      },
+      {
+        "para": []
+      },
+      {
+        "para": [
+          "4. Bij aangetekend verzonden brief van 16 februari 2000 heeft het College A.F.C. Ajax in de gelegenheid gesteld als partij aan het geding deel te nemen, op welke uitnodiging tot op heden niet is gereageerd."
+        ]
+      },
+      {
+        "para": []
+      },
+      {
+        "para": [
+          "5. Ter beoordeling staat thans of de door verweerder gevraagde beperking van de kennisneming gerechtvaardigd is. Het College, dat deze tussenbeslissing neemt in een samenstelling waarvan leden, die de zaak ten gronde zullen beoordelen, geen deel uitmaken, overweegt daartoe dienaangaande als volgt."
+        ]
+      },
+      {
+        "para": []
+      },
+      {
+        "para": [
+          "6. Ingevolge het bepaalde bij artikel 8:29, eerste lid, van de Awb, juncto artikel 19, eerste lid, van de Wet bestuursrechtspraak bedrijfsorganisatie, kan een partij bij het overleggen van stukken het College mededelen dat uitsluitend het College van die stukken kennis zal mogen nemen. Uit het derde lid van dit artikel volgt dat het College beslist of de beperking van de kennisneming gerechtvaardigd is. De omstandigheid dat sprake is van vertrouwelijk meegedeelde bedrijfs- en fabricage- gegevens verplicht verweerder weliswaar tot geheimhouding ingevolge artikel 2:5, eerste lid, van de Awb, maar deze bepaling maakt uitdrukkelijk uitzondering voor zover enig wettelijk voorschrift tot mededeling verplicht. In het onderwerpelijke geval vloeit deze informatieplicht voort uit de artikelen 8:28 en 8:45 van de Awb. Hieraan doet niet af dat de Wet openbaarheid van bestuur (hierna: Wob) voor gegevens als hier aan de orde uitzondering maakt. De omstandigheid dat een bestuursorgaan een verzoek om informatie op grond van de ter zake toepasselijke bijzondere wetgeving - zoals in casu de Wob - zou kunnen afwijzen, kan niet zonder meer doorslaggevend zijn in een procedure tussen partijen. Relevant is of het gaat om stukken die gegevens bevatten waarvan de andere partijen in het geding de inhoud niet onder ogen dienen te krijgen."
+        ]
+      },
+      {
+        "para": []
+      },
+      {
+        "para": [
+          "7. Blijkens de Memorie van Toelichting (MvT) bij de Awb vergt de door het College thans te nemen beslissing een feitelijk oordeel op basis van een afweging van belangen. In de eerste plaats geldt dat partijen over en weer zoveel mogelijk beschikken over de relevante informatie om de door hen gewenste positie in de procedure in te nemen. Het eveneens om bescherming van het belang dat de rechter beschikt over alle informatie die nodig is om de hem voorgelegde zaak op een juiste en zorgvuldige wijze af te doen. Maar het gaat ook om bescherming van het belang dat bepaalde gegevens niet, althans slechts in beperkte mate, openbaar worden. Onder dergelijke gegevens dienen mede te worden begrepen  concurrentiegevoelige bedrijfsgegevens (zie de Memorie van Toelichting bij artikel 8:29 c.a. Awb)."
+        ]
+      },
+      {
+        "para": []
+      },
+      {
+        "para": [
+          "8. Naar het oordeel van het College zijn als concurrentie gevoelige bedrijfsgegevens te beschouwen: de vijf (5) bedragen en de twee (2) percentages in artikel 11 van de sponsorovereenkomst, het percentage in de bijlage van de overeenkomst, almede het bepaalde in artikel 12, vanaf het slot van de derde volzin. Deze beperking van de kennisneming voor zover betrekking hebbend op deze gegevens acht het College, gelet op het vorenoverwogene, derhalve gerechtvaardigd."
+        ]
+      },
+      {
+        "para": []
+      },
+      {
+        "para": [
+          "9. Voor het overige ziet het College geen plaats voor het oordeel dat de beperking van de kennisneming, als door verweerder meegedeeld, gerechtvaardigd is. Beslist moet derhalve worden dat appellant van deze sponsorovereenkomst kennis zal mogen nemen in het kader van deze procedure, met uitzondering van de hiervoor onder punt 8 bedoelde gegevens in de overeenkomst."
+        ]
+      },
+      {
+        "para": []
+      },
+      {
+        "para": [
+          "10. Gelet op deze beslissing zal aan appellant moeten worden verzocht of hij toestemt, dat het College mede op de grondslag van onder 8 bedoelde gegevens uitspraak zal doen."
+        ]
+      },
+      {
+        "para": []
+      },
+      {
+        "para": [
+          "Aldus beslist door mr B. Verwayen, mr C.M. Wolters en mr M.J. Kuiper, in tegenwoordigheid van R. van Cuilenborg op . 9 juni 2000"
+        ]
+      },
+      {
+        "para": []
+      },
+      {
+        "parablock": [
+          {
+            "para": [
+              "w.g. B Verwayen \tw.g. R. van Cuilenborg"
+            ]
+          },
+          {
+            "para": [
+              "Verzonden op:"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

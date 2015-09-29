@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:tr="http://tuchtrecht.overheid.nl/" xmlns:eu="http://publications.europa.eu/celex/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:CBB:2000:AA7124</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2014-11-21T03:25:06</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">AA7124</dcterms:replaces>
+      <dcterms:replaces rdfs:label="Vervangt">AH6977</dcterms:replaces>
+      <dcterms:replaces rdfs:label="Vervangt">AN6463</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/College_van_Beroep_voor_het_bedrijfsleven" scheme="overheid.RechterlijkeMacht">College van Beroep voor het bedrijfsleven</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">2000-08-01</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">AWB 00/323</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#eersteAanlegMeervoudig">Eerste aanleg - meervoudig</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht">Bestuursrecht</dcterms:subject>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht_socialezekerheidsrecht">Bestuursrecht; Socialezekerheidsrecht</dcterms:subject>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0005537&amp;artikel=1:1&amp;g=2000-08-01">Algemene wet bestuursrecht 1:1</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0005537&amp;artikel=1:3&amp;g=2000-08-01">Algemene wet bestuursrecht 1:3</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0005537&amp;artikel=1:3&amp;g=2000-08-01">Algemene wet bestuursrecht 1:3</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0003934&amp;g=2000-08-01">Wet op de toegang tot ziektekostenverzekeringen</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0009750&amp;artikel=3&amp;g=2000-08-01">Wet op de toegang tot ziektekostenverzekeringen 1998 3</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0009750&amp;artikel=34&amp;g=2000-08-01">Wet op de toegang tot ziektekostenverzekeringen 1998 34</dcterms:references>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+          <rdf:li>JB 2000/281</rdf:li>
+          <rdf:li>AB 2000, 388 met annotatie door J.H. Veen</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:2000:AA7124">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:2000:AA7124</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-04T16:08:25</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2004-04-14</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:CBB:2000:AA7124 College van Beroep voor het bedrijfsleven , 01-08-2000 / AWB 00/323</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:CBB:2000:AA7124:INH" lang="nl" xml:space="preserve">
+      <para>Het d.m.v. publiekrechtelijke acceptatieplicht beperken van contractsvrijheid maakt niet dat afsluiten verzekeringsovereenkomst neerkomt op uitoefening van publiekrechtelijke bevoegdheid.</para>
+      <para/>
+      <parablock>
+        <para>Besluit tot het niet aangaan van overeenkomst van standaardverzekering als bedoeld in art. 3 Wet op de toegang tot de ziektekostenverzekering 1998 (Wtz). Verweerster is geen orgaan als bedoeld in art. 1:1, eerste lid sub a Awb. De Wtz 1986 en de gelijknamige vigerende wet van 1998 garanderen toegang tot de ziektekostenverzekering-markt voor bij AMvB aangewezen categorieën personen via een acceptatieplicht (art. 3) die wordt gehandhaafd d.m.v. strafbaarstelling met het van toepassing verklaren van de Wet op de economische delicten. Dit doet er niet aan af dat het gaat om het sluiten van een privaatrechtelijke overeenkomst. Het enkel stellen van een publiekrechtelijke beperking aan de contractsvrijheid leidt niet tot de conclusie dat het afsluiten van zo'n overeenkomst neerkomt op de uitoefening van een publiekrechtelijke bevoegdheid. Dit vindt bevestiging in de strafbaarstelling, die passend is bij handhaving van wettelijke plichten van particulieren, doch niet bij toezicht op de uitoefening van overheidstaken en -bevoegdheden. Particuliere verzekeraars oefenen bij het afbakenen van hun in art. 3 Wtz neegelegde verplichting geen openbaar gezag uit en treden derhalve niet op als bestuursorgaan. </para>
+        <para>Derhalve geen sprake van een beschikking als bedoeld in art. 34 Wtz. Het College is onbevoegd.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Agis Ziektekostenverzekeringen N.V. te Amersfoort, verweerster.</para>
+        <para>mrs. B. Verwayen, H.C. Cusell, M. Vlasblom</para>
+      </parablock>
+    </inhoudsindicatie>
+  <uitspraak xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:CBB:2000:AA7124:DOC" lang="nl" xml:space="preserve">
+      <parablock>
+        <para>Zaaknummer	: 00/323</para>
+        <para>22100</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Raadsheren	: mr B. Verwayen</para>
+        <para>mr H.C. Cusell</para>
+        <para>mr M. Vlasblom</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Regelingen	: Awb, artt. 1:1, 1:3</para>
+        <para>Wet op de toegang tot ziektekostenverzekeringen 1986 (oud) en 1998 (nieuw)</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Partijen	:  [appellante] te Amsterdam, appellante </para>
+        <para>		Agis Ziektekostenverzekeringen N.V., te Amersfoort, verweerster</para>
+      </parablock>
+      <para/>
+      <para>Datum uitspraak	: 01-08-2000</para>
+      <para/>
+      <para>Datum invoer	: 29-08-2000</para>
+      <para/>
+      <para>Kop	: Weigering particuliere ziektekostenverzekeraar een verzekeringsovereenkomst aan te gaan. Geen besluit van bestuursorgaan. Geen uitoefening van enig openbaar gezag. Afwijking van de Awb en daarin neergelegde definities. Verhouding MvT en de (bijzondere) wet. Bevoegdheid College.</para>
+      <para/>
+      <para>Samenvatting	: Allereerst rijst de vraag of verweerster een bestuursorgaan is. Van een orgaan als bedoeld in art. 1:1 lid 1 sub a Awb is geen sprake, dus staat te bezien of verweerster openbaar gezag uitoefent, zijnde het geven van uitvoering aan krachtenspubliekrecht opgedragen overheidstaken en daaraan verbonden bevoegdheden. De Wet toegang  tot ziektekostenverzekeringen 1986 en de gelijknamige vigerende wet van 1998 garanderen toegang tot de ziektekostenverzekering-markt voor bij AMvB aangewezen categorieën personen via een acceptatieplicht (art. 3) die wordt gehandhaafd door middel van strafbaarstelling via de Wet. Dit doet er niet aan af dat het gaat om het sluiten van een privaatrechtelijke overeenkomst. Het aldus stellen van een publiekrechtelijke bepaling aan de contractsvrijheid leidt niet tot de conclusie dat het afsluiten van zo’n overeenkomst neerkomt op de uitoefening van een publiekrechtelijke bevoegdheid. Dit vindt bevestiging in de strafbaarstelling; een sanctionering die past bij handhaving van wettelijke plichten van particulieren, niet bij toezicht op de uitoefening van overheidstaken en -bevoegdheden. De verzekeraars treden dus niet op als bestuursorgaan. In de rechtspraktijk onder de wet van 1986 is daar ook van uitgegaan en blijkens de toelichting behelst de vigerende wet geen herziening van de verhouding tussen verzekerde en verzekeraar. De opmerking in de toelichting dat de Awb van toepassing is op het acceptatietraject doet hieraan niet af. Afwijking van de (definitie van de) Awb dient uitdrukkelijk bij wettelijke bepaling te geschieden. De wet behelst niet de bepaling dat wat betreft de acceptatie verzekeraar bestuursorgaan is of haar toelatingsbeslissing een besluit, in afwijking van de artt. 1:1 respectievelijk 1:3 Awb. Het College is onbevoegd wegens de pretentie in de rechtsmiddelvoorlichting. Wel proceskostenveroordeling.</para>
+      <para/>
+      <parablock>
+        <para>Uitspraak	: AM</para>
+        <para>College van Beroep voor het bedrijfsleven</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>No. AWB 00/323  1 augustus 2000</para>
+        <para>       22100</para>
+      </parablock>
+      <para/>
+      <para>Uitspraak in de zaak van:</para>
+      <para/>
+      <parablock>
+        <para>[appellante], te [woonplaats], appellante,</para>
+        <para>gemachtigde: mr M.F. Vermaat, advocaat te Amsterdam,</para>
+      </parablock>
+      <para/>
+      <para>tegen</para>
+      <para/>
+      <parablock>
+        <para>Agis Ziektekostenverzekeringen N.V., te Amersfoort, verweerster,</para>
+        <para>gemachtigden: R. Out en O. van Gellecum, werkzaam bij verweerster.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para>1.      De procedure</para>
+      <para/>
+      <parablock>
+        <para>Op 21 april 2000 heeft het College van appellante een beroepschrift ontvangen, waarbij beroep wordt ingesteld tegen een beslissing van verweerster van 4 april 2000.</para>
+        <para>Bij die beslissing is ongegrond verklaard het bezwaar dat appellante heeft gemaakt tegen de beslissing van verweerster om met appellante geen overeenkomst van standaardverzekering, als bedoeld in artikel 3 van de Wet op de toegang tot ziektekostenverzekeringen 1998 (hierna: de Wet) af te sluiten.</para>
+        <para>Bij schrijven van 21 mei 2000 heeft verweerster een verweerschrift ingediend. </para>
+        <para>Op 11 juli 2000 heeft het onderzoek ter zitting plaatsgevonden, alwaar partijen, bij monde van haar gemachtigden haar standpunt nader heeft toegelicht. Namens appellante is tevens ter zitting verschenen M.C.I. Visser.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para>2.      De grondslag van het geschil</para>
+      <para/>
+      <parablock>
+        <para>2.1     De artikelen 1:1, eerste lid  en 1:3, eerste, tweede en derde lid van de Algemene wet bestuursrecht (hierna: Awb) luiden, voor zover van belang:</para>
+        <para>"       Artikel 1:1</para>
+        <para>1. Onder bestuursorgaan wordt verstaan:</para>
+        <para>               a. een orgaan van een rechtspersoon die krachtens publiekrecht is ingesteld,</para>
+        <para>         of</para>
+        <para>               b. een ander persoon of college, met enig openbaar gezag bekleed.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Artikel 1:3</para>
+        <para>1. Onder besluit wordt verstaan: een schriftelijke beslissing van een bestuursorgaan, inhoudende een publiekrechtelijke rechtshandeling.</para>
+        <para>2. Onder beschikking wordt verstaan: een besluit dat niet van algemene strekking is, met inbegrip van de afwijzing van een aanvraag daarvan.</para>
+        <para>3. Onder aanvraag wordt verstaan: een verzoek van een belanghebbende, een besluit te nemen."</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>       De artikelen 1, 3, eerste lid en 34 van de Wet luiden, voor zover van belang:</para>
+        <para>"       Artikel 1</para>
+        <para>In deze wet en de daarop berustende bepalingen wordt verstaan onder:</para>
+        <para>(...)</para>
+        <para>c. een overeenkomst van ziektekostenverzekering: een overeenkomst van directe verzekering die strekt tot vergoeding van kosten van geneeskundige verzorging (.);</para>
+        <para>d. overeenkomst van standaardverzekering: een overeenkomst van ziektekostenverzekering, gesloten op grond van de in artikel 3, eerste lid, bedoelde verplichting;</para>
+        <para>e. ziektekostenverzekeringsbedrijf: het als bedrijf sluiten van overeenkomsten van ziektekostenverzekering voor eigen rekening (...), ook al wordt daarmee niet beoogd het maken van winst;</para>
+        <para>(.).</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Artikel 3</para>
+        <para>1. Een ziektekostenverzekeraar is op een desbetreffende aanvraag verplicht een overeenkomst van standaardverzekering te sluiten met personen die behoren tot de bij algemene maatregel van bestuur aan te wijzen categorie‰n van personen en die naar de omstandigheden beoordeeld hier te lande woonachtig zijn.</para>
+        <para>Artikel 34</para>
+        <para>Tegen een op grond van deze wet en de daarop berustende bepalingen genomen beschikking kan een belanghebbende beroep instellen bij het College van Beroep voor het bedrijfsleven.</para>
+      </parablock>
+      <para/>
+      <para>       Bij besluit van 16 december 1998 (Stb. 1998, 699) is op grond van artikel 3, eerste lid van de Wet vastgesteld het Besluit categorie‰ van verzekerden Wtz 1998 (hierna: het Besluit)."</para>
+      <para/>
+      <para>2.2     Op grond van de stukken en het onderzoek ter zitting zijn in deze zaak de volgende feiten en omstandigheden voor het College komen vast te staan.</para>
+      <para/>
+      <parablock>
+        <para>-       Op 6 april 1999 is appellante in Nederland gearriveerd, tezamen met haar Nederlandse partner.</para>
+        <para>-       Op 2 september 1999 is positief beslist op haar verzoek om een vergunning tot verblijf.</para>
+        <para>-.      Bij formulier, ondertekend op 30 september 1999 heeft appellante bij verweerster een aanvraag standaardpakketpolis ingediend.</para>
+        <para>-       Bij schrijven van 21 oktober 1999 heeft verweerster appellante bericht dat haar verzoek is afgewezen, omdat appellante niet behoort tot een der categorieën personen, opgesomd in artikel 1 van het Besluit.</para>
+        <para>- Op 25 oktober 1999 heeft appellante bezwaar gemaakt tegen de afwijzing van haar verzoek.</para>
+        <para>- Hierop heeft verweerder de bestreden beslissing genomen.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para>3.      Het standpunt van verweerder</para>
+      <para/>
+      <parablock>
+        <para>Bij de bestreden beslissing zijn de bezwaren van appellante, gericht tegen de weigering van verweerster om met haar een overeenkomst van standaardverzekering te sluiten, afgewezen op basis van een daartoe strekkend advies van Beroepscommissie Wtz.</para>
+        <para>Verweerster heeft appellante aan het slot van de beslissing medegedeeld dat daartegen beroep open staat bij het College.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Ter zitting van het College is namens verweerster ter verklaring van deze mededeling aangevoerd dat verweerster voor de uitvoering van de Wet een bestuursorgaan is in de zin van de Awb en dat haar besluit van 4 april 2000 is te beschouwen als een besluit in de zin van artikel 1:3 van de Awb. Ter onderbouwing van dit standpunt is verwezen naar de het gestelde op p. 9 van de memorievan toelichting bij het ontwerp van de Wet, zoals dat destijds bij de Tweede Kamer is ingediend (Kamerstukken II 1997-1998, 25 859, nr. 3). De relevante passage uit die toelichting luidt, voor zover van belang:</para>
+        <para>"       Teneinde onduidelijkheden, die bij de toepassing van de huidige wet soms ontstaan, te vermijden, zij tevens gewezen op het volgende. Uitgangspunt van de wet voor het effectueren van de toegang tot de standaardverzekering is de totstandkoming van een privaatrechtelijke verzekeringsovereenkomst tussen verzekeraar en verzekerde. De expliciete regeling van de toegang tot het standaardpakket voor met name genoemde categorieën van personen en het daarvoor bij de verzekerde gelegde initiatief tot het richten van een verzoek aan de verzekeraar impliceert eveneens dat het in eerste instantie de keuze van de verzekerde is die doorslaggevend is voor de vraag of een maatschappijpolis dan wel een standaardpakketpolis wordt afgesloten. (.)</para>
+        <para>Alvorens de verzekeraar de verzekerde accepteert voor de standaardverzekering, zal hij moeten nagaan of de verzekerde aan de voor acceptatie gestelde voorwaarden voldoet. De criteria daarvoor zijn in de wet geregeld, waarbij ook is bepaald dat een maximumpremie van toepassing is en of eventuele toeslagen op die premie mogen worden geheven. Op dat traject is de Algemene wet bestuursrecht (Awb) van toepassing en geldt bij eventuele geschillen tussen verzekeraar en aspirant-verzekerde de in de Awb geregelde bezwaarschrift- en beroepsprocedure.</para>
+        <para>Heeft de verzekeraar eenmaal de verzekerde geaccepteerd dan zal hij ten bewijze van de totstandkoming van die overeenkomst een standaardpakketpolis afgeven aan de verzekerde. Geschillen tussen verzekerde en verzekeraar over de uitvoering van die verzekering worden beslecht via het civiele recht. De door de representatieve organisatie van verzekeraars ingestelde Beroepscommissie Wtz fungeert thans als klachteninstituut voor zowel acceptatie- als vergoedingsgeschillen. Het toepasselijk zijn van de Awb op de acceptatie brengt met zich dat de competentie van deze beroepscommissie is beperkt tot de geschillen inzake de vergoedingen. Dat neemt niet weg dat de Beroepscommissie Wtz, indien verzekeraars haar daartoe aanwijzen, tevens de functie van bezwaarschriftencommissie als bedoeld in de Awb kan vervullen."</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para>4.      Het standpunt van appellante</para>
+      <para/>
+      <parablock>
+        <para>Appellante heeft het in rubriek 3 van deze uitspraak door verweerster ingenomen standpunt inzake het rechtskarakter van de door haar genomen beslissing, niet bestreden.</para>
+        <para>Gelet op hetgeen hierna in rubriek 5 van deze uitspraak zal worden overwogen, komt aan hetgeen door appellante ter onderbouwing van haar beroep is aangevoerd geen betekenis toe voor de door het College op dat beroep te nemen beslissing.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para>5.      De beoordeling van het geschil</para>
+      <para/>
+      <parablock>
+        <para>Het College ziet zich in deze zaak allereerst gesteld voor de vraag of verweerster bij het nemen van de beslissing om met appellante, op haar verzoek, al dan niet een overeenkomst van standaardverzekering, als bedoeld in artikel 1, aanhef en onder d van de Wet aan te gaan, is opgetreden als bestuursorgaan in de zin van artikel 1:1, eerste lid, van de Awb.</para>
+        <para>Alleen bij bevestigende beantwoording van die vraag is de bestreden beslissing een beschikking, als bedoeld in artikel 1:3, tweede lid, van de Awb, die ingevolge artikel 34 van de Wet ter beoordeling aan het College kan worden voorgelegd.</para>
+        <para>Aangezien verweerster niet is aan te merken als orgaan van een rechtspersoon, die is ingesteld krachtens publiekrecht, kan evenbedoelde vraag slechts bevestigend worden beantwoord, indien verweerster bij het nemen van de bestreden beslissing enig openbaar gezag heeft uitgeoefend in de zin van artikel 1:1, eerste lid, aanhef en onder b, van de Awb.</para>
+        <para>Van uitoefenen van openbaar gezag is sprake in zoverre door personen of colleges bedoeld in laatstgenoemd artikelonderdeel, uitvoering wordt gegeven aan krachtens publiekrecht aan hen opgedragen overheidstaken en daaraan verbonden bevoegdheden.</para>
+        <para>In aansluiting op de Wet op de toegang tot ziektekostenverzekeringen van 1986 (Stb. 123), als nadien gewijzigd, strekt de Wet tot het garanderen van de toegang tot de particuliere ziektekostenverzekeringsmarkt voor nader omschreven categorieën personen, die daarop zijn aangewezen. Deze garantie is door de wetgever gegoten in de vorm van een aan de particuliere ziektekostenverzekeraars opgelegde acceptatieplicht die -onder meer- begrensd is tot een standaardpakket van vergoedingen.</para>
+        <para>Zowel onder de oude wet (laatstelijk: artikel 23a) als onder de thans geldende wet (artikel 44) is niet-nakoming van die verplichting strafbaar gesteld met het van toepassing verklaren van de Wet op de economische delicten.</para>
+        <para>Evenbedoelde verplichting van de verzekeraars tot het verlenen van toegang aan de aangewezen groepen personen tot de standaardverzekering, als bedoeld in artikel 1, onder d, van de Wet, doet er niet aan af dat die verzekering wordt gerealiseerd door het sluiten van een privaatrechtelijke overeenkomst. Zulks blijkt uit de in rubriek 2.1 van deze uitspraak uit artikel 1 van de Wet aangehaalde wettelijke definities en wordt in de hiervoor geciteerde passage uit de memorie van toelichting bij de Wet ook uitdrukkelijk onderkend.</para>
+        <para>De in artikel 3, eerste lid, van de Wet neergelegde acceptatieverplichting betreft een publiekrechtelijke beperking van de contractsvrijheid, die de verzekeraars naar de regels van het privaatrecht toekomt. Het enkele bestaan van zulk een beperking kan derhalve niet de conclusie rechtvaardigen dat de beslissing van een verzekeraar inzake afsluiting van een standaardverzekering, als voornoemd, de uitoefening betreft van een publiekrechtelijke bevoegdheid.</para>
+        <para>Dit oordeel vindt bevestiging in de beslissing van de wetgever om niet-nakoming van voornoemde verplichting strafbaar te stellen. Een zodanige sanctionering is passend waar het gaat om handhaving van aan particulieren door de wetgever opgelegde verplichtingen, doch niet waar het gaat om toezicht op de uitoefening van taken en bevoegdheden door de overheid.</para>
+        <para>Op grond van het vorenoverwogene is het College van oordeel dat particuliere verzekeraars als verweerster bij het afbakenen van hun in artikel 3 van de Wet neergelegde verplichting geen openbaar gezag uitoefenen en dat zij in dat verband derhalve niet optreden als bestuursorgaan. Naar uit bovenbedoelde passage uit de toelichting bij de Wet blijkt, is daarvan onder werking van de Wet van 1986, ook na de inwerkingtreding van de Awb op 1 januari 1994, in de rechtspraktijk ook uitgegaan, getuige het optreden van de Beroepscommissie Wtz als klachteninstituut voor zowel acceptatie- als vergoedingsgeschillen. Niet valt in te zien waarom dit na de inwerkingtreding van de Wet anders zou zijn geworden. Blijkens de memorie van toelichting (p.9) strekte de herziening van de Wet van 1986 tot aanwijzing van het orgaan, belast met de uitvoering van de omslagregeling - de in rubriek 1 van deze uitspraak genoemde Stichting -, als zelfstandig bestuursorgaan, tot verbetering van de toezichtsregeling en tot een strakkere regeling van de vaststelling van de omslagbijdrage en de door het uitvoeringsorgaan aan te houden voorziening, maar niet tot wijziging van (de aard van) de verhouding tussen verzekeraar en verzekerde.</para>
+        <para>De opmerking op dezelfde bladzijde van de toelichting dat op het acceptatie-traject de Awb van toepassing is en dat bij eventuele geschillen tussen verzekeraar en aspirant-verzekerde de in de Awb geregelde bezwaarschrift- en beroepsprocedure geldt, vermag niet af te doen aan het oordeel van het College omtrent de positie van verweerster. Van de Awb, en dus ook van de in die wet neergelegde definities, kan slechts worden afgeweken bij uitdrukkelijk daartoe strekkende wetsbepaling. De Wet behelst geen bepaling die de particuliere verzekeraar, wat betreft het nemen van de beslissing al dan niet een overeenkomst van standaardverzekering aan te gaan, in afwijking van art. 1:1, eerste lid, van de Awb aanwijst als bestuursorgaan. Evenmin behelst de Wet een bepaling waarin evenbedoelde beslissing in afwijking van artikel 1:3 van de Awb wordt aangemerkt als een beschikking in de zin van het tweede lid van dat voorschrift en daarmede als een beschikking in de zin van artikel 34 van de Wet.</para>
+        <para>Het College komt in verband met het vorenoverwogene tot de slotsom dat de door appellante bestreden beslissing van 4 april 2000 niet kan worden aangemerkt als een beschikking, als bedoeld in artikel 34 van de Wet.</para>
+        <para>Derhalve komt aan het College niet de bevoegdheid toe een oordeel te geven over de door appellante bestreden beslissing.</para>
+        <para>Aangezien verweerster appellante ten onrechte heeft medegedeeld dat zij tegen de bestreden beslissing beroep kon instellen bij het College, acht het College termen aanwezig voor de navolgende beslissingen inzake de door appellante gemaakte kosten.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para>6.      De beslissing</para>
+      <para/>
+      <parablock>
+        <para>Het College:</para>
+        <para>-       verklaart zich onbevoegd van het beroep kennis te nemen;</para>
+        <para>-       bepaalt dat aan appellante het door haar gestorte griffierecht ad fl. 450,-- (zegge: vierhonderdenvijftig gulden) wordt vergoed;</para>
+        <para>-       wijst de Staat aan als rechtspersoon die evengenoemd bedrag moet voldoen;</para>
+        <para>-       veroordeelt verweerder in de kosten van deze procedure aan de zijde van appellante, vastgesteld op fl. 710,-- (zegge: zevenhonderdentien gulden), te vergoeden door de Staat.</para>
+      </parablock>
+      <para/>
+      <para>Aldus gewezen door mr B. Verwayen, mr H.C. Cusell en mr M. Vlasblom, in tegenwoordigheid van mr M.M. Smorenburg, als griffier, en uitgesproken in het openbaar op 1 augustus 2000.</para>
+      <para/>
+      <para>w.g. B. Verwayen                                                        w.g. M.M. Smorenburg</para>
+    </uitspraak>
+</open-rechtspraak>

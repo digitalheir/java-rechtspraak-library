@@ -41,7 +41,7 @@ import javax.xml.bind.annotation.XmlValue;
 public class Start {
 
     @XmlValue
-    protected short value;
+    protected String value;
     @XmlAttribute(name = "label", namespace = "http://www.w3.org/2000/01/rdf-schema#", required = true)
     protected String label;
 
@@ -49,7 +49,7 @@ public class Start {
      * Gets the value of the value property.
      * 
      */
-    public short getValue() {
+    public String getValue() {
         return value;
     }
 
@@ -57,7 +57,7 @@ public class Start {
      * Sets the value of the value property.
      * 
      */
-    public void setValue(short value) {
+    public void setValue(String value) {
         this.value = value;
     }
 

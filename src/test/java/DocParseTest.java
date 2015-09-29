@@ -28,50 +28,81 @@ public class DocParseTest {
     public void testDoc() {
         ArrayList<String> list = new ArrayList<String>();
         list.add("ECLI:NL:GHSHE:2014:1641");
+        list.add("ECLI:NL:CBB:1997:ZG2071");
 
         try {
-            OpenRechtspraak doc = RechtspraakNlInterface.parseDocument(list.get(0));
+            parseFirst(list);
+            parseSecond(list);
+        } catch (Exception e) {
+            throw new Error(e);
+        }
+    }
 
-            List<Description> descs = doc.getRDF().getDescription();
-            assertEquals(descs.size(), 2);
+    private void parseSecond(ArrayList<String> list) throws IOException, JAXBException, XPathExpressionException {
+        OpenRechtspraak doc = RechtspraakNlInterface.parseEcliXml(list.get(0));
 
-            Description desc1 = descs.get(0);
-            Description desc2 = descs.get(1);
+        List<Description> descs = doc.getRDF().getDescription();
+        assertEquals(descs.size(), 2);
 
-            // Test some basic facts
-            assertEquals(desc1.getAccessRights(), "public");
-            assertEquals(desc1.getCoverage(), "NL");
-            assertEquals(desc1.getCreator().getValue(), "Gerechtshof 's-Hertogenbosch");
-            assertEquals(desc2.getIdentifier(), "http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:GHSHE:2014:1641");
-            assertEquals(desc2.getIssued().getLabel(), "Publicatiedatum");
+        Description desc1 = descs.get(0);
+        Description desc2 = descs.get(1);
 
-            assertNull(doc.getConclusie());
-            assertNotNull(doc.getUitspraak());
+        assertEquals(desc2.getAbstract().getAbstractXml(), doc.getInhoudsindicatie().getXml());
+        assertEquals(desc2.getAbstract().getAbstractSimple(), doc.getInhoudsindicatie().toString().trim());
+    }
+
+    private void parseFirst(ArrayList<String> list) throws IOException, JAXBException, XPathExpressionException {
+        OpenRechtspraak doc = RechtspraakNlInterface.parseEcliXml(list.get(0));
+
+        List<Description> descs = doc.getRDF().getDescription();
+        assertEquals(descs.size(), 2);
+
+        Description desc1 = descs.get(0);
+        Description desc2 = descs.get(1);
+
+        // Test some basic facts
+        assertEquals(desc1.getAccessRights(), "public");
+
+
+        // Abstract
+        assertEquals(desc2.getAbstract().getResourceIdentifier(), "../../rs:inhoudsindicatie");
+        assertEquals(doc.getInhoudsindicatie().toString().trim(),"dwaling over pensioenrechten bij beëindiging arbeidsovereenkomst");
+        assertEquals(doc.getInhoudsindicatie().toString().trim(),"dwaling over pensioenrechten bij beëindiging arbeidsovereenkomst");
+        assertEquals(desc2.getAbstract().getAbstractSimple(), "dwaling over pensioenrechten bij beëindiging arbeidsovereenkomst");
+        assertNotEquals(desc2.getAbstract().getAbstractXml(), "dwaling over pensioenrechten bij beëindiging arbeidsovereenkomst");
+        assertTrue(desc2.getAbstract().getAbstractXml().contains("dwaling over pensioenrechten bij beëindiging arbeidsovereenkomst"));
+        assertNull(desc1.getAbstract());
+
+        assertEquals(desc1.getSpatial().getLabel(), "Zittingsplaats");
+        assertEquals(desc1.getCoverage(), "NL");
+        assertEquals(desc1.getCreator().getValue(), "Gerechtshof 's-Hertogenbosch");
+        assertEquals(desc2.getIdentifier(), "http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:GHSHE:2014:1641");
+        assertEquals(desc2.getIssued().getLabel(), "Publicatiedatum");
+
+        assertNull(doc.getConclusie());
+        assertNotNull(doc.getUitspraak());
 
 //            assertEquals(doc.getUitspraak().getId(), "ECLI:NL:GHSHE:2014:1641:DOC");
 //            assertEquals(doc.getUitspraak().getSpace(), "preserve");
 
-            int markups = assertAllRechtspraakMarkup(doc.getUitspraak().getContent(), 0);
-            assertTrue(markups > 0);
+        int markups = assertAllRechtspraakMarkup(doc.getUitspraak().getContent(), 0);
+        assertTrue(markups > 0);
 
 
-            // Test innerText string
-            String markupStr = doc.getUitspraak().toString().trim();
+        // Test innerText string
+        String markupStr = doc.getUitspraak().toString().trim();
 //            System.out.println(markupStr);
-            assertTrue(markupStr.startsWith("GERECHTSHOF ’s-HERTOGENBOSCH"));
-            assertTrue(markupStr.endsWith("3 juni 2014."));
-        } catch (Exception e) {
-            throw new Error(e);
-        }
+        assertTrue(markupStr.startsWith("GERECHTSHOF ’s-HERTOGENBOSCH"));
+        assertTrue(markupStr.endsWith("3 juni 2014."));
     }
 
 
     @Test
     public void impossibleEcliTest() {
         try {
-            RechtspraakNlInterface.parseDocument("I should not exist");
+            RechtspraakNlInterface.parseEcliXml("I should not exist");
             assertEquals("apples", "pears");
-        } catch (IOException | JAXBException | XPathExpressionException e) {
+        } catch (IOException | JAXBException e) {
             throw new Error(e);
         } catch (IllegalStateException ignored) {
         }

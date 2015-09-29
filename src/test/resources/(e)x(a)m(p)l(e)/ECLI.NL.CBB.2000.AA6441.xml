@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:tr="http://tuchtrecht.overheid.nl/" xmlns:eu="http://publications.europa.eu/celex/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:CBB:2000:AA6441</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2015-06-08T22:45:51</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">AA6441</dcterms:replaces>
+      <dcterms:replaces rdfs:label="Vervangt">AN6407</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/College_van_Beroep_voor_het_bedrijfsleven" scheme="overheid.RechterlijkeMacht">College van Beroep voor het bedrijfsleven</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">2000-07-10</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">AWB 00/42300/423</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#voorlopigeVoorziening">Voorlopige voorziening</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht">Bestuursrecht</dcterms:subject>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0007214&amp;artikel=3&amp;g=2000-07-10">Besluit milieutoelatingseisen bestrijdingsmiddelen 3</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0007214&amp;artikel=8&amp;g=2000-07-10">Besluit milieutoelatingseisen bestrijdingsmiddelen 8</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0007214&amp;artikel=II&amp;g=2000-07-10">Besluit milieutoelatingseisen bestrijdingsmiddelen II</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0007214&amp;artikel=II&amp;g=2000-07-10">Besluit milieutoelatingseisen bestrijdingsmiddelen II</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0011223&amp;g=2000-07-10">Wijzigingsbesluit Besluit milieutoelatingseisen bestrijdingsmiddelen (aanvullende milieucriteria)</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0002380&amp;artikel=1a&amp;g=2000-07-10">Bestrijdingsmiddelenwet 1962 1a</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0002380&amp;artikel=3&amp;g=2000-07-10">Bestrijdingsmiddelenwet 1962 3</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0002380&amp;artikel=3&amp;g=2000-07-10">Bestrijdingsmiddelenwet 1962 3</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0002380&amp;artikel=3&amp;g=2000-07-10">Bestrijdingsmiddelenwet 1962 3</dcterms:references>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+          <rdf:li>AB 2000, 320 met annotatie door JHvdV</rdf:li>
+          <rdf:li>M en R 2000, 187K</rdf:li>
+          <rdf:li>M en R 2001, 38 met annotatie door E.M. Vogelezang-Stoute</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:2000:AA6441">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:2000:AA6441</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-04T16:05:37</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2001-07-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:CBB:2000:AA6441 College van Beroep voor het bedrijfsleven , 10-07-2000 / AWB 00/42300/423</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:CBB:2000:AA6441:INH" lang="nl" xml:space="preserve">
+      <para>-</para>
+    </inhoudsindicatie>
+  <uitspraak xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:CBB:2000:AA6441:DOC" lang="nl" xml:space="preserve">
+      <parablock>
+        <para>De president van het College van Beroep voor het bedrijfsleven</para>
+        <para>No. AWB	00/42300/423	10 juli 2000</para>
+        <para>	3203032030</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para>Uitspraak op het verzoek om voorlopige voorziening in de zaak van:</para>
+      <para/>
+      <parablock>
+        <para>1. de stichting Zuid-Hollandse Milieufederatie, te Rotterdam, en</para>
+        <para>2. de stichting Natuur en Milieu, te Utrecht1. de stichting Zuid-Hollandse Milieufederatie, te Rotterdam, en</para>
+        <para>2. de stichting Natuur en Milieu, te Utrecht,</para>
+        <para>verzoeksters,</para>
+        <para>gemachtigde: mr drs J. Rutteman, werkzaam bij verzoekster sub 1,</para>
+        <para>tegen</para>
+        <para>de Minister van Volkshuisvesting, Ruimtelijke Ordening en Milieubeheer, te 's-Gravenhage, verweerder,</para>
+        <para>gemachtigde: mr J.H. Geerdink, advocaat te 's-Gravenhage,</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>waaraan voorts als partij deelneemt, de Land- en Tuinbouworganisatie Nederland (LTO),</para>
+        <para>te 's-Gravenhage,</para>
+        <para>gemachtigde: ir J.J.G.W. Ottenheim, werkzaam bij LTO.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>1.	De procedure</para>
+        <para>Op 24 mei 2000 heeft de president van het College van verzoeksters een verzoekschrift ontvangen, waarbij de president is verzocht een voorlopige voorziening te treffen.</para>
+        <para>Verweerder heeft op 14 juni 2000 schriftelijk op het verzoek om voorlopige voorziening gereageerd.</para>
+        <para>Bij brief van 21 juni 2000 heeft LTO te kennen gegeven als derde-belanghebbende aan het geding te willen deelnemen.</para>
+        <para>Op 29 juni 2000 heeft het onderzoek ter zitting plaatsgevonden, waarbij partijen bij monde van hun gemachtigden hun standpunten nader hebben toegelicht.</para>
+        <para>2.	De grondslag van het geschil</para>
+        <para>2.1	In de Bestrijdingsmiddelenwet 1962 (hierna: Bmw) is onder meer het volgende bepaald:</para>
+        <para>Artikel 1a, eerste lid:</para>
+      </parablock>
+      <para/>
+      <para>		"1. Er is een College voor de toelating van bestrijdingsmiddelen, voor de toepassing van het bepaalde bij of krachtens deze wet verder te noemen het college. Het college bezit rechtspersoonlijkheid."</para>
+      <para/>
+      <para>Artikel 2, eerste lid:</para>
+      <para/>
+      <para>		"1. Het is verboden een bestrijdingsmiddel af te leveren, voorhanden of in voorraad te hebben, binnen Nederland te brengen of te gebruiken, waarvan niet blijkt dat het ingevolge deze wet is toegelaten."</para>
+      <para/>
+      <para>Artikel 3, eerste lid, aanhef en onder a:</para>
+      <para/>
+      <parablock>
+        <para>		"- 1. Een bestrijdingsmiddel wordt slechts toegelaten indien:</para>
+        <para>		a. op grond van de stand van de wetenschappelijke en technische kennis en aan de hand van onderzoek van de gegevens, bedoeld in artikel 4, tweede lid, met inachtneming van de bij of krachtens artikel 3a vastgestelde regels en beginselen voor de beoordeling, is vastgesteld dat het bestrijdingsmiddel en zijn omzettingsprodukten, wanneer het overeenkomstig het bepaalde bij of krachtens deze wet wordt gebruikt:</para>
+        <para>		(…)</para>
+        <para>		9. geen schadelijke uitwerking heeft op het grondwater;</para>
+        <para>		10. geen voor het milieu onaanvaardbaar effect heeft, waarbij in het bijzonder rekening wordt gehouden met:</para>
+        <para>		- de plaats waar het bestrijdingsmiddel in het milieu terecht komt en wordt verspreid, met name voor wat betreft besmetting van het water, met inbegrip van drink- en grondwater en belasting van de bodem;</para>
+        <para>		- de gevolgen voor niet-doelsoorten;"</para>
+      </parablock>
+      <para/>
+      <para>Artikel 3a, eerste lid en tweede lid, aanhef en onder d:</para>
+      <para/>
+      <para>		"1. Bij of krachtens algemene maatregel van bestuur kunnen nadere regelen worden gesteld met betrekking tot de toelatingscriteria als bedoeld in artikel 3, eerste lid, onderdeel a, en kunnen beginselen voor de beoordeling worden vastgesteld.</para>
+      <para/>
+      <parablock>
+        <para>		2. De voordracht voor een algemene maatregel van bestuur als bedoeld in het eerste lid, wordt:</para>
+        <para>		(…)</para>
+        <para>		d. voor zover daarin gestelde regelen, betrekking hebben op de toelatingscriteria als bedoeld in artikel 3, eerste lid, onderdeel a, ten negende en ten tiende, Ons gedaan door Onze Minister van Volkshuisvesting, Ruimtelijke Ordening en Milieubeheer in overeenstemming met Onze Minister van Landbouw, Natuurbeheer en Visserij, Onze Minister van Welzijn, Volksgezondheid en Cultuur en Onze Minister van Sociale Zaken en Werkgelegenheid;"</para>
+      </parablock>
+      <para/>
+      <para>Artikel 4, eerste lid:</para>
+      <para/>
+      <para>		"1. Over de toelating van een bestrijdingsmiddel wordt op aanvraag beslist door het college."</para>
+      <para/>
+      <parablock>
+        <para>Voorts is in het Besluit milieutoelatingseisen bestrijdingsmiddelen (hierna: Bmb), zoals gewijzigd bij Besluit van 15 maart 2000 (Stb. 2000, nr. 136), onder meer het volgende bepaald:</para>
+        <para>Artikel 3:</para>
+        <para>		"1. Onverminderd het tweede lid, wordt een gewasbeschermingsmiddel slechts toegelaten indien het middel voldoet aan de bij of krachtens de artikelen 5 tot en met 7a gestelde regels, waarbij voor de toepassing van die regels wordt uitgegaan van het gebruik van het middel overeenkomstig de gebruiksvoorschriften.</para>
+        <para>		 2. Indien:</para>
+        <para>		 a. het gebruik van een gewasbeschermingsmiddel dringend vereist is en voor het gebruik uit landbouwkundig of volksgezondheidsoogpunt geen geschikt alternatief bestaat in de vorm van een ander gewasbeschermings-middel dan wel een mechanische of biologische methode, die hetzelfde doeleinde en een vergelijkbare deugdelijkheid heeft en waarvan met redelijke zekerheid kan worden aangenomen dat deze aanmerkelijk minder risico's heeft voor de kwaliteit van het milieu, of </para>
+        <para>		 b. het niet toelaten van het gewasbeschermingsmiddel leidt tot aanzienlijke verslechtering van de arbeidsomstandigheden, wordt het gewasbeschermingsmiddel toegelaten indien wordt voldaan aan de normen, bedoeld in artikel 8, waarbij voor de toepassing van die normen wordt uitgegaan van het gebruik van het middel overeenkomstig de gebruiksvoorschriften.</para>
+        <para>		 3. Bij regeling van Onze Minister kunnen voor de toepassing van het tweede lid nadere regels worden gesteld.</para>
+      </parablock>
+      <para/>
+      <para>Artikel 8:</para>
+      <para/>
+      <para>“	Het gewasbeschermingsmiddel voldoet tenminste aan bij regeling van Onze Minister vastgestelde normen met betrekking tot de in de artikelen 5 tot en met 7a genoemde milieucriteria.”</para>
+      <para/>
+      <para>Artikel II, tweede tot en met vierde lid, van voornoemd Besluit van 15 maart 2000, aan welke bepaling terugwerkende kracht is verleend tot 1 januari 2000, luidt als volgt:</para>
+      <para/>
+      <parablock>
+        <para>		"2. Een gewasbeschermingsmiddel dat is aan te merken als een gewasbeschermingsmiddel als bedoeld in artikel 8, eerste lid, van het Besluit milieutoelatingseisen bestrijdingsmiddelen, zoals dat artikel luidde voor de inwerkingtreding van dit besluit, waarvan de toelating voor een of meer van de doeleinden waarvoor het middel mag worden gebruikt, in de periode van 11 mei 1999 tot en met 1 januari 2000 vervalt, is een gewasbeschermingsmiddel als bedoeld in artikel 3, tweede lid, en is, voor zover Onze Minister dat middel en de doeleinden van gebruik ervan heeft aangewezen, als zodanig toegelaten, zij het dat de houder van de toelating verplicht is binnen een jaar na inwerkingtreding van dit besluit verlenging van de toelating voor de doeleinden waarvoor het middel wordt gebruikt, aan te vragen met overlegging van de vereiste gegevens om te beoordelen of het middel aan de toelatingseisen voldoet. Op een aanvraag om verlenging van de toelating als bedoeld in de eerste volzin, wordt beslist binnen twee jaar na de inwerkingtreding van artikel 1, onderdelen A en C, van dit besluit, waarbij artikel 7, vijfde lid, van de Regeling toelating bestrijdingsmiddelen buiten toepassing blijft.</para>
+        <para>		 3. een gewasbeschermingsmiddel als bedoeld in artikel 8, tweede lid, van het Besluit milieutoelatingseisen bestrijdingsmiddelen, zoals dat artikel luidde voor de inwerkingtreding van dit besluit, waarvan de toelating voor een of meer van de doeleinden waarvoor het middel mag worden gebuikt, in de periode van 1 september 1999 tot en met 1 januari 2000 vervalt, is een gewasbeschermingsmiddel als bedoeld in artikel 3, tweede lid, en is voor zover Onze Minister dat middel en de doeleinden van gebruik ervan heeft aangewezen, als zodanig toegelaten, zij het dat de houder van de toelating verplicht is binnen een jaar na inwerkingtreding van dit besluit verlenging van de toelating voor de doeleinden waarvoor het middel wordt gebruikt, aan te vragen met overlegging van de vereiste gegevens om te beoordelen of het middel aan de toelatingseisen voldoet. Op een aanvraag om verlenging van de toelating als bedoeld in de eerste volzin, wordt beslist binnen twee jaar na de inwerkingtreding van artikel 1, Onderdelen A en C, van dit besluit, waarbij artikel 7, vijfde lid, van de Regeling toelating bestrijdingsmiddelen buiten toepassing blijft.</para>
+        <para>		 4. Een gewasbeschermingsmiddel komt niet voor aanwijzing door Onze Minister als bedoeld in het tweede of derde lid, in aanmerking indien:</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>		 a. de toelating van het gewasbeschermingsmiddel op verzoek van de toelatingshouder voor de inwerkingtreding van dit besluit is ingetrokken,</para>
+        <para>		 b. het een gewasbeschermingsmiddel betreft, waarvoor geen verzoek tot verlenging van de toelating is ingediend op grond van artikel 8, tweede lid, van het Besluit milieutoelatingseisen bestrijdingsmiddelen, zoals dat artikel luidde voor de inwerkingtreding van dit besluit, of waarvan dat verzoek is afgewezen, of</para>
+        <para>		 c. voor de inwerkingtreding van dit besluit op basis van herbeoordeling van de toelating van een gewasbeschermingsmiddel is vastgesteld dat het middel niet voldoet aan de in artikel 8, tweede lid, van het Besluit milieutoelatingseisen bestrijdingsmiddelen vermelde voorlopige normen en criteria, zoals dat artikel luidde voor de inwerkingtreding van dit besluit."</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Vóór de inwerkingtreding van voornoemd Besluit van 15 maart 2000 luidde artikel 8, eerste en tweede lid, van het Bmb als volgt:</para>
+        <para>		"1. Voor gewasbeschermingsmiddelen die op het tijdstip van inwerkingtreding van dit besluit zijn toegelaten en die vanwege een of meer van de doeleinden waarvoor het middel mag worden gebruikt, niet voldoet aan de bij of krachtens de artikelen 5 tot en met 7 gestelde regels, kan, voor een periode van telkens twee jaar en uiterlijk tot 1 januari 2000, op verzoek van de toelatinghouder met betrekking tot deze doeleinden de toelating worden verlengd indien voor het betrokken middel geldt dat:</para>
+        <para>		 a. het gebruik dringend vereist is en voor het gebruik geen geschikt alternatief bestaat vanuit landbouwkundig of volksgezondheidsoogpunt in de vorm van een ander gewasbeschermingsmiddel dan wel een mechanische of biologische methode, die het zelfde doeleinde en een vergelijkbare deugdelijkheid heeft en waarvan met redelijke zekerheid kan worden aangenomen dat deze aanmerkelijk minder risico's heeft voor de kwaliteit van het milieu; of</para>
+        <para>		 b. de niet-verlenging van de toelating zou resulteren in een aanzienlijke verslechtering van de arbeidsomstandigheden.</para>
+        <para>		 2. Voor gewasbeschermingsmiddelen die op het tijdstip van inwerkingtreding van dit besluit zijn toegelaten en die vanwege een of meer van de doeleinden waarvoor het middel mag worden gebruikt, niet voldoen aan de bij of krachtens de artikelen 5 tot en met 7 gestelde regels, kan, op verzoek van de toelatinghouder en voor de doeleinden waarvoor het middel mag worden gebruikt de toelating tot uiterlijk 1 januari 2000 worden verlengd indien de toelating een gewasbeschermingsmiddel betreft op basis van werkzame stoffen die zijn vastgesteld op de lijst, opgenomen in de bijlage behorende bij dit besluit, en de toelating voor het betrokken doeleinde ingevolge het verzoek van de toelatinghouder voldoet aan de voorlopige normen en criteria die zijn overeengekomen op grond van de bestuursovereenkomst MJP-G (Kamerstukken II 1992-93, 21677, nr. 17)."</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para>2.2	Bij de beoordeling van het verzoek om voorlopige voorziening gaat de president, voorzover hier van belang, uit van de volgende feiten en omstandigheden.</para>
+      <para/>
+      <parablock>
+        <para>-	Op 31 maart 2000 heeft verweerder de Tijdelijke regeling aanwijzing landbouwkundig onmisbare gewasbeschermingsmiddelen I vastgesteld (Staatscourant 19 april 2000, nr. 78, p. 15; hierna aan te duiden als de Tijdelijke regeling I). De Tijdelijke regeling I strekt tot uitvoering van artikel II, derde lid, van voornoemd Besluit van 15 maart 2000 en voorziet in de artikelen 1 tot en met 6 in de aanwijzing van een aantal met naam en dossiernummer aangeduide bestrijdingsmiddelen op basis van een zestal werkzame stoffen en voor een aantal toepassingen, welke middelen aldus zijn toegelaten. In artikel 7 is bepaald dat de toelating van de in artikel 1 tot en met 6 aangewezen middelen geldt totdat het College voor de toelating van bestrijdingsmiddelen (hierna: Ctb) overeenkomstig artikel II, derde lid, van voornoemd Besluit van 15 maart 2000 of overeenkomstig artikel 3 van de Bmw ten aanzien van het middel of van één of meer van de in het desbetreffende artikel genoemde toepassingen een besluit omtrent de toelating ervan heeft genomen.</para>
+        <para>-	Op 31 maart 2000 heeft verweerder de Tijdelijke regeling aanwijzing landbouwkundig onmisbare gewasbeschermingsmiddelen II vastgesteld (Staatscourant 19 april 2000, nr. 78, p. 16; hierna aan te duiden als de Tijdelijke regeling II). De Tijdelijke regeling II strekt tot uitvoering van artikel II, tweede lid, van voornoemd Besluit van 15 maart 2000 en voorziet in de artikelen 1 tot en met 3 in de aanwijzing van een aantal met naam en dossiernummer aangeduide bestrijdingsmiddelen op basis van een drietal werkzame stoffen en voor een aantal toepassingen, welke middelen aldus zijn toegelaten. In artikel 4 is bepaald dat de toelating van de in artikel 1 tot en met 3 aangewezen middelen geldt totdat het Ctb overeenkomstig artikel II, tweede lid, van voornoemd Besluit van 15 maart 2000 of overeenkomstig artikel 3 van de Bmw ten aanzien van het middel of van één of meer van de in het desbetreffende artikel genoemde toepassingen een besluit omtrent de toelating ervan heeft genomen.</para>
+        <para>-	Tegen deze Tijdelijke regelingen hebben verzoeksters bij bezwaarschriften van </para>
+        <para>11 mei 2000 bezwaar gemaakt.</para>
+        <para>-	Hiernaast hebben verzoeksters, zoals reeds vermeld, de president op 24 mei 2000 verzocht ter zake een voorlopige voorziening te treffen.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>3.	De standpunten van partijen</para>
+        <para>3.1	Verzoeksters hebben de president onder meer verzocht bij wege van voorlopige voorziening te bepalen dat de toelating van de in de Tijdelijke regelingen aangewezen bestrijdingsmiddelen ongedaan wordt gemaakt totdat op het bezwaar is beslist. Ter ondersteuning van hun verzoek hebben zij, samengevat en voorzover hier van belang, het volgende aangevoerd.</para>
+        <para>De Tijdelijke regelingen omvatten geen besluiten inhoudende een algemeen verbindend voorschrift, als bedoeld in artikel 8:2, aanhef en onder a, van de Algemene wet bestuursrecht (hierna: Awb), maar behelzen in feite niets anders dan een bundel beschikkingen waarbij een aantal met name genoemde bestrijdingsmiddelen worden aangewezen die worden toegelaten voor een aantal nader omschreven toepassingen.</para>
+        <para>Verweerder heeft de Tijdelijke regelingen onbevoegd vastgesteld, nu de Bmw de bevoegdheid tot het toelaten van bestrijdingsmiddelen uitsluitend aan het Ctb toekent.</para>
+        <para>Voorts zijn de Tijdelijke regelingen in strijd met de artikelen 3 en 3a van de Bmw. De Tijdelijke regelingen zijn gebaseerd op artikel II, van voornoemd Besluit van 15 maart 2000, welk besluit op haar beurt is gebaseerd op artikel 3a van de Bmw. Evenals artikel 8, eerste lid, (oud) van het Bmb voorziet ook artikel II van het Besluit van 15 maart 2000 in de mogelijkheid om bestrijdingsmiddelen toe te laten zonder dat op grond van de stand van de wetenschappelijke en technische kennis is beoordeeld of de middelen voor het milieu onaanvaardbare effecten hebben. Nu de president bij uitspraak van 11 mei 1999 (AWB 99/412) heeft geoordeeld dat artikel 3a van de Bmw geen grondslag biedt voor toelating op grond van artikel 8, eerste lid, oud van het Bmb en dat deze bepaling 'onmiskenbaar onverbindend' is, is ook artikel II van het besluit van 15 maart 2000 onmiskenbaar onverbindend.</para>
+        <para>Verzoeksters hebben een spoedeisend belang bij de gevraagde voorziening, nu het gebruik van de onderhavige bestrijdingsmiddelen tot aanzienlijke en onomkeerbare schade aan het milieu leidt.</para>
+        <para>3.2	Verweerder heeft geconcludeerd tot onbevoegdverklaring van de president en heeft hiertoe, samengevat en voorzover hier van belang, het volgende aangevoerd.</para>
+        <para>De Tijdelijke regelingen zijn algemeen verbindende voorschriften waartegen ingevolge artikel 8:2, aanhef en onder a, van de Awb geen beroep kan worden ingesteld.</para>
+        <para>Uit de omschrijving van het begrip algemene verbindende voorschriften in het voorontwerp voor de derde tranche van de Awb (TK 1993-1994, 1993-1994, 23700, nr. 3, p. 105) en uit Van Wijk/Konijnbelt &amp; Van Male (Hoofdstukken van bestuursrecht, 11e druk, 1999, p. 251 e.v.) blijkt dat, wil er sprake zijn van een algemeen verbindend voorschrift, voldaan moet zijn aan drie voorwaarden:</para>
+        <para>1. het moet gaan om een regeling die een overheidsorgaan heeft uitgevaardigd krachtens een uitdrukkelijke wetgevende bevoegdheid;</para>
+        <para>2. de regeling moet algemene regels inhouden waarin rechtsnormen zijn vervat;</para>
+        <para>3. de regeling moet externe werking hebben.</para>
+        <para>Ad 1. De Tijdelijke regelingen zijn krachtens uitdrukkelijke wetgevende bevoegdheid uitgevaardigd. De wijziging van het Bmb is immers in overeenstemming met artikel 3a van de Bmw. Het Bmb is zodanig gewijzigd dat er een regeling voor misbare middelen (artikel 3, eerste lid) en een regeling voor onmisbare middelen (artikel 3, tweede lid) zijn ingevoerd. Om een goede overgang naar dit nieuwe systeem te bewerkstelligen is in artikel II van het Besluit van 15 maart 2000 een overgangsregeling opgenomen, welke de Minister de bevoegdheid geeft om middelen aan te wijzen die worden geacht te zijn toegelaten conform het bepaalde in artikel 3, tweede lid, van het gewijzigde Bmb.</para>
+        <para>Ad 2. De Tijdelijke regelingen bevatten voorschriften waarin rechtsnormen zijn vervat.</para>
+        <para>Zo volgt uit artikel 7 van de Tijdelijke regeling I dat de toelatingen van de middelen die in de artikelen 1 tot en met 6 worden genoemd, gelden totdat het Ctb ingevolge artikel II, derde lid, van het besluit van 15 maart 2000 dan wel ingevolge artikel 3 van de Bmw een beslissing over de verdere toelating heeft genomen. Een vergelijkbare rechtsnorm is opgenomen in artikel 4 van de Tijdelijke regeling II.</para>
+        <para>Bovendien is er sprake van algemene regels omdat het gevolg van de Tijdelijke regelingen is dat de daarin opgenomen middelen vanaf 1 januari 2000 toegelaten zijn en dus door een ieder afgeleverd, voorhanden, in voorraad gehouden en binnen Nederland gebracht of gebruikt mogen worden.</para>
+        <para>Ad 3. Ook aan het vereiste van externe werking is voldaan, nu de Tijdelijke regelingen niet de bewindslieden treffen die de regelingen hebben uitgevaardigd, maar de toelatingshouders, producenten, handelaren en gebruikers.</para>
+        <para>3.3	LTO heeft, samengevat, het volgende aangevoerd.</para>
+        <para>Met de toelating van onderhavige bestrijdingsmiddelen worden zowel landbouwkundige als maatschappelijke belangen gediend.</para>
+        <para>Van de circa 860 toepassingen op basis van 42 kanalisatiestoffen zijn uiteindelijk slechts 36 toepassingen (4 %) landbouwkundig onmisbaar verklaard. Uit een berekening van het Centrum Landbouw en Milieu kan worden afgeleid dat de resterende milieubelasting circa 5 % bedraagt.</para>
+        <para>LTO bepleit met betrekking tot de milieubeoordeling voor Europese afstemming. De huidige systematiek voor landbouwkundige onmisbaarheid biedt deze mogelijkheid en ondersteunt derhalve de Nederlandse boeren en tuinders in hun concurrentie met het buitenland.</para>
+        <para>4.	De beoordeling van het geschil</para>
+        <para>4.1	Ingevolge het bepaalde in artikel 8:81 van de Awb juncto artikel 19, eerste lid, van de Wet bestuursrechtspraak bedrijfsorganisatie kan, indien tegen een besluit bij het College beroep is ingesteld, dan wel, voorafgaand aan een mogelijk beroep, bezwaar is gemaakt, op verzoek een voorlopige voorziening worden getroffen indien onverwijlde spoed, gelet op de betrokken belangen, dat vereist.</para>
+        <para>4.2	De president ziet zich allereerst voor de vraag gesteld of hij bevoegd is van het verzoek om voorlopige voorziening kennis te nemen, nu tussen partijen in geschil of, gelet op het bepaalde in artikel 8:2, aanhef en onder a, van de Awb, tegen de aanwijzing van de middelen in voormelde Tijdelijke regelingen I en II beroep kan worden ingesteld.</para>
+        <para>Anders dan verweerder is de president voorshands van oordeel dat de aanwijzing van de middelen in de Tijdelijke regelingen I en II niet zijn uitgevaardigd krachtens een uitdrukkelijke wetgevende bevoegdheid. Artikel II, tweede en derde lid, van het Besluit van 15 maart 2000, waarop de litigieuze aanwijzingen zijn gegrond, verleent verweerder niet meer dan de bevoegdheid om middelen aan te wijzen en kent aan verweerder geen wetgevende bevoegdheid toe.</para>
+        <para>Voorts is de president, anders dan verweerder, voorshands van oordeel dat de aanwijzing van de middelen in de Tijdelijke regelingen I en II geen algemene regels inhouden waarin rechtsnormen zijn vervat. De omstandigheid dat artikel 7 van de Tijdelijke regeling I en artikel 4 van de Tijdelijke regeling II wellicht wel zodanige regels inhouden, brengt nog niet mee dat de aanwijzing van de met naam en dossiernummer aangeduide middelen zelf eveneens zodanige regels inhouden. De omstandigheid dat de Tijdelijke regelingen tot gevolg hebben dat de daarin opgenomen middelen vanaf 1 januari 2000 toegelaten zijn en dus door een ieder afgeleverd, voorhanden, in voorraad gehouden en binnen Nederland gebracht of gebruikt mogen worden, is al evenmin beslissend. De aanwijzing van de middelen onderscheidt zich in dit opzicht immers niet van een reguliere toelating door het Ctb, ten aanzien waarvan onomstreden is dat hiertegen bezwaar en beroep kan worden ingesteld. Bovendien blijkt uit artikel II, tweede lid en derde lid, van het Besluit van 15 maart 2000, waarin de toelatinghouder van een aangewezen middel de verplichting is opgelegd binnen een jaar na inwerkingtreding van dit besluit verlenging aan te vragen, dat de aanwijzingen van de middelen in de Tijdelijke regelingen zich evenals reguliere toelatingen door het Ctb in wezen tot de toelatinghouder richten.</para>
+        <para>Naar voorlopig oordeel van de president dienen de aanwijzingen van de middelen in de Tijdelijke regelingen I en II dan ook niet aangemerkt te worden als besluiten inhoudende een algemeen verbindend voorschrift waartegen geen beroep zou openstaan.</para>
+        <para>De president acht zich bevoegd van het verzoek om voorlopige voorziening kennis te nemen.</para>
+        <para>4.3	Vervolgens is de vraag aan de orde of artikel II, tweede en derde lid, van het Besluit van</para>
+        <para>15 maart 2000, waarop de toelating van de in de Tijdelijke regelingen I en II door  verweerder aangewezen middelen is gegrond, in het voetspoor van de uitspraak van het College van 29 januari 1998 (nr. 95/0995/060/029; AB 1998, nr. 111) en de uitspraak van de president van het College van 11 mei 1999 (nr. AWB 99/412; AB 1999, nr. 331) niet vanwege het ontbreken van een wettelijke grondslag verbindende kracht ontbeert.</para>
+        <para>De president beantwoordt die vraag naar voorlopig oordeel bevestigend en overweegt hiertoe als volgt.</para>
+        <para>De president merkt allereerst op dat de Bmw de bevoegdheid tot toelating van bestrijdingsmiddelen uitdrukkelijk en uitsluitend aan het Ctb heeft toegekend en niet aan verweerder.</para>
+        <para>De president overweegt voorts dat ingevolge artikel 3a van de Bmw bij of krachtens algemene maatregel van bestuur nadere regels kunnen worden gesteld met betrekking tot de toelatingscriteria als bedoeld in artikel 3, eerste lid, onderdeel a, en dat beginselen voor de beoordeling kunnen worden vastgesteld. Voorzover het de toelatingscriteria als bedoeld in artikel 3, eerste lid, aanhef en onder a, sub 9 en 10 van de Bmw betreft, moet het dus gaan om een uitwerking van de voorwaarden dat een bestrijdingsmiddel geen schadelijke uitwerking heeft op het grondwater en geen voor het milieu onaanvaardbaar effect heeft. Voor andere doeleinden kan de in artikel 3a voorziene regelgevende bevoegdheid in zoverre niet worden aangewend.</para>
+        <para>In de artikelen 5 tot en met 7a van het Bmb is met toepassing van artikel 3a van de Bmw uitwerking gegeven aan de toelatingscriteria als bedoeld in artikel 3, eerste lid, aanhef en onder a, sub 9 en 10 van de Bmw, althans voorzover het de persistentie in de bodem, de uitspoeling naar het grondwater en het risico voor waterorganismen betreft. Uit de Nota van Toelichting bij het Besluit van 15 maart 2000 (Staatsblad 2000, nr. 136, p. 10) blijkt dat artikel II, tweede en derde lid, van dit Besluit een overgangsregeling voor gewasbeschermingsmiddelen geeft "waarvan bij herbeoordeling is vastgesteld dat ze, al dan niet voor een of meer van de doeleinden van gebruik, niet voldoen aan de artikelen 5 tot en met 7a van het Bmb". Voor een zodanige bepaling, waarin geen uitwerking van de toelatingscriteria als bedoeld in artikel 3, eerste lid, aanhef en onder a, sub 9 en 10 van de Bmw wordt gegeven en een bevoegdheid wordt gecreëerd om niet alleen in afwijking van de uitwerking in de artikelen 5 tot en met 7a maar ook zonder enige toetsing op milieucriteria een bestrijdingsmiddel toe te laten, biedt artikel 3a van de Bmw evenwel geen grondslag. De door verweerder aangevoerde omstandigheid dat het Bmb zodanig is gewijzigd dat er een regeling voor misbare middelen (artikel 3, eerste lid) en een regeling voor onmisbare middelen (artikel 3, tweede lid) zijn ingevoerd, kan hieraan niet afdoen. De president laat in het midden of voormeld artikel 3, tweede lid, verbindend is.</para>
+        <para>4.4	Nu artikel II, tweede en derde lid, van het Besluit van 15 maart 2000 naar voorlopig oordeel van de president onmiskenbaar onverbindend is, ontberen ook de op deze bepaling gegronde aanwijzingen van de middelen in de Tijdelijke regelingen I en II rechtsgeldigheid.</para>
+        <para>Er is mitsdien aanleiding het verzoek om voorlopige voorziening toe te wijzen als hierna vermeld.</para>
+        <para>5.	De beslissing</para>
+        <para>De president:</para>
+        <para>wijst het verzoek om voorlopige voorziening toe;</para>
+        <para>schorst de besluiten Tijdelijke regelingen I en II, voorzover hierin bestrijdingsmiddelen zijn aangewezen;</para>
+        <para>-	bepaalt dat de in de Tijdelijke regelingen I en II aangewezen bestrijdingsmiddelen worden behandeld als waren zij niet toegelaten;</para>
+        <para>-	bepaalt dat deze voorziening vervalt nadat op het bezwaar is beslist of zoveel eerder als het geschil op een andere wijze tot een einde is gekomen;</para>
+        <para>-	bepaalt dat het door verzoeksters bepaalde griffierecht ad fl. 450,-- (zegge: vierhonderdenvijftig gulden) door de Staat der Nederlanden wordt vergoed;</para>
+        <para>-	wijst af het meer of anders gevorderde.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <parablock>
+        <para>Aldus gewezen door mr D. Roemers, fungerend president, en uitgesproken in het openbaar op 10 juli 2000. De griffier mr E.J.M. Heijs is verhinderd deze uitspraak te ondertekenen.</para>
+        <para>w.g. D. Roemers	E.J.M. Heijs</para>
+        <para>Verzonden op:</para>
+      </parablock>
+    </uitspraak>
+</open-rechtspraak>

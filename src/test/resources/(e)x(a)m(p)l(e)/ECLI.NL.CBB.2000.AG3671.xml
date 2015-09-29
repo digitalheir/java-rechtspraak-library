@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:tr="http://tuchtrecht.overheid.nl/" xmlns:eu="http://publications.europa.eu/celex/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:CBB:2000:AG3671</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2015-03-25T13:09:47</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">AG3671</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/College_van_Beroep_voor_het_bedrijfsleven" scheme="overheid.RechterlijkeMacht">College van Beroep voor het bedrijfsleven</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">2000-08-10</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">AWB 00/622</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#voorlopigeVoorziening">Voorlopige voorziening</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht">Bestuursrecht</dcterms:subject>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0007708&amp;artikel=10&amp;g=2000-08-10">Besluit toezicht effectenverkeer 1995 10</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0007708&amp;artikel=12&amp;g=2000-08-10">Besluit toezicht effectenverkeer 1995 12</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0007708&amp;artikel=13&amp;g=2000-08-10">Besluit toezicht effectenverkeer 1995 13</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0007708&amp;artikel=17&amp;g=2000-08-10">Besluit toezicht effectenverkeer 1995 17</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0007708&amp;artikel=23&amp;g=2000-08-10">Besluit toezicht effectenverkeer 1995 23</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0007708&amp;artikel=24&amp;g=2000-08-10">Besluit toezicht effectenverkeer 1995 24</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0007708&amp;artikel=25&amp;g=2000-08-10">Besluit toezicht effectenverkeer 1995 25</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0007657&amp;artikel=7&amp;g=2000-08-10">Wet toezicht effectenverkeer 1995 7</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0007657&amp;artikel=19&amp;g=2000-08-10">Wet toezicht effectenverkeer 1995 19</dcterms:references>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+          <rdf:li>JOR 2000/243 met annotatie door mr. drs. C.M. Grundmann-van de Krol</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:2000:AG3671">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:2000:AG3671</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-04T18:50:11</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2003-12-18</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:CBB:2000:AG3671 College van Beroep voor het bedrijfsleven , 10-08-2000 / AWB 00/622</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:CBB:2000:AG3671:INH" lang="nl" xml:space="preserve">
+      <parablock>
+        <para>Bij brief van 19 juli 2000 heeft verweerster verzoekster medegedeeld dat verzoeksters vergunning, als bedoeld in artikel 7, eerste lid, van de Wet toezicht effectenverkeer 1995 (hierna: Wte 1995), met onmiddellijke ingang is ingetrokken.</para>
+        <para>Bij brief van 25 juli 2000 heeft verzoekster tegen voormeld besluit een bezwaarschrift ingediend bij verweerster.</para>
+        <para>Eveneens op 25 juli 2000 heeft verzoekster zich tot de president gewend met het verzoek bij wege van voorlopige voorziening het bestreden besluit te schorsen.</para>
+        <para>Bij schrijven van 26 juli 2000 heeft verzoekster de gronden van haar verzoek aangevuld alsmede verzocht te schorsen totdat op bezwaar en beroep zal zijn beslist.</para>
+        <para>Bij schrijven van 1 augustus 2000 heeft verweerster op het verzoek om voorlopige voorziening gereageerd.</para>
+      </parablock>
+    </inhoudsindicatie>
+  <uitspraak xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:CBB:2000:AG3671:DOC" lang="nl" xml:space="preserve">
+      <para>De president van het College van Beroep voor het bedrijfsleven</para>
+      <para/>
+      <parablock>
+        <para>No. AWB 00/622					10 augustus 2000</para>
+        <para>21500</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para/>
+      <para>Uitspraak op het verzoek om voorlopige voorziening in de zaak van:</para>
+      <para/>
+      <parablock>
+        <para>A &amp; B B.V., te C, verzoekster,</para>
+        <para>gemachtigde: mr W.M. Schonewille, advocaat te 's-Gravenhage,</para>
+        <para>tegen</para>
+        <para>de Stichting Toezicht Effectenverkeer, te Amsterdam, verweerster,</para>
+        <para>gemachtigde: mr H.J. Sachse, advocaat te Amsterdam.</para>
+      </parablock>
+      <para/>
+      <para> </para>
+      <parablock>
+        <para>1.	De procedure</para>
+        <para>Bij brief van 19 juli 2000 heeft verweerster verzoekster medegedeeld dat verzoeksters vergunning, als bedoeld in artikel 7, eerste lid, van de Wet toezicht effectenverkeer 1995 (hierna: Wte 1995), met onmiddellijke ingang is ingetrokken.</para>
+        <para>Bij brief van 25 juli 2000 heeft verzoekster tegen voormeld besluit een bezwaarschrift ingediend bij verweerster.</para>
+        <para>Eveneens op 25 juli 2000 heeft verzoekster zich tot de president gewend met het verzoek bij wege van voorlopige voorziening het bestreden besluit te schorsen.</para>
+        <para>Bij schrijven van 26 juli 2000 heeft verzoekster de gronden van haar verzoek aangevuld alsmede verzocht te schorsen totdat op bezwaar en beroep zal zijn beslist.</para>
+        <para>Bij schrijven van 1 augustus 2000 heeft verweerster op het verzoek om voorlopige voorziening gereageerd. </para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Het verzoek om voorlopige voorziening is door de president behandeld ter zitting van </para>
+        <para>3 augustus 2000, waar partijen bij monde van hun gemachtigden hun standpunten nader hebben toegelicht. Aan de zijde van verzoekster zijn tevens verschenen </para>
+        <para>D en E, directeuren van verzoekster.</para>
+        <para>2.	De grondslag van het geschil</para>
+        <para>2.1	In de Wte 1995 is onder meer het volgende bepaald:</para>
+        <para>"	Artikel 7</para>
+        <para>1. Het is verboden zonder vergunning als effectenbemiddelaar of vermogensbeheerder in of vanuit Nederland diensten aan te bieden of te verrichten.</para>
+        <para>(…)</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Artikel 11</para>
+        <para>1. Een effecteninstelling waaraan een vergunning als bedoeld in artikel 7, eerste lid, is verleend, houdt zich aan bij of krachtens algemene maatregel van bestuur te stellen regels ten aanzien van:</para>
+        <para>a. deskundigheid en betrouwbaarheid;</para>
+        <para>b. financiële waarborgen, al dan niet tevens op geconsolideerde basis;</para>
+        <para>c. bedrijfsvoering en vestiging van het hoofdkantoor;</para>
+        <para>d. aan Onze Minister en aan het publiek te verstrekken informatie; en</para>
+        <para>e. waarborgen voor een  adequaat toezicht op de naleving van de bij of krachtens deze wet gestelde regels.</para>
+        <para>(…)</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Artikel 19</para>
+        <para>1. Onze Minister kan een op grond van de artikelen 4 en 5 verleende ontheffing en een vergunning als bedoeld in artikel 7, eerste lid, slechts intrekken:</para>
+        <para>(…)</para>
+        <para>e. indien de houder niet meer voldoet aan bij of krachtens deze wet gestelde regels of beperkingen of gegeven voorschriften.</para>
+        <para>(…)."</para>
+      </parablock>
+      <para/>
+      <para>In het Besluit toezicht effectenverkeer 1995 (hierna: Bte 1995) is onder meer het volgende bepaald:</para>
+      <para/>
+      <parablock>
+        <para>"	Artikel 10</para>
+        <para>1. Een ieder die een effecteninstelling krachtens wet, statuten of reglementen vertegenwoordigt dan wel het dagelijks beleid van een effecteninstelling bepaalt, dient naar het oordeel van de toezichthoudende autoriteit voldoende deskundig te zijn in verband met de bedrijfsvoering van de effecteninstelling. </para>
+        <para>2. De betrouwbaarheid van de in het eerste lid bedoelde personen, de personen die het dagelijks beleid van de effecteninstelling mede bepalen en de personen die  rechtstreeks of middellijk bevoegd zijn de in het eerste lid bedoelde personen te benoemen of te ontslaan, dient naar het oordeel van de toezichthoudende autoriteit buiten twijfel te staan.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Artikel 12</para>
+        <para>Een effecteninstelling beschikt over een minimum bedrag aan eigen vermogen, waarvan de hoogte en de samenstelling voldoen aan door de toezichthoudende autoriteit te stellen regels.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Artikel 13</para>
+        <para>1. Onverminderd artikel 12 beschikt een effecteninstelling over een toetsingsvermogen, waarvan de hoogte en de samenstelling voldoen aan door de toezichthoudende autoriteit te stellen regels met betrekking tot de solvabiliteit van effecteninstellingen.</para>
+        <para>(…)</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Artikel 15</para>
+        <para>1. Een effecteninstelling is zodanig gestructureerd dat naar het oordeel van de toezichthoudende autoriteit het risico wordt vermeden dat de belangen van haar cliënten worden geschaad door belangenconflicten tussen de effecteninstelling en haar cliënten of tussen haar cliënten onderling.</para>
+        <para>(…)</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Artikel 17</para>
+        <para>1. Een effecteninstelling beschikt naar het oordeel van de toezichthoudende autoriteit over een goede administratieve organisatie, adequate interne controleprocedures en een deugdelijke registratie van de verrichte diensten, alsmede  over systemen voor een adequate bewaking en beheersing van het risico met betrekking tot haar gehele bedrijf en over systemen om te allen tijde nauwkeurig haar financiële positie te berekenen. Deze organisatie, procedures, registratie en systemen moeten de toezichthoudende autoriteit in staat stellen na te gaan of de regels inzake de bedrijfsvoering en de financiële waarborgen worden nageleefd.</para>
+        <para>(…)</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Artikel 23</para>
+        <para>1. Het eigen vermogen en het toetsingsvermogen van een effecteninstelling voldoen aan de regels, bedoeld in de artikelen 12 onderscheidenlijk 13, eerste lid.</para>
+        <para>2. Een effecteninstelling brengt aan de toezichthoudende autoriteit verslag uit met betrekking tot het in het eerste lid bedoelde voorschrift volgens door de toezichthoudende autoriteit te stellen regels.</para>
+        <para>3. Een effecteninstelling die niet voldoet aan het in het eerste lid bedoelde voorschrift brengt haar  eigen vermogen en haar toetsingsvermogen binnen een door de toezichthoudende autoriteit te stellen termijn in overeenstemming met de regels, bedoeld in de artikelen 12 onderscheidenlijk 13, eerste lid, en houdt zich aan door de toezichthoudende autoriteit te geven instructies met betrekking tot het verrichten van effectentransacties en handelingen die met die effectentransacties verband houden.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Artikel 24</para>
+        <para>Een effecteninstelling houdt zich bij het verrichten van haar werkzaamheden aan door de toezichthoudende autoriteit te stellen regels die ertoe strekken dat de effecteninstelling: </para>
+        <para>a. handelt in het belang van haar cliënten en de adequate functionering van de</para>
+        <para>effectenmarkten;</para>
+        <para>b. in het belang van haar cliënten kennis neemt van hun financiële positie, ervaring en beleggingsdoelstellingen, voor zover dit redelijkerwijs van belang is met het oog op het verrichten van haar diensten;</para>
+        <para>c. haar cliënten de gegevens en bescheiden verstrekt die nodig zijn voor de beoordeling van de door haar aangeboden diensten en de effecten waarop die diensten betrekking hebben;</para>
+        <para>d. belangenconflicten tracht te voorkomen en, wanneer deze onvermijdelijk zijn, ervoor zorgt dat haar cliënten op billijke wijze worden behandeld;</para>
+        <para>e. de bevoegdheden die zij heeft gekregen ten behoeve van de door haar te verrichten diensten, niet gebruikt voor andere doeleinden dan die waarvoor zij aan haar zijn verleend; en</para>
+        <para>f. een goede interne organisatie en adequate controlemechanismen heeft ten behoeve van de naleving van de in de aanhef bedoelde regels en ter bevordering van de continuïteit van haar bedrijfsvoering.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Artikel 29</para>
+        <para>1. Een effecteninstelling die in de uitoefening van haar bedrijf vermogensbeheer verricht, stelt regelmatig aan iedere cliënt met wie zij een overeenkomst inzake vermogensbeheer heeft gesloten een opgave beschikbaar die een getrouw en volledig overzicht geeft van de samenstelling van het door de effecteninstelling voor die cliënt beheerde vermogen. Deze opgave bevat ten minste de volgende gegevens:</para>
+        <para>a. de samenstelling naar effectensoort en de marktwaarde van het onder beheer zijnde vermogen; en</para>
+        <para>b. de aan de cliënt in rekening gebrachte onderscheidenlijk te brengen kosten van beheer en overige kosten.</para>
+        <para>(…)"</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Voorts heeft verweerster op grond van het Bte 1995 nadere regels gesteld in de Nadere Regeling 1999 (hierna: NR 1999).</para>
+        <para>2.2	Bij de beoordeling van het verzoek om voorlopige voorziening gaat de president uit van de volgende feiten en omstandigheden.</para>
+        <para>- Verzoekster is een effecteninstelling als gedefinieerd in de Wte 1995. Zij houdt zich bezig met dienstverlening op het gebied van vermogenbeheer. Blijkens een uittreksel van 28 juli 2000 uit het Handelsregister handelt verzoekster onder de namen "A &amp; B Assetmanagement" en "F Beleggingsadvies en Vermogensbeheer".</para>
+        <para>- De directie van verzoekster wordt gevormd door D en E. D, die al eerder werkzaam was voor verzoekster (tot oktober 1997), is in maart 2000 opnieuw in dienst getreden als directeur. E, die sinds 1 april 1996 in dienst is van verzoekster, is op 19 mei 2000 als directeur in functie getreden.</para>
+        <para>- In het kader van de toetsing door verweerster van de deskundigheid en betrouwbaarheid van E in het kader van zijn aanstelling bij verzoekster, heeft verzoekster verklaard dat E sinds oktober 1997 bij verzoekster "fulltime op directieniveau" heeft gefunctioneerd.</para>
+        <para>- Op 27 september 1999 heeft verweerster de vergunningaanvraag, als bedoeld in artikel 7, eerste lid, Wte 1995, van G Beleggings- en Vermogensadvies B.V., handelend onder de naam "F Beleggingsadvies", afgewezen omdat de betrouwbaarheid van de bestuurders van deze B.V., G1 en H, niet buiten twijfel staat.</para>
+        <para>- Per 1 december 1999 is G1 voor 8 uur in de week in dienst getreden bij verzoekster als senior vermogensbeheerder. Per 1 maart 2000 is het dienstverband beëindigd.</para>
+        <para>- Op 25 april 2000 heeft verweerster desgevraagd van verzoekster een beschrijving van de AO/IC ontvangen.</para>
+        <para>- Op 1 mei 2000 hebben G Beleggings- en Vermogensadvies B.V. en verzoekster een overeenkomst cliëntenremisier gesloten. Verzoekster heeft aan verweerster toegezegd uitsluitend bestaande klanten van G Beleggings- en Vermogensadvies B.V. te willen overnemen en de samenwerking met G Beleggings- en Vermogensadvies B.V. voor het overige te beëindigen.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para>- Op 7 en 8 juni 2000 heeft verweerster bij verzoeksters bedrijf een onderzoek uitgevoerd, naar aanleiding van de ontwikkeling van de financiële positie van verzoekster, zoals blijkend uit haar financiële rapportages over het laatste kwartaal 1999, alsmede het eerste kwartaal van 2000, de door verzoekster overgelegde beschrijving van de administratieve organisatie en systemen van interne controle (hierna: AO/IC) en de met verzoekster gevoerde besprekingen inzake de cliënten van een niet-ingeschreven effecteninstelling. Het onderzoek had ten doel om na te gaan of verzoekster voldoet aan de bij of krachtens de Wte 1995 gestelde eisen of beperkingen dan wel gegeven voorschriften. De uit het onderzoek voortvloeiende bevindingen heeft verweerster vastgelegd in een controlerapport van 23 juni 2000, dat 11 pagina's beslaat. Hierin is onder meer de volgende passage opgenomen:</para>
+      <para/>
+      <para>"	3. Algemene indruk</para>
+      <para/>
+      <para>De beheersing van de bedrijfsprocessen en de maatregelen op het gebied van administratieve organisatie is onvoldoende. De beschrijving van de AO/IC zoals die door A &amp; B bij de STE is ingediend, in het kader van de inwerkingtreding van de NR 1999, voldoet niet. De gehanteerde procedures van A &amp; B inzake de AO/IC wijken af van de beschrijving. De huidige AO/IC van A &amp; B voorziet niet in een juiste, tijdige en volledige vastlegging van alle rechten en verplichtingen en de daartoe bestemde administratie, verantwoording daarvan in de periode(n) waarop deze betrekking hebben, alsmede in toekenning van het resultaat aan de periode(n) waarop zij betrekking heeft.</para>
+      <para/>
+      <para>Tevens voorziet de huidige AO/IC niet in de verificatie van de (rekenkundige) juistheid van de administratieve vastlegging, een adequate documentatie van de administratie, alsmede in tijdige, krachtens deze regeling vereiste rapportages aan de STE, daaronder begrepen procedures omtrent de wijze waarop de rapportages worden opgesteld en hoe zij aansluiten op de desbetreffende administratie(s).</para>
+      <para/>
+      <para>A &amp; B heeft meegewerkt aan overtredingen van de regelgeving van de STE die door derden zijn begaan."</para>
+      <para/>
+      <para>- Bij fax van 23 juni 2000 heeft verweerster een kopie van bedoeld rapport doen toekomen aan verzoekster.</para>
+      <para/>
+      <para/>
+      <parablock>
+        <para>- Op grond van de ernst van de bevindingen die uit het onderzoek naar voren zijn gekomen heeft verweerster de directie van verzoekster uitgenodigd om op 26 juni 2000 een toelichting te komen geven op de geconstateerde tekortkomingen. Verzoekster heeft aan deze uitnodiging gehoor gegeven.</para>
+        <para>- Op 7 juli 2000 heeft verweerster een jaarrekening 1999 van verzoekster ontvangen. Die jaarrekening is gecontroleerd door I &amp; J B.V. (hierna: I &amp; J). Bij de betreffende jaarrekening is een accountantsverklaring gevoegd waarin onder meer het volgende is vermeld:</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>"	Door het ontbreken van een adequaat stelsel van administratieve organisatie en interne controle is het niet mogelijk dat door accountantscontrole op rationele wijze de vereiste zekerheid kan worden verkregen over de volledigheid van de in de jaarrekening opgenomen brutomarge.</para>
+        <para>(…)</para>
+        <para>Om vorenstaande reden kunnen wij geen oordeel geven omtrent de getrouwheid van de jaarrekening als geheel."</para>
+      </parablock>
+      <para/>
+      <para>Voorts bevat de accountantsverklaring over de bedrijfsvoering bij verzoekster de volgende passage:</para>
+      <para/>
+      <para>"	Zonder afbreuk te doen aan ons oordeel vestigen wij de aandacht op de toelichting van de jaarrekening bij de post eigen vermogen, waaruit blijkt dat het voortbestaan van de vennootschap onzeker is. Uit de uiteenzetting blijkt echter dat een duurzame voortzetting van de bedrijfsuitoefening niet onmogelijk is. Derhalve zijn de toegepaste grondslagen van waardering en resultaatbepaling gebaseerd op de veronderstelling van continuïteit van de vennootschap."</para>
+      <para/>
+      <para>- Op 11 juli 2000 heeft verzoekster een fax gezonden aan verweerster, waarin zij het volgende meedeelt:</para>
+      <para/>
+      <para>"	Bij deze deel ik u mede dat bij uw laatste controlebezoek geconstateerde tekortkomingen van de administratie etc., nagenoeg zijn opgelost, of mondeling nader aan de heer K zijn toegelicht. De directie ziet er op toe dat alle activiteiten met grote spoed conform de AO&amp;IC zullen worden uitgevoerd."</para>
+      <para/>
+      <para>- Op 11 juli 2000 heeft verweerder een brief aan verzoekster gezonden, waarbij verzoekster wordt uitgenodigd voor een hoorzitting om opheldering te geven over de volgende kwestie:</para>
+      <para/>
+      <para>"	Uit informatie, van derden verkregen, maken wij op dat A &amp; B zeer recentelijk een presentatie heeft gegeven aan potentiële cliënten.</para>
+      <para/>
+      <parablock>
+        <para>De presentatie, waaraan genoemde derde heeft deelgenomen, werd gegeven in samenwerking met de heren G1 en H van F Beleggingsadvies. Uit deze presentatie maken wij op dat F Beleggingsadvies en A &amp; B derhalve nauw samenwerken bij het werven van potentiële cliënten.</para>
+        <para>(…)</para>
+      </parablock>
+      <para/>
+      <para>Zoals meermalen door de STE aan u is benadrukt staat de betrouwbaarheid van de heren G1 en H niet buiten twijfel. Om deze reden is door u tijdens de hoorzitting d.d. 26 juni jl. bij de STE expliciet aangegeven dat A &amp; B alleen contact met de heer G1 heeft voor het overnemen van de cliënten van de heer G1 en dat er van een verdere samenwerking geen sprake zou zijn. Dit is op 10 juli 2000 nog eens nadrukkelijk bevestigd door de heer E.</para>
+      <para/>
+      <para>Het bestuur van A &amp; B lijkt de STE derhalve bezijden de waarheid te hebben geïnformeerd."</para>
+      <para/>
+      <parablock>
+        <para>- Op 12 juli 2000 heeft genoemde hoorzitting plaatsgevonden.</para>
+        <para>- Naar aanleiding van de fax van verzoekster van 11 juli 2000 heeft verweerster op 12 juli 2000 per fax aan verzoekster verzocht om per omgaande doch uiterlijk 13 juli 2000 schriftelijk gemotiveerd aannemelijk te maken dat de AO/IC van verzoekster voldoet aan de wettelijke eisen.</para>
+        <para>- Bij fax van 13 juli 2000 heeft verzoekster hierop onder meer als volgt gereageerd:</para>
+      </parablock>
+      <para/>
+      <para>"	Terug komende op onze verklaring van 11 juli en uw controlebevindingen, welke wij tot op dit moment slecht in "concept" ontvingen, kunnen wij u het volgende mededelen. A &amp; B als eerder mondeling al uitvoerig is toegelicht volgt de beschrijving van de AO&amp;IC zoals die in april bij u is aangeleverd zo goed als mogelijk op. Zoals bij u bekend is verkeert A &amp; B op dit moment in een overgangssituatie waarbij de firma naar behoren geherstructureerd wordt. Dit vergt enige tijd. Bovendien zullen wij zo spoedig mogelijk verhuizen naar Amsterdam. Ten aanzien van de AO&amp;IC kunnen wij u meedelen dat wij enkele wijzigingen zullen aanbrengen. Wij zullen u hier medio augustus nader over berichten.</para>
+      <para/>
+      <para/>
+      <parablock>
+        <para>Nadere toelichting van de gevolgde procedures volgens de AO&amp;IC:</para>
+        <para>1. Beschrijving organisatie: geen nadere toelichting</para>
+        <para>2. Functiescheiding: gezien de huidige personele bezetting is dit moeilijk (2 man) hier wordt zo spoedig mogelijk </para>
+        <para>    verandering in gebracht door	uitbreiding.</para>
+        <para>3. Vastlegging van rechten en verplichtingen: gebeurt conform de beschrijving</para>
+        <para>4. Inzicht in de financiële positie: Is mogelijk. Op dit moment op wekelijkse basis dit zal veranderen zodra de personele</para>
+        <para>    bezetting wordt uitgebreid. Op	dit moment geschiedt de administratie met ondersteuning van I &amp; J.</para>
+        <para>5. Administratie interne en externe bescheiden: conform de beschrijving, zal verder worden geoptimaliseerd.</para>
+        <para>6. Cliëntenacquisitie: gebeurt volgens de beschrijving. Aangezien dit een doorlopend proces is zijn wij hier conform de</para>
+        <para>    beschrijving mee bezig.</para>
+        <para>7. Cliëntenadministratie: Hier wordt aan gewerkt om dit te optimaliseren. Rond 1 augustus zal er een meelees scherm van</para>
+        <para>    Bank Labouchere worden geïnstalleerd. Ook met de SNS Bank wordt middels internet naar een oplossing gezocht. Ook zullen wij de cliënten bij SNS zo spoedig mogelijk naar Bank Labouchere overbrengen. De op dit moment gevoerde	administratie, het ontvangen van kopiën van nota's en dagafschriften, geeft mede door de lage frequentie van transacties naar ons inzien voldoende inzage en overzicht.</para>
+        <para>8. Informatieverstrekking: gebeurt conform de beschrijving.</para>
+        <para>9. Klachten procedure: op dit moment zijn er geen klachten. Wanneer een klacht zich voordoet zal de procedure zoals beschreven worden gevolgd. 10.Orderafhandeling en orderadministratie: Is in het verleden niet conform de wet uitgevoerd. Inmiddels zijn maatregelen getroffen en geschiedt dit conform de beschrijving. Hierin zullen medio augustus kleine wijzigingen worden getroffen. Er zijn nieuwe genummerde ordertickets gedrukt en in gebruik (vanaf 10 juli). De wijziging betreft o.a. archivering. Vanaf 10 juli wordt het origineel van de ticket aan de kopie nota gehecht en de kopie ticket op nummer. Hierover nader bericht.</para>
+        <para>11.Effecten administratie: zie 7, en verder volgens beschrijving.</para>
+        <para>12.Positie administratie. Op dit moment wordt gebruik gemaakt van de door de uitvoerende instelling verstrekte stukken. Hier wordt aangewerkt om dit te optimaliseren, zie 7.</para>
+        <para>13.Structurering A &amp; B: conform beschrijving.</para>
+        <para>14.Beleggingsbeleid: enige afwijking van AO&amp;IC: er worden geen notulen gemaakt tot op heden. Er is uiteraard overleg. Rest conform beschrijving.</para>
+        <para>15.Registratie overtredingen: zal wanneer zich dat voordoet worden toegepast conform de beschrijving.</para>
+        <para>16.Aanname personeel: zal conform de beschrijving worden uitgevoerd.</para>
+        <para>17.MOT: conform beschrijving.</para>
+        <para>18.Automatisering: zie beschrijving."</para>
+      </parablock>
+      <para/>
+      <para>- Vervolgens heeft verweerster het bestreden besluit genomen.</para>
+      <para/>
+      <parablock>
+        <para>3.	Het bestreden besluit en het standpunt van verweerster</para>
+        <para>Bij het bestreden besluit heeft verweerster onder meer het volgende overwogen en besloten:</para>
+        <para>"	Bevindingen 6 en 7 juni 2000</para>
+        <para>Naar aanleiding van de ontwikkeling van de financiële positie van A &amp; B, zoals blijkend uit haar financiële rapportages over het laatste kwartaal 1999, alsmede het eerste kwartaal van 2000, de door A &amp; B overgelegde beschrijving van de administratieve organisatie en systemen van interne controle (hierna: "AO/IC") en de met A &amp; B gevoerde besprekingen inzake de cliënten van een niet-ingeschreven effecteninstelling, heeft de STE bij A &amp; B op 7 en 8 juni 2000 een onderzoek ingesteld. De daaruit voorvloeiende bevindingen van de STE heeft zij vastgelegd in haar controlerapport van 23 juni 2000 (…). Onderstaand volgt een samenvatting van de door de STE geconstateerde overtredingen van A &amp; B.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>OA/IC</para>
+        <para>Blijkens bedoeld onderzoek van de STE heeft de STE geconstateerd dat de AO/IC van A &amp; B niet voldoet aan de eisen gesteld bij of krachtens artikel 17 Bte 1995. </para>
+      </parablock>
+      <para/>
+      <para>De door A &amp; B gehanteerde bedrijfsvoering wijkt in grote mate af van de beschrijving van haar AO/IC. Het dagelijks inzicht in de financiële administratie van A &amp; B voldoet niet aan de voorgeschreven eisen (4.5 in bijlage 4 bij de NR 1999 j° artikel 24 NR 1999). A &amp; B blijkt haar cliëntenadministratie niet systematisch en toegankelijk uit te voeren (4.12 in bijlage 4 bij de NR 1999 j° artikel 24 NR 1999). A &amp; B verstrekt zelf geen betrouwbare en tijdige informatie aan haar cliënten overeenkomstig de voorgeschreven eisen (4.13 in bijlage 4 bij de NR 1999 j° artikel 24 NR 1999). De klachtenadministratie van A &amp; B voldoet niet aan de gestelde eisen (4.14 in bijlage 4 bij de NR 1999 j° artikel 24 NR 1999). De orderafhandelingen en -administratie van A &amp; B verloopt niet overeenkomstig de relevante eisen (4.15 in bijlage 4 bij de NR 1999 j° artikel 24 NR 1999). De effectenadministratie van A &amp; B voldoet niet aan de voorgeschreven eisen (4.16 in bijlage 4 bij de NR 1999 j° artikel 24 NR 1999). A &amp; B voert geen effectenafwikkelingadministratie uit die voldoet aan de relevante eisen (4.17 in bijlage 4 bij de NR 1999 j° artikel 24 NR 1999). A &amp; B heeft de opzet en naleving van procedures ten aanzien van haar beleggingsbeleid inzake het vermogensbeheer, dat zij voor haar cliënten verricht, niet vastgelegd zoals voorgeschreven (4.22 in bijlage 4 bij de NR 1999 j° artikel 24 NR 1999). De STE heeft geconcludeerd dat de AO/IC niet voldoet aan de eisen als gesteld in artikel 17 Bte 1995.</para>
+      <para/>
+      <parablock>
+        <para>Overige bevindingen</para>
+        <para>De STE heeft geconstateerd dat de regels inzake de privé-beleggingstransacties door personen verbonden aan A &amp; B niet voldoen aan de gestelde eisen als genoemd in artikel 23 NR 1999 j° bijlage 3 bij de NR 1999. A &amp; B voldoet derhalve niet aan het gestelde in artikel 15 Bte 1995. Daarnaast voldoet de informatieverstrekking aan het publiek door A &amp; B niet aan de voorgeschreven normen als genoemd in artikel 33 NR 1999 j° bijlage 7 bij de NR 1999. A &amp; B voldoet derhalve niet aan het gestelde in artikel 24 Bte 1995. De overeenkomsten die A &amp; B sluit met haar cliënten voldoen niet aan de eisen als gesteld in artikel 25 Bte 1995.</para>
+      </parablock>
+      <para/>
+      <para>Per fax van 23 juni 2000 (…) heeft de STE een kopie van bedoeld rapport doen toekomen aan A &amp; B. Bedoelde bevindingen van de STE zijn besproken met de heren D en E, beiden dagelijks beleidsbepalers van A &amp; B, op 26 juni 2000. Zij hebben in dat gesprek gesteld dat zij bij hun aantreden op respectievelijk 22 maart 2000 en 2 mei 2000 als dagelijks beleidsbepaler van A &amp; B hadden opgemerkt dat er bij A &amp; B sprake was van een AO/IC die niet voldeed aan de wettelijke eisen. De heren E en D bevestigden tijdens het gesprek op 26 juni 2000 dat zij tot de dag van de controle van de STE op 7 juni 2000 niets hadden ondernomen om daarin verbetering aan te brengen. De dagelijks beleidsbepalers bleken ten tijde van hun aantreden geen voornemens ter zake te hebben ontwikkeld. Ook hebben de heren D en E gesteld dat zij alle door de STE geconstateerde bevindingen zoals vastgelegd in haar controlerapport onderkennen, echter met uitzondering van de bevindingen geformuleerd onder punt 4.1., die volgens hen betrekking hadden op een periode waarin zij geen dagelijks beleidsbepaler van A &amp; B waren.</para>
+      <para/>
+      <para>(…)</para>
+      <para/>
+      <para>De STE heeft op 12 juli 2000 A &amp; B per fax (…) verzocht om schriftelijk aan te tonen dat haar AO/IC reeds voldoet aan de wettelijke eisen. Daarop heeft A &amp; B per fax van 13 juli 2000 hoofdzakelijk als volgt gereageerd. A &amp; B zou enkele wijzigingen aanbrengen in haar AO/IC en zou de STE daarover medio augustus 2000 nader berichten. In die fax heeft A &amp; B echter niet zoals verzocht schriftelijk aannemelijk gemaakt dat A &amp; B haar AO/IC heeft vastgelegd en uitvoert overeenkomstig de eisen terzake. De STE concludeert dat A &amp; B niet aannemelijk heeft gemaakt dat haar AO/IC voldoet aan de relevante wettelijke eisen.</para>
+      <para/>
+      <parablock>
+        <para>Eigen vermogen en toetsingsvermogen</para>
+        <para>Uit de financiële rapportage over het vierde kwartaal in 1999 is de STE gebleken dat zowel het eigen vermogen (? 133.000) als het toetsingsvermogen (? 132.000) van A &amp; B voldeden aan de relevante eisen. Daarentegen bleken het eigen vermogen (? 43.000) en het toetsingsvermogen (? 43.000) van A &amp; B volgens haar rapportage over het eerste kwartaal in 2000 niet meer te voldoen aan bedoelde eisen.</para>
+      </parablock>
+      <para/>
+      <para>Op schriftelijk verzoek van de STE van 2 mei 2000 (…) heeft A &amp; B de STE schriftelijk op 5 mei 2000 doen weten dat zij voor eind mei exact zou kunnen aangeven wanneer zij weer aan de eisen zou voldoen. Zoals schriftelijk bevestigd door de STE op 23 mei 2000 (…) heeft de heer E namens A &amp; B verklaard dat hij door middel van een overeenkomst van geldlening en/of de storting van een erfenis ten gunste van A &amp; B, A &amp; B door middel van een aandelenemissie op korte termijn weer zou gaan voldoen aan de relevante eisen.</para>
+      <para/>
+      <para>(…)</para>
+      <para/>
+      <parablock>
+        <para>Tijdens een gesprek op 12 juli 2000 heeft A &amp; B tegenover vertegenwoordigers van de STE aangegeven dat ten gunste van A &amp; B middelen zouden zijn gestort. Daarop heeft A &amp; B per fax van 13 juli 2000 een kopie aan de STE doen toekomen van een bevestiging van een overboeking van Nlg. 187.672,50 ten gunste van A &amp; B. Ook na verwerking door de STE van dit bedrag en van het bedrag, dat volgens A &amp; B zou voortvloeien uit verkoop van haar kantoorpand, ter grootte van Nlg. 295.000,- in de kwartaalrapportage over het tweede kwartaal van 2000, blijken eigen vermogen (? -54.000) en toetsingsvermogen </para>
+        <para>(? -111.000) van A &amp; B niet te voldoen aan de voorgeschreven wettelijke eisen.</para>
+      </parablock>
+      <para/>
+      <para>Betrouwbaarheid en deskundigheid van de bestuurders</para>
+      <para/>
+      <parablock>
+        <para>Betrouwbaarheid</para>
+        <para>Tijdens een gesprek tussen vertegenwoordigers van de STE en van A &amp; B, op </para>
+        <para>26 juni 2000, heeft de STE bij A &amp; B geïnformeerd naar haar cliëntenremissierovereenkomst met G Beleggings- en Vermogensadvies B.V., thans tevens handelend onder de naam: F Beleggings- en Vermogensadvies (hierna: "F"). De STE heeft hierbij gerefereerd aan een gesprek met A &amp; B van begin april jl., waarin de STE A &amp; B erop heeft gewezen dat het niet is toegestaan de A &amp; B cliënten of orders accepteert van niet-geregistreerde instellingen aangezien dat in strijd is met artikel 41 NR 1999. In dat kader is het A &amp; B niet toegestaan een samenwerkingsverband met F aan te gaan aangezien die instelling niet staat ingeschreven als cliëntenremisier in het register van de STE. A &amp; B heeft in dat gesprek toegezegd dat de samenwerking met F alleen zou worden voortgezet ter overname van de bestaande cliënten van F.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>A &amp; B heeft jegens de STE desgevraagd meerdere malen, laatstelijk op </para>
+        <para>26 juni 2000, toegezegd dat zij deze overeenkomst met F uitsluitend is aangegaan in verband met de overname van de bestaande cliënten van F. Evenzeer heeft A &amp; B gesteld dat van een verdere of andere samenwerking met F geen sprake zou zijn. Dit heeft de heer E op 10 juli 2000, dus na de hieronder bedoelde presentaties, ook telefonisch nog eens nadrukkelijk aan de STE bevestigd.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para>A &amp; B blijkt echter in juni 2000 bedrijfspresentaties te hebben gegeven aan potentiële cliënten. Deze presentatie heeft A &amp; B gegeven in samenwerking met F danwel de heer H, directeur van F. F en A &amp; B werken dus nauw samen bij het werven van potentiële cliënten. Tijdens deze presentaties heeft F aan de aanwezigen ook haar bedrijfsbrochure uitgereikt. Deze brochure blijkt tekstueel grotendeels overeen te komen met de bedrijfsbrochure van A &amp; B. De STE heeft geconstateerd dat de heren D en E als dagelijks beleidsbepalers van A &amp; B hebben gehandeld in strijd met de hierboven weergegeven toezeggingen jegens de STE.</para>
+      <para/>
+      <para>Op 11 juli 2000 heeft de STE aan A &amp; B het bovenstaande schriftelijk (…) vastgelegd. Tijdens het gesprek op 12 juli 2000 tussen vertegenwoordigers van de STE en van A &amp; B, heeft A &amp; B bevestigd dat zij drie presentaties heeft gehouden. A &amp; B heeft daartoe gesteld dat zij in de veronderstelling zou hebben verkeerd dat zij met de heer H mocht samenwerken: de STE had immers op 2 mei 2000 het verzoek tot inschrijving van L B.V., waarvan de heer H dagelijks beleidsbepaler is, als cliëntenremisier gehonoreerd.</para>
+      <para/>
+      <para>De STE heeft geconstateerd dat A &amp; B de presentaties heeft gegeven met een instelling die niet onder de naam L B.V. handelt maar onder de naam F. Dit blijkt onder meer uit de tijdens de presentatie uitgereikte brochures van F. Van deze instelling is de heer H tevens dagelijks beleidsbepaler. De STE concludeert dat de dagelijks beleidsbepalers van A &amp; B, in strijd met hetgeen zij tegenover de STE hebben verklaard, in samenwerking met F getracht hebben cliënten te werven, door middel van gemeenschappelijke bedrijfspresentaties.</para>
+      <para/>
+      <parablock>
+        <para>Deskundigheid</para>
+        <para>Gedurende de periode van infunctietreding in respectievelijk maart en mei 2000 tot op heden hebben de heren D en E nagelaten aantoonbaar afdoende maatregelen te treffen teneinde de gebreken in de AO/IC van A &amp; B, zoals bevonden in het controlerapport van de STE, te verhelpen en in overeenstemming te brengen met de relevante eisen. Bedoelde dagelijks beleidsbepalers van A &amp; B hebben geen blijk gegeven te beschikken over de vereiste deskundigheid om bedoelde maatregelen bij A &amp; B in te voeren en te doen naleven, overeenkomstig de relevante eisen.</para>
+      </parablock>
+      <para/>
+      <para>4. Beschikking</para>
+      <para/>
+      <parablock>
+        <para>AO/IC</para>
+        <para>De AO/IC van A &amp; B voldoen niet aan de regels gesteld bij of krachtens artikel </para>
+        <para>17 Bte 1995. Met E&amp;Y is de STE van oordeel dat de AO/IC van A &amp; B niet het vereiste inzicht geeft in haar bedrijfsvoering. De aard en omvang van de gebreken in de AO/IC van A &amp; B zijn naar het oordeel van de STE dermate ernstig dat de bescherming van de positie van haar bestaande en potentiële cliënten onaanvaardbare risico's lopen. Dit klemt te meer nu A &amp; B cliënten van F overneemt, het cliëntenbestand verder uitbreidt alsmede de aanzienlijke intensivering van de samenwerking met andere cliëntenremisiers.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Eigen vermogen en toetsingsvermogen</para>
+        <para>De hoogte van het eigen vermogen en het toetsingsvermogen van A &amp; B is sinds 1 januari 2000 niet overeenkomstig de regels gesteld bij of krachtens de artikelen 12 en 13 Bte 1995. Daarmee beschikt A &amp; B over een periode van inmiddels zes kalendermaanden niet over de voorgeschreven financiële waarborgen (artikelen 23 Bte 1995 j° 11, eerste lid, onder b, Wte 1995).</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Deskundigheid van de heren E en D</para>
+        <para>De heren E en D hebben tot op heden geen aantoonbaar afdoende maatregelen getroffen teneinde de ernstige en acute tekortkomingen in de AO/IC van A &amp; B te verhelpen en in overeenstemming te brengen met de voorgeschreven normen uit hoofde van de regels gesteld bij of krachtens artikel 17 Bte 1995. Op grond daarvan is de STE van oordeel dat de dagelijks beleidsbepalers van A &amp; B, te weten de heren E en D, geen dan wel onvoldoende prioriteit hebben toegekend aan het nemen van bedoelde maatregel bij A &amp; B. Aldus hebben zij als dagelijks beleidsbepalers naar het oordeel van de STE geen dan wel onvoldoende invulling gegeven aan hun bestuurlijke verantwoordelijkheid. Op grond daarvan komt de STE tot de conclusie dat de heren E en D niet voldoende deskundig zijn in verband met de bedrijfsvoering van A &amp; B (artikel 10, eerste lid, Bte 1995). Als zodanig acht de STE hen niet in staat op korte termijn bedoelde maatregelen bij A &amp; B in te voeren en te doen naleven, overeenkomstig de relevante wettelijke eisen.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Betrouwbaarheid van de heren E en D</para>
+        <para>Tevens is de STE van oordeel dat de betrouwbaarheid van de huidige twee dagelijks beleidsbepalers van A &amp; B om de hierna volgende reden niet meer buiten twijfel staat (artikel 10, tweede lid, Bte 1995). A &amp; B heeft, in strijd met haar toezeggingen aan de STE, tezamen met een niet-ingeschreven effecteninstelling getracht nieuwe cliënten te werven voor A &amp; B. Als zodanig maakt A &amp; B zich schuldig aan overtreding van artikel 41 NR 1999 handelt zij in strijd met haar toezegging.</para>
+      </parablock>
+      <para/>
+      <para>De STE heeft de heren E en D doen weten dat A &amp; B uitsluitend met een niet-geregistreerde cliëntenremisier mocht samenwerken teneinde de bestaande cliënten daarvan over te nemen. De heren E en D hebben tegenover de STE desgevraagd meerdere malen bevestigd dat A &amp; B uitsluitend heeft samengewerkt dan wel samenwerkt met F teneinde de bestaande cliënten van deze instelling over te nemen. In strijd met die verklaring van de heren E en D heeft A &amp; B wel degelijk met F samengewerkt teneinde nieuwe cliënten te werven voor A &amp; B.</para>
+      <para/>
+      <parablock>
+        <para>Overige</para>
+        <para>De STE is van oordeel dat A &amp; B ten aanzien van de structurering van de effecteninstelling niet voldoet aan het gestelde in artikel 15 Bte 1995. Daarnaast voldoet A &amp; B ten aanzien van informatieverstrekking aan het publiek cliënten niet aan het gestelde in artikel 24 Bte 1995. De STE is van oordeel dat de overeenkomsten die A &amp; B sluit met haar cliënten niet voldoet aan de eisen gesteld in artikel 25 Bte 1995. Nu A &amp; B niet, zoals voorgeschreven zelf regelmatig aan iedere cliënt met wie zij een overeenkomst inzake vermogensbeheer heeft gesloten, een opgave beschikbaar stelt die een getrouw en volledig overzicht geeft van de samenstelling van het door de effecteninstelling voor die cliënt beheerde vermogen, handelt A &amp; B in strijd met de regels gesteld bij of krachtens artikel 29 Bte 1995.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Conclusie</para>
+        <para>Naar het oordeel van de STE zijn de gebreken in de AO/IC van A &amp; B dermate fundamenteel dat niet te verwachten valt dat de heren E en D als dagelijks beleidsbepaler van A &amp; B daarin op korte termijn de benodigde verbeteringen kunnen aanbrengen. Daarenboven verslechtert de financiële positie van A &amp; B zich en voldoet A &amp; B bij voortduring niet aan de kapitaalseisen. De heren E en D hebben verzuimd de bedrijfsvoering en de financiële waarborgen van A &amp; B in overeenstemming te brengen met de wettelijke eisen. Naar het oordeel van de STE hebben de beleidsbepalers van A &amp; B onvoldoende invulling gegeven aan hun bestuurlijke verantwoordelijkheid. Tenslotte heeft A &amp; B samengewerkt met een niet-ingeschreven cliëntenremisier hetgeen in strijd is met de aan de STE gedane toezeggingen.</para>
+      </parablock>
+      <para/>
+      <para>Gezien de aard en omvang van bovengenoemde overtredingen door A &amp; B is de STE van oordeel dat, mede uit oogpunt van de bescherming van belangen van de beleggers, zij de ontstane situatie bij A &amp; B niet langer kan laten voortduren. Niet valt te verwachten dat A &amp; B op korte termijn in staat zal zijn de door haar begane overtredingen ongedaan zal maken. Dit gegeven in samenhang met de ernst van de door A &amp; B begane overtredingen heeft de STE doen besluiten de vergunning van A &amp; B tot het verrichten van vermogensbeheer met onmiddellijke ingang in te trekken (artikel 19, eerste lid, onder e, Wte 1995).</para>
+      <para/>
+      <para>(…)."</para>
+      <para/>
+      <parablock>
+        <para>4.	Het standpunt van verzoekster</para>
+        <para>Verzoekster heeft ter ondersteuning van haar verzoek om voorlopige voorziening, samengevat, het volgende aangevoerd.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>4.1 Verweerster heeft in strijd met de wettelijke bepalingen verzuimd verzoekster de gelegenheid te geven haar zienswijze aangaande de voorgenomen intrekking van de vergunning naar voren te brengen. De intrekking van de vergunning kwam voor verzoekster als een donderslag bij heldere hemel. Haar was niet bekend - en zij heeft dit ook niet uit de veelvuldige gesprekken met verweerster kunnen afleiden - dat verweerster voornemens was op basis van het verrichte onderzoek de vergunning in te trekken.</para>
+        <para>4.2 De feiten die aan de intrekkingsbeschikking ten grondslag liggen, zijn onjuist en onvolledig.</para>
+        <para>De constateringen in het onderzoek van verweerster zijn gegrond op de voordien door verzoekster gevoerde administratie en derhalve op een achterhaalde feitelijke situatie. De beschrijving van de AO/IC die verzoekster heeft toegezonden aan verweerster voldoet volledig aan de bij of krachtens artikel 17 Wte 1995 gestelde eisen. Voor zover verweerster heeft aangegeven dat de beschrijving daaraan niet volledig voldoet, heeft zij nooit duidelijk gemaakt welke punten dit betreft.</para>
+        <para>Verzoekster betwist niet dat haar eigen vermogen en toetsingsvermogen tot op heden niet voldoen aan de relevante eisen. Echter, dit is niet aan verzoekster te wijten. Verweerster weigert tot op heden om goedkeuring te verlenen aan het aandeelhouderschap van een derde, de heer M, waardoor verzoekster niet in staat was haar eigen vermogen aan te vullen. Voorts is een pand in Rotterdam verkocht en een tweede pand wordt binnenkort verkocht. Met de opbrengst die resteert na aflossing van de hypothecaire schulden, wordt het eigen vermogen versterkt. Voorts bestaat bereidheid bij derden tot verdere versterking van de vermogenspositie van verzoekster.</para>
+        <para>Nadat verweerster haar twijfels had geuit over de deskundigheid en betrouwbaarheid van de bestuurders van G Beleggingsadvies en Vermogensbeheer B.V. (die als handelsnaam F Beleggingsadvies gebruikt) is de samenwerking met deze niet-geregistreerde cliëntenremisier, na overboeking van de bestaande klanten, beëindigd. Overigens presenteert F Beleggingsadvies zich thans uitsluitend als beleggingsadviseur. Indien en voor zover nog van samenwerking met F sprake zou zijn, zoals het organiseren van voorlichtingsavonden over beleggingen, valt dit buiten het toetsingskader van verweerster.</para>
+        <para>4.3 Het bestreden besluit is niet dan wel onvoldoende gemotiveerd.</para>
+        <para>Uit de beschikking is niet af te leiden dat verweerster de belangen van verzoekster, haar directie en haar personeel heeft afgewogen tegen de (bescherming van) belangen van de beleggers en het adequaat functioneren van de effectenmarkt.</para>
+        <para>Verweerster heeft niet aangegeven om welke redenen de belangen van de beleggers ernstig in het geding zijn.</para>
+        <para>Verweerster heeft niet gemotiveerd waarom de meest vergaande maatregel, intrekking van de vergunning, noodzakelijk was. Gelet op de andere ter beschikking staande mogelijkheden is de maatregel van intrekking disproportioneel.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>5.	De beoordeling van het verzoek</para>
+        <para>Ingevolge het bepaalde in artikel 8:81 van de Algemene wet bestuursrecht (hierna: Awb) juncto artikel 19, eerste lid, van de Wet bestuursrechtspraak bedrijfsorganisatie kan, indien tegen een besluit, voorafgaand aan een mogelijk beroep, bezwaar is gemaakt, de president van het College op verzoek een voorlopige voorziening treffen, indien onverwijlde spoed, gelet op de betrokken belangen, dat vereist.</para>
+        <para>Naar aanleiding van hetgeen verzoekster heeft aangevoerd overweegt de president als volgt.</para>
+        <para>Verzoekster stelt ten eerste dat zij door verweerster niet in de gelegenheid is gesteld haar zienswijze omtrent de voorgenomen intrekking van de vergunning naar voren te brengen.</para>
+        <para>Op grond van de feiten zoals die uit de stukken en ter zitting naar voren zijn gekomen, kan worden vastgesteld dat in de periode voorafgaand aan de intrekking van de vergunning, tussen verzoekster en verweerster veelvuldig contact heeft plaatsgevonden. Verweerster heeft herhaalde malen ook schriftelijk de ernst van de situatie benadrukt. Verzoekster is door verweerster diverse malen in de gelegenheid gesteld om een reactie te geven op de door verweerster geconstateerde tekortkomingen. De hierbij aan verzoekster gestelde termijnen moeten voor haar een waarschuwing zijn geweest met betrekking tot de ernst van de situatie. Ter zitting is door verzoekster bevestigd dat tijdens gesprekken de sanctiemogelijkheden die verweerster op grond van de Wte 1995 ter beschikking staan, waaronder intrekking van de vergunning, de revue hebben gepasseerd. Naar voorlopig oordeel van de president heeft verweerster verzoekster hiermee ruimschoots in de gelegenheid gesteld om haar zienswijze naar voren te brengen.</para>
+        <para>Voorts heeft verzoekster aangevoerd dat de feiten die aan de intrekkingsbeschikking ten grondslag liggen, onjuist en onvolledig zijn.</para>
+        <para>Ten aanzien van de beschrijving van de AO/IC die verzoekster heeft ingediend, heeft verweerster, naar het oordeel van de president terecht, opgemerkt dat deze beschrijving geen betrekking kan hebben op verzoekster bedrijf. Voorts heeft verweerster in het controlerapport van 23 juni 2000, alsmede in het bestreden besluit uitvoerig en gedetailleerd aangegeven welke tekortkomingen zijn geconstateerd. Zij heeft verzoekster gevraagd om schriftelijk gemotiveerd aannemelijk te maken dat de AO/IC van verzoekster aan de wettelijke eisen voldoet. Verzoekster heeft hierop gereageerd bij brieven van 11 en 13 juli 2000, waarbij is volstaan met een zeer summiere reactie. Bij diverse onderdelen is aangegeven dat "wordt gewerkt aan optimalisering", dat "wij bezig zijn", althans bewoordingen van gelijke strekking, hetgeen - vrij vertaald - betekent dat de situatie nog steeds niet aan de eisen voldoet.</para>
+        <para>Met betrekking tot de vermogenssituatie heeft verzoekster ter zitting desgevraagd verklaard dat, ook na ontvangst van de gelden van de heer M en de gestelde verkoop van nog een pand, de vermogenssituatie nog steeds niet voldoende zou zijn. De gestelde bereidheid van derden tot verdere versterking van de vermogenspositie van verzoekster is overigens niet aannemelijk gemaakt.</para>
+        <para>Ten aanzien van de presentatie van A &amp; B aan potentiële cliënten blijkt uit de verklaring van de zich bij de stukken bevindende verklaring van de heer N, mede op grond van een aan hem toegezonden brochure met foto's van F Beleggingsadvies, dat op deze avond R. h H aanwezig was. Dit strookt niet met verzoeksters toezegging alleen nog met de bestuurders van F Beleggingsadvies samen te werken ter overname van bestaande klanten. Dat H bij de presentatie aanwezig zou zijn geweest - zoals verzoekster ter zitting heeft verklaard - namens een ander bedrijf, L B.V., een geregistreerde cliëntenremisier, is, mede gelet op de gepresenteerde brochure met foto's, weinig aannemelijk. Dat verzoekster zelf ten tijde van deze presentatie zou hebben gehandeld onder haar handelsnaam F Beleggings- en Vermogensbeheer is om voormelde redenen al eveneens weinig aannemelijk. Voorts is uit de stukken gebleken dat - anders dan verzoekster beweert - de presentatie gericht was op het werven van nieuwe cliënten.</para>
+        <para>Uit al het voorgaande volgt dat verzoekster naar voorlopig oordeel van de president niet, althans niet overtuigend, heeft aangetoond dat de aan de het bestreden besluit ten grondslag liggende feiten onjuist of onvolledig zouden zijn.</para>
+        <para>Verzoekster heeft voorts aangevoerd dat het bestreden besluit niet dan wel onvoldoende is gemotiveerd.</para>
+        <para>Verweerster heeft in het bestreden besluit aangegeven welke overtredingen verzoekster heeft begaan, gelet op de eisen uit de Wte 1995 en het Bte 1995. Zij heeft voorts aangegeven dat fundamentele gebreken kleven aan de AO/IC van verzoekster, zonder dat de verwachting bestaat dat hierin op korte termijn verbetering zal worden aangebracht. De financiële positie van verzoekster voldoet nog steeds niet aan de kapitaalseisen. Verzoekster werkt in strijd met de door haar gedane toezeggingen nog steeds samen met een niet-ingeschreven cliëntenremisier. Naar voorlopig oordeel van de president kan reeds op grond van voormelde constateringen niet met vrucht staande worden gehouden dat de belangen van de beleggers hierdoor niet ernstig in het geding worden gebracht. De president kan dus ook thans onbesproken laten de overige door verweerster aan verzoekster verweten tekortkomingen. Verweerster heeft de bescherming van de belangen van de beleggers zwaar laten wegen, gelet op de ernst van de door verzoekster begane overtredingen in samenhang met het ontbreken van de verwachting dat verzoekster op korte termijn de overtredingen ongedaan zal maken.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Gelet op het voorgaande is de president van, voorlopig, oordeel dat niet gezegd kan worden dat verweerster, na afweging van de hier in het geding zijnde belangen, ten onrechte gebruik heeft gemaakt van de haar ter beschikking staande bevoegdheid om de aan verzoekster verleende vergunning in te trekken. Voorts is de president voorshands van oordeel dat de intrekking van de vergunning niet disproportioneel was, in aanmerking genomen de ernst van de door verzoekster begane overtredingen.</para>
+        <para>Vorenstaande overwegingen leiden de president tot het oordeel dat het verzoek om voorlopige voorziening dient te worden afgewezen.</para>
+        <para>De president acht geen termen aanwezig toepassing te geven aan artikel 8:75 van de Awb.</para>
+      </parablock>
+      <para/>
+      <para>7.	De beslissing</para>
+      <para/>
+      <para>De president wijst het verzoek om een voorlopige voorziening af.</para>
+      <para/>
+      <parablock>
+        <para>Aldus gewezen door mr D. Roemers, fungerend president, in aanwezigheid van </para>
+        <para>mr M.M. Smorenburg, als griffier, en uitgesproken in het openbaar op 10 augustus 2000.</para>
+      </parablock>
+      <para/>
+      <para>w.g. D. Roemers	w.g. M.M. Smorenburg</para>
+    </uitspraak>
+</open-rechtspraak>

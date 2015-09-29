@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:tr="http://tuchtrecht.overheid.nl/" xmlns:eu="http://publications.europa.eu/celex/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:CBB:1998:ZG1801</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2014-04-13T14:53:12</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-08</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">ZG1801</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/College_van_Beroep_voor_het_bedrijfsleven" scheme="overheid.RechterlijkeMacht">College van Beroep voor het bedrijfsleven</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">1998-05-07</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">96/0775/127/002</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#eersteAanlegMeervoudig">Eerste aanleg - meervoudig</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht">Bestuursrecht</dcterms:subject>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0002374&amp;g=1998-05-07">Wet op de Registeraccountants</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0002374&amp;artikel=33&amp;g=1998-05-07">Wet op de Registeraccountants 33</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0002374&amp;artikel=40&amp;g=1998-05-07">Wet op de Registeraccountants 40</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0002374&amp;artikel=52&amp;g=1998-05-07">Wet op de Registeraccountants 52</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0002374&amp;artikel=54g&amp;g=1998-05-07">Wet op de Registeraccountants 54g</dcterms:references>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:1998:ZG1801">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:1998:ZG1801</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-08T15:25:46</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2003-02-14</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:CBB:1998:ZG1801 College van Beroep voor het bedrijfsleven , 07-05-1998 / 96/0775/127/002</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:CBB:1998:ZG1801:INH" lang="nl" xml:space="preserve">
+      <para>-</para>
+    </inhoudsindicatie>
+  <uitspraak xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:CBB:1998:ZG1801:DOC" lang="nl" xml:space="preserve">
+      <para>College van Beroep voor het bedrijfsleven</para>
+      <para/>
+      <para>No. 96/0775/127/002				7 mei 1998</para>
+      <para/>
+      <para/>
+      <para/>
+      <para>Uitspraak in de zaak van:</para>
+      <para/>
+      <para>A, wonende te X, appellant van een beslissing van de raad van tucht voor Registeraccountants en Accountants-Administratieconsulenten te 's-Gravenhage (hierna: de raad van tucht), gegeven op 3 juni 1996, onder nummer 594/95.25.</para>
+      <para/>
+      <para/>
+      <para>1.	Het verloop van de procedure</para>
+      <para/>
+      <parablock>
+        <para>Bij brief, verzonden op 4 juni 1996, is aan appellant afschrift verzonden van de in de aanhef van deze uitspraak vermelde beslissing, die werd gegeven op klacht van B te Y (hierna: klaag-ster).</para>
+        <para>De klacht had betrekking op A, regis-teraccountant te X.</para>
+        <para>Bij een op 5 augustus 1996 bij het College ingediend beroepschrift heeft appellant tegen die beslissing beroep ingesteld.</para>
+        <para>De raad van tucht heeft op 13 augustus 1996 de op de zaak betrekking hebbende stukken aan het College doen toekomen.</para>
+        <para>Klaagster heeft op 17 september 1996 het College een verweerschrift doen toekomen.</para>
+        <para>Bij brief, ingekomen ter griffie op 8 juli 1997, heeft appellant het College meegedeeld dat klaagster haar klacht, evenals het verweer tegen het ingediende beroepschrift wenst in te trekken, waarmee appellant kan instemmen. Op grond hiervan hebben partijen het College hebben verzocht de uit-spraak van de raad van tucht te vernietigen. </para>
+        <para>Het College heeft de zaak behandeld ter zitting van 12 februari 1998, waar partijen bij gemachtigden, appellant bij monde van prof. mr H. Beckman, advocaat te Amster-dam, en klaagster bij monde van mr E.M. van Zelm, advocaat te Utrecht, zijn verschenen en hun standpunt hebben toegelicht.  </para>
+      </parablock>
+      <para/>
+      <para>2.   	De grondslag van het geschil</para>
+      <para/>
+      <para>Artikel 5 van de Gedrags- en beroepsre-gels registerac-countants, zoals die golden ten tijde hier van belang (hierna: GBR (oud)) luidde:</para>
+      <para/>
+      <parablock>
+        <para>			"Artikel 5</para>
+        <para>De registeraccountant onthoudt zich van al hetgeen schadelijk is voor de eer van de stand van registeraccountants."</para>
+      </parablock>
+      <para/>
+      <para>Op grond van de stukken en het verhandelde ter terecht-zitting staan de volgende feiten en omstandigheden vast.</para>
+      <para/>
+      <parablock>
+        <para>-	Blijkens overeenkomst van 20 november 1990 zijn K, management-consul-tant te Z, in deze handelend namens J te Z, L te W en A te X, vennoot van de vereniging voor zakelijke dienstverlening M (appellant) overeengeko-men klaagster op te richten.</para>
+        <para>-	Ingevolge voormelde overeenkomst is klaagster bij notariële akte van 22 maart 1991, verleden ten over-staan van N, notaris te Z door K, organisatie-ad-viseur te Z, en A, registeraccoun-tant te X, opgericht. Krachtens artikel 2 van de statuten heeft de stichting ten doel: het bevorderen van kennis en kennisontwikkeling met betrekking tot de internationale samenwerking tussen de Verenigde Staten en Europa, zowel op het gebied van ondernemen in de meest brede zin, als dat van culturele uitwisseling en voorts al hetgeen met één en ander rechtstreeks of zijdelings verband houdt of daartoe bevorderlijk kan zijn, alles in de ruimste zin des woords. Bij de oprichting is het uit drie personen bestaande bestuur benoemd. L is daarbij als voorzit-ter benoemd, A als penningmees-ter en K als secretaris.</para>
+        <para>-	De statuten van klaagster houden onder meer het volgende in:</para>
+      </parablock>
+      <para/>
+      <para/>
+      <parablock>
+        <para>	"Vermogen</para>
+        <para>	Artikel 3</para>
+        <para>Het vermogen van de stichting zal worden gevormd door:</para>
+        <para>-	dotaties van bedrijven, instellingen en particulie-ren; </para>
+        <para>-	financiële bijdragen van direct belanghebbende on-der-nemingen;</para>
+        <para>-	inkomsten uit wetenschappelijk onderzoek;</para>
+        <para>-	inkomsten uit advieswerkzaamheden;</para>
+        <para>-	inkomsten uit voordrachten, voorlichting en publica-ties;</para>
+        <para>-	alle andere verkrijgingen en baten.</para>
+        <para>				(...)</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Artikel 7</para>
+        <para>De stichting wordt in en buiten rechte vertegenwoordigd door één bestuurs-lid."</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>-	Tot 13 januari 1995  hebben geen bestuursvergaderingen van klaagster plaats gevonden; de zaken van klaagster werden in onder-ling overleg tussen de bestuurs-leden K en appellant behartigd. Medio december 1993 heeft tussen K en appellant aldus een bespre-king plaats gevonden waarvan onderwerp is geweest het beheer van het vermogen van klaag-ster.</para>
+        <para>-	Op 17 januari 1994 heeft appellant een bedrag van fl 318.000,--, uitmakende vrijwel het gehele tegoed van klaagster bij de Krediet en Effectenbank te Utrecht, van de door klaagster bij deze bank aangehouden bankrekening telefonisch overgeboekt naar een bij de Van Lanschot-bank te Maastricht aangehouden beleggingsrekening van O, een vennootschap waarvan de anteceden-ten aan de overige bestuursleden van klaagster onbekend waren. Aan deze overboeking heeft geen geldig bestuursbe-sluit ten grondslag gelegen; evenmin is gebleken van onderlinge overeenstemming tussen K en appel-lant dienaangaande. Over de rekening bij de Van Lanschot-bank kon klaagster niet dan via appellant beschikken.</para>
+        <para>-	K wist in ieder geval in maart 1994 dat appellant in zijn hoedanigheid van penningmeester van klaagster vrijwel het gehele vermogen van klaagster (het bedrag van fl 318.000,--) van de bankrekening bij de Krediet en Effectenbank van klaag-ster had overgeboekt naar elders. Medio april 1994 wist K dat over-boeking had plaats gevonden naar de rekening van een op Aruba geves-tigde vennootschap. K heeft appel-lant namens klaagster meerdere malen gesom-meerd justifi-catoire be-scheiden over te leggen, waaruit zou moeten blijken waar het geld zich bevond en/of hoe het was belegd. Appellant heeft aan deze somma-ties geen gehoor gegeven.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>-	Op een mede hierom bijeengeroepen bijzondere bestuursver-gadering van klaagster, welke op 13 januari 1995 heeft plaats gevonden ten kantore van notaris P te V, heeft appellant twee kopieën van aandeel-be-wij-zen (aan toonder) overgelegd. De be-trek-kelij-ke bewijzen, g-e-d-a-t-e-erd 24 d-e-c-e-m-ber 1992, zijn uitgegeven door Q, gevestigd en kan-toorhou-dende te U. Zij verte-gen-woor-digen ieder 4.000 aandelen a fl. 1,-- nominaal per aan-deel en zijn voor het bedrag van fl. 318.000,-- belegd in O, eveneens aan te U. O is opge-richt door Q en R; tot bestuurder van O is op 21 december 1992 benoemd Q. Directeur van de Q en R is S, wonende op U.</para>
+        <para>-	Uit de van de vergadering van 13 januari 1995 opgemaakte notulen blijkt dat </para>
+        <para>K een financieel overzicht met betrekking tot klaagster had gemaakt, hetwelk door appellant onjuist werd bevonden. Appellant heeft hierop medege-deeld dat hij binnen een maand in zijn hoedanig-heid van pen-ningmeester verslag zou doen van de financiële situatie van klaagster. Ter vergadering is besloten dat appellant binnen  een maand justificatoire bescheiden zou moeten overleggen met betrekking tot de besteding van het bedrag van fl. 318.000,--. Ter vergadering heeft appel-lant medege-deeld dat hij zodanige bescheiden op 20 janua-ri 1994 aan K had overhandigd. Voorts is ter vergadering besloten dat KPMG als onafhankelijke regis-teraccountant klaagster zou doorlichten. Blijkens meer- genoemde notulen heeft appellant ter vergadering medege-deeld de aandelenmacht in O te hebben en op deze wijze voor evenwicht binnen klaagster te zorgen. Appellant deelde voorts mede als registerac-countant te voorkomen dat iemand persoonlijk voordeel uit klaagster haalt. </para>
+        <para>Vanwege het feit dat L te kennen had gegeven te willen terug-tre-den werd mede overeenkomstig de wens van K T, ter vergade-ring aanwezig als adviseur van K, tot nieuwe voorzitter van klaagster benoemd. Appellant heeft de rechtsgeldigheid van deze benoeming van meet af aan betwist. Ook van de overige op 13 januari 1995 genomen besluiten betwist appellant de rechtsgel-digheid. De notulen van de vergade-ring zijn op 24 februari 1995 goedgekeurd met de stemmen vóór van K en</para>
+        <para>T; de gemach-tigde van appellant stemde tegen.</para>
+        <para>-	Bij vonnis van de arrondissementsrechtbank te Amster-dam van 3 juli 1996, gewezen tussen appellant en klaagster, is de benoeming van T tot voorzitter van klaagster vernietigd. Klaagster heeft tegen dit vonnis beroep ingesteld.</para>
+        <para>-	Bij een op 24 februari 1995 bij de griffie van de arron-dissementsrechtbank van Amsterdam ingediend verzoek-schrif-t ex artikel 2:298 BW heeft appellant voor-melde rechtbank verzocht K te ontslaan als secretaris van klaagster, alsmede om deze, hangende het onderzoek, voorlopig te schorsen.</para>
+        <para>-	Namens klaagster en haar bestuurders T en K heeft mr E.M. van Zelm, gemachtigde van klaagster in deze procedure, een verweer-schrift inge-diend, tevens houdende een zelfstandig verzoek aan de rechtbank om appellant in diens verzoek tot ontslag van K niet-ontvankelijk te verklaren alsmede om appellant niet-ontvankelijk te verklaren in diens verzoek K hangende het onder-zoek te schorsen. In dit zelfstandig verzoek vragen klaagster cum suis voorts om appel-lant als penningmeester van klaagster te ontslaan, alsme-de om appellant hangende het onderzoek te schorsen.</para>
+        <para>-	In een door appellant opgesteld financieel verslag van klaagster de dato 16 januari 1995 is in de balans per 31 december 1994 ten aanzien van de belegging van fl. 318.0-00,-- een 100% voorziening getroffen onder de vermelding "wegens mogelijk niet realiseerbaar zijn van de waarde". In de toelichting op de balans ten aanzien van deze voorzie-ning ontbreekt een toelich-ting met betrekking tot de ten aanzien van deze belegging gebruikte constructie. Tevens ontbreekt een verwijzing naar de betrekkelijke aankoopstukken. Voorts blijkt uit de toelichting dat het saldo van de beleggingen van O op 23 november 1994 Fl. 325.886,-- bedroeg.</para>
+        <para>-	Op de bestuursvergadering van klaagster van 24 februa-ri 1995, a-l-w-aar appellant werd vertegenwoordigd door zijn toenmalige raads-man, is het door appellant opgestelde financieel verslag van klaagster verworpen. Appellant kreeg opdracht het bedrag van fl. 318.000,-- terug te brengen in klaag-ster. Voorzover nodig verleenden K en T in hun hoedanigheid van secre-taris respectieve-lijk voor-zitter van klaagster aan appel-lant volmacht om het zich bij een derde bevinden-de bedrag van fl. 318.000,-- op de bankreke-ning van klaagster te doen terugstorten. Voor het geval zulks niet zou gebeuren werd de advocaat van klaagster verzocht de benodigde rechts-maatregelen te nemen.</para>
+        <para>-	Op 9 maart 1995 zijn J, gevestigd te X, vertegenwoordigd door haar bestuurder, appellant, enerzijds en klaagster, vertegen-woordigd door haar penningmeester, appellant, anderzijds te Eindhoven als volgt overeengekomen:</para>
+      </parablock>
+      <para/>
+      <para>"a.	A neemt de vordering uit hoofde van de door de Stichting als aandeelhouder besloten kapitaalvermindering c.q. terugbetaling van gestort aandelenkapitaal en agio over door overboeking naar de Stichting van het bedrag van ¦318.000.</para>
+      <para/>
+      <para>b.	De Stichting erkent dat wanneer de directie van O instemt met de terugbetaling aandelenkapitaal en agio dat deze terugbe-taling rechtstreeks kan geschieden naar de bankrekening van A.</para>
+      <para/>
+      <para>c.	Mocht de directie van O niet akkoord gaan met de kapitaalvermindering, dan strekt dit tot verrekening tussen de Stichting en A."</para>
+      <para/>
+      <parablock>
+        <para>-	Op 10 maart 1995 heeft de besloten vennootschap H, een beheermaatschappij ter uitvoering van het beroep van registeraccountant, waarvan appellant direc-teur is, op de door klaagster bij de Krediet- en Effec-ten-bank N.V. te Utrecht aangehouden rekening een bedrag van fl 318.000,-- gestort onder de omschrijving "overna-me vorde-ring uit hoofde van terugbetaling gestort aande-lenka-pitaal/agio O".</para>
+        <para>-	Bij tussenbeschikking van 18 juli 1995 heeft de arrondis-sementsrechtbank te Amsterdam in een tussen partijen aanhangige procedure voorlopige voorzieningen getroffen onder meer inhoudende de schorsing van appellant en K als bestuurslid van klaagster, met ingang van de datum van die beschikking, en de benoeming van G, advocaat en procureur te Amsterdam, tot bewind-voer-der met zelfstandige vertegenwoordigingsbevoegdheid en met bepaling dat T met ingang van 18 juli 1995 geen daden van beheer en beschikking met betrekking tot klaagster mag treffen zonder machtiging van de be-windvoerder.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <parablock>
+        <para>-	Bij tussenbeschikking van de arrondissementrechtbank te Amsterdam van 16 januari 1996 is appellant ontslagen als bestuurder van klaagster en zijn de reeds eerder getrof-fen voorlopige voorzieningen gehandhaafd, met uitzonde-ring van die inhoudende de schorsing van appellant als be-stuurder van klaagster tot aan de datum van de einduit-spraak. In deze tussenbeschikking heeft de rechtbank overwogen dat er op dat moment (nog) geen aanleiding was K als bestuurder van klaagster te ontslaan. Appellant is van deze beschikking in beroep gegaan bij het gerechtshof te Amsterdam.</para>
+        <para>-	Bij beschikking van 4 juli 1996 heeft het gerechtshof te Amsterdam voormelde beschikking van 16 januari 1996 bekrach-tigd.</para>
+        <para>-	Een brief van G de dato 1 augustus 1996 aan mr R.J.H. Klinkhamer, toenmalig advocaat van appellant, houdt onder meer het volgende in:</para>
+      </parablock>
+      <para/>
+      <para>"1.	Op 18 juli 1995 ben ik door de Arrondissementsrechtbank te Amsterdam benoemd tot bewindvoerder van de stichting "B". Ik werd omtrent deze benoeming op 31 juli 1995 ge-nformeerd. In overleg met de advocaten van de bij de stichting betrok-ken bestuursleden heb ik mij steeds zo veel mogelijk lijdelijk opgesteld.</para>
+      <para/>
+      <parablock>
+        <para>2.	Bij brief van 4 oktober 1995 heeft mr Van Zelm te Utrecht mij in kennis gesteld omtrent de door hem namens de stichting op 7 juli 1995 (dat wil zeggen voordat ik tot bewindvoerder was benoemd) bij de Raad van Tucht voor registeraccountants en accountants-administratieconsu-lenten te 's Gravenhage ingediende klacht tegen uw cliënt, de heer A.</para>
+        <para>Ik heb derhalve niet tevoren ingestemd met het indienen van de klacht.</para>
+      </parablock>
+      <para/>
+      <para>3.	Bij brief van 17 oktober 1995 heb ik mr Van Zelm meegedeeld dat hij in de lopende procedures zo nodig voor de stichting kon blijven optre-den, als daar voor de stichting maar geen kosten uit voort vloeiden. Ik heb u van die brief destijds een kopie gestuurd.</para>
+      <para/>
+      <para>4.	Naar mijn mening was voor het voortzetten van de klacht tegen de heer A mijn expliciete machtiging niet nodig, maar voor zover dat anders zou zijn, denk ik dat mijn impliciete machtiging voortvloeit uit het hierboven sub 3 gestelde. Daarbij speelt een rol dat ik als (relatieve) buitenstaander ten aanzien van het nut en de haalbaarheid van de klacht geen enkele zinnige uitspraak kon doen, en een beslissing dus maar wilde overlaten aan de Raad van Tucht."</para>
+      <para/>
+      <parablock>
+        <para>-	Bij brieven van klaagster van 18 juni 1997 en van appel-lant van 4 juli 1997, door het College ontvangen op 8 juli 1997, hebben appellant en klaagster medegedeeld dat aan het indienen van de klacht door klaagster miscommu-nicatie tussen partijen ten grondslag ligt. Zij hebben in die brieven voorts geconcludeerd als aangegeven in rubriek 1 van deze uitspraak.</para>
+        <para>-	Klaagster en appellant hebben de tussen hen lopende civielrechtelijke procedures geroyeerd.</para>
+      </parablock>
+      <para/>
+      <para>3. 	De bestreden tuchtbeschikking</para>
+      <para/>
+      <para>Bij de bestreden tuchtbeschikking, die aan deze uitspraak is gehecht en als hier ingelast geldt, is de klacht gegrond verklaard.</para>
+      <para> </para>
+      <para>4.	De grieven van appellant</para>
+      <para/>
+      <para>In zijn beroepschrift heeft appellant een uitgebreider en deels niet eerder aange-voerd feitenrelaas gegeven dan in eerste aanleg. Vervolgens heeft appellant 43 grie-ven tegen de beslis-sing van de raad van tucht van 3 juni 1996 aangevoerd. Het College zal in de hieronder gegeven weergave van deze grieven de nummering van appellant aanhouden.</para>
+      <para/>
+      <para>In 12 grieven betoogt appellant dat de raad van tucht klaagster in haar klacht niet-ontvankelijk had behoren te verkla-ren, c.q. verzoekt appellant het College dit alsnog te doen. Kort en zakelijk in de woorden van het College weergege-ven luiden deze grieven als volgt.</para>
+      <para/>
+      <para>1.	Aan de indiening van de klacht heeft geen rechtsgeldig be-stuursbesluit van klaagster ten grondslag gelegen.</para>
+      <para/>
+      <para>2.	De benoeming van T tot bestuurslid van klaagster was niet rechtsgeldig.</para>
+      <para/>
+      <para>3.	De raad van tucht was ervan op de hoogte dat appellant rechtens had verzocht tot vernietiging van het besluit tot benoeming van T als bestuurslid van klaagster. De raad van tucht heeft in zijn beoordeling van de ontvankelijk-heid van de klacht ten onrechte niet betrokken de omstandigheid dat het benoe-mings-besluit nietig was dan wel in rechte vernietigd kon worden.</para>
+      <para/>
+      <parablock>
+        <para>4.	Anders dan de raad van tucht heeft overwogen heeft de bewindvoerder niet ingestemd met het indienen van de klacht, hoewel zulks wel noodzakelijk was. De bewindvoerder is na indiening van de klacht benoemd.                                              </para>
+        <para>5.	Binnen het bestuur van klaagster bestonden onoverbrugbare tegenstellingen, met name tussen K en appellant. Appellant had op 24 februari 1995 een procedure ingeleid, inhoudende een verzoek tot ontslag van K als be-stuurslid van klaagster en hangende dit verzoek tot schorsing van K. Bij verweerschrift van 4 april 1995 heeft K een verzoek tot ontslag van appellant als bestuurslid van klaag-ster gedaan en hangende dit verzoek een verzoek tot schorsing van appellant. Onder deze omstandigheden is het onjuist dat niet door de raad van tucht in aanmerking is geno-men dat op 20 juni 1995  - ca. 2½ week voor datering van de klacht - de behan-deling ter openbare terechtzit-ting is bepaald op 11 juli 1995 en dat toen te verwachten viel dat de recht-bank bij tussenbe-schikking op korte termijn uitspraak zou doen.</para>
+      </parablock>
+      <para/>
+      <para>6.	Ten onrechte heeft de raad van tucht hangende de procedu-re niet telkens opnieuw beoor-deeld of klaagster tot voortzet-ting van de klacht bevoegd was. </para>
+      <para/>
+      <para>7.	Tijdens indiening van de repliek op 11 oktober 1995 was T het enige niet geschorste bestuurslid. Deze mocht echter op grond van een door de arrondissements-rechtbank getroffen voorlopige voorziening geen daden van beheer of beschikking treffen vanaf 18 juli 1995. Op 11 oktober 1995 was geen machti-ging van de bewindvoerder aanwezig.</para>
+      <para/>
+      <para>8.	Eerst bij brief van 17 oktober 1995 heeft de bewindvoer-der laten weten dat de advocaat van klaagster in lopende procedures kon blijven optreden, mits er geen kosten voor klaagster aan verbonden waren. Voorts liet de bewindvoerder weten dat zijns inziens geen expliciete machtiging voor voort-zetting van de aangespannen tuchtprocedure nodig was, maar dat deze, indien wel nodig, voortvloeide uit zijn brief van 17 oktober 1995. Voor elke  handeling van beheer of beschik-king- waaron-der ook processuele handelingen vallen - is expliciete vooraf-gaan-de mach-tiging van de bewindvoerder nodig omdat anders de ingestelde bewindvoe-ring niet zinvol is. De raad van tucht had zich moeten vergewissen van de machtiging van de bewindvoerder en moeten beoordelen of uit de brief van 17 oktober 1995 een machtiging voortvloeide.</para>
+      <para/>
+      <para>9.	Bij vonnis van 3 juli 1996 heeft de arrondissementsrecht-bank te Amsterdam het besluit tot benoeming van T wegens strijd met de statuten vernietigd. De consequentie is dat T nooit bestuurder is geweest. Ten tijde van de indiening van de klacht waren alleen K en appel-lant rechtsgeldige bestuurders. Een rechtsgeldig besluit van het bestuur tot indiening van deze klacht - afkomstig van K en appel-lant - is nooit tot stand geko-men.</para>
+      <para/>
+      <parablock>
+        <para>10.	De raad van tucht heeft in zijn beslissing ten onrechte -buiten beschouwing gelaten dat de arrondissementsrechtbank te Amsterdam in zijn beschikking van 16 januari 1996 heeft over-wogen dat, indien appellant zich terecht heeft beroepen op de ongeldigheid van het besluit tot benoeming van T en indien bovendien komt vast te staan dat K de uit-voering van dit besluit heeft bevorderd, terwijl hij ernstig rekening diende te houden met de ongeldigheid van dit besluit, het ontslag van K als bestuurder van klaagster gerechtvaardigd zal zijn. Het besluit tot benoeming van T is vernietigd. De arrondis-sementsrechtbank zou derhalve naar verwachting overgaan tot ontslag van </para>
+        <para>		K als bestuurder van klaagster. Hiermee had de raad van tucht rekening behoren te houden bij de beoordeling van de ontvankelijkheid.</para>
+      </parablock>
+      <para/>
+      <para>11.	Bij de beoordeling van de ontvankelijkheidsvraag had de raad van tucht behoren te betrekken de omstandigheid dat het hier om een inter-ne ruzie tussen twee bestuur-ders gaat, die over en weer proce-du-res hebben gevoerd en waaraan geen enkele externe publici-teit is verbonden. Dergelijke ruzies lenen zich niet voor behande-ling door de raad van tucht, teminder nu de betrokken registeraccountant niet werk-zaam was als openbaar accoun-tant.</para>
+      <para/>
+      <para>12.	Klaagster heeft geen enkel belang meer bij de klacht omdat zij het deposito reeds ca. 10 maart 1995 rechtstreeks onder zich heeft. Tevens is klaagster 100% aandeelhoudster  van O en heeft zij daardoor de beschik-king over het vermogen van de N.V.</para>
+      <para/>
+      <para>Appellant heeft 31 grieven aangevoerd ten betoge dat de beoordeling van de klacht door de raad van tucht onjuist is geweest. Kort en zakelijk in de woorden van het College weer-gegeven luiden deze grieven als volgt. Het College zal hierbij grieven gezamenlijk weergeven wanneer hij zulks geraden acht.</para>
+      <para/>
+      <para>1.	Appellant wist eerst op 21 februari 1996 dat de beschik-king van de arrondisse-mentsrechtbank te Amsterdam van 16 januari 1996, welke door appellant op 30 januari 1996 ontvan-gen was, door klaagster in de tuchtprocedure is ingebracht. De zitting volgde op 26 februari 1996. Hierdoor heeft appellant zich onvoldoende kunnen voorbereiden. Appellant heeft aangeno-men dat uitstel hem niet zou worden toegestaan. De raad van tucht heeft appellant ten onrechte niet in de gelegenheid gesteld zich na de zitting over de tussenbeschikking uit te laten.</para>
+      <para/>
+      <para>2/3.	Tijdens de zitting van de raad van tucht is voormelde beschikking niet aan de orde geweest. Nu de beoordeling door de raad van tucht zwaar op deze tussenbeschik-king leunt, had de raad van tucht appellant de gelegenheid behoren te bieden vóór de uitspraak alsnog gehoord te worden. Nu dit niet is gebeurd, kan de uitspraak op grond van algemene beginselen van behoor-lijke procesorde niet in stand blijven. Appel-lant wijst erop dat tegen de tussenbeschikking hoger beroep was ingesteld.</para>
+      <para/>
+      <para>4.	Aan de belegging van het vermogen van klaagster in O is medio december 1993 overleg tussen appel-lant en K vooraf gegaan. Daarbij is overeenstemming bereikt inhoudende - onder meer - dat afzondering van de liquide midde-len zou plaats vinden onder zodanig afzonderlijk beheer dat individuele bestuurders hier niet over konden beschikken en dat appellant voor zodanige afzondering zorg zou dragen. Ten onrechte kwalificeert de raad van tucht uitvoering van deze afspraken als eigenmachtig optreden van appellant. Tot deze af-spraken is besloten op de wijze als binnen klaag-ster gebrui-kelijk was, te weten in informeel overleg tussen K en appellant.</para>
+      <para/>
+      <para>5.	Het beleggen van het vermogen van klaagster behoorde tot de normale taak van appellant als penningmeester van klaag-ster. </para>
+      <para/>
+      <para>6.	Bij het trekken van de conclusie dat appellant geen verantwoording wilde afleggen houdt de raad van tucht onvol-doende rekening met de omstandigheden van dit geval. Met name gaat de raad van tucht eraan voorbij dat tevoren overleg over de belegging heeft plaats gevonden en dat K reeds op 20 januari 1994 beschikte over de aandeelbewijzen. De be-stuursleden K en appellant van klaagster wisten dat tegenover het deposito van fl 318.000,-- aandelen van klaag-ster in O stonden.</para>
+      <para/>
+      <para>7.	Tot de conclusie dat appellant geen verantwoording wilde afleggen komt de raad van tucht ten onrechte met negeren van de escalatie in de onderlinge verhouding tussen de secretaris en de penningmeester van klaagster. In geval van zodanige ruzie gaat het niet aan dat de één doet alsof hij het bestuur is en de ander niet. Hierbij komt dat met name het gedrag van K leidde tot voormelde escalatie. Het is onder die omstandigheden zeer begrijpelijk dat appellant zich niet wilde laten ringeloren door aan alles wat K wenste, tegemoet te komen. Onder die omstandigheden kan in redelijk-heid niet gezegd worden dat appellant geen verantwoording af wenste te leggen.</para>
+      <para/>
+      <para>8.	Appellant heeft gehandeld conform gemaakte afspraken en over de uitvoering van die afspraken overleg gevoerd. Na de escalatie van de spanning binnen het bestuur ontstond een patstelling omdat zowel K als appel-lant bestuurders waren en elkaar geen opdrachten konden geven. De raad van tucht heeft derhalve ten onrechte geoor-deeld dat appellant, die optrad als bestuurder, onzorgvuldig heeft gehandeld.</para>
+      <para/>
+      <para>9/10.	Het al dan niet onzorgvuldig handelen van een bestuurder is een civielrechtelijke aangelegenheid die buiten de beoorde-ling van de tuchtrechter valt. Reeds hierom had de raad van tucht de klacht moeten afwijzen. Dit wordt niet anders, indien de raad terecht van oordeel zou zijn dat in december 1993 binnen klaagster geen afspraken zijn gemaakt en/of over de uitvoering van zodanige afspraken geen overleg zou zijn gevoerd - hetgeen onjuist zou zijn- en/of appellant zich door K had moeten laten ringeloren.</para>
+      <para/>
+      <para>11.	Ook al zou de raad van tucht terecht van oordeel zijn dat appellant onzorg-vuldig heeft gehandeld, dan nog is hij ten onrechte tot het oordeel geko-men dat appellant inbreuk heeft gemaakt op artikel 5 van GBR (oud). Het gaat immers om een interne bestuursruzie die buiten de eer van de stand van registeraccountants staat.</para>
+      <para/>
+      <para>12.	Klaagster heeft niet geklaagd over het niet vragen door appellant van een ont-vangstbe-wijs voor de overhandiging van aandelencertificaten. Door hierover niettemin te oordelen treedt de raad van tucht ten onrechte buiten de klacht.</para>
+      <para/>
+      <para>13.	Ten onrechte heeft de raad van tucht geoordeeld dat appel-lant een ontvangstbewijs bij de overhandiging van de aandelen-certificaten had moeten vragen. Gelet op de verhouding tussen K en appellant, die elkaar reeds ongeveer 15 jaar zakelijk en persoonlijk kenden, kan appellant in deze geen onzorgvuldigheid worden verweten.</para>
+      <para/>
+      <para>14.	Zelfs al zou appellant op hierboven vermeld punt onzorg-vuldigheid verweten kunnen worden, dan nog gaat het om een aangele-genheid tussen twee bestuurders. Onzorgvuldig handelen als bestuurder kan niet leiden tot de gevolgtrekking dat gehandeld is in strijd met de eer van de stand. Ook hierom kan de uitspraak van de raad van tucht niet in stand blijven.</para>
+      <para/>
+      <para>15.	Ten onrechte heeft de raad van tucht geoordeeld dat appellant niet aannemelijk heeft gemaakt waarom hij een 100% voorziening terzake van de vordering uit hoofde van toonder-aandelen in zijn concept financiële verantwoording heeft opgenomen. Ten onrechte verliest de raad van tucht bij zijn oordeel uit het oog dat voorafgaande hieraan op 13 januari 1995 een emotionele en voor appellant qua woordkeuze aanstoot-gevende vergadering had plaats gevonden. Vanuit de emotio-nele stemming als gevolg van deze vergadering heeft appellant een 100% voorzie-ning opgenomen omdat K beweerde dat hij de toonderaandelen niet had. Appellant erkent dat hij aan deze emotionele stemming niet had moeten toegeven en had moeten nagaan of het in het ongerede raken van de toonderaan-delen een voorziening noodzakelijk maakte. De raad van tucht had niette-min meer begrip voor appellant moeten tonen. Bovendien ging het ook hier weer om een aangelegenheid tussen bestuurders.</para>
+      <para/>
+      <para>16.	Ten onrechte heeft de raad van tucht overwogen dat het onzorgvuldig van appellant is geweest om niet het resultaat van de belegging bij O ad fl. 7.886,-- aan klaagster te voldoen. Appellant kreeg bij bestuurs-besluit van 24 februari 1995 slechts opdracht om te zorgen dat fl. 318.000,-- werd teruggestort. Aan overboeking van een groter bedrag zou geen bestuursbesluit ten grondslag hebben gelegen. Klaag-ster is bovendien voor 100% aandeelhoudster in O, zodat het resultaat van de belegging haar toe-komt.                             </para>
+      <para/>
+      <para>17/	Ten onrechte heeft de raad van tucht overwogen dat appel-lant juist als register-</para>
+      <para/>
+      <para>18/	ac-countant was gekozen als penningmees-ter - hetgeen de raad van tucht overigens</para>
+      <para/>
+      <para>19. 	niet had vastgesteld -  en deze omstandigheid appellant aangerekend. Appellant zat in het bestuur van klaagster op persoonlijke titel. De klacht betrof een interne be-stuursruzie, waarbij hij niet als accountant is opge-treden. Zelfs al zou appellant in juridische zin onzorgvuldig gehandeld hebben, dan is dit geschied in zijn kwaliteit als bestuurder en zijn de beroepsregels van het NIVRA niet in het geding. Hierom had de raad van tucht de klacht in al zijn onderdelen ongegrond moeten verklaren.</para>
+      <para/>
+      <para>20.	Het handelen van appellant als bestuurder van klaagster kan de collectiviteit van accountants niet hebben geschaad en derhalve ook niet schadelijk voor de eer van de stand zijn geweest. Er is geen sprake geweest van een handeling met een openbaar karakter; ook hierom kan de eer van de stand niet geschaad zijn.</para>
+      <para/>
+      <para>21.	In de overwegingen van de raad van tucht komt artikel 25 GBR (oud) in het geheel niet aan de orde. Aan de toepas-sing van dit artikel ligt derhalve geen deugdelijke motivering ten grondslag.</para>
+      <para/>
+      <para>22.	Terecht heeft de raad van tucht vastgesteld dat appellant niet als openbaar accountant optrad. Ingaande 1 april 1993 maakte appellant geen deel meer uit van de maatschap F. De raad van tucht heeft derhalve ten onrechte arti-kel 25 GBR (oud) toegepast.</para>
+      <para/>
+      <para>23.	De raad van tucht heeft zijn beslissing ten onrechte mede gegrond op artikel 7 GBR (oud). Nu artikel 25 GBR (oud) niet van toepassing is, is artikel 7 GBR (oud) evenmin van toepas-sing.</para>
+      <para/>
+      <para>24.	Artikel 7 GBR (oud) is ook niet van toepassing omdat appellant voormelde wijziging in zijn functievervulling zo spoedig mogelijk heeft doorgegeven aan het NIVRA, hetgeen heeft geleid tot een herrubricering in het betrekkelijke regis-ter. Dit register is openbaar en voor een ieder toeganke-lijk. Een ieder wordt geacht dit register te kennen. Daarenboven blijkt de functiewijziging van appellant uit de NIVRA-gids. De raad van tucht heeft ook uitdrukkelijk geconsta-teerd dat appel-lant niet optrad als openbaar accountant.</para>
+      <para/>
+      <para>25.	De toepassing van artikel 7 GBR (oud) moet gegrond zijn op de door de raad van tucht niet onderkende typefout in de brief van F van 11 januari 1995, welke de raad van tucht uit een andere procedure kent. Deze brief is in deze procedure niet relevant, omdat zij niet de verhouding tussen appellant en klaagster betreft. Artikel 7 GBR is niet van toepassing omdat appel-lant geen zaken met klaagster deed.</para>
+      <para/>
+      <para>26.	Ten onrechte heeft de raad van tucht aangenomen dat appellant tot 1 april 1994 als openbaar accountant heeft gewerkt. Appellant was tot 1 april 1993 als lid van de maat-schap F werkzaam.</para>
+      <para/>
+      <para>27.	Voormelde brief van F van 11 januari 1995 is evenmin als de brieven van I de dato 29 december 1994 en 30 december 1994 door klaagster in de proce-dure gebracht. Klaagster is niet te vereenzelvigen met I. Ook om deze reden kan de beslissing niet in stand blijven.</para>
+      <para> </para>
+      <para>28.	Appellant was als penningmeester van klaagster op de hoogte van het feit dat hij geen openbaar accountant meer was. Deze kennis dient aan klaagster te worden toegerekend.</para>
+      <para/>
+      <para>29.	Ten onrechte heeft de raad van tucht onder de vaststaande feiten niet vastgesteld dat klaagster niet wist (of redelij-ker-wijze niet kon vermoeden) dat appellant geen lid meer was van de maatschap F en/of niet meer optrad als openbaar accountant. Reeds hierom is de toepasselijkheid van artikel 7 GBR oud niet aan de orde.</para>
+      <para/>
+      <para>30.	Klaagster wist ook in de persoon van haar bestuurslid K dat appellant geen lid meer was van de maatschap F. Appellant heeft F op de dag van de beëindigingsregeling met de maatschap geïnfor-meerd. Ook hierom kan de beslissing niet in stand blijven.</para>
+      <para/>
+      <para>31.	De raad van tucht heeft ten onrechte niet gemotiveerd waarom artikel 2 GBR (oud) van toepassing zou zijn.</para>
+      <para/>
+      <para>Appellant is voorts van oordeel dat de toegepaste sanctie ongehoord is, gelet op de achtergronden en de werkelijke gang van zaken. Appellant voert hiertoe aan dat hij en zijn kan-toorgenoten door K simpelweg zijn bedrogen en dat de raad van tucht in aanmerking had moeten nemen dat K onrechtmatig middelen van klaagster tot zich wilde nemen.</para>
+      <para/>
+      <para>Appellant heeft thans uitvoeriger dan ooit de achtergronden van deze zaak geschetst en is van oordeel dat op grond daarvan een totale herbeoordeling van de klacht moet plaats vinden.</para>
+      <para/>
+      <parablock>
+        <para>Ter zitting heeft appellant herhaald en nader betoogd dat nu klaagster haar klacht en haar verweerschrift tegen zijn beroepschrift heeft ingetrokken, het College de uitspraak zonder verdere behandeling kan vernietigen en verzocht appellant het College zulks ook te doen.</para>
+        <para>Eerstens is appellant van mening dat elk redelijk belang bij een verdere behande-ling ontbreekt en dat aldus ook de proceseco-nomie wordt gediend.</para>
+        <para>Mocht het College voormeld standpunt van appellant niet delen, dan is appellant van mening dat door het intrekken van de klacht de basis aan de uitspraak is komen te vervallen. Deze uitspraak kan reeds hierom niet in stand blijven.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Voorzover het College toch aan behandeling van de zaak toe zou komen betoogt appellant dat omtrent de gang van zaken  volle-dige klaarheid tussen partijen bestaat en ook het feitencom-plex zoals vastge-legd in de uitspraak van de raad van tucht in een ander licht is komen te staan. </para>
+        <para>Klaagster is het er mee eens dat de bespreking medio december 1993 de indruk heeft kunnen wekken dat beide bestuurders hadden besloten dat het deposito onder een afzonderlijke be-heerder zou worden aangehouden waardoor klaagster alleen over het deposito kon beschikken bij unaniem bestuursbesluit.</para>
+        <para>Voorts staat vast dat de aandeelbewijzen niet bij appellant of K aanwezig zijn zodat aannemelijk is dat zij tussen andere stukken terecht zijn gekomen. Voorts staat vast dat de gelden op een bankrekening van Van Lanschot zijn aangehou-den en dat hierover door klaagster kon worden beschikt. Uitgaande van deze vaststaande feiten dient de uitspraak van de raad van tucht vernietigd te worden.</para>
+      </parablock>
+      <para/>
+      <para>5.	Beoordeling</para>
+      <para/>
+      <para>Als zijnde het meest verstrekkend zal het College aller-eerst behandelen het verzoek van appellant om de bestreden uitspraak van de raad van tucht zonder verdere behandeling  vanwege de intrekking door klaagster van de klacht en van het verweer-schrift in beroep te vernietigen.</para>
+      <para/>
+      <para>Bij de beoordeling van dit verzoek kan jurisprudentie van de voormalige Raad van Beroep geen beslissende rol spelen nu de wettelijke regeling met betrekking tot behandeling van beroe-pen voor het College een andere is dan die welke gold voor behandeling van beroepen voor de Raad van Beroep. In de eerste plaats zal aan de hand van de vigerende wetgeving beoordeeld moeten worden, wat de consequentie is van de intrekking van een klacht door een klager, nadat diens klacht door de raad van tucht gegrond is ver-klaard. </para>
+      <para/>
+      <parablock>
+        <para>Luidens artikel 33 van de Wet op de registeraccountants (hierna: de Wet) heeft de tuchtrechtspraak ten doel het weren en beteugelen van misslagen van registeraccountants in de uitoefening van hun beroep en van inbreuken op verordeningen van de orde en op de eer van de stand der registeraccountants. Deze tuchtrechtspraak strekt niet uitsluitend tot bescherming van privébelangen van klagers; zij dient ook het openbaar belang. In overeenstemming hiermede kan de raad van tucht ingevolge het bepaalde in artikel 40 van de Wet een tegen een registeraccountant gerezen bezwaar niet alleen in behandeling nemen op een bij de raad van  tucht ingediende klacht maar ook op verzoek van het bestuur of ambtshalve. De raad van tucht is gehouden over een naar aan-lei-ding van een klacht gerezen bezwaar - indien de klacht ontvan-kelijk is - een beslissing te nemen. Zolang door de  raad van tucht op een klacht niet is beslist, kan deze worden inge-trok-ken. In zodanig geval heeft de raad van tucht op grond van artikel 40  van de Wet in overeenstem-ming met boven vermelde doelstelling van de Wet en met name ter bescher-ming van het hierbij betrokken openbaar belang de mogelijkheid om ambtshalve een rechterlijk oordeel te geven op een hem in een klachtprocedure gebleken bezwaar. Blijft intrekking van de klacht hangende de behandeling ervan achterwege, dan wordt de klacht afgedaan bij uitspraak van de raad van tucht.</para>
+        <para>Artikel 52 van de Wet bevat naar het oordeel van het College een limitatieve opsomming van de rechtsmiddelen die tegen een op grond van de Wet gegeven rechter-lijk oordeel kunnen worden aangewend. In geval van aantasting van zodanig rechterlijk oordeel op buiten de Wet ge-noemde gronden wordt het gezag van dit oordeel immers op onaanvaard-bare wijze aangetast. Tot die rechtsmiddelen behoort uiteraard niet het intrekken van de klacht. In artikel 54g van de Wet, is dan ook bepaald dat vernietiging van een uit-spraak van de raad van tucht eerst mogelijk is, indien het College het beroep gegrond verklaart. Gegrondverklaring kan alleen plaats vinden naar aanleiding van een in de Wet vermeld rechtsmiddel. Om tot gegrondverklaring te komen dienen de aange-voerde grieven te worden beoordeeld.</para>
+        <para>Bovendien wordt in de door appellant bepleite con-structie aan de raad van tucht de moge-lijkheid onthouden om  in geval van intrekking van een klacht ambtshalve een oordeel te geven over een tegen een register-ac-countant in een klacht-procedure gerezen bezwaar. In hoger beroep komt het Colle-ge deze bevoegdheid niet toe nu artikel 40 van de Wet niet van overeen-komstige toepassing is op het rechtsgeding voor het College. Aldus zou het openbaar belang te kort kunnen worden gedaan. Ook hierom kan de door appellant bepleite constructie niet als rechtens juist worden aangemerkt.</para>
+        <para>Het vorenstaande voert het College tot de slotsom dat in het wettelijk systeem de klacht een verzoek is om een uitspraak te doen, welk verzoek met het geven van het rechterlijk oor-deel is uitge-werkt, zodat aan intrekking nadien van de klacht geen gevolgen zijn te verbinden voor de rechtskracht van het gegeven oordeel.</para>
+        <para>Het door appellant gedane verzoek om de uitspraak van de raad van tucht te vernietigen onder achterwegelating van verdere behandeling van het beroep is derhalve als in strijd met de wet niet voor toewijzing vatbaar.</para>
+        <para>Intrekking van het verweerschrift in hoger beroep heeft, gelet op het hiervoor overwogene, slechts tot gevolg dat klaagster het gestelde in hoger beroep niet langer bestrijdt. </para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Appellant heeft in zijn beroepschrift opnieuw en uitge-breider dan in eerste aanleg zijn voorstelling van de gang van zaken gegeven. Voor het College is dit aan-leiding geweest de feiten opnieuw vast te stellen rekening houdende met het relaas in het beroep-schrift, waartegen niet langer verweer wordt gevoerd.</para>
+        <para>Vaststelling van de feiten is een zelfstandige bevoegd-heid van de raad van tucht en - in beroep - het College. Gelet op de doelstelling van de Wet en met name gelet op het daarbij betrokken openbaar belang kan vaststelling van de feiten door de tuchtrechter niet geheel worden bepaald door hetgeen door partijen over en weer is gesteld en niet bestreden. Ook wanneer, zoals in het onderhavige geval, partijen op een gegeven moment komen tot een eenduidige weergave van bepaalde feiten, betekent dit niet dat de raad van tucht en het College deze weergave in weerwil van eerdere, afzon-derlijke, andersluidende feitelijke stellingen van partijen en in weerwil van anderslui-dende overgelegde producties zonder meer voor juist zou moeten houden.</para>
+        <para>Opgemerkt zij dat in het onderhavige geval de nadere eendui-dige, doch haaks op de aanvankelijk gegeven voorstelling van zaken staande, weergave van de feiten van beperkte omvang is.</para>
+        <para>Partijen zijn het over eens dat medio december 1993 overleg heeft plaats gevonden tussen de bestuurders K en appellant, welk overleg bij appellant de indruk gewekt kan hebben dat er overeenstemming over bestond dat het deposito onder een afzonder-lijk beheer zou worden aangehouden waardoor klaagster alleen over het deposito kon beschikken bij unaniem bestuurs-besluit. Verder gaat hun (latere) overeen-stemming niet. Dat partijen thans stellen dat de aandeelbewijzen bij beide toen-mali-ge be-stuurders niet (meer) aanwezig zijn, doet geen afbreuk aan eerdere stellingen van partijen met betrekking tot de overhandiging van deze aandeelbewijzen. De stelling van appellant dat klaagster kon beschik-ken over de bankreke-ning bij Van Lanschot betreft een interpreta-tie waarmee klaagster niet expliciet heeft inge-stemd en die bovendien zozeer in strijd is met eerdere mededelin-gen van beide partijen, al dan niet gedaan in rechterlijke procedu-res, dat hij niet als juist aanvaard kan worden, zelfs al zou klaagster hiermee expliciet hebben ingestemd.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Voorzover appellant al heeft bedoeld door het geven van een nieuw en uitgebrei-der feitenrelaas nadere, niet-geëxplici-teerde grieven aan te voeren tegen de vaststelling van de feiten door de raad van tucht, heeft het College deze afdoende behandeld door de feiten opnieuw vast te stellen.</para>
+        <para>Met betrekking tot de twaalf door appellant ingediende grieven betreffende de ontvankelijkheid van klaagster over-weegt het College als volgt.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Het College ziet aanleiding de eerste tien grieven met betrekking tot de ontvanke-lijkheid van klaagster gezamenlijk behandelen.</para>
+        <para>Het College is van oordeel dat deze grieven falen en dat de raad van tucht klaagster in zoverre terecht in haar klacht ontvankelijk heeft geacht. Het overweegt hiertoe als volgt. </para>
+        <para>Vast staat dat K ten tijde van de indie-ning van de klacht rechtsgeldig bestuurder van klaagster was. Klaagster kan blijkens artikel 7 van haar statuten in en buiten rechte worden vertegenwoordigd door één bestuurs-lid. Aan deze vertegenwoordi-gingsbevoegdheid zijn in de statuten geen beper-kingen gesteld. Derhalve kon het bestuurslid K klaagster vertegen-woordigen bij de indie-ning van de klacht. Nu blijkens voormeld artikel 7 van de statuten van klaagster één bestuurslid be-schikte over onbeperkte vertegen-woordigings-be-voegdheid, diende de raad van tucht er voorts vanuit te gaan dat de intern voorgeschre-ven besluit-vormings-proce-dure gevolgd was. </para>
+        <para>Al aangenomen dat de benoeming van T tot voorzitter van klaagster van meet af aan nietig was, dan nog had de raad van tucht de klacht als zijnde ingediend door het bestuurslid K moeten ontvangen en ook verder moeten behan-delen.</para>
+        <para>Ten tijde van de indiening van de klacht was nog geen sprake van bewindvoering. Reeds hierom was toen geen (expli-ciete) machtiging voor de indiening van de klacht vereist. Voor zover noodzake-lijk heeft de bewindvoerder later met de voortzetting van de rechtsgeldig aanhangig gemaakte tuchtpro-cedure ingestemd. De opvatting dat de bewindvoerder telkens tevoren expliciet machtiging zou dienen te geven voor iedere afzonderlijke processuele handeling in de reeds rechtsgeldig aanhangig gemaakte tuchtproce-dure, vindt geen steun in het recht. Niet is ook in te zien waarom de bewind-voering gefrustreerd zou worden door de omstandigheid dat achteraf, voor zover nodig, machti-ging wordt verleend. Klaagster is immers bij het ontbre-ken van een noodzakelijke machtiging niet gebonden.</para>
+        <para>De raad van tucht dient, zoals reeds boven overwogen, naar aan-leiding van een klacht uit-spraak te doen. Dit brengt met zich mede dat de raad van tucht zich ook zelfstan-dig een oordeel moet vormen over de vraag of een klager kan worden ontvan-gen. De omstandigheid dat er procedu-res voor de civiele rechter dienen, die gevolgen kunnen hebben voor de bevoegdheid van bestuurders van een rechtsper-soon maakt dit niet anders. In zodanig geval kan de raad van tucht een klager niet reeds niet-ontvanke-lijk verklaren vanwege het enkele feit dat nog dergelijke procedures aanhangig zijn. Niet gebleken is overigens dat het oordeel van de raad van tucht in het licht van de uitkom-sten van de civiele procedures onjuist is geweest. </para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>De omstandigheid dat blijkens de overwegingen van de arron-dis-sementsrechtbank te Amsterdam naast appellant ook K voor ontslag als bestuurder van klaagster in aanmerking zou komen, maakt niet dat deze met terugwerkende kracht ont-slagen wordt en nog minder dat door hem bevoegdelijk verrichte recht-shan-delingen aantastbaar worden. </para>
+        <para>De eerste tien grieven falen.</para>
+      </parablock>
+      <para/>
+      <para>De enkele omstandigheid dat hier een ruzie tussen twee be-stuurders aan de orde zou zijn maakt niet dat reeds hierom geen sprake zou kunnen zijn van tucht-waar-dig gedrag van een regis-teraccountant. De elfde grief faalt.</para>
+      <para/>
+      <parablock>
+        <para>Appellant heeft als twaalfde grief aangevoerd dat klaag-ster niet-ontvankelijk moet worden geacht bij gebreke van enig belang van klaagster bij haar klacht.</para>
+        <para>Als hiervoor overwogen stelt de Wet de tuchtrechtspraak ten doel het weren van misslagen van registeraccountants in de uitoefening van hun beroep en van inbreuken op verordeningen van de Orde en de eer van de stand der registeraccountants. Ingevolge  artikel 40 van de Wet neemt de raad van tucht een tegen een registeraccountant gerezen bezwaar in behandeling op onder meer een bij de raad ingediende klacht. </para>
+        <para>Dit wettelijk stelsel brengt mee dat, anders dan appel-lant wil, de ontvankelijkheid van een klager niet afhankelijk is van klagers individuele belang bij een zaak. De twaalfde grief faalt.</para>
+      </parablock>
+      <para/>
+      <para>Ten aanzien van de 31 grieven van appellant die het door de raad van tucht gegeven oordeel betreffen, overweegt het College als volgt.</para>
+      <para>     </para>
+      <parablock>
+        <para>Het College ziet aanleiding de eerste drie grieven geza-menlijk te behandelen en overweegt hierover als volgt.</para>
+        <para>Het was in de eerste plaats aan appellant te verzoeken om uitstel van behandeling en/of om nadere gelegenheid  om zich uit te laten, c.q om gehoord te worden, indien hij van oordeel was dat hij zich onvoldoende had kunnen voorbereiden, c.q. dat hij zich onvol-doende had kunnen uiten over nieuwe aspecten van de zaak. Op geen enkele wijze is gebleken dat in dit opzicht van appellant enig initiatief is uitgegaan. Reeds hierom falen de eerste drie grieven. Het gaat niet aan dat appellant in zijn beroepschrift de raad van tucht verwijt in gebreke te zijn gebleven op punten waar het initiatief bij hem lag.</para>
+        <para>Het College acht het overigens niet aannemelijk dat appellant  met het oog op de beschikking van de arrondissements-rechtbank te Amsterdam van 16 januari 1996, zich onvoldoende op de zitting van de raad van tucht van 26 februari 1996 heeft kunnen voorbereiden. Volgens eigen zeggen had hij deze uit-spraak al sinds 30 januari 1996 in zijn bezit. Bovendien had appellant vanzelfsprekend ook eerder de gelegenheid van de uitspraak kennis te nemen. Dat hij dit kennelijk niet heeft gedaan komt voor zijn rekening. Onaannemelijk is voorts dat appellant, die uiteraard van de processtukken die aan de beschikking voorafgingen en van de pro-cesstukken in de tuchtrechtproce-dure op de hoogte was, zich niet realiseerde dat de beschikking op de tuchtrechtproce-dure van invloed zou kunnen zijn en overvallen is door het in het tuchtgeding brengen van deze beschikking door klaagster op 21 februari 1996, met als gevolg dat hij onvoldoende tijd heeft gehad om zich voor te bereiden op de zitting van de raad van tucht en/of om zich over deze beschik-king, indien gewenst, ter zitting uit te laten. </para>
+        <para>De eerste drie grieven falen.</para>
+      </parablock>
+      <para/>
+      <para>De vierde grief is gegrond. Hoewel op grond van de enkele verklaring van appellant niet is komen vast te staan dat overleg tussen de bestuurders K en appel-lant overeenstemming is bereikt als door appellant gesteld, zodat evenmin is komen vast te staan dat appellant handelde ter uitvoering van gemaakte en binnen klaagster gebruikelijke afspraken en de raad van tucht derhalve het optreden van appellant op zichzelve terecht heeft gekwalifi-ceerd als eigenmachtig, is thans wel komen vast te staan dat medio december 1993 in ieder geval overleg over het beheer van het deposito heeft plaatsgevonden, welk overleg bij appellant de mening kon doen postvat-ten dat afgesproken was dat het deposi-to onder een afzonderlijk beheerder zou  worden aangehouden waardoor klaagster alleen over het deposito kon beschikken bij unaniem bestuursbesluit. Het optreden van appellant is derhal-ve niet in die mate eigenmachtig geweest als door de raad van tucht is aangenomen en appellant dient op dit punt een lichter verwijt te worden gemaakt dan door de raad van tucht is gedaan.</para>
+      <para> </para>
+      <para>De vijfde grief faalt. Appellant heeft niet aannemelijk gemaakt dat belegging van het vermogen van klaagster op een wijze dat alleen via appellant over dit vermogen kon worden beschikt tot zijn normale taak als penningmeester behoorde.</para>
+      <para/>
+      <para>Het College ziet aanleiding de zesde en de zevende grief gezamenlijk te be-hande-len. In deze grieven erkent appellant geen verantwoording te hebben willen afleggen over de beleg-ging van het vermogen van klaagster, maar voert hij aan dat zulks redelijkerwijze niet van hem verwacht kon worden nu tussen hem als penning-meester en K als secretaris fundamenteel verschil van inzicht bestond en van hem niet verwacht kon worden dat hij zich tegenover deze K, die zich opwierp als bestuur, zou verantwoorden. Dit betoog faalt. Niet is aannemelijk geworden dat appellant enige poging heeft gedaan om verantwoording af te leggen. Zulks had vooraf-gaande aan 13 januari 1995 zeker voor de hand gelegen omdat hij als enige binnen het bestuur van klaagster toen wist op welke wijze het vermogen van klaagster belegd was. Juist de omstandigheid dat binnen het bestuur van klaagster ruzie was ontstaan had appellant ertoe moeten brengen de uiterste zorgvuldigheid te betrachten bij het afleggen van verantwoor-ding en de overige leden van het bestuur te informeren over de belegging van het vermogen. Appellant is hier tekort geschoten.</para>
+      <para/>
+      <parablock>
+        <para>Het College ziet aanleiding de grieven 8 tot en met 11 en 18 tot en met 20 gezamenlijk te behandelen.</para>
+        <para>Zoals het College reeds heeft overwogen staat de omstan-digheid dat sprake is geweest van een interne ruzie tussen twee bestuurders er geenszins aan in de weg dat in het kader van zodanige ruzie tuchtwaardig kan worden gehandeld door een bij die ruzie betrokken registeraccountant. Dat onzorgvuldig handelen van een bestuurder van een stichting civielrechtelij-ke gevol-gen kan hebben, betekent al evenmin dat dit handelen reeds daarom onttrokken zou zijn aan het bereik van het tucht-recht. Een optreden van een registeraccountant binnen een stichting kan in voorkomend geval leiden tot een inbreuk op de eer van de stand. Dit geld temeer indien deze optreedt als penningmees-ter, omdat zodanig optreden om voordehandliggende redenen nauwe verwantschap heeft met zijn vakmatig optreden. Door op te treden als penningmeester in een stichting treedt een regis-teraccountant op in het openbaar. Zodanig optreden kan een kwaad licht op de stand der registeraccountants werpen en hun collec-tiviteit schade berokkenen.</para>
+        <para>De grieven 8 tot en met 11 en 18 tot en met 20 falen.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Het College ziet aanleiding grieven 12 tot en met 14 gezamenlijk te behande-len.</para>
+        <para>Ingevolge het bepaalde bij artikel 40, eerste lid, van de Wet neemt de raad van tucht een tegen een registeraccountant gerezen bezwaar in behandeling hetzij op een bij die raad ingediende klacht, hetzij op verzoek van het bestuur, hetzij ambtshalve. Het College stelt voorop dat de Wet geen specifieke eisen stelt waaraan de klacht als bedoeld in artikel 40 van de Wet moet voldoen.</para>
+        <para>Uit het bepaalde in de artikelen 42, 44 en 52 van de Wet leidt het College af dat de raad van tucht beslist aangaande een tegen een registeraccountant gerezen bezwaar. Zodanig bezwaar kan zijn gerezen op een ingediende klacht.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Klaagster heeft niet geklaagd over het niet vragen van een ontvangstbewijs voor de aandelen van appellant.</para>
+        <para>Door hier niettemin over te beslissen heeft de raad van tucht zich op dit punt naar het oordeel van het College zo ver verwijderd van de klacht dat deze beslissing niet kan worden aangemerkt als een beslissing aangaande een tegen een registeraccountant op een klacht gerezen bezwaar.</para>
+        <para>De grieven 12 tot en met 14 zijn derhalve gegrond.</para>
+      </parablock>
+      <para/>
+      <para>Appellant erkent dat hij ten onrechte zonder nader onder-zoek een 100% voorzie-ning terzake van de vordering uit hoofde van toonderaandelen in zijn financiële overzicht heeft opgeno-men maar wijt dit aan zijn emotionele stemming als gevolg van de vergadering van 13 januari 1995. Het College is van oordeel dat zodanige stemming geen excuus kan opleveren voor het opnemen van een voorziening, welk opnemen slechts tot doel kon hebben een medebestuurder te dwarsbomen. Bovendien had appel-lant ruim de tijd gehad om zijn emoties de baas te worden. De vergadering waarvoor zijn financieel overzicht bedoeld was vond immers eerst op 24 februari 1995 plaats. Appellant schr-eef volgens eigen stelling zijn financieel overzicht voor een te houden bestuursver-gadering; het ging hier dus niet om een aangelegenheid tussen twee bestuur-ders. De vijftiende grief faalt.</para>
+      <para/>
+      <para>Anders dan appellant wil wordt de zorgvuldig-heid van zijn handelen niet alleen bepaald door het bestuursbesluit om fl 318.000,-- terug te doen komen bij klaagster maar ook door zijn eigen kennis omtrent het beleg-gingsresultaat. Appellant wist wat dit resultaat was. Appellant had uit het bestuursbesluit behoren te begrijpen dat het de bedoeling was dat het gehele deposito terug zou komen. Niet aannemelijk is dat appellant beducht hoefde te zijn voor acties van de kant van het bestuur bij overboeking van een groter bedrag dan fl. 318.000,--. Appellant heeft niet aannemelijk gemaakt dat klaagster voor 100% aandeel-houdster was in O. De toonderaan-delen noch de kopieën zijn ooit in deze procedure getoond. Daarbij komt dat zulks voor deze procedure irrelevant is. Vast staat - appellant zegt dat zelf blijkens de bestuursver-gadering van 13 januari, die hij op dit punt niet heeft betwist, nog eens overduidelijk - dat hij over de aande-lenmacht beschikte, zodat slechts via appellant klaagster over haar vermogen kon beschikken. De zestiende grief faalt.</para>
+      <para/>
+      <para>De zeventiende grief is gegrond. De raad van tucht heeft niet vastgesteld dat appellant juist als registeraccountant was gekozen.</para>
+      <para/>
+      <para>Het College ziet aanleiding de grieven 21 tot en met 31 gezamenlijk te behandelen.</para>
+      <para/>
+      <parablock>
+        <para>De raad van tucht heeft niet gemotiveerd waarom door appellant gehandeld zou zijn in strijd met de artikelen 2, 7 en 25 GBR (oud). De raad van tucht heeft derhalve ten onrechte deze artikelen mede aan zijn beslissing ten grondslag gelegd.</para>
+        <para>Reeds hierom zijn de grieven 21 tot en met 31 gegrond. Gelet op het voorgaande behoeven zij geen verdere bespreking.</para>
+      </parablock>
+      <para/>
+      <para>Gelet op hetgeen door het College hiervoor ten aanzien van grieven 4, 12, 13, 14, 17 en 21 tot en met 31 is overwogen, is de slotsom dat het beroep van appellant gegrond is. Het College zal derhalve de bestreden uitspraak vernietigen.</para>
+      <para/>
+      <para>Het College acht termen aanwezig om de zaak zelf af te doen. Bij die afdoening baseert het College zich op de door hem vastgestelde feiten en op het bij behandeling van de grieven overwogene.</para>
+      <para/>
+      <parablock>
+        <para>Vast staat dat appellant vrijwel het gehele vermogen van klaagster heeft overge-maakt aan een naamloze vennootschap waarvan de antecedenten aan de overige bestuursleden onbekend waren. Hieraan is overleg vooraf gegaan als binnen klaagster gebruikelijk op grond waarvan bij appellant de indruk kon bestaan dat hij tot overma-king van het vermogen bevoegd was naar een afzonderlijke rekening waarover slechts bij unaniem bestuursbesluit kon worden beslist. Appellant heeft dit niet gedaan maar het geld overgemaakt naar een rekening waarover slechts via hem kon worden beschikt, hetgeen hem te verwijten valt. Voor zover bij appellant als gevolg van het over-leg van medio december 1993 de indruk zou zijn gewekt als boven ver-meld, moet het hem binnen korte tijd al duidelijk zijn gewor-den dat die indruk onjuist was. Dit had appellant ertoe moeten brengen open kaart te spelen tegenover zijn medebestuursleden en verantwoording af te leggen. Hij heeft dit niet gedaan. Appellant treft ook hier een verwijt. Voorts treft appellant een verwijt dat hij niet het gehele bedrag van de beleg-gingsre-kening heeft overgemaakt. Het College is van oordeel dat appellant onjuist heeft gehandeld en door zijn handelen inbreuk heeft gemaakt op de eer van de stand van register-accountants (art. 5 GBR). </para>
+        <para>De klacht van klaagster moet dan ook gegrond verklaard worden.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Het totale verwijt dat appellant treft is, gelet op het vorenoverwogene waaronder het overwogene bij bespreking van de grieven, van lichtere aard dan door de raad van tucht aangeno-men. Het College neemt hierbij met name in aanmerking dat wel degelijk overleg binnen klaagster heeft plaatsgevonden met het oog op het beheer van het deposito, waarbij aannemelijk is, gelet op het tussen K en appellant bestaande meningsverschil, dat dit overleg mede heeft omvat beheer van het vermogen als door appellant gesteld. Voorts neemt het College in aanmerking dat niet aannemelijk is geworden dat appellant zich wilde verrijken door zijn eigenmachtig optreden.</para>
+        <para>Het College is van oordeel dat een schriftelijke berisping in het onderhavige geval, alle omstandigheden in aanmerking genomen, een adequate reactie op het handelen van appellant vormt. </para>
+        <para>Na te melden beslissing berust op de artikelen 33, 34, 35, 39, 40, 42, 44 en 52 tot en met 54f van de Wet en op artikel 5 GBR (oud).</para>
+      </parablock>
+      <para>        </para>
+      <para>6.	Beslissing</para>
+      <para/>
+      <para>Het College:</para>
+      <para/>
+      <parablock>
+        <para>-	verklaart het beroep gegrond;</para>
+        <para>-	vernietigt de bestreden beslissing van de raad van tucht te 's-Gravenhage van 3 juni 1996;</para>
+        <para>-	verklaart de klacht gegrond;</para>
+        <para>-	legt aan appellant de maatregel van een schriftelijke berisping op.</para>
+      </parablock>
+      <para/>
+      <para>Aldus gewezen door mr R.R. Winter, mr D. Roemers en mr M. Vlasblom, in tegen-woordigheid van mr H.J. Dullaart, als griffier, en uitgesproken in het openbaar op 7 mei 1998.</para>
+      <para/>
+      <para>w.g. R.R. Winter					w.g. H.J. Dullaart</para>
+    </uitspraak>
+</open-rechtspraak>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:tr="http://tuchtrecht.overheid.nl/" xmlns:eu="http://publications.europa.eu/celex/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:CBB:2000:AU1259</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2014-04-13T11:42:48</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">AU1259</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/College_van_Beroep_voor_het_bedrijfsleven" scheme="overheid.RechterlijkeMacht">College van Beroep voor het bedrijfsleven</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">2000-02-02</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">AWB 98/111</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#eersteAanlegMeervoudig">Eerste aanleg - meervoudig</psi:procedure>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#eersteEnEnigeAanleg">Eerste en enige aanleg</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht">Bestuursrecht</dcterms:subject>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0005537&amp;artikel=6:2&amp;g=2000-02-02">Algemene wet bestuursrecht 6:2</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0005537&amp;artikel=6:23&amp;g=2000-02-02">Algemene wet bestuursrecht 6:23</dcterms:references>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:2000:AU1259">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:2000:AU1259</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-04T22:35:42</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2005-08-22</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:CBB:2000:AU1259 College van Beroep voor het bedrijfsleven , 02-02-2000 / AWB 98/111</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:CBB:2000:AU1259:INH" lang="nl" xml:space="preserve">
+      <para>Vaste heffing eiproduktenfabrikanten</para>
+    </inhoudsindicatie>
+  <uitspraak xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:CBB:2000:AU1259:DOC" lang="nl" xml:space="preserve">
+      <para>College van Beroep voor het bedrijfsleven</para>
+      <para/>
+      <para/>
+      <parablock>
+        <para>No. AWB 98/111				2 februari 2000</para>
+        <para>4210 Vaste heffing eiproduktenfabrikanten</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para/>
+      <para>Uitspraak in de zaak van:</para>
+      <para/>
+      <parablock>
+        <para>A, te B, appellante,</para>
+        <para>gemachtigde: J.P.M. Foxen, te Heeze, </para>
+        <para>tegen</para>
+        <para>het Productschap voor Pluimvee en Eieren, verweerder,</para>
+        <para>gemachtigde: mr F.M.C. Veenman, werkzaam bij verweerder.</para>
+      </parablock>
+      <para/>
+      <para> </para>
+      <para/>
+      <parablock>
+        <para>1.	Het verloop van de procedure</para>
+        <para>Op 2 februari 1998 heeft het College van appellante een beroepschrift ontvangen, waarbij door appellante beroep is ingesteld tegen het door verweerder niet opnieuw beslissen op de bezwaarschriften van 17 juni 1994 en 15 november 1995, zoals verweerder door het College bij uitspraken van 30 juli 1997 was opgedragen.</para>
+        <para>Verweerder heeft op 6 april 1998 een verweerschrift ingediend.</para>
+        <para>Op 26 mei 1998 is door appellante een conclusie van repliek ingediend.</para>
+        <para>Verweerder heeft een conclusie van dupliek ingediend op 23 juni 1998.</para>
+        <para>Op 10 november 1999 heeft het onderzoek ter zitting plaatsgevonden, waar partijen hun standpunt bij monde van hun gemachtigden nader hebben toegelicht.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>2.	De grondslag van het geschil</para>
+        <para>Op grond van de stukken en het onderzoek ter zitting zijn in deze zaak de volgende feiten en omstandigheden komen vast te staan.</para>
+        <para>- Op 17 juni 1994 en 15 november 1995 heeft appellante bezwaar gemaakt tegen de haar door verweerder over de jaren 1994 en 1995 op grond van de Verordening heffingen eiprodukten 1990 van het produktschap opgelegde vaste heffingen.</para>
+        <para>- Bij besluiten van 14 maart 1995 en 14 juni 1996 heeft verweerder op deze bezwaren beslist. </para>
+        <para>- Bij uitspraken van 30 juli 1997 heeft het College deze besluiten vernietigd en bepaald dat de aan de heffingen ten grondslag liggende Verordening heffing eiprodukten 1990, voorzover betrekking hebbend op de omstreden vaste heffing, onverbindend is, zodat verweerder de heffingen niet had mogen handhaven. Het College heeft verweerder opgedragen opnieuw op de bezwaren te beslissen.</para>
+        <para>- Verweerder heeft hierop aan appellante bij brief van 4 september 1997 meegedeeld dat hij, gelet op de beslissing van het College, zal overgaan tot terugbetaling van de vaste heffingen over 1994 en 1995 en tot vergoeding van de griffiekosten, in totaal fl. 10.660,--.</para>
+        <para>- Appellante heeft bij brief van 3 oktober 1997 bezwaar gemaakt tegen het besluit van 4 september 1997. Tevens heeft appellante in een andere brief van dezelfde datum verweerder verzocht opnieuw en gemotiveerd te beslissen op de bezwaarschriften van 17 juni 1994 en 15 november 1995.</para>
+        <para>- Bij brief van 7 januari 1998 heeft verweerder appellante bericht dat hij de bij brief van 3 oktober 1997 van appellante gemaakte bezwaren ongegrond verklaart, aangezien bij het besluit van 4 september 1997 volledig is tegemoet gekomen aan de bezwaren van appellante, en dat hij zijn besluit van 4 september 1997 handhaaft.</para>
+        <para>- Bij afzonderlijke brief van 7 januari 1998 heeft verweerder appellante meegedeeld dat reeds op 4 september 1997 opnieuw is beslist op de bezwaarschriften die ten grondslag lagen aan de uitspraken van het College van 30 juli 1997.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>3.	Het standpunt van appellante</para>
+        <para>Appellante komt in beroep tegen het niet opnieuw beslissen door verweerder op haar bezwaarschriften van 17 juni 1994 en 15 november 1995. Ter ondersteuning van haar beroep voert appellante, voorzover hier van belang, het volgende aan. De brief van verweerder van 4 september 1997 is niet aan te merken als een nieuwe beslissing op de bezwaarschriften van 17 juni 1994 en 15 november 1995. Immers:</para>
+      </parablock>
+      <para/>
+      <para>"(…) Het ontbreken van de melding als bedoeld in art. 6:23 Awb is reeds een indicatie dat het hier niet kan gaan om een nieuwe beslissing op een bezwaarschrift. Een gegrondverklaring ontbreekt, evenals een (draagkrachtige) motivatie. (…)".</para>
+      <para/>
+      <para>Appellante verzoekt het College de bezwaarschriften gegrond te verklaren en verweerder op te dragen de betaalde heffingen terug te betalen en verweerder te veroordelen in de sinds de uitspraken van het College van 30 juli 1997 wegens juridische bijstand gemaakte kosten.</para>
+      <para/>
+      <parablock>
+        <para>4.	De beoordeling van het geschil</para>
+        <para>Met het instellen van beroep maakt appellante gebruik van de door artikel 6:2, aanhef en onder b, van de Algemene wet bestuursrecht (hierna: Awb) geboden mogelijkheid om in beroep te komen tegen het niet tijdig nemen van een besluit. Allereerst is dus aan de orde of sprake is van het uitblijven van een besluit. Het College overweegt hieromtrent als volgt.</para>
+        <para>Verweerder heeft bij brief van 4 september 1997 aan appellante heeft meegedeeld dat hij, gelet op de uitspraken van het College van 30 juli 1997, zou overgaan tot terugbetaling van de vaste heffingen over de jaren 1994 en 1995 en tot vergoeding van de griffiekosten en de proceskosten. Deze brief bevat een besluit, dat is gericht tot appellante. </para>
+        <para>Gelet op het feit dat het College in zijn genoemde uitspraken heeft overwogen dat de aan de bestreden heffingen ten grondslag liggende Verordening heffing eiprodukten 1990, voorzover betrekking hebbend op de omstreden vaste heffing, onverbindend is, zodat verweerder de heffingen niet had mogen handhaven, dient het besluit van 4 september 1997 tot terugbetaling van de heffingen te worden aangemerkt als de nieuwe beslissing op de bezwaarschriften van 17 juni 1994 en 15 november 1995. Dat het besluit van 4 september 1997 ertoe strekte uitvoering te geven aan bedoelde uitspraken, blijkt temeer nu in hetzelfde besluit tevens is aangegeven dat de griffie- en proceskosten in verband met de procedures die geleid hebben tot deze uitspraken, worden vergoed.</para>
+        <para>De enkele omstandigheid dat in het besluit van 4 september 1997 de mededeling bedoeld in art. 6:23 van de Awb ontbreekt, brengt niet mee dat het besluit niet als beslissing op bedoelde bezwaren kan worden beschouwd. </para>
+        <para>Nu, gelet op het bovenstaande, een beslissing op de bezwaren van 17 juni 1994 en 15 november 1995 is genomen, is het beroep dat zich richt tegen het niet nemen van een dergelijk besluit ongegrond.</para>
+        <para>Het College acht geen termen aanwezig voor een proceskostenveroordeling met toepassing van artikel 8:75 van de Awb.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>5. De beslissing</para>
+        <para>Het College verklaart het beroep ongegrond.</para>
+      </parablock>
+      <para/>
+      <para>Aldus gewezen door mr H.G. Lubberdink, mr C.J. Borman en mr H.E. Akyürek-Kievits, in tegenwoordigheid van mr H.J. Dullaart, als griffier, en uitgesproken in het openbaar op 2 februari 2000.</para>
+      <para/>
+      <para>w.g. H.G. Lubberdink				w.g. H.J. Dullaart</para>
+    </uitspraak>
+</open-rechtspraak>

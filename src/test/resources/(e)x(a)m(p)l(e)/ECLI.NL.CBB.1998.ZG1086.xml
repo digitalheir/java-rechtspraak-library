@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:tr="http://tuchtrecht.overheid.nl/" xmlns:eu="http://publications.europa.eu/celex/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:CBB:1998:ZG1086</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2014-04-13T14:52:16</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-08</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">ZG1086</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/College_van_Beroep_voor_het_bedrijfsleven" scheme="overheid.RechterlijkeMacht">College van Beroep voor het bedrijfsleven</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">1998-05-07</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">96/0774/127/002;96/0775/127/002</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#eersteAanlegMeervoudig">Eerste aanleg - meervoudig</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht">Bestuursrecht</dcterms:subject>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0002374&amp;artikel=33&amp;g=1998-05-07">Wet op de Registeraccountants 33</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0002374&amp;artikel=40&amp;g=1998-05-07">Wet op de Registeraccountants 40</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0002374&amp;artikel=52&amp;g=1998-05-07">Wet op de Registeraccountants 52</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0002374&amp;artikel=54g&amp;g=1998-05-07">Wet op de Registeraccountants 54g</dcterms:references>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:1998:ZG1086">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:1998:ZG1086</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-08T15:23:26</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2010-10-08</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:CBB:1998:ZG1086 College van Beroep voor het bedrijfsleven , 07-05-1998 / 96/0774/127/002;96/0775/127/002</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:CBB:1998:ZG1086:INH" lang="nl" xml:space="preserve">
+      <para>Wet op de Registeraccountants</para>
+    </inhoudsindicatie>
+  <uitspraak xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:CBB:1998:ZG1086:DOC" lang="nl" xml:space="preserve">
+      <para>College van Beroep voor het bedrijfsleven</para>
+      <para/>
+      <para/>
+      <para>No. 96/0774/127/002     					7 mei 1998</para>
+      <para/>
+      <para/>
+      <para>Uitspraak in de zaak van:</para>
+      <para/>
+      <para/>
+      <parablock>
+        <para>A, wonende te B, appellant van een beslissing van de raad van tucht voor Registeraccountants en Accountants-Administratieconsulenten te 's-Gravenhage (hierna: de raad van tucht), gegeven op 3 juni 1996, onder nummer</para>
+        <para>596/95.27.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para>1.      Het verloop van de procedure</para>
+      <para/>
+      <parablock>
+        <para>Bij brief, verzonden op 4 juni 1996, is aan appellant afschrift verzonden van de in de aanhef van deze uitspraak vermelde beslissing, die werd gegeven op klacht van Beta Consultants B.V. te Zeist (hierna: klaagster).</para>
+        <para>De klacht had betrekking op A RA, registeraccountant te B (hierna: appellant).</para>
+        <para>Bij een op 5 augustus 1996 bij het College ingediend beroepschrift heeft appellant tegen die beslissing beroep ingesteld.</para>
+        <para>De raad van tucht heeft op 13 augustus 1996 de op de zaak betrekking hebbende stukken doen toekomen aan de griffier van het College.</para>
+        <para>Klaagster heeft op 16 september 1996 het College een verweerschrift doen toekomen.</para>
+        <para>Bij brief, ingekomen ter griffie op 24 juni 1997, heeft appellant het College meegedeeld dat klaagster haar klacht, evenals het verweer tegen het ingediende beroepschrift wenst in te trekken, waarmee appellant kan instemmen. Op grond</para>
+        <para>hiervan</para>
+        <para> hebben partijen het College verzocht de uitspraak van de raad van tucht te vernietigen.</para>
+        <para>Het College heeft de zaak behandeld ter terechtzitting van 12 februari 1998, waarbij partijen bij gemachtigden, appellant bij monde van prof. mr H. Beckman, advocaat te Amsterdam en klaagster bij monde van mr E.M. van Zelm, advocaat te</para>
+        <para>Utrecht, zijn verschenen en hun standpunt hebben toegelicht.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para>2.      De grondslag van het geschil</para>
+      <para/>
+      <parablock>
+        <para>Artikel 25 van de Gedrags- en beroepsregels registeraccountants, zoals die golden ten tijde hier van belang (hierna: GBR (oud)), luidde:</para>
+        <para>"1. De registeraccountant die pleegt op te treden als openbaar accountant</para>
+        <para>vervult generlei functie die geacht kan worden de onpartijdigheid van zijn oordeel of van het oordeel van degene met wie hij onder gemeenschappe-lijke naam optreedt, dan wel zijn onafhankelijkheid of de onafhankelijkheid van</para>
+        <para>de degene met wie hij onder gemeenschappelijke naam optreedt, in gevaar te brengen.</para>
+        <para>2. De registeraccountant die tevens in een andere functie dan die van openbaar accountant optreedt, is gehouden zijn uitingen in die andere functie zodanig in te richten dat voor een ieder duidelijk is dat deze niet in de</para>
+        <para>openbare accountantsfunctie zijn gedaan."</para>
+        <para>Bij de beoordeling van het beroep gaat het College uit van de feiten, zoals weergegeven in de bestreden tuchtbeslissing die aan deze uitspraak is gehecht, met uitzondering van de onder punt 1 vermelde datum van 1 april 1994 als de datum tot</para>
+        <para>welke betrokkene heeft deel uitgemaakt van de maatschap Deloitte &amp; Touche.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para>3.      De bestreden tuchtbeslissing</para>
+      <para/>
+      <para>Bij de bestreden tuchtbeslissing, die aan deze uitspraak is gehecht en als hier ingelast geldt, is de klacht gegrond verklaard.</para>
+      <para/>
+      <para/>
+      <para>4.      De grieven van appellant</para>
+      <para/>
+      <parablock>
+        <para>In zijn beroepschrift heeft appellant de volgende grieven tegen de beslissing van de raad van tucht van 3 juni 1996 aangevoerd.</para>
+        <para>4.1             Anders dan de raad van tucht in de rubriek "vaststaande feiten" heeft vermeld, heeft betrokkene slechts tot 1 april 1993 - en niet tot 1 april 1994 - deel uitgemaakt van de maatschap Deloitte en Touche.</para>
+        <para>4.2             Ten onrechte heeft de raad van tucht klaagster ontvankelijk geacht in haar klacht.</para>
+        <para>De overweging van de raad van tucht dat klaagster een kwestie aan de orde stelt die voor het functioneren van de gehele beroepsgroep van belang geoordeeld kan worden, kan niet de conclusie dragen dat klaagster ontvankelijk is in haar</para>
+        <para>klacht.</para>
+        <para>Aangenomen moet worden dat een klager enig belang moet hebben bij zijn klacht. Het door klaagster gestelde handelen van appellant heeft haar geen schade toegebracht en ook overigens is het belang van klaagster in het geheel niet betrokken bij dat handelen. Zo aan klaagster al enig klachtrecht kon toekomen had zij niettemin niet-ontvankelijk moeten worden verklaard op de grond dat zij misbruik maakt van dat klachtrecht door uitsluitend te handelen uit rancune en door de klacht eerst in te dienen, twee jaar na afloop van het verweten handelen waarvan klaagster van meet af aan op de hoogte was.</para>
+        <para>4.3             In de weergave van de klacht door de raad van tucht komt onvoldoende tot uitdrukking dat appellant door het overlijden van C op 5 maart 1991 onverwacht geconfronteerd werd met zijn benoeming tot bestuurslid van de</para>
+        <para>Stichting Administratiekantoor D. De schijn van belangenverstrengeling kan uitsluitend hebben bestaan in de periode 1991 en 1992. Over het jaar 1992 was de controle pas voltooid in 1993 nadat appellant uit de maatschap was getreden.</para>
+        <para>4.4             De raad van tucht heeft onvoldoende in zijn oordeel betrokken hetgeen appellant thans wederom in zijn beroepschrift aan de orde heeft gesteld.</para>
+        <para>Appellant erkent dat hij gedurende een periode naar de letter in strijd met artikel 25 GBR (oud) heeft gehandeld. Voor zijn handelen heeft appellant echter afdoende rechtvaardigingsgronden aangevoerd, te weten: het onverwachte overlijden van C waardoor appellant onverhoeds werd geconfronteerd met zijn benoeming als bestuurder van voornoemde Stichting, de omstandigheid dat het abrupt beëindigen c.q. opzeggen van de controle-opdracht aan respectievelijk door de maatschap Kepu</para>
+        <para> Beheer</para>
+        <para> B.V.</para>
+        <para> zou hebben geschaad, alsmede de omstandigheid dat appellant zich in het geheel niet met de uitvoering van de controle opdracht heeft bemoeid. Hier komt nog bij dat de zeggenschap over Kepu Beheer B.V. niet in handen was van de Stichting. De</para>
+        <para> zeggenschap</para>
+        <para> is aandeelhouderszeggenschap en geen bestuurlijke zeggenschap over Kepu Beheer B.V..</para>
+        <para> De functie van appellant was uitsluitend intern gericht en hield geen directie-bevoegdheden in ten aanzien van Kepu Beheer B.V..</para>
+        <para>4.5             Ten onrechte heeft de raad van tucht de maatregel van schriftelijke waarschuwing opgelegd.</para>
+        <para>De raad van tucht heeft onvoldoende in aanmerking genomen de bijzondere omstandigheden van het geval en het feit dat appellant reeds op 1 april 1993 is uitge-treden als lid van de maatschap.</para>
+        <para>De uitspraak van de raad van tucht dient op inhoudelijke gronden te worden vernietigd, subsidiair dient het beroep, gelet op de geschetste omstandigheden, te leiden tot gegrondverklaring zonder oplegging van een maatregel.</para>
+        <para>4.6             Ter zitting heeft appellant herhaald en nader uiteengezet dat nu klaagster haar klacht en haar verweerschrift tegen zijn beroepschrift heeft ingetrokken, het College de uitspraak zonder verdere behandeling kan vernietigen en</para>
+        <para>verzoekt appellant het College zulks ook te doen.</para>
+        <para>Eerstens is appellant van mening dat elk redelijk belang bij een verdere behandeling ontbreekt en dat ook de proceseconomie wordt gediend.</para>
+        <para>Mocht het College voormeld standpunt van appellant niet delen, dan is appellant van mening dat door het intrekken van de klacht de basis aan de uitspraak is komen te vervallen. Deze uitspraak kan reeds hierom niet in stand blijven.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para>5.      Beoordeling</para>
+      <para/>
+      <parablock>
+        <para>5.1             Als zijnde het meest verstrekkend zal het College allereerst behandelen het verzoek van appellant om de bestreden uitspraak van de raad van tucht zonder verdere behandeling te vernietigen vanwege de intrekking van de klacht en van</para>
+        <para> het</para>
+        <para> verweerschrift in beroep.</para>
+        <para>Bij de beoordeling van dit verzoek kan jurisprudentie van de voormalige Raad van Beroep geen beslissende rol spelen nu de wettelijke regeling met betrekking tot behandeling van beroepen voor het College een andere is dan die welke gold voor</para>
+        <para>behandeling van beroepen voor de Raad van Beroep.  In de eerste plaats zal aan de hand van de vigerende wetgeving beoordeeld moeten worden, wat de consequentie is van de intrekking van een klacht door een klager, nadat diens klacht door de raad</para>
+        <para> van tucht gegrond is verklaard.</para>
+        <para>Luidens artikel 33 van de Wet op de registeraccountants (hierna: de Wet) heeft de tuchtrechtspraak ten doel het weren en beteugelen van misslagen van registeraccountants in de uitoefening van hun beroep en van inbreuken op verordeningen van de orde en op de eer van de stand der registeraccountants. Deze tuchtrechtspraak strekt niet uitsluitend tot bescherming van privébelangen van klagers; zij dient ook het openbaar belang. In overeenstemming hiermede kan de raad van tucht ingevolge</para>
+        <para> het bepaalde in artikel 40 van de Wet een tegen een registeraccountant gerezen bezwaar niet alleen in behandeling nemen op een bij de raad van  tucht ingediende klacht maar ook op verzoek van het bestuur of ambtshalve. De raad van tucht is gehouden</para>
+        <para> over een naar aanleiding van een klacht gerezen bezwaar - indien de klacht ontvankelijk is - een beslissing te nemen. Zolang door de  raad van tucht op een klacht niet is beslist, kan deze worden inge-trokken. In zodanig geval heeft de raad van tucht op</para>
+        <para> grond</para>
+        <para> van artikel 40  van de Wet in overeenstemming met boven vermelde doelstelling van de Wet en met name ter bescherming van het hierbij betrokken openbaar belang de mogelijkheid om ambtshalve een rechterlijk oordeel te geven op een hem in een klachtprocedure gebleken bezwaar. Blijft intrekking van de klacht hangende de behandeling ervan achterwege, dan wordt de klacht afgedaan bij uitspraak van de raad van tucht.</para>
+        <para>Artikel 52 van de Wet bevat naar het oordeel van het College een limitatieve opsomming van de rechtsmiddelen die tegen een op grond van de Wet gegeven rechterlijk oordeel kunnen worden aangewend. In geval van aantasting van zodanig</para>
+        <para>rechterlijk oordeel op buiten de Wet genoemde gronden wordt het gezag van dit oordeel immers op onaanvaardbare wijze aangetast. Tot die rechtsmiddelen behoort uiteraard niet het intrekken van de klacht. In artikel 54g van de Wet is dan ook</para>
+        <para>bepaald</para>
+        <para> dat vernietiging van een uitspraak van de raad van tucht eerst mogelijk is, indien het College het beroep gegrond verklaart. Gegrondverklaring kan alleen plaats vinden naar aanleiding van een in de Wet vermeld rechtsmiddel. Om tot gegrondverklaring</para>
+        <para> te</para>
+        <para> komen dienen de aangevoerde grieven te worden beoordeeld.</para>
+        <para>Bovendien wordt in de door appellant bepleite constructie aan de raad van tucht de mogelijkheid onthouden om  in geval van intrekking van een klacht ambtshalve een oordeel te geven over een tegen een registeraccountant in een</para>
+        <para>klachtprocedure</para>
+        <para> gerezen bezwaar. In hoger beroep komt het College deze bevoegdheid niet toe nu artikel 40 van de Wet niet van overeenkomstige toepassing is op het rechtsgeding voor het College. Aldus zou het openbaar belang te kort kunnen worden gedaan. Ook</para>
+        <para> hierom</para>
+        <para> kan de door appellant bepleite constructie niet als rechtens juist worden aangemerkt.</para>
+        <para>Het vorenstaande voert het College op dit punt tot de slotsom dat in het wettelijk systeem de klacht een verzoek is om een uitspraak te doen, welk verzoek met het geven van het rechterlijk oordeel is uitgewerkt, zodat aan intrekking nadien</para>
+        <para>van de klacht geen gevolgen zijn te verbinden voor de rechtskracht van het gegeven oordeel.</para>
+        <para>Het door appellant gedane verzoek om de uitspraak van de raad van tucht te vernietigen onder achterwegelating van verdere behandeling van het beroep is derhalve als in strijd met de wet niet voor toewijzing vatbaar.</para>
+        <para>Intrekking van het verweerschrift in hoger beroep heeft, gelet op het hiervoor overwogene, slechts tot gevolg dat klaagster het gestelde in hoger beroep niet langer bestrijdt.</para>
+        <para>5.2             Op grond van hetgeen door partijen ter zitting over en weer is gesteld, gaat het College er, anders dan de raad van tucht van uit dat appellant tot 1 april 1993 deel heeft uitgemaakt van de maatschap Deloitte &amp; Touche. Op de onder</para>
+        <para> 5.4</para>
+        <para> vermelde grond, ziet het College in deze wijziging van de feitenvaststelling evenwel geen reden om af te doen aan het door de raad van tucht uitgesproken oordeel.</para>
+        <para>5.3             Zoals het College reeds eerder heeft overwogen (CBb nrs. 95/0928/126/002 en 95/1357/088/002) vereist de Wet voor het indienen van een klacht niet dat klaagster een rechtstreeks bij de klacht betrokken belang heeft, laat staan dat</para>
+        <para>zij</para>
+        <para> schade moet hebben geleden. In hetgeen door partijen over en weer is aangevoerd, ziet het College onvoldoende grond voor het oordeel dat de klacht niettemin niet-ontvankelijk had moeten worden verklaard. In het bijzonder acht het College het</para>
+        <para>tijdsverloop tussen het in de klacht aan appellant verweten handelen en de indiening van de klacht gelet ook op de door klaagster daarvoor gegeven verklaring - haar aanvankelijke onbekendheid met de ter zake geldende tuchtrechtelijke norm - niet van</para>
+        <para> zodanige aard dat de raad van tucht de klacht uit dien hoofde niet-ontvankelijk had moeten verklaren.</para>
+        <para>De tot niet ontvankelijkheid strekkende grief faalt derhalve.</para>
+        <para>5.4             Met betrekking tot de derde en vierde grief overweegt het College als volgt.</para>
+        <para>Het standpunt van appellant dat wordt ingenomen in het derde middel, namelijk dat de controle over het jaar 1992 pas was voltooid in 1993 nadat appellant uit de maatschap Deloitte en Touche was getreden, kan niet tot het door hem gewenste</para>
+        <para>resultaat leiden. Vast staat immers dat appellant tot 1 september 1993 bevoegd was voornoemde maatschap te vertegenwoordigen. Aan het feit dat appellant tot 1 april 1993 deel uitmaakte van voornoemde maatschap komt derhalve niet die betekenis toe die appellant daaraan gehecht wil zien.</para>
+        <para>De door appellant ter verklaring van zijn handelwijze aangevoerde omstandigheden werpen evenmin een ander licht op de zaak. Het College is met de raad van tucht van oordeel dat de appellant verweten combinatie van functies eenvoudig te</para>
+        <para>voorkomen was geweest, indien appellant zich niet als bestuurder van de Stichting Administratiekantoor van Aandelen D had laten benoemen, maar was opgetreden als adviseur van deze Stichting c.q. Kepu Beheer B.V.. In die</para>
+        <para>hoedanigheid</para>
+        <para> had</para>
+        <para> appellant een afstandelijker positie kunnen innemen en was beëindiging van de controleopdracht niet noodzakelijk geweest. Ook hetgeen overigens door appellant is aangevoerd, treft geen doel. In het bijzonder is het College van oordeel dat de omstandigheid dat gesteld noch gebleken is dat appellant van de combinatie van functies op onoorbare wijze gebruik heeft gemaakt, er niet aan af doet dat hij niet heeft voldaan aan zijn verplichting om iedere schijn van belangenverstrengeling te</para>
+        <para> vermijden.</para>
+        <para>Deze grieven falen derhalve.</para>
+        <para>5.5             Met de vijfde grief heeft appellant de zwaarte van de opgelegde maatregel aan de orde gesteld.</para>
+        <para>Het College is met de raad van tucht van oordeel dat appellant kan worden verweten dat hij een ontoelaatbare combinatie van functies niet heeft voorkomen en dat dit verwijt de door de raad opgelegde maatregel van een schriftelijke</para>
+        <para>waarschuwing rechtvaardigt.</para>
+        <para>5.6             Het beroep moet daarom worden verworpen.</para>
+        <para>Na te melden beslissing berust op de in de uitspraak van de raad van tucht genoemde artikelen en op de artikelen 52 tot en met 54f van de Wet op de register-accountants.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para>6.      Beslissing</para>
+      <para/>
+      <para>Het College verwerpt het beroep.</para>
+      <para/>
+      <parablock>
+        <para>Aldus gewezen door mr R.R. Winter, mr D. Roemers en mr M. Vlasblom, in tegenwoordigheid van mr H.J. Dullaart, als griffier, en uitgesproken in het openbaar</para>
+        <para> op 7 mei 1998.</para>
+      </parablock>
+      <para/>
+      <para>w.g. R.R. Winter        					w.g. H.J. Dullaart</para>
+    </uitspraak>
+</open-rechtspraak>

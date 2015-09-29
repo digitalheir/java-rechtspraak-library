@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:tr="http://tuchtrecht.overheid.nl/" xmlns:eu="http://publications.europa.eu/celex/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:CBB:1998:AA3436</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2014-04-13T10:19:58</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">AA3436</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/College_van_Beroep_voor_het_bedrijfsleven" scheme="overheid.RechterlijkeMacht">College van Beroep voor het bedrijfsleven</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">1998-11-18</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">98/998/14860</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#voorlopigeVoorziening">Voorlopige voorziening</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht">Bestuursrecht</dcterms:subject>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0005537&amp;artikel=8:81&amp;g=1998-11-18">Algemene wet bestuursrecht 8:81</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0001840&amp;artikel=112&amp;g=1998-11-18">Grondwet 112</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0006620&amp;artikel=29&amp;g=1998-11-18">Kaderwet bestuur in verandering 29</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0003740&amp;artikel=28&amp;g=1998-11-18">Wet gemeenschappelijke regelingen 28</dcterms:references>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:1998:AA3436">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:1998:AA3436</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-04T15:52:24</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">1998-11-18</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:CBB:1998:AA3436 College van Beroep voor het bedrijfsleven , 18-11-1998 / 98/998/14860</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:CBB:1998:AA3436:INH" lang="nl" xml:space="preserve">
+      <para>Verweerder heeft op grond van artikel 25, vierde lid, van de Wet personenvervoer en artikel 13, eerste lid, van de Gemeenschappelijke regeling Stadsregio Rotterdam onder meer de dienstregeling openbaar vervoer 1998-1999 van de RET vastgesteld, voor de periode van 7 september 1998 tot en met 30 mei 1999.</para>
+    </inhoudsindicatie>
+  <uitspraak xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:CBB:1998:AA3436:DOC" lang="nl" xml:space="preserve">
+      <parablock>
+        <para>De president van het College van Beroep voor het bedrijfsleven</para>
+        <para>No. AWB 98/998 18 november 1998</para>
+      </parablock>
+      <para/>
+      <para>14860</para>
+      <para/>
+      <para>Uitspraak op het verzoek om voorlopige voorziening in de zaak van:</para>
+      <para/>
+      <parablock>
+        <para>de Gemeente Schiedam, verzoekster,</para>
+        <para>gemachtigde: ir A.M. Boersma,</para>
+      </parablock>
+      <para/>
+      <para>tegen</para>
+      <para/>
+      <parablock>
+        <para>het Dagelijks Bestuur van de Stadsregio Rotterdam, verweerder, </para>
+        <para>gemachtigden: drs E.J. Overgaauw en H. Bouwknegt.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para>1. Het verloop van de procedure</para>
+      <para/>
+      <para>Bij besluit van 28 januari 1998, gepubliceerd 13 augustus 1998, heeft verweerder op grond van artikel 25, vierde lid, van de Wet personenvervoer en artikel 13, eerste lid, van de Gemeenschappelijke regeling Stadsregio Rotterdam onder meer de dienstregeling openbaar vervoer 1998-1999 van de RET vastgesteld, voor de periode van 7 september 1998 tot en met 30 mei 1999.</para>
+      <para/>
+      <para>Bij brief van 23 september 1998 heeft verzoekster tegen voormeld besluit administratief beroep ingesteld bij de Regioraad van de Stadsregio Rotterdam.</para>
+      <para/>
+      <para>Bij verzoekschrift van 23 september 1998, ingekomen bij de griffie van het College op 24 september 1998, heeft verzoekster de president verzocht het besluit van 28 april 1998, voor zover inhoudend de gedeeltelijke opheffing van buslijn 54, bij wege van voorlopige voorziening te schorsen, en te bepalen dat, in afwachting van de beslissing op het ingestelde beroep, een voorziening wordt geboden voor lijn 54 in overeenstemming met de dienstregeling zoals die gold tot 7 september 1998.</para>
+      <para/>
+      <para>Verweerder heeft, onder toezending van de op de zaak betrekking hebbende stukken, op 13 oktober 1998 schriftelijk op het verzoek om voorlopige voorziening gereageerd.</para>
+      <para/>
+      <para>Bij brief van 9 november heeft verzoekster nadere stukken ingediend.</para>
+      <para/>
+      <para>Het verzoek om voorlopige voorziening is door de president behandeld ter zitting van 11 november 1998, waar partijen bij monde van hun gemachtigden hun standpunt nader hebben toegelicht.</para>
+      <para/>
+      <para/>
+      <para>2. De grondslag van het geschil</para>
+      <para/>
+      <para>2.1 Artikel 28, eerste lid, van de Wet gemeenschappelijke regelingen (hierna: Wgr) luidt als volgt:</para>
+      <para/>
+      <para>"1. Geschillen omtrent de toepassing, in de ruimste zin, van een regeling tussen besturen van deelnemende gemeenten of tussen besturen van een of meer gemeenten en het bestuur van het openbaar lichaam of het gemeenschappelijk orgaan worden door gedeputeerde staten beslist, voor zover zij niet behoren tot die, vermeld in artikel 112, eerste lid van de Grondwet of tot die, waarvan de beslissing krachtens artikel 112, tweede lid van de Grondwet is opgedragen hetzij aan de rechterlijke macht, hetzij aan gerechten die niet tot de rechterlijke macht behoren."</para>
+      <para/>
+      <para>Artikel 112 van de Grondwet luidt, voor zover hier van belang, als volgt:</para>
+      <para/>
+      <parablock>
+        <para>"1. Aan de rechterlijke macht is opgedragen de berechting van geschillen over burgerlijke rechten en over schuldvorderingen.</para>
+        <para>2. De wet kan de berechting van geschillen die niet uit burgerlijke rechtsbetrekkingen zijn ontstaan, opdragen hetzij aan de rechterlijke macht, hetzij aan gerechten die niet tot de rechterlijke macht behoren. (...)."</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Artikel 29 van de Kaderwet bestuur in verandering (hierna: de Kaderwet) luidt als volgt:</para>
+        <para>"Indien het bestuur van een in het samenwerkingsgebied liggende gemeente beroep tegen een besluit van het bestuur van een regionaal openbaar lichaam instelt, is artikel 7:1 van de Algemene wet bestuursrecht niet van toepassing."</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>In de Wet personenvervoer (hierna: de Wet) is onder meer het volgende bepaald:</para>
+        <para>"Artikel 4</para>
+        <para>Bij de uitvoering van deze wet dient een afweging te worden gemaakt tussen de omvang en het gebruik van goed functionerend openbaar vervoer, de noodzaak van openbaar vervoervoorzieningen voor degenen die op dit vervoer zijn aangewezen, het gebruik van particulier personenvervoer per auto, verkeersveiligheid, ruimtelijke ordening, milieubeheer, energiegebruik en de beschikbare financiële middelen.</para>
+        <para>Artikel 65</para>
+        <para>"Tegen een op grond van deze wet genomen besluit kan een belanghebbende beroep instellen bij het College van Beroep voor het bedrijfsleven."</para>
+      </parablock>
+      <para/>
+      <para>Ingevolge de Wet van 13 november 1997 (Staatsblad 1997, 559), artikel I, onderdeel Y, zijn de artikelen 67 en 68 van de Wet personenvervoer met ingang van 31 december 1997 vervallen.</para>
+      <para/>
+      <para>2.2 Bij de beoordeling van het verzoek om voorlopige voorziening gaat de president uit van de volgende feiten en omstandigheden.</para>
+      <para/>
+      <para>Op 11 juni 1997 heeft verweerder vastgesteld de "Uitgangspunten dienstregeling openbaar vervoer lange termijn". In dit document is een analyse gemaakt van de zogenoemde zwakke lijnen, dat wil zeggen lijnen met een dynamische bezettingsgraad lager dan 15%. Verweerder streeft naar verhoging van de dynamische bezettingsgraad van zwakke lijnen, teneinde het huidig lijnennet te kunnen onderhouden, noodzakelijke uitbreidingen van het lijnennet mogelijk te maken en tegenvallende rijksbijdragen op te kunnen vangen. Indien geen mogelijkheden tot verhoging van de bezettingsgraad aanwezig zijn, moeten - aldus verweerder - kostenbeperkende maatregelen worden overwogen.</para>
+      <para/>
+      <para>Van 11 september tot en met 8 oktober 1997 heeft ter inzage gelegen het voorstel voor de dienstregeling 1998-1999 van de RET in het gebied van de Stadsregio Rotterdam. Het voorstel is opgesteld overeenkomstig het door verweerder vastgestelde document met uitgangspunten.</para>
+      <para/>
+      <para>Volgens genoemd voorstel vervalt met ingang van de Winterdienstregeling (per 7 september 1998) voor buslijn 54 het traject Station Schiedam - Woudhoek in de avond na 18.00 uur en op de gehele zondag. De wijziging houdt verband met een verwachte korting op de rijksbijdrage voor het openbaar vervoer, waardoor een vermindering van het voorzieningenniveau in de Stadsregio noodzakelijk is. In verband hiermee zijn rationalisaties aangebracht op de zwakke lijnen (in het licht van de verhouding kosten/opbrengsten). Met betrekking tot lijn 54 is in het voorstel het navolgende opgemerkt:</para>
+      <para/>
+      <para>"Lijn 54 bevindt zich met zijn dynamische bezettingsgraad van 10,2% stevig in de gevarenzone. Het feit dat de lijnvoering pas sinds de Zomerdienst van 1996 in zijn huidige vorm bestaat en dat een deel van Schiedam Noord nog groeit, rechtvaardigen slechts een beperkte ingreep. Een zeer zwakke bezetting in de avond en op zondag van het traject Station Schiedam - Woudhoek springt daarbij zodanig in het oog, dat een ongewijzigde voortzetting daarvan niet reëel is."</para>
+      <para/>
+      <para>Ten aanzien van de bezetting is aangegeven dat volgens tellingen uit januari 1997 op het genoemde traject op een gemiddelde werkdag na 18.00 uur sprake was van een gemiddelde van 2,9 reizigers per rit en op zondag van een gemiddelde van 1,7 reizigers per rit. Indien uit een evaluatie in het najaar van 1997 zou blijken dat het aantal reizigers op dit traject beduidend is gestegen, zou het voorstel worden ingetrokken.</para>
+      <para/>
+      <para>Bij brief van 12 november 1997 heeft verzoekster aan de Stadsregio laten weten dat zij grote bezwaren heeft tegen het gedeeltelijk opheffen van lijn 54 tijdens de avonden en op zondag.</para>
+      <para/>
+      <para>Op 17 december is het dienstregelingsvoorstel en de binnengekomen reacties besproken in een vergadering van de Commissie Verkeer en Vervoer van de Stadsregio. Ten behoeve van deze vergadering is door de RET een samenvatting opgesteld van de inspraakreacties en een commentaar daarop gegeven. Ten aanzien van lijn 54 is onder meer de volgende passage opgenomen:</para>
+      <para/>
+      <para>"Gemeente Schiedam</para>
+      <para/>
+      <parablock>
+        <para>Ter visie gelegd voorstel:</para>
+        <para>(...)</para>
+        <para>G lijn 54 vervalt traject Station Schiedam - Woudhoek na 18.00 uur en op zondag</para>
+        <para>(...).</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Reactie gemeente Schiedam</para>
+        <para>(...) Bezwaar wordt wel gemaakt tegen punt G. De oorspronkelijke tellingen zijn gehouden in de aanloopperiode van de nieuwe opzet van lijn 54. Mocht uit recentere tellingen blijken dat het reizigersaanbod toch nog achterblijft, dan blijft de maatregel onacceptabel om de volgende redenen:</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>1. In Spaland-Oost worden de komende jaren 1000 - 1200 woningen 2. gebouwd.</para>
+        <para>2. Buslijn 54 is voorloper van TramPlus lijn T11.</para>
+        <para>3. Door het rijk en de Stadsregio is toegezegd dat de betrokken 4. wijken met hoogwaardig openbaar vervoer zullen worden 5. ontsloten. Daarom moet dat er vanaf het begin al zijn.</para>
+        <para>4. Na gereed komen Benelux-metro zal het traject drukker worden door het grotere belang van Station Schiedam.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Commentaar RET:</para>
+        <para>In de eerste twee weekenden van oktober heeft de RET nogmaals een telling uitgevoerd op lijn 54 op zondag, om de vermeende groei vast te stellen. Ten opzichte van de telperiode januari 1997 werd echter geen groei geconstateerd. Het beeld is als volgt:</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>traject</para>
+        <para>reizigers zondag</para>
+        <para>januari 1997</para>
+        <para>reizigers zondag</para>
+        <para>oktober 1997</para>
+        <para>Station - 's-Grav.Polder</para>
+        <para>0 (0,0 per rit)</para>
+        <para>0 (0,0 per rit)</para>
+        <para>Station - Spaland</para>
+        <para>24 (0,8 per rit)</para>
+        <para>28 (0,9 per rit)</para>
+        <para>Station - eindpunt Woudhoek</para>
+        <para>30 (0,9 per rit)</para>
+        <para>16 (0,5 per rit)</para>
+        <para>totaal</para>
+        <para>54 (1,7 per rit</para>
+        <para>44 (1,4 per rit)</para>
+      </parablock>
+      <para/>
+      <para>De (lichte) groei van Spaland wordt meer dan teniet gedaan door de daling van het eindpunt Woudhoek. In ieder geval blijft het aantal reizigers per rit dermate ver onder de door de RET gehanteerde standaardnorm op zondag van 16,6 reizigers per rit, dat opheffing in relatie tot andere lijnen reëel is. Te bedenken is dat bijvoorbeeld een verdrievoudiging van het aantal reizigers van en naar Spaland leidt tot een aantal reizigers per rit van 3,2.</para>
+      <para/>
+      <para>Specifiek op de vier punten ingaand:</para>
+      <para/>
+      <para>1. Uit bovenstaand overzicht blijkt het aantal reizigers in 2. Spaland inderdaad enige groei te hebben doorgemaakt, maar die 3. is veel te gering om tot een acceptabel niveau te komen. Het 4. ligt helaas niet in de rede te veronderstellen dat de bouw van meer woningen dat beeld dermate ingrijpend zal wijzigen dat voortzetting van de dienst reëel is.</para>
+      <para/>
+      <para>2. Dat een buslijn voorloper is van een mogelijke TramPluslijn, wil nog niet zeggen dat er geen redelijke verhouding meer zou hoeven te bestaan tussen het aantal reizigers en de exploitatiekosten. Zie ook voorgaand punt.</para>
+      <para/>
+      <para>3. Net als bij voorgaande punt geldt hier in zekere zin dat ook het belang van vroegtijdige aanwezigheid van openbaar vervoer nog niet betekent dat er dan geen redelijke verhouding tussen het aantal reizigers en de exploitatiekosten zou hoeven te bestaan.</para>
+      <para/>
+      <para>De opening van de Beneluxmetro zal enerzijds een toename van het aantal reizigers in lijn 54 kunnen betekenen, anderzijds wordt gelijktijdig tramlijn 1 via Station Schiedam geleid, wat tot een verzwakking van de "concurrentiepositie" zou kunnen leiden."</para>
+      <para/>
+      <para>Verzoekster heeft zich in de vergadering van de Commissie Verkeer en Vervoer op 17 december 1997 niet laten vertegenwoordigen. Blijkens het verslag van de vergadering zijn de voorstellen ten aanzien van lijn 54 of de reacties daarop niet ter sprake gekomen.</para>
+      <para/>
+      <para>Op 28 januari 1998 heeft verweerder het bestreden besluit vastgesteld. Het besluit is bij brief van 24 maart 1998 aan verzoekster bekendgemaakt. Op 13 augustus 1998 is het besluit gepubliceerd. Ten aanzien van buslijn 54 is in de publicatie vermeld dat 's avonds na 18.00 uur niet meer wordt gereden op het traject Station Schiedam - 's Gravelandse Polder - Woudhoek. Onder het kopje "Beroepsmogelijkheid" is aangegeven dat op grond van de Algemene wet bestuursrecht en de Wet personenvervoer belanghebbenden binnen zes weken een beroepschrift kunnen indienen bij de Regioraad van de Stadsregio Rotterdam.</para>
+      <para/>
+      <para/>
+      <para>3. Het bestreden besluit en het standpunt van verweerder</para>
+      <para/>
+      <para>Bij het onderhavige besluit heeft verweerder onder meer de dienstregeling van de RET voor buslijn 54 voor de periode van 7 september 1998 tot en met 30 mei 1999 vastgesteld.</para>
+      <para/>
+      <para>In zijn reactie op het verzoek om voorlopige voorziening is verweerder allereerst ingegaan op de ontvankelijkheid van het verzoek om voorlopige voorziening. Aangezien de artikelen 67 en 68 van de Wet met ingang van 31 december 1997 zijn vervallen, is namelijk bij de publicatie van het bestreden besluit ten onrechte vermeld dat beroep kon worden ingediend bij de Regioraad van de Stadsregio. Verweerder heeft nog geen besluit genomen over de doorzending van het beroepschrift naar de juiste instantie, maar houdt het er voor dat - nu geen juiste toepassing is gegeven aan artikel 3:45 van de Algemene wet bestuursrecht - het beroepschrift van verzoekster tijdig is ingediend, zodat verzoekster in haar verzoek om voorlopige voorziening kan worden ontvangen.</para>
+      <para/>
+      <para>Volgens verweerder bestaat echter, gelet op het zeer beperkte aantal reizigers in de avonduren en op zondagen op het traject Station Schiedam - Woudhoek, geen spoedeisend belang bij de gevraagde voorziening. De vertegenwoordigers van verzoekster hebben ook geen poging gedaan om de bestreden wijziging van de dienstregeling te voorkomen in de vergadering van de Commissie Verkeer en Vervoer van de Stadsregio op 17 december 1997.</para>
+      <para/>
+      <para>De bezwaren van verzoekster zijn door de RET afgewogen tegen het belang van een redelijke verhouding tussen reizigersaantallen en exploitatiekosten. Deze afweging was opgenomen in de door verweerder onderschreven "Samenvatting inspraakreacties".</para>
+      <para/>
+      <para>Voorts gaat verweerder in op mogelijke andere kostenbeperkende maatregelen, zoals verlaging van de frequentie, combineren met een andere lijn en vervanging van zwakke gedeelten door oproepgestuurd vervoer, maar ziet hierin geen alternatieve oplossing met betrekking tot lijn 54.</para>
+      <para/>
+      <para>In de door verzoekster genoemde plannen voor de Beneluxlijn en het TramPlusplan, die overigens niet vóór november 2002 zullen worden gerealiseerd, ziet verweerder onvoldoende aanleiding om de dienstregeling voor lijn 54 ongewijzigd te handhaven.</para>
+      <para/>
+      <para>Door verweerder wordt niet ontkend dat de bestreden maatregel zal leiden tot een verlies aan reizigers, maar dit weegt ruimschoots op tegen de kostenbesparing van naar schatting fl. 100.000,-. Bovendien kan een deel van de betrokken reizigers als alternatief nog gebruik maken van tramlijn 1. De door verzoekster gestelde te verwachten reizigersgroei is door haar niet geconcretiseerd.</para>
+      <para/>
+      <para/>
+      <para>4. Het standpunt van verzoekster</para>
+      <para/>
+      <para>Verzoekster heeft - samengevat - het volgende aangevoerd.</para>
+      <para/>
+      <para>De wijziging van de dienstregeling van buslijn 54 is maatschappelijk onaanvaardbaar, omdat voor de betrokkenen geen tot onvoldoende alternatief wordt geboden en het besluit tot een onomkeerbaar verlies aan openbaar vervoerreizigers zal leiden. De feitelijke situatie wijkt bovendien af van het besluit, zoals gepubliceerd op 13 augustus 1998. Buslijn 54 rijdt niet alleen 's avonds na 18.00 uur niet meer op het traject Station Schiedam - Woudhoek, maar ook niet meer op zondag.</para>
+      <para/>
+      <para>Ondanks de door verzoekster gemaakte bezwaren heeft geen nader overleg plaatsgevonden en zijn de voorstellen toch tot uitvoering gebracht, waarbij de argumenten van verzoekster maar zeer gedeeltelijk zijn onderzocht. Daarbij zijn geen alternatieve oplossingen in beschouwing genomen, zoals bijvoorbeeld collectief vraagafhankelijk vervoer.</para>
+      <para/>
+      <para>Aanpassingen van de dienstregeling dienen te passen in een toekomstvast eindbeeld en een duidelijke beleidsvisie, waarbij ook rekening dient te worden gehouden met afspraken over andere openbaar vervoer-voorzieningen zoals de Benelux-metrolijn en de Tramplus-verbinding Schiedam - Vlaardingen.</para>
+      <para/>
+      <para>Er is geen rekening gehouden met de in ruime mate aanwezige mogelijkheden voor reizigersgroei. Verzoekster dringt aan op nader overleg tussen de Stadsregio en de gemeente over een alternatieve oplossing.</para>
+      <para/>
+      <para>Tenslotte heeft in afwijking van het bestreden besluit en zonder nader overleg nog een verdere inperking van de dienstregeling van buslijn 54 plaatsgevonden op het traject in de richting station Schiedam Centrum - Hoofdplein - Rubensplein - station Schiedam Centrum.</para>
+      <para/>
+      <para/>
+      <para>5. De beoordeling van het geschil</para>
+      <para/>
+      <para>Ingevolge het bepaalde in artikel 8:81 van de Algemene wet bestuursrecht (hierna: Awb) juncto artikel 19, eerste lid, van de Wet bestuursrechtspraak bedrijfsorganisatie kan, hangende de beslissing op een ingediend bezwaarschrift dan wel indien tegen een besluit bij het College beroep is ingesteld, de president van het College op verzoek een voorlopige voorziening treffen, indien onverwijlde spoed, gelet op de betrokken belangen, dat vereist.</para>
+      <para/>
+      <para>Met ingang van 31 december 1997 zijn de artikelen 67 en 68 van de Wet vervallen, zodat de daarin vervatte regeling van het administratief beroep tegen de vaststelling van een dienstregeling niet langer van kracht is. Voor de bevoegdheid van de president is het allereerst van belang om vast te stellen welk rechtsmiddel openstond tegen het bestreden besluit van verweerder. De president overweegt hiertoe als volgt.</para>
+      <para/>
+      <para>Artikel 28, eerste lid, van de Wgr draagt de beslechting van geschillen omtrent de toepassing van gemeenschappelijke regelingen op aan gedeputeerde staten, tenzij - voor zover hier van belang - sprake is van een geschil waarvan de berechting krachtens artikel 112, tweede lid, van de Grondwet is opgedragen aan de rechterlijke macht dan wel aan een gerecht dat daartoe niet behoort. Ingevolge artikel 65 van de Wet kan een belanghebbende tegen een op grond van de Wet genomen besluit beroep instellen bij het College.</para>
+      <para/>
+      <para>De vaststelling van een dienstregeling is een besluit op grond van de Wet, waartegen beroep openstaat op grond van voornoemd artikel 65. Naar voorlopig oordeel van de president is dit niet anders wanneer de dienstregeling is vastgesteld door het bestuur van een (regionaal) openbaar lichaam. De tekst van de Wgr noch de totstandkomingsgeschiedenis van deze wet geven aanknopingspunten voor een andersluidend oordeel. De beslechting van het onderhavige geschil behoort, naar voorlopig oordeel, derhalve niet tot de competentie van gedeputeerde staten, maar - gelet op artikel 29 van de Kaderwet - tot de rechtstreekse competentie van het College, zonder voorafgaande bezwaarschriftprocedure. Op grond van artikel 6:15 van de Awb zal het door verzoekster ingediende beroepschrift zo spoedig mogelijk aan het College dienen te worden doorgezonden.</para>
+      <para/>
+      <para>De hiervoor opgeworpen vraag omtrent de bevoegdheid van de president om van het onderhavige verzoek om voorlopige voorziening kennis te nemen, kan derhalve bevestigend worden beantwoord.</para>
+      <para/>
+      <para>Voor het treffen van de gevraagde voorziening zou allereerst plaats kunnen zijn indien een redelijke kans aanwezig is dat het ingestelde beroep - met materieel gunstig gevolg voor verzoekster - gegrond zal worden verklaard. Die kans acht de president niet groot. Hetgeen verzoekster heeft aangevoerd, noch hetgeen overigens is gebleken, leidt de president tot het oordeel dat aangenomen moet worden dat het College het bestreden besluit van verweerder niet in stand zal laten.</para>
+      <para/>
+      <para>Daartoe overweegt de president dat het besluit voorshands niet lijkt te zijn genomen met miskenning van wettelijke voorschriften.</para>
+      <para/>
+      <para>Hetgeen zijdens verzoekster naar voren is gebracht geeft evenmin aanleiding tot het oordeel dat de besluitvorming onzorgvuldig zou zijn geweest of dat zou moeten worden gesproken van een zodanige onevenwichtigheid in de afweging van de betrokken belangen dat moet worden geoordeeld dat verweerder niet in redelijkheid tot het aangevallen besluit heeft kunnen komen. De president overweegt daarbij dat bij de afweging van de bij de openbaar vervoervoorziening betrokken belangen als verwoord in artikel 4 van de Wet uitdrukkelijk ook de beschikbare financiële middelen dienen te worden betrokken. Gelet op de door verweerder vastgestelde "Uitgangspunten dienstregeling openbaar vervoer lange termijn" en de daarin voorgenomen maatregelen om de verhouding tussen het aantal reizigers en de exploitatie-kosten te verbeteren, kan niet met vrucht worden staande gehouden dat verweerder het dienstregelingsvoorstel voor buslijn 54 niet had mogen vaststellen. Daarbij is van belang dat uit de tellingen is gebleken dat de wijziging van de dienstregeling slechts een zeer gering aantal reizigers treft en dat - blijkens hetgeen in de reactie op het verzoek om voorlopige voorziening is opgenomen en ter zitting door verweerder is verklaard - ook alternatieve oplossingen zijn onderzocht.</para>
+      <para/>
+      <para>Hetgeen door verzoekster is aangevoerd met betrekking tot de plannen voor de Beneluxlijn en TramPlusplan, en de mogelijkheden voor reizigersgroei, is niet zodanig concreet dat dit tot een ander voorlopig oordeel zou moeten leiden.</para>
+      <para/>
+      <para>Voor zover verzoekster heeft willen betogen dat de besluitvorming onzorgvuldig zou zijn geweest omdat geen nader overleg met verzoekster heeft plaatsgevonden, kan de president verzoekster hierin niet volgen. Verzoekster is in de gelegenheid gesteld om haar bezwaren tegen de voorstellen kenbaar te maken en vervolgens zijn deze bezwaren afgewogen tegen de andere bij de openbaar vervoervoorzieningen betrokken belangen.</para>
+      <para/>
+      <para>Verzoekster heeft voorts aangevoerd dat het vervallen van de dienstregeling op het betreffende traject van lijn 54 op zondag in strijd is met het gepubliceerde besluit. Ter zitting heeft verweerder verklaard dat het bestreden besluit ook betrekking had op de dienstregeling op zondag, maar dat dit ten onrechte niet is vermeld bij de publicatie van het besluit. In de voorstellen zoals die voor inspraak zijn aangeboden was echter wel sprake van een wijziging op zondag, zodat naar voorlopig oordeel, verzoekster, die van dit onderdeel van het voornemen ook op de hoogte was, op dit punt niet in haar belangen is geschaad door de onjuiste publicatie van het besluit.</para>
+      <para/>
+      <para>Tenslotte heeft verzoekster aangevoerd dat feitelijk nog verdergaande beperkingen voor lijn 54 zijn ingevoerd, waardoor thans wordt gereden op een wijze die afwijkt van de bij het bestreden besluit vastgestelde dienstregeling. Door verweerder is ter zitting verklaard dat over deze verdergaande beperking geen besluitvorming heeft plaatsgevonden.</para>
+      <para/>
+      <para>Dienaangaande merkt de president op dat het ingevolge de artikelen 13 en 18 van de Wet op zich zelf verboden is om lokaal c.q. interlokaal vervoer te verrichten volgens een andere dan de ingevolge de Wet vastgestelde dienstregeling, doch de bevoegdheid tot het treffen van een voorlopige voorziening strekt zich hier niet uit tot het redresseren van feitelijk handelen dat mogelijk plaatsvindt in afwijking van een op zich zelf, naar voorlopig oordeel, rechtmatig besluit.</para>
+      <para/>
+      <para>Nu de president ook overigens niet is gebleken van feiten of omstandigheden, die meebrengen dat onverwijlde spoed, gelet op de betrokken belangen, het treffen van enigerlei voorziening vereist, dient het daartoe strekkende verzoek te worden afgewezen.</para>
+      <para/>
+      <para>De president acht geen termen aanwezig toepassing te geven aan artikel 8:75 Awb.</para>
+      <para/>
+      <para/>
+      <para>6. Beslissing</para>
+      <para/>
+      <para>De president wijst het verzoek om voorlopige voorziening af.</para>
+      <para/>
+      <parablock>
+        <para>Aldus gewezen door mr R.R. Winter, fungerend president, </para>
+        <para>in aanwezigheid van mr M.M. Smorenburg, als griffier, </para>
+        <para>en uitgesproken in het openbaar op 18 november 1998.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para>w.g. R.R. Winter                           w.g. M.M. Smorenburg</para>
+      <para/>
+      <para>Verzonden op:</para>
+    </uitspraak>
+</open-rechtspraak>

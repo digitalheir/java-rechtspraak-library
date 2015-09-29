@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:tr="http://tuchtrecht.overheid.nl/" xmlns:eu="http://publications.europa.eu/celex/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:CBB:2000:ZG1820</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2014-04-13T14:53:14</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-08</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">ZG1820</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/College_van_Beroep_voor_het_bedrijfsleven" scheme="overheid.RechterlijkeMacht">College van Beroep voor het bedrijfsleven</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">2000-02-29</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">98/140;11230</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#eersteAanlegMeervoudig">Eerste aanleg - meervoudig</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht">Bestuursrecht</dcterms:subject>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0007820&amp;artikel=8&amp;g=2000-02-29">Besluit bescherming tegen bepaalde zoönosen en bestrijding besmettelijke dierziekten 8</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0005662&amp;g=2000-02-29">Gezondheids- en welzijnswet voor dieren</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0005662&amp;artikel=21&amp;g=2000-02-29">Gezondheids- en welzijnswet voor dieren 21</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0005662&amp;artikel=22&amp;g=2000-02-29">Gezondheids- en welzijnswet voor dieren 22</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0005662&amp;artikel=86&amp;g=2000-02-29">Gezondheids- en welzijnswet voor dieren 86</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0005662&amp;artikel=91&amp;g=2000-02-29">Gezondheids- en welzijnswet voor dieren 91</dcterms:references>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:2000:ZG1820">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:2000:ZG1820</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-08T15:25:49</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2001-08-14</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:CBB:2000:ZG1820 College van Beroep voor het bedrijfsleven , 29-02-2000 / 98/140;11230</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:CBB:2000:ZG1820:INH" lang="nl" xml:space="preserve">
+      <para>-</para>
+    </inhoudsindicatie>
+  <uitspraak xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:CBB:2000:ZG1820:DOC" lang="nl" xml:space="preserve">
+      <para>College van Beroep voor het bedrijfsleven</para>
+      <para/>
+      <para/>
+      <parablock>
+        <para>No. AWB 98/140					29 februari 2000</para>
+        <para>11230</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para/>
+      <para>Uitspraak in de zaak van:</para>
+      <para/>
+      <parablock>
+        <para>A, te B appellant,</para>
+        <para>gemachtigden: mr J.A.J.H. van Houtum en drs H.P.W. Havens, beiden werkzaam bij de Stichting Rechtsbijstand te Tilburg,</para>
+        <para>tegen</para>
+        <para>de Minister van Landbouw, Natuurbeheer en Visserij, te 's-Gravenhage, verweerder,</para>
+        <para>gemachtigden: mr G. de Goede, drs J. Bloemendal en J. Braamskamp, allen werkzaam bij verweerder.</para>
+      </parablock>
+      <para/>
+      <para> </para>
+      <para/>
+      <parablock>
+        <para>1.	De procedure</para>
+        <para>Op 17 februari 1998 heeft het College van appellant een beroepschrift ontvangen, waarbij beroep wordt ingesteld tegen een besluit van verweerder van 15 januari 1998.</para>
+        <para>Bij dat besluit heeft verweerder beslist op het bezwaar dat appellant heeft gemaakt tegen de beslissing waarbij een tegemoetkoming in de schade als bedoeld in artikel 86 van de Gezondheids- en welzijnswet voor dieren is vastgesteld, na verlaging van het berekende bedrag met 35%.</para>
+        <para>Verweerder heeft op 18 juni 1998 een verweerschrift ingediend.</para>
+        <para>Op 17 december 1999 heeft het onderzoek ter zitting plaatsgevonden, waarbij partijen hun standpunten nader hebben toegelicht.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>2.	De grondslag van het geschil</para>
+        <para>2.1	Regelgeving</para>
+        <para>Artikel 7:13 Algemene wet bestuursrecht (hierna: Awb)</para>
+        <para>"1. Dit artikel is van toepassing indien ten behoeve van de beslissing op het bezwaar</para>
+        <para>een adviescommissie is ingesteld:</para>
+        <para>(…)</para>
+        <para>3. Het horen geschiedt door de commissie. (…)</para>
+        <para>(…)</para>
+        <para>5. Een vertegenwoordiger van het bestuursorgaan wordt voor het horen uitgenodigd en</para>
+        <para>wordt in de gelegenheid gesteld een toelichting op het standpunt van het</para>
+        <para>bestuursorgaan te geven.</para>
+        <para>(…)"</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Richtlijn 80/217/EEG, zoals deze laatstelijk is gewijzigd bij besluit nr. 95/1/EEG van de Raad van de Europese Unie van 1 januari 1995 (PbEG L 1/90)</para>
+        <para>"Artikel 5</para>
+        <para>1. De Lid-Staten zien erop toe dat de bevoegde autoriteit, wanneer de aanwezigheid van varkenspest officieel wordt bevestigd, ter aanvulling van de in artikel 4, lid 1, genoemde maatregelen, beveelt:</para>
+        <para>- alle varkens op het bedrijf onverwijld onder officieel toezicht af te maken, op zodanige wijze dat alle gevaar voor verspreiding van het varkenspestvirus zowel tijdens het vervoer als tijdens het afmaken voorkomen wordt;</para>
+        <para>- voornoemde varkens na het afmaken onder officieel toezicht te vernietigen, op zodanige wijze dat alle gevaar voor verspreiding van het varkenspestvirus voorkomen wordt;</para>
+        <para>- het vlees van varkens die in het tijdvak tussen de vermoedelijke insleep van de ziekte in het bedrijf en de toepassing van de officiële maatregelen geslacht werden, zo veel mogelijk onder officieel toezicht op te sporen en te vernietigen, op zodanige wijze dat alle gevaar voor verspreiding van het varkenspestvirus voorkomen wordt;</para>
+        <para>- de kadavers van op het bedrijf gestorven varkens onder officieel toezicht op zodanige wijze te vernietigen dat alle gevaar voor verspreiding van het varkenspestvirus voorkomen wordt;</para>
+        <para>- alle stoffen of afvallen die mogelijk besmet zijn, zoals diervoeders, aan een behandeling te onderwerpen die de vernietiging van het eventueel aanwezige pestvirus waarborgt deze behandeling moet volgens de aanwijzingen van de officiële dierenarts worden uitgevoerd;</para>
+        <para>- na de opruiming van de varkens, de varkensstallen en de voertuigen waarmee de varkens vervoerd zijn, en alle materieel dat mogelijk besmet is, te reinigen en te ontsmetten overeenkomstig artikel 10;</para>
+        <para>(…)</para>
+        <para>2. De bevoegde autoriteit mag de in lid 1 vastgestelde maatregelen ook toepassen op andere bedrijven waar in verband met de ligging van het bedrijf en de rechtstsreekse on onrechtstreekse contacten met het besmette bedrijf, varkens kunnen zijn besmet.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Artikel 8, eerste lid, onder c,</para>
+        <para>1.    (…)</para>
+        <para>c) Het officiële toezicht heeft ten doel onmiddellijk iedere aanwijzing van varkenspest te ontdekken, de varkens te tellen en de verplaatsingen van deze dieren na te gaan alsook eventueel over te gaan tot de toepassing van alle of van een gedeelte van de in artikel 4, lid 1, bedoelde maatregelen."</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Richtlijn 92/102/EEG, zoals deze laatstelijk is gewijzigd bij besluit nr. 95/1/EEG van de Raad van de Europese Unie van 1 januari 1995 (PbEG L 1/90)</para>
+        <para>"Artikel 1</para>
+        <para>Bij deze richtlijn worden de minimumvoorschriften voor de identificatie en registratie van dieren vastgesteld, onverminderd nadere voorschriften die kunnen worden vastgesteld met het oog op de uitroeiing van en de controle op ziekten.</para>
+        <para>Deze richtlijn geldt onverminderd Beschikking 89/153/EEG en de uitvoeringsbepalingen die zijn vastgesteld op grond van Richtlijn 91/496/EEG, en rekening houdend met artikel 5 van Verordening (EEG) nr. 3508/92 van de Raad van 27 november 1992 tot  instelling van een geïntegreerd beheers- en controlesysteem voor bepaalde communautaire steunregelingen.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Artikel 3</para>
+        <para>1. De Lid-Staten zien erop toe dat:</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>a) de bevoegde autoriteit beschikt over een bijgewerkte lijst van alle bedrijven op haar grondgebied waar in deze richtlijn bedoelde dieren worden gehouden, met vermelding van de gehouden diersoorten en de houders; deze bedrijven moeten op deze lijst  blijven staan tot drie jaar na de verwijdering van de dieren. Deze lijst bevat tevens het merkteken of de merktekens die worden gebruikt ter identificatie van het bedrijf overeenkomstig artikel 5, lid 2, onder a), artikel 5, lid 2, onder c), tweede alinea, artikel 5, lid 3, eerste alinea, en artikel 8;</para>
+        <para>(…).</para>
+      </parablock>
+      <para/>
+      <para/>
+      <parablock>
+        <para>Artikel 4</para>
+        <para>1. De Lid-Staten zien erop toe dat:</para>
+        <para>a) elke houder van de in Richtlijn 64/432/EEG bedoelde runderen of varkens, die op de in artikel 3, lid 1, onder a), bedoelde lijst voorkomt een register bijhoudt van het aantal dieren dat zich op zijn bedrijf bevindt.</para>
+      </parablock>
+      <para/>
+      <para>In dat register worden alle geboorten, sterftegevallen en verplaatsingen (aantallen inkomende en uitgaande dieren) bijgehouden van de dieren, minstens op basis van de stromen met vermelding, in voorkomend geval, van oorsprong of bestemming alsmede de datum van deze stromen.</para>
+      <para/>
+      <para>In alle gevallen moet melding worden gemaakt van het overeenkomstig de artikelen 5 en 8 aangebrachte identificatiemerk.</para>
+      <para/>
+      <para>Het is evenwel niet verplicht voor varkens gegevens betreffende geboorten en sterftegevallen op te nemen.</para>
+      <para/>
+      <para>Voor raszuivere en hybride varkens die overeenkomstig Richtlijn 88/661/EEG (11) in een stamboek zijn ingeschreven, kan volgens de procedure van artikel 18 van Richtlijn 90/425/EEG een registratiesysteem op basis van individuele identificatie van de dieren worden erkend, indien dit systeem garanties biedt die gelijkwaardig zijn aan die van een register;</para>
+      <para/>
+      <para>(…).</para>
+      <para/>
+      <para>3. De Lid-Staten zien er tevens op toe dat:</para>
+      <para/>
+      <para>a) elke houder van dieren de bevoegde autoriteit desgevraagd alle inlichtingen verschaft over de oorsprong, de identificatie en, in voorkomend geval, de bestemming van de dieren die hij heeft bezeten, gehouden, vervoerd, in de handel gebracht of geslacht;</para>
+      <para/>
+      <para>(…).</para>
+      <para/>
+      <parablock>
+        <para>Artikel 5, derde lid,</para>
+        <para>3. Andere dieren dan runderen moeten zo snel mogelijk en in ieder geval voordat zij het bedrijf verlaten, worden gemerkt met een oormerk of een tatoeage aan de hand waarvan het bedrijf van herkomst kan worden vastgesteld en waardoor een verband kan  worden gelegd met de in artikel 3, lid 1, onder a), bedoelde lijst in de begeleidende documenten dient van dit merk melding te worden gemaakt.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>In afwijking van artikel 3, lid 1, onder c), tweede alinea, van Richtlijn 90/425/EEG en in afwachting van het in artikel 10 van de onderhavige richtlijn bedoelde besluit kunnen de Lid-Staten voor andere dieren dan runderen hun nationale systeem handhaven voor alle verplaatsingen op hun grondgebied. Met dit systeem moet het mogelijk zijn het bedrijf van herkomst te identificeren en het bedrijf waar het dier geboren is op te sporen. De Lid-Staten stellen de Commissie in kennis van de systemen  die zij te dien einde vanaf 1 juli 1993 voor varkens en op 1 juli 1994 voor schapen en geiten zullen toepassen.</para>
+        <para>Volgens de procedure van artikel 18 van Richtlijn 90/425/EEG kan een Lid-Staat worden verzocht het systeem te wijzigen wanneer het niet aan  vorengenoemd vereiste voldoet.</para>
+      </parablock>
+      <para/>
+      <para>Dieren met een tijdelijk merkteken ter identificatie van een partij moeten gedurende de verplaatsing vergezeld gaan van een document aan de hand waarvan de oorsprong, de eigenaar en de plaats van vertrek en bestemming van de dieren kunnen worden  bepaald."</para>
+      <para/>
+      <para>(…).</para>
+      <para/>
+      <parablock>
+        <para>Gezondheids- en welzijnswet voor dieren, zoals deze laatstelijk is gewijzigd bij Wet van 6 februari 1997, Stb. 630 (hierna: GWD)</para>
+        <para>"Artikel 21</para>
+        <para>1. Een door Onze minister aangewezen ambtenaar deelt de burgemeester (…) zo spoedig mogelijk mede welke maatregelen tot bestrijding van de ziekte door hem nodig worden geacht.</para>
+        <para>2. De burgemeester neemt de nodig geachte maatregelen zo spoedig mogelijk.</para>
+        <para>3. In spoedeisende gevallen neemt de in het eerste lid bedoelde ambtenaar deze maatregelen zelf en stelt hij de burgemeester daarvan onmiddellijk in kennis.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Artikel 22</para>
+        <para>1. De in artikel 21 bedoelde maatregelen kunnen zijn:</para>
+        <para>(…)</para>
+        <para>f. het doden van zieke en verdachte dieren;</para>
+        <para>g. het onschadelijk maken van gedoden of gestorven, zieke en verdachte dieren, en van produkten en voorwerpen, die besmet zijn of ervan worden verdacht gevaar op te leveren voor de verspreiding van smetstof;</para>
+        <para>(…)</para>
+        <para>2. (…)</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Artikel 86</para>
+        <para>1. Uit 's Rijks kas wordt aan de eigenaar een tegemoetkoming in de schade uitgekeerd, indien:</para>
+        <para>a. dieren krachtens het bepaalde in artikel 22, eerste lid, onderdeel f, worden gedood;</para>
+        <para>b. produkten en voorwerpen krachtens het bepaalde in artikel 22, eerste lid, onderdeel g, onschadelijk worden gemaakt;</para>
+        <para>c. maatregelen krachtens het bepaalde in artikel 22, tweede lid,  onderdeel f en g, zijn toegepast.</para>
+        <para>2. De tegemoetkoming in de schade bedraagt:</para>
+        <para>a. voor verdachte dieren: de waarde in gezonde toestand,</para>
+        <para>b. voor zieke dieren: het bij algemene maatregel van bestuur te bepalen gedeelte van de waarde in gezonde toestand,</para>
+        <para>c. voor produkten en voorwerpen: de waarde op het moment van de maatregel,</para>
+        <para>met dien verstande, dat het aldus bepaalde bedrag met bij algemene maatregel van bestuur vast te stellen percentages kan worden verlaagd. Deze percentages verschillen naar gelang aan de in de laatste zinsnede bedoelde maatregel gestelde eisen ter zake van de inrichting van het bedrijf is voldaan en door de eigenaar in die maatregel bedoelde maatregelen zijn genomen om de gezondheid van de dieren op het bedrijf te waarborgen.</para>
+        <para>(…)</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Artikel 91</para>
+        <para>Schade veroorzaakt door de toepassing van maatregelen, als bedoeld in artikel 17 of 21, kan voor zover deze niet uit hoofde van de artikelen 86 of 90 voor vergoeding in aanmerking komt, in door Onze Minister te bepalen bijzondere gevallen geheel of gedeeltelijk uit 's Rijks kas worden vergoed."</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Besluit bescherming tegen bepaalde zoönosen en bestrijding besmettelijke dierziekten, Stb. 1996, 156 (hierna: het Besluit)</para>
+        <para>" Artikel 8</para>
+        <para>1. De in artikel 86, tweede lid, onderdeel c, van de wet bedoelde percentages tot verlaging van de tegemoetkoming in de schade bedragen bij het uitbreken van varkenspest bij varkens:</para>
+        <para>a. indien op een bedrijf varkens afkomstig van vier of meer andere bedrijven aanwezig zijn: 35%;</para>
+        <para>b. indien de houder op de eerste vordering van een aangewezen ambtenaar niet kan aantonen van welke bedrijven de op zijn bedrijf aanwezige varkens afkomstig zijn: 100%;</para>
+        <para>c. indien door een  aangewezen ambtenaar is geconstateerd dat niet alle varkens op het bedrijf overeenkomstig de door bedrijfslichamen als bedoeld in artikel 66 Wet op de Bedrijfsorganisatie vastgestelde regelen of overeenkomstig het bepaalde bij of krachtens artikel 9 Veewet, behoudens het geval waarin artikel 9a, tweede lid, Veewet van toepassing is, of artikel 96 van de wet van een merk zijn voorzien of zijn geregistreerd: 35%;</para>
+        <para>d. (…)</para>
+        <para>2. Voor de bepaling of de in het eerste lid, onderdeel a of b, bedoelde situatie zich voordoet, worden varkens waarvan de houder op eerste vordering van een aangewezen ambtenaar aantoont dat zij langer dan vier maanden ononderbroken op zijn bedrijf aanwezig zijn, buiten beschouwing gelaten.</para>
+        <para>3. Indien op een bedrijf meer dan een der onderdelen a tot en met i van het eerste lid van toepassing zijn, worden de toepasselijke percentages bij elkaar opgeteld tot een maximum van 100."</para>
+      </parablock>
+      <para/>
+      <para/>
+      <parablock>
+        <para>Verordening van het Landbouwschap inzake de identificatie en registratie van varkens 1995, PBO-blad, jaargang 45, nummer 83, L67, 29 december 1995 (hierna: I&amp;R-verordening)</para>
+        <para>"Artikel 9</para>
+        <para>1. De ondernemer is verplicht binnen 2 werkdagen alle mutaties in zijn varkensstapel met uitzondering van geboorten, aan het I &amp; R bureau te melden.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>2. Het melden wordt volledig en naar waarheid gedaan volgens de door de Afdeling te stellen regels en heeft in ieder geval betrekking op:</para>
+        <para>a. het UBN van betrokken vestiging;</para>
+        <para>b. het UBN van de vestiging of van het bedrijf waaraan afgestaan of waarvan ontvangen is;</para>
+        <para>c. indien dit afwijkt van de in onderdeel b. bedoelde UBN's, het nummer op het merk dat is aangebracht op het  varken waarop de mutatie betrekking heeft;</para>
+        <para>d. het aantal varkens en de soort varkens waarop de mutatie betrekking heeft;</para>
+        <para>e. de datum van mutatie;</para>
+        <para>f. in voorkomend geval het nummers van het gezondheidscertificaat; en</para>
+        <para>g. de wijze van vervoer."</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>2.2	De vaststaande feiten</para>
+        <para>Op grond van de stukken en het onderzoek ter zitting zijn in deze zaak de volgende feiten en omstandigheden voor het College komen vast te staan.</para>
+        <para>-	Het bedrijf van appellant is in verband met de uitbraak van klassieke varkenspest besmet verklaard.</para>
+        <para>-	Op 13 maart 1997 is de varkensstapel van appellants bedrijf getaxeerd en op </para>
+        <para>14 maart 1997 is het bedrijf geruimd.</para>
+        <para>-	Blijkens een rapport van 21 maart 1997 heeft de Algemene Inspectiedienst van verweerders ministerie (hierna: AID) ten behoeve van de schaderegeling op appellants bedrijf een onderzoek ingesteld naar de naleving van voor dat bedrijf geldende voorschriften, als bedoeld in artikel 8 van het Besluit. Uit dat onderzoek blijkt dat appellant enkele malen de aanvoer van varkens niet binnen 2 werkdagen heeft gemeld aan het I &amp; R bureau.</para>
+        <para>-	Bij besluit van 25 maart 1997 heeft verweerder appellant - zakelijk weergegeven -  meegedeeld dat op grond van dat onderzoek op het bedrag van de getaxeerde waarde van de varkensstapel een korting van 35% is toegepast en dat appellant als tegemoetkoming in de schade een bedrag van fl. 245.564,57 zal worden uitbetaald.</para>
+        <para>-	Op het hiertegen gemaakte bezwaar heeft verweerder het bestreden besluit genomen.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>3.	Het bestreden besluit</para>
+        <para>Verweerder heeft bij het bestreden besluit het bezwaar van appellant tegen de verlaging van 35% van de tegemoetkoming in de schade ongegrond verklaard.</para>
+        <para>Hieraan heeft verweerder artikel 86, tweede lid, GWD, juncto artikel 8, eerste lid, onder c van het Besluit en artikel 9 van de I&amp;R-verordening ten grondslag gelegd.</para>
+        <para>Voor nadere overwegingen van verweerder zij verwezen naar het bestreden besluit, dat aan deze uitspraak is gehecht en als hier ingelast moet worden beschouwd.</para>
+        <para>4.	Het standpunt van appellant</para>
+        <para>Appellant heeft in zijn beroepschrift tegen het bestreden besluit een aantal grieven aangevoerd, die bij de beoordeling in rubriek 5 van deze uitspraak zullen worden besproken.</para>
+        <para>Het beroepschrift is aan deze uitspraak gehecht en moet als hier ingelast worden beschouwd.</para>
+        <para>5.	De beoordeling</para>
+        <para>5.1 Wat betreft de totstandkoming van het bestreden besluit is namens appellant aangevoerd dat in strijd met het bepaalde in artikel 7:13, vijfde lid, Awb voor de behandeling van de zaak ter hoorzitting van de adviescommissie niet een vertegenwoordiger van verweerder is uitgenodigd om een toelichting te geven op diens standpunt. </para>
+        <para>Daaromtrent is ter zitting van het College medegedeeld dat, nadat enige hoorzittingen in zaken als deze waren gehouden, verweerder te kennen heeft gegeven dat de aanwezigheid van een vertegenwoordiger zijnerzijds als regel niet meer zinvol werd geacht, nu de commissie over zijn standpunt voldoende was voorgelicht. Hierop heeft de commissie nog slechts een uitnodiging aan verweerder doen uitgaan indien de bijzondere omstandigheden van het geval daartoe aanleiding gaven.</para>
+        <para>Met appellant is het College van oordeel dat die gedragslijn niet strookt met het in genoemd artikellid neergelegde vormvoorschrift en dat de commis-sie aldus zichzelf en de indiener van het bezwaar de mogelijkheid heeft onthouden om op de hoorzitting een op de zaak toegespitste mondelinge reactie van verweerder op het bezwaarschrift te vernemen. Gelet evenwel op de uitgebreide schrifte-lijke en mondelinge gedachtewisseling in rechte, die alle in bezwaar aange-voerde argumenten mede heeft omvat, is het College van oordeel dat appel-lant door de schending van het vormvoorschrift niet is benadeeld en laat het met toepassing van artikel 6:22 Awb vernietiging van het bestreden besluit op deze grond achterwege.</para>
+        <para>5.2	Ten principale heeft appellant op de eerste plaats doen betogen dat de in artikel 86, tweede lid, GWD neergelegde bevoegdheid van verweerder om het bedrag van de tegemoetko-ming bedoeld in het eerste lid te verlagen met bij algemene maatregel van bestuur vast te stellen percentages, strekt tot het opleggen van een punitieve sanctie. Aan deze stelling zijn namens appellant grieven van formele en inhoudelijke aard verbonden. </para>
+        <para>Eerstbedoelde grieven strekken ten betoge dat verweerder er in het bestre-den besluit ten onrechte aan voorbij is gegaan dat bij het nemen van het primaire besluit voor het opleggen van punitieve sancties geldende rechts-re-gels niet in acht zijn genomen, zoals de regel dat niemand gedwongen mag worden mee te werken aan zijn eigen veroordeling en dat iemand die verdacht wordt van een strafbaar feit op het bestaan van die regel gewezen dient te worden, alvorens hem vragen worden gesteld. Voorts is aangevoerd dat het kortings-stelsel als neergelegd in de wet en het Besluit, zich niet ver-draagt met het rechtsbeginsel volgens hetwelk bij het opleggen van punitie-ve sancties sprake moet zijn van evenredigheid tussen de ernst van de overtreding en de hoogte van de opgelegde sanctie en dat die evenredig-heid beoordeeld moet worden in het licht van de omstandig-heden van het individu-ele geval. Aan zo een geïndividuali-seerde besluit-vor-ming staat het rigide stelsel van vaste verlagingspercen-tages die zijn voorzien bij bepaalde overtredin-gen immers in de weg. De hoogte van op basis van dit stelsel aan appellant opgelegde korting van f. 132.791,- staat dan ook in geen enkele verhouding tot de kleine administratieve omissies die appellan-t verweten worden.</para>
+        <para>Dienaangaande overweegt het College als volgt.</para>
+        <para>In aansluiting op hetgeen voorheen in de artikel 39 e.v. van de Veewet was bepaald, voorzien de op 13 april 1996 (Stb. 1996, 217) in werking getreden artikelen 86 t/m 91 GWD in een tegemoetkoming in de schade die geleden wordt door de eigenaren van dieren die op bevel van de in artikel 21 GWD bedoelde overheidsorganen krachtens het bepaalde in artikel 22, eerste lid, van die wet worden gedood. Aan de invoering bij wet van 1991, Stb. 706 van het stelsel van kortin-gen, toe te passen op de schadeloosstelling als bedoeld in artikel 39 van de toenmalige Veewet, lag blijkens de wetsgeschiede-nis de gedachte ten grond-slag dat bij uitbreken van de varkenspest niet zonder meer een volle schadeloosstelling dient te worden uitgekeerd, doch dat het wenselijk is om een kortingspercentage te kunnen toepassen op de uit te keren schadeloosstellingen, indien zich op een bedrijf omstandigheden voordoen die het risico met zich brengen dat een dierziekte uitbreekt of zich verspreidt (Kamerstukken II 1988-1989, 21 243, nr. 3, p. 6). Gekozen is voor een toekenning die gedifferentieerd wordt, rekening houdend met een redelijke risico-verdeling. Op dit stelsel is in de artikelen 86 e.v. GWD in hoofd-lijnen aangesloten. Ook dit stelsel is dus gebaseerd op een vorm van risicotoe-deling tussen overheid en varkens-houderijen. </para>
+        <para>Enerzijds bergt het houden van vee het bedrijfsrisico van ziekte in zich. Ander-zijds heeft de wetgever er toe besloten dat indien de overheid bij uitbre-ken van bepaalde ziekten maatregelen beveelt, zij de houder van het vee in de in het tweede lid van artikel 86 bepaalde mate in de aldus ontstane schade tegemoet komt. Het in die schade gerealiseerde risico verschuift blijkens het kortingsstelsel evenwel met de in artikel 8, eerste lid, van het Besluit aangegeven percentages weer naar de veehouder op het moment waarop deze de daar opgesomde, op preventie dan wel effectie-ve bestrijding van de ziekte gerichte wettelijke voorschriften niet heeft nageleefd. Niet naleving van die voorschriften kan immers er toe leiden dat het risico van uitbreken of van -potentieel vermijdbare- verspreiding van de ziekte wordt vergroot, dan wel de opsporing en bestrijding er van wordt bemoeilijkt. Het via het hanteren van percentages betrekken van de hoogte van de korting op de hoogte van de geleden bedrijfsschade past bij dit stelsel van risicotoedeling. </para>
+        <para>Het opleggen van een korting kan derhalve niet worden beschouwd als een leed toevoegende sanctie, waarvan de zwaarte primair wordt bepaald door de ernst van een bepaalde overtreding, maar als het toerekenen van niet door de overheid toegebrachte doch door het uitbreken van de varkenspest ontstane schade aan de houders van de door die ziekte getroffen dieren. De op het andersluidende standpunt van appellant gebaseerde grieven falen reeds daarom.</para>
+        <para>5.3	Alvorens in te gaan op de vraag of de korting die is toegepast op de aan appellant toegekende tegemoetko-ming de toetsing aan het bepaalde in artikel 3:4, tweede lid, Awb kan doorstaan, zal het College ingaan op andere grieven inzake de verbin-dendheid van artikel 8, eerste lid, van het Besluit en de overtreden voor-schriften waarnaar in die bepaling verwezen wordt en voorts op de grieven die verband houden met de aard en de reikwijdte van de aan verweer-der toegeken-de kortingsbe-voegdheid.</para>
+        <para>5.3.1	Ter zake van de houdbaarheid in rechte van de in artikel 8, eerste lid, van het Besluit neerge-legde kortingsregeling, heeft appellant zich beroepen op strijdigheid van die regeling met het evenredig-heidsbeginsel. </para>
+        <para>Dienaan-gaande stelt het College voorop dat bij het vaststel-len van de algemene maatregel van bestuur door de wetgever aan de Kroon beleidsruimte is gelaten en dat de rechter niet kan treden in de vraag naar de innerlijke waarde en de billijkheid van een algemeen verbin-dend voor-schrift. Hij moet zich beperken tot beantwoording van de vraag of de Kroon bij afweging van alle betrokken belangen niet in redelijkheid tot de kortings-percentages heeft kunnen besluiten. Het College ziet geen grond voor een bevestigend antwoord. Bij dat oordeel is betrokken hetgeen is overwogen omtrent het karakter van de regeling. Deze strekt niet tot normering van het opleggen van punitieve sancties, maar tot een risicoverdeling tussen overheid en varkenshouders. Het College ziet geen grond voor het oordeel dat zo een risicoverdeling minder globaal zou moeten worden vastgesteld dan in het Besluit is geschied. Zij ziet immers niet op de daadwerke-lijke gevolgen van individue-le overtredingen, maar op de potentiële gevolgen daarvan voor de effecti-viteit van preventie en bestrij-ding van een varkenspestepidemie, derhalve op de door de overtredingen ontstane risico's, die niet anders dan schat-tenderwijs zijn te benaderen. </para>
+        <para>De hoogte van de gekozen percentages moet in dit licht bezien -anders dan appellant betoogt- niet worden afgemeten aan een geïsoleerde beschouwing van aard en aantal van de door appellant gepleegde overtredingen, maar aan de mogelij-ke gevolgen van overtredingen van deze aard voor de preventie en bestrij-ding van de ziekte. Voorts sluiten de percentages grosso modo aan op hetgeen voorheen in artikel 39c, eerste lid, van de Veewet was bepaald en zijn, blijkens de toelichting bij artikel 8 van het Besluit, bij de tot-standkoming van die bepaling vertegenwoordigers van het landbouwbedrijfs-leven betrokken geweest.</para>
+        <para>5.3.2	Door appellant is de verbindendheid van artikel 8 voornoemd ook betwist op de grond dat deze bepaling in strijd met artikel 86, tweede lid, GWD niet de eisen en maatregelen behelst, waaraan voldaan moet zijn, wil geen korting worden toegepast, doch op tal van onderdelen volstaat met verwijzing naar in andere wettelijke bepalingen neergelegde voorschriften. Het College kan appellant hierin niet volgen. Door daarnaar te verwijzen, sluit het Besluit die andere bepalingen in, op een wijze die verenigbaar is met de tekst van artikel 86, tweede lid, GWD, zonder ze letterlijk te herhalen. </para>
+        <para>Dat neemt evenwel niet weg dat, zouden die andere bepalingen onbevoegdelijk zijn gesteld, dat gebrek ook zou doorwerken in artikel 8, eerste lid, van het Besluit. </para>
+        <para>Dienaangaande heeft appellant aangevoerd dat de I&amp;R-verordening, die verweerder ingesloten heeft geacht in artikel 8, eerste lid, Besluit wegens de verwijzing in dat lid naar door bedrijfsli-cha-men als bedoeld in artikel 66 Wet op de bedrijfsorganisatie (hierna: WBO) vastgestelde regelen inzake het merken en registreren van varkens, niet berust op een genoegzame bevoegdheidsgrondslag. </para>
+        <para>Met verweerder is het College echter van oordeel dat de I&amp;R-verordening grondslag kan vinden in de onderdelen a (registratie van ondernemingen), b (het verstrekking van de voor de vervulling van de taak van het lichaam nodige gegevens), d (de voortbren-ging, afzet, verdeling en aanwending van goederen) en i (de administratie van ondernemingen) van artikel 93, tweede lid, WBO, zijnde onderwerpen ter zake waarvan de instel-lingsverordening het lichaam bevoegd kan maken en in de onderdelen a (bevordering van de gezondheidstoe-stand van landbouwprodukten), b (de voortbrenging van land-bouwprodukten), d (de afzet van landbouwprodukten) en j (de registratie van landbouwonderne-mingen) van artikel 10, eerste lid, van het Instellingsbesluit Landbouwschap. Het College tekent hierbij aan dat bij de totstandkoming van de wet tot wijziging van de Veewet van 1991 en van de GWD is uitgegaan van de bevoegdheid van het Landbouwschap tot het stellen van regels inzake identificatie en registratie van vee, in het bijzonder van varkens.</para>
+        <para>Ten tijde van het vaststellen van de I&amp;R-verordening eind 1995, stond de in artikel 9, derde lid, van de Veewet aan verweerder inzake het merken en registre-ren van vee toegekende regelingsbe-voegdheid aan die vaststelling niet in de weg, aangezien dit een discretio-naire bevoegdheid was, welke blijkens de geschiedenis van de wet van 1991, Stb 706 (Kamerstukken II 1989-1990, 21 243, nr. 6, p. 4 en 5) slechts is toegekend voor het geval de ingevolge de WBO bevoegde publiekrechtelijke bedrijfslichamen niet alsnog tot een 'overzichtelijk en sluitend systeem van regels' inzake identificatie en registratie zouden komen. De in artikel 96 van de geldende GWD neerge-legde bevoegdheid van de Kroon om zulke regels te stellen is evenzeer welbewust facultatief geformuleerd. Naar in de memorie van antwoord aan de Eerste Kamer uitdrukkelijk is bevestigd (Kamerstukken I 1991-1992, 16 447, 88b, p. 13) kan dan ook besloten worden om het stellen van deze regels over te laten aan de betrokken organen van de publiekrechtelijke bedrijfsorganisatie.</para>
+        <para>Voorts is door appellant aangevoerd dat verweerder de I&amp;R-verordening niet met toepassing van artikel 8, eerste lid, van het Besluit tegen hen kan inroepen, nu de verordening technische voorschriften behelst als bedoeld in Richtlij-n 83/189 EG van de Raad van de Europese Gemeenschappen van 28 maart 1983 betreffen-de een informatieprocedure op het gebied van normen en technische voor-schriften (Pb 1983, L 109), als nadien gewijzigd en niet voldaan is aan de in die Richtlijn voorziene notificatieplicht. </para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Hetgeen appellant hiertoe heeft aangevoerd en hetgeen overigens is gebleken, stelt het College voor de vraag of de in het geding zijnde verplichting van de varkenshouder om alle mutaties in zijn varkenstapel binnen twee werkdagen aan het I&amp;R bureau te melden, een technisch voorschrift behelst dat ingevolge artikel 8, lid 1, eerste alinea, van richtlijn 83/189/EEG in ontwerp aan de Commissie had moeten zijn aangemeld. Het College acht het buiten twijfel dat deze meldingsplicht niet als zodanig technisch voorschrift is aan te merken en overweegt hiertoe als volgt.</para>
+        <para>Ingevolge artikel 1, onder 5, van richtlijn 83/189/EEG wordt onder technisch voorschrift verstaan "technische specificaties, met inbegrip van de hierop toepasselijke bestuursrechtelijke bepalingen die de jure of de facto moeten worden nageleefd voor het verhandelen of het gebruik in een Lid-Staat." De in artikel 9 van de I&amp;R-verordening bepaalde meldingsplicht is een zelfstandig voorschrift, gericht tot de veehouder, waarvan de naleving niet rechtens of feitelijk voorwaarde is voor de rechtmatigheid van het verhandelen of het gebruik van varkens, en vormt reeds daarom geen technisch voorschrift in de zin de richtlijn 83/189/EEG. Niet valt in te zien, en appellant heeft ook niet betoogd, dat de naleving van artikel 9 van de I&amp;R-verordening voor de kenmerken van betrokken producten gevolgen zou kunnen hebben (zie arrest van het Hof van Justitie van 16 september 1997, zaak C-279/94, Jurispr. 1997, blz. I-4771, r.o. 34).</para>
+        <para>Op grond van het vorenoverwogene is het College van oordeel dat artikel 8, eerste lid, van het Besluit en de I&amp;R-verordening waarnaar in dat artikellid verwezen wordt de toetsing in rechte kunnen doorstaan.</para>
+        <para>5.4	Inzake de rechtmatigheid van het op die grondslag genomen bestreden besluit verschillen partijen op de eerste plaats van mening over de aard van de bevoegdheid die verweerder in artikel 86, tweede lid, GWD is toegekend. </para>
+        <para>Verweerder stelt dat, ondanks het gebruik van het woord 'kan' in deze bepaling, hem niet de discretie toekomt om per geval te overwegen of een bij en krachtens de bepaling voorziene korting daadwerke-lijk wordt opge-legd. De vraag of bij bepaalde ziekten een korting noodzake-lijk is, heeft de wetgever ter regeling aan de Kroon overgelaten. Nu bij het Besluit besloten is bij het uitbreken van varkenspest bepaalde kortingen bij bepaalde overtredingen toe te passen, mist verweer-der naar eigen inzicht de ruimte tot enige nadere afweging.</para>
+        <para>Het College kan verweerder in dit betoog niet volgen. Artikel 86, tweede lid, bepaalt het bedrag van de tegemoetkoming, met dien verstande dat dit bedrag 'met bij algemene maatregel van bestuur vast te stellen percentages kan worden verlaagd'. De regelingsopdracht aan de Kroon ziet derhalve op de vaststelling van de kortingspercentages bij bepaalde overtredin-gen en strekt er niet toe sluitend te bepalen in welke gevallen een korting moet worden opgelegd. In aansluiting hierop luidt de aanhef van artikel 8, eerste lid, van het Besluit: 'De in artikel 86, tweede lid van de wet bedoelde percentages (..) bedragen bij het uitbreken van varkenspest: (..)'. De bepaling strekt niet tot de verplichting tot het opleggen van kortingen met die percenta-ges. </para>
+        <para>Het College kan echter evenmin appellant volgen in zijn stelling, dat de in artikel 86, tweede lid, GWD aan verweerder gelaten discretie ook betrekking zou hebben op de hoogte van de korting. Terecht heeft verweerder zich op het standpunt gesteld dat de hoogte van de korting door wet en Besluit sluitend is vastgesteld. In zoverre komt aan verweerder derhalve geen matigingsbe-voegdheid toe. Kenne-lijk heeft de wetgever een strak, categoriaal kortings-stelsel gewenst; een oogmerk dat aansluit op het karakter van de regeling als een globale toerekening van risico's. Ter mitigering heeft hij verweer-der evenwel enige ruimte gelaten om wegens de bijzondere omstandigheden van het geval, van het opleggen van zo'n korting af te zien. </para>
+        <para>Het beroep van verweerder, ter onderbouwing van zijn anderslui-dende standpunt, op de rechtspraktijk onder de Veewet gaat niet op, nu de kortingsregeling in artikel 39a van die wet wel imperatief was geformu-leerd. </para>
+        <para>5.5.1	In weerwil van zijn stellingna-me in het bestreden besluit, heeft verweer-der bij het toepassen van het kortingsstelsel op de schade ten gevolge van de begin 1997 uitgebroken varkenspest een beleid gevoerd dat overeen-komt met het wettelijke stelsel dat het College in artikel 86, tweede lid, GWD ziet neergelegd. Hij heeft immers in veel gevallen waarin ingevolge wet en Besluit een bepaalde korting kon worden opgelegd, daarvan op grond van een afweging van belangen afgezien en hij heeft geen kortingspercentages gehanteerd die afwijken van het bepaalde in artikel 8, eerste lid, van het Besluit.</para>
+        <para>Dit beleid strekte er op de eerste plaats toe geen kortingen op te leggen in de gevallen waarin preventief is geruimd, dit in overeenstemming met de toezeggingen die verweerder bij gelegenheid van die ruimingen aan de houders van de betrokken bedrijven heeft gedaan. Bij de bestrijding van de varkenspest van 1997 is voor het eerst op zeer grote schaal gebruik gemaakt van het instrument van de preventieve ruiming. Er zijn naar verweerder ter zitting onweersproken heeft gesteld, ongeveer 1300 bedrijven preventief geruimd. De communau-taire wetge-ving verplichtte evenwel niet tot zo'n ruiming en ook de regeling neergelegd in de artikelen 21 e.v. GWD noopte niet tot het doden van verdachte dieren. Daarom miste deze voorge-sta-ne bestrij-dingswijze aanvankelijk draagvlak in de varkenssector. Naar ter zitting nader is toegelicht, achtte verweerder onder de gegeven omstandig-heden preven-tief ruimen onder dwang geen aanvaard-bare optie. Derhalve heeft hij gemeend zich alsnog van een voldoende draagvlak te moeten verzekeren en daartoe heeft hij bedoelde toezegging gedaan. </para>
+        <para>Het bedrijf van appel-lant is geruimd nadat daar varkens-pest was geconsta-teerd. Hij kon derhalve aan evenbe-doelde beleids-lijn geen rechten ontle-nen. Met een beroep op het gelijkheids-beginsel in verbin-ding met het bepaalde in artikel 3:4, tweede lid, Awb heeft hij evenwel gesteld dat verweerder ten onrechte onderscheid heeft gemaakt tussen beide categorieën geruimde bedrijven, zonder zich te verdiepen in aard en aantal van mogelijk door preventief geruimde bedrijven gepleegde overtre-dingen van de in artikel 8, eerste lid,van het Besluit bedoelde voorschrif-ten en in de risico's voor de versprei-ding en effectieve bestrij-ding van de ziekte die daardoor kunnen zijn ontstaan. </para>
+        <para>Bij de beoordeling van deze grief ziet het College zich niet gesteld voor de vraag of het zich kan verenigen met deze door verweerder gemaakte beleids-keuze, noch of de door appellant voorgestane keuze om bij geen der geruimde bedrijven een korting toe te passen wellicht redelijker zou zijn geweest. Het moet zich bepalen tot de vraag of verweerder niet in redelijk-heid tot het aldus gemaakte onderscheid heeft kunnen besluiten.</para>
+        <para>Aan appellant kan worden toegegeven dat de risicoverhoging wegens overtre-ding van de in artikel 8, eerste lid, van het Besluit opgesomde voor-schriften op zich zelf beschouwd niet verschilt naar gelang zij zijn gepleegd door preventief dan wel door besmet geruimde bedrijven. </para>
+        <para>Evenwel, de verdeling van het aldus verhoogde basisrisico verschilt wel wezenlijk. Het basisrisi-co voor het uitbreken op een bedrijf van varkens-pest ligt in beginsel bij de houder van dat bedrijf, niet bij de overheid. Voor de overheid vloeit uit de constatering van besmetting uit artikel 5, eerste lid 1, van Richtlijn 80/217 de verplichting voort zeker te stellen dat tot ruiming wordt overgegaan. Dat de overheid indien de ziekte daadwer-ke-lijk uitbreekt wegens door haar met dwang opgelegde maatregelen een deel van de schade voor haar rekening neemt, doet daaraan niet af. </para>
+        <para>Dat het risico van -rechtens niet verplichte- preventieve ruiming door de overheid van bedrijven waar de ziekte niet is uitgebroken in beginsel moet worden gedragen door de houder van het bedrijf, kan aanmerke-lijk minder stellig worden geponeerd. </para>
+        <para>Voorts vloeit uit het vorenoverwogene voort dat verweerder enige ruimte had om te besluiten de bij en krachtens de GWD voorziene kortingen in bepaalde gevallen niet toe te passen. De maatstaven op basis waarvan die ruimte werd aange-wend dienden aan te sluiten op de strekking van het wettelijke kortingsstelsel, voorzien bij artikel 86 GWD en derhalve betrokken te zijn op de risicotoedeling die aan dat stel-sel ten grondslag ligt. </para>
+        <para>Alvorens over te gaan tot het op grote schaal preventief ruimen heeft verweerder toegezegd dat de schade ten gevolge van dergelijke ruimingen in verregaande mate door de overheid zou worden vergoed en dat dus ook geen kortin-gen zouden worden toegepast. Deze toezegging werd ingegeven door de gedachte dat bedrijven niet met de schadelijke gevolgen van een ruiming behoren te worden geconfronteerd, indien de onzekere gebeurtenis waarvoor zij het primaire risico dragen: het uitbreken van de ziekte, zich niet heeft voorgedaan.  </para>
+        <para>Van dit motief om ten aanzien van preventief geruimde bedrijven geen korting toe te passen kan niet worden gezegd dat dit geen verband houdt met de risicotoe-deling waarop het wettelijke kortingsstelsel is gebaseerd. Evenmin kan blijkens het vorenoverwogene worden geoordeeld dat verweerder aldus bij de toepassing van het kortings-stelsel niet in redelijkheid onderscheid heeft kunnen maken tussen preven-tief geruimde bedrijven en bedrijven die eerst geruimd zijn nadat de ziekte daar was uitgebroken. </para>
+        <para>De stelling van appellan-t dat het onderscheid wille-keurig was omdat het veelal op toeval berustte of men net voor of net na de constate-ring van een besmetting werd geruimd, vindt onvoldoende grondslag in de feiten. Blijkens door verweerder overgelegde gegevens bleek slechts in 61 van de ongeveer 1300 gevallen van preventieve ruiming achteraf toch sprake van een besmet-ting.</para>
+        <para>Op grond van deze overwegingen is het  College van oordeel dat de beslis-sing van verweerder om het wettelijke kortingsstelsel slechts toe te passen bij besmet geruimde bedrijven de toetsing in rechte kan doorstaan.</para>
+        <para>5.5.2	Op dezelfde gronden houdt rechtens stand de door bovenbedoelde toezeggingen ingegeven beslissing van verweerder om wel aan de houders van preventief geruimde bedrijven en niet aan de houders van besmet geruimde bedrijven voor geruimde fokzeugen met toepassing van artikel 91 GWD hogere vergoedin-gen toe te kennen dan die welke zijn vastgesteld met toepassing van de artikelen 86 tot en met 89 GWD. Het aldus gemaakte onderscheid tussen vlees- en fokvarkens ontbeert geen redelijke grondslag, nu met de productie van vleesvarkens op korte termijn weer een aanvang kan worden gemaakt, maar het weer opstarten van een bedrijf gericht op het voortbren-gen van fokmate-riaal aanmerkelijk meer tijd en inspanning vergt.</para>
+        <para>5.6	Ook los van de besluiten die verweerder heeft genomen ten aanzien van de preventief geruimde bedrijven, heeft appellant betwist dat verweerder in redelijkheid heeft kunnen komen tot de aan haar opgelegde korting.</para>
+        <para>Aan appellant is een korting opgelegd van 35% van het met toepassing van de artikelen 86 e.v. GWD berekende bedrag als tegemoetkoming in de door de besmet-ting geleden schade, omdat hij in de periode tussen december 1996 en begin februari 1997 in strijd met artikel 9 van de I&amp;R-verordening enkele malen de aanvoer van een aantal partijen varkens niet binnen 2 werkdagen heeft gemeld bij het I&amp;R-Bureau.</para>
+        <para>5.6.1	Appellant heeft zijn grief in de eerste plaats gebaseerd op de stelling dat niet naleving van de meldingsplicht hem niet, althans niet in die mate, valt aan te rekenen omdat aan die verplichting wegens het slecht functione-ren van het geautomatiseerde meldingssysteem niet zonder onrede-lijk zware inspanning kon worden voldaan en zeker niet binnen de daartoe gestelde termijn van twee dagen.</para>
+        <para>Dienaangaande overweegt het College het volgende.</para>
+        <para>Bij artikel 9 van de I&amp;R-verordening van 1995 is met ingang van 1 januari 1996 het oude systeem van centrale melding van mutaties in varkensstapels door toezending van vervoersbewijzen aan de toenmalige districtbureauhouder vervangen door een geautomatiseerd systeem van telefonische melding bij een centrale computer van het I&amp;R-Bureau. Deze melding dient te geschieden binnen twee dagen na de mutatie. Het College ziet geen grond voor het oordeel dat dit voorschrift niet kan worden aangemerkt als een voorschrift in de zin van artikel 8, eerste lid, van het Besluit.</para>
+        <para>Aanvankelijk is blijkens Brochures I&amp;R varkens uit oktober 1995 en februari 1996 uitgegaan van een dubbele melding: van aanvoer en afvoer. Naar namens verweerder ter zitting van het College onweersproken is gesteld, bestonden met name tegen deze dubbele melding en voorts tegen de zeer korte meldings-tijd van twee dagen binnen de bedrijfssector grote bezwaren en is in september 1996 is door de Nederlandse Vakbond voor Varkens-houders de oproep gedaan die dubbele melding te boycotten. In gemeenschap-pelijk overleg tussen overheid en bedrijfstak binnen de Stuurgroep I&amp;R-varkens is tot mitigering van het stelsel gekomen, waarbij in het bijzonder de verplich-ting tot het melden van de afvoer is vervallen, nu die elders als aanvoer zal worden gemeld (Brochure van februari 1997). Invoering van dit bijge-stelde systeem is overigens door-kruist door de uitbraak van de epidemie. Na die uitbraak is door de sector consequent zowel aanvoer en afvoer gemeld, aldus verweerders gemachtigden. </para>
+        <para>Het College acht het niet onaannemelijk dat tijdige melding in relevante mate bemoei-lijkt kan zijn door overbelasting van de operationele capaci-teit. Dat na februari 1997 consequent dubbel is gemeld, doet daaraan niet af, nu evenmin onaannemelijk is dat ten gevolge van transportverboden de overbe-lasting van het systeem door daling van het aantal meldingen in relevante mate is verminderd. </para>
+        <para>Bij zijn beleidsvorming ten aanzien van de toepassing van het kortingsstel-sel heeft verweerder evenwel met de geschetste problemen in dier voege rekening gehouden dat het niet melden van afvoermutaties en het tardief doch binnen een week melden van aanvoermutaties in geen geval grond is geweest voor toepassing van een korting. </para>
+        <para>Het is het College niet genoegzaam gebleken dat met in acht nemen van deze modificaties naleving van de meldingsplicht (dus melding binnen een week van aanvoermutaties) een onevenredige belas-ting vormde. Voorts staat vast dat ook een eenmalige overtre-ding binnen de gehanteerde peilperiode niet tot korting op de tegemoetkoming heeft geleid. </para>
+        <para>Blijkens door verweerder overgelegde, door appellant niet gemotiveerd weersproken gegevens is conform dit beleid bij 16% van de besmet geruimde bedrijven een korting toegepast. Dit percentage duidt er niet op dat naleving van de aldus gemitigeerde meldingsplicht in het algemeen een onaan-vaardba-re last met zich bracht. Bijzondere omstandigheden waardoor in zijn geval wel sprake geweest zou kunnen zijn van een onaanvaardbare last, zijn door appellant niet gesteld.</para>
+        <para>5.6.2	Voorts heeft appellant aangevoerd dat het belang van de gepleegde overtre-dingen in geen verhouding staat tot de hoogte van de hem opgelegde korting. Dienaangaande overweegt het College dat de formulering van deze grief is ingegeven door het door appellant in zijn betoog voorop gestelde uitgangspunt dat het bestreden besluit strekt tot handhaving van een punitieve sanctie. </para>
+        <para>Zoals het College reeds heeft vastgesteld is van zodanige sanctie hier geen sprake. Het gaat hier om de toepassing van een kortingsregeling die is gebaseerd op risicotoedeling. De dan rijzende vraag of verweerder niet in redelijkheid heeft kunnen menen dat sprake is van evenredigheid tussen het doel van het besluit en de nadelige gevolgen voor appellant moet beant-woord worden, niet in het licht van de verhouding tussen de hoogte van de korting en de ernst van de individuele overtreding op zich zelf beschouwd, maar in het licht van de verhouding tussen de risico's die niet naleven van de meldingsverplichting in algemene zin met zich brachten voor de mogelijk-heden tot het treffen van effectieve en dus snelle bestrijdingsmaatregelen na uitbraak van de ziekte. Naar verweerder ter zitting van het College heeft uiteen gezet, is de ratio van de centrale melding, anders dan die van de bedrijfsregistratie bedoeld in artikel 8 van de I&amp;R-verordening niet de identificatie van individuele dieren, maar het traceren van vervoersbewe-gingen. Die bewegingen zijn van grote betekenis voor de verspreiding van een eenmaal uitgebroken ziekte. Door centrale registra-tie ervan is direct, zonder natrekkingsonderzoek van bedrijf naar bedrijf, te overzien via welke lijnen de ziekte zich reeds verspreid kan hebben. Bij een gebrekkige naleving van de meldingsplicht vormt het niet steeds voorhan-den zijn van dit overzicht een belemmering bij het nemen van snelle bestrijdingsmaatregelen. In dit bredere kader beschouwd, komt de betekenis van de door appellant gepleegde overtredingen in de vorm van de verhoging van het risico van verspreiding van de ziekte in een ander licht te staan. Gegeven die extra risicozetting ziet het College geen grond voor het oordeel dat verweerder niet in redelijkheid heeft kunnen besluiten tot het opleggen van de voorziene korting aan appellant. Daarbij beschouwt het, zoals hiervoor is overwogen, die korting niet als straf voor een aantal geïsoleerd gewogen overtredin-gen, maar als een terugschuiven van het - immers primair bij appellant berustende - bedrijfsrisico omdat hij niet alles heeft gedaan wat verwacht mocht worden om een effectieve bestrij-ding van de ziekte te bevorderen en de schade van die ziekte en haar bestrijding voor de gehele bedrijfs-tak -die via de artikel 86 e.v. GWD in belangrijke mate door de overheid wordt gedragen- zoveel mogelijk te beperken. Het College tekent daarbij aan dat het belang van de meldings-plicht voor een snelle en effectieve tracering van de besmetting in het beroepschrift van appellant met zoveel woorden wordt onderkend. Dat de korting geen sanctie is, maar een vorm van risico-verdeling brengt met zich dat de hoogte van de korting is gerelateerd aan de hoogte van de door appellant ten gevolge van het uitbreken van de ziekte geleden bedrijfs-schade. Anders dan appellant in zijn beroepschrift aan de hand van voor-beelden heeft betoogd, kan een vergelijking van aan bedrijven opgeleg-de kortingen derhalve niet gebaseerd zijn op aard, ernst en aantal van de gepleegde overtredin-gen, maar moet daarbij op de eerste plaats in ogenschouw worden genomen het verschil in de door die be-drijven geleden schade en daarmede de bedrijfsomvang.</para>
+        <para>	Op grond van het vorenoverwogene is de slotsom dat het beroep ongegrond dient te worden verklaard. </para>
+        <para>Het College acht geen termen aanwezig voor een proceskostenveroordeling met toepassing van artikel 8:75 van de Awb.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>6.  De beslissing</para>
+        <para>Het College verklaart het beroep ongegrond.</para>
+      </parablock>
+      <para/>
+      <para>Aldus gewezen door mr B. Verwayen, mr M. Vlasblom en mr G.P. Kleijn, in tegenwoordigheid van mr drs J.J.P. Bosman als griffier, en uitgesproken in het openbaar op 29 februari 2000.</para>
+      <para/>
+      <para>w.g. B. Verwayen				w.g. J.J.P. Bosman</para>
+    </uitspraak>
+</open-rechtspraak>

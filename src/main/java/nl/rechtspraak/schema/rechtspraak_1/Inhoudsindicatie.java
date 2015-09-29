@@ -8,17 +8,20 @@
 
 package nl.rechtspraak.schema.rechtspraak_1;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import generated.OpenRechtspraak;
+import org.leibnizcenter.helpers.InnerTextHandler;
+
+import javax.xml.bind.*;
+import javax.xml.bind.annotation.*;
+import java.io.OutputStream;
+import java.io.StringWriter;
 
 
 /**
  * <p>Java class for anonymous complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType>
  *   &lt;complexContent>
@@ -28,15 +31,27 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "")
 @XmlRootElement(name = "inhoudsindicatie")
-public class Inhoudsindicatie
-    extends TRechtspraakMarkup
-{
+public class Inhoudsindicatie extends TRechtspraakMarkup{
 
+    public String getXml() throws JAXBException {
+        JAXBContext context = JAXBContext.newInstance(
+                OpenRechtspraak.class,
+                org.purl.dc.terms.ObjectFactory.class,
+                nl.rechtspraak.psi.ObjectFactory.class,
+                org.w3._1999._02._22_rdf_syntax_ns_.ObjectFactory.class,
+                generated.ObjectFactory.class
+        );
+        Marshaller um = context.createMarshaller();
+
+        StringWriter sw = new StringWriter();
+        um.marshal(this, sw);
+
+
+        return sw.toString();
+    }
 
 }

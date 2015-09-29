@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:tr="http://tuchtrecht.overheid.nl/" xmlns:eu="http://publications.europa.eu/celex/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:CBB:2000:AA8268</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2014-04-13T10:26:32</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">AA8268</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/College_van_Beroep_voor_het_bedrijfsleven" scheme="overheid.RechterlijkeMacht">College van Beroep voor het bedrijfsleven</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">2000-10-27</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">00/778</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#eersteAanlegEnkelvoudig">Eerste aanleg - enkelvoudig</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht">Bestuursrecht</dcterms:subject>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#civielRecht">Civiel recht</dcterms:subject>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0005537&amp;artikel=5:32&amp;g=2000-10-27">Algemene wet bestuursrecht 5:32</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0005537&amp;artikel=5:24&amp;g=2000-10-27">Algemene wet bestuursrecht 5:24</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0005537&amp;artikel=8:18&amp;g=2000-10-27">Algemene wet bestuursrecht 8:18</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0005537&amp;artikel=8:26&amp;g=2000-10-27">Algemene wet bestuursrecht 8:26</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0005537&amp;artikel=1:2&amp;g=2000-10-27">Algemene wet bestuursrecht 1:2</dcterms:references>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:2000:AA8268">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:2000:AA8268</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-04T16:13:14</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2001-07-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:CBB:2000:AA8268 College van Beroep voor het bedrijfsleven , 27-10-2000 / 00/778</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:CBB:2000:AA8268:INH" lang="nl" xml:space="preserve">
+      <para>-</para>
+    </inhoudsindicatie>
+  <uitspraak xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:CBB:2000:AA8268:DOC" lang="nl" xml:space="preserve">
+      <parablock>
+        <para>IV	</para>
+        <para>De president van het College van Beroep voor het bedrijfsleven</para>
+        <para>No. AWB	00/778	27 oktober 2000</para>
+        <para>	14880</para>
+      </parablock>
+      <para> </para>
+      <para> </para>
+      <parablock>
+        <para>Uitspraak op </para>
+        <para>a.	het verzoek om voorlopige voorziening in de zaak van:</para>
+        <para>A, verzoeker,</para>
+        <para>gemachtigde: mr J.B. Vallenduuk, advocaat te Haarlem,</para>
+        <para>tegen</para>
+        <para>de Minister van Verkeer en Waterstaat, te 's-Gravenhage, verweerder,</para>
+        <para>gemachtigde: mr H.J. 't Hart, werkzaam bij verweerder.</para>
+        <para>b.	het verzoek tot toelating als partij ingediend door:</para>
+        <para>V.o.f. [naam v.o.f.], te Amsterdam,</para>
+        <para>gemachtigde: mr J.B. Vallenduuk, advocaat te Haarlem.</para>
+      </parablock>
+      <para> </para>
+      <para> </para>
+      <parablock>
+        <para>1.	De procedure</para>
+        <para>Bij brief van 28 september 2000 heeft verzoeker een bezwaarschrift ingediend tegen het besluit van verweerder van 25 september 2000 tot toepassing van bestuursdwang ingevolge artikel 88 van de Wet personenvervoer.</para>
+        <para>Op 29 september 2000 heeft verzoeker zich tot de president van het College gewend met het verzoek bij wege van voorlopige voorziening het bestreden besluit te schorsen en te </para>
+        <para>bepalen dat:</para>
+        <para>- verzoeker ongehinderd zijn beroep van taxi-chauffeur kan uitoefenen binnen het bedrijf van V.o.f. [naam v.o.f.];</para>
+        <para>- verweerder de inhoud van het vonnis, mits begunstigend voor verzoeker, doet verspreiden onder de inspecteurs belast met toezicht op taxivervoer;</para>
+        <para>- verweerder wordt veroordeeld in de kosten van de onderhavige procedure.</para>
+        <para>Op 4 oktober 2000 heeft verzoeker desgevraagd nadere informatie verstrekt omtrent de feitelijke stand van zaken ten aanzien van de bestuursdwang en over de positie van </para>
+        <para>V.o.f. [naam v.o.f.].</para>
+        <para>Op 10 oktober 2000 heeft verweerder schriftelijk op het verzoek om voorlopige voorziening gereageerd.</para>
+        <para>Op 16 oktober 2000 heeft verweerder schriftelijk gereageerd op enkele, bij griffiersbrief aan hem gestelde, vragen.</para>
+        <para>Op 18 oktober 2000 heeft verzoeker nog nadere stukken ingediend.</para>
+        <para>Het verzoek om voorlopige voorziening is door de president behandeld ter zitting van 20 oktober 2000, alwaar partijen bij monde van hun gemachtigden hun standpunten nader hebben toegelicht. Voorts is verzoeker in persoon verschenen. Tevens is aan de zijde van verzoeker verschenen G. van Gelderen, werkzaam bij de Taxicentrale Amsterdam. Namens V.o.f. [naam v.o.f.] is tevens verschenen J. den Hartog, vennnoot.</para>
+        <para>2.	De grondslag van het geschil</para>
+        <para>2.1	In de Wet personenvervoer (hierna: de Wet), laatstelijk gewijzigd bij de wet van 9 december 1999 tot wijziging van de Wet personenvervoer voor het taxivervoer (deregulering taxivervoer; Stb. 535), is onder meer het volgende bepaald:</para>
+        <para>"	Artikel 5</para>
+        <para>1. Het is verboden openbaar vervoer, besloten busvervoer of taxivervoer te verrichten zonder een daartoe strekkende vergunning.</para>
+        <para>(.).</para>
+        <para>Artikel 88</para>
+        <para>Onze Minister is bevoegd tot toepassing van bestuursdwang ter handhaving van de bij of krachtens deze wet gestelde verplichtingen met betrekking tot het vervoer van personen."</para>
+        <para>Bij het Besluit personenvervoer, laatstelijk gewijzigd bij besluit van 16 december 1999 (deregulering taxivervoer; Stb. 560), is onder meer het volgende bepaald:</para>
+        <para>"	Artikel 14</para>
+        <para>1. Vergunningen voor het verrichten van openbaar vervoer, besloten busvervoer en taxivervoer worden op naam van de vervoerder gesteld.</para>
+        <para>	2. Indien natuurlijke personen of rechtspersonen gezamenlijk als vervoerder optreden, worden de vergunningen op hun namen te zamen gesteld, met, in voorkomend geval, toevoeging van de naam waaronder zij gezamenlijk als vervoerder optreden.</para>
+        <para>	3. De vervoerder is verplicht wijziging van de vergunning aan te vragen bij wijziging van de naam van de vervoerder, van een van de namen van de natuurlijke personen of rechtspersonen die gezamenlijk als vervoerder optreden of van de naam waaronder natuurlijke personen of rechtspersonen gezamenlijk als vervoerder optreden.</para>
+        <para>Artikel 17</para>
+        <para>In iedere bus en auto waarmee besloten busvervoer of taxivervoer wordt verricht, is een vergunningbewijs aanwezig. (.)"</para>
+        <para>Artikel 5:24 van de Algemene wet bestuursrecht (hierna: Awb) luidt:</para>
+        <para>"	1. Een beslissing tot toepassing van bestuursdwang wordt op schrift gesteld. De schriftelijke beslissing is een beschikking.</para>
+        <para>	2. De beschikking vermeldt welk voorschrift is of wordt overtreden.</para>
+        <para>	3. De bekendmaking geschiedt aan de overtreder, aan de rechthebbenden op het gebruik van de zaak ten aanzien waarvan bestuursdwang zal worden toegepast en aan de aanvrager.</para>
+        <para>	4. In de beschikking wordt een termijn gesteld waarbinnen de belanghebbenden de tenuitvoerlegging kunnen voorkomen door zelf maatregelen te treffen. Het bestuursorgaan omschrijft de te nemen maatregelen.</para>
+        <para>	5. Geen termijn behoeft te worden gegund, indien de vereiste spoed zich daartegen verzet.</para>
+        <para>	6. Indien de situatie dermate spoedeisend is dat het bestuursorgaan de beslissing tot toepassing van bestuursdwang niet tevoren op schrift kan stellen, zorgt het alsnog zo spoedig mogelijk voor de opschriftstelling en voor de bekendmaking." </para>
+        <para>2.2 Bij de beoordeling van het verzoek om voorlopige voorziening gaat de president, gelet op de stukken en hetgeen partijen thans over en weer hebben aangevoerd, uit van de volgende feiten en omstandigheden.</para>
+        <para>- V.o.f. [naam v.o.f.] (hierna ook: de v.o.f.) beschikt over een vergunning voor het verrichten van taxivervoer, op naam van J. den Hartog en R. Crown.</para>
+        <para>- Op 21 maart 2000 is verzoeker toegetreden tot de v.o.f..</para>
+        <para>- Verzoeker is nadien, tijdelijk, uitgeschreven als vennoot in verband met de aanvraag van een nieuwe kentekenplaat.</para>
+        <para>- Op donderdag 21 september 2000, te Schiphol omstreeks 16.50 uur, is door een inspecteur van de Rijksverkeersinspectie, sector Handhaving, in de uitoefening van zijn toezichthoudende taak in het kader van de Wet een taxi, met kenteken [nummer], die op dat moment werd bestuurd door verzoeker, gecontroleerd.</para>
+        <para>- De taxi stond op naam van verzoeker.</para>
+        <para>- Tijdens voornoemde controle heeft verzoeker een vergunningbewijs laten zien dat was gesteld op naam van de v.o.f..</para>
+        <para>- De inspecteur heeft ter plaatse telefonische informatie ingewonnen. Hieruit is gebleken dat verzoeker niet stond vermeld op de taxivergunning van de v.o.f., alsmede dat verzoeker op dat moment niet als vennoot van de v.o.f. stond ingeschreven bij de Kamer van Koophandel en Fabrieken voor Amsterdam.</para>
+        <para>- Vervolgens heeft de inspecteur bestuursdwang toegepast door middel van feitelijk handelen, waarbij het verdere vervoer van personen door verzoeker met genoemde taxi, terstond is belet. Onder meer is verzoeker gesommeerd het daklicht van de taxi te verwijderen, aan welk verzoek gevolg is gegeven.</para>
+        <para>- Op 22 september 2000 is verzoeker opnieuw ingeschreven bij de Kamer van Koophandel als vennoot van de v.o.f., met terugwerkende kracht tot 9 september 2000.</para>
+        <para>- Verweerder heeft de beslissing tot toepassing van bestuursdwang vervolgens op schrift gesteld en bij besluit van 25 september 2000 aan verzoeker toegezonden.</para>
+        <para>- Bij brief van 28 september 2000 heeft verzoeker tegen voornoemd besluit een bezwaarschrift ingediend bij verweerder. Daags daarna heeft verzoeker het verzoek om voorlopige voorziening, als hiervoor omschreven, ingediend.</para>
+        <para>3.	Het bestreden besluit en het standpunt van verweerder</para>
+        <para>Bij het onderhavige besluit heeft verweerder onder meer het volgende overwogen:</para>
+        <para>"	(.)</para>
+        <para>dat de bevoegdheid tot het toepassen van bestuursdwang als bedoeld in artikel 88 van de Wet personenvervoer door de Minister van Verkeer en Waterstaat is gemandateerd aan de ambtenaren van de Rijksverkeersinspectie die op grond van artikel 80 van de Wet personenvervoer belast zijn met het toezicht op de naleving van het bij of krachtens deze wet bepaalde; dat tijdens een op donderdag 21 september 2000 om omstreeks 16.50 uur te Schiphol, vertrekpassage Vertrek 3 in het kader van het in artikel 80 van de Wet personenvervoer bedoelde toezicht door ambtenaren van de Rijksverkeersinspectie gehouden controle een auto als bedoeld in artikel 1 van de Wet personenvervoer werd gecontroleerd van verzoeker, gevestigd (.) te Amsterdam. De auto was voorzien van het kenteken [nummer].dat tijdens deze controle bleek dat met de vorenbedoelde auto taxivervoer als bedoeld in artikel 1 van de Wet personenvervoer werd verricht zonder dat de vervoerder in het bezit was van de daarvoor krachtens de Wet personenvervoer vereiste vergunning;</para>
+        <para>dat artikel 5 van de Wet personenvervoer onder meer bepaalt, dat het verboden is besloten busvervoer of taxivervoer te verrichten zonder een daartoe strekkende vergunning;</para>
+        <para>dat op het moment van de hiervoor bedoelde controle door de vervoerder, </para>
+        <para>verzoeker gevestigd (.) te Amsterdam, in strijd met het in artikel 5 van de Wet personenvervoer opgenomen verbod werd gehandeld;</para>
+        <para>(.)</para>
+        <para>dat het vervoer van personen met een auto, zijnde taxivervoer, als bedoeld in </para>
+        <para>artikel 1 van de Wet personenvervoer, zonder dat de vervoerder ten tijde van dat vervoer in het bezit is van een uit hoofde van de Wet personenvervoer vereiste vergunning voor taxivervoer, in het belang van de door middel van vergunningverlening nagestreefde ordening van de vervoermarkt, terstond diende te worden beeindigd;</para>
+        <para>dat er in het onderhavige geval sprake is geweest van een situatie die dermate spoedeisend was dat de beslissing tot toepassing van bestuursdwang, er in bestaande dat het verdere vervoer met het betrokken voertuig werd belet, niet tevoren op schrift kon worden gesteld;</para>
+        <para>(.)</para>
+        <para>Besluit dat het verdere vervoer van personen door verzoeker te Schiphol op donderdag 21 september 2000, omstreeks 16.50 uur met een auto, kenteken [nummer], dat op dat moment plaats vond in strijd met het in artikel 5 van de Wet personenvervoer bedoelde verbod terstond diende te worden belet."</para>
+        <para>In zijn reactie op het verzoek om voorlopige voorziening heeft verweerder opgemerkt dat naar zijn mening de termijn voor het toepassen van bestuursdwang, i.c. het beletten van hetgeen in strijd met de regels of met ingevolge die regels gestelde verplichtingen is of wordt gedaan, gehouden of nagelaten door het feitelijk handhaven van de gestelde verplichting, zich slechts uitstrekt tot het moment waarop de overtreding is opgehouden. </para>
+        <para>Verweerder is aldus van mening dat de beschikking slechts gelding heeft gedurende het feitelijk optreden van de inspecteur. Aangezien het beletten van de overtreding na beeindiging van die overtreding onmiddellijk werd gestaakt, is het verzoek tot schorsing van het bestreden besluit niet opportuun.</para>
+        <para>Voorts is volgens verweerder geen spoedeisend belang aanwezig, omdat verzoeker eerst het beroep van taxichauffeur kan uitoefenen vanaf het moment dat aan de wettelijke voorschriften van de Wet en het Besluit personenvervoer is voldaan.</para>
+        <para>4.	Het standpunt van verzoeker</para>
+        <para>Verzoeker heeft ter ondersteuning van zijn verzoek om voorlopige voorziening </para>
+        <para>- samengevat - het volgende aangevoerd.</para>
+        <para>Verzoeker is door de uitoefening van bestuursdwang rechtstreeks in zijn belang getroffen. </para>
+        <para>De spoedeisendheid is gelegen in de omstandigheid dat verzoeker door de bestuursdwang is belemmerd in het voorzien in zijn levensonderhoud als taxichauffeur.</para>
+        <para>De beschikking is onduidelijk over de aanduiding van de vervoerder, althans geeft zonder daarvoor enige onderbouwing te leveren slechts aan dat verzoeker vervoerder is. De toepassing van bestuursdwang op verzoeker is ten onrechte toegepast nu het vervoer plaats vond in het bedrijf van de v.o.f., welke als vervoerder in het bezit is van een vergunning, alsook in het bezit van een vergunningbewijs. Nu de beschikking ten onrechte verzoeker als vervoerder aanwijst, mist de beschikking feitelijke grondslag.</para>
+        <para>Subsidiair voert verzoeker aan dat de vaststelling ter plekke als zou verzoeker niet beschikken over een vergunning, inhoudt dat de inspecteur in een eerder stadium kennis heeft genomen van het bestand van vergunninghouders. Dat ertoe is overgegaan om het vervoer te beletten, terwijl een vergunningbewijs werd getoond, duidt op een voorbereiding vooraf, welke zich niet laat rijmen met een situatie die wordt voorgesteld als dermate spoedeisend dat onmiddellijk moet worden overgegaan tot toepassing van bestuursdwang. </para>
+        <para>De vermeende overtreding van artikel 5 van de Wet is een papieren aangelegenheid, die door een onderzoek op het bedrijf door middel van een formele aanzegging zou moeten worden afgedaan. De thans gekozen aanpak betekent een daad van willekeur, welke is gericht op het 'aanpakken' van de Amsterdamse taxiwereld.</para>
+        <para>Meer subsidiair heeft verweerder de betrokken belangen onzorgvuldig afgewogen. In het kader van een evenwichtige belangenafweging had een andere, minder zware ingreep, zoals het doen van een preventieve aanzegging, met een termijn om orde op zaken te stellen, voor de hand gelegen.</para>
+        <para>Ter zitting heeft verzoeker het standpunt van verweerder dat de bestuursdwangbeschikking zou zijn uitgewerkt, bestreden. Naar de mening van verzoeker duurt de bestuursdwang voort zolang de uitoefening van vervoer van personen door verzoeker met het voertuig [nummer] wordt belemmerd. Uit de stellingname van verweerder gaat bovendien impliciet de dreiging uit dat een volgende keer op eenzelfde wijze bestuursdwang zal worden toegepast.</para>
+        <para>Voorts heeft verzoeker ter zitting gemotiveerd aangevoerd dat hij het besluit van verweerder om in het onderhavige geval bestuursdwang toe te passen, in strijd acht met het proportionaliteitsbeginsel, het motiveringsbeginsel, het zorgvuldigheidsbeginsel en het vertrouwensbeginsel.</para>
+        <para>5. Het standpunt van V.o.f. [naam v.o.f.]</para>
+        <para>De v.o.f. heeft ten aanzien van de vraag of zij als belanghebbende in de onderhavige procedure kan worden aangemerkt, het volgende aangevoerd.</para>
+        <para>Zij wordt door het besluit tot toepassing van bestuursdwang rechtstreeks in haar belang getroffen. Als gevolg van het besluit kan ‚‚n voertuig minder worden ingezet, waardoor het bedrijf omzetverlies lijdt. De algemene kosten van het bedrijf werden gedeeld door de drie vennoten. De spoedeisendheid is gelegen in de abrupte wijze waarop haar bedrijfsvoering ten dele is stopgezet. Daarnaast is onzekerheid ontstaan over de rechtsgeldige uitoefening van haar bedrijf.</para>
+        <para>6. Beoordeling</para>
+        <para>6.1	Met betrekking tot het verzoek om voorlopige voorziening</para>
+        <para>Ingevolge het bepaalde in artikel 8:81 van de Algemene wet bestuursrecht (hierna: Awb) juncto artikel 19, eerste lid, van de Wet bestuursrechtspraak bedrijfsorganisatie kan, indien tegen een besluit, voorafgaand aan een mogelijk beroep, bezwaar is gemaakt, de president van het College op verzoek een voorlopige voorziening treffen, indien onverwijlde spoed, gelet op de betrokken belangen, dat vereist.</para>
+        <para>Gelet op hetgeen partijen over en weer hebben gesteld zal de president in de eerste plaats nagaan of verweerder verzoeker in het kader van het besluit tot toepassing van bestuursdwang terecht als vervoerder - en adressaat van het besluit - heeft aangemerkt. </para>
+        <para>Daartoe overweegt de president als volgt. </para>
+        <para>In het kader van de Wet dient, naar onder meer blijkt uit de Nota van toelichting bij het besluit tot wijziging van het Besluit personenvervoer (Stb. 1999, 560, pag. 9), onder vervoerder te worden verstaan degene die voor eigen rekening en risico het in artikel 5 van de Wet bedoelde vervoer verricht. Vast staat dat verzoeker taxivervoer verrichtte in een auto die op zijn naam stond en dat verzoeker op het moment van de controle door de Rijksverkeersinspectie niet stond ingeschreven als vennoot van de v.o.f. waarvan hij het vergunningbewijs liet zien. Voorts is gesteld noch gebleken dat verzoeker in loondienst was bij de v.o.f., zodat verweerder zich, gelet op deze omstandigheden, naar voorlopig oordeel, op het standpunt heeft kunnen stellen dat verzoeker ten tijde hier van belang voor eigen rekening en risico het taxivervoer verrichtte. Hieruit volgt, evenzeer naar voorlopig oordeel, dat verzoeker door verweerder terecht als vergunningsplichtige vervoerder in de zin van de Wet is aangemerkt.</para>
+        <para>Verweerder heeft gesteld dat onvoldoende spoedeisend belang bestaat bij het onderhavige verzoek, omdat de bestuursdwang - na beeindiging van de gestelde overtreding - zou zijn uitgewerkt. De president volgt verweerder hierin niet en overweegt daartoe als volgt.</para>
+        <para>Vast staat dat verzoeker, door het feitelijk handelen van de inspecteur van de Rijksverkeersinspectie, het verdere vervoer van personen met zijn taxi, is belet. Naar het oordeel van de president - verweerder heeft op dit punt ook niet van een andere opvatting doen blijken - heeft de sommatie van verweerder het gewraakte vervoer te staken en de lichtbak van de betrokken auto verwijderd te houden, nog steeds gelding en duurt het beletten van vervoer, uitgaande van ongewijzigde omstandigheden, als gevolg van de bestuursdwang derhalve nog steeds voort. Verzoeker heeft en houdt uit dien hoofde derhalve belang bij een beoordeling van zijn verzoek om voorlopige voorziening. Een </para>
+        <para>andere opvatting zou bovendien tot het, ongewenste, gevolg leiden dat - zodra verzoeker, in gelijke omstandigheden, weer zou overgaan tot het vervoer van personen - telkens opnieuw bestuursdwang zou kunnen worden toegepast door middel van feitelijk optreden, zonder dat daar een adequate rechtsbescherming voor de betrokkene tegenover staat.</para>
+        <para>Gelet op het voorgaande heeft verzoeker naar het oordeel van de president op zichzelf voldoende belang bij een verzoek om voorlopige voorziening tegen een - achteraf op schrift gesteld - besluit tot toepassing van bestuursdwang, gericht tegen het verrichten van taxivervoer zonder vergunning.</para>
+        <para>Ten aanzien van de vraag of in het onderhavige geval ook voldoende spoedeisend belang bestaat, overweegt de president voorts als volgt.</para>
+        <para>Ter zitting is komen vast te staan dat verzoeker sinds medio oktober zijn beroep van taxichauffeur weer uitoefent. Verzoeker heeft een vergunningaanvraag ingediend voor een eenmanszaak en maakt gebruik van een overgangsregeling in het besluit van 16 december 1999 tot wijziging van het Besluit personenvervoer (Stb. 560). Naar de opvatting van verweerder, zoals uiteengezet ter zitting, handelt verzoeker hiermee niet in strijd met de wettelijke voorschriften.</para>
+        <para>Het door verzoeker bij zijn inleidende verzoek om voorlopige voorziening gestelde spoedeisende belang was gelegen in verlies van inkomsten doordat hij als gevolg van de toepassing van de gewraakte bestuursdwang zijn beroep van taxichauffeur niet meer kon uitoefenen.</para>
+        <para>Nu vaststaat dat verzoeker sinds medio oktober zijn beroep van taxichauffeur weer uitoefent en voor optreden van de Rijksverkeersinspectie, om redenen als thans aan de orde, kennelijk niet behoeft te vrezen, is reeds hierom geen sprake van een voldoende spoedeisend belang bij de gevraagde voorziening. Eventuele door verzoeker geleden en voor vergoeding in aanmerking komende schade, kan in het kader van de bodemprocedure aan de orde te worden gesteld.</para>
+        <para>Vorenstaande overwegingen leiden de president tot het oordeel dat het verzoek om voorlopige voorziening dient te worden afgewezen.</para>
+        <para>De president komt derhalve niet toe aan een behandeling van de overige door verzoeker opgeworpen vragen, zoals onder meer de vraag of de hier aan de orde zijnde situatie tot een zodanig spoedig optreden noopte dat de mondelinge beslissing om bestuursdwang toe te passen onmiddellijk kon worden uitgevoerd zonder deze eerst, al dan niet voorzien van een termijn als bedoeld in artikel 5:24, vierde lid, Awb, op schrift te stellen.</para>
+        <para>De president acht geen termen aanwezig toepassing te geven aan artikel 8:75 van de Awb.</para>
+        <para>6.2 Met betrekking tot het verzoek van V.o.f. [naam v.o.f.] </para>
+        <para>Ten aanzien van het verzoek van de v.o.f. tot toelating als partij overweegt de president als volgt.</para>
+        <para>Ingevolge artikel 8:26 van de Awb kan een belanghebbende in de gelegenheid worden gesteld als partij aan het geding deel te nemen. Ingevolge artikel 1:2, eerste lid, van de Awb wordt onder een belanghebbende verstaan: degene, wiens belang rechtstreeks bij een besluit is betrokken.</para>
+        <para>Het besluit tot toepassing van bestuursdwang is gericht aan verzoeker. De v.o.f. is niet de geadresseerde van dit besluit. Hetgeen van de zijde van de v.o.f. is aangevoerd met betrekking tot het belang waarin zij zich getroffen acht, moet naar voorlopig oordeel van de president niet als een rechtstreeks, maar als een afgeleid belang worden aangemerkt. Het - in feite aan dat van verzoeker parallelle - belang van de v.o.f. is bij het bestreden besluit slechts betrokken als gevolg van het vennootschappelijk contract dat is gesloten met verzoeker en mitsdien niet rechtstreeks.</para>
+        <para>Gelet hierop is de president van oordeel dat de v.o.f. niet als belanghebbende kan worden aangemerkt en dat het verzoek van de v.o.f. om als partij aan het geding te mogen deelnemen, moet worden afgewezen.</para>
+        <para>Het voorgaande leidt tot de volgende beslissingen.</para>
+        <para>7.	Beslissing</para>
+        <para>De president:</para>
+        <para>1. wijst het verzoek om een voorlopige voorziening van verzoeker af;</para>
+        <para>2. wijst het verzoek van V.o.f. [naam v.o.f.] tot toelating als partij in het onderhavige </para>
+        <para>geding, af.</para>
+      </parablock>
+      <para> </para>
+      <parablock>
+        <para>Aldus gewezen door mr R.R. Winter, president, in aanwezigheid van </para>
+        <para>mr M.M. Smorenburg, als griffier, en uitgesproken in het openbaar op 27 oktober 2000.</para>
+      </parablock>
+      <para> </para>
+      <para>w.g. R.R. Winter	w.g. M.M. Smorenburg</para>
+      <para> </para>
+      <para> </para>
+      <para> </para>
+      <para> </para>
+      <para>Verzonden op:</para>
+    </uitspraak>
+</open-rechtspraak>
