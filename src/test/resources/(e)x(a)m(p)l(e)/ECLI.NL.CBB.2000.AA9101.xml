@@ -20,7 +20,7 @@
       <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht">Bestuursrecht</dcterms:subject>
       <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0005537&amp;artikel=3:4&amp;g=2000-11-28">Algemene wet bestuursrecht 3:4</dcterms:references>
       <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0005537&amp;artikel=7:13&amp;g=2000-11-28">Algemene wet bestuursrecht 7:13</dcterms:references>
-      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0007820&amp;g=2000-11-28">Besluit bescherming tegen bepaalde zoönosen en bestrijding besmettelijke dierziekten</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0007820&amp;g=2000-11-28">Besluit bescherming tegen bepaalde zoÃ¶nosen en bestrijding besmettelijke dierziekten</dcterms:references>
       <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0005662&amp;artikel=86&amp;g=2000-11-28">Gezondheids- en welzijnswet voor dieren 86</dcterms:references>
       <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
         <rdf:list>
@@ -117,7 +117,7 @@
       </parablock>
       <para/>
       <parablock>
-        <para>Besluit bescherming tegen bepaalde zo”nosen en bestrijding besmettelijke dierziekten, Stb. 1996, 156 (hierna: het Besluit)</para>
+        <para>Besluit bescherming tegen bepaalde zoâ€nosen en bestrijding besmettelijke dierziekten, Stb. 1996, 156 (hierna: het Besluit)</para>
         <para>"	Artikel 8</para>
         <para>	1. De in artikel 86, tweede lid, onderdeel c, van de wet bedoelde percentages tot verlaging van de tegemoetkoming in de schade bedragen bij het uitbreken van varkenspest bij varkens:</para>
         <para>	a. indien op een bedrijf varkens afkomstig van vier of meer andere bedrijven aanwezig zijn: 35%;</para>
@@ -159,14 +159,14 @@
         <para>3.1 Verweerder heeft bij het bestreden besluit het bezwaar van appellant tegen de verlaging van 70% van de tegemoetkoming in de schade ongegrond verklaard.</para>
         <para>3.2 De overwegingen van verweerder ten aanzien van de bezwaren van appellant tegen de verlaging van de tegemoetkoming, voorzover die verlaging haar grond vindt in het bepaalde bij artikel 86, tweede lid, GWD juncto artikel 8, eerste lid, onder c, van het Besluit wegens een aantal malen niet melden van de aanvoer van varkens bij het I&amp;R bureau Varkens zijn, voorzover hier van belang, gelijkluidend aan die welke verweerder ten grondslag heeft gelegd aan zijn beslissing op het bezwaar dat ter beoordeling stond in de - aan partijen door het College toegezonden - uitspraak AWB 97/1599. Deze beslissing is aan die uitspraak gehecht en wordt geacht daarvan deel uit te maken, zodat het College voor de overwegingen van verweerder ten aanzien van bedoelde bezwaren naar de inhoud van genoemde uitspraak verwijst.</para>
         <para>3.3 De overwegingen die verweerder ten grondslag heeft gelegd aan zijn beslissing tot ongegrondverklaring van appellants bezwaren tegen de taxatie en tegen de verlaging van de tegemoetkoming in de schade voorzover die haar grond vindt in het bepaalde bij artikel 86, tweede lid, GWD juncto artikel 8, eerste lid, onder a, van het Besluit juncto artikel 8, derde lid, van het Besluit, luiden, voorzover hier van belang, als volgt:</para>
-        <para>"	Op grond van artikel 87 van de Wet zijn Uw varkens, alvorens te worden gedood, en de voorwerpen en producten, alvorens te worden vernietigd, gewaardeerd. Zoals dit is voorgeschreven in artikel 88, eerste lid, van de Wet, is de waardevaststelling uitgevoerd door een be‰digd deskundige. Deze was vergezeld van een medewerker van de Rijksdienst voor de keuring van vee en vlees (hierna te noemen: de RVV). Uw varkens en voorwerpen en producten zijn gewaardeerd naar de omstandigheden van Uw bedrijf en de specifieke kenmerken van de varkens en voorwerpen en producten.</para>
+        <para>"	Op grond van artikel 87 van de Wet zijn Uw varkens, alvorens te worden gedood, en de voorwerpen en producten, alvorens te worden vernietigd, gewaardeerd. Zoals dit is voorgeschreven in artikel 88, eerste lid, van de Wet, is de waardevaststelling uitgevoerd door een beâ€°digd deskundige. Deze was vergezeld van een medewerker van de Rijksdienst voor de keuring van vee en vlees (hierna te noemen: de RVV). Uw varkens en voorwerpen en producten zijn gewaardeerd naar de omstandigheden van Uw bedrijf en de specifieke kenmerken van de varkens en voorwerpen en producten.</para>
         <para>U heeft de waardevaststelling ondertekend. Daarmee heeft U ingestemd met de vastgestelde waarde en afgezien van inschakeling van de kantonrechter om een hertaxatie te laten uitvoeren, zoals voorzien in artikel 88, tweede lid, van de Wet.</para>
       </parablock>
       <para/>
       <parablock>
         <para>U heeft in Uw bezwaarschrift gesteld dat U zich niet kunt verenigen met de waardevaststelling, dat U zich niet bewust was van hetgeen U ondertekende omdat U zich in een emotionele toestand bevond en dat U min of meer gedwongen de taxatie voor akkoord heeft getekend. Hierover merk ik het volgende op.</para>
         <para>Mij is niet gebleken dat de taxatie op een onjuiste wijze heeft plaatsgevonden. </para>
-        <para>Zoals gezegd, is de taxatie uitgevoerd door een daartoe be‰digd deskundige, die door ervaring en kennis op juiste wijze de waarde van de op Uw bedrijf aanwezige varkens en voorwerpen en producten heeft vastgesteld. Mij is niet gebleken dat de taxatie procedureel of inhoudelijk onjuist is geschied. </para>
+        <para>Zoals gezegd, is de taxatie uitgevoerd door een daartoe beâ€°digd deskundige, die door ervaring en kennis op juiste wijze de waarde van de op Uw bedrijf aanwezige varkens en voorwerpen en producten heeft vastgesteld. Mij is niet gebleken dat de taxatie procedureel of inhoudelijk onjuist is geschied. </para>
         <para>Overigens heeft U in Uw bezwaarschrift niet concreet aangegeven waarom de waardevaststelling niet juist zou zijn, doch heeft U zich beperkt tot een algemene stelling.</para>
         <para>Het is voorstelbaar dat U zich ten tijde van de taxatie in een emotionele toestand bevond. Mij is echter niet gebleken dat deze toestand dermate ernstig was, dat U ten aanzien van de vastgestelde waarde en de ondertekening, waarbij U zich akkoord verklaarde met deze vastgestelde waarde, niet Uw wil kon bepalen en zich niet bewust was van de situatie. Daarbij neem ik in aanmerking dat op grond van de regelgeving en op grond van het feit dat taxatie ten behoeve van een tegemoetkoming in de schade reeds enige jaren </para>
         <para>praktijk is, het als algemeen bekend mag worden verondersteld dat men zich niet hoeft neer te leggen bij een (eerste) taxatie.</para>
@@ -211,7 +211,7 @@
       <para/>
       <para>(.)</para>
       <para/>
-      <para>E‚n van de in het Besluit genoemde maatregelen waarvan het belang zo groot is dat de naleving wordt versterkt door de toepassing van een kortings-percentage, is het identificeren en registreren van de varkens.</para>
+      <para>Eâ€šn van de in het Besluit genoemde maatregelen waarvan het belang zo groot is dat de naleving wordt versterkt door de toepassing van een kortings-percentage, is het identificeren en registreren van de varkens.</para>
       <para/>
       <para>(.)</para>
       <para/>
@@ -272,7 +272,7 @@
       <parablock>
         <para>Met betrekking tot de evenredigheid van de kortingsgrond, zoals bepaald in artikel 8, eerste lid, onderdeel a, van het Besluit (varkens op het bedrijf afkomstig van vier of meer bedrijven), merk ik op dat de wetgever in artikel 8, eerste lid, onderdeel a, van het Besluit, zelf het aantal toeleverende bedrijven heeft bepaald waarbij een korting zal worden toegepast, namelijk bij vier of </para>
         <para>meer. Dit criterium is geobjectiveerd.</para>
-        <para>Dit wil zeggen dat de subjectieve omstandigheden van het geval niet van belang zijn: maatgevend is slechts het feit ¢f er op het bedrijf varkens zijn afkomstig van vier of meer bedrijven. Is er derhalve sprake van een situatie waarin op een bedrijf varkens aanwezig zijn afkomstig van vier of meer andere bedrijven dan wordt de schadeloosstelling met 35% gekort.</para>
+        <para>Dit wil zeggen dat de subjectieve omstandigheden van het geval niet van belang zijn: maatgevend is slechts het feit Â¢f er op het bedrijf varkens zijn afkomstig van vier of meer bedrijven. Is er derhalve sprake van een situatie waarin op een bedrijf varkens aanwezig zijn afkomstig van vier of meer andere bedrijven dan wordt de schadeloosstelling met 35% gekort.</para>
       </parablock>
       <para/>
       <parablock>
@@ -285,16 +285,16 @@
       <para/>
       <parablock>
         <para>Met betrekking tot de kortingsgrond, zoals bepaald in artikel 8, eerste lid, onderdeel c, van het Besluit merk ik het volgende op.</para>
-        <para>Hiervoor is reeds het grote belang van een juiste I &amp; R-registratie die up-to-date is, uiteengezet. Het is daarbij niet van belang dat U, ondanks het niet melden van mutaties, de herkomst van Uw varkens kunt aantonen. Melding op ‚‚n centraal punt is essentieel.</para>
+        <para>Hiervoor is reeds het grote belang van een juiste I &amp; R-registratie die up-to-date is, uiteengezet. Het is daarbij niet van belang dat U, ondanks het niet melden van mutaties, de herkomst van Uw varkens kunt aantonen. Melding op â€šâ€šn centraal punt is essentieel.</para>
       </parablock>
       <para/>
       <para>(.)</para>
       <para/>
       <parablock>
-        <para>Indien er echter sprake is van ‚‚n fout of vergissing waardoor geen melding of een te late melding plaatsvindt, brengt de eis van evenredigheid met zich mee dat geen korting op de schadeloosstelling wordt toegepast. Gelet op de veel voorkomende praktijk dat men ‚‚n keer per week de administratie bijwerkt en daarbij de meldingen deed, leidt het evenredigheidsbeginsel er in de huidige </para>
-        <para>situatie eveneens toe dat geen korting wordt toegepast indien de aanvoer van varkens later dan twee dagen maar binnen ‚‚n week na de aanvoer is gemeld. </para>
+        <para>Indien er echter sprake is van â€šâ€šn fout of vergissing waardoor geen melding of een te late melding plaatsvindt, brengt de eis van evenredigheid met zich mee dat geen korting op de schadeloosstelling wordt toegepast. Gelet op de veel voorkomende praktijk dat men â€šâ€šn keer per week de administratie bijwerkt en daarbij de meldingen deed, leidt het evenredigheidsbeginsel er in de huidige </para>
+        <para>situatie eveneens toe dat geen korting wordt toegepast indien de aanvoer van varkens later dan twee dagen maar binnen â€šâ€šn week na de aanvoer is gemeld. </para>
         <para>Wel dienen de vervoersdocumenten van de betreffende transporten in orde te zijn.</para>
-        <para>In Uw geval is er niet sprake van ‚‚n fout, maar is driemaal de aanvoer van varkens door U niet gemeld. Van deze transporten ontbraken tevens op de desbetreffende vervoersdocumenten sommige gegevens.</para>
+        <para>In Uw geval is er niet sprake van â€šâ€šn fout, maar is driemaal de aanvoer van varkens door U niet gemeld. Van deze transporten ontbraken tevens op de desbetreffende vervoersdocumenten sommige gegevens.</para>
       </parablock>
       <para/>
       <para>(.)"</para>
@@ -336,7 +336,7 @@
         <para>Dat is i.c. niet geschied, de varkenspest is immers feitelijk reeds d.d. 03.02.1997 vastgesteld. Had de burgemeester tijdig maatregelen genomen dan zou appellant d.d. 04.02.1997 geen biggen geleverd gekregen hebben.</para>
       </parablock>
       <para/>
-      <para>-blz 12 bij de ruiming was behalve de door de minister genoemde heren Bastiaansen, Osta en Vrielink van RVV een AID ook de heer Westerlaken als be‰digd taxateur aanwezig.</para>
+      <para>-blz 12 bij de ruiming was behalve de door de minister genoemde heren Bastiaansen, Osta en Vrielink van RVV een AID ook de heer Westerlaken als beâ€°digd taxateur aanwezig.</para>
       <para/>
       <parablock>
         <para>-blz 13/14 nogmaals wordt benadrukt dat de ruiming onder emotionele </para>
@@ -379,7 +379,7 @@
       </parablock>
       <para/>
       <parablock>
-        <para>Gegeven de discretionaire bevoegdheid van verweerder ter zake, valt niet in te zien dat het hiervoor bedoelde wettelijk stelsel zich ertegen verzet dat, in geval van samenloop van twee of meer categorie‰n, als bedoeld in de onderdelen a tot en met i, verweerder bij de afweging of, gelet op de bijzonderheden van het geval, toepassing van de korting onevenredig is, de omstandigheid dat er volgens het per categorie ontwikkelde beleid in beginsel sprake is van de in het derde lid van artikel 8 bedoelde cumulatie, als zwaarwegende omstandigheid betrekt. </para>
+        <para>Gegeven de discretionaire bevoegdheid van verweerder ter zake, valt niet in te zien dat het hiervoor bedoelde wettelijk stelsel zich ertegen verzet dat, in geval van samenloop van twee of meer categorieâ€°n, als bedoeld in de onderdelen a tot en met i, verweerder bij de afweging of, gelet op de bijzonderheden van het geval, toepassing van de korting onevenredig is, de omstandigheid dat er volgens het per categorie ontwikkelde beleid in beginsel sprake is van de in het derde lid van artikel 8 bedoelde cumulatie, als zwaarwegende omstandigheid betrekt. </para>
         <para>Het College is voorts van oordeel dat, indien ingevolge het besluit de mogelijkheid van de toepassing van een gecumuleerde korting aan de orde is, verweerder in verband met artikel 3:4, tweede lid, van de Awb dient na te gaan of de ernst van de risico's welke door de onderscheiden overtredingen in het leven worden geroepen, een dergelijke cumulatie kan rechtvaardigen, en dat verweerder bij een besluit, waarbij een gecumuleerde korting wordt </para>
         <para>opgelegd, een op de omstandigheden van het individuele geval toegesneden motivering geeft.</para>
         <para>Deze motivering ontbreekt in casu geheel.</para>

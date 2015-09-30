@@ -60,7 +60,7 @@ public class RechtspraakNlInterface {
         return doc;
     }
 
-    public static OpenRechtspraak parseEcliXml(String str) throws JAXBException, UnsupportedEncodingException {
+    public static OpenRechtspraak parseXml(String str) throws JAXBException, UnsupportedEncodingException {
         InputStream is = new ByteArrayInputStream(str.getBytes("UTF-8"));
         return parseEcliXml(is);
     }

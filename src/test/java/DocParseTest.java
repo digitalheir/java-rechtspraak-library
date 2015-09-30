@@ -10,6 +10,10 @@ import javax.xml.bind.JAXBException;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.xpath.XPathExpressionException;
 import java.io.IOException;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
@@ -38,8 +42,11 @@ public class DocParseTest {
         }
     }
 
-    private void parseSecond(ArrayList<String> list) throws IOException, JAXBException, XPathExpressionException {
-        OpenRechtspraak doc = RechtspraakNlInterface.parseEcliXml(list.get(0));
+    private void parseSecond(ArrayList<String> list) throws IOException, JAXBException, XPathExpressionException, URISyntaxException {
+        String ecli = list.get(1);
+        String strXml = getDocStringFromResources(ecli);
+
+        OpenRechtspraak doc = RechtspraakNlInterface.parseXml(strXml);
 
         List<Description> descs = doc.getRDF().getDescription();
         assertEquals(descs.size(), 2);
@@ -51,8 +58,20 @@ public class DocParseTest {
         assertEquals(desc2.getAbstract().getAbstractSimple(), doc.getInhoudsindicatie().toString().trim());
     }
 
-    private void parseFirst(ArrayList<String> list) throws IOException, JAXBException, XPathExpressionException {
-        OpenRechtspraak doc = RechtspraakNlInterface.parseEcliXml(list.get(0));
+    private static String getDocStringFromResources(String ecli) throws IOException, URISyntaxException {
+        String strXml;
+        URL resource = DocParseTest.class.getResource("/(e)x(a)m(p)l(e)/" + ecli.replaceAll(":", ".") + ".xml");
+        byte[] encoded = Files.readAllBytes(Paths.get(resource.toURI()));
+        strXml = new String(encoded, "UTF-8");
+//                }
+        return strXml;
+    }
+
+    private void parseFirst(ArrayList<String> list) throws IOException, JAXBException, XPathExpressionException, URISyntaxException {
+        String ecli = list.get(0);
+        String strXml = getDocStringFromResources(ecli);
+
+        OpenRechtspraak doc = RechtspraakNlInterface.parseXml(strXml);
 
         List<Description> descs = doc.getRDF().getDescription();
         assertEquals(descs.size(), 2);
@@ -100,11 +119,13 @@ public class DocParseTest {
     @Test
     public void impossibleEcliTest() {
         try {
-            RechtspraakNlInterface.parseEcliXml("I should not exist");
+            RechtspraakNlInterface.request("Ishouldnotexist");
             assertEquals("apples", "pears");
         } catch (IOException | JAXBException e) {
             throw new Error(e);
         } catch (IllegalStateException ignored) {
+        } catch (XPathExpressionException e) {
+            e.printStackTrace();
         }
     }
 
