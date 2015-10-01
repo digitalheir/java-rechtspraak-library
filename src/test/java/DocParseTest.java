@@ -10,6 +10,10 @@ import javax.xml.bind.JAXBException;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.xpath.XPathExpressionException;
 import java.io.IOException;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
@@ -55,6 +59,14 @@ public class DocParseTest {
         }
     }
 
+    private static String getDocStringFromResources(String ecli) throws IOException, URISyntaxException {
+        String strXml;
+        URL resource = DocParseTest.class.getResource("/(e)x(a)m(p)l(e)/" + ecli.replaceAll(":", ".") + ".xml");
+        byte[] encoded = Files.readAllBytes(Paths.get(resource.toURI()));
+        strXml = new String(encoded, "UTF-8");
+//                }
+        return strXml;
+    }
     private void parseFirst(ArrayList<String> list) {
         String ecli = list.get(0);
         try {

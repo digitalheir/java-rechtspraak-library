@@ -15,11 +15,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static org.junit.Assert.assertEquals;
-
 /**
  * Test the JSON-LD output of Rechtspraak.nl XML documents
- * <p>
+ * <p/>
  * Created by maarten on 31-7-15.
  */
 public class ToJsonTest {
@@ -96,16 +94,8 @@ public class ToJsonTest {
             for (String ecli : testDocs) {
                 String strXml;
                 URL resource = getClass().getResource("/(e)x(a)m(p)l(e)/" + ecli.replaceAll(":", ".") + ".xml");
-//                if (resource == null) {
-//                    Response res = CouchInterface.request(ecli);
-//                    strXml = res.body().string();
-//                    PrintWriter out = new PrintWriter("C:\\Users\\Maarten\\IdeaProjects\\java-rechtspraak-library\\src\\test\\resources\\" + "(e)x(a)m(p)l(e)\\" + ecli.replaceAll(":", ".") + ".xml");
-//                    out.print(strXml);
-//                    out.close();
-//                } else {
-                    byte[] encoded = Files.readAllBytes(Paths.get(resource.toURI()));
-                    strXml = new String(encoded, "UTF-8");
-//                }
+                byte[] encoded = Files.readAllBytes(Paths.get(resource.toURI()));
+                strXml = new String(encoded, "UTF-8");
 
                 OpenRechtspraak doc = CouchInterface.parseXml(strXml);
 
