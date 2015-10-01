@@ -1,27 +1,11 @@
-import com.squareup.okhttp.Response;
 import generated.OpenRechtspraak;
-import nl.rechtspraak.schema.rechtspraak_1.RechtspraakContent;
 import org.junit.Test;
 import org.leibnizcenter.rechtspraak.CouchDoc;
 import org.leibnizcenter.rechtspraak.CouchInterface;
-import org.leibnizcenter.rechtspraak.RechtspraakNlInterface;
-import org.w3._1999._02._22_rdf_syntax_ns_.Description;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.xml.sax.InputSource;
-import org.xml.sax.SAXException;
 
 import javax.xml.bind.JAXBException;
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
-import javax.xml.xpath.XPathExpressionException;
-import java.io.File;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.io.StringReader;
-import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.file.Files;
@@ -123,7 +107,7 @@ public class ToJsonTest {
                     strXml = new String(encoded, "UTF-8");
 //                }
 
-                OpenRechtspraak doc = CouchInterface.parseEcliXml(strXml);
+                OpenRechtspraak doc = CouchInterface.parseXml(strXml);
 
                 CouchDoc couchDoc = new CouchDoc(doc, strXml);
                 parsedDocs.add(couchDoc);

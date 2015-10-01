@@ -32,6 +32,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
+import static org.leibnizcenter.rechtspraak.RechtspraakNlInterface.xmlToHtml;
+
 /**
  * Created by Maarten on 29/09/2015.
  */
@@ -434,7 +436,6 @@ public class CouchDoc {
 
     static class Attachments {
         static BaseEncoding b64 = BaseEncoding.base64();
-        static TransformerFactory traFo = TransformerFactory.newInstance();
 
         @SerializedName("data.xml")
         Attachment xml;
@@ -443,20 +444,7 @@ public class CouchDoc {
 
         public Attachments(String xmlStr) throws TransformerException, URISyntaxException {
             this.xml = new Attachment(xmlStr, "text/xml;charset=utf-8");
-
-
-            File stylesheet = new File(
-                    CouchDoc.class.getResource("/xslt/rechtspraak_to_html.xslt").toURI()
-            );
-            StreamSource stylesource = new StreamSource(stylesheet);
-            Transformer transformer = traFo.newTransformer(stylesource);
-
-            ByteArrayInputStream is = new ByteArrayInputStream(xmlStr.getBytes());
-            StringWriter sw=new StringWriter();
-            transformer.transform(new StreamSource(is),new StreamResult(sw));
-            String htmStr=sw.toString();
-
-            this.htm = new Attachment(htmStr, "text/html;charset=utf-8");
+            this.htm = new Attachment(xmlToHtml(xmlStr), "text/html;charset=utf-8");
         }
 
         class Attachment {

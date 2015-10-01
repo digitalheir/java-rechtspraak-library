@@ -9,27 +9,27 @@ import nl.rechtspraak.schema.rechtspraak_1.Uitspraak;
 import org.jsoup.Jsoup;
 import org.jsoup.parser.Parser;
 import org.jsoup.select.Elements;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.NodeList;
-import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.stream.StreamResult;
+import javax.xml.transform.stream.StreamSource;
 import javax.xml.xpath.*;
 import java.io.*;
 import java.net.URI;
+import java.net.URISyntaxException;
 
 /**
  * Created by maarten on 28-9-15.
  */
 public class RechtspraakNlInterface {
-    public static Response request(String ecli) throws IOException, JAXBException, XPathExpressionException {
+    public static Response requestXmlForEcli(String ecli) throws IOException, JAXBException, XPathExpressionException {
         URI uri = URI.create(getXmlUrl(ecli));
         HttpUrl url = HttpUrl.get(uri);
         return new DocumentRequest(url).execute();
@@ -39,7 +39,7 @@ public class RechtspraakNlInterface {
         return "http://data.rechtspraak.nl/uitspraken/content?id=" + ecli;
     }
 
-    public static OpenRechtspraak parseEcliXml(InputStream isXml) throws JAXBException {
+    public static OpenRechtspraak parseXml(InputStream isXml) throws JAXBException {
         JAXBContext context = JAXBContext.newInstance(
                 OpenRechtspraak.class,
                 org.purl.dc.terms.ObjectFactory.class,
@@ -60,18 +60,36 @@ public class RechtspraakNlInterface {
         return doc;
     }
 
-    public static OpenRechtspraak parseEcliXml(String str) throws JAXBException, UnsupportedEncodingException {
-        InputStream is = new ByteArrayInputStream(str.getBytes("UTF-8"));
-        return parseEcliXml(is);
+    public static String xmlToHtml(String xmlStr) throws URISyntaxException, TransformerException {
+//            ByteArrayInputStream is
+        return xmlToHtml(new ByteArrayInputStream(xmlStr.getBytes()));
     }
 
-    public static org.jsoup.nodes.Element getUitspraakOrConclusieXmlElement(String strXml) throws IOException, SAXException, ParserConfigurationException, XPathExpressionException {
-        org.jsoup.nodes.Document doc = Jsoup.parse(strXml, "http://data.rechtspraak.nl/uitspraken/", Parser.xmlParser());
-        Elements els = doc.select("open-rechtspraak > uitspraak,conclusie");
-        if (els.size() != 1)
-            throw new IllegalStateException("Document should have exactly one uitspraak or conclusie");
-        return els.get(0);
+    public static String xmlToHtml(ByteArrayInputStream is) throws URISyntaxException, TransformerException {
+        File stylesheet = new File(
+                CouchDoc.class.getResource("/xslt/rechtspraak_to_html.xslt").toURI()
+        );
+        StreamSource stylesource = new StreamSource(stylesheet);
+        Transformer transformer = TransformerFactory.newInstance().newTransformer(stylesource);
+
+
+        StringWriter sw = new StringWriter();
+        transformer.transform(new StreamSource(is), new StreamResult(sw));
+        return sw.toString();
     }
+
+    public static OpenRechtspraak parseXml(String str) throws JAXBException, UnsupportedEncodingException {
+        InputStream is = new ByteArrayInputStream(str.getBytes("UTF-8"));
+        return parseXml(is);
+    }
+
+//    public static org.jsoup.nodes.Element getUitspraakOrConclusieXmlElement(String strXml) throws IOException, SAXException, ParserConfigurationException, XPathExpressionException {
+//        org.jsoup.nodes.Document doc = Jsoup.parse(strXml, "http://data.rechtspraak.nl/uitspraken/", Parser.xmlParser());
+//        Elements els = doc.select("open-rechtspraak > uitspraak,conclusie");
+//        if (els.size() != 1)
+//            throw new IllegalStateException("Document should have exactly one uitspraak or conclusie");
+//        return els.get(0);
+//    }
 
     public static RechtspraakContent getUitspraakOrConclusie(OpenRechtspraak doc) {
         Uitspraak u = doc.getUitspraak();

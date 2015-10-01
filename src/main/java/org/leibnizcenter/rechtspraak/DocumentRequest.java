@@ -10,7 +10,6 @@ import org.leibnizcenter.helpers.SimpleNamespaceContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.xpath.XPathExpressionException;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.HashMap;
 
 /**
@@ -56,7 +55,7 @@ public class DocumentRequest {
     }
 
     public OpenRechtspraak executeAndParse() throws IOException, XPathExpressionException, JAXBException {
-        return RechtspraakNlInterface.parseEcliXml(execute().body().byteStream());
+        return RechtspraakNlInterface.parseXml(execute().body().byteStream());
     }
 
     public Request getRequest() {

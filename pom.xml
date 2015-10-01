@@ -6,7 +6,7 @@
 
     <groupId>org.leibnizcenter</groupId>
     <artifactId>rechtspraak</artifactId>
-    <version>0.10.0</version>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
 
     <licenses>
@@ -52,11 +52,6 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
-        </dependency>
-        <dependency>
-            <groupId>net.sf.json-lib</groupId>
-            <artifactId>json-lib</artifactId>
-            <version>2.4</version>
         </dependency>
         <dependency>
             <groupId>org.jsoup</groupId>
