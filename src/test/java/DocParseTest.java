@@ -1,5 +1,6 @@
 import generated.OpenRechtspraak;
 import nl.rechtspraak.schema.rechtspraak_1.TRechtspraakMarkup;
+import org.jsoup.HttpStatusException;
 import org.junit.Test;
 import org.leibnizcenter.rechtspraak.RechtspraakNlInterface;
 import org.leibnizcenter.rechtspraak.SearchRequest;
@@ -123,9 +124,9 @@ public class DocParseTest {
         try {
             parseXml(requestXmlForEcli("I-should-not-exist").body().byteStream());
             assertEquals("apples", "pears");
+        } catch (HttpStatusException ignored) {
         } catch (IOException | JAXBException | XPathExpressionException e) {
             throw new Error(e);
-        } catch (IllegalStateException ignored) {
         }
     }
 

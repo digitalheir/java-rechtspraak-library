@@ -15,6 +15,8 @@ import com.google.gson.JsonPrimitive;
 
 import javax.xml.bind.annotation.*;
 import javax.xml.namespace.QName;
+import java.io.IOException;
+import java.io.NotSerializableException;
 import java.util.*;
 
 
@@ -228,7 +230,7 @@ public class TRechtspraakMarkup {
         return sb.toString();
     }
 
-    public JsonElement toJson() {
+    public JsonElement toJson() throws NotSerializableException {
         JsonObject o = new JsonObject();
 
         JsonArray children = new JsonArray();
@@ -241,7 +243,7 @@ public class TRechtspraakMarkup {
             } else if (child instanceof TRechtspraakMarkup) {
                 children.add(((TRechtspraakMarkup) child).toJson());
             } else {
-                throw new IllegalStateException("Unable to serialize child with class " + child.getClass().getSimpleName());
+                throw new NotSerializableException("Unable to serialize child with class " + child.getClass().getSimpleName());
             }
         }
 
