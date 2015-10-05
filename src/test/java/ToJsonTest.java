@@ -104,6 +104,7 @@ public class ToJsonTest {
             }
 
             for (CouchDoc doc : parsedDocs) {
+
 //                if (validateJson.get(doc._id) != null) {
 //                    assertEquals(validateJson.get(doc._id), CouchInterface.toJson(doc));
 //                }

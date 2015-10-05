@@ -1,32 +1,19 @@
 package org.leibnizcenter.rechtspraak;
 
-import com.google.common.base.Charsets;
 import com.google.common.base.Preconditions;
-import com.google.common.base.Strings;
 import com.google.common.io.BaseEncoding;
-import com.google.common.io.CharStreams;
-import com.google.gson.*;
+import com.google.gson.JsonElement;
 import com.google.gson.annotations.SerializedName;
 import generated.OpenRechtspraak;
 import nl.rechtspraak.psi.Procedure;
 import nl.rechtspraak.schema.rechtspraak_1.RechtspraakContent;
 import org.joda.time.DateTime;
-import org.jsoup.Connection;
 import org.purl.dc.terms.*;
-
-import javax.xml.transform.TransformerConfigurationException;
-import javax.xml.transform.TransformerException;
-import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.dom.DOMSource;
-import javax.xml.transform.stream.StreamSource;
-import javax.xml.transform.stream.StreamResult;
-
 import org.w3._1999._02._22_rdf_syntax_ns_.Description;
 
-import javax.xml.transform.Transformer;
-import javax.xml.transform.stream.StreamSource;
-import java.io.*;
-import java.net.URI;
+import javax.xml.transform.TransformerException;
+import java.io.NotSerializableException;
+import java.io.UnsupportedEncodingException;
 import java.net.URISyntaxException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
@@ -369,7 +356,9 @@ public class CouchDoc {
     public static class RechtsValue {
         @SerializedName("@value")
         String value;
-        String language = null;
+
+        @SerializedName("@value")
+        String language;
 
         RechtsValue(String value) {
             this.value = value;

@@ -226,8 +226,8 @@ public class TRechtspraakMarkup {
                     //sb.append(o.toString());
                 }
             }
-        } else {
-            System.out.println();
+//        } else {
+            //System.out.println("<No content>");
         }
         return sb.toString();
     }
@@ -270,5 +270,18 @@ public class TRechtspraakMarkup {
         XmlRootElement ann = c.getAnnotation(XmlRootElement.class);
         o.add(ann.name(), children);
         return o;
+    }
+
+    public boolean hasTitle() {
+        return getTitle() != null;
+    }
+
+    public Title getTitle() {
+        for (Object o : getContent()) {
+            if (o instanceof Title) {
+                return (Title) o;
+            }
+        }
+        return null;
     }
 }
