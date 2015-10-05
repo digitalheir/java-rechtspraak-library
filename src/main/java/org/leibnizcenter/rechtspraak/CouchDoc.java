@@ -357,7 +357,7 @@ public class CouchDoc {
         @SerializedName("@value")
         String value;
 
-        @SerializedName("@value")
+        @SerializedName("@language")
         String language;
 
         RechtsValue(String value) {

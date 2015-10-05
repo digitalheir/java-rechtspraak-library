@@ -15,6 +15,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static org.junit.Assert.assertEquals;
+
 /**
  * Test the JSON-LD output of Rechtspraak.nl XML documents
  * <p/>
@@ -23,11 +25,7 @@ import java.util.Map;
 public class ToJsonTest {
 
     ArrayList<String> testDocs = new ArrayList<>();
-    private static Map<String, String> validateJson = new HashMap<>();
 
-    static {
-        validateJson.put("ECLI:NL:GHSHE:2014:1641", "{\"_id\":\"ECLI:NL:GHSHE:2014:1641\",\"owl:sameAs\":\"http://deeplink.rechtspraak.nl/uitspraak?id\\u003dECLI:NL:GHSHE:2014:1641\",\"@context\":[\"https://rechtspraak.cloudant.com/assets/assets/context.jsonld\",{\"Vervangt\":\"http://purl.org/dc/terms/replaces\",\"Procedure\":\"http://psi.rechtspraak.nl/procedure\",\"Instantie\":\"http://purl.org/dc/terms/creator\",\"Zaaknr\":\"http://psi.rechtspraak.nl/zaaknummer\"}],\"ecli\":\"ECLI:NL:GHSHE:2014:1641\",\"corpus\":\"Rechtspraak.nl\",\"@type\":\"frbr:LegalWork\",\"source\":\"http://data.rechtspraak.nl/uitspraken/content?id\\u003dECLI:NL:GHSHE:2014:1641\",\"abstract\":{\"resourceIdentifier\":\"../../rs:inhoudsindicatie\",\"abstractXml\":\"\\u003c?xml version\\u003d\\\"1.0\\\" encoding\\u003d\\\"UTF-8\\\" standalone\\u003d\\\"yes\\\"?\\u003e\\u003cns8:inhoudsindicatie xml:space\\u003d\\\"preserve\\\" id\\u003d\\\"ECLI:NL:GHSHE:2014:1641:INH\\\" lang\\u003d\\\"nl\\\" xmlns:ns6\\u003d\\\"bwb-dl\\\" xmlns:ns5\\u003d\\\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\\\" xmlns:ns8\\u003d\\\"http://www.rechtspraak.nl/schema/rechtspraak-1.0\\\" xmlns:ns7\\u003d\\\"https://e-justice.europa.eu/ecli\\\" xmlns:ns2\\u003d\\\"http://purl.org/dc/terms/\\\" xmlns:ns4\\u003d\\\"http://psi.rechtspraak.nl/\\\" xmlns:ns3\\u003d\\\"http://www.w3.org/2000/01/rdf-schema#\\\"\\u003e\\n      \\u003cns8:para\\u003edwaling over pensioenrechten bij beëindiging arbeidsovereenkomst\\u003c/ns8:para\\u003e\\n    \\u003c/ns8:inhoudsindicatie\\u003e\",\"@value\":\"dwaling over pensioenrechten bij beëindiging arbeidsovereenkomst\"},\"accessRights\":\"public\",\"coverage\":{\"@id\":\"nl\",\"rdfs:label\":[{\"@value\":\"Nederland\",\"@language\":\"nl\"}]},\"hasVersion\":[\"Rechtspraak.nl\",\"AR-Updates.nl 2014-0513\"],\"relation\":[{\"rdfs:label\":[{\"@value\":\"Einduitspraak: ECLI:NL:GHSHE:2015:1672\",\"@language\":\"nl\"}],\"@id\":\"ECLI:NL:GHSHE:2015:1672\",\"aanleg\":\"http://psi.rechtspraak.nl/latereAanleg\",\"type\":\"http://psi.rechtspraak.nl/tussenuitspraak\"}],\"zaaknummer\":[\"HD 200.132.399_01\"],\"subject\":[{\"rdfs:label\":[{\"@value\":\"Civiel recht; Arbeidsrecht\",\"@language\":\"nl\"}],\"@id\":\"http://psi.rechtspraak.nl/rechtsgebied#civielRecht_arbeidsrecht\"}],\"metadataModified\":\"2015-06-23T13:33:50.000+02:00\",\"contentModified\":\"2014-06-05T10:23:38.000+02:00\",\"issued\":\"2014-06-03T00:00:00.000+02:00\",\"htmlIssued\":\"2014-06-05T00:00:00.000+02:00\",\"page\":\"http://rechtspraak.lawreader.nl/ecli/ECLI:NL:GHSHE:2014:1641\",\"creator\":{\"scheme\":\"overheid.RechterlijkeMacht\",\"rdfs:label\":[{\"@value\":\"Gerechtshof \\u0027s-Hertogenbosch\",\"@language\":\"nl\"}],\"@id\":\"http://standaarden.overheid.nl/owms/terms/Gerechtshof_\\u0027s-Hertogenbosch\"},\"date\":\"2014-06-03T00:00:00.000+02:00\",\"language\":{\"rdfs:label\":[{\"@value\":\"Nederlands\",\"@language\":\"nl\"}],\"@id\":\"nl\"},\"publisher\":{\"rdfs:label\":[{\"@value\":\"Raad voor de Rechtspraak\",\"@language\":\"nl\"}],\"@id\":\"http://rechtspraak.nl/\"},\"spatial\":{\"rdfs:label\":[{\"@value\":\"\\u0027s-Hertogenbosch\",\"@language\":\"nl\"}],\"@id\":\"%27s-Hertogenbosch\"},\"couchDbUpdated\":\"2015-09-29T19:33:31.564+02:00\",\"about\":\"http://deeplink.rechtspraak.nl/uitspraak?id\\u003dECLI:NL:GHSHE:2014:1641\",\"title\":{\"@value\":\"ECLI:NL:GHSHE:2014:1641 Gerechtshof \\u0027s-Hertogenbosch , 03-06-2014 / HD 200.132.399_01\",\"language\":\"nl\"},\"procedure\":[],\"type\":{\"rdfs:label\":[{\"@value\":\"Uitspraak\",\"@language\":\"nl\"}],\"@id\":\"http://psi.rechtspraak.nl/uitspraak\"}}");
-    }
 
     {
         testDocs.add("ECLI:NL:GHSHE:2014:1641");
@@ -104,9 +102,10 @@ public class ToJsonTest {
             }
 
             for (CouchDoc doc : parsedDocs) {
-
+                String json = CouchInterface.toJson(doc);
+//                if (doc._id.equals("ECLI:NL:CBB:2000:AU1262"))
+//                    System.out.println(json);
 //                if (validateJson.get(doc._id) != null) {
-//                    assertEquals(validateJson.get(doc._id), CouchInterface.toJson(doc));
 //                }
             }
         } catch (IOException | JAXBException | URISyntaxException | TransformerException e) {
