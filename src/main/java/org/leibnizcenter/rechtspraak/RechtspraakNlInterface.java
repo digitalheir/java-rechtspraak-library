@@ -78,8 +78,6 @@ public class RechtspraakNlInterface {
         StreamSource stylesource = new StreamSource(CouchDoc.class.getResourceAsStream("/xslt/rechtspraak_to_html.xslt"));
         Transformer transformer = TransformerFactory.newInstance().newTransformer(stylesource);
 
-
-
         StringWriter sw = new StringWriter();
         transformer.transform(new StreamSource(is), new StreamResult(sw));
         return sw.toString();
