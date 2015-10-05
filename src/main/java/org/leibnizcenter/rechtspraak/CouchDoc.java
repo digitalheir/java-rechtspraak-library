@@ -437,8 +437,6 @@ public class CouchDoc {
     }
 
     static class Attachments {
-        static BaseEncoding b64 = BaseEncoding.base64();
-
         @SerializedName("data.xml")
         Attachment xml;
         @SerializedName("data.htm")
@@ -454,7 +452,7 @@ public class CouchDoc {
             String data;
 
             Attachment(String data, String contentType) {
-                this.data = b64.encode(data.getBytes());
+                this.data = BaseEncoding.base64().encode(data.getBytes());
                 this.content_type = contentType;
             }
         }

@@ -25,8 +25,6 @@ import java.util.Locale;
  * Created by maarten on 28-9-15.
  */
 public class CouchInterface extends RechtspraakNlInterface {
-    static final Gson gson = new GsonBuilder()
-            .create();
     public static Response request(String ecli) throws IOException, JAXBException, XPathExpressionException {
         URI uri = URI.create(getXmlUrl(ecli));
         HttpUrl url = HttpUrl.get(uri);
@@ -38,7 +36,9 @@ public class CouchInterface extends RechtspraakNlInterface {
     }
 
     public static String toJson(Object desc) {
-        return gson.toJson(desc);
+        return
+                new GsonBuilder().create()
+                        .toJson(desc);
     }
 
 }

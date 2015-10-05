@@ -20,10 +20,10 @@ import java.util.HashMap;
  */
 public class DocumentRequest {
 
-    private static final HashMap<String, String> prefMap = new HashMap<String, String>() {{
-        put("rdf", "http://www.w3.org/1999/02/22-rdf-syntax-ns#");
-    }};
-    private static final SimpleNamespaceContext namespaces = new SimpleNamespaceContext(prefMap);
+//    private static final HashMap<String, String> prefMap = new HashMap<String, String>() {{
+//        put("rdf", "http://www.w3.org/1999/02/22-rdf-syntax-ns#");
+//    }};
+//    private static final SimpleNamespaceContext namespaces = new SimpleNamespaceContext(prefMap);
     private final Request request;
     /**
      * Client for doing HTTP requests
