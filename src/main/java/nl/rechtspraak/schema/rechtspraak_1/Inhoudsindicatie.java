@@ -9,19 +9,22 @@
 package nl.rechtspraak.schema.rechtspraak_1;
 
 import generated.OpenRechtspraak;
-import org.leibnizcenter.helpers.InnerTextHandler;
 
-import javax.xml.bind.*;
-import javax.xml.bind.annotation.*;
-import java.io.OutputStream;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import java.io.StringWriter;
 
 
 /**
  * <p>Java class for anonymous complex type.
- * <p>
+ * <p/>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ * <p/>
  * <pre>
  * &lt;complexType>
  *   &lt;complexContent>
@@ -35,7 +38,7 @@ import java.io.StringWriter;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "")
 @XmlRootElement(name = "inhoudsindicatie")
-public class Inhoudsindicatie extends TRechtspraakMarkup{
+public class Inhoudsindicatie extends TRechtspraakMarkup {
 
     public String getXml() throws JAXBException {
         JAXBContext context = JAXBContext.newInstance(

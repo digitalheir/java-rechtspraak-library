@@ -1,6 +1,7 @@
 package org.leibnizcenter.rechtspraak;
 
 import com.google.common.base.Charsets;
+import com.google.common.base.Preconditions;
 import com.google.common.base.Strings;
 import com.google.common.io.BaseEncoding;
 import com.google.common.io.CharStreams;
@@ -82,7 +83,7 @@ public class CouchDoc {
     protected JsonElement simplifiedContent;
     protected Attachments _attachments;
 
-    public CouchDoc(OpenRechtspraak doc, String xmlStr) throws TransformerException, URISyntaxException {
+    public CouchDoc(OpenRechtspraak doc, String xmlStr) throws TransformerException, URISyntaxException, NotSerializableException {
         //Set attachments
         this._attachments = new Attachments(xmlStr);
 
@@ -142,7 +143,7 @@ public class CouchDoc {
         }
 
         // relation
-        if (desc2.getRelation().size() != 0) throw new AssertionError();
+        Preconditions.checkState(desc2.getRelation().size() == 0);
         if (desc1.getRelation().size() > 0) {
             relation = new ArrayList<>(desc1.getRelation().size());
             for (Relation r : desc1.getRelation()) {
@@ -175,7 +176,7 @@ public class CouchDoc {
         }
 
         //subject
-        if (desc2.getSubject().size() != 0) throw new AssertionError();
+        Preconditions.checkState(desc2.getSubject().size() == 0);
         if (desc1.getSubject().size() > 0) {
             subject = new ArrayList<>(desc1.getSubject().size());
             for (Subject s : desc1.getSubject()) {
@@ -240,7 +241,7 @@ public class CouchDoc {
 
 
         //procedure
-        if (desc2.getProcedure().size() > 0) throw new AssertionError();
+        Preconditions.checkState(desc2.getProcedure().size() == 0);
         if (desc1.getProcedure() != null) {
             List<Procedure> prs = desc1.getProcedure();
             this.procedure = new ArrayList<>(prs.size());
@@ -276,7 +277,8 @@ public class CouchDoc {
         }
 
         //replaces
-        if (desc2.getReplaces().size() > 0) throw new AssertionError();
+        Preconditions.checkState(desc2.getReplaces().size() == 0);
+
         if (desc1.getReplaces().size() > 0) {
             replaces = new ArrayList<>(desc1.getReplaces().size());
             for (Replaces r : desc1.getReplaces()) {

@@ -5,6 +5,7 @@ import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
 import generated.OpenRechtspraak;
+import org.jsoup.HttpStatusException;
 import org.leibnizcenter.helpers.SimpleNamespaceContext;
 
 import javax.xml.bind.JAXBException;
@@ -50,7 +51,7 @@ public class DocumentRequest {
     public Response execute() throws IOException, XPathExpressionException, JAXBException {
         Response response = getResponse();
         if (response.code() != 200)
-            throw new IllegalStateException("code " + response.code() + ", URL: " + request.url());
+            throw new HttpStatusException("Did not get HTTP code 200", response.code(),request.url().toString());
         return response;
     }
 

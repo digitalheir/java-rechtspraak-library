@@ -1,26 +1,22 @@
 package org.leibnizcenter.rechtspraak;
 
+import com.google.common.base.Preconditions;
 import com.squareup.okhttp.HttpUrl;
 import com.squareup.okhttp.Response;
 import generated.OpenRechtspraak;
 import nl.rechtspraak.schema.rechtspraak_1.Conclusie;
 import nl.rechtspraak.schema.rechtspraak_1.RechtspraakContent;
 import nl.rechtspraak.schema.rechtspraak_1.Uitspraak;
-import org.jsoup.Jsoup;
-import org.jsoup.parser.Parser;
-import org.jsoup.select.Elements;
-import org.xml.sax.SAXException;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
-import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
-import javax.xml.xpath.*;
+import javax.xml.xpath.XPathExpressionException;
 import java.io.*;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -79,10 +75,7 @@ public class RechtspraakNlInterface {
 
     @Deprecated
     public static String xmlToHtml(ByteArrayInputStream is) throws URISyntaxException, TransformerException {
-        File stylesheet = new File(
-                CouchDoc.class.getResource("/xslt/rechtspraak_to_html.xslt").toURI()
-        );
-        StreamSource stylesource = new StreamSource(stylesheet);
+        StreamSource stylesource = new StreamSource(CouchDoc.class.getResourceAsStream("/xslt/rechtspraak_to_html.xslt"));
         Transformer transformer = TransformerFactory.newInstance().newTransformer(stylesource);
 
 
@@ -108,9 +101,8 @@ public class RechtspraakNlInterface {
     public static RechtspraakContent getUitspraakOrConclusie(OpenRechtspraak doc) {
         Uitspraak u = doc.getUitspraak();
         Conclusie c = doc.getConclusie();
-        if ((u == null && c == null) || (u != null && c != null)) {
-            throw new IllegalStateException("Document should have exactly one uitspraak or conclusie");
-        }
+        Preconditions.checkState(((u == null && c != null) || (u != null && c == null)),
+                "Document should have exactly one uitspraak or conclusie");
         return u == null ? c : u;
     }
 }
