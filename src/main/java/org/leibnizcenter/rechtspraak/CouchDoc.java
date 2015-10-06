@@ -480,6 +480,9 @@ public class CouchDoc {
         String type;
 
         FormeleRelatie(String ecli, String type, String aanleg, Label... labels) {
+            Preconditions.checkNotNull(ecli);
+            Preconditions.checkNotNull(type);
+            Preconditions.checkNotNull(aanleg);
             label = labels;
             id = ecli;
             this.type = type;
@@ -537,6 +540,8 @@ public class CouchDoc {
 
         Periode(String startDate,
                 String endDate) {
+            Preconditions.checkNotNull(startDate);
+            Preconditions.checkNotNull(endDate);
             this.startDate = startDate;
             this.endDate = endDate;
         }

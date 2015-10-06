@@ -13,12 +13,12 @@ import java.io.IOException;
 
 /**
  * For quering a particular Rechtspraak XML document.
- * <p>
+ * <p/>
  * Created by maarten on 31-7-15.
  */
 public class DocumentRequest {
 
-//    private static final HashMap<String, String> prefMap = new HashMap<String, String>() {{
+    //    private static final HashMap<String, String> prefMap = new HashMap<String, String>() {{
 //        put("rdf", "http://www.w3.org/1999/02/22-rdf-syntax-ns#");
 //    }};
 //    private static final SimpleNamespaceContext namespaces = new SimpleNamespaceContext(prefMap);
@@ -32,12 +32,12 @@ public class DocumentRequest {
         httpClient.setFollowRedirects(false);
     }
 
-    public DocumentRequest(HttpUrl url, SearchRequest.ReturnType type) {
+    public DocumentRequest(HttpUrl url, org.leibnizcenter.rechtspraak.SearchRequest.ReturnType type) {
         request = (new Request.Builder().url(url)).build();
     }
 
     public DocumentRequest(HttpUrl url) {
-        this(url, SearchRequest.ReturnType.DOC);
+        this(url, org.leibnizcenter.rechtspraak.SearchRequest.ReturnType.DOC);
     }
 
     /**
@@ -50,7 +50,7 @@ public class DocumentRequest {
     public Response execute() throws IOException {
         Response response = getResponse();
         if (response.code() != 200)
-            throw new HttpStatusException("Did not get HTTP code 200", response.code(),request.url().toString());
+            throw new HttpStatusException("Did not get HTTP code 200", response.code(), request.url().toString());
         return response;
     }
 
