@@ -7,6 +7,7 @@ import generated.OpenRechtspraak;
 import nl.rechtspraak.schema.rechtspraak_1.Conclusie;
 import nl.rechtspraak.schema.rechtspraak_1.RechtspraakContent;
 import nl.rechtspraak.schema.rechtspraak_1.Uitspraak;
+import org.w3._1999._02._22_rdf_syntax_ns_.Description;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -46,11 +47,20 @@ public class RechtspraakNlInterface {
         Unmarshaller um = context.createUnmarshaller();
         OpenRechtspraak doc = (OpenRechtspraak) um.unmarshal(isXml);
 
-        String abstractXml = doc.getInhoudsindicatie().getXml();
-        String simpleAbstract = doc.getInhoudsindicatie().toString().trim();
-        if (simpleAbstract.length() > 0 && !simpleAbstract.equals("-")) {
-            doc.getRDF().getDescription().get(1).getAbstract().setAbstractXml(abstractXml);
-            doc.getRDF().getDescription().get(1).getAbstract().setAbstractSimple(simpleAbstract);
+        if (doc.getInhoudsindicatie() != null) {
+            String abstractXml = doc.getInhoudsindicatie().getXml();
+            String simpleAbstract = doc.getInhoudsindicatie().toString().trim();
+            if (simpleAbstract.length() > 0 && !simpleAbstract.equals("-")) {
+                doc.getRDF().getDescription().get(1).getAbstract().setAbstractXml(abstractXml);
+                doc.getRDF().getDescription().get(1).getAbstract().setAbstractSimple(simpleAbstract);
+            }
+        } else {
+            // Doc should not have an abstract field if there's no 'inhoudsindicatie'; for example
+            //            ECLI:NL:CRVB:2013:1886
+            if (doc.getRDF().getDescription().size() >= 2) {
+                Description desc2 = doc.getRDF().getDescription().get(1);
+                Preconditions.checkState(desc2.getAbstract() == null);
+            }
         }
 
         return doc;

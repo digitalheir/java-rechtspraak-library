@@ -11,11 +11,7 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-
-import static org.junit.Assert.assertEquals;
 
 /**
  * Test the JSON-LD output of Rechtspraak.nl XML documents
@@ -82,6 +78,7 @@ public class ToJsonTest {
         testDocs.add("ECLI:NL:CBB:2001:AA9497");
         testDocs.add("ECLI:NL:CBB:2001:AA9499");
         testDocs.add("ECLI:NL:CBB:2001:AA9501");
+        testDocs.add("ECLI:NL:CRVB:2013:1886");
     }
 
     @Test
