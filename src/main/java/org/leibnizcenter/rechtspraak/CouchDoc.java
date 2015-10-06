@@ -23,6 +23,8 @@ import java.util.Locale;
 import static org.leibnizcenter.rechtspraak.RechtspraakNlInterface.xmlToHtml;
 
 /**
+ * To serialize in JSON for use in CouchDB
+ * <p/>
  * Created by Maarten on 29/09/2015.
  */
 public class CouchDoc {
@@ -35,8 +37,10 @@ public class CouchDoc {
     public String corpus = "Rechtspraak.nl";
     @SerializedName("@type")
     public String _type = "frbr:LegalWork";
-    //        dcterms:source
     public String source;
+    @SerializedName("owl:sameAs")
+    public String sameAs;
+    public String ecli;
     @SerializedName("abstract")
     protected Abstract _abstract;
     protected String accessRights;
@@ -65,9 +69,6 @@ public class CouchDoc {
     protected JsonElement simplifiedContent;
     protected Attachments _attachments;
     protected List<RechtsResource> references;
-    @SerializedName("owl:sameAs")
-    private String sameAs;
-    private String ecli;
 
     public CouchDoc(OpenRechtspraak doc, String xmlStr) throws TransformerException, URISyntaxException, NotSerializableException {
         //Set attachments
@@ -81,7 +82,7 @@ public class CouchDoc {
         /**
          * ECLI:NL:CRVB:2013:1886, ECLI:NL:RBZWB:2013:901 only have 1 description tag: desc1
          */
-        Description desc1 = null;
+        Description desc1;
         Description desc2 = null;
         if (doc.getRDF().getDescription().size() == 2) {
             desc1 = doc.getRDF().getDescription().get(0);
@@ -232,6 +233,7 @@ public class CouchDoc {
         }
     }
 
+    @SuppressWarnings("unused")
     public static Label[] getDutchLabels(String val) {
         return getLabels(val, "nl");
     }
@@ -454,6 +456,7 @@ public class CouchDoc {
         Coverage(String id, Label... labels) {
             label = labels;
             this.id = id;
+            Preconditions.checkNotNull(this.id);
         }
     }
 
@@ -502,7 +505,8 @@ public class CouchDoc {
         @SerializedName("@language")
         String language;
 
-        RechtsValue(String value) {
+        @SuppressWarnings("unused")
+        public RechtsValue(String value) {
             this.value = value;
         }
 

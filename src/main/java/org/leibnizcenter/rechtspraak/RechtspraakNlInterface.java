@@ -71,7 +71,7 @@ public class RechtspraakNlInterface {
         return xmlToHtml(new StringReader(xmlStr));
     }
 
-    public static String xmlToHtml(StringReader is) throws URISyntaxException, TransformerException {
+    public static String xmlToHtml(StringReader is) throws TransformerException {
         StreamSource stylesource = new StreamSource(
                 CouchDoc.class.getResourceAsStream("/xslt/rechtspraak_to_html.xslt"));
         Transformer transformer = TransformerFactory.newInstance().newTransformer(stylesource);
@@ -82,7 +82,7 @@ public class RechtspraakNlInterface {
     }
 
     @Deprecated
-    public static String xmlToHtml(ByteArrayInputStream is) throws URISyntaxException, TransformerException {
+    public static String xmlToHtml(ByteArrayInputStream is) throws TransformerException {
         StreamSource stylesource = new StreamSource(CouchDoc.class.getResourceAsStream("/xslt/rechtspraak_to_html.xslt"));
         Transformer transformer = TransformerFactory.newInstance().newTransformer(stylesource);
 

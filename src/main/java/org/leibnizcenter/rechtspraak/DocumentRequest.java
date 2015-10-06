@@ -6,12 +6,10 @@ import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
 import generated.OpenRechtspraak;
 import org.jsoup.HttpStatusException;
-import org.leibnizcenter.helpers.SimpleNamespaceContext;
 
 import javax.xml.bind.JAXBException;
 import javax.xml.xpath.XPathExpressionException;
 import java.io.IOException;
-import java.util.HashMap;
 
 /**
  * For quering a particular Rechtspraak XML document.
@@ -37,6 +35,7 @@ public class DocumentRequest {
     public DocumentRequest(HttpUrl url, SearchRequest.ReturnType type) {
         request = (new Request.Builder().url(url)).build();
     }
+
     public DocumentRequest(HttpUrl url) {
         this(url, SearchRequest.ReturnType.DOC);
     }
@@ -48,7 +47,7 @@ public class DocumentRequest {
         return httpClient.newCall(request).execute();
     }
 
-    public Response execute() throws IOException, XPathExpressionException, JAXBException {
+    public Response execute() throws IOException {
         Response response = getResponse();
         if (response.code() != 200)
             throw new HttpStatusException("Did not get HTTP code 200", response.code(),request.url().toString());

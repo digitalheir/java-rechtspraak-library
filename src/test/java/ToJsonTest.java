@@ -13,6 +13,9 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+
 /**
  * Test the JSON-LD output of Rechtspraak.nl XML documents
  * <p/>
@@ -100,6 +103,11 @@ public class ToJsonTest {
 
             for (CouchDoc doc : parsedDocs) {
                 String json = CouchInterface.toJson(doc);
+                assertNotNull(json);
+                assertEquals("Rechtspraak.nl", doc.corpus);
+                assertEquals("frbr:LegalWork", doc._type);
+                assertEquals(doc.sameAs, "http://deeplink.rechtspraak.nl/uitspraak?id=" + doc.ecli);
+                assertNotNull(doc.context);
 //                if (doc._id.equals("ECLI:NL:CBB:2000:AU1262"))
 //                    System.out.println(json);
 //                if (validateJson.get(doc._id) != null) {
@@ -110,6 +118,4 @@ public class ToJsonTest {
         }
     }
 
-    private void assertAllRechtspraakMarkup(List<Object> content, int i) {
-    }
 }
