@@ -29,6 +29,7 @@ import static org.leibnizcenter.rechtspraak.RechtspraakNlInterface.xmlToHtml;
  */
 public class CouchDoc {
     public String _id;
+    public String _rev;
     @SerializedName("@context")
     public Object[] context = {
             "https://rechtspraak.cloudant.com/assets/assets/context.jsonld",
