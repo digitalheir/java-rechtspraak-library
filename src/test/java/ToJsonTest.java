@@ -82,6 +82,7 @@ public class ToJsonTest {
         testDocs.add("ECLI:NL:CBB:2001:AA9499");
         testDocs.add("ECLI:NL:CBB:2001:AA9501");
         testDocs.add("ECLI:NL:CRVB:2013:1886");
+        testDocs.add("ECLI:NL:RBDHA:2013:15631");
     }
 
     @Test

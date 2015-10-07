@@ -19,6 +19,7 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.Objects;
 
 import static org.leibnizcenter.rechtspraak.RechtspraakNlInterface.xmlToHtml;
 
@@ -256,8 +257,15 @@ public class CouchDoc {
         if (desc1.getReferences().size() > 0) {
             r = new ArrayList<>(desc1.getReferences().size());
             for (References ref : desc1.getReferences()) {
+                String bwbId = ref.getResourceIdentifierBwb();
+                String cvdrId = ref.getResourceIdentifierCvdr();
+
+                // Exactly one of either must be set
+                Preconditions.checkArgument((Objects.nonNull(bwbId) && Objects.isNull(cvdrId)) || (Objects.nonNull(cvdrId) && Objects.isNull(bwbId)));
+
+                String identifier = bwbId == null ? cvdrId : bwbId;
                 RechtsResource rr = new RechtsResource(
-                        ref.getResourceIdentifier(),
+                        identifier,
                         getLabels(ref.getValue(), "nl")
                 );
                 r.add(rr);
