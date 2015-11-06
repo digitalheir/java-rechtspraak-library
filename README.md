@@ -5,7 +5,7 @@
 A Java interface to the judgment database of [rechtspraak.nl](http://www.rechtspraak.nl/).
 
 ## JavaDoc
-JavaDoc is available at http://phil.uu.nl/~trompper/rechtspraak-1.2.1-javadoc/
+JavaDoc is available at http://phil.uu.nl/~trompper/rechtspraak-latest-javadoc/
 
 ## Usage
 Download [the latest JAR](https://github.com/digitalheir/java-rechtspraak-library/releases/latest) or grab from Maven:
@@ -15,14 +15,14 @@ Download [the latest JAR](https://github.com/digitalheir/java-rechtspraak-librar
         <dependency>
             <groupId>org.leibnizcenter</groupId>
             <artifactId>rechtspraak</artifactId>
-            <version>1.2.1</version>
+            <version>1.2.2</version>
         </dependency>
 </dependencies>
 ```
 
 or Gradle:
 ```groovy
-compile 'org.leibnizcenter:rechtspraak:1.2.1'
+compile 'org.leibnizcenter:rechtspraak:1.2.2'
 ```
 
 ## More

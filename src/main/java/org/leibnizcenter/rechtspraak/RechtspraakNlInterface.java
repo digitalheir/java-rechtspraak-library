@@ -39,6 +39,7 @@ public class RechtspraakNlInterface {
     public static OpenRechtspraak parseXml(InputStream isXml) throws JAXBException {
         JAXBContext context = JAXBContext.newInstance(
                 OpenRechtspraak.class,
+                org.w3._1999._02._22_rdf_syntax_ns_.Description.class,
                 org.purl.dc.terms.ObjectFactory.class,
                 nl.rechtspraak.psi.ObjectFactory.class,
                 org.w3._1999._02._22_rdf_syntax_ns_.ObjectFactory.class,
