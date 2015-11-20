@@ -2,16 +2,22 @@ package org.leibnizcenter.rechtspraak;
 
 import com.google.common.base.Preconditions;
 import com.google.common.io.BaseEncoding;
+import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.annotations.SerializedName;
 import generated.OpenRechtspraak;
 import nl.rechtspraak.psi.Procedure;
 import nl.rechtspraak.schema.rechtspraak_1.RechtspraakContent;
 import org.joda.time.DateTime;
+import org.leibnizcenter.xml.DomHelper;
+import org.leibnizcenter.xml.TerseJson;
 import org.purl.dc.terms.*;
 import org.w3._1999._02._22_rdf_syntax_ns_.Description;
+import org.xml.sax.SAXException;
 
+import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
+import java.io.IOException;
 import java.io.NotSerializableException;
 import java.io.UnsupportedEncodingException;
 import java.net.URISyntaxException;
@@ -68,18 +74,18 @@ public class CouchDoc {
     protected Periode temporal;
     protected List<String> replaces;
     protected RechtsResource type;
-    protected JsonElement simplifiedContent;
     protected Attachments _attachments;
     protected List<RechtsResource> references;
+    protected Object xml;
 
-    public CouchDoc(OpenRechtspraak doc, String xmlStr) throws TransformerException, URISyntaxException, NotSerializableException {
+    public CouchDoc(OpenRechtspraak doc, String xmlStr) throws TransformerException, URISyntaxException, IOException, SAXException, ParserConfigurationException {
         //Set attachments
         this._attachments = new Attachments(xmlStr);
 
         //Set content json
-        RechtspraakContent content = RechtspraakNlInterface.getUitspraakOrConclusie(doc);
-        simplifiedContent = content.toJson();
-
+        //RechtspraakContent content = RechtspraakNlInterface.getUitspraakOrConclusie(doc);
+        //simplifiedContent = content.toJson();// remove
+        xml = new TerseJson(TerseJson.WhiteSpace.Preserve).convert(DomHelper.parse(xmlStr));
 
         /**
          * ECLI:NL:CRVB:2013:1886, ECLI:NL:RBZWB:2013:901 only have 1 description tag: desc1

@@ -2,8 +2,10 @@ import generated.OpenRechtspraak;
 import org.junit.Test;
 import org.leibnizcenter.rechtspraak.CouchDoc;
 import org.leibnizcenter.rechtspraak.CouchInterface;
+import org.xml.sax.SAXException;
 
 import javax.xml.bind.JAXBException;
+import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -114,7 +116,7 @@ public class ToJsonTest {
 //                if (validateJson.get(doc._id) != null) {
 //                }
             }
-        } catch (IOException | JAXBException | URISyntaxException | TransformerException e) {
+        } catch (IOException | JAXBException | URISyntaxException | TransformerException | SAXException | ParserConfigurationException e) {
             throw new Error(e);
         }
     }

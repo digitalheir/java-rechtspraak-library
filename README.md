@@ -15,14 +15,14 @@ Download [the latest JAR](https://github.com/digitalheir/java-rechtspraak-librar
         <dependency>
             <groupId>org.leibnizcenter</groupId>
             <artifactId>rechtspraak</artifactId>
-            <version>1.2.2</version>
+            <version>1.2.3</version>
         </dependency>
 </dependencies>
 ```
 
 or Gradle:
 ```groovy
-compile 'org.leibnizcenter:rechtspraak:1.2.2'
+compile 'org.leibnizcenter:rechtspraak:1.2.3'
 ```
 
 ## More
