@@ -5,7 +5,7 @@
 A Java interface to the judgment database of [rechtspraak.nl](http://www.rechtspraak.nl/).
 
 ## JavaDoc
-JavaDoc is available at http://phil.uu.nl/~trompper/rechtspraak-latest-javadoc/
+JavaDoc is available at http://phil.uu.nl/~trompper/rechtspraak-1.2.3-javadoc/
 
 ## Usage
 Download [the latest JAR](https://github.com/digitalheir/java-rechtspraak-library/releases/latest) or grab from Maven:
