@@ -2,7 +2,6 @@ import generated.OpenRechtspraak;
 import nl.rechtspraak.schema.rechtspraak_1.TRechtspraakMarkup;
 import org.jsoup.HttpStatusException;
 import org.junit.Test;
-import org.leibnizcenter.rechtspraak.RechtspraakNlInterface;
 import org.leibnizcenter.rechtspraak.SearchRequest;
 import org.w3._1999._02._22_rdf_syntax_ns_.Description;
 import org.xml.sax.SAXException;
@@ -31,6 +30,15 @@ import static org.leibnizcenter.rechtspraak.RechtspraakNlInterface.requestXmlFor
  */
 public class DocParseTest {
 
+    private static String getDocStringFromResources(String ecli) throws IOException, URISyntaxException {
+        String strXml;
+        URL resource = DocParseTest.class.getResource("/(e)x(a)m(p)l(e)/" + ecli.replaceAll(":", ".") + ".xml");
+        byte[] encoded = Files.readAllBytes(Paths.get(resource.toURI()));
+        strXml = new String(encoded, "UTF-8");
+//                }
+        return strXml;
+    }
+
     @Test
     public void testDoc() {
         ArrayList<String> list = new ArrayList<String>();
@@ -49,7 +57,7 @@ public class DocParseTest {
             List<Description> descs = doc.getRDF().getDescription();
             assertEquals(descs.size(), 2);
 
-            Description desc1 = descs.get(0);
+            //Description desc1 = descs.get(0);
             Description desc2 = descs.get(1);
 
             assertEquals(desc2.getAbstract().getAbstractXml(), doc.getInhoudsindicatie().getXml());
@@ -60,14 +68,6 @@ public class DocParseTest {
         }
     }
 
-    private static String getDocStringFromResources(String ecli) throws IOException, URISyntaxException {
-        String strXml;
-        URL resource = DocParseTest.class.getResource("/(e)x(a)m(p)l(e)/" + ecli.replaceAll(":", ".") + ".xml");
-        byte[] encoded = Files.readAllBytes(Paths.get(resource.toURI()));
-        strXml = new String(encoded, "UTF-8");
-//                }
-        return strXml;
-    }
     private void parseFirst(ArrayList<String> list) {
         String ecli = list.get(0);
         try {

@@ -8,19 +8,14 @@
 
 package org.purl.dc.terms;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.XmlValue;
+import javax.xml.bind.annotation.*;
 
 
 /**
  * <p>Java class for anonymous complex type.
- * 
+ * <p/>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p/>
  * <pre>
  * &lt;complexType>
  *   &lt;simpleContent>
@@ -31,12 +26,10 @@ import javax.xml.bind.annotation.XmlValue;
  *   &lt;/simpleContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "value"
+        "value"
 })
 @XmlRootElement(name = "references")
 public class References {
@@ -45,16 +38,16 @@ public class References {
     protected String value;
     @XmlAttribute(name = "label", namespace = "http://www.w3.org/2000/01/rdf-schema#", required = true)
     protected String label;
-    @XmlAttribute(name = "resourceIdentifier", namespace = "bwb-dl", required = true)
-    protected String resourceIdentifier;
+    @XmlAttribute(name = "resourceIdentifier", namespace = "bwb-dl")
+    protected String resourceIdentifierBwb;
+    @XmlAttribute(name = "resourceIdentifier", namespace = "http://decentrale.regelgeving.overheid.nl/cvdr/")
+    protected String resourceIdentifierCvdr;
 
     /**
      * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getValue() {
         return value;
@@ -62,11 +55,9 @@ public class References {
 
     /**
      * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setValue(String value) {
         this.value = value;
@@ -74,11 +65,9 @@ public class References {
 
     /**
      * Gets the value of the label property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getLabel() {
         return label;
@@ -86,11 +75,9 @@ public class References {
 
     /**
      * Sets the value of the label property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setLabel(String value) {
         this.label = value;
@@ -98,26 +85,36 @@ public class References {
 
     /**
      * Gets the value of the resourceIdentifier property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
-    public String getResourceIdentifier() {
-        return resourceIdentifier;
+    public String getResourceIdentifierBwb() {
+        return resourceIdentifierBwb;
+    }
+
+    public String getResourceIdentifierCvdr() {
+        return resourceIdentifierCvdr;
     }
 
     /**
      * Sets the value of the resourceIdentifier property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
-    public void setResourceIdentifier(String value) {
-        this.resourceIdentifier = value;
+    public void setResourceIdentifierBwb(String value) {
+        this.resourceIdentifierBwb = value;
+    }
+
+    /**
+     * Sets the value of the resourceIdentifier property.
+     *
+     * @param value allowed object is
+     *              {@link String }
+     */
+    public void setResourceIdentifierCvdr(String value) {
+        this.resourceIdentifierCvdr = value;
     }
 
 }

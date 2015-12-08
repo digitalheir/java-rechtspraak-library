@@ -6,7 +6,7 @@
 
     <groupId>org.leibnizcenter</groupId>
     <artifactId>rechtspraak</artifactId>
-    <version>1.0.1</version>
+    <version>1.2.3</version>
     <packaging>jar</packaging>
 
     <licenses>
@@ -38,6 +38,11 @@
     </scm>
 
     <dependencies>
+        <dependency>
+            <groupId>org.leibnizcenter</groupId>
+            <artifactId>xml-to-json</artifactId>
+            <version>0.3.0</version>
+        </dependency>
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>

@@ -1,10 +1,13 @@
 package org.leibnizcenter.rechtspraak;
 
+import com.google.common.base.Preconditions;
 import com.squareup.okhttp.HttpUrl;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
+import org.jsoup.HttpStatusException;
 import org.xml.sax.Attributes;
+import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
@@ -12,7 +15,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import java.io.IOException;
-import java.io.InputStream;
+import java.io.StringReader;
 import java.security.InvalidParameterException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -51,11 +54,24 @@ public class SearchRequest {
 
     public List<JudgmentMetadata> execute() throws IOException, ParserConfigurationException, SAXException {
 //        System.out.println(getResponse().body().string().toString());
-        InputStream is = getResponse().body().byteStream();
-        SAXParser saxParser = factory.newSAXParser();
-        ResultHandler handler = new ResultHandler();
-        saxParser.parse(is, handler);
-        return handler.judgments;
+        Response resp = getResponse();
+
+        if (resp.code() == 200) {
+
+            String str = getResponse().body().string();
+
+            SAXParser saxParser = factory.newSAXParser();
+            ResultHandler handler = new ResultHandler();
+            try {
+                saxParser.parse(new InputSource(new StringReader(str)), handler);
+            } catch (SAXException e) {
+                System.err.println(str);
+                throw e;
+            }
+            return handler.judgments;
+        } else {
+            throw new HttpStatusException("Code was not 200 but " + resp.code(), resp.code(), getRequest().url().toString());
+        }
     }
 
     public enum ReturnType {META, DOC}
@@ -243,14 +259,14 @@ public class SearchRequest {
 
             if ("entry".equals(qName)) {
                 JudgmentMetadata judgment = new JudgmentMetadata(
-                        id.toString(),
-                        title.toString(),
-                        summary.toString(),
+                        id,
+                        title,
+                        summary,
                         Date.from(
                                 javax.xml.bind.DatatypeConverter.parseDateTime(updated.toString())
                                         .toInstant()),
                         new JudgmentMetadata.Link(
-                                linkRel.toString(), linkType.toString(), linkHref.toString()
+                                linkRel, linkType, linkHref
                         )
                 );
                 id = null;
@@ -321,6 +337,16 @@ public class SearchRequest {
         public final Link link;
 
         public JudgmentMetadata(String id, String title, String summary, Date updated, Link link) {
+            Preconditions.checkArgument(id != null && id.length() > 0);
+            Preconditions.checkNotNull(title, id + ": null pointer for title");
+//            if (summary == null) {
+//                System.out.println("Summary was null: " + summary);
+//            }
+//            if (updated == null) {
+//                System.out.println("Updated was null: " + updated);
+//            }
+            Preconditions.checkNotNull(link, id + ": null pointer for link");
+
             this.id = id;
             this.title = title;
             this.summary = summary;
@@ -345,6 +371,10 @@ public class SearchRequest {
             public final String href;
 
             public Link(String rel, String type, String href) {
+                Preconditions.checkNotNull(rel);
+                Preconditions.checkNotNull(type);
+                Preconditions.checkNotNull(href);
+
                 this.rel = rel;
                 this.type = type;
                 this.href = href;

@@ -15,16 +15,18 @@ import com.google.gson.JsonPrimitive;
 
 import javax.xml.bind.annotation.*;
 import javax.xml.namespace.QName;
-import java.io.IOException;
 import java.io.NotSerializableException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 /**
  * <p>Java class for T_Rechtspraak_Markup complex type.
- * <p>
+ * <p/>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ * <p/>
  * <pre>
  * &lt;complexType name="T_Rechtspraak_Markup">
  *   &lt;complexContent>
@@ -140,21 +142,21 @@ public class TRechtspraakMarkup {
 
     /**
      * Gets the value of the content property.
-     * <p>
-     * <p>
+     * <p/>
+     * <p/>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the content property.
-     * <p>
-     * <p>
+     * <p/>
+     * <p/>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getContent().add(newItem);
      * </pre>
-     * <p>
-     * <p>
-     * <p>
+     * <p/>
+     * <p/>
+     * <p/>
      * Objects of the following type(s) are allowed in the list
      * {@link Imagedata }
      * {@link Tbody }
@@ -196,11 +198,11 @@ public class TRechtspraakMarkup {
 
     /**
      * Gets a map that contains attributes that aren't bound to any typed property on this class.
-     * <p>
-     * <p>
+     * <p/>
+     * <p/>
      * the map is keyed by the name of the attribute and
      * the value is the string value of the attribute.
-     * <p>
+     * <p/>
      * the map returned by this method is live, and you can add new attribute
      * by updating the map directly. Because of this design, there's no setter.
      *
@@ -224,8 +226,8 @@ public class TRechtspraakMarkup {
                     //sb.append(o.toString());
                 }
             }
-        } else {
-            System.out.println();
+//        } else {
+            //System.out.println("<No content>");
         }
         return sb.toString();
     }
@@ -241,7 +243,24 @@ public class TRechtspraakMarkup {
                     children.add(new JsonPrimitive(child.toString().trim()));
                 }
             } else if (child instanceof TRechtspraakMarkup) {
-                children.add(((TRechtspraakMarkup) child).toJson());
+                TRechtspraakMarkup mChild = ((TRechtspraakMarkup) child);
+                JsonElement mChildJson = mChild.toJson();
+
+                boolean irrelevantChild = false;
+                //An element is irrelevant if it is a 'para' tag with no children
+                for (Map.Entry<String, JsonElement> entry : mChildJson.getAsJsonObject().entrySet()) {
+                    if (entry.getValue().isJsonArray()) {
+                        if (entry.getKey().equals("para")) {
+                            if (entry.getValue().getAsJsonArray().size() <= 0) {
+                                irrelevantChild = true;
+                            }
+                        }
+                    }
+                }
+
+                if (!irrelevantChild) {
+                    children.add(mChildJson);
+                }
             } else {
                 throw new NotSerializableException("Unable to serialize child with class " + child.getClass().getSimpleName());
             }
@@ -251,5 +270,18 @@ public class TRechtspraakMarkup {
         XmlRootElement ann = c.getAnnotation(XmlRootElement.class);
         o.add(ann.name(), children);
         return o;
+    }
+
+    public boolean hasTitle() {
+        return getTitle() != null;
+    }
+
+    public Title getTitle() {
+        for (Object o : getContent()) {
+            if (o instanceof Title) {
+                return (Title) o;
+            }
+        }
+        return null;
     }
 }
