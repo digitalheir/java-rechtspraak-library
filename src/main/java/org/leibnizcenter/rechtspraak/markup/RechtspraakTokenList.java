@@ -81,12 +81,12 @@ public class RechtspraakTokenList extends ArrayList<RechtspraakToken> {
                 // i.e. <section> <title /> </section>
                 childDescendentOf = Label.SECTION_TITLE;
             } else if (parentName.equals(TAG_SECTION)) {
-                childDescendentOf = Label.SECTION_PARA;
-            } else if (Label.SECTION_PARA.equals(rootDescendentOf)
+                childDescendentOf = Label.OUT;//SECTION_PARA;
+            } else if (Label.OUT.equals(rootDescendentOf)
                     && parentName.equals(TAG_TITLE)) {
                 childDescendentOf = Label.SECTION_TITLE;
             } else if (parentName.endsWith(TAG_SECTION)) {
-                childDescendentOf = Label.SECTION_PARA;
+                childDescendentOf = Label.OUT;//SECTION_PARA;
             }
 
             if (child.getNodeType() == Node.TEXT_NODE
