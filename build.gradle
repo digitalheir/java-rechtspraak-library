@@ -1,0 +1,34 @@
+group 'org.leibnizcenter'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceCompatibility = 1.8
+mainClassName = 'org.leibnizcenter.rechtspraak.markup.Main'
+
+configuration {
+    all*.exclude group: "org.apache.logging.log4j", module: "*"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile 'com.google.guava:guava:19.0'
+
+    // Logging
+    compile "org.slf4j:slf4j-api:1.7.18"    // the SLF4J API
+    runtime "org.slf4j:slf4j-jdk14:1.7.18"  // SLF4J binding for java.util.logging
+
+    // Testing
+    testCompile 'junit:junit:4.12' // A dependency for a test framework.
+
+
+}
+
+run {
+    systemProperty 'jmodern.name', 'Maarten'
+}
