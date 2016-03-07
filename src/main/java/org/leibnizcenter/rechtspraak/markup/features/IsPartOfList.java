@@ -1,0 +1,99 @@
+package org.leibnizcenter.rechtspraak.markup.features;
+
+import org.crf.crf.CrfFeature;
+import org.leibnizcenter.rechtspraak.markup.Label;
+import org.leibnizcenter.rechtspraak.markup.RechtspraakElement;
+import org.leibnizcenter.rechtspraak.util.Doubles;
+import org.leibnizcenter.rechtspraak.util.numbering.NumberingNumber;
+
+import java.util.EnumMap;
+import java.util.Map;
+
+/**
+ * Created by maarten on 2-3-16.
+ */
+public class IsPartOfList {
+    public static final Map<Label, IsPartOfListFeature> features = new EnumMap<>(Label.class);
+    public static final Map<Label, IsPartOfListFilter> filters = new EnumMap<>(Label.class);
+
+    static {
+        for (Label l : Label.values()) {
+            features.put(l, new IsPartOfListFeature(l));
+            filters.put(l, new IsPartOfListFilter(l));
+        }
+    }
+
+    public static class IsPartOfListFilter extends org.crf.crf.filters.Filter<org.leibnizcenter.rechtspraak.markup.RechtspraakElement, org.leibnizcenter.rechtspraak.markup.Label> {
+        public final Label label;
+
+        private IsPartOfListFilter(Label l) {
+            label = l;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+
+            IsPartOfListFilter that = (IsPartOfListFilter) o;
+
+            return label.equals(that.label);
+        }
+
+        @Override
+        public int hashCode() {
+            return label.hashCode();
+        }
+    }
+
+    public static class IsPartOfListFeature extends CrfFeature<RechtspraakElement, Label> {
+        private final Label label;
+
+        private IsPartOfListFeature(Label label) {
+            this.label = label;
+        }
+
+        public static boolean isPartOfList(RechtspraakElement[] sequence, int indexInSequence) {
+            if (sequence[indexInSequence].numbering == null) return false;
+
+            if (sequence[indexInSequence].numbering.isFirstNumbering()) {
+                // Check next
+                if (sequence.length > indexInSequence + 1) {
+                    return (
+                            NumberingNumber.isSuccedentOf(sequence[indexInSequence + 1].numbering,
+                                    sequence[indexInSequence].numbering)
+                    );
+                }
+            } else {
+                // Check previous
+                if (indexInSequence > 0) {
+                    return (
+                            NumberingNumber.isSuccedentOf(sequence[indexInSequence].numbering,
+                                    sequence[indexInSequence - 1].numbering)
+                    );
+                }
+            }
+            return false;
+        }
+
+        @Override
+        public double value(RechtspraakElement[] sequence, int indexInSequence, Label currentTag, Label previousTag) {
+            return Doubles.asDouble(isPartOfList(sequence, indexInSequence));
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+
+            IsPartOfListFeature that = (IsPartOfListFeature) o;
+
+            return label.equals(that.label);
+        }
+
+        @Override
+        public int hashCode() {
+            return label.hashCode();
+        }
+    }
+}
