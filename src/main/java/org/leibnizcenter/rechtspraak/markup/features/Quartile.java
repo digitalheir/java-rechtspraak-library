@@ -14,7 +14,7 @@ import java.util.Map;
  * Created by maarten on 2-3-16.
  */
 public enum Quartile {
-    FIRST(-Double.MAX_VALUE, 0.25), SECOND(0.25, 0.50), THIRD(0.50, 0.75), FOURTH(0.75, Double.MAX_VALUE);
+    FIRST(Double.NEGATIVE_INFINITY, 0.25), SECOND(0.25, 0.50), THIRD(0.50, 0.75), FOURTH(0.75, Double.POSITIVE_INFINITY);
 
     private final Map<Label, QuartileFilter> filters = new EnumMap<>(Label.class);
     private final Map<Label, QuartileFeature> features = new EnumMap<>(Label.class);

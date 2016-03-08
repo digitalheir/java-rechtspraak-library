@@ -48,7 +48,7 @@ public final class TrainCrf implements Runnable {
     @Override
     public void run() {
         // Load a corpus into the memory
-        RechtspraakCorpus corpus = new RechtspraakCorpus(listXmlFiles(xmlFiles, 100));
+        RechtspraakCorpus corpus = new RechtspraakCorpus(listXmlFiles(xmlFiles, 3000));
 
         // Create trainer factory
         CrfTrainerFactory<RechtspraakElement, Label> trainerFactory = new CrfTrainerFactory<>();

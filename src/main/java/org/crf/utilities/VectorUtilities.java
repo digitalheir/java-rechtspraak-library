@@ -1,5 +1,7 @@
 package org.crf.utilities;
 
+import org.crf.crf.CrfUtilities;
+
 /**
  * A collection of linear algebra functions over vectors.
  *
@@ -19,7 +21,7 @@ public class VectorUtilities {
             throw new CrfException("Cannot multiply vector of different sizes.");
         double ret = 0.0;
         for (int i = 0; i < rowVector.length; ++i) {
-            ret += rowVector[i] * columnVector[i];
+            ret = CrfUtilities.safeAdd(ret, CrfUtilities.safeMultiply(rowVector[i], columnVector[i]));
         }
         return ret;
     }
@@ -69,6 +71,9 @@ public class VectorUtilities {
         if (vector1.length != vector2.length) throw new CrfException("Cannot substract vectors of difference sizes.");
         double[] ret = new double[vector1.length];
         for (int i = 0; i < vector1.length; ++i) {
+            if (Double.isNaN(vector1[i] - vector2[i])) {
+                throw new Error("NaN:  " + "vector1[i]" + " - " + vector2[i]);
+            }
             ret[i] = vector1[i] - vector2[i];
         }
         return ret;
