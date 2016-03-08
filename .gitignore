@@ -5,6 +5,8 @@
 *.apk
 *.ap_
 
+*.ser
+
 # Ignition Module files
 *.modl
 
