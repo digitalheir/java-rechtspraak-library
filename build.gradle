@@ -5,7 +5,9 @@ apply plugin: 'java'
 apply plugin: 'application'
 
 sourceCompatibility = 1.8
+
 mainClassName = 'org.leibnizcenter.rechtspraak.markup.Main'
+
 
 configuration {
     all*.exclude group: "org.apache.logging.log4j", module: "*"

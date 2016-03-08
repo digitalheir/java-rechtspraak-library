@@ -42,15 +42,6 @@ public class RechtspraakFeatureGenerator extends CrfFeatureGenerator<Rechtspraak
             }
         }
 
-        // Relative position in text
-        for (Label l : Label.values()) {
-            for (Quartile q : Quartile.values()) {
-                CrfFeature<RechtspraakElement, Label> feature = q.getFeature(l);
-                features.add(
-                        new CrfFilteredFeature<>(feature, q.getFilter(l), true)
-                );
-            }
-        }
 
         // Whether this is an info tag as one of the first X elements
         for (InfoAsFirstX i : InfoAsFirstX.values()) {
@@ -59,14 +50,31 @@ public class RechtspraakFeatureGenerator extends CrfFeatureGenerator<Rechtspraak
             );
         }
 
-        // Label probabilities
+        // Whether this is a very likely title tag following info
+        features.add(
+                new CrfFilteredFeature<>(
+                        FirstSectionTitleAfterInfo.feature,
+                        FirstSectionTitleAfterInfo.filter,
+                        true)
+        );
+
         for (Label label : Label.values()) {
-//            features.add(
-//                    new CrfFilteredFeature<>(
-//                            HasLabel.features.get(label),
-//                            HasLabel.filters.get(label),
-//                            true)
-//            );
+            // Label probabilities
+            //  features.add(
+            //          new CrfFilteredFeature<>(
+            //                  HasLabel.features.get(label),
+            //                  HasLabel.filters.get(label),
+            //                  true)
+            //  );
+
+            // Relative position in text
+            for (Quartile q : Quartile.values()) {
+                CrfFeature<RechtspraakElement, Label> feature = q.getFeature(label);
+                features.add(
+                        new CrfFilteredFeature<>(feature, q.getFilter(label), true)
+                );
+            }
+
 
             for (WordCount wc : WordCount.values()) {
                 features.add(
@@ -77,10 +85,8 @@ public class RechtspraakFeatureGenerator extends CrfFeatureGenerator<Rechtspraak
                         )
                 );
             }
-        }
 
-        // Token values
-        for (Label label : Label.values()) {
+            // Token values
 //            features.addAll(
 //                    TitlesEncountered.encountered.stream()
 //                            .map(p -> new CrfFilteredFeature<>(p.features.get(label), p.filters.get(label), true))
@@ -95,6 +101,13 @@ public class RechtspraakFeatureGenerator extends CrfFeatureGenerator<Rechtspraak
                     new CrfFilteredFeature<>(
                             TextBlockInfo.Space.features.get(label),
                             TextBlockInfo.Space.filters.get(label),
+                            true
+                    )
+            );
+            features.add(
+                    new CrfFilteredFeature<>(
+                            IsAllCaps.features.get(label),
+                            IsAllCaps.filters.get(label),
                             true
                     )
             );

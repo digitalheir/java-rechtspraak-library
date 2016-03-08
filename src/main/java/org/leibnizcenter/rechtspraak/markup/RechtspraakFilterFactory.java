@@ -37,10 +37,12 @@ public class RechtspraakFilterFactory extends HashSet<Filter<RechtspraakElement,
                 .filter(pattern -> pattern.matches(normalizedText))
                 .forEach(pattern -> this.add(pattern.filters.get(currentTag)));
 
-        // Whether this token is spaced
-        if (thisToken.isSpaced) {
-            add(TextBlockInfo.Space.filters.get(currentTag));
+        if (FirstSectionTitleAfterInfo.isVeryLikelyFirstTitle(thisToken, currentTag, previousTag)) {
+            add(FirstSectionTitleAfterInfo.filter);
         }
+        if (thisToken.isSpaced) add(TextBlockInfo.Space.filters.get(currentTag));
+        if (thisToken.isAllCaps) add(IsAllCaps.filters.get(currentTag));
+
 
         for (WordCount wc : WordCount.values()) {
             if (WordCount.isTrue(wc, thisToken)) {

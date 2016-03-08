@@ -5,9 +5,11 @@ import com.google.common.collect.Sets;
 import org.crf.crf.CrfModel;
 import org.crf.crf.CrfTags;
 import org.crf.crf.CrfUtilities;
-import org.crf.crf.run.*;
+import org.crf.crf.run.CrfInferencePerformer;
+import org.crf.crf.run.CrfTrainer;
+import org.crf.crf.run.CrfTrainerFactory;
+import org.crf.crf.run.ExampleMain;
 import org.crf.utilities.TaggedToken;
-import org.leibnizcenter.rechtspraak.util.Labels;
 import org.leibnizcenter.rechtspraak.util.Xml;
 import org.w3c.dom.Document;
 import org.xml.sax.InputSource;
@@ -16,8 +18,14 @@ import org.xml.sax.SAXException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import java.io.*;
-import java.util.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import static org.leibnizcenter.rechtspraak.markup.RechtspraakCorpus.listXmlFiles;
 
@@ -27,7 +35,7 @@ import static org.leibnizcenter.rechtspraak.markup.RechtspraakCorpus.listXmlFile
  * Created by maarten on 28-2-16.
  */
 public final class TrainCrf implements Runnable {
-    private final static File xmlFiles = new File(Const.PATH_TRAIN_TEST_XML_FILES);
+    private final static File xmlFiles = new File("B:\\rechtspraak-rich-docs\\");
     private Map<Label, Set<Label>> canFollow = new LinkedHashMap<>();
     private Map<Label, Set<Label>> canPrecede = new LinkedHashMap<>();
 
@@ -40,7 +48,7 @@ public final class TrainCrf implements Runnable {
     @Override
     public void run() {
         // Load a corpus into the memory
-        RechtspraakCorpus corpus = new RechtspraakCorpus(listXmlFiles(xmlFiles, 10));
+        RechtspraakCorpus corpus = new RechtspraakCorpus(listXmlFiles(xmlFiles, 100));
 
         // Create trainer factory
         CrfTrainerFactory<RechtspraakElement, Label> trainerFactory = new CrfTrainerFactory<>();

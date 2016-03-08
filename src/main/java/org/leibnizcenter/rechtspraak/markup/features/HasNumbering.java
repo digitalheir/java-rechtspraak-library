@@ -5,6 +5,7 @@ import org.crf.crf.CrfFeature;
 import org.leibnizcenter.rechtspraak.markup.Label;
 import org.leibnizcenter.rechtspraak.markup.RechtspraakElement;
 import org.leibnizcenter.rechtspraak.util.Doubles;
+import org.leibnizcenter.rechtspraak.util.Labels;
 
 import java.util.Map;
 
@@ -18,7 +19,7 @@ public class HasNumbering {
     static {
         Map<Label, Filter> filterMap = Maps.newEnumMap(Label.class);
         Map<Label, Feature> featureMap = Maps.newEnumMap(Label.class);
-        for (Label l : Label.values()) {
+        for (Label l : Labels.withoutNull) {
             filterMap.put(l, new Filter(l));
             featureMap.put(l, new Feature(l));
         }
@@ -35,7 +36,7 @@ public class HasNumbering {
 
         @Override
         public double value(RechtspraakElement[] sequence, int indexInSequence, Label currentTag, Label previousTag) {
-            return Doubles.asDouble(sequence[indexInSequence].numbering != null);
+            return Doubles.asDouble(sequence[indexInSequence].numbering != null && (this.label.equals(currentTag)));
         }
 
         @Override

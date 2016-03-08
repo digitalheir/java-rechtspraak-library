@@ -1,5 +1,6 @@
 package org.leibnizcenter.rechtspraak.markup;
 
+import org.leibnizcenter.rechtspraak.markup.features.IsAllCaps;
 import org.leibnizcenter.rechtspraak.util.TextBlockInfo;
 import org.leibnizcenter.rechtspraak.util.numbering.NumberingNumber;
 import org.leibnizcenter.rechtspraak.util.numbering.SubSectionNumber;
@@ -19,28 +20,32 @@ public class RechtspraakElement implements Element {
     public final String normalizedText;
     public final int wordCount;
     public final boolean isSpaced;
+    public final boolean isAllCaps;
 
     public RechtspraakElement(Element e) {
         this.e = e;
         //token.setFeatureValue("HAS_TEXT", dbl(normalizedTextWithoutLeadingNumber.matches(".*[\\p{L}].*")));
 
-        String normalizedWithPotentialLeadingNumber = e
-                .getTextContent()
-                .replaceAll("\\s\\s+", " ") // Replace all whitespace with a single space
-                .replaceAll("[^\\p{L} 0-9]", "") // Remove non-alphanumerics
-                .toLowerCase(Locale.ENGLISH);
+        String textContent = e.getTextContent().trim();
+        this.numbering = startsWithNumber(textContent);
 
-        this.numbering = startsWithNumber(normalizedWithPotentialLeadingNumber);
+        String normalizedWithPotentialLeadingNumber = textContent
+                .replaceAll("\\s\\s+", " ") // Replace all whitespace with a single space
+                .replaceAll("[^\\p{L} 0-9]", ""); // Remove non-alphanumerics
+
         String normalizedText = normalizedWithPotentialLeadingNumber
                 .replace("^\\s*([0-9]|\\b(i{1,3})\\b|\\b((i?[vx])|([xv]i{0,3}))\\b)+\\s*[;:\\.]*)+\\s*", "") // Remove leading numbering
                 .replace("^\\s*(de|het|een)\\b\\s*", "") // Remove leading article (de/het/een)
                 .trim();
 
+        this.isAllCaps = (IsAllCaps.ALL_CAPS.matcher(normalizedText).matches());
+
         this.isSpaced = TextBlockInfo.Space.isSpaced(normalizedText);
         if (isSpaced) {
             normalizedText = TextBlockInfo.Space.unspace(normalizedText);
         }
-        this.normalizedText = normalizedText;
+
+        this.normalizedText = normalizedText.toLowerCase(Locale.ENGLISH);
 
         this.wordCount = normalizedText.split("\\s+").length;
     }

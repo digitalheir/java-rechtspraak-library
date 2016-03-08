@@ -15,6 +15,14 @@ import java.util.regex.Pattern;
  * Created by maarten on 11-2-16.
  */
 public class TextBlockInfo {
+    //new TextPattern("PREP", Pattern.compile("^(van|in|op)", Pattern.CASE_INSENSITIVE)),
+    //new TextPattern("FACT", Pattern.compile(".*\\bfeit.*", Pattern.CASE_INSENSITIVE)),
+    //new TextPattern("GROUND", Pattern.compile(".*\\bgrond.*", Pattern.CASE_INSENSITIVE)),
+    //new TextPattern("JUDGMENT", Pattern.compile(".*\\b(slotsom|beslis).*", Pattern.CASE_INSENSITIVE)),
+    //new TextPattern("CONSIDERED", Pattern.compile(".*\\b(middel|bewijs|straf|maatregel|sanctie|hoofdzaak|overige|incident)\\b.*", Pattern.CASE_INSENSITIVE)),
+    //new TextPattern("CONSIDERATION", Pattern.compile(".*\\b((bewijs|straf)?overweg|beoordel|(straf|bewijs)?motivering|beschouwing).*", Pattern.CASE_INSENSITIVE)),
+    //new TextPattern("PUNCT", Pattern.compile(".*(:|\\.).*", Pattern.CASE_INSENSITIVE)),
+
     public static Collection<TextPattern> patterns = Sets.newHashSet(
             /**
              * starts with rechtbank/gerechthof with location
@@ -53,14 +61,7 @@ public class TextBlockInfo {
             // Patterns for titles
             ///////////////////////
             new TextPattern("START_W_LEGAL_QUALIFIER", Pattern.compile("^(eerst|tweed|verdere|vaststaande|terbeschikkingstelling).*", Pattern.CASE_INSENSITIVE))
-            //new TextPattern("PREP", Pattern.compile("^(van|in|op)", Pattern.CASE_INSENSITIVE)),
-            //new TextPattern("FACT", Pattern.compile(".*\\bfeit.*", Pattern.CASE_INSENSITIVE)),
-            //new TextPattern("GROUND", Pattern.compile(".*\\bgrond.*", Pattern.CASE_INSENSITIVE)),
-            //new TextPattern("JUDGMENT", Pattern.compile(".*\\b(slotsom|beslis).*", Pattern.CASE_INSENSITIVE)),
-            //new TextPattern("CONSIDERED", Pattern.compile(".*\\b(middel|bewijs|straf|maatregel|sanctie|hoofdzaak|overige|incident)\\b.*", Pattern.CASE_INSENSITIVE)),
-            //new TextPattern("CONSIDERATION", Pattern.compile(".*\\b((bewijs|straf)?overweg|beoordel|(straf|bewijs)?motivering|beschouwing).*", Pattern.CASE_INSENSITIVE)),
-            //new TextPattern("PROCEEDINGS", Pattern.compile("\\b(voor)?geschied|onsta|((proces)?(verlo|gang)|procedu|ontstaan|loop)")),
-            //new TextPattern("PUNCT", Pattern.compile(".*(:|\\.).*", Pattern.CASE_INSENSITIVE)),
+
 
             ///**
             // * Any combination of uppercase characters and whitespace
@@ -316,6 +317,10 @@ public class TextBlockInfo {
             }
         }
 
+        public TextPattern(Pattern compile) {
+            this(compile.pattern(), compile);
+        }
+
         public boolean matches(String text) {
             return pattern.matcher(text).matches();
         }
@@ -340,4 +345,5 @@ public class TextBlockInfo {
             return result;
         }
     }
+
 }
