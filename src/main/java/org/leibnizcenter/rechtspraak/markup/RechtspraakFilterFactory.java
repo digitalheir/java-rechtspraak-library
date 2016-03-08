@@ -2,6 +2,7 @@ package org.leibnizcenter.rechtspraak.markup;
 
 import org.crf.crf.filters.Filter;
 import org.leibnizcenter.rechtspraak.markup.features.*;
+import org.leibnizcenter.rechtspraak.markup.features.patterns.Patterns;
 import org.leibnizcenter.rechtspraak.util.TextBlockInfo;
 import org.leibnizcenter.rechtspraak.util.numbering.FullSectionNumber;
 
@@ -36,6 +37,12 @@ public class RechtspraakFilterFactory extends HashSet<Filter<RechtspraakElement,
         TextBlockInfo.patterns.stream()
                 .filter(pattern -> pattern.matches(normalizedText))
                 .forEach(pattern -> this.add(pattern.filters.get(currentTag)));
+
+        if (Label.SECTION_TITLE.equals(currentTag)) {
+            for(Patterns p:Patterns.values()){
+                add(Patterns.filters.get(p).get(Label.SECTION_TITLE));
+            }
+        }
 
         if (FirstSectionTitleAfterInfo.isVeryLikelyFirstTitle(thisToken, currentTag, previousTag)) {
             add(FirstSectionTitleAfterInfo.filter);

@@ -220,10 +220,35 @@ public class CrfUtilities {
     public static double safeAdd(double variable, final double valueToAdd) {
         final double oldValue = variable;
         variable += valueToAdd;
+        if (variable == Double.POSITIVE_INFINITY) variable = Double.MAX_VALUE;
+        if (variable == Double.NEGATIVE_INFINITY) variable = -Double.MAX_VALUE;
+
         if (((valueToAdd < 0.0) && (oldValue < variable)) || ((valueToAdd > 0.0) && (oldValue > variable))) {
             throw new CrfException("Error: adding value to \"double\" variable yielded unexpected results. This seems like a limitation of double."
-                    + "variable was: " + String.format("%-3.3", oldValue) + ", value to add was: " + String.format("%-3.3f", valueToAdd));
+                    + "variable was: " + String.format("%-3.3f", oldValue) + ", value to add was: " + String.format("%-3.3f", valueToAdd));
         }
+        return variable;
+    }
+
+    public static double safeMultiply(double variable, final double val2) {
+        final double oldValue = variable;
+        variable *= val2;
+        if (variable == Double.POSITIVE_INFINITY) {
+            variable = Double.MAX_VALUE;
+            //System.out.println("+INFINITY <- " + variable);
+        }
+        if (variable == Double.NEGATIVE_INFINITY) {
+            variable = -Double.MAX_VALUE;
+            //System.out.println("-INFINITY <- " + variable);
+        }
+
+        if (!Double.isFinite(variable)) {
+            throw new CrfException("Error: multiplying value to \"double\" variable yielded unexpected results. This seems like a limitation of double."
+                    + "variable was: " + String.format("%-3.3f", oldValue) + ", value to multiply was: " + String.format("%-3.3f", val2));
+        }
+//        if (((val2 < 0.0) && (oldValue < variable)) || ((val2 > 0.0) && (oldValue > variable))) {
+//            System.err.println(String.format("%1$.3f * %2$.3f = %3$.3f", oldValue, val2, variable));
+//        }
         return variable;
     }
 
@@ -287,5 +312,6 @@ public class CrfUtilities {
         }
         set.add(value);
     }
+
 
 }

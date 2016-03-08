@@ -5,6 +5,7 @@ import org.crf.crf.filters.CrfFilteredFeature;
 import org.crf.crf.run.CrfFeatureGenerator;
 import org.crf.utilities.TaggedToken;
 import org.leibnizcenter.rechtspraak.markup.features.*;
+import org.leibnizcenter.rechtspraak.markup.features.patterns.Patterns;
 import org.leibnizcenter.rechtspraak.util.Doubles;
 import org.leibnizcenter.rechtspraak.util.TextBlockInfo;
 
@@ -57,6 +58,16 @@ public class RechtspraakFeatureGenerator extends CrfFeatureGenerator<Rechtspraak
                         FirstSectionTitleAfterInfo.filter,
                         true)
         );
+
+        // Whether this is a section title that looks like something we've seen a lot before
+        for (Patterns p : Patterns.values()) {
+            features.add(
+                    new CrfFilteredFeature<>(
+                            Patterns.features.get(p).get(Label.SECTION_TITLE),
+                            Patterns.filters.get(p).get(Label.SECTION_TITLE),
+                            true
+                    ));
+        }
 
         for (Label label : Label.values()) {
             // Label probabilities

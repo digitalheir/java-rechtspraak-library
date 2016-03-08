@@ -115,6 +115,7 @@ public class LbfgsMinimizer extends Minimizer<DerivableFunction> {
         ArrayList<Double> alphaList = new ArrayList<>(previousItrations.size());
 
         double[] q = function.gradient(point);
+        for (double d : q) if (Double.isNaN(d)) throw new Error("Was NaN");
         for (PointAndGradientSubstractions substractions : previousItrations) {
             double rho = 1.0 / VectorUtilities.product(substractions.getGradientSubstraction(), substractions.getPointSubstraction());
             rhoList.add(rho);
@@ -123,6 +124,7 @@ public class LbfgsMinimizer extends Minimizer<DerivableFunction> {
 
             q = VectorUtilities.substractVectors(q, VectorUtilities.multiplyByScalar(alpha, substractions.getGradientSubstraction()));
         }
+        for (double d : q) if (Double.isNaN(d)) throw new Error("Was NaN");
 
         double[] r = calculateInitial_r_forTwoLoopRecursion(q);
 
