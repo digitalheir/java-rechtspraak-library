@@ -37,11 +37,17 @@ public class SearchRequest {
      * Client for doing HTTP requests
      */
     private final OkHttpClient sHttpClient = new OkHttpClient();
+    private final Builder builder;
 
-    private SearchRequest(HttpUrl url) {
+    private SearchRequest(Builder b) {
+        this.builder = b;
         mRequest = new Request.Builder()
-                .url(url)
+                .url(b.urlBuilder.build())
                 .build();
+    }
+
+    public Builder getBuilder() {
+        return builder;
     }
 
     public Request getRequest() {
@@ -52,7 +58,7 @@ public class SearchRequest {
         return sHttpClient.newCall(mRequest).execute();
     }
 
-    public List<JudgmentMetadata> execute() throws IOException, ParserConfigurationException, SAXException {
+    public SearchResult execute() throws IOException, ParserConfigurationException, SAXException {
 //        System.out.println(getResponse().body().string().toString());
         Response resp = getResponse();
 
@@ -68,7 +74,7 @@ public class SearchRequest {
                 System.err.println(str);
                 throw e;
             }
-            return handler.judgments;
+            return new SearchResult(this, handler.judgments);
         } else {
             throw new HttpStatusException("Code was not 200 but " + resp.code(), resp.code(), getRequest().url().toString());
         }
@@ -86,14 +92,31 @@ public class SearchRequest {
     public static class Builder {
         public static final DateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
         public static final DateFormat MODIFIED_FORMAT = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
-        private final HttpUrl.Builder mBuilder;
+        private final HttpUrl.Builder urlBuilder;
+        private int offset = 0;
 
         public Builder() {
+            urlBuilder = initBuilder();
+        }
+
+        /**
+         * @param returnType Whether to return only documents with content,
+         *                   or documents that have at least metadata. The later is the default,
+         *                   but it is more likely that you are looking for the former.
+         */
+        public Builder(ReturnType returnType) {
+            urlBuilder = initBuilder();
+            urlBuilder.addQueryParameter("return", returnType.toString());
+        }
+
+        private HttpUrl.Builder initBuilder() {
+            HttpUrl.Builder mBuilder;
             mBuilder = new HttpUrl.Builder()
                     .scheme("http")
                     .host("data.rechtspraak.nl")
                     .addPathSegment("uitspraken")
                     .addPathSegment("zoeken");
+            return mBuilder;
         }
 
         /**
@@ -103,7 +126,7 @@ public class SearchRequest {
             if (max > 1000 | max < 1) {
                 throw new InvalidParameterException("Return limit needs to be a number between 1 and 1000 inclusive");
             }
-            mBuilder.addQueryParameter("max", max + "");
+            urlBuilder.addQueryParameter("max", max + "");
             return this;
         }
 
@@ -112,7 +135,7 @@ public class SearchRequest {
          * @param type The type of content to return (only metadata or metadata+document)
          */
         public Builder returnType(ReturnType type) {
-            mBuilder.addQueryParameter("return", type.toString());
+            urlBuilder.addQueryParameter("return", type.toString());
             return this;
         }
 
@@ -123,7 +146,8 @@ public class SearchRequest {
             if (from < 0) {
                 from = 0;
             }
-            mBuilder.addQueryParameter("from", from + "");
+            this.offset = from;
+            urlBuilder.addQueryParameter("from", from + "");
             return this;
         }
 
@@ -131,7 +155,7 @@ public class SearchRequest {
          * @param sort Sort results on modification date ascending or descending. Default is ascending (oldest first).
          */
         public Builder sort(Sort sort) {
-            mBuilder.addQueryParameter("sort", sort.toString());
+            urlBuilder.addQueryParameter("sort", sort.toString());
             return this;
         }
 
@@ -139,7 +163,7 @@ public class SearchRequest {
          * @param replaces Returns ECLI judgments that replace given LJN number
          */
         public Builder replaces(String replaces) {
-            mBuilder.addQueryParameter("replaces", replaces);
+            urlBuilder.addQueryParameter("replaces", replaces);
             return this;
         }
 
@@ -148,7 +172,7 @@ public class SearchRequest {
          * @see #date(Date, Date)
          */
         public Builder date(Date date) {
-            mBuilder.addQueryParameter("date", DATE_FORMAT.format(date));
+            urlBuilder.addQueryParameter("date", DATE_FORMAT.format(date));
             return this;
         }
 
@@ -159,8 +183,8 @@ public class SearchRequest {
          * @param date2 search window end date, inclusive
          */
         public Builder date(Date date1, Date date2) {
-            mBuilder.addQueryParameter("date", DATE_FORMAT.format(date1));
-            mBuilder.addQueryParameter("date", DATE_FORMAT.format(date2));
+            urlBuilder.addQueryParameter("date", DATE_FORMAT.format(date1));
+            urlBuilder.addQueryParameter("date", DATE_FORMAT.format(date2));
             return this;
         }
 
@@ -169,7 +193,7 @@ public class SearchRequest {
          * @see #modified(Date, Date)
          */
         public Builder modified(Date modified) {
-            mBuilder.addQueryParameter("modified", MODIFIED_FORMAT.format(modified));
+            urlBuilder.addQueryParameter("modified", MODIFIED_FORMAT.format(modified));
             return this;
         }
 
@@ -181,8 +205,8 @@ public class SearchRequest {
          * @see #modified(Date, Date)
          */
         public Builder modified(Date modified1, Date modified2) {
-            mBuilder.addQueryParameter("modified", MODIFIED_FORMAT.format(modified1));
-            mBuilder.addQueryParameter("modified", MODIFIED_FORMAT.format(modified2));
+            urlBuilder.addQueryParameter("modified", MODIFIED_FORMAT.format(modified1));
+            urlBuilder.addQueryParameter("modified", MODIFIED_FORMAT.format(modified2));
             return this;
         }
 
@@ -190,7 +214,7 @@ public class SearchRequest {
          * @param type The type of document to return ('uitspraak' or 'conclusie')
          */
         public Builder type(Type type) {
-            mBuilder.addQueryParameter("type", type.toString());
+            urlBuilder.addQueryParameter("type", type.toString());
             return this;
         }
 
@@ -198,21 +222,29 @@ public class SearchRequest {
          * @param subject Subject URI for a legal field
          */
         public Builder subject(String subject) {
-            mBuilder.addQueryParameter("subject", subject);
+            urlBuilder.addQueryParameter("subject", subject);
             return this;
         }
 
         @Override
         public String toString() {
-            return mBuilder.toString();
+            return urlBuilder.toString();
         }
 
         public SearchRequest build() {
-            return new SearchRequest(mBuilder.build());
+            return new SearchRequest(this);
         }
 
         public HttpUrl.Builder getBuilder() {
-            return mBuilder;
+            return urlBuilder;
+        }
+
+        public int getFrom() {
+            return offset;
+        }
+
+        public int getOffset() {
+            return offset;
         }
     }
 
