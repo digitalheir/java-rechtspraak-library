@@ -12,50 +12,37 @@ import java.util.List;
 public class SearchResult {
     private final List<SearchRequest.JudgmentMetadata> judgments;
     private final SearchRequest request;
+    private SearchResult next;
 
     public SearchResult(SearchRequest request, List<SearchRequest.JudgmentMetadata> judgments) {
         this.request = request;
         this.judgments = judgments;
     }
 
-    public SearchResultIterator iterator() {
-        return new SearchResultIterator(this);
-    }
-
     public List<SearchRequest.JudgmentMetadata> getJudgments() {
         return judgments;
     }
 
-    public static class SearchResultIterator {
-        private SearchResult current;
-        private SearchResult next;
+    public boolean hasNext() throws ParserConfigurationException, SAXException, IOException {
+        SearchRequest.Builder builder = request.getBuilder();
 
-        public SearchResultIterator(SearchResult startingFrom) {
-            current = startingFrom;
+        // We know we've reached (past) the final page when it contains <= 0 results
+        if (judgments.size() > 0) {
+            next = getNextResult(builder);
+            return next.judgments.size() > 0;
         }
+        return false;
+    }
 
-        public boolean hasNext() throws ParserConfigurationException, SAXException, IOException {
-            SearchRequest.Builder builder = current.request.getBuilder();
+    private SearchResult getNextResult(SearchRequest.Builder builder) throws IOException, ParserConfigurationException, SAXException {
+        SearchRequest nextRequest = builder.from(builder.getOffset() + this.judgments.size()).build();
+        return nextRequest.execute();
+    }
 
-            // We know we've reached (past) the final page when it contains <= 0 results
-            if (current.judgments.size() > 0) {
-                next = getNextResult(builder);
-                return next.judgments.size() > 0;
-            }
-            return false;
-        }
-
-        private SearchResult getNextResult(SearchRequest.Builder builder) throws IOException, ParserConfigurationException, SAXException {
-            SearchRequest nextRequest = builder.from(builder.getOffset() + current.judgments.size()).build();
-            return nextRequest.execute();
-        }
-
-        public SearchResult next() throws ParserConfigurationException, SAXException, IOException {
-            SearchResult old = this.current;
-            this.current = next;
-            this.next = null;
-            if (this.current == null) current = getNextResult(old.request.getBuilder());
-            return current;
-        }
+    public SearchResult next() throws ParserConfigurationException, SAXException, IOException {
+        SearchResult old = this;
+        SearchResult returnNext = next;
+        if (returnNext == null) returnNext = getNextResult(old.request.getBuilder());
+        return returnNext;
     }
 }

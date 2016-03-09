@@ -14,13 +14,13 @@ public class SearchRequestTest {
 
     @Test
     public void testIteration() throws ParserConfigurationException, SAXException, IOException {
-        SearchResult.SearchResultIterator iterator = new SearchRequest.Builder().build()
-                .execute().iterator();
+        SearchResult iterator = new SearchRequest.Builder().build()
+                .execute();
 
         Assert.assertTrue(iterator.hasNext());
-        iterator.next();
+        iterator = iterator.next();
         Assert.assertTrue(iterator.hasNext());
-        iterator.next();
+        iterator = iterator.next();
         Assert.assertTrue(iterator.hasNext());
     }
 }
