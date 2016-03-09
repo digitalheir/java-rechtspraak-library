@@ -158,7 +158,7 @@ public class DocParseTest {
                     .date(
                             SearchRequest.Builder.DATE_FORMAT.parse("2014-02-03"),
                             SearchRequest.Builder.DATE_FORMAT.parse("2014-02-04")
-                    ).build().execute();
+                    ).build().execute().getJudgments();
             System.out.println(list);
 
 

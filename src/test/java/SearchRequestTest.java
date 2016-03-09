@@ -1,0 +1,26 @@
+import org.junit.Assert;
+import org.junit.Test;
+import org.leibnizcenter.rechtspraak.SearchRequest;
+import org.leibnizcenter.rechtspraak.SearchResult;
+import org.xml.sax.SAXException;
+
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.IOException;
+
+/**
+ * Created by maarten on 9-3-16.
+ */
+public class SearchRequestTest {
+
+    @Test
+    public void testIteration() throws ParserConfigurationException, SAXException, IOException {
+        SearchResult.SearchResultIterator iterator = new SearchRequest.Builder().build()
+                .execute().iterator();
+
+        Assert.assertTrue(iterator.hasNext());
+        iterator.next();
+        Assert.assertTrue(iterator.hasNext());
+        iterator.next();
+        Assert.assertTrue(iterator.hasNext());
+    }
+}

@@ -22,7 +22,11 @@ public class SearchResult {
         return new SearchResultIterator(this);
     }
 
-    private class SearchResultIterator {
+    public List<SearchRequest.JudgmentMetadata> getJudgments() {
+        return judgments;
+    }
+
+    public static class SearchResultIterator {
         private SearchResult current;
         private SearchResult next;
 
