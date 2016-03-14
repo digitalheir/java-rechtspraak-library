@@ -1,14 +1,14 @@
 package org.crf.postagging.postaggers.crf;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-
 import org.crf.crf.CrfModel;
 import org.crf.crf.run.CrfInferencePerformer;
 import org.crf.postagging.postaggers.PosTaggerLoader;
 import org.crf.utilities.CrfException;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
 
 /**
  * Loads a {@link CrfPosTagger} from a model that is stored in a directory in the file-system.

@@ -91,6 +91,7 @@ public class ArabicSectionNumber extends Number implements FullSectionNumber {
 
     @Override
     public boolean equals(Object obj) {
+        // TODO check if terminal is the same
         return obj instanceof ArabicSectionNumber && ((ArabicSectionNumber) obj).mainNum() == this.mainNum();
     }
 

@@ -1,14 +1,6 @@
 package org.crf.crf.run;
 
-import java.lang.reflect.Array;
-import java.util.Iterator;
-import java.util.LinkedHashMap;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
-import org.slf4j.Logger;
+import org.apache.log4j.Logger;
 import org.crf.crf.CrfTags;
 import org.crf.crf.CrfUtilities;
 import org.crf.crf.filters.CrfFeaturesAndFilters;
@@ -17,7 +9,12 @@ import org.crf.crf.filters.Filter;
 import org.crf.crf.filters.FilterFactory;
 import org.crf.utilities.CrfException;
 import org.crf.utilities.TaggedToken;
-import org.slf4j.LoggerFactory;
+import org.leibnizcenter.rechtspraak.markup.Label;
+import org.leibnizcenter.rechtspraak.markup.RechtspraakCorpus;
+import org.leibnizcenter.rechtspraak.markup.RechtspraakElement;
+
+import java.lang.reflect.Array;
+import java.util.*;
 
 
 /**
@@ -38,10 +35,16 @@ public class CrfTrainerFactory<K, G> {
      * @param filterFactory           The {@link FilterFactory} <B>that corresponds to the feature-generator.</B>
      * @return a CRF trainer.
      */
-    public CrfTrainer<K, G> createTrainer(
-            List<List<? extends TaggedToken<K, G>>> corpus,
-            CrfFeatureGeneratorFactory<K, G> featureGeneratorFactory,
-            FilterFactory<K, G> filterFactory, CrfTags<G> crfTags) {
+    public CrfTrainer<K, G> createTrainer(List<List<? extends TaggedToken<K, G>>> corpus, CrfFeatureGeneratorFactory<K, G> featureGeneratorFactory, FilterFactory<K, G> filterFactory) {
+        logger.info("Extracting tags.");
+        CrfTagsBuilder<G> tagsBuilder = new CrfTagsBuilder<G>(corpus);
+        tagsBuilder.build();
+        CrfTags<G> crfTags = tagsBuilder.getCrfTags();
+
+        return createTrainer(corpus, featureGeneratorFactory, filterFactory, crfTags);
+    }
+
+    public CrfTrainer<K, G> createTrainer(List<List<? extends TaggedToken<K, G>>> corpus, CrfFeatureGeneratorFactory<K, G> featureGeneratorFactory, FilterFactory<K, G> filterFactory, CrfTags<G> crfTags) {
         logger.info("Generating features.");
         CrfFeatureGenerator<K, G> featureGenerator = featureGeneratorFactory.create(corpus, crfTags.getTags());
         featureGenerator.generateFeatures();
@@ -49,19 +52,7 @@ public class CrfTrainerFactory<K, G> {
         CrfFeaturesAndFilters<K, G> features = createFeaturesAndFiltersObjectFromSetOfFeatures(setFilteredFeatures, filterFactory);
 
         logger.info("CrfPosTaggerTrainer has been created.");
-        return new CrfTrainer<>(features, crfTags);
-    }
-
-    public CrfTrainer<K, G> createTrainer(
-            List<List<? extends TaggedToken<K, G>>> corpus,
-            CrfFeatureGeneratorFactory<K, G> featureGeneratorFactory,
-            FilterFactory<K, G> filterFactory) {
-        logger.info("Extracting tags.");
-        CrfTagsBuilder<G> tagsBuilder = new CrfTagsBuilder<>(corpus);
-        tagsBuilder.build();
-        CrfTags<G> crfTags = tagsBuilder.getCrfTags();
-
-        return createTrainer(corpus, featureGeneratorFactory, filterFactory, crfTags);
+        return new CrfTrainer<K, G>(features, crfTags);
     }
 
 
@@ -82,8 +73,8 @@ public class CrfTrainerFactory<K, G> {
         }
 
 
-        Set<Integer> indexesOfFeaturesWithNoFilter = new LinkedHashSet<>();
-        Map<Filter<K, G>, Set<Integer>> mapActiveFeatures = new LinkedHashMap<>();
+        Set<Integer> indexesOfFeaturesWithNoFilter = new LinkedHashSet<Integer>();
+        Map<Filter<K, G>, Set<Integer>> mapActiveFeatures = new LinkedHashMap<Filter<K, G>, Set<Integer>>();
         for (int index = 0; index < featuresAsArray.length; ++index) {
             CrfFilteredFeature<K, G> filteredFeature = featuresAsArray[index];
             Filter<K, G> filter = filteredFeature.getFilter();
@@ -94,7 +85,7 @@ public class CrfTrainerFactory<K, G> {
             }
         }
 
-        CrfFeaturesAndFilters<K, G> allFeatures = new CrfFeaturesAndFilters<>(
+        CrfFeaturesAndFilters<K, G> allFeatures = new CrfFeaturesAndFilters<K, G>(
                 filterFactory,
                 featuresAsArray,
                 mapActiveFeatures,
@@ -105,5 +96,6 @@ public class CrfTrainerFactory<K, G> {
     }
 
 
-    private static final Logger logger = LoggerFactory.getLogger(CrfTrainerFactory.class);
+    private static final Logger logger = Logger.getLogger(CrfTrainerFactory.class);
+
 }

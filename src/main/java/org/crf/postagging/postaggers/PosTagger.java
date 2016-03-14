@@ -1,8 +1,8 @@
 package org.crf.postagging.postaggers;
 
-import java.util.List;
-
 import org.crf.utilities.TaggedToken;
+
+import java.util.List;
 
 /**
  * Assigns part-of-speech tags for a given sentence.

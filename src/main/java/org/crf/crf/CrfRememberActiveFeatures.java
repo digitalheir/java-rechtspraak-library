@@ -1,10 +1,10 @@
 package org.crf.crf;
 
+import org.crf.crf.filters.CrfFeaturesAndFilters;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
-
-import org.crf.crf.filters.CrfFeaturesAndFilters;
 
 /**
  * Holds sets of active features for every token, and every pair of tags (for this token and the preceding token) in the given input.

@@ -1,15 +1,14 @@
 package org.crf.postagging.evaluation;
 
+import org.apache.log4j.Logger;
+import org.crf.postagging.postaggers.PosTagger;
+import org.crf.utilities.CrfException;
+import org.crf.utilities.TaggedToken;
+
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
-import org.slf4j.Logger;
-import org.crf.postagging.postaggers.PosTagger;
-import org.crf.utilities.CrfException;
-import org.crf.utilities.TaggedToken;
-import org.slf4j.LoggerFactory;
 
 /**
  * Evaluates the accuracy of a given {@link PosTagger} on a given test corpus.
@@ -158,5 +157,5 @@ public class AccuracyEvaluator
 	private long incorrect = 0;
 	private double accuracy = 0.0;
 	
-	private static final Logger logger = LoggerFactory.getLogger(AccuracyEvaluator.class);
+	private static final Logger logger = Logger.getLogger(AccuracyEvaluator.class);
 }

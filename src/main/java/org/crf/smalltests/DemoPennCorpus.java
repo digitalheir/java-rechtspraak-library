@@ -1,13 +1,13 @@
 package org.crf.smalltests;
 
-import java.io.File;
-import java.util.List;
-
-
+import org.apache.log4j.Level;
 import org.crf.postagging.data.LimitedSizePosTagCorpusReader;
 import org.crf.postagging.data.penn.PennCorpus;
 import org.crf.utilities.TaggedToken;
+import org.crf.utilities.log4j.Log4jInit;
 
+import java.io.File;
+import java.util.List;
 
 public class DemoPennCorpus
 {
@@ -16,7 +16,7 @@ public class DemoPennCorpus
 	{
 		try
 		{
-//			Log4jInit.init(Level.DEBUG);
+			Log4jInit.init(Level.DEBUG);
 			new DemoPennCorpus().go(new File(args[0]));
 		}
 		catch(Throwable t)

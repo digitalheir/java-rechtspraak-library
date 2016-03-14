@@ -27,7 +27,7 @@ import static org.leibnizcenter.rechtspraak.markup.RechtspraakCorpus.listXmlFile
  * Created by maarten on 28-2-16.
  */
 public final class TestCrf implements Runnable {
-    private final static File xmlFiles = new File(Const.PATH_TRAIN_TEST_XML_FILES);
+    private final static File xmlFiles = new File(Const.PATH_TRAIN_TEST_XML_FILES_LINUX);
 
 
     public static void main(String[] a) {

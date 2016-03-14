@@ -10,6 +10,7 @@ import org.crf.crf.run.CrfTrainer;
 import org.crf.crf.run.CrfTrainerFactory;
 import org.crf.crf.run.ExampleMain;
 import org.crf.utilities.TaggedToken;
+import org.crf.utilities.log4j.Log4jInit;
 import org.leibnizcenter.rechtspraak.util.Xml;
 import org.w3c.dom.Document;
 import org.xml.sax.InputSource;
@@ -34,12 +35,14 @@ import static org.leibnizcenter.rechtspraak.markup.RechtspraakCorpus.listXmlFile
  * :p
  * Created by maarten on 28-2-16.
  */
+@Deprecated
 public final class TrainCrf implements Runnable {
-    private final static File xmlFiles = new File("B:\\rechtspraak-rich-docs\\");
+    private final static File xmlFiles = new File(Const.PATH_TRAIN_TEST_XML_FILES_LINUX);
     private Map<Label, Set<Label>> canFollow = new LinkedHashMap<>();
     private Map<Label, Set<Label>> canPrecede = new LinkedHashMap<>();
 
     public static void main(String[] a) {
+        Log4jInit.init();
         TrainCrf app = new TrainCrf();
         app.run();
     }
@@ -48,7 +51,7 @@ public final class TrainCrf implements Runnable {
     @Override
     public void run() {
         // Load a corpus into the memory
-        RechtspraakCorpus corpus = new RechtspraakCorpus(listXmlFiles(xmlFiles, 3000));
+        RechtspraakCorpus corpus = new RechtspraakCorpus(listXmlFiles(xmlFiles, 300));
 
         // Create trainer factory
         CrfTrainerFactory<RechtspraakElement, Label> trainerFactory = new CrfTrainerFactory<>();
@@ -71,10 +74,9 @@ public final class TrainCrf implements Runnable {
         CrfTrainer<RechtspraakElement, Label> trainer = trainerFactory.createTrainer(
                 corpus,
                 RechtspraakFeatureGenerator::new,
-                RechtspraakFilterFactory::new,
+                RechtspraakFilters::new,
                 crfTags
         );
-
 
         // Run training with the loaded corpus.
         trainer.train(corpus);

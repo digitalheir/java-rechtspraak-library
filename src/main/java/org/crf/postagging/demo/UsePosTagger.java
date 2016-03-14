@@ -1,21 +1,17 @@
 package org.crf.postagging.demo;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.List;
-
-
-import org.slf4j.Logger;
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 import org.crf.postagging.postaggers.crf.CrfPosTagger;
 import org.crf.postagging.postaggers.crf.CrfPosTaggerLoader;
-import org.crf.utilities.ExceptionUtil;
 import org.crf.utilities.CrfException;
+import org.crf.utilities.ExceptionUtil;
 import org.crf.utilities.TaggedToken;
-import org.slf4j.LoggerFactory;
+import org.crf.utilities.log4j.Log4jInit;
+
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -39,7 +35,7 @@ public class UsePosTagger
 	{
 		try
 		{
-//			Log4jInit.init(Level.DEBUG);
+			Log4jInit.init(Level.DEBUG);
 			try
 			{
 				int index=0;
@@ -128,5 +124,5 @@ public class UsePosTagger
 	private final File sentencesToTag;
 	private final File outputFile;
 
-	private static final Logger logger = LoggerFactory.getLogger(UsePosTagger.class);
+	private static final Logger logger = Logger.getLogger(UsePosTagger.class);
 }

@@ -1,9 +1,9 @@
 package org.crf.crf.run;
 
+import org.crf.utilities.TaggedToken;
+
 import java.util.List;
 import java.util.Set;
-
-import org.crf.utilities.TaggedToken;
 
 /**
  * A factory which creates a {@link CrfFeatureGenerator}.
@@ -20,5 +20,5 @@ public interface CrfFeatureGeneratorFactory<K,G>
 	 * @param tags
 	 * @return
 	 */
-	public CrfFeatureGenerator<K,G> create(Iterable<? extends List<? extends TaggedToken<K, G> >> corpus, Set<G> tags);
+	public CrfFeatureGenerator<K,G> create(Iterable<? extends List<? extends TaggedToken<K, G>>> corpus, Set<G> tags);
 }

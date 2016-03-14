@@ -1,17 +1,16 @@
 package org.crf.postagging.data.penn;
 
 
+import org.apache.log4j.Logger;
+import org.crf.utilities.CrfException;
+import org.crf.utilities.FileUtilities;
+import org.crf.utilities.TaggedToken;
+
 import java.io.File;
 import java.io.FileFilter;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
-import org.slf4j.Logger;
-import org.crf.utilities.FileUtilities;
-import org.crf.utilities.CrfException;
-import org.crf.utilities.TaggedToken;
-import org.slf4j.LoggerFactory;
 
 /**
  * Iterator for the Penn Tree-Bank. See {@link PennCorpus}.
@@ -89,5 +88,5 @@ public class PennCorpusReader implements Iterator<List<TaggedToken<String, Strin
 	private Iterator<PennParserTreeNode> treeIterator = null;
 	
 	@SuppressWarnings("unused")
-	private static final Logger logger = LoggerFactory.getLogger(PennCorpusReader.class);
+	private static final Logger logger = Logger.getLogger(PennCorpusReader.class);
 }

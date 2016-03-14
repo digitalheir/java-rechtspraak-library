@@ -1,9 +1,9 @@
 package org.crf.crf;
 
+import org.crf.crf.filters.CrfFeaturesAndFilters;
+
 import java.io.Serializable;
 import java.util.ArrayList;
-
-import org.crf.crf.filters.CrfFeaturesAndFilters;
 
 /**
  * This class encapsulates the set of all possible tags, the list of features (f_i), and the list of parameters (\theta_i).

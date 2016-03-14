@@ -1,17 +1,16 @@
 package org.crf.postagging.postaggers.majority;
 
+import org.apache.log4j.Logger;
+import org.crf.postagging.postaggers.PosTagger;
+import org.crf.postagging.postaggers.PosTaggerTrainer;
+import org.crf.utilities.CrfException;
+import org.crf.utilities.TaggedToken;
+
 import java.io.File;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-
-import org.crf.postagging.postaggers.PosTagger;
-import org.crf.postagging.postaggers.PosTaggerTrainer;
-import org.crf.utilities.CrfException;
-import org.crf.utilities.TaggedToken;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * Trains a {@link MajorityPosTagger} from a given corpus.
@@ -139,7 +138,7 @@ public class MajorityPosTaggerTrainer implements PosTaggerTrainer<Iterable<List<
 	private Map<String, String> majorityForToken = null;
 	private String majorGeneralTag = null;
 	private MajorityPosTagger posTagger = null;
-
-
-	private static final Logger logger = LoggerFactory.getLogger(MajorityPosTaggerTrainer.class);
+	
+	
+	private static final Logger logger = Logger.getLogger(MajorityPosTaggerTrainer.class);
 }

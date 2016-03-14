@@ -1,13 +1,13 @@
 package org.crf.smalltests;
 
+import org.apache.log4j.Logger;
+import org.crf.postagging.data.brown.BrownCorpusReader;
+import org.crf.utilities.TaggedToken;
+import org.crf.utilities.log4j.Log4jInit;
+
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
-
-import org.slf4j.Logger;
-import org.crf.postagging.data.brown.BrownCorpusReader;
-import org.crf.utilities.TaggedToken;
-import org.slf4j.LoggerFactory;
 
 /**
  * 
@@ -23,7 +23,7 @@ public class DemoReadBrownCorpus
 	{
 		try
 		{
-//			Log4jInit.init();
+			Log4jInit.init();
 			new DemoReadBrownCorpus(args[0]).go();
 		}
 		catch(Throwable t)
@@ -66,7 +66,7 @@ public class DemoReadBrownCorpus
 //			logger.info(sb.toString());
 			if (0==index%10000)
 			{
-				logger.info(index+"");
+				logger.info(index);
 			}
 		}
 		
@@ -90,6 +90,6 @@ public class DemoReadBrownCorpus
 	
 	private Set<String> tags = null;
 	
-	private static final Logger logger = LoggerFactory.getLogger(DemoReadBrownCorpus.class);
+	private static final Logger logger = Logger.getLogger(DemoReadBrownCorpus.class);
 
 }

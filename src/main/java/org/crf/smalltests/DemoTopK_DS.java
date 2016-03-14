@@ -1,8 +1,8 @@
 package org.crf.smalltests;
 
-import java.util.List;
-
 import org.crf.utilities.TopK_DateStructure;
+
+import java.util.List;
 
 /**
  * 

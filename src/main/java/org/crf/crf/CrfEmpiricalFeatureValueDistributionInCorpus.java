@@ -1,13 +1,13 @@
 package org.crf.crf;
 
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
-
 import org.crf.crf.filters.CrfFeaturesAndFilters;
 import org.crf.crf.filters.CrfFilteredFeature;
 import org.crf.utilities.CrfException;
 import org.crf.utilities.TaggedToken;
+
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
 
 import static org.crf.crf.CrfUtilities.safeAdd;
 

@@ -1,9 +1,9 @@
 package org.crf.postagging.data.penn;
 
+import org.crf.utilities.TaggedToken;
+
 import java.io.File;
 import java.util.List;
-
-import org.crf.utilities.TaggedToken;
 
 /**
  * Iterable implementation for Penn Tree-Bank corpus, where each iterated item is a pos-tagged sentence.

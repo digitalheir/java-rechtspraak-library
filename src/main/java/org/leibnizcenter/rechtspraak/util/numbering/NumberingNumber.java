@@ -24,10 +24,8 @@ public interface NumberingNumber {
      *                               big (docs don't really grow into thousands of sections.)
      */
     static NumberingNumber parse(String num, String terminal) throws NumberFormatException {
-        if (terminal != null) {
-            terminal = terminal.trim();
-            if (terminal.length() <= 0) terminal = null;
-        }
+        if (terminal != null) terminal = terminal.trim();
+        if (terminal != null && terminal.length() <= 0) terminal = null;
 
         num = num.trim();
         if (num.contains(".")) {

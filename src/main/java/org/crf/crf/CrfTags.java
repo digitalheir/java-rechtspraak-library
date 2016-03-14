@@ -1,13 +1,9 @@
 package org.crf.crf;
 
-import java.io.Serializable;
-import java.util.Collections;
-import java.util.LinkedHashMap;
-import java.util.LinkedHashSet;
-import java.util.Map;
-import java.util.Set;
-
 import org.crf.utilities.CrfException;
+
+import java.io.Serializable;
+import java.util.*;
 
 /**
  * The set of tags which exist in the training corpus, along with maps that indicate which tags follow which tag,

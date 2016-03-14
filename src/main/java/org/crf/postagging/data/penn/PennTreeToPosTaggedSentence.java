@@ -1,11 +1,11 @@
 package org.crf.postagging.data.penn;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.crf.utilities.CrfException;
 import org.crf.utilities.StringUtilities;
 import org.crf.utilities.TaggedToken;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**

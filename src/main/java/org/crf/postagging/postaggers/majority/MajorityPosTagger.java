@@ -1,11 +1,11 @@
 package org.crf.postagging.postaggers.majority;
 
+import org.crf.postagging.postaggers.PosTagger;
+import org.crf.utilities.TaggedToken;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
-import org.crf.postagging.postaggers.PosTagger;
-import org.crf.utilities.TaggedToken;
 
 /**
  * A {@link PosTagger} which assigns for each word the tag that occurs mostly with that word.

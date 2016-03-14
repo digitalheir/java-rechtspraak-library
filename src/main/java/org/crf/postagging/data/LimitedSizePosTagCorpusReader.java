@@ -1,14 +1,14 @@
 package org.crf.postagging.data;
 
+import org.crf.utilities.TaggedToken;
+
 import java.util.Iterator;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-import org.crf.utilities.TaggedToken;
-
 /**
  * A corpus that contains only a portion of an original corpus.
- * It contains only the fixed numbering of the first sentences that are included in the original corpus.
+ * It contains only the fixed number of the first sentences that are included in the original corpus.
  * 
  * @author Asher Stern
  * Date: Nov 4, 2014

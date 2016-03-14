@@ -34,8 +34,8 @@ public class RechtspraakElement implements Element {
                 .replaceAll("[^\\p{L} 0-9]", ""); // Remove non-alphanumerics
 
         String normalizedText = normalizedWithPotentialLeadingNumber
-                .replace("^\\s*([0-9]|\\b(i{1,3})\\b|\\b((i?[vx])|([xv]i{0,3}))\\b)+\\s*[;:\\.]*)+\\s*", "") // Remove leading numbering
-                .replace("^\\s*(de|het|een)\\b\\s*", "") // Remove leading article (de/het/een)
+                .replaceAll("^\\s*([0-9]|\\b(i{1,3})\\b|\\b((i?[vx])|([xv]i{0,3}))\\b)+\\s*([;:\\.]*)+\\s*", "") // Remove leading numbering
+                .replaceAll("^\\s*(de|het|een)\\b\\s*", "") // Remove leading article (de/het/een)
                 .trim();
 
         this.isAllCaps = (IsAllCaps.ALL_CAPS.matcher(normalizedText).matches());
@@ -60,7 +60,7 @@ public class RechtspraakElement implements Element {
                     ) {
                 // If it's not a date...
                 String num = numberMatcher.group(1);
-                String terminal = numberMatcher.group(2);
+                String terminal = numberMatcher.group(3);
 //                System.out.println("Num: "+num);
 //                System.out.println("Terminal: "+terminal);
                 try {

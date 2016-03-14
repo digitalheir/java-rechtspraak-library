@@ -1,9 +1,9 @@
 package org.crf.postagging.postaggers;
 
+import org.crf.utilities.TaggedToken;
+
 import java.io.File;
 import java.util.List;
-
-import org.crf.utilities.TaggedToken;
 
 /**
  * Trains a {@link PosTagger} with the given corpus, and provides method to get the trained pos-tagger and

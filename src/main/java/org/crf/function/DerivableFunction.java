@@ -10,13 +10,13 @@ package org.crf.function;
  * So, for example, for the point [3,5] the gradient is [2*3+5 , 3] = [11 , 3].
  * <BR>
  * The method {@link #gradient(double[])} returns the gradient in a given point (i.e., x, where x is a vector).
- * 
- * 
+ *
+ *
  * @author Asher Stern
  * Date: Nov 6, 2014
  *
  */
-public abstract class DerivableFunction extends Function
+public interface DerivableFunction extends Function
 {
 	/**
 	 * Returns the gradient of the function in the given point.
@@ -24,5 +24,5 @@ public abstract class DerivableFunction extends Function
 	 * @param point the point is "x", the input for the function, for which the user needs the gradient.
 	 * @return the gradient of the function in the given point.
 	 */
-	public abstract double[] gradient(double[] point);
+	double[] gradient(double[] point);
 }

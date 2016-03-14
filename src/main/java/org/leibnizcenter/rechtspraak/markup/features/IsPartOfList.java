@@ -3,6 +3,8 @@ package org.leibnizcenter.rechtspraak.markup.features;
 import org.crf.crf.CrfFeature;
 import org.leibnizcenter.rechtspraak.markup.Label;
 import org.leibnizcenter.rechtspraak.markup.RechtspraakElement;
+import org.leibnizcenter.rechtspraak.markup.RechtspraakToken;
+import org.leibnizcenter.rechtspraak.markup.RechtspraakTokenList;
 import org.leibnizcenter.rechtspraak.util.Doubles;
 import org.leibnizcenter.rechtspraak.util.numbering.NumberingNumber;
 
@@ -21,6 +23,52 @@ public class IsPartOfList {
             features.put(l, new IsPartOfListFeature(l));
             filters.put(l, new IsPartOfListFilter(l));
         }
+    }
+
+    public static boolean isPartOfList(RechtspraakTokenList sequence, int indexInSequence) {
+        RechtspraakElement token = sequence.get(indexInSequence).getToken();
+        if ((token).numbering == null) return false;
+
+        if ((token).numbering.isFirstNumbering()) {
+            // Check next
+            if (sequence.size() > indexInSequence + 1) {
+                return (
+                        NumberingNumber.isSuccedentOf(sequence.get(indexInSequence + 1).getToken().numbering,
+                                (token).numbering)
+                );
+            }
+        } else {
+            // Check previous
+            if (indexInSequence > 0) {
+                return (
+                        NumberingNumber.isSuccedentOf(token.numbering,
+                                sequence.get(indexInSequence - 1).getToken().numbering)
+                );
+            }
+        }
+        return false;
+    }
+    public static boolean isPartOfList(RechtspraakElement[] sequence, int indexInSequence) {
+        if (sequence[indexInSequence].numbering == null) return false;
+
+        if (sequence[indexInSequence].numbering.isFirstNumbering()) {
+            // Check next
+            if (sequence.length > indexInSequence + 1) {
+                return (
+                        NumberingNumber.isSuccedentOf(sequence[indexInSequence + 1].numbering,
+                                sequence[indexInSequence].numbering)
+                );
+            }
+        } else {
+            // Check previous
+            if (indexInSequence > 0) {
+                return (
+                        NumberingNumber.isSuccedentOf(sequence[indexInSequence].numbering,
+                                sequence[indexInSequence - 1].numbering)
+                );
+            }
+        }
+        return false;
     }
 
     public static class IsPartOfListFilter extends org.crf.crf.filters.Filter<org.leibnizcenter.rechtspraak.markup.RechtspraakElement, org.leibnizcenter.rechtspraak.markup.Label> {
@@ -51,29 +99,6 @@ public class IsPartOfList {
 
         private IsPartOfListFeature(Label label) {
             this.label = label;
-        }
-
-        public static boolean isPartOfList(RechtspraakElement[] sequence, int indexInSequence) {
-            if (sequence[indexInSequence].numbering == null) return false;
-
-            if (sequence[indexInSequence].numbering.isFirstNumbering()) {
-                // Check next
-                if (sequence.length > indexInSequence + 1) {
-                    return (
-                            NumberingNumber.isSuccedentOf(sequence[indexInSequence + 1].numbering,
-                                    sequence[indexInSequence].numbering)
-                    );
-                }
-            } else {
-                // Check previous
-                if (indexInSequence > 0) {
-                    return (
-                            NumberingNumber.isSuccedentOf(sequence[indexInSequence].numbering,
-                                    sequence[indexInSequence - 1].numbering)
-                    );
-                }
-            }
-            return false;
         }
 
         @Override

@@ -1,9 +1,11 @@
 package org.crf.smalltests;
 
+import org.apache.log4j.Level;
 import org.crf.function.DerivableFunction;
 import org.crf.function.optimization.LbfgsMinimizer;
 import org.crf.function.optimization.Minimizer;
 import org.crf.utilities.StringUtilities;
+import org.crf.utilities.log4j.Log4jInit;
 
 /**
  * 
@@ -18,8 +20,8 @@ public class DemoOptimizer
 	{
 		try
 		{
-//			Log4jInit.init(Level.DEBUG);
-			new DemoOptimizer().go();			
+			Log4jInit.init(Level.DEBUG);
+			new DemoOptimizer().go();
 		}
 		catch(Throwable t)
 		{
@@ -36,7 +38,7 @@ public class DemoOptimizer
 		Minimizer<?> optimizer = new LbfgsMinimizer(function);
 		optimizer.find();
 		
-		System.out.println("point = "+StringUtilities.arrayOfDoubleToString(optimizer.getPoint()));
+		System.out.println("point = "+ StringUtilities.arrayOfDoubleToString(optimizer.getPoint()));
 		System.out.println("value = "+String.format("%-3.3f",optimizer.getValue()));
 	}
 	

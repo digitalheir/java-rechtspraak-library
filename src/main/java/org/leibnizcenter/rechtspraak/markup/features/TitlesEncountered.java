@@ -1,7 +1,7 @@
 package org.leibnizcenter.rechtspraak.markup.features;
 
 import com.google.common.collect.Sets;
-import org.leibnizcenter.rechtspraak.util.TextBlockInfo;
+import org.leibnizcenter.rechtspraak.util.TextPattern;
 
 import java.util.Set;
 import java.util.regex.Pattern;
@@ -1539,7 +1539,7 @@ public class TitlesEncountered {
 
     );
 
-    public static final Set<TextBlockInfo.TextPattern> encountered = TitlesEncountered.titles.stream()
-            .map(s -> new TextBlockInfo.TextPattern(s, Pattern.compile(s)))
+    public static final Set<TextPattern> encountered = TitlesEncountered.titles.stream()
+            .map(s -> new TextPattern(s, Pattern.compile(s)))
             .collect(Collectors.toSet());
 }

@@ -3,10 +3,20 @@ package org.leibnizcenter.rechtspraak.markup;
 import org.leibnizcenter.rechtspraak.util.TextBlockInfo;
 import org.leibnizcenter.rechtspraak.util.Xml;
 import org.w3c.dom.*;
+import org.xml.sax.InputSource;
+import org.xml.sax.SAXException;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.*;
+import java.util.function.Consumer;
+
+import static org.leibnizcenter.rechtspraak.markup.RechtspraakCorpus.getEcliFromFileName;
 
 /**
  * Created by maarten on 28-2-16.
@@ -117,6 +127,15 @@ public class RechtspraakTokenList extends ArrayList<RechtspraakToken> {
         return (Element) node;
     }
 
+    public static RechtspraakTokenList from(DocumentBuilder builder, File xmlFile, String ecli) throws SAXException, IOException {
+        FileInputStream is = new FileInputStream(xmlFile);
+        Document doc = builder.parse(new InputSource(new InputStreamReader(is)));
+//                assert ecli != null;
+//                assert doc != null;
+        //System.out.println("Parsed " + ecli);
+        return from(ecli, Xml.getContentRoot(doc));
+    }
+
     public void setFeatures(String ecli, Node doc) {
 //        /**
 //         * Get document node nodes as a linear list
@@ -162,5 +181,82 @@ public class RechtspraakTokenList extends ArrayList<RechtspraakToken> {
 //            // Add label
 //            labels.add(entry.label);
 //        }
+    }
+
+    public static class FileIterator implements java.util.Iterator<RechtspraakTokenList> {
+        private File[] files;
+        private int index = 0;
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        private DocumentBuilder builder = factory.newDocumentBuilder();
+
+        public FileIterator(File... files) throws ParserConfigurationException {
+            this.files = files;
+        }
+
+        @Override
+        public boolean hasNext() {
+            boolean hasNext = index < files.length;
+            if (!hasNext) files = null; // Allow to be garbage collected
+            return hasNext;
+        }
+
+        @Override
+        public RechtspraakTokenList next() {
+            try {
+                File file = files[index];
+                files[index] = null; // Allow to be garbage collected
+                index++;
+                if (index % 1000 == 0) System.out.println("Cycled through " + index);
+                return from(builder, file, getEcliFromFileName(file));
+            } catch (SAXException | IOException e) {
+                throw new Error();
+            }
+        }
+
+        @Override
+        public void remove() {
+            throw new Error("not implemented");
+        }
+
+        @Override
+        public void forEachRemaining(Consumer<? super RechtspraakTokenList> action) {
+            Objects.requireNonNull(action);
+            while (hasNext()) action.accept(next());
+        }
+    }
+
+    public static class FileIterable implements Iterable<RechtspraakTokenList> {
+        private File[] files;
+
+        public FileIterable(List<File> xmlFiles) {
+            this.files = xmlFiles.toArray(new File[xmlFiles.size()]);
+        }
+
+        public FileIterable(File... files) {
+            this.files = files;
+        }
+
+
+        @Override
+        public void forEach(Consumer<? super RechtspraakTokenList> action) {
+            Objects.requireNonNull(action);
+
+            for (RechtspraakTokenList rechtspraakToken : this) action.accept(rechtspraakToken);
+        }
+
+        @Override
+        public Spliterator<RechtspraakTokenList> spliterator() {
+            throw new Error("Not implemented");
+        }
+
+
+        @Override
+        public FileIterator iterator() {
+            try {
+                return new FileIterator(files);
+            } catch (ParserConfigurationException e) {
+                throw new Error(e);
+            }
+        }
     }
 }

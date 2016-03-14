@@ -5,18 +5,20 @@ import com.google.common.collect.Lists;
 import java.security.InvalidParameterException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.regex.Pattern;
 
 /**
  * Created by maarten on 16-2-16.
  */
 public class SubSectionNumber extends ArrayList<FullSectionNumber> implements NumberingNumber {
-    public static Pattern REGEX_SUBSECTION = Pattern.compile("(?:([0-9]+)|(i{1,3}\\b)|(i?vi{0,3}\\b)|(i?xi{0,3}\\b))(?:\\.[0-9]+)+", Pattern.CASE_INSENSITIVE);
+    public static Pattern REGEX_SUBSECTION = Pattern.compile("(?:([0-9]+)|(i{1,3}\\b)|(i?vi{0,3}\\b)|(i?xi{0,3}\\b))(?:\\.(?:([0-9]+)|(i{1,3}\\b)|(i?vi{0,3}\\b)|(i?xi{0,3}\\b)))+", Pattern.CASE_INSENSITIVE);
     private final String terminal;
 
     public SubSectionNumber(String s, String terminal) {
-        if (!REGEX_SUBSECTION.matcher(s.trim()).matches()) {
-            throw new InvalidParameterException("String '" + s + "' did not follow regex pattern " + REGEX_SUBSECTION.pattern());
+        CharSequence toCheck = s.toLowerCase(Locale.ENGLISH).trim();
+        if (!REGEX_SUBSECTION.matcher(toCheck).matches()) {
+            throw new InvalidParameterException("String '" + toCheck + "' did not follow regex pattern " + REGEX_SUBSECTION.pattern());
         }
 
         List<String> l = Lists.newArrayList(s.split("\\."));
@@ -158,6 +160,9 @@ public class SubSectionNumber extends ArrayList<FullSectionNumber> implements Nu
         if (obj instanceof SubSectionNumber) {
             SubSectionNumber ssn1 = this;
             SubSectionNumber ssn2 = ((SubSectionNumber) obj);
+            if (!((ssn1.terminal == null && ssn2.terminal == null) || ssn1.terminal.equals(ssn2.getTerminal()))) {
+                return false;
+            }
             if (ssn1.size() == ssn2.size()) {
                 for (int i = 0; i < ((SubSectionNumber) obj).size(); i++) {
                     if (!ssn2.get(i).equals(ssn1.get(i))) {

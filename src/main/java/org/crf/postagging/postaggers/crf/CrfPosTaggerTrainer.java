@@ -1,17 +1,6 @@
 package org.crf.postagging.postaggers.crf;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
-import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-
-import org.slf4j.Logger;
+import org.apache.log4j.Logger;
 import org.crf.crf.CrfModel;
 import org.crf.crf.filters.CrfFilteredFeature;
 import org.crf.crf.run.CrfTrainer;
@@ -20,7 +9,12 @@ import org.crf.utilities.AbsoluteValueComparator;
 import org.crf.utilities.CrfException;
 import org.crf.utilities.PosTaggerUtilities;
 import org.crf.utilities.TaggedToken;
-import org.slf4j.LoggerFactory;
+
+import java.io.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -126,5 +120,5 @@ public class CrfPosTaggerTrainer implements PosTaggerTrainer<List<? extends List
 	
 	private CrfPosTagger crfPosTagger = null;
 	
-	private static final Logger logger = LoggerFactory.getLogger(CrfPosTaggerTrainer.class);
+	private static final Logger logger = Logger.getLogger(CrfPosTaggerTrainer.class);
 }

@@ -59,15 +59,15 @@ public class RechtspraakFeatureGenerator extends CrfFeatureGenerator<Rechtspraak
                         true)
         );
 
-        // Whether this is a section title that looks like something we've seen a lot before
-        for (Patterns p : Patterns.values()) {
-            features.add(
-                    new CrfFilteredFeature<>(
-                            Patterns.features.get(p).get(Label.SECTION_TITLE),
-                            Patterns.filters.get(p).get(Label.SECTION_TITLE),
-                            true
-                    ));
-        }
+//        // Whether this is a section title that looks like something we've seen a lot before
+//        for (Patterns p : Patterns.values()) {
+//            features.add(
+//                    new CrfFilteredFeature<>(
+//                            Patterns.features.get(p).get(Label.SECTION_TITLE),
+//                            Patterns.filters.get(p).get(Label.SECTION_TITLE),
+//                            true
+//                    ));
+//        }
 
         for (Label label : Label.values()) {
             // Label probabilities
@@ -103,10 +103,6 @@ public class RechtspraakFeatureGenerator extends CrfFeatureGenerator<Rechtspraak
 //                            .map(p -> new CrfFilteredFeature<>(p.features.get(label), p.filters.get(label), true))
 //                            .collect(Collectors.toSet())
 //            );
-
-            features.addAll(TextBlockInfo.patterns.stream()
-                    .map(p -> new CrfFilteredFeature<>(p.features.get(label), p.filters.get(label), true))
-                    .collect(Collectors.toSet()));
 
             features.add(
                     new CrfFilteredFeature<>(

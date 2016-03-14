@@ -1,12 +1,12 @@
 package org.crf.postagging.data.brown;
 
+import org.crf.utilities.CrfException;
+import org.crf.utilities.TaggedToken;
+
 import java.util.ArrayList;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
-
-import org.crf.utilities.CrfException;
-import org.crf.utilities.TaggedToken;
 
 /**
  * Sentence reader for Brown corpus.

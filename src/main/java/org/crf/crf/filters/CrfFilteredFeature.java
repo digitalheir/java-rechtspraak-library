@@ -1,9 +1,9 @@
 package org.crf.crf.filters;
 
-import java.io.Serializable;
-
 import org.crf.crf.CrfFeature;
 import org.crf.crf.CrfUtilities;
+
+import java.io.Serializable;
 
 /**
  * Encapsulates a {@link CrfFeature} and its {@link Filter}.

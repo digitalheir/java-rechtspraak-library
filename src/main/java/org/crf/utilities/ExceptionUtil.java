@@ -1,11 +1,11 @@
 package org.crf.utilities;
 
+import org.apache.log4j.Logger;
+
 import java.io.IOException;
 import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.io.StringWriter;
-
-import org.slf4j.Logger;
 
 
 /**

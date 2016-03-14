@@ -1,18 +1,13 @@
 package org.leibnizcenter.rechtspraak.markup;
 
 import org.crf.utilities.TaggedToken;
-import org.leibnizcenter.rechtspraak.util.Xml;
-import org.w3c.dom.Document;
-import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -40,14 +35,9 @@ public class RechtspraakCorpus extends ArrayList<List<? extends TaggedToken<Rech
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
             for (File xmlFile : xmlFiles) {
-                String ecli = xmlFile.getName().replaceAll("\\.xml$", "").replaceAll("\\.", ":");
+                String ecli = getEcliFromFileName(xmlFile);
                 try {
-                    FileInputStream is = new FileInputStream(xmlFile);
-                    Document doc = builder.parse(new InputSource(new InputStreamReader(is)));
-//                assert ecli != null;
-//                assert doc != null;
-                    System.out.println("Parsed " + ecli);
-                    RechtspraakTokenList instance = RechtspraakTokenList.from(ecli, Xml.getContentRoot(doc));
+                    RechtspraakTokenList instance = RechtspraakTokenList.from(builder, xmlFile, ecli);
 //                System.out.println("Instance made for " + ecli + "("
 //                        + ((TokenSequence) instance.getData()).size() + ")");
 //                System.out.println("Added " + ecli + " through pipe");
@@ -66,6 +56,11 @@ public class RechtspraakCorpus extends ArrayList<List<? extends TaggedToken<Rech
         }
     }
 
+    public static String getEcliFromFileName(File xmlFile) {
+        String name = xmlFile.getName();
+        return name.replaceAll("\\.xml$", "").replaceAll("\\.", ":");
+    }
+
     public static List<File> listXmlFiles(File folder) {
         return listXmlFiles(folder, -1);
     }
@@ -81,28 +76,29 @@ public class RechtspraakCorpus extends ArrayList<List<? extends TaggedToken<Rech
         List<File> xmls = new ArrayList<>(files.length);
         if (shuffle) {
             for (File file : files) {
-                addXmlToList(xmls, file);
+                addToListIfXmlFile(xmls, file);
             }
             Collections.shuffle(xmls);
         } else {
             for (File file : files) {
-                addXmlToList(xmls, file);
+                addToListIfXmlFile(xmls, file);
                 if (max > 0 && xmls.size() >= max) break;
             }
         }
         if (max > 0 && max < xmls.size()) {
             return xmls.subList(0, max);
         }
+        for (File f : xmls) if (f == null || f.getName() == null) throw new Error();
         return xmls;
     }
 
-    private static void addXmlToList(List<File> xmls, File file) {
-        //            if (file.isDirectory()) {
-//                xmls.addAll(listXmlFiles(file));
-//            } else
+    private static void addToListIfXmlFile(List<File> xmls, File file) {
         if (file.getAbsolutePath().endsWith(".xml")) {
-//                System.out.println(file.getAbsolutePath());
             xmls.add(file);
         }
+    }
+
+    public static List<File> listXmlFiles() {
+        return listXmlFiles(new File(Const.PATH_TRAIN_TEST_XML_FILES_LINUX), -1, false);
     }
 }

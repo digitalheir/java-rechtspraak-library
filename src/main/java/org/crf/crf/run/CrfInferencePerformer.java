@@ -1,14 +1,14 @@
 package org.crf.crf.run;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
 import org.crf.crf.CrfInferenceViterbi;
 import org.crf.crf.CrfModel;
 import org.crf.utilities.CrfException;
 import org.crf.utilities.TaggedToken;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * Performs the inference -- the process of finding the most likely sequence of tags to a sequence of tokens, for new
@@ -36,19 +36,19 @@ public class CrfInferencePerformer<K, G>
 	public List<TaggedToken<K,G>> tagSequence(List<K> sequence)
 	{
 		if (null==sequence) {return null;}
-		if (sequence.size()==0) {return Collections.emptyList();}
+		if (sequence.size()==0) {return Collections.<TaggedToken<K,G>>emptyList();}
 		
 		@SuppressWarnings("unchecked")
 		K[] sentenceAsArray = sequence.toArray( (K[]) Array.newInstance(sequence.get(0).getClass(), sequence.size()) );
-		CrfInferenceViterbi<K, G> crfInference = new CrfInferenceViterbi<>(model, sentenceAsArray);
+		CrfInferenceViterbi<K, G> crfInference = new CrfInferenceViterbi<K, G>(model, sentenceAsArray);
 		G[] bestTags = crfInference.inferBestTagSequence();
 
 		if (sentenceAsArray.length!=bestTags.length) {throw new CrfException("Inference failed. Array of tags differs in length from array of tokens.");}
 		
-		List<TaggedToken<K,G>> ret = new ArrayList<>();
+		List<TaggedToken<K,G>> ret = new ArrayList<TaggedToken<K,G>>();
 		for (int index=0;index<sentenceAsArray.length;++index)
 		{
-			ret.add(new TaggedToken<>(sentenceAsArray[index], bestTags[index]));
+			ret.add(new TaggedToken<K,G>(sentenceAsArray[index], bestTags[index]));
 		}
 		return ret;
 

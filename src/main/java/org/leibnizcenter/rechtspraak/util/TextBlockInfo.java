@@ -23,51 +23,6 @@ public class TextBlockInfo {
     //new TextPattern("CONSIDERATION", Pattern.compile(".*\\b((bewijs|straf)?overweg|beoordel|(straf|bewijs)?motivering|beschouwing).*", Pattern.CASE_INSENSITIVE)),
     //new TextPattern("PUNCT", Pattern.compile(".*(:|\\.).*", Pattern.CASE_INSENSITIVE)),
 
-    public static Collection<TextPattern> patterns = Sets.newHashSet(
-            /**
-             * starts with rechtbank/gerechthof with location
-             */
-            new TextPattern("START_WITH_COURT", Pattern.compile(
-                    "^*(de|het)?\\s*(?:ge)?recht(?:bank|shof) ?(?:te )?(.*)",
-                    Pattern.CASE_INSENSITIVE)),
-            /**
-             * council of the state
-             */
-            new TextPattern("RAAD_VAN_STATE", Pattern.compile(
-                    "^*(de|het)?\\s*raad\\s+van\\s+state",
-                    Pattern.CASE_INSENSITIVE)),
-            /**
-             * starts with high/central council, e.g. 'hoge raad van beroep'
-             */
-            new TextPattern("STARTS_WITH_RAAD", Pattern.compile(
-                    "^*(de|het)?\\s*(?:hoge|centrale)\\s+raad.*",
-                    Pattern.CASE_INSENSITIVE)),
-            //new TextPattern("START_W_WHITESPACE", Pattern.compile("^(\\s+).*", Pattern.CASE_INSENSITIVE)),
-            new TextPattern("AND_OR_AGAINST", Pattern.compile("^(en|tegen|contra)", Pattern.CASE_INSENSITIVE)),
-            new TextPattern("START_W_AFDELING", Pattern.compile("^afdeling.*", Pattern.CASE_INSENSITIVE)),
-            new TextPattern("START_W_SECTOR", Pattern.compile("^sector.*", Pattern.CASE_INSENSITIVE)),
-            new TextPattern("START_W_HIERNA", Pattern.compile("^hierna.*", Pattern.CASE_INSENSITIVE)),
-            new TextPattern("START_W_LOCATIE", Pattern.compile("^locatie.*", Pattern.CASE_INSENSITIVE)),
-            new TextPattern("START_W_ZAAK_ROL_NR", Pattern.compile("(?:kenmerk|(?:(?:zaak|rol).{0,15})?n(?:umme)?[ro]\\.?).*", Pattern.CASE_INSENSITIVE)),
-            new TextPattern("START_W_ZAAKNR_FORMAT", Pattern.compile("(?:(?:zaak|rol|parket|ro).{0,15})?n(?:umme)?[ro]\\.?.*", Pattern.CASE_INSENSITIVE)),
-            new TextPattern("END_W_KAMER", Pattern.compile(".*kamer$", Pattern.CASE_INSENSITIVE)),
-            new TextPattern("START_W_DATUM", Pattern.compile("^datum.*", Pattern.CASE_INSENSITIVE)),
-            new TextPattern("START_END_W_INZAKE", Pattern.compile("^inzake$", Pattern.CASE_INSENSITIVE)),
-            new TextPattern("START_W_WONEND_GEVESTIGD", Pattern.compile("^.{0,15}wonend|gevestigd.*", Pattern.CASE_INSENSITIVE)),
-            new TextPattern("END_W_PERSON_ROLE", Pattern.compile(".*ge(daagd|machtigd)e?$", Pattern.CASE_INSENSITIVE)),
-            new TextPattern("START_W_IN_DE_ZAAK_VAN", Pattern.compile("^(?:in|op) (?:de|het) (?:zaak|beroep) .*", Pattern.CASE_INSENSITIVE)),
-            new TextPattern("CONTAINS_BRACKETED_TEXT", Pattern.compile(".*\\[[a-z ]+\\].*", Pattern.CASE_INSENSITIVE)),
-            ///////////////////////
-            // Patterns for titles
-            ///////////////////////
-            new TextPattern("START_W_LEGAL_QUALIFIER", Pattern.compile("^(eerst|tweed|verdere|vaststaande|terbeschikkingstelling).*", Pattern.CASE_INSENSITIVE))
-
-
-            ///**
-            // * Any combination of uppercase characters and whitespace
-            // */
-            //new TextPattern("ALL_CAPS", Pattern.compile("^(?:\\s*\\p{Lu}\\s*)+$", Pattern.CASE_INSENSITIVE)),
-    );
 //    private static final String INCREMENTING_NUMBER = "INCREMENTING_NUMBER";
 //    private static final String SUBSECTION_NUMBER = "SUBSECTION_NUMBER";
 //    private static final String SECTION_NUMBER = "SECTION_NUMBER";
@@ -296,54 +251,10 @@ public class TextBlockInfo {
          * Starts with whitespace, then a decimal or roman numeral
          */
         public static final Pattern START_WITH_NUM = Pattern.compile(
-                "^\\s*((?:([0-9]+)|(i{1,3}\\b)|(i?vi{0,3}\\b)|(i?xi{0,3}\\b))(\\.[0-9]+)*)\\s{0,3}([:\\.-;#]?).*",
+                "^\\s*((?:(?:([0-9]+)|(?:i{1,3}\\b)|(?:i?vi{0,3}\\b)|(?:i?xi{0,3}\\b))\\.)*(?:(?:[0-9]+)|(?:i{1,3}\\b)|(?:i?vi{0,3}\\b)|(?:i?xi{0,3}\\b)))\\s{0,3}([:\\.-;#]?).*",
                 Pattern.CASE_INSENSITIVE);
         public static final Pattern ALL_WHITESPACE =
                 Pattern.compile("^\\s*$");
-    }
-
-    public static class TextPattern {
-        public final Map<Label, TokenMatch.Filter> filters = new EnumMap<>(Label.class);
-        public final Map<Label, TokenMatch.Feature> features = new EnumMap<>(Label.class);
-        private final String name;
-        private final Pattern pattern;
-
-        public TextPattern(String name, Pattern regex) {
-            this.name = name;
-            this.pattern = regex;
-            for (Label l : Label.values()) {
-                filters.put(l, new TokenMatch.Filter(l, pattern));
-                features.put(l, new TokenMatch.Feature(l, pattern));
-            }
-        }
-
-        public TextPattern(Pattern compile) {
-            this(compile.pattern(), compile);
-        }
-
-        public boolean matches(String text) {
-            return pattern.matcher(text).matches();
-        }
-
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-
-            TextPattern that = (TextPattern) o;
-
-            return name.equals(that.name) && pattern.equals(that.pattern) && filters.equals(that.filters) && features.equals(that.features);
-
-        }
-
-        @Override
-        public int hashCode() {
-            int result = name.hashCode();
-            result = 31 * result + pattern.hashCode();
-            result = 31 * result + filters.hashCode();
-            result = 31 * result + features.hashCode();
-            return result;
-        }
     }
 
 }

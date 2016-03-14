@@ -9,7 +9,6 @@
 
 # Ignition Module files
 *.modl
-*.ser
 
 # files for the dex VM
 *.dex

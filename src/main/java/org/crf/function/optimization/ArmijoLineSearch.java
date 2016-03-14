@@ -1,10 +1,10 @@
 package org.crf.function.optimization;
 
-import static org.crf.function.optimization.LineSearchUtilities.derivationForAlpha;
-import static org.crf.function.optimization.LineSearchUtilities.valueForAlpha;
-
 import org.crf.function.DerivableFunction;
 import org.crf.utilities.CrfException;
+
+import static org.crf.function.optimization.LineSearchUtilities.derivationForAlpha;
+import static org.crf.function.optimization.LineSearchUtilities.valueForAlpha;
 
 /**
  * The Armijo line search is a relatively efficient inexact line search method.

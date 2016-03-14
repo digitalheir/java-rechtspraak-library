@@ -1,10 +1,10 @@
 package org.crf.postagging.data.penn;
 
+import org.crf.utilities.CrfException;
+
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
-
-import org.crf.utilities.CrfException;
 
 /**
  * Parses an ".mrg" file of Penn Tree-Bank, and generates a Java data-structure for each parse-tree.

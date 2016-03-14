@@ -1,10 +1,10 @@
 package org.crf.postagging.postaggers.crf;
 
-import java.util.List;
-
 import org.crf.crf.run.CrfInferencePerformer;
 import org.crf.postagging.postaggers.PosTagger;
 import org.crf.utilities.TaggedToken;
+
+import java.util.List;
 
 /**
  * A part-of-speech tagger which assigns the tags using CRF inference. CRF is an acronym of Conditional Random Fields.

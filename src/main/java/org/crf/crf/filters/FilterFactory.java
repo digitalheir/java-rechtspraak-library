@@ -1,10 +1,9 @@
 package org.crf.crf.filters;
 
+import org.crf.crf.CrfUtilities;
+
 import java.io.Serializable;
 import java.util.Set;
-
-import org.crf.crf.CrfUtilities;
-import org.w3c.dom.Element;
 
 /**
  * Creates a set of filters for the given input. "Input" is the sequence of tokens, the token-index, its tag, and the tag of the preceding token.
@@ -26,8 +25,7 @@ public interface FilterFactory<K, G> extends Serializable
 	 * The convention is as follows:
 	 * Let each feature f be a feature that <B>might</B> return non-zero for the given token,tag,previous-tag.
 	 * That feature is encapsulated with a {@link Filter} in a {@link CrfFilteredFeature}. Let's call this filter "t".
-	 * For that filter there exist one filter in the set returned by this function, name it "t'", such that "t'" equals
-	 * to "t".
+	 * For that filter there exist one filter in the set returned by this function, name it "t'", such that "t'" equals to "t".
 	 * 
 	 * 
 	 * @param sequence A sequence of tokens

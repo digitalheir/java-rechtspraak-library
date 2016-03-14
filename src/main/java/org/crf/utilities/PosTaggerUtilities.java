@@ -1,13 +1,7 @@
 package org.crf.utilities;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.LinkedHashMap;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.Map.Entry;
-import java.util.Set;
 
 
 /**
@@ -27,7 +21,7 @@ public class PosTaggerUtilities
 	public static Set<String> extractAllTagsFromCorpus(Iterable<? extends List<? extends TaggedToken<String, String>>> corpus)
 	{
 		Set<String> allTags = new LinkedHashSet<String>();
-		for (List<? extends TaggedToken<String, String> > sentence : corpus)
+		for (List<? extends TaggedToken<String, String>> sentence : corpus)
 		{
 			for (TaggedToken<String, String> taggedToken : sentence)
 			{
@@ -86,13 +80,13 @@ public class PosTaggerUtilities
 	 */
 	public static <K,V> List<K> sortByValue(Map<K, V> map, Comparator<V> valueComparator)
 	{
-		List<Map.Entry<K, V>> list = new ArrayList<Map.Entry<K,V>>(map.entrySet().size());
-		for (Map.Entry<K, V> entry : map.entrySet())
+		List<Entry<K, V>> list = new ArrayList<Entry<K,V>>(map.entrySet().size());
+		for (Entry<K, V> entry : map.entrySet())
 		{
 			list.add(entry);
 		}
-		
-		Comparator<Map.Entry<K, V>> comparator = new Comparator<Map.Entry<K, V>>()
+
+		Comparator<Entry<K, V>> comparator = new Comparator<Entry<K, V>>()
 		{
 			@Override
 			public int compare(Entry<K, V> o1, Entry<K, V> o2)
@@ -103,11 +97,11 @@ public class PosTaggerUtilities
 				return valueComparator.compare(o1.getValue(), o2.getValue());
 			}
 		};
-		
+
 		list.sort(comparator);
-		
+
 		List<K> ret = new ArrayList<K>(list.size());
-		for (Map.Entry<K, V> entry : list)
+		for (Entry<K, V> entry : list)
 		{
 			ret.add(entry.getKey());
 		}

@@ -1,19 +1,11 @@
 package org.crf.postagging.data.brown;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileFilter;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.Iterator;
-import java.util.LinkedHashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Set;
-
-import org.crf.utilities.FileUtilities;
 import org.crf.utilities.CrfException;
+import org.crf.utilities.FileUtilities;
 import org.crf.utilities.TaggedToken;
+
+import java.io.*;
+import java.util.*;
 
 /**
  * A reader for the Brown-corpus.

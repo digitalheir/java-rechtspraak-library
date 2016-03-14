@@ -1,15 +1,16 @@
 package org.crf.smalltests;
 
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
+import org.crf.postagging.data.penn.PennFileContentsParser;
+import org.crf.postagging.data.penn.PennParserTreeNode;
+import org.crf.utilities.CrfException;
+import org.crf.utilities.ExceptionUtil;
+import org.crf.utilities.log4j.Log4jInit;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-
-import org.slf4j.Logger;
-import org.crf.postagging.data.penn.PennFileContentsParser;
-import org.crf.postagging.data.penn.PennParserTreeNode;
-import org.crf.utilities.ExceptionUtil;
-import org.crf.utilities.CrfException;
-import org.slf4j.LoggerFactory;
 
 
 public class DemoPennFile
@@ -19,7 +20,7 @@ public class DemoPennFile
 	{
 		try
 		{
-//			Log4jInit.init(Level.DEBUG);
+			Log4jInit.init(Level.DEBUG);
 			new DemoPennFile(args[0]).go();
 		}
 		catch(Throwable t)
@@ -92,5 +93,5 @@ public class DemoPennFile
 	
 	private final String filename;
 	
-	private static final Logger logger = LoggerFactory.getLogger(DemoPennFile.class);
+	private static final Logger logger = Logger.getLogger(DemoPennFile.class);
 }
