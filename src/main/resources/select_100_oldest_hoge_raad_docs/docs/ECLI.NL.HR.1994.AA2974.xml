@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:tr="http://tuchtrecht.overheid.nl/" xmlns:eu="http://publications.europa.eu/celex/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:HR:1994:AA2974</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2015-06-28T20:34:28</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">AA2974</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Hoge_Raad_der_Nederlanden" scheme="overheid.RechterlijkeMacht">Hoge Raad</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">1994-11-23</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">252</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#cassatie">Cassatie</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht_belastingrecht">Bestuursrecht; Belastingrecht</dcterms:subject>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0002126&amp;artikel=6&amp;g=1994-11-23">Coördinatiewet Sociale Verzekering 6</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0002471&amp;artikel=11&amp;g=1994-11-23">Wet op de loonbelasting 1964 11</dcterms:references>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+          <rdf:li>RSV 1995, 87</rdf:li>
+          <rdf:li>BNB 1995/23</rdf:li>
+          <rdf:li>WFR 1994/1817</rdf:li>
+          <rdf:li>FED 1995/299 met annotatie door B.L. DUTMER</rdf:li>
+          <rdf:li>V-N 1994/3987, 39 met annotatie door Kluwer</rdf:li>
+          <rdf:li>FED 1994/752</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:HR:1994:AA2974">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:HR:1994:AA2974</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-04T15:47:47</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2001-07-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:HR:1994:AA2974 Hoge Raad , 23-11-1994 / 252</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:HR:1994:AA2974:INH" lang="nl" xml:space="preserve">
+      <para>-</para>
+    </inhoudsindicatie>
+  <uitspraak xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:HR:1994:AA2974:DOC" lang="nl" xml:space="preserve">
+      <parablock>
+        <para>gewezen op het beroep in cassatie van het Bestuur van de Bedrijfsvereniging voor Bank- en Verzekeringswezen, Groothandel en Vrije Beroepen te Amsterdam (hierna: het Bestuur) tegen de uitspraak van de Centrale Raad van Beroep van 27 november 1991 betreffende na te melden beslissing van het Bestuur tot vaststelling ten laste van de besloten vennootschap met beperkte aansprakelijkheid X Beheer B.V. te Z van premies over de jaren 1985 en 1986 ingevolge de Werkloosheidswet, de Ziektewet en de Wet op de arbeidsongeschiktheidsverzekering. </para>
+        <para>1. Beslissing van het Bestuur en geding voor de Raad van Beroep Bij beslissing, gedagtekend 22 maart 1989 heeft het Bestuur ten laste van X Beheer B.V. met betrekking tot bovenmatige kostenvergoedingen over 1985 en 1986 premies vastgesteld ten bedrage van f 1.642,51. Tegen die beslissing heeft X Beheer B.V. beroep ingesteld bij de Raad van Beroep te Haarlem. De Raad heeft bij uitspraak van 20 mei 1991 het beroep tegen die beslissing gegrond verklaard en de beslissing vernietigd. </para>
+        <para>2. Geding voor de Centrale Raad van Beroep Het Bestuur heeft tegen de uitspraak van de Raad van Beroep hoger beroep ingesteld bij de Centrale Raad van Beroep. De Centrale Raad van Beroep heeft de aangevallen uitspraak bevestigd. De uitspraak van de Centrale Raad is aan dit arrest gehecht. </para>
+        <para>3. Geding in cassatie Het Bestuur heeft tegen de uitspraak van de Centrale Raad van Beroep beroep in cassatie ingesteld. Het beroepschrift in cassatie is aan dit arrest gehecht en maakt daarvan deel uit. X Beheer B.V. heeft een vertoogschrift ingediend. De Advocaat-Generaal Van den Berge heeft op 22 april 1993 geconcludeerd tot verwerping van het beroep. </para>
+        <para>4. Beoordeling van het middel van cassatie. 4.1. De Centrale Raad van Beroep heeft geoordeeld dat voor aanvullende premieheffing slechts plaats is wanneer komt vast te staan dat de gepresenteerde onkostenvergoeding naar objectieve maatstaven niet kan strekken tot vergoeding van kosten die door de uitoefening van de dienstbetrekking noodzakelijkerwijs worden opgeroepen, noch tot een vergoeding, betrekking hebbende op uitgaven welke objectief gesproken kunnen bijdragen tot een behoorlijke vervulling van de dienstbetrekking, voor zover die uitgaven niet zouden zijn gedaan door iemand die niet een zodanige dienstbetrekking vervult maar wat inkomen, vermogen en gezinsomstandigheden betreft, in dezelfde positie verkeert, omdat de werkgever het tegendeel in genen dele aannemelijk heeft kunnen maken. Vervolgens heeft de Centrale Raad van Beroep geoordeeld dat op de werkgever in redelijkheid niet de verplichting kan rusten om met bewijsstukken voor jaren in het verleden te bewijzen dat de onkostenvergoedingen ter dekking van reële kosten hebben gestrekt. 4.2. Anders dan in het middel wordt verondersteld, volgt uit deze oordelen niet - de formulering "in genen dele" heeft kennelijk geen andere betekenis dan: niet - dat de Centrale Raad van Beroep uit het oog heeft verloren dat artikel 6, eerste lid, aanhef en onder i, van de Coördinatiewet Sociale Verzekeringen een uitzondering vormt op de in artikel 4, eerste lid, van die wet vervatte regel dat loon is al hetgeen uit een dienstbetrekking wordt genoten, en dat het op de weg van de werkgever ligt de feiten en omstandigheden die tot toepassing van die uitzondering kunnen leiden, aannemelijk te maken. Het middel faalt derhalve. </para>
+        <para>5. Proceskosten De Hoge Raad zal met het oog op een eventuele veroordeling in de proceskosten als bedoeld in artikel 5a van de Wet administratieve rechtspraak belastingzaken X Beheer B.V. in de gelegenheid stellen zich uit te laten als hierna bepaald. </para>
+        <para>6. Beslissing De Hoge Raad verwerpt het beroep en stelt X Beheer B.V. in de gelegenheid binnen 6 weken na heden zich uit te laten omtrent een eventuele veroordeling van de wederpartij in de kosten van het geding in cassatie. </para>
+        <para>Dit arrest is gewezen door de vice-president Stoffer als voorzitter, en de raadsheren Urlings, Zuurmond, Herrmann en Fleers, in tegenwoordigheid van de waarnemend griffier Loen, in raadkamer van 23 november 1994. </para>
+        <para>Van het Bestuur wordt ter zake van dit beroep een recht geheven van f 300,--.</para>
+      </parablock>
+    </uitspraak>
+</open-rechtspraak>

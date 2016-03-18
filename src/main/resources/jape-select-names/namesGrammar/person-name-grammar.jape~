@@ -1,0 +1,222 @@
+Phase:   Names
+Input:   Token Sentence Lookup 
+Options: control = appelt debug = true
+
+/* `!Sentence` was added to most macros so that last names don't flow over into new sentences.
+ * If we don't provision for this, we get cases like
+ *
+ * ```
+ *   w.g [van de Berg
+ *   Voorzitter] ambtenaar van Staat
+ * ```
+ *
+ * i.e., we should ignore the word 'Voorzitter'
+ */
+
+Macro: KNOWN_TITLE
+// ex. 'prof.'
+(
+    ({Lookup.majorType==title})
+   |
+    ({Lookup.majorType==title, Token.string ==~ ".*\\p{L}.*\\.$"}) //If the title ends with a period, we're all good
+   |
+    ({Lookup.majorType==title, Token.length == 1}{Token.string=="."}) //Need a period for titles with length 1
+   |
+    ({Lookup.majorType==title, Token.length == 2}{Token.string=="."}) //Need a period for titles with length 2
+)
+
+
+Macro: TITLELOWCONF
+(
+   {Token.string ==~ "[\\p{L}]{2,3}"}{Token.string == "."}
+)
+
+Macro: STRICTINITIAL
+// ex. '[A.] Th. C.'
+(
+  ({Token.orth == upperInitial, Token.length >= 1,Token.length < 3, !Token.string ==~ "^St"})
+  ({Token.string == "."})
+)
+
+
+Macro: INITIAL
+// ex. '[A.] Th. C.'
+(
+  ({Token.orth == upperInitial, Token.length >= 1,Token.length < 3, !Lookup.majorType==nonperson})
+  ({Token.string == "."})?
+)
+
+Macro: INITIALS
+(
+  INITIAL
+)+
+
+Macro: FIRSTNAME
+({Token.orth == "upperInitial", Token.string ==~ "\\p{Lu}(\\p{Ll}|-)+\\p{Ll}", !Lookup.majorType==nonperson, !Sentence})
+
+Macro: VANDE
+({Token.string ==~ "[\\p{L}']{1,3}", Token.string !=~ "en|te", !Sentence})[1,2]
+
+Macro: SINGLETOLERANTLASTNAME
+// ex. van der Laan
+(
+  (VANDE)*
+  (
+    {
+    Token.string ==~ "\\p{L}*\\p{Lu}(\\p{Ll}[\\p{L}-]*)?[\\p{Ll}-]",
+    //Token.string ==~ ".*[aeiouyéèë].*", //At least one vowel
+    !Sentence}
+  )
+)
+
+Macro: TOLERANTLASTNAME
+// ex. 'van der Laan-Wijngaerde'
+// ex. 'de Beer de Laer Dupont'
+(
+  (SINGLETOLERANTLASTNAME)+
+  // Arbitrary amount of hyphens
+  (
+   {Token.string=="-"}
+   (SINGLETOLERANTLASTNAME)
+  )*
+)
+
+Macro: KNOWNSURNAME
+(
+  {Lookup.majorType == surname}
+  // Married ppl may have a double name such as  mr. E.J. de Lange-Bekker, which does not appear in the lookup list for last names
+  (
+    {Token.string == "-"}
+    {Lookup.majorType == surname}
+  )?
+)
+
+Macro: TITLEDNAME
+(
+ (KNOWN_TITLE)+
+ ((FIRSTNAME)*|(INITIALS)*)
+ (TOLERANTLASTNAME)
+)
+
+Macro: TITLEDNAMEKNOWN
+(
+ (KNOWN_TITLE)+
+ ((FIRSTNAME)*|(INITIALS)*)
+ (KNOWNSURNAME)
+)
+
+Macro: STRICTINITIALSNAMEKNOWN
+(
+ (KNOWN_TITLE)*
+ (STRICTINITIAL)+
+ (KNOWNSURNAME)
+)
+
+Macro: STRICTINITIALSNAMEWITHMULTIPLEINITIALS
+(
+ (KNOWN_TITLE)*
+ (STRICTINITIAL)
+ (STRICTINITIAL)+
+ (KNOWNSURNAME)
+)
+
+Macro: SEMITOLERANTFULLNAME
+// Ex. [mr. Vox], [mr. A.D.W. de Heyde], [Vincent Willems]
+(
+  (KNOWN_TITLE)*
+  ((FIRSTNAME)*|(STRICTINITIAL)*)
+  (TOLERANTLASTNAME)
+)
+
+Macro: TOLERANTFULLNAME
+// Ex. [mr. Vox], [mr. A.D.W. de Heyde], [Vincent Willems]
+(
+  (KNOWN_TITLE)*
+  ((FIRSTNAME)*|((INITIALS)*):ini)
+  TOLERANTLASTNAME
+)
+
+Macro: TOLERANTFULLNAMEKNOWN
+// Last name from gazetteer
+(
+  (KNOWN_TITLE)*
+  ((FIRSTNAME)*|(INITIALS)*)
+  (KNOWNSURNAME)
+)
+
+Macro: TOLERANTFULLNAME_4
+(
+    (
+      ((KNOWN_TITLE)*):titles1
+      (((FIRSTNAME)*):firstnames|((INITIALS)*):initials1)
+      (TOLERANTLASTNAME):lastname1
+    ):name1
+    (({Token.string == ","})({Lookup.majorType == role, Lookup.minorType==singular}):role1)?
+    ({Token.string == ","})
+    (
+      ((KNOWN_TITLE)*):titles2
+      (((FIRSTNAME)*):firstnames|((INITIALS)*):initials2)
+      (TOLERANTLASTNAME):lastname2
+    ):name2
+    (({Token.string == ","})({Lookup.majorType == role, Lookup.minorType==singular}):role2)?
+    ({Token.string == ","})
+    (
+      ((KNOWN_TITLE)*):titles3
+      (((FIRSTNAME)*):firstnames|((INITIALS)*):initials3)
+      (TOLERANTLASTNAME):lastname3
+    ):name3
+    (({Token.string == ","})({Lookup.majorType == role, Lookup.minorType==singular}):role3({Token.string == ","})?)?
+    ({Token.string == "en"})
+    (
+      ((KNOWN_TITLE)*):titles4
+      (((FIRSTNAME)*):firstnames|((INITIALS)*):initials4)
+      (TOLERANTLASTNAME):lastname4
+    ):name4
+    (({Token.string == ","})({Lookup.majorType == role, Lookup.minorType==singular}):role4)?
+)
+
+//////////
+// Rules
+//////////
+
+Rule: Meesters4
+Priority: 200
+(
+    ({Lookup.string ==~ "[Mm][Rr][Ss]\\.?"})
+    TOLERANTFULLNAME_4
+):namegroup
+//Followed by the group role possibly
+ (
+   {Token.string == ","}
+   ({Token.string==~"allen"})?
+   ({Lookup.majorType == role}):roleGroup
+   ({Token.string == ","})?
+ )?
+ -->
+      :name1.Name = { role=:role1@cleanString, confidence=medium},
+      :name2.Name = { role=:role2@cleanString, confidence=medium},
+      :name3.Name = { role=:role3@cleanString, confidence=medium},
+      :name4.Name = { role=:role4@cleanString, confidence=medium},
+      :namegroup.Namegroup = {role=:roleGroup@cleanString}
+
+
+/**
+ * To make it easier to spot false negatives, we annotate all spans that look like a name (...if we squint)
+ */
+Phase:   PossibleNames
+Input:   Token Sentence Lookup
+Options: control = appelt debug = true
+
+
+Rule: TolerantName
+(
+    (KNOWN_TITLE)*
+    ((FIRSTNAME)+|(INITIAL)+)
+    (TOLERANTLASTNAME)
+):name
+-->
+:name.PossibleName = {confidence=low}
+
+Rule: Title
+(KNOWN_TITLE):t --> :t.Title = {}
+

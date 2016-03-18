@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:tr="http://tuchtrecht.overheid.nl/" xmlns:eu="http://publications.europa.eu/celex/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:HR:1996:AA1919</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2015-06-28T20:44:01</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">AA1919</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Hoge_Raad_der_Nederlanden" scheme="overheid.RechterlijkeMacht">Hoge Raad</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">1996-03-27</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">30810</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#cassatie">Cassatie</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht_belastingrecht">Bestuursrecht; Belastingrecht</dcterms:subject>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+          <rdf:li>BNB 1996/180 met annotatie door J.W. Zwemmer</rdf:li>
+          <rdf:li>WFR 1996/495</rdf:li>
+          <rdf:li>FED 1996/317</rdf:li>
+          <rdf:li>WFR 1996/495, 1</rdf:li>
+          <rdf:li>V-N 1996/1383, 20 met annotatie door Kluwer</rdf:li>
+          <rdf:li>FED 1996/377 met annotatie door J.E.A.M. VAN DIJCK</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:HR:1996:AA1919">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:HR:1996:AA1919</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-04T15:37:25</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2001-07-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:HR:1996:AA1919 Hoge Raad , 27-03-1996 / 30810</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:HR:1996:AA1919:INH" lang="nl" xml:space="preserve">
+      <para>-</para>
+    </inhoudsindicatie>
+  <uitspraak xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:HR:1996:AA1919:DOC" lang="nl" xml:space="preserve">
+      <parablock>
+        <para>gewezen op het beroep in cassatie van de Staatssecretaris van Financiën tegen de uitspraak van het Gerechtshof te Arnhem van 28 oktober 1994 betreffende de aan X te Z voor het jaar 1990 opgelegde aanslag inkomstenbelasting/premie volksverzekeringen. </para>
+        <para>1. Aanslag, bezwaar en geding voor het Hof Aan belanghebbende is voor het jaar 1990 een aanslag inkomstenbelasting/premie volksverzekeringen opgelegd naar een belastbaar inkomen van ƒ 43.126,--, welke aanslag, na daartegen gemaakt bezwaar, bij uitspraak van de Inspecteur is gehandhaafd. Belanghebbende is van de uitspraak van de Inspecteur in beroep gekomen bij het Hof. Het Hof heeft die uitspraak vernietigd en de aanslag verminderd tot een aanslag berekend naar een belastbaar inkomen van ƒ 42.696,--. De uitspraak van het Hof is aan dit arrest gehecht. </para>
+        <para>2. Geding in cassatie De Staatssecretaris van Financiën heeft tegen de uitspraak van het Hof beroep in cassatie ingesteld. Het beroepschrift in cassatie is aan dit arrest gehecht en maakt daarvan deel uit. Belanghebbende heeft een vertoogschrift ingediend. </para>
+        <para>3. Beoordeling van het middel 3.1. In cassatie kan van het volgende worden uitgegaan. Belanghebbende was in het onderhavige jaar werkzaam in dienstbetrekking. Daarnaast was belanghebbende lid van de gemeenteraad van Z in verband waarmee hij een algemene onkostenvergoeding ten bedrage van ƒ 2.091,-- heeft ontvangen. Belanghebbende heeft zijn totale beroepskosten gespecificeerd berekend op ƒ 10.555,--, waaronder een bedrag van ƒ 736,- - aan representatiekosten. Belanghebbende ontving de algemene onkostenvergoeding op basis van het Koninklijk besluit van 23 november 1976, Stb. 621, zoals gewijzigd bij Koninklijk besluit van 27 december 1984, Stb. 672, tot uitvoering van artikel 64 f van de gemeentewet. In een aan de gemeentebesturen gerichte brief van 18 oktober 1991, kenmerk BW91/U 1124 van het directoraat-generaal Openbaar Bestuur van het Ministerie van Binnenlandse Zaken is aangegeven welke kostencategorieën geacht worden te worden bestreden door de algemene onkostenvergoeding, echter zonder vermelding van daaraan toe te rekenen bedragen. Tot die kostencategorieën behoren ook representatiekosten. Bij Resolutie van de Staatssecretaris van Financiën van 17 maart 1992, nr. DB 92/735, BNB 1992/209 (hierna: de Resolutie), is goedgekeurd dat de door gemeenteraadsleden te ontvangen algemene onkostenvergoeding ook na 1 januari 1990 in aanmerking kan worden genomen als een niet tot de inkomsten uit arbeid behorende vergoeding van kosten tot verwerving als bedoeld in artikel 23, lid 1, onder b, van de Wet op de inkomstenbelasting 1964 (hierna: de Wet).  Bij zijn aangifte heeft belanghebbende de ontvangen vergoeding in mindering gebracht op de door hem opgevoerde beroepskosten en het verschil als aftrekbare kosten aangemerkt. De Inspecteur heeft van de door belanghebbende opgevoerde beroepskosten het bedrag van ƒ 736,-- voor representatiekosten niet geaccepteerd en de vergoeding in mindering gebracht op het resterende bedrag. 3.2. Het Hof heeft de door belanghebbende ontvangen kostenvergoeding tot een bedrag van ƒ 430,-- aangemerkt als vergoeding voor de door belanghebbende gemaakte representatiekosten op grond van het oordeel dat de algemene kostenvergoeding pro rata moet worden toegerekend aan de kosten ter bestrijding waarvan zij geacht wordt te strekken. 3.3. Het middel, dat tegen dit oordeel is gericht, steunt op de opvatting dat een algemene kostenvergoeding allereerst moet worden toegerekend aan de voor de inkomstenbelasting aftrekbare kosten. 3.4. In een geval waarin, zoals hier, een algemene kostenvergoeding mede strekt tot vergoeding van kosten die, zoals het geval is bij representatiekosten, niet tot de aftrekbare kosten behoren maar wel belastingvrij kunnen worden vergoed, leidt de door de Staatssecretaris voorgestane wijze van toerekening ertoe dat indien kosten als de zoëven bedoelde zijn gemaakt, het daarvoor bestemde gedeelte van de algemene kostenvergoeding indirect als een belast voordeel in aanmerking wordt genomen. 3.5. Daarvoor is in de loonsfeer geen steun te vinden in de tekst van de Wet zoals die sedert 1 januari 1990 geldt, terwijl ook de wetsgeschiedenis geen aanknopingspunt ervoor biedt dat de wetgever de toen door hem in het leven geroepen asymmetrie tussen aftrekbare kosten en daarvoor verstrekte vergoedingen niet heeft willen laten gelden indien en voor zover algemene kostenvergoedingen mede strekken ter bestrijding van kosten die niet aftrekbaar zijn maar wel belastingvrij kunnen worden vergoed. 3.6. Het vorenoverwogene brengt mee dat wat betreft inkomsten uit arbeid die als loon uit dienstbetrekking worden genoten de in het middel verdedigde wetstoepassing niet als juist kan worden aanvaard. Het beantwoordt veeleer aan het stelsel van de Wet om een algemene kostenvergoeding naar evenredigheid toe te rekenen aan de gemaakte kosten waarvoor de vergoeding is bestemd. 3.7. Buiten de loonsfeer behoren algemene kostenvergoedingen tot de inkomsten uit arbeid en behelst de in 3.1 vermelde Resolutie, voor zover deze algemene kostenvergoedingen aan gemeenteraadsleden en wethouders onbelast laat, derhalve een van de wet afwijkende tegemoetkoming. Nu de Resolutie, naar moet worden aangenomen op grond van hetgeen in de Notitie inzake de fiscale behandeling kostenvergoedingen en andere emolumenten politieke ambtsdragers (Kamerstukken II 1990/91, 21.972, nr. 1, blz. 3) omtrent het met betrekking tot kostenvergoedingen gevoerde en te voeren beleid is opgemerkt, is bedoeld om voor belastingplichtigen als belanghebbende met betrekking tot hun kostenvergoeding in de uitvoeringssfeer een regeling te treffen die overeenkomt met het wettelijk regime voor werknemers, is het redelijk de Resolutie op het punt van de toerekening op dezelfde wijze uit te leggen als onder 3.6 juist werd geacht. 3.8. Het middel faalt derhalve. </para>
+        <para>4. Proceskosten De Hoge Raad acht gelet op de inhoud van het procesdossier termen aanwezig om ten aanzien van de proceskosten die belanghebbende in verband met de behandeling van het geding in cassatie redelijkerwijs heeft moeten maken, te beslissen als hierna zal worden vermeld. </para>
+        <para>5. Beslissing De Hoge Raad verwerpt het beroep en veroordeelt de Staatssecretaris van Financiën in de  kosten van het geding in cassatie aan de zijde van belanghebbende, vastgesteld op ƒ 355,-- voor kosten van beroepsmatig verleende rechtsbijstand. </para>
+        <para>Dit arrest is op 27 maart 1996 vastgesteld door de vice-president Stoffer als voorzitter, en de raadsheren Urlings, Zuurmond, Herrmann en Fleers, in tegenwoordigheid van de waarnemend griffier Reijngoud, en op die datum in het openbaar uitgesproken. </para>
+        <para>Van de Staatssecretaris van Financiën wordt ter zake van dit beroep een recht geheven van ƒ 300,--.</para>
+      </parablock>
+    </uitspraak>
+</open-rechtspraak>

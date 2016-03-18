@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:tr="http://tuchtrecht.overheid.nl/" xmlns:eu="http://publications.europa.eu/celex/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:HR:1995:AA1568</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2015-06-28T20:39:51</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">AA1568</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Hoge_Raad_der_Nederlanden" scheme="overheid.RechterlijkeMacht">Hoge Raad</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">1995-04-26</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">30387</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#cassatie">Cassatie</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht_belastingrecht">Bestuursrecht; Belastingrecht</dcterms:subject>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+          <rdf:li>BNB 1995/194</rdf:li>
+          <rdf:li>WFR 1995/676</rdf:li>
+          <rdf:li>FED 1995/371</rdf:li>
+          <rdf:li>WFR 1995/676, 1</rdf:li>
+          <rdf:li>V-N 1995/1663, 8 met annotatie door Kluwer</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:HR:1995:AA1568">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:HR:1995:AA1568</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-04T15:33:55</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2001-07-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:HR:1995:AA1568 Hoge Raad , 26-04-1995 / 30387</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:HR:1995:AA1568:INH" lang="nl" xml:space="preserve">
+      <para>-</para>
+    </inhoudsindicatie>
+  <uitspraak xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:HR:1995:AA1568:DOC" lang="nl" xml:space="preserve">
+      <parablock>
+        <para>gewezen op het beroep in cassatie van de Staatssecretaris van Financiën tegen de uitspraak van het Gerechtshof te Leeuwarden van 3 juni 1994 betreffende de aan X te Z voor het jaar 1992 opgelegde aanslag inkomstenbelasting/premie volksverzekeringen. </para>
+        <para>1. Aanslag, bezwaar en geding voor het Hof Aan belanghebbende is voor het jaar 1992 een aanslag inkomstenbelasting/premie volksverzekeringen opgelegd naar een belastbaar inkomen van ƒ 68.629,--, welke aanslag, na daartegen gemaakt bezwaar, bij uitspraak van de Inspecteur is gehandhaafd. Belanghebbende is van de uitspraak van de Inspecteur in beroep gekomen bij het Hof. Het Hof heeft die uitspraak vernietigd en de aanslag verminderd tot een aanslag naar een belastbaar inkomen van ƒ 67.690,--. De uitspraak van het Hof is aan dit arrest gehecht. </para>
+        <para>2. Geding in cassatie De Staatssecretaris van Financiën heeft tegen de uitspraak van het Hof beroep in cassatie ingesteld. Het beroepschrift in cassatie is aan dit arrest gehecht en maakt daarvan deel uit. </para>
+        <para>3. Beoordeling van het middel 3.1. In cassatie is de vraag aan de orde of belanghebbende, die twee dienstbetrekkingen vervult en daartoe op maandag, dinsdag, woensdag, donderdag en vrijdag heen en weer reist tussen zijn woning in Z en zijn werk in Q en op dinsdag, donderdag en zaterdag tussen zijn woning en zijn andere werk in R, voor het woon-werkverkeer op zaterdag recht heeft op aftrek  van kosten per kilometer dan wel of het reiskostenforfait daarop van toepassing is. 3.2. Indien, zoals hier, een belastingplichtige twee dienstbetrekkingen op verschillende arbeidsplaatsen vervult, dient ingevolge artikel 8, lid 5, van de Uitvoeringsregeling inkomstenbelasting 1990, tekst 1992 (hierna: de Uitvoeringsregeling), voor elk van die dienstbetrekkingen afzonderlijk te worden beoordeeld of het reiskostenforfait als bedoeld in het eerste lid van dat artikel van toepassing is, met dien verstande dat het bepaalde in artikel 8, lid 6, meebrengt dat als voor de vervulling van die dienstbetrekkingen op dezelfde dag naar verschillende arbeidsplaatsen wordt gereisd, het reiskostenforfait alleen van toepassing is op de meest bereisde arbeidsplaats en de kosten van het reizen op die dag tussen de woning en de andere arbeidsplaatsen in aanmerking worden genomen volgens de regels die in het algemeen voor aftrekbare kosten gelden. 3.3. Nu voor wat betreft het woon-werkverkeer van belanghebbende op de zaterdagen zich niet voordoet dat hij op die dagen naar verschillende arbeidsplaatsen moet reizen, is het reiskostenforfait op dat woon-werkverkeer van toepassing. 3.4. Het andersluidende oordeel van het Hof is derhalve onjuist. Het middel is gegrond. De uitspraak van het Hof kan niet in stand blijven. De Hoge Raad kan de zaak afdoen. Het belastbare inkomen moet nader worden vastgesteld op (ƒ 68.629,-- min ƒ 220,-- of) ƒ 68.409,--. </para>
+        <para>4. Proceskosten De Hoge Raad acht geen termen aanwezig voor een veroordeling in de proceskosten als bedoeld in artikel 5a van de Wet administratieve rechtspraak belastingzaken. </para>
+        <para>5. Beslissing De Hoge Raad vernietigt de uitspraak van het Hof, behoudens de beslissing omtrent het griffierecht, vernietigt de uitspraak van de Inspecteur, vermindert de aanslag tot een naar een belastbaar inkomen van ƒ 68.409,-- en bepaalt dat door de Griffier van de Hoge Raad aan de Staatssecretaris van Financiën wordt terugbetaald het ter zake van de vervanging van de mondelinge uitspraak bij het Hof gestorte bedrag van ƒ 150,--. </para>
+        <para>Dit arrest is op 26 april 1995 vastgesteld door de vice-president Stoffer als voorzitter, en de raadsheren Wildeboer, Urlings, Zuurmond en Herrmann, in tegenwoordigheid van de waarnemend griffier Van der Vegt, en op die datum in het openbaar uitgesproken.</para>
+      </parablock>
+    </uitspraak>
+</open-rechtspraak>

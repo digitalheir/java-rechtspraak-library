@@ -1,0 +1,7 @@
+als_functies/roles_single.lst:role:singular:nl
+als_functies/roles_multiple.lst:role:multiple:nl
+pre_functie/roles_single.lst:pre_role:singular:nl
+pre_functie/roles_multiple.lst:pre_role:multiple:nl
+employs/dutch_employs.lst:employ::nl
+titles/titles.lst:title::nl
+non_person/non_person.lst:nonperson::nl

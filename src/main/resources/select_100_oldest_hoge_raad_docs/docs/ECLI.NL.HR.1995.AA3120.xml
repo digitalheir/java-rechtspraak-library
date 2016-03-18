@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:tr="http://tuchtrecht.overheid.nl/" xmlns:eu="http://publications.europa.eu/celex/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:HR:1995:AA3120</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2015-07-23T13:30:37</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">AA3120</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Hoge_Raad_der_Nederlanden" scheme="overheid.RechterlijkeMacht">Hoge Raad</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">1995-09-27</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">30460</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#cassatie">Cassatie</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht_belastingrecht">Bestuursrecht; Belastingrecht</dcterms:subject>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0002629&amp;artikel=50 (oud)&amp;g=1995-09-27">Wet op de omzetbelasting 1968 50 (oud)</dcterms:references>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+          <rdf:li>V-N 1996/3627, 6 met annotatie door Kluwer</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:HR:1995:AA3120">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:HR:1995:AA3120</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-04T15:49:10</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2001-07-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:HR:1995:AA3120 Hoge Raad , 27-09-1995 / 30460</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:HR:1995:AA3120:INH" lang="nl" xml:space="preserve">
+      <para>-</para>
+    </inhoudsindicatie>
+  <uitspraak xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:HR:1995:AA3120:DOC" lang="nl" xml:space="preserve">
+      <parablock>
+        <para>gewezen op het beroep in cassatie van X te Z tegen de uitspraak van het Gerechtshof te Amsterdam van 4 mei 1994 betreffende de hem voor het jaar 1990 opgelegde aanslag in de inkomstenbelasting/premie volksverzekeringen. </para>
+        <para>1. Aanslag, bezwaar en geding voor het Hof Aan belanghebbende is voor het jaar 1990 een aanslag in de inkomstenbelasting/premie volksverzekeringen opgelegd naar een belastbaar inkomen van ƒ 9.910,--, welke aanslag, na daartegen gemaakt bezwaar, bij uitspraak van de Inspecteur is gehandhaafd. Belanghebbende is tegen die uitspraak in beroep gekomen bij het Hof, dat deze uitspraak heeft bevestigd. </para>
+        <para>2. Geding in cassatie Belanghebbende heeft tegen 's Hofs uitspraak beroep in cassatie ingesteld en daarbij een aantal klachten aangevoerd. De Staatssecretaris van Financiën heeft bij vertoogschrift het cassatieberoep bestreden. </para>
+        <para>3. Beoordeling van de klachten 3.1. In cassatie kan van het volgende worden uitgegaan: Belanghebbende, die zelfstandig het beroep van technisch illustrator uitoefent, heeft in 1989 een Volkswagen Transporter (hierna: de auto) gekocht, welke direct na de aankoop door de leverancier is voorzien van een zogenoemde dubbele cabine. Belanghebbende rekent de auto tot zijn ondernemingsvermogen; in het onderhavige jaar (1990) werd de auto mede voor privé-doeleinden gebruikt. In zijn aangifte voor dit jaar heeft belanghebbende het belastbare inkomen berekend zonder toepassing van een toevoeging aan de winst wegens privé-gebruik als bedoeld in artikel 42, lid 2, van de Wet op de inkomstenbelasting 1964 (tekst 1990; hierna: de Wet). De Inspecteur heeft het aangegeven belastbare inkomen verhoogd met ƒ 4.644,-, zich op het standpunt stellende dat de auto dient te worden aangemerkt als een personenauto als bedoeld in genoemde wetsbepaling. Belanghebbende heeft het standpunt van de Inspecteur bestreden en daartoe, voor zover in cassatie van belang, aangevoerd dat de auto geen personenauto in vorenbedoelde zin is, en subsidiair dat hij aan het bepaalde in de Leidraad bijzondere verbruiksbelastingen (Vakstudie Omzetbelasting, aant. 29 bij art. 50; hierna: de Leidraad BVP) het vertrouwen mocht ontlenen dat de auto, waarvoor bij de aankoop geen bijzondere verbruiksbelasting van personenauto's is geheven, in het onderhavige jaar ook voor de toepassing van artikel 42 van de Wet niet als personenauto diende te worden aangemerkt. </para>
+        <para>3.2. Wat betreft belanghebbendes stelling dat de auto geen personenauto in de zin van artikel 42, lid 2, van de Wet is, heeft het Hof geoordeeld: dat deze stelling geen doel treft; dat een motorrijtuig dat uit hoofde van zijn bouw kan dienen voor het vervoer van personen langs de weg, als een personenauto dient te worden aangemerkt, ook indien het tevens kan dienen voor andere doeleinden, tenzij moet worden aangenomen dat de mogelijkheid tot personenvervoer ondergeschikt is aan het vervoer waarvoor het voertuig overigens dient, en aldus geen zelfstandige betekenis heeft; dat belanghebbende niet aannemelijk heeft gemaakt dat dit laatste zich in het onderhavige geval voordoet; dat met name daarbij op zichzelf niet van belang is dat de heffing van bijzondere verbruiksbelasting van personenauto's achterwege is gebleven. Hierin ligt besloten het oordeel dat de auto moet worden aangemerkt als een personenauto als bedoeld in artikel 42, lid 2, van de Wet. Laatstbedoeld oordeel geeft niet blijk van een onjuiste rechtsopvatting en kan voor het overige, als verweven met waarderingen van feitelijke aard, in cassatie niet op zijn juistheid worden getoetst; het is ook niet onbegrijpelijk. In zoverre de klachten tegen dit oordeel opkomen, falen zij derhalve. </para>
+        <para>3.3. Artikel 42 van de Wet verwijst in lid 6 (met ingang van 1 augustus 1990 lid 7) naar artikel 50, lid 3, van de Wet op de omzetbelasting 1968 (tekst 1990). In de Memorie van Toelichting bij het ontwerp dat heeft geleid tot de Wet van 18 december 1987, Stb. 580, welke wet in werking is getreden met ingang van 1 januari 1988, heeft de Staatssecretaris verklaard het uit een oogpunt van uniformiteit gewenst te vinden een verwijzing naar artikel 50 van de Wet op de omzetbelasting 1968 eveneens op te nemen in artikel 42 van de Wet (Kamerstukken II 1987/88, 20 287, nr. 3, blz. 4). Hieruit volgt dat met ingang van 1 januari 1988 voor de toepassing van beide wetten moet worden uitgegaan van een gelijk begrip personenauto. Met de tekst van § 9.2 van de Leidraad BVP, zoals die tot 28 december 1990 gold, wordt toegezegd dat onder bepaalde voorwaarden auto's met een zogenoemde dubbele cabine niet als personenauto's in de zin van artikel 50, leden 2 of 3, van de Wet op de omzetbelasting 1968 behoeven te worden aangemerkt. Een en ander brengt mede dat in een geval als het onderhavige - anders dan in het geval, waaromtrent is beslist in het arrest van de Hoge Raad van 12 juni 1991, BNB 1991/228, welk arrest betrekking had op een jaar, gelegen vóór 1 januari 1988 -  ook voor de heffing van inkomstenbelasting vertrouwen kan worden ontleend aan het in de Leidraad BVP bepaalde, zodat de auto in het onderhavige jaar, indien aan bedoelde voorwaarden was voldaan, voor de toepassing van artikel 42 van de Wet niet als personenauto diende te worden aangemerkt. De klachten zijn derhalve gegrond, voor zover zij betogen dat het Hof ten onrechte niet heeft onderzocht belanghebbendes stelling dat hij aan het bepaalde in de Leidraad BVP het vertrouwen mocht ontlenen dat de auto in het onderhavige jaar ook voor de toepassing van artikel 42, lid 2, van de Wet niet als personenauto diende te worden aangemerkt. </para>
+        <para>3.4. De klachten kunnen voor het overige niet tot cassatie leiden. Zulks behoeft, gezien artikel 101a van de Wet op de rechterlijke organisatie, geen nadere motivering, nu de klachten in zoverre niet nopen tot beantwoording van rechtsvragen in het belang van de rechtseenheid of de rechtsontwikkeling. </para>
+        <para>3.5. Het hiervóór in 3.3 overwogene leidt tot de slotsom dat 's Hofs uitspraak niet in stand kan blijven. Verwijzing moet volgen voor een onderzoek betreffende de vraag of aan de hiervóór in 3.3 bedoelde voorwaarden is voldaan. </para>
+        <para>4. Proceskosten De Hoge Raad acht geen termen aanwezig voor een veroordeling in de proceskosten als bedoeld in artikel 5a van de Wet administratieve rechtspraak belastingzaken. </para>
+        <para>5. Beslissing De Hoge Raad vernietigt de uitspraak van het Hof, verwijst het geding naar het Gerechtshof te Arnhem ter verdere behandeling en beslissing van de zaak in meervoudige kamer met inachtneming van dit arrest, en gelast dat door de Staatssecretaris van Financiën aan belanghebbende wordt vergoed het door deze ter zake van de behandeling van het beroep in cassatie verschuldigd geworden griffierecht ten bedrage van ƒ 300,--. Dit arrest is op 27 september 1995 vastgesteld door de vice-president R.J.J. Jansen als voorzitter, en de raadsheren Van der Linde, Bellaart, C.H.M. Jansen en Van der Putt-Lauwers, in tegenwoordigheid van de waarnemend griffier Van Hooff, en op die datum in het openbaar uitgesproken.</para>
+      </parablock>
+    </uitspraak>
+</open-rechtspraak>
