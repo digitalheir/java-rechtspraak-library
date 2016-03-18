@@ -21,12 +21,14 @@ public class RechtspraakElement implements Element {
     public final int wordCount;
     public final boolean isSpaced;
     public final boolean isAllCaps;
+    private final String textContent;
+    public boolean containsName;
 
     public RechtspraakElement(Element e) {
         this.e = e;
-        //token.setFeatureValue("HAS_TEXT", dbl(normalizedTextWithoutLeadingNumber.matches(".*[\\p{L}].*")));
+        this.textContent = e.getTextContent().trim();
+        containsName = false;//ParseNames.nameFound(textContent);//todo
 
-        String textContent = e.getTextContent().trim();
         this.numbering = startsWithNumber(textContent);
 
         String normalizedWithPotentialLeadingNumber = textContent
@@ -384,7 +386,7 @@ public class RechtspraakElement implements Element {
 
     @Override
     public String getTextContent() throws DOMException {
-        return e.getTextContent();
+        return textContent;
     }
 
     @Override
@@ -439,6 +441,6 @@ public class RechtspraakElement implements Element {
 
     @Override
     public String toString() {
-        return e.getTagName() + ": " + e.getTextContent().trim();
+        return e.getTagName() + ": " + textContent;
     }
 }

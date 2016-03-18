@@ -3,11 +3,11 @@ version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
 apply plugin: 'application'
+apply plugin: 'java-library-distribution'
 
 sourceCompatibility = 1.8
 
-mainClassName = 'org.leibnizcenter.rechtspraak.markup.Main'
-
+mainClassName = 'org.leibnizcenter.rechtspraak.TrainWithMallet'
 
 repositories {
     mavenCentral()
@@ -18,6 +18,8 @@ dependencies {
     compile 'com.google.guava:guava:19.0'
 
     compile 'cc.mallet:mallet:2.0.7'
+    compile 'uk.ac.gate:gate-core:8.1'
+    compile 'lucene:lucene:1.4.3'
 
     // Logging
     compile "org.slf4j:slf4j-api:1.7.18"    // the SLF4J API
@@ -30,7 +32,10 @@ dependencies {
 
 }
 
-run {
-    systemProperty 'jmodern.name', 'Maarten'
-}
-apply plugin: 'application'
+//
+//build.dependsOn(copyToLib)
+//
+//task copyToLib(type: Copy) {
+//    into "$buildDir/output/libs"
+//    from configurations.runtime
+//}

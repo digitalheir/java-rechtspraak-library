@@ -5,6 +5,7 @@ import org.leibnizcenter.rechtspraak.markup.features.TokenMatch;
 
 import java.util.EnumMap;
 import java.util.Map;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
@@ -13,8 +14,8 @@ import java.util.regex.Pattern;
 public class TextPattern {
     public final Map<Label, TokenMatch.Filter> filters = new EnumMap<>(Label.class);
     public final Map<Label, TokenMatch.Feature> features = new EnumMap<>(Label.class);
-    private final String name;
-    private final Pattern pattern;
+    public final String name;
+    public final Pattern pattern;
 
     public TextPattern(String name, Pattern regex) {
         this.name = name;
@@ -31,6 +32,10 @@ public class TextPattern {
 
     public boolean matches(String text) {
         return pattern.matcher(text).matches();
+    }
+
+    public boolean find(String text) {
+        return pattern.matcher(text).find();
     }
 
     @Override
@@ -51,5 +56,16 @@ public class TextPattern {
         result = 31 * result + filters.hashCode();
         result = 31 * result + features.hashCode();
         return result;
+    }
+
+
+    public static class Match {
+        public final TextPattern pattern;
+        public final Matcher matcher;
+
+        public Match(TextPattern pattern, Matcher matcher) {
+            this.pattern = pattern;
+            this.matcher = matcher;
+        }
     }
 }

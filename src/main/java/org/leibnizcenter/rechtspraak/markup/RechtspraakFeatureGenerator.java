@@ -5,14 +5,12 @@ import org.crf.crf.filters.CrfFilteredFeature;
 import org.crf.crf.run.CrfFeatureGenerator;
 import org.crf.utilities.TaggedToken;
 import org.leibnizcenter.rechtspraak.markup.features.*;
-import org.leibnizcenter.rechtspraak.markup.features.patterns.Patterns;
 import org.leibnizcenter.rechtspraak.util.Doubles;
 import org.leibnizcenter.rechtspraak.util.TextBlockInfo;
 
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 /**
  * Created by maarten on 29-2-16.

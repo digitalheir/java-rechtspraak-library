@@ -3,11 +3,9 @@ package org.leibnizcenter.rechtspraak.markup;
 import com.google.common.collect.Lists;
 import org.junit.Assert;
 import org.junit.Test;
-import org.leibnizcenter.rechtspraak.markup.features.patterns.Patterns;
-
-import static org.leibnizcenter.rechtspraak.markup.features.patterns.Patterns.OnNormalizedText;
-import static org.leibnizcenter.rechtspraak.markup.features.patterns.Patterns.OnUnnormalizedText;
-
+import org.leibnizcenter.rechtspraak.features.info.InfoPatterns;
+import org.leibnizcenter.rechtspraak.features.title.TitlePatterns;
+import org.leibnizcenter.rechtspraak.markup.features.Patterns;
 import org.leibnizcenter.rechtspraak.util.Xml;
 import org.leibnizcenter.rechtspraak.util.numbering.ArabicSectionNumber;
 import org.leibnizcenter.rechtspraak.util.numbering.NumberingNumber;
@@ -49,20 +47,20 @@ public class TestRechtspraakCorpus {
         for (RechtspraakToken token : paraDoc) {
             Assert.assertEquals(token.getTag(), Label.OUT);
         }
-        Assert.assertTrue(OnNormalizedText.START_W_DATUM.matches(paraDoc.get(1).getToken().normalizedText));
-        Assert.assertTrue(OnNormalizedText.START_W_AFDELING.matches(paraDoc.get(2).getToken().normalizedText));
-        Assert.assertTrue(OnNormalizedText.GEDING.matches(paraDoc.get(4).getToken().normalizedText));
+        Assert.assertTrue(InfoPatterns.InfoPatternsNormalizedContains.START_W_DATUM.matches(paraDoc.get(1).getToken().normalizedText));
+        Assert.assertTrue(InfoPatterns.InfoPatternsNormalizedContains.START_W_AFDELING.matches(paraDoc.get(2).getToken().normalizedText));
+        Assert.assertTrue(TitlePatterns.TitlesNormalizedMatches.CASE.matches(paraDoc.get(4).getToken().normalizedText));
         for (int i = 6; i <= 15; i++) {
-            Assert.assertTrue(Patterns.matches(OnUnnormalizedText.CONTAINS_BRACKETED_TEXT, paraDoc.get(i)));
+            Assert.assertTrue(Patterns.matches(InfoPatterns.InfoPatternsUnormalizedContains.CONTAINS_BRACKETED_TEXT, paraDoc.get(i)));
         }
         // TODO is part of list
         NumberingNumber numbering = paraDoc.get(5).getToken().numbering;
         Assert.assertEquals(numbering.getTerminal(), ".");
         Assert.assertEquals(numbering.mainNum(), 1);
-        Assert.assertTrue(OnNormalizedText.EN_VS_CONTRA.matches(paraDoc.get(26).getToken().normalizedText));
-        Assert.assertTrue(OnNormalizedText.END_W_ROLE.matches(paraDoc.get(28).getToken().normalizedText));
-        Assert.assertTrue(OnNormalizedText.PROCEEDINGS.matches(paraDoc.get(29).getToken().normalizedText));
-        Assert.assertTrue(OnNormalizedText.CONSIDERATIONS.matches(paraDoc.get(36).getToken().normalizedText));
+        Assert.assertTrue((InfoPatterns.InfoPatternsNormalizedMatches.EN_VS_CONTRA.matches(paraDoc.get(26).getToken().normalizedText)));
+        Assert.assertTrue((InfoPatterns.InfoPatternsNormalizedContains.END_W_ROLE.matches(paraDoc.get(28).getToken().normalizedText)));
+        Assert.assertTrue(TitlePatterns.TitlesNormalizedMatches.PROCEEDINGS.matches(paraDoc.get(29).getToken().normalizedText));
+        Assert.assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches(paraDoc.get(36).getToken().normalizedText));
 
         numbering = paraDoc.get(42).getToken().numbering;
         Assert.assertTrue(numbering instanceof SubSectionNumber);
@@ -71,8 +69,8 @@ public class TestRechtspraakCorpus {
                 ".")
         ));
         Assert.assertFalse(numbering.equals(new SubSectionNumber(
-                Lists.newArrayList(new ArabicSectionNumber(2), new ArabicSectionNumber(2)), ""
-        )
+                        Lists.newArrayList(new ArabicSectionNumber(2), new ArabicSectionNumber(2)), ""
+                )
         ));
 
         RechtspraakCorpus rsCorpus = new RechtspraakCorpus(corpus);

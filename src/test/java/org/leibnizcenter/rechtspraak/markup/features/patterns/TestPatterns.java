@@ -1,98 +1,144 @@
 package org.leibnizcenter.rechtspraak.markup.features.patterns;
 
 import org.junit.Test;
+import org.leibnizcenter.rechtspraak.features.info.InfoPatterns;
+import org.leibnizcenter.rechtspraak.features.title.TitlePatterns;
 
 import static junit.framework.TestCase.assertTrue;
+import static org.junit.Assert.assertFalse;
 
 /**
  * Created by Maarten on 3/7/2016.
  */
 public class TestPatterns {
+    @Test
+    public void testInfoSignifiers() {
+        assertTrue(InfoPatterns.InfoPatternsUnormalizedContains.CONTAINS_BRACKETED_TEXT.matches("[some 69 brachteket text]"));
+        assertFalse(InfoPatterns.InfoPatternsUnormalizedContains.CONTAINS_BRACKETED_TEXT.matches("[some 69: brachteket text]"));
+        assertTrue(InfoPatterns.InfoPatternsUnormalizedContains.CONTAINS_BRACKETED_TEXT.matches("some [ b r a c k e t e d ] text"));
+        assertTrue(InfoPatterns.InfoPatternsUnormalizedContains.CONTAINS_LIKELY_ZAAKNR.matches("this: 69/666 looks like zaaknummer"));
+        assertTrue(InfoPatterns.InfoPatternsNormalizedMatches.START_WITH_COURT.matches("het gerechtshof beslist"));
+        assertTrue(InfoPatterns.InfoPatternsNormalizedMatches.START_WITH_COURT.matches("de rechtbank beslist"));
+        assertFalse(InfoPatterns.InfoPatternsNormalizedMatches.START_WITH_COURT.matches("beslist de rechtbank"));
+        assertTrue(InfoPatterns.InfoPatternsNormalizedMatches.RAAD_VAN_STATE.matches("de raad van state"));
+        assertTrue(InfoPatterns.InfoPatternsNormalizedMatches.STARTS_WITH_RAAD.matches("hoge raad van beroep"));
+        assertTrue(InfoPatterns.InfoPatternsNormalizedMatches.STARTS_WITH_RAAD.matches("het college van beroep"));
+        assertTrue(InfoPatterns.InfoPatternsNormalizedMatches.EN_VS_CONTRA.matches("en"));
+        assertTrue(InfoPatterns.InfoPatternsNormalizedMatches.EN_VS_CONTRA.matches("tegen"));
+        assertTrue(InfoPatterns.InfoPatternsNormalizedMatches.EN_VS_CONTRA.matches("vs"));
+        assertTrue(InfoPatterns.InfoPatternsNormalizedMatches.EN_VS_CONTRA.matches("contra"));
+        assertTrue(InfoPatterns.InfoPatternsNormalizedMatches.INZAKE.matches("inzake"));
+        assertFalse(InfoPatterns.InfoPatternsNormalizedMatches.INZAKE.matches("inzake x"));
+        assertTrue(InfoPatterns.InfoPatternsNormalizedContains.START_W_INZAKE.matches("inzake x"));
+        assertTrue(InfoPatterns.InfoPatternsNormalizedContains.START_W_AFDELING.matches("afdeling x"));
+        assertTrue(InfoPatterns.InfoPatternsNormalizedContains.START_W_SECTOR.matches("sector x"));
+        assertTrue(InfoPatterns.InfoPatternsNormalizedContains.START_W_HIERNA.matches("hierna x"));
+        assertTrue(InfoPatterns.InfoPatternsNormalizedContains.START_W_LOCATIE.matches("locatie x"));
+        assertTrue(InfoPatterns.InfoPatternsNormalizedContains.START_W_ZAAK_ROL_NR.matches("zaaknr."));
+        assertTrue(InfoPatterns.InfoPatternsNormalizedContains.START_W_ZAAKNR.matches("zaaknr."));
+        assertTrue(InfoPatterns.InfoPatternsNormalizedContains.START_W_WONEND_GEVESTIGD.matches("wonende"));
+        assertTrue(InfoPatterns.InfoPatternsNormalizedContains.START_W_DATUM.matches("datum 22-xx-9990"));
+        assertTrue(InfoPatterns.InfoPatternsNormalizedContains.START_W_PATT.matches("in de zaak van van x"));
+        assertTrue(InfoPatterns.InfoPatternsNormalizedContains.END_W_KAMER.matches("meervoudige kamer"));
+        assertTrue(InfoPatterns.InfoPatternsNormalizedContains.END_W_ROLE.matches("a, gedaagde"));
+        assertTrue(InfoPatterns.InfoPatternsNormalizedContains.END_W_ROLE.matches("a, appelant"));
+        assertTrue(InfoPatterns.InfoPatternsNormalizedContains.END_W_ROLE.matches("a, verweerder"));
+        assertTrue(InfoPatterns.InfoPatternsNormalizedContains.END_W_ROLE.matches("a, advocaat te rotterdam"));
+    }
+
+    @Test
+    public void testCase() {
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CASE.matches("het geding in beroep"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CASE.matches("het geding in eerste aanleg"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CASE.matches("geding in hoger beroep"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CASE.matches("het geschil"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CASE.matches("geding"));
+    }
 
     @Test
     public void testProceedings() {
-        assertTrue(Patterns.OnNormalizedText.PROCEEDINGS.matches("de procedure"));
-        assertTrue(Patterns.OnNormalizedText.PROCEEDINGS.matches("de procesgang"));
-        assertTrue(Patterns.OnNormalizedText.PROCEEDINGS.matches("het procesverloop"));
-        assertTrue(Patterns.OnNormalizedText.PROCEEDINGS.matches("procesverloop en de processtukken"));
-        assertTrue(Patterns.OnNormalizedText.PROCEEDINGS.matches("feiten en procesverloop"));
-        assertTrue(Patterns.OnNormalizedText.PROCEEDINGS.matches("feiten en het procesverloop"));
-        assertTrue(Patterns.OnNormalizedText.PROCEEDINGS.matches("inleiding feiten en procesverloop"));
-        assertTrue(Patterns.OnNormalizedText.PROCEEDINGS.matches("procesgang"));
-        assertTrue(Patterns.OnNormalizedText.PROCEEDINGS.matches("procesverloop"));
-        assertTrue(Patterns.OnNormalizedText.PROCEEDINGS.matches("procesverloop in hoger beroep"));
-        assertTrue(Patterns.OnNormalizedText.PROCEEDINGS.matches("procesverloop in eerste aanleg en vaststaande feiten"));
-        assertTrue(Patterns.OnNormalizedText.PROCEEDINGS.matches("verder procesverloop in hoger beroep"));
-        assertTrue(Patterns.OnNormalizedText.PROCEEDINGS.matches("verdere procesverloop in hoger beroep"));
-        assertTrue(Patterns.OnNormalizedText.PROCEEDINGS.matches("voorgeschiedenis en het procesverloop"));
-        assertTrue(Patterns.OnNormalizedText.PROCEEDINGS.matches("ontstaan en loop van het geding"));
-        assertTrue(Patterns.OnNormalizedText.PROCEEDINGS.matches("ontstaan en loop van de procedure"));
-        assertTrue(Patterns.OnNormalizedText.PROCEEDINGS.matches("ontstaan en loop van de gedingen"));
-        assertTrue(Patterns.OnNormalizedText.PROCEEDINGS.matches("ontstaan en loop van het geding voor verwijzing"));
-        assertTrue(Patterns.OnNormalizedText.PROCEEDINGS.matches("verdere procesgang in hoger beroep"));
-        assertTrue(Patterns.OnNormalizedText.PROCEEDINGS.matches("geschiedenis en het procesverloop en de processtukken in hoger beroep plus: meer"));
-        assertTrue(Patterns.OnNormalizedText.PROCEEDINGS.matches("geschiedenis en het procesgang in hoger beroep en de processtukken plus: meer"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.PROCEEDINGS.matches("de procedure"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.PROCEEDINGS.matches("de procesgang"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.PROCEEDINGS.matches("het procesverloop"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.PROCEEDINGS.matches("procesverloop en de processtukken"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.PROCEEDINGS.matches("feiten en procesverloop"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.PROCEEDINGS.matches("feiten en het procesverloop"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.PROCEEDINGS.matches("inleiding feiten en procesverloop"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.PROCEEDINGS.matches("procesgang"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.PROCEEDINGS.matches("procesverloop"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.PROCEEDINGS.matches("procesverloop in hoger beroep"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.PROCEEDINGS.matches("procesverloop in eerste aanleg en vaststaande feiten"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.PROCEEDINGS.matches("verder procesverloop in hoger beroep"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.PROCEEDINGS.matches("verdere procesverloop in hoger beroep"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.PROCEEDINGS.matches("voorgeschiedenis en het procesverloop"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.PROCEEDINGS.matches("ontstaan en loop van het geding"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.PROCEEDINGS.matches("ontstaan en loop van de procedure"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.PROCEEDINGS.matches("ontstaan en loop van de gedingen"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.PROCEEDINGS.matches("ontstaan en loop van het geding voor verwijzing"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.PROCEEDINGS.matches("verdere procesgang in hoger beroep"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.PROCEEDINGS.matches("geschiedenis en het procesverloop en de processtukken in hoger beroep plus: meer"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.PROCEEDINGS.matches("geschiedenis en het procesgang in hoger beroep en de processtukken plus: meer"));
     }
 
     @Test
     public void testJudgment() {
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("beoordeling van het geschil en de motivering van de beslissing"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("beoordeling van het verzoek en de motivering van de beslissing"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("beslissing"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("beslissing afwijzing vordering verlenging terbeschikkingstelling"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("beslissing de rechtbank"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("beslissing het gerechtshof"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("beslissing in conventie en in reconventie"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("beslissing in eerste aanleg"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("beslissing in het incident"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("beslissing in kort geding"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("beslissing in reconventie"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("beslissing inzake het bewijs"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("beslissing met betrekking tot de voorlopige hechtenis"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("beslissing na voorwaardelijke veroordeling"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("beslissing op de vordering van de benadeelde partij"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("beslissing op de vordering van de benadeelde partij feit"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("beslissing op de vordering van de benadeelde partij slachtoffer"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("beslissing op het hoger beroep"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("beslissing op het principale en het incidentele hoger beroep"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("beslissing van de kantonrechter"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("beslissing van de rechtbank"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("beslissing van de voorzitter"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("beslissing verlenging terbeschikkingstelling"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("beslissing voorwaardelijk einde verpleging van overheidswege"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("beslissingen"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("beslissingen in eerste aanleg"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("beslissingen op de vorderingen van de benadeelde partijen"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("bestreden beslissing op bezwaar"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("bewijsbeslissing"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("bewijsbeslissingen"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("feiten het geschil en de beslissing in eerste aanleg"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("feiten het geschil en de motivering van de beslissing"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("geschil en de beslissing in eerste aanleg"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("geschil en de beslissing van de kantonrechter"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("geschil en de beslissing van de rechtbank"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("geschil en de beslissing van de voorzieningenrechter"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("geschil in eerste aanleg en de beslissing van de voorzieningenrechter"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("gronden van de beslissing"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("gronden voor de beslissing"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("motivering van de beslissing"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("motivering van de beslissing in het incident"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("motivering van de beslissing in hoger beroep"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("motivering van de beslissing na voorwaardelijke veroordeling"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("slotsom"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("slotsom en conclusie"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("slotsom en kosten"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("slotsom en proceskosten"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("verdere beoordeling van het geschil en de gronden van de beslissing"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("verdere motivering van de beslissing"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("verdere motivering van de beslissing in hoger beroep"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("voortgezette motivering van de beslissing in hoger beroep"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("vordering en de beslissing daarop in eerste aanleg"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("vordering en de beslissing in eerste aanleg"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("vordering in eerste aanleg en de beslissing daarop"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("vorderingen en de beslissing in eerste aanleg"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("vorderingen en de beslissingen in eerste aanleg"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("vorderingen in eerste aanleg en de beslissing daarop"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("beoordeling van het geschil en de motivering van de beslissing"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("beoordeling van het verzoek en de motivering van de beslissing"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("beslissing"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("beslissing afwijzing vordering verlenging terbeschikkingstelling"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("beslissing de rechtbank"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("beslissing het gerechtshof"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("beslissing in conventie en in reconventie"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("beslissing in eerste aanleg"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("beslissing in het incident"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("beslissing in kort geding"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("beslissing in reconventie"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("beslissing inzake het bewijs"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("beslissing met betrekking tot de voorlopige hechtenis"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("beslissing na voorwaardelijke veroordeling"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("beslissing op de vordering van de benadeelde partij"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("beslissing op de vordering van de benadeelde partij feit"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("beslissing op de vordering van de benadeelde partij slachtoffer"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("beslissing op het hoger beroep"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("beslissing op het principale en het incidentele hoger beroep"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("beslissing van de kantonrechter"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("beslissing van de rechtbank"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("beslissing van de voorzitter"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("beslissing verlenging terbeschikkingstelling"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("beslissing voorwaardelijk einde verpleging van overheidswege"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("beslissingen"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("beslissingen in eerste aanleg"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("beslissingen op de vorderingen van de benadeelde partijen"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("bestreden beslissing op bezwaar"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("bewijsbeslissing"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("bewijsbeslissingen"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("feiten het geschil en de beslissing in eerste aanleg"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("feiten het geschil en de motivering van de beslissing"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("geschil en de beslissing in eerste aanleg"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("geschil en de beslissing van de kantonrechter"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("geschil en de beslissing van de rechtbank"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("geschil en de beslissing van de voorzieningenrechter"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("geschil in eerste aanleg en de beslissing van de voorzieningenrechter"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("gronden van de beslissing"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("gronden voor de beslissing"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("motivering van de beslissing"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("motivering van de beslissing in het incident"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("motivering van de beslissing in hoger beroep"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("motivering van de beslissing na voorwaardelijke veroordeling"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("slotsom"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("slotsom en conclusie"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("slotsom en kosten"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("slotsom en proceskosten"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("verdere beoordeling van het geschil en de gronden van de beslissing"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("verdere motivering van de beslissing"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("verdere motivering van de beslissing in hoger beroep"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("voortgezette motivering van de beslissing in hoger beroep"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("vordering en de beslissing daarop in eerste aanleg"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("vordering en de beslissing in eerste aanleg"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("vordering in eerste aanleg en de beslissing daarop"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("vorderingen en de beslissing in eerste aanleg"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("vorderingen en de beslissingen in eerste aanleg"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("vorderingen in eerste aanleg en de beslissing daarop"));
     }
 
     @Test
@@ -286,7 +332,7 @@ public class TestPatterns {
 // "beschikt"  //7
 // "beschouwing"  //44
 // "beschouwing rechtbank"  //16
-        assertTrue(Patterns.OnNormalizedText.BESLAG.matches("beslag"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.BESLAG.matches("beslag"));
 
 //assertTrue(Patterns.OnNormalizedText.ROLE_UNKOWN.matches("beslissing"));
 
@@ -333,10 +379,10 @@ public class TestPatterns {
 // "bevoegdheid van de rechtbank"  //20
 // "bevoegdheid van het hof"  //8
 
-        assertTrue(Patterns.OnNormalizedText.PROVE.matches("bewijs"));
-        assertTrue(Patterns.OnNormalizedText.PROVE.matches("bewijsmiddelen"));
-        assertTrue(Patterns.OnNormalizedText.PROVE.matches("bewezenverklaring en bewijsvoering"));
-        assertTrue(Patterns.OnNormalizedText.PROVE.matches("bewezenverklaring"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.PROVE.matches("bewijs"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.PROVE.matches("bewijsmiddelen"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.PROVE.matches("bewezenverklaring en bewijsvoering"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.PROVE.matches("bewezenverklaring"));
 // "bewijsmiddelen"  //269
 // "bewijsaanbod"  //15
 // "bewijsbeslissingen"  //35
@@ -373,8 +419,9 @@ public class TestPatterns {
 // "centrale raad van beroep"  //7
 // "ciz"  //55
 // "college"  //6
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("conclusie"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("conclusies"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("conclusie"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("uitspraak"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("conclusies"));
 // "conclusie in het principale en incidentele cassatieberoep"  //6
 // "conclusie van de advocaatgeneraal"  //21
 // "conclusies"  //13
@@ -442,20 +489,20 @@ public class TestPatterns {
 // "feit primair poging tot doodslag"  //6
 // "feitelijke gang van zaken"  //15
 // "feitelijke uitgangspunten"  //10
-        assertTrue(Patterns.OnNormalizedText.FACTS.matches("feiten"));
-        assertTrue(Patterns.OnNormalizedText.FACTS.matches("feiten en"));  //9
-        assertTrue(Patterns.OnNormalizedText.FACTS.matches("feiten en het geding in feitelijke instantie"));  //29
-        assertTrue(Patterns.OnNormalizedText.FACTS.matches("feiten en het geding in feitelijke instanties"));  //153
-        assertTrue(Patterns.OnNormalizedText.FACTS.matches("feiten en het geschil"));  //6
-        assertTrue(Patterns.OnNormalizedText.FACTS.matches("feiten en omstandigheden"));  //199
-        assertTrue(Patterns.OnNormalizedText.FACTS.matches("feiten en omstandigheden in conventie en in reconventie"));  //11
-        assertTrue(Patterns.OnNormalizedText.FACTS.matches("feiten in beide zaken"));  //28
-        assertTrue(Patterns.OnNormalizedText.FACTS.matches("feiten in conventie en in reconventie"));  //56
-        assertTrue(Patterns.OnNormalizedText.FACTS.matches("feiten in conventie en reconventie"));  //17
-        assertTrue(Patterns.OnNormalizedText.FACTS.matches("feiten in conventie en voorwaardelijke reconventie"));  //7
-        assertTrue(Patterns.OnNormalizedText.FACTS.matches("feiten in de hoofdzaak en in de vrijwaringszaak"));  //8
-        assertTrue(Patterns.OnNormalizedText.FACTS.matches("feiten in het incident"));  //27
-        assertTrue(Patterns.OnNormalizedText.FACTS.matches("feiten voor zover van belang in het incident"));  //16
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.FACTS.matches("feiten"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.FACTS.matches("feiten en"));  //9
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.FACTS.matches("feiten en het geding in feitelijke instantie"));  //29
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.FACTS.matches("feiten en het geding in feitelijke instanties"));  //153
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.FACTS.matches("feiten en het geschil"));  //6
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.FACTS.matches("feiten en omstandigheden"));  //199
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.FACTS.matches("feiten en omstandigheden in conventie en in reconventie"));  //11
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.FACTS.matches("feiten in beide zaken"));  //28
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.FACTS.matches("feiten in conventie en in reconventie"));  //56
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.FACTS.matches("feiten in conventie en reconventie"));  //17
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.FACTS.matches("feiten in conventie en voorwaardelijke reconventie"));  //7
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.FACTS.matches("feiten in de hoofdzaak en in de vrijwaringszaak"));  //8
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.FACTS.matches("feiten in het incident"));  //27
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.FACTS.matches("feiten voor zover van belang in het incident"));  //16
 // "formaliteiten met betrekking tot het bewijs in alle zaken"  //8
 // "formele voorvragen"  //543
 // "g"  //15
@@ -465,9 +512,9 @@ public class TestPatterns {
 // "gedaagde"  //536
 // "gedaagde sub"  //229
 // "gedaagden"  //15
-        assertTrue(Patterns.OnNormalizedText.GEDING.matches("geding"));
-        assertTrue(Patterns.OnNormalizedText.GEDING.matches("geding in cassatie"));
-        assertTrue(Patterns.OnNormalizedText.GEDING.matches("geding in eerste aanleg"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CASE.matches("geding"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CASE.matches("geding in cassatie"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CASE.matches("geding in eerste aanleg"));
 // "geding in eerste aanleg zaaknr"  //55
 // "geding in eerste aanleg zaaknr c ha za"  //31
 // "geding in eerste aanleg zaaknr c kg za"  //37
@@ -505,10 +552,10 @@ public class TestPatterns {
 // "geding in eerste aanleg zaakrolnummer cv expl"  //11
 // "geding in eerste instantie"  //102
 // "geding in feitelijke instantie"  //198
-        assertTrue(Patterns.OnNormalizedText.GEDING.matches("geding in feitelijke instanties"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CASE.matches("geding in feitelijke instanties"));
 // "geding in feitelijke instanties en in cassatie"  //7
 // "geding in het principaal en het incidenteel hoger beroep"  //56
-        assertTrue(Patterns.OnNormalizedText.GEDING.matches("geding in hoger beroep"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CASE.matches("geding in hoger beroep"));
 // "geding na cassatie"  //26
 // "geding na verwijzing"  //15
 // "geding na verwijzing door de hoge raad"  //12
@@ -541,7 +588,7 @@ public class TestPatterns {
 // "gerechtshof sgravenhage"  //42
 // "gerechtshof shertogenbosch"  //25
 // "gerechtshof te sgravenhage"  //12
-        assertTrue(Patterns.OnNormalizedText.GEDING.matches("geschil"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CASE.matches("geschil"));
 // "geschil alsmede standpunten en conclusies van partijen"  //374
 // "geschil de standpunten en conclusies van partijen"  //692
 // "geschil en de procedure in eerste aanleg"  //7
@@ -556,7 +603,7 @@ public class TestPatterns {
 // "geschil in de vrijwaringszaak"  //6
 // "geschil in eerste aanleg"  //7
 // "geschil in het incident"  //73
-        assertTrue(Patterns.OnNormalizedText.GEDING.matches("geschil in hoger beroep"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CASE.matches("geschil in hoger beroep"));
 // "geschil in hoger beroep en incidenteel hoger beroep"  //10
 // "geschil in hoger beroep en standpunten en conclusies van partijen"  //12
 // "geschil in hoger beroep en standpunten van partijen"  //113
@@ -769,8 +816,8 @@ public class TestPatterns {
 // "oordeel"  //8
 // "oordeel hof"  //6
 // ""  //8
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("oordeel van het hof"));
-        assertTrue(Patterns.OnNormalizedText.JUDGMENT.matches("oordeel van de kantonrechter"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("oordeel van het hof"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.JUDGMENT.matches("oordeel van de kantonrechter"));
 // ""  //23
 // "op te leggen maatregel"  //9
 // "op te leggen straf"  //18
@@ -818,7 +865,7 @@ public class TestPatterns {
 // "prejudicile vraag"  //7
 // "prejudicile vragen"  //9
 // "primair"  //54
-        assertTrue(Patterns.OnNormalizedText.PROCEEDINGS.matches("procedure"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.PROCEEDINGS.matches("procedure"));
 // "procedure in conventie en in reconventie"  //10
 // "procedure in de hoofdzaak"  //53
 // "procedure in de vrijwaringszaak"  //43
@@ -969,30 +1016,30 @@ public class TestPatterns {
 // "stichting william schrikker jeugdbescherming en jeugdreclassering"  //7
 // "straf"  //68
 // "straf enof de maatregel"  //29
-        assertTrue(Patterns.OnNormalizedText.STRAFBAARHEID.matches("strafbaarheid"));
-        assertTrue(Patterns.OnNormalizedText.STRAFBAARHEID.matches("strafbaarheid feit"));
-        assertTrue(Patterns.OnNormalizedText.STRAFBAARHEID.matches("strafbaarheid feiten"));
-        assertTrue(Patterns.OnNormalizedText.STRAFBAARHEID.matches("strafbaarheid van de dader"));
-        assertTrue(Patterns.OnNormalizedText.STRAFBAARHEID.matches("strafbaarheid van de feiten en van verdachte"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.PUNISHMENT.matches("strafbaarheid"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.PUNISHMENT.matches("strafbaarheid feit"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.PUNISHMENT.matches("strafbaarheid feiten"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.PUNISHMENT.matches("strafbaarheid van de dader"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.PUNISHMENT.matches("strafbaarheid van de feiten en van verdachte"));
 // "strafbaarheid feit"  //44
 // "strafbaarheid feiten"  //42
 // "strafbaarheid feiten vermeld op bijlage bij de olw"  //16
 // "strafbaarheid van de dader"  //6
 // "strafbaarheid van de feiten"  //556
 // "strafbaarheid van de feiten en van verdachte"  //10
-        assertTrue(Patterns.OnNormalizedText.STRAFBAARHEID.matches("strafbaarheid van de verdachte"));
-        assertTrue(Patterns.OnNormalizedText.STRAFBAARHEID.matches("strafbaarheid van het bewezen verklaarde"));
-        assertTrue(Patterns.OnNormalizedText.STRAFBAARHEID.matches("strafbaarheid van het bewezenverklaarde"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.PUNISHMENT.matches("strafbaarheid van de verdachte"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.PUNISHMENT.matches("strafbaarheid van het bewezen verklaarde"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.PUNISHMENT.matches("strafbaarheid van het bewezenverklaarde"));
 // "strafbaarheid van het bewezenverklaarde en de kwalificatie"  //243
 // "strafbaarheid van het bewezenverklaarde en van de verdachte"  //20
-        assertTrue(Patterns.OnNormalizedText.STRAFBAARHEID.matches("strafbaarheid van het feit"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.PUNISHMENT.matches("strafbaarheid van het feit"));
 // "strafbaarheid van het feit en van verdachte"  //8
-        assertTrue(Patterns.OnNormalizedText.STRAFBAARHEID.matches("strafbaarheid van verdachte"));
-        assertTrue(Patterns.OnNormalizedText.STRAFBAARHEID.matches("strafbaarheid van het feit en van verdachte"));
-        assertTrue(Patterns.OnNormalizedText.STRAFBAARHEID.matches("strafbaarheid verdachte"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.PUNISHMENT.matches("strafbaarheid van verdachte"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.PUNISHMENT.matches("strafbaarheid van het feit en van verdachte"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.PUNISHMENT.matches("strafbaarheid verdachte"));
 // "strafbaarheid verdachte"  //91
 // "strafmaatregel"  //47
-        assertTrue(Patterns.OnNormalizedText.STRAFBAARHEID.matches("strafoplegging"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.PUNISHMENT.matches("strafoplegging"));
 // "stukken"  //41
 // "stukken van het geding"  //309
 // "subsidiair"  //60
@@ -1099,7 +1146,7 @@ public class TestPatterns {
 // "vader"  //14
 // "valsheid in geschrift meermalen gepleegd"  //10
 // "van het plegen van witwassen een gewoonte maken"  //7
-        assertTrue(Patterns.OnNormalizedText.FACTS.matches("vaststaande feiten"));  //3357
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.FACTS.matches("vaststaande feiten"));  //3357
 // "vaststaande feiten en de procedure in eerste aanleg"  //13
 // "vaststaande feiten in beide zaken"  //6
 // "vaststaande feiten in conventie en in reconventie"  //7
@@ -1134,7 +1181,7 @@ public class TestPatterns {
 // "verkort vonnis"  //61
 // "verkrachting"  //8
 // "verlenging ondertoezichtstelling en verlenging machtiging tot uithuisplaatsing"  //20
-        assertTrue(Patterns.OnNormalizedText.PROCEEDINGS.matches("verloop van de procedure"));  //1631
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.PROCEEDINGS.matches("verloop van de procedure"));  //1631
 // "verloop van de procedure blijkt uit"  //10
 // "verloop van de procedure in hoger beroep"  //8
 // "verloop van de procedures"  //7
@@ -1301,7 +1348,7 @@ public class TestPatterns {
 // "vrouw"  //7
 // "waardering bewijs"  //6
 // "waardering van de bewijsmiddelen"  //8
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("waardering van het bewijs"));  //1032
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("waardering van het bewijs"));  //1032
 // "waardering van het bewijs ten aanzien van feit"  //9
 // "waarvan het hof uitgaat"  //14
 // "waarvan in hoger beroep moet worden uitgegaan"  //6
@@ -1352,197 +1399,203 @@ public class TestPatterns {
     @Test
     public void testConsiderations() {
         // overwegingen
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("achtergronden van de zaak"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("algemene bewijsoverwegingen"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("algemene overwegingen in alle zaken"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("ambtshalve beoordeling van de bestreden uitspraak"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling door de rechtbank"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling en de gronden daarvoor"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling in beide zaken"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling in conventie"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling in conventie en in reconventie"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling in conventie en in voorwaardelijke reconventie"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling in conventie en reconventie"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling in de hoofdzaak"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling in de incidenten"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling in de vrijwaringszaak"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling in eerste aanleg"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling in het incident"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling in het incident en in de hoofdzaak"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling in het incident ex art rv"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling in het incident tot verzet tegen de eiswijziging"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling in het principaal en incidenteel appel"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling in hoger beroep"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling in reconventie"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling in voorwaardelijke reconventie"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling rechtbank"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van de aanvraag"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van de door belanghebbende voorgestelde middelen"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van de door de staatssecretaris voorgestelde middelen"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van de geschillen"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van de geschillen in hoger beroep"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van de grieven"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van de grieven en de vordering"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van de gronden van het verzet"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van de hoger beroepen"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van de in het incidentele beroep voorgestelde middelen"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van de in het principale beroep voorgestelde middelen"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van de incidentele vordering"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van de klacht"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van de klachten"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van de middelen"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van de middelen in het principale beroep"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van de middelen in het principale en in het incidentele beroep"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van de middelen voor het overige"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van de namens de verdachte voorgestelde middelen"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van de ontvankelijkheid"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van de ontvankelijkheid van het beroep"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van de ontvankelijkheid van het beroep in cassatie"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van de ontvankelijkheid van het verzoek tot herziening"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van de overige middelen"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van de standpunten"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van de ten laste gelegde feiten"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van de verzoeken"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van de vordering"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van de vorderingen"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van de zaak"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het achtste middel"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het beklag"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het beroep"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het beroep na verwijzing"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het bewijs"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het bezwaar"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het cassatieberoep"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het cassatiemiddel"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het derde middel"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het door belanghebbende voorgestelde middel"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het door de staatssecretaris voorgestelde middel"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het eerste en het tweede middel"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het eerste het tweede en het derde middel"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het eerste het tweede het derde en het vierde middel"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het eerste middel"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het eerste namens de verdachte voorgestelde middel"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het geschil"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het geschil in conventie en in reconventie"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het geschil in hoger beroep"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het geschil vaststaande feiten"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het geschil wijziging van eis"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het hoger beroep"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het hoger beroep en het incidenteel hoger beroep"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het hoger beroep en het incidentele hoger beroep"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het hoger beroep in de zaak met zaaknummer"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het hoger beroep na verwijzing"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het hoger beroep zaaknummer"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het in het incidentele beroep voorgestelde middel"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het in het principale beroep voorgestelde middel"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het incident"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het incidentele beroep in cassatie"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het middel"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het middel in het incidentele beroep"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het middel in het principale beroep"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het namens de benadeelde partij voorgestelde middel"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het negende middel"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het principaal en incidenteel hoger beroep"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het principale en het incidentele hoger beroep"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het ten laste gelegde"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het tiende middel"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het tweede en het derde middel"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het tweede middel"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het tweede namens de verdachte voorgestelde middel"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het verzet"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het verzochte"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het verzoek"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het verzoek tot het vaststellen van een dwangakkoord"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het verzoek zaaknummer"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het vierde middel"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het vijfde middel"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het wrakingsverzoek"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het zesde middel"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling van het zevende middel"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beoordeling vaststaande feiten"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beschouwing en beoordeling"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beschouwing en beoordeling van de middelen"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("beschouwing en beoordeling van het middel"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("bewijs en bewijsoverwegingen"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("bewijsmiddelen en de beoordeling daarvan"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("bewijsmotivering"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("bewijsoverwegingen"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("bewijsoverwegingen met betrekking tot zaaksdossier adres"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("bewijsoverwegingen ten aanzien van feit"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("bijzondere overwegingen omtrent het bewijs"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("feiten en achtergronden"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("geschil en beoordeling"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("geschil en de beoordeling"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("geschil en de beoordeling daarvan"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("geschil en de beoordeling in eerste aanleg"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("grieven en beoordeling in hoger beroep"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("grieven en de beoordeling in hoger beroep"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("gronden"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("gronden van het hoger beroep"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("gronden van het verzet"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("gronden van het verzoek"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("gronden van het wrakingsverzoek"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("gronden van het wrakingsverzoek en het standpunt van verzoeker"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("gronden van wraking"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("inhoudelijke beoordeling"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("inleidende overwegingen"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("motivering"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("motivering maatregel"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("motivering straf"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("motivering van de bewezenverklaring"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("motivering van de hoofdelijkheid"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("motivering van de maatregel"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("motivering van de maatregel onttrekking aan het verkeer"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("motivering van de sanctie"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("motivering van de sancties"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("motivering van de straf"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("motivering van de straf en maatregel"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("motivering van de straf en maatregelen"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("motivering van de straffen"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("motivering van de straffen en maatregel"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("motivering van de straffen en maatregelen"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("motivering van de verbeurdverklaring"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("motivering van straf of maatregel"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("motivering vrijspraak"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("nadere beoordeling"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("nadere beoordeling van het hoger beroep"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("nadere beoordeling van het middel"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("nadere bewijsmotivering"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("nadere bewijsoverwegingen"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("op te leggen straf of maatregel en de gronden daarvoor"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("overwegingen"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("overwegingen en oordeel van het hof"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("overwegingen met betrekking tot het bewijs"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("overwegingen omtrent het geschil"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("overwegingen ten aanzien van het bewijs"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("overwegingen ten aanzien van straf enof maatregel"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("overwegingen van de kantonrechter"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("overwegingen van de rechtbank"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("overwegingen van het hof"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("rechtsoverwegingen"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("standpunten van partijen en de beoordeling daarvan"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("strafmotivering"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("tenlastelegging en motivering van de gegeven vrijspraak"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("uitgangspunten voor de beoordeling"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("vaststellingen en overwegingen"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("verdere beoordeling"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("verdere beoordeling in conventie en in reconventie"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("verdere beoordeling in de hoofdzaak"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("verdere beoordeling in hoger beroep"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("verdere beoordeling in reconventie"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("verdere beoordeling van de zaak"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("verdere beoordeling van het geschil"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("verdere beoordeling van het geschil in hoger beroep"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("verdere beoordeling van het hoger beroep"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("verdere beoordeling van het middel"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("verdere beoordeling vaststaande feiten"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("verzoek en de beoordeling"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("verzoek en de beoordeling daarvan"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("verzoek en de gronden daarvan"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("vordering en beoordeling daarvan in eerste aanleg"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("vordering en beoordeling in eerste aanleg"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("vordering en de beoordeling in eerste aanleg"));
-        assertTrue(Patterns.OnNormalizedText.CONSIDERATIONS.matches("vorderingen en beoordeling in eerste aanleg"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("achtergronden van de zaak"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("algemene bewijsoverwegingen"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("algemene overwegingen in alle zaken"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("ambtshalve beoordeling van de bestreden uitspraak"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling door de rechtbank"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling en de gronden daarvoor"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling in beide zaken"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling in conventie"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling in conventie en in reconventie"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling in conventie en in voorwaardelijke reconventie"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling in conventie en reconventie"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling in de hoofdzaak"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling in de incidenten"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling in de vrijwaringszaak"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling in eerste aanleg"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling in het incident"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling in het incident en in de hoofdzaak"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling in het incident ex art rv"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling in het incident tot verzet tegen de eiswijziging"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling in het principaal en incidenteel appel"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling in hoger beroep"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling in reconventie"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling in voorwaardelijke reconventie"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling rechtbank"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van de aanvraag"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van de door belanghebbende voorgestelde middelen"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van de door de staatssecretaris voorgestelde middelen"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van de geschillen"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van de geschillen in hoger beroep"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van de grieven"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van de grieven en de vordering"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van de gronden van het verzet"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van de hoger beroepen"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van de in het incidentele beroep voorgestelde middelen"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van de in het principale beroep voorgestelde middelen"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van de incidentele vordering"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van de klacht"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van de klachten"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van de middelen"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van de middelen in het principale beroep"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van de middelen in het principale en in het incidentele beroep"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van de middelen voor het overige"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van de namens de verdachte voorgestelde middelen"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van de ontvankelijkheid"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van de ontvankelijkheid van het beroep"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van de ontvankelijkheid van het beroep in cassatie"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van de ontvankelijkheid van het verzoek tot herziening"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van de overige middelen"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van de standpunten"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van de ten laste gelegde feiten"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van de verzoeken"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van de vordering"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van de vorderingen"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van de zaak"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het achtste middel"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het beklag"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het beroep"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het beroep na verwijzing"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het bewijs"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het bezwaar"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het cassatieberoep"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het cassatiemiddel"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het derde middel"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het door belanghebbende voorgestelde middel"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het door de staatssecretaris voorgestelde middel"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het eerste en het tweede middel"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het eerste het tweede en het derde middel"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het eerste het tweede het derde en het vierde middel"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het eerste middel"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het eerste namens de verdachte voorgestelde middel"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het geschil"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het geschil in conventie en in reconventie"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het geschil in hoger beroep"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het geschil vaststaande feiten"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het geschil wijziging van eis"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het hoger beroep"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het hoger beroep en het incidenteel hoger beroep"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het hoger beroep en het incidentele hoger beroep"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het hoger beroep in de zaak met zaaknummer"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het hoger beroep na verwijzing"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het hoger beroep zaaknummer"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het in het incidentele beroep voorgestelde middel"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het in het principale beroep voorgestelde middel"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het incident"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het incidentele beroep in cassatie"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het middel"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het middel in het incidentele beroep"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het middel in het principale beroep"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het namens de benadeelde partij voorgestelde middel"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het negende middel"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het principaal en incidenteel hoger beroep"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het principale en het incidentele hoger beroep"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het ten laste gelegde"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het tiende middel"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het tweede en het derde middel"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het tweede middel"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het tweede namens de verdachte voorgestelde middel"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het verzet"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het verzochte"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het verzoek"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het verzoek tot het vaststellen van een dwangakkoord"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het verzoek zaaknummer"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het vierde middel"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het vijfde middel"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het wrakingsverzoek"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het zesde middel"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling van het zevende middel"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beoordeling vaststaande feiten"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beschouwing en beoordeling"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beschouwing en beoordeling van de middelen"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("beschouwing en beoordeling van het middel"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("bewijs en bewijsoverwegingen"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("bewijsmiddelen en de beoordeling daarvan"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("bewijsmotivering"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("bewijsoverwegingen"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("bewijsoverwegingen met betrekking tot zaaksdossier adres"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("bewijsoverwegingen ten aanzien van feit"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("bijzondere overwegingen omtrent het bewijs"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("feiten en achtergronden"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("geschil en beoordeling"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("geschil en de beoordeling"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("geschil en de beoordeling daarvan"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("geschil en de beoordeling in eerste aanleg"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("grieven en beoordeling in hoger beroep"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("grieven en de beoordeling in hoger beroep"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("gronden"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("gronden van het hoger beroep"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("gronden van het verzet"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("gronden van het verzoek"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("gronden van het wrakingsverzoek"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("gronden van het wrakingsverzoek en het standpunt van verzoeker"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("gronden van wraking"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("inhoudelijke beoordeling"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("inleidende overwegingen"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("motivering"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("motivering maatregel"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("motivering straf"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("motivering van de bewezenverklaring"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("motivering van de hoofdelijkheid"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("motivering van de maatregel"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("motivering van de maatregel onttrekking aan het verkeer"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("motivering van de sanctie"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("motivering van de sancties"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("motivering van de straf"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("motivering van de straf en maatregel"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("motivering van de straf en maatregelen"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("motivering van de straffen"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("motivering van de straffen en maatregel"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("motivering van de straffen en maatregelen"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("motivering van de verbeurdverklaring"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("motivering van straf of maatregel"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("motivering vrijspraak"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("nadere beoordeling"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("nadere beoordeling van het hoger beroep"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("nadere beoordeling van het middel"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("nadere bewijsmotivering"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("nadere bewijsoverwegingen"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("op te leggen straf of maatregel en de gronden daarvoor"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("overwegingen"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("overwegingen en oordeel van het hof"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("overwegingen met betrekking tot het bewijs"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("overwegingen omtrent het geschil"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("overwegingen ten aanzien van het bewijs"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("overwegingen ten aanzien van straf enof maatregel"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("overwegingen van de kantonrechter"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("overwegingen van de rechtbank"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("overwegingen van het hof"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("rechtsoverwegingen"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("standpunten van partijen en de beoordeling daarvan"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("strafmotivering"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("tenlastelegging en motivering van de gegeven vrijspraak"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("uitgangspunten voor de beoordeling"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("vaststellingen en overwegingen"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("verdere beoordeling"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("verdere beoordeling in conventie en in reconventie"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("verdere beoordeling in de hoofdzaak"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("verdere beoordeling in hoger beroep"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("verdere beoordeling in reconventie"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("verdere beoordeling van de zaak"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("verdere beoordeling van het geschil"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("verdere beoordeling van het geschil in hoger beroep"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("verdere beoordeling van het hoger beroep"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("verdere beoordeling van het middel"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("verdere beoordeling vaststaande feiten"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("verzoek en de beoordeling"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("verzoek en de beoordeling daarvan"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("verzoek en de gronden daarvan"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("vordering en beoordeling daarvan in eerste aanleg"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("vordering en beoordeling in eerste aanleg"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("vordering en de beoordeling in eerste aanleg"));
+        assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches("vorderingen en beoordeling in eerste aanleg"));
+    }
+
+    @Test
+    public void testTitleContains() {
+        assertTrue(TitlePatterns.TitlesUnnormalizedContains.ENDS_W_COLON.matches("vorderingen en beoordeling in eerste aanleg:"));
+        assertFalse(TitlePatterns.TitlesUnnormalizedContains.ENDS_W_COLON.matches("vorderingen en beoordeling in eerste aanleg"));
     }
 }

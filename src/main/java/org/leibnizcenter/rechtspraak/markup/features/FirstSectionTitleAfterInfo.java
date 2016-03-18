@@ -1,9 +1,9 @@
 package org.leibnizcenter.rechtspraak.markup.features;
 
 import org.crf.crf.CrfFeature;
+import org.leibnizcenter.rechtspraak.features.title.TitlePatterns;
 import org.leibnizcenter.rechtspraak.markup.Label;
 import org.leibnizcenter.rechtspraak.markup.RechtspraakElement;
-import org.leibnizcenter.rechtspraak.markup.features.patterns.Patterns;
 import org.leibnizcenter.rechtspraak.util.Doubles;
 
 /**
@@ -23,7 +23,7 @@ public class FirstSectionTitleAfterInfo {
         return Label.INFO.equals(previousTag)
                 && currentTag.equals(Label.SECTION_TITLE)
                 && (rechtspraakElement.numbering != null && rechtspraakElement.numbering.mainNum() == 1
-                || Patterns.OnNormalizedText.PROCEEDINGS.matches(rechtspraakElement.normalizedText));
+                || TitlePatterns.TitlesNormalizedMatches.PROCEEDINGS.matches(rechtspraakElement.normalizedText));
     }
 
     public static class Feature extends CrfFeature<RechtspraakElement, Label> {

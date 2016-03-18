@@ -4,10 +4,9 @@ import cc.mallet.fst.CRF;
 import cc.mallet.fst.SimpleTagger;
 import cc.mallet.types.Instance;
 import cc.mallet.types.Sequence;
-import cc.mallet.types.Token;
-import cc.mallet.types.TokenSequence;
-import org.leibnizcenter.rechtspraak.markup.*;
-import org.leibnizcenter.rechtspraak.util.Xml;
+import org.leibnizcenter.rechtspraak.markup.Const;
+import org.leibnizcenter.rechtspraak.markup.RechtspraakCorpus;
+import org.leibnizcenter.rechtspraak.markup.RechtspraakTokenList;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -30,14 +29,16 @@ public class ApplyCrf {
             for (Sequence s : labels) {
                 for (int i = 0; i < s.size(); i++) {
                     Object label = s.get(i);
-                    RechtspraakToken taggedToken = doc.get(i);
-                    if (!taggedToken.getTag().toString().equals(label)) {
-                        System.out.println("---------------------------------");
-                        System.out.println(label + ": " + ((Token) data.get(i)));
-                        System.out.println(taggedToken.getTag() + ": " + ((Token) data.get(i)));
-                        System.out.println("---------------------------------");
-                    }
+                    //RechtspraakToken taggedToken = doc.get(i);
+                    System.out.println(label + ": " + data.get(i));
+//                    if (!taggedToken.getTag().toString().equals(label)) {
+//                        System.out.println("---------------------------------");
+//                        System.out.println(label + ": " + ((Token) data.get(i)));
+//                        System.out.println(taggedToken.getTag() + ": " + ((Token) data.get(i)));
+//                        System.out.println("---------------------------------");
+//                    }
                 }
+                System.out.println("------------------------");
             }
             System.out.println("------------------------");
         }
