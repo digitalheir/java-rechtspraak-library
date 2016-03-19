@@ -1,5 +1,6 @@
 package org.leibnizcenter.rechtspraak.markup;
 
+import org.leibnizcenter.rechtspraak.features.title.TitlePatterns;
 import org.leibnizcenter.rechtspraak.util.TextBlockInfo;
 import org.leibnizcenter.rechtspraak.util.Xml;
 import org.w3c.dom.*;
@@ -34,11 +35,11 @@ public class RechtspraakTokenList extends ArrayList<RechtspraakToken> {
 
     ////////////////////////////////////////////////////////
     // Features
-    private static final String POSITION = "POSITION";
+//    private static final String POSITION = "POSITION";
     private static final String TAG_SECTION = "section";
     private static final String TAG_TITLE = "title";
     private static final String TAG_TEXT = "text";
-    private static final String TAG_NR = "nr";
+//    private static final String TAG_NR = "nr";
     private final String ecli;
 
     public RechtspraakTokenList(String ecli, int initialCapacity) {
@@ -60,7 +61,29 @@ public class RechtspraakTokenList extends ArrayList<RechtspraakToken> {
     }
 
     public static RechtspraakTokenList from(String ecli, Node doc) {
-        return new RechtspraakTokenList(ecli, textInPreorder(doc, null, null, false));
+        RechtspraakTokenList tokenList = new RechtspraakTokenList(ecli, textInPreorder(doc, null, null, false));
+
+        // find if there are numbered high likelihood-titles
+        if (highConfidenceNumberedTitlesFound(tokenList)) {
+            tokenList.forEach((t) -> {
+                if (t.getToken().numbering != null) t.getToken().setHighConfidenceNumberedTitleFoundAndIsNumbered(true);
+            });
+        }
+
+
+        return tokenList;
+    }
+
+    private static boolean highConfidenceNumberedTitlesFound(RechtspraakTokenList tokenList) {
+        boolean highConfidenceNumberedTitlesFound = false;
+        for (RechtspraakToken t : tokenList) {
+            RechtspraakElement token = t.getToken();
+            if (token.numbering != null && TitlePatterns.TitlesNormalizedMatchesHighConf.matchesAny(token)) {
+                highConfidenceNumberedTitlesFound = true;
+                break;
+            }
+        }
+        return highConfidenceNumberedTitlesFound;
     }
 
     public static List<RechtspraakToken> textInPreorder(Node root, Node parent, Label rootDescendentOf, boolean includeWhiteSpace) {

@@ -13,6 +13,7 @@ import org.leibnizcenter.rechtspraak.markup.Label;
 import org.leibnizcenter.rechtspraak.markup.RechtspraakElement;
 import org.leibnizcenter.rechtspraak.markup.RechtspraakTokenList;
 import org.leibnizcenter.rechtspraak.markup.features.IsPartOfList;
+import org.leibnizcenter.rechtspraak.markup.nameparser.ParseNames;
 import org.leibnizcenter.rechtspraak.util.numbering.FullSectionNumber;
 import org.leibnizcenter.rechtspraak.util.numbering.SubSectionNumber;
 
@@ -30,7 +31,8 @@ import static org.leibnizcenter.rechtspraak.markup.RechtspraakCorpus.listXmlFile
  * Created by maarten on 11-3-16.
  */
 public class TrainWithMallet {
-    public final static File xmlFiles = new File(Const.PATH_TRAIN_TEST_XML_FILES_LINUX);
+    public final static File xmlFiles = new File(Const.PATH_TRAIN_TEST_XML_FILES_WINDOWS);
+
     private static final int MAX_DOCS = -1;
     private static final CommandOption.Double gaussianVarianceOption = new CommandOption.Double
             (SimpleTagger.class, "gaussian-variance", "DECIMAL", true, 10.0,
@@ -311,9 +313,12 @@ public class TrainWithMallet {
         InfoPatterns.InfoPatternsUnormalizedContains.setFeatureValues(t, token);
 
         // Title patterns
-        TitlePatterns.TitlesNormalizedMatches.setFeatureValues(t, token);
+        TitlePatterns.TitlesNormalizedMatchesHighConf.setFeatureValues(t, token);
+        TitlePatterns.TitlesNormalizedMatchesLowConf.setFeatureValues(t, token);
         TitlePatterns.TitlesUnnormalizedContains.setFeatureValues(t, token);
 
+        // Whether the text contains a name, or something that looks like a name
+        ParseNames.Patterns.setFeatureValues(t, token);
 
         if (token.numbering != null) {
             if (token.numbering instanceof SubSectionNumber) {
@@ -324,7 +329,8 @@ public class TrainWithMallet {
         }
         if (IsPartOfList.isPartOfList(sequence, indexInSequence)) t.setFeatureValue("LIKELY_PART_OF_LIST", 1.0);
 
-        if (token.containsName) t.setFeatureValue("HAS_NAME", 1.0);
+
+
         if (token.isSpaced) t.setFeatureValue("IS_SPACED", 1.0);
         if (token.isAllCaps) t.setFeatureValue("IS_ALL_CAPS", 1.0);
         if (token.wordCount < 5) t.setFeatureValue("LESS_THAN_5_WORDS", 1.0);

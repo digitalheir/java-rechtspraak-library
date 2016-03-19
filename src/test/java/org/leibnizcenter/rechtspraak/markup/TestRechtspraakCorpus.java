@@ -49,7 +49,7 @@ public class TestRechtspraakCorpus {
         }
         Assert.assertTrue(InfoPatterns.InfoPatternsNormalizedContains.START_W_DATUM.matches(paraDoc.get(1).getToken().normalizedText));
         Assert.assertTrue(InfoPatterns.InfoPatternsNormalizedContains.START_W_AFDELING.matches(paraDoc.get(2).getToken().normalizedText));
-        Assert.assertTrue(TitlePatterns.TitlesNormalizedMatches.CASE.matches(paraDoc.get(4).getToken().normalizedText));
+        Assert.assertTrue(TitlePatterns.TitlesNormalizedMatchesHighConf.CASE.matches(paraDoc.get(4).getToken().normalizedText));
         for (int i = 6; i <= 15; i++) {
             Assert.assertTrue(Patterns.matches(InfoPatterns.InfoPatternsUnormalizedContains.CONTAINS_BRACKETED_TEXT, paraDoc.get(i)));
         }
@@ -59,8 +59,8 @@ public class TestRechtspraakCorpus {
         Assert.assertEquals(numbering.mainNum(), 1);
         Assert.assertTrue((InfoPatterns.InfoPatternsNormalizedMatches.EN_VS_CONTRA.matches(paraDoc.get(26).getToken().normalizedText)));
         Assert.assertTrue((InfoPatterns.InfoPatternsNormalizedContains.END_W_ROLE.matches(paraDoc.get(28).getToken().normalizedText)));
-        Assert.assertTrue(TitlePatterns.TitlesNormalizedMatches.PROCEEDINGS.matches(paraDoc.get(29).getToken().normalizedText));
-        Assert.assertTrue(TitlePatterns.TitlesNormalizedMatches.CONSIDERATIONS.matches(paraDoc.get(36).getToken().normalizedText));
+        Assert.assertTrue(TitlePatterns.TitlesNormalizedMatchesHighConf.PROCEEDINGS.matches(paraDoc.get(29).getToken().normalizedText));
+        Assert.assertTrue(TitlePatterns.TitlesNormalizedMatchesHighConf.CONSIDERATIONS.matches(paraDoc.get(36).getToken().normalizedText));
 
         numbering = paraDoc.get(42).getToken().numbering;
         Assert.assertTrue(numbering instanceof SubSectionNumber);

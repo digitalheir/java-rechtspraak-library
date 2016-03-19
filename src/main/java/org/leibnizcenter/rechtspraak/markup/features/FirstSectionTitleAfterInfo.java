@@ -23,7 +23,7 @@ public class FirstSectionTitleAfterInfo {
         return Label.INFO.equals(previousTag)
                 && currentTag.equals(Label.SECTION_TITLE)
                 && (rechtspraakElement.numbering != null && rechtspraakElement.numbering.mainNum() == 1
-                || TitlePatterns.TitlesNormalizedMatches.PROCEEDINGS.matches(rechtspraakElement.normalizedText));
+                || TitlePatterns.TitlesNormalizedMatchesHighConf.PROCEEDINGS.matches(rechtspraakElement.normalizedText));
     }
 
     public static class Feature extends CrfFeature<RechtspraakElement, Label> {

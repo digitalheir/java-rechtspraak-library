@@ -10,7 +10,7 @@ import java.io.IOException;
 public class FindWhichPatternMatchii {
 
     public static void main(String[] a) throws IOException {
-        for (TitlePatterns.TitlesNormalizedMatches pattern : TitlePatterns.TitlesNormalizedMatches.set) {
+        for (TitlePatterns.TitlesNormalizedMatchesHighConf pattern : TitlePatterns.TitlesNormalizedMatchesHighConf.set) {
             if (pattern.matches("ii")) {
                 break;
             }

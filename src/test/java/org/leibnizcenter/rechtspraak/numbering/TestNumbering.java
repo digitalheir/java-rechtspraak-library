@@ -1,6 +1,6 @@
 package org.leibnizcenter.rechtspraak.numbering;
 
-import junit.framework.Assert;
+import org.junit.Assert;
 import org.junit.Test;
 import org.leibnizcenter.rechtspraak.util.numbering.ArabicSectionNumber;
 import org.leibnizcenter.rechtspraak.util.numbering.RomanNumeral;

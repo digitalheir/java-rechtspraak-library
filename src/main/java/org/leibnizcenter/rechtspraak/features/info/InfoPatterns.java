@@ -14,20 +14,34 @@ import java.util.regex.Pattern;
  */
 public class InfoPatterns {
     public enum InfoPatternsUnormalizedContains implements Patterns.UnnormalizedTextContains {
-        CONTAINS_BRACKETED_TEXT(new TextPattern("CONTAINS_BRACKETED_TEXT",
-                Pattern.compile("\\[[\\p{L}0-9 ]+\\]", Pattern.CASE_INSENSITIVE))),
+        CONTAINS_DATE(Pattern.compile("(?:" + Constants.YEAR + "-" + Constants.DAY_MONTH + "-" + Constants.DAY_MONTH +
+                        "|" + Constants.DAY_MONTH + "-" + Constants.DAY_MONTH + "-" + Constants.YEAR +
+                        "|" + Constants.DAY_MONTH + " +" +
+                        "(" +
+                        "jan(\\.|uari)?|feb(\\.|ruari)?" +
+                        "|m(aa)?rt\\.?|apr(\\.|il)?|mei|ju[nl](\\.|i)?" +
+                        "|aug(\\.|ustus)?|okt(\\.|ober)?" +
+                        "|nov(\\.|ember)?|sept?(\\.|t?ember)?|dec(\\.|ember)?" +
+                        ")" +
+                        " +" + Constants.YEAR +
+                        ")",
+                Pattern.CASE_INSENSITIVE)),
 
-        CONTAINS_LIKELY_ZAAKNR(new TextPattern("CONTAINS_LIKELY_ZAAKNR",
-                Pattern.compile("\\p{L}*\\s*[0-9]{2}/[0-9]{2,5}",
-                        Pattern.CASE_INSENSITIVE)
+        CONTAINS_BRACKETED_TEXT(Pattern.compile("\\[[\\p{L}0-9 ]+\\]", Pattern.CASE_INSENSITIVE)),
 
-        ));
+        CONTAINS_LIKELY_ZAAKNR(Pattern.compile("\\p{L}*\\s*[0-9]{2}/[0-9]{2,5}",
+                Pattern.CASE_INSENSITIVE)
+        );
 
         public static Set<InfoPatternsUnormalizedContains> set = EnumSet.allOf(InfoPatternsUnormalizedContains.class);
         private final TextPattern pattern;
 
         InfoPatternsUnormalizedContains(TextPattern pattern) {
             this.pattern = pattern;
+        }
+
+        InfoPatternsUnormalizedContains(Pattern compile) {
+            pattern = new TextPattern(this.name(), compile);
         }
 
         public static void setFeatureValues(Token t, RechtspraakElement token) {
@@ -39,6 +53,11 @@ public class InfoPatterns {
         @Override
         public boolean matches(String textContent) {
             return this.pattern.find(textContent);
+        }
+
+        private static class Constants {
+            private static final String YEAR = "(?:[12][90])?[0-9]{2}";
+            private static final String DAY_MONTH = "[0-9]{1,2}";
         }
     }
 

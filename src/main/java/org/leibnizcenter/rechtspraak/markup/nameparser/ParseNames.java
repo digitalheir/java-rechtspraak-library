@@ -77,16 +77,8 @@ public class ParseNames {
     public static final String TOLERANTLASTNAME = "(?:(?:" + SINGLETOLERANTLASTNAME + ")+"
             // Arbitrary amount of hyphens
             + "(?:-" + SINGLETOLERANTLASTNAME + ")*)";
-    public static final String TOLERANTFULLNAME_WITH_OPTIONAL_ROLE = "(?:"
-            + TOLERANTFULLNAME
-            + "(?:, {0,2}(" + ROLE_SINGULAR + "))?"
-            + ")";
-    public static final Pattern TITLED_NAME = Pattern.compile(TOLERANT_TITLED_NAME);
-    public static final String TOLERANTFULLNAME_2_TO_4 =
-            "" + TOLERANTFULLNAME_WITH_OPTIONAL_ROLE + ""
-                    + "(?:[,;] {0,2}" + TOLERANTFULLNAME_WITH_OPTIONAL_ROLE + "){0,3}"
-                    + "[,;]? {0,2}en[,;]? {0,2}\\b"
-                    + TOLERANTFULLNAME_WITH_OPTIONAL_ROLE + "";
+
+
     //Token.string ==~ ".*[aeiouy].*", //At least one vowel...
     public static final String STRICTINITIALSNAMEWITHMULTIPLEINITIALS = "((" +
             KNOWN_TITLE +
@@ -153,6 +145,18 @@ public class ParseNames {
             "(?:(" + KNOWN_TITLES + ") {0,2})?"
                     + "(?:(" + STRICT_INITIALS + ") {0,2})"
                     + "(" + TOLERANTLASTNAME + ")";
+    public static final String TOLERANTFULLNAME_WITH_OPTIONAL_ROLE = "(?:"
+            + TOLERANTFULLNAME
+            + "(?:, {0,2}(" + ROLE_SINGULAR + "))?"
+            + ")";
+    public static final Pattern TITLED_NAME = Pattern.compile(TOLERANT_TITLED_NAME);
+
+    public static final String TOLERANTFULLNAME_2_TO_4 =
+            "" + TOLERANTFULLNAME_WITH_OPTIONAL_ROLE + ""
+                    + "(?:[,;] {0,2}" + TOLERANTFULLNAME_WITH_OPTIONAL_ROLE + "){0,3}"
+                    + "[,;]? {0,2}en[,;]? {0,2}\\b"
+                    + TOLERANTFULLNAME_WITH_OPTIONAL_ROLE + "";
+
 
     public static List<Name> getNames(Matcher matcher, boolean checkSurname) {
         List<Name> names = new ArrayList<>();
@@ -194,28 +198,6 @@ public class ParseNames {
         return false;
     }
 
-    /**
-     * griffier [mr. A. B. van der Werf]
-     */
-    public List<Name> MediumConfidenceRolePre(String s) {
-//        (Pattern.compile(
-//                "[Dd]e"
-//                        + " (" + ROLE_SINGULAR + ")"
-//                        + "([:;])?"
-//                        // Having two or more initials makes the name more probable, or alternatively a title
-//                        + " ("
-//                        + "(" +
-//                        "(" +
-//                        "(" + KNOWN_TITLE + ")*" +
-//                        "(" + STRICT_INITIAL + ")+)" +
-//                        "(" + KNOWNSURNAME + ")" +
-//                        ")|(" +
-//                        "(" + KNOWN_TITLE + ")+" +
-//                        "(" + STRICT_INITIAL + ")*" +
-//                        "(" + TOLERANTLASTNAME + ")))"
-//        ))
-        return null; // TODO: 16-3-16
-    }
 
     public enum Patterns {
         /**
@@ -295,7 +277,15 @@ public class ParseNames {
             }
             return names;
         }),
-
+        /**
+         * Medium conf
+         */
+        RolePre(Pattern.compile(
+                "" + ROLE_SINGULAR + ""
+                        + "[:; ]{1,3}"
+                        // Having two or more initials makes the name more probable, or alternatively a title
+                        + TOLERANTFULLNAME),
+                true),
         /**
          * high confidence
          * mr A de B als X

@@ -1,6 +1,7 @@
 package org.leibnizcenter.rechtspraak.markup;
 
 import org.leibnizcenter.rechtspraak.markup.features.IsAllCaps;
+import org.leibnizcenter.rechtspraak.markup.nameparser.ParseNames;
 import org.leibnizcenter.rechtspraak.util.TextBlockInfo;
 import org.leibnizcenter.rechtspraak.util.numbering.NumberingNumber;
 import org.leibnizcenter.rechtspraak.util.numbering.SubSectionNumber;
@@ -22,12 +23,11 @@ public class RechtspraakElement implements Element {
     public final boolean isSpaced;
     public final boolean isAllCaps;
     private final String textContent;
-    public boolean containsName;
+    private boolean highConfidenceNumberedTitleFoundAndIsNumbered;
 
     public RechtspraakElement(Element e) {
         this.e = e;
         this.textContent = e.getTextContent().trim();
-        containsName = false;//ParseNames.nameFound(textContent);//todo
 
         this.numbering = startsWithNumber(textContent);
 
@@ -442,5 +442,10 @@ public class RechtspraakElement implements Element {
     @Override
     public String toString() {
         return e.getTagName() + ": " + textContent;
+    }
+
+    public void setHighConfidenceNumberedTitleFoundAndIsNumbered(boolean highConfidenceNumberedTitleFoundAndIsNumbered) {
+        if (this.numbering == null) throw new IllegalStateException();
+        this.highConfidenceNumberedTitleFoundAndIsNumbered = highConfidenceNumberedTitleFoundAndIsNumbered;
     }
 }
