@@ -1,7 +1,6 @@
 package org.leibnizcenter.rechtspraak.markup;
 
 import org.leibnizcenter.rechtspraak.markup.features.IsAllCaps;
-import org.leibnizcenter.rechtspraak.markup.nameparser.ParseNames;
 import org.leibnizcenter.rechtspraak.util.TextBlockInfo;
 import org.leibnizcenter.rechtspraak.util.numbering.NumberingNumber;
 import org.leibnizcenter.rechtspraak.util.numbering.SubSectionNumber;

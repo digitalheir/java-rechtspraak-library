@@ -1,13 +1,17 @@
 package org.leibnizcenter.rechtspraak.markup.nameparser;
 
+import cc.mallet.types.Token;
 import gate.util.GateException;
 import org.leibnizcenter.rechtspraak.features.KnownSurnamesNl;
+import org.leibnizcenter.rechtspraak.markup.RechtspraakElement;
 import org.leibnizcenter.rechtspraak.util.TextPattern;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
+import java.util.EnumSet;
 import java.util.List;
+import java.util.Set;
 import java.util.function.Function;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -15,7 +19,7 @@ import java.util.regex.Pattern;
 /**
  * Created by maarten on 14-3-16.
  */
-public class ParseNames {
+public class Names {
     // Personal titles
     public static final String KNOWN_TITLE =
             "(?:BA\\.?|[BbMm]\\.?[Ss][Cc]\\.?|LLM|MA|MPhil\\.?|P\\.?[Hh]\\.?D\\.?" +
@@ -190,7 +194,7 @@ public class ParseNames {
     }
 
     public static boolean nameFound(String s) {
-        for (Patterns p : Patterns.values()) {
+        for (NamePatterns p : NamePatterns.values()) {
             if (p.getNames(s).size() > 0) {
                 return true;
             }
@@ -199,7 +203,7 @@ public class ParseNames {
     }
 
 
-    public enum Patterns {
+    public enum NamePatterns implements org.leibnizcenter.rechtspraak.markup.features.Patterns.UnnormalizedTextContains {
         /**
          * All spans that sort-of look like a name
          */
@@ -354,19 +358,19 @@ public class ParseNames {
         private final boolean checkSurname;
         private final Function<Matcher, List<Name>> handleMatcher;
 
-        Patterns(Pattern pattern) {
+        NamePatterns(Pattern pattern) {
             this(pattern, false);
         }
 
 
-        Patterns(Pattern pattern, boolean checkIfSurnameIsKnown) {
+        NamePatterns(Pattern pattern, boolean checkIfSurnameIsKnown) {
             this.checkSurname = checkIfSurnameIsKnown;
             this.handleMatcher = null;
             this.pattern = new TextPattern(this.name(), pattern);
         }
 
 
-        Patterns(Pattern pattern, Function<Matcher, List<Name>> handleMatcher) {
+        NamePatterns(Pattern pattern, Function<Matcher, List<Name>> handleMatcher) {
             this.pattern = new TextPattern(this.name(), pattern);
             this.handleMatcher = handleMatcher;
             this.checkSurname = false;
@@ -377,9 +381,25 @@ public class ParseNames {
             if (handleMatcher != null) {
                 return handleMatcher.apply(matcher);
             } else {
-                return ParseNames.getNames(matcher, checkSurname);
+                return Names.getNames(matcher, checkSurname);
             }
         }
+
+        public static Set<NamePatterns> set = EnumSet.allOf(NamePatterns.class);
+
+        @Override
+        public boolean matches(String s) {
+            List<Name> names = getNames(s);
+            return names.size() > 0;
+        }
+
+        public static void setFeatureValues(Token t, RechtspraakElement token) {
+            set.forEach((p) -> {
+                if (org.leibnizcenter.rechtspraak.markup.features.Patterns.matches(p, token))
+                    t.setFeatureValue(p.toString(), 1.0);
+            });
+        }
+
 
         private static class Constants {
             public static final Function<Matcher, List<Name>> MATCHER_TODO = (matcher) -> {

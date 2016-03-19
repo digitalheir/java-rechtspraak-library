@@ -32,16 +32,16 @@ public class RechtspraakFilters extends HashSet<Filter<RechtspraakElement, Label
 //                .forEach(pattern -> this.add(pattern.filters.get(currentTag)));
 
         // Add patterns we've made
-        //TODO finetune params (use Patterns class)
+        //TODO finetune params (use NamePatterns class)
 //        TextBlockInfo.patterns.stream()
 //                .filter(pattern -> pattern.matches(normalizedText))
 //                .forEach(pattern -> this.add(pattern.filters.get(currentTag)));
 //
 //        if (Label.SECTION_TITLE.equals(currentTag)) {
-//            for (Patterns p : Patterns.values()) {
+//            for (NamePatterns p : NamePatterns.values()) {
 //                if (p.matches(thisToken.normalizedText)) {
 //                    if(Label.INFO.equals(previousTag))System.out.println("Likely title: "+previousTag+" -> "+currentTag+" (" + thisToken.normalizedText+")");
-//                    add(Patterns.filters.get(p).get(Label.SECTION_TITLE));
+//                    add(NamePatterns.filters.get(p).get(Label.SECTION_TITLE));
 //                }
 //            }
 //        }

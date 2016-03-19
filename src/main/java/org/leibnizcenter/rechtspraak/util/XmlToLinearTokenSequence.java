@@ -80,7 +80,7 @@
 //
 //        // Normalize strings
 //        for (String tokenStr : strings) {
-//            String normalized = FetchTopWords.normalizeToken(tokenStr).trim();// TODO also stem using snowball?
+//            String normalized = FetchTopWords.normalizeToken(tokenStr).trim();// TO DO also stem using snowball?
 //            normalizedStrings.add(normalized);
 //        }
 //

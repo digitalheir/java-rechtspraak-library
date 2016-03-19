@@ -334,7 +334,7 @@ public class TestPatterns {
 // "beschouwing rechtbank"  //16
         assertTrue(TitlePatterns.TitlesNormalizedMatchesLowConf.BESLAG.matches("beslag"));
 
-//assertTrue(Patterns.OnNormalizedText.ROLE_UNKOWN.matches("beslissing"));
+//assertTrue(NamePatterns.OnNormalizedText.ROLE_UNKOWN.matches("beslissing"));
 
 // "beslist"  //12
 // "besloten vennootschap"  //11
@@ -584,7 +584,7 @@ public class TestPatterns {
 // "gentimeerden"  //9
 // "gerechtshof amsterdam"  //13
 // "gerechtshof arnhemleeuwarden"  //58
-//assertTrue(Patterns.OnNormalizedText.ROLE_UNKOWN.matches("gerechtshof den haag"));
+//assertTrue(NamePatterns.OnNormalizedText.ROLE_UNKOWN.matches("gerechtshof den haag"));
 // "gerechtshof sgravenhage"  //42
 // "gerechtshof shertogenbosch"  //25
 // "gerechtshof te sgravenhage"  //12
@@ -633,7 +633,7 @@ public class TestPatterns {
 // "grondslag van het geschil"  //265
 // "h"  //22
 // "handelen in strijd met artikel eerste lid van de wet wapens en munitie"  //49
-//assertTrue(Patterns.OnNormalizedText.ROLE_UNKOWN.matches("hd"));
+//assertTrue(NamePatterns.OnNormalizedText.ROLE_UNKOWN.matches("hd"));
 // "heropening van het onderzoek"  //13
 // "hetgeen de rechtbank bewezen acht"  //99
 // "hof"  //26
@@ -696,7 +696,7 @@ public class TestPatterns {
 // "klacht en het verweer daartegen"  //14
 // "klager"  //18
 // "komen overeen dat"  //6
-//assertTrue(Patterns.OnNormalizedText.ROLE_UNKOWN.matches("kosten"));
+//assertTrue(NamePatterns.OnNormalizedText.ROLE_UNKOWN.matches("kosten"));
 // "kosten en griffierecht"  //12
 // "kostenveroordeling"  //13
 // "kwalificatie"  //291
@@ -786,9 +786,9 @@ public class TestPatterns {
 // "ondertoezichtstelling"  //9
 // "onderzoek"  //10
 // "onderzoek op de terechtzitting"  //643
-//assertTrue(Patterns.OnNormalizedText.ROLE_UNKOWN.matches("onderzoek ter terechtzitting"));
+//assertTrue(NamePatterns.OnNormalizedText.ROLE_UNKOWN.matches("onderzoek ter terechtzitting"));
 // "onderzoek ter zitting"  //7
-//assertTrue(Patterns.OnNormalizedText.ROLE_UNKOWN.matches("onderzoek van de zaak"));
+//assertTrue(NamePatterns.OnNormalizedText.ROLE_UNKOWN.matches("onderzoek van de zaak"));
 // "onderzoek wagner"  //10
 // "onrechtmatigheid ontruiming"  //6
 // "onschuldverweer"  //21
@@ -830,7 +830,7 @@ public class TestPatterns {
 // "oplegging van straf"  //551
 // "oplegging van straf en maatregel"  //97
 // "oplegging van straf en maatregelen"  //8
-//assertTrue(Patterns.OnNormalizedText.ROLE_UNKOWN.matches("oplegging van straf enof maatregel"));
+//assertTrue(NamePatterns.OnNormalizedText.ROLE_UNKOWN.matches("oplegging van straf enof maatregel"));
 // "oplegging van straf of maatregel"  //60
 // "oplegging van straffen"  //66
 // "oplegging van straffen en maatregel"  //18
@@ -848,7 +848,7 @@ public class TestPatterns {
 // "overweging met betrekking tot het bewijs van feit"  //11
 // "overweging omtrent het bewijs"  //6
 // "overweging van de rechtbank"  //6
-//assertTrue(Patterns.OnNormalizedText.ROLE_UNKOWN.matches("overwegingen"));
+//assertTrue(NamePatterns.OnNormalizedText.ROLE_UNKOWN.matches("overwegingen"));
 // "overwegingen ten aanzien van straf enof maatregel"  //7
 // "overzicht"  //60
 // "p verweerder"  //14
@@ -874,7 +874,7 @@ public class TestPatterns {
 // "procedure in hoger beroep"  //7
 // "procedures"  //10
 // "procesgang"  //8
-//assertTrue(Patterns.OnNormalizedText.ROLE_UNKOWN.matches("proceskosten"));
+//assertTrue(NamePatterns.OnNormalizedText.ROLE_UNKOWN.matches("proceskosten"));
 // "proceskosten en griffierecht"  //264
 // "proceskosten en griffierechten"  //29
 // "proceskosten en schadevergoeding"  //11
@@ -906,8 +906,8 @@ public class TestPatterns {
 // "rechtbank limburg"  //97
 // "rechtbank middennederland"  //73
 // "rechtbank noordholland"  //120
-//assertTrue(Patterns.OnNormalizedText.ROLE_UNKOWN.matches("rechtbank noordnederland"));
-//assertTrue(Patterns.OnNormalizedText.ROLE_UNKOWN.matches("rechtbank oostbrabant"));
+//assertTrue(NamePatterns.OnNormalizedText.ROLE_UNKOWN.matches("rechtbank noordnederland"));
+//assertTrue(NamePatterns.OnNormalizedText.ROLE_UNKOWN.matches("rechtbank oostbrabant"));
 // "rechtbank overijssel"  //242
 // "rechtbank overweegt als volgt"  //13
 // "rechtbank overweegt het volgende"  //7
@@ -916,7 +916,7 @@ public class TestPatterns {
 // "rechtbank zeelandwestbrabant"  //24
 // "rechtdoende"  //17
 // "rechthebbende"  //14
-//assertTrue(Patterns.OnNormalizedText.ROLE_UNKOWN.matches("rechtsmiddel"));//TODO
+//assertTrue(NamePatterns.OnNormalizedText.ROLE_UNKOWN.matches("rechtsmiddel"));//TODO
 // "rechtsmiddel tegen deze uitspraak kan binnen vier weken na de dag van verzending daarvan hoger beroep worden ingesteld bij de afdeling bestuursrechtspraak van de raad van state"  //12
 // "rechtsmiddel tegen deze uitspraak kan binnen zes weken na de dag van verzending daarvan hoger beroep worden ingesteld bij de centrale raad van beroep"  //6
 // "rechtsmiddel tegen deze uitspraak staat geen rechtsmiddel open"  //7
@@ -1062,7 +1062,7 @@ public class TestPatterns {
 // "ten aanzien van feit van"  //9
 // "ten aanzien van het onder ten laste gelegde"  //8
 // "ten aanzien van parketnummer"  //15
-//assertTrue(Patterns.OnNormalizedText.ROLE_UNKOWN.matches("tenlastelegging"));//TODO
+//assertTrue(NamePatterns.OnNormalizedText.ROLE_UNKOWN.matches("tenlastelegging"));//TODO
 // "tenlastelegging aan de verdachte is na wijziging van de tenlastelegging ter terechtzitting ten laste gelegd dat"  //7
 // "tenlastelegging aan de verdachte is ten laste gelegd dat"  //33
 // "tenlastelegging aan verdachte is ten laste gelegd dat"  //7
@@ -1086,10 +1086,10 @@ public class TestPatterns {
 // "toepasselijk wettelijk voorschrift"  //21
 // "toepasselijke recht"  //11
 // "toepasselijke regelgeving"  //7
-//assertTrue(Patterns.OnNormalizedText.ROLE_UNKOWN.matches("toepasselijke wetsartikelen"));
+//assertTrue(NamePatterns.OnNormalizedText.ROLE_UNKOWN.matches("toepasselijke wetsartikelen"));
 // "toepasselijke wetsbepalingen"  //90
 // "toepasselijke wettelijke bepaling"  //15
-//assertTrue(Patterns.OnNormalizedText.ROLE_UNKOWN.matches("toepasselijke wettelijke voorschriften"));  //2555
+//assertTrue(NamePatterns.OnNormalizedText.ROLE_UNKOWN.matches("toepasselijke wettelijke voorschriften"));  //2555
 // "toepasselijkheid wettelijke voorschriften"  //150
 // "toepassing van de wetsartikelen"  //8
 // "toepassing van wetsartikelen"  //502
@@ -1109,7 +1109,7 @@ public class TestPatterns {
 // "tweede middelfaalt"  //6
 // "uitgangspunten"  //113
 // "uitgangspunten in cassatie"  //136
-//assertTrue(Patterns.OnNormalizedText.ROLE_UNKOWN.matches("uitspraak"));  //3002 // TODO?
+//assertTrue(NamePatterns.OnNormalizedText.ROLE_UNKOWN.matches("uitspraak"));  //3002 // TODO?
 // "uitspraak dd april"  //25
 // "uitspraak dd augustus"  //24
 // "uitspraak dd december"  //27
@@ -1154,7 +1154,7 @@ public class TestPatterns {
 // "vaststelling van het wederrechtelijk verkregen voordeel"  //25
 // "vennootschap onder firma"  //9
 // "verbeurdverklaring"  //13
-//assertTrue(Patterns.OnNormalizedText.ROLE_UNKOWN.matches("verdachte"));  //3315
+//assertTrue(NamePatterns.OnNormalizedText.ROLE_UNKOWN.matches("verdachte"));  //3315
 // "verdediging"  //12
 // "verder verloop van de procedure"  //29
 // "verder verloop van het geding"  //45
@@ -1205,7 +1205,7 @@ public class TestPatterns {
 // "verschenen"  //7
 // "verslag van de advocaatgeneraal"  //20
 // "vervolg van de procedure"  //6
-//assertTrue(Patterns.OnNormalizedText.ROLE_UNKOWN.matches("verweer"));  //701//TODO
+//assertTrue(NamePatterns.OnNormalizedText.ROLE_UNKOWN.matches("verweer"));  //701//TODO
 // "verweer en het tegenverzoek"  //10
 // "verweer en zelfstandig verzoek"  //11
 // "verweer in conventie"  //43
@@ -1222,7 +1222,7 @@ public class TestPatterns {
 // "verwijzingsarrest"  //12
 // "verwijzingsopdracht"  //37
 // "verzet"  //9
-//assertTrue(Patterns.OnNormalizedText.ROLE_UNKOWN.matches("verzoek"));  //840//TODO
+//assertTrue(NamePatterns.OnNormalizedText.ROLE_UNKOWN.matches("verzoek"));  //840//TODO
 // "verzoek en de grondslag daarvan"  //25
 // "verzoek en het standpunt van de ind"  //8
 // "verzoek en het verweer"  //230
@@ -1254,7 +1254,7 @@ public class TestPatterns {
 // "vonnis van de kantonrechter van juli"  //7
 // "vonnis van oktober"  //7
 // "vonnis waartegen het hoger beroep is gericht"  //10
-//assertTrue(Patterns.OnNormalizedText.ROLE_UNKOWN.matches("vonnis waarvan beroep"));  //1188//TODO
+//assertTrue(NamePatterns.OnNormalizedText.ROLE_UNKOWN.matches("vonnis waarvan beroep"));  //1188//TODO
 // "voor een proceskostenveroordeling bestaat geen aanleiding"  //17
 // "vooraf"  //8
 // "voorbedachte raad"  //8
@@ -1263,7 +1263,7 @@ public class TestPatterns {
 // "voorlopige hechtenis"  //46
 // "voortgang van de behandeling van de zaak"  //7
 // "voortgezette handeling van"  //8
-//assertTrue(Patterns.OnNormalizedText.ROLE_UNKOWN.matches("voorvragen"));  //3060//TODO
+//assertTrue(NamePatterns.OnNormalizedText.ROLE_UNKOWN.matches("voorvragen"));  //3060//TODO
 // "voorwaardelijk verzoek"  //9
 // "voorwaardelijke incidentele beroep"  //9
 // "voorwaardelijke verzoeken"  //7
@@ -1366,7 +1366,7 @@ public class TestPatterns {
 // "wettelijk kader"  //52
 // "wettelijk kader en wetsgeschiedenis"  //6
 // "wettelijke rente"  //7
-//assertTrue(Patterns.OnNormalizedText.ROLE_UNKOWN.matches("wettelijke voorschriften"));  //795//TODO
+//assertTrue(NamePatterns.OnNormalizedText.ROLE_UNKOWN.matches("wettelijke voorschriften"));  //795//TODO
 // "wia"  //27
 // "wijziging van eis"  //22
 // "wijziging van omstandigheden"  //14

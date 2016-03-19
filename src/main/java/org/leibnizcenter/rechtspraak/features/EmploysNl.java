@@ -21,7 +21,7 @@ public class EmploysNl {
     static {
         InputStream is = EmploysNl.class
                 .getResourceAsStream(
-                        "/jape-select-names/gazetteer/employs/dutch_employs.lst"
+                        "/names/gazetteer/employs/dutch_employs.lst"
                 );
         LineReader lr = new LineReader(new InputStreamReader(is));
         patterns = new HashSet<>(1500);

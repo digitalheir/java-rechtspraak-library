@@ -20,7 +20,7 @@ public class PlaceNamesInNL {
     static {
         InputStream is = PlaceNamesInNL.class
                 .getResourceAsStream(
-                        "/jape-select-names/gazetteer/dutch-place-names/dutch_place_names.lst"
+                        "/names/gazetteer/dutch-place-names/dutch_place_names.lst"
                 );
         LineReader lr = new LineReader(new InputStreamReader(is));
         patterns = new HashSet<>(6500);

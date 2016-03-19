@@ -188,7 +188,7 @@ public class RechtspraakTokenList extends ArrayList<RechtspraakToken> {
 //                System.out.println("https://rechtspraak.cloudant.com/docs/" + ecli + "/data.xml");
 //            }
 //
-//            //TODO   away with enum iterators / lambdas
+//            //TO DO   away with enum iterators / lambdas
 //            TextBlockInfo.setFeaturesForTrimmedTextContent(textContent, token, ecli);
 //            TextBlockInfo.setFeaturesForFullTextContent(textContent, token, ecli);
 //

@@ -2,7 +2,7 @@ package org.leibnizcenter.rechtspraak.markup.features.patterns;
 
 import org.junit.Test;
 import org.leibnizcenter.rechtspraak.features.KnownSurnamesNl;
-import org.leibnizcenter.rechtspraak.markup.nameparser.ParseNames;
+import org.leibnizcenter.rechtspraak.markup.nameparser.Names;
 
 import java.util.List;
 import java.util.regex.Pattern;
@@ -27,7 +27,7 @@ public class TestPersonNamePatterns {
 
     @Test
     public void testNamePatterns() {
-        Pattern knownTitle = Pattern.compile(ParseNames.KNOWN_TITLE);
+        Pattern knownTitle = Pattern.compile(Names.KNOWN_TITLE);
         assertTrue(knownTitle.matcher("BA.").matches());
         assertTrue(knownTitle.matcher("meneer").matches());
         assertTrue(knownTitle.matcher("mevrouw").matches());
@@ -41,7 +41,7 @@ public class TestPersonNamePatterns {
         assertTrue(knownTitle.matcher("bacc.").matches());
 
 
-        Pattern preRoleSing = Pattern.compile(ParseNames.ROLE_SINGULAR);
+        Pattern preRoleSing = Pattern.compile(Names.ROLE_SINGULAR);
         assertTrue(preRoleSing.matcher("advocaat").matches());
         assertTrue(preRoleSing.matcher("Advocate").matches());
         assertTrue(preRoleSing.matcher("Advocate-Generaal").matches());
@@ -57,7 +57,7 @@ public class TestPersonNamePatterns {
         assertTrue(preRoleSing.matcher("Rechter").matches());
         assertTrue(preRoleSing.matcher("rechter Commissaris").matches());
 
-        Pattern preRoleMult = Pattern.compile(ParseNames.ROLE_MULTIPLE);
+        Pattern preRoleMult = Pattern.compile(Names.ROLE_MULTIPLE);
         assertTrue(preRoleMult.matcher("advocaten").matches());
         assertTrue(preRoleMult.matcher("Advocates").matches());
         assertTrue(preRoleMult.matcher("Advocaten-Generaal").matches());
@@ -73,8 +73,8 @@ public class TestPersonNamePatterns {
         assertTrue(preRoleMult.matcher("Rechters").matches());
         assertTrue(preRoleMult.matcher("rechter Commissarissen").matches());
 
-        Pattern strictInitial = Pattern.compile(ParseNames.STRICT_INITIAL);
-        Pattern looseInitials = Pattern.compile(ParseNames.LOOSE_INITIALS);
+        Pattern strictInitial = Pattern.compile(Names.STRICT_INITIAL);
+        Pattern looseInitials = Pattern.compile(Names.LOOSE_INITIALS);
         assertTrue(strictInitial.matcher("M.").matches());
         assertTrue(strictInitial.matcher("Thc.").matches());
         assertFalse(strictInitial.matcher("Thc").matches());
@@ -82,57 +82,57 @@ public class TestPersonNamePatterns {
         assertTrue(looseInitials.matcher("M F A").matches());
         assertTrue(looseInitials.matcher("M F. A.").matches());
 
-        Pattern tolerantSingleName = Pattern.compile(ParseNames.TOLERANTFULLNAME_WITH_OPTIONAL_ROLE);
+        Pattern tolerantSingleName = Pattern.compile(Names.TOLERANTFULLNAME_WITH_OPTIONAL_ROLE);
         assertTrue(tolerantSingleName.matcher("V.D.W. van der Laan-Wijngaerde, advocaat").matches());
         assertTrue(tolerantSingleName.matcher("V D Willem Willem, raadheer").matches());
         assertTrue(tolerantSingleName.matcher("V D. de Beer de Laer Dupont, ambtenaar").matches());
 
-        List<ParseNames.Name> namez = ParseNames.Patterns.WasGetekend.getNames("was getekend. A.F.T. de Waal");
+        List<Names.Name> namez = Names.NamePatterns.WasGetekend.getNames("was getekend. A.F.T. de Waal");
         assertEquals(namez.size(), 1);
         assertEquals(namez.get(0).titles.string, null);
         assertEquals(namez.get(0).firstName.string, "A.F.T.");
         assertEquals(namez.get(0).lastName.string, "de Waal");
 
-        namez = ParseNames.Patterns.WasGetekend.getNames("w.g mr. Vincent W. Willems");
+        namez = Names.NamePatterns.WasGetekend.getNames("w.g mr. Vincent W. Willems");
         assertEquals(namez.size(), 1);
         assertEquals(namez.get(0).titles.string, "mr.");
         assertEquals(namez.get(0).firstName.string, "Vincent W.");
         assertEquals(namez.get(0).lastName.string, "Willems");
 
 
-        namez = ParseNames.Patterns.TitledNameKnownSurname.getNames("w.g. mr. Vincent W. Willems");
+        namez = Names.NamePatterns.TitledNameKnownSurname.getNames("w.g. mr. Vincent W. Willems");
         assertEquals(namez.get(0).lastName.string, "Willems");
         assertEquals(namez.get(0).titles.string, "mr.");
 
-        namez = ParseNames.Patterns.StrictInitialsTolerantName.getNames("prof. Vincent Willems prof. S.T. R.I. C.T. van der Berg.");
+        namez = Names.NamePatterns.StrictInitialsTolerantName.getNames("prof. Vincent Willems prof. S.T. R.I. C.T. van der Berg.");
         assertEquals(namez.get(0).lastName.string, "van der Berg");
 
-        namez = ParseNames.Patterns.StrictInitialsKnownSurname.getNames("prof. Vincent Willems prof. S.T. R.I. C.T. van der Berg.");
+        namez = Names.NamePatterns.StrictInitialsKnownSurname.getNames("prof. Vincent Willems prof. S.T. R.I. C.T. van der Berg.");
         assertEquals(namez.get(0).lastName.string, "van der Berg");
 
-        namez = ParseNames.Patterns.AdvocaatPre.getNames("met advocaat : mr. A.B. van der Berg");
+        namez = Names.NamePatterns.AdvocaatPre.getNames("met advocaat : mr. A.B. van der Berg");
         assertEquals(namez.get(0).titles.string, "mr.");
         assertEquals(namez.get(0).firstName.string, "A.B.");
         assertEquals(namez.get(0).lastName.string, "van der Berg");
 
-        namez = ParseNames.Patterns.GewezenDoor.getNames("is gewezen door : mr. A.B. van der Berg");
+        namez = Names.NamePatterns.GewezenDoor.getNames("is gewezen door : mr. A.B. van der Berg");
         assertEquals(namez.get(0).titles.string, "mr.");
         assertEquals(namez.get(0).firstName.string, "A.B.");
         assertEquals(namez.get(0).lastName.string, "van der Berg");
 
-        namez = ParseNames.Patterns.GexxxDoorRolePost.getNames("is vertegenwoordigd door : mr. A.B. van der Berg, advocaat");
+        namez = Names.NamePatterns.GexxxDoorRolePost.getNames("is vertegenwoordigd door : mr. A.B. van der Berg, advocaat");
         assertEquals(namez.get(0).titles.string, "mr.");
         assertEquals(namez.get(0).firstName.string, "A.B.");
         assertEquals(namez.get(0).lastName.string, "van der Berg");
         assertEquals(namez.get(0).role.string, "advocaat");
 
-        namez = ParseNames.Patterns.DeXConcludeert.getNames("de rechter mr. A.B. van der Berg heeft concludeerde");
+        namez = Names.NamePatterns.DeXConcludeert.getNames("de rechter mr. A.B. van der Berg heeft concludeerde");
         assertEquals(namez.get(0).titles.string, "mr.");
         assertEquals(namez.get(0).firstName.string, "A.B.");
         assertEquals(namez.get(0).lastName.string, "van der Berg");
         assertEquals(namez.get(0).role.string, "rechter");
 
-        namez = ParseNames.Patterns.NameAlsX.getNames("de ambtenaar mr. A.B. van der Berg, advocaat, als rechter heeft concludeerde");
+        namez = Names.NamePatterns.NameAlsX.getNames("de ambtenaar mr. A.B. van der Berg, advocaat, als rechter heeft concludeerde");
         assertEquals(namez.get(0).titles.string, "mr.");
         assertEquals(namez.get(0).firstName.string, "A.B.");
         assertEquals(namez.get(0).lastName.string, "van der Berg");
@@ -143,19 +143,19 @@ public class TestPersonNamePatterns {
 //        assertEquals(pttrn.get(0).role.string, "advocaat");
 
         // Namegroups todo
-        namez = ParseNames.Patterns.Meesters.getNames("uhh w.g. mrs. Vincent W. Willems en M. Nellen allen als advocaat :-)");
+        namez = Names.NamePatterns.Meesters.getNames("uhh w.g. mrs. Vincent W. Willems en M. Nellen allen als advocaat :-)");
         assertTrue(namez.size() > 0);
         //assertEquals(namez.get(0).lastName.string, "Willems");
-        namez = ParseNames.Patterns.GexxxDoorMultiple.getNames("uhh vertegenwoordigd door mrs. Vincent W. Willems en M. Nellen allen als advocaat :-)");
+        namez = Names.NamePatterns.GexxxDoorMultiple.getNames("uhh vertegenwoordigd door mrs. Vincent W. Willems en M. Nellen allen als advocaat :-)");
         assertTrue(namez.size() > 0);
-        namez = ParseNames.Patterns.RolePreMultiple.getNames("uhh vertegenwoordigd door rechters mrs. Vincent W. Willems en M. Nellen, advocaten :-)");
+        namez = Names.NamePatterns.RolePreMultiple.getNames("uhh vertegenwoordigd door rechters mrs. Vincent W. Willems en M. Nellen, advocaten :-)");
         assertTrue(namez.size() > 0);
 
 
 //        ("advocaat V D Willem Willem, advocaat als raadsheer"));
 //        assertTrue(UnnormalizedTextContainsName.HighConfidenceRolePost.matches("V D Willem Willem als raadsheer"));
 
-//        Pattern tolerantMultipleNames = Pattern.compile(Patterns.TOLERANTFULLNAME_2_TO_4);
+//        Pattern tolerantMultipleNames = Pattern.compile(NamePatterns.TOLERANTFULLNAME_2_TO_4);
 //        assertTrue(tolerantSingleName.matcher("V. Willems en C. Willems").matches());
 //        assertTrue(tolerantSingleName.matcher("V. Willems en C. Willems").matches());
 //                , ambtenaren"

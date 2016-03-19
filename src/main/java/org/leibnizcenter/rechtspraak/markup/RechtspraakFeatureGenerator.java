@@ -58,11 +58,11 @@ public class RechtspraakFeatureGenerator extends CrfFeatureGenerator<Rechtspraak
         );
 
 //        // Whether this is a section title that looks like something we've seen a lot before
-//        for (Patterns p : Patterns.values()) {
+//        for (NamePatterns p : NamePatterns.values()) {
 //            features.add(
 //                    new CrfFilteredFeature<>(
-//                            Patterns.features.get(p).get(Label.SECTION_TITLE),
-//                            Patterns.filters.get(p).get(Label.SECTION_TITLE),
+//                            NamePatterns.features.get(p).get(Label.SECTION_TITLE),
+//                            NamePatterns.filters.get(p).get(Label.SECTION_TITLE),
 //                            true
 //                    ));
 //        }

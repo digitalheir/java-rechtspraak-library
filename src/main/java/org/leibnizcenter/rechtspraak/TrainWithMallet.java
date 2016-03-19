@@ -13,7 +13,7 @@ import org.leibnizcenter.rechtspraak.markup.Label;
 import org.leibnizcenter.rechtspraak.markup.RechtspraakElement;
 import org.leibnizcenter.rechtspraak.markup.RechtspraakTokenList;
 import org.leibnizcenter.rechtspraak.markup.features.IsPartOfList;
-import org.leibnizcenter.rechtspraak.markup.nameparser.ParseNames;
+import org.leibnizcenter.rechtspraak.markup.nameparser.Names;
 import org.leibnizcenter.rechtspraak.util.numbering.FullSectionNumber;
 import org.leibnizcenter.rechtspraak.util.numbering.SubSectionNumber;
 
@@ -318,7 +318,7 @@ public class TrainWithMallet {
         TitlePatterns.TitlesUnnormalizedContains.setFeatureValues(t, token);
 
         // Whether the text contains a name, or something that looks like a name
-        ParseNames.Patterns.setFeatureValues(t, token);
+        Names.NamePatterns.setFeatureValues(t, token);
 
         if (token.numbering != null) {
             if (token.numbering instanceof SubSectionNumber) {

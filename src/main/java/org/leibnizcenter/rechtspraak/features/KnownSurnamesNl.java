@@ -20,7 +20,7 @@ public class KnownSurnamesNl {
     static {
         InputStream is = KnownSurnamesNl.class
                 .getResourceAsStream(
-                        "/jape-select-names/gazetteer/dutch-surnames/family_names_common.lst"
+                        "names/gazetteer/dutch-surnames/family_names_common.lst"
                 );
         LineReader lr = new LineReader(new InputStreamReader(is));
         patterns = new HashSet<>(125000);

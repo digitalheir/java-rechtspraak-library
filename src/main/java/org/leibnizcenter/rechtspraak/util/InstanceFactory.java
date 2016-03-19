@@ -87,7 +87,7 @@
 //                System.out.println("https://rechtspraak.cloudant.com/docs/" + ecli + "/data.xml");
 //            }
 //
-//            //TODO   away with enum iterators / lambdas
+//            //NOTE (or to do)   away with enum iterators / lambdas
 //            TextBlockInfo.setFeaturesForTrimmedTextContent(textContent, token, ecli);
 //            TextBlockInfo.setFeaturesForFullTextContent(textContent, token, ecli);
 //
