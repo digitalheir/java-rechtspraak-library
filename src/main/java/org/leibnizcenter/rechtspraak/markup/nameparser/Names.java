@@ -82,7 +82,18 @@ public class Names {
             // Arbitrary amount of hyphens
             + "(?:-" + SINGLETOLERANTLASTNAME + "){0,5})";
 
+    private static final String TOLERANT_FIRSTNAMES = "(?:\\b" + TOLERANT_FIRSTNAME + "(?: {1,2}" + TOLERANT_FIRSTNAME + "){0,5})";
+    public static final String TOLERANT_FIRST_NAME_AND_OR_INITIALS =
+            "(?:" + TOLERANT_FIRSTNAMES
+                    + "(?: {0,2}\\b" + LOOSE_INITIALS + ")?"
+                    + "|" + LOOSE_INITIALS + ")";
+    /////////////////////////////////////////
+    private static final String KNOWN_TITLES = "(?:" + KNOWN_TITLE + "(?: {0,2}" + KNOWN_TITLE + "){0,4})";
 
+    public static final String TOLERANTFULLNAME_STRICT_INITIALS =
+            "(?:(" + KNOWN_TITLES + ") {0,2})?"
+                    + "(?:(" + STRICT_INITIALS + ") {0,2})"
+                    + "(" + TOLERANTLASTNAME + ")";
     //Token.string ==~ ".*[aeiouy].*", //At least one vowel...
     public static final String STRICTINITIALSNAMEWITHMULTIPLEINITIALS = "((" +
             KNOWN_TITLE +
@@ -93,6 +104,20 @@ public class Names {
             ")+(" +
             TOLERANTLASTNAME +
             "))";
+    /**
+     * Ex. [mr. Vox], [mr. A.D.W. de Heyde]
+     */
+    public static final String TOLERANT_TITLED_NAME =
+            "(" + KNOWN_TITLES + ") {0,2}"
+                    + "(" + TOLERANT_FIRST_NAME_AND_OR_INITIALS + " {0,2})"
+                    + "(" + TOLERANTLASTNAME + ")";
+    /**
+     * [Vincent Willems]
+     */
+    public static final String TOLERANTFULLNAME =
+            "(?:(" + KNOWN_TITLES + ") {0,2})?"
+                    + "(?:(" + TOLERANT_FIRST_NAME_AND_OR_INITIALS + ") {0,2})"
+                    + "(" + TOLERANTLASTNAME + ")";
     /**
      * Matches any non-space strings
      */
@@ -133,31 +158,7 @@ public class Names {
      * i.e., we should ignore the word 'Voorzitter'
      */
     private static final String INTEGENWOORDIGHEIDVAN = "in(?: (?:het|de))? (?:bijzijn|tegenwoordigheid) van";
-    private static final String TOLERANT_FIRSTNAMES = "(?:\\b" + TOLERANT_FIRSTNAME + "(?: {1,2}" + TOLERANT_FIRSTNAME + "){0,5})";
-    public static final String TOLERANT_FIRST_NAME_AND_OR_INITIALS =
-            "(?:" + TOLERANT_FIRSTNAMES
-                    + "(?: {0,2}\\b" + LOOSE_INITIALS + ")?"
-                    + "|" + LOOSE_INITIALS + ")";
-    /////////////////////////////////////////
-    private static final String KNOWN_TITLES = "(?:" + KNOWN_TITLE + "(?: {0,2}" + KNOWN_TITLE + "){0,4})";
-    /**
-     * Ex. [mr. Vox], [mr. A.D.W. de Heyde]
-     */
-    public static final String TOLERANT_TITLED_NAME =
-            "(" + KNOWN_TITLES + ") {0,2}"
-                    + "(" + TOLERANT_FIRST_NAME_AND_OR_INITIALS + " {0,2})"
-                    + "(" + TOLERANTLASTNAME + ")";
-    /**
-     * [Vincent Willems]
-     */
-    public static final String TOLERANTFULLNAME =
-            "(?:(" + KNOWN_TITLES + ") {0,2})?"
-                    + "(?:(" + TOLERANT_FIRST_NAME_AND_OR_INITIALS + ") {0,2})"
-                    + "(" + TOLERANTLASTNAME + ")";
-    public static final String TOLERANTFULLNAME_STRICT_INITIALS =
-            "(?:(" + KNOWN_TITLES + ") {0,2})?"
-                    + "(?:(" + STRICT_INITIALS + ") {0,2})"
-                    + "(" + TOLERANTLASTNAME + ")";
+
 
     public static List<Name> getNames(Matcher matcher, boolean checkSurname) {
         List<Name> names = new ArrayList<>();

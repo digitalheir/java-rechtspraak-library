@@ -25,6 +25,7 @@ import java.util.HashSet;
 import java.util.List;
 
 /**
+ * Tests for correct feature vector sequence initialization
  * Created by maarten on 13-3-16.
  */
 public class TestRechtspraakCorpus {
@@ -74,11 +75,12 @@ public class TestRechtspraakCorpus {
         ));
 
         RechtspraakCorpus rsCorpus = new RechtspraakCorpus(corpus);
+        Assert.assertTrue(rsCorpus.size()>0);
     }
 
     public List<RechtspraakToken> getTokenList(DocumentBuilder builder, String ecli) throws SAXException, IOException {
         InputStream is = TestRechtspraakCorpus.class.getResourceAsStream("/docs/" + ecli.replaceAll(":", ".") + ".xml");
         Document doc = builder.parse(new InputSource(new InputStreamReader(is)));
-        return RechtspraakTokenList.from(ecli, Xml.getContentRoot(doc));
+        return RechtspraakTokenList.from(ecli,doc, Xml.getContentRoot(doc));
     }
 }
