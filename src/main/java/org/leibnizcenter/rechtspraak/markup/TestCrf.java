@@ -61,7 +61,7 @@ public final class TestCrf implements Runnable {
                 Document doc = builder.parse(new InputSource(new InputStreamReader(is)));
 
                 List<RechtspraakElement> instance =
-                        Lists.transform(RechtspraakTokenList.from(ecli, Xml.getContentRoot(doc)), TaggedToken::getToken);
+                        Lists.transform(RechtspraakTokenList.from(ecli, doc, Xml.getContentRoot(doc)), TaggedToken::getToken);
                 List<TaggedToken<RechtspraakElement, Label>> result = inferencePerformer.tagSequence(instance);
 
                 // Print the result:

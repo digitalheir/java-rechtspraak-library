@@ -17,7 +17,7 @@ public interface TitlePatterns {
     // TITLES
     //
     public enum TitlesUnnormalizedContains implements Patterns.UnnormalizedTextContains, TitlePatterns {
-        ENDS_W_COLON(new TextPattern(Pattern.compile(":\\s*$")));
+        ENDS_W_COLON(new TitleTextPattern(Pattern.compile(":$")));
         public static Set<TitlesNormalizedMatchesHighConf> set = EnumSet.allOf(TitlesNormalizedMatchesHighConf.class);
         private final TextPattern pattern;
 
@@ -45,41 +45,41 @@ public interface TitlePatterns {
         //"bewezenverklaring"));
 
 
-        FACTS(new TextPattern(Pattern.compile("(t(en)? ?\\.? ?a(anzien)? ?\\.? ?v(an)? ?\\.? ?)?" +
-                "(de )?" +
-                "(tussen (de )?partijen )?" +
-                "([\\p{L}]+ )?" +
-                "(feiten|uitgangs?punten)" +
-                "( voor zover van belang)?" +
-                "( en)?" +
-                "( (de|het))?" +
-                "( omstandigheden|geding)?" +
-                "( in( (de|het))?( feitelijke)? [\\p{L}]+)?" +
-                "( (va|i)n( (de|het))? (beide )?[\\p{L}]+)?" +
-                "( in (re)?conventie en (in )?(re)?conventie)?" +
-                "\\s*", Pattern.CASE_INSENSITIVE)
+        FACTS(new TitleTextPattern(Pattern.compile("(t(en)? ?\\.? ?a(anzien)? ?\\.? ?v(an)? ?\\.? ?)?" +
+                        "(de )?" +
+                        "(tussen (de )?partijen )?" +
+                        "([\\p{L}]{1,25} )?" +
+                        "(feiten|uitgangs?punten)" +
+                        "( voor zover van belang)?" +
+                        "( en)?" +
+                        "( (de|het))?" +
+                        "( (omstandighei?d(en)?|[a-z]{1,10}))?" +
+                        "( in( (de|het))?( feitelijke)? [\\p{L}]{1,25})?" +
+                        "( (va|i)n( (de|het))? (beide )?[\\p{L}]{1,10})?" +
+                        "( en( in)?( de)?( voorwaardelijke?)? [\\p{L}]{1,25})?",
+                Pattern.CASE_INSENSITIVE)
 
         )),
 
-        INVESTIGATION(new TextPattern(
-                Pattern.compile("(het )?onderzoek( ((van de|der) zaak|([dt]er|op de) terechtzitting|([^\\p{L}]+\\b[\\p{L}]+\\b){0,3}))\\s*",
+        INVESTIGATION(new TitleTextPattern(
+                Pattern.compile("(het )?onderzoek( ((van de|der) zaak|([dt]er|op de) terechtzitting|([ ]{1,3}\\b\\p{L}{1,25}\\b){0,3}))",
                         Pattern.CASE_INSENSITIVE))),
 
 
-        GUARANTEE(new TextPattern(Pattern.compile(
-                "(de )?garantie( als bedoeld in( artikel)?(([^\\p{L}]+[\\p{L}0-9]+){0,3})" +
-                        "( van de)?(([^\\p{L}]+\\b[\\p{L}0-9]+\\b){0,3}))?"
+        GUARANTEE(new TitleTextPattern(Pattern.compile(
+                "(de )?garantie( als bedoeld in( artikel)?(( {1,3}[\\p{L}0-9]{1,25}){0,3})" +
+                        "( van de)?(( {1,3}\\b[\\p{L}0-9]{1,25}\\b){0,3}))?"
         ))),
 
         /**
          * see http://uitspraken.rechtspraak.nl/inziendocument?id=ECLI:NL:RBAMS:2015:9594
          */
-        IDENTITY(new TextPattern(Pattern.compile("identiteit van de opge[eë]iste persoon",
+        IDENTITY(new TitleTextPattern(Pattern.compile("identiteit van de opge[eë]iste persoon",
                 Pattern.CASE_INSENSITIVE))),
 
 
-        CASE(new TextPattern(Pattern.compile("(([0-9]|i{0,3}v?i{0,3}) ?)?" +
-                        "((de )?(((mondelinge )?[\\p{L}]+) van|uitspraak in) )?" +
+        CASE(new TitleTextPattern(Pattern.compile("(([0-9]|i{0,3}v?i{0,3}) ?)?" +
+                        "((de )?(((mondelinge )?\\p{L}{1,25}) van|uitspraak in) )?" +
                         "((de|het) feiten en )?" +
                         "((de|het) (aan)?duiding( van)?)?" +
                         "((de|het) )?" +
@@ -90,24 +90,24 @@ public interface TitlePatterns {
                         "|besluit|zaak|(wrakings?)?verzoek(en)?)" +
 
                         "( (in|waarvan|op)( (de|het))?" +
-                        "( (voorwaardelijke|hogere?|hoofd|feitelijke|incidentee?le?|eer(ste|dere?)|tweede))? [\\p{L}]+)?" +
+                        "( (voorwaardelijke|hogere?|hoofd|feitelijke|incidentee?le?|eer(ste|dere?)|tweede))? \\p{L}{1,25})?" +
                         "(( waarvan)?( tot)? herziening(( is)? gevraagd( is)?)?)?" +
-                        "( (alsmede|en)( het)?( verweer)?([^\\p{L}]+\\b[\\p{L}]+\\b){0,4})?"
-                        + "( na [\\p{L}]+)?",
+                        "( (alsmede|en)( het)?( verweer)?( {1,3}\\b\\p{L}{1,25}\\b){0,4})?"
+                        + "( na \\p{L}{1,25})?",
                 Pattern.CASE_INSENSITIVE))),
 
-        CASSATIE(new TextPattern(Pattern.compile("(bespreking van (het|de) )?" +
+        CASSATIE(new TitleTextPattern(Pattern.compile("(bespreking van (het|de) )?" +
                         "(uitgangspunt(en)? )?(in )?" +
                         "cassatie(middel)?",
                 Pattern.CASE_INSENSITIVE)
         )),
 
 
-        QUESTIONS(new TextPattern(Pattern.compile("(de )?(voor)?vragen",
+        QUESTIONS(new TitleTextPattern(Pattern.compile("(de )?(voor)?vragen",
                 Pattern.CASE_INSENSITIVE
         )
         )),
-        LAWS_APPLICABLE(new TextPattern(Pattern.compile("((de|het) )?" +
+        LAWS_APPLICABLE(new TitleTextPattern(Pattern.compile("((de|het) )?" +
                         "((toepass(elijke?(heid)?|ing)|toegepaste|relevanti?e) )?" +
                         "( van)?((de|het) )?" +
                         "( juridische?)?" +
@@ -116,7 +116,7 @@ public interface TitlePatterns {
                 Pattern.CASE_INSENSITIVE
         )
         )),
-        INDICTMENT(new TextPattern(
+        INDICTMENT(new TitleTextPattern(
                 Pattern.compile("(de )?(inhoud van de )?tenlasten?legging",
                         Pattern.CASE_INSENSITIVE
                 )
@@ -124,38 +124,38 @@ public interface TitlePatterns {
 
 
         // Grondslag (van het geschil)
-        GRONDSLAG(new TextPattern(Pattern.compile("((de|het) )?grond(slag)?(en)?( van het (geschil|(hoger )?beroep))?",
+        GRONDSLAG(new TitleTextPattern(Pattern.compile("((de|het) )?grond(slag)?(en)?( van het (geschil|(hoger )?beroep))?",
                 Pattern.CASE_INSENSITIVE)
         )),
 
-        PIECES(new TextPattern(Pattern.compile("((de|het) )?(voorhanden )?stukken",
+        PIECES(new TitleTextPattern(Pattern.compile("((de|het) )?(voorhanden )?stukken",
                 Pattern.CASE_INSENSITIVE)
         )),
 
 
-        DEFENSE(new TextPattern(Pattern.compile(
+        DEFENSE(new TitleTextPattern(Pattern.compile(
                 "((de )?vordering (en )?)?" +
                         "((de|het) )?" +
                         "(onschulds?)?verwe?er(en)?" +
                         "( en( (het|de))?( tegen)?verzoek(en)?)?" +
-                        "( van( de)? [\\p{L}]+\\b)?",
+                        "( van( de)? \\p{L}{1,25}\\b)?",
                 Pattern.CASE_INSENSITIVE)
         )),
 
 
-        EAB(new TextPattern(Pattern.compile("((de )?((inhoud|grondslag) en )?(inhoud|grondslag) van het )?eab",
+        EAB(new TitleTextPattern(Pattern.compile("((de )?((inhoud|grondslag) en )?(inhoud|grondslag) van het )?eab",
                 Pattern.CASE_INSENSITIVE)
         )),
 
 
-        INTRO(new TextPattern(Pattern.compile("inleiding|overzicht",
+        INTRO(new TitleTextPattern(Pattern.compile("inleiding|overzicht",
                 Pattern.CASE_INSENSITIVE)
         )),
 
         //
         // beslissing
         //
-        JUDGMENT(new TextPattern(Pattern.compile(
+        JUDGMENT(new TitleTextPattern(Pattern.compile(
                 /**
                  * "beoordeling van het geschil en de motivering van de beslissing" //46
                  * "beoordeling van het verzoek en de motivering van de beslissing" //41
@@ -219,7 +219,7 @@ public interface TitlePatterns {
                          * "beslissingen op de vorderingen van de benadeelde partijen" //6
                          */
                         "(" +
-                        "(((de )?(bestreden )?(bewijs)?beslissing(en)?)([^\\p{L}]+\\b[\\p{L}]+\\b){0,8})" +
+                        "(((de )?(bestreden )?(bewijs)?beslissing(en)?)( {1,3}\\b\\p{L}{1,25}\\b){0,8})" +
                         /**
                          * "slotsom" //2423
                          * "slotsom en conclusie" //8
@@ -246,11 +246,11 @@ public interface TitlePatterns {
                         "|(vordering(en)?( in eerste aanleg)? en de beslissing(en)?( daarop)?( in eerste aanleg)?)" +
                         // oordeel van de rechtbank
                         "|((conclusie|reactie|(be)?oordee?l(ing)?|(uit|vrij)spraa?k(en)?)( van (de|het) " +
-                        "(officier van justitie|[\\p{L}]+))?)" +
+                        "(officier van justitie|\\p{L}{1,25}))?)" +
 
                         "|((tenuitvoerlegging )?(van )?( de)?(voorwaardelijke )?veroordeling)" +
                         "|(d[eé]cision)" +
-                        "))\\s*",
+                        "))",
                 Pattern.CASE_INSENSITIVE
         )
 
@@ -260,7 +260,7 @@ public interface TitlePatterns {
         //
         // overwegingen
         //
-        CONSIDERATIONS(new TextPattern(Pattern.compile(
+        CONSIDERATIONS(new TitleTextPattern(Pattern.compile(
                 "(i{0,3}v?i{0,3} ?)?" +
                         "((de|het) )?(" +
                         "(waardering van het bewijs)" +
@@ -295,7 +295,7 @@ public interface TitlePatterns {
                          * "rechtsoverwegingen" //40
                          * "vaststellingen en overwegingen" //19
                          */
-                        "|(((bewijs|vaststellingen) en )?((nadere|algemene|bijzondere|inleidende) )?(bewijs|rechts?)?(overwegingen|middelen|motivering)([^\\p{L}]+\\b[\\p{L}]+\\b){0,6})" +
+                        "|(((bewijs|vaststellingen) en )?((nadere|algemene|bijzondere|inleidende) )?(bewijs|rechts?)?(overwegingen|middelen|motivering)( {1,3}\\b\\p{L}{1,25}\\b){0,6})" +
                         /**
                          * "beoordeling" //13418
                          * "beoordeling door ..." //43
@@ -352,7 +352,7 @@ public interface TitlePatterns {
                          * */
                         "|(((standpunt(en)? van( de)? partij(en)?)|beschouwing|verzoek|geschil|grieven|vordering(en)?) en )?(uitgangspunten (van|voor) )?(de )?((ambtshalve|verdere|inhoudelijke|nadere) )?" +
                         "(be(oordeling|schouwing)" +
-                        "(([^\\p{L}]+\\b[\\p{L}]+\\b){0,11})?)" +//TODO remove?
+                        "(( {1,3}\\b\\p{L}{1,25}\\b){0,11})?)" +//TODO remove?
                         /**
                          * "feiten en achtergronden" //24
                          * * "gronden" //695
@@ -365,7 +365,7 @@ public interface TitlePatterns {
                          * "op te leggen straf of maatregel en de gronden daarvoor" //14
                          *  * "verzoek en de gronden daarvan" //78
                          */
-                        "|(((op te leggen (straf|maatregel) (of (maatregel|straf) )?en (de )?)|(feiten en achter)|(verzoek en de ))?gronden([^\\p{L}]+\\b[\\p{L}]+\\b){0,8})" +
+                        "|(((op te leggen (straf|maatregel) (of (maatregel|straf) )?en (de )?)|(feiten en achter)|(verzoek en de ))?gronden( {1,3}\\b\\p{L}{1,25}\\b){0,8})" +
                         /**
                          * "motivering" //266
                          * "motivering maatregel" //7
@@ -388,7 +388,7 @@ public interface TitlePatterns {
                          * "strafmotivering" //577
                          * "tenlastelegging en motivering van de gegeven vrijspraak" //6
                          */
-                        "|(tenlastelegging en )?((straf)?motivering(van )?([^\\p{L}]+\\b[\\p{L}]+\\b){0,8})" +
+                        "|(tenlastelegging en )?((straf)?motivering(van )?( {1,3}\\b\\p{L}{1,25}\\b){0,8})" +
                         ")",
                 Pattern.CASE_INSENSITIVE
         )
@@ -396,7 +396,7 @@ public interface TitlePatterns {
         )),
 
 
-        PROCEEDINGS(new TextPattern(Pattern.compile(
+        PROCEEDINGS(new TitleTextPattern(Pattern.compile(
                 "(i{0,3}v?i{0,3} ?)?" +
                         "(((de|het) )?verloop van )?" +
                         "((de|het) )?" +
@@ -417,10 +417,9 @@ public interface TitlePatterns {
                          */
                         "((((voor)?geschiedenis)|((inleiding )?feiten)) en )?" +
                         "(" + "(de|het) ?)?" +
-                        "("
-                        + "(((verdere?|voortgezet(te)?) )?" +
+                        "(" + "(((verdere?|voortgezet(te)?) )?" +
                         "proce(s|dure)(gang|verloop)?" +
-                        "(( [ei]n)( de)?([^\\p{L}]+\\b[\\p{L}]+\\b){0,2}\\s*)?" +
+                        "(( [ei]n)( de)?( {1,3}\\b\\p{L}{1,25}\\b){0,2}\\s{0,3})?" +
                         "(en vaststaande feiten)?)" +
                         "|((voor)?geschiedenis)" +
                         "|proce(s|dure)" +
@@ -431,7 +430,8 @@ public interface TitlePatterns {
                          * "ontstaan en loop van het geding voor verwijzing" 6
                          **/
                         "|(" +
-                        "(ontstaan en )?((verdere?|voortgezet(te)?) )?(ver)?loop(( van( (de|het) ?)?)?(procedures?|geding(en)?))?" +
+                        "(ontstaan en )?((verdere?|voortgezet(te)?) )?(ver)?loop" +
+                        "(( van( (de|het))?)? ?(procedures?|geding(en)?)( voor [a-z]{1,25})?)?" +
                         ")" +
                         "|(gang van zaken)" +
                         ")" +
@@ -449,12 +449,8 @@ public interface TitlePatterns {
 
         public static void setFeatureValues(Token t, RechtspraakElement token) {
             set.forEach((p) -> {
-                if (Patterns.matches(p, token)) t.setFeatureValue(p.toString(), 1.0);
+                if (Patterns.matches(p, token)) t.setFeatureValue(p.name(), 1.0);
             });
-        }
-
-        public boolean matches(String s) {
-            return this.pattern.matches(s);
         }
 
         public static boolean matchesAny(RechtspraakElement token) {
@@ -465,33 +461,39 @@ public interface TitlePatterns {
             }
             return false;
         }
+
+        public boolean matches(String s) {
+            return this.pattern.matches(s);
+        }
+
     }
 
     public enum TitlesNormalizedMatchesLowConf implements Patterns.NormalizedTextMatches, TitlePatterns {
 
         // BESLAG
-        BESLAG(new TextPattern(Pattern.compile("((de|het) )?beslag", Pattern.CASE_INSENSITIVE)
+        BESLAG(new TitleTextPattern(Pattern.compile("((de|het) )?beslag", Pattern.CASE_INSENSITIVE)
 
         )),
 
-        PUNISHMENT(new TextPattern(Pattern.compile("(kwalificatie en )?((de|het) )?" +
+        PUNISHMENT(new TitleTextPattern(Pattern.compile("(kwalificatie en )?((de|het) )?" +
                         "((op te leggen|oplegging) )?(van )?(de )?" +
                         "(straf(baarheid|oplegging)?|(straf)?maatregel)" +
                         "( (en|of|enof) (maatregel|straf))?" +
-                        "((( en)?( van)?( (de|het))? (bewezen ?verklaarde|daders?|verdachten?|feit(en)?))+)?" +
+                        "((( en)?( van)?( (de|het))? (bewezen ?verklaarde|daders?|verdachten?|feit(en)?)){1,4})?" +
                         "(vermeld )?( op)?( bijlage)?" +
-                        "([^\\p{L}0-9]+\\b[\\p{L}0-9]+\\b){0,4}\\s*",
+                        "([^\\p{L}0-9]{1,3}\\b[\\p{L}0-9]{1,25}\\b){0,4}",
                 Pattern.CASE_INSENSITIVE)
 
         )),
-        COSTS(new TextPattern(Pattern.compile("(i{0,3}v?i{0,3} ?)?"
+        COSTS(new TitleTextPattern(Pattern.compile("(i{0,3}v?i{0,3} ?)?"
                 + "([0-9]? ?)" +
                 "((de|het) )?(proces)?kosten( en griffierecht)?(veroordeling)?"))),
 
-        PAYMENT(new TextPattern(Pattern.compile("(verplichting (tot )?)?betaling( [av]an( (de|het))?[ +\\p{L}]+)?",
+        PAYMENT(new TitleTextPattern(Pattern.compile("(verplichting (tot )?)?betaling" +
+                        "( [av]an( (de|het))? {1,3}[\\p{L}]{1,25})?",
                 Pattern.CASE_INSENSITIVE)
         )),
-        PARTY(new TextPattern(Pattern.compile(
+        PARTY(new TitleTextPattern(Pattern.compile(
                 "(ten aanzien van )?" +
                         "((het )?geschil (alsmede )?)?" +
                         "(" +
@@ -502,12 +504,12 @@ public interface TitlePatterns {
                         "( en (de )?schadevergoedings?maatregel(en)?)?",
                 Pattern.CASE_INSENSITIVE)
         )),
-        STANDPUNT(new TextPattern(Pattern.compile("(het geschil )?((de|het) )?(standpunt|griev)(en)?" +
-                        "( van( (de|het))?(\\s+\\p{L}+){1,3})?" +
-                        "( en( van)?( (de|het))?(\\s+\\p{L}+){1,3})?",
+        STANDPUNT(new TitleTextPattern(Pattern.compile("(het geschil )?((de|het) )?(standpunt|griev)(en)?" +
+                        "( van( (de|het))?(\\s{1,3}\\p{L}{1,25}){1,3})?" +
+                        "( en( van)?( (de|het))?(\\s{1,3}\\p{L}{1,25}){1,3})?",
                 Pattern.CASE_INSENSITIVE)
         )),
-        DEMAND(new TextPattern(Pattern.compile(
+        DEMAND(new TitleTextPattern(Pattern.compile(
                 "((de|het) )?" +
                         "(bespreking (van )?)?" +
                         "((de|het) )?" +
@@ -515,20 +517,20 @@ public interface TitlePatterns {
                         "( van)?( de)?( (benadeelden?|officier(s|en)? van justitie))?",
                 Pattern.CASE_INSENSITIVE))),
 
-        RECEPTIVITY(new TextPattern(Pattern.compile("(de )?ontvankelijkheid" +
+        RECEPTIVITY(new TitleTextPattern(Pattern.compile("(de )?ontvankelijkheid" +
                         "( van( (de|het))? )?" +
                         "([\\p{L}]|openbaar ministerie|officier van justitie)?",
                 Pattern.CASE_INSENSITIVE))),
-        APPENDIX(new TextPattern(Pattern.compile("(de )?" +
+        APPENDIX(new TitleTextPattern(Pattern.compile("(de )?" +
                         "bijlage(n|s)?",
                 Pattern.CASE_INSENSITIVE))),
 
-        PROVE(new TextPattern(Pattern.compile("((de )?kwalificatie van )?" +
+        PROVE(new TitleTextPattern(Pattern.compile("((de )?kwalificatie van )?" +
                 "((het|de) )?" +
                 "bew(ijs|ezen)(verklaa?r(de|ing)|middel|voering|aanbod)?(en)?( en bewijsvoering)?", Pattern.CASE_INSENSITIVE)
 
         )),
-        DAMAGE(new TextPattern(Pattern.compile(
+        DAMAGE(new TitleTextPattern(Pattern.compile(
                 "(ten aanzien van )?" +
                         "((de|het) )?" +
                         "(immateri[ëe]le )?" +
@@ -538,29 +540,29 @@ public interface TitlePatterns {
                 Pattern.CASE_INSENSITIVE)
         )),
         QUALIFICATION(
-                new TextPattern(Pattern.compile("(de )?kwalificaties?",
+                new TitleTextPattern(Pattern.compile("(de )?kwalificaties?",
                         Pattern.CASE_INSENSITIVE))),
 
-        VORDERING(new TextPattern(Pattern.compile(
+        VORDERING(new TitleTextPattern(Pattern.compile(
                 "(ten aanzien van )?" +
                         "((de|het) )?vordering(en)?" +
                         "( van( de)?)?" +
                         "(( tot)? tenuitvoerlegging)?" +
                         "( (advocaatgeneraals?|officier van justitie|benadeelde partij(en)?))?" +
-                        "( +(en )?(de )?( immateriële)?schadevergoedings?maatregel(en)?)?" +
+                        "( {1,3}(en )?(de )?( immateriële)?schadevergoedings?maatregel(en)?)?" +
                         "( in (re)?conventie)?" +
                         "( benadeelde.?)?",
                 Pattern.CASE_INSENSITIVE)
         )),
-        GOODS(new TextPattern(Pattern.compile(
+        GOODS(new TitleTextPattern(Pattern.compile(
                 "((de|het) )?(in ?beslag ?genomen )?goed(eren)?",
                 Pattern.CASE_INSENSITIVE)
         )),
-        LEGAL_MEANS(new TextPattern(Pattern.compile("((de|het) )?(be(spreking|handeling) van )?" +
+        LEGAL_MEANS(new TitleTextPattern(Pattern.compile("((de|het) )?(be(spreking|handeling) van )?" +
                 "((de|het) )?" +
                 "(cassatie|rechts?)?middel(en)?"))),
 
-        RECONVENTION(new TextPattern(Pattern.compile("(in )?(re)?conventie( en (in )?(re)?conventie)?",
+        RECONVENTION(new TitleTextPattern(Pattern.compile("(in )?(re)?conventie( en (in )?(re)?conventie)?",
                 Pattern.CASE_INSENSITIVE)));
 
         public static Set<TitlesNormalizedMatchesLowConf> set = EnumSet.allOf(TitlesNormalizedMatchesLowConf.class);
@@ -579,6 +581,17 @@ public interface TitlePatterns {
 
         public boolean matches(String s) {
             return this.pattern.matches(s);
+        }
+    }
+
+    class TitleTextPattern extends TextPattern {
+        public TitleTextPattern(Pattern compile) {
+            super(compile);
+        }
+
+        @Override
+        public boolean matches(String text) {
+            return super.matches(text);
         }
     }
 }

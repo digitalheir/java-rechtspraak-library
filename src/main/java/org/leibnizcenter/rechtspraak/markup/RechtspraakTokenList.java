@@ -39,29 +39,29 @@ public class RechtspraakTokenList extends ArrayList<RechtspraakToken> {
     private static final String TAG_SECTION = "section";
     private static final String TAG_TITLE = "title";
     private static final String TAG_TEXT = "text";
-//    private static final String TAG_NR = "nr";
+    //    private static final String TAG_NR = "nr";
     private final String ecli;
+    private final Document doc;
 
-    public RechtspraakTokenList(String ecli, int initialCapacity) {
+    public RechtspraakTokenList(String ecli, int initialCapacity, Document document) {
         super(initialCapacity);
         this.ecli = ecli;
+        this.doc = document;
     }
 
-    public RechtspraakTokenList(String ecli) {
+    public RechtspraakTokenList(String ecli, Document document) {
         this.ecli = ecli;
+        this.doc = document;
     }
 
-    public RechtspraakTokenList(String ecli, Collection<? extends RechtspraakToken> c) {
+    public RechtspraakTokenList(String ecli, Document document, Collection<? extends RechtspraakToken> c) {
         super(c);
         this.ecli = ecli;
+        this.doc = document;
     }
 
-    public static RechtspraakTokenList from(Document doc) {
-        return from(null, doc);
-    }
-
-    public static RechtspraakTokenList from(String ecli, Node doc) {
-        RechtspraakTokenList tokenList = new RechtspraakTokenList(ecli, textInPreorder(doc, null, null, false));
+    public static RechtspraakTokenList from(String ecli, Document document, Node root) {
+        RechtspraakTokenList tokenList = new RechtspraakTokenList(ecli, document, textInPreorder(root, null, null, false));
 
         // find if there are numbered high likelihood-titles
         if (highConfidenceNumberedTitlesFound(tokenList)) {
@@ -72,6 +72,15 @@ public class RechtspraakTokenList extends ArrayList<RechtspraakToken> {
 
 
         return tokenList;
+    }
+
+    public static RechtspraakTokenList from(DocumentBuilder builder, File xmlFile, String ecli) throws SAXException, IOException {
+        FileInputStream is = new FileInputStream(xmlFile);
+        Document doc = builder.parse(new InputSource(new InputStreamReader(is)));
+//                assert ecli != null;
+//                assert doc != null;
+        //System.out.println("Parsed " + ecli);
+        return from(ecli, doc, Xml.getContentRoot(doc));
     }
 
     private static boolean highConfidenceNumberedTitlesFound(RechtspraakTokenList tokenList) {
@@ -150,13 +159,8 @@ public class RechtspraakTokenList extends ArrayList<RechtspraakToken> {
         return (Element) node;
     }
 
-    public static RechtspraakTokenList from(DocumentBuilder builder, File xmlFile, String ecli) throws SAXException, IOException {
-        FileInputStream is = new FileInputStream(xmlFile);
-        Document doc = builder.parse(new InputSource(new InputStreamReader(is)));
-//                assert ecli != null;
-//                assert doc != null;
-        //System.out.println("Parsed " + ecli);
-        return from(ecli, Xml.getContentRoot(doc));
+    public String getEcli() {
+        return ecli;
     }
 
     public void setFeatures(String ecli, Node doc) {
@@ -206,10 +210,15 @@ public class RechtspraakTokenList extends ArrayList<RechtspraakToken> {
 //        }
     }
 
+    public Document getSource() {
+        if (doc == null) throw new NullPointerException();
+        return doc;
+    }
+
     public static class FileIterator implements java.util.Iterator<RechtspraakTokenList> {
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         private File[] files;
         private int index = 0;
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         private DocumentBuilder builder = factory.newDocumentBuilder();
 
         public FileIterator(File... files) throws ParserConfigurationException {
@@ -263,7 +272,6 @@ public class RechtspraakTokenList extends ArrayList<RechtspraakToken> {
         @Override
         public void forEach(Consumer<? super RechtspraakTokenList> action) {
             Objects.requireNonNull(action);
-
             for (RechtspraakTokenList rechtspraakToken : this) action.accept(rechtspraakToken);
         }
 

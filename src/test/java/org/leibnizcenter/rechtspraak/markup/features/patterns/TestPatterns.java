@@ -76,8 +76,6 @@ public class TestPatterns {
         assertTrue(TitlePatterns.TitlesNormalizedMatchesHighConf.PROCEEDINGS.matches("ontstaan en loop van de gedingen"));
         assertTrue(TitlePatterns.TitlesNormalizedMatchesHighConf.PROCEEDINGS.matches("ontstaan en loop van het geding voor verwijzing"));
         assertTrue(TitlePatterns.TitlesNormalizedMatchesHighConf.PROCEEDINGS.matches("verdere procesgang in hoger beroep"));
-        assertTrue(TitlePatterns.TitlesNormalizedMatchesHighConf.PROCEEDINGS.matches("geschiedenis en het procesverloop en de processtukken in hoger beroep plus: meer"));
-        assertTrue(TitlePatterns.TitlesNormalizedMatchesHighConf.PROCEEDINGS.matches("geschiedenis en het procesgang in hoger beroep en de processtukken plus: meer"));
     }
 
     @Test

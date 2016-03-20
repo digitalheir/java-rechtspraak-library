@@ -2,11 +2,10 @@ package org.leibnizcenter.rechtspraak;
 
 import cc.mallet.fst.CRF;
 import cc.mallet.fst.SimpleTagger;
-import cc.mallet.types.Instance;
-import cc.mallet.types.Sequence;
-import org.leibnizcenter.rechtspraak.markup.Const;
-import org.leibnizcenter.rechtspraak.markup.RechtspraakCorpus;
-import org.leibnizcenter.rechtspraak.markup.RechtspraakTokenList;
+import cc.mallet.types.*;
+import org.crf.utilities.TaggedToken;
+import org.leibnizcenter.rechtspraak.markup.*;
+import org.leibnizcenter.rechtspraak.markup.Label;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -23,7 +22,7 @@ public class ApplyCrf {
         CRF crf = loadCrf(new File(Const.RECHTSPRAAK_MARKUP_TAGGER_CRF));
         List<File> files = RechtspraakCorpus.listXmlFiles().subList(0, 3);
         for (RechtspraakTokenList doc : new RechtspraakTokenList.FileIterable(files)) {
-            Instance instance = TrainWithMallet.getInstance(doc, true);
+            Instance instance = getInstance(doc, true);
             Sequence data = (Sequence) instance.getData();
             Sequence[] labels = SimpleTagger.apply(crf, (Sequence) TrainWithMallet.pipe.pipe(instance).getData(), 3);
             for (Sequence s : labels) {
@@ -44,6 +43,31 @@ public class ApplyCrf {
         }
 
         //TODO write stuff to xml
+    }
+
+
+    public static Instance getInstance(RechtspraakTokenList doc, boolean preserveInfo) {
+        TokenSequence ts = getTokenSequence(doc, preserveInfo);
+        LabelSequence ls = TrainWithMallet.getLabelSequence(doc);
+        return new Instance(ts, ls, null, null);
+    }
+
+    public static TokenSequence getTokenSequence(RechtspraakTokenList doc, boolean preserveInfo) {
+        TokenSequence ts = new TokenSequence(doc.size());
+        for (int i = 0; i < doc.size(); i++) {
+            TaggedToken<RechtspraakElement, Label> taggedToken = doc.get(i);
+            RechtspraakElement token = taggedToken.getToken();
+            Token t = new Token(null);
+
+            TrainWithMallet.setFeatureValues(doc, i, t);
+
+            if (preserveInfo) {
+                t.setText(token.getTextContent().trim());
+                t.setProperty(Const.RECHTSPRAAK_TOKEN, token);
+            }
+            ts.add(t);
+        }
+        return ts;
     }
 
     private static CRF loadCrf(File file) throws IOException, ClassNotFoundException {

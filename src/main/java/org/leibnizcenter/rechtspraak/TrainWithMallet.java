@@ -31,7 +31,7 @@ import static org.leibnizcenter.rechtspraak.markup.RechtspraakCorpus.listXmlFile
  * Created by maarten on 11-3-16.
  */
 public class TrainWithMallet {
-    public final static File xmlFiles = new File(Const.PATH_TRAIN_TEST_XML_FILES_WINDOWS);
+    public final static File xmlFiles = new File(Const.PATH_TRAIN_TEST_XML_FILES_LINUX);
 
     private static final int MAX_DOCS = -1;
     private static final CommandOption.Double gaussianVarianceOption = new CommandOption.Double
@@ -105,17 +105,23 @@ public class TrainWithMallet {
         System.out.println("_____________________________________");
         InstanceList il = new InstanceList(pipe);
         List<File> xmlFiles = listXmlFiles(TrainWithMallet.xmlFiles, MAX_DOCS, false);
+
+        int i = 0;
         for (RechtspraakTokenList doc : new RechtspraakTokenList.FileIterable(xmlFiles)) {
             Instance instance = getInstance(doc, false);
             il.addThruPipe(instance);
+            i++;
+            if (i % 50 == 0) {
+                System.out.println(i);
+            }
         }
         System.gc();
 
 
 //        InstanceList[] trainingLists =
 //                il.split(
-//                        r, new double[]{0.7,
-//                                1.0 - 0.7});
+//                        r, new double[]{0.8,
+//                                1.0 - 0.8});
 //        InstanceList trainingData = trainingLists[0];
 //        InstanceList testData = trainingLists[1];
 //        TokenAccuracyEvaluator eval = new TokenAccuracyEvaluator(
@@ -328,7 +334,6 @@ public class TrainWithMallet {
             }
         }
         if (IsPartOfList.isPartOfList(sequence, indexInSequence)) t.setFeatureValue("LIKELY_PART_OF_LIST", 1.0);
-
 
 
         if (token.isSpaced) t.setFeatureValue("IS_SPACED", 1.0);

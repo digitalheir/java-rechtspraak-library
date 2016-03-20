@@ -60,8 +60,8 @@ public class Names {
      */
     public static final String INITIAL_WITHOUT_PERIOD = "\\p{Lu}\\p{L}{0,2}";
     public static final String STRICT_INITIAL = INITIAL_WITHOUT_PERIOD + "\\.";
-    public static final String STRICT_INITIALS = STRICT_INITIAL + "(?: {0,2}?" + STRICT_INITIAL + ")*";
-    public static final String LOOSE_INITIALS = INITIAL_WITHOUT_PERIOD + "(?:[\\. ] ?" + INITIAL_WITHOUT_PERIOD + ")*\\.?";
+    public static final String STRICT_INITIALS = STRICT_INITIAL + "(?: {0,2}?" + STRICT_INITIAL + "){0,10}";
+    public static final String LOOSE_INITIALS = INITIAL_WITHOUT_PERIOD + "(?:[\\. ] ?" + INITIAL_WITHOUT_PERIOD + "){0,10}\\.?";
 
     // Initials
     // First names
@@ -73,14 +73,14 @@ public class Names {
     /**
      * ex. van der Laan
      */
-    public static final String SINGLETOLERANTLASTNAME = "(?:(?:" + VANDE + " )*(?:\\p{L}*\\p{Lu}(?:\\p{Ll}[\\p{L}-]{0,15})?\\p{Ll}))";
+    public static final String SINGLETOLERANTLASTNAME = "(?:(?:" + VANDE + " ){0,3}(?:\\p{L}{0,5}\\p{Lu}(?:\\p{Ll}[\\p{L}-]{0,15})?\\p{Ll}))";
     /**
      * ex. 'van der Laan-Wijngaerde'
      * ex. 'de Beer de Laer Dupont'
      */
     public static final String TOLERANTLASTNAME = "(?:(?:" + SINGLETOLERANTLASTNAME + ")+"
             // Arbitrary amount of hyphens
-            + "(?:-" + SINGLETOLERANTLASTNAME + ")*)";
+            + "(?:-" + SINGLETOLERANTLASTNAME + "){0,5})";
 
 
     //Token.string ==~ ".*[aeiouy].*", //At least one vowel...
@@ -97,19 +97,23 @@ public class Names {
      * Matches any non-space strings
      */
     public static final Pattern TOKEN_REGEX = Pattern.compile("[^\\s]+");
+    public static final String TOLERANTFULLNAME_WITH_OPTIONAL_ROLE = "(?:"
+            + TOLERANTFULLNAME
+            + "(?:, {0,2}(" + ROLE_SINGULAR + "))?"
+            + ")";
+    public static final Pattern TITLED_NAME = Pattern.compile(TOLERANT_TITLED_NAME);
+    public static final String TOLERANTFULLNAME_2_TO_4 =
+            "" + TOLERANTFULLNAME_WITH_OPTIONAL_ROLE + ""
+                    + "(?:[,;] {0,2}" + TOLERANTFULLNAME_WITH_OPTIONAL_ROLE + "){0,3}"
+                    + "[,;]? {0,2}en[,;]? {0,2}\\b"
+                    + TOLERANTFULLNAME_WITH_OPTIONAL_ROLE + "";
     private static final String VERTEGENWOORDIGD_DOOR = "(?:(?:" +
             "(?:vert(?:eg)?enwoordigd|bijgestaan|laten vertegenwoordigen|laten bijstaan)" +
             "|" +
-            "(?:\\p{L}*ge\\p{L}{3,}(?:en|d|t)$))" +
+            "(?:\\p{L}{0,5}ge\\p{L}{3,}(?:en|d|t)$))" +
             " {1,2}door)";
     private static final String ALLEN_ALS = "[,: ]{0,2}(?:alle(?:n|maal)?)?[,: ]{0,2}?(?:als)?";
     private final static String ALS = "(?:[^\\p{L}]{0,2}als[^\\p{L}]{1,3}|,[^\\p{L}]{0,3})";
-    private static final String INTEGENWOORDIGHEIDVAN = "in(?: (?:het|de))? (?:bijzijn|tegenwoordigheid) van";
-    private static final String TOLERANT_FIRSTNAMES = "(?:\\b" + TOLERANT_FIRSTNAME + "(?: {1,2}" + TOLERANT_FIRSTNAME + ")*)";
-    public static final String TOLERANT_FIRST_NAME_AND_OR_INITIALS =
-            "(?:" + TOLERANT_FIRSTNAMES
-                    + "(?: {0,2}\\b" + LOOSE_INITIALS + ")?"
-                    + "|" + LOOSE_INITIALS + ")";
 
 
     ////////////
@@ -128,9 +132,14 @@ public class Names {
      * <p>
      * i.e., we should ignore the word 'Voorzitter'
      */
-
+    private static final String INTEGENWOORDIGHEIDVAN = "in(?: (?:het|de))? (?:bijzijn|tegenwoordigheid) van";
+    private static final String TOLERANT_FIRSTNAMES = "(?:\\b" + TOLERANT_FIRSTNAME + "(?: {1,2}" + TOLERANT_FIRSTNAME + "){0,5})";
+    public static final String TOLERANT_FIRST_NAME_AND_OR_INITIALS =
+            "(?:" + TOLERANT_FIRSTNAMES
+                    + "(?: {0,2}\\b" + LOOSE_INITIALS + ")?"
+                    + "|" + LOOSE_INITIALS + ")";
     /////////////////////////////////////////
-    private static final String KNOWN_TITLES = "(?:" + KNOWN_TITLE + "(?: {0,2}" + KNOWN_TITLE + ")*)";
+    private static final String KNOWN_TITLES = "(?:" + KNOWN_TITLE + "(?: {0,2}" + KNOWN_TITLE + "){0,4})";
     /**
      * Ex. [mr. Vox], [mr. A.D.W. de Heyde]
      */
@@ -149,18 +158,6 @@ public class Names {
             "(?:(" + KNOWN_TITLES + ") {0,2})?"
                     + "(?:(" + STRICT_INITIALS + ") {0,2})"
                     + "(" + TOLERANTLASTNAME + ")";
-    public static final String TOLERANTFULLNAME_WITH_OPTIONAL_ROLE = "(?:"
-            + TOLERANTFULLNAME
-            + "(?:, {0,2}(" + ROLE_SINGULAR + "))?"
-            + ")";
-    public static final Pattern TITLED_NAME = Pattern.compile(TOLERANT_TITLED_NAME);
-
-    public static final String TOLERANTFULLNAME_2_TO_4 =
-            "" + TOLERANTFULLNAME_WITH_OPTIONAL_ROLE + ""
-                    + "(?:[,;] {0,2}" + TOLERANTFULLNAME_WITH_OPTIONAL_ROLE + "){0,3}"
-                    + "[,;]? {0,2}en[,;]? {0,2}\\b"
-                    + TOLERANTFULLNAME_WITH_OPTIONAL_ROLE + "";
-
 
     public static List<Name> getNames(Matcher matcher, boolean checkSurname) {
         List<Name> names = new ArrayList<>();
@@ -221,7 +218,7 @@ public class Names {
         /**
          * Was getekend. FirstName de la LooksLikeLastname
          */
-        WasGetekend(Pattern.compile("(?:(?:(?:w(?:as)? {1,2})?(?:get(?:ekend)?\\.?))|w\\.?g\\.?)\\s+" + TOLERANTFULLNAME + "")),
+        WasGetekend(Pattern.compile("(?:(?:(?:w(?:as)? {1,2})?(?:get(?:ekend)?\\.?))|w\\.?g\\.?)\\s{0,3}" + TOLERANTFULLNAME + "")),
         /**
          * prof. FirstName de la FamiliarLastname
          */
@@ -354,9 +351,11 @@ public class Names {
         ///////////////////
 
 
+        public static Set<NamePatterns> set = EnumSet.allOf(NamePatterns.class);
         private final TextPattern pattern;
         private final boolean checkSurname;
         private final Function<Matcher, List<Name>> handleMatcher;
+
 
         NamePatterns(Pattern pattern) {
             this(pattern, false);
@@ -366,14 +365,20 @@ public class Names {
         NamePatterns(Pattern pattern, boolean checkIfSurnameIsKnown) {
             this.checkSurname = checkIfSurnameIsKnown;
             this.handleMatcher = null;
-            this.pattern = new TextPattern(this.name(), pattern);
+            this.pattern = new NameTextPattern(this.name(), pattern);
         }
 
-
         NamePatterns(Pattern pattern, Function<Matcher, List<Name>> handleMatcher) {
-            this.pattern = new TextPattern(this.name(), pattern);
+            this.pattern = new NameTextPattern(this.name(), pattern);
             this.handleMatcher = handleMatcher;
             this.checkSurname = false;
+        }
+
+        public static void setFeatureValues(Token t, RechtspraakElement token) {
+            set.forEach((p) -> {
+                if (org.leibnizcenter.rechtspraak.markup.features.Patterns.matches(p, token))
+                    t.setFeatureValue(p.toString(), 1.0);
+            });
         }
 
         public List<Name> getNames(String s) {
@@ -385,21 +390,11 @@ public class Names {
             }
         }
 
-        public static Set<NamePatterns> set = EnumSet.allOf(NamePatterns.class);
-
         @Override
         public boolean matches(String s) {
             List<Name> names = getNames(s);
             return names.size() > 0;
         }
-
-        public static void setFeatureValues(Token t, RechtspraakElement token) {
-            set.forEach((p) -> {
-                if (org.leibnizcenter.rechtspraak.markup.features.Patterns.matches(p, token))
-                    t.setFeatureValue(p.toString(), 1.0);
-            });
-        }
-
 
         private static class Constants {
             public static final Function<Matcher, List<Name>> MATCHER_TODO = (matcher) -> {
@@ -428,6 +423,17 @@ public class Names {
                 }
                 return names;
             };
+        }
+
+        private static class NameTextPattern extends TextPattern {
+            public NameTextPattern(String name, Pattern compile) {
+                super(name, compile);
+            }
+
+            @Override
+            public boolean matches(String text) {
+                return super.matches(text);
+            }
         }
     }
 
