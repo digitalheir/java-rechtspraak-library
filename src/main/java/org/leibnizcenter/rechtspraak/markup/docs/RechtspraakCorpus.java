@@ -25,7 +25,7 @@ public class RechtspraakCorpus extends ArrayList<List<? extends TaggedToken<Rech
     public RechtspraakCorpus() {
     }
 
-    public RechtspraakCorpus(Collection<List<RechtspraakToken>> c) {
+    public RechtspraakCorpus(Collection<List<LabeledToken>> c) {
         super(c);
     }
 
@@ -37,7 +37,7 @@ public class RechtspraakCorpus extends ArrayList<List<? extends TaggedToken<Rech
             for (File xmlFile : xmlFiles) {
                 String ecli = getEcliFromFileName(xmlFile);
                 try {
-                    RechtspraakTokenList instance = RechtspraakTokenList.from(builder, xmlFile, ecli);
+                    LabeledTokenList instance = LabeledTokenList.from(builder, xmlFile, ecli);
 //                System.out.println("Instance made for " + ecli + "("
 //                        + ((TokenSequence) instance.getData()).size() + ")");
 //                System.out.println("Added " + ecli + " through pipe");
@@ -99,6 +99,6 @@ public class RechtspraakCorpus extends ArrayList<List<? extends TaggedToken<Rech
     }
 
     public static List<File> listXmlFiles() {
-        return listXmlFiles(new File(Const.PATH_TRAIN_TEST_XML_FILES_LINUX), -1, false);
+        return listXmlFiles(new File(Const.PATH_TRAIN_TEST_XML_FILES_WINDOWS), -1, false);
     }
 }

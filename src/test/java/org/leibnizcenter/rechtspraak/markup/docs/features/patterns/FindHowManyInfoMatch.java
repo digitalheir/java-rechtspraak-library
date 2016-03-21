@@ -10,8 +10,8 @@ import org.leibnizcenter.rechtspraak.TrainWithMallet;
 import org.leibnizcenter.rechtspraak.features.info.InfoPatterns;
 import org.leibnizcenter.rechtspraak.markup.docs.Label;
 import org.leibnizcenter.rechtspraak.markup.docs.RechtspraakCorpus;
-import org.leibnizcenter.rechtspraak.markup.docs.RechtspraakToken;
-import org.leibnizcenter.rechtspraak.markup.docs.RechtspraakTokenList;
+import org.leibnizcenter.rechtspraak.markup.docs.LabeledToken;
+import org.leibnizcenter.rechtspraak.markup.docs.LabeledTokenList;
 import org.leibnizcenter.rechtspraak.markup.docs.features.Patterns;
 
 import java.io.File;
@@ -28,8 +28,8 @@ public class FindHowManyInfoMatch {
         Multiset<String> falsePositives = HashMultiset.create();
         int truePositives = 0, falsePositive = 0, totalPositives = 0, totalTokens = 0;
         List<File> xmlFiles = RechtspraakCorpus.listXmlFiles(TrainWithMallet.xmlFiles, -1, false);
-        for (RechtspraakTokenList doc : new RechtspraakTokenList.FileIterable(xmlFiles)) {
-            for (RechtspraakToken token : doc) {
+        for (LabeledTokenList doc : new LabeledTokenList.FileIterable(xmlFiles)) {
+            for (LabeledToken token : doc) {
                 String text = token.getToken().normalizedText;
                 boolean matches = false;
                 // Check if this title find any of our patterns

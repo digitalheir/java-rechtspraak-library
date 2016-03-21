@@ -1,10 +1,12 @@
 package org.leibnizcenter.rechtspraak.markup.docs.features;
 
 import org.crf.crf.CrfFeature;
+import org.leibnizcenter.rechtspraak.features.title.TitlePatterns;
 import org.leibnizcenter.rechtspraak.markup.docs.Label;
 import org.leibnizcenter.rechtspraak.markup.docs.RechtspraakElement;
-import org.leibnizcenter.rechtspraak.markup.docs.RechtspraakTokenList;
+import org.leibnizcenter.rechtspraak.markup.docs.LabeledTokenList;
 import org.leibnizcenter.rechtspraak.util.Doubles;
+import org.leibnizcenter.rechtspraak.util.numbering.FullSectionNumber;
 import org.leibnizcenter.rechtspraak.util.numbering.NumberingNumber;
 
 import java.util.EnumMap;
@@ -16,6 +18,7 @@ import java.util.Map;
 public class IsPartOfList {
     public static final Map<Label, IsPartOfListFeature> features = new EnumMap<>(Label.class);
     public static final Map<Label, IsPartOfListFilter> filters = new EnumMap<>(Label.class);
+    private static final int LIST_LOOKUP_LIMIT = 2;
 
     static {
         for (Label l : Label.values()) {
@@ -24,47 +27,79 @@ public class IsPartOfList {
         }
     }
 
-    public static boolean isPartOfList(RechtspraakTokenList sequence, int indexInSequence) {
+    public static boolean isPartOfList(LabeledTokenList sequence, int indexInSequence) {
         RechtspraakElement token = sequence.get(indexInSequence).getToken();
-        if ((token).numbering == null) return false;
+        return token.numbering != null && token.numbering instanceof FullSectionNumber
+                && (succedentFound(sequence, indexInSequence) || precedentFound(sequence, indexInSequence));
+    }
 
-        if ((token).numbering.isFirstNumbering()) {
-            // Check next
-            if (sequence.size() > indexInSequence + 1) {
-                return (
-                        NumberingNumber.isSuccedentOf(sequence.get(indexInSequence + 1).getToken().numbering,
-                                (token).numbering)
-                );
-            }
-        } else {
-            // Check previous
-            if (indexInSequence > 0) {
-                return (
-                        NumberingNumber.isSuccedentOf(token.numbering,
-                                sequence.get(indexInSequence - 1).getToken().numbering)
-                );
+    public static boolean isPartOfList(RechtspraakElement[] sequence, int indexInSequence) {
+        RechtspraakElement token = sequence[indexInSequence];
+        return token.numbering != null && token.numbering instanceof FullSectionNumber
+                && (succedentFound(sequence, indexInSequence) || precedentFound(sequence, indexInSequence));
+    }
+
+    private static boolean precedentFound(RechtspraakElement[] sequence, int indexInSequence) {
+        for (int i = 1; i <= LIST_LOOKUP_LIMIT; i++) {
+            if (indexInSequence - i >= 0) {
+                RechtspraakElement adjacentEl = sequence[indexInSequence - i];
+                if (adjacentEl.numbering != null
+                        && adjacentEl.numbering instanceof FullSectionNumber
+                        && NumberingNumber.isSuccedentOf(sequence[indexInSequence].numbering,
+                        adjacentEl.numbering)
+                        && (!TitlePatterns.TitlesNormalizedMatchesHighConf.matchesAny(adjacentEl))) {
+                    return true;
+                }
             }
         }
         return false;
     }
-    public static boolean isPartOfList(RechtspraakElement[] sequence, int indexInSequence) {
-        if (sequence[indexInSequence].numbering == null) return false;
 
-        if (sequence[indexInSequence].numbering.isFirstNumbering()) {
-            // Check next
-            if (sequence.length > indexInSequence + 1) {
-                return (
-                        NumberingNumber.isSuccedentOf(sequence[indexInSequence + 1].numbering,
-                                sequence[indexInSequence].numbering)
-                );
+    private static boolean precedentFound(LabeledTokenList sequence, int indexInSequence) {
+                RechtspraakElement token = sequence.get(indexInSequence).getToken();
+        for (int i = 1; i <= LIST_LOOKUP_LIMIT; i++) {
+            if (indexInSequence - i >= 0) {
+                RechtspraakElement adjacentEl = sequence.get(indexInSequence - i).getToken();
+                if (adjacentEl.numbering != null
+                        && adjacentEl.numbering instanceof FullSectionNumber
+                        && NumberingNumber.isSuccedentOf(token.numbering,
+                        adjacentEl.numbering)
+                        && (!TitlePatterns.TitlesNormalizedMatchesHighConf.matchesAny(adjacentEl))) {
+                    return true;
+                }
             }
-        } else {
-            // Check previous
-            if (indexInSequence > 0) {
-                return (
-                        NumberingNumber.isSuccedentOf(sequence[indexInSequence].numbering,
-                                sequence[indexInSequence - 1].numbering)
-                );
+        }
+        return false;
+    }
+
+    private static boolean succedentFound(RechtspraakElement[] sequence, int indexInSequence) {
+        for (int i = 1; i <= LIST_LOOKUP_LIMIT; i++) {
+            if (sequence.length > indexInSequence + i) {
+                RechtspraakElement adjacentEl = sequence[indexInSequence + i];
+                if (adjacentEl.numbering != null
+                        && adjacentEl.numbering instanceof FullSectionNumber
+                        && NumberingNumber.isSuccedentOf(adjacentEl.numbering,
+                        sequence[indexInSequence].numbering)
+                        && (!TitlePatterns.TitlesNormalizedMatchesHighConf.matchesAny(adjacentEl))) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    private static boolean succedentFound(LabeledTokenList sequence, int indexInSequence) {
+                RechtspraakElement token = sequence.get(indexInSequence).getToken();
+        for (int i = 1; i <= LIST_LOOKUP_LIMIT; i++) {
+            if (sequence.size() > indexInSequence + i) {
+                RechtspraakElement adjacentEl = sequence.get(indexInSequence + i).getToken();
+                if (adjacentEl.numbering != null
+                        && adjacentEl.numbering instanceof FullSectionNumber
+                        && NumberingNumber.isSuccedentOf(adjacentEl.numbering,
+                        token.numbering)
+                        && (!TitlePatterns.TitlesNormalizedMatchesHighConf.matchesAny(adjacentEl))) {
+                    return true;
+                }
             }
         }
         return false;

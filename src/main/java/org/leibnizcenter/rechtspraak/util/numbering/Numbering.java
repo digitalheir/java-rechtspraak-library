@@ -43,9 +43,8 @@ public class Numbering extends ArrayList<List<Numbering>> {
     }
 
 //    /**
-//     * Greedily collects numbering sequences.  All incrementing sequences of numbering are seen as a list.
-//     * Subsection numberings and plain lists are both seen as subsequences. So this method effectively creates
-//     * a tree of numberings, without the root node.
+//     * Non-deterministically collect numbering sequences.  All incrementing sequences of numbering are seen as a list.
+//     * Subsection numberings and plain lists are both seen as subsequences.
 //     * <pre>
 //     * 1. Section one
 //     *   1.1. Subsection one point one
@@ -53,7 +52,7 @@ public class Numbering extends ArrayList<List<Numbering>> {
 //     *   This section contains a list, which is a sub-sequence of Section two:
 //     *   1. Item 1
 //     *   2. Item 2
-//     * 3. Section three
+//     * 3. Section three will also be in the sub-sequence item list, because we can't know to which 2 this is subsequent
 //     *   The following list might semantically fall outside of section 3, but there is no way for us to know
 //     *   1. Item 1
 //     *   2. Item 2
@@ -62,10 +61,10 @@ public class Numbering extends ArrayList<List<Numbering>> {
 //     * @param tokenList
 //     * @return
 //     */
-//    private static List<List<Numbering>> parseNumberingSequences(List<RechtspraakToken> tokenList) {
+//    private static List<List<Numbering>> parseNumberingSequences(List<LabeledToken> tokenList) {
 //        Stack<List<Numbering>> sequences = new Stack<>();
 //
-//        for (RechtspraakToken token : tokenList) {
+//        for (LabeledToken token : tokenList) {
 //            RechtspraakElement element = token.getToken();
 //            NumberingNumber numb = element.numbering;
 //            if (numb != null) {

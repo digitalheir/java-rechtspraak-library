@@ -7,9 +7,9 @@ import org.w3c.dom.Element;
 /**
  * Created by maarten on 28-2-16.
  */
-public class RechtspraakToken extends TaggedToken<RechtspraakElement, Label> {
+public class LabeledToken extends TaggedToken<RechtspraakElement, Label> {
 
-    public RechtspraakToken(Element token, Label tag) {
+    public LabeledToken(Element token, Label tag) {
         super(new RechtspraakElement(token), tag);
     }
 

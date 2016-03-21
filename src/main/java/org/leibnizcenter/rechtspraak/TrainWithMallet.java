@@ -6,15 +6,11 @@ import cc.mallet.pipe.TokenSequence2FeatureVectorSequence;
 import cc.mallet.types.*;
 import cc.mallet.util.CommandOption;
 import org.crf.utilities.TaggedToken;
-import org.leibnizcenter.rechtspraak.features.info.InfoPatterns;
-import org.leibnizcenter.rechtspraak.features.title.TitlePatterns;
+import org.leibnizcenter.rechtspraak.features.Features;
 import org.leibnizcenter.rechtspraak.markup.docs.Const;
 import org.leibnizcenter.rechtspraak.markup.docs.Label;
 import org.leibnizcenter.rechtspraak.markup.docs.RechtspraakElement;
-import org.leibnizcenter.rechtspraak.markup.docs.RechtspraakTokenList;
-import org.leibnizcenter.rechtspraak.markup.docs.features.IsPartOfList;
-import org.leibnizcenter.rechtspraak.util.numbering.FullSectionNumber;
-import org.leibnizcenter.rechtspraak.util.numbering.SubSectionNumber;
+import org.leibnizcenter.rechtspraak.markup.docs.LabeledTokenList;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -30,9 +26,11 @@ import static org.leibnizcenter.rechtspraak.markup.docs.RechtspraakCorpus.listXm
  * Created by maarten on 11-3-16.
  */
 public class TrainWithMallet {
-    public final static File xmlFiles = new File(Const.PATH_TRAIN_TEST_XML_FILES_LINUX);
+    public final static File xmlFiles = new File(Const.PATH_TRAIN_TEST_XML_FILES_WINDOWS);
 
-    private static final int MAX_DOCS = -1;
+    private static final int MAX_DOCS = 100;
+
+
     private static final CommandOption.Double gaussianVarianceOption = new CommandOption.Double
             (SimpleTagger.class, "gaussian-variance", "DECIMAL", true, 10.0,
                     "The gaussian prior variance used for training.", null);
@@ -106,7 +104,7 @@ public class TrainWithMallet {
         List<File> xmlFiles = listXmlFiles(TrainWithMallet.xmlFiles, MAX_DOCS, false);
 
         int i = 0;
-        for (RechtspraakTokenList doc : new RechtspraakTokenList.FileIterable(xmlFiles)) {
+        for (LabeledTokenList doc : new LabeledTokenList.FileIterable(xmlFiles)) {
             Instance instance = getInstance(doc, false);
             il.addThruPipe(instance);
             i++;
@@ -277,20 +275,20 @@ public class TrainWithMallet {
         }
     }
 
-    public static Instance getInstance(RechtspraakTokenList doc, boolean preserveInfo) {
+    public static Instance getInstance(LabeledTokenList doc, boolean preserveInfo) {
         TokenSequence ts = getTokenSequence(doc, preserveInfo);
         LabelSequence ls = getLabelSequence(doc);
         return new Instance(ts, ls, null, null);
     }
 
-    public static TokenSequence getTokenSequence(RechtspraakTokenList doc, boolean preserveInfo) {
+    public static TokenSequence getTokenSequence(LabeledTokenList doc, boolean preserveInfo) {
         TokenSequence ts = new TokenSequence(doc.size());
         for (int i = 0; i < doc.size(); i++) {
             TaggedToken<RechtspraakElement, Label> taggedToken = doc.get(i);
             RechtspraakElement token = taggedToken.getToken();
             Token t = new Token(null);
 
-            setFeatureValues(doc, i, t);
+            Features.setFeatureValues(doc, i, t);
 
             if (preserveInfo) {
                 t.setText(token.getTextContent().trim());
@@ -301,62 +299,12 @@ public class TrainWithMallet {
         return ts;
     }
 
-    public static LabelSequence getLabelSequence(RechtspraakTokenList doc) {
+    public static LabelSequence getLabelSequence(LabeledTokenList doc) {
         LabelSequence ls = new LabelSequence(labelAlphabet);
         for (TaggedToken<RechtspraakElement, Label> taggedToken : doc) {
             ls.add(taggedToken.getTag().toString());
         }
         return ls;
-    }
-
-    public static void setFeatureValues(RechtspraakTokenList sequence, int indexInSequence, Token t) {
-        RechtspraakElement token = sequence.get(indexInSequence).getToken();
-
-//        System.out.println("1info");
-        // Info patterns
-        InfoPatterns.InfoPatternsNormalizedContains.setFeatureValues(t, token);
-        InfoPatterns.InfoPatternsNormalizedMatches.setFeatureValues(t, token);
-        InfoPatterns.InfoPatternsUnormalizedContains.setFeatureValues(t, token);
-//        System.out.println("2info");
-
-        // Title patterns
-//        System.out.println("1title");
-        TitlePatterns.TitlesNormalizedMatchesHighConf.setFeatureValues(t, token);
-        TitlePatterns.TitlesNormalizedMatchesLowConf.setFeatureValues(t, token);
-        TitlePatterns.TitlesUnnormalizedContains.setFeatureValues(t, token);
-//        System.out.println("2title");
-
-//        System.out.println("1names");
-        // Whether the text contains a name, or something that looks like a name
-        //Names.NamePatterns.setFeatureValues(t, token);
-        // Whether the text contains a place name, or something that looks like a place name
-        //PlaceNamesInNL.setFeatureValues(t, token);
-
-//        System.out.println("2names");
-
-//        System.out.println("1etc");
-        if (token.numbering != null) {
-            if (token.numbering instanceof SubSectionNumber) {
-                t.setFeatureValue("HAS_SUBSECTION_NUMBERING", 1.0);
-            } else if (token.numbering instanceof FullSectionNumber) {
-                t.setFeatureValue("HAS_SECTION_NUMBERING", 1.0);
-            }
-        }
-        if (token.highConfidenceNumberedTitleFoundAndIsNumbered()) t.setFeatureValue("VERY_PROBABLE_SECTION", 1.0);
-        if (IsPartOfList.isPartOfList(sequence, indexInSequence)) t.setFeatureValue("LIKELY_PART_OF_LIST", 1.0);
-
-
-        if (token.isSpaced) t.setFeatureValue("IS_SPACED", 1.0);
-        if (token.isAllCaps) t.setFeatureValue("IS_ALL_CAPS", 1.0);
-        //if (token.wordCount < 5) t.setFeatureValue("LESS_THAN_5_WORDS", 1.0);
-        //if (token.wordCount >= 5 && token.wordCount < 10) t.setFeatureValue("LESS_THAN_10_WORDS", 1.0);
-        if (token.wordCount >= 5 && token.wordCount >= 10) t.setFeatureValue("AT_LEAST_10_WORDS", 1.0);
-
-        if (indexInSequence < 5) t.setFeatureValue("WITHIN_FIRST_5_BLOCKS", 1.0);
-        if (indexInSequence >= 5 && indexInSequence < 10) t.setFeatureValue("WITHIN_FIRST_10_BLOCKS", 1.0);
-        //if (indexInSequence < sequence.size() / 4) t.setFeatureValue("FIRST_QUARTILE", 1.0);
-        if (indexInSequence >= sequence.size() / 2) t.setFeatureValue("OVER_HALF", 1.0);
-//        System.out.println("2etc");
     }
 
     private static CRF constructCrf(Alphabet inputAlphabet, Alphabet outputAlphabet) {

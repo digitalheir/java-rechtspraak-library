@@ -81,7 +81,7 @@ public class RechtspraakFilters extends HashSet<Filter<RechtspraakElement, Label
 //                this.add(HasNumberingTerminal.filters.get(currentTag));
 //            }
 
-            // TODO Incrementing, isPartOfList
+            // TODO Incrementing, isLikelyPartOfList
         }
 
         //

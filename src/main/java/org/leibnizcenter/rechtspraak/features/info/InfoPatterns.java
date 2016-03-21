@@ -1,6 +1,7 @@
 package org.leibnizcenter.rechtspraak.features.info;
 
 import cc.mallet.types.Token;
+import org.leibnizcenter.rechtspraak.features.ElementHandler;
 import org.leibnizcenter.rechtspraak.markup.docs.RechtspraakElement;
 import org.leibnizcenter.rechtspraak.markup.docs.features.Patterns;
 import org.leibnizcenter.rechtspraak.util.TextPattern;
@@ -13,19 +14,42 @@ import java.util.regex.Pattern;
  * Created by maarten on 17-3-16.
  */
 public class InfoPatterns {
+    public enum Patteren {
+        YES((list, i) -> {
+            RechtspraakElement token = list.get(i);
+            return 1.0;
+        });
+
+
+        private final ElementHandler handler;
+
+        Patteren(ElementHandler handler) {
+            this.handler = handler;
+        }
+    }
+
+//    public static void setFeatureValues(Token t, RechtspraakElement token) {
+//        set.forEach((p) -> {
+//            if (Patterns.matches(p, token)) t.setFeatureValue(p.toString(), 1.0);
+//        });
+//    }
+
     public enum InfoPatternsUnormalizedContains implements Patterns.UnnormalizedTextContains {
-        CONTAINS_DATE(Pattern.compile("(?:" + Constants.YEAR + "-" + Constants.DAY_MONTH + "-" + Constants.DAY_MONTH +
-                        "|" + Constants.DAY_MONTH + "-" + Constants.DAY_MONTH + "-" + Constants.YEAR +
-                        "|" + Constants.DAY_MONTH + " {0,3}" +
-                        "(" +
-                        "jan(\\.|uari)?|feb(\\.|ruari)?" +
-                        "|m(aa)?rt\\.?|apr(\\.|il)?|mei|ju[nl](\\.|i)?" +
-                        "|aug(\\.|ustus)?|okt(\\.|ober)?" +
-                        "|nov(\\.|ember)?|sept?(\\.|t?ember)?|dec(\\.|ember)?" +
-                        ")" +
-                        " {0,3}" + Constants.YEAR +
-                        ")",
-                Pattern.CASE_INSENSITIVE)),
+        CONTAINS_DATE(
+                Pattern.compile("(?:" + Constants.YEAR + "-" + Constants.DAY_MONTH + "-" + Constants.DAY_MONTH +
+                                "|" + Constants.DAY_MONTH + "-" + Constants.DAY_MONTH + "-" + Constants.YEAR +
+                                "|" + Constants.DAY_MONTH + " {0,3}" +
+                                "(" +
+                                "jan(\\.|uari)?|feb(\\.|ruari)?" +
+                                "|m(aa)?rt\\.?|apr(\\.|il)?|mei|ju[nl](\\.|i)?" +
+                                "|aug(\\.|ustus)?|okt(\\.|ober)?" +
+                                "|nov(\\.|ember)?|sept?(\\.|t?ember)?|dec(\\.|ember)?" +
+                                ")" +
+                                " {0,3}" + Constants.YEAR +
+                                ")",
+                        Pattern.CASE_INSENSITIVE)
+        ),
+
 
         CONTAINS_BRACKETED_TEXT(Pattern.compile("\\[[\\p{L}0-9 ]{0,25}\\]", Pattern.CASE_INSENSITIVE)),
 
@@ -65,18 +89,26 @@ public class InfoPatterns {
         //
         // INFO
         //
+
+        CONTAINS_REF_TO_PERSON(Pattern.compile(
+                "ge[iï]ntimeerden?|belanghebbenden?|vaders?|moeders?|ver(weerder|zoeker)|man|vrouw|naam|eiser(es)?|gedaagden?|app?ell?ante?"
+        )),
+        CONTAINS_REF_TO_WOONPLAATS(Pattern.compile(
+                "woo?n(plaats|ende)"
+        )),
+        // inzake / in de zaak
         START_W_INZAKE(new TextPattern("START_W_INZAKE",
-                Pattern.compile("^inzake\\b", Pattern.CASE_INSENSITIVE)
+                Pattern.compile("^in ?(de )?zaa?ke?\\b", Pattern.CASE_INSENSITIVE)
 
         )),
 
         START_W_AFDELING(new TextPattern("START_W_AFDELING",
-                Pattern.compile("^afdeling", Pattern.CASE_INSENSITIVE)
+                Pattern.compile("^(de )?afdeling", Pattern.CASE_INSENSITIVE)
 
         )),
 
         START_W_SECTOR(new TextPattern("START_W_SECTOR",
-                Pattern.compile("^sector", Pattern.CASE_INSENSITIVE)
+                Pattern.compile("^(de )?sector", Pattern.CASE_INSENSITIVE)
 
         )),
 
@@ -91,13 +123,13 @@ public class InfoPatterns {
         )),
 
         START_W_ZAAK_ROL_NR(new TextPattern("START_W_ZAAK_ROL_NR",
-                Pattern.compile("(?:kenmerk|(?:(?:zaak|rol).{0,15})?n(?:umme)?[ro]\\.?)",
+                Pattern.compile("^(?:kenmerk|(?:(?:zaak|rol).{0,15})?n(?:umme)?[ro]\\.?)",
                         Pattern.CASE_INSENSITIVE)
 
         )),
 
         START_W_ZAAKNR(new TextPattern("START_W_ZAAKNR",
-                Pattern.compile("(?:(?:zaak|rol|parket|ro).{0,15})?n(?:umme)?[ro]\\.?",
+                Pattern.compile("^(?:(?:zaak|rol|parket|ro).{0,15})?n(?:umme)?[ro]\\.?",
                         Pattern.CASE_INSENSITIVE)
 
         )),
@@ -133,6 +165,11 @@ public class InfoPatterns {
 
         InfoPatternsNormalizedContains(TextPattern pattern) {
             this.pattern = pattern;
+        }
+
+
+        InfoPatternsNormalizedContains(Pattern compile) {
+            this.pattern = new TextPattern(name(), compile);
         }
 
         public static void setFeatureValues(Token t, RechtspraakElement token) {
@@ -173,7 +210,7 @@ public class InfoPatterns {
                 "^(?:de|het)?\\s{0,3}(?:hoge|centrale)?\\s{0,3}(?:raad|college)" +
                         "(?:\\s{0,3}(van|voor))?" +
                         "(?:\\s{0,3}(de|het))?" +
-                        "(?:\\s{1,3}\\p{L}+){0,3}",
+                        "(?:\\s{1,3}\\p{L}{0,20}){0,3}",
                 Pattern.CASE_INSENSITIVE)
 
         )),

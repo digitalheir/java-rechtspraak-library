@@ -7,9 +7,9 @@ import com.google.common.io.Files;
 import org.leibnizcenter.rechtspraak.TrainWithMallet;
 import org.leibnizcenter.rechtspraak.features.title.TitlePatterns.TitlesNormalizedMatchesHighConf;
 import org.leibnizcenter.rechtspraak.markup.docs.Label;
+import org.leibnizcenter.rechtspraak.markup.docs.LabeledToken;
 import org.leibnizcenter.rechtspraak.markup.docs.RechtspraakCorpus;
-import org.leibnizcenter.rechtspraak.markup.docs.RechtspraakToken;
-import org.leibnizcenter.rechtspraak.markup.docs.RechtspraakTokenList;
+import org.leibnizcenter.rechtspraak.markup.docs.LabeledTokenList;
 import org.leibnizcenter.rechtspraak.markup.docs.features.Patterns;
 
 import java.io.File;
@@ -37,8 +37,8 @@ public class FindHowManyTitlesMatch {
 
         int truePositives = 0, falsePositive = 0, totalTitles = 0, totalTokens = 0;
         List<File> xmlFiles = RechtspraakCorpus.listXmlFiles(TrainWithMallet.xmlFiles, -100, false);
-        for (RechtspraakTokenList doc : new RechtspraakTokenList.FileIterable(xmlFiles)) {
-            for (RechtspraakToken token : doc) {
+        for (LabeledTokenList doc : new LabeledTokenList.FileIterable(xmlFiles)) {
+            for (LabeledToken token : doc) {
                 String text = token.getToken().normalizedText;
                 boolean ignore = Strings.isNullOrEmpty(text)
                         || ":".equals(text)

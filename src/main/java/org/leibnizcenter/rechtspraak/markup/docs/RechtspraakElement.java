@@ -9,25 +9,29 @@ import org.w3c.dom.*;
 import java.util.Locale;
 import java.util.function.Function;
 import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * XML element from Rechtspraak.nl with some pre-processing applied
  * Created by maarten on 29-2-16.
  */
 public class RechtspraakElement implements Element {
+    private static final Pattern ENDS_WITH_NON_LETTER = Pattern.compile("[^p{L}]$");
     public final Element e;
     public final NumberingNumber numbering;
     public final String normalizedText;
     public final int wordCount;
     public final boolean isSpaced;
     public final boolean isAllCaps;
+    public final boolean endsWithNonLetter;
     private final String textContent;
     private boolean highConfidenceNumberedTitleFoundAndIsNumbered;
+    protected boolean likelyPartOfList =false;
 
     public RechtspraakElement(Element e) {
         this.e = e;
         this.textContent = e.getTextContent().trim();
-
+        endsWithNonLetter = ENDS_WITH_NON_LETTER.matcher(textContent).find();
         this.numbering = startsWithNumber(textContent);
 
         String normalizedWithPotentialLeadingNumber = textContent
@@ -450,5 +454,9 @@ public class RechtspraakElement implements Element {
 
     public boolean highConfidenceNumberedTitleFoundAndIsNumbered() {
         return highConfidenceNumberedTitleFoundAndIsNumbered;
+    }
+
+    public boolean isLikelyPartOfList() {
+        return likelyPartOfList;
     }
 }

@@ -4,7 +4,7 @@ import cc.mallet.types.LabelAlphabet;
 import org.leibnizcenter.rechtspraak.markup.docs.Const;
 import org.leibnizcenter.rechtspraak.markup.docs.Label;
 import org.leibnizcenter.rechtspraak.markup.docs.RechtspraakElement;
-import org.leibnizcenter.rechtspraak.markup.docs.RechtspraakTokenList;
+import org.leibnizcenter.rechtspraak.markup.docs.LabeledTokenList;
 import org.w3c.dom.Node;
 
 import javax.xml.transform.OutputKeys;
@@ -40,7 +40,7 @@ public class ManuallyAnnotateRichDocs {
         File out = new File(OUT_FOLDER);
         assert out.exists();
         assert out.isDirectory();
-        for (RechtspraakTokenList doc : new RechtspraakTokenList.FileIterable(xmlFiles)) {
+        for (LabeledTokenList doc : new LabeledTokenList.FileIterable(xmlFiles)) {
             String ecli = doc.getEcli();
             String fileName = ecli.replace(':', '.') + ".xml";
             File outFile = new File(out, fileName);

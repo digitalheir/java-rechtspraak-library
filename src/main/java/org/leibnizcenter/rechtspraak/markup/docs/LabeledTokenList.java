@@ -1,8 +1,10 @@
 package org.leibnizcenter.rechtspraak.markup.docs;
 
 import org.leibnizcenter.rechtspraak.features.title.TitlePatterns;
+import org.leibnizcenter.rechtspraak.markup.docs.features.IsPartOfList;
 import org.leibnizcenter.rechtspraak.util.TextBlockInfo;
 import org.leibnizcenter.rechtspraak.util.Xml;
+import org.leibnizcenter.rechtspraak.util.numbering.NumberingNumber;
 import org.w3c.dom.*;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
@@ -20,7 +22,7 @@ import java.util.function.Consumer;
 /**
  * Created by maarten on 28-2-16.
  */
-public class RechtspraakTokenList extends ArrayList<RechtspraakToken> {
+public class LabeledTokenList extends ArrayList<LabeledToken> {
     // Labels
 //    public static final String INFO = "*.info";
 //    public static final String SECTION_PARA = "section";
@@ -41,31 +43,46 @@ public class RechtspraakTokenList extends ArrayList<RechtspraakToken> {
     private final String ecli;
     private final Document doc;
 
-    public RechtspraakTokenList(String ecli, int initialCapacity, Document document) {
+    public LabeledTokenList(String ecli, int initialCapacity, Document document) {
         super(initialCapacity);
         this.ecli = ecli;
         this.doc = document;
     }
 
-    public RechtspraakTokenList(String ecli, Document document) {
+    public LabeledTokenList(String ecli, Document document) {
         this.ecli = ecli;
         this.doc = document;
     }
 
-    public RechtspraakTokenList(String ecli, Document document, Collection<? extends RechtspraakToken> c) {
+    public LabeledTokenList(String ecli, Document document, Collection<? extends LabeledToken> c) {
         super(c);
         this.ecli = ecli;
         this.doc = document;
     }
 
-    public static RechtspraakTokenList from(String ecli, Document document, Node root) {
-        RechtspraakTokenList tokenList = new RechtspraakTokenList(ecli, document, textInPreorder(root, null, null, false));
+    public static LabeledTokenList from(String ecli, Document document, Node root) {
+        LabeledTokenList tokenList = new LabeledTokenList(ecli, document, textInPreorder(root, null, null, false));
+
+
+        // Decide whether elements are likley list items (as opposed to section titles)
+        for(int indexInSequence=0;indexInSequence<tokenList.size();indexInSequence++) {
+            tokenList.get(indexInSequence).getToken().likelyPartOfList =
+                    IsPartOfList.isPartOfList(tokenList, indexInSequence);
+        }
 
         // find if there are numbered high likelihood-titles
-        if (highConfidenceNumberedTitlesFound(tokenList)) {
+        Optional<NumberingNumber> numb = highConfidenceNumberedTitlesFound(tokenList);
+        if (numb.isPresent()) {
+            NumberingNumber n = numb.get();
             tokenList.forEach((t) -> {
-                if (t.getToken().numbering != null) {
-                    t.getToken().setHighConfidenceNumberedTitleFoundAndIsNumbered(true);
+                RechtspraakElement token = t.getToken();
+                if (token.numbering != null
+                        // Check if they're both the same class (ie both arabic; both roman)
+                        && token.numbering.getClass().equals(n.getClass())
+                        // Check if they're both the same class (ie both arabic; both roman)
+                        && !token.likelyPartOfList
+                        ) {
+                    token.setHighConfidenceNumberedTitleFoundAndIsNumbered(true);
                 }
             });
         }
@@ -74,7 +91,7 @@ public class RechtspraakTokenList extends ArrayList<RechtspraakToken> {
         return tokenList;
     }
 
-    public static RechtspraakTokenList from(DocumentBuilder builder, File xmlFile, String ecli) throws SAXException, IOException {
+    public static LabeledTokenList from(DocumentBuilder builder, File xmlFile, String ecli) throws SAXException, IOException {
         FileInputStream is = new FileInputStream(xmlFile);
         Document doc = builder.parse(new InputSource(new InputStreamReader(is)));
 //                assert ecli != null;
@@ -83,21 +100,19 @@ public class RechtspraakTokenList extends ArrayList<RechtspraakToken> {
         return from(ecli, doc, Xml.getContentRoot(doc));
     }
 
-    private static boolean highConfidenceNumberedTitlesFound(RechtspraakTokenList tokenList) {
-        boolean highConfidenceNumberedTitlesFound = false;
-        for (RechtspraakToken t : tokenList) {
+    private static Optional<NumberingNumber> highConfidenceNumberedTitlesFound(LabeledTokenList tokenList) {
+        for (LabeledToken t : tokenList) {
             RechtspraakElement token = t.getToken();
             if (token.numbering != null && TitlePatterns.TitlesNormalizedMatchesHighConf.matchesAny(token)) {
-                highConfidenceNumberedTitlesFound = true;
-                break;
+                return Optional.of(token.numbering);
             }
         }
-        return highConfidenceNumberedTitlesFound;
+        return Optional.empty();
     }
 
-    public static List<RechtspraakToken> textInPreorder(Node root, Node parent, Label rootDescendentOf, boolean includeWhiteSpace) {
+    public static List<LabeledToken> textInPreorder(Node root, Node parent, Label rootDescendentOf, boolean includeWhiteSpace) {
         NodeList children = root.getChildNodes();
-        List<RechtspraakToken> texts = new ArrayList<>(children.getLength());
+        List<LabeledToken> texts = new ArrayList<>(children.getLength());
 
         String parentName = root.getNodeName();
 
@@ -137,13 +152,13 @@ public class RechtspraakTokenList extends ArrayList<RechtspraakToken> {
                     ) {
                 if (includeWhiteSpace || !TextBlockInfo.Regex.ALL_WHITESPACE.matcher(child.getTextContent()).matches()) {
                     Element childAsElement = getElement(child); // if this is a text node, wrap in element
-                    RechtspraakToken textBlockWithLabel = new RechtspraakToken(childAsElement, childDescendentOf);
+                    LabeledToken textBlockWithLabel = new LabeledToken(childAsElement, childDescendentOf);
                     //child = textBlockWithLabel.getToken(); // XML tree may have changed
                     //System.out.println(texts.size());
                     texts.add(textBlockWithLabel);
                 }
             } else {
-                List<RechtspraakToken> childrenTexts = textInPreorder(child, root, childDescendentOf, includeWhiteSpace);
+                List<LabeledToken> childrenTexts = textInPreorder(child, root, childDescendentOf, includeWhiteSpace);
                 texts.addAll(childrenTexts);
             }
         }
@@ -167,13 +182,13 @@ public class RechtspraakTokenList extends ArrayList<RechtspraakToken> {
 //        /**
 //         * Get document node nodes as a linear list
 //         */
-//        List<RechtspraakToken> textsWithLabels = Xml.textInPreorder(Xml.getContentRoot(doc), null, null, false);
+//        List<LabeledToken> textsWithLabels = Xml.textInPreorder(Xml.getContentRoot(doc), null, null, false);
 //
 //        //        System.out.println(textsWithLabels.size() + " tokens; adding features");
 //        List<NumberingNumber> numbers = new ArrayList<>();
 //        int size = textsWithLabels.size();
 //        for (int i = 0; i < size; i++) {
-//            RechtspraakToken entry = textsWithLabels.get(i);
+//            LabeledToken entry = textsWithLabels.get(i);
 //            String textContent = entry.node.getTextContent().trim();
 //
 //            // Add observation
@@ -215,7 +230,7 @@ public class RechtspraakTokenList extends ArrayList<RechtspraakToken> {
         return doc;
     }
 
-    public static class FileIterator implements java.util.Iterator<RechtspraakTokenList> {
+    public static class FileIterator implements java.util.Iterator<LabeledTokenList> {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         private File[] files;
         private int index = 0;
@@ -233,7 +248,7 @@ public class RechtspraakTokenList extends ArrayList<RechtspraakToken> {
         }
 
         @Override
-        public RechtspraakTokenList next() {
+        public LabeledTokenList next() {
             try {
                 File file = files[index];
                 files[index] = null; // Allow to be garbage collected
@@ -251,13 +266,13 @@ public class RechtspraakTokenList extends ArrayList<RechtspraakToken> {
         }
 
         @Override
-        public void forEachRemaining(Consumer<? super RechtspraakTokenList> action) {
+        public void forEachRemaining(Consumer<? super LabeledTokenList> action) {
             Objects.requireNonNull(action);
             while (hasNext()) action.accept(next());
         }
     }
 
-    public static class FileIterable implements Iterable<RechtspraakTokenList> {
+    public static class FileIterable implements Iterable<LabeledTokenList> {
         private File[] files;
 
         public FileIterable(List<File> xmlFiles) {
@@ -270,13 +285,13 @@ public class RechtspraakTokenList extends ArrayList<RechtspraakToken> {
 
 
         @Override
-        public void forEach(Consumer<? super RechtspraakTokenList> action) {
+        public void forEach(Consumer<? super LabeledTokenList> action) {
             Objects.requireNonNull(action);
-            for (RechtspraakTokenList rechtspraakToken : this) action.accept(rechtspraakToken);
+            for (LabeledTokenList rechtspraakToken : this) action.accept(rechtspraakToken);
         }
 
         @Override
-        public Spliterator<RechtspraakTokenList> spliterator() {
+        public Spliterator<LabeledTokenList> spliterator() {
             throw new Error("Not implemented");
         }
 
