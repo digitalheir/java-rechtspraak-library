@@ -4,8 +4,8 @@ import cc.mallet.fst.CRF;
 import cc.mallet.fst.SimpleTagger;
 import cc.mallet.types.*;
 import org.crf.utilities.TaggedToken;
-import org.leibnizcenter.rechtspraak.markup.*;
-import org.leibnizcenter.rechtspraak.markup.Label;
+import org.leibnizcenter.rechtspraak.markup.docs.*;
+import org.leibnizcenter.rechtspraak.markup.docs.Label;
 
 import java.io.File;
 import java.io.FileInputStream;

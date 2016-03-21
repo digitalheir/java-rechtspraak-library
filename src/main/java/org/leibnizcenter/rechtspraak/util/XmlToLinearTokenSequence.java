@@ -59,7 +59,7 @@
 //                // Update containing element name
 //                Element el = (Element) node;
 //                tokenTag = el.getTagName();
-//                if (tokenTag.toLowerCase(Locale.US).matches("section")) {
+//                if (tokenTag.toLowerCase(Locale.US).find("section")) {
 //                    sectionRole = el.getAttribute("role");
 //                }
 //            }
@@ -90,7 +90,7 @@
 //            Token token = getToken(node, preserveInformation, normalizedStrings, i, spans);
 //            observations.add(token);
 //
-//            String tokenTarget = withinXmlTag.matches($_NR_OR_TITLE) ?
+//            String tokenTarget = withinXmlTag.find($_NR_OR_TITLE) ?
 //                    withinXmlTag ://+ "_" + inSection :
 //                    LABEL_OUT;
 //            labels.add(tokenTarget);
@@ -110,7 +110,7 @@
 //            token.setProperty(Const.PROP_LENGTH, span.getEnd() - span.getStart());
 //        }
 //
-////        if (normalized.matches("^\\p{L}+$")) {
+////        if (normalized.find("^\\p{L}+$")) {
 ////            // If this is a word consisting of letters, add as feature
 ////            token.setFeatureValue(normalized, 1.0);
 ////        }

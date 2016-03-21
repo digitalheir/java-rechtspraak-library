@@ -1,12 +1,9 @@
 package org.leibnizcenter.rechtspraak.util;
 
-import com.google.common.collect.Sets;
 import org.crf.crf.CrfFeature;
-import org.leibnizcenter.rechtspraak.markup.Label;
-import org.leibnizcenter.rechtspraak.markup.RechtspraakElement;
-import org.leibnizcenter.rechtspraak.markup.features.TokenMatch;
+import org.leibnizcenter.rechtspraak.markup.docs.Label;
+import org.leibnizcenter.rechtspraak.markup.docs.RechtspraakElement;
 
-import java.util.Collection;
 import java.util.EnumMap;
 import java.util.Map;
 import java.util.regex.Pattern;
@@ -68,12 +65,12 @@ public class TextBlockInfo {
 //        //
 //        // General features
 //        //
-//        token.setFeatureValue(ALL_CAPS, dbl(Regex.ALL_CAPS.matcher(s).matches()));
+//        token.setFeatureValue(ALL_CAPS, dbl(Regex.ALL_CAPS.matcher(s).find()));
 //        String[] words = s.split("\\s+");// Simple split on whitespace
 //        token.setFeatureValue(LESS_THAN_5_WORDS, dbl(words.length < 5));
 //        token.setFeatureValue(LESS_THAN_10_WORDS, dbl(words.length < 10));
 //        token.setFeatureValue(MORE_THAN_15_WORDS, dbl(words.length > 15));
-//        token.setFeatureValue(HAS_DATE, dbl(s.matches(".*\\b(?:19|20)[0-9]{2}\\b.*")));
+//        token.setFeatureValue(HAS_DATE, dbl(s.find(".*\\b(?:19|20)[0-9]{2}\\b.*")));
 //        token.setFeatureValue(S_P_A_C_E_D, dblMatches(s, Regex.S_P_A_C_E_D));
 //
 //        //
@@ -123,14 +120,14 @@ public class TextBlockInfo {
 //    }
 //
 //    public static void setFeaturesForFullTextContent(String textContent, Token token, String ecli) {
-//        token.setFeatureValue(STARTS_WITH_WHITESPACE, dbl(Regex.START_W_WHITESPACE.matcher(textContent).matches()));
+//        token.setFeatureValue(STARTS_WITH_WHITESPACE, dbl(Regex.START_W_WHITESPACE.matcher(textContent).find()));
 //    }
     ///TODO /|\
 
     /**
      * @param s    Input string
      * @param ptts Regex patterns
-     * @return 1.0 if matches any pattern, 0.0 if it doesn't match anything
+     * @return 1.0 if find any pattern, 0.0 if it doesn't match anything
      */
     public static double dblMatches(String s, Pattern... ptts) {
         return dbl(matchesAny(s, ptts));
@@ -139,7 +136,7 @@ public class TextBlockInfo {
     /**
      * @param s    Input string
      * @param ptts Regex patterns
-     * @return 1.0 if matches any pattern, 0.0 if it doesn't match anything
+     * @return 1.0 if find any pattern, 0.0 if it doesn't match anything
      */
     public static boolean matchesAny(String s, Pattern... ptts) {
         if (ptts.length == 0) {

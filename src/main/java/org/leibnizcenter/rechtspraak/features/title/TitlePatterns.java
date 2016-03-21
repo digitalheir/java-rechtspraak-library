@@ -1,8 +1,8 @@
 package org.leibnizcenter.rechtspraak.features.title;
 
 import cc.mallet.types.Token;
-import org.leibnizcenter.rechtspraak.markup.RechtspraakElement;
-import org.leibnizcenter.rechtspraak.markup.features.Patterns;
+import org.leibnizcenter.rechtspraak.markup.docs.RechtspraakElement;
+import org.leibnizcenter.rechtspraak.markup.docs.features.Patterns;
 import org.leibnizcenter.rechtspraak.util.TextPattern;
 
 import java.util.EnumSet;

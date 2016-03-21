@@ -8,12 +8,11 @@ import cc.mallet.util.CommandOption;
 import org.crf.utilities.TaggedToken;
 import org.leibnizcenter.rechtspraak.features.info.InfoPatterns;
 import org.leibnizcenter.rechtspraak.features.title.TitlePatterns;
-import org.leibnizcenter.rechtspraak.markup.Const;
-import org.leibnizcenter.rechtspraak.markup.Label;
-import org.leibnizcenter.rechtspraak.markup.RechtspraakElement;
-import org.leibnizcenter.rechtspraak.markup.RechtspraakTokenList;
-import org.leibnizcenter.rechtspraak.markup.features.IsPartOfList;
-import org.leibnizcenter.rechtspraak.markup.nameparser.Names;
+import org.leibnizcenter.rechtspraak.markup.docs.Const;
+import org.leibnizcenter.rechtspraak.markup.docs.Label;
+import org.leibnizcenter.rechtspraak.markup.docs.RechtspraakElement;
+import org.leibnizcenter.rechtspraak.markup.docs.RechtspraakTokenList;
+import org.leibnizcenter.rechtspraak.markup.docs.features.IsPartOfList;
 import org.leibnizcenter.rechtspraak.util.numbering.FullSectionNumber;
 import org.leibnizcenter.rechtspraak.util.numbering.SubSectionNumber;
 
@@ -25,7 +24,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.regex.Pattern;
 
-import static org.leibnizcenter.rechtspraak.markup.RechtspraakCorpus.listXmlFiles;
+import static org.leibnizcenter.rechtspraak.markup.docs.RechtspraakCorpus.listXmlFiles;
 
 /**
  * Created by maarten on 11-3-16.
@@ -58,10 +57,10 @@ public class TrainWithMallet {
                     "List of label Markov orders (main and backoff) ", null);
     private static final CommandOption.String forbiddenOption = new CommandOption.String(
             SimpleTagger.class, "forbidden", "REGEXP", true,
-            "\\s", "label1,label2 transition forbidden if it matches this", null);
+            "\\s", "label1,label2 transition forbidden if it find this", null);
     private static final CommandOption.String allowedOption = new CommandOption.String(
             SimpleTagger.class, "allowed", "REGEXP", true,
-            ".*", "label1,label2 transition allowed only if it matches this", null);
+            ".*", "label1,label2 transition allowed only if it find this", null);
     private static final CommandOption.String defaultOption = new CommandOption.String(
             SimpleTagger.class, "default-label", "STRING", true, "O",
             "Label for initial context and uninteresting tokens", null);
@@ -313,19 +312,29 @@ public class TrainWithMallet {
     public static void setFeatureValues(RechtspraakTokenList sequence, int indexInSequence, Token t) {
         RechtspraakElement token = sequence.get(indexInSequence).getToken();
 
+//        System.out.println("1info");
         // Info patterns
         InfoPatterns.InfoPatternsNormalizedContains.setFeatureValues(t, token);
         InfoPatterns.InfoPatternsNormalizedMatches.setFeatureValues(t, token);
         InfoPatterns.InfoPatternsUnormalizedContains.setFeatureValues(t, token);
+//        System.out.println("2info");
 
         // Title patterns
+//        System.out.println("1title");
         TitlePatterns.TitlesNormalizedMatchesHighConf.setFeatureValues(t, token);
         TitlePatterns.TitlesNormalizedMatchesLowConf.setFeatureValues(t, token);
         TitlePatterns.TitlesUnnormalizedContains.setFeatureValues(t, token);
+//        System.out.println("2title");
 
+//        System.out.println("1names");
         // Whether the text contains a name, or something that looks like a name
-        Names.NamePatterns.setFeatureValues(t, token);
+        //Names.NamePatterns.setFeatureValues(t, token);
+        // Whether the text contains a place name, or something that looks like a place name
+        //PlaceNamesInNL.setFeatureValues(t, token);
 
+//        System.out.println("2names");
+
+//        System.out.println("1etc");
         if (token.numbering != null) {
             if (token.numbering instanceof SubSectionNumber) {
                 t.setFeatureValue("HAS_SUBSECTION_NUMBERING", 1.0);
@@ -333,18 +342,21 @@ public class TrainWithMallet {
                 t.setFeatureValue("HAS_SECTION_NUMBERING", 1.0);
             }
         }
+        if (token.highConfidenceNumberedTitleFoundAndIsNumbered()) t.setFeatureValue("VERY_PROBABLE_SECTION", 1.0);
         if (IsPartOfList.isPartOfList(sequence, indexInSequence)) t.setFeatureValue("LIKELY_PART_OF_LIST", 1.0);
 
 
         if (token.isSpaced) t.setFeatureValue("IS_SPACED", 1.0);
         if (token.isAllCaps) t.setFeatureValue("IS_ALL_CAPS", 1.0);
-        if (token.wordCount < 5) t.setFeatureValue("LESS_THAN_5_WORDS", 1.0);
-        if (token.wordCount >= 5 && token.wordCount < 10) t.setFeatureValue("LESS_THAN_10_WORDS", 1.0);
+        //if (token.wordCount < 5) t.setFeatureValue("LESS_THAN_5_WORDS", 1.0);
+        //if (token.wordCount >= 5 && token.wordCount < 10) t.setFeatureValue("LESS_THAN_10_WORDS", 1.0);
+        if (token.wordCount >= 5 && token.wordCount >= 10) t.setFeatureValue("AT_LEAST_10_WORDS", 1.0);
 
         if (indexInSequence < 5) t.setFeatureValue("WITHIN_FIRST_5_BLOCKS", 1.0);
         if (indexInSequence >= 5 && indexInSequence < 10) t.setFeatureValue("WITHIN_FIRST_10_BLOCKS", 1.0);
-        if (indexInSequence < sequence.size() / 4) t.setFeatureValue("FIRST_QUARTILE", 1.0);
+        //if (indexInSequence < sequence.size() / 4) t.setFeatureValue("FIRST_QUARTILE", 1.0);
         if (indexInSequence >= sequence.size() / 2) t.setFeatureValue("OVER_HALF", 1.0);
+//        System.out.println("2etc");
     }
 
     private static CRF constructCrf(Alphabet inputAlphabet, Alphabet outputAlphabet) {

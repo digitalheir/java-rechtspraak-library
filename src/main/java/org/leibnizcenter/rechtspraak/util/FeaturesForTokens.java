@@ -7,7 +7,7 @@
 // */
 //public enum FeaturesForTokens {
 //    //    describes a number (a sequence of digits, or a roman numeral)
-//    NUM((s, i) -> toDouble(Regex.NUM.matcher(s.get(i)).matches())),
+//    NUM((s, i) -> toDouble(Regex.NUM.matcher(s.get(i)).find())),
 //
 //    PUNCT((s, i) -> toDouble(Regex.PUNCT, s.get(i))),
 //
@@ -48,7 +48,7 @@
 //    FIRST_WORD((s, i) -> toDouble(i == 0));
 //
 //    private static double toDouble(Pattern art, String s) {
-//        return toDouble(art.matcher(s).matches());
+//        return toDouble(art.matcher(s).find());
 //    }
 //
 //

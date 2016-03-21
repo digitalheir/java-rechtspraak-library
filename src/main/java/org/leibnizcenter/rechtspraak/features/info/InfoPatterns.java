@@ -1,8 +1,8 @@
 package org.leibnizcenter.rechtspraak.features.info;
 
 import cc.mallet.types.Token;
-import org.leibnizcenter.rechtspraak.markup.RechtspraakElement;
-import org.leibnizcenter.rechtspraak.markup.features.Patterns;
+import org.leibnizcenter.rechtspraak.markup.docs.RechtspraakElement;
+import org.leibnizcenter.rechtspraak.markup.docs.features.Patterns;
 import org.leibnizcenter.rechtspraak.util.TextPattern;
 
 import java.util.EnumSet;
@@ -16,20 +16,20 @@ public class InfoPatterns {
     public enum InfoPatternsUnormalizedContains implements Patterns.UnnormalizedTextContains {
         CONTAINS_DATE(Pattern.compile("(?:" + Constants.YEAR + "-" + Constants.DAY_MONTH + "-" + Constants.DAY_MONTH +
                         "|" + Constants.DAY_MONTH + "-" + Constants.DAY_MONTH + "-" + Constants.YEAR +
-                        "|" + Constants.DAY_MONTH + " +" +
+                        "|" + Constants.DAY_MONTH + " {0,3}" +
                         "(" +
                         "jan(\\.|uari)?|feb(\\.|ruari)?" +
                         "|m(aa)?rt\\.?|apr(\\.|il)?|mei|ju[nl](\\.|i)?" +
                         "|aug(\\.|ustus)?|okt(\\.|ober)?" +
                         "|nov(\\.|ember)?|sept?(\\.|t?ember)?|dec(\\.|ember)?" +
                         ")" +
-                        " +" + Constants.YEAR +
+                        " {0,3}" + Constants.YEAR +
                         ")",
                 Pattern.CASE_INSENSITIVE)),
 
-        CONTAINS_BRACKETED_TEXT(Pattern.compile("\\[[\\p{L}0-9 ]+\\]", Pattern.CASE_INSENSITIVE)),
+        CONTAINS_BRACKETED_TEXT(Pattern.compile("\\[[\\p{L}0-9 ]{0,25}\\]", Pattern.CASE_INSENSITIVE)),
 
-        CONTAINS_LIKELY_ZAAKNR(Pattern.compile("\\p{L}*\\s*[0-9]{2}/[0-9]{2,5}",
+        CONTAINS_LIKELY_ZAAKNR(Pattern.compile("[0-9]{0,15}(/[A-Z]{0,2}[0-9]{1,5}){1,3}",
                 Pattern.CASE_INSENSITIVE)
         );
 
@@ -66,66 +66,66 @@ public class InfoPatterns {
         // INFO
         //
         START_W_INZAKE(new TextPattern("START_W_INZAKE",
-                Pattern.compile("inzake\\b.*", Pattern.CASE_INSENSITIVE)
+                Pattern.compile("^inzake\\b", Pattern.CASE_INSENSITIVE)
 
         )),
 
         START_W_AFDELING(new TextPattern("START_W_AFDELING",
-                Pattern.compile("^afdeling.*", Pattern.CASE_INSENSITIVE)
+                Pattern.compile("^afdeling", Pattern.CASE_INSENSITIVE)
 
         )),
 
         START_W_SECTOR(new TextPattern("START_W_SECTOR",
-                Pattern.compile("^sector.*", Pattern.CASE_INSENSITIVE)
+                Pattern.compile("^sector", Pattern.CASE_INSENSITIVE)
 
         )),
 
         START_W_HIERNA(new TextPattern("START_W_HIERNA",
-                Pattern.compile("^hierna.*", Pattern.CASE_INSENSITIVE)
+                Pattern.compile("^hierna", Pattern.CASE_INSENSITIVE)
 
         )),
 
         START_W_LOCATIE(new TextPattern("START_W_LOCATIE",
-                Pattern.compile("^locatie.*", Pattern.CASE_INSENSITIVE)
+                Pattern.compile("^locatie", Pattern.CASE_INSENSITIVE)
 
         )),
 
         START_W_ZAAK_ROL_NR(new TextPattern("START_W_ZAAK_ROL_NR",
-                Pattern.compile("(?:kenmerk|(?:(?:zaak|rol).{0,15})?n(?:umme)?[ro]\\.?).*",
+                Pattern.compile("(?:kenmerk|(?:(?:zaak|rol).{0,15})?n(?:umme)?[ro]\\.?)",
                         Pattern.CASE_INSENSITIVE)
 
         )),
 
         START_W_ZAAKNR(new TextPattern("START_W_ZAAKNR",
-                Pattern.compile("(?:(?:zaak|rol|parket|ro).{0,15})?n(?:umme)?[ro]\\.?.*",
+                Pattern.compile("(?:(?:zaak|rol|parket|ro).{0,15})?n(?:umme)?[ro]\\.?",
                         Pattern.CASE_INSENSITIVE)
 
         )),
 
 
         START_W_WONEND_GEVESTIGD(new TextPattern("START_W_WONEND_GEVESTIGD",
-                Pattern.compile("^.{0,15}(wonend|gevestigd).*", Pattern.CASE_INSENSITIVE)
+                Pattern.compile("^.{0,15}(wonend|gevestigd)", Pattern.CASE_INSENSITIVE)
 
         )),
 
         START_W_DATUM(new TextPattern("START_W_DATUM",
-                Pattern.compile("^datum.*", Pattern.CASE_INSENSITIVE)
+                Pattern.compile("^datum", Pattern.CASE_INSENSITIVE)
 
         )),
 
         START_W_PATT(new TextPattern("START_W_IN_DE_ZAAK_VAN",
-                Pattern.compile("^(?:in|op) (?:de|het) (?:zaak|beroep) .*", Pattern.CASE_INSENSITIVE)
+                Pattern.compile("^(?:in|op) (?:de|het) (?:zaak|beroep)", Pattern.CASE_INSENSITIVE)
 
         )),
 
         END_W_KAMER(new TextPattern("END_W_KAMER",
-                Pattern.compile(".*kamer$", Pattern.CASE_INSENSITIVE)
+                Pattern.compile("kamer$", Pattern.CASE_INSENSITIVE)
 
         )),
 
         END_W_ROLE(new TextPattern("END_W_ROLE",
-                Pattern.compile(".*(((ge)(daagd|machtigd)e?)|appelante?|verweerders?|advocaa?t(en)?)" +
-                        "( te \\p{L}+\\b)?\\s*[^\\p{L}]*$", Pattern.CASE_INSENSITIVE)
+                Pattern.compile("(((ge)(daagd|machtigd)e?)|appelante?|verweerders?|advocaa?t(en)?)" +
+                        "( te \\p{L}+\\b)?\\s{0,3}[^\\p{L}]{0,20}$", Pattern.CASE_INSENSITIVE)
         ));
 
         public static Set<InfoPatternsNormalizedContains> set = EnumSet.allOf(InfoPatternsNormalizedContains.class);
@@ -152,7 +152,7 @@ public class InfoPatterns {
          * starts with rechtbank/gerechthof with location
          */
         START_WITH_COURT(new TextPattern("START_WITH_COURT", Pattern.compile(
-                "^*(de|het)?\\s*(?:ge)?recht(?:bank|shof) ?(?:te )?(.*)",
+                "^*(de|het)?\\s{0,3}(?:ge)?recht(?:bank|shof) ?(?:te )?",
                 Pattern.CASE_INSENSITIVE)
 
         )),
@@ -161,7 +161,7 @@ public class InfoPatterns {
          * council of the state
          */
         RAAD_VAN_STATE(new TextPattern("RAAD_VAN_STATE", Pattern.compile(
-                "^*(de|het)?\\s*raad\\s+van\\s+state",
+                "^*(de|het)?\\s{0,3}raad\\s{0,3}van\\s{0,3}state",
                 Pattern.CASE_INSENSITIVE)
 
         )),
@@ -170,10 +170,10 @@ public class InfoPatterns {
          * starts with high/central council, e.g. 'hoge raad van beroep'
          */
         STARTS_WITH_RAAD(new TextPattern("COUNCIL", Pattern.compile(
-                "^(?:de|het)?\\s*(?:hoge|centrale)?\\s+(?:raad|college)" +
-                        "(?:\\s+(van|voor))?" +
-                        "(?:\\s+(de|het))?" +
-                        "(?:\\s+\\p{L}+){0,3}.*",
+                "^(?:de|het)?\\s{0,3}(?:hoge|centrale)?\\s{0,3}(?:raad|college)" +
+                        "(?:\\s{0,3}(van|voor))?" +
+                        "(?:\\s{0,3}(de|het))?" +
+                        "(?:\\s{1,3}\\p{L}+){0,3}",
                 Pattern.CASE_INSENSITIVE)
 
         )),

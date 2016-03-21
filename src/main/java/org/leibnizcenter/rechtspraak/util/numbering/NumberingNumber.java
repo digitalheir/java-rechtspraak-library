@@ -72,6 +72,7 @@ public interface NumberingNumber {
 
     String getTerminal();
 
+
     public static class TooBigForFormattingException extends NumberFormatException {
         public TooBigForFormattingException(String number) {
             super("Number is too big to be a numbering numbering: " + number);

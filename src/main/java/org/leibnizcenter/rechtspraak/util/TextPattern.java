@@ -1,7 +1,7 @@
 package org.leibnizcenter.rechtspraak.util;
 
-import org.leibnizcenter.rechtspraak.markup.Label;
-import org.leibnizcenter.rechtspraak.markup.features.TokenMatch;
+import org.leibnizcenter.rechtspraak.markup.docs.Label;
+import org.leibnizcenter.rechtspraak.markup.docs.features.TokenMatch;
 
 import java.util.EnumMap;
 import java.util.Map;
@@ -56,6 +56,10 @@ public class TextPattern {
         result = 31 * result + filters.hashCode();
         result = 31 * result + features.hashCode();
         return result;
+    }
+
+    public String name() {
+        return name;
     }
 
 

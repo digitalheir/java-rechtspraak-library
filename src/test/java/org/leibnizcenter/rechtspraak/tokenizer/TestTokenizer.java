@@ -1,7 +1,7 @@
 package org.leibnizcenter.rechtspraak.tokenizer;
 
 import org.junit.Test;
-import org.leibnizcenter.rechtspraak.markup.nameparser.Names;
+import org.leibnizcenter.rechtspraak.markup.docs.nameparser.Names;
 
 import java.util.List;
 

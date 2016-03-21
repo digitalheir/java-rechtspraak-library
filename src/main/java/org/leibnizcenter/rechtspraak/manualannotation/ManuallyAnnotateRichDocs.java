@@ -1,10 +1,10 @@
 package org.leibnizcenter.rechtspraak.manualannotation;
 
 import cc.mallet.types.LabelAlphabet;
-import org.leibnizcenter.rechtspraak.markup.Const;
-import org.leibnizcenter.rechtspraak.markup.Label;
-import org.leibnizcenter.rechtspraak.markup.RechtspraakElement;
-import org.leibnizcenter.rechtspraak.markup.RechtspraakTokenList;
+import org.leibnizcenter.rechtspraak.markup.docs.Const;
+import org.leibnizcenter.rechtspraak.markup.docs.Label;
+import org.leibnizcenter.rechtspraak.markup.docs.RechtspraakElement;
+import org.leibnizcenter.rechtspraak.markup.docs.RechtspraakTokenList;
 import org.w3c.dom.Node;
 
 import javax.xml.transform.OutputKeys;
@@ -19,7 +19,7 @@ import java.io.IOException;
 import java.io.StringWriter;
 import java.util.List;
 
-import static org.leibnizcenter.rechtspraak.markup.RechtspraakCorpus.listXmlFiles;
+import static org.leibnizcenter.rechtspraak.markup.docs.RechtspraakCorpus.listXmlFiles;
 
 
 /**
@@ -49,7 +49,7 @@ public class ManuallyAnnotateRichDocs {
                 System.out.println(doc.getEcli());
                 for (int i = 0; i < doc.size(); i++) {
                     RechtspraakElement token = doc.get(i).getToken();
-                    org.leibnizcenter.rechtspraak.markup.Label tag = doc.get(i).getTag();
+                    Label tag = doc.get(i).getTag();
                     System.out.println();
                     System.out.println(tag + "\t\t" + token.getTextContent());
 

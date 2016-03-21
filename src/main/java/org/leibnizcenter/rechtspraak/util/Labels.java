@@ -1,7 +1,7 @@
 package org.leibnizcenter.rechtspraak.util;
 
 import com.google.common.collect.Sets;
-import org.leibnizcenter.rechtspraak.markup.Label;
+import org.leibnizcenter.rechtspraak.markup.docs.Label;
 
 import java.util.EnumSet;
 import java.util.Set;
