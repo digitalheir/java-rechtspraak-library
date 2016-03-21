@@ -82,6 +82,19 @@ public class Names {
     public static final String TOLERANTLASTNAME = "(?:(?:" + SINGLETOLERANTLASTNAME + ")+"
             // Arbitrary amount of hyphens
             + "(?:-" + SINGLETOLERANTLASTNAME + "){0,5})";
+
+    private static final String TOLERANT_FIRSTNAMES = "(?:\\b" + TOLERANT_FIRSTNAME + "(?: {1,2}" + TOLERANT_FIRSTNAME + "){0,5})";
+    public static final String TOLERANT_FIRST_NAME_AND_OR_INITIALS =
+            "(?:" + TOLERANT_FIRSTNAMES
+                    + "(?: {0,2}\\b" + LOOSE_INITIALS + ")?"
+                    + "|" + LOOSE_INITIALS + ")";
+    /////////////////////////////////////////
+    private static final String KNOWN_TITLES = "(?:" + KNOWN_TITLE + "(?: {0,2}" + KNOWN_TITLE + "){0,4})";
+
+    public static final String TOLERANTFULLNAME_STRICT_INITIALS =
+            "(?:(" + KNOWN_TITLES + ") {0,2})?"
+                    + "(?:(" + STRICT_INITIALS + ") {0,2})"
+                    + "(" + TOLERANTLASTNAME + ")";
     //Token.string ==~ ".*[aeiouy].*", //At least one vowel...
     public static final String STRICTINITIALSNAMEWITHMULTIPLEINITIALS = "((" +
             KNOWN_TITLE +
@@ -92,31 +105,6 @@ public class Names {
             ")+(" +
             TOLERANTLASTNAME +
             "))";
-    /**
-     * Matches any non-space strings
-     */
-    public static final Pattern TOKEN_REGEX = Pattern.compile("[^\\s]+");
-    public static final String TOLERANTFULLNAME_WITH_OPTIONAL_ROLE = "(?:"
-            + TOLERANTFULLNAME
-            + "(?:, {0,2}(" + ROLE_SINGULAR + "))?"
-            + ")";
-    public static final Pattern TITLED_NAME = Pattern.compile(TOLERANT_TITLED_NAME);
-    public static final String TOLERANTFULLNAME_2_TO_4 =
-            "" + TOLERANTFULLNAME_WITH_OPTIONAL_ROLE + ""
-                    + "(?:[,;] {0,2}" + TOLERANTFULLNAME_WITH_OPTIONAL_ROLE + "){0,3}"
-                    + "[,;]? {0,2}en[,;]? {0,2}\\b"
-                    + TOLERANTFULLNAME_WITH_OPTIONAL_ROLE + "";
-    private static final String TOLERANT_FIRSTNAMES = "(?:\\b" + TOLERANT_FIRSTNAME + "(?: {1,2}" + TOLERANT_FIRSTNAME + "){0,5})";
-    public static final String TOLERANT_FIRST_NAME_AND_OR_INITIALS =
-            "(?:" + TOLERANT_FIRSTNAMES
-                    + "(?: {0,2}\\b" + LOOSE_INITIALS + ")?"
-                    + "|" + LOOSE_INITIALS + ")";
-    /////////////////////////////////////////
-    private static final String KNOWN_TITLES = "(?:" + KNOWN_TITLE + "(?: {0,2}" + KNOWN_TITLE + "){0,4})";
-    public static final String TOLERANTFULLNAME_STRICT_INITIALS =
-            "(?:(" + KNOWN_TITLES + ") {0,2})?"
-                    + "(?:(" + STRICT_INITIALS + ") {0,2})"
-                    + "(" + TOLERANTLASTNAME + ")";
     /**
      * Ex. [mr. Vox], [mr. A.D.W. de Heyde]
      */
@@ -131,6 +119,20 @@ public class Names {
             "(?:(" + KNOWN_TITLES + ") {0,2})?"
                     + "(?:(" + TOLERANT_FIRST_NAME_AND_OR_INITIALS + ") {0,2})"
                     + "(" + TOLERANTLASTNAME + ")";
+    /**
+     * Matches any non-space strings
+     */
+    public static final Pattern TOKEN_REGEX = Pattern.compile("[^\\s]+");
+    public static final String TOLERANTFULLNAME_WITH_OPTIONAL_ROLE = "(?:"
+            + TOLERANTFULLNAME
+            + "(?:, {0,2}(" + ROLE_SINGULAR + "))?"
+            + ")";
+    public static final Pattern TITLED_NAME = Pattern.compile(TOLERANT_TITLED_NAME);
+    public static final String TOLERANTFULLNAME_2_TO_4 =
+            "" + TOLERANTFULLNAME_WITH_OPTIONAL_ROLE + ""
+                    + "(?:[,;] {0,2}" + TOLERANTFULLNAME_WITH_OPTIONAL_ROLE + "){0,3}"
+                    + "[,;]? {0,2}en[,;]? {0,2}\\b"
+                    + TOLERANTFULLNAME_WITH_OPTIONAL_ROLE + "";
     private static final String VERTEGENWOORDIGD_DOOR = "(?:(?:" +
             "(?:vert(?:eg)?enwoordigd|bijgestaan|laten vertegenwoordigen|laten bijstaan)" +
             "|" +
