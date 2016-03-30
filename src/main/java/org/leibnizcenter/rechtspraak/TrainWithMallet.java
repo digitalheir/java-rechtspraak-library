@@ -5,20 +5,24 @@ import cc.mallet.pipe.Pipe;
 import cc.mallet.pipe.TokenSequence2FeatureVectorSequence;
 import cc.mallet.types.*;
 import cc.mallet.util.CommandOption;
-import org.crf.utilities.TaggedToken;
+import deprecated.org.crf.utilities.TaggedToken;
 import org.leibnizcenter.rechtspraak.features.Features;
+import org.leibnizcenter.rechtspraak.manualannotation.Annotator;
 import org.leibnizcenter.rechtspraak.markup.docs.Const;
 import org.leibnizcenter.rechtspraak.markup.docs.Label;
-import org.leibnizcenter.rechtspraak.markup.docs.RechtspraakElement;
 import org.leibnizcenter.rechtspraak.markup.docs.LabeledTokenList;
+import org.leibnizcenter.rechtspraak.markup.docs.RechtspraakElement;
 
+import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.util.List;
 import java.util.Random;
+import java.util.Set;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 import static org.leibnizcenter.rechtspraak.markup.docs.RechtspraakCorpus.listXmlFiles;
 
@@ -26,9 +30,10 @@ import static org.leibnizcenter.rechtspraak.markup.docs.RechtspraakCorpus.listXm
  * Created by maarten on 11-3-16.
  */
 public class TrainWithMallet {
-    public final static File xmlFiles = new File(Const.PATH_TRAIN_TEST_XML_FILES_WINDOWS);
+    //    public final static File xmlFiles = new File(Const.PATH_TRAIN_TEST_XML_FILES_LINUX);
+    public final static File xmlFiles = new File(Annotator.OUT_FOLDER);
 
-    private static final int MAX_DOCS = 100;
+    private static final int MAX_DOCS = 500;
 
 
     private static final CommandOption.Double gaussianVarianceOption = new CommandOption.Double
@@ -97,14 +102,16 @@ public class TrainWithMallet {
     private static Alphabet labelAlphabet = new LabelAlphabet();
     private static Random r = new Random(69L);
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, ClassNotFoundException, ParserConfigurationException {
         // Load a corpus
         System.out.println("_____________________________________");
         InstanceList il = new InstanceList(pipe);
         List<File> xmlFiles = listXmlFiles(TrainWithMallet.xmlFiles, MAX_DOCS, false);
 
         int i = 0;
-        for (LabeledTokenList doc : new LabeledTokenList.FileIterable(xmlFiles)) {
+        for (LabeledTokenList doc : new LabeledTokenList.FileIterable(
+                new LabeledTokenList.FileIteratorFromAnnotations(xmlFiles))
+                ) {
             Instance instance = getInstance(doc, false);
             il.addThruPipe(instance);
             i++;
@@ -126,12 +133,17 @@ public class TrainWithMallet {
 //        );
 
         CRF crf = constructCrf(dataAlphabet, labelAlphabet);
+//        CRF crf = loadCrf(new File(Const.RECHTSPRAAK_MARKUP_TAGGER_CRF));
 
+        Set<String> trnasitions = Label.getAllowedTransitions().stream()
+                .map((arr) -> String.join(",", arr[0].name(), arr[1].name()))
+                .collect(Collectors.toSet());
+        String allowedTransitions = String.join(" ",
+                trnasitions);
+        System.out.println(forbiddenOption.defaultValue);
         train(il, null, null, ordersOption.value, defaultOption.value,
-                Label.SECTION_TITLE.toString() + "," + Label.SECTION_TITLE.toString()
-                        + " " + Label.SECTION_TITLE.toString() + "," + Label.INFO.toString()
-                        + " " + Label.OUT.toString() + "," + Label.INFO.toString(),
-                allowedOption.value,
+                forbiddenOption.defaultValue,
+                allowedTransitions,
                 connectedOption.value, iterationsOption.value,
                 gaussianVarianceOption.value, crf, numThreads.value);
 
@@ -159,6 +171,7 @@ public class TrainWithMallet {
      * @param numThreads   Number of threads to use
      * @return the trained model
      */
+
     public static CRF train(InstanceList training, InstanceList testing,
                             TransducerEvaluator eval, int[] orders,
                             String defaultLabel,
@@ -310,27 +323,17 @@ public class TrainWithMallet {
     private static CRF constructCrf(Alphabet inputAlphabet, Alphabet outputAlphabet) {
         CRF crf = new CRF(inputAlphabet, outputAlphabet);
 
-        // construct the finite state machine
-        crf.addState(Label.INFO.toString(), new String[]{
-                Label.SECTION_TITLE.toString(),
-                Label.OUT.toString(),
-                Label.INFO.toString()
-        });
-        crf.addState(Label.SECTION_TITLE.toString(), new String[]{
-                Label.SECTION_TITLE.toString(),// Should not happen too often
-                Label.INFO.toString(),// Should not happen too often
-                Label.OUT.toString()
-        });
-        crf.addState(Label.OUT.toString(), new String[]{
-                Label.INFO.toString(),// Should not happen too often
-                Label.SECTION_TITLE.toString(),
-                Label.OUT.toString()
-        });
+        // Add states
+        for (Label l : Label.values()) {
+            Set<String> destinationSet = Label.getAllowedTransitions(l).stream()
+                    .map(Enum::name)
+                    .collect(Collectors.toSet());
+            crf.addState(l.name(), destinationSet.toArray(new String[destinationSet.size()]));
+        }
 
         //    CRFOptimizableBy* objects (terms in the objective function)
         //    CRF trainer
         //    evaluator and writer
-
         return crf;
     }
 

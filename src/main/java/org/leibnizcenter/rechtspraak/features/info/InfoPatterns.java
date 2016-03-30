@@ -35,6 +35,7 @@ public class InfoPatterns {
 //    }
 
     public enum InfoPatternsUnormalizedContains implements Patterns.UnnormalizedTextContains {
+
         CONTAINS_DATE(
                 Pattern.compile("(?:" + Constants.YEAR + "-" + Constants.DAY_MONTH + "-" + Constants.DAY_MONTH +
                                 "|" + Constants.DAY_MONTH + "-" + Constants.DAY_MONTH + "-" + Constants.YEAR +
@@ -96,77 +97,93 @@ public class InfoPatterns {
         CONTAINS_REF_TO_WOONPLAATS(Pattern.compile(
                 "woo?n(plaats|ende)"
         )),
+
+        /**
+         * starts with high/central council, e.g. 'hoge raad van beroep'
+         */
+        STARTS_WITH_RAAD(Pattern.compile(
+                "^(?:de|het)?\\s{0,3}(?:hoge|centrale)?\\s{0,3}(?:raad|college)" +
+                        "(?:\\s{0,3}(van|voor))?" +
+                        "(?:\\s{0,3}(de|het))?" +
+                        "(?:\\s{1,3}\\p{L}{0,20}){0,3}",
+                Pattern.CASE_INSENSITIVE)
+
+        ),
+
+        /**
+         * starts with rechtbank/gerechthof with location
+         */
+        START_WITH_COURT(Pattern.compile(
+                "^(de|het)?\\s{0,3}(?:ge)?rechts?(?:bank|hof)?",
+                Pattern.CASE_INSENSITIVE)
+
+        ),
         // inzake / in de zaak
-        START_W_INZAKE(new TextPattern("START_W_INZAKE",
+        START_W_INZAKE(
                 Pattern.compile("^in ?(de )?zaa?ke?\\b", Pattern.CASE_INSENSITIVE)
 
-        )),
+        ),
 
-        START_W_AFDELING(new TextPattern("START_W_AFDELING",
+        START_W_AFDELING(
                 Pattern.compile("^(de )?afdeling", Pattern.CASE_INSENSITIVE)
 
-        )),
+        ),
 
-        START_W_SECTOR(new TextPattern("START_W_SECTOR",
+        START_W_SECTOR(
                 Pattern.compile("^(de )?sector", Pattern.CASE_INSENSITIVE)
 
-        )),
+        ),
 
-        START_W_HIERNA(new TextPattern("START_W_HIERNA",
+        START_W_HIERNA(
                 Pattern.compile("^hierna", Pattern.CASE_INSENSITIVE)
 
-        )),
+        ),
 
-        START_W_LOCATIE(new TextPattern("START_W_LOCATIE",
+        START_W_LOCATIE(
                 Pattern.compile("^locatie", Pattern.CASE_INSENSITIVE)
 
-        )),
+        ),
 
-        START_W_ZAAK_ROL_NR(new TextPattern("START_W_ZAAK_ROL_NR",
+        START_W_ZAAK_ROL_NR(
                 Pattern.compile("^(?:kenmerk|(?:(?:zaak|rol).{0,15})?n(?:umme)?[ro]\\.?)",
                         Pattern.CASE_INSENSITIVE)
 
-        )),
+        ),
 
-        START_W_ZAAKNR(new TextPattern("START_W_ZAAKNR",
+        START_W_ZAAKNR(
                 Pattern.compile("^(?:(?:zaak|rol|parket|ro).{0,15})?n(?:umme)?[ro]\\.?",
                         Pattern.CASE_INSENSITIVE)
 
-        )),
+        ),
 
 
-        START_W_WONEND_GEVESTIGD(new TextPattern("START_W_WONEND_GEVESTIGD",
+        START_W_WONEND_GEVESTIGD(
                 Pattern.compile("^.{0,15}(wonend|gevestigd)", Pattern.CASE_INSENSITIVE)
 
-        )),
+        ),
 
-        START_W_DATUM(new TextPattern("START_W_DATUM",
+        START_W_DATUM(
                 Pattern.compile("^datum", Pattern.CASE_INSENSITIVE)
 
-        )),
+        ),
 
-        START_W_PATT(new TextPattern("START_W_IN_DE_ZAAK_VAN",
+        START_W_PATT(
                 Pattern.compile("^(?:in|op) (?:de|het) (?:zaak|beroep)", Pattern.CASE_INSENSITIVE)
 
-        )),
+        ),
 
-        END_W_KAMER(new TextPattern("END_W_KAMER",
+        END_W_KAMER(
                 Pattern.compile("kamer$", Pattern.CASE_INSENSITIVE)
 
-        )),
+        ),
 
-        END_W_ROLE(new TextPattern("END_W_ROLE",
+        END_W_ROLE(
                 Pattern.compile("(((ge)(daagd|machtigd)e?)|appelante?|verweerders?|advocaa?t(en)?)" +
                         "( te \\p{L}+\\b)?\\s{0,3}[^\\p{L}]{0,20}$", Pattern.CASE_INSENSITIVE)
-        ));
+        );
 
         public static Set<InfoPatternsNormalizedContains> set = EnumSet.allOf(InfoPatternsNormalizedContains.class);
         private final TextPattern pattern;
-
-        InfoPatternsNormalizedContains(TextPattern pattern) {
-            this.pattern = pattern;
-        }
-
 
         InfoPatternsNormalizedContains(Pattern compile) {
             this.pattern = new TextPattern(name(), compile);
@@ -185,50 +202,28 @@ public class InfoPatterns {
 
 
     public enum InfoPatternsNormalizedMatches implements Patterns.NormalizedTextMatches {
-        /**
-         * starts with rechtbank/gerechthof with location
-         */
-        START_WITH_COURT(new TextPattern("START_WITH_COURT", Pattern.compile(
-                "^*(de|het)?\\s{0,3}(?:ge)?recht(?:bank|shof) ?(?:te )?",
-                Pattern.CASE_INSENSITIVE)
-
-        )),
+        DE_RECHTBANK(Pattern.compile("de rechtbank", Pattern.CASE_INSENSITIVE)),
 
         /**
          * council of the state
          */
-        RAAD_VAN_STATE(new TextPattern("RAAD_VAN_STATE", Pattern.compile(
-                "^*(de|het)?\\s{0,3}raad\\s{0,3}van\\s{0,3}state",
+        RAAD_VAN_STATE(Pattern.compile(
+                "^(de|het)?\\s{0,3}raad\\s{0,3}van\\s{0,3}state",
                 Pattern.CASE_INSENSITIVE)
 
-        )),
+        ),
 
-        /**
-         * starts with high/central council, e.g. 'hoge raad van beroep'
-         */
-        STARTS_WITH_RAAD(new TextPattern("COUNCIL", Pattern.compile(
-                "^(?:de|het)?\\s{0,3}(?:hoge|centrale)?\\s{0,3}(?:raad|college)" +
-                        "(?:\\s{0,3}(van|voor))?" +
-                        "(?:\\s{0,3}(de|het))?" +
-                        "(?:\\s{1,3}\\p{L}{0,20}){0,3}",
-                Pattern.CASE_INSENSITIVE)
+        EN_VS_CONTRA(Pattern.compile("(en|vs|tegen|contra)", Pattern.CASE_INSENSITIVE)),
+        VENNOOTSCHAP(Pattern.compile("((de|het) )?(naamloze|besloten )?vennootschap(pen)?", Pattern.CASE_INSENSITIVE)),
 
-        )),
-
-
-        EN_VS_CONTRA(new TextPattern("AND_OR_AGAINST",
-                Pattern.compile("^(en|vs|tegen|contra)", Pattern.CASE_INSENSITIVE)
-
-        )),
-
-        INZAKE(new TextPattern("INZAKE", Pattern.compile("^inzake$", Pattern.CASE_INSENSITIVE)));
+        INZAKE(Pattern.compile("(inzake)", Pattern.CASE_INSENSITIVE));
 
 
         public static Set<InfoPatternsNormalizedMatches> set = EnumSet.allOf(InfoPatternsNormalizedMatches.class);
         private final TextPattern pattern;
 
-        InfoPatternsNormalizedMatches(TextPattern pattern) {
-            this.pattern = pattern;
+        InfoPatternsNormalizedMatches(Pattern pattern) {
+            this.pattern = new TextPattern(name(), pattern);
         }
 
         public static void setFeatureValues(Token t, RechtspraakElement token) {

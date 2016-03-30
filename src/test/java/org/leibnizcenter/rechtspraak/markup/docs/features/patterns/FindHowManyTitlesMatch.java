@@ -8,10 +8,11 @@ import org.leibnizcenter.rechtspraak.TrainWithMallet;
 import org.leibnizcenter.rechtspraak.features.title.TitlePatterns.TitlesNormalizedMatchesHighConf;
 import org.leibnizcenter.rechtspraak.markup.docs.Label;
 import org.leibnizcenter.rechtspraak.markup.docs.LabeledToken;
-import org.leibnizcenter.rechtspraak.markup.docs.RechtspraakCorpus;
 import org.leibnizcenter.rechtspraak.markup.docs.LabeledTokenList;
+import org.leibnizcenter.rechtspraak.markup.docs.RechtspraakCorpus;
 import org.leibnizcenter.rechtspraak.markup.docs.features.Patterns;
 
+import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
@@ -28,7 +29,7 @@ public class FindHowManyTitlesMatch {
     private static final int INT = 20;
 //    (pattern) ->
 
-    public static void main(String[] a) throws IOException {
+    public static void main(String[] a) throws IOException, ParserConfigurationException {
         Multiset<String> falseNegatives = HashMultiset.create();
 
         Multiset<String> falsePositives = HashMultiset.create();
@@ -37,7 +38,7 @@ public class FindHowManyTitlesMatch {
 
         int truePositives = 0, falsePositive = 0, totalTitles = 0, totalTokens = 0;
         List<File> xmlFiles = RechtspraakCorpus.listXmlFiles(TrainWithMallet.xmlFiles, -100, false);
-        for (LabeledTokenList doc : new LabeledTokenList.FileIterable(xmlFiles)) {
+        for (LabeledTokenList doc : new LabeledTokenList.FileIterable(new LabeledTokenList.FileIteratorFromXmlStructure(xmlFiles))) {
             for (LabeledToken token : doc) {
                 String text = token.getToken().normalizedText;
                 boolean ignore = Strings.isNullOrEmpty(text)

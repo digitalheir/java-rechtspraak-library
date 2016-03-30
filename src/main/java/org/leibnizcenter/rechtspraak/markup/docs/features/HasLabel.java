@@ -1,7 +1,7 @@
 package org.leibnizcenter.rechtspraak.markup.docs.features;
 
-import org.crf.crf.CrfFeature;
-import org.crf.crf.filters.Filter;
+import deprecated.org.crf.crf.CrfFeature;
+import deprecated.org.crf.crf.filters.Filter;
 import org.leibnizcenter.rechtspraak.markup.docs.Label;
 import org.leibnizcenter.rechtspraak.markup.docs.RechtspraakElement;
 import org.leibnizcenter.rechtspraak.util.Doubles;

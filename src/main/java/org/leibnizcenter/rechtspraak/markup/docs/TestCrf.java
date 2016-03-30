@@ -1,10 +1,10 @@
 package org.leibnizcenter.rechtspraak.markup.docs;
 
 import com.google.common.collect.Lists;
-import org.crf.crf.CrfModel;
-import org.crf.crf.run.CrfInferencePerformer;
-import org.crf.crf.run.ExampleMain;
-import org.crf.utilities.TaggedToken;
+import deprecated.org.crf.crf.CrfModel;
+import deprecated.org.crf.crf.run.CrfInferencePerformer;
+import deprecated.org.crf.crf.run.ExampleMain;
+import deprecated.org.crf.utilities.TaggedToken;
 import org.leibnizcenter.rechtspraak.util.Xml;
 import org.w3c.dom.Document;
 import org.xml.sax.InputSource;
@@ -59,7 +59,7 @@ public final class TestCrf implements Runnable {
                 Document doc = builder.parse(new InputSource(new InputStreamReader(is)));
 
                 List<RechtspraakElement> instance =
-                        Lists.transform(LabeledTokenList.from(ecli, doc, Xml.getContentRoot(doc)), TaggedToken::getToken);
+                        Lists.transform(LabeledTokenList.fromOriginalTags(ecli, doc, Xml.getContentRoot(doc)), TaggedToken::getToken);
                 List<TaggedToken<RechtspraakElement, Label>> result = inferencePerformer.tagSequence(instance);
 
                 // Print the result:

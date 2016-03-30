@@ -4,6 +4,7 @@ import com.google.common.collect.Lists;
 
 import java.security.InvalidParameterException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 import java.util.regex.Pattern;
@@ -11,8 +12,8 @@ import java.util.regex.Pattern;
 /**
  * Created by maarten on 16-2-16.
  */
-public class SubSectionNumber extends ArrayList<FullSectionNumber> implements NumberingNumber {
-    public static Pattern REGEX_SUBSECTION = Pattern.compile("(?:([0-9]+)|(i{1,3}\\b)|(i?vi{0,3}\\b)|(i?xi{0,3}\\b))(?:\\.(?:([0-9]+)|(i{1,3}\\b)|(i?vi{0,3}\\b)|(i?xi{0,3}\\b)))+", Pattern.CASE_INSENSITIVE);
+public class SubSectionNumber extends ArrayList<SingleTokenNumbering> implements NumberingNumber {
+    public static Pattern REGEX_SUBSECTION = Pattern.compile("(?:([0-9]+)|(i{1,3}\\b)|(i?vi{0,3}\\b)|(i?xi{0,3}\\b))(?:\\.(?:([0-9]+)|[a-z\\*\\-]{0,3}|(i{1,3}\\b)|(i?vi{0,3}\\b)|(i?xi{0,3}\\b)))+", Pattern.CASE_INSENSITIVE);
     private final String terminal;
 
     public SubSectionNumber(String s, String terminal) {
@@ -37,7 +38,7 @@ public class SubSectionNumber extends ArrayList<FullSectionNumber> implements Nu
         addAll(Lists.transform(l, NumberingNumber::parseFullInteger));
     }
 
-    public SubSectionNumber(List<FullSectionNumber> nums, String terminal) {
+    public SubSectionNumber(List<SingleTokenNumbering> nums, String terminal) {
         addAll(nums);
         this.terminal = terminal;
     }
@@ -56,11 +57,12 @@ public class SubSectionNumber extends ArrayList<FullSectionNumber> implements Nu
             throw new IllegalStateException("Numbering should have at least a main section and a subsection");
         }
 
-        FullSectionNumber checkFor = (get(size() - 1));
-        if (FullSectionNumber.isFirstNumberInSequence(checkFor)) {
+        SingleTokenNumbering checkFor = (get(size() - 1));
+        if (checkFor instanceof FullNumber && FullNumber.isFirstNumberInSequence((FullNumber) checkFor)) {
             return new SubSectionNumber(subList(0, size() - 1), terminal);
+        } else {
+            return new SubSectionNumber(Collections.emptyList(), terminal);
         }
-        return new SubSectionNumber(Lists.newArrayList(), terminal);
     }
 
     /**
@@ -76,7 +78,9 @@ public class SubSectionNumber extends ArrayList<FullSectionNumber> implements Nu
                     return false;
                 }
             }
-            return FullSectionNumber.isFirstNumberInSequence(trailingNumber());
+            SingleTokenNumbering trailingNumber = trailingNumber();
+            return trailingNumber instanceof FullNumber
+                    && FullNumber.isFirstNumberInSequence((FullNumber) trailingNumber);
         } else {
             return false;
         }
@@ -84,13 +88,16 @@ public class SubSectionNumber extends ArrayList<FullSectionNumber> implements Nu
 
     @Override
     public boolean isSuccedentOf(NumberingNumber precedent) {
-        List<FullSectionNumber> succedent = this;
+        List<SingleTokenNumbering> succedent = this;
 
-        if (precedent instanceof FullSectionNumber) {
+        if (precedent instanceof FullNumber) {
             // E.g., 3 -> 3.1
             return succedent.size() == 2
                     && succedent.get(0).equals(precedent) // [3].1
-                    && FullSectionNumber.isFirstNumberInSequence(succedent.get(1)); // 3.[1]
+                    && succedent.get(1) instanceof FullNumber
+                    && FullNumber.isFirstNumberInSequence((FullNumber) succedent.get(1)); // 3.[1]
+        } else if (precedent instanceof NonNumericNumbering) {
+            return false;
         } else if (precedent instanceof SubSectionNumber) {
             // E.g., 1.2.2 -> 1.2.3:
             SubSectionNumber predecessor = ((SubSectionNumber) precedent);
@@ -117,14 +124,15 @@ public class SubSectionNumber extends ArrayList<FullSectionNumber> implements Nu
                         return false;
                     }
                 }
-                return succedent.get(ixLastSucc).equals(predecessor.get(ixLastSucc).succ());
+                SingleTokenNumbering lastSucc = predecessor.get(ixLastSucc);
+                return lastSucc instanceof FullNumber && succedent.get(ixLastSucc).equals(((FullNumber) lastSucc).succ());
             } else return false;
         } else {
-            throw new InvalidParameterException();
+            throw new InvalidParameterException(precedent.getClass().getSimpleName());
         }
     }
 
-    public FullSectionNumber trailingNumber() {
+    public SingleTokenNumbering trailingNumber() {
         return get(size() - 1);
     }
 
@@ -136,7 +144,7 @@ public class SubSectionNumber extends ArrayList<FullSectionNumber> implements Nu
 
     /**
      * A subsection numbering is never the first numbering. By definition it needs to be preceded
-     * by {@link FullSectionNumber}
+     * by {@link FullNumber}
      *
      * @return false
      */

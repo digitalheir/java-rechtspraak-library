@@ -1,11 +1,14 @@
 package org.leibnizcenter.rechtspraak.markup.docs;
 
 import org.leibnizcenter.rechtspraak.features.title.TitlePatterns;
-import org.leibnizcenter.rechtspraak.markup.docs.features.IsPartOfList;
-import org.leibnizcenter.rechtspraak.util.TextBlockInfo;
+import org.leibnizcenter.rechtspraak.markup.docs.features.HasCloseAdjacentNumbering;
+import org.leibnizcenter.rechtspraak.markup.docs.tokentree.TokenTree;
 import org.leibnizcenter.rechtspraak.util.Xml;
+import org.leibnizcenter.rechtspraak.util.numbering.Numbering;
 import org.leibnizcenter.rechtspraak.util.numbering.NumberingNumber;
-import org.w3c.dom.*;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
@@ -18,6 +21,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 import java.util.function.Consumer;
+import java.util.stream.Collectors;
 
 /**
  * Created by maarten on 28-2-16.
@@ -34,11 +38,7 @@ public class LabeledTokenList extends ArrayList<LabeledToken> {
     public static final String INFO_SUFFIX = ".info";
 
     ////////////////////////////////////////////////////////
-    // Features
-//    private static final String POSITION = "POSITION";
-    private static final String TAG_SECTION = "section";
-    private static final String TAG_TITLE = "title";
-    private static final String TAG_TEXT = "text";
+
     //    private static final String TAG_NR = "nr";
     private final String ecli;
     private final Document doc;
@@ -60,15 +60,40 @@ public class LabeledTokenList extends ArrayList<LabeledToken> {
         this.doc = document;
     }
 
-    public static LabeledTokenList from(String ecli, Document document, Node root) {
-        LabeledTokenList tokenList = new LabeledTokenList(ecli, document, textInPreorder(root, null, null, false));
-
-
-        // Decide whether elements are likley list items (as opposed to section titles)
-        for(int indexInSequence=0;indexInSequence<tokenList.size();indexInSequence++) {
-            tokenList.get(indexInSequence).getToken().likelyPartOfList =
-                    IsPartOfList.isPartOfList(tokenList, indexInSequence);
+    public static LabeledTokenList fromAnnotations(String ecli, Document document, Element root) {
+        try {
+            LabeledTokenList tokenList = new LabeledTokenList(
+                    ecli,
+                    document,
+                    TokenTree.labelFromAnnotation(new TokenTree(root, false).terminalsInPreOrder())
+            );
+            setGlobalFeatures(tokenList);
+            return tokenList;
+        } catch (NullPointerException e) {
+            throw new NullPointerException(ecli + ": " + e.getMessage());
         }
+    }
+
+    public static LabeledTokenList fromOriginalTags(String ecli, Document document, Element root) {
+        LabeledTokenList tokenList = new LabeledTokenList(
+                ecli,
+                document,
+                TokenTree.labelFromXmlTags(new TokenTree(root, false).terminalsInPreOrder())
+        );
+        setGlobalFeatures(tokenList);
+        return tokenList;
+    }
+
+    private static void setGlobalFeatures(LabeledTokenList tokenList) {
+        List<RechtspraakElement> unlabeled = tokenList.stream().map(LabeledToken::getToken).collect(Collectors.toList());
+
+
+        // Decide whether elements are close to another numbered item that is in sequence
+        for (int indexInSequence = 0; indexInSequence < tokenList.size(); indexInSequence++) {
+            tokenList.get(indexInSequence).getToken().closeToAdjacentNumbering =
+                    HasCloseAdjacentNumbering.value(tokenList, indexInSequence);
+        }
+
 
         // find if there are numbered high likelihood-titles
         Optional<NumberingNumber> numb = highConfidenceNumberedTitlesFound(tokenList);
@@ -80,24 +105,26 @@ public class LabeledTokenList extends ArrayList<LabeledToken> {
                         // Check if they're both the same class (ie both arabic; both roman)
                         && token.numbering.getClass().equals(n.getClass())
                         // Check if they're both the same class (ie both arabic; both roman)
-                        && !token.likelyPartOfList
+                        && !token.closeToAdjacentNumbering
                         ) {
                     token.setHighConfidenceNumberedTitleFoundAndIsNumbered(true);
                 }
             });
         }
 
-
-        return tokenList;
+        // Decide whether this is a plausible numbering
+        for (int ix = 0; ix < tokenList.size(); ix++) {
+            unlabeled.get(ix).isPlausibleNumbering = unlabeled.get(ix).numbering != null &&
+                    !Numbering.looksLikeNumberingButProbablyIsnt(unlabeled, ix);
+        }
     }
 
-    public static LabeledTokenList from(DocumentBuilder builder, File xmlFile, String ecli) throws SAXException, IOException {
+    public static Document getDoc(DocumentBuilder builder, File xmlFile) throws SAXException, IOException {
         FileInputStream is = new FileInputStream(xmlFile);
-        Document doc = builder.parse(new InputSource(new InputStreamReader(is)));
+        return builder.parse(new InputSource(new InputStreamReader(is)));
 //                assert ecli != null;
 //                assert doc != null;
         //System.out.println("Parsed " + ecli);
-        return from(ecli, doc, Xml.getContentRoot(doc));
     }
 
     private static Optional<NumberingNumber> highConfidenceNumberedTitlesFound(LabeledTokenList tokenList) {
@@ -110,69 +137,6 @@ public class LabeledTokenList extends ArrayList<LabeledToken> {
         return Optional.empty();
     }
 
-    public static List<LabeledToken> textInPreorder(Node root, Node parent, Label rootDescendentOf, boolean includeWhiteSpace) {
-        NodeList children = root.getChildNodes();
-        List<LabeledToken> texts = new ArrayList<>(children.getLength());
-
-        String parentName = root.getNodeName();
-
-        // Make sure we have a reference to all children as they are now, as the XML tree might change.
-        Node[] childz = new Node[children.getLength()];
-        for (int i = 0; i < children.getLength(); i++) {
-            childz[i] = children.item(i);
-        }
-
-        for (Node child : childz) {
-            Label childDescendentOf = rootDescendentOf == null ? Label.OUT : rootDescendentOf; // Default: out
-            if (parentName.endsWith(INFO_SUFFIX)) {
-                childDescendentOf = Label.INFO;
-//            } else if (
-//                    isElement(child)
-//                            && TAG_NR.equals(child.getNodeName())) {
-//                // i.e. <section> <title ><nr/> </section>
-//                childDescendentOf = LABEL_NR;
-            } else if (
-                    Xml.isElement(child) && TAG_SECTION.equals(parentName)
-                            //&& TAG_TEXT.equals(parentName)
-                            && TAG_TITLE.equals(child.getNodeName())) {
-                // i.e. <section> <title /> </section>
-                childDescendentOf = Label.SECTION_TITLE;
-            } else if (parentName.equals(TAG_SECTION)) {
-                childDescendentOf = Label.OUT;//SECTION_PARA;
-            } else if (Label.OUT.equals(rootDescendentOf)
-                    && parentName.equals(TAG_TITLE)) {
-                childDescendentOf = Label.SECTION_TITLE;
-            } else if (parentName.endsWith(TAG_SECTION)) {
-                childDescendentOf = Label.OUT;//SECTION_PARA;
-            }
-
-            if (child.getNodeType() == Node.TEXT_NODE
-                    ||
-                    (child.getNodeType() == Node.ELEMENT_NODE && ((Element) child).getTagName().matches("nr|para|title"))
-                    ) {
-                if (includeWhiteSpace || !TextBlockInfo.Regex.ALL_WHITESPACE.matcher(child.getTextContent()).matches()) {
-                    Element childAsElement = getElement(child); // if this is a text node, wrap in element
-                    LabeledToken textBlockWithLabel = new LabeledToken(childAsElement, childDescendentOf);
-                    //child = textBlockWithLabel.getToken(); // XML tree may have changed
-                    //System.out.println(texts.size());
-                    texts.add(textBlockWithLabel);
-                }
-            } else {
-                List<LabeledToken> childrenTexts = textInPreorder(child, root, childDescendentOf, includeWhiteSpace);
-                texts.addAll(childrenTexts);
-            }
-        }
-        return texts;
-    }
-
-    private static Element getElement(Node node) {
-        if (node.getNodeType() == Node.TEXT_NODE) {
-//                System.out.println("Wrapped text block in element:\t" + "(" + label + ")\t" + node.getTextContent());
-            node = Xml.wrapSubstringInElement((Text) node, 0,
-                    node.getTextContent().length(), TAG_TEXT);
-        }
-        return (Element) node;
-    }
 
     public String getEcli() {
         return ecli;
@@ -230,11 +194,11 @@ public class LabeledTokenList extends ArrayList<LabeledToken> {
         return doc;
     }
 
-    public static class FileIterator implements java.util.Iterator<LabeledTokenList> {
+    public abstract static class FileIterator implements java.util.Iterator<LabeledTokenList> {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        private DocumentBuilder builder = factory.newDocumentBuilder();
         private File[] files;
         private int index = 0;
-        private DocumentBuilder builder = factory.newDocumentBuilder();
 
         public FileIterator(File... files) throws ParserConfigurationException {
             this.files = files;
@@ -254,11 +218,15 @@ public class LabeledTokenList extends ArrayList<LabeledToken> {
                 files[index] = null; // Allow to be garbage collected
                 index++;
                 if (index % 1000 == 0) System.out.println("Cycled through " + index);
-                return from(builder, file, RechtspraakCorpus.getEcliFromFileName(file));
+                String ecli = RechtspraakCorpus.getEcliFromFileName(file);
+                Document doc = getDoc(builder, file);
+                return getLabeledDoc(ecli, doc, Xml.getContentRoot(doc));
             } catch (SAXException | IOException e) {
                 throw new Error();
             }
         }
+
+        protected abstract LabeledTokenList getLabeledDoc(String ecli, Document doc, Element contentRoot);
 
         @Override
         public void remove() {
@@ -273,16 +241,11 @@ public class LabeledTokenList extends ArrayList<LabeledToken> {
     }
 
     public static class FileIterable implements Iterable<LabeledTokenList> {
-        private File[] files;
+        private final FileIterator iterator;
 
-        public FileIterable(List<File> xmlFiles) {
-            this.files = xmlFiles.toArray(new File[xmlFiles.size()]);
+        public FileIterable(FileIterator iterator) {
+            this.iterator = iterator;
         }
-
-        public FileIterable(File... files) {
-            this.files = files;
-        }
-
 
         @Override
         public void forEach(Consumer<? super LabeledTokenList> action) {
@@ -298,11 +261,38 @@ public class LabeledTokenList extends ArrayList<LabeledToken> {
 
         @Override
         public FileIterator iterator() {
-            try {
-                return new FileIterator(files);
-            } catch (ParserConfigurationException e) {
-                throw new Error(e);
-            }
+            return iterator;
+        }
+
+    }
+
+    public static class FileIteratorFromAnnotations extends FileIterator {
+        public FileIteratorFromAnnotations(File... files) throws ParserConfigurationException {
+            super(files);
+        }
+
+        public FileIteratorFromAnnotations(List<File> xmlFiles) throws ParserConfigurationException {
+            super(xmlFiles.toArray(new File[xmlFiles.size()]));
+        }
+
+        @Override
+        protected LabeledTokenList getLabeledDoc(String ecli, Document doc, Element contentRoot) {
+            return fromAnnotations(ecli, doc, Xml.getContentRoot(doc));
+        }
+    }
+
+    public static class FileIteratorFromXmlStructure extends FileIterator {
+        public FileIteratorFromXmlStructure(File... files) throws ParserConfigurationException {
+            super(files);
+        }
+
+        public FileIteratorFromXmlStructure(List<File> files) throws ParserConfigurationException {
+            super(files.toArray(new File[files.size()]));
+        }
+
+        @Override
+        protected LabeledTokenList getLabeledDoc(String ecli, Document doc, Element contentRoot) {
+            return fromOriginalTags(ecli, doc, Xml.getContentRoot(doc));
         }
     }
 }

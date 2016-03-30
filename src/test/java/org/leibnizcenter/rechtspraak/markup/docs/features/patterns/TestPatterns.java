@@ -2,6 +2,7 @@ package org.leibnizcenter.rechtspraak.markup.docs.features.patterns;
 
 import org.junit.Test;
 import org.leibnizcenter.rechtspraak.features.info.InfoPatterns;
+import org.leibnizcenter.rechtspraak.features.quote.PreBlockQuotePattrns;
 import org.leibnizcenter.rechtspraak.features.title.TitlePatterns;
 
 import static junit.framework.TestCase.assertTrue;
@@ -17,12 +18,12 @@ public class TestPatterns {
         assertFalse(InfoPatterns.InfoPatternsUnormalizedContains.CONTAINS_BRACKETED_TEXT.matches("[some 69: brachteket text]"));
         assertTrue(InfoPatterns.InfoPatternsUnormalizedContains.CONTAINS_BRACKETED_TEXT.matches("some [ b r a c k e t e d ] text"));
         assertTrue(InfoPatterns.InfoPatternsUnormalizedContains.CONTAINS_LIKELY_ZAAKNR.matches("this: 69/666 looks like zaaknummer"));
-        assertTrue(InfoPatterns.InfoPatternsNormalizedMatches.START_WITH_COURT.matches("het gerechtshof beslist"));
-        assertTrue(InfoPatterns.InfoPatternsNormalizedMatches.START_WITH_COURT.matches("de rechtbank beslist"));
-        assertFalse(InfoPatterns.InfoPatternsNormalizedMatches.START_WITH_COURT.matches("beslist de rechtbank"));
+        assertTrue(InfoPatterns.InfoPatternsNormalizedContains.START_WITH_COURT.matches("het gerechtshof beslist"));
+        assertTrue(InfoPatterns.InfoPatternsNormalizedContains.START_WITH_COURT.matches("de rechtbank beslist"));
+        assertFalse(InfoPatterns.InfoPatternsNormalizedContains.START_WITH_COURT.matches("beslist de rechtbank"));
         assertTrue(InfoPatterns.InfoPatternsNormalizedMatches.RAAD_VAN_STATE.matches("de raad van state"));
-        assertTrue(InfoPatterns.InfoPatternsNormalizedMatches.STARTS_WITH_RAAD.matches("hoge raad van beroep"));
-        assertTrue(InfoPatterns.InfoPatternsNormalizedMatches.STARTS_WITH_RAAD.matches("het college van beroep"));
+        assertTrue(InfoPatterns.InfoPatternsNormalizedContains.STARTS_WITH_RAAD.matches("hoge raad van beroep"));
+        assertTrue(InfoPatterns.InfoPatternsNormalizedContains.STARTS_WITH_RAAD.matches("het college van beroep"));
         assertTrue(InfoPatterns.InfoPatternsNormalizedMatches.EN_VS_CONTRA.matches("en"));
         assertTrue(InfoPatterns.InfoPatternsNormalizedMatches.EN_VS_CONTRA.matches("tegen"));
         assertTrue(InfoPatterns.InfoPatternsNormalizedMatches.EN_VS_CONTRA.matches("vs"));
@@ -1593,7 +1594,7 @@ public class TestPatterns {
 
     @Test
     public void testTitleContains() {
-        assertTrue(TitlePatterns.TitlesUnnormalizedContains.ENDS_W_COLON.matches("vorderingen en beoordeling in eerste aanleg:"));
-        assertFalse(TitlePatterns.TitlesUnnormalizedContains.ENDS_W_COLON.matches("vorderingen en beoordeling in eerste aanleg"));
+        assertTrue(PreBlockQuotePattrns.Unnormalized.END_W_COLON.matches("vorderingen en beoordeling in eerste aanleg:"));
+        assertFalse(PreBlockQuotePattrns.Unnormalized.END_W_COLON.matches("vorderingen en beoordeling in eerste aanleg"));
     }
 }

@@ -1,6 +1,6 @@
 package org.leibnizcenter.rechtspraak.markup.docs;
 
-import org.crf.crf.CrfFeature;
+import deprecated.org.crf.crf.CrfFeature;
 
 /**
  * Created by maarten on 28-2-16.

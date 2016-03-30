@@ -1,6 +1,6 @@
 package org.leibnizcenter.rechtspraak.markup.docs.features;
 
-import org.crf.crf.CrfFeature;
+import deprecated.org.crf.crf.CrfFeature;
 import org.leibnizcenter.rechtspraak.markup.docs.Label;
 import org.leibnizcenter.rechtspraak.markup.docs.RechtspraakElement;
 import org.leibnizcenter.rechtspraak.util.Doubles;
@@ -11,7 +11,7 @@ import java.util.regex.Pattern;
  * Created by maarten on 2-3-16.
  */
 public class TokenMatch {
-    public static class Filter extends org.crf.crf.filters.Filter<RechtspraakElement, Label> {
+    public static class Filter extends deprecated.org.crf.crf.filters.Filter<RechtspraakElement, Label> {
         public final Pattern pattern;
         public final Label label;
 

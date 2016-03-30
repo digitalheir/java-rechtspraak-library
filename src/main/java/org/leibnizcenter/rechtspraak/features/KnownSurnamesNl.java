@@ -1,6 +1,7 @@
 package org.leibnizcenter.rechtspraak.features;
 
 import com.google.common.io.LineReader;
+import org.leibnizcenter.rechtspraak.markup.docs.RechtspraakElement;
 import org.leibnizcenter.rechtspraak.util.TextPattern;
 
 import java.io.IOException;
@@ -66,6 +67,12 @@ public class KnownSurnamesNl {
             for (String name : subNames) if (!names.contains(name)) return false;
             return true;
         }
+        return false;
+    }
+
+    public static boolean startsWithKnownName(RechtspraakElement token) {
+        String text = token.getTextContent();
+        for (String name : names) if (text.startsWith(name)) return true;
         return false;
     }
 }

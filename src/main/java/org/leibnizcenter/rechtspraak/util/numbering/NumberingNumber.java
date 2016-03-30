@@ -1,19 +1,21 @@
 package org.leibnizcenter.rechtspraak.util.numbering;
 
+import org.leibnizcenter.rechtspraak.util.TextBlockInfo;
+
 import java.util.regex.Pattern;
 
 /**
  * Created by maarten on 16-2-16.
  */
 public interface NumberingNumber {
-    Pattern START_WITH_ARABIC = Pattern.compile("^\\s*([0-9]+).*", Pattern.CASE_INSENSITIVE);
+    static Pattern START_WITH_ARABIC = Pattern.compile("^\\s*([0-9]+).*", Pattern.CASE_INSENSITIVE);
 
     static boolean isFirstNumberInSequence(int checkFor) {
         return checkFor == 1 || checkFor == 0;
     }
 
     static NumberingNumber m() {
-        return new ArabicSectionNumber(3);
+        return new ArabicNumbering(3);
     }
 
     /**
@@ -31,18 +33,28 @@ public interface NumberingNumber {
         if (num.contains(".")) {
             return new SubSectionNumber(num, terminal);
         } else {
-            return parseFullIntegerWithTerminal(num, terminal);
+            return parseSingleToken(num, terminal);
         }
     }
 
-    static FullSectionNumber parseFullInteger(String num) {
-        return parseFullIntegerWithTerminal(num, null);
+
+    static SingleTokenNumbering parseFullInteger(String num) {
+        return parseSingleToken(num, null);
     }
 
-    static FullSectionNumber parseFullIntegerWithTerminal(String num, String terminal) {
+    static SingleTokenNumbering parseSingleToken(String num, String terminal) {
+        if (TextBlockInfo.Regex.NON_ALPHANUMERIC.matcher(num).find()) {
+            return new NonNumericNumbering(num, terminal);
+        } else if (terminal != null
+                && (terminal.contains(")") || terminal.contains("("))
+                && num.matches("[A-Za-z]")) {
+            return new AlphabeticNumbering(num, terminal);
+        } else if (num.matches("[A-Ha-hJ-Zj-z]")) {
+            return new AlphabeticNumbering(num, terminal);
+        }
         if (START_WITH_ARABIC.matcher(num).matches()) {
-            if (num.length() <= 3) {
-                return new ArabicSectionNumber(num, terminal);
+            if (num.length() < 3) {
+                return new ArabicNumbering(num, terminal);
             } else {
                 throw new TooBigForFormattingException(num);
             }

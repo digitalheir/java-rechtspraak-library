@@ -15,14 +15,14 @@
 //public class InstanceFactory {
 
 //
-//    //    private final Tokenizer tokenizer;
+//    //    private final Tokenizer utils;
 //    private final boolean preserveInformation;
 //    private final LabelAlphabet outputLabels;
 //
 //    public InstanceFactory(
 //            boolean preserveInformation, LabelAlphabet outputAlphabet
 //    ) {
-////        this.tokenizer = new Tokenizer(Tokenizer.Language.nl);
+////        this.utils = new Tokenizer(Tokenizer.Language.nl);
 //        this.preserveInformation = preserveInformation;
 //        outputLabels = outputAlphabet;
 ////        observationAlphabet = new Alphabet();

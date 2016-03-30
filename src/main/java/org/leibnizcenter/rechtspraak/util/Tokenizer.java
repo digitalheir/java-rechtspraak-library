@@ -12,25 +12,25 @@
 // */
 //public class Tokenizer implements opennlp.tools.tokenize.Tokenizer {
 //    private final TokenizerModel model;
-//    private final opennlp.tools.tokenize.Tokenizer tokenizer;
+//    private final opennlp.tools.tokenize.Tokenizer utils;
 //
 //    public Tokenizer(Language lang) throws IOException {
 //        this.model = loadTokenizer(lang);
-//        tokenizer = new TokenizerME(model);
+//        utils = new TokenizerME(model);
 //    }
 //
 //    @Override
 //    public String[] tokenize(String str) {
-//        return tokenizer.tokenize(str);
+//        return utils.tokenize(str);
 //    }
 //
 //    @Override
 //    public Span[] tokenizePos(String s) {
-//        return tokenizer.tokenizePos(s);
+//        return utils.tokenizePos(s);
 //    }
 //
 //    private static TokenizerModel loadTokenizer(Language lang) throws IOException {
-//        InputStream modelIn = Tokenizer.class.getResourceAsStream("/tokenizer/" + lang.toString() + "-token.bin");
+//        InputStream modelIn = Tokenizer.class.getResourceAsStream("/utils/" + lang.toString() + "-token.bin");
 //        TokenizerModel model = new TokenizerModel(modelIn);
 //        modelIn.close();
 //

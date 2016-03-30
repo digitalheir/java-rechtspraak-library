@@ -1,7 +1,7 @@
 package org.leibnizcenter.rechtspraak.markup.docs;
 
 import com.google.common.collect.Maps;
-import org.crf.crf.CrfFeature;
+import deprecated.org.crf.crf.CrfFeature;
 import org.leibnizcenter.rechtspraak.util.Doubles;
 import org.leibnizcenter.rechtspraak.util.Labels;
 
@@ -58,7 +58,7 @@ public class WasPrevious {
         }
     }
 
-    public static class Filter extends org.crf.crf.filters.Filter<RechtspraakElement, Label> {
+    public static class Filter extends deprecated.org.crf.crf.filters.Filter<RechtspraakElement, Label> {
         private final Label label;
 
         private Filter(Label l) {

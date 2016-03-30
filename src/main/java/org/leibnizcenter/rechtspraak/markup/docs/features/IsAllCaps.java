@@ -1,6 +1,6 @@
 package org.leibnizcenter.rechtspraak.markup.docs.features;
 
-import org.crf.crf.CrfFeature;
+import deprecated.org.crf.crf.CrfFeature;
 import org.leibnizcenter.rechtspraak.markup.docs.Label;
 import org.leibnizcenter.rechtspraak.markup.docs.RechtspraakElement;
 import org.leibnizcenter.rechtspraak.util.Doubles;
@@ -61,7 +61,7 @@ public class IsAllCaps {
         }
     }
 
-    public static class Filter extends org.crf.crf.filters.Filter<RechtspraakElement, Label> {
+    public static class Filter extends deprecated.org.crf.crf.filters.Filter<RechtspraakElement, Label> {
         private final Label label;
 
         public Filter(Label l) {

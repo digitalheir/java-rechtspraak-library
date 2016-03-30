@@ -171,7 +171,7 @@ public class RomanNumeral extends Number implements FullSectionNumber {
         //noinspection Duplicates
         if (precedent instanceof SubSectionNumber || precedent instanceof RomanNumeral) {
             return true;
-        } else if (precedent instanceof ArabicSectionNumber) {
+        } else if (precedent instanceof ArabicNumbering) {
             return false; // We can't mix Arabics and Romans
         } else {
             throw new InvalidParameterException();
@@ -191,6 +191,11 @@ public class RomanNumeral extends Number implements FullSectionNumber {
     @Override
     public String getTerminal() {
         return terminal;
+    }
+
+    @Override
+    public String canonicalRepresentation() {
+        return toString();
     }
 
     @Override

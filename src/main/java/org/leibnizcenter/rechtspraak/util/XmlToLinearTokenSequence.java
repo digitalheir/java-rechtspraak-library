@@ -17,7 +17,7 @@
 //    public static final String $_NR_OR_TITLE = "nr|title";
 //    private static final String SENTENCE_LENGTH = "SHORT_SENTENCE";
 //
-//    private final Tokenizer tokenizer;
+//    private final Tokenizer utils;
 //    private final boolean mapTokensToNodes;
 //    private final String ecli;
 //
@@ -39,10 +39,10 @@
 //            String ecli,
 //            Document doc,
 //            boolean preserveInformation,
-//            Tokenizer tokenizer,
+//            Tokenizer utils,
 //            LabelAlphabet possibleLabels) {
 //        this.ecli = ecli;
-//        this.tokenizer = tokenizer;
+//        this.utils = utils;
 //        this.mapTokensToNodes = preserveInformation;
 //
 //        labels = new LabelSequence(possibleLabels, 27000);
@@ -74,7 +74,7 @@
 //        Text t = (Text) node;
 //        String txt = t.getWholeText().trim();
 //
-//        Span[] spans = tokenizer.tokenizePos(txt);
+//        Span[] spans = utils.tokenizePos(txt);
 //        String[] strings = Span.spansToStrings(spans, txt);
 //        List<String> normalizedStrings = new ArrayList<>();
 //

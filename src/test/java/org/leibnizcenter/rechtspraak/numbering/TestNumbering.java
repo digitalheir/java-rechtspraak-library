@@ -1,10 +1,11 @@
 package org.leibnizcenter.rechtspraak.numbering;
 
-import org.junit.Assert;
 import org.junit.Test;
-import org.leibnizcenter.rechtspraak.util.numbering.ArabicSectionNumber;
+import org.leibnizcenter.rechtspraak.util.numbering.ArabicNumbering;
 import org.leibnizcenter.rechtspraak.util.numbering.RomanNumeral;
 import org.leibnizcenter.rechtspraak.util.numbering.SubSectionNumber;
+
+import static org.junit.Assert.assertTrue;
 
 /**
  * Created by maarten on 16-2-16.
@@ -12,6 +13,8 @@ import org.leibnizcenter.rechtspraak.util.numbering.SubSectionNumber;
 public class TestNumbering {
     @Test
     public void testIncrementingNumbers() {
+        assertTrue(new SubSectionNumber("1.2.1.b", ".").isSuccedentOf(new SubSectionNumber("1.2.1.a", ".")));
+        assertTrue(new SubSectionNumber("1.2.1.a", ".").isSuccedentOf(new SubSectionNumber("1.2.1", ".")));
 //        ArrayList<NumberingNumber> numbers = Lists.newArrayList(
 //                TextBlockInfo.startsWithNumber("I. meme"),
 //                TextBlockInfo.startsWithNumber("i.1: submeme"),
@@ -41,42 +44,42 @@ public class TestNumbering {
 
     @Test
     public void testSomeSectionNumbering() {
-        ArabicSectionNumber an = new ArabicSectionNumber(2);
+        ArabicNumbering an = new ArabicNumbering(2);
         RomanNumeral rn = new RomanNumeral(" iii ", ".");
 
-        Assert.assertTrue(!an.isSuccedentOf(rn));
-        Assert.assertTrue(!rn.isSuccedentOf(an)); // Don't mix roman and arabic section numbers
+        assertTrue(!an.isSuccedentOf(rn));
+        assertTrue(!rn.isSuccedentOf(an)); // Don't mix roman and arabic section numbers
 
         SubSectionNumber ssn;
 
         ssn = new SubSectionNumber("1.2.3.1", ".");
-        Assert.assertTrue(ssn.firstSubsectionOf().size() == 3);
-        Assert.assertTrue(ssn.size() == 4);
-        Assert.assertTrue(ssn.firstSubsectionOf().get(2).mainNum() == 3);
-        Assert.assertTrue(an.isSuccedentOf(ssn));
+        assertTrue(ssn.firstSubsectionOf().size() == 3);
+        assertTrue(ssn.size() == 4);
+        assertTrue(ssn.firstSubsectionOf().get(2).mainNum() == 3);
+        assertTrue(an.isSuccedentOf(ssn));
 
         ssn = new SubSectionNumber("2.1", ".");
-        Assert.assertTrue(ssn.firstSubsectionOf().size() == 1);
-        Assert.assertTrue(ssn.size() == 2);
-        Assert.assertTrue(!an.isSuccedentOf(ssn));
-        Assert.assertTrue(rn.isSuccedentOf(ssn));
+        assertTrue(ssn.firstSubsectionOf().size() == 1);
+        assertTrue(ssn.size() == 2);
+        assertTrue(!an.isSuccedentOf(ssn));
+        assertTrue(rn.isSuccedentOf(ssn));
         rn = new RomanNumeral(" iI", ".");
-        Assert.assertTrue(!ssn.isSuccedentOf(rn));
-        Assert.assertTrue(ssn.isSuccedentOf(an));
+        assertTrue(!ssn.isSuccedentOf(rn));
+        assertTrue(ssn.isSuccedentOf(an));
 
         ssn = new SubSectionNumber("1.1.1.0", ".");
-        Assert.assertTrue(ssn.firstSubsectionOf().size() == 3);
-        Assert.assertTrue(ssn.size() == 4);
-        Assert.assertTrue(an.isSuccedentOf(ssn));
+        assertTrue(ssn.firstSubsectionOf().size() == 3);
+        assertTrue(ssn.size() == 4);
+        assertTrue(an.isSuccedentOf(ssn));
 
         ssn = new SubSectionNumber("0.0.00.00", ".");
-        Assert.assertTrue(ssn.firstSubsectionOf().size() == 3);
-        Assert.assertTrue(ssn.size() == 4);
-        Assert.assertTrue(!an.isSuccedentOf(ssn));
-        Assert.assertTrue(!ssn.isSuccedentOf(an));
+        assertTrue(ssn.firstSubsectionOf().size() == 3);
+        assertTrue(ssn.size() == 4);
+        assertTrue(!an.isSuccedentOf(ssn));
+        assertTrue(!ssn.isSuccedentOf(an));
 
         ssn = new SubSectionNumber("3.10.1", ".");
         SubSectionNumber ssn2 = new SubSectionNumber("3.30.2", ".");
-        Assert.assertTrue(!ssn2.isSuccedentOf(ssn));
+        assertTrue(!ssn2.isSuccedentOf(ssn));
     }
 }

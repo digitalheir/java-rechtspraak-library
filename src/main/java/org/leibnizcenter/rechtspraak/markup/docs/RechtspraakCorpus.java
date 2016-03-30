@@ -1,13 +1,8 @@
 package org.leibnizcenter.rechtspraak.markup.docs;
 
-import org.crf.utilities.TaggedToken;
-import org.xml.sax.SAXException;
+import deprecated.org.crf.utilities.TaggedToken;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -29,32 +24,33 @@ public class RechtspraakCorpus extends ArrayList<List<? extends TaggedToken<Rech
         super(c);
     }
 
-    public RechtspraakCorpus(List<File> xmlFiles) {
-        super(xmlFiles.size());
-        try {
-            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-            DocumentBuilder builder = factory.newDocumentBuilder();
-            for (File xmlFile : xmlFiles) {
-                String ecli = getEcliFromFileName(xmlFile);
-                try {
-                    LabeledTokenList instance = LabeledTokenList.from(builder, xmlFile, ecli);
-//                System.out.println("Instance made for " + ecli + "("
-//                        + ((TokenSequence) instance.getData()).size() + ")");
-//                System.out.println("Added " + ecli + " through pipe");
-                    add(instance);
-                } catch (IOException e) {
-                    throw new Error(e);
-                } catch (SAXException e) {
-                    System.err.println("Could not parse " + ecli + ", deleting it");
-                    //noinspection ResultOfMethodCallIgnored
-                    xmlFile.delete();
-                    throw new Error(e);
-                }
-            }
-        } catch (ParserConfigurationException e) {
-            throw new Error(e);
-        }
-    }
+//    public RechtspraakCorpus(List<File> xmlFiles) {
+//        super(xmlFiles.size());
+//        try {
+//            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+//            DocumentBuilder builder = factory.newDocumentBuilder();
+//            for (File xmlFile : xmlFiles) {
+//                String ecli = getEcliFromFileName(xmlFile);
+//                try {
+//                    Document doc = LabeledTokenList.getDoc(builder, xmlFile);
+//                    LabeledTokenList instance = LabeledTokenList.fromAnnotations()
+////                System.out.println("Instance made for " + ecli + "("
+////                        + ((TokenSequence) instance.getData()).size() + ")");
+////                System.out.println("Added " + ecli + " through pipe");
+//                    add(instance);
+//                } catch (IOException e) {
+//                    throw new Error(e);
+//                } catch (SAXException e) {
+//                    System.err.println("Could not parse " + ecli + ", deleting it");
+//                    //noinspection ResultOfMethodCallIgnored
+//                    xmlFile.delete();
+//                    throw new Error(e);
+//                }
+//            }
+//        } catch (ParserConfigurationException e) {
+//            throw new Error(e);
+//        }
+//    }
 
     public static String getEcliFromFileName(File xmlFile) {
         String name = xmlFile.getName();
@@ -99,6 +95,6 @@ public class RechtspraakCorpus extends ArrayList<List<? extends TaggedToken<Rech
     }
 
     public static List<File> listXmlFiles() {
-        return listXmlFiles(new File(Const.PATH_TRAIN_TEST_XML_FILES_WINDOWS), -1, false);
+        return listXmlFiles(new File(Const.PATH_TRAIN_TEST_XML_FILES_LINUX), -1, false);
     }
 }

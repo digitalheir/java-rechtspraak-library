@@ -1,7 +1,12 @@
 package org.leibnizcenter.rechtspraak.markup.docs;
 
+import org.jetbrains.annotations.Contract;
+import org.leibnizcenter.rechtspraak.features.quote.BlockQuotePatterns;
+import org.leibnizcenter.rechtspraak.features.quote.PreBlockQuotePattrns;
 import org.leibnizcenter.rechtspraak.markup.docs.features.IsAllCaps;
+import org.leibnizcenter.rechtspraak.markup.docs.tokentree.TokenTreeVertex;
 import org.leibnizcenter.rechtspraak.util.TextBlockInfo;
+import org.leibnizcenter.rechtspraak.util.Xml;
 import org.leibnizcenter.rechtspraak.util.numbering.NumberingNumber;
 import org.leibnizcenter.rechtspraak.util.numbering.SubSectionNumber;
 import org.w3c.dom.*;
@@ -15,24 +20,50 @@ import java.util.regex.Pattern;
  * XML element from Rechtspraak.nl with some pre-processing applied
  * Created by maarten on 29-2-16.
  */
-public class RechtspraakElement implements Element {
+public class RechtspraakElement implements Element, TokenTreeVertex {
     private static final Pattern ENDS_WITH_NON_LETTER = Pattern.compile("[^p{L}]$");
     public final Element e;
     public final NumberingNumber numbering;
     public final String normalizedText;
     public final int wordCount;
     public final boolean isSpaced;
+    public final boolean onlyNumbering;
     public final boolean isAllCaps;
     public final boolean endsWithNonLetter;
+    public final boolean endsWithDoubleQuote;
+    public final boolean startsWithDoubleQuote;
+    public final boolean startsWithQuote;
+    public final boolean endsWithQuote;
+    public final boolean endsWithColon;
+    public final boolean endsWithSemiColon;
+    public final boolean followsLineBreak;
+    public final boolean followsNonEmptyText;
+    public final boolean precedesNonEmptyText;
+    public final boolean startsWithLowerCaseLetter;
     private final String textContent;
+    public boolean isPlausibleNumbering;
+    protected boolean closeToAdjacentNumbering = false;
     private boolean highConfidenceNumberedTitleFoundAndIsNumbered;
-    protected boolean likelyPartOfList =false;
 
     public RechtspraakElement(Element e) {
         this.e = e;
+        this.followsLineBreak = followsLineBreak(e);
+        this.followsNonEmptyText = followsNonEmptyText(e);
+        this.precedesNonEmptyText = precedesNonEmptyText(e);
         this.textContent = e.getTextContent().trim();
-        endsWithNonLetter = ENDS_WITH_NON_LETTER.matcher(textContent).find();
-        this.numbering = startsWithNumber(textContent);
+
+
+        this.endsWithQuote = BlockQuotePatterns.END_W_QUOTE.matches(textContent);
+        this.startsWithQuote = BlockQuotePatterns.START_W_QUOTE.matches(textContent);
+
+        this.endsWithDoubleQuote = BlockQuotePatterns.END_W_DOUBLE_QUOTE.matches(textContent);
+        this.startsWithDoubleQuote = BlockQuotePatterns.START_W_DOUBLE_QUOTE.matches(textContent);
+
+        this.startsWithLowerCaseLetter = textContent.length() > 0 && Character.isLowerCase(textContent.charAt(0));
+        this.endsWithColon = PreBlockQuotePattrns.Unnormalized.END_W_COLON.matches(textContent);
+        this.endsWithSemiColon = PreBlockQuotePattrns.Unnormalized.END_W_SEMICOLON.matches(textContent);
+        this.endsWithNonLetter = ENDS_WITH_NON_LETTER.matcher(textContent).find();
+        this.numbering = startsWithNumbering(textContent);
 
         String normalizedWithPotentialLeadingNumber = textContent
                 .replaceAll("\\s\\s+", " ") // Replace all whitespace with a single space
@@ -53,22 +84,25 @@ public class RechtspraakElement implements Element {
         this.normalizedText = normalizedText.toLowerCase(Locale.ENGLISH);
 
         this.wordCount = normalizedText.split("\\s+").length;
+        this.onlyNumbering = numbering != null && normalizedText.length() == 0;
     }
 
-
-    public static NumberingNumber startsWithNumber(String textContent) {
+    public static NumberingNumber startsWithNumbering(String textContent) {
         Matcher numberMatcher = TextBlockInfo.Regex.START_WITH_NUM.matcher(textContent);
-        if (numberMatcher.matches()) {
-            if (!textContent.matches("^[0-9]{4}-[01]?[0-9]-[0-3]?[0-9]\b.*")
-                    && !textContent.matches(
-                    "^[0-3]?[0-9]\\s+(jan|feb|maart|apr|mei|jun|jul|aug|sep|okt|nov|dec).*[0-9]{4}\\b.*")
+        if (numberMatcher.find()) {
+            if (!TextBlockInfo.Regex.YYYY_MM_DD.matcher(textContent).find()
+                    && !TextBlockInfo.Regex.DD_MON_YYYY.matcher(textContent).find()
                     ) {
                 // If it's not a date...
-                String num = numberMatcher.group(1);
-                String terminal = numberMatcher.group(3);
+                String num = numberMatcher.group(2);
+                String terminal = numberMatcher.group(4);
 //                System.out.println("Num: "+num);
 //                System.out.println("Terminal: "+terminal);
                 try {
+                    if (num.charAt(0) == '(') {
+                        terminal = '(' + terminal;
+                        num = num.substring(1);
+                    }
                     return NumberingNumber.parse(num, terminal);
                 } catch (NumberingNumber.TooBigForFormattingException e) {
                     return null;
@@ -76,6 +110,41 @@ public class RechtspraakElement implements Element {
             }
         }
         return null;
+    }
+
+    public static Function<NumberingNumber, Boolean> isPlausiblySuccedent(NumberingNumber startsWithNumbering) {
+        return (precedingNumber) -> startsWithNumbering.isSuccedentOf(precedingNumber) || (
+                startsWithNumbering instanceof SubSectionNumber
+                        && startsWithNumbering.isFirstNumbering()
+                        && ((SubSectionNumber) startsWithNumbering).firstSubsectionOf().isSuccedentOf(precedingNumber));
+    }
+
+    private boolean precedesNonEmptyText(Element e) {
+        return isNonEmptyText(e.getNextSibling());
+    }
+
+    private boolean followsNonEmptyText(Element e) {
+        return isNonEmptyText(e.getPreviousSibling());
+    }
+
+    @Contract("null -> false")
+    private boolean isNonEmptyText(Node sibling) {
+        return sibling != null
+                && (sibling.getNodeType() == Element.TEXT_NODE
+                || "text".equals(sibling.getNodeName())
+                || "textgroup".equals(sibling.getNodeName())
+                || "nr".equals(sibling.getNodeName())
+                || "emphasis".equals(sibling.getNodeName())
+        )
+                && sibling.getTextContent().trim().length() > 0;
+    }
+
+    private boolean followsLineBreak(Element e) {
+        Node prev = getPreviousNonWhitespaceNode(e);
+        return prev != null
+                && ((prev.getNodeType() == Element.PROCESSING_INSTRUCTION_NODE
+                && ((ProcessingInstruction) prev).getTarget().equals("linebreak"))
+                || prev.getNodeType() == Element.ELEMENT_NODE && prev.getChildNodes().getLength() == 0);
     }
 
 
@@ -135,13 +204,13 @@ public class RechtspraakElement implements Element {
 //        }
 //    }
 
-    public static Function<NumberingNumber, Boolean> isPlausiblySuccedent(NumberingNumber startsWithNumbering) {
-        return (precedingNumber) -> startsWithNumbering.isSuccedentOf(precedingNumber) || (
-                startsWithNumbering instanceof SubSectionNumber
-                        && startsWithNumbering.isFirstNumbering()
-                        && ((SubSectionNumber) startsWithNumbering).firstSubsectionOf().isSuccedentOf(precedingNumber));
+    private Node getPreviousNonWhitespaceNode(Element e) {
+        Node prev = e;
+        do {
+            prev = prev.getPreviousSibling();
+        } while (prev != null && Xml.whitespaceText(prev));
+        return prev;
     }
-
 
     @Override
     public String getTagName() {
@@ -456,7 +525,33 @@ public class RechtspraakElement implements Element {
         return highConfidenceNumberedTitleFoundAndIsNumbered;
     }
 
-    public boolean isLikelyPartOfList() {
-        return likelyPartOfList;
+    public boolean isCloseToAdjacentNumbering() {
+        return closeToAdjacentNumbering;
+    }
+
+    public Element getEmphasisSingletonChild() {
+        if (this.e.getNodeName().equals("emphasis")) {
+            return this;
+        }
+
+        NodeList chs = getChildNodes();
+        int ix = -1;
+        for (int i = 0; i < chs.getLength(); i++) {
+            Node item = chs.item(i);
+            if (item.getNodeType() == ELEMENT_NODE
+                    && ((Element) item).getTagName().equals("emphasis")) {
+                if (ix < 0) {
+                    ix = i;
+                } else {
+                    return null; // Multiple found
+                }
+            } else {
+                if (item.getTextContent().trim().length() > 3) {
+                    // Some non-emphasized text in here too
+                    return null;
+                }
+            }
+        }
+        return ix < 0 ? null : (Element) chs.item(ix);
     }
 }

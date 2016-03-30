@@ -82,19 +82,6 @@ public class Names {
     public static final String TOLERANTLASTNAME = "(?:(?:" + SINGLETOLERANTLASTNAME + ")+"
             // Arbitrary amount of hyphens
             + "(?:-" + SINGLETOLERANTLASTNAME + "){0,5})";
-
-    private static final String TOLERANT_FIRSTNAMES = "(?:\\b" + TOLERANT_FIRSTNAME + "(?: {1,2}" + TOLERANT_FIRSTNAME + "){0,5})";
-    public static final String TOLERANT_FIRST_NAME_AND_OR_INITIALS =
-            "(?:" + TOLERANT_FIRSTNAMES
-                    + "(?: {0,2}\\b" + LOOSE_INITIALS + ")?"
-                    + "|" + LOOSE_INITIALS + ")";
-    /////////////////////////////////////////
-    private static final String KNOWN_TITLES = "(?:" + KNOWN_TITLE + "(?: {0,2}" + KNOWN_TITLE + "){0,4})";
-
-    public static final String TOLERANTFULLNAME_STRICT_INITIALS =
-            "(?:(" + KNOWN_TITLES + ") {0,2})?"
-                    + "(?:(" + STRICT_INITIALS + ") {0,2})"
-                    + "(" + TOLERANTLASTNAME + ")";
     //Token.string ==~ ".*[aeiouy].*", //At least one vowel...
     public static final String STRICTINITIALSNAMEWITHMULTIPLEINITIALS = "((" +
             KNOWN_TITLE +
@@ -105,20 +92,6 @@ public class Names {
             ")+(" +
             TOLERANTLASTNAME +
             "))";
-    /**
-     * Ex. [mr. Vox], [mr. A.D.W. de Heyde]
-     */
-    public static final String TOLERANT_TITLED_NAME =
-            "(" + KNOWN_TITLES + ") {0,2}"
-                    + "(" + TOLERANT_FIRST_NAME_AND_OR_INITIALS + " {0,2})"
-                    + "(" + TOLERANTLASTNAME + ")";
-    /**
-     * [Vincent Willems]
-     */
-    public static final String TOLERANTFULLNAME =
-            "(?:(" + KNOWN_TITLES + ") {0,2})?"
-                    + "(?:(" + TOLERANT_FIRST_NAME_AND_OR_INITIALS + ") {0,2})"
-                    + "(" + TOLERANTLASTNAME + ")";
     /**
      * Matches any non-space strings
      */
@@ -133,6 +106,31 @@ public class Names {
                     + "(?:[,;] {0,2}" + TOLERANTFULLNAME_WITH_OPTIONAL_ROLE + "){0,3}"
                     + "[,;]? {0,2}en[,;]? {0,2}\\b"
                     + TOLERANTFULLNAME_WITH_OPTIONAL_ROLE + "";
+    private static final String TOLERANT_FIRSTNAMES = "(?:\\b" + TOLERANT_FIRSTNAME + "(?: {1,2}" + TOLERANT_FIRSTNAME + "){0,5})";
+    public static final String TOLERANT_FIRST_NAME_AND_OR_INITIALS =
+            "(?:" + TOLERANT_FIRSTNAMES
+                    + "(?: {0,2}\\b" + LOOSE_INITIALS + ")?"
+                    + "|" + LOOSE_INITIALS + ")";
+    /////////////////////////////////////////
+    private static final String KNOWN_TITLES = "(?:" + KNOWN_TITLE + "(?: {0,2}" + KNOWN_TITLE + "){0,4})";
+    public static final String TOLERANTFULLNAME_STRICT_INITIALS =
+            "(?:(" + KNOWN_TITLES + ") {0,2})?"
+                    + "(?:(" + STRICT_INITIALS + ") {0,2})"
+                    + "(" + TOLERANTLASTNAME + ")";
+    /**
+     * Ex. [mr. Vox], [mr. A.D.W. de Heyde]
+     */
+    public static final String TOLERANT_TITLED_NAME =
+            "(" + KNOWN_TITLES + ") {0,2}"
+                    + "(" + TOLERANT_FIRST_NAME_AND_OR_INITIALS + " {0,2})"
+                    + "(" + TOLERANTLASTNAME + ")";
+    /**
+     * [Vincent Willems]
+     */
+    public static final String TOLERANTFULLNAME =
+            "(?:(" + KNOWN_TITLES + ") {0,2})?"
+                    + "(?:(" + TOLERANT_FIRST_NAME_AND_OR_INITIALS + ") {0,2})"
+                    + "(" + TOLERANTLASTNAME + ")";
     private static final String VERTEGENWOORDIGD_DOOR = "(?:(?:" +
             "(?:vert(?:eg)?enwoordigd|bijgestaan|laten vertegenwoordigen|laten bijstaan)" +
             "|" +
@@ -223,6 +221,13 @@ public class Names {
          */
         WasGetekend(Pattern.compile("(?:(?:(?:w(?:as)? {1,2})?(?:get(?:ekend)?\\.?))|w\\.?g\\.?)\\s{0,3}" + TOLERANTFULLNAME + "")),
         /**
+         * gewezen door [mr. A.B. van Wiel]
+         */
+        GewezenDoor((Pattern.compile(
+                "(?:deze uitspraak is ge(?:daan|maakt)|gewezen) {0,2}(?:te [\\p{L}]{0,20} )?door" +
+                        "[:;, ]{0,3}(?:" + TOLERANTFULLNAME + ")"
+        ))),
+        /**
          * prof. FirstName de la FamiliarLastname
          */
         TitledNameKnownSurname(TITLED_NAME, true),
@@ -242,13 +247,7 @@ public class Names {
                         + "[:; ]{0,3}\\b"
                         + TOLERANTFULLNAME
         )),
-        /**
-         * gewezen door [mr. A.B. van Wiel]
-         */
-        GewezenDoor((Pattern.compile(
-                "gewezen {0,2}door" +
-                        "[:;, ]{0,3}(?:" + TOLERANTFULLNAME + ")"
-        ))),
+
         /**
          * HighConfidence bijgestaan door mr. A. B. van der Werf, gemachtigde
          */

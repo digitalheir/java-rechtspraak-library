@@ -1,8 +1,11 @@
 package org.leibnizcenter.rechtspraak.util;
 
-import org.crf.crf.CrfFeature;
+import deprecated.org.crf.crf.CrfFeature;
 import org.leibnizcenter.rechtspraak.markup.docs.Label;
 import org.leibnizcenter.rechtspraak.markup.docs.RechtspraakElement;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
+import org.w3c.dom.ProcessingInstruction;
 
 import java.util.EnumMap;
 import java.util.Map;
@@ -158,6 +161,23 @@ public class TextBlockInfo {
         return b ? 1.0 : 0.0;
     }
 
+    public static boolean isAllWhitespace(String s) {
+        return Regex.ALL_WHITESPACE.matcher(s).matches();
+    }
+
+    public static boolean hasElementsOrLinebreaksAsChildren(Element child) {
+        NodeList childNodes = child.getChildNodes();
+        for (int i = 0; i < childNodes.getLength(); i++) {
+            if ((childNodes.item(i).getNodeType() == Element.PROCESSING_INSTRUCTION_NODE
+                    && ((ProcessingInstruction) childNodes.item(i)).getTarget().equals("linebreak"))
+                    ||
+                    Xml.isElement(childNodes.item(i))) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public static class Feature {
         public final double value;
         public final String name;
@@ -217,7 +237,7 @@ public class TextBlockInfo {
             }
         }
 
-        public static class Filter extends org.crf.crf.filters.Filter<RechtspraakElement, Label> {
+        public static class Filter extends deprecated.org.crf.crf.filters.Filter<RechtspraakElement, Label> {
             private final Label label;
 
             public Filter(Label l) {
@@ -243,15 +263,38 @@ public class TextBlockInfo {
     }
 
     public static class Regex {
-
+        public static final Pattern YYYY_MM_DD = Pattern.compile("^[0-9]{4}-[01]?[0-9]-[0-3]?[0-9]\\b");
+        public static final Pattern DD_MON_YYYY = Pattern.compile("^[0-3]?[0-9]\\s{0,3}(jan|feb|maart|apr|mei|jun|jul|aug|sep|okt|nov|dec)\\w{0,20}(?:[0-9]{4})?\\b");
+        public static final Pattern ALL_WHITESPACE =
+                Pattern.compile("^\\s*$");
+        private static final String STR_NON_ALPHANUMERIC = "(?:[\\*°º•\\-])";
+        public static final Pattern NON_ALPHANUMERIC = Pattern.compile("^" + STR_NON_ALPHANUMERIC);
         /**
          * Starts with whitespace, then a decimal or roman numeral
          */
         public static final Pattern START_WITH_NUM = Pattern.compile(
-                "^\\s*((?:(?:([0-9]+)|(?:i{1,3}\\b)|(?:i?vi{0,3}\\b)|(?:i?xi{0,3}\\b))\\.)*(?:(?:[0-9]+)|(?:i{1,3}\\b)|(?:i?vi{0,3}\\b)|(?:i?xi{0,3}\\b)))\\s{0,3}([:\\.-;#]?).*",
+                "^\\s*(" +
+                        // Leading parenthesis
+                        "(?:\\( {0,2})?" +
+                        "(" +
+                        // Leading numbers
+                        "(?:" +
+                        "(?:([0-9]+)" +
+                        "|(?:i{1,3}\\b)" +
+                        "|(?:i?vi{0,3}\\b)" +
+                        "|(?:i?xi{0,3}\\b))\\.)*" +
+                        //
+                        "(?:(?:[0-9]+)" +
+                        "|(?:i{1,3}\\b)" +
+                        "|(?:i?vi{0,3}\\b)" +
+                        "|(?:[a-z]\\b)" +
+                        "|" + STR_NON_ALPHANUMERIC + ")" +
+                        ")" +
+                        // Whitespace
+                        "\\s{0,3}" +
+                        // Terminal character
+                        "([:\\.\\-;#\\)°º•%&@!?><\\+=\\]]{0,2}))",
                 Pattern.CASE_INSENSITIVE);
-        public static final Pattern ALL_WHITESPACE =
-                Pattern.compile("^\\s*$");
     }
 
 }

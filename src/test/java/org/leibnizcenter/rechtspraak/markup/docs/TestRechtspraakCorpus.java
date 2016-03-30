@@ -10,7 +10,7 @@ import org.leibnizcenter.rechtspraak.TrainWithMallet;
 import org.leibnizcenter.rechtspraak.features.info.InfoPatterns;
 import org.leibnizcenter.rechtspraak.features.title.TitlePatterns;
 import org.leibnizcenter.rechtspraak.util.Xml;
-import org.leibnizcenter.rechtspraak.util.numbering.ArabicSectionNumber;
+import org.leibnizcenter.rechtspraak.util.numbering.ArabicNumbering;
 import org.leibnizcenter.rechtspraak.util.numbering.NumberingNumber;
 import org.leibnizcenter.rechtspraak.util.numbering.SubSectionNumber;
 import org.w3c.dom.Document;
@@ -27,16 +27,21 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
 
-import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertTrue;
+import static org.leibnizcenter.rechtspraak.features.Features.CLOSE_TO_ADJACENT_NUMBERING;
 import static org.leibnizcenter.rechtspraak.features.info.InfoPatterns.InfoPatternsUnormalizedContains.CONTAINS_BRACKETED_TEXT;
-import static org.leibnizcenter.rechtspraak.features.Features.LIKELY_PART_OF_LIST;
 
 /**
  * Tests for correct feature vector sequence initialization
  * Created by maarten on 13-3-16.
  */
 public class TestRechtspraakCorpus {
+
+    public static LabeledTokenList getTokenList(DocumentBuilder builder, String ecli) throws SAXException, IOException {
+        InputStream is = TestRechtspraakCorpus.class.getResourceAsStream("/docs/" + ecli.replaceAll(":", ".") + ".xml");
+        Document doc = builder.parse(new InputSource(new InputStreamReader(is)));
+        return LabeledTokenList.fromOriginalTags(ecli, doc, Xml.getContentRoot(doc));
+    }
 
     @Test
     public void main() throws ParserConfigurationException, IOException, SAXException {
@@ -83,7 +88,7 @@ public class TestRechtspraakCorpus {
         //checkContainsTitlePatterns(ts);//todo
 
         checkContainsBracketedText(ts);
-        checkIsLikelyPartOfList(ts);
+        checkCloseToAdjacentNumbering(ts);
 
 
         /////////////////////////////////////
@@ -99,11 +104,11 @@ public class TestRechtspraakCorpus {
         numbering = paraDoc.get(42).getToken().numbering;
         Assert.assertTrue(numbering instanceof SubSectionNumber);
         Assert.assertTrue(numbering.equals(new SubSectionNumber(
-                Lists.newArrayList(new ArabicSectionNumber(2), new ArabicSectionNumber(2)),
+                Lists.newArrayList(new ArabicNumbering(2), new ArabicNumbering(2)),
                 ".")
         ));
         Assert.assertFalse(numbering.equals(new SubSectionNumber(
-                        Lists.newArrayList(new ArabicSectionNumber(2), new ArabicSectionNumber(2)), ""
+                Lists.newArrayList(new ArabicNumbering(2), new ArabicNumbering(2)), ""
                 )
         ));
 
@@ -122,29 +127,14 @@ public class TestRechtspraakCorpus {
         assertTrue(token.getFeatureValue(name) == val);
     }
 
-    private void checkIsLikelyPartOfList(TokenSequence ts) {
-        for (int i = 5; i <= 25; i++) if (i != 9) assertFeature(ts.get(i), LIKELY_PART_OF_LIST, 1.0);
-        assertFeature(ts.get(37), LIKELY_PART_OF_LIST, 1.0);
-        assertFeature(ts.get(38), LIKELY_PART_OF_LIST, 0.0);
-        assertFeature(ts.get(39), LIKELY_PART_OF_LIST, 1.0);
-        for (int i = 40; i <= 106; i++) {
-            assertFeature(ts.get(i), LIKELY_PART_OF_LIST, 0.0);
-        }
-        assertFeature(ts.get(107), LIKELY_PART_OF_LIST, 1.0);
-        assertFeature(ts.get(108), LIKELY_PART_OF_LIST, 0.0);
-        assertFeature(ts.get(109), LIKELY_PART_OF_LIST, 1.0);
-        assertFeature(ts.get(110), LIKELY_PART_OF_LIST, 1.0);
-        for (int i = 111; i <= 246; i++) {
-            if (i != 180 && i != 182)
-                assertTrue("Failed on " + i, ts.get(i).getFeatureValue(LIKELY_PART_OF_LIST) == 0.0);
-        }
-        for (int i : new int[]{180, 182, 247, 248})
-            assertTrue("Failed on " + i, ts.get(i).getFeatureValue(LIKELY_PART_OF_LIST) == 1.0);
-    }
-
-    public LabeledTokenList getTokenList(DocumentBuilder builder, String ecli) throws SAXException, IOException {
-        InputStream is = TestRechtspraakCorpus.class.getResourceAsStream("/docs/" + ecli.replaceAll(":", ".") + ".xml");
-        Document doc = builder.parse(new InputSource(new InputStreamReader(is)));
-        return LabeledTokenList.from(ecli, doc, Xml.getContentRoot(doc));
+    private void checkCloseToAdjacentNumbering(TokenSequence ts) {
+        for (int i = 5; i <= 25; i++) if (i != 9) assertFeature(ts.get(i), CLOSE_TO_ADJACENT_NUMBERING, 1.0);
+        assertFeature(ts.get(38), CLOSE_TO_ADJACENT_NUMBERING, 0.0);
+        assertFeature(ts.get(40), CLOSE_TO_ADJACENT_NUMBERING, 0.0);
+        assertTrue("Failed on " + 52, ts.get(52).getFeatureValue(CLOSE_TO_ADJACENT_NUMBERING) == 0.0);
+        assertTrue("Failed on " + 51, ts.get(51).getFeatureValue(CLOSE_TO_ADJACENT_NUMBERING) == 1.0);
+        assertFeature(ts.get(108), CLOSE_TO_ADJACENT_NUMBERING, 0.0);
+        for (int i : new int[]{37, 39, 41, 42, 107, 109, 110, 180, 182, 247, 248})
+            assertTrue("Failed on " + i, ts.get(i).getFeatureValue(CLOSE_TO_ADJACENT_NUMBERING) == 1.0);
     }
 }
