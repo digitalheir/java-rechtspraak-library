@@ -18,8 +18,8 @@ dependencies {
     compile 'com.google.guava:guava:19.0'
 
     compile 'cc.mallet:mallet:2.0.7'
-    compile 'uk.ac.gate:gate-core:8.1'
-    compile 'lucene:lucene:1.4.3'
+//    compile 'uk.ac.gate:gate-core:8.1'
+//    compile 'lucene:lucene:1.4.3'
 
     // Logging
     compile "org.slf4j:slf4j-api:1.7.18"    // the SLF4J API
@@ -28,8 +28,6 @@ dependencies {
 
     // Testing
     testCompile 'junit:junit:4.12' // A dependency for a test framework.
-
-
 }
 
 //
