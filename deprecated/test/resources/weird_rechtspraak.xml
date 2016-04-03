@@ -1,0 +1,80 @@
+<docs>
+    <doc>
+        <id>ECLI:NL:RBNHO:2014:347</id>
+    </doc>
+    <doc>
+        <id>ECLI:NL:RBAMS:2014:2748</id>
+    </doc>
+    <doc>
+        <id>ECLI:NL:GHDHA:2014:1688</id>
+    </doc>
+    <doc>
+        <id>ECLI:NL:GHDHA:2014:1688</id>
+    </doc>
+    <doc>
+        <id>ECLI:NL:GHARL:2014:1195</id>
+        <snippet>
+            <paragroup>
+                <nr>2.14</nr>
+                <parablock>
+                    <para/>
+                    <para/>
+                    <parablock>
+                        <para>
+                            <emphasis role="bold">De beslissing</emphasis>
+                        </para>
+                        <para>Het gerechtshof:</para>
+                    </parablock>
+                    <para/>
+                    <parablock>
+                        <para>
+                            vernietigt het vonnis van de rechtbank Zwolle-Lelystad van 8 juni 2011 voor zover in
+                            conventie sub 3.3 van het dictum [appellante] is veroordeeld aan [geïntimeerden] te
+                            betalen
+                            een bedrag van € 8.758,40 vermeerderd met de wettelijke rente vanaf 2 maart 2009 en voor
+                            zover in reconventie onder 3.7 alle vorderingen van [appellante] zijn afgewezen;
+                        </para>
+                    </parablock>
+                    <para/>
+                    <parablock>
+                        <para>en in zoverre opnieuw rechtdoende:</para>
+                    </parablock>
+                </parablock>
+            </paragroup>
+        </snippet>
+    </doc>
+    <doc>
+        <id>ECLI:NL:GHARL:2014:1195</id>
+        <snippet>
+            <paragroup>
+                <nr>4.7</nr>
+                <parablock>
+                    <para>Nu in beroep niet is gebleken van kosten die volgens artikel 1 van het Besluit proceskosten
+                        bestuursrecht kunnen worden begrepen in een kostenveroordeling op de voet van artikel 8:75 van
+                        de Algemene wet bestuursrecht, heeft de Rechtbank terecht een proceskostenvergoeding achterwege
+                        gelaten.
+                    </para>
+                    <para>
+                        <emphasis role="italic">Slotsom</emphasis>
+                        <?linebreak?>
+                        <?linebreak?>Op grond van het vorenstaande is het hoger beroep ongegrond.
+                    </para>
+                </parablock>
+                <para/>
+                <para/>
+            </paragroup>
+        </snippet>
+        <comment>slotsom not properly tokenized</comment>
+    </doc>
+
+
+    <doc>
+        <id>
+        </id>
+        <snippet>
+        </snippet>
+        <comment>
+        </comment>
+    </doc>
+
+</docs>
