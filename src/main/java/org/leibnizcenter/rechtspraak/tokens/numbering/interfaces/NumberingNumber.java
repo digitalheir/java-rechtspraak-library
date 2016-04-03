@@ -24,11 +24,14 @@ public interface NumberingNumber {
 
     boolean isFirstNumbering();
 
+    boolean equalsSansTerminal(Object obj);
+
     String getTerminal();
 
     static boolean isFirstNumberInSequence(int checkFor) {
         return checkFor == 1 || checkFor == 0;
     }
+
 
     static NumberingNumber m() {
         return new ArabicNumbering(3);
@@ -71,15 +74,11 @@ public interface NumberingNumber {
                 String terminal = numberMatcher.group(4);
 //                System.out.println("Num: "+num);
 //                System.out.println("Terminal: "+terminal);
-                try {
-                    if (num.charAt(0) == '(') {
-                        terminal = '(' + terminal;
-                        num = num.substring(1);
-                    }
-                    return NumberingNumber.parse(num, terminal);
-                } catch (NumberingNumber.TooBigForFormattingException e) {
-                    return null;
+                if (num.charAt(0) == '(') {
+                    terminal = '(' + terminal;
+                    num = num.substring(1);
                 }
+                return NumberingNumber.parse(num, terminal);
             }
         }
         return null;
@@ -93,9 +92,7 @@ public interface NumberingNumber {
     static SingleTokenNumbering parseSingleToken(String num, String terminal) {
         if (ListMarking.startsWithListMarking(num)) return new NonNumericNumbering(num, terminal);
         else if (START_WITH_ARABIC.matcher(num).matches()) {
-            ArabicNumbering arabicNumbering = new ArabicNumbering(num, terminal);
-            if (arabicNumbering.mainNum() > 50) throw new TooBigForFormattingException(num);
-            return arabicNumbering;
+            return new ArabicNumbering(num, terminal);
         } else if (num.length() == 1) {
             if (AmbiguousAlphabeticOrRomanNumeral.isAmbiguousCharacter(num.charAt(0))) {
                 return new AmbiguousAlphabeticOrRomanNumeral(num, terminal);
@@ -106,10 +103,12 @@ public interface NumberingNumber {
     static boolean isSuccedentOf(NumberingNumber second, NumberingNumber first) {
         return second != null && first != null && second.isSuccedentOf(first);
     }
+//
+//    class TooBigForFormattingException extends NumberFormatException {
+//        public TooBigForFormattingException(String number) {
+//            super("Number is too big to be a numbering numbering: " + number);
+//        }
+//    }
 
-    class TooBigForFormattingException extends NumberFormatException {
-        public TooBigForFormattingException(String number) {
-            super("Number is too big to be a numbering numbering: " + number);
-        }
-    }
+
 }

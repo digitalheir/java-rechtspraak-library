@@ -66,25 +66,25 @@ public class TokenTree implements TokenTreeVertex {
         // Make sure we have a reference to all children as they are now; the XML tree might change.
         Node[] originalChildren = getChildren(root);
 
-        for (Node child : originalChildren) {
-            switch (child.getNodeType()) {
-                case Node.TEXT_NODE:
-                    String text = child.getTextContent();
-                    if (text.length() != 0 && !Regex.CONSECUTIVE_WHITESPACE.matcher(text).matches()) {
-                        // Only process non-whitespace blocks of text
-                        children.add(fromTextNode((Text) child));
-                    }
-                    break;
-                case Node.ELEMENT_NODE:
-                    children.add(fromElement((Element) child));
-                    break;
-                case Node.PROCESSING_INSTRUCTION_NODE:
-                    children.add(fromProcessingInstruction((ProcessingInstruction) child));
-                    break;
-                default:
-                    throw new IllegalStateException("Unknown node type found");
+            for (Node child : originalChildren) {
+                switch (child.getNodeType()) {
+                    case Node.TEXT_NODE:
+                        String text = child.getTextContent();
+                        if (text.length() != 0 && !Regex.CONSECUTIVE_WHITESPACE.matcher(text).matches()) {
+                            // Only process non-whitespace blocks of text
+                            children.add(fromTextNode((Text) child));
+                        }
+                        break;
+                    case Node.ELEMENT_NODE:
+                        children.add(fromElement((Element) child));
+                        break;
+                    case Node.PROCESSING_INSTRUCTION_NODE:
+                        children.add(fromProcessingInstruction((ProcessingInstruction) child));
+                        break;
+                    default:
+                        throw new IllegalStateException("Unknown node type found");
+                }
             }
-        }
     }
 
     public TokenTree(Node e, List<TokenTreeVertex> children) {

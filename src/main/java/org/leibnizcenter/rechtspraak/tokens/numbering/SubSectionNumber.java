@@ -4,13 +4,15 @@ import com.google.common.collect.Lists;
 import org.leibnizcenter.rechtspraak.tokens.numbering.interfaces.FullNumber;
 import org.leibnizcenter.rechtspraak.tokens.numbering.interfaces.NumberingNumber;
 import org.leibnizcenter.rechtspraak.tokens.numbering.interfaces.SingleTokenNumbering;
+import org.leibnizcenter.rechtspraak.util.Collections3;
+import org.leibnizcenter.rechtspraak.util.Pair;
 import org.leibnizcenter.rechtspraak.util.Regex;
 
 import java.security.InvalidParameterException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Locale;
+import java.util.*;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * Created by maarten on 16-2-16.
@@ -25,11 +27,6 @@ public class SubSectionNumber extends ArrayList<SingleTokenNumbering> implements
         }
 
         List<String> l = Lists.newArrayList(s.split("\\."));
-        for (String number : l) {
-            if (number.length() >= 3) {
-                throw new NumberingNumber.TooBigForFormattingException(number);
-            }
-        }
 
         if (terminal != null) {
             terminal = terminal.trim();
@@ -95,9 +92,15 @@ public class SubSectionNumber extends ArrayList<SingleTokenNumbering> implements
         if (precedent instanceof FullNumber) {
             // E.g., 3 -> 3.1
             return succedent.size() == 2
-                    && succedent.get(0).equals(precedent) // [3].1
+                    && succedent.get(0).equalsSansTerminal(precedent) // [3].1
                     && succedent.get(1) instanceof FullNumber
                     && FullNumber.isFirstNumberInSequence((FullNumber) succedent.get(1)); // 3.[1]
+        } else if (precedent instanceof SingleCharNumbering) {
+            // E.g., a -> a.1
+            return succedent.size() == 2
+                    && succedent.get(0).equalsSansTerminal(precedent) // [3].1
+                    && succedent.get(1) instanceof SingleCharNumbering
+                    && FullNumber.isFirstNumberInSequence((FullNumber) succedent.get(1)); // a.[1] // TODO a.a?
         } else if (precedent instanceof NonNumericNumbering) {
             return false;
 //        } else if (precedent instanceof AlphabeticNumbering) { // TODO
@@ -150,6 +153,7 @@ public class SubSectionNumber extends ArrayList<SingleTokenNumbering> implements
         return false;
     }
 
+
     @Override
     public String getTerminal() {
         return terminal;
@@ -160,23 +164,29 @@ public class SubSectionNumber extends ArrayList<SingleTokenNumbering> implements
         return String.join(".", Lists.transform(this, Object::toString));
     }
 
+
     @Override
     public boolean equals(Object obj) {
-        if (obj instanceof SubSectionNumber) {
-            SubSectionNumber ssn1 = this;
-            SubSectionNumber ssn2 = ((SubSectionNumber) obj);
-            if (!((ssn1.terminal == null && ssn2.terminal == null) || ssn1.terminal.equals(ssn2.getTerminal()))) {
-                return false;
-            }
-            if (ssn1.size() == ssn2.size()) {
-                for (int i = 0; i < ((SubSectionNumber) obj).size(); i++) {
-                    if (!ssn2.get(i).equals(ssn1.get(i))) {
-                        return false;
-                    }
-                }
-                return true;
-            }
-        }
-        return false;
+        // All sub elements equal
+        return obj instanceof SubSectionNumber
+                && Objects.equals(this.terminal, ((SubSectionNumber) obj).getTerminal())
+                && this.size() == ((SubSectionNumber) obj).size()
+                && Collections3.zip(this.stream(), ((SubSectionNumber) obj).stream())
+                .filter((p) -> !p.getKey().equals(p.getValue()))
+                .limit(1)
+                .collect(Collectors.toSet())
+                .size() <= 0;
+    }
+
+    @Override
+    public boolean equalsSansTerminal(Object obj) {
+        // All sub elements equal sans terminal
+        return obj instanceof SubSectionNumber
+                && this.size() == ((SubSectionNumber) obj).size()
+                && Collections3.zip(this.stream(), ((SubSectionNumber) obj).stream())
+                .filter((p) -> !p.getKey().equalsSansTerminal(p.getValue()))
+                .limit(1)
+                .collect(Collectors.toSet())
+                .size() <= 0;
     }
 }

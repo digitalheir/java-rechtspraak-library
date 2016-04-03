@@ -5,6 +5,7 @@ import org.leibnizcenter.rechtspraak.tokens.numbering.interfaces.FullSectionNumb
 import org.leibnizcenter.rechtspraak.tokens.numbering.interfaces.NumberingNumber;
 
 import java.security.InvalidParameterException;
+import java.util.Objects;
 
 /**
  * An object of type RomanNumeral is an integer between 1 and 3999.  It can
@@ -210,6 +211,13 @@ public abstract class RomanNumeral extends Number implements FullSectionNumber {
 
     @Override
     public boolean equals(Object obj) {
+        return obj instanceof RomanNumeral
+                && equalsSansTerminal(obj)
+                && Objects.equals(((RomanNumeral) obj).getTerminal(),terminal);
+    }
+
+    @Override
+    public boolean equalsSansTerminal(Object obj) {
         return obj instanceof RomanNumeral && ((RomanNumeral) obj).mainNum() == this.mainNum();
     }
 

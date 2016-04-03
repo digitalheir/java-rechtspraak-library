@@ -58,10 +58,10 @@ public class Annotator extends JFrame {
     private DocumentBuilder builder = factory.newDocumentBuilder();
     private File xmlFolder = new File(IN_FOLDER);
     private File out = new File(OUT_FOLDER);
-    private List<File> xmlFiles = Lists.newArrayList(Xml.getFile(new File(IN_FOLDER),
-            "ECLI:NL:OGEAA:2015:386"
-    ));
-    //    private List<File> xmlFiles = Xml.listXmlFiles(xmlFolder, -1, true);
+//    private List<File> xmlFiles = Lists.newArrayList(Xml.getFile(new File(IN_FOLDER),
+//            "ECLI:NL:OGEAA:2015:386"
+//    ));
+        private List<File> xmlFiles = Xml.listXmlFiles(xmlFolder, -1, true);
     private Iterator<File> iterator = xmlFiles.iterator();
     private List<Label> labels;
 

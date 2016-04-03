@@ -39,6 +39,8 @@ public class AmbiguousAlphabeticOrRomanNumeral extends RomanNumeral implements A
         return super.isFirstNumbering();
     }
 
+
+
     @Override
     public char getCharacter() {
         return character;

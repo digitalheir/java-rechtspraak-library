@@ -5,6 +5,7 @@ import org.leibnizcenter.rechtspraak.tokens.numbering.interfaces.FullSectionNumb
 import org.leibnizcenter.rechtspraak.tokens.numbering.interfaces.NumberingNumber;
 
 import java.security.InvalidParameterException;
+import java.util.Objects;
 
 /**
  * Created by maarten on 16-2-16.
@@ -104,7 +105,13 @@ public class ArabicNumbering extends Number implements FullSectionNumber {
 
     @Override
     public boolean equals(Object obj) {
-        // TODO check if terminal is the same?
+        return obj instanceof ArabicNumbering
+                && equalsSansTerminal(obj)
+                && Objects.equals(((ArabicNumbering) obj).getTerminal(),terminal);
+    }
+
+    @Override
+    public boolean equalsSansTerminal(Object obj) {
         return obj instanceof ArabicNumbering && ((ArabicNumbering) obj).mainNum() == this.mainNum();
     }
 

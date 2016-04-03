@@ -6,8 +6,6 @@ import org.leibnizcenter.rechtspraak.tokens.numbering.SingleCharNumbering;
  * Created by maarten on 2-4-16.
  */
 public interface AlphabeticNumbering extends SingleCharNumbering {
-
-
     static char nextChar(char character) {
         switch (character) {
             case 'z':

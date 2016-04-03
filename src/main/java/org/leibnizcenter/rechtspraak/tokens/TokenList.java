@@ -20,7 +20,7 @@ import java.util.function.Consumer;
 
 /**
  * A list of tokens plus some metadata like source doc and ECLI
- *
+ * <p>
  * Created by maarten on 28-2-16.
  */
 public class TokenList extends ArrayList<TokenTreeLeaf> {
@@ -49,15 +49,11 @@ public class TokenList extends ArrayList<TokenTreeLeaf> {
     }
 
     public static TokenList parse(String ecli, Document document, Element root) {
-        try {
-            return new TokenList(
-                    ecli,
-                    document,
-                    new TokenTree(root).leafsInPreOrder()
-            );
-        } catch (NullPointerException e) {
-            throw new NullPointerException(ecli + ": " + e.getMessage());
-        }
+        return new TokenList(
+                ecli,
+                document,
+                new TokenTree(root).leafsInPreOrder()
+        );
     }
 
     public static Document getDoc(DocumentBuilder builder, File xmlFile) throws SAXException, IOException {

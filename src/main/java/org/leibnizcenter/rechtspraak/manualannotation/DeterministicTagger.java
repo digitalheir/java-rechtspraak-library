@@ -26,7 +26,7 @@ public class DeterministicTagger {
         int firstTitle = -1;
         for (int i = 0; i < untagged.size(); i++) {
             TokenTreeLeaf token = untagged.get(i);
-            Label tag = protoTag(untagged, i, tagged);
+            Label tag = firstPass(untagged, i, tagged);
 
             // Set first title if this is the first encountered title
             if (firstTitle < 0 && Label.SECTION_TITLE.equals(tag)) firstTitle = setToPrevIfPrecededByNumber(tagged, i);
@@ -79,7 +79,7 @@ public class DeterministicTagger {
         return i;
     }
 
-    private static Label protoTag(List<TokenTreeLeaf> untagged, int ix, List<Label> tagged) {
+    private static Label firstPass(List<TokenTreeLeaf> untagged, int ix, List<Label> tagged) {
         TokenTreeLeaf token = untagged.get(ix);
         if (IgnoreElement.dontTokenize(token.getNodeName())) {
             return Label.TEXT_BLOCK;
@@ -126,6 +126,7 @@ public class DeterministicTagger {
                 || NumberingFeature.probablyJustU.apply(elements, ix) // u heeft
                 || (NumberingFeature._S.apply(elements, ix)) // 's
                 || (NumberingFeature.IS_SPELLED_OUT.apply(elements, ix)) // 2 (twee)
+                || (NumberingFeature.NUM_LARGER_THAN_15.apply(elements, ix)) // We assume full numbers are <= 15
                 //|| (isProbablyJustStartOfSentence.apply(elements, ix)) // 7 patronen //TODO
                 || (NumberingFeature.isPartOfSpacedLetters.apply(elements, ix)) // u i t s p r a a k
                 || (NumberingFeature.IS_PROBABLY_NAME.apply(elements, ix)) //

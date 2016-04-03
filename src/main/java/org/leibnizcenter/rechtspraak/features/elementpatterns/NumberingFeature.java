@@ -7,6 +7,8 @@ import org.leibnizcenter.rechtspraak.features.elementpatterns.interfaces.Element
 import org.leibnizcenter.rechtspraak.features.elementpatterns.interfaces.NamedElementFeatureFunction;
 import org.leibnizcenter.rechtspraak.features.textpatterns.GeneralTextPattern;
 import org.leibnizcenter.rechtspraak.features.textpatterns.KnownSurnamesNl;
+import org.leibnizcenter.rechtspraak.tokens.numbering.interfaces.FullNumber;
+import org.leibnizcenter.rechtspraak.tokens.numbering.interfaces.SingleTokenNumbering;
 import org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf;
 import org.leibnizcenter.rechtspraak.tokens.numbering.*;
 import org.leibnizcenter.rechtspraak.tokens.numbering.interfaces.AlphabeticNumbering;
@@ -14,6 +16,10 @@ import org.leibnizcenter.rechtspraak.tokens.numbering.interfaces.NumberingNumber
 import org.leibnizcenter.rechtspraak.tokens.tokentree.NumberingProfile;
 
 import java.util.List;
+import java.util.function.BinaryOperator;
+import java.util.function.Predicate;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 /**
  * Created by maarten on 1-4-16.
@@ -21,6 +27,14 @@ import java.util.List;
 public enum NumberingFeature implements NamedElementFeatureFunction {
     FOLLOWED_BY_SAME_PROFILE_NUMBERING((tokens, i) -> tokens.get(i) instanceof Numbering && ((Numbering) tokens.get(i)).getSameProfileSuccessors().size() > 0),
     PRECEDED_BY_SAME_PROFILE_NUMBERING((tokens, i) -> tokens.get(i) instanceof Numbering && ((Numbering) tokens.get(i)).getSameProfilePredecessors().size() > 0),
+
+    NUM_LARGER_THAN_5(numLargerThan(5)),
+    NUM_LARGER_THAN_10(numLargerThan(10)),
+    NUM_LARGER_THAN_15(numLargerThan(15)),
+    NUM_LARGER_THAN_20(numLargerThan(20)),
+    NUM_LARGER_THAN_50(numLargerThan(50)),
+    NUM_LARGER_THAN_100(numLargerThan(100)),
+
 
     HAS_PLAUSIBLE_SUCCEDENT((tokens, i) -> tokens.get(i) instanceof Numbering && ((Numbering) tokens.get(i)).getPlausibleSuccessors().size() > 0),
     HAS_PLAUSIBLE_PRECEDENT((tokens, i) -> tokens.get(i) instanceof Numbering && ((Numbering) tokens.get(i)).getPlausiblePredecessors().size() > 0),
@@ -50,6 +64,32 @@ public enum NumberingFeature implements NamedElementFeatureFunction {
     hasArabicNumberWithNoTerminal(((tokens, ix) -> Numbering.isArabic(tokens.get(ix)) && noTerminal(tokens, ix))),
     hasNonNumericNumberWithNoTerminal((tokens, ix) -> Numbering.isNonNumeric(tokens.get(ix)) && noTerminal(tokens, ix)),
     hasRomanNumberWithNoTerminal((tokens, ix) -> Numbering.isRoman(tokens.get(ix)) && noTerminal(tokens, ix));
+
+    private static ElementFeatureFunction numLargerThan(int checkfor) {
+        return (tokens, ix) -> tokens.get(ix) instanceof Numbering
+                && (
+                isFullNumberLargerThan(checkfor, (Numbering) tokens.get(ix))
+                        || isPartOFSectionNumberLargerThan(checkfor, (Numbering) tokens.get(ix))
+        );
+    }
+
+    private static boolean isPartOFSectionNumberLargerThan(final int checkfor, Numbering numbering) {
+        return numbering.getNumbering() instanceof SubSectionNumber
+                // Whether there is at least one subsection part that is larger than checkfor
+                && ((SubSectionNumber) numbering.getNumbering()).stream()
+                .filter((n) -> isFullNumberLargerThan(checkfor, n))
+                .limit(1)
+                .collect(Collectors.toSet()).size() > 0;
+    }
+
+    private static boolean isFullNumberLargerThan(int checkfor, NumberingNumber numbering) {
+        return numbering instanceof FullNumber
+                && ((FullNumber) numbering).mainNum() > checkfor;
+    }
+
+    private static boolean isFullNumberLargerThan(int checkfor, Numbering numbering) {
+        return isFullNumberLargerThan(checkfor, numbering.getNumbering());
+    }
 
     private static boolean noTerminal(List<TokenTreeLeaf> tokens, int ix) {
         return Strings.isNullOrEmpty(((Numbering) tokens.get(ix)).getTerminal());

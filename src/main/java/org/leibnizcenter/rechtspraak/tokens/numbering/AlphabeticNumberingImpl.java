@@ -4,6 +4,7 @@ import org.leibnizcenter.rechtspraak.tokens.numbering.interfaces.AlphabeticNumbe
 import org.leibnizcenter.rechtspraak.tokens.numbering.interfaces.NumberingNumber;
 
 import java.security.InvalidParameterException;
+import java.util.Objects;
 
 /**
  * Created by maarten on 16-2-16.
@@ -98,7 +99,13 @@ public class AlphabeticNumberingImpl implements AlphabeticNumbering {
 
     @Override
     public boolean equals(Object obj) {
-        // TODO check if terminal is the same?
-        return obj instanceof SingleCharNumbering && ((SingleCharNumbering) obj).getCharacter() == this.character;
+        return obj instanceof SingleCharNumbering && equalsSansTerminal(obj)
+                && Objects.equals(terminal, ((SingleCharNumbering) obj).getTerminal());
+    }
+
+    @Override
+    public boolean equalsSansTerminal(Object obj) {
+        return obj instanceof SingleCharNumbering
+                && ((SingleCharNumbering) obj).getCharacter() == this.character;
     }
 }

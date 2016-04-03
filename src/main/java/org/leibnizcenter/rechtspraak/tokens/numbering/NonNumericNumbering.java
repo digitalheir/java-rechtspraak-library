@@ -35,14 +35,15 @@ public class NonNumericNumbering implements SingleCharNumbering {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+    public boolean equals(Object obj) {
+        return obj instanceof NonNumericNumbering
+                && equalsSansTerminal(obj)
+                && Objects.equals(((NonNumericNumbering) obj).getTerminal(), terminal);
+    }
 
-        NonNumericNumbering that = (NonNumericNumbering) o;
-
-        return Objects.equals(terminal, that.terminal) && symbol == that.symbol;
-
+    @Override
+    public boolean equalsSansTerminal(Object obj) {
+        return obj instanceof NonNumericNumbering && ((NonNumericNumbering) obj).getSymbol() == this.getSymbol();
     }
 
     public char getSymbol() {

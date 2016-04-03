@@ -1,8 +1,7 @@
 package org.leibnizcenter.rechtspraak.tokens.tokentree;
 
+import org.leibnizcenter.rechtspraak.tokens.numbering.*;
 import org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf;
-import org.leibnizcenter.rechtspraak.tokens.numbering.ArabicNumbering;
-import org.leibnizcenter.rechtspraak.tokens.numbering.Numbering;
 import org.leibnizcenter.rechtspraak.tokens.numbering.interfaces.AlphabeticNumbering;
 import org.leibnizcenter.rechtspraak.tokens.numbering.interfaces.NumberingNumber;
 
@@ -37,9 +36,12 @@ public class NumberingProfile extends ArrayList<Numbering> {
     }
 
     private static Class getSuperClass(NumberingNumber num) {
+        if (num instanceof AmbiguousAlphabeticOrRomanNumeral) return AmbiguousAlphabeticOrRomanNumeral.class;
         if (num instanceof AlphabeticNumbering) return AlphabeticNumbering.class;
+        if (num instanceof RomanNumeral) return RomanNumeral.class;
         if (num instanceof ArabicNumbering) return ArabicNumbering.class;
-        throw new IllegalStateException();
+        if (num instanceof SubSectionNumber) return SubSectionNumber.class;
+        throw new IllegalStateException(num.getClass() + "");
     }
 
     public boolean fits(NumberingNumber n) {
@@ -74,6 +76,6 @@ public class NumberingProfile extends ArrayList<Numbering> {
     }
 
     public static boolean isSameProfile(Numbering n1, Numbering n2) {
-return        fitSameProfile(n1, n2);
+        return fitSameProfile(n1, n2);
     }
 }

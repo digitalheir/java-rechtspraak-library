@@ -28,7 +28,8 @@ public class Numbering extends RechtspraakElement {
     public Numbering(Element element) {
         super(element);
         this.numbering = NumberingNumber.startsWithNumbering(this.getTextContent());
-        if (numbering == null) throw new NullPointerException();
+        if (numbering == null)
+            throw new NullPointerException();
     }
 
 

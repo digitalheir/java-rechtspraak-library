@@ -1,8 +1,8 @@
 //package org.leibnizcenter.rechtspraak.docs;
 //
-//import org.leibnizcenter.rechtspraak.TrainWithMallet;
 //import org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf;
 //import org.leibnizcenter.rechtspraak.tokens.TokenList;
+//import org.leibnizcenter.rechtspraak.util.Xml;
 //
 //import javax.xml.parsers.ParserConfigurationException;
 //import java.io.File;
@@ -15,7 +15,8 @@
 //    private static final int INT = 20;
 //
 //    public static void main(String[] args) throws ParserConfigurationException {
-//        List<File> xmlFiles = RechtspraakCorpus.listXmlFiles(TrainWithMallet.xmlFiles, 500, true);
+//        File files;
+//        List<File> xmlFiles = Xml.listXmlFiles(files, 500, true);
 //        for (File f : xmlFiles) {
 //            System.out.println(
 //                    "file://" +
