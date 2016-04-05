@@ -479,8 +479,8 @@ public class Annotator extends JFrame {
                     return GRY;
                 case SECTION_TITLE:
                     return LIME;
-                case QUOTE:
-                    return RED;
+//                case QUOTE:
+//                    return RED;
 //                case NR_FULL_INLINE:
 //                    return SECTION_NR;
                 case NR:
@@ -499,8 +499,8 @@ public class Annotator extends JFrame {
 //                    return SUBSECTION_TEXT;
 //                case QUOTE_IN:
 //                    return RED;
-                case LIST_HEADING:
-                    return Color.ORANGE;
+//                case LIST_HEADING:
+//                    return Color.ORANGE;
 //                case LIST_ITEM_IN:
 //                    return Color.YELLOW;
 //                case QUOTE_START:

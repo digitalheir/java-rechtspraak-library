@@ -15,11 +15,10 @@ import java.util.stream.StreamSupport;
  * Created by maarten on 1-4-16.
  */
 public enum Label {
-    QUOTE,
+//    QUOTE,
     NEWLINE,
     NR,
     SECTION_TITLE,
-    LIST_HEADING,
     TEXT_BLOCK;
 
     public final static Map<String, Label> fromString;
@@ -33,11 +32,8 @@ public enum Label {
     }
 
     public static Label getNumberingType(List<TokenTreeLeaf> tokens, int i) {
-        if (((Numbering) tokens.get(i)).getNumbering() instanceof ListMarking) return Label.LIST_HEADING;
-        else {
             if (i + 1 > tokens.size()) return Label.TEXT_BLOCK;
             else return Label.NR;
-        }
     }
 
     public static boolean isNumbering(Label label) {

@@ -10,6 +10,7 @@ import org.leibnizcenter.rechtspraak.manualannotation.DeterministicTagger;
 import org.leibnizcenter.rechtspraak.tokens.Label;
 import org.leibnizcenter.rechtspraak.tokens.numbering.interfaces.AlphabeticNumbering;
 import org.leibnizcenter.rechtspraak.tokens.text.IgnoreElement;
+import org.leibnizcenter.rechtspraak.tokens.text.Newline;
 import org.leibnizcenter.rechtspraak.tokens.text.TextElement;
 import org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf;
 import org.leibnizcenter.rechtspraak.tokens.numbering.Numbering;
@@ -29,13 +30,13 @@ import java.util.regex.Pattern;
  * Created by maarten on 31-3-16.
  */
 public enum ElementFeature implements NamedElementFeatureFunction {
-    HAS_1_WORD((tokens, ix) -> tokens.get(ix).words.length == 1),
-    HAS_2_WORDS((tokens, ix) -> tokens.get(ix).words.length == 2),
-    HAS_3_WORDS((tokens, ix) -> tokens.get(ix).words.length == 3),
-    HAS_4_WORDS((tokens, ix) -> tokens.get(ix).words.length == 4),
-    HAS_5_WORDS((tokens, ix) -> tokens.get(ix).words.length == 5),
-    HAS_BETWEEN_5_AND_10_WORDS((tokens, ix) -> tokens.get(ix).words.length > 5 && tokens.get(ix).words.length <= 10),
-    HAS_MORE_THAN_10_WORDS((tokens, ix) -> tokens.get(ix).words.length > 10),
+    HAS_1_WORD((tokens, ix) -> tokens.get(ix) instanceof TextElement && tokens.get(ix).words.length == 1),
+    HAS_2_WORDS((tokens, ix) -> tokens.get(ix) instanceof TextElement && tokens.get(ix).words.length == 2),
+    HAS_3_WORDS((tokens, ix) -> tokens.get(ix) instanceof TextElement && tokens.get(ix).words.length == 3),
+    HAS_4_WORDS((tokens, ix) -> tokens.get(ix) instanceof TextElement && tokens.get(ix).words.length == 4),
+    HAS_5_WORDS((tokens, ix) -> tokens.get(ix) instanceof TextElement && tokens.get(ix).words.length == 5),
+    HAS_BETWEEN_5_AND_10_WORDS((tokens, ix) -> tokens.get(ix) instanceof TextElement && tokens.get(ix).words.length > 5 && tokens.get(ix).words.length <= 10),
+    HAS_MORE_THAN_10_WORDS((tokens, ix) -> tokens.get(ix) instanceof TextElement && tokens.get(ix).words.length > 10),
 
     PRECEDED_BY_D_NUMBERING_gronden_van_het_hoger_beroep((tokens, ix) -> ix > 0
             && tokens.get(ix).getNormalizedText().endsWith("gronden van het hoger beroep")
@@ -45,13 +46,13 @@ public enum ElementFeature implements NamedElementFeatureFunction {
     TEXT_PRECEDED_BY_NUMBERING((tokens, ix) -> ix > 0
             && tokens.get(ix) instanceof TextElement && tokens.get(ix - 1) instanceof Numbering),
 
-    HAS_1_WORD_BETWEEN_BRACKETS((tokens, ix) -> tokens.get(ix).wordsBeforeOpeningBracket.length == 1),
-    HAS_2_WORDS_BETWEEN_BRACKETS((tokens, ix) -> tokens.get(ix).wordsBeforeOpeningBracket.length == 2),
-    HAS_3_WORDS_BETWEEN_BRACKETS((tokens, ix) -> tokens.get(ix).wordsBeforeOpeningBracket.length == 3),
-    HAS_4_WORDS_BETWEEN_BRACKETS((tokens, ix) -> tokens.get(ix).wordsBeforeOpeningBracket.length == 4),
-    HAS_5_WORDS_BETWEEN_BRACKETS((tokens, ix) -> tokens.get(ix).wordsBeforeOpeningBracket.length == 5),
-    HAS_BETWEEN_5_AND_10_WORDS_BETWEEN_BRACKETS((tokens, ix) -> tokens.get(ix).wordsBeforeOpeningBracket.length > 5 && tokens.get(ix).wordsBeforeOpeningBracket.length <= 10),
-    HAS_MORE_THAN_10_WORDS_BETWEEN_BRACKETS((tokens, ix) -> tokens.get(ix).wordsBeforeOpeningBracket.length > 10),
+    HAS_1_WORD_BETWEEN_BRACKETS((tokens, ix) -> tokens.get(ix) instanceof TextElement && tokens.get(ix).wordsBeforeOpeningBracket.length == 1),
+    HAS_2_WORDS_BETWEEN_BRACKETS((tokens, ix) -> tokens.get(ix) instanceof TextElement && tokens.get(ix).wordsBeforeOpeningBracket.length == 2),
+    HAS_3_WORDS_BETWEEN_BRACKETS((tokens, ix) -> tokens.get(ix) instanceof TextElement && tokens.get(ix).wordsBeforeOpeningBracket.length == 3),
+    HAS_4_WORDS_BETWEEN_BRACKETS((tokens, ix) -> tokens.get(ix) instanceof TextElement && tokens.get(ix).wordsBeforeOpeningBracket.length == 4),
+    HAS_5_WORDS_BETWEEN_BRACKETS((tokens, ix) -> tokens.get(ix) instanceof TextElement && tokens.get(ix).wordsBeforeOpeningBracket.length == 5),
+    HAS_BETWEEN_5_AND_10_WORDS_BETWEEN_BRACKETS((tokens, ix) -> tokens.get(ix) instanceof TextElement && tokens.get(ix).wordsBeforeOpeningBracket.length > 5 && tokens.get(ix).wordsBeforeOpeningBracket.length <= 10),
+    HAS_MORE_THAN_10_WORDS_BETWEEN_BRACKETS((tokens, ix) -> tokens.get(ix) instanceof TextElement && tokens.get(ix).wordsBeforeOpeningBracket.length > 10),
 
     FOLLOWED_BY_TEXT_W_MORE_THAN_5_LETTERS((tokens, ix) -> tokens.size() > ix + 1 && GeneralTextFeature.MORE_THAN_5_LETTERS.apply(tokens, ix + 1)),
     IMMEDIATELY_FOLLOWED_BY_INLINE_TEXT((tokens, ix) -> tokens.size() > ix + 1 && GeneralTextFeature.START_W_LOWER_CASE_LETTER.apply(tokens, ix + 1)),
@@ -164,10 +165,10 @@ public enum ElementFeature implements NamedElementFeatureFunction {
 
     IGNORE_NODE((ElementFeature::ignoreNode)),
 
-    WITHIN_FIRST_5_BLOCKS((tokens, ix) -> ix < 5),
-    WITHIN_FIRST_10_BLOCKS((tokens, ix) -> ix < 10),
-    WITHIN_FIRST_15_BLOCKS((tokens, ix) -> ix < 15),
-    WITHIN_FIRST_20_BLOCKS((tokens, ix) -> ix < 20),
+    TEXT_WITHIN_FIRST_5_BLOCKS((tokens, ix) ->tokens.get(ix) instanceof TextElement &&  ix < 5),
+    TEXT_WITHIN_FIRST_10_BLOCKS((tokens, ix) ->tokens.get(ix) instanceof TextElement &&  ix < 10),
+    TEXT_WITHIN_FIRST_15_BLOCKS((tokens, ix) -> tokens.get(ix) instanceof TextElement && ix < 15),
+    TEXT_WITHIN_FIRST_20_BLOCKS((tokens, ix) ->tokens.get(ix) instanceof TextElement &&  ix < 20),
 
 //    OVER_HALF((tokens, ix) -> (ix > (tokens.size() / 2))),
 
@@ -210,7 +211,7 @@ public enum ElementFeature implements NamedElementFeatureFunction {
     matchesLowConfTitle((tokens, ix) -> Features.matchesAny(tokens, ix,
             (ElementFeatureFunction[]) TitlePatterns.TitlesNormalizedMatchesLowConf.values())),
 
-    likelyNotTitle((tokens, ix) -> ElementFeature.WITHIN_FIRST_15_BLOCKS.apply(tokens, ix)
+    likelyNotTitle((tokens, ix) -> ElementFeature.TEXT_WITHIN_FIRST_15_BLOCKS.apply(tokens, ix)
             || GeneralTextFeature.CONTAINS_NON_LETTER.apply(tokens, ix)
             || GeneralTextFeature.CONTAINS_SQUARE_BRACKETS.apply(tokens, ix)
             || GeneralTextFeature.START_W_NON_LETTER.apply(tokens, ix)
@@ -252,7 +253,11 @@ public enum ElementFeature implements NamedElementFeatureFunction {
                     && (matchesHighConfTitle.apply(tokens, ix)
                     || matchesLowConfTitleButLooksLikeATitleSomewhat.apply(tokens, ix)
             )),
-    probablyTextBlock((tokens, ix) -> DeterministicTagger.firstPass(tokens, ix).equals(Label.TEXT_BLOCK));
+    probablyTextBlock((tokens, ix) -> DeterministicTagger.firstPass(tokens, ix).equals(Label.TEXT_BLOCK)),
+    probablyNotTextBlock((tokens, ix) -> !DeterministicTagger.firstPass(tokens, ix).equals(Label.TEXT_BLOCK)),
+
+    probablyNotNewline((tokens, ix) -> !(tokens.get(ix) instanceof Newline)),
+    probablyNotNr((tokens, ix) -> !(tokens.get(ix) instanceof Numbering));
 
 
     private static boolean followedBy(List<TokenTreeLeaf> tokens, int ix, Pattern p) {

@@ -119,7 +119,8 @@ public class TokenTree implements TokenTreeVertex {
             if (l == null)
                 if (el instanceof ListMarking ||
                         ((RechtspraakElement) el).getTagName().matches("quote|footnote\\-ref")) return Label.TEXT_BLOCK;
-                else throw new NullPointerException();
+                else
+            throw new NullPointerException();
             return l;
         } else if (el instanceof Newline) {
             return Label.NEWLINE;
@@ -145,7 +146,7 @@ public class TokenTree implements TokenTreeVertex {
         TokenTreeLeaf el = tokens.get(i);
         Label label = Label.TEXT_BLOCK; // Default: out
         if (el instanceof Newline) label = Label.NEWLINE;
-        else if (el instanceof Quote) label = Label.QUOTE;
+//        else if (el instanceof Quote) label = Label.QUOTE;
         else if (el instanceof Numbering) {
             label = Label.getNumberingType(tokens, i);
         }//todo
@@ -215,9 +216,11 @@ public class TokenTree implements TokenTreeVertex {
                         if (numberings.size() > 0) {
                             tokenSiblings.addAll(numberings);
                         } else {
-
                             if (children.length == 1) return new TextElement(e);
-                            else tokenSiblings.add(new TextElement(Xml.wrapNodeInElement(c, TAG_TEXT)));
+                            else {
+                                Element wrapped = Xml.wrapNodeInElement(c, TAG_TEXT);
+                                tokenSiblings.add(new TextElement(wrapped));
+                            }
                         }
                     }
                     break;
