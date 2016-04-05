@@ -64,7 +64,7 @@ public class TrainCrf {
             SimpleTagger.class, "default-label", "STRING", true, "O",
             "Label for initial context and uninteresting tokens", null);
     private static final CommandOption.Integer iterationsOption = new CommandOption.Integer(
-            SimpleTagger.class, "iterations", "INTEGER", true, 500,
+            SimpleTagger.class, "iterations", "INTEGER", true, Integer.MAX_VALUE,
             "Number of training iterations", null);
     private static final CommandOption.Boolean viterbiOutputOption = new CommandOption.Boolean(
             SimpleTagger.class, "viterbi-output", "true|false", true, false,
