@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:eu="http://publications.europa.eu/celex/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:tr="http://tuchtrecht.overheid.nl/">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:RBLEE:2011:BQ3070</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-29T11:10:54</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-05</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">BQ3070</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Rechtbank_Leeuwarden" scheme="overheid.RechterlijkeMacht">Rechtbank Leeuwarden</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">2011-04-26</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">336021 - CV EXPL  10-9571</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#eersteAanlegEnkelvoudig">Eerste aanleg - enkelvoudig</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:spatial rdfs:label="Zittingsplaats">Leeuwarden</dcterms:spatial>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#civielRecht">Civiel recht</dcterms:subject>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBLEE:2011:BQ3070">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBLEE:2011:BQ3070</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-05T08:06:00</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2011-04-29</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:RBLEE:2011:BQ3070 Rechtbank Leeuwarden , 26-04-2011 / 336021 - CV EXPL  10-9571</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie id="ECLI:NL:RBLEE:2011:BQ3070:INH" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <para>Consumentenkoop tweedehands auto. Geen reparatiekosten verschuldigd nu het hier een versnellingsbak betreft die binnen zes maanden na aankoop kapot is gegaan.</para>
+    </inhoudsindicatie>
+  <uitspraak id="ECLI:NL:RBLEE:2011:BQ3070:DOC" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">RECHTBANK LEEUWARDEN</para>
+        <para manualAnnotation="TEXT_BLOCK">Sector kanton</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Locatie Leeuwarden</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">zaak-/rolnummer: 	</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">vonnis van de kantonrechter d.d. 26 april 2011</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">inzake</para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">de besloten vennootschap</para>
+        <para manualAnnotation="TEXT_BLOCK">Autobedrijf [eiseres] B.V.,</para>
+        <para manualAnnotation="TEXT_BLOCK">hierna te noemen: [eiseres],</para>
+        <para manualAnnotation="TEXT_BLOCK">gevestigd te [plaats],</para>
+        <para manualAnnotation="TEXT_BLOCK">eiseres,</para>
+        <para manualAnnotation="TEXT_BLOCK">gemachtigde: VNR NGC Gerechtsdeurwaarders en Incasso,</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">[gedaagde],</para>
+        <para manualAnnotation="TEXT_BLOCK">hierna te noemen: [gedaagde],</para>
+        <para manualAnnotation="TEXT_BLOCK">wonende te [woonplaats],</para>
+        <para manualAnnotation="TEXT_BLOCK">gedaagde,</para>
+        <para manualAnnotation="TEXT_BLOCK">procederende in persoon.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <parablock>
+        <para manualAnnotation="SECTION_TITLE">Procesverloop</para>
+        <para><potentialnr manualAnnotation="NR">1.	</potentialnr><text manualAnnotation="TEXT_BLOCK">Op de bij dagvaarding vermelde gronden heeft [eiseres] gevorderd om [gedaagde] te veroordelen tot betaling van € 1.781,31 met rente en kosten.</text></para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">[gedaagde] heeft bij antwoord de vordering betwist.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Na repliek en dupliek is vonnis bepaald op de stukken van het geding, waarvan de inhoud als hier ingelast geldt.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Door [eiseres] zijn producties in het geding gebracht.</para>
+      <para/>
+      <para manualAnnotation="SECTION_TITLE">Motivering</para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="SECTION_TITLE">De vaststaande feiten</para>
+        <para><potentialnr manualAnnotation="NR">2.	</potentialnr><text manualAnnotation="TEXT_BLOCK">Als gesteld en erkend, dan wel als niet of onvoldoende weersproken, alsmede op grond van de in zoverre onbetwiste inhoud der overgelegde producties staat het volgende vast.</text></para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.1.	</potentialnr><text manualAnnotation="TEXT_BLOCK">[eiseres] exploiteert een autobedrijf te [plaats]. </text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.2.	</potentialnr><text manualAnnotation="TEXT_BLOCK">Tussen [eiseres] als verkoper en [gedaagde] als koper is in september 2009 een koopovereenkomst gesloten met betrekking tot een tweedehands auto van het merk Mini Cooper 1.6., met als kenteken [kenteken]. Het bouwjaar van de auto is 2003. [eiseres] heeft de auto op 30 september 2009 aan [gedaagde] afgeleverd met een op die dag uitgevoerde APK-keuring. Partijen zijn geen garantie overeengekomen in het kader van de (ver)koop van de auto. De koopsom van de auto bedroeg EUR 10.250,00.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.3.	</potentialnr><text manualAnnotation="TEXT_BLOCK">Enige tijd na aankoop van de auto hoorde [gedaagde] een "tik" in de versnellingsbak, naar aanleiding waarvan zij zich in november 2009 bij [eiseres] heeft gemeld. [eiseres] heeft [gedaagde] toen verzocht om later met deze kwestie terug te komen in verband met winterdrukte. In onderling overleg is een afspraak gemaakt voor 4 januari 2010. [eiseres] heeft de auto toen naar haar garagewerkplaats gesleept voor het uitvoeren van reparatie-werkzaamheden, welke op of omstreeks 20 januari 2010 hebben plaatsgevonden. [eiseres] heeft een kapotte versnellingsbak geconstateerd. [gedaagde] heeft [eiseres] vervolgens opdracht verstrekt om reparatiewerkzaamheden uit te voeren aan de auto. </text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.4.	</potentialnr><text manualAnnotation="TEXT_BLOCK">[eiseres] heeft [gedaagde] bij twee facturen, beide gedateerd 26 januari 2010, de kosten van de uitgevoerde reparaties in rekening gebracht, voor een totaalbedrag van EUR 1.459,47. De kilometerstand ten tijde van de reparaties bedroeg 109.480 km.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.4.1.	</potentialnr><text manualAnnotation="TEXT_BLOCK">De eerste factuur, met nummer 2010139, bedraagt EUR 269,15 en vermeldt het volgende:</text></para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">Auto schakelt niet meer	</para>
+        <para manualAnnotation="TEXT_BLOCK">Auto halen van huisadres-gratis</para>
+        <para manualAnnotation="TEXT_BLOCK">Onderzoek: koppelingscylinder lek</para>
+        <para manualAnnotation="TEXT_BLOCK">Koppelingscylinder vervangen</para>
+        <para manualAnnotation="TEXT_BLOCK">Systeem vullen</para>
+        <para manualAnnotation="TEXT_BLOCK">Arbeidsloon koppelingscylinder vervangen			(…)		109,90</para>
+        <para manualAnnotation="TEXT_BLOCK">Remvloeistof tbv hydr. koppeling			(…)		11,01</para>
+        <para manualAnnotation="TEXT_BLOCK">Koppelingscylinder				(…)		85,32</para>
+        <para manualAnnotation="TEXT_BLOCK">Sleepoog					(…)		19,95</para>
+        <para manualAnnotation="TEXT_BLOCK">							-----------</para>
+        <para manualAnnotation="TEXT_BLOCK">Totaal exclusief BTW						226,18</para>
+        <para manualAnnotation="TEXT_BLOCK">BTW 19% van							42,97</para>
+        <para manualAnnotation="TEXT_BLOCK">							-----------</para>
+        <para manualAnnotation="TEXT_BLOCK">						EUR	269,15</para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.4.2.	</potentialnr><text manualAnnotation="TEXT_BLOCK">De tweede factuur, met nummer 2010140, bedraagt EUR 1.190,32 en vermeldt het volgende:</text></para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">Geluid in versn. bak: versn. bak demonteren</para>
+        <para manualAnnotation="TEXT_BLOCK">Versn. bak uit elkaar halen</para>
+        <para manualAnnotation="TEXT_BLOCK">Lager met speling</para>
+        <para manualAnnotation="TEXT_BLOCK">Tanden van achteruittandwiel gebroken</para>
+        <para manualAnnotation="TEXT_BLOCK">Revisie versnellingsbak monteren</para>
+        <para manualAnnotation="TEXT_BLOCK">Arbeidsloon met coulancekorting			(…)		398,39</para>
+        <para manualAnnotation="TEXT_BLOCK">Revisie versn. bak met coulancekorting			(…)		598,50</para>
+        <para manualAnnotation="TEXT_BLOCK">Transmissieolie met coulancekorting			(…)		3,38</para>
+        <para manualAnnotation="TEXT_BLOCK">							-----------</para>
+        <para manualAnnotation="TEXT_BLOCK">Totaal exclusief BTW						1.000,27</para>
+        <para manualAnnotation="TEXT_BLOCK">BTW 19% van 1.000,27						190,05</para>
+        <para manualAnnotation="TEXT_BLOCK">							-----------</para>
+        <para manualAnnotation="TEXT_BLOCK">						EUR	1.190,32	</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.5.	</potentialnr><text manualAnnotation="TEXT_BLOCK">Bij brief van 1 februari 2010 heeft [gedaagde] de verschuldigdheid van de toegezonden facturen betwist, daartoe stellende dat de auto niet alle eigenschappen bezit die [gedaagde] op grond van de koopovereenkomst mocht verwachten. Tussen partijen is nadien nog verder gecorrespondeerd omtrent de vordering van [eiseres], waarbij [eiseres] haar vordering heeft gehandhaafd en [gedaagde] in haar verweer daartegen heeft volhard. Omdat betaling van de vordering uitbleef, heeft [eiseres] haar vordering ter incasso uit handen gegeven aan haar gemachtigde, die [gedaagde] tot betaling heeft aangemaand. Ook nadien is de vordering van [eiseres] niet voldaan.</text></para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="SECTION_TITLE">De standpunten van partijen</para>
+        <para><potentialnr manualAnnotation="NR">3.	</potentialnr><text manualAnnotation="TEXT_BLOCK">[eiseres] legt aan haar vordering ten grondslag dat zij in opdracht en voor rekening van [gedaagde] de onderhavige reparatiewerkzaamheden heeft uitgevoerd. [gedaagde] heeft telefonisch ingestemd met de overeengekomen prijs voor reparatie en heeft tevens een sleepoog bij [eiseres] besteld, welke zaak door [eiseres] is geleverd. Ten tijde van de aflevering voldeed de auto volgens [eiseres] aan de eisen die men aan een dergelijk voertuig mag stellen; de auto was net voorzien van een APK-keuring. Gelet op de aard van de zaak, een tweedehands auto van 6 jaar oud, mogen niet dezelfde eigenschappen worden verwacht als bij de aanschaf van een nieuwe auto. Pas drie maanden na het in gebruik nemen van de auto heeft [gedaagde] een gebrek gemeld. Het risico van gebreken aan de auto komt in de gegeven omstandigheden voor rekening van [gedaagde] als koper, aldus [eiseres]. [eiseres] wijst er voorts nog op dat zij gelet op de omstandigheden uit coulance een flinke korting heeft gegeven op de kosten van de uitgevoerde reparaties. Naast betaling van voormelde facturen vordert [eiseres] tevens betaling van rente en incassokosten. Zij betwist de door [gedaagde] gevorderde verzuimkosten. </text></para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.	</potentialnr><text manualAnnotation="TEXT_BLOCK">[gedaagde] voert tot haar verweer aan dat de auto bij aflevering niet de eigenschappen bezat die zij op grond van de koopovereenkomst van partijen mocht verwachten. In dat verband verwijst [gedaagde] naar het vermoeden van non-conformiteit bij consumentenkoop zoals opgenomen in artikel 7:18 lid 2 BW. Binnen de daarin genoemde termijn van zes maanden na aflevering hebben de onderhavige gebreken aan de auto zich gemanifesteerd. Klaarblijkelijk waren de gebreken al bij de aflevering van de auto aanwezig, aldus [gedaagde]. Op advies van [eiseres] heeft [gedaagde] ingestemd met de vervanging van de defecte versnellingsbak door een gereviseerde versnellingsbak. Zonder de uitgevoerde reparaties kon de auto niet rijden. Nu de auto bij aflevering niet de eigenschappen bezat die [gedaagde] op grond van de koopovereenkomst mocht verwachten, acht zij zich niet gehouden tot betaling van de reparatiewerkzaamheden die nodig waren om de bij aflevering al bestaande gebreken te verhelpen. [gedaagde] stelt verder dat het door haar bestelde sleepoog al bij de APK-keuring door [eiseres] had moeten worden aangebracht. Ten slotte vordert [gedaagde] betaling van de door haar gemaakte verzuimkosten in verband met het verschijnen ter rolzitting voor het voeren van mondeling verweer tegen de vordering. Deze verzuimkosten worden door [gedaagde] gesteld op een bedrag van EUR 100,00.</text></para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="SECTION_TITLE">De beoordeling van het geschil</para>
+        <para><potentialnr manualAnnotation="NR">5.	</potentialnr><text manualAnnotation="TEXT_BLOCK">De kantonrechter stelt voorop dat de koopovereenkomst met betrekking tot de auto als een consumentenkoop moet worden beschouwd, nu deze is aangegaan tussen [eiseres] in de uitoefening van haar (auto)bedrijf en [gedaagde] als consument. </text></para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">6.	</potentialnr><text manualAnnotation="TEXT_BLOCK">Artikel 7:17 lid 1 BW bepaalt dat de afgeleverde zaak aan de overeenkomst moet beantwoorden. In lid 2 van dit artikel is bepaald dat een zaak niet aan de overeenkomst beantwoordt indien zij, mede gelet op de aard van de zaak en de mededelingen die de koper over de zaak heeft gedaan, niet de eigenschappen bezit die de koper op grond van de koopovereenkomst mocht verwachten. De koper mag verwachten dat de zaak de eigenschappen bezit die voor een normaal gebruik daarvan nodig zijn en waarvan hij de aanwezigheid niet behoefde te betwijfelen. </text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">7.	</potentialnr><text manualAnnotation="TEXT_BLOCK">Bij de beantwoording van de vraag of de door [gedaagde] bij [eiseres] aangeschafte auto bij aflevering de eigenschappen bezat die [gedaagde] op grond van de koopovereenkomst mocht verwachten, geldt het volgende uitgangspunt. Ingeval een (tweedehands) auto wordt gekocht om daarmee, naar de verkoper bekend is, aan het verkeer deel te nemen, zal als regel moeten worden aangenomen dat de auto niet beantwoordt aan de overeenkomst, indien als gevolg van een eraan klevend gebrek dat niet op eenvoudige wijze kan worden ontdekt en hersteld, zodanig gebruik van de auto gevaar voor de verkeersveiligheid zou opleveren. Niet uitgesloten is dat deze regel uitzondering lijdt, bij voorbeeld wanneer de koper het risico van zodanig gebrek had aanvaard (zie HR 15 april 1994, NJ 1995, 614 en HR 8 juli 2005, NJ 2006, 22). </text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">8.	</potentialnr><text manualAnnotation="TEXT_BLOCK">In het onderhavige geval betreft het een gebrek aan de versnellingsbak van de auto (problemen met de koppeling) dat zich enige tijd na de aanschaf van de auto heeft voorgedaan. Het gaat alsdan om een mechanisch gebrek dat een consumentkoper voorafgaand aan de aanschaf niet eenvoudig kan ontdekken. Gelet op de - uit de facturen van [eiseres] blijkende - omvang van de uitgevoerde reparatie aan de versnellingsbak gaat de kantonrechter ervan uit het gebrek niet op eenvoudige wijze konden worden hersteld. Gebruik van een auto met een defecte versnellingsbak betekent, gelet op de aard van dit gebrek, hetzij dat de auto niet meer aan het verkeer kan deelnemen, hetzij dat deze een gevaar kan opleveren voor de verkeersveiligheid. Voorts gaat de kantonrechter ervan uit dat het [eiseres] bekend was dat [gedaagde] de auto bij haar heeft gekocht om daarmee aan het verkeer deel te nemen. Tegen deze achtergrond moet worden geoordeeld dat de auto ten tijde van de aflevering niet beantwoordde aan de koopovereenkomst. Voor dit oordeel bestaat reden te meer, nu het gebrek zich binnen de termijn van zes maanden uit artikel 7:18 lid 2 BW heeft geopenbaard. In dit artikel is immers bepaald dat bij een consumentenkoop wordt vermoed dat de zaak niet aan de overeenkomst heeft beantwoord, indien de afwijking van het overeengekomene zich binnen een termijn van zes maanden na aflevering openbaart, tenzij de aard van de zaak of de aard van de afwijking zich daartegen verzet. Naar het oordeel van de kantonrechter verzet de aard van de gekochte zaak - in dit geval een tweedehands auto van omstreeks 6 jaar oud - zich, anders dan [eiseres] heeft betoogd, niet tegen de toepassing van dit bewijsvermoeden. Ook dan mag de koper er bij aanschaf van de auto in zijn algemeenheid op vertrouwen dat de versnellingsbak nog dusdanig functioneert dat daarmee (veilig) aan het verkeer kan worden deelgenomen. </text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">9.	</potentialnr><text manualAnnotation="TEXT_BLOCK">Nu [gedaagde], gezien het vorenstaande, een auto heeft gekocht met een versnellingsbak die niet die eigenschappen bezat, die [gedaagde] op grond van de koopovereenkomst mocht verwachten, had [gedaagde] ingevolge artikel 7:21 lid 1 sub b BW recht op - kosteloos - herstel (lees: reparatie) van de afgeleverde auto door [eiseres], teneinde de gebreken aan de versnellingsbak te verhelpen, waarmee de koopovereenkomst alsnog correct werd nagekomen. Een en ander brengt met zich dat [gedaagde] niet gehouden is om de kosten van de uitgevoerde reparaties aan [eiseres] te voldoen. Dit geldt ook voor de kosten van het bestelde sleepoog, nu genoegzaam is komen vast te staan dat deze (extra) kosten zijn gemaakt ten behoeve van het slepen van de auto naar de garagewerkplaats van [eiseres], om voor herstel van de versnellingsbak zorg te kunnen dragen, welk herstel voor rekening van [eiseres] komt.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">10.	</potentialnr><text manualAnnotation="TEXT_BLOCK">De vordering van [eiseres] strekkende tot betaling van de reparatiefacturen, vermeerderd met rente en incassokosten, zal dan ook worden afgewezen. </text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">11.	</potentialnr><text manualAnnotation="TEXT_BLOCK">[eiseres] zal als de in het ongelijk te stellen partij in de kosten van het geding aan de zijde van [gedaagde] worden veroordeeld. Deze kosten zullen aan de zijde van [gedaagde] schattenderwijs op EUR 25,00 worden vastgesteld. Het door [gedaagde] genoemde bedrag, samenhangende met het bezoek aan de rolzitting voor het voeren van mondeling verweer, is niet voldoende onderbouwd. </text></para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="SECTION_TITLE">Beslissing</para>
+        <para manualAnnotation="TEXT_BLOCK">De kantonrechter:</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">wijst af de vordering van [eiseres];</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">veroordeelt [eiseres] in de kosten van het geding, tot op heden aan de zijde van [gedaagde] vastgesteld op EUR 25,00.</para>
+      <para/>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Aldus gewezen door mr. J.E. Biesma, kantonrechter, en uitgesproken ter openbare terechtzitting van 26 april 2011 in tegenwoordigheid van de griffier.</para>
+      <para/>
+      <para/>
+      <para><potentialnr manualAnnotation="TEXT_BLOCK">c </potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">119</potentialnr></para>
+    </uitspraak>
+</open-rechtspraak>

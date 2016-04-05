@@ -1,7 +1,9 @@
 package org.leibnizcenter.rechtspraak.util;
 
+import com.google.common.base.Strings;
 import com.google.common.collect.Lists;
 import com.sun.org.apache.xerces.internal.dom.DOMOutputImpl;
+import org.leibnizcenter.rechtspraak.manualannotation.Annotator;
 import org.w3c.dom.*;
 import org.w3c.dom.bootstrap.DOMImplementationRegistry;
 import org.w3c.dom.ls.DOMImplementationLS;
@@ -15,7 +17,6 @@ import java.io.Writer;
 import java.security.InvalidParameterException;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.List;
 import java.util.regex.Matcher;
 
@@ -23,6 +24,23 @@ import java.util.regex.Matcher;
  * Created by maarten on 22-12-15.
  */
 public class Xml {
+    public static String OUT_FOLDER = "/media/maarten/Media/rechtspraak-rich-docs-20160221-annotated/";
+    public static String IN_FOLDER = "/media/maarten/Media/rechtspraak-rich-docs-20160221/";
+
+    public static Element wrapRemainderInElement(Element e, int startFromChildIx, String tagName) {
+        Element newElement = e.getOwnerDocument().createElement(tagName);
+
+        Node[] children = getChildren(e); // Tree will change, so get a ref to children as they are now
+        for (int i = startFromChildIx; i < children.length; i++) {
+            Node child = children[i];
+            e.removeChild(child);
+            newElement.appendChild(child);
+        }
+        if (newElement.getChildNodes().getLength() > 0) e.appendChild(newElement);
+
+        return newElement;
+    }
+
     public static Element wrapSubstringInElement(
             Text node,
             int startIndex,
@@ -270,5 +288,20 @@ public class Xml {
 
     public static File getFile(File folder, String ecli) {
         return new File(folder, ecli.replaceAll(":", ".") + ".xml");
+    }
+
+
+    public static Node[] getChildren(Node root) {
+        NodeList children = root.getChildNodes();
+        Node[] originalChildren = new Node[children.getLength()];
+        for (int i = 0; i < children.getLength(); i++) {
+            originalChildren[i] = children.item(i);
+        }
+        return originalChildren;
+    }
+
+    public static void setFolders(String[] args) {
+        if (args.length > 0 && !Strings.isNullOrEmpty(args[0])) IN_FOLDER = args[0];
+        if (args.length > 1 && !Strings.isNullOrEmpty(args[1])) OUT_FOLDER = args[1];
     }
 }

@@ -4,7 +4,8 @@ import org.leibnizcenter.rechtspraak.tokens.RechtspraakElement;
 import org.leibnizcenter.rechtspraak.tokens.numbering.interfaces.AlphabeticNumbering;
 import org.leibnizcenter.rechtspraak.tokens.numbering.interfaces.NumberingNumber;
 import org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf;
-import org.leibnizcenter.rechtspraak.tokens.tokentree.NumberingProfile;
+import org.leibnizcenter.rechtspraak.tokens.tokentree.SameKindOfNumbering;
+import org.leibnizcenter.rechtspraak.tokens.tokentree.TokenTreeVertex;
 import org.w3c.dom.Element;
 
 import java.util.*;
@@ -15,7 +16,7 @@ import java.util.*;
 public class Numbering extends RechtspraakElement {
     private NumberingNumber numbering;
     public boolean isPlausibleNumbering;
-    private NumberingProfile alphabeticSequence;
+    private Map<SameKindOfNumbering, SameKindOfNumbering.List> siblingSequences = new EnumMap<>(SameKindOfNumbering.class);
 
     private static final Comparator<Map.Entry<Integer, Numbering>> sortByKey = (o1, o2) -> o1.getKey().compareTo(o2.getKey());
 
@@ -41,12 +42,12 @@ public class Numbering extends RechtspraakElement {
         return numbering.getTerminal();
     }
 
-    public void setAlphabeticSequence(NumberingProfile alphabeticSequence) {
-        this.alphabeticSequence = alphabeticSequence;
+    public void setSequence(SameKindOfNumbering profile, SameKindOfNumbering.List seq) {
+        this.siblingSequences.put(profile, seq);
     }
 
-    public NumberingProfile getAlphabeticSequence() {
-        return alphabeticSequence;
+    public SameKindOfNumbering.List getSequence(SameKindOfNumbering profile) {
+        return this.siblingSequences.get(profile);
     }
 
     public boolean isSuccedentOf(Numbering earlier) {
@@ -111,6 +112,19 @@ public class Numbering extends RechtspraakElement {
 
     public Collection<Map.Entry<Integer, Numbering>> getPlausibleSuccessors() {
         return plausibleSuccessors;
+    }
+
+    public static boolean is(TokenTreeVertex numbering) {
+        return numbering instanceof Numbering;
+    }
+
+    public static Collection<Map.Entry<Integer, Numbering>> getPlausibleSuccessors(TokenTreeLeaf tokenTreeLeaf) {
+        if(tokenTreeLeaf instanceof Numbering) return ((Numbering) tokenTreeLeaf).getPlausibleSuccessors();
+        else return null;
+    }
+    public static Collection<Map.Entry<Integer, Numbering>> getPlausiblePredecessors(TokenTreeLeaf tokenTreeLeaf) {
+        if(tokenTreeLeaf instanceof Numbering) return ((Numbering) tokenTreeLeaf).getPlausiblePredecessors();
+        else return null;
     }
 
 

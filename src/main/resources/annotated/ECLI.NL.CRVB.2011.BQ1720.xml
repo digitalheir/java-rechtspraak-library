@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:eu="http://publications.europa.eu/celex/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:tr="http://tuchtrecht.overheid.nl/">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:CRVB:2011:BQ1720</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-29T10:08:09</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-05</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">BQ1720</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Centrale_Raad_van_Beroep" scheme="overheid.RechterlijkeMacht">Centrale Raad van Beroep</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">2011-04-15</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">10-3518 WW</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#hogerBeroep">Hoger beroep</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:spatial rdfs:label="Zittingsplaats">Utrecht</dcterms:spatial>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht">Bestuursrecht</dcterms:subject>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht_socialezekerheidsrecht">Bestuursrecht; Socialezekerheidsrecht</dcterms:subject>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CRVB:2011:BQ1720">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CRVB:2011:BQ1720</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-05T08:01:30</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2011-04-19</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:CRVB:2011:BQ1720 Centrale Raad van Beroep , 15-04-2011 / 10-3518 WW</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie id="ECLI:NL:CRVB:2011:BQ1720:INH" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <para>Herziening WW-uitkering. Terugvordering. Boete. Het had appellant redelijkerwijs duidelijk moeten zijn dat hij de inlichtingenverplichting heeft geschonden door de door hem gewerkte uren niet op de werkbriefjes op te geven. Het beroep op het vertrouwensbeginsel faalt. Appellant heeft zijn werkbriefjes over de betreffende periode onjuist ingevuld. Binnen de systematiek van de WW vormt dat een ernstige overtreding omdat de rechtmatigheid van de uitkering destijds aan de hand van het werkbriefje werd vastgesteld. Mede gelet op de overige ten aanzien van appellant gebleken omstandigheden is de opgelegde boete van  € 310,-- een evenredige sanctie.</para>
+    </inhoudsindicatie>
+  <uitspraak id="ECLI:NL:CRVB:2011:BQ1720:DOC" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <para><potentialnr manualAnnotation="TEXT_BLOCK">10/</potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">3518 </potentialnr><text manualAnnotation="TEXT_BLOCK">WW</text></para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Centrale Raad van Beroep</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Meervoudig kamer</para>
+      <para/>
+      <para><potentialnr manualAnnotation="TEXT_BLOCK">U </potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">I </potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">T </potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">S </potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">P </potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">R </potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">A </potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">A </potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">K</potentialnr></para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">op het hoger beroep van:</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">[Appellant], wonende te [woonplaats] (hierna: appellant),</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">tegen de uitspraak van de rechtbank Haarlem van 4 mei 2010, 09-5009 (hierna: aangevallen uitspraak),</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">in het geding tussen:</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">appellant</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">en</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">de Raad van bestuur van het Uitvoeringsinstituut werknemersverzekeringen (hierna: Uwv).</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Datum uitspraak: 15 april 2011</para>
+      <para> </para>
+      <para><potentialnr manualAnnotation="NR">I. </potentialnr><text manualAnnotation="SECTION_TITLE">PROCESVERLOOP</text></para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Namens appellant heeft mr. A.J. de Boer, advocaat, hoger beroep ingesteld.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Het Uwv heeft een verweerschrift ingediend.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Het onderzoek ter zitting heeft plaatsgevonden op 30 maart 2011. Appellant en zijn gemachtigde zijn niet verschenen. Het Uwv heeft zich laten vertegenwoordigen door mr. H.B. Heij.</para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">II. </potentialnr><text manualAnnotation="SECTION_TITLE">OVERWEGINGEN</text></para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">1.1. </potentialnr><text manualAnnotation="TEXT_BLOCK">Appellant heeft van 16 november 2006 tot en met 15 oktober 2007 een uitkering op grond van de Werkloosheidswet (WW) ontvangen. Hij heeft gedurende deze periode op de zogenoemde werkbriefjes meegedeeld niet te hebben gewerkt. Uit informatie, verkregen van [werkgever] te [vestigingsplaats] ([werkgever]), is naar voren gekomen dat appellant vanaf week 47 van 2006 tot en met week 50 van 2007 voor [werkgever] heeft gewerkt. Bij besluit van 4 juni 2009 heeft het Uwv de WW-uitkering van appellant herzien over de periode van 20 november 2006 tot en met 14 oktober 2007 en de volgens het Uwv over die periode onverschuldigd betaalde uitkering van € 3.048,19 van hem teruggevorderd. Bij besluit van 19 juni 2009 heeft het Uwv appellant een boete opgelegd van </text></para>
+        <para manualAnnotation="TEXT_BLOCK">€ 310,--.</para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">1.2. </potentialnr><text manualAnnotation="TEXT_BLOCK">Bij besluit van 26 augustus 2009 heeft het Uwv de tegen de besluiten van 4 en 19 juni 2009 gemaakte bezwaren ongegrond verklaard. </text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2. </potentialnr><text manualAnnotation="TEXT_BLOCK">Bij de aangevallen uitspraak heeft de rechtbank het tegen het besluit van 26 augustus 2009 ingestelde beroep ongegrond verklaard. De rechtbank heeft het standpunt van het Uwv onderschreven dat appellant zijn inlichtingenplicht heeft geschonden door op de werkbriefjes in te vullen dat hij niet gewerkt heeft. Volgens de rechtbank heeft het Uwv terecht de WW-uitkering herzien, de onverschuldigd betaalde uitkering teruggevorderd en in overeenstemming met de mate van verwijtbaarheid de onderhavige boete opgelegd. </text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">3. </potentialnr><text manualAnnotation="TEXT_BLOCK">Appellant heeft in hoger beroep dit oordeel van de rechtbank bestreden. Volgens hem heeft hij zijn inlichtingenplicht niet geschonden. Ten onrechte is de rechtbank in de aangevallen uitspraak niet ingegaan op zijn stelling dat hij erop mocht vertrouwen dat de mededeling, die hem was gedaan dat hij op zijn werkbriefjes niet hoefde in te vullen dat hij voor 30% werkte, juist was.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4. </potentialnr><text manualAnnotation="TEXT_BLOCK">De Raad komt tot de volgende beoordeling.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.1. </potentialnr><text manualAnnotation="TEXT_BLOCK">In dit geding zijn de volgende bepalingen uit de WW, zoals deze golden ten tijde hier in geding, van belang:</text></para>
+      <para/>
+      <parablock>
+        <para><quote manualAnnotation="TEXT_BLOCK">“</quote><text manualAnnotation="SECTION_TITLE">Artikel 20</text></para>
+        <para><potentialnr manualAnnotation="NR">1. </potentialnr><text manualAnnotation="TEXT_BLOCK">Het recht op uitkering eindigt: </text></para>
+        <para manualAnnotation="TEXT_BLOCK">(…)</para>
+        <para><potentialnr manualAnnotation="TEXT_BLOCK">b. </potentialnr><text manualAnnotation="TEXT_BLOCK">voor zover de werknemer niet langer werkloos is;</text></para>
+        <para manualAnnotation="TEXT_BLOCK">(…)</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para manualAnnotation="SECTION_TITLE">Artikel 22a</para>
+        <para><potentialnr manualAnnotation="NR">1. </potentialnr><text manualAnnotation="TEXT_BLOCK">Onverminderd het elders in deze wet bepaalde terzake van herziening of intrekking van een besluit tot toekenning van uitkering en terzake van weigering van uitkering, herziet het Uwv een dergelijk besluit of trekt dat in:</text></para>
+        <para><potentialnr manualAnnotation="NR">a. </potentialnr><text manualAnnotation="TEXT_BLOCK">indien het niet of niet behoorlijk nakomen van een verplichting op grond van artikel 24, 25 of 26 heeft geleid tot het ten onrechte of tot een te hoog bedrag verlenen van uitkering;</text></para>
+        <para><potentialnr manualAnnotation="NR">b. </potentialnr><text manualAnnotation="TEXT_BLOCK">indien anderszins de uitkering ten onrechte of tot een te hoog bedrag is verleend;</text></para>
+        <para manualAnnotation="TEXT_BLOCK">(…)</para>
+        <para><potentialnr manualAnnotation="NR">2. </potentialnr><text manualAnnotation="TEXT_BLOCK">Indien daarvoor dringende reden aanwezig zijn kan het Uwv besluiten geheel of gedeeltelijk van herziening of intrekking af te zien.</text></para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para manualAnnotation="SECTION_TITLE">Artikel 25</para>
+        <para manualAnnotation="TEXT_BLOCK">De werknemer is verplicht aan het Uwv op zijn verzoek of onverwijld uit eigen beweging alle feiten en omstandigheden mede te delen, waarvan hem redelijkerwijs duidelijk moet zijn dat zij van invloed kunnen zijn op het recht op uitkering, het geldend maken van het recht op de uitkering, de hoogte of de duur van de uitkering, of op het bedrag van de uitkering dat aan de werknemer wordt betaald.</para>
+        <para manualAnnotation="TEXT_BLOCK">(…)</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para manualAnnotation="SECTION_TITLE">Artikel 27a</para>
+        <para><potentialnr manualAnnotation="TEXT_BLOCK">1. </potentialnr><text manualAnnotation="TEXT_BLOCK">Indien de werknemer een verplichting als bedoeld in artikel 25 van deze wet (…) niet of niet behoorlijk is nagekomen, legt het Uwv hem een boete op van ten hoogste € 2.269,--.</text></para>
+        <para manualAnnotation="TEXT_BLOCK">(…)</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para manualAnnotation="SECTION_TITLE">Artikel 36</para>
+        <para><potentialnr manualAnnotation="TEXT_BLOCK">1. </potentialnr><text manualAnnotation="TEXT_BLOCK">De uitkering die als gevolg van een besluit als bedoeld in artikel 22a (…) onverschuldigd is betaald, alsmede hetgeen anderszins onverschuldigd is betaald, wordt door het Uwv teruggevorderd.</text></para>
+        <para manualAnnotation="TEXT_BLOCK">(…)</para>
+        <para><potentialnr manualAnnotation="NR">4. </potentialnr><text manualAnnotation="TEXT_BLOCK">Indien daarvoor dringende redenen aanwezig zijn kan het Uwv besluiten geheel of gedeeltelijk van terugvordering af te zien.</text></para>
+        <para manualAnnotation="TEXT_BLOCK">(…).”.</para>
+        <para><potentialnr manualAnnotation="NR">4.2. </potentialnr><text manualAnnotation="TEXT_BLOCK">De Raad onderschrijft het oordeel van de rechtbank dat appellant de inlichtingenverplichting van artikel 25 van de WW heeft geschonden en de overwegingen waarop dat oordeel berust. Hij voegt daar aan toe dat het appellant op grond van de in het</text></para>
+        <para manualAnnotation="TEXT_BLOCK">aanvraagformulier WW-uitkering genoemde brochure “Wat zijn mijn rechten en plichten bij een WW-uitkering” en de duidelijke, niet voor meerdere uitleg vatbare tekst van de vragen op de werkbriefjes redelijkerwijs duidelijk had moeten zijn dat hij de door hem gewerkte uren bij [werkgever] op de werkbriefjes aan het Uwv had moeten opgeven.</para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.3. </potentialnr><text manualAnnotation="TEXT_BLOCK">De overige oordelen van de rechtbank begrijpt de Raad aldus dat in dit geval aan de voorwaarden voor de toepassing van de artikelen 22a, 27a en 36 van de WW is voldaan, dat appellant niet aannemelijk heeft gemaakt dat hij door medewerkers van het Uwv onjuist over zijn aanspraken op een WW-uitkering is ingelicht en dat de hoogte van de boete in overeenstemming is met de ernst van het inlichtingenverzuim. Aldus oordelend heeft de rechtbank tot uitdrukking gebracht dat er geen feitelijke grondslag is voor de stelling van appellant dat hij van bedoelde medewerkers had gehoord dat hij 30% van zijn salaris mocht bijverdienen. De opvatting van appellant dat de rechtbank ten onrechte niet op deze stelling is ingegaan, deelt de Raad niet.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.4. </potentialnr><text manualAnnotation="TEXT_BLOCK">De Raad heeft geen aanknopingspunten gevonden om de in 4.3 genoemde oordelen van de rechtbank voor onjuist te houden. De Raad heeft bij zijn oordeelsvorming tevens in aanmerking genomen dat het Uwv op 24 en 25 augustus 2009 bij appellant navraag heeft gedaan. Uit de notities van de gesprekken met appellant (B40 en B41) is toen naar voren gekomen dat hij geen namen kon noemen van een contactpersoon of arts die de beweerde mededeling zou hebben gedaan. Appellant zelf twijfelde aan de bedoeling van de vraag op de werkbriefjes of hij had gewerkt. Ondanks die twijfel heeft hij geen navraag gedaan naar de juiste wijze van invulling van de werkbriefjes om die twijfel weg te nemen. Onder die omstandigheden kon appellant er niet van uitgaan dat hij zijn werkzaamheden bij [werkgever] niet op de werkbriefjes hoefde te vermelden. Het beroep op het vertrouwensbeginsel faalt dan ook. </text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.5. </potentialnr><text manualAnnotation="TEXT_BLOCK">Voor de wijze van toetsing van een bestuurlijke boete wordt verwezen naar de uitspraak van de Raad van 27 mei 2010 (LJN BM5914). Appellant heeft zijn werkbriefjes over de betreffende periode onjuist ingevuld. Binnen de systematiek van de WW vormt dat een ernstige overtreding omdat de rechtmatigheid van de uitkering destijds aan de hand van het werkbriefje werd vastgesteld. Mede gelet op de overige ten aanzien van appellant gebleken omstandigheden is de Raad van oordeel dat de opgelegde boete van  € 310,-- een evenredige sanctie is.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.6. </potentialnr><text manualAnnotation="TEXT_BLOCK">Het hoger beroep slaagt niet. De aangevallen uitspraak moet worden bevestigd.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">5. </potentialnr><text manualAnnotation="TEXT_BLOCK">Voor een veroordeling tot schadevergoeding bestaat geen ruimte. Het verzoek daartoe van appellant dient daarom te worden afgewezen.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">6. </potentialnr><text manualAnnotation="TEXT_BLOCK">De Raad ziet geen aanleiding voor een proceskostenveroordeling.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">III. </potentialnr><text manualAnnotation="SECTION_TITLE">BESLISSING</text></para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">De Centrale Raad van Beroep;</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Recht doende:</para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">Bevestigt de aangevallen uitspraak;</para>
+        <para manualAnnotation="TEXT_BLOCK">Wijst het verzoek om veroordeling tot schadevergoeding af</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Deze uitspraak is gedaan door G.A.J. van den Hurk als voorzitter en H.G. Rottier en B.W.N. de Waard als leden, in tegenwoordigheid van R.L. Venneman als griffier. De beslissing is uitgesproken in het openbaar op 15 april 2011.</para>
+      <para>					</para>
+      <para manualAnnotation="TEXT_BLOCK">(get.) G.A.J. van den Hurk.</para>
+      <para>					</para>
+      <para manualAnnotation="TEXT_BLOCK">(get.) R.L. Venneman.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">JL</para>
+    </uitspraak>
+</open-rechtspraak>

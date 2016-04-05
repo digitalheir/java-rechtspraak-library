@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:eu="http://publications.europa.eu/celex/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:tr="http://tuchtrecht.overheid.nl/">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:GHAMS:2003:AQ6979</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2015-06-28T15:59:21</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">AQ6979</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Gerechtshof_Amsterdam" scheme="overheid.RechterlijkeMacht">Gerechtshof Amsterdam</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">2003-12-19</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">01/00592</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#eersteAanlegMeervoudig">Eerste aanleg - meervoudig</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht_belastingrecht">Bestuursrecht; Belastingrecht</dcterms:subject>
+      <dcterms:references bwb:resourceIdentifier="1.0:v:BWB:BWBR0005537&amp;artikel=2:4&amp;g=2003-12-19" rdfs:label="Wetsverwijzing">Algemene wet bestuursrecht 2:4</dcterms:references>
+      <dcterms:references bwb:resourceIdentifier="1.0:v:BWB:BWBR0005537&amp;artikel=7:11&amp;g=2003-12-19" rdfs:label="Wetsverwijzing">Algemene wet bestuursrecht 7:11</dcterms:references>
+      <dcterms:references bwb:resourceIdentifier="1.0:v:BWB:BWBR0005537&amp;artikel=10:3&amp;g=2003-12-19" rdfs:label="Wetsverwijzing">Algemene wet bestuursrecht 10:3</dcterms:references>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+          <rdf:li>NTFR 2004, 1320</rdf:li>
+          <rdf:li>V-N 2004/53.3.2</rdf:li>
+          <rdf:li>FutD 2004-1531</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:GHAMS:2003:AQ6979">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:GHAMS:2003:AQ6979</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-04T21:19:11</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2004-08-18</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:GHAMS:2003:AQ6979 Gerechtshof Amsterdam , 19-12-2003 / 01/00592</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie id="ECLI:NL:GHAMS:2003:AQ6979:INH" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <para>Door varkenshandelaar behaalde resultaat uit termijnhandel in varkens is in casu niet aan te merken als winst uit onderneming dan wel inkomsten uit andere arbeid. Beroep op bij boekenonderzoek gewekt vertrouwen en gelijkheidsbeginsel faalt. Belanghebbende heeft zijn stelling dat de aanslag is vastgesteld en de uitspraak is gedaan door een en dezelfde persoon niet aannemelijk gemaakt.</para>
+    </inhoudsindicatie>
+  <uitspraak id="ECLI:NL:GHAMS:2003:AQ6979:DOC" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">GERECHTSHOF TE AMSTERDAM</para>
+        <para manualAnnotation="TEXT_BLOCK">Vierde Meervoudige Belastingkamer</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">UITSPRAAK</para>
+      <para/>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">op het beroep van X te Z, belanghebbende, </para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">tegen</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">een uitspraak van het Hoofd van de Belastingdienst Ondernemingen te P, de inspecteur.</para>
+      <para/>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">1. </potentialnr><text manualAnnotation="SECTION_TITLE">Loop van het geding</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">1.1. </potentialnr><text manualAnnotation="TEXT_BLOCK">Van de gemachtigde van belanghebbende, A (A Accountants) te Q, is ter griffie een beroepschrift ontvangen op 20 februari 2001. Het beroep is gericht tegen de uitspraak van de inspecteur, gedagtekend 5 februari 2001, betreffende de aan belanghebbende opgelegde aanslag in de inkomsten-belasting/pre-mie volksverzekeringen voor het jaar 1997.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">1.2. </potentialnr><text manualAnnotation="TEXT_BLOCK">Aan belanghebbende is een aanslag opgelegd berekend naar een belastbaar inkomen van ƒ 259.802. Na bezwaar tegen de aanslag is deze bij de bestreden uitspraak gehandhaafd. Het beroep strekt tot vernietiging van de uitspraak van de inspecteur en tot het verminderen van de aanslag tot een berekend naar een belastbaar inkomen van ? 149.085. De inspecteur heeft een verweerschrift ingediend en concludeert tot bevestiging van de bestreden uitspraak. Van mr. B (B Belastingadvies), eveneens gemachtigde van belanghebbende, is op 7 maart 2002 een brief met bijlagen ingekomen ter griffie van het Hof. De griffier heeft kopieën hiervan bij brief van 8 maart 2002 doorgezonden aan de inspecteur.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">1.3. </potentialnr><text manualAnnotation="TEXT_BLOCK">Het beroep is behandeld ter zitting van de Vierde Meervoudige Belastingkamer van 22 maart 2002. Na deze zitting heeft de griffier de gemachtigde van belanghebbende bij brief van 9 april 2002 in de gelegenheid gesteld schriftelijk te reageren op de door de inspecteur ter zitting overgelegde en voorgedragen pleitnota. Deze reaktie is op 12 april 2002 ingekomen ter griffie. De inspecteur heeft hierop gereageerd bij brief van 3 mei 2002 welke brief door de griffier bij brief van 7 mei 2002 in kopie is doorgezonden aan de gemachtigde van belanghebbende. Het beroep is vervolgens opnieuw behandeld ter zitting van de Vierde Meervoudige Belastingkamer van 31 mei 2002. Van het verhandelde op de zittingen zijn door de griffier processen-verbaal opgemaakt die zijn aangehecht aan deze uitspraak. De ter zitting overgelegde stukken rekent het Hof tot de gedingstukken.</text></para>
+      <para/>
+      <para/>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2. </potentialnr><text manualAnnotation="SECTION_TITLE">Tussen partijen vaststaande feiten</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.1. </potentialnr><text manualAnnotation="TEXT_BLOCK">Belanghebbende, geboren in 19.. en gehuwd, is handelaar in varkens en biggen en laat tegen een mestvergoeding varkens voor zijn rekening en risico mesten in een varkensmesterij te R. Verder exploiteert belanghebbende samen met een derde een varkensmesterij en fokkerij te S, tot en met 1995 in de hoedanigheid van firmant van een vennootschap onder firma en vanaf 1 januari 1996 in een besloten vennootschap. Belanghebbende is als arbiter en deelnemer actief op de Nederlandse termijnmarkt voor varkens. De financiële afwikkeling en het beheer van deze termijnmarkt wordt verzorgd door de naamloze vennootschap Nederlandse Liquidatiekas (hierna ook: NLK).</text></para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">2.2. </potentialnr><text manualAnnotation="TEXT_BLOCK">In de jaarstukken van belanghebbende is gedurende de periode 1981 tot en met 1985, 1992, 1993 en 1994, een post ‘N.V. Liquidatiekas’ als vordering of schuld opgenomen. In 1981, 1982, 1983, 1984, 1993, 1994, 1995 en 1996 heeft belanghebbende in zijn jaarrekening respectievelijk ? 14.588, ? 17.920, ? 1.654, ? 792, ? 3.302, ? 7.000, ? 9.900 en ? 250 als opbrengst termijnhandel verantwoord. De in de jaarrekeningen 1993, 1994 en 1995 als zodanig omschreven bedragen betreffen in werkelijkheid arbitragevergoedingen. </text></para>
+        <para manualAnnotation="TEXT_BLOCK">In de aangiften en jaarstukken van 1985 tot en met 1991 wordt geen resultaat uit termijnhandel vermeld. In 1986 heeft belanghebbende termijntransacties afgesloten. Uit een door belanghebbende verstrekt overzicht van termijntransacties in 1992 en 1993 blijkt van termijnhandel tot een bedrag van ? 2.192.020. De desbetreffende rekening bij NLK stond op naam van de maatschap X en Y.</para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.3. </potentialnr><text manualAnnotation="TEXT_BLOCK">In 1989 is door de inspectie der Directe Belastingen te S een boekenonderzoek voor de inkomstenbelasting over de jaren 1985 tot en met 1987 uitgevoerd. In het daarvan opgemaakte rapport staat niets vermeld over handel op de termijnmarkt.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.4. </potentialnr><text manualAnnotation="TEXT_BLOCK">In 1993 en 1994 is door de Belastingdienst Ondernemingen te P een boekenonderzoek voor de inkomsten-, omzet- en loonbelasting voor de jaren 1988 tot en met 1991 uitgevoerd. Dit onderzoek had voor de eenmanszaak van belanghebbende betrekking op de periode 1988 tot en met 1992. In het daarvan in een brief van 14 april 1994 opgemaakte verslag staat vermeld dat het veehandelsbedrijf van belanghebbende slechts zijdelings in het onderzoek is betrokken.  In het onderzoek is de administratie van belanghebbendes eenmanszaak niet betrokken. In het verslag staat niets vermeld over handel op de termijnmarkt.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.5. </potentialnr><text manualAnnotation="TEXT_BLOCK">Belanghebbende heeft op 5, 8 en 15 juli 1996 via de makelaar C B.V. op de termijnmarkt in totaal tien verkoopcontracten gekocht en deze op 18 juli en 22 augustus 1996 weer afgewikkeld door zes kooptransacties. Het in 1996 naast de ontvangen arbitragevergoeding van ? 9.900 behaalde resultaat uit termijnhandel was negatief ? 22.898. </text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.6. </potentialnr><text manualAnnotation="TEXT_BLOCK">In de maand februari 1997 is in Nederland de varkenspest uitgebroken. In 1997 heeft belanghebbende via de makelaar D B.V. op de termijnmarkt circa 114 koopcontracten en 92 verkoopcontracten gesloten bij 67 aankoop- en 49 verkooptransacties (een transacties betreft vaak maar dan één contract; de contracthoeveelheid bedraagt voor varkens 10.000 kg en voor biggen 100 stuks per contract). Meer in het bijzonder heeft hij in de periode 18 april 1997 tot en met 6 juni 1997 17 koopcontracten voor varkens en 6 koopcontracten voor biggen gesloten waarvan de leveringsmaand oktober 1997 was. Deze contracten heeft hij op 5 november 1997 met 4 transacties en een verlies van ? 129.595 verkocht. In juli 1997 heeft belanghebbende 5 contracten en in november 1997 2 contracten gekocht waarvan de leveringsmaand december 1997 was. Deze contracten heeft hij op 3 december 1997 met 3 transacties en een verlies van ? 25.385 verkocht.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.7. </potentialnr><text manualAnnotation="TEXT_BLOCK">Belanghebbende heeft in zijn jaarstukken van 1997 onder de post ‘overige bedrijfsopbrengsten’ een verlies van ? 109.518 met de omschrijving ‘opbrengst termijnhandel’ verantwoord. Het verlies bestaat uit een arbitragevergoeding van ? 1.200 en een negatief resultaat uit termijnhandel van ? 110.717.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.8. </potentialnr><text manualAnnotation="TEXT_BLOCK">In 1998 heeft belanghebbende tot en met de maand maart op de termijnmarkt 20 koopcontracten en 40 verkoopcontracten gesloten. Hierna heeft belanghebbende zijn bestaande contracten afgewikkeld en geen nieuwe contracten meer gesloten. Het resultaat uit termijnhandel beliep in 1998 negatief ? 140.577.</text></para>
+      <para/>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">3. </potentialnr><text manualAnnotation="SECTION_TITLE">Geschil</text></para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Tussen partijen is in geschil of het in 1997 behaalde resultaat uit termijnhandel als winst uit onderneming dan wel inkomsten uit andere arbeid is aan te merken en - zo dat niet het geval is - of het vertrouwensbeginsel dan wel het gelijkheidsbeginsel meebrengt dat belanghebbende dit resultaat toch in aanmerking mag nemen bij het bepalen van de winst. Voorts is in geschil of bij het doen van uitspraak op bezwaar het bepaalde in de artikelen 2:4, 7:11, eerste lid, en 10:3, derde lid, van de Algemene wet bestuursrecht, is nageleefd.</para>
+      <para/>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4. </potentialnr><text manualAnnotation="SECTION_TITLE">Standpunten van partijen</text></para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Voor de standpunten van partijen wordt verwezen naar de gedingstukken en de processen-verbaal van de zittingen.</para>
+      <para/>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">5. </potentialnr><text manualAnnotation="SECTION_TITLE">Beoordeling van het geschil</text></para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">5.1. </potentialnr><text manualAnnotation="TEXT_BLOCK">Belanghebbende stelt dat de aanslag is vastgesteld en de uitspraak is gedaan door een en dezelfde persoon, J, zich daarbij, naar het Hof begrijpt, beroepend op de voorschriften uit de Algemene Wet Bestuursrecht zoals vervat in de artikelen 2:4, 7:11, eerste lid en 10:3, derde lid. Hij voert daartoe aan tijdens de bezwaarfase telefonisch kontakt met J omtrent het bezwaar te hebben gehad en verwijst naar een memo van E, medewerker van belanghebbendes gemachtigde A, d.d. 19 januari 2001, waarin deze aan A bericht die dag telefonisch van F van de belastingdienst P te hebben vernomen dat F de behandeling van het bezwaar van J had overgenomen, dat terzake van het bezwaar inmiddels een second opinion was verkregen en dat hij de zaak zou ‘terugleggen’ bij J, die de 23e januari van vakantie terug zou zijn, zulks omdat F het niet efficiënt vond zich in de zaak te verdiepen. Tegenover hetgeen belanghebbende in dit verband heeft gesteld, geldt als vaststaand feit dat de uitspraak op bezwaar is ondertekend door een ander dan J, te weten door G. De inspecteur heeft daaromtrent gesteld dat de beoordeling van het bezwaar, leidend tot die uitspraak, ook daadwerkelijk door die G is gedaan, zulks nadat ter zake van het bezwaar advies was verkregen van de vakgroepcoördinator H. Ook heeft de inspecteur gesteld dat G in het kader van dat handelen op 2 februari 2001 met belanghebbendes gemachtigde heeft gebeld om te vragen of deze gehoord wenste te worden, waarop ontkennend werd geantwoord, dat G in het kader van de bezwaarafdoening weliswaar kontakt met J heeft gehad, doch dat zulks slechts zeer zijdelings is gebeurd en dat J desgevraagd te kennen heeft gegeven zich niet te herinneren of zijzelf in de bezwaarfase enig kontakt met belanghebbende(s gemachtigde) heeft gehad. Belanghebbende heeft hierop bevestigd dat zijn gemachtigde (naar het Hof begrijpt: in de bezwaarfase) telefonisch kontakt heeft gehad met G, doch gesteld dat dat kontakt met een andere fiscale kwestie te maken had dan de onderhavige.</text></para>
+        <para manualAnnotation="TEXT_BLOCK">Tegenover de ondertekening van de uitspraak op bezwaar door G en hetgeen de inspecteur daaromtrent gemotiveerd en -in afwijking van belanghebbendes stellingen- heeft aangevoerd, heeft belanghebbende onvoldoende aannemelijk gemaakt dat J degene is geweest die op zijn bezwaar heeft beslist. Zijn verweer dienaangaande, moet als op onjuiste feitelijke grond berustende, worden verworpen. Een en ander geldt temeer nu belanghebbende niet heeft aangeboden van zijn desbetreffende stellingen (nader) bewijs bij te brengen.     </para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">5.2. </potentialnr><text manualAnnotation="TEXT_BLOCK">Belanghebbende heeft in 1997 met de termijnhandel per saldo een verlies geleden van ? 110.717. Resultaten behaald met het handelen op de termijnmarkt behoren tot de winst uit onderneming indien de handel tot de normale bedrijfsuitoefening van belanghebbende kan worden gerekend, of indien een gunstige afloop van de termijnhandeltransacties als gevolg van belanghebbendes bedrijfsuitoefening kan worden voorzien dan wel door belanghebbendes bedrijfsuitoefening kan worden beïnvloed (HR 15 juni 1955, BNB 1955/338).</text></para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">5.3. </potentialnr><text manualAnnotation="TEXT_BLOCK">Vaststaat dat belanghebbende vanaf 1985 varkens gemest en/of gehouden heeft en dat hij sinds 1985 slechts in de jaren 1986, 1991, 1992, 1996, 1997 en 1998 in termijncontracten gehandeld heeft. Tevens staat vast dat belanghebbende in 1998 na het behalen van forse verliezen met de termijnhandel is gestopt, terwijl zijn handel in varkens en zijn varkensmesterij en -fokkerij doorgingen. Belanghebbende heeft verklaard dat er in de regel geen rechtstreeks verband bestond tussen zijn aan-/verkopen op de termijnmarkt en zijn bedrijfsuitoefening in de varkensfokkerij en/of mesterij.</text></para>
+        <para manualAnnotation="TEXT_BLOCK">Met betrekking tot de handel in varkens en de termijnhandel leidt het Hof uit de - door belanghebbende ingebrachte - gedingstukken af:</para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> dat belanghebbendes handel in varkens in 1997 inhield dat hij eerst een aantal ‘eenheden’ aankocht en dat aantal vervolgens in de regel binnen 2 á 3 dagen, en altijd binnen 9 dagen, doorverkocht zonder dat hij de aangekochte varkens geleverd kreeg,</text></para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> dat belanghebbendes handel in varkens in andere jaren niet anders van aard was,</text></para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> dat belanghebbendes termijnhandel in varkens en biggen inhield dat hij ‘waarden’ kocht om deze vervolgens op dezelfde dag te verkopen,</text></para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> dat belanghebbende niet gesteld heeft - en het Hof ook niet aannemelijk acht - dat er enig rechtstreeks verband bestond tussen belanghebbendes handel in varkens en zijn aan-/verkopen op de termijnmarkt.</text></para>
+        <para manualAnnotation="TEXT_BLOCK">Hieruit concludeert het Hof dat belanghebbendes termijnhandel niet diende om prijsrisico’s met betrekking tot zijn varkensfokkerij en/of mesterij, dan wel zijn varkenshandel af te dekken. Het Hof is dan ook van oordeel dat de termijnhandel niet behoorde tot belanghebbendes normale bedrijfsuitoefening. </para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">5.4. </potentialnr><text manualAnnotation="TEXT_BLOCK">Belanghebbende heeft - samengevat - gesteld dat zijn wetenschap en deskundigheid als varkenshandelaar, varkensmester, arbiter op de termijnmarkt en zijn functies in de Nederlandse Vakbond Varkenshouderij hem in staat stelden winsten op de termijnmarkt te behalen, maar dat een zeer bijzondere oorzaak, te weten het in februari 1997 uitbreken van de varkenspest, er toe geleid heeft dat hij aanzienlijke verliezen met de termijnhandel heeft geleden. </text></para>
+        <para manualAnnotation="TEXT_BLOCK">Zoals belanghebbende verklaard heeft en ook kan worden afgeleid uit tot de gedingstukken behorende publicaties in bladen voor de landbouwsector, is hij niet de enige in de varkenssector werkzame persoon die op de termijnmarkt actief was. Aannemelijk is dat de bij belanghebbende aanwezige kennis en ervaring bij meerdere op die markt handelende personen aanwezig is. Uit de eerdergenoemde gedingstukken blijkt bovendien dat voor in beginsel alle handelaren aan het handelen op de termijnmarkt grote risico’s zijn verbonden. Tot slot kan uit de financiële resultaten die belanghebbende op de termijnmarkt in 1992, 1997 en 1998 behaald heeft - en die, wat die laatste twee jaren aangaat, voor hem kennelijk reden waren om met die handel te stoppen - , afgeleid worden dat belanghebbende niet over meer kennis, deskundigheid of inzicht beschikte dan andere handelaren en over onvoldoende kennis beschikte om van jaar tot jaar in de handel op de termijnmarkt (minst genomen) verliezen te vermijden. Naar het oordeel van het Hof volgt hieruit dat belanghebbende een gunstige afloop van de transacties niet kon voorzien of kon beïnvloeden. </para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">5.5. </potentialnr><text manualAnnotation="TEXT_BLOCK">Nu belanghebbende niet gesteld of aannemelijk gemaakt heeft dat de handel op de termijnmarkt als een aparte onderneming kan worden gezien, volgt uit het voorgaande dat het verlies op de termijntransacties geen winst uit onderneming vormt.</text></para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">5.6. </potentialnr><text manualAnnotation="TEXT_BLOCK">Belanghebbende heeft voorts gesteld dat sprake is van zogenoemde andere inkomsten uit arbeid. Een van de voorwaarden waaraan moet worden voldaan om een bate onder de andere opbrengst van arbeid in de zin van art. 22, eerste lid, onderdeel b, van de Wet op de inkomstenbelasting 1964 te rangschikken is dat met de arbeid het verkrijgen van enig geldelijk voordeel redelijkerwijs moet kunnen worden verwacht. </text></para>
+        <para manualAnnotation="TEXT_BLOCK">Belanghebbende, op wie te dezen de bewijslast rust, heeft niet aannemelijk gemaakt dat hij aan deze voorwaarde voldoet. Daar komt bij dat uit het door hem op de termijnmarkt geleden verlies in combinatie met het overwogene onder 5.4 veeleer volgt dat hij niet aan deze voorwaarde voldoet. De resultaten uit de in het onderhavige jaar verrichte termijntransacties kunnen daarom naar het oordeel van het Hof eveneens niet worden aangemerkt als inkomsten uit andere arbeid aangezien redelijkerwijs geen zicht was op een daarmee te behalen positief resultaat en derhalve geen sprake is van een bron van inkomen als bedoeld in de Wet op de inkomstenbelasting 1964. Het door belanghebbende verantwoorde verlies kan op deze gronden dus niet in mindering komen op zijn belastbare inkomen.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">5.7. </potentialnr><text manualAnnotation="TEXT_BLOCK">Belanghebbende heeft verder - samengevat - gesteld dat in het verleden ook termijntransacties werden verricht doch dat bij verschillende boekenonderzoeken daarover door de inspecteur geen opmerkingen zijn gemaakt en dat de inspecteur hiermee bij belanghebbende het in rechte te honoreren vertrouwen heeft gewekt dat de resultaten uit de door hem verrichte termijntransacties tot de winst behoorden. De inspecteur heeft zulks betwist en daarbij enerzijds gesteld dat onvoldoende is komen vast te staan dat de transacties in het verleden door de inspecteur zijn beoordeeld en zich anderzijds op het standpunt gesteld dat niet is uitgesloten dat de destijds verrichte transacties een andersoortig karakter hebben omdat zij bijvoorbeeld anders dan de in het onderhavige jaar verrichte transacties zijn aangegaan ter afdekking van prijsrisico’s die belanghebbende bij de handel in en het mesten van varkens loopt.</text></para>
+        <para manualAnnotation="TEXT_BLOCK">Een juiste wetstoepassing wordt opzij gezet, indien een belastingplichtige heeft mogen aannemen dat een bepaalde aangelegenheid bij een eerdere controle op zijn fiscale merites is beoordeeld en dat een en ander de goedkeuring van de inspecteur heeft kunnen wegdragen. </para>
+        <para manualAnnotation="TEXT_BLOCK">De controles van de Belastingdienst betroffen de jaren 1985 tot en met 1992. Het eerste onderzoek zag op de periode 1985 tot en met 1987. Met betrekking tot 1985 blijkt uit de gedingstukken niets meer dan dat op de verlies- en winstrekening van dat jaar achter de post “opbrengst termijnhandel” een liggend streepje is geplaatst. In de jaarrekening 1986 is niets vermeld ten aanzien van termijnhandel. In het onderhavige geding zijn bescheiden ingebracht, onder meer afschriften van NLK, gesteld op naam van de echtgenote van belanghebbende. Uit deze bescheiden valt niet, althans onvoldoende af te leiden in hoeverre het gaat om termijntransacties en tot welk totaalbedrag en welk resultaat daarmee is behaald. Zo er sprake is geweest van een positief resultaat, is dit hooguit versluierd, en niet afzonderlijk vermeld, in de jaarekening over 1986 opgenomen. Gelet op een en ander is niet aannemelijk gemaakt dat bij het boekenonderzoek zoveel duidelijk kon zijn voor de fiscus dat belanghebbende er - wat 1986 betreft - op mocht vertrouwen dat bij het onderzoek de - gestelde - verantwoording van de termijnhandel werd geaccordeerd. In 1987 heeft belanghebbende, naar hij ook zelf stelt, niet in termijncontracten gehandeld. Het vorenoverwogene leidt tot de gevolgtrekking dat het onderzoek over de periode 1985 tot en met 1987 geen in rechte te honoreren vertrouwen kan worden ontleend.</para>
+        <para manualAnnotation="TEXT_BLOCK">Het tweede onderzoek zag op de jaren 1988 tot en met 1992. Met betrekking tot dit onderzoek heeft de inspecteur gemotiveerd gesteld dat het betrekking had op de maatschap te S, dat de administratie van belanghebbendes eenmanszaak, die zich in Z bevond, op aandrang van belanghebbendes accountant niet is overgebracht naar de plaats van het boekenonderzoek en dat de eenmanszaak in feite slechts in de resultaten van het onderzoek is verschenen door een herrekening door de accountant van belanghebbende van de verschuldigde omzetbelasting. Hiertegenover heeft belanghebbende geen, althans onvoldoende feiten gesteld die grond kunnen opleveren voor het oordeel dat de uitvoerder van het onderzoek zich een beeld heeft gevormd van termijntransacties van belanghebbende en de verantwoording daarvan. Ook aan dit onderzoek kan belanghebbende derhalve met betrekking tot de onderhavige kwestie geen te honoreren vertrouwen ontlenen.</para>
+        <para manualAnnotation="TEXT_BLOCK">Voor het in rechte te beschermen vertrouwen, gebaseerd op het in het verleden volgen van de aangifte, is vereist dat er sprake is van omstandigheden die bij de belastingplichtige de indruk hebben kunnen wekken dat een door de inspecteur gedurende een aantal jaren betreffende dezelfde aangelegenheid gevolgde gedragslijn berust op een bewuste standpuntbepaling (Hoge Raad BNB 1990/119). Belanghebbende heeft niet aannemelijk gemaakt dat in het verleden de vaststelling van aanslag geschied is in overeenstemming met een aangifte waarin belanghebbende de kwestie van de belastbaarheid van de resultaten uit de termijnhandel uitdrukkelijk en gemotiveerd aan de orde had gesteld, dat de vaststelling van de aanslag geschied is na gehouden besprekingen of gevoerde correspondentie over deze kwestie, dan wel dat sprake is geweest van een tegemoetkoming na bezwaar waarin dezelfde aangelegenheid speelde. Belanghebbende heeft overigens geen relevante omstandigheden gesteld of aannemelijk gemaakt die bij hem de indruk hebben kunnen wekken dat de inspecteur de resultaten uit de termijnhandel tot belanghebbendes winst rekende. </para>
+        <para manualAnnotation="TEXT_BLOCK">Op basis van het voorgaande concludeert het Hof dat belanghebbende zich tevergeefs op het vertrouwensbeginsel beroept.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">5.8. </potentialnr><text manualAnnotation="TEXT_BLOCK">Belanghebbende heeft tenslotte betoogd dat de inspecteur in andere gevallen het resultaat uit termijnhandel wel tot de resultaten uit de onderneming heeft gerekend. De inspecteur heeft dit betwist en daarvoor aangevoerd dat dit binnen zijn eenheid niet het geval is. Verder heeft de inspecteur gesteld dat van de door belanghebbende aangevoerde andere gevallen niet vaststaat of sprake was van vergelijkbare termijnhandel.</text></para>
+        <para manualAnnotation="TEXT_BLOCK">Een juiste wetstoepassing wordt als gevolg van de toepassing van het gelijkheidsbeginsel opzijgezet indien de inspecteur gelijke gevallen ongelijk behandelt, in die zin </para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> dat hij een begunstigend, niet-gepubliceerd beleid voert en hij daarvan ten nadele belanghebbende is afgeweken, </text></para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> dat hij binnen een groep van belastingplichtigen, waartoe belanghebbende behoort, sommigen met het oogmerk van begunstiging gunstiger behandelt dan de wet voorschrijft, terwijl hij dit met betrekking tot belanghebbende heeft nagelaten,</text></para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> dat hij in een meerderheid van de met het geval van belanghebbende vergelijkbare gevallen een juiste rechtstoepassing achterwege heeft gelaten.</text></para>
+        <para manualAnnotation="TEXT_BLOCK">Belanghebbende, op wie te dezen de bewijslast rust, heeft onvoldoende feiten en omstandigheden aannemelijk gemaakt die het oordeel rechtvaardigen dat de inspecteur gelijke gevallen - die onder zijn relatieve competentie vallen - in bovenstaande zin ongelijk behandelt. In ieder geval is voor een geslaagd beroep op het gelijkheidsbeginsel meer nodig dan het verwijzen naar verwijzen naar een situatie waarin de inspecteur de opbrengst uit termijnhandel als winst uit onderneming heeft geaccepteerd. Dit geldt te meer nu de inspecteur gemotiveerd bestreden heeft dat die situatie met die van belanghebbende vergelijkbaar zou zijn. </para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">5.9. </potentialnr><text manualAnnotation="TEXT_BLOCK">De slotsom luidt dat het beroep ongegrond is.</text></para>
+      <para/>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">6. </potentialnr><text manualAnnotation="TEXT_BLOCK">Proceskosten</text></para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Het Hof acht geen termen aanwezig om de inspecteur te veroordelen tot het vergoeden van proceskosten als bedoeld in artikel 8:75 van de Algemene wet bestuursrecht.</para>
+      <para/>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">7. </potentialnr><text manualAnnotation="SECTION_TITLE">Beslissing</text></para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Het Hof verklaart het beroep ongegrond.</para>
+      <para/>
+      <para/>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Deze uitspraak is vastgesteld op 19 december 2003 door mrs. Van Loon, Steenbergen en Goes, in tegenwoordigheid van mr. Couperus als griffier. De beslissing is op dezelfde dag ter openbare zitting uitgesproken.</para>
+      <para/>
+      <para/>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">De griffier is verhinderd deze uitspraak</para>
+        <para manualAnnotation="TEXT_BLOCK">mede te ondertekenen.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para/>
+      <para/>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK"> Het Hof heeft geen bezwaar tegen afgifte door de griffier van een afschrift van de uitspraak in geanonimiseerde vorm.</para>
+      <para/>
+      <para/>
+      <para/>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">Tegen deze uitspraak kan binnen zes weken na de verzenddatum van deze uitspraak beroep in cassatie worden ingesteld bij de Hoge Raad der Nederlanden. Daarbij moet het volgende in acht worden genomen:</para>
+        <para><potentialnr manualAnnotation="NR">1. </potentialnr><text manualAnnotation="TEXT_BLOCK">Het instellen van beroep in cassatie geschiedt door het indienen van een beroepschrift bij dit gerechtshof (zie voor het adres de begeleidende brief).</text></para>
+        <para><potentialnr manualAnnotation="NR">2. </potentialnr><text manualAnnotation="TEXT_BLOCK">Bij het beroepschrift wordt een afschrift van de bestreden uitspraak overgelegd.</text></para>
+        <para><potentialnr manualAnnotation="NR">3. </potentialnr><text manualAnnotation="TEXT_BLOCK">Het beroepschrift wordt ondertekend en bevat ten minste:</text></para>
+        <para><potentialnr manualAnnotation="NR">a. </potentialnr><text manualAnnotation="TEXT_BLOCK">de naam en het adres van de indiener;</text></para>
+        <para><potentialnr manualAnnotation="NR">b. </potentialnr><text manualAnnotation="TEXT_BLOCK">de dagtekening;</text></para>
+        <para><potentialnr manualAnnotation="NR">c. </potentialnr><text manualAnnotation="TEXT_BLOCK">een omschrijving van de uitspraak waartegen het beroep in cassatie is gericht;</text></para>
+        <para><potentialnr manualAnnotation="NR">d. </potentialnr><text manualAnnotation="SECTION_TITLE">de gronden van het beroep in cassatie.</text></para>
+        <para manualAnnotation="TEXT_BLOCK">Voor het instellen van beroep is een griffierecht verschuldigd. Na het instellen van beroep in cassatie ontvangt U een nota griffierecht van de griffier van de Hoge Raad.  In het cassatieberoepschrift kan de Hoge Raad verzocht worden om de wederpartij te veroordelen in de proceskosten.</para>
+      </parablock>
+    </uitspraak>
+</open-rechtspraak>

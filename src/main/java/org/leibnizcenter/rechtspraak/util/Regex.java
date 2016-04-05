@@ -6,12 +6,16 @@ import java.util.regex.Pattern;
  * Created by maarten on 31-3-16.
  */
 public class Regex {
-    public static final Pattern ENDS_WITH_NON_LETTER = Pattern.compile("[^\\p{L}]$");
-    public static final Pattern ENDS_WITH_LETTER = Pattern.compile("[\\p{L}]$");
+    public static final Pattern BRACKET_OPEN = Pattern.compile("[\\[\\(<]");
+
+    public static final Pattern DOTDOT_ = Pattern.compile("(\\.\\.?|-|\\(?\\))");
+
+    public static final Pattern ENDS_WITH_NON_ALPHANUMERIC_OR_BRACKET = Pattern.compile("[^\\p{L}0-9\\]\\)]$");
+    public static final Pattern ENDS_WITH_ALPHANUMERIC_OR_BRACKET = Pattern.compile("[\\p{L}0-9\\]\\)]$");
     public static final Pattern S_P_A_C_E_D = Pattern.compile("(?:\\p{L} {1,3}){2,100}\\p{L}");
     public static final Pattern CONSECUTIVE_WHITESPACE = Pattern.compile("\\s+");
     public static final Pattern ALL_DIGITS = Pattern.compile("^[0-9 ]*[0-9][0-9 ]*$");
-    public static final Pattern START_W_LOWERCASE_LETTER = Pattern.compile("^\\p{Ll}");
+    public static final Pattern START_W_LOWERCASE_LETTER = Pattern.compile("^[\\p{Ll}0-9]");
     public static final Pattern START_W_UPPERCASE_LETTER = Pattern.compile("^\\p{Lu}");
     public static final Pattern NON_WHITESPACE = Pattern.compile("[^\\s]");
     public static final Pattern NON_ALPHANUMERIC = Pattern.compile("[^\\p{L} 0-9]");
@@ -57,7 +61,7 @@ public class Regex {
                     // Whitespace
                     "\\s{0,3}" +
                     // Terminal character
-                    "([^\\p{L}]{0,2}))",
+                    "([^\\p{L}0-9<\\[\\(]{0,2}))",
             Pattern.CASE_INSENSITIVE);
     public static final Pattern START_W_RAAD = Pattern.compile(
             "^(?:de|het)?\\s{0,3}(?:hoge|centrale)?\\s{0,3}(?:raad|college)" +
@@ -163,4 +167,6 @@ public class Regex {
     public static final Pattern OVEREENKOMST = Pattern.compile("overeenkomst", Pattern.CASE_INSENSITIVE);
     public static final Pattern IS_BEOORDEELD = Pattern.compile("^in.*artikel.*is (?:als|het) volg(t|ende)? (?:[gb]e)oordeelde?$", Pattern.CASE_INSENSITIVE);
 
+    public static final Pattern END_W_BV = Pattern.compile("B\\.?V\\.?$", Pattern.CASE_INSENSITIVE);
+    public static final Pattern START_W_NON_LETTER = Pattern.compile("^[^\\p{L}]");
 }

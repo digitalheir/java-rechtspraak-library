@@ -5,20 +5,20 @@ import com.google.common.base.Strings;
 import org.leibnizcenter.rechtspraak.features.Features;
 import org.leibnizcenter.rechtspraak.features.elementpatterns.interfaces.ElementFeatureFunction;
 import org.leibnizcenter.rechtspraak.features.elementpatterns.interfaces.NamedElementFeatureFunction;
-import org.leibnizcenter.rechtspraak.features.textpatterns.GeneralTextPattern;
+import org.leibnizcenter.rechtspraak.features.textpatterns.GeneralTextFeature;
 import org.leibnizcenter.rechtspraak.features.textpatterns.KnownSurnamesNl;
 import org.leibnizcenter.rechtspraak.tokens.numbering.interfaces.FullNumber;
-import org.leibnizcenter.rechtspraak.tokens.numbering.interfaces.SingleTokenNumbering;
 import org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf;
 import org.leibnizcenter.rechtspraak.tokens.numbering.*;
 import org.leibnizcenter.rechtspraak.tokens.numbering.interfaces.AlphabeticNumbering;
 import org.leibnizcenter.rechtspraak.tokens.numbering.interfaces.NumberingNumber;
-import org.leibnizcenter.rechtspraak.tokens.tokentree.NumberingProfile;
+import org.leibnizcenter.rechtspraak.tokens.tokentree.SameKindOfNumbering;
+import org.leibnizcenter.rechtspraak.util.Collections3;
+import org.leibnizcenter.rechtspraak.util.Regex;
+import org.leibnizcenter.rechtspraak.util.Strings2;
 
 import java.util.List;
-import java.util.function.BinaryOperator;
-import java.util.function.Predicate;
-import java.util.stream.Collector;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 /**
@@ -33,11 +33,21 @@ public enum NumberingFeature implements NamedElementFeatureFunction {
     NUM_LARGER_THAN_15(numLargerThan(15)),
     NUM_LARGER_THAN_20(numLargerThan(20)),
     NUM_LARGER_THAN_50(numLargerThan(50)),
+    NUM_LARGER_THAN_75(numLargerThan(75)),
     NUM_LARGER_THAN_100(numLargerThan(100)),
 
 
     HAS_PLAUSIBLE_SUCCEDENT((tokens, i) -> tokens.get(i) instanceof Numbering && ((Numbering) tokens.get(i)).getPlausibleSuccessors().size() > 0),
     HAS_PLAUSIBLE_PRECEDENT((tokens, i) -> tokens.get(i) instanceof Numbering && ((Numbering) tokens.get(i)).getPlausiblePredecessors().size() > 0),
+
+    ODD_TERMINAL_CHAR((tokens, i) -> {
+        if (tokens.get(i) instanceof Numbering) {
+            String t = ((Numbering) tokens.get(i)).getTerminal();
+            return !(Strings.isNullOrEmpty(t) || Regex.DOTDOT_.matcher(t.trim()).matches());
+        } else {
+            return false;
+        }
+    }),
 
     isFirstNumbering((tokens, i) -> tokens.get(i) instanceof Numbering && ((Numbering) tokens.get(i)).getNumbering().isFirstNumbering()),
 
@@ -48,6 +58,9 @@ public enum NumberingFeature implements NamedElementFeatureFunction {
     probableAbbrEuro(NumberingFeature::probableAbbrEuro),
     probablyJustU(NumberingFeature::probablyJustU),
     _S(NumberingFeature::_s),
+    MORE_THAN_2_NUMBERS_IN_SEQUENCE((elements, ix) ->
+            !Collections3.isNullOrEmpty(SameKindOfNumbering.ANY_NUMBERING.getList(elements, ix))
+                    && SameKindOfNumbering.ANY_NUMBERING.getList(elements, ix).size() > 2),
     IS_SPELLED_OUT(NumberingFeature::isSpelledOut),// 2 (twee)
     isPossiblyJustStartOfSentence(NumberingFeature::isPossiblyJustStartOfSentence),// 7 patronen
     isPartOfSpacedLetters(NumberingFeature::isJustSpacedLetters),// u i t s p r a a k
@@ -59,16 +72,31 @@ public enum NumberingFeature implements NamedElementFeatureFunction {
     hasRomanNumber(((tokens, ix) -> Numbering.isRoman(tokens.get(ix)))),
     hasCompositeNumber(((tokens, ix) -> Numbering.isCompositeNumbering(tokens.get(ix)))),
 
+    PREFIXED_WITH_0(((tokens, ix) -> Strings2.firstCharIs(tokens.get(ix).getTextContent(), '0'))),
 
     hasAlphabeticNumberWithNoTerminal((tokens, ix) -> Numbering.isAlphabetic(tokens.get(ix)) && noTerminal(tokens, ix)),
     hasArabicNumberWithNoTerminal(((tokens, ix) -> Numbering.isArabic(tokens.get(ix)) && noTerminal(tokens, ix))),
     hasNonNumericNumberWithNoTerminal((tokens, ix) -> Numbering.isNonNumeric(tokens.get(ix)) && noTerminal(tokens, ix)),
-    hasRomanNumberWithNoTerminal((tokens, ix) -> Numbering.isRoman(tokens.get(ix)) && noTerminal(tokens, ix));
+    hasRomanNumberWithNoTerminal((tokens, ix) -> Numbering.isRoman(tokens.get(ix)) && noTerminal(tokens, ix)),
+
+    PART_OF_NUMBER_CLUSTER_W_ODD_TERMINAL((tokens, ix) -> ODD_TERMINAL_CHAR.apply(tokens, ix)
+            && !Collections3.isNullOrEmpty(((Numbering) tokens.get(ix)).getSequence(SameKindOfNumbering.ANY_NUMBERING))),
+    SUSPECT_NUMBERING((tokens, ix) -> ODD_TERMINAL_CHAR.apply(tokens, ix) || PREFIXED_WITH_0.apply(tokens, ix)),
+    IS_TAINTED_BY_IMPLAUSIBLE_SIBLING_NR((tokens, ix) -> {
+        for (SameKindOfNumbering p : SameKindOfNumbering.values()) {
+            if (!Collections3.isNullOrEmpty(((Numbering) tokens.get(ix)).getSequence(p))
+                    && ((Numbering) tokens.get(ix)).getSequence(p).isTaintedByImplausibleNumbering()) return true;
+        }
+        return false;
+    }
+    ), HAS_NO_PLAUSIBLE_PREDECESSORS_OR_SUCCESSORS(((tokens, ix) -> Collections3.isNullOrEmpty(Numbering.getPlausiblePredecessors(tokens.get(ix)))
+            && Collections3.isNullOrEmpty(Numbering.getPlausibleSuccessors(tokens.get(ix)))));
+
 
     private static ElementFeatureFunction numLargerThan(int checkfor) {
         return (tokens, ix) -> tokens.get(ix) instanceof Numbering
                 && (
-                isFullNumberLargerThan(checkfor, (Numbering) tokens.get(ix))
+                isArabicNumberLargerThan(checkfor, (Numbering) tokens.get(ix))
                         || isPartOFSectionNumberLargerThan(checkfor, (Numbering) tokens.get(ix))
         );
     }
@@ -77,18 +105,18 @@ public enum NumberingFeature implements NamedElementFeatureFunction {
         return numbering.getNumbering() instanceof SubSectionNumber
                 // Whether there is at least one subsection part that is larger than checkfor
                 && ((SubSectionNumber) numbering.getNumbering()).stream()
-                .filter((n) -> isFullNumberLargerThan(checkfor, n))
+                .filter((n) -> isArabicNumberLargerThan(checkfor, n))
                 .limit(1)
                 .collect(Collectors.toSet()).size() > 0;
     }
 
-    private static boolean isFullNumberLargerThan(int checkfor, NumberingNumber numbering) {
-        return numbering instanceof FullNumber
+    private static boolean isArabicNumberLargerThan(int checkfor, NumberingNumber numbering) {
+        return numbering instanceof ArabicNumbering
                 && ((FullNumber) numbering).mainNum() > checkfor;
     }
 
-    private static boolean isFullNumberLargerThan(int checkfor, Numbering numbering) {
-        return isFullNumberLargerThan(checkfor, numbering.getNumbering());
+    private static boolean isArabicNumberLargerThan(int checkfor, Numbering numbering) {
+        return isArabicNumberLargerThan(checkfor, numbering.getNumbering());
     }
 
     private static boolean noTerminal(List<TokenTreeLeaf> tokens, int ix) {
@@ -185,6 +213,10 @@ public enum NumberingFeature implements NamedElementFeatureFunction {
 
             // Run through enum
             Features.setFeatures(t, tokens, ix, (NamedElementFeatureFunction[]) NumberingFeature.values());
+
+            for (SameKindOfNumbering p : SameKindOfNumbering.values()) {
+                if (!Collections3.isNullOrEmpty(((Numbering) token).getSequence(p))) t.setFeatureValue("PART_OF_" + p.name(), 1.0);
+            }
         }
     }
 
@@ -208,7 +240,7 @@ public enum NumberingFeature implements NamedElementFeatureFunction {
 
             //noinspection UnnecessaryLocalVariable
             int startToken = ix, lastToken = ix;
-            if (!GeneralTextPattern.followsLineBreak(untagged, ix)) {
+            if (!GeneralTextFeature.followsLineBreak(untagged, ix)) {
                 for (int i = ix - 1; num != '\0' && i >= 0; i--) {
                     TokenTreeLeaf token = untagged.get(ix);
                     num = getUppercaseCharNumbering(token);
@@ -230,7 +262,7 @@ public enum NumberingFeature implements NamedElementFeatureFunction {
 
             for (int i = ix + 1; num != '\0' && i < untagged.size(); i++) {
                 TokenTreeLeaf token = untagged.get(ix);
-                if (!GeneralTextPattern.followsLineBreak(untagged, ix)) {
+                if (!GeneralTextFeature.followsLineBreak(untagged, ix)) {
                     num = getUppercaseCharNumbering(token);
                     if (num != '\0') {
                         // Having multiple letters after each other
@@ -258,7 +290,7 @@ public enum NumberingFeature implements NamedElementFeatureFunction {
                 TokenTreeLeaf token = untagged.get(startToken);
                 return getUppercaseCharNumbering(token) == 'A'
                         && startToken < untagged.size() - 1
-                        && !GeneralTextPattern.followsLineBreak(untagged, ix)
+                        && !GeneralTextFeature.followsLineBreak(untagged, ix)
                         && KnownSurnamesNl.startsWithName.apply(untagged.get(startToken + 1).getTextContent());
             }
             //List<Character> stringOfChars = new ArrayList<>(lastToken-(startToken-1));
@@ -284,8 +316,8 @@ public enum NumberingFeature implements NamedElementFeatureFunction {
         for (int i = ix - 1; i >= 0; i--) {
             TokenTreeLeaf n1 = untagged.get(i);
             if (n1 instanceof Numbering) {
-                if (NumberingProfile.isSameProfile((Numbering) n1, n2))
-                    return NumberingProfile.isSameProfileSuccession((Numbering) n1, n2);
+                if (SameKindOfNumbering.isSameProfile((Numbering) n1, n2))
+                    return SameKindOfNumbering.isSameProfileSuccession((Numbering) n1, n2);
             }
         }
         return false;
@@ -355,9 +387,9 @@ public enum NumberingFeature implements NamedElementFeatureFunction {
 
     private static boolean isJustSpacedLetters(List<TokenTreeLeaf> tokens, int ix) {
         if (tokens.get(ix) instanceof Numbering
-                && ((Numbering) tokens.get(ix)).getAlphabeticSequence() != null) {
-            NumberingProfile seq = ((Numbering) tokens.get(ix)).getAlphabeticSequence();
-            return seq.size() > 2 && (seq.size() > 3 || Strings.isNullOrEmpty(seq.getTerminal()));
+                && ((Numbering) tokens.get(ix)).getSequence(SameKindOfNumbering.ALPHABETIC_SAME_TERMINAL) != null) {
+            SameKindOfNumbering.List seq = ((Numbering) tokens.get(ix)).getSequence(SameKindOfNumbering.ALPHABETIC_SAME_TERMINAL);
+            return seq.size() > 2 && (seq.size() > 3 || Strings.isNullOrEmpty(((Numbering) tokens.get(ix)).getTerminal()));
         } else {
             return false;
         }
@@ -366,5 +398,13 @@ public enum NumberingFeature implements NamedElementFeatureFunction {
     @Override
     public boolean apply(List<org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf> tokens, int ix) {
         return function.apply(tokens, ix);
+    }
+
+    public static boolean any(List<TokenTreeLeaf> tokens, int ix, NumberingFeature... features) {
+        for (NumberingFeature f : features) {
+            if (f.apply(tokens, ix))
+                return true;
+        }
+        return false;
     }
 }

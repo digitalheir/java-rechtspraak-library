@@ -1,16 +1,17 @@
 package org.leibnizcenter.rechtspraak.manualannotation;
 
 import com.google.common.base.Strings;
-import com.google.common.collect.Lists;
 import org.leibnizcenter.rechtspraak.features.elementpatterns.ElementFeature;
 import org.leibnizcenter.rechtspraak.features.textpatterns.TitlePatterns;
 import org.leibnizcenter.rechtspraak.tokens.Label;
 import org.leibnizcenter.rechtspraak.tokens.RechtspraakElement;
 import org.leibnizcenter.rechtspraak.tokens.TokenList;
+import org.leibnizcenter.rechtspraak.tokens.numbering.Numbering;
 import org.leibnizcenter.rechtspraak.tokens.text.IgnoreElement;
 import org.leibnizcenter.rechtspraak.tokens.text.Newline;
 import org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf;
-import org.leibnizcenter.rechtspraak.tokens.tokentree.TokenTree;
+import org.leibnizcenter.rechtspraak.tokens.tokentree.SameKindOfNumbering;
+import org.leibnizcenter.rechtspraak.util.Collections3;
 import org.leibnizcenter.rechtspraak.util.Xml;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -43,8 +44,6 @@ import static org.leibnizcenter.rechtspraak.tokens.TokenList.getEcliFromFileName
 
 public class Annotator extends JFrame {
 
-    public static String OUT_FOLDER = "/media/maarten/Media/rechtspraak-rich-docs-20160221-annotated/";
-    private static String IN_FOLDER = "/media/maarten/Media/rechtspraak-rich-docs-20160221/"; // TODO make ui fields
     private final ListSelectionModel listSelectionModel;
     private JPanel contentPane;
     private JButton buttonCancel;
@@ -56,12 +55,12 @@ public class Annotator extends JFrame {
     private TokenList currentDoc;
     private DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
     private DocumentBuilder builder = factory.newDocumentBuilder();
-    private File xmlFolder = new File(IN_FOLDER);
-    private File out = new File(OUT_FOLDER);
-//    private List<File> xmlFiles = Lists.newArrayList(Xml.getFile(new File(IN_FOLDER),
+    private File xmlFolder = new File(Xml.IN_FOLDER);
+    private File out = new File(Xml.OUT_FOLDER);
+    //    private List<File> xmlFiles = Lists.newArrayList(Xml.getFile(new File(IN_FOLDER),
 //            "ECLI:NL:OGEAA:2015:386"
 //    ));
-        private List<File> xmlFiles = Xml.listXmlFiles(xmlFolder, -1, true);
+    private List<File> xmlFiles = Xml.listXmlFiles(xmlFolder, -1, true);
     private Iterator<File> iterator = xmlFiles.iterator();
     private List<Label> labels;
 
@@ -74,6 +73,8 @@ public class Annotator extends JFrame {
         reloadButton.addActionListener(e -> reloadCurrentDoc());
         buttonCancel.addActionListener(e -> onCancel());
         loadNewButton.addActionListener(e -> saveAndLoadNewDoc());
+
+        contentPane.setPreferredSize(new Dimension(1100, 900));
 
 // call onCancel() when cross is clicked
         setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
@@ -160,8 +161,7 @@ public class Annotator extends JFrame {
     }
 
     public static void main(String[] args) throws IOException, SAXException, ParserConfigurationException {
-        if (args.length > 0 && !Strings.isNullOrEmpty(args[0])) IN_FOLDER = args[0];
-        if (args.length > 1 && !Strings.isNullOrEmpty(args[1])) OUT_FOLDER = args[1];
+        Xml.setFolders(args);
         Annotator dialog = new Annotator("Annotator");
         dialog.pack();
         dialog.setLocationRelativeTo(null);
@@ -195,8 +195,8 @@ public class Annotator extends JFrame {
         switch (keystroke) {
 //            case KeyEvent.VK_E:
 //                return Label.QUOTE_IN;
-            case KeyEvent.VK_Q:
-                return Label.NR_BLOCK;
+//            case KeyEvent.VK_Q:
+//                return Label.NR_BLOCK;
 //            case KeyEvent.VK_W:
 //                return Label.QUOTE_IN;
 //            case KeyEvent.VK_O:
@@ -204,10 +204,10 @@ public class Annotator extends JFrame {
 //            case KeyEvent.VK_I:
 //                return Label.INFO;
             case KeyEvent.VK_R:
-                return Label.NR_INLINE;
+                return Label.NR;
             case KeyEvent.VK_T:
                 return Label.SECTION_TITLE;
-            case KeyEvent.VK_L:
+            case KeyEvent.VK_A:
                 return Label.TEXT_BLOCK;
 //            case KeyEvent.VK_SEMICOLON:
 //                return Label.LIST_ITEM_IN;
@@ -289,9 +289,11 @@ public class Annotator extends JFrame {
 
         System.out.println("http://uitspraken.rechtspraak.nl/inziendocument?id=" + from.getEcli());
         setListModel(labels, from);
-        table1.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
-        table1.getColumnModel().getColumn(MyTableModel.COLUMN_TAG).setWidth(60);
-        table1.getColumnModel().getColumn(MyTableModel.COLUMN_TAG).setPreferredWidth(60);
+        table1.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+        table1.getColumnModel().getColumn(0).setPreferredWidth(30);
+        table1.getColumnModel().getColumn(MyTableModel.COLUMN_NOTE).setPreferredWidth(100);
+        table1.getColumnModel().getColumn(MyTableModel.COLUMN_TEXT).setPreferredWidth(600);
+        table1.getColumnModel().getColumn(MyTableModel.COLUMN_TAG).setPreferredWidth(100);
     }
 
     private void setListModel(List<Label> labeledTokens, TokenList tokens) {
@@ -316,6 +318,8 @@ public class Annotator extends JFrame {
             public void editingCanceled(ChangeEvent e) {
             }
         });
+
+
         table1.getColumnModel()
                 .getColumn(MyTableModel.COLUMN_TAG)
                 .setCellEditor(cellEditor);
@@ -331,23 +335,24 @@ public class Annotator extends JFrame {
     }
 
     static class MyTableModel extends DefaultTableModel {
-        public static final int COLUMN_TEXT = 1;
+        private static final int COLUMN_NOTE = 1;
+        public static final int COLUMN_TEXT = 2;
+        private static final int COLUMN_TAG = 3;
         private static final Color SUBSECTION_NR = Color.decode("#89e861");
         private static final Color SUBSECTION_TEXT = Color.decode("#cefcba");
         private static final Color SECTION_TEXT = Color.decode("#cefeff");
         private static final Color SECTION_NR = Color.decode("#97FDFF");
         private static final Color GRY = Color.decode("#EEEEEE");
         private static final Color DARK_RED = new Color(214, 84, 84);
+        private static final Color LIME = Color.decode("#76D654");
         private static final Color RED = new Color(234, 184, 184);
-        private static final int COLUMN_NOTE = 0;
-        private static final int COLUMN_TAG = 2;
         private static final Pattern LIST_START = Pattern.compile("^(?:(?:[a-h][ \\.:\\)])" +
                 "|[0-9] ? ?[:\\.]|[\\*-])");
         private final List<Label> labels;
         private final TokenList tokens;
 
         public MyTableModel(List<Label> labels, TokenList tokens) {
-            super(getRows(labels, tokens), new Object[]{"Note", "Text", "Label"});
+            super(getRows(labels, tokens), new Object[]{"Nr","Note", "Text", "Label"});
             this.labels = labels;
             this.tokens = tokens;
         }
@@ -375,6 +380,18 @@ public class Annotator extends JFrame {
                     else note = "emph";
                     notes.add(note);
                 }
+
+
+
+                if (token instanceof Numbering
+                        && !Collections3.isNullOrEmpty(((Numbering) token).getSequence(SameKindOfNumbering.ALPHABETIC))) {
+                    notes.add("α-seq");
+                }
+
+                if (token instanceof Numbering
+                        && !Collections3.isNullOrEmpty(((Numbering) token).getSequence(SameKindOfNumbering.ALPHABETIC))) {
+                    notes.add("σ-seq");
+                }
 //                if (labels.get(i).equals(Label.SECTION_TITLE)) {
 //                    notes.add("||");
 //                }
@@ -389,8 +406,11 @@ public class Annotator extends JFrame {
 
                 String notesStr = String.join(" ", notes);
                 ret[i] = new Object[]{
+                        i,
                         notesStr,
-                        token.getTextContent(), labels.get(i)};
+                        token.getTextContent(),
+                        labels.get(i)
+                };
                 if (labels.get(i).equals(Label.SECTION_TITLE)
                         && !TitlePatterns.TitlesNormalizedMatchesHighConf.matchesAny(tokens, i)
                         && !TitlePatterns.TitlesNormalizedMatchesLowConf.matchesAny(tokens, i)) {
@@ -433,7 +453,7 @@ public class Annotator extends JFrame {
                 Element e = (Element) t;
                 if (e.hasAttribute("manualAnnotation")) {
                     System.out.println("Found pre-set " + e.getAttribute("manualAnnotation"));
-                    return Label.get(e.getAttribute("manualAnnotation"));
+                    return Label.fromString.get(e.getAttribute("manualAnnotation"));
                 } else return labels.get(i);
             } else if (t instanceof Newline) return Label.NEWLINE;
             else throw new IllegalStateException();
@@ -458,19 +478,19 @@ public class Annotator extends JFrame {
                 case NEWLINE:
                     return GRY;
                 case SECTION_TITLE:
-                    return SECTION_TEXT;
+                    return LIME;
                 case QUOTE:
                     return RED;
 //                case NR_FULL_INLINE:
 //                    return SECTION_NR;
-                case NR_INLINE:
+                case NR:
                     return SECTION_NR;
 //                case NR_SUBSECTION_INLINE:
 //                    return SECTION_NR;
 //                case NR_SUBSECTION_BLOCK:
 //                    return SECTION_NR;
-                case NR_BLOCK:
-                    return Color.YELLOW;
+//                case NR_BLOCK:
+//                    return Color.YELLOW;
                 case TEXT_BLOCK:
                     return Color.WHITE;
 //                case SUBSECTION_NR:

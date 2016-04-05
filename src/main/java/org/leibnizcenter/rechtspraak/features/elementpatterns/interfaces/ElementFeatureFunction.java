@@ -21,6 +21,6 @@ public interface ElementFeatureFunction {
     boolean apply(List<TokenTreeLeaf> tokens, int ix);
 
     static ElementFeatureFunction matchesNormalized(Pattern pattern) {
-        return (elements, i) -> pattern.matcher(elements.get(i).getNormalizedText()).find();
+        return (elements, i) -> pattern.matcher(elements.get(i).getNormalizedText()).matches();
     }
 }

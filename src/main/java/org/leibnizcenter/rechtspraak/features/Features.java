@@ -5,7 +5,7 @@ import org.leibnizcenter.rechtspraak.features.elementpatterns.ElementFeature;
 import org.leibnizcenter.rechtspraak.features.elementpatterns.NumberingFeature;
 import org.leibnizcenter.rechtspraak.features.elementpatterns.interfaces.ElementFeatureFunction;
 import org.leibnizcenter.rechtspraak.features.elementpatterns.interfaces.NamedElementFeatureFunction;
-import org.leibnizcenter.rechtspraak.features.textpatterns.GeneralTextPattern;
+import org.leibnizcenter.rechtspraak.features.textpatterns.GeneralTextFeature;
 import org.leibnizcenter.rechtspraak.features.textpatterns.KnownSurnamesNl;
 import org.leibnizcenter.rechtspraak.features.textpatterns.TitlePatterns;
 import org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf;
@@ -27,8 +27,10 @@ public class Features {
         ElementFeature.setFeatures(t, sequence, ix);
         NumberingFeature.setFeatures(t, sequence, ix);
         TitlePatterns.setFeatureValues(t, sequence, ix);
-        Features.setFeatures(t, sequence, ix, (NamedElementFeatureFunction[]) GeneralTextPattern.values());
-        Features.setFeatures(t, sequence, ix, (NamedElementFeatureFunction[]) KnownSurnamesNl.values());
+        Features.setFeatures(t, sequence, ix, (NamedElementFeatureFunction[]) GeneralTextFeature.values());
+
+
+//        Features.setFeatures(t, sequence, ix, (NamedElementFeatureFunction[]) KnownSurnamesNl.values());
 
 
         // General patterns
@@ -58,11 +60,14 @@ public class Features {
                 t.setFeatureValue(f.name(), 1.0);
                 matches.add(f);
             }
+//            else t.setFeatureValue("NOT_"+f.name(), 1.0);
         return matches;
     }
 
     public static boolean matchesAny(List<TokenTreeLeaf> tokens, int ix, ElementFeatureFunction... patterns) {
-        for (ElementFeatureFunction p : patterns) if (p.apply(tokens, ix)) return true;
+        for (ElementFeatureFunction p : patterns)
+            if (p.apply(tokens, ix))
+                return true;
         return false;
     }
 }

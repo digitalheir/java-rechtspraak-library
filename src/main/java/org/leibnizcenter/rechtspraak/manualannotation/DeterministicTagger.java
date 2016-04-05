@@ -1,10 +1,7 @@
 package org.leibnizcenter.rechtspraak.manualannotation;
 
-import org.leibnizcenter.rechtspraak.features.Features;
 import org.leibnizcenter.rechtspraak.features.elementpatterns.ElementFeature;
 import org.leibnizcenter.rechtspraak.features.elementpatterns.NumberingFeature;
-import org.leibnizcenter.rechtspraak.features.elementpatterns.interfaces.ElementFeatureFunction;
-import org.leibnizcenter.rechtspraak.features.textpatterns.GeneralTextPattern;
 import org.leibnizcenter.rechtspraak.features.textpatterns.TitlePatterns;
 import org.leibnizcenter.rechtspraak.tokens.Label;
 import org.leibnizcenter.rechtspraak.tokens.numbering.Numbering;
@@ -25,8 +22,7 @@ public class DeterministicTagger {
         List<Label> tagged = new ArrayList<>(untagged.size());
         int firstTitle = -1;
         for (int i = 0; i < untagged.size(); i++) {
-            TokenTreeLeaf token = untagged.get(i);
-            Label tag = firstPass(untagged, i, tagged);
+            Label tag = firstPass(untagged, i);
 
             // Set first title if this is the first encountered title
             if (firstTitle < 0 && Label.SECTION_TITLE.equals(tag)) firstTitle = setToPrevIfPrecededByNumber(tagged, i);
@@ -79,33 +75,23 @@ public class DeterministicTagger {
         return i;
     }
 
-    private static Label firstPass(List<TokenTreeLeaf> untagged, int ix, List<Label> tagged) {
+    public static Label firstPass(List<TokenTreeLeaf> untagged, int ix) {
         TokenTreeLeaf token = untagged.get(ix);
-        if (IgnoreElement.dontTokenize(token.getNodeName())) {
+        if (ElementFeature.dontTryToLabel.apply(untagged,ix)) {
             return Label.TEXT_BLOCK;
-        } else if (matchesHighConfTitle(untagged, ix) || matchesLowConfTitleButHasMarkup(untagged, ix)) {
-            if (probablyInfoTag(untagged, ix, tagged)) return Label.TEXT_BLOCK;
-            else return Label.SECTION_TITLE;
+        } else if (ElementFeature.probablySectionTitle.apply(untagged, ix)) {
+            //if (probablyInfoTag(untagged, ix, tagged)) return Label.TEXT_BLOCK;
+            //else
+            return Label.SECTION_TITLE;
         } else if (token instanceof Numbering) {
-            if (!((Numbering) token).isPlausibleNumbering) return Label.TEXT_BLOCK;
-            else return Label.getNumberingType(untagged, ix);
+            if (ElementFeature.isProbablyNumbering.apply(untagged, ix)) return Label.getNumberingType(untagged, ix);
+            else return Label.TEXT_BLOCK;
         } else {
             return Label.TEXT_BLOCK;
         }
     }
 
-    public static boolean matchesHighConfTitle(List<TokenTreeLeaf> tokens, int ix) {
-        return Features.matchesAny(tokens, ix, (ElementFeatureFunction[]) TitlePatterns.TitlesNormalizedMatchesHighConf.values());
-    }
 
-    public static boolean matchesLowConfTitle(List<TokenTreeLeaf> tokens, int ix) {
-        return Features.matchesAny(tokens, ix, (ElementFeatureFunction[]) TitlePatterns.TitlesNormalizedMatchesLowConf.values());
-    }
-
-    public static boolean matchesLowConfTitleButHasMarkup(List<TokenTreeLeaf> tokens, int ix) {
-        return (ElementFeature.hasEmphasis(tokens, ix) || GeneralTextPattern.ENDS_WITH_LETTER.apply(tokens, ix))
-                && matchesLowConfTitle(tokens, ix);
-    }
 
 
     private static boolean probablyInfoTag(List<TokenTreeLeaf> untagged, int ix, List<Label> tagged) {
@@ -118,18 +104,23 @@ public class DeterministicTagger {
 //                );
     }
 
-    public static boolean looksLikeNumberingButProbablyIsnt(List<org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf> elements, int ix) {
-        return NumberingFeature.PART_OF_WG.apply(elements, ix) // [w.][g.]
-                || NumberingFeature.FOLLOWS_WG.apply(elements, ix) // w.g. [A.] van der Hoeven
-                || NumberingFeature.probableAbbrFlorijnen.apply(elements, ix) // florijnen
-                || NumberingFeature.probableAbbrEuro.apply(elements, ix) // euro
-                || NumberingFeature.probablyJustU.apply(elements, ix) // u heeft
-                || (NumberingFeature._S.apply(elements, ix)) // 's
-                || (NumberingFeature.IS_SPELLED_OUT.apply(elements, ix)) // 2 (twee)
-                || (NumberingFeature.NUM_LARGER_THAN_15.apply(elements, ix)) // We assume full numbers are <= 15
-                //|| (isProbablyJustStartOfSentence.apply(elements, ix)) // 7 patronen //TODO
-                || (NumberingFeature.isPartOfSpacedLetters.apply(elements, ix)) // u i t s p r a a k
-                || (NumberingFeature.IS_PROBABLY_NAME.apply(elements, ix)) //
-                ;
+    public static boolean looksLikeNumberingButProbablyIsnt(List<org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf> tokens, int ix) {
+        return NumberingFeature.any(
+                tokens, ix,
+                NumberingFeature.PART_OF_WG, // [w.][g.]
+                NumberingFeature.FOLLOWS_WG, // w.g. [A.] van der Hoeven
+                NumberingFeature.NUM_LARGER_THAN_100, // We assume full numbers are <= 100
+                NumberingFeature.probableAbbrFlorijnen, // florijnen
+                NumberingFeature.probableAbbrEuro, // euro
+                NumberingFeature.probablyJustU, // u heeft
+                NumberingFeature._S, // 's
+                NumberingFeature.MORE_THAN_2_NUMBERS_IN_SEQUENCE,
+                NumberingFeature.HAS_NO_PLAUSIBLE_PREDECESSORS_OR_SUCCESSORS,
+                NumberingFeature.SUSPECT_NUMBERING,
+                NumberingFeature.IS_SPELLED_OUT, // 2 (twee)
+                NumberingFeature.isPartOfSpacedLetters, // u i t s p r a a k
+                NumberingFeature.IS_PROBABLY_NAME //
+        );
+        //|| (isProbablyJustStartOfSentence,) // 7 patronen //TODO
     }
 }

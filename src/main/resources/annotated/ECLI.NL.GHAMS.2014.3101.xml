@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:eu="http://publications.europa.eu/celex/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:tr="http://tuchtrecht.overheid.nl/">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:GHAMS:2014:3101</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2015-06-28T19:46:28</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2014-08-05</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Gerechtshof_Amsterdam" scheme="overheid.RechterlijkeMacht">Gerechtshof Amsterdam</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">2014-07-10</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">13/00545</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#hogerBeroep">Hoger beroep</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:temporal rdfs:label="Periode">
+        <start rdfs:label="van">2010</start>
+        <end rdfs:label="tot">2010</end>
+      </dcterms:temporal>
+      <dcterms:spatial rdfs:label="Zittingsplaats">Amsterdam</dcterms:spatial>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht_belastingrecht">Bestuursrecht; Belastingrecht</dcterms:subject>
+      <dcterms:relation ecli:resourceIdentifier="ECLI:NL:RBNHO:2013:7284" psi:aanleg="http://psi.rechtspraak.nl/eerdereAanleg" psi:gevolg="http://psi.rechtspraak.nl/gevolg#(Gedeeltelijke) vernietiging en zelf afgedaan" psi:type="http://psi.rechtspraak.nl/hogerBeroep" rdfs:label="Formele relatie">Eerste aanleg: ECLI:NL:RBNHO:2013:7284, (Gedeeltelijke) vernietiging en zelf afgedaan</dcterms:relation>
+      <dcterms:references bwb:resourceIdentifier="1.0:v:BWB:BWBR0007119&amp;artikel=17&amp;g=2010-01-01" rdfs:label="Wetsverwijzing">Wet waardering onroerende zaken 17</dcterms:references>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+          <rdf:li>FutD 2014-1891</rdf:li>
+          <rdf:li>V-N 2014/52.20.19</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:GHAMS:2014:3101">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:GHAMS:2014:3101</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2014-08-05T09:38:30</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2014-08-06</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:GHAMS:2014:3101 Gerechtshof Amsterdam , 10-07-2014 / 13/00545</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie id="ECLI:NL:GHAMS:2014:3101:INH" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <para>WOZ. Waardering woon/bedrijfserf en waardering sorteerloodsen en de daarin aangebrachte koel-/vriescellen.</para>
+    </inhoudsindicatie>
+  <uitspraak id="ECLI:NL:GHAMS:2014:3101:DOC" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <uitspraak.info>
+        <bridgehead manualAnnotation="TEXT_BLOCK" role="bold">GERECHTSHOF AMSTERDAM</bridgehead>
+        <para manualAnnotation="TEXT_BLOCK">kenmerk 13/00545</para>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">10 juli 2014</para>
+        </parablock>
+        <para/>
+        <parablock>
+          <para>
+            <emphasis manualAnnotation="TEXT_BLOCK" role="bold">uitspraak van de derde meervoudige belastingkamer </emphasis>
+          </para>
+        </parablock>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">op het hoger beroep van</para>
+        </parablock>
+        <para/>
+        <parablock>
+          <para>
+            <emphasis manualAnnotation="TEXT_BLOCK" role="bold">[X]</emphasis><text manualAnnotation="TEXT_BLOCK"> te [Z], belanghebbende,</text></para>
+        </parablock>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">tegen </para>
+        </parablock>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">de uitspraak in de zaak met kenmerk ALK 12/1219 van de rechtbank Noord-Holland (hierna: de rechtbank),  in het geding tussen </para>
+        </parablock>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">belanghebbende </para>
+        </parablock>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">en </para>
+        </parablock>
+        <para/>
+        <parablock>
+          <para>
+            <emphasis manualAnnotation="TEXT_BLOCK" role="bold">de heffingsambtenaar van de gemeente Heerhugowaard</emphasis><text manualAnnotation="TEXT_BLOCK">, de heffingsambtenaar.</text></para>
+        </parablock>
+        <para/>
+        <para/>
+        <para/>
+      </uitspraak.info>
+      <section role="procesverloop">
+        <title>
+          <nr manualAnnotation="NR">1</nr><text manualAnnotation="SECTION_TITLE">Ontstaan en loop van het geding</text></title>
+        <para/>
+        <paragroup>
+          <nr manualAnnotation="NR">1.1.</nr>
+          <para manualAnnotation="TEXT_BLOCK">De heffingsambtenaar heeft op de voet van artikel 22 van de Wet waardering onroerende zaken (hierna: de Wet Woz) bij beschikking van 25 februari 2010  de waarde van de onroerende zaak [adres 1] te [Z] (hierna: het object) voor het jaar 2010 vastgesteld op € 882.000. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">1.2.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Het tegen de waardevaststelling gemaakte bezwaar is door de heffingsambtenaar bij uitspraak van 12 april 2012 ongegrond verklaard. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">1.3.</nr>
+          <para manualAnnotation="TEXT_BLOCK">In haar uitspraak van 15 augustus 2013 heeft de rechtbank het tegen deze uitspraak ingestelde beroep ongegrond verklaard.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">1.4.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Het tegen de uitspraak van de rechtbank ingestelde hoger beroep is op 12 september 2013 bij het Hof ingekomen. De heffingsambtenaar heeft een verweerschrift ingediend.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">1.5.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Op 20 november 2013 is van belanghebbende een nader stuk ontvangen.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">1.6.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Het onderzoek ter zitting heeft plaatsgevonden op 25 juni 2014. Van het verhandelde ter zitting is een proces-verbaal opgemaakt dat met deze uitspraak wordt meegezonden.</para>
+          <para/>
+          <para/>
+        </paragroup>
+      </section>
+      <section>
+        <title>
+          <nr manualAnnotation="NR">2</nr><text manualAnnotation="SECTION_TITLE">Feiten</text></title>
+        <para/>
+        <paragroup>
+          <nr manualAnnotation="NR">2.1.</nr>
+          <para manualAnnotation="TEXT_BLOCK">De rechtbank heeft in haar uitspraak, waarin belanghebbende wordt aangeduid als ‘eiser’ en de heffingsambtenaar als ‘verweerder’, de navolgende feiten vastgesteld.</para>
+          <para/>
+          <parablock>
+            <para><quote manualAnnotation="TEXT_BLOCK">“</quote><potentialnr manualAnnotation="NR">1.2. </potentialnr><text manualAnnotation="TEXT_BLOCK">Eisers onroerende zaak bestaat uit in totaal negen percelen grond met een totale oppervlakte van 175.549 m², waarvan een deel bebouwd is, of dienstbaar is aan de opstallen. De grond, voor zover die niet is bebouwd en/of dienstbaar is aan de opstallen, betreft bedrijfsmatig geëxploiteerde cultuurgrond. Bij de waardering is aan deze cultuurgrond geen waarde toegekend.</text></para>
+          </parablock>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">1.3.</nr>
+          <para manualAnnotation="TEXT_BLOCK">De cultuurgrond wordt gebruikt voor het kweken van groenten (ijsbergsla, spitskool, witte kool rode kool en als wisselteelt tarwe). Er zijn acht vaste arbeidskrachten en twintig losse arbeidskrachten.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">1.4.</nr>
+          <parablock>
+            <para manualAnnotation="TEXT_BLOCK">Bij de waardering is aan de volgende deelobjecten een waarde toegekend: woning (1.070 m³), grond bij woning (600 m²), schuur (80 m²), open werktuigberging </para>
+            <para><potentialnr manualAnnotation="TEXT_BLOCK">(200 </potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">m²)</potentialnr><text manualAnnotation="TEXT_BLOCK">, gesloten werktuigberging (300 m²), twee sorteerloodsen (1034 m² en 990 m²) </text></para>
+            <para manualAnnotation="TEXT_BLOCK">drie koel/vriescellen (441 m², 185 m² en 308 m²), grond bij niet-woning (7.800 m²) en verharding (2.300 m²).”</para>
+          </parablock>
+          <para/>
+          <para/>
+          <parablock>
+            <para manualAnnotation="TEXT_BLOCK">Nu tegen deze feitenvaststelling geen bezwaren zijn ingebracht, gaat ook het Hof van die feiten uit.</para>
+          </parablock>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">2.2.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Het Hof voegt hieraan nog de volgende feiten toe.</para>
+          <para/>
+          <paragroup>
+            <nr manualAnnotation="NR">2.3.1.</nr>
+            <para manualAnnotation="TEXT_BLOCK">Bij uitspraak van 19 januari 2012 met zaaknummer AWB 10/540 heeft de rechtbank Alkmaar het beroep van belanghebbende inzake de waardebeschikking voor het jaar 2009 gegrond verklaard en voor dat jaar de waarde van het object vastgesteld op € 840.000.</para>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr manualAnnotation="NR">2.3.2.</nr>
+            <para manualAnnotation="TEXT_BLOCK">De heffingsambtenaar heeft in die procedure een taxatierapport van [taxateur B] ([kantoor taxateur B]) overgelegd waarin de waarde van het object naar de peildatum 1 januari 2008 is getaxeerd op € 1.000.000, welke waarde blijkens de specificatie op bladzijde 5 van het taxatierapport als volgt is opgebouwd.</para>
+            <para/>
+            <para/>
+            <parablock>
+              <para>
+                <emphasis manualAnnotation="TEXT_BLOCK" role="bold">Onderdeelobject	Bwjr	Opp. m2	Inh. M3	Stukwrd	Waarde</emphasis>
+              </para>
+              <para manualAnnotation="TEXT_BLOCK">Woning vrijstaand 	1900 		1.071 	€ 210 	€ 227.000</para>
+              <para manualAnnotation="TEXT_BLOCK">eenvoudig</para>
+              <para manualAnnotation="TEXT_BLOCK">Grond bij niet woning 		7.800		€ 20 		€ 156.000</para>
+              <para manualAnnotation="TEXT_BLOCK">Schuur (steen) 	1900 	80 		€ 100 	€ 8000</para>
+              <para manualAnnotation="TEXT_BLOCK">Werktuigenloods open 	1997 	200 		€ 95 		€ 19.000</para>
+              <para manualAnnotation="TEXT_BLOCK">(metaal)</para>
+              <para manualAnnotation="TEXT_BLOCK">Grond bij eengezinswoning 		700 		€ 26 		€ 18.135</para>
+              <para manualAnnotation="TEXT_BLOCK">Werktuigenberging (metaal) 	1980 	300 		€ 66 		€ 19.800</para>
+              <para manualAnnotation="TEXT_BLOCK">Verharding (grond) 		2.300 		€ 15 		€ 34.500</para>
+              <para manualAnnotation="TEXT_BLOCK">Asbest opruiming 	1970 	790 				€ -/- 6083</para>
+              <para manualAnnotation="TEXT_BLOCK">Sorteerloods (metaal) 	2004 	493 		€ 230 	€ 113.390</para>
+              <para manualAnnotation="TEXT_BLOCK">Sorteerloods (metaal) 	2006 	486 		€ 231 	€ 112.266</para>
+              <para manualAnnotation="TEXT_BLOCK">Koelcel (inpandig) 	2004 	441 		€ 213 	€ 93.933</para>
+              <para manualAnnotation="TEXT_BLOCK">Koelcel (inpandig) 	2006 	308 		€ 227 	€ 69.916</para>
+              <para manualAnnotation="TEXT_BLOCK">Koelcel (inpandig) 	2006 	185 		€ 258 	€ 47.730</para>
+              <para manualAnnotation="TEXT_BLOCK">Kantoor (inpandig) 	2004 	40 		€ 300 	€ 12.000</para>
+              <para manualAnnotation="TEXT_BLOCK">Kantine (inpandig, le verd.) 	2004 	40 		€ 300 	€ 12.000</para>
+              <para manualAnnotation="TEXT_BLOCK">Zomerhuis 	1900 	220 		€ 250 	€ 55.000</para>
+              <para manualAnnotation="TEXT_BLOCK">	/</para>
+              <para manualAnnotation="TEXT_BLOCK">	2007</para>
+              <para manualAnnotation="TEXT_BLOCK">Laad/los kuil 	2004 	137 		€ 60 		€ 8.250</para>
+              <para>
+                <emphasis manualAnnotation="TEXT_BLOCK" role="bold">Totale waarde 		€ 1.000.000</emphasis>
+              </para>
+            </parablock>
+            <para/>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr manualAnnotation="NR">2.4.1.</nr>
+            <para manualAnnotation="TEXT_BLOCK">Op 12 december 2012 heeft [A] (hierna: de taxateur) ten behoeve van de heffingsambtenaar een taxatie naar waardepeildatum 1 januari 2009 verricht, uitkomend op € 1.080.000. Dit taxatierapport bevat de volgende waarde-opbouw van het object:</para>
+            <para/>
+            <parablock>
+              <para manualAnnotation="TEXT_BLOCK">onderdeel 		onderdeel object 	bouwjaar 	oppervlakte	stukwaarde 	factor 	waarde</para>
+              <para manualAnnotation="TEXT_BLOCK">nummer 							/inhoud 		grote</para>
+              <para manualAnnotation="TEXT_BLOCK">	1 	Woning 			1900 	1.070m³ 	€ 225 	0,908 	€ 218.563</para>
+              <para manualAnnotation="TEXT_BLOCK">	2 	Grond bij woning 				600m² 	€ 101 		€ 60.500</para>
+              <para manualAnnotation="TEXT_BLOCK">	3 	Schuur (steen) 		1900 	80m² 	€ 98 	1,200 	€ 9.480</para>
+              <para manualAnnotation="TEXT_BLOCK">		Werktuigberging open</para>
+              <para manualAnnotation="TEXT_BLOCK">	4 	metaal 			1997 	200m² 	€ 93 	1,040 	€ 19.344</para>
+              <para manualAnnotation="TEXT_BLOCK">	5 	werktuigberginggesloten 	1980 	300m² 	€67 	1,000 	€20.100</para>
+              <para manualAnnotation="TEXT_BLOCK">	6	 Sorteerloods metaal 		2004 	1.034m² 	€ 192 	0,893 	€ 192.948</para>
+              <para manualAnnotation="TEXT_BLOCK">	7 	Sorteerloods metaal 		2006 	990m² 	€ 192 	0,890 	€ 169.171</para>
+              <para manualAnnotation="TEXT_BLOCK">	8 	koel/ vriescel (inpandig) 	2004 	441m²	€ 302 	0,854 	€ 113.794</para>
+              <para manualAnnotation="TEXT_BLOCK">	9	koel/ vriescel (inpandig) 	2006 	185m² 	€ 302 	0,930 	€ 51.944</para>
+              <para manualAnnotation="TEXT_BLOCK">	10 	koel/vriescel(inpandig) 		2006 	308m² 	€302 	0,878 	€81.667</para>
+              <para manualAnnotation="TEXT_BLOCK">	14 	Grond bij niet woning 				7.800m² 	€ 15 		€ 118.000</para>
+              <para manualAnnotation="TEXT_BLOCK">	15 	verharding 					2.300m² 	€ 15 		[€ 34.500]</para>
+              <para manualAnnotation="TEXT_BLOCK">	16 	asbestopruiming 		1970 	790m²	€-10 		€-7.584</para>
+              <para manualAnnotation="TEXT_BLOCK">								Totaal van de</para>
+              <para manualAnnotation="TEXT_BLOCK">								waarde 		€ 1.082.427</para>
+            </parablock>
+            <para/>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr manualAnnotation="NR">2.4.2.</nr>
+            <parablock>
+              <para manualAnnotation="TEXT_BLOCK">De taxateur heeft daarbij onder meer de volgende toelichting gegeven:</para>
+              <para><quote manualAnnotation="TEXT_BLOCK">“</quote><text manualAnnotation="TEXT_BLOCK">In de sorteerloodsen staan koel/vriescellen. Deze cellen zijn apart gewaardeerd en hierdoor komen het aantal vierkante meters van de sorteerloodsen niet overeen met de genoemde vierkante meters op de taxatieverslag van de gemeente. Het totaal aan vierkante meters van de koelcellen incl. de sorteerloodsen komt wel overeen met de werkelijkheid”.</text></para>
+            </parablock>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr manualAnnotation="NR">2.4.3.</nr>
+            <para manualAnnotation="TEXT_BLOCK">De taxateur heeft voor – onder meer – de waardering van de sorteerloodsen en de koel/vriescellen gebruik gemaakt van kengetallen uit de Taxatiewijzers grond en gebouwen bij agrarische objecten.</para>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr manualAnnotation="NR">2.4.4.</nr>
+            <parablock>
+              <para manualAnnotation="TEXT_BLOCK">De taxateur heeft bij de waardebepaling gebruik gemaakt van de volgende gegevens betreffende transacties van in de omgeving gelegen boerderijen:</para>
+              <para manualAnnotation="TEXT_BLOCK">[adres 2], op 1 april 2009 verkocht voor € 722.500</para>
+              <para manualAnnotation="TEXT_BLOCK">[adres 3], op 3 maart 2008 verkocht voor € 985.000</para>
+              <para manualAnnotation="TEXT_BLOCK">[adres 4], op 16 januari 2012 verkocht voor € 663.000.</para>
+            </parablock>
+            <para/>
+          </paragroup>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">2.5.</nr>
+          <parablock>
+            <para manualAnnotation="TEXT_BLOCK">Bij brief van 26 februari 2013, gericht aan de rechtbank, heeft de heffingsambtenaar onder meer het volgende meegedeeld:</para>
+            <para><quote manualAnnotation="TEXT_BLOCK">“</quote><text manualAnnotation="TEXT_BLOCK">Bij het taxeren van de woning van [het object] is gebruik gemaakt van de waarnemingen van de heer [taxateur B] in verband met de beroepszaak voor het belastingjaar 2009. Hierin staat vermeld dat de woning in goede staat verkeert. Op dit moment is het niet meer te controleren omdat medio oktober 2010 het pand grondig gerenoveerd is. Ik ga er echter van uit dat een pand niet gerenoveerd wordt als het in goede staat verkeert. Ik ga daarom akkoord met een waarde voor de woning van € 150.000,--. De taxatiewaarde gaat van € 1.080.000,-- naar € 1.010.000,--. De WOZwaarde van het object blijft gehandhaafd op € 882.000,--.”</text></para>
+          </parablock>
+          <para/>
+          <para/>
+        </paragroup>
+      </section>
+      <section>
+        <title>
+          <nr manualAnnotation="NR">3</nr><text manualAnnotation="SECTION_TITLE">Geschil in hoger beroep</text></title>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">In geschil is of de waarde van het object te hoog is vastgesteld.</para>
+        </parablock>
+        <para/>
+        <para/>
+      </section>
+      <section role="overwegingen">
+        <title>
+          <nr manualAnnotation="NR">4</nr><text manualAnnotation="SECTION_TITLE">Beoordeling van het geschil</text></title>
+        <para/>
+        <paragroup>
+          <nr manualAnnotation="NR">4.1.</nr>
+          <para manualAnnotation="TEXT_BLOCK">De rechtbank heeft omtrent het geschil als volgt overwogen:</para>
+          <para/>
+          <parablock>
+            <para><quote manualAnnotation="TEXT_BLOCK">“</quote><potentialnr manualAnnotation="NR">3.1. </potentialnr><text manualAnnotation="TEXT_BLOCK">Het is aan verweerder om aannemelijk te maken dat hij de WOZ-waarde niet te hoog heeft vastgesteld. Bij niet-woningen kan de waarde onder meer worden vastgesteld door middel van vergelijking met de verkoopprijzen van op of rond de waardepeildatum verkochte vergelijkbare onroerende zaken. Daarbij mag verweerder, zoals hij in dit geval met zijn bij het verweerschrift overgelegde nieuwe taxatierapport heeft gedaan, de vastgestelde waarde ook in beroep nog onderbouwen met nieuwe gegevens.</text></para>
+          </parablock>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">3.2.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Ter zitting heeft verweerders taxateur een toelichting gegeven op het door hem overgelegde taxatierapport. De waarde van eisers onroerende zaak is vastgesteld aan de hand van de kengetallen uit de Landelijke taxatiewijzer agrarische gebouwen versie 1.0 en de Taxatiewijzer Grond bij agrarische objecten versie 1.0 (hierna: taxatiewijzer). Om te kunnen bepalen of de berekende waarde een goede afspiegeling is van de daadwerkelijk gerealiseerde verkoopprijzen in de markt heeft verweerders taxateur de waarden van de gehanteerde referentieobjecten [adres 3], [adres 2], [adres 4] en [adres 5] (alleen grond) ook berekend aan de hand van deze kengetallen en vergeleken met de gerealiseerde verkoopprijzen van deze referentieobjecten. Uit deze vergelijking volgt dat de met de kengetallen berekende waarde van de referentieobjecten zeer dicht in de buurt liggen van de daadwerkelijk gerealiseerde verkoopprijzen. Deze wijze van taxeren acht de rechtbank niet onjuist. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">3.3.</nr>
+          <para manualAnnotation="TEXT_BLOCK">De stelling van eiser dat de door verweerder gehanteerde referentieobjecten [adres 3], [adres 2], [adres 4] en [adres 5] (alleen grond) geen geschikte vergelijkingen zijn volgt de rechtbank niet. De rechtbank heeft in haar uitspraak van 19 januari 2012, waarin de WOZ-waarde vastgesteld voor het belastingjaar 2009 is beoordeeld, geoordeeld dat deze referentieobjecten op zichzelf voldoende vergelijkbaar zijn met de onroerende zaak van eiser. Er bestaat geen aanleiding om van dit oordeel af te wijken. Het referentieobject [adres 4] acht de rechtbank echter geen geschikte vergelijking, aangezien het verkoopcijfer van dit object te ver van de waardepeildatum (drie jaar) is gerealiseerd om te kunnen dienen als onderbouwing van de WOZ-waarde op de onderhavige waardepeildatum. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">4.1.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Eiser stelt dat verweerder aan de sorteerloodsen een te hoge waarde heeft toegekend door los van de sorteerloods ook nog een afzonderlijke waarde toe te kennen aan de inpandige koel/vriescellen. Verweerder voert aan dat eerst de sorteerloods wordt gewaardeerd alsof deze leeg is en dat vervolgens aan de extra’s in de sorteerloods, zoals de koel/vriescellen, een waarde wordt toegekend. Vervolgens worden deze onderdelen afzonderlijk van elkaar in het taxatierapport genoemd. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">4.2.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Naar het oordeel van de rechtbank heeft verweerder voldoende gemotiveerd dat geen sprake is van een dubbele taxatie van de sorteerloodsen. Verweerder heeft zowel aan de sorteerloodsen als de koel/vriescellen een afzonderlijke waarde kunnen toekennen nu dit twee verschillende onderdelen zijn. Door afzonderlijk een waarde toe te kennen aan deze onderdelen vergroot verweerder het inzicht in de taxatie van de onroerende zaak van eiser. Verder is de rechtbank van oordeel dat de door verweerder toegekende waarde aan de sorteerloodsen en de koelvriescellen niet te hoog is gelet op de kengetallen uit de taxatiewijzers. Eiser heeft zijn stelling dat aan de sorteerloods een veel lagere waarde toekomt niet met bewijzen onderbouwd. </para>
+          <para/>
+          <parablock>
+            <para><potentialnr manualAnnotation="NR">5.1.</potentialnr><text manualAnnotation="TEXT_BLOCK">Eiser stelt, onder verwijzing naar de uitspraak van de rechtbank van 19 januari 2012, dat verweerder bij de waardering geen rekening heeft gehouden met de kosten van asbestopruiming van € 6.083 en is uitgegaan van 8700 m² ‘grond bij niet-woning’ in plaats van 7800 m². Verder stelt eiser dat ‘de woning inpandig in bedrijfsgebouwen’ ten onrechte mee is getaxeerd. </text></para>
+          </parablock>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">5.2</nr>
+          <para manualAnnotation="TEXT_BLOCK">De rechtbank volgt eiser niet in deze stellingen. Uit verweerders taxatierapport van 12 december 2012 blijkt dat een aftrek van € 7.584 wordt toegepast vanwege de kosten van asbestopruiming. Ook blijkt uit het taxatierapport dat verweerder uitgaat van 7800 m² ‘grond bij niet-woning’. De op het taxatieverslag genoemde ‘woning inpandig in bedrijfsgebouw’ (waaraan een waarde van € 51.000 is toegekend) wordt in het taxatierapport niet meer opgevoerd. Dat verweerder in het taxatieverslag een bedrag noemt van € 4.290 voor asbestopruiming, een oppervlakte van 8700 m² voor ‘grond bij niet-woning’ noemt en een waarde toekent aan de ‘woning inpandig in bedrijfsgebouw’ doet hier niet aan af aangezien in de beroepsprocedure wordt uitgegaan van het door verweerder in de beroepsfase overgelegde taxatierapport. Het taxatieverslag dat eiser destijds van verweerder heeft ontvangen is daarom in deze fase niet meer relevant voor de beoordeling of de waarde niet te hoog is vastgesteld. </para>
+          <para/>
+          <parablock>
+            <para><potentialnr manualAnnotation="NR">6. </potentialnr><text manualAnnotation="TEXT_BLOCK">Eiser stelt dat moet worden gewaardeerd naar de economische waarde bij voortgezet agrarisch gebruik en niet naar de waarde in het economisch verkeer. De rechtbank overweegt hiertoe het volgende. De WOZ-waarde wordt bepaald op de waarde die per 1 januari 2009 (de onderhavige waardepeildatum) aan de onroerende zaak dient te worden toegekend, indien de volle en onbezwaarde eigendom daarvan zou kunnen worden overgedragen en de verkrijger de zaak in de staat waarin die zich bevindt, onmiddellijk en in volle omvang in gebruik zou kunnen nemen. Kort gezegd is de WOZ-waarde van een object de prijs die de meestbiedende gegadigde daarvoor zou willen betalen. Of deze koper al dan niet het voortzetten van het agrarisch gebruik voor ogen heeft is daarbij niet van belang. </text></para>
+          </parablock>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">7.1.</nr>
+          <parablock>
+            <para manualAnnotation="TEXT_BLOCK">De taxatiewijzers kunnen volgens eiser bij de waardering van zijn onroerende zaak niet worden gebruikt, omdat in de gemeente Heerhugowaard het teeltgebied steeds kleiner wordt. Een agrarisch bedrijf in deze gemeente heeft een lagere economische waarde dan in andere gemeenten vanwege hogere transportkosten. </para>
+            <para manualAnnotation="TEXT_BLOCK">Verweerder voert aan dat voldoende rekening is gehouden met de ligging van eisers onroerende zaak in een agrarisch gebied dat onder druk staat van stedelijke uitbreiding. Bij de bepaling van de grondwaarde is gebruik gemaakt van de taxatiewijzer Grond bij agrarische objecten waarin een verdeling in verschillende gebieden is gemaakt. De gemeente Heerhugowaard is gelegen in het gebied ‘Westelijk Holland’. Dit is een sterk verstedelijkt gebied en overal in dit gebied staat het landbouwgebied onder druk van de verstedelijking. </para>
+          </parablock>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">7.2.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Naar het oordeel van de rechtbank heeft verweerder de grondwaarde van eisers onroerende zaak kunnen berekenen aan de hand van de in de taxatiewijzer Grond bij agrarische objecten genoemde kengetallen. De rechtbank overweegt hiertoe dat in deze taxatiewijzer veertien landbouwregio’s worden onderscheiden waarvoor verschillende kengetallen gelden. Deze kengetallen zijn afgeleid van de plaatselijke marktgegevens. Een van deze regio’s is ‘Westelijk Holland’ waaronder de gemeente Heerhugowaard valt. Niet valt in te zien waarom voor eisers onroerende zaak de kengetallen uit de taxatiewijzer die gelden voor deze regio niet van toepassing kunnen zijn. Eiser heeft zijn stelling niet onderbouwd. </para>
+          <para/>
+          <parablock>
+            <para><potentialnr manualAnnotation="NR">8. </potentialnr><text manualAnnotation="TEXT_BLOCK">Gelet op het door verweerder overgelegde taxatierapport en de ter zitting door verweerders taxateur gegeven toelichting is de rechtbank van oordeel dat verweerder voldoende inzichtelijk heeft gemaakt hoe tot de WOZ-waarde is gekomen die aan eisers onroerende zaak is toegekend. De door verweerder gehanteerde stukwaarden die zijn afgeleid uit de taxatiewijzers komen de rechtbank niet te hoog voor. De rechtbank acht hierbij van belang dat verweerder heeft laten zien dat uit de daadwerkelijk gerealiseerde verkoopprijzen van de referentieobjecten kan worden afgeleid dat de kengetallen uit de taxatiewijzers een goede afspiegeling zijn van de prijs die in de markt tot stand komt. </text></para>
+          </parablock>
+          <para/>
+          <parablock>
+            <para><potentialnr manualAnnotation="NR">9. </potentialnr><text manualAnnotation="TEXT_BLOCK">De rechtbank is van oordeel dat de WOZ-waarde van eisers onroerende zaak niet te hoog is vastgesteld. De stelling van eiser dat uit de WOZ-waarde van de onroerende zaak [adres 6] blijkt dat de WOZ-waarde van zijn onroerende zaak te hoog is vastgesteld maakt dit niet anders. De rechtbank overweegt daartoe dat de WOZ-waarde van een onroerende zaak wordt bepaald op de waarde in het economisch verkeer. De verwijzing naar de WOZ-waarde van [adres 6], nog daargelaten of deze onroerende zaak voldoende vergelijkbaar is met eisers onroerende zaak, is daarom niet relevant.</text></para>
+          </parablock>
+          <para/>
+          <parablock>
+            <para manualAnnotation="TEXT_BLOCK">Eiser staat een aanzienlijke lagere WOZ-waarde voor. De rechtbank ziet hierin echter geen aanleiding om te twijfelen aan de door verweerder vastgestelde WOZ-waarde, omdat eiser de deze waarde niet met relevante bewijsstukken heeft onderbouwd. </para>
+          </parablock>
+          <para/>
+          <parablock>
+            <para><potentialnr manualAnnotation="NR">10. </potentialnr><text manualAnnotation="TEXT_BLOCK">Het voorgaande leidt de rechtbank tot de conclusie dat verweerder aannemelijk heeft gemaakt dat de door hem vastgestelde waarde niet te hoog is. Het beroep is ongegrond.”</text></para>
+          </parablock>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">4.2.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Uit hetgeen partijen over en weer in hoger beroep hebben gesteld, maakt het Hof op dat het geschil in hoger beroep zich toespitst op de waardering van het woon/bedrijfserf (de taxatie-onderdelen ‘verharding’, ‘Grond bij woning’ en ‘Grond bij niet-woning’) en op de waardering van de sorteerloodsen en de daarin aangebrachte koel-/vriescellen. Met inachtneming van op die posten aan te brengen waardecorrecties, verdedigt belanghebbende een vast te stellen waarde van, naar het Hof begrijpt, (maximaal) € 769.054.</para>
+          <para/>
+          <paragroup>
+            <nr manualAnnotation="NR">4.3.1.</nr>
+            <para manualAnnotation="TEXT_BLOCK">Wat de sorteerloodsen en de koel-/vriescellen betreft, heeft belanghebbende het standpunt ingenomen dat de taxatie van de taxateur een dubbeltelling bevat omdat de oppervlakte van de in de sorteerloodsen aangebrachte koel-/vriescellen in de eerste plaats wordt gebruikt als uitgangspunt voor de waardering van die koel-/vriescellen zelf, en in de tweede plaats ook nog eens wordt meegenomen in de oppervlakte die als uitgangspunt wordt gebruikt voor de waardering van de sorteerloodsen. Belanghebbende heeft ter zitting aangegeven dat hij zich wél kan verenigen met de waardering van de sorteerloodsen en de koel-/vriescellen volgens de taxatie van [taxateur B] ([kantoor taxateur B]) omdat de totale oppervlakte daarin op juiste wijze is verdeeld over de diverse in de sorteerloodsen te onderscheiden gedeelten, waartoe trouwens ook kantoor-/kantinegedeelten behoren.</para>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr manualAnnotation="NR">4.3.2.</nr>
+            <para manualAnnotation="TEXT_BLOCK">De ter zitting aanwezige taxateur heeft, desgevraagd, op zichzelf niet betwist dat het deel van de oppervlakte van de sorteerloodsen dat is ‘bezet’ door koel-/vriescellen, volledig is meegeteld bij de berekening van de waarde van de sorteerloodsen als zodanig. Hij heeft zich evenwel voor de juistheid van deze waarderingsmethodiek beroepen op de door hem gehanteerde ‘Taxatiewijzers’.</para>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr manualAnnotation="NR">4.3.3.</nr>
+            <para manualAnnotation="TEXT_BLOCK">Het Hof stelt evenals de rechtbank voorop dat de bewijslast van een niet te hoge waardering op de heffingsambtenaar rust.</para>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr manualAnnotation="NR">4.3.4.</nr>
+            <parablock>
+              <para manualAnnotation="TEXT_BLOCK">De rechtbank heeft vastgesteld, en de taxateur heeft desgevraagd ter zitting bevestigd, dat de taxateur als waarderingsmaatstaf de waarden in het economische verkeer (marktwaarden) heeft gehanteerd. In het midden latende of dit theoretisch juist is, stelt het Hof vast dat zonder nadere toelichting niet duidelijk is waarom een sorteerloods van (bijvoorbeeld) 1000 m2 die voor (bijvoorbeeld) 300 m2 als koel-/vriescel is ingericht, en waarvan dus slechts 700 m2 resteert voor (het werk aan) sorteerlijnen, eenzelfde marktwaarde heeft als een sorteerloods van 1000 m2 zonder inbouw, die volledig voor (het werken aan) sorteerlijnen kan worden gebezigd, terwijl bij de waardering van eerstgenoemde loods tevens de volledige marktwaarde van een 300 m2 grote koel-/vriescel in aanmerking wordt genomen. Een toereikende toelichting heeft de taxateur ter zitting niet gegeven, terwijl deze ook niet volgt uit (de in het taxatierapport opgenomen tekst van) de taxatiewijzers.</para>
+              <para manualAnnotation="TEXT_BLOCK">De taxateur heeft ter zitting in dit verband voorts gesteld dat bij de bepaling van de marktwaarde uitgegaan moet worden van de bouwkosten van de loodsen en koel-/vriescellen minus afschrijvingen. Belanghebbende heeft ter zitting onweersproken gesteld dat de loodsen inclusief koel-/vriescellen (in 2004 en 2006) ongeveer € 300.000 per stuk hebben gekost. In dit licht valt niet goed te plaatsen dat de taxateur, naar zijn eigen waarderingsmaatstaven, de loodsen per 1 januari 2009 op (tezamen) circa € 609.000 heeft gewaardeerd.</para>
+            </parablock>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr manualAnnotation="NR">4.3.5.</nr>
+            <para manualAnnotation="TEXT_BLOCK">De heffingsambtenaar heeft zich er daarnaast op beroepen dat de aan de hand van de taxatiewijzers vastgestelde marktwaarden van de sorteerloodsen en koel-/vriescellen bevestiging vinden in de omstandigheid dat de voor de drie (in 2.4.4 vermelde) vergelijkingsobjecten feitelijk gerealiseerde verkoopprijzen vrijwel gelijk zijn aan (de optelsom van) de voor die objecten geanalyseerde waarden. Ook dit argument vermag het Hof niet te overtuigen. Naar de taxateur ter zitting heeft erkend, zijn de geanalyseerde waarden van de vergelijkingsobjecten slechts gedeeltelijk terug te voeren op gegevens uit de taxatiewijzers. In de waardeanalyse van de vergelijkingsobjecten  zijn ook onderdelen opgenomen, met name de - steeds - zwaar meetellende post ‘Woning’, waaraan geen zelfstandige waarderingsbasis ten grondslag ligt. Het gewicht van deze ‘resterende’ onderdelen binnen de geanalyseerde waarden van de vergelijkingsobjecten is evenwel zodanig (namelijk, wat de woningen betreft, respectievelijk 57%, 61% en 37%), dat via deze waardeanalyse naar ’s Hofs oordeel geen voldoende bevestiging kan worden gevonden voor de juistheid van de bij de waardering van de sorteerloodsen en koel-/vriescellen gehanteerde uitgangspunten.</para>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr manualAnnotation="NR">4.3.6.</nr>
+            <para manualAnnotation="TEXT_BLOCK">Het voorgaande leidt tot de conclusie dat de heffingsambtenaar niet is geslaagd in het op hem rustende bewijs dat de waarde, voor zover het de sorteerloodsen en koel-/vriescellen betreft, niet tot een te hoog bedrag in aanmerking is genomen.</para>
+            <para/>
+          </paragroup>
+          <paragroup>
+            <nr manualAnnotation="NR">4.3.7.</nr>
+            <para manualAnnotation="TEXT_BLOCK">Nu belanghebbende de juistheid van de door taxateur [taxateur B] ([kantoor taxateur B]) bij diens eerdere taxatie vastgestelde waarden van de (in onderdelen, waaronder de koel-/vriescellen, opgesplitste) sorteerloodsen niet betwist, en er tussen partijen in zoverre dus geen geschil bestaat, kan van die (deel)waarden worden uitgegaan bij de waardevaststelling van het object.</para>
+            <para/>
+          </paragroup>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">4.4.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Met de als bijlage bij het verweerschrift in hoger beroep overgelegde grondstaffel en de daarop in het verweerschrift en ter zitting gegeven toelichting heeft de heffingsambtenaar tegenover de onvoldoende gemotiveerde betwisting door belanghebbende naar ’s Hofs oordeel voldoende aannemelijk gemaakt dat waardering van woon/bedrijfserven in de gemeente steeds aan de hand van deze grondstaffel plaatsvindt en dat de onderdelen ‘verharding’, ‘Grond bij woning’ en ‘Grond bij niet-woning’ bij het object van belanghebbende niet tegen te hoge waarden in aanmerking zijn genomen.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">4.5.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Voor zover het de overige waarde-onderdelen betreft, volgt het Hof het in de uitspraak van de rechtbank besloten liggende oordeel dat voldoende aannemelijk is dat die in de (aangepaste, op € 1.010.000 uitkomende) taxatie niet tegen te hoge bedragen in aanmerking zijn genomen. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">4.6.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Uit het vorenoverwogene volgt dat de taxatie van € 1.010.000 dient te worden gecorrigeerd met het verschil tussen € (192.948 + 169.171 + 113.794 + 51.944 + 81.667) = € 609.524 (taxatie taxateur) en € (113.390 + 112.266 + 93.933 + 69.916 + 47.730 + 12.000 + 12.000) = € 461.235 (taxatie [kantoor taxateur B]) ofwel met € 148.289, afgerond € 148.000. Dit leidt tot een waarde voor het object van € (1.010.000 -/- 148.000) = € 862.000. De heffingsambtenaar heeft een hogere waarde dan deze, laat staan de vastgestelde waarde van € 882.000, niet aannemelijk gemaakt. Belanghebbende heeft de door hem verdedigde  waarde echter evenmin aannemelijk gemaakt.</para>
+          <para/>
+          <parablock>
+            <para>
+              <emphasis manualAnnotation="SECTION_TITLE" role="italic">Slotsom</emphasis>
+            </para>
+          </parablock>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">4.7.</nr>
+          <para manualAnnotation="TEXT_BLOCK">De slotsom is dat het hoger beroep gegrond is. De uitspraak van de rechtbank dient te worden vernietigd. Doende wat de rechtbank had behoren te doen, zal het Hof het beroep gegrond verklaren, de uitspraak op bezwaar vernietigen en de vastgestelde waarde verminderen tot € 862.000.</para>
+          <para/>
+          <para/>
+        </paragroup>
+      </section>
+      <section>
+        <title>
+          <nr manualAnnotation="NR">5</nr><text manualAnnotation="SECTION_TITLE">Kosten</text></title>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">Nu het beroep en het hoger beroep gegrond zijn, acht het Hof termen aanwezig voor een kostenveroordeling op de voet van artikel 8:75 van de Algemene wet bestuursrecht. De voor vergoeding in aanmerking komende kosten zijn opgenomen in artikel 1 van het Besluit proceskosten bestuursrecht (het Besluit). Voor het onderhavige geval zijn dat de in onderdeel c vermelde reiskosten voor het bijwonen van de zittingen van de rechtbank en het Hof op basis van openbaar vervoer tweede klasse. De kosten [Z] – Alkmaar v.v. bepaalt het Hof op € 4,20 overeenkomstig de niet betwiste opgave van belanghebbende; de kosten [Z] – Amsterdam v.v. bepaalt het Hof op € 16,60; totaal derhalve € 20,80.</para>
+        </parablock>
+        <para/>
+        <para/>
+      </section>
+      <section>
+        <title>
+          <nr manualAnnotation="NR">6</nr><text manualAnnotation="SECTION_TITLE">Beslissing</text></title>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">Het Hof:</para>
+        </parablock>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> vernietigt de uitspraak van de rechtbank,</text></para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> verklaart het beroep gegrond,</text></para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> vernietigt de uitspraak op bezwaar,</text></para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> vermindert de bij beschikking vastgestelde waarde tot € 862.000,</text></para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> veroordeelt de heffingsambtenaar in de kosten van belanghebbende tot een bedrag van € 20,80 en</text></para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> gelast de heffingsambtenaar het door belanghebbende betaalde griffierecht (aan rechtbank en Hof) ad € 160 aan hem te vergoeden. </text></para>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">De uitspraak is gedaan door mrs. J. den Boer, voorzitter, E.F. Faase en H.N. van der Kolk, leden van de belastingkamer, in tegenwoordigheid van mr. B.J.E. Lodder als griffier. De beslissing is op 10 juli 2014 in het openbaar uitgesproken.</para>
+        </parablock>
+        <para/>
+        <para/>
+        <para/>
+        <para/>
+        <para/>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">Tegen deze uitspraak kan binnen zes weken na de verzenddatum beroep in cassatie worden ingesteld bij de Hoge Raad der Nederlanden (belastingkamer), Postbus 20303, 2500 EH  Den Haag. Daarbij moet het volgende in acht worden genomen:</para>
+          <para><potentialnr manualAnnotation="NR">1..</potentialnr><text manualAnnotation="TEXT_BLOCK"> bij het beroepschrift wordt een afschrift van deze uitspraak overgelegd.</text></para>
+        </parablock>
+        <para><potentialnr manualAnnotation="NR">2. </potentialnr><text manualAnnotation="TEXT_BLOCK">het beroepschrift moet ondertekend zijn en ten minste het volgende vermelden:</text></para>
+        <para><potentialnr manualAnnotation="NR">a. </potentialnr><text manualAnnotation="TEXT_BLOCK">de naam en het adres van de indiener;</text></para>
+        <para><potentialnr manualAnnotation="NR">b. </potentialnr><text manualAnnotation="TEXT_BLOCK">een dagtekening;</text></para>
+        <para><potentialnr manualAnnotation="NR">c. </potentialnr><text manualAnnotation="TEXT_BLOCK">een omschrijving van de uitspraak waartegen het beroep in cassatie is gericht;</text></para>
+        <para><potentialnr manualAnnotation="NR">d. </potentialnr><text manualAnnotation="SECTION_TITLE">de gronden van het beroep in cassatie.</text></para>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">Voor het instellen van beroep in cassatie is griffierecht verschuldigd. Na het instellen van beroep in cassatie ontvangt de indiener een nota griffierecht van de griffier van de Hoge Raad.</para>
+          <para manualAnnotation="TEXT_BLOCK">In het cassatieberoepschrift kan de Hoge Raad verzocht worden om de wederpartij te veroordelen in de proceskosten.</para>
+        </parablock>
+        <para/>
+        <para/>
+        <para/>
+        <para/>
+        <para/>
+        <para/>
+        <para/>
+      </section>
+    </uitspraak>
+</open-rechtspraak>

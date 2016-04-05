@@ -66,13 +66,59 @@ public class TitlePatterns {
         //"bewezenverklaring en bewijsvoering"));
         //"bewezenverklaring"));
 
+
+        ////////////////////////////////////////////////////////////////////////////////////
+
+        QUALIFICATION(
+                ElementFeatureFunction.matchesNormalized(Pattern.compile("(de )?kwalificaties?",
+                        Pattern.CASE_INSENSITIVE))),
+
+        STRAF(ElementFeatureFunction.matchesNormalized(Pattern.compile("((de|het) )?(hoofd)?straf(fen)?",
+                Pattern.CASE_INSENSITIVE)
+        )),
+
+        PUNISHMENT_HIGH_CONF(ElementFeatureFunction.matchesNormalized(Pattern.compile("(kwalificatie en )?((de|het) )?" +
+                        "((op te leggen|oplegging) )?(van )?(de )?" +
+                        "(straf(baarheid|oplegging)?|(straf)?maatregel)" +
+                        "( (en|of|enof) (maatregel|straf))?" +
+                        "((( en)?( van)?( (de|het))? (bewezen ?verklaarde|daders?|verdachten?|feit(en)?)){1,4})?" +
+                        "(vermeld )?( op)?( bijlage)?",
+                Pattern.CASE_INSENSITIVE)
+
+        )),
+
         APPENDIX(ElementFeatureFunction.matchesNormalized(Pattern.compile("^((het|de) )?" +
                         "appendi(x|ces)|bijlage(n|s)?( [a-z0-9]{0,20}){0,5}",
                 Pattern.CASE_INSENSITIVE))),
+        LEGAL_MEANS(ElementFeatureFunction.matchesNormalized(Pattern.compile("((de|het) )?(be(spreking|handeling) van )?" +
+                "((de|het) )?" +
+                "(cassatie|rechts?)?middel(en)?"))),
+        STANDPUNT_HIGH_CONF(ElementFeatureFunction.matchesNormalized(Pattern.compile(
+                "(het geschil )?" +
+                "((de|het) )?" +
+                        "(standpunt|grie[fv])(en)?" +
+                        "( van( (de|het))?( (partij(en)?|eisers?|\\p{L}{3,10})))?" +
+                        "( en( van)?( (de|het))?( {1,3}\\p{L}{1,25}){1,3})?",
+                Pattern.CASE_INSENSITIVE)
+        )),
+
+
+        RECEPTIVITY(ElementFeatureFunction.matchesNormalized(Pattern.compile("(de )?ontvankelijkheid" +
+                        "( van( (de|het))? )?" +
+                        "([\\p{L}]|openbaar ministerie|officier van justitie)?",
+                Pattern.CASE_INSENSITIVE))),
+
+
+        PROVE(ElementFeatureFunction.matchesNormalized(Pattern.compile("((de )?kwalificatie van )?" +
+                "((het|de) )?" +
+                "bew(ijs|ezen)(verklaa?r(de|ing)|middel|voering|aanbod)?(en)?( en bewijsvoering)?", Pattern.CASE_INSENSITIVE)
+
+        )),
+
         FACTS(ElementFeatureFunction.matchesNormalized(Pattern.compile("(t(en)? ?\\.? ?a(anzien)? ?\\.? ?v(an)? ?\\.? ?)?" +
                         "(de )?" +
-                        "(tussen (de )?partijen )?" +
-                        "([\\p{L}]{1,25} )?" +
+                        "(tussen (de )?partijen ([\\p{L}]{1,25} )?)?" +
+                        "(vaststaande )?" +
                         "(feiten|uitgangs?punten)" +
                         "( voor zover van belang)?" +
                         "( en)?" +
@@ -111,6 +157,7 @@ public class TitlePatterns {
                         "((de|het) (aan)?duiding( van)?)?" +
                         "((de|het) )?" +
                         "((bestreden|eerste|tweede) )?" +
+                        "(?:eind)?" +
 
                         "(aanvraa?g(en)?|vonnis(sen)?|verweer|(hoger )?beroep" +
                         "|vordering(en)?|uitspra?ak(en)?|(deel)?ge(ding|schill?)(en)?" +
@@ -122,8 +169,7 @@ public class TitlePatterns {
                         "( (voorwaardelijke|hogere?|hoofd|feitelijke|incidentee?le?|eer(ste|dere?)|tweede))? \\p{L}{1,25})?" +
                         "(( waarvan)?( tot)? herziening(( is)? gevraagd( is)?)?)?" +
                         "( (alsmede|en)( het)?( verweer)?( {1,3}\\b\\p{L}{1,25}\\b){0,4})?"
-                        + "( na \\p{L}{1,25})?"
-                        + "( .{1,3})?",
+                        + "( na \\p{L}{1,25})?",
                 Pattern.CASE_INSENSITIVE))),
 
         CASSATIE(ElementFeatureFunction.matchesNormalized(Pattern.compile("(bespreking van (het|de) )?" +
@@ -132,14 +178,16 @@ public class TitlePatterns {
                 Pattern.CASE_INSENSITIVE)
         )),
 
+        BEWIJS(ElementFeatureFunction.matchesNormalized(Pattern.compile("([hd]et? )?(uitsluiting )?bewijs",
+                Pattern.CASE_INSENSITIVE)
+        )),
 
         QUESTIONS(ElementFeatureFunction.matchesNormalized(Pattern.compile("(de )?(voor)?vragen",
-                Pattern.CASE_INSENSITIVE
-                )
+                Pattern.CASE_INSENSITIVE)
         )),
         LAWS_APPLICABLE(ElementFeatureFunction.matchesNormalized(Pattern.compile("((de|het) )?" +
                         "((toepass(elijke?(heid)?|ing)|toegepaste|relevanti?e) )?" +
-                        "( van)?((de|het) )?" +
+                        "(van )?((de|het) )?" +
                         "( juridische?)?" +
                         "(juridische?|literatuur|wet)s?((telijke?)? ?(voorschrift|kader|bepaling|artikel)(en)?)?" +
                         "(en regelgeving)?",
@@ -428,10 +476,10 @@ public class TitlePatterns {
 
 
         PROCEEDINGS(ElementFeatureFunction.matchesNormalized(Pattern.compile(
-                "(i{0,3}v?i{0,3} ?)?" +
-                        "(((de|het) )?verloop van )?" +
-                        "((de|het) )?" +
-                        "((pre)?judici[eë]le )?" +
+                "(?:i{0,3}v?i{0,3} ?)?" +
+                        "(?:(?:(?:de|het) )?verloop van )?" +
+                        "(?:(?:de|het) )?" +
+                        "(?:(?:pre)?judici[eë]le )?" +
                         /**
                          * "feiten en procesverloop" 250,
                          * "feiten en het procesverloop" 121,
@@ -446,12 +494,19 @@ public class TitlePatterns {
                          * "verdere procesverloop in hoger beroep" 16,
                          * "voorgeschiedenis en het procesverloop" 111
                          */
-                        "((((voor)?geschiedenis)|((inleiding )?feiten)) en )?" +
-                        "(" + "(de|het) ?)?" +
-                        "(" + "(((verdere?|voortgezet(te)?) )?" +
-                        "proce(s|dure)(gang|verloop)?" +
+                        "(?:(?:(?:(?:voor)?geschiedenis)|(?:(?:inleiding ?)?feiten)) en )?" +
+                        "(?:(?:de|het) ?)?" +
+                        "(?:" +
+
+                        "(?:" +
+                        "(?:(?:verdere?|voortgezet(te)?) )?" +
+
+                        "proce(?:s|dure)(?:gang|verloop)?" +
+
                         "(( [ei]n)( de)?( {1,3}\\b\\p{L}{1,25}\\b){0,2}\\s{0,3})?" +
-                        "(en vaststaande feiten)?)" +
+                        "( en vaststaande feiten)?" +
+                        ")" +
+
                         "|((voor)?geschiedenis)" +
                         "|proce(s|dure)" +
                         /**
@@ -484,7 +539,9 @@ public class TitlePatterns {
         }
 
         public static boolean matchesAny(List<TokenTreeLeaf> tokens, int i) {
-            for (TitlesNormalizedMatchesHighConf p : values()) if (p.apply(tokens, i)) return true;
+            for (TitlesNormalizedMatchesHighConf p : values())
+                if (p.apply(tokens, i))
+                    return true;
             return false;
         }
 
@@ -530,7 +587,7 @@ public class TitlePatterns {
                         "(( waarvan)?( tot)? herziening(( is)? gevraagd( is)?)?)?" +
                         "( (alsmede|en)( het)?( verweer)?( {1,3}\\b\\p{L}{1,25}\\b){0,4})?"
                         + "( na \\p{L}{1,25})?"
-                        + "( {1,5}.{0,55})?"
+                        + "( {1,5}.{0,80})?"
                         // actually we should check for \\(, \\) but parentheses are lost after normalization
                         + "( .{1,3})?",
                 Pattern.CASE_INSENSITIVE))),
@@ -559,8 +616,6 @@ public class TitlePatterns {
 
         )), OVERIG(ElementFeatureFunction.matchesNormalized(Pattern.compile("((de|het) )?overige?( overwegingen)?", Pattern.CASE_INSENSITIVE)
 
-        )), STRAF(ElementFeatureFunction.matchesNormalized(Pattern.compile("((de|het) )?straf(fen)?", Pattern.CASE_INSENSITIVE)
-
         )),
 
         PUNISHMENT(ElementFeatureFunction.matchesNormalized(Pattern.compile("(kwalificatie en )?((de|het) )?" +
@@ -586,15 +641,15 @@ public class TitlePatterns {
                         "((het )?geschil (alsmede )?)?" +
                         "(" +
                         "((de|het) )?(standpunt|stelling)(en)? (en conclusies? )?(?:van )?)?" +
-                        "((de|het) )?(benadeelde )?(verdediging|partij|officier van justitie)(en)?" +
+                        "((de|het) )?(benadeelde )?(verdediging|partij|verzoek(st)?ers?|officier(?:en)? van justitie)(en)?" +
                         "(en ((de|het) )?(benadeelde )?(verdediging|partij|officier van justitie)(en)?)?" +
                         "( in( hoger)? beroep)?" +
                         "( en (de )?schadevergoedings?maatregel(en)?)?",
                 Pattern.CASE_INSENSITIVE)
         )),
-        STANDPUNT(ElementFeatureFunction.matchesNormalized(Pattern.compile("(het geschil )?((de|het) )?(standpunt|griev)(en)?" +
-                        "( van( (de|het))?(\\s{1,3}\\p{L}{1,25}){1,3})?" +
-                        "( en( van)?( (de|het))?(\\s{1,3}\\p{L}{1,25}){1,3})?",
+        STANDPUNT_LOW_CONF(ElementFeatureFunction.matchesNormalized(Pattern.compile("(het geschil )?((de|het) )?(standpunt|griev)(en)?" +
+                        "( van( (de|het))?( {1,3}\\p{L}{1,25}){1,5})?" +
+                        "( en( van)?( (de|het))?( {1,3}\\p{L}{1,25}){1,5})?",
                 Pattern.CASE_INSENSITIVE)
         )),
         DEMAND(ElementFeatureFunction.matchesNormalized(Pattern.compile(
@@ -605,29 +660,16 @@ public class TitlePatterns {
                         "( van)?( de)?( (benadeelden?|officier(s|en)? van justitie))?",
                 Pattern.CASE_INSENSITIVE))),
 
-        RECEPTIVITY(ElementFeatureFunction.matchesNormalized(Pattern.compile("(de )?ontvankelijkheid" +
-                        "( van( (de|het))? )?" +
-                        "([\\p{L}]|openbaar ministerie|officier van justitie)?",
-                Pattern.CASE_INSENSITIVE))),
-
-
-        PROVE(ElementFeatureFunction.matchesNormalized(Pattern.compile("((de )?kwalificatie van )?" +
-                "((het|de) )?" +
-                "bew(ijs|ezen)(verklaa?r(de|ing)|middel|voering|aanbod)?(en)?( en bewijsvoering)?", Pattern.CASE_INSENSITIVE)
-
-        )),
         DAMAGE(ElementFeatureFunction.matchesNormalized(Pattern.compile(
                 "(ten aanzien van )?" +
                         "((de|het) )?" +
                         "(immateri[ëe]le )?" +
-                        "(schade(vergoeding)?|benadeelde partij)" +
+                        "(schade(vergoedings?)?maatregel(?:en)?|benadeelde partij)" +
                         "( (van|voor) (de )?benadeelden?)?" +
                         "(en (de )?schadevergoedings?maatregel)?",
                 Pattern.CASE_INSENSITIVE)
         )),
-        QUALIFICATION(
-                ElementFeatureFunction.matchesNormalized(Pattern.compile("(de )?kwalificaties?",
-                        Pattern.CASE_INSENSITIVE))),
+
 
         VORDERING(ElementFeatureFunction.matchesNormalized(Pattern.compile(
                 "(ten aanzien van )?" +
@@ -644,9 +686,7 @@ public class TitlePatterns {
                 "((de|het) )?(in ?beslag ?genomen )?goed(eren)?",
                 Pattern.CASE_INSENSITIVE)
         )),
-        LEGAL_MEANS(ElementFeatureFunction.matchesNormalized(Pattern.compile("((de|het) )?(be(spreking|handeling) van )?" +
-                "((de|het) )?" +
-                "(cassatie|rechts?)?middel(en)?"))),
+
 
         RECONVENTION(ElementFeatureFunction.matchesNormalized(Pattern.compile("(in )?(re)?conventie( en (in )?(re)?conventie)?",
                 Pattern.CASE_INSENSITIVE)));

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:eu="http://publications.europa.eu/celex/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:tr="http://tuchtrecht.overheid.nl/">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:CRVB:2010:BN5996</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-27T07:04:52</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-05</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">BN5996</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Centrale_Raad_van_Beroep" scheme="overheid.RechterlijkeMacht">Centrale Raad van Beroep</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">2010-08-26</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">10-502 WUBO</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#eersteAanlegMeervoudig">Eerste aanleg - meervoudig</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:spatial rdfs:label="Zittingsplaats">Utrecht</dcterms:spatial>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht">Bestuursrecht</dcterms:subject>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht_socialezekerheidsrecht">Bestuursrecht; Socialezekerheidsrecht</dcterms:subject>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CRVB:2010:BN5996">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CRVB:2010:BN5996</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-05T06:53:18</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2010-09-06</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:CRVB:2010:BN5996 Centrale Raad van Beroep , 26-08-2010 / 10-502 WUBO</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie id="ECLI:NL:CRVB:2010:BN5996:INH" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <para>Appellant heeft in bezwaar geen redenen aangevoerd op grond waarvan de termijnoverschrijding verschoonbaar kan worden geacht. Ook in beroep heeft appellant dergelijke redenen niet naar voren gebracht.</para>
+    </inhoudsindicatie>
+  <uitspraak id="ECLI:NL:CRVB:2010:BN5996:DOC" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <para><potentialnr manualAnnotation="TEXT_BLOCK">10/</potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">502 </potentialnr><text manualAnnotation="TEXT_BLOCK">WUBO</text></para>
+      <para/>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Centrale Raad van Beroep</para>
+      <para/>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Meervoudige kamer</para>
+      <para/>
+      <para/>
+      <para><potentialnr manualAnnotation="TEXT_BLOCK">U </potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">I </potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">T </potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">S </potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">P </potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">R </potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">A </potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">A </potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">K</potentialnr></para>
+      <para/>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">in het geding tussen:</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">[appellant], wonende te [woonplaats] (hierna: appellant),</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">en</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">de Raadskamer WUBO van de Pensioen- en Uitkeringsraad (hierna: verweerster)</para>
+      <para/>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Datum uitspraak: 26 augustus 2010</para>
+      <para/>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">I. </potentialnr><text manualAnnotation="SECTION_TITLE">PROCESVERLOOP</text></para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Appellant heeft beroep ingesteld tegen het door verweerster onder dagtekening 29 december 2009, kenmerk BZ 9453, JZ/O90/2009, ten aanzien van hem genomen besluit (verder: bestreden besluit).</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Verweerster heeft een verweerschrift ingediend.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Het onderzoek ter zitting heeft plaatsgevonden op 15 juli 2010. Daar is appellant niet verschenen. Verweerster heeft zich laten vertegenwoordigen door mr. T.R.A. Dircke, werkzaam bij de Pensioen- en Uitkeringsraad.</para>
+      <para/>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">II. </potentialnr><text manualAnnotation="SECTION_TITLE">OVERWEGINGEN</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">1. </potentialnr><text manualAnnotation="TEXT_BLOCK">Op grond van de gedingstukken en het verhandelde ter zitting gaat de Raad uit van de volgende hier van belang zijnde feiten en omstandigheden. </text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">1.1. </potentialnr><text manualAnnotation="TEXT_BLOCK">Bij besluit van 28 mei 2009 heeft verweerster afwijzend beslist op een verzoek van appellant om hem op grond van de Wet uitkeringen burger-oorlogsslachtoffers 1940-1945 de toeslag als bedoeld in artikel 19 van die wet toe te kennen.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">1.2. </potentialnr><text manualAnnotation="TEXT_BLOCK">Tegen dat besluit heeft appellant bezwaar gemaakt bij schrijven van 9 september 2009, dat blijkens de gedingstukken op 11 september 2009 door verweerster is ontvangen.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">1.3. </potentialnr><text manualAnnotation="TEXT_BLOCK">Bij het bestreden besluit heeft verweerster het bezwaar niet-ontvankelijk verklaard wegens overschrijding van de op grond van artikel 6:7 van de Algemene wet bestuursrecht (Awb) geldende termijn voor het indienen van een bezwaarschrift. In dat verband is overwogen dat appellant geen omstandigheid heeft aangevoerd die de termijnoverschrijding kan verontschuldigen.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2. </potentialnr><text manualAnnotation="TEXT_BLOCK">Ter beantwoording staat de vraag of het bestreden besluit, gelet op hetgeen in beroep is aangevoerd, in rechte kan standhouden. De Raad overweegt als volgt.</text></para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">2.1. </potentialnr><text manualAnnotation="TEXT_BLOCK">Ingevolge artikel 6:7 van de Awb bedraagt de termijn voor het indienen van een bezwaarschrift zes weken. Appellant heeft eerder, namelijk op 9 juni 2009, een brief aan verweerster gericht waarin hij bezwaar heeft gemaakt tegen het niet tijdig nemen van een beslissing op zijn aanvraag. Daarop heeft verweerster aan appellant bericht dat op 28 mei 2009 al een besluit op appellants aanvraag was genomen en dat hij binnen zes weken na 28 mei 2009 bezwaar kon maken tegen dat besluit. Appellant heeft vervolgens eerst op 9 september 2009 bezwaar gemaakt tegen het besluit van 28 mei 2009. Dat bezwaar was te laat, omdat het niet binnen zes weken na 28 mei 2009 is gemaakt.</text></para>
+        <para manualAnnotation="TEXT_BLOCK">Op grond van artikel 6:11 van de Awb blijft ten aanzien van een na afloop van de termijn ingediend bezwaarschrift niet-ontvankelijkverklaring op grond daarvan achterwege indien redelijkerwijs niet kan worden geoordeeld dat de indiener in verzuim is geweest.</para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.2. </potentialnr><text manualAnnotation="TEXT_BLOCK">De termijnen voor het maken van bezwaar en het instellen van beroep zijn fatale termijnen. Dit betekent dat bij overschrijding van die termijnen een niet-ontvankelijkverklaring dient te worden uitgesproken behalve als blijkt van een aanvaardbare reden voor verschoonbaarheid als bedoeld in artikel 6:11 van de Awb.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.3. </potentialnr><text manualAnnotation="TEXT_BLOCK">Op grond van de beschikbare gegevens is de Raad van oordeel dat verweerster terecht geen aanleiding heeft gezien om een niet-ontvankelijkverklaring met toepassing van artikel 6:11 van de Awb achterwege te laten. Hiertoe overweegt de Raad dat appellant in bezwaar geen redenen heeft aangevoerd op grond waarvan de termijnoverschrijding verschoonbaar kan worden geacht. Ook in beroep heeft appellant dergelijke redenen niet naar voren gebracht.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">3. </potentialnr><text manualAnnotation="TEXT_BLOCK">Het voorgaande brengt de Raad tot de slotsom dat het bestreden besluit in rechte kan standhouden en het ingestelde beroep ongegrond dient te worden verklaard.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4. </potentialnr><text manualAnnotation="TEXT_BLOCK">De Raad acht tot slot geen termen aanwezig om toepassing te geven aan het bepaalde in artikel 8:75 van de Awb inzake een vergoeding van proceskosten.</text></para>
+      <para/>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">III. </potentialnr><text manualAnnotation="SECTION_TITLE">BESLISSING</text></para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">De Centrale Raad van Beroep; </para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Recht doende:</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Verklaart het beroep ongegrond.</para>
+      <para/>
+      <para> </para>
+      <para manualAnnotation="TEXT_BLOCK">Deze uitspraak is gedaan door A. Beuker-Tilstra als voorzitter en G.L.M.J. Stevens en A.J. Schaap als leden, in tegenwoordigheid van P.W.J. Hospel als griffier. De beslissing is uitgesproken in het openbaar op 26 augustus 2010.</para>
+      <para/>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">(get.) A. Beuker-Tilstra.</para>
+      <para/>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">(get.) P.W.J. Hospel.</para>
+      <para/>
+      <para/>
+      <para/>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">HD</para>
+    </uitspraak>
+</open-rechtspraak>

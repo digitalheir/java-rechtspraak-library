@@ -4,8 +4,13 @@ import cc.mallet.types.Token;
 import org.leibnizcenter.rechtspraak.features.Features;
 import org.leibnizcenter.rechtspraak.features.elementpatterns.interfaces.ElementFeatureFunction;
 import org.leibnizcenter.rechtspraak.features.elementpatterns.interfaces.NamedElementFeatureFunction;
-import org.leibnizcenter.rechtspraak.features.textpatterns.GeneralTextPattern;
+import org.leibnizcenter.rechtspraak.features.textpatterns.GeneralTextFeature;
 import org.leibnizcenter.rechtspraak.features.textpatterns.TitlePatterns;
+import org.leibnizcenter.rechtspraak.manualannotation.DeterministicTagger;
+import org.leibnizcenter.rechtspraak.tokens.Label;
+import org.leibnizcenter.rechtspraak.tokens.numbering.interfaces.AlphabeticNumbering;
+import org.leibnizcenter.rechtspraak.tokens.text.IgnoreElement;
+import org.leibnizcenter.rechtspraak.tokens.text.TextElement;
 import org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf;
 import org.leibnizcenter.rechtspraak.tokens.numbering.Numbering;
 import org.leibnizcenter.rechtspraak.tokens.numbering.interfaces.NumberingNumber;
@@ -31,6 +36,33 @@ public enum ElementFeature implements NamedElementFeatureFunction {
     HAS_5_WORDS((tokens, ix) -> tokens.get(ix).words.length == 5),
     HAS_BETWEEN_5_AND_10_WORDS((tokens, ix) -> tokens.get(ix).words.length > 5 && tokens.get(ix).words.length <= 10),
     HAS_MORE_THAN_10_WORDS((tokens, ix) -> tokens.get(ix).words.length > 10),
+
+    PRECEDED_BY_D_NUMBERING_gronden_van_het_hoger_beroep((tokens, ix) -> ix > 0
+            && tokens.get(ix).getNormalizedText().endsWith("gronden van het hoger beroep")
+            && Numbering.isAlphabetic(tokens.get(ix - 1))
+            && ((AlphabeticNumbering) ((Numbering) tokens.get(ix - 1)).getNumbering()).getCharacter() == 'd'),
+
+    TEXT_PRECEDED_BY_NUMBERING((tokens, ix) -> ix > 0
+            && tokens.get(ix) instanceof TextElement && tokens.get(ix - 1) instanceof Numbering),
+
+    HAS_1_WORD_BETWEEN_BRACKETS((tokens, ix) -> tokens.get(ix).wordsBeforeOpeningBracket.length == 1),
+    HAS_2_WORDS_BETWEEN_BRACKETS((tokens, ix) -> tokens.get(ix).wordsBeforeOpeningBracket.length == 2),
+    HAS_3_WORDS_BETWEEN_BRACKETS((tokens, ix) -> tokens.get(ix).wordsBeforeOpeningBracket.length == 3),
+    HAS_4_WORDS_BETWEEN_BRACKETS((tokens, ix) -> tokens.get(ix).wordsBeforeOpeningBracket.length == 4),
+    HAS_5_WORDS_BETWEEN_BRACKETS((tokens, ix) -> tokens.get(ix).wordsBeforeOpeningBracket.length == 5),
+    HAS_BETWEEN_5_AND_10_WORDS_BETWEEN_BRACKETS((tokens, ix) -> tokens.get(ix).wordsBeforeOpeningBracket.length > 5 && tokens.get(ix).wordsBeforeOpeningBracket.length <= 10),
+    HAS_MORE_THAN_10_WORDS_BETWEEN_BRACKETS((tokens, ix) -> tokens.get(ix).wordsBeforeOpeningBracket.length > 10),
+
+    FOLLOWED_BY_TEXT_W_MORE_THAN_5_LETTERS((tokens, ix) -> tokens.size() > ix + 1 && GeneralTextFeature.MORE_THAN_5_LETTERS.apply(tokens, ix + 1)),
+    IMMEDIATELY_FOLLOWED_BY_INLINE_TEXT((tokens, ix) -> tokens.size() > ix + 1 && GeneralTextFeature.START_W_LOWER_CASE_LETTER.apply(tokens, ix + 1)),
+
+    FOLLOWED_OR_PRECEDED_BY_INZAKE((tokens, ix) -> followedBy(tokens, ix, Regex.INZAKE) || precededBy(tokens, ix, Regex.INZAKE)),
+    FOLLOWED_OR_PRECEDED_BY_ENTEGENCONTRA((tokens, ix) -> followedBy(tokens, ix, Regex.EN_VS_CONTRA) || precededBy(tokens, ix, Regex.EN_VS_CONTRA)),
+
+    NOT_SURROUNDED_BY_TEXT_BLOCKS((tokens, ix) ->
+            (0 == ix || !TextElement.is(tokens, ix - 1))
+                    && (tokens.size() == ix + 1 || !TextElement.is(tokens, ix + 1))
+    ),
 
     //
     // Often seen in header text (*.info)
@@ -60,11 +92,11 @@ public enum ElementFeature implements NamedElementFeatureFunction {
     START_W_DATUM(ElementFeatureFunction.find(Regex.START_W_DATUM)),
     END_W_KAMER(ElementFeatureFunction.find(Regex.END_W_KAMER)),
     END_W_ROLE(ElementFeatureFunction.find(Regex.END_W_ROLE)),
-    CONTAINS_REF_TO_PERSON(GeneralTextPattern::containsRefToPersonage),
-    CONTAINS_REF_TO_WOONPLAATS(GeneralTextPattern::containsRefToWoonplaats),
-    CONTAINS_DATE(GeneralTextPattern::containsDate),
-    CONTAINS_BRACKETED_TEXT(GeneralTextPattern::containsBracketedText),
-    CONTAINS_LIKELY_ZAAKNR(GeneralTextPattern::containsLikelyZaaknr),
+    CONTAINS_REF_TO_PERSON(GeneralTextFeature::containsRefToPersonage),
+    CONTAINS_REF_TO_WOONPLAATS(GeneralTextFeature::containsRefToWoonplaats),
+    CONTAINS_DATE(GeneralTextFeature::containsDate),
+    CONTAINS_BRACKETED_TEXT(GeneralTextFeature::containsBracketedText),
+    CONTAINS_LIKELY_ZAAKNR(GeneralTextFeature::containsLikelyZaaknr),
 
 
     /**
@@ -75,6 +107,11 @@ public enum ElementFeature implements NamedElementFeatureFunction {
             Pattern.CASE_INSENSITIVE)
     )
     ),
+
+    TENUITVOERLEGGING(((tokens, ix) -> tokens.get(ix).getNormalizedText().startsWith("tenuitvoerlegging")
+            && tokens.get(ix).words.length < 15
+            && tokens.get(ix).wordsBeforeOpeningBracket.length < 5
+    )),
 
     MATCHES_DE_RECHTBANK(ElementFeatureFunction.matches(Regex.DE_RECHTBANK)),
     MATCHES_EN_VS_CONTRA(ElementFeatureFunction.matches(Regex.EN_VS_CONTRA)),
@@ -127,8 +164,11 @@ public enum ElementFeature implements NamedElementFeatureFunction {
 
     IGNORE_NODE((ElementFeature::ignoreNode)),
 
-//    WITHIN_FIRST_5_BLOCKS((tokens, ix) -> ix < 5),
-//    WITHIN_FIRST_10_BLOCKS((tokens, ix) -> ix < 10),
+    WITHIN_FIRST_5_BLOCKS((tokens, ix) -> ix < 5),
+    WITHIN_FIRST_10_BLOCKS((tokens, ix) -> ix < 10),
+    WITHIN_FIRST_15_BLOCKS((tokens, ix) -> ix < 15),
+    WITHIN_FIRST_20_BLOCKS((tokens, ix) -> ix < 20),
+
 //    OVER_HALF((tokens, ix) -> (ix > (tokens.size() / 2))),
 
     // VERY_PROBABLE_SECTION(ElementFeature::), //TODO
@@ -145,7 +185,6 @@ public enum ElementFeature implements NamedElementFeatureFunction {
     /**
      * Whether the element starts with 1 or Procesverloop
      *
-     * @param rechtspraakElement
      * @return Whether this element is very likely to be the first title in the sequence
      */
     isVeryLikelyFirstTitle((tokens, ix) -> {
@@ -154,16 +193,87 @@ public enum ElementFeature implements NamedElementFeatureFunction {
                 && ((Numbering) prevToken).getNumbering().isFirstNumbering())
                 || TitlePatterns.TitlesNormalizedMatchesHighConf.PROCEEDINGS.apply(tokens, ix);
     }),
-
+    UITSPRAAK_WITHIN_10_BLOCKS((tokens, ix) -> ix < 10
+            && tokens.get(ix).getNormalizedText().equals("uitspraak")),
     PREV_END_W_QUOTE((ElementFeatureFunction)
             (tokens, ix) -> ix > 0 && Quote.endsWithQuote(tokens.get(ix - 1).getTextContent())),
     PREV_END_W_DBL_QUOTE((ElementFeatureFunction)
             (tokens, ix) -> ix > 0 && Quote.endsWithDoubleQuote(tokens.get(ix - 1).getTextContent())),
     PREV_END_W_COLON((ElementFeatureFunction)
-            (tokens, ix) -> ix > 0 && GeneralTextPattern.END_W_COLON.apply(tokens.get(ix - 1).getTextContent())),
+            (tokens, ix) -> ix > 0 && GeneralTextFeature.END_W_COLON.apply(tokens.get(ix - 1).getTextContent())),
     PREV_END_W_SEMICOLON((ElementFeatureFunction)
-            (tokens, ix) -> ix > 0 && GeneralTextPattern.END_W_SEMICOLON.apply(tokens.get(ix - 1).getTextContent()));
+            (tokens, ix) -> ix > 0 && GeneralTextFeature.END_W_SEMICOLON.apply(tokens.get(ix - 1).getTextContent())),
+    matchesHighConfTitle((tokens, ix) -> Features.matchesAny(tokens, ix,
+            (ElementFeatureFunction[]) TitlePatterns.TitlesNormalizedMatchesHighConf.values())
+    ),
 
+    matchesLowConfTitle((tokens, ix) -> Features.matchesAny(tokens, ix,
+            (ElementFeatureFunction[]) TitlePatterns.TitlesNormalizedMatchesLowConf.values())),
+
+    likelyNotTitle((tokens, ix) -> ElementFeature.WITHIN_FIRST_15_BLOCKS.apply(tokens, ix)
+            || GeneralTextFeature.CONTAINS_NON_LETTER.apply(tokens, ix)
+            || GeneralTextFeature.CONTAINS_SQUARE_BRACKETS.apply(tokens, ix)
+            || GeneralTextFeature.START_W_NON_LETTER.apply(tokens, ix)
+            || ElementFeature.UITSPRAAK_WITHIN_10_BLOCKS.apply(tokens, ix)
+            || ElementFeature.IMMEDIATELY_FOLLOWED_BY_INLINE_TEXT.apply(tokens, ix)),
+//                || KnownSurnamesNl.containsAnyName.apply(tokens, ix)
+
+    matchesLowConfTitleButLooksLikeATitleSomewhat((tokens, ix) ->
+            !likelyNotTitle.apply(tokens, ix) &&
+                    (
+                            GeneralTextFeature.LOOKS_LIKE_UPPERCASE_TITLE.apply(tokens, ix)
+                                    || ElementFeature.hasEmphasis(tokens, ix)
+                                    || GeneralTextFeature.ENDS_WITH_LETTER_OR_NUMBER_OR_BRACKET.apply(tokens, ix)
+                    )
+                    && (
+                    matchesLowConfTitle.apply(tokens, ix)
+                            || (
+                            ElementFeature.NOT_SURROUNDED_BY_TEXT_BLOCKS.apply(tokens, ix)
+                                    && GeneralTextFeature.MORE_THAN_5_LETTERS.apply(tokens, ix)
+                                    && tokens.get(ix).wordsBeforeOpeningBracket.length <= 5
+                                    && tokens.get(ix).words.length <= 15
+                    )
+
+            )),
+    isProbablyNumbering((tokens, ix) -> Numbering.is(tokens.get(ix))
+            && ((Numbering) tokens.get(ix)).isPlausibleNumbering
+            && !NumberingFeature.IS_TAINTED_BY_IMPLAUSIBLE_SIBLING_NR.apply(tokens, ix)),
+    dontTryToLabel((tokens, ix) ->
+            IgnoreElement.dontTryToLabel(tokens.get(ix).getNodeName())),
+    probablySectionTitle((tokens, ix) ->
+            !(
+                    ElementFeature.MATCHES_EN_VS_CONTRA.apply(tokens, ix)
+                            || ElementFeature.MATCHES_INZAKE.apply(tokens, ix)
+                            || ElementFeature.FOLLOWED_OR_PRECEDED_BY_ENTEGENCONTRA.apply(tokens, ix)
+                            || ElementFeature.FOLLOWED_OR_PRECEDED_BY_INZAKE.apply(tokens, ix)
+                            || ElementFeature.PRECEDED_BY_D_NUMBERING_gronden_van_het_hoger_beroep.apply(tokens, ix)
+                            || GeneralTextFeature.END_W_BV.apply(tokens, ix)
+            )
+                    && (matchesHighConfTitle.apply(tokens, ix)
+                    || matchesLowConfTitleButLooksLikeATitleSomewhat.apply(tokens, ix)
+            )),
+    probablyTextBlock((tokens, ix) -> DeterministicTagger.firstPass(tokens, ix).equals(Label.TEXT_BLOCK));
+
+
+    private static boolean followedBy(List<TokenTreeLeaf> tokens, int ix, Pattern p) {
+        for (int i = ix + 1; i < tokens.size(); i++) {
+            String txt = tokens.get(i).getNormalizedText();
+            if (txt.length() > 0 && !Regex.CONSECUTIVE_WHITESPACE.matcher(txt).matches()) {
+                return p.matcher(txt).matches();
+            }
+        }
+        return false;
+    }
+
+    private static boolean precededBy(List<TokenTreeLeaf> tokens, int ix, Pattern p) {
+        for (int i = (ix - 1); i >= 0; i--) {
+            String txt = tokens.get(i).getNormalizedText();
+            if (txt.length() > 0 && !Regex.CONSECUTIVE_WHITESPACE.matcher(txt).matches()) {
+                return p.matcher(txt).matches();
+            }
+        }
+        return false;
+    }
 
     /**
      * Whether this element's only substantial text is wrapped in an <code>emphasis</code> element
@@ -177,7 +287,10 @@ public enum ElementFeature implements NamedElementFeatureFunction {
     }
 
     public static Element getEmphasis(List<TokenTreeLeaf> tokens, int i) {
-        NodeList children = tokens.get(i).getChildNodes();
+        TokenTreeLeaf e = tokens.get(i);
+        if (e.getNodeType() == Element.ELEMENT_NODE
+                && e.getNodeName().equals("emphasis")) return (Element) e;
+        NodeList children = e.getChildNodes();
         for (int j = 0; j < children.getLength(); j++) {
             Node child = children.item(j);
             switch (child.getNodeType()) {
@@ -210,7 +323,7 @@ public enum ElementFeature implements NamedElementFeatureFunction {
 
     private static boolean hasAdjacentNumberingBefore(List<TokenTreeLeaf> tokens, int ix) {
         Numbering current = (Numbering) tokens.get(ix);
-        for (int i = ix - 1; ix >= 0; i--) {
+        for (int i = ix - 1; i >= 0; i--) {
             TokenTreeLeaf earlier = tokens.get(i);
             if (earlier instanceof Numbering
                     && NumberingNumber.isSuccedentOf(current.getNumbering(), ((Numbering) earlier).getNumbering()))
@@ -221,7 +334,7 @@ public enum ElementFeature implements NamedElementFeatureFunction {
 
     private static boolean hasAdjacentNumberingAfter(List<TokenTreeLeaf> tokens, int ix) {
         Numbering current = (Numbering) tokens.get(ix);
-        for (int i = ix + 1; ix < tokens.size(); i++) {
+        for (int i = ix + 1; i < tokens.size(); i++) {
             TokenTreeLeaf later = tokens.get(i);
             if (later instanceof Numbering
                     && NumberingNumber.isSuccedentOf(((Numbering) later).getNumbering(), current.getNumbering()))
@@ -244,7 +357,9 @@ public enum ElementFeature implements NamedElementFeatureFunction {
 
     public static void setFeatures(Token t, List<TokenTreeLeaf> tokens, int ix) {
         TokenTreeLeaf token = tokens.get(ix);
+
         t.setFeatureValue("CLASS_" + token.getClass(), 1.0);
+
         Element emphasis = getEmphasis(tokens, ix);
         if (emphasis != null) {
             String role = emphasis.getAttribute("role");
@@ -261,6 +376,8 @@ public enum ElementFeature implements NamedElementFeatureFunction {
 //        if (sameEmphasisAsTwoBack) {
 //            t.setFeatureValue("CONTINUES_EMPHASIS_2", 1.0);
 //        }
+        } else {
+            t.setFeatureValue("NO_EMPH_", 1.0);
         }
 
         // Run through enum

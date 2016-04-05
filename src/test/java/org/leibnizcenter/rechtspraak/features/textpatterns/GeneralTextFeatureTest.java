@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 /**
  * Created by maarten on 1-4-16.
  */
-public class GeneralTextPatternTest {
+public class GeneralTextFeatureTest {
 //TODO
     @Test
     public void hasOnlyUppercaseLetters() throws Exception {

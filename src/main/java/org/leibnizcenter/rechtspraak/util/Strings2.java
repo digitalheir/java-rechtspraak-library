@@ -1,16 +1,16 @@
 package org.leibnizcenter.rechtspraak.util;
 
 import java.util.*;
+import java.util.function.Function;
 
 /**
  * Created by maarten on 31-3-16.
  */
 public class Strings2 {
-
-
     public static boolean lastCharIs(String s, char c) {
         return s.length() > 0 && s.charAt(s.length() - 1) == c;
     }
+
 
     public static boolean firstCharIs(String s, char c) {
         return s.length() > 0 && s.charAt(0) == c;
@@ -32,7 +32,11 @@ public class Strings2 {
     }
 
     public static int firstNonWhitespaceCharIsAny(String s, Collection<Character> chars) {
-        for (int i = 0; i < s.length(); i++) {
+        return firstNonWhitespaceCharIsAny(s, chars, 0);
+    }
+
+    public static int firstNonWhitespaceCharIsAny(String s, Collection<Character> chars, int from) {
+        for (int i = from; i < s.length(); i++) {
             char c = s.charAt(i);
             if (chars.contains(c)) {
                 return i;
@@ -41,5 +45,10 @@ public class Strings2 {
             }
         }
         return -1;
+    }
+
+    public static boolean hasAtLeastOneLetter(String s) {
+        for (int i = 0; i < s.length(); i++) if (Character.isLetter(s.charAt(i))) return true;
+        return false;
     }
 }

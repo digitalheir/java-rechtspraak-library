@@ -13,6 +13,7 @@ import java.util.Set;
 public class IgnoreElement extends RechtspraakElement {
     private static final Set<String> dontTokenize = Sets.newHashSet(
             "footnote",
+            "footnote-ref",
             "listitem",
             "link",
             "bridgehead",
@@ -49,4 +50,17 @@ public class IgnoreElement extends RechtspraakElement {
                 || nodeName.endsWith("object");
     }
 
+    public static boolean dontTryToLabel(String nodeName) {
+        return nodeName.endsWith("list")
+                || nodeName.endsWith("table")
+                || nodeName.endsWith("table")
+                || nodeName.startsWith("footnote")
+                || nodeName.endsWith("listitem")
+                || nodeName.endsWith("link")
+                || nodeName.endsWith("list")
+                || nodeName.endsWith("informaltable")
+                || nodeName.endsWith("table")
+                || nodeName.endsWith("mediaobject")
+                || nodeName.endsWith("object");
+    }
 }

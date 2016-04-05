@@ -7,15 +7,16 @@ import org.leibnizcenter.rechtspraak.tokens.LabeledToken;
 import org.leibnizcenter.rechtspraak.tokens.RechtspraakElement;
 import org.leibnizcenter.rechtspraak.tokens.numbering.ListMarking;
 import org.leibnizcenter.rechtspraak.tokens.numbering.Numbering;
-import org.leibnizcenter.rechtspraak.tokens.numbering.interfaces.AlphabeticNumbering;
 import org.leibnizcenter.rechtspraak.tokens.quote.Quote;
 import org.leibnizcenter.rechtspraak.tokens.text.Newline;
 import org.leibnizcenter.rechtspraak.tokens.text.TextElement;
 import org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf;
+import org.leibnizcenter.rechtspraak.util.Collections3;
 import org.leibnizcenter.rechtspraak.util.Regex;
 import org.leibnizcenter.rechtspraak.util.Xml;
 import org.leibnizcenter.rechtspraak.tokens.text.IgnoreElement;
 import org.w3c.dom.*;
+import sun.plugin.dom.exception.InvalidStateException;
 
 import java.security.InvalidParameterException;
 import java.util.ArrayList;
@@ -33,6 +34,7 @@ public class TokenTree implements TokenTreeVertex {
     private final Node element;
 
     private static final String TAG_SECTION = "section";
+    private static final java.lang.String TAG_LIST_MARKING = "listmarking";
     private static final String TAG_TITLE = "title";
     private static final String TAG_NR = "nr";
     private static final String TAG_TEXT = "text";
@@ -43,6 +45,8 @@ public class TokenTree implements TokenTreeVertex {
 
     private static final Pattern KNOWN_ELEMENTS = Pattern.compile("(itemized|ordered)list" +
             "|footnote" +
+            "|footnote-ref" +
+            "|listmarking" +
             "|listitem" +
             "|link" +
             "|" + TAG_POTENTIAL_NR +
@@ -64,27 +68,27 @@ public class TokenTree implements TokenTreeVertex {
         children = new ArrayList<>();
 
         // Make sure we have a reference to all children as they are now; the XML tree might change.
-        Node[] originalChildren = getChildren(root);
+        Node[] originalChildren = Xml.getChildren(root);
 
-            for (Node child : originalChildren) {
-                switch (child.getNodeType()) {
-                    case Node.TEXT_NODE:
-                        String text = child.getTextContent();
-                        if (text.length() != 0 && !Regex.CONSECUTIVE_WHITESPACE.matcher(text).matches()) {
-                            // Only process non-whitespace blocks of text
-                            children.add(fromTextNode((Text) child));
-                        }
-                        break;
-                    case Node.ELEMENT_NODE:
-                        children.add(fromElement((Element) child));
-                        break;
-                    case Node.PROCESSING_INSTRUCTION_NODE:
-                        children.add(fromProcessingInstruction((ProcessingInstruction) child));
-                        break;
-                    default:
-                        throw new IllegalStateException("Unknown node type found");
-                }
+        for (Node child : originalChildren) {
+            switch (child.getNodeType()) {
+                case Node.TEXT_NODE:
+                    String text = child.getTextContent();
+                    if (text.length() != 0 && !Regex.CONSECUTIVE_WHITESPACE.matcher(text).matches()) {
+                        // Only process non-whitespace blocks of text
+                        children.add(fromTextNode((Text) child));
+                    }
+                    break;
+                case Node.ELEMENT_NODE:
+                    children.add(fromElement((Element) child));
+                    break;
+                case Node.PROCESSING_INSTRUCTION_NODE:
+                    children.add(fromProcessingInstruction((ProcessingInstruction) child));
+                    break;
+                default:
+                    throw new IllegalStateException("Unknown node type found");
             }
+        }
     }
 
     public TokenTree(Node e, List<TokenTreeVertex> children) {
@@ -102,30 +106,23 @@ public class TokenTree implements TokenTreeVertex {
         }
     }
 
-    private static Node[] getChildren(Node root) {
-        NodeList children = root.getChildNodes();
-        Node[] originalChildren = new Node[children.getLength()];
-        for (int i = 0; i < children.getLength(); i++) {
-            originalChildren[i] = children.item(i);
-        }
-        return originalChildren;
-    }
-
-    public static List<LabeledToken> labelFromAnnotation(List<TokenTreeLeaf> l) {
+    public static List<Label> labelFromAnnotation(List<TokenTreeLeaf> l) {
         return l.stream()
                 .map(TokenTree::getFromAnnotation)
                 .collect(Collectors.toList());
     }
 
-    private static LabeledToken getFromAnnotation(TokenTreeLeaf el) {
+    private static Label getFromAnnotation(TokenTreeLeaf el) {
         // TODO inline label based on whether a text node follows element
         if (el instanceof RechtspraakElement) {
-            return new LabeledToken(
-                    el,
-                    Label.get(((RechtspraakElement) el).getAttribute("manualAnnotation"))
-            );
+            Label l = Label.fromString.get(((RechtspraakElement) el).getAttribute("manualAnnotation"));
+            if (l == null)
+                if (el instanceof ListMarking ||
+                        ((RechtspraakElement) el).getTagName().matches("quote|footnote\\-ref")) return Label.TEXT_BLOCK;
+                else throw new NullPointerException();
+            return l;
         } else if (el instanceof Newline) {
-            return new LabeledToken(el, Label.NEWLINE);
+            return Label.NEWLINE;
         } else {
             throw new IllegalStateException();
         }
@@ -182,26 +179,61 @@ public class TokenTree implements TokenTreeVertex {
                     return new Newline(e);
 
                 // If this is a node with a numbering, create a <potentialnumber/> in front
-                Text txt = getFirstTextChildOrBreakOnNr(e);
-                if (txt != null) {
-                    List<TokenTreeVertex> children = findNumberings(txt);
-                    if (children.size() > 0) {
-                        return new TokenTree(e, children);
-                    }
-                }
-//                if (hasElementsOrLinebreaksAsChildren(e)) {
-//                    return new TokenTree(e);
-//                } else {
-                return new TextElement(e);
-//                }
+                return fromPotentiallyMixed(e);
             case "nr":
             case "potentialnr":
                 return new Numbering(e);
+            case "listmarking":
+                return new TextElement(e);
             case "quote":
                 return new Quote(e);
             default:
                 if (IgnoreElement.dontTokenize(e.getTagName())) return new IgnoreElement(e);
                 return new TokenTree(e);
+        }
+    }
+
+    private static TokenTreeVertex fromPotentiallyMixed(Element e) {
+        Node[] children = Xml.getChildren(e);
+
+        ArrayList<TokenTreeVertex> tokenSiblings = new ArrayList<>(children.length);
+        for (int i = 0; i < children.length; i++) {
+            Node c = children[i];
+
+            ///////////////////////////
+            switch (c.getNodeType()) {
+                case Element.ELEMENT_NODE:
+                    Element childE = (Element) c;
+                    tokenSiblings.add(fromElement(childE));
+                    break;
+                case Element.TEXT_NODE:
+                    String text = c.getTextContent();
+
+                    // If we're not trailing or leading whitespace
+                    if (!((i == 0 || i == children.length - 1) && Regex.CONSECUTIVE_WHITESPACE.matcher(text).matches())) {
+                        List<TokenTreeVertex> numberings = findNumberings((Text) c);
+                        if (numberings.size() > 0) {
+                            tokenSiblings.addAll(numberings);
+                        } else {
+
+                            if (children.length == 1) return new TextElement(e);
+                            else tokenSiblings.add(new TextElement(Xml.wrapNodeInElement(c, TAG_TEXT)));
+                        }
+                    }
+                    break;
+                case Element.PROCESSING_INSTRUCTION_NODE:
+                    tokenSiblings.add(fromProcessingInstruction((ProcessingInstruction) c));
+                    break;
+                default:
+                    throw new IllegalStateException();
+            }
+            //////////////////////////////////////////////////////
+        }
+
+        if (tokenSiblings.size() > 0) {
+            return new TokenTree(e, tokenSiblings);
+        } else {
+            return new Newline(e);
         }
     }
 
@@ -217,9 +249,9 @@ public class TokenTree implements TokenTreeVertex {
 
         int listMarking = ListMarking.startsWithListMarkingAtChar(txt.getTextContent());
         if (listMarking > -1) {
-            Element element = Xml.wrapSubstringInElement(txt, listMarking, 1, TAG_POTENTIAL_NR);
+            Element element = Xml.wrapSubstringInElement(txt, 0, listMarking+1, TAG_LIST_MARKING);
             txt = (Text) element.getNextSibling();
-            children.add(new Numbering(element));
+            children.add(new ListMarking(element));
         }
 
         CharSequence textContent = txt.getTextContent();
@@ -237,35 +269,6 @@ public class TokenTree implements TokenTreeVertex {
             if (txt.getTextContent().length() > 0) children.add(new TextElement(Xml.wrapNodeInElement(txt, TAG_TEXT)));
         }
         return children;
-    }
-
-    private static Text getFirstTextChildOrBreakOnNr(Element root) {
-        NodeList children = root.getChildNodes();
-        for (int i = 0; i < children.getLength(); i++) {
-            Node c = children.item(i);
-            switch (c.getNodeType()) {
-                case Element.ELEMENT_NODE:
-                    Element element = (Element) c;
-                    if ((element).getTagName().equals(TAG_NR)) {
-                        return null;
-                    } else {
-                        Text result = getFirstTextChildOrBreakOnNr(element);
-                        if (result != null) return result;
-                    }
-                case Element.TEXT_NODE:
-                    String text = c.getTextContent();
-                    if (text.length() != 0 && !Regex.CONSECUTIVE_WHITESPACE.matcher(text).matches()) {
-                        return (Text) c;
-                    }
-                    break;
-                case Element.PROCESSING_INSTRUCTION_NODE:
-                    // Ignore
-                    break;
-                default:
-                    throw new IllegalStateException();
-            }
-        }
-        return null;
     }
 
     private static TokenTreeVertex fromTextNode(Text child) {
@@ -302,8 +305,9 @@ public class TokenTree implements TokenTreeVertex {
             if (list.get(i) instanceof Numbering) allNumberings.add(Maps.immutableEntry(i, (Numbering) list.get(i)));
         }
 
-        // Get all sequences of adjacent alphabetic numberings with the same terminals
-        setAdjacentAlphabeticNumbers(list);
+        // Get all sequences of adjacent numberings
+        setAdjacentNumbers(list);
+
         setSameProfileNumberingsPreAndSuccessors(allNumberings);
         setPlausiblePreAndSuccessors(allNumberings);
 
@@ -311,8 +315,15 @@ public class TokenTree implements TokenTreeVertex {
         for (int i = 0; i < list.size(); i++) {
             org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf element = list.get(i);
             if (element instanceof Numbering) {
-                ((Numbering) element).isPlausibleNumbering = !DeterministicTagger
+                boolean isImplausible = DeterministicTagger
                         .looksLikeNumberingButProbablyIsnt(list, i);
+                if (isImplausible) {
+                    for (SameKindOfNumbering p : SameKindOfNumbering.values()) {
+                        SameKindOfNumbering.List sequence = ((Numbering) element).getSequence(p);
+                        if (!Collections3.isNullOrEmpty(sequence)) sequence.taintByImplausibleNumbering();
+                    }
+                }
+                ((Numbering) element).isPlausibleNumbering = !isImplausible;
             }
         }
         return list;
@@ -332,15 +343,31 @@ public class TokenTree implements TokenTreeVertex {
         return list;
     }
 
-    private void setAdjacentAlphabeticNumbers(List<TokenTreeLeaf> list) {
-        NumberingProfile profile = null;
-        for (TokenTreeLeaf element : list) {
-            if (element instanceof Numbering && ((Numbering) element).getNumbering() instanceof AlphabeticNumbering) {
-                if (profile == null || !profile.fits(element)) profile = new NumberingProfile(((Numbering) element));
-                profile.addInstance((Numbering) element);
-                ((Numbering) element).setAlphabeticSequence(profile);
-            } else {
-                profile = null;
+    private void setAdjacentNumbers(List<TokenTreeLeaf> list) {
+        for (SameKindOfNumbering p : SameKindOfNumbering.values()) {
+            SameKindOfNumbering.List l = new SameKindOfNumbering.List(p);
+
+            for (int i = 1; i <= list.size(); i++) {
+                TokenTreeLeaf prev = list.get(i - 1);
+                if (i == list.size()) {
+                    if (l.size() > 0) {
+                        // Add last match
+                        l.add((Numbering) prev);
+                        ((Numbering) prev).setSequence(p, l);
+                    }
+                } else {
+                    TokenTreeLeaf token = list.get(i);
+
+                    if (p.test(prev, token)) {
+                        l.add((Numbering) prev);// We add 'token' in the next iteration
+                        ((Numbering) prev).setSequence(p, l);
+                    } else if (l.size() > 0) {
+                        // Add last match
+                        l.add((Numbering) prev);
+                        ((Numbering) prev).setSequence(p, l);
+                        l = new SameKindOfNumbering.List(p); // Start with fresh list
+                    }
+                }
             }
         }
     }
@@ -348,7 +375,7 @@ public class TokenTree implements TokenTreeVertex {
     public void setSameProfileNumberingsPreAndSuccessors(List<Map.Entry<Integer, Numbering>> allNumberings) {
         allNumberings.stream().forEach((numbering1) ->
                 allNumberings.stream()
-                        .filter(numbering2 -> NumberingProfile.isSameProfileSuccession(numbering1, numbering2))
+                        .filter(numbering2 -> SameKindOfNumbering.isSameProfileSuccession(numbering1, numbering2))
                         .forEach(numbering2 -> {
                             numbering1.getValue().addSameProfileSuccessor(numbering2);
                             numbering2.getValue().addSameProfilePredecessor(numbering1);

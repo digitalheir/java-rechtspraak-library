@@ -107,12 +107,14 @@ public class TokenList extends ArrayList<TokenTreeLeaf> {
                 File file = files[index];
                 files[index] = null; // Allow to be garbage collected
                 index++;
+                System.out.println(file.getAbsolutePath());
                 if (index % 1000 == 0) System.out.println("Cycled through " + index);
                 String ecli = getEcliFromFileName(file);
                 Document doc = getDoc(builder, file);
                 return parse(ecli, doc, Xml.getContentRoot(doc));
             } catch (SAXException | IOException e) {
-                throw new Error();
+                e.printStackTrace();
+                throw new Error(e);
             }
         }
 

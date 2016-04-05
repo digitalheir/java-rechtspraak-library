@@ -1,7 +1,9 @@
 package org.leibnizcenter.rechtspraak.tokens.numbering;
 
 import com.google.common.collect.Sets;
+import org.leibnizcenter.rechtspraak.tokens.RechtspraakElement;
 import org.leibnizcenter.rechtspraak.util.Strings2;
+import org.w3c.dom.Element;
 
 import java.util.Set;
 
@@ -11,7 +13,7 @@ import java.util.Set;
  * </p>
  * Created by maarten on 31-3-16.
  */
-public class ListMarking {
+public class ListMarking extends RechtspraakElement {
 
     /**
      * Sticks
@@ -59,7 +61,8 @@ public class ListMarking {
             '゠',    // U+30A0	&#12448;	katakana-hiragana double hyphen	in Japasene kana writing
             '᐀',    // U+1400	&#5120;	canadian syllabics hyphen	used in Canadian Aboriginal Syllabics
             '±',
-            '÷'
+            '÷',
+            '?' // Probably a unicode fail; see http://uitspraken.rechtspraak.nl/inziendocument?id=ECLI:NL:RBALM:2005:AU7924
     );
     public static Set<Character> ETC_LIST_MARKINGS = Sets.newHashSet(
             '›',    //8250	203A	&rsaquo;	SINGLE RIGHT-POINTING ANGLE QUOTATION MARK
@@ -104,20 +107,30 @@ public class ListMarking {
     );
 
     public static Set<Character> all =
-            Sets.intersection(VERTICAL_LIST_MARKINGS,
-                    Sets.intersection(CLASSIC_ROUND_LIST_MARKINGS,
-                            Sets.intersection(FANCY_LIST_MARKINGS, Sets.intersection(QUESTIONABLE_LIST_MARKINGS,
-                                    Sets.intersection(HORIZONTAL_LIST_MARKING, ETC_LIST_MARKINGS)
+            Sets.union(VERTICAL_LIST_MARKINGS,
+                    Sets.union(CLASSIC_ROUND_LIST_MARKINGS,
+                            Sets.union(FANCY_LIST_MARKINGS,
+                                    Sets.union(QUESTIONABLE_LIST_MARKINGS,
+                                            Sets.union(HORIZONTAL_LIST_MARKING, ETC_LIST_MARKINGS)
                                     )
                             )
                     )
             );
 
-    public static boolean startsWithListMarking(String s) {
-        return startsWithListMarkingAtChar(s) > -1;
+    public ListMarking(Element element) {
+        super(element);
     }
 
-    public static int startsWithListMarkingAtChar(String textContent) {
-        return Strings2.firstNonWhitespaceCharIsAny(textContent, all);
+    public static boolean startsWithListMarking(String s) {
+        int at = startsWithListMarkingAtChar(s);
+        return at > -1;
+    }
+
+    public static int startsWithListMarkingAtChar(String s) {
+        int at = Strings2.firstNonWhitespaceCharIsAny(s, all);
+        if (at > -1
+                && s.length() > at + 1
+                && !(Strings2.firstNonWhitespaceCharIsAny(s, all, at + 1) > -1)) return at;
+        else return -1;
     }
 }

@@ -3,16 +3,20 @@ package org.leibnizcenter.rechtspraak.tokens.text;
 import com.google.common.base.Strings;
 import org.leibnizcenter.rechtspraak.tokens.tokentree.TokenTreeVertex;
 import org.leibnizcenter.rechtspraak.util.Regex;
+import org.leibnizcenter.rechtspraak.util.Strings2;
 import org.w3c.dom.*;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Locale;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 /**
  * Created by maarten on 3-4-16.
  */
 public abstract class TokenTreeLeaf implements TokenTreeVertex, Node {
-    private static final String[] STRINGS = new String[]{};
+    private static final String[] ZERO_STRINGS = new String[]{};
     private static final String EMPTY_STRING = "";
     private static final String SPACE = " ";
 
@@ -22,12 +26,16 @@ public abstract class TokenTreeLeaf implements TokenTreeVertex, Node {
     private final String normalizedText;
     public final String[] words;
 
+    public String[] wordsBeforeOpeningBracket;
+
     public TokenTreeLeaf(Node n) {
         this.node = n;
         String textContent = n.getTextContent();
         this.textContent = textContent == null ? null : textContent.trim();
 
-        words = this.textContent == null ? STRINGS : Regex.CONSECUTIVE_WHITESPACE.split(textContent);
+        words = this.textContent == null ? ZERO_STRINGS : getWords(textContent);
+        wordsBeforeOpeningBracket = getWordsBeforeOpeningBracket(words);
+
         if (Strings.isNullOrEmpty(textContent)) {
             this.normalizedText = EMPTY_STRING;
         } else {
@@ -38,6 +46,29 @@ public abstract class TokenTreeLeaf implements TokenTreeVertex, Node {
                     .replaceAll(EMPTY_STRING)
                     .trim().toLowerCase(Locale.ENGLISH);
             this.normalizedText = normalizedText;
+        }
+    }
+
+    private static String[] getWords(String textContent) {
+        List<String> words = Arrays.stream(Regex.CONSECUTIVE_WHITESPACE.split(textContent))
+                .filter(s -> !(Strings.isNullOrEmpty(s)) && Strings2.hasAtLeastOneLetter(s))
+                .collect(Collectors.toList());
+        if (words.size() == 0) return ZERO_STRINGS;
+        return words.toArray(new String[words.size()]);
+    }
+
+    private static String[] getWordsBeforeOpeningBracket(String[] words) {
+        int bracketOpen = -1;
+        for (int i = 0; i < words.length; i++) {
+            if (Regex.BRACKET_OPEN.matcher(words[i]).find()) {
+                bracketOpen = i;
+            }
+        }
+        if (bracketOpen < 0) return words;
+        else {
+            String[] wordsBeforeOpeningBracket = new String[bracketOpen];
+            System.arraycopy(words, 0, wordsBeforeOpeningBracket, 0, wordsBeforeOpeningBracket.length);
+            return wordsBeforeOpeningBracket;
         }
     }
 

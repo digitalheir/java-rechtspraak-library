@@ -3,7 +3,7 @@ package org.leibnizcenter.rechtspraak.features;
 import org.junit.Test;
 import org.leibnizcenter.rechtspraak.features.elementpatterns.ElementFeature;
 import org.leibnizcenter.rechtspraak.features.elementpatterns.NumberingFeature;
-import org.leibnizcenter.rechtspraak.features.textpatterns.GeneralTextPattern;
+import org.leibnizcenter.rechtspraak.features.textpatterns.GeneralTextFeature;
 import org.leibnizcenter.rechtspraak.features.textpatterns.KnownSurnamesNl;
 import org.leibnizcenter.rechtspraak.features.textpatterns.TitlePatterns;
 
@@ -22,7 +22,7 @@ public class FeaturesTest {
 
         addNames(names, ElementFeature.values());
         addNames(names, NumberingFeature.values());
-        addNames(names, GeneralTextPattern.values());
+        addNames(names, GeneralTextFeature.values());
         addNames(names, KnownSurnamesNl.values());
         addNames(names, TitlePatterns.General.values());
         addNames(names, TitlePatterns.TitlesNormalizedMatchesLowConf.values());

@@ -1,5 +1,7 @@
 package org.leibnizcenter.rechtspraak.features.textpatterns;
 
+import com.google.common.collect.Sets;
+import com.google.common.escape.CharEscaper;
 import org.leibnizcenter.rechtspraak.features.elementpatterns.interfaces.NamedElementFeatureFunction;
 import org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf;
 import org.leibnizcenter.rechtspraak.tokens.numbering.ListMarking;
@@ -11,28 +13,56 @@ import org.leibnizcenter.rechtspraak.util.Strings2;
 
 import java.util.List;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 /**
  * Created by maarten on 31-3-16.
  */
-public enum GeneralTextPattern implements StringFeature, NamedElementFeatureFunction {
-    ENDS_WITH_NON_LETTER(s -> Regex.ENDS_WITH_NON_LETTER.matcher(s).find()),
-    ENDS_WITH_LETTER(s -> Regex.ENDS_WITH_LETTER.matcher(s).find()),
+public enum GeneralTextFeature implements StringFeature, NamedElementFeatureFunction {
+    ENDS_WITH_NON_LETTER_OR_NUMBER_OR_BRACKET(s -> Regex.ENDS_WITH_NON_ALPHANUMERIC_OR_BRACKET.matcher(s).find()),
+    ENDS_WITH_LETTER_OR_NUMBER_OR_BRACKET(s -> Regex.ENDS_WITH_ALPHANUMERIC_OR_BRACKET.matcher(s).find()),
+
+
+    MORE_THAN_5_LETTERS(moreThanNLetters(5)),
+    MORE_THAN_10_LETTERS(moreThanNLetters(10)),
+    MORE_THAN_20_LETTERS(moreThanNLetters(20)),
+    MORE_THAN_30_LETTERS(moreThanNLetters(30)),
+    MORE_THAN_50_LETTERS(moreThanNLetters(50)),
+    MORE_THAN_75_LETTERS(moreThanNLetters(75)),
+
     /**
      * Apply on trimmed text
+     * NOTE: won't work because all spaced letter are tokenised as potential nrs
      */
     IS_SPACED(s -> Regex.S_P_A_C_E_D.matcher(s).matches()),
     START_W_LOWER_CASE_LETTER(s -> Regex.START_W_LOWERCASE_LETTER.matcher(s.trim()).matches()),
     START_W_UPPER_CASE_LETTER(s -> Regex.START_W_UPPERCASE_LETTER.matcher(s.trim()).matches()),
-    IS_ALL_CAPS(GeneralTextPattern::hasOnlyUppercaseLetters),
+
+    IS_90_PERCENT_CAPS(GeneralTextFeature::has90PercentUppercaseLetters),
+
+    CONTAINS_SQUARE_BRACKETS((s) -> s.contains("[") || s.contains("]")),
+    CONTAINS_NON_LETTER((s) -> s.chars()
+            .filter(ch -> !(Character.isWhitespace(ch) || Character.isLetter(ch)))
+            .limit(1)
+            .toString()
+            .length() > 0
+    ),
+    START_W_NON_LETTER((s) -> Regex.START_W_NON_LETTER.matcher(s).find()),
+
     END_W_SEMICOLON(s -> Strings2.lastCharIs(s.trim(), ';')),
     END_W_COLON(s -> Strings2.lastCharIs(s.trim(), ':')),
+    END_W_BV(s -> Regex.END_W_BV.matcher(s).find()),
+
     START_W_LIST_MARKING(ListMarking::startsWithListMarking),
-    START_W_CIRCLE_LIST_MARKING(s -> ListMarking.CLASSIC_ROUND_LIST_MARKINGS.contains(s.trim().charAt(0))),
-    START_W_QUESTIONABLE_LIST_MARKING(s -> ListMarking.QUESTIONABLE_LIST_MARKINGS.contains(s.trim().charAt(0))),
-    START_W_HORIZONTAL_LIST_MARKING(s -> ListMarking.HORIZONTAL_LIST_MARKING.contains(s.trim().charAt(0))),
-    START_W_VERTICAL_LIST_MARKING(s -> ListMarking.VERTICAL_LIST_MARKINGS.contains(s.trim().charAt(0))),
+    START_W_CIRCLE_LIST_MARKING(s -> Strings2.firstNonWhitespaceCharIsAny(s, ListMarking.CLASSIC_ROUND_LIST_MARKINGS) > -1),
+    START_W_QUESTIONABLE_LIST_MARKING(s -> Strings2.firstNonWhitespaceCharIsAny(s, ListMarking.QUESTIONABLE_LIST_MARKINGS) > -1),
+    START_W_HORIZONTAL_LIST_MARKING(s -> Strings2.firstNonWhitespaceCharIsAny(s, ListMarking.HORIZONTAL_LIST_MARKING) > -1),
+    START_W_VERTICAL_LIST_MARKING(s -> Strings2.firstNonWhitespaceCharIsAny(s, ListMarking.VERTICAL_LIST_MARKINGS) > -1),
+
+    LOOKS_LIKE_UPPERCASE_TITLE(s -> IS_90_PERCENT_CAPS.apply(s) && MORE_THAN_5_LETTERS.apply(s)),
+
     ALL_NUMERIC(s -> Regex.ALL_DIGITS.matcher(s.trim()).matches()),
+
     END_W_QUOTE(Quote::endsWithQuote),
     END_W_QUOTE_STRICT(Quote::endsWithQuoteStrict),
     END_W_SINGLE_QUOTE(Quote::endsWithSingleQuote),
@@ -40,13 +70,31 @@ public enum GeneralTextPattern implements StringFeature, NamedElementFeatureFunc
     END_W_DOUBLE_QUOTE_STRICT(Quote::endsWithDoubleQuoteStrict),
     MULTIPLE_QUOTES(Quote::containsMultipleQuotes);
 
-    public static Boolean hasOnlyUppercaseLetters(String s) {
-        boolean hasAtLeastOneLetter = false;
+    private static Function<String, Boolean> moreThanNLetters(int i) {
+        return (s) -> {
+            int letterCount = 0;
+            for (char c : s.toCharArray()) if (Character.isLetter(c)) letterCount++;
+            return letterCount > i;
+        };
+    }
+
+    /**
+     * @param s
+     * @return If strings has more than 3 characters and most are uppercase
+     */
+    public static Boolean has90PercentUppercaseLetters(String s) {
+        int allLetters = 0;
+        int uppercase = 0;
         for (char c : s.toCharArray()) {
-            if (Character.isLetter(c) && !Character.isUpperCase(c)) return false;
-            if (!hasAtLeastOneLetter && Character.isLetter(c)) hasAtLeastOneLetter = true;
+            if (Character.isLetter(c)) {
+                allLetters++;
+                if (Character.isUpperCase(c)) uppercase++;
+            }
         }
-        return hasAtLeastOneLetter;
+        return
+                (allLetters > 3)
+                        && ((allLetters <= 10 && uppercase >= (allLetters - 1))
+                        || ((10.0 * uppercase) / (10.0 * allLetters) >= 0.9));
     }
 
     private final Function<String, Boolean> f;
@@ -63,7 +111,7 @@ public enum GeneralTextPattern implements StringFeature, NamedElementFeatureFunc
         return bool;
     }
 
-    GeneralTextPattern(Function<String, Boolean> f) {
+    GeneralTextFeature(Function<String, Boolean> f) {
         this.f = f;
     }
 
