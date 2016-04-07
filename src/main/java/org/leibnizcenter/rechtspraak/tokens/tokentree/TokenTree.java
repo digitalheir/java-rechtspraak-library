@@ -33,15 +33,11 @@ public class TokenTree implements TokenTreeVertex {
     private final List<TokenTreeVertex> children;
     private final Node element;
 
-    private static final String TAG_SECTION = "section";
-    private static final java.lang.String TAG_LIST_MARKING = "listmarking";
-    private static final String TAG_TITLE = "title";
-    private static final String TAG_NR = "nr";
-    private static final String TAG_TEXT = "text";
-    public static final String TAG_POTENTIAL_NR = "potentialnr";
-    private static final String TAG_TEXTGROUP = "textgroup";
-    private static final String TAG_PARA = "para";
-    private static final String TAG_QUOTE = "quote";
+    public static final String TAG_SECTION = "section";
+    public static final String TAG_TITLE = "title";
+    public static final String TAG_NR = "nr";
+    public static final String TAG_PARA = "para";
+    
 
     private static final Pattern KNOWN_ELEMENTS = Pattern.compile("(itemized|ordered)list" +
             "|footnote" +
