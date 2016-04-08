@@ -1,11 +1,11 @@
-package org.leibnizcenter.rechtspraak.features;
+package org.leibnizcenter.rechtspraak.tokens.features;
 
 import cc.mallet.types.Token;
-import org.leibnizcenter.rechtspraak.features.info.InfoPatterns;
-import org.leibnizcenter.rechtspraak.features.quote.BlockQuotePatterns;
-import org.leibnizcenter.rechtspraak.features.quote.PreBlockQuotePattrns;
-import org.leibnizcenter.rechtspraak.features.title.TitlePatterns;
-import org.leibnizcenter.rechtspraak.manualannotation.DeterministicTagger;
+import org.leibnizcenter.rechtspraak.tokens.features.info.InfoPatterns;
+import org.leibnizcenter.rechtspraak.tokens.features.quote.BlockQuotePatterns;
+import org.leibnizcenter.rechtspraak.tokens.features.quote.PreBlockQuotePattrns;
+import org.leibnizcenter.rechtspraak.tokens.features.title.TitlePatterns;
+import org.leibnizcenter.rechtspraak.leibnizannotations.DeterministicTagger;
 import org.leibnizcenter.rechtspraak.markup.docs.LabeledToken;
 import org.leibnizcenter.rechtspraak.markup.docs.LabeledTokenList;
 import org.leibnizcenter.rechtspraak.markup.docs.RechtspraakElement;
@@ -19,7 +19,7 @@ import java.util.List;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
-import static org.leibnizcenter.rechtspraak.features.quote.BlockQuotePatterns.END_W_QUOTE;
+import static org.leibnizcenter.rechtspraak.tokens.features.quote.BlockQuotePatterns.END_W_QUOTE;
 
 /**
  * Created by Maarten on 2016-03-21.

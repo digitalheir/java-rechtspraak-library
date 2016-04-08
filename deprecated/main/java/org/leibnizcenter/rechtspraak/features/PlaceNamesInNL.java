@@ -1,4 +1,4 @@
-package org.leibnizcenter.rechtspraak.features;
+package org.leibnizcenter.rechtspraak.tokens.features;
 
 import cc.mallet.types.Token;
 import com.google.common.io.LineReader;

@@ -1,4 +1,4 @@
-package org.leibnizcenter.rechtspraak.features;
+package org.leibnizcenter.rechtspraak.tokens.features;
 
 import com.google.common.io.LineReader;
 import org.leibnizcenter.rechtspraak.util.TextPattern;

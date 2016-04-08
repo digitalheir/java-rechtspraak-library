@@ -1,5 +1,26 @@
 package org.leibnizcenter.rechtspraak.enricher;
 
+import cc.mallet.fst.CRF;
+import org.leibnizcenter.rechtspraak.crf.ApplyCrf;
+import org.leibnizcenter.rechtspraak.leibnizannotations.DeterministicTagger;
+import org.leibnizcenter.rechtspraak.leibnizannotations.Label;
+import org.leibnizcenter.rechtspraak.tokens.RechtspraakElement;
+import org.leibnizcenter.rechtspraak.tokens.TokenList;
+import org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf;
+import org.leibnizcenter.rechtspraak.tokens.tokentree.TokenTree;
+import org.leibnizcenter.rechtspraak.tokens.tokentree.leibniztags.LeibnizTags;
+import org.leibnizcenter.rechtspraak.util.Collections3;
+import org.leibnizcenter.rechtspraak.util.Const;
+import org.leibnizcenter.rechtspraak.util.Xml;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+
+import java.io.File;
+import java.io.IOException;
+import java.security.InvalidParameterException;
+import java.util.List;
+
 /**
  * Helpers functions enriching Rechtspraak XML
  * <p>
@@ -7,58 +28,92 @@ package org.leibnizcenter.rechtspraak.enricher;
  */
 public class Enrich {
     private final CRF crf;
-    public Enricher(){
-        this(f);
+
+    public Enrich() throws IOException, ClassNotFoundException {
+        this(new File(Const.RECHTSPRAAK_MARKUP_TAGGER_CRF));
     }
-    
-    public Enricher(File crfModelFile){
-        if(!crfModelFile.exists()) throw new InvalidParameterException("CRF model not found at "+crfModelFile.getAbcolutePath())
-        this.crf = loadCrf(f);
+
+    public Enrich(File crfModelFile) throws IOException, ClassNotFoundException {
+        if (!crfModelFile.exists())
+            throw new InvalidParameterException("CRF model not found at " + crfModelFile.getAbsolutePath());
+        this.crf = ApplyCrf.loadCrf(crfModelFile);
     }
-    
-    public Document enrich(String ecli, Document doc) {
+
+    public void enrich(String ecli, Document doc) {
         // Tokenize 
-        tokenList = TokenList.parse( ecli, Document doc, Xml.getRootElement(doc));
-        
+        Element contentRoot = Xml.getContentRoot(doc);
+        TokenList tokenList = TokenList.parse(ecli, doc, contentRoot);
+
         // Apply tagging
-        DeterministicTagger.tag(tokenList);
-        
-        // Dissolve intermediate tags
-        cleanUp(doc.getRootElement());
-        
-        // Return enriched doc
-        return ;
-    }
-    
-    public static void cleanUp(Node node){
-        Node[] children = Xml.getChildren(node);
-        // If this element has a leibniz namespace, either dissolve the tag or make it an 'official' tag
-        if(LeibnizTags.hasLeibnizNameSpace(node)){
-            etc...
+        List<Label> tags = DeterministicTagger.tag(tokenList);
+
+        // Make sectioning tree if there is no section tag already
+        if (!Xml.containsTag(contentRoot, "section")) {
+            TokenTree mostLikelySectionTree = MostLikelyTreeFromList.getMostLikelyTree(tokenList);
+            setSectionTags(mostLikelySectionTree);
         }
 
-        //
-        for(Node child:children){
-            cleanUp(child);
-        }
-    }
-
-    public static Set<NamedElementFeatureFunction> setFeatures(Token t, List<TokenTreeLeaf> tokens, int ix,
-                                                               NamedElementFeatureFunction... values) {
-        Set<NamedElementFeatureFunction> matches = new HashSet<>();
-        for (NamedElementFeatureFunction f : values)
-            if (f.apply(tokens, ix)) {
-                t.setFeatureValue(f.name(), 1.0);
-                matches.add(f);
+        // Set tag values on elements (we can do this another way)
+        Collections3.zip(tokenList.stream(), tags.stream()).forEach(paire -> {
+            Label label = paire.getValue();
+            TokenTreeLeaf token = paire.getKey();
+            if (token instanceof RechtspraakElement) {
+                Element element = ((RechtspraakElement) token).getElement();
+                switch (label) {
+                    case NEWLINE:
+                        break;
+                    case NR:
+                        element = Xml.setElementNameTo(element, null, "nr");
+                        break;
+                    case SECTION_TITLE:
+                        element = Xml.setElementNameTo(element, null, "title");
+                        break;
+                    case TEXT_BLOCK:
+                        switch (element.getTagName()) {
+                            case LeibnizTags.TAG_POTENTIAL_NR:
+                            case LeibnizTags.TAG_QUOTE:
+                            case LeibnizTags.TAG_TEXT:
+                                Xml.dissolveTag(element);
+                                element = null;
+                                break;
+                            default:
+                                break;
+                        }
+                        break;
+                    default:
+                        throw new IllegalStateException();
+                }
             }
-//            else t.setFeatureValue("NOT_"+f.name(), 1.0);
-        return matches;
+        });
+
+        // Dissolve intermediate tags
+        cleanUp(doc.getDocumentElement());
     }
 
-    public static boolean matchesAny(List<TokenTreeLeaf> tokens, int ix, ElementFeatureFunction... patterns) {
-        for (ElementFeatureFunction p : patterns)
-            if (p.apply(tokens, ix))
-                return true;
-        return false;
+    /**
+     * We assume the nodes in the tree are title for sections that span up to and including all children, up to the
+     * next sibling node
+     *
+     * @param tree
+     */
+    private void setSectionTags(TokenTree tree) {
+tofo
+    }
+
+    public static void cleanUp(Node n) {
+        Node[] children = Xml.getChildren(n);
+
+        for (Node c : children) cleanUp(c);
+
+        if (n instanceof Element) {
+            Element element = ((Element) n);
+            // If this element has a leibniz namespace, either dissolve the tag or make it an 'official' tag
+            if (LeibnizTags.hasLeibnizNameSpace(element)) {
+                if (!element.hasAttributeNS(LeibnizTags.LEIBNIZ_NAMESPACE, LeibnizTags.Attr.manualAnnotation))
+                    throw new InvalidParameterException("No attr found: " + LeibnizTags.Attr.manualAnnotation);
+            }
+
+            element.removeAttributeNS(LeibnizTags.LEIBNIZ_NAMESPACE, LeibnizTags.Attr.manualAnnotation);
+        }
     }
 }

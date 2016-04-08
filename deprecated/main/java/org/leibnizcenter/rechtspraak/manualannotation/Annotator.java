@@ -1,9 +1,9 @@
-package org.leibnizcenter.rechtspraak.manualannotation;
+package org.leibnizcenter.rechtspraak.leibnizannotations;
 
 import com.google.common.base.Strings;
 import deprecated.org.crf.utilities.TaggedToken;
-import org.leibnizcenter.rechtspraak.features.quote.BlockQuotePatterns;
-import org.leibnizcenter.rechtspraak.features.title.TitlePatterns;
+import org.leibnizcenter.rechtspraak.tokens.features.quote.BlockQuotePatterns;
+import org.leibnizcenter.rechtspraak.tokens.features.title.TitlePatterns;
 import org.leibnizcenter.rechtspraak.markup.docs.Label;
 import org.leibnizcenter.rechtspraak.markup.docs.*;
 import org.leibnizcenter.rechtspraak.markup.docs.features.Patterns;

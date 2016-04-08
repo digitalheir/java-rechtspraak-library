@@ -5,7 +5,7 @@
 //import com.google.common.collect.*;
 //import com.google.common.io.Files;
 //import org.leibnizcenter.rechtspraak.TrainWithMallet;
-//import org.leibnizcenter.rechtspraak.features.title.TitlePatterns.TitlesNormalizedMatchesHighConf;
+//import org.leibnizcenter.rechtspraak.tokens.features.title.TitlePatterns.TitlesNormalizedMatchesHighConf;
 //import org.leibnizcenter.rechtspraak.markup.docs.Label;
 //import org.leibnizcenter.rechtspraak.markup.docs.LabeledToken;
 //import org.leibnizcenter.rechtspraak.markup.docs.LabeledTokenList;

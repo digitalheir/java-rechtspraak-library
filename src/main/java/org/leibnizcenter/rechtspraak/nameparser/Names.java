@@ -1,8 +1,8 @@
 package org.leibnizcenter.rechtspraak.nameparser;
 
 import cc.mallet.types.Token;
-import org.leibnizcenter.rechtspraak.features.textpatterns.KnownSurnamesNl;
-import org.leibnizcenter.rechtspraak.features.textpatterns.interfaces.Patterns;
+import org.leibnizcenter.rechtspraak.tokens.features.textpatterns.KnownSurnamesNl;
+import org.leibnizcenter.rechtspraak.tokens.features.textpatterns.interfaces.Patterns;
 import org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf;
 import org.leibnizcenter.rechtspraak.util.TextPattern;
 

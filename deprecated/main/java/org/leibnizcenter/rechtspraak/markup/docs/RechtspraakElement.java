@@ -1,8 +1,8 @@
 package org.leibnizcenter.rechtspraak.markup.docs;
 
 import org.jetbrains.annotations.Contract;
-import org.leibnizcenter.rechtspraak.features.quote.BlockQuotePatterns;
-import org.leibnizcenter.rechtspraak.features.quote.PreBlockQuotePattrns;
+import org.leibnizcenter.rechtspraak.tokens.features.quote.BlockQuotePatterns;
+import org.leibnizcenter.rechtspraak.tokens.features.quote.PreBlockQuotePattrns;
 import org.leibnizcenter.rechtspraak.markup.docs.features.IsAllCaps;
 import org.leibnizcenter.rechtspraak.markup.docs.tokentree.TokenTreeVertex;
 import org.leibnizcenter.rechtspraak.util.TextBlockInfo;

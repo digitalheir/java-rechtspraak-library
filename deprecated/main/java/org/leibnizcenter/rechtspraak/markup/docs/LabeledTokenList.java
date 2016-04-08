@@ -1,6 +1,6 @@
 package org.leibnizcenter.rechtspraak.markup.docs;
 
-import org.leibnizcenter.rechtspraak.features.title.TitlePatterns;
+import org.leibnizcenter.rechtspraak.tokens.features.title.TitlePatterns;
 import org.leibnizcenter.rechtspraak.markup.docs.features.HasCloseAdjacentNumbering;
 import org.leibnizcenter.rechtspraak.markup.docs.tokentree.TokenTree;
 import org.leibnizcenter.rechtspraak.util.Xml;

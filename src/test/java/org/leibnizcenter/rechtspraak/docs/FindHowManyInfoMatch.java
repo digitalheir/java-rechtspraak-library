@@ -7,7 +7,7 @@
 //import com.google.common.collect.UnmodifiableIterator;
 //import com.google.common.io.Files;
 //import org.leibnizcenter.rechtspraak.TrainWithMallet;
-//import org.leibnizcenter.rechtspraak.features.info.InfoPatterns;
+//import org.leibnizcenter.rechtspraak.tokens.features.info.InfoPatterns;
 //import org.leibnizcenter.rechtspraak.markup.docs.Label;
 //import org.leibnizcenter.rechtspraak.markup.docs.LabeledToken;
 //import org.leibnizcenter.rechtspraak.markup.docs.LabeledTokenList;

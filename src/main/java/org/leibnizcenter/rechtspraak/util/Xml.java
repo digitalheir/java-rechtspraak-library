@@ -3,7 +3,6 @@ package org.leibnizcenter.rechtspraak.util;
 import com.google.common.base.Strings;
 import com.google.common.collect.Lists;
 import com.sun.org.apache.xerces.internal.dom.DOMOutputImpl;
-import org.leibnizcenter.rechtspraak.manualannotation.Annotator;
 import org.w3c.dom.*;
 import org.w3c.dom.bootstrap.DOMImplementationRegistry;
 import org.w3c.dom.ls.DOMImplementationLS;
@@ -303,5 +302,59 @@ public class Xml {
     public static void setFolders(String[] args) {
         if (args.length > 0 && !Strings.isNullOrEmpty(args[0])) IN_FOLDER = args[0];
         if (args.length > 1 && !Strings.isNullOrEmpty(args[1])) OUT_FOLDER = args[1];
+    }
+
+    public static Element setElementNameTo(Element element, String ns, String tagName) {
+        Node parent = element.getParentNode();
+
+        Element newElement;
+        if (ns != null) newElement = element.getOwnerDocument().createElementNS(ns, tagName);
+        else newElement = element.getOwnerDocument().createElement(tagName);
+
+
+        copyElement(element, newElement);
+
+        parent.insertBefore(newElement, element);
+        parent.removeChild(element);
+        return newElement;
+    }
+
+    private static void copyElement(Element element, Element newElement) {
+        Node[] children = getChildren(element);
+        NamedNodeMap attrs = element.getAttributes();
+        for (Node child : children) {
+            element.removeChild(child);
+            newElement.appendChild(child);
+        }
+        for (int i = 0; i < attrs.getLength(); i++) {
+            Attr attr = (Attr) attrs.item(i);
+            element.removeAttributeNode(attr);
+            newElement.setAttributeNode(attr);
+        }
+    }
+
+    /**
+     * Replaces the given element with its children.
+     *
+     * @param element
+     */
+    public static void dissolveTag(Element element) {
+        Node[] children = getChildren(element);
+
+        Node parent = element.getParentNode();
+
+        for (Node child : children) parent.insertBefore(child, element);
+        parent.removeChild(element);
+    }
+
+    public static boolean containsTag(Node root, String tagName) {
+        if (root.getNodeName().equals(tagName)) return true;
+
+        NodeList children = root.getChildNodes();
+        for (int i = 0; i < children.getLength(); i++) {
+            if (containsTag(children.item(i), tagName)) return true;
+        }
+
+        return false;
     }
 }

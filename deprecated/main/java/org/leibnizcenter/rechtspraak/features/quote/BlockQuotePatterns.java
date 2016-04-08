@@ -1,4 +1,4 @@
-package org.leibnizcenter.rechtspraak.features.quote;
+package org.leibnizcenter.rechtspraak.tokens.features.quote;
 
 import cc.mallet.types.Token;
 import org.leibnizcenter.rechtspraak.markup.docs.RechtspraakElement;

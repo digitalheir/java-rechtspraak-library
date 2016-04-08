@@ -1,8 +1,8 @@
 package org.leibnizcenter.rechtspraak.tokens.tokentree;
 
 import com.google.common.collect.Maps;
-import org.leibnizcenter.rechtspraak.manualannotation.DeterministicTagger;
-import org.leibnizcenter.rechtspraak.tokens.Label;
+import org.leibnizcenter.rechtspraak.leibnizannotations.DeterministicTagger;
+import org.leibnizcenter.rechtspraak.leibnizannotations.Label;
 import org.leibnizcenter.rechtspraak.tokens.LabeledToken;
 import org.leibnizcenter.rechtspraak.tokens.RechtspraakElement;
 import org.leibnizcenter.rechtspraak.tokens.numbering.ListMarking;
@@ -16,7 +16,6 @@ import org.leibnizcenter.rechtspraak.util.Regex;
 import org.leibnizcenter.rechtspraak.util.Xml;
 import org.leibnizcenter.rechtspraak.tokens.text.IgnoreElement;
 import org.w3c.dom.*;
-import sun.plugin.dom.exception.InvalidStateException;
 
 import java.security.InvalidParameterException;
 import java.util.ArrayList;
@@ -25,6 +24,8 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
+
+import static org.leibnizcenter.rechtspraak.tokens.tokentree.leibniztags.LeibnizTags.*;
 
 /**
  * Created by maarten on 27-3-16.

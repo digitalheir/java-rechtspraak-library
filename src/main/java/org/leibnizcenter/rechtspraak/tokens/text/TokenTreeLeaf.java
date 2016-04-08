@@ -1,14 +1,14 @@
 package org.leibnizcenter.rechtspraak.tokens.text;
 
 import com.google.common.base.Strings;
+import com.google.common.collect.Sets;
 import org.leibnizcenter.rechtspraak.tokens.tokentree.TokenTreeVertex;
 import org.leibnizcenter.rechtspraak.util.Regex;
 import org.leibnizcenter.rechtspraak.util.Strings2;
+import org.leibnizcenter.rechtspraak.util.Xml;
 import org.w3c.dom.*;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Locale;
+import java.util.*;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
@@ -27,6 +27,7 @@ public abstract class TokenTreeLeaf implements TokenTreeVertex, Node {
     public final String[] words;
 
     public String[] wordsBeforeOpeningBracket;
+    public final Element emphasis;
 
     public TokenTreeLeaf(Node n) {
         this.node = n;
@@ -35,6 +36,8 @@ public abstract class TokenTreeLeaf implements TokenTreeVertex, Node {
 
         words = this.textContent == null ? ZERO_STRINGS : getWords(textContent);
         wordsBeforeOpeningBracket = getWordsBeforeOpeningBracket(words);
+
+        emphasis = findEmphasis();
 
         if (Strings.isNullOrEmpty(textContent)) {
             this.normalizedText = EMPTY_STRING;
@@ -265,6 +268,24 @@ public abstract class TokenTreeLeaf implements TokenTreeVertex, Node {
         return node.setUserData(key, data, handler);
     }
 
+    private Element findEmphasis() {
+        TokenTreeLeaf e = this;
+        if (e.getNodeType() == Element.ELEMENT_NODE
+                && e.getNodeName().equals("emphasis")) return (Element) e;
+        NodeList children = e.getChildNodes();
+        for (int j = 0; j < children.getLength(); j++) {
+            Node child = children.item(j);
+            switch (child.getNodeType()) {
+                case Node.ELEMENT_NODE:
+                    if (!"emphasis".equals(((Element) child).getTagName())) return (Element) child;
+                    break;
+                case Node.TEXT_NODE:
+                    if (Xml.hasSubstantialText((Text) child)) return null;
+            }
+        }
+        return null;
+    }
+
     @Override
     public Object getUserData(String key) {
         return node.getUserData(key);
@@ -276,4 +297,9 @@ public abstract class TokenTreeLeaf implements TokenTreeVertex, Node {
         return node.getNodeName() + ": " + textContent;
     }
 
+    public Set<String> getEmphasis() {
+        // todo split at initialization
+        if (emphasis == null) return null;
+        else return Sets.newHashSet(Regex.CONSECUTIVE_WHITESPACE.split(emphasis.getAttribute("role")));
+    }
 }

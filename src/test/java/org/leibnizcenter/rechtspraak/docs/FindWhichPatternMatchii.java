@@ -1,6 +1,6 @@
 //package org.leibnizcenter.rechtspraak.docs;
 //
-//import org.leibnizcenter.rechtspraak.features.title.TitlePatterns;
+//import org.leibnizcenter.rechtspraak.tokens.features.title.TitlePatterns;
 //
 //import java.io.IOException;
 //

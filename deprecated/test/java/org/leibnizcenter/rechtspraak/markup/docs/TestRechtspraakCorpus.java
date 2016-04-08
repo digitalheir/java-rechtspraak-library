@@ -7,8 +7,8 @@ import com.google.common.collect.Lists;
 import org.junit.Assert;
 import org.junit.Test;
 import org.leibnizcenter.rechtspraak.TrainWithMallet;
-import org.leibnizcenter.rechtspraak.features.info.InfoPatterns;
-import org.leibnizcenter.rechtspraak.features.title.TitlePatterns;
+import org.leibnizcenter.rechtspraak.tokens.features.info.InfoPatterns;
+import org.leibnizcenter.rechtspraak.tokens.features.title.TitlePatterns;
 import org.leibnizcenter.rechtspraak.util.Xml;
 import org.leibnizcenter.rechtspraak.util.numbering.ArabicNumbering;
 import org.leibnizcenter.rechtspraak.util.numbering.NumberingNumber;
@@ -28,8 +28,8 @@ import java.util.HashSet;
 import java.util.List;
 
 import static junit.framework.Assert.assertTrue;
-import static org.leibnizcenter.rechtspraak.features.Features.CLOSE_TO_ADJACENT_NUMBERING;
-import static org.leibnizcenter.rechtspraak.features.info.InfoPatterns.InfoPatternsUnormalizedContains.CONTAINS_BRACKETED_TEXT;
+import static org.leibnizcenter.rechtspraak.tokens.features.Features.CLOSE_TO_ADJACENT_NUMBERING;
+import static org.leibnizcenter.rechtspraak.tokens.features.info.InfoPatterns.InfoPatternsUnormalizedContains.CONTAINS_BRACKETED_TEXT;
 
 /**
  * Tests for correct feature vector sequence initialization

@@ -13,13 +13,14 @@ import java.util.regex.Pattern;
  * XML element from Rechtspraak.nl with some pre-processing applied
  * Created by maarten on 29-2-16.
  */
-public abstract class RechtspraakElement extends org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf implements Element{
+public abstract class RechtspraakElement extends org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf implements Element {
     private final Element e;
 
 
     public RechtspraakElement(Element e) {
         super(e);
         this.e = e;
+        if (e == null) throw new NullPointerException();
     }
 
     public boolean precedesNonEmptyText() {
