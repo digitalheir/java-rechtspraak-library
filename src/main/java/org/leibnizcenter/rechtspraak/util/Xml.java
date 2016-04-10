@@ -3,6 +3,7 @@ package org.leibnizcenter.rechtspraak.util;
 import com.google.common.base.Strings;
 import com.google.common.collect.Lists;
 import com.sun.org.apache.xerces.internal.dom.DOMOutputImpl;
+import org.leibnizcenter.rechtspraak.util.immutabletree.ImmutableTree;
 import org.w3c.dom.*;
 import org.w3c.dom.bootstrap.DOMImplementationRegistry;
 import org.w3c.dom.ls.DOMImplementationLS;
@@ -17,6 +18,7 @@ import java.security.InvalidParameterException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 import java.util.regex.Matcher;
 
 /**
@@ -356,5 +358,43 @@ public class Xml {
         }
 
         return false;
+    }
+
+    /**
+     * If this would result in an overlapping tag, the algorithm cuts the container elements so that
+     * we end up with a valid XML tree
+     *
+     * @param start inclusive
+     * @param stop  exclusive
+     */
+    public static void wrapSubTreeInElement(Node start, Node stop, String tagName) {
+        Node parent = start.getParentNode();
+        Node[] children = getChildren(parent);
+
+        makeSureThatNodesHaveSameParent(start, stop);
+
+        Element newElement = parent.getOwnerDocument().createElement(tagName);
+        Node next = start;
+        while (next != null) {
+            if (next == stop) {
+                break;
+            }
+            newElement.appendChild(next);
+            next = start.getNextSibling();
+        }
+
+        if (!stoppedOnStopNode && stop != null) {
+            // TODO cut open the parent
+        }
+    }
+
+    private static void makeSureThatNodesHaveSameParent(Node first, Node second) {
+        if (!Objects.equals(first.getParentNode(), second.getParentNode())) {
+            Element commonAncestor = getCommonAncestor(first,second);
+        }
+    }
+
+    private static Element getCommonAncestor(Node first, Node second) {
+
     }
 }

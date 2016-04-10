@@ -12,6 +12,7 @@ import org.leibnizcenter.rechtspraak.tokens.tokentree.leibniztags.LeibnizTags;
 import org.leibnizcenter.rechtspraak.util.Collections3;
 import org.leibnizcenter.rechtspraak.util.Const;
 import org.leibnizcenter.rechtspraak.util.Xml;
+import org.leibnizcenter.rechtspraak.util.immutabletree.ImmutableTree;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -49,7 +50,7 @@ public class Enrich {
 
         // Make sectioning tree if there is no section tag already
         if (!Xml.containsTag(contentRoot, "section")) {
-            TokenTree mostLikelySectionTree = MostLikelyTreeFromList.getMostLikelyTree(tokenList);
+            ImmutableTree mostLikelySectionTree = MostLikelyTreeFromList.getMostLikelyTree(tokenList, tags);
             setSectionTags(mostLikelySectionTree);
         }
 
@@ -96,8 +97,12 @@ public class Enrich {
      *
      * @param tree
      */
-    private void setSectionTags(TokenTree tree) {
-tofo
+    private void setSectionTags(ImmutableTree tree) {
+        for (int i = 0; i < tree.children.size(); i++) {
+            ImmutableTree child = tree.children.get(i);
+            ImmutableTree next = (i + 1 < tree.children.size()) ? tree.children.get(i + 1) : null;
+            Xml.wrapSubTreeInElement(child, next);
+        }
     }
 
     public static void cleanUp(Node n) {

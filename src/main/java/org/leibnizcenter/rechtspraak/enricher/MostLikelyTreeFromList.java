@@ -1,24 +1,23 @@
 package org.leibnizcenter.rechtspraak.enricher;
 
 import com.google.common.collect.ImmutableList;
+import com.google.common.collect.Maps;
 import org.leibnizcenter.rechtspraak.leibnizannotations.Label;
 import org.leibnizcenter.rechtspraak.tokens.numbering.Numbering;
 import org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf;
-import org.leibnizcenter.rechtspraak.tokens.tokentree.TokenTree;
 import org.leibnizcenter.rechtspraak.util.Collections3;
 import org.leibnizcenter.rechtspraak.util.Pair;
 import org.leibnizcenter.rechtspraak.util.immutabletree.ImmutableTree;
 
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /**
  * Created by maarten on 7-4-16.
  */
 public class MostLikelyTreeFromList {
 
-    public static TokenTree getMostLikelyTree(List<TokenTreeLeaf> l, List<Label> labels) {
+    public static ImmutableTree getMostLikelyTree(List<TokenTreeLeaf> l, List<Label> labels) {
         ImmutableList<TokenTreeLeaf> titles =
                 ImmutableList.copyOf(
                         Collections3.zip(l.stream(), labels.stream())
@@ -26,64 +25,95 @@ public class MostLikelyTreeFromList {
                                 .map(Pair::getKey)
                                 .collect(Collectors.toList()));
 
-
         //TokenTreeLeaf[] arr = titles.toArray(new TokenTreeLeaf[titles.size()]);
 
         // Make every possible combination of these titles
-
-
-        recurse(new ImmutableTree(titleToAdd, ImmutableList.of()), 0, Integer.MIN_VALUE, titles);
+        return recurse(new ImmutableTree(null, ImmutableList.of()), 0,
+                Maps.immutableEntry(null,Integer.MIN_VALUE), titles).getKey();
     }
 
-    private static void recurse(final ImmutableTree treeSoFar,
-                                final int scoreSoFar,
-                                final int maxSoFar,
-                                final ImmutableList<TokenTreeLeaf> remainingTitles) {
-        if (remainingTitles.size() > 0) {
-            TokenTreeLeaf titleToAdd = remainingTitles.get(0);
+    private static Map.Entry<ImmutableTree, Integer> recurse(final ImmutableTree treeSoFar,
+                                                             final int scoreSoFar,
+                                                             Map.Entry<ImmutableTree, Integer> maxSoFar,
+                                                             final ImmutableList<TokenTreeLeaf> titles) {
+        ImmutableList<TokenTreeLeaf> newRemainingTitles
+                = titles.subList(1, titles.size());
+        if (titles.size() > 0) {
+            TokenTreeLeaf titleToAdd = titles.get(0);
+
             for (Deque<ImmutableTree> possibleParentPaths : getPossibleNodesToAddTo(treeSoFar)) {
                 // First out was last in, i.e. the node that we append the given title to
                 ImmutableTree addTo = possibleParentPaths.pop();
 
-                if (!isNumberingInSequenceWithLast(addTo.children, titleToAdd)) penalty += 3;
-//                if (!isNumberingInSequenceWithSecondToLat(nextChildToAdd)) penalty += 3;
-                if (!hasNumberingSameMarkupAsMost(nextChildToAdd)) penalty += 1;
-                if (hasSameMarkup(possibleParentPaths.peek(), titleToAdd)) penalty += 2;
-                if (isSubsectionOfSameMarkupAndNumbering(nextChildToAdd)) penalty += 5;
+                int penalty = getPenalty(possibleParentPaths, addTo, titleToAdd);
 
-                ImmutableTree nextChildToAdd = addTo.addChild(new ImmutableTree(titleToAdd, null));
-
-
+                ImmutableTree nextRoot = addTo.addChild(new ImmutableTree(titleToAdd, null));
                 while (possibleParentPaths.size() > 0) {
                     ImmutableTree parent = possibleParentPaths.pop();
-                    nextChildToAdd = parent.replaceChild(
+                    nextRoot = parent.replaceChild(
                             // This will always be the last node, because we need to keep the same linear order of the text
                             // (See implementation of addPossibleNodesToAddAsChild)
                             parent.children.size() - 1,
-                            nextChildToAdd
+                            nextRoot
                     );
                 }
-
-                ImmutableTree newTree = nextChildToAdd;
-
-                int penalty = 0;
-
+                ImmutableTree newTree = nextRoot;
 
                 int newScoreSoFar = scoreSoFar - penalty;
-
-                if (newScoreSoFar) {
-
-                }
+                maxSoFar = max(maxSoFar, recurse(newTree, newScoreSoFar, maxSoFar, newRemainingTitles));
             }
-            ImmutableList<TokenTreeLeaf> newRemainingTitles
-                    = remainingTitles.subList(1, remainingTitles.size());
+            return maxSoFar;
+        } else {
+            return max(Maps.immutableEntry(treeSoFar, scoreSoFar), maxSoFar);
         }
     }
 
-    private static boolean hasSameMarkup(ImmutableTree n1, TokenTreeLeaf n2) {
-        if(n1 == null || n2 == null) return true;
+    private static Map.Entry<ImmutableTree, Integer> max(Map.Entry<ImmutableTree, Integer> a1, Map.Entry<ImmutableTree, Integer> a2) {
+        if (a2.getKey() == null
+                || a1.getValue() > a2.getValue()) return a1;
+        else return a2;
+    }
 
-        n1.token
+    /**
+     * @param parents
+     * @param addToNode
+     * @param newNode
+     * @return a number that reflects how unhappy we are by adding <code>newNode</code> to <code>addToNode</code>, where
+     * a higher number is worse.
+     */
+    private static int getPenalty(Deque<ImmutableTree> parents, ImmutableTree addToNode, TokenTreeLeaf newNode) {
+        int penalty = 0;
+
+        //todo more features?
+
+        if (!isNumberingInSequenceWithLast(addToNode.children, newNode)) penalty += 3;
+//                if (!isNumberingInSequenceWithSecondToLat(nextChildToAdd)) penalty += 3;
+        if (!hasNumberingSameMarkupAsMost(addToNode.children, newNode)) penalty += 1;
+        if (Collections3.isNullOrEmpty(parents.peek().children)) {
+            TokenTreeLeaf parent = parents.peek().token;
+            if (hasSameMarkup(parent, newNode)) penalty += 2;
+            // isSubsectionOfSameMarkupAndNumberingInSequence
+            if (hasSameMarkup(parent, newNode) && isNumberingInSequence(parent, newNode)) penalty += 5;
+        }
+        return penalty;
+    }
+
+    private static boolean isNumberingInSequence(TokenTreeLeaf n1, TokenTreeLeaf n2) {
+        return Numbering.is(n1)
+                && Numbering.is(n2)
+                && ((Numbering) n2).isSuccedentOf(((Numbering) n1));
+    }
+
+    private static boolean hasNumberingSameMarkupAsMost(ImmutableList<ImmutableTree> elements, TokenTreeLeaf compareWith) {
+        int overHalf = (int) Math.ceil(((double) elements.size()) / 2.0);
+        return elements.stream()
+                .filter(e -> hasSameMarkup(e.token, compareWith))
+                .limit(overHalf)
+                .collect(Collectors.toSet()).size() >= overHalf;
+    }
+
+    private static boolean hasSameMarkup(TokenTreeLeaf n1, TokenTreeLeaf n2) {
+        return n1 == null || n2 == null || com.google.common.base.Objects.equal(n1.getEmphasis(), n2.getEmphasis());
     }
 
     private static boolean isNumberingInSequenceWithLast(ImmutableList<ImmutableTree> children, TokenTreeLeaf titleToAdd) {
@@ -92,15 +122,18 @@ public class MostLikelyTreeFromList {
         Numbering numb = (Numbering) titleToAdd;
         if (Collections3.isNullOrEmpty(children)) return (numb.getNumbering().isFirstNumbering());
 
+        Numbering prev = getPrevNumber(children);
+        if (prev != null) return (numb.getNumbering().isSuccedentOf(prev.getNumbering()));
+        else return numb.getNumbering().isFirstNumbering();
+
+    }
+
+    private static Numbering getPrevNumber(ImmutableList<ImmutableTree> children) {
         Set<ImmutableTree> prevz = children.reverse().stream()
                 .filter(e -> e.token instanceof Numbering)
                 .limit(1).collect(Collectors.toSet());
-        if (!Collections3.isNullOrEmpty(prevz)) {
-            Numbering prev = (Numbering) prevz.iterator().next().token;
-            return (numb.getNumbering().isSuccedentOf(prev.getNumbering()));
-        } else {
-            return numb.getNumbering().isFirstNumbering();
-        }
+        if (!Collections3.isNullOrEmpty(prevz)) return (Numbering) prevz.iterator().next().token;
+        else return null;
     }
 
 
