@@ -51,7 +51,7 @@ public class Enrich {
         // Make sectioning tree if there is no section tag already
         if (!Xml.containsTag(contentRoot, "section")) {
             ImmutableTree mostLikelySectionTree = MostLikelyTreeFromList.getMostLikelyTree(tokenList, tags);
-            setSectionTags(mostLikelySectionTree);
+            setSectionTags(mostLikelySectionTree, tokenList);
         }
 
         // Set tag values on elements (we can do this another way)
@@ -96,12 +96,12 @@ public class Enrich {
      * next sibling node
      *
      * @param tree
+     * @param tokenList
      */
-    private void setSectionTags(ImmutableTree tree) {
-        for (int i = 0; i < tree.children.size(); i++) {
-            ImmutableTree child = tree.children.get(i);
-            ImmutableTree next = (i + 1 < tree.children.size()) ? tree.children.get(i + 1) : null;
-            Xml.wrapSubTreeInElement(child, next);
+    private void setSectionTags(ImmutableTree tree, TokenList tokenList) {
+//        for (int i = 0; i < tree.children.size(); i++) {
+
+            Xml.wrapSubTreeInElement(firstElementInSection, lastElementInSection, TokenTree.TAG_SECTION);
         }
     }
 

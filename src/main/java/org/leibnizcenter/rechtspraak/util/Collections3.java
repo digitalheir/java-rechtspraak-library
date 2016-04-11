@@ -1,7 +1,8 @@
 package org.leibnizcenter.rechtspraak.util;
 
-import java.util.Collection;
-import java.util.Iterator;
+import org.w3c.dom.Node;
+
+import java.util.*;
 import java.util.stream.Stream;
 
 /**
@@ -16,5 +17,14 @@ public class Collections3 {
 
     public static <T> boolean isNullOrEmpty(Collection<T> coll) {
         return coll == null || coll.size() <= 0;
+    }
+
+    public static <K> Deque<K> upToAndIncluding(Deque<K> deque, K stopAfter) {
+        ArrayDeque<K> returnObj = new ArrayDeque<>(deque.size());
+        for (K el : deque) {
+            returnObj.add(el);
+            if (Objects.equals(el, stopAfter)) break;
+        }
+        return returnObj;
     }
 }

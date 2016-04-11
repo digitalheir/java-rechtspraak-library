@@ -3,7 +3,6 @@ package org.leibnizcenter.rechtspraak.util;
 import com.google.common.base.Strings;
 import com.google.common.collect.Lists;
 import com.sun.org.apache.xerces.internal.dom.DOMOutputImpl;
-import org.leibnizcenter.rechtspraak.util.immutabletree.ImmutableTree;
 import org.w3c.dom.*;
 import org.w3c.dom.bootstrap.DOMImplementationRegistry;
 import org.w3c.dom.ls.DOMImplementationLS;
@@ -15,10 +14,7 @@ import java.io.File;
 import java.io.StringWriter;
 import java.io.Writer;
 import java.security.InvalidParameterException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 import java.util.regex.Matcher;
 
 /**
@@ -323,15 +319,19 @@ public class Xml {
 
     private static void copyElement(Element element, Element newElement) {
         Node[] children = getChildren(element);
-        NamedNodeMap attrs = element.getAttributes();
         for (Node child : children) {
-            element.removeChild(child);
+            // element.removeChild(child);
             newElement.appendChild(child);
         }
+        copyAttributes(element, newElement);
+    }
+
+    public static void copyAttributes(Element copyFrom, Element copyTo) {
+        NamedNodeMap attrs = copyFrom.getAttributes();
         for (int i = 0; i < attrs.getLength(); i++) {
             Attr attr = (Attr) attrs.item(i);
-            element.removeAttributeNode(attr);
-            newElement.setAttributeNode(attr);
+            copyFrom.removeAttributeNode(attr);
+            copyTo.setAttributeNode(attr);
         }
     }
 
@@ -364,37 +364,93 @@ public class Xml {
      * If this would result in an overlapping tag, the algorithm cuts the container elements so that
      * we end up with a valid XML tree
      *
-     * @param start inclusive
-     * @param stop  exclusive
+     * @param startAt   inclusive
+     * @param stopAfter inclusive
      */
-    public static void wrapSubTreeInElement(Node start, Node stop, String tagName) {
-        Node parent = start.getParentNode();
+    public static void wrapSubTreeInElement(Node startAt, Node stopAfter, String tagName) {
+        Node parent = startAt.getParentNode();
         Node[] children = getChildren(parent);
 
-        makeSureThatNodesHaveSameParent(start, stop);
+        Pair<Node, Node> p = makeSureThatNodesHaveSameParent(startAt, stopAfter);
+        startAt = p.getKey();
+        stopAfter = p.getKey();
 
         Element newElement = parent.getOwnerDocument().createElement(tagName);
-        Node next = start;
-        while (next != null) {
-            if (next == stop) {
-                break;
-            }
+        Node next = startAt;
+        Node last;
+        do {
             newElement.appendChild(next);
-            next = start.getNextSibling();
-        }
-
-        if (!stoppedOnStopNode && stop != null) {
-            // TODO cut open the parent
-        }
+            last = next;
+            next = next.getNextSibling();
+        } while (next != null && last != stopAfter);
     }
 
-    private static void makeSureThatNodesHaveSameParent(Node first, Node second) {
+    private static Pair<Node, Node> makeSureThatNodesHaveSameParent(Node first, Node second) {
         if (!Objects.equals(first.getParentNode(), second.getParentNode())) {
-            Element commonAncestor = getCommonAncestor(first,second);
-        }
+            Pair<Deque<Node>, Deque<Node>> pathUpToCommonAncestor = getPathUpToCommonAncestor(first, second);//todo just return common ancestor
+            if (!Objects.equals(pathUpToCommonAncestor.getValue().getLast(), pathUpToCommonAncestor.getKey().getLast()))
+                throw new IllegalStateException();
+
+            // Close whatever the nodes are in, up to the common ancestor
+            Deque<Node> firstPath = pathUpToCommonAncestor.getKey();
+            Node commonAncestor = firstPath.getLast();
+            Node node1 = first;
+            while (!Objects.equals(node1.getParentNode(), commonAncestor)) node1 = cutParentAtNode(node1);
+            Node node2 = second;
+            while (!Objects.equals(node2.getParentNode(), commonAncestor)) node2 = cutParentAtNode(node2);
+
+            return new Pair<>(node1, node2);
+        } else return new Pair<>(first, second);
     }
 
-    private static Element getCommonAncestor(Node first, Node second) {
+    private static Element cutParentAtNode(Node n) {
+        if (n.getParentNode().getNodeType() != Node.ELEMENT_NODE)
+            throw new InvalidParameterException("Parent must be element.");
+        Element parent = (Element) n.getParentNode();
+        Element newElement = n.getOwnerDocument().createElement(parent.getTagName());
+        getPrevSiblings(n).forEach(newElement::appendChild);
+        parent.getParentNode().insertBefore(newElement, parent);
+        copyAttributes(parent, newElement);
+        return newElement;
+    }
 
+
+    private static List<Node> getNodeWithNextSiblings(Node node) {
+        List<Node> nodes = Lists.newArrayList(node);
+        while (node.getNextSibling() != null) {
+            node = node.getNextSibling();
+            nodes.add(node);
+        }
+        return nodes;
+    }
+
+    private static Deque<Node> getPrevSiblings(Node node) {
+        Deque<Node> nodes = new ArrayDeque<>();
+        while (node.getPreviousSibling() != null) {
+            node = node.getPreviousSibling();
+            nodes.addFirst(node);
+        }
+        return nodes;
+    }
+
+    private static Pair<Deque<Node>, Deque<Node>> getPathUpToCommonAncestor(Node first, Node second) {
+        Deque<Node> firstAncestors = new ArrayDeque<>();
+        Deque<Node> secondAncestors = new ArrayDeque<>();
+
+        Node l1 = first;
+        Node l2 = second;
+
+        while (l1 != null || l2 != null) {
+            firstAncestors.add(l1);
+            secondAncestors.add(l2);
+            if (firstAncestors.contains(l2))
+                return new Pair<>(Collections3.upToAndIncluding(firstAncestors, l2), secondAncestors);
+            if (secondAncestors.contains(l1))
+                return new Pair<>(firstAncestors, Collections3.upToAndIncluding(secondAncestors, l1));
+            if (l1 != null) l1 = l1.getParentNode();
+            if (l2 != null) l2 = l2.getParentNode();
+        }
+
+        throw new InvalidParameterException("No common ancestors exists for given nodes.");
     }
 }

@@ -21,7 +21,7 @@ public class MostLikelyTreeFromList {
         ImmutableList<TokenTreeLeaf> titles =
                 ImmutableList.copyOf(
                         Collections3.zip(l.stream(), labels.stream())
-                                .filter(p -> p.getValue().equals(Label.SECTION_TITLE))
+                                .filter(p -> p.getValue().equals(Label.SECTION_TITLE) || p.getValue().equals(Label.NR))
                                 .map(Pair::getKey)
                                 .collect(Collectors.toList()));
 
