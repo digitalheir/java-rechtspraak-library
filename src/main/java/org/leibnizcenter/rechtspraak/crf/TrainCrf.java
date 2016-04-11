@@ -73,7 +73,7 @@ public class TrainCrf {
             "Include all allowed transitions, even those not in training data", null);
     private static final CommandOption.String weightsOption = new CommandOption.String(
             SimpleTagger.class, "weights", "sparse|some-dense|dense", true, "some-dense",
-            "Use sparse, some dense (using a heuristic), or dense features on transitions.", null);
+            "Use sparse, some dense (using a heuristic), or dense mostlikelytreefromlist on transitions.", null);
     private static final CommandOption.Boolean continueTrainingOption = new CommandOption.Boolean(
             SimpleTagger.class, "continue-training", "true|false", false, false,
             "Continue training from model specified by --model-file", null);
@@ -85,7 +85,7 @@ public class TrainCrf {
             "How much state information to memoize in n-best decoding", null);
     private static final CommandOption.Boolean includeInputOption = new CommandOption.Boolean(
             SimpleTagger.class, "include-input", "true|false", true, false,
-            "Whether to include the input features when printing decoding output", null);
+            "Whether to include the input mostlikelytreefromlist when printing decoding output", null);
     private static final CommandOption.Boolean featureInductionOption = new CommandOption.Boolean(
             SimpleTagger.class, "feature-induction", "true|false", true, false,
             "Whether to perform feature induction during training", null);

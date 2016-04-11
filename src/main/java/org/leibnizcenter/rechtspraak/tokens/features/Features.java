@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * Helpers functions for features
+ * Helpers functions for mostlikelytreefromlist
  * <p>
  * Created by Maarten on 2016-03-21.
  */

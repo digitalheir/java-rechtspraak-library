@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * Generates the standard set of CRF features for part-of-speech tagging.
+ * Generates the standard set of CRF mostlikelytreefromlist for part-of-speech tagging.
  * This standard set is:
  * <OL>
  * <LI>For each token and tag - a feature that models that that token is assigned that tag.</LI>

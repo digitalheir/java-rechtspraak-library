@@ -25,7 +25,7 @@ import java.util.Set;
  * \delta_j(g) = max_{g'}{\delta_{j-1}(g')*\psi_j(g,g')}<BR>
  * where \psi_j(g,g') is the formula for token number j in the sequence, where its tag is s, and the tag of token number j-1 is g'.<BR>
  * This formula, in CRF, is e^{\sum_{i=0}^{k-1}{\theta_i*f_i(sequecne,j,g,g')}}/Z(sequence)<BR>
- * where k is the number of features, theta_i is the parameter number i, and f_i is feature number i,
+ * where k is the number of mostlikelytreefromlist, theta_i is the parameter number i, and f_i is feature number i,
  * and Z(sequence) is the normalization factor.
  * <P>
  * Now, it can be observed that to calculate \delta_j(g), the tag g' should be detected, and that g' is the tag assigned to

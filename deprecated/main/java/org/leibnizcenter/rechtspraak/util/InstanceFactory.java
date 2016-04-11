@@ -55,7 +55,7 @@
 //        Xml.TextBlockSequence textsWithLabels = Xml.textInPreorder(Xml.getContentRoot(doc), null, null, false);
 //
 //        /**
-//         * Text nodes as tokens with features set
+//         * Text nodes as tokens with mostlikelytreefromlist set
 //         */
 //        TokenSequence observations = new TokenSequence(textsWithLabels.size());
 //        /**
@@ -63,7 +63,7 @@
 //         */
 //        LabelSequence labels = new LabelSequence(outputLabels, textsWithLabels.size());
 //
-////        System.out.println(textsWithLabels.size() + " tokens; adding features");
+////        System.out.println(textsWithLabels.size() + " tokens; adding mostlikelytreefromlist");
 //        List<NumberingNumber> numbers = new ArrayList<>();
 //        int size = textsWithLabels.size();
 //        for (int i = 0; i < size; i++) {

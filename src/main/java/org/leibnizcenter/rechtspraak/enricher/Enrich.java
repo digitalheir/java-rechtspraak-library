@@ -2,6 +2,8 @@ package org.leibnizcenter.rechtspraak.enricher;
 
 import cc.mallet.fst.CRF;
 import org.leibnizcenter.rechtspraak.crf.ApplyCrf;
+import org.leibnizcenter.rechtspraak.enricher.mostlikelytreefromlist.MostLikelyTreeFromListImpl;
+import org.leibnizcenter.rechtspraak.enricher.mostlikelytreefromlist.PenaltyCalculatorImpl;
 import org.leibnizcenter.rechtspraak.leibnizannotations.DeterministicTagger;
 import org.leibnizcenter.rechtspraak.leibnizannotations.Label;
 import org.leibnizcenter.rechtspraak.tokens.RechtspraakElement;
@@ -50,7 +52,11 @@ public class Enrich {
 
         // Make sectioning tree if there is no section tag already
         if (!Xml.containsTag(contentRoot, "section")) {
-            ImmutableTree mostLikelySectionTree = MostLikelyTreeFromList.getMostLikelyTree(tokenList, tags);
+            ImmutableTree mostLikelySectionTree = MostLikelyTreeFromListImpl.getMostLikelyTree(
+                    tokenList,
+                    tags,
+                    new PenaltyCalculatorImpl()
+            );
             setSectionTags(mostLikelySectionTree, tokenList);
         }
 

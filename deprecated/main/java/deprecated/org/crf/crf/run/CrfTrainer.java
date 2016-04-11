@@ -50,14 +50,14 @@ public class CrfTrainer<K,G>
 
 	public void train(List<? extends List<? extends TaggedToken<K, G>>> corpus)
 	{
-		logger.info("CRF training: Number of tags = "+crfTags.getTags().size()+". Number of features = "+features.getFilteredFeatures().length +".");
+		logger.info("CRF training: Number of tags = "+crfTags.getTags().size()+". Number of mostlikelytreefromlist = "+features.getFilteredFeatures().length +".");
 		logger.info("Creating log likelihood function.");
 		DerivableFunction convexNegatedCrfFunction = NegatedFunction.fromDerivableFunction(createLogLikelihoodFunctionConcave(corpus));
 		logger.info("Optimizing log likelihood function.");
 		LbfgsMinimizer lbfgsOptimizer = new LbfgsMinimizer(convexNegatedCrfFunction);
 		lbfgsOptimizer.find();
 		double[] parameters = lbfgsOptimizer.getPoint();
-		if (parameters.length!=features.getFilteredFeatures().length) {throw new CrfException("Number of parameters, returned by LBFGS optimizer, differs from number of features.");}
+		if (parameters.length!=features.getFilteredFeatures().length) {throw new CrfException("Number of parameters, returned by LBFGS optimizer, differs from number of mostlikelytreefromlist.");}
 
 		ArrayList<Double> parametersAsList = new ArrayList<Double>(parameters.length);
 		for (double parameter : parameters)

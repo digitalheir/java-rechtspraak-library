@@ -64,10 +64,10 @@ public class CrfFeatureValueExpectationByModel<K, G>
 	{
 		K[] sentenceTokens = CrfUtilities.extractSentence(sentence);
 
-		// Find the "active" features for each triple of {token-index,tag-of-token,tag-of-previous-token}
+		// Find the "active" mostlikelytreefromlist for each triple of {token-index,tag-of-token,tag-of-previous-token}
 		CrfRememberActiveFeatures<K, G> activeFeaturesForSentence = CrfRememberActiveFeatures.findForSentence(model.getFeatures(), model.getCrfTags(), sentenceTokens);
 
-		// Calculate the CRF formula: e^{\Sum_{i=0}^{F-1}\theta_i*f_i(j,g,g')} where F is the number of features, j is a token index, g is a tag for that token, and g' is a tag for the previous token.
+		// Calculate the CRF formula: e^{\Sum_{i=0}^{F-1}\theta_i*f_i(j,g,g')} where F is the number of mostlikelytreefromlist, j is a token index, g is a tag for that token, and g' is a tag for the previous token.
 		CrfPsi_FormulaAllTokens<K, G> allTokensFormula = CrfPsi_FormulaAllTokens.createAndCalculate(model,sentenceTokens,activeFeaturesForSentence);
 
 		CrfForwardBackward<K,G> forwardBackward = new CrfForwardBackward<K,G>(model,sentenceTokens,activeFeaturesForSentence);

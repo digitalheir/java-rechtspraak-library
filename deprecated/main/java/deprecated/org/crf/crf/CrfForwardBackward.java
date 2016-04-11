@@ -34,9 +34,9 @@ import static deprecated.org.crf.crf.CrfUtilities.roughlyEqual;
  * k_{j-1} is g' is:
  * \alpha_{j-1}(g')*\Psi(j,g,g')*\beta_{j}(g)
  * where \Psi(j,g,g') is the formula for token number j where its tag is g and the tag of token (j-1) is g', i.e.,
- * e^{\Sum{i=0}^{number-of-features}(\theta_i*f_i(j,g,g'))}
+ * e^{\Sum{i=0}^{number-of-mostlikelytreefromlist}(\theta_i*f_i(j,g,g'))}
  * where \theta_i is parameter number i (these are the parameters learned in the training) and f_i is feature number i (the
- * features are defined by the user).
+ * mostlikelytreefromlist are defined by the user).
  * <BR>
  * This formula, \alpha_{j-1}(g')*\Psi(j,g,g')*\beta_{j}(g), is used to calculate the <B>expected</B> feature-values under the
  * model, and is utilized by {@link CrfFeatureValueExpectationByModel}.

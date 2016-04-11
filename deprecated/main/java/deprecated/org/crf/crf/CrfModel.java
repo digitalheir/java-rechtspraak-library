@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
- * This class encapsulates the set of all possible tags, the list of features (f_i), and the list of parameters (\theta_i).
+ * This class encapsulates the set of all possible tags, the list of mostlikelytreefromlist (f_i), and the list of parameters (\theta_i).
  * 
  * @author Asher Stern
  * Date: Nov 8, 2014

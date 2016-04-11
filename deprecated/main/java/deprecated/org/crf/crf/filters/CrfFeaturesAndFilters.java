@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * Encapsulates all the features, the {@link FilterFactory}, and data-structures used for filtering features.
+ * Encapsulates all the mostlikelytreefromlist, the {@link FilterFactory}, and data-structures used for filtering mostlikelytreefromlist.
  * 
  * @author Asher Stern
  * Date: Nov 11, 2014
@@ -34,7 +34,7 @@ public class CrfFeaturesAndFilters<K, G> implements Serializable
 	}
 
 	/**
-	 * Returns the {@link FilterFactory} to be used with the features encapsulated here, for efficient feature-value calculations.
+	 * Returns the {@link FilterFactory} to be used with the mostlikelytreefromlist encapsulated here, for efficient feature-value calculations.
 	 */
 	public FilterFactory<K, G> getFilterFactory()
 	{
@@ -42,7 +42,7 @@ public class CrfFeaturesAndFilters<K, G> implements Serializable
 	}
 
 	/**
-	 * An array of all the features in the CRF model.
+	 * An array of all the mostlikelytreefromlist in the CRF model.
 	 */
 	public CrfFilteredFeature<K, G>[] getFilteredFeatures()
 	{
@@ -50,7 +50,7 @@ public class CrfFeaturesAndFilters<K, G> implements Serializable
 	}
 
 	/**
-	 * Returns a map from each filter to a set of indexes of features, that might be active if their filters are equal to
+	 * Returns a map from each filter to a set of indexes of mostlikelytreefromlist, that might be active if their filters are equal to
 	 * this filter. "Active" means that they might return non-zero.
 	 */
 	public Map<Filter<K, G>, Set<Integer>> getMapActiveFeatures()
@@ -59,7 +59,7 @@ public class CrfFeaturesAndFilters<K, G> implements Serializable
 	}
 
 	/**
-	 * Returns a set of indexes of features that might be active for any type of input. These features have no filters.
+	 * Returns a set of indexes of mostlikelytreefromlist that might be active for any type of input. These mostlikelytreefromlist have no filters.
 	 */
 	public Set<Integer> getIndexesOfFeaturesWithNoFilter()
 	{

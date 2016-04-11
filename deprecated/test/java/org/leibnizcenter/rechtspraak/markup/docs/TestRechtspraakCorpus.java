@@ -62,7 +62,7 @@ public class TestRechtspraakCorpus {
             Assert.assertEquals(token.getTag(), Label.TEXT_BLOCK);
         }
 
-        // Test the features that our tokens are assigned
+        // Test the mostlikelytreefromlist that our tokens are assigned
         Instance instance = TrainWithMallet.getInstance(paraDoc, true);
         TokenSequence ts = (TokenSequence) instance.getData();
 

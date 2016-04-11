@@ -148,7 +148,7 @@ public class LabeledTokenList extends ArrayList<LabeledToken> {
 //         */
 //        List<LabeledToken> textsWithLabels = Xml.textInPreorder(Xml.getContentRoot(doc), null, null, false);
 //
-//        //        System.out.println(textsWithLabels.size() + " tokens; adding features");
+//        //        System.out.println(textsWithLabels.size() + " tokens; adding mostlikelytreefromlist");
 //        List<NumberingNumber> numbers = new ArrayList<>();
 //        int size = textsWithLabels.size();
 //        for (int i = 0; i < size; i++) {

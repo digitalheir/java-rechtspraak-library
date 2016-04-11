@@ -66,7 +66,7 @@ public class TextBlockInfo {
 //
 //    public static void setFeaturesForTrimmedTextContent(String s, Token token, String ecli) {
 //        //
-//        // General features
+//        // General mostlikelytreefromlist
 //        //
 //        token.setFeatureValue(ALL_CAPS, dbl(Regex.ALL_CAPS.matcher(s).find()));
 //        String[] words = s.split("\\s+");// Simple split on whitespace

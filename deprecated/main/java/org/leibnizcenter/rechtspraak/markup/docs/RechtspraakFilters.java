@@ -1,7 +1,7 @@
 //package org.leibnizcenter.rechtspraak.markup.docs;
 //
 //import Filter;
-//import org.leibnizcenter.rechtspraak.markup.docs.features.*;
+//import org.leibnizcenter.rechtspraak.markup.docs.mostlikelytreefromlist.*;
 //import org.leibnizcenter.rechtspraak.util.numbering.FullSectionNumber;
 //
 //import java.util.HashSet;

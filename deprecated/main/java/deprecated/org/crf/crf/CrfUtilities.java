@@ -67,10 +67,10 @@ public class CrfUtilities
 	
 	/**
 	 * Finds and returns the feature-indexes for which it is not sure that they return 0.<BR>
-	 * Typically in CRF, most of the features return 0 in most inputs.
+	 * Typically in CRF, most of the mostlikelytreefromlist return 0 in most inputs.
 	 * For example, a feature that returns 1 if the token is "the" and its tag is "DETERMINER". This feature returns 0 for most
 	 * of the words in the corpus, and most of the tags.<BR>
-	 * This static function returns the features, for a given token and tags, that <b>might</b> return non-zero.
+	 * This static function returns the mostlikelytreefromlist, for a given token and tags, that <b>might</b> return non-zero.
 	 * <BR>
 	 * See also {@link Filter}
 	 *
@@ -101,11 +101,11 @@ public class CrfUtilities
 	}
 
 	/**
-	 * Returns \Sum_{i=0}^{k-1}{\theta_i*f_i(x,j,s,s')}, where k is the number of features, \theta_i is parameter number i,
+	 * Returns \Sum_{i=0}^{k-1}{\theta_i*f_i(x,j,s,s')}, where k is the number of mostlikelytreefromlist, \theta_i is parameter number i,
 	 * f_i is feature number i, x is the given sentence, j is the index of the token, s is the tag of token number j,
 	 * and s' is the tag of token number j-1.
 	 *
-	 * @param model the CRF model: holds the features and the parameters.
+	 * @param model the CRF model: holds the mostlikelytreefromlist and the parameters.
 	 * @param sentence a sentence (sequence of tokens)
 	 * @param tokenIndex token index
 	 * @param currentTag tag of the token in tokenIndex
@@ -119,19 +119,19 @@ public class CrfUtilities
 	}
 
 	/**
-	 * Returns \Sum_{i=0}^{k-1}{\theta_i*f_i(x,j,s,s')}, where k is the number of features, \theta_i is parameter number i,
+	 * Returns \Sum_{i=0}^{k-1}{\theta_i*f_i(x,j,s,s')}, where k is the number of mostlikelytreefromlist, \theta_i is parameter number i,
 	 * f_i is feature number i, x is the given sentence, j is the index of the token, s is the tag of token number j,
 	 * and s' is the tag of token number j-1.
 	 * <BR>
-	 * This function is also given a set of features for which <b>it is not known</b> that they return zero for (x,j,s,s').
+	 * This function is also given a set of mostlikelytreefromlist for which <b>it is not known</b> that they return zero for (x,j,s,s').
 	 * See {@link #getActiveFeatureIndexes(CrfFeaturesAndFilters, Object[], int, Object, Object)}.
 	 *
-	 * @param model the CRF model: holds the features and the parameters.
+	 * @param model the CRF model: holds the mostlikelytreefromlist and the parameters.
 	 * @param sentence a sentence (sequence of tokens)
 	 * @param tokenIndex token index
 	 * @param currentTag tag of the token in tokenIndex
 	 * @param previousTag tag of the token in tokenIndex-1
-	 * @param knownActiveFeatureIndexes a set of features for which <b>it is not known</b> that they return zero for (x,j,s,s').
+	 * @param knownActiveFeatureIndexes a set of mostlikelytreefromlist for which <b>it is not known</b> that they return zero for (x,j,s,s').
 	 * @return \Sum_{i=0}^{k-1}{\theta_i*f_i(x,j,s,s')}
 	 */
 	public static <K,G> double oneTokenSumWeightedFeatures(CrfModel<K, G> model, K[] sentence, int tokenIndex, G currentTag, G previousTag, Set<Integer> knownActiveFeatureIndexes)
@@ -157,11 +157,11 @@ public class CrfUtilities
 	}
 	
 	/**
-	 * Returns e^{\Sum_{i=0}^{k-1}{\theta_i*f_i(x,j,s,s')}}, where k is the number of features, \theta_i is parameter number i,
+	 * Returns e^{\Sum_{i=0}^{k-1}{\theta_i*f_i(x,j,s,s')}}, where k is the number of mostlikelytreefromlist, \theta_i is parameter number i,
 	 * f_i is feature number i, x is the given sentence, j is the index of the token, s is the tag of token number j,
 	 * and s' is the tag of token number j-1.
 	 *
-	 * @param model the CRF model: holds the features and the parameters.
+	 * @param model the CRF model: holds the mostlikelytreefromlist and the parameters.
 	 * @param sentence a sentence (sequence of tokens)
 	 * @param tokenIndex token index
 	 * @param currentTag tag of the token in tokenIndex
@@ -175,19 +175,19 @@ public class CrfUtilities
 	}
 	
 	/**
-	 * Returns e^{\Sum_{i=0}^{k-1}{\theta_i*f_i(x,j,s,s')}}, where k is the number of features, \theta_i is parameter number i,
+	 * Returns e^{\Sum_{i=0}^{k-1}{\theta_i*f_i(x,j,s,s')}}, where k is the number of mostlikelytreefromlist, \theta_i is parameter number i,
 	 * f_i is feature number i, x is the given sentence, j is the index of the token, s is the tag of token number j,
 	 * and s' is the tag of token number j-1.
 	 * <BR>
-	 * This function is also given a set of features for which <b>it is not known</b> that they return zero for (x,j,s,s').
+	 * This function is also given a set of mostlikelytreefromlist for which <b>it is not known</b> that they return zero for (x,j,s,s').
 	 * See {@link #getActiveFeatureIndexes(CrfFeaturesAndFilters, Object[], int, Object, Object)}.
 	 *
-	 * @param model the CRF model: holds the features and the parameters.
+	 * @param model the CRF model: holds the mostlikelytreefromlist and the parameters.
 	 * @param sentence a sentence (sequence of tokens)
 	 * @param tokenIndex token index
 	 * @param currentTag tag of the token in tokenIndex
 	 * @param previousTag tag of the token in tokenIndex-1
-	 * @param knownActiveFeatureIndexes a set of features for which <b>it is not known</b> that they return zero for (x,j,s,s').
+	 * @param knownActiveFeatureIndexes a set of mostlikelytreefromlist for which <b>it is not known</b> that they return zero for (x,j,s,s').
 	 * @return e^{\Sum_{i=0}^{k-1}{\theta_i*f_i(x,j,s,s')}}
 	 */
 	public static <K,G> double oneTokenFormula(CrfModel<K, G> model, K[] sentence, int tokenIndex, G currentTag, G previousTag, Set<Integer> knownActiveFeatureIndexes)

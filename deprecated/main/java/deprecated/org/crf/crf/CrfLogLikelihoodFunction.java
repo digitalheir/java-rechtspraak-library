@@ -18,12 +18,12 @@ import static deprecated.org.crf.crf.CrfUtilities.safeAdd;
  * The "likelihood" of a sequence of tags for a given sentence is the probability of that sequence of tags to occur (to exist)
  * for that sentence.
  * This probability is:
- * \Sum{j=0}^{sentence-length-1}(e^( \Sum_{i=0}^{number-of-features}(\theta_i*f_i(j,g,g')) )) / Z(x)
+ * \Sum{j=0}^{sentence-length-1}(e^( \Sum_{i=0}^{number-of-mostlikelytreefromlist}(\theta_i*f_i(j,g,g')) )) / Z(x)
  * where \theta_i is parameter number i (these are the parameters that are learned during training - these parameters form
  * the input vector "point" of this function), f_i is feature number i, g is the tag of token number j, and g' is the tag of
  * token number j-1. Z(x) is the normalization factor.
  * <P>
- * The log-likelihood is \Sum_{sentence \in corpus}log( \Sum{j=0}^{sentence-length-1}(e^( \Sum_{i=0}^{number-of-features}(\theta_i*f_i(j,g,g')) )) / Z(x) ).
+ * The log-likelihood is \Sum_{sentence \in corpus}log( \Sum{j=0}^{sentence-length-1}(e^( \Sum_{i=0}^{number-of-mostlikelytreefromlist}(\theta_i*f_i(j,g,g')) )) / Z(x) ).
  * <BR>
  * The log is in the natural basis (e) (It is actually ln).
  * 
@@ -56,7 +56,7 @@ public class CrfLogLikelihoodFunction<K, G> implements DerivableFunction
 	 *
 	 * @param corpus A corpus -- a list of sequences of tokens, where each token has a tag (this is a gold-standard corpus: the tags are known).
 	 * @param crfTags The tags that exist in the given corpus. See {@link CrfTagsBuilder}.
-	 * @param features The CRF features.
+	 * @param features The CRF mostlikelytreefromlist.
 	 * @param useRegularization whether to use a regularization factor or not.
 	 * @param sigmaSquare_inverseRegularizationFactor the \sigma^2 parameter of the L2 regularization factor.
 	 */
@@ -83,7 +83,7 @@ public class CrfLogLikelihoodFunction<K, G> implements DerivableFunction
 
 		CrfModel<K, G> model = createModel(point);
 		double regularization = useRegularization?calculateRegularizationFactor(point):0.0;
-		logger.debug("Calculating sum weighted features");
+		logger.debug("Calculating sum weighted mostlikelytreefromlist");
 		double sumWeightedFeatures = calculateSumWeightedFeatures(model);
 		logger.debug("Calculating sum log normalizations");
 		double sumOfLogNormalizations = calculateSumOfLogNormalizations(model);
@@ -137,7 +137,7 @@ public class CrfLogLikelihoodFunction<K, G> implements DerivableFunction
 //		for (List<? extends TaggedToken<K, G> > sentence : corpus)
 //		{
 //			K[] sentenceAsArray = CrfUtilities.extractSentence(sentence);
-//			CrfRememberActiveFeatures<K,G> activeFeaturesOfSentence = CrfRememberActiveFeatures.findForSentence(features,tags, sentenceAsArray);
+//			CrfRememberActiveFeatures<K,G> activeFeaturesOfSentence = CrfRememberActiveFeatures.findForSentence(mostlikelytreefromlist,tags, sentenceAsArray);
 //			activeFeaturesWholeCorpus.add(activeFeaturesOfSentence);
 //		}
 //		logger.info(RuntimeUtilities.getUsedMemory());
@@ -196,7 +196,7 @@ public class CrfLogLikelihoodFunction<K, G> implements DerivableFunction
 
 	private CrfModel<K, G> createModel(double[] point)
 	{
-		if (point.length!=features.getFilteredFeatures().length) {throw new CrfException("Number of parameters differs from number of features.");}
+		if (point.length!=features.getFilteredFeatures().length) {throw new CrfException("Number of parameters differs from number of mostlikelytreefromlist.");}
 		ArrayList<Double> parameters = new ArrayList<Double>(point.length);
 		for (double parameter : point)
 		{

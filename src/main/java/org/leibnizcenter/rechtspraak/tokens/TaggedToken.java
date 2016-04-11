@@ -1,5 +1,9 @@
 package org.leibnizcenter.rechtspraak.tokens;
 
+import org.leibnizcenter.rechtspraak.leibnizannotations.Label;
+import org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf;
+import org.leibnizcenter.rechtspraak.util.Pair;
+
 /**
  * Encapsulates a token and its tag.
  * <p>
@@ -18,6 +22,10 @@ public class TaggedToken<K, G> {
         super();
         this.token = token;
         this.tag = tag;
+    }
+
+    public TaggedToken(Pair<K, G> pair) {
+        this(pair.getKey(),pair.getValue());
     }
 
     public K getToken() {

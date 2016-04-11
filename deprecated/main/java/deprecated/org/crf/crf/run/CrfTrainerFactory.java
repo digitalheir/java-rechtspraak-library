@@ -26,7 +26,7 @@ public class CrfTrainerFactory<K, G> {
     private static final Logger logger = Logger.getLogger(CrfTrainerFactory.class);
 
     private static <K, G> CrfFeaturesAndFilters<K, G> createFeaturesAndFiltersObjectFromSetOfFeatures(Set<CrfFilteredFeature<K, G>> setFilteredFeatures, FilterFactory<K, G> filterFactory) {
-        if (setFilteredFeatures.size() <= 0) throw new CrfException("No features have been generated.");
+        if (setFilteredFeatures.size() <= 0) throw new CrfException("No mostlikelytreefromlist have been generated.");
         @SuppressWarnings("unchecked")
         CrfFilteredFeature<K, G>[] featuresAsArray = (CrfFilteredFeature<K, G>[]) Array.newInstance(setFilteredFeatures.iterator().next().getClass(), setFilteredFeatures.size()); // new CrfFilteredFeature<String,String>[setFilteredFeatures.size()];
         Iterator<CrfFilteredFeature<K, G>> filteredFeatureIterator = setFilteredFeatures.iterator();
@@ -69,7 +69,7 @@ public class CrfTrainerFactory<K, G> {
      * <B>The given corpus must reside completely in the internal memory. Not in disk/data-base etc.</B>
      *
      * @param corpus                  The corpus: a list a tagged sequences. Must reside completely in memory.
-     * @param featureGeneratorFactory A factory which creates a feature-generator (the feature-generator creates a set of features)
+     * @param featureGeneratorFactory A factory which creates a feature-generator (the feature-generator creates a set of mostlikelytreefromlist)
      * @param filterFactory           The {@link FilterFactory} <B>that corresponds to the feature-generator.</B>
      * @return a CRF trainer.
      */
@@ -83,7 +83,7 @@ public class CrfTrainerFactory<K, G> {
     }
 
     public CrfTrainer<K, G> createTrainer(List<List<? extends TaggedToken<K, G>>> corpus, CrfFeatureGeneratorFactory<K, G> featureGeneratorFactory, FilterFactory<K, G> filterFactory, CrfTags<G> crfTags) {
-        logger.info("Generating features.");
+        logger.info("Generating mostlikelytreefromlist.");
         CrfFeatureGenerator<K, G> featureGenerator = featureGeneratorFactory.create(corpus, crfTags.getTags());
         featureGenerator.generateFeatures();
         Set<CrfFilteredFeature<K, G>> setFilteredFeatures = featureGenerator.getFeatures();

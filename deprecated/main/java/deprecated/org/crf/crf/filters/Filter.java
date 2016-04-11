@@ -7,7 +7,7 @@ import java.io.Serializable;
  * for a given input. "Input" is the sequence of tokens, the token-index, its tag, and the tag of the preceding token.
  * <P>
  * The CRF formula e^{weight-vector*feature-vector} might be quite expensive in run-time complexity notion. However,
- * in most cases most of the features return zero for the given input. Thus, there is no need to sum over all the features,
+ * in most cases most of the mostlikelytreefromlist return zero for the given input. Thus, there is no need to sum over all the mostlikelytreefromlist,
  * but only over those which <B>might</B> return a non-zero value.
  * <BR>
  * Concretely, Assume we have a {@link CrfFilteredFeature} and a {@link Filter}: if the filter {@link #equals(Object)
@@ -15,7 +15,7 @@ import java.io.Serializable;
  * known for sure that it returns zero.
  * <P>
  * The usage of filters is to build a map from {@link Filter } to a <B>set of</B> {@link CrfFilteredFeature}s, and for each input
- * create filters and use them to retrieve the set of relevant features from the map.   
+ * create filters and use them to retrieve the set of relevant mostlikelytreefromlist from the map.
  * 
  * @see CrfFilteredFeature
  * @see FilterFactory

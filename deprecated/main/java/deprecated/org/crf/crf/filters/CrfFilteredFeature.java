@@ -11,11 +11,11 @@ import java.io.Serializable;
  * The filter should represent the case in which the feature <B>might</B> return a non-zero value.
  * It is the responsibility of the programmer who subclasses this class to encapsulate the right filter for the feature.
  * <P>
- * Filters work as follows: the programmer who programs the CRF features, writes for each feature also a filter.
+ * Filters work as follows: the programmer who programs the CRF mostlikelytreefromlist, writes for each feature also a filter.
  * In addition, the programmer writers a {@link FilterFactory} which returns a set of filters for each input.
  * That's all for the feature programmer.
  * In the CRF side of training and inference, the {@link FilterFactory} is queried for each input for a set of filters,
- * which are used to retrieve the features which <B>might</B> return non-zero for the given input.
+ * which are used to retrieve the mostlikelytreefromlist which <B>might</B> return non-zero for the given input.
  * 
  * @see Filter
  * @see FilterFactory

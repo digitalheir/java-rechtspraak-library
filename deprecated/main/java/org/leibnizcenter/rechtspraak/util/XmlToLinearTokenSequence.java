@@ -103,7 +103,7 @@
 //        Token token = new Token(preserveInformation ? normalized : null);
 //
 //        Span span = spans[i];
-//        // Note: these are not features, but properties we need if we want to reconstruct the source XML
+//        // Note: these are not mostlikelytreefromlist, but properties we need if we want to reconstruct the source XML
 //        if (mapTokensToNodes) {
 //            token.setProperty(Const.PROP_NODE, node);
 //            token.setProperty(Const.PROP_OFFSET, span.getStart());

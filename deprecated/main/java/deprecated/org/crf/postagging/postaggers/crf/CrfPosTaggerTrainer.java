@@ -91,7 +91,7 @@ public class CrfPosTaggerTrainer implements PosTaggerTrainer<List<? extends List
 			ArrayList<Double> parameters = crfModel.getParameters();
 			if (features.length!=parameters.size())
 			{
-				throw new CrfException("features.length!=parameters.size()");
+				throw new CrfException("mostlikelytreefromlist.length!=parameters.size()");
 			}
 
 			Map<Integer,Double> parametersMap = PosTaggerUtilities.listToMap(parameters);

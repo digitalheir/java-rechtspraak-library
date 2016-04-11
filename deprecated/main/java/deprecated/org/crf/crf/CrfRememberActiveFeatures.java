@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * Holds sets of active features for every token, and every pair of tags (for this token and the preceding token) in the given input.
+ * Holds sets of active mostlikelytreefromlist for every token, and every pair of tags (for this token and the preceding token) in the given input.
  * 
  * @author Asher Stern
  * Date: Nov 13, 2014
@@ -43,7 +43,7 @@ public class CrfRememberActiveFeatures<K, G>
 	/**
 	 * Creates an instance of {@link CrfRememberActiveFeatures} for the given sentence, calls its {@link #findActiveFeaturesForAllTokens()}
 	 * method, and returns it. With the returned object, the method {@link #getOneTokenActiveFeatures(int, Object, Object)} can be
-	 * used to retrieve active features for any token/tag/tag-of-previous in the sentence.
+	 * used to retrieve active mostlikelytreefromlist for any token/tag/tag-of-previous in the sentence.
 	 *
 	 * @param features
 	 * @param crfTags
@@ -57,7 +57,7 @@ public class CrfRememberActiveFeatures<K, G>
 	}
 
 	/**
-	 * Finds all the active features for every triple of token/tag/tag-of-previous. Then, the method
+	 * Finds all the active mostlikelytreefromlist for every triple of token/tag/tag-of-previous. Then, the method
 	 * {@link #getOneTokenActiveFeatures(int, Object, Object)} can be used.
 	 */
 	public void findActiveFeaturesForAllTokens()

@@ -5,12 +5,12 @@
 //import com.google.common.collect.*;
 //import com.google.common.io.Files;
 //import org.leibnizcenter.rechtspraak.TrainWithMallet;
-//import org.leibnizcenter.rechtspraak.tokens.features.title.TitlePatterns.TitlesNormalizedMatchesHighConf;
+//import org.leibnizcenter.rechtspraak.tokens.mostlikelytreefromlist.title.TitlePatterns.TitlesNormalizedMatchesHighConf;
 //import org.leibnizcenter.rechtspraak.markup.docs.Label;
 //import org.leibnizcenter.rechtspraak.markup.docs.LabeledToken;
 //import org.leibnizcenter.rechtspraak.markup.docs.LabeledTokenList;
 //import org.leibnizcenter.rechtspraak.markup.docs.RechtspraakCorpus;
-//import org.leibnizcenter.rechtspraak.markup.docs.features.Patterns;
+//import org.leibnizcenter.rechtspraak.markup.docs.mostlikelytreefromlist.Patterns;
 //
 //import javax.xml.parsers.ParserConfigurationException;
 //import java.io.File;
