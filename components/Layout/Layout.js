@@ -1,10 +1,9 @@
-/**
- * React Static Boilerplate
- * https://github.com/koistya/react-static-boilerplate
- * Copyright (c) Konstantin Tarkus (@koistya) | MIT license
- */
-
 import React, { PropTypes } from 'react';
+
+//todo
+// import './normalize.scss';
+// import './opiniated-defaults.scss';
+
 import './Layout.scss';
 import Navigation from '../Navigation';
 

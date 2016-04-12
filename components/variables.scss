@@ -8,15 +8,15 @@
  * Scaffolding
  * -------------------------------------------------------------------------- */
 
-$body-bg: #f7f7f7;
-$text-color: #333;
+$body-bg: #fff;
+$text-color: #727272;
 $brand-color: #21ce99;
 
 /*
  * Typography
  * -------------------------------------------------------------------------- */
 
-$font-family-base: 'Roboto', 'Helvetica', sans-serif;
+$font-family-base: 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 /*
  * Media queries breakpoints
@@ -25,3 +25,6 @@ $font-family-base: 'Roboto', 'Helvetica', sans-serif;
 $screen-sm-min: 768px;
 $screen-md-min: 992px;
 $screen-lg-min: 1200px;
+
+$body-padding: 50px;
+$body-padding-narrow: 15px;

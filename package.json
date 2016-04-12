@@ -31,6 +31,7 @@
     "raw-loader": "^0.5.1",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
+    "react-addons-pure-render-mixin": "^15.0.1",
     "react-transform-catch-errors": "^1.0.0",
     "react-transform-hmr": "^1.0.1",
     "redbox-react": "^1.1.1",
@@ -39,7 +40,8 @@
     "url-loader": "^0.5.6",
     "webpack": "^1.12.2",
     "webpack-dev-middleware": "^1.2.0",
-    "webpack-hot-middleware": "^2.4.1"
+    "webpack-hot-middleware": "^2.4.1",
+    "underscore": "latest"
   },
   "scripts": {
     "lint": "eslint src tools test",
@@ -48,5 +50,7 @@
     "build": "babel-node --eval \"require('./tools/build')().catch(err => console.log(err.stack))\"",
     "start": "babel-node --eval \"require('./tools/start')().catch(err => console.log(err.stack))\"",
     "deploy": "babel-node --eval \"require('./tools/deploy')().catch(err => console.log(err.stack))\""
+  },
+  "dependencies": {
   }
 }
