@@ -36,5 +36,4 @@ public class EnrichTest {
     public void cleanUp() throws Exception {
 
     }
-
 }

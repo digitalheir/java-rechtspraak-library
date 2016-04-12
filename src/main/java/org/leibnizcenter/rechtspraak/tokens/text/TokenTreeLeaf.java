@@ -25,6 +25,7 @@ public abstract class TokenTreeLeaf implements TokenTreeVertex, Node {
     private final static Pattern LEADING_ARTICLE = Pattern.compile("^\\s*(de|het|een)\\b\\s*");
     private final String normalizedText;
     public final String[] words;
+    private final Set<String> emphasisRoles;
 
     public String[] wordsBeforeOpeningBracket;
     public final Element emphasis;
@@ -38,6 +39,8 @@ public abstract class TokenTreeLeaf implements TokenTreeVertex, Node {
         wordsBeforeOpeningBracket = getWordsBeforeOpeningBracket(words);
 
         emphasis = findEmphasis();
+        if (emphasis == null) emphasisRoles = null;
+        else emphasisRoles = Sets.newHashSet(Regex.CONSECUTIVE_WHITESPACE.split(emphasis.getAttribute("role")));
 
         if (Strings.isNullOrEmpty(textContent)) {
             this.normalizedText = EMPTY_STRING;
@@ -298,8 +301,6 @@ public abstract class TokenTreeLeaf implements TokenTreeVertex, Node {
     }
 
     public Set<String> getEmphasis() {
-        // todo split at initialization
-        if (emphasis == null) return null;
-        else return Sets.newHashSet(Regex.CONSECUTIVE_WHITESPACE.split(emphasis.getAttribute("role")));
+        return emphasisRoles;
     }
 }

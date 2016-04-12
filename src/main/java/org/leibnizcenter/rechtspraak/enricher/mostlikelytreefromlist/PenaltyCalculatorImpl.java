@@ -1,10 +1,12 @@
 package org.leibnizcenter.rechtspraak.enricher.mostlikelytreefromlist;
 
 import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableSet;
+import com.google.common.collect.Sets;
 import org.leibnizcenter.rechtspraak.enricher.mostlikelytreefromlist.interfaces.PenaltyCalculator;
 import org.leibnizcenter.rechtspraak.leibnizannotations.Label;
-import org.leibnizcenter.rechtspraak.tokens.LabeledToken;
 import org.leibnizcenter.rechtspraak.tokens.numbering.Numbering;
+import org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf;
 import org.leibnizcenter.rechtspraak.tokens.tokentree.TokenTree;
 import org.leibnizcenter.rechtspraak.util.Collections3;
 import org.leibnizcenter.rechtspraak.util.immutabletree.ImmutableTree;
@@ -13,7 +15,6 @@ import org.leibnizcenter.rechtspraak.util.immutabletree.LabeledTokenNode;
 
 import java.security.InvalidParameterException;
 import java.util.*;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 /**
@@ -50,8 +51,9 @@ public class PenaltyCalculatorImpl implements PenaltyCalculator {
                 if (!numberingToAdd.getNumbering().isFirstNumbering()) penalty += 3;
             }
         }
+        //todo more features
 
-//                if (!isNumberingInSequenceWithSecondToLat(nextChildToAdd)) penalty += 3;
+//                if (!isNumberingInSequenceWithSecondToLast(nextChildToAdd)) penalty += 3;
 //        if (addToNodeParent != null && Collections3.isNullOrEmpty(addToNodeParent.getChildren())) {
 //            if (hasSameMarkup(addToNodeParent.token, newNode)) penalty += 2;
 //            // isSubsectionOfSameMarkupAndNumberingInSequence
@@ -72,13 +74,12 @@ public class PenaltyCalculatorImpl implements PenaltyCalculator {
     }
 
     private static NamedImmutableTree hasPreviousSection(ImmutableTree addToNode) {
-        if (Collections3.isNullOrEmpty(addToNode.getChildren())) return null;
-        Iterator<ImmutableTree> prevSection = addToNode.getChildren()
-                .reverse()// todo we can make this somewhat faster by iterating from size()-1 to 0
-                .stream()
-                .filter(PenaltyCalculatorImpl::isSectionNode)
-                .limit(1).collect(Collectors.toSet()).iterator();
-        return prevSection.hasNext() ? (NamedImmutableTree) prevSection.next() : null;
+        ImmutableList<ImmutableTree> children = addToNode.getChildren();
+        if (Collections3.isNullOrEmpty(children)) return null;
+        for (int i = children.size(); i >= 0; i--) {
+            if (PenaltyCalculatorImpl.isSectionNode(children.get(i))) return (NamedImmutableTree) children.get(i);
+        }
+        return null;
     }
 
     private static boolean isSectionNode(ImmutableTree child) {
@@ -99,8 +100,7 @@ public class PenaltyCalculatorImpl implements PenaltyCalculator {
 
         if (Collections3.isNullOrEmpty(section.getChildren())
                 || !(section.getChildren().get(0) instanceof NamedImmutableTree)
-                || !TokenTree.TAG_TITLE.equals((getTitleNodeFromSection(section)).getName()))
-            return null;
+                || !TokenTree.TAG_TITLE.equals(getTitleNodeFromSection(section).getName())) return null;
 
         return getNumberingFromTitleNode(getTitleNodeFromSection(section));
     }
@@ -113,13 +113,14 @@ public class PenaltyCalculatorImpl implements PenaltyCalculator {
                 && titleNode.getChildren().get(0) instanceof LabeledTokenNode
                 // Title numbering must be first element of title
                 && Label.NR.equals(((LabeledTokenNode) titleNode.getChildren().get(0)).token.getTag())) {
-            numberingToAdd = (Numbering) getTitleNodeFromSection(titleNode).token.getToken();
+            numberingToAdd = (Numbering) ((LabeledTokenNode) titleNode.getChildren().get(0)).token.getToken();
         } else numberingToAdd = null;
         return numberingToAdd;
     }
 
-    private static LabeledTokenNode getTitleNodeFromSection(NamedImmutableTree titleNode) {
-        return (LabeledTokenNode) titleNode.getChildren().get(0);
+
+    private static NamedImmutableTree getTitleNodeFromSection(NamedImmutableTree titleNode) {
+        return (NamedImmutableTree) titleNode.getChildren().get(0);
     }
 
 
@@ -146,20 +147,51 @@ public class PenaltyCalculatorImpl implements PenaltyCalculator {
         if (!TokenTree.TAG_TITLE.equals(n1.getName())) throw new InvalidParameterException();
         if (!TokenTree.TAG_TITLE.equals(n2.getName())) throw new InvalidParameterException();
 
-        if (Collections3.isNullOrEmpty(n1.getChildren())
-                || Collections3.isNullOrEmpty(n2.getChildren())) return false;
+        return !(Collections3.isNullOrEmpty(n1.getChildren())
+                || Collections3.isNullOrEmpty(n2.getChildren()))
 
-        return hasSameMarkup(getTitleTextFrom(n1), getTitleTextFrom(n2))
-                || hasSameMarkup(getTitleNrFrom(n1), getTitleNrFrom(n2))
-                || hasSameMarkup(allTokenDescendents(n1), allTokenDescendents(n2));
+                && (
+                getEmphasisForTitleTexts(n1).equals(getEmphasisForTitleTexts(n2))
+                        || getEmphasisForTitleNr(n1).equals(getEmphasisForTitleNr(n2))
+                        || getAllEmphases(allTokenDescendents(n1)).equals(getAllEmphases(allTokenDescendents(n2)))
+        );
+
     }
 
-    private static List<LabeledTokenNode> allTokenDescendents(ImmutableTree node) {
+    private static Set<String> getAllEmphases(List<TokenTreeLeaf> tokens) {
+        return tokens.stream().map(TokenTreeLeaf::getEmphasis).reduce(Sets.newHashSet(), Sets::union);
+    }
+
+    private static Set<String> getEmphasisForTitleTexts(NamedImmutableTree node) {
+        if (!Collections3.isNullOrEmpty(node.getChildren())) {
+            return node.getChildren().stream()
+                    .filter(child ->
+                            child instanceof LabeledTokenNode
+                                    && Label.SECTION_TITLE.equals(((LabeledTokenNode) child).token.getTag()))
+                    .map(child -> ((LabeledTokenNode) child).token.getToken().getEmphasis())
+                    .reduce(Sets.newHashSet(), Sets::union);
+        }
+        return ImmutableSet.of();
+    }
+
+    private static Set<String> getEmphasisForTitleNr(NamedImmutableTree node) {
+        if (!Collections3.isNullOrEmpty(node.getChildren())) {
+            return node.getChildren().stream()
+                    .filter(child ->
+                            child instanceof LabeledTokenNode
+                                    && Label.NR.equals(((LabeledTokenNode) child).token.getTag()))
+                    .map(child -> ((LabeledTokenNode) child).token.getToken().getEmphasis())
+                    .reduce(Sets.newHashSet(), Sets::union);
+        }
+        return ImmutableSet.of();
+    }
+
+    private static List<TokenTreeLeaf> allTokenDescendents(ImmutableTree node) {
         return allTokenDescendents(node, new ArrayList<>());
     }
 
-    private static List<LabeledTokenNode> allTokenDescendents(ImmutableTree node, List<LabeledTokenNode> acc) {
-        if (node instanceof LabeledTokenNode) acc.add((LabeledTokenNode) node);
+    private static List<TokenTreeLeaf> allTokenDescendents(ImmutableTree node, List<TokenTreeLeaf> acc) {
+        if (node instanceof LabeledTokenNode) acc.add(((LabeledTokenNode) node).token.getToken());
         else if (!Collections3.isNullOrEmpty(node.getChildren()))
             for (ImmutableTree child : node.getChildren()) allTokenDescendents(child, acc);
         return acc;
@@ -183,11 +215,12 @@ public class PenaltyCalculatorImpl implements PenaltyCalculator {
 //        else return numb.getNumbering().isFirstNumbering();
     }
 
-    private static Numbering getPrevNumber(ImmutableList<ImmutableTree> children) {
-        Set<ImmutableTree> prevz = children.reverse().stream()
-                .filter(e -> e.token instanceof Numbering)
-                .limit(1).collect(Collectors.toSet());
-        if (!Collections3.isNullOrEmpty(prevz)) return (Numbering) prevz.iterator().next().token;
-        else return null;
-    }
+//
+//    private static Numbering getPrevNumber(ImmutableList<ImmutableTree> children) {
+//        Set<ImmutableTree> prevz = children.reverse().stream()
+//                .filter(e -> e.token instanceof Numbering)
+//                .limit(1).collect(Collectors.toSet());
+//        if (!Collections3.isNullOrEmpty(prevz)) return (Numbering) prevz.iterator().next().token;
+//        else return null;
+//    }
 }

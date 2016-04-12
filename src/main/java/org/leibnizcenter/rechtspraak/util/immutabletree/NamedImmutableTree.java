@@ -18,7 +18,7 @@ public class NamedImmutableTree implements ImmutableTree {
     @Override
     public ImmutableTree addChild(ImmutableTree child) {
         ImmutableList<ImmutableTree> newChildren = new ImmutableList.Builder<ImmutableTree>()
-                .addAll(children)
+                .addAll(children == null ? ImmutableList.of() : children)
                 .add(child)
                 .build();
         return new NamedImmutableTree(name, newChildren);
@@ -32,7 +32,7 @@ public class NamedImmutableTree implements ImmutableTree {
     @Override
     public ImmutableTree replaceChild(int ix, ImmutableTree newChild) {
         ImmutableList.Builder<ImmutableTree> b = new ImmutableList.Builder<>();
-        for (int i = 0; i < children.size(); i++)  b.add(i == ix ? newChild : children.get(i));
+        for (int i = 0; i < children.size(); i++) b.add(i == ix ? newChild : children.get(i));
         return new NamedImmutableTree(name, b.build());
     }
 

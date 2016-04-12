@@ -33,10 +33,8 @@ import java.awt.event.*;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Iterator;
-import java.util.LinkedList;
+import java.util.*;
 import java.util.List;
-import java.util.Vector;
 import java.util.regex.Pattern;
 
 import static org.leibnizcenter.rechtspraak.tokens.TokenList.getEcliFromFileName;
@@ -352,7 +350,7 @@ public class Annotator extends JFrame {
         private final TokenList tokens;
 
         public MyTableModel(List<Label> labels, TokenList tokens) {
-            super(getRows(labels, tokens), new Object[]{"Nr","Note", "Text", "Label"});
+            super(getRows(labels, tokens), new Object[]{"Nr", "Note", "Text", "Label"});
             this.labels = labels;
             this.tokens = tokens;
         }
@@ -365,7 +363,6 @@ public class Annotator extends JFrame {
                 labels.set(i, getBestGuessForTag(labels, tokens, i));
                 List<String> notes = new LinkedList<>();
 
-                Element empasis = ElementFeature.getEmphasis(tokens, i);
                 if (IgnoreElement.passThrough(token.getNodeName())
                         || token.getNodeName().endsWith("nr")
                         || labels.get(i).equals(Label.NEWLINE)
@@ -373,14 +370,13 @@ public class Annotator extends JFrame {
                     notes.add(token.getNodeName());
                 }
 
+                Set<String> empasis = tokens.get(i).getEmphasis();
                 if (null != empasis) {
                     String note;
-                    String role = empasis.getAttribute("role");
-                    if (!Strings.isNullOrEmpty(role)) note = role;
+                    if (empasis.size() != 0) note = String.join(",", empasis);
                     else note = "emph";
                     notes.add(note);
                 }
-
 
 
                 if (token instanceof Numbering

@@ -9,12 +9,13 @@ import org.leibnizcenter.rechtspraak.leibnizannotations.Label;
 import org.leibnizcenter.rechtspraak.tokens.RechtspraakElement;
 import org.leibnizcenter.rechtspraak.tokens.TokenList;
 import org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf;
-import org.leibnizcenter.rechtspraak.tokens.tokentree.TokenTree;
 import org.leibnizcenter.rechtspraak.tokens.tokentree.leibniztags.LeibnizTags;
 import org.leibnizcenter.rechtspraak.util.Collections3;
 import org.leibnizcenter.rechtspraak.util.Const;
 import org.leibnizcenter.rechtspraak.util.Xml;
 import org.leibnizcenter.rechtspraak.util.immutabletree.ImmutableTree;
+import org.leibnizcenter.rechtspraak.util.immutabletree.LabeledTokenNode;
+import org.leibnizcenter.rechtspraak.util.immutabletree.NamedImmutableTree;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -22,6 +23,8 @@ import org.w3c.dom.Node;
 import java.io.File;
 import java.io.IOException;
 import java.security.InvalidParameterException;
+import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.List;
 
 /**
@@ -51,13 +54,10 @@ public class Enrich {
         List<Label> tags = DeterministicTagger.tag(tokenList);
 
         // Make sectioning tree if there is no section tag already
+        MostLikelyTreeFromListImpl m = new MostLikelyTreeFromListImpl(tokenList, tags, new PenaltyCalculatorImpl());
         if (!Xml.containsTag(contentRoot, "section")) {
-            ImmutableTree mostLikelySectionTree = MostLikelyTreeFromListImpl.getMostLikelyTree(
-                    tokenList,
-                    tags,
-                    new PenaltyCalculatorImpl()
-            );
-            setSectionTags(mostLikelySectionTree, tokenList);
+            ImmutableTree mostLikelySectionTree = m.getMostLikelyTree();
+            setNewXmlStructure(mostLikelySectionTree, contentRoot);
         }
 
         // Set tag values on elements (we can do this another way)
@@ -102,13 +102,45 @@ public class Enrich {
      * next sibling node
      *
      * @param tree
-     * @param tokenList
      */
-    private void setSectionTags(ImmutableTree tree, TokenList tokenList) {
-//        for (int i = 0; i < tree.children.size(); i++) {
+    private void setNewXmlStructure(ImmutableTree tree, Element contentRoot) {
+        if (!(tree instanceof NamedImmutableTree)) throw new IllegalStateException();
 
-            Xml.wrapSubTreeInElement(firstElementInSection, lastElementInSection, TokenTree.TAG_SECTION);
+        // TODO less destructive XML change
+        for (Node n : Xml.getChildren(contentRoot)) contentRoot.removeChild(n);
+
+        for (int i = 0; i < tree.getChildren().size(); i++) {
+            contentRoot.appendChild(recursiveCreateXml(tree.getChildren().get(i), contentRoot.getOwnerDocument()));
         }
+    }
+
+    private Node recursiveCreateXml(ImmutableTree root, Document ownerDocument) {
+        if (root instanceof NamedImmutableTree) {
+            Element newElement = ownerDocument.createElement(((NamedImmutableTree) root).getName());
+            if (!Collections3.isNullOrEmpty(root.getChildren()))
+                for (int i = 0; i < root.getChildren().size(); i++) {
+                    ImmutableTree child = root.getChildren().get(i);
+                    if (child instanceof LabeledTokenNode)
+                        appendPrevSiblings(newElement, ((LabeledTokenNode) child).token.getToken().getNode());
+                    newElement.appendChild(recursiveCreateXml(child, ownerDocument));
+                }
+            return newElement;
+        } else if (root instanceof LabeledTokenNode) {
+            return ((LabeledTokenNode) root).token.getToken().getNode();
+        } else throw new InvalidParameterException();
+    }
+
+    /**
+     * Append child and all preceding nodes (which are automatically removed from the original container)
+     *
+     * @param newElement
+     * @param child
+     */
+    private void appendPrevSiblings(Element newElement, Node child) {
+        Deque<Node> previousSiblings = new ArrayDeque<>(child.getParentNode().getChildNodes().getLength());
+        while (child.getPreviousSibling() != null)
+            previousSiblings.push(child.getPreviousSibling());
+        while (previousSiblings.size() > 0) newElement.appendChild(previousSiblings.pop());
     }
 
     public static void cleanUp(Node n) {
