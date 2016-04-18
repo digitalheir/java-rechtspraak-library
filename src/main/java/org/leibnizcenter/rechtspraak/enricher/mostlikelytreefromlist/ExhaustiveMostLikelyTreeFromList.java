@@ -16,37 +16,66 @@ import java.util.*;
  * Finds the most likely tree given a list of tagged tokens
  * Created by maarten on 7-4-16.
  */
-public class MostLikelyTreeFromListImpl extends MostLikelyTreeFromList<TokenTreeLeaf, Label> {
-    public MostLikelyTreeFromListImpl(List<TokenTreeLeaf> tokens, List<Label> labels, PenaltyCalculator penaltyCalculator) {
+public class ExhaustiveMostLikelyTreeFromList extends MostLikelyTreeFromList<TokenTreeLeaf, Label> {
+    public ExhaustiveMostLikelyTreeFromList(List<TokenTreeLeaf> tokens, List<Label> labels, PenaltyCalculator penaltyCalculator) {
         super(tokens, labels, penaltyCalculator);
     }
 
+
+
     @Override
     public boolean canAppendChildTo(ImmutableTree childToAdd,
-                                    ImmutableTree nodeToAddTo) {
+                                    Deque<ImmutableTree> addToPath, int index) {
+        Iterator<ImmutableTree> i = addToPath.iterator();
+        ImmutableTree nodeToAddTo = i.next();
+        ImmutableTree parentOfNodeToAddTo = i.hasNext() ? i.next() : null;
+
         if (nodeToAddTo instanceof LabeledTokenNode) {
             return false; // Can't add to terminal nodes
-        } else if (
-                nodeToAddTo instanceof NamedImmutableTree
-                        && TokenTree.TAG_TITLE.equals(((NamedImmutableTree) nodeToAddTo).getName())) {
-            // Only allow newline, nr, section title in <title> nodes
-            if (!(childToAdd instanceof LabeledTokenNode)) return false;
+        }
 
+        if (childToAdd instanceof LabeledTokenNode) {
             switch (((LabeledTokenNode) childToAdd).token.getTag()) {
                 case NEWLINE:
+                    // We can add new lines anywhere
+                    return true;
                 case NR:
                 case SECTION_TITLE:
-                    return true;
+                    // We can only add nr and section nodes to <title> nodes
+                    return PenaltyCalculatorImpl.isTitleContainerNode(nodeToAddTo);
                 case TEXT_BLOCK:
-                    return false;
+                    // We can't add text blocks to <title> nodes
+                    return !PenaltyCalculatorImpl.isTitleContainerNode(nodeToAddTo);
                 default:
                     throw new IllegalStateException();
             }
-        } else return true; // Allow any node in any other node than <title>
+        }
+
+//        throw new IllegalStateException();
+        if (childToAdd instanceof NamedImmutableTree) {
+            if (
+                    PenaltyCalculatorImpl.isSectionNode(nodeToAddTo)
+                    && PenaltyCalculatorImpl.isSectionNode(childToAdd)
+                    && PenaltyCalculatorImpl.hasPreviousSection(nodeToAddTo) == null
+                    && !PenaltyCalculatorImpl.isPlausibleFirstSectionOfParent(childToAdd, nodeToAddTo)
+                    && PenaltyCalculatorImpl.isPlausibleNextSectionOfParent((NamedImmutableTree) childToAdd, parentOfNodeToAddTo)
+                    ) {
+                return false;
+            }
+
+            if (nodeToAddTo instanceof NamedImmutableTree) {
+                if (
+                        ((NamedImmutableTree) childToAdd).getName().matches("section|#root")
+                                && ((NamedImmutableTree) nodeToAddTo).getName().matches("section|#root")
+                        ) return true;
+            }
+        }
+        return true; // Allow any other node to move freely
     }
 
     @Override
-    public List<ImmutableTree> getPossibleNodesToAdd(TaggedToken<TokenTreeLeaf, Label> nodeToAdd) {
+    public List<ImmutableTree> getPossibleNodesToAdd(int index) {
+        TaggedToken<TokenTreeLeaf, Label> nodeToAdd = new TaggedToken<>(getTokens().get(index), getLabels().get(index));
         final List<ImmutableTree> possibleNodesToAdd = new ArrayList<>(5);
         final LabeledTokenNode labeledTokenNode = new LabeledTokenNode(nodeToAdd);
         switch (nodeToAdd.getTag()) {

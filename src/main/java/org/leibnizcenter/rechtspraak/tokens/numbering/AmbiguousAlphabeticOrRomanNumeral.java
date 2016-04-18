@@ -40,7 +40,6 @@ public class AmbiguousAlphabeticOrRomanNumeral extends RomanNumeral implements A
     }
 
 
-
     @Override
     public char getCharacter() {
         return character;
@@ -54,5 +53,10 @@ public class AmbiguousAlphabeticOrRomanNumeral extends RomanNumeral implements A
     @Override
     public char prevChar() {
         return AlphabeticNumbering.prevChar(character);
+    }
+
+    @Override
+    public boolean couldBeFirstInSequence() {
+        return character == 'i' || character == 'I' || prevChar() == '\0';
     }
 }

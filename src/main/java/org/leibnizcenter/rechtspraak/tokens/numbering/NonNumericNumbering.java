@@ -71,4 +71,9 @@ public class NonNumericNumbering implements SingleCharNumbering {
     public char prevChar() {
         return symbol;
     }
+
+    @Override
+    public boolean couldBeFirstInSequence() {
+        return true;
+    }
 }

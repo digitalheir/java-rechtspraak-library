@@ -1,5 +1,8 @@
 package org.leibnizcenter.rechtspraak.util;
 
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableSet;
+import org.leibnizcenter.rechtspraak.util.immutabletree.ImmutableTree;
 import org.w3c.dom.Node;
 
 import java.util.*;
@@ -26,5 +29,21 @@ public class Collections3 {
             if (Objects.equals(el, stopAfter)) break;
         }
         return returnObj;
+    }
+
+    public static <T> List<T> thisOrEmpty(List<T> list) {
+        return (list == null) ? ImmutableList.of() : list;
+    }
+
+    public static int size(Collection<?> collection) {
+        return collection == null ? 0 : collection.size();
+    }
+
+    public static <R> Set<R> thisOrEmpty(Set<R> set) {
+        return set == null ? ImmutableSet.of() : set;
+    }
+
+    public static <R> R last(List<R> list) {
+        return (list == null || list.size() <= 0) ? null : list.get(list.size() - 1);
     }
 }

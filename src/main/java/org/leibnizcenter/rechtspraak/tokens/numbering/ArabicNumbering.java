@@ -119,4 +119,6 @@ public class ArabicNumbering extends Number implements FullSectionNumber {
     public FullSectionNumber succ() {
         return new ArabicNumbering(num + 1);
     }
+
+
 }

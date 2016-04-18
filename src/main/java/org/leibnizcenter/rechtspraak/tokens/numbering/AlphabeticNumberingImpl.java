@@ -77,6 +77,11 @@ public class AlphabeticNumberingImpl implements AlphabeticNumbering {
         return AlphabeticNumbering.prevChar(character);
     }
 
+    @Override
+    public boolean couldBeFirstInSequence() {
+        return prevChar() == '\0';
+    }
+
 //    @Override
 //    public int intValue() {
 //        return num;

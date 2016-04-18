@@ -57,7 +57,7 @@ public class SubSectionNumber extends ArrayList<SingleTokenNumbering> implements
         }
 
         SingleTokenNumbering checkFor = (get(size() - 1));
-        if (checkFor instanceof FullNumber && FullNumber.isFirstNumberInSequence((FullNumber) checkFor)) {
+        if (checkFor.couldBeFirstInSequence()) {
             return new SubSectionNumber(subList(0, size() - 1), terminal);
         } else {
             return new SubSectionNumber(Collections.emptyList(), terminal);
@@ -78,8 +78,7 @@ public class SubSectionNumber extends ArrayList<SingleTokenNumbering> implements
                 }
             }
             SingleTokenNumbering trailingNumber = trailingNumber();
-            return trailingNumber instanceof FullNumber
-                    && FullNumber.isFirstNumberInSequence((FullNumber) trailingNumber);
+            return trailingNumber.couldBeFirstInSequence();
         } else {
             return false;
         }
@@ -100,10 +99,7 @@ public class SubSectionNumber extends ArrayList<SingleTokenNumbering> implements
             return succedent.size() == 2
                     && succedent.get(0).equalsSansTerminal(precedent) // [3].1
                     && succedent.get(1) instanceof SingleCharNumbering
-                    && FullNumber.isFirstNumberInSequence((FullNumber) succedent.get(1)); // a.[1] // TODO a.a?
-        } else if (precedent instanceof NonNumericNumbering) {
-            return false;
-//        } else if (precedent instanceof AlphabeticNumbering) { // TODO
+                    && succedent.get(1).couldBeFirstInSequence(); // a.[1] //
         } else if (precedent instanceof SubSectionNumber) {
             // E.g., 1.2.2 -> 1.2.3:
             SubSectionNumber predecessor = ((SubSectionNumber) precedent);
@@ -188,5 +184,10 @@ public class SubSectionNumber extends ArrayList<SingleTokenNumbering> implements
                 .limit(1)
                 .collect(Collectors.toSet())
                 .size() <= 0;
+    }
+
+    public boolean firstSubsection() {
+        SingleTokenNumbering checkFor = (get(size() - 1));
+        return checkFor.couldBeFirstInSequence();
     }
 }

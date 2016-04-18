@@ -2,8 +2,10 @@ package org.leibnizcenter.rechtspraak.enricher;
 
 import cc.mallet.fst.CRF;
 import org.leibnizcenter.rechtspraak.crf.ApplyCrf;
-import org.leibnizcenter.rechtspraak.enricher.mostlikelytreefromlist.MostLikelyTreeFromListImpl;
+import org.leibnizcenter.rechtspraak.enricher.mostlikelytreefromlist.ExhaustiveMostLikelyTreeFromList;
+import org.leibnizcenter.rechtspraak.enricher.mostlikelytreefromlist.GreedyMostLikelyTreeFromList;
 import org.leibnizcenter.rechtspraak.enricher.mostlikelytreefromlist.PenaltyCalculatorImpl;
+import org.leibnizcenter.rechtspraak.enricher.mostlikelytreefromlist.abstracts.MostLikelyTreeFromList;
 import org.leibnizcenter.rechtspraak.leibnizannotations.DeterministicTagger;
 import org.leibnizcenter.rechtspraak.leibnizannotations.Label;
 import org.leibnizcenter.rechtspraak.tokens.RechtspraakElement;
@@ -54,7 +56,7 @@ public class Enrich {
         List<Label> tags = DeterministicTagger.tag(tokenList);
 
         // Make sectioning tree if there is no section tag already
-        MostLikelyTreeFromListImpl m = new MostLikelyTreeFromListImpl(tokenList, tags, new PenaltyCalculatorImpl());
+        MostLikelyTreeFromList m = new GreedyMostLikelyTreeFromList(tokenList, tags, new PenaltyCalculatorImpl());
         if (!Xml.containsTag(contentRoot, "section")) {
             ImmutableTree mostLikelySectionTree = m.getMostLikelyTree();
             setNewXmlStructure(mostLikelySectionTree, contentRoot);
@@ -138,8 +140,11 @@ public class Enrich {
      */
     private void appendPrevSiblings(Element newElement, Node child) {
         Deque<Node> previousSiblings = new ArrayDeque<>(child.getParentNode().getChildNodes().getLength());
-        while (child.getPreviousSibling() != null)
-            previousSiblings.push(child.getPreviousSibling());
+        while (child.getPreviousSibling() != null) {
+            child = child.getPreviousSibling();
+            previousSiblings.push(child);
+        }
+
         while (previousSiblings.size() > 0) newElement.appendChild(previousSiblings.pop());
     }
 

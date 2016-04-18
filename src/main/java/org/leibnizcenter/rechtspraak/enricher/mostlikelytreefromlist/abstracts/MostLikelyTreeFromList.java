@@ -3,13 +3,11 @@ package org.leibnizcenter.rechtspraak.enricher.mostlikelytreefromlist.abstracts;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Maps;
 import org.leibnizcenter.rechtspraak.enricher.mostlikelytreefromlist.interfaces.PenaltyCalculator;
-import org.leibnizcenter.rechtspraak.tokens.TaggedToken;
 import org.leibnizcenter.rechtspraak.util.Collections3;
 import org.leibnizcenter.rechtspraak.util.immutabletree.ImmutableTree;
 import org.leibnizcenter.rechtspraak.util.immutabletree.NamedImmutableTree;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 
 public abstract class MostLikelyTreeFromList<TokenType, LabelType> {
@@ -45,12 +43,6 @@ public abstract class MostLikelyTreeFromList<TokenType, LabelType> {
 //                                .map(Pair::getKey)
 //                                .collect(Collectors.toList()));
 
-        ImmutableList<TaggedToken<TokenType, LabelType>> taggedTokens =
-                ImmutableList.copyOf(
-                        Collections3
-                                .zip(getTokens().stream(), getLabels().stream()).map(TaggedToken::new)
-                                .collect(Collectors.toList()));
-
         // Make every possible combination of the tokens
         NamedImmutableTree root = new NamedImmutableTree("#root", ImmutableList.of());
         Map.Entry<ImmutableTree, Integer> startingTree = Maps.immutableEntry(root, 0);
@@ -59,31 +51,33 @@ public abstract class MostLikelyTreeFromList<TokenType, LabelType> {
         Map.Entry<ImmutableTree, Integer> bestTree = recurse(
                 startingTree, // start w/ empty tree
                 maxTreeStarting,
-                taggedTokens
+                0
         );
         return bestTree.getKey();
     }
 
     private Map.Entry<ImmutableTree, Integer> recurse(final Map.Entry<ImmutableTree, Integer> treeSoFar,
                                                       Map.Entry<ImmutableTree, Integer> maxSoFar,
-                                                      ImmutableList<TaggedToken<TokenType, LabelType>> remainingNodesToAdd) {
-        if (remainingNodesToAdd.size() <= 0) return max(treeSoFar, maxSoFar);// No more title to add; return maximum
+                                                      int index) {
+        if (index >= tokens.size()) return max(treeSoFar, maxSoFar);// No more title to add; return maximum
         else {
             // else... Recurse into all possibilities depth-first, returning the tree with the highest score
-            TaggedToken<TokenType, LabelType> tokenToAdd = remainingNodesToAdd.get(0);
-            remainingNodesToAdd = remainingNodesToAdd.subList(1, remainingNodesToAdd.size());
 
-            for (Map.Entry<ImmutableTree, Integer> possibleNewTree : getPossibleNewTrees(treeSoFar, getPossibleNodesToAdd(tokenToAdd))) {
+            for (Map.Entry<ImmutableTree, Integer> possibleTreeStub : getPossibleNewSubTrees(treeSoFar,
+                    getPossibleNodesToAdd(index), index)) {
                 /**
                  * Only keep searching while currentScore > maxSoFar. When currentScore <= maxSoFar,
                  * it will never improve because we will subtract penalty >= 0 in every recursion.
                  * So we can already discard it.
                  */
-                if (possibleNewTree.getValue() > maxSoFar.getValue()) {
+                if (possibleTreeStub.getValue() > maxSoFar.getValue()) {
                     maxSoFar = recurse(
-                            possibleNewTree,
+                            possibleTreeStub,
                             maxSoFar,
-                            remainingNodesToAdd);
+                            index + 1);
+//                    System.out.println(index + ": Max so far: " + maxSoFar.getValue() + " (" + ")");
+//                }else{
+//                    System.out.println("nvm");
                 }
             }
             return maxSoFar;
@@ -95,17 +89,21 @@ public abstract class MostLikelyTreeFromList<TokenType, LabelType> {
      * @param treeSoFar          Tree so far, to which to add a node in every way possible
      * @param possibleNodesToAdd Nodes to maybe add to treeSoFar
      * @return Trees that we can make from treeSoFar, adding tokenToAdd, along with its score.
-     * The result will be domain-specific.
+     * The result will be domain-specific. Order is important for computational reasons: we
+     * should return the most likely tree first (as a local optimum), measured by their penalty.
      */
-    private Collection<Map.Entry<ImmutableTree, Integer>> getPossibleNewTrees(Map.Entry<ImmutableTree, Integer> treeSoFar, List<ImmutableTree> possibleNodesToAdd) {
-        Collection<Map.Entry<ImmutableTree, Integer>> possibleNewTrees = new HashSet<>(possibleNodesToAdd.size() * 10);
+    public List<Map.Entry<ImmutableTree, Integer>> getPossibleNewSubTrees(
+            Map.Entry<ImmutableTree, Integer> treeSoFar,
+            List<ImmutableTree> possibleNodesToAdd, int index) {
+        List<Map.Entry<ImmutableTree, Integer>> possibleNewTrees = new ArrayList<>(possibleNodesToAdd.size() * 10);
         possibleNodesToAdd.forEach((nodeToAdd) ->
-                getPossiblePathsToAddTo(nodeToAdd, treeSoFar.getKey()).forEach((possibleParentPath) -> {
+                getPossiblePathsToAddTo(nodeToAdd, treeSoFar.getKey(), index).forEach((possibleParentPath) -> {
                     int penalty = getPenaltyCalculator().getPenalty(possibleParentPath, nodeToAdd);
                     if (penalty < 0) throw new Error("Penalty must be >= 0, or we can't guarantee optimizations");
                     ImmutableTree newTree = addToTree(nodeToAdd, possibleParentPath);
                     possibleNewTrees.add(Maps.immutableEntry(newTree, treeSoFar.getValue() - penalty));
                 }));
+        possibleNewTrees.sort((entry1, entry2) -> Integer.compare(entry2.getValue(), entry1.getValue()));
         return possibleNewTrees;
     }
 
@@ -114,7 +112,7 @@ public abstract class MostLikelyTreeFromList<TokenType, LabelType> {
      * @param addToPath tree path; add given node to first element (pop)
      * @return Final element in addToPath, with nodeToAdd added to the tree
      */
-    private static ImmutableTree addToTree(ImmutableTree nodeToAdd, Deque<ImmutableTree> addToPath) {
+    protected static ImmutableTree addToTree(ImmutableTree nodeToAdd, Deque<ImmutableTree> addToPath) {
         ImmutableTree addTo = addToPath.pop();
         ImmutableTree nextRoot = addTo.addChild(nodeToAdd);
         while (addToPath.size() > 0) {
@@ -130,11 +128,18 @@ public abstract class MostLikelyTreeFromList<TokenType, LabelType> {
     }
 
 
-    private Collection<Deque<ImmutableTree>> getPossiblePathsToAddTo(ImmutableTree nodeToAdd, ImmutableTree root) {
+    /**
+     * @param nodeToAdd
+     * @param root
+     * @return The possible paths that we append the given node to.
+     */
+    protected Deque<Deque<ImmutableTree>> getPossiblePathsToAddTo(ImmutableTree nodeToAdd, ImmutableTree root, int index) {
         return getPossiblePathsToAddTo(
                 nodeToAdd,
                 root,
-                new ArrayList<>(root.depth(ImmutableTree.Depth.RightMostBranches))
+                index,
+                new ArrayDeque<>(root.depth(ImmutableTree.Depth.RightMostBranches)),
+                null
         );
     }
 
@@ -143,47 +148,55 @@ public abstract class MostLikelyTreeFromList<TokenType, LabelType> {
      *
      * @param nodeToCheck Some node in a right-branching path from the root
      * @param accumulator List that collects possible paths to append the given child to
+     * @return The possible paths that we append the given node to
      */
-    private Collection<Deque<ImmutableTree>> getPossiblePathsToAddTo(
+    private Deque<Deque<ImmutableTree>> getPossiblePathsToAddTo(
             ImmutableTree nodeToAdd,
             ImmutableTree nodeToCheck,
-            List<Deque<ImmutableTree>> accumulator) {
+            int index,
+            Deque<Deque<ImmutableTree>> accumulator,
+            Deque<ImmutableTree> addedLast) {
         // Make next contender path to append node to
         ArrayDeque<ImmutableTree> nextContender;
-        if (accumulator.size() > 0) nextContender = new ArrayDeque<>(accumulator.get(accumulator.size() - 1));
+        if (addedLast != null) nextContender = new ArrayDeque<>(addedLast);
         else nextContender = new ArrayDeque<>();
         nextContender.push(nodeToCheck);
 
         // Check if this is a valid path to add the node to
-        if (canAppendChildTo(nodeToAdd, nextContender.peek())) accumulator.add(nextContender);
+        if (canAppendChildTo(nodeToAdd, nextContender, index)) {
+            accumulator.push(nextContender);
+        }
 
         // If this node had children, check whether the right-most child is also a valid contender
         if (!Collections3.isNullOrEmpty(nodeToCheck.getChildren())) {
             getPossiblePathsToAddTo(
                     nodeToAdd,
                     nodeToCheck.getChildren().get(nodeToCheck.getChildren().size() - 1),
-                    accumulator
+                    index,
+                    accumulator,
+                    nextContender
             );
         }
+//        ik drink sojamelk omdat ik een vrouw wil worden en het smaakt naar dat eetbare klei
         return accumulator;
     }
 
     /**
      * @param nodeToAdd Node that we may want to append as child to given tree
-     * @param addAsChildOfNode given tree of which we may wish to append node to children
+     * @param addToPath given tree path of which we may wish to append node to children
      * @return Whether we may append nodeToAdd as a child of addAsChildOfNode
      */
-    public abstract boolean canAppendChildTo(ImmutableTree nodeToAdd, ImmutableTree addAsChildOfNode);
+    public abstract boolean canAppendChildTo(ImmutableTree nodeToAdd, Deque<ImmutableTree> addToPath, int index);
 
     /**
      * Expand token to all possible nodes.
      *
-     * @param nodeToAdd token that we expand into one or more trees
+     * @param nodeToAdd index for token that we expand into one or more trees
      * @return Might return a single a singleton list of this the given node, or something more complex.
      * For example, when the node to add is a section title, the list would contain a <section> node containing a
      * <title> node.
      */
-    public abstract List<ImmutableTree> getPossibleNodesToAdd(TaggedToken<TokenType, LabelType> nodeToAdd);
+    public abstract List<ImmutableTree> getPossibleNodesToAdd(int nodeToAdd);
 
 
     @SuppressWarnings("WeakerAccess")
