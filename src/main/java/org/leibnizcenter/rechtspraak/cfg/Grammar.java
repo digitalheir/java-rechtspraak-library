@@ -41,22 +41,27 @@ package org.leibnizcenter.rechtspraak.cfg;
 
 
 import com.google.common.collect.*;
+import org.jetbrains.annotations.NotNull;
 import org.leibnizcenter.rechtspraak.cfg.rule.RightHandSide;
 import org.leibnizcenter.rechtspraak.cfg.rule.Rule;
+import org.leibnizcenter.rechtspraak.cfg.rule.Term;
 import org.leibnizcenter.rechtspraak.cfg.rule.type.NonTerminal;
 import org.leibnizcenter.rechtspraak.cfg.rule.type.Terminal;
 import org.leibnizcenter.rechtspraak.cfg.rule.type.Type;
+import org.leibnizcenter.rechtspraak.util.Collections3;
 import org.leibnizcenter.rechtspraak.util.Pair;
 
 import java.util.*;
+import java.util.function.Consumer;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * A class that represents a Stochastic Context Free Grammar (SCFG)
  */
 @SuppressWarnings("unused")
-public class Grammar {
-    final Type start;
+public class Grammar implements Iterable<Term> {
+    final NonTerminal start;
     final SortedSet<Rule> ruleSet;
     /**
      * Maps from left hand side to right hand side
@@ -78,10 +83,10 @@ public class Grammar {
     /**
      * Maps from RHS to LHS -> RHS
      */
-    final Multimap<Pair<NonTerminal, NonTerminal>, Rule> binaryProductionRules;
+    final Map<NonTerminal, Multimap<NonTerminal, Rule>> binaryProductionRules;
 
     public Grammar(
-            Type start,
+            NonTerminal start,
             Collection<Rule> rules) {
         this.start = start;
         this.ruleSet = new TreeSet<>(rules);
@@ -107,15 +112,19 @@ public class Grammar {
         return mmb3.build();
     }
 
-    private static ImmutableMultimap<Pair<NonTerminal, NonTerminal>, Rule> getBinaryProductionRules(SortedSet<Rule> ruleSet) {
-        ImmutableMultimap.Builder<Pair<NonTerminal, NonTerminal>, Rule> mmb4 = new ImmutableMultimap.Builder<>();
+    private static Map<NonTerminal, Multimap<NonTerminal, Rule>> getBinaryProductionRules(SortedSet<Rule> ruleSet) {
+        Map<NonTerminal, Multimap<NonTerminal, Rule>> BtoCtoRules = new HashMap<>(ruleSet.size());
+
         ruleSet.stream()
                 .filter(Rule::isBinaryProduction)
-                .forEach((r) -> mmb4.put(
-                        new Pair<>((NonTerminal) r.getRHS().get(0), (NonTerminal) r.getRHS().get(1)),
-                        r)
-                );
-        return mmb4.build();
+                .forEach((r) -> {
+                    @NotNull NonTerminal B = (NonTerminal) r.getRHS().get(0);
+                    @NotNull NonTerminal C = (NonTerminal) r.getRHS().get(1);
+                    Multimap<NonTerminal, Rule> CtoRules = BtoCtoRules.getOrDefault(B, ArrayListMultimap.create());
+                    CtoRules.put(C, r);
+                    BtoCtoRules.put(B, CtoRules);
+                });
+        return BtoCtoRules;
     }
 
     private static ImmutableMultimap<Terminal, Rule> getTerminals(SortedSet<Rule> ruleSet) {
@@ -439,11 +448,15 @@ public class Grammar {
 //
 //    }
 //
-//    /**
-//     * given an arbitrary grammar, return it in CNF
-//     */
-//    public Grammar convertToChomskyNormalForm() throws MalformedGrammarException {
-//    if(isInCNF())return this;
+
+    /**
+     * given an arbitrary grammar, return it in CNF
+     * The orderings START,TERM,BIN,DEL,UNIT and START,BIN,DEL,UNIT,TERM lead to the least (i.e. quadratic) blow-up.
+     */
+    public Grammar convertToChomskyNormalFormWithUnaries() throws MalformedGrammarException {
+        if (isInChomskyNormalFormWithUnaries()) return this;
+
+        return CNF_START().CNF_TERM().CNF_BIN().CNF_DEL();//.CNF_UNIT();
 
 //        if (hasUnitTransitions() || !hasNoEpsilonsExceptForStart())
 //            throw new MalformedGrammarException("When converting to Chomsky Normal Form" +
@@ -529,13 +542,343 @@ public class Grammar {
 //        Rule newRule = new Rule(getUnusedSymbol(), RHS);
 //        addSet.add(newRule);
 //        return newRule.getLHS();
-//    }
+    }
+
+    /**
+     * Eliminate ε-rules
+     * An ε-rule is a rule of the form
+     * A → ε,
+     * where A is not the grammar's start symbol.
+     * To eliminate all rules of this form, first determine the set of all non-terminals that derive ε.
+     * Hopcroft and Ullman (1979) call such non-terminals nullable, and compute them as follows:
+     * If a rule A → ε exists, then A is nullable.
+     * If a rule A → X1 ... Xn exists, and each Xi is nullable, then A is nullable, too.
+     * Obtain an intermediate grammar by replacing each rule
+     * A → X1 ... Xn
+     * by all versions with some nullable Xi omitted. By deleting in this grammar each ε-rule, unless its left-hand
+     * side is the start symbol, the transformed grammar is obtained.[2]:90
+     *
+     * @return new Grammar with all epsilon rules deleted, except possibly for the start variable
+     */
+    public Grammar CNF_DEL() {
+        // get all nullable nonterminals
+        Set<Type> nullableNonTerminals = ruleSet.stream().filter(r -> r.getRHS().size() == 0).map(Rule::getLHS).collect(Collectors.toSet());
+        boolean changed;
+        do {
+            changed = addNullables(nullableNonTerminals, ruleSet);
+        } while (changed);
+
+        // Create intermediate grammar where we omit epsilon rules
+        Set<Rule> newRules = possibleRulesWithEpsilonsOmitted(ruleSet, nullableNonTerminals);
+        // Remove all epsilon rules
+        newRules = newRules.stream().filter(r -> r.getLHS().equals(start) || !r.isEpsilonRule()).collect(Collectors.toSet());
+        return new Grammar(start, newRules);
+    }
+
+    private Set<Rule> possibleRulesWithEpsilonsOmitted(Set<Rule> ruleSet, Set<Type> nullables) {
+        final Set<Rule> newRules = new HashSet<>(ruleSet.size() * 5);
+        ruleSet.forEach(r -> {
+            newRules.add(r);
+
+            // Get all versions with nullable's omitted
+            if (r.getRHS().containsAny(nullables)) {
+                newRules.addAll(r.getRHS()
+                        .enumerateWaysToOmit(nullables).stream().map(rhs -> new Rule(r.getLHS(), rhs,
+                        r.getPriorProbability()//TODO probability applied
+                )).collect(Collectors.toSet()));
+            }
+        });
+        return newRules;
+    }
+
+    private boolean addNullables(Set<Type> nullableNonTerminalsSoFar, Collection<Rule> ruleSet) {
+        boolean changed = false;
+        for (Rule r : ruleSet) {
+            if (!nullableNonTerminalsSoFar.contains(r.getLHS())
+                    && rhsConsistsOfOnlyNullables(nullableNonTerminalsSoFar, r)
+                    ) {
+                nullableNonTerminalsSoFar.add(r.getLHS());
+                changed = true;
+            }
+        }
+        return changed;
+    }
+
+    private boolean rhsConsistsOfOnlyNullables(Set<Type> nullableNonTerminalsSoFar, Rule r) {
+        //noinspection RedundantCast
+        return r.getRHS().stream().filter(a -> a.isTerminal()
+                || !nullableNonTerminalsSoFar.contains((NonTerminal) a)).count() <= 0;
+    }
+
+    /**
+     * BIN: Eliminate right-hand sides with more than 2 nonterminals[edit]
+     * Replace each rule
+     * A → X1 X2 ... Xn
+     * with more than 2 non-terminals X1,...,Xn by rules
+     * A → X1 A1,
+     * A1 → X2 A2,
+     * ... ,
+     * An-2 → Xn-1 Xn,
+     * where Ai are new non-terminal symbols. Again, this doesn't change the grammar's produced language.[2]:93
+     */
+    public Grammar CNF_BIN() {
+        Collection<Rule> newRules = new HashSet<>(ruleSet.size() ^ 2);
+
+        ruleSet.stream().forEach(rule -> {
+                    if (rule.RHS.size() > 2) {
+                        newRules.addAll(makeBinaryProductionRules(rule, new ArrayList<>(rule.getRHS().size())));
+                    } else {
+                        newRules.add(rule);
+                    }
+                }
+        );
+        return new Grammar(getStartSymbol(), newRules);
+    }
+
+    private Collection<? extends Rule> makeBinaryProductionRules(Rule rule, List<Rule> accumulator) {
+        if (rule.RHS.hasNonSolitaryTerminal())
+            throw new IllegalStateException("Rule is not supposed to contain terminals at this point");
+
+        if (rule.getRHS().size() > 2) {
+            NonTerminal newNonTerminal = getUnusedNonTerminal(null, Sets.union(variableSet, accumulator.stream().map(Rule::getLHS).collect(Collectors.toSet())));
+            Rule newBinaryRule = new Rule(rule.getLHS(), new RightHandSide(rule.getRHS().get(0), newNonTerminal), rule.getPriorProbability());
+
+            List<Type> term = rule.getRHS().getTerm();
+            Rule remainderRule = new Rule(newNonTerminal, new RightHandSide(Collections3.subList(term, 1)), 1.0);
+
+            accumulator.add(newBinaryRule);
+            return makeBinaryProductionRules(remainderRule, accumulator);
+        } else {
+            accumulator.add(rule);
+            return accumulator;
+        }
+    }
 
 
-    public Type getStartSymbol() {
+    public NonTerminal getStartSymbol() {
         return start;
     }
 
+    /**
+     * START: Eliminate the start symbol from right-hand sides
+     * Introduce a new start symbol S0, and a new rule
+     * S0 → S,
+     * where S is the previous start symbol. This doesn't change the grammar's produced
+     * language, and S0 won't occur on any rule's right-hand side.
+     */
+    public Grammar CNF_START() {
+        Grammar g = this;
+        Type startSymbol = g.getStartSymbol();
+        Set<Rule> newRules = Sets.newHashSet(g.ruleSet);
+
+        NonTerminal newStartSymbol = getUnusedNonTerminal("s0", variableSet);
+        newRules.add(new Rule(newStartSymbol, new RightHandSide(startSymbol), 1.0));
+        return new Grammar(newStartSymbol, newRules);
+    }
+
+    @NotNull
+    private NonTerminal getUnusedNonTerminal(String pref, Collection<NonTerminal> existingVars) {
+        NonTerminal newStartSymbol;
+        if (pref == null || existingVars.contains(new NonTerminal(pref))) {
+            do {
+                newStartSymbol = new NonTerminal(UUID.randomUUID().toString());
+            } while (existingVars.contains(newStartSymbol));
+        } else newStartSymbol = new NonTerminal(pref);
+        return newStartSymbol;
+    }
+
+    /**
+     * Eliminate rules with non-solitary terminals
+     * To eliminate each rule
+     * <p>
+     * A → X1 ... a ... Xn
+     * with a terminal symbol a being not the only symbol on the right-hand side,
+     * introduce, for every such terminal, a new non-terminal symbol Na, and a new
+     * rule
+     * <p>
+     * Na → a.
+     * Change every rule
+     * <p>
+     * A → X1 ... a ... Xn
+     * to
+     * <p>
+     * A → X1 ... Na ... Xn.
+     * If several terminal symbols occur on the right-hand side, simultaneously
+     * replace each of them by its associated non-terminal symbol. This doesn't
+     * change the grammar's produced language.
+     */
+    public Grammar CNF_TERM() {
+        Grammar g = this;
+        Collection<Rule> newRules = Sets.newHashSet();
+
+        g.ruleSet.stream()
+                .forEach(r -> {
+                            if (r.getRHS().hasNonSolitaryTerminal()) {
+                                // Replace every solitary terminal with the LHS of a new rule
+                                RightHandSide newRhs = new RightHandSide(r.getRHS().stream()
+                                        .map(t -> {
+                                            if (t.isTerminal()) {
+                                                NonTerminal newNonTerminal = getUnusedNonTerminal("N_" + t.toString(), Sets.union(g.variableSet, newRules.stream().map(Rule::getLHS).collect(Collectors.toSet())));
+                                                Rule newRule = new Rule(newNonTerminal, new RightHandSide(t), 1.0);
+                                                newRules.add(newRule);
+                                                return newNonTerminal;
+                                            } else return t;
+                                        })
+                                        .collect(Collectors.toList()));
+                                newRules.add(new Rule(r.getLHS(), newRhs,
+                                        r.getPriorProbability()
+                                ));
+                            } else newRules.add(r);
+                        }
+                );
+        return new Grammar(g.start, newRules);
+    }
+
+
+    public Stream<Term> generate(NonTerminal start) {
+        final Iterator iterator = new Iterator();
+        return Stream.generate(iterator::next);
+    }
+
+
+    @Override
+    public java.util.Iterator<Term> iterator() {
+        return new Iterator();
+    }
+
+    @Override
+    public void forEach(Consumer<? super Term> action) {
+
+    }
+
+    @Override
+    public java.util.Spliterator<Term> spliterator() {
+        return null;
+    }
+
+    public Collection<Term> expand(Term term) {
+        Collection<Term> newTerms1 = new HashSet<>();
+        for (int i = 0; i < term.size(); i++) {
+            if (!term.get(i).isTerminal()) newTerms1.addAll(expand(term, i));
+        }
+        return ImmutableSet.copyOf(newTerms1);
+    }
+
+    private Collection<Term> expand(Term term, int index) {
+        Collection<RightHandSide> RHSs = ruleMap.get((NonTerminal) term.get(index));
+        Collection<Term> newTerms = new HashSet<>();
+        for (RightHandSide expandWith : RHSs) {
+            ImmutableList.Builder<Type> builder = ImmutableList.builder();
+            if (index > 0) builder.addAll(term.subList(0, index));
+            builder.addAll(expandWith.getTerm());
+            if (index < term.size() - 1) builder.addAll(term.subList(index + 1, term.size()));
+            Term newTerm = new Term(builder.build());
+            newTerms.add(newTerm);
+        }
+        return ImmutableSet.copyOf(newTerms);
+    }
+
+    public Collection<Rule> getBinaryProductionRules(NonTerminal B, NonTerminal C) {
+        Multimap<NonTerminal, Rule> fromCtoRules = binaryProductionRules.get(B);
+        if (fromCtoRules == null) return Collections.emptySet();
+        return fromCtoRules.get(C);
+    }
+
+    // TODO return term with probability
+    private class Iterator implements java.util.Iterator<Term> {
+        private final Deque<Term> terms = new ArrayDeque<>();
+
+        public Iterator() {
+            terms.addAll(ruleMap.get(start).stream().map(RightHandSide::getTerm).collect(Collectors.toList()));
+        }
+
+
+        @Override
+        public boolean hasNext() {
+            //todo search more efficiently
+            expandUntilThereIsATerminal();
+            return terms.size() > 0;
+        }
+
+        private void expandUntilThereIsATerminal() {
+            while (terms.size() > 0 && !terms.stream().anyMatch(Term::isTerminal)) {
+                Term expandMe = terms.pop();
+                Collection<Term> expandedMemes = expand(expandMe);
+                terms.addAll(expandedMemes); // Add to end of queue
+                if (expandedMemes.stream().anyMatch(Term::isTerminal)) return; // Expanded to a terminal term!
+            }
+        }
+
+        @Override
+        public Term next() {
+            expandUntilThereIsATerminal();
+            if (terms.size() <= 0)
+                throw new NoSuchElementException();
+            assert terms.stream().anyMatch(Term::isTerminal);
+
+            for (int i = 0; i < terms.size(); i++) { // Make sure we don't loop forever, but throw an exception after we come full circle
+                Term term = terms.pop();
+                if (term.isTerminal())
+                    return new Term(term.stream().map(t -> (Terminal) t).collect(Collectors.toList()));
+                else terms.addLast(term);
+            }
+            throw new IllegalStateException();
+        }
+
+        @Override
+        public void remove() {
+            throw new Error("Not implemented");
+        }
+
+        @Override
+        public void forEachRemaining(Consumer<? super Term> action) {
+            Objects.requireNonNull(action);
+            while (hasNext()) action.accept(next());
+        }
+    }
+
+    //TODO
+//    private class Spliterator implements java.util.Spliterator<Term> {
+//        @Override
+//        public boolean tryAdvance(Consumer<? super Term> action) {
+//            return false;
+//        }
+//
+//        @Override
+//        public void forEachRemaining(Consumer<? super Term> action) {
+//
+//        }
+//
+//        @Override
+//        public java.util.Spliterator<Term> trySplit() {
+//            return null;
+//        }
+//
+//        @Override
+//        public long estimateSize() {
+//            return 0;
+//        }
+//
+//        @Override
+//        public long getExactSizeIfKnown() {
+//            return 0;
+//        }
+//
+//        @Override
+//        public int characteristics() {
+//            return 0;
+//        }
+//
+//        @Override
+//        public boolean hasCharacteristics(int characteristics) {
+//            return false;
+//        }
+//
+//        @Override
+//        public Comparator<? super Term> getComparator() {
+//            return null;
+//        }
+//    }
 
 }
 

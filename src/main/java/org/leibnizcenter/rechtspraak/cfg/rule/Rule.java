@@ -1,11 +1,24 @@
 package org.leibnizcenter.rechtspraak.cfg.rule;
 
 import org.jetbrains.annotations.NotNull;
-import org.leibnizcenter.rechtspraak.cfg.CKY;
+import org.leibnizcenter.rechtspraak.cfg.CYK;
+import org.leibnizcenter.rechtspraak.cfg.MalformedGrammarException;
 import org.leibnizcenter.rechtspraak.cfg.rule.type.NonTerminal;
 import org.leibnizcenter.rechtspraak.cfg.rule.type.Terminal;
+import org.leibnizcenter.rechtspraak.cfg.rule.type.Type;
+import org.leibnizcenter.rechtspraak.util.Regex;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.StringReader;
 import java.security.InvalidParameterException;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 /**
  * A class that keeps track of rules
@@ -31,11 +44,13 @@ public class Rule implements Comparable {
     }
 
     /**
-     * @return number between 0 and 1 inclusive
+     * Recall that log(a*b) = log(a) + log(b)
+     *
+     * @return Logarithm of a number between 0 and 1 inclusive
      */
-    public double getProbability(CKY.Score... inputs) {
-        double prob = priorProbability;
-        for (CKY.Score s : inputs) prob *= s.getProbability();
+    public double getLogProbability(CYK.ParseTreeContainer... inputs) {
+        double prob = Math.log(priorProbability);
+        for (CYK.ParseTreeContainer s : inputs) prob += s.getLogProbability();
         return prob;
     }
 
@@ -103,6 +118,72 @@ public class Rule implements Comparable {
 
     public boolean isTerminal() {
         return RHS.size() == 1 && RHS.get(0) instanceof Terminal;
+    }
+
+    private static final Pattern SINGLE_RULE = Pattern.compile("\\s*(.*)\\s*(->|→)\\s*(.*)\\s*");
+    private static final Pattern PROB = Pattern.compile("\\s*(.*)(\\([0-9]+(?:\\.[0-9]+)?%?\\))?\\s*");
+
+    public static Collection<Rule> parseRules(BufferedReader reader) throws IOException, MalformedGrammarException {
+        Collection<Rule> rules = new HashSet<>(100);
+
+        reader.lines().forEach(line -> {
+            if (!Regex.CONSECUTIVE_WHITESPACE.matcher(line).matches()) { // ignore white lines
+                Matcher m = SINGLE_RULE.matcher(line);
+                if (!m.matches())
+                    throw new MalformedGrammarException("Rule could not be parsed: " + line);
+                String LHString = m.group(1);
+                String RHString = m.group(3);
+                if (SINGLE_RULE.matcher(LHString).matches() || SINGLE_RULE.matcher(RHString).matches())
+                    throw new MalformedGrammarException("Rule should contain just one arrow. " + line);
+                NonTerminal LHS = new NonTerminal(LHString.trim());
+                String[] RHSs = RHString.split("\\|");
+                for (String rhs : RHSs) {
+                    Rule r = parseRule(line, LHS, rhs);
+                    rules.add(r);
+                }
+            }
+        });
+        return rules;
+    }
+
+    @NotNull
+    private static Rule parseRule(String line, NonTerminal LHS, String rhs) throws MalformedGrammarException {
+        Matcher ma = PROB.matcher(rhs);
+        if (!ma.matches()) throw new MalformedGrammarException("Probability unparseable: "
+                + rhs + "\n  in line" + "\n" + line);
+        double prob = parseProbability(ma);
+        String[] typeStrings = Regex.CONSECUTIVE_WHITESPACE.split(ma.group(1));
+        List<Type> types = new ArrayList<>(typeStrings.length);
+        for (String typeString : typeStrings) {
+            Type type = Type.parse(typeString);
+            types.add(type);
+        }
+        if (types.size() != 1 && types.stream().filter(t -> t == null).count() > 0)
+            throw new MalformedGrammarException("Epsilon should be only token: " + rhs);
+        RightHandSide RHS = new RightHandSide(types.stream().filter(t -> t != null).collect(Collectors.toList()));
+        return new Rule(LHS, RHS, prob);
+    }
+
+    private static double parseProbability(Matcher ma) {
+        double prob;
+        if (ma.group(2) != null) {
+            if (ma.group(2).endsWith("%")) {
+                prob = Double.parseDouble(ma.group(2)) / 100.0;
+            } else {
+                prob = Double.parseDouble(ma.group(2));
+            }
+        } else {
+            prob = 1.0;
+        }
+        return prob;
+    }
+
+    public static Collection<Rule> parseRules(String string) throws IOException, MalformedGrammarException {
+        return parseRules(new BufferedReader(new StringReader(string)));
+    }
+
+    public double getPriorProbability() {
+        return priorProbability;
     }
 }
 

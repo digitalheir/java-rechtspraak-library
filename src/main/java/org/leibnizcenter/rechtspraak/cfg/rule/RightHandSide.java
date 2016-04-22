@@ -2,26 +2,31 @@ package org.leibnizcenter.rechtspraak.cfg.rule;
 
 import com.google.common.collect.ImmutableList;
 import org.jetbrains.annotations.NotNull;
-import org.leibnizcenter.rechtspraak.cfg.rule.type.NonTerminal;
+import org.leibnizcenter.rechtspraak.cfg.rule.type.Terminal;
 import org.leibnizcenter.rechtspraak.cfg.rule.type.Type;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 
 /**
+ * Represents righ hand side of a grammar rule
  * Created by maarten on 18-4-16.
  */
 public class RightHandSide implements Comparable<RightHandSide> {
-    public final ImmutableList<Type> types;
+    public final Term term;
 
-    public RightHandSide(@NotNull ImmutableList<Type> types) {
-        this.types = types;
+    public RightHandSide(@NotNull Term t) {
+        this.term = t;
     }
 
     public RightHandSide(@NotNull Type... types) {
-        this(ImmutableList.copyOf(types));
+        this(new Term(types));
+    }
+
+    public RightHandSide(List<Type> types) {
+        this(new Term(types));
     }
 
 
@@ -38,37 +43,17 @@ public class RightHandSide implements Comparable<RightHandSide> {
 
     @NotNull
     public Type get(int i) {
-        return types.get(i);
+        return term.get(i);
     }
 
     public int size() {
-        return types.size();
+        return term.size();
     }
 
-    /**
-     * This method is used by the removeEpsilons() method in CFG
-     * For example:
-     * If we encounter a rule "A -> ε" in removeEpsilons()
-     * we want to go through all of the rules that contain the symbol
-     * "A" and create new rules that have "ε" instead of "A".
-     * But we still want to keep the original rules that had "A".  To do
-     * this you can call rule.copyAndReplaceAll('A',null).  This will attempt
-     * to replace all occurrence of 'A' with "" and return a new Rule that
-     * corresponds to the new RHS.  This rule can then be added to the ruleSet.
-     * If no replacements are made it returns null.
-     */
-    @NotNull
-    public RightHandSide copyAndReplaceAll(Type removeType, Type newSymbol) {
-        ArrayList<Type> newTypeList = new ArrayList<>(types.size());
-        Type ours;
-        for (int i = 0; i < size(); i++) {
-            ours = get(i);
-            if (!ours.equals(removeType))
-                newTypeList.add(ours);
-            else if (newSymbol != null) newTypeList.add(newSymbol);
-        }
 
-        return new RightHandSide(ImmutableList.copyOf(newTypeList));
+    @SuppressWarnings("unused")
+    public Term getTerm() {
+        return term;
     }
 
     @Override
@@ -78,31 +63,65 @@ public class RightHandSide implements Comparable<RightHandSide> {
 
         RightHandSide that = (RightHandSide) o;
 
-        return types.equals(that.types);
+        return term.equals(that.term);
 
     }
 
     @Override
     public int hashCode() {
-        return types.hashCode();
+        return term.hashCode();
     }
 
     public boolean contains(Type type) {
-        return types.contains(type);
+        return term.contains(type);
     }
 
+    @SuppressWarnings("unused")
     public boolean match(Type... elements) {
         if (elements.length != size()) return false;
         for (int i = 0; i < elements.length; i++) if (!elements[i].equals(get(i))) return false;
         return true;
     }
+
     public boolean match(List<Type> elements) {
-        return types.equals(elements);
+        return term.equals(elements);
     }
 
     @Override
     public String toString() {
-        return String.join(" ", this.types.stream().map(t -> "<" + t.toString() + ">").collect(Collectors.toList()));
+        return String.join(" ", this.term.stream().map(t -> "<" + t.toString() + ">").collect(Collectors.toList()));
     }
 
+    public boolean hasNonSolitaryTerminal() {
+        return size() > 1
+                && term.stream().filter(t -> t instanceof Terminal).limit(1).count() > 0;
+    }
+
+    public Stream<Type> stream() {
+        return term.stream();
+    }
+
+
+    public Collection<RightHandSide> enumerateWaysToOmit(Set<Type> typesToCheck) {
+        if (!containsAny(typesToCheck)) return Collections.emptySet();
+
+        Set<RightHandSide> returnSet = new HashSet<>(size());
+        for (int i = 0; i < size(); i++) {
+            if (typesToCheck.contains(get(i))) {
+                ImmutableList.Builder<Type> builder = ImmutableList.builder();
+                if (i > 0) builder.addAll(term.subList(0, i));
+                if (i < size() - 1) builder.addAll(term.subList(i + 1, size()));
+                RightHandSide newRHS = new RightHandSide(new Term(builder.build()));
+                returnSet.add(newRHS);
+
+                returnSet.addAll(newRHS.enumerateWaysToOmit(typesToCheck));
+            }
+        }
+
+        return returnSet;
+    }
+
+    public boolean containsAny(Set<Type> searchFor) {
+        return term.stream().filter(searchFor::contains).limit(1).count() > 0;
+    }
 }

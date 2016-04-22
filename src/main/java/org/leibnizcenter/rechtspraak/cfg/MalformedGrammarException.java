@@ -5,12 +5,12 @@ package org.leibnizcenter.rechtspraak.cfg;
  * correctly defined
  */
 
-class MalformedGrammarException extends Exception {
-    MalformedGrammarException() {
+public class MalformedGrammarException extends Error {
+    public MalformedGrammarException() {
         super();
     }
 
-    MalformedGrammarException(String s) {
+    public MalformedGrammarException(String s) {
         super(s);
     }
 }

@@ -8,17 +8,13 @@ import org.leibnizcenter.rechtspraak.cfg.rule.Rule;
 import org.leibnizcenter.rechtspraak.cfg.rule.type.NonTerminal;
 import org.leibnizcenter.rechtspraak.cfg.rule.type.Terminal;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static org.junit.Assert.*;
-
 /**
- * Created by maarten on 18-4-16.
  */
-public class CKYTest {
+public class CYKTest {
 
     @Test
     public void getBestParseTree() throws Exception {
@@ -41,10 +37,10 @@ public class CKYTest {
 
         System.out.println(grammar);
 
-        CKY.Score bestParseTree = CKY.getBestParseTree(words, grammar, goal);
+        CYK.ParseTreeContainer bestParseTree = CYK.getBestParseTree(words, grammar, goal);
         Assert.assertNotNull(bestParseTree);
-        Assert.assertTrue(bestParseTree.getProbability() > 0.0);
-        Assert.assertTrue(bestParseTree.getProbability() < 1.0);
+        Assert.assertTrue(Math.exp(bestParseTree.getLogProbability()) > 0.0);
+        Assert.assertTrue(Math.exp(bestParseTree.getLogProbability()) < 1.0);
     }
 
 }

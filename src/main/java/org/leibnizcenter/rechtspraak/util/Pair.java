@@ -34,12 +34,12 @@ public class Pair<K, V> implements Map.Entry<K, V> {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (o == null || !(o instanceof Map.Entry)) return false;
 
-        Pair<?, ?> pair = (Pair<?, ?>) o;
+        Map.Entry<?, ?> pair = (Map.Entry<?, ?>) o;
 
-        return v != null ? v.equals(pair.v) : pair.v == null && (k != null ? k.equals(pair.k) : pair.k == null);
-
+        return (v != null ? v.equals(pair.getValue()) : pair.getValue() == null)
+                && (k != null ? k.equals(pair.getKey()) : pair.getKey() == null);
     }
 
     @Override

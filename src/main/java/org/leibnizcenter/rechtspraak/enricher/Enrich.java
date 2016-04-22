@@ -1,6 +1,9 @@
 package org.leibnizcenter.rechtspraak.enricher;
 
 import cc.mallet.fst.CRF;
+import org.leibnizcenter.rechtspraak.cfg.CYK;
+import org.leibnizcenter.rechtspraak.cfg.Grammar;
+import org.leibnizcenter.rechtspraak.cfg.rule.type.Terminal;
 import org.leibnizcenter.rechtspraak.crf.ApplyCrf;
 import org.leibnizcenter.rechtspraak.enricher.mostlikelytreefromlist.ExhaustiveMostLikelyTreeFromList;
 import org.leibnizcenter.rechtspraak.enricher.mostlikelytreefromlist.GreedyMostLikelyTreeFromList;
@@ -26,6 +29,7 @@ import java.io.File;
 import java.io.IOException;
 import java.security.InvalidParameterException;
 import java.util.ArrayDeque;
+import java.util.ArrayList;
 import java.util.Deque;
 import java.util.List;
 
@@ -56,16 +60,20 @@ public class Enrich {
         List<Label> tags = DeterministicTagger.tag(tokenList);
 
         // Make sectioning tree if there is no section tag already
-        MostLikelyTreeFromList m = new GreedyMostLikelyTreeFromList(tokenList, tags, new PenaltyCalculatorImpl());
         if (!Xml.containsTag(contentRoot, "section")) {
-            ImmutableTree mostLikelySectionTree = m.getMostLikelyTree();
-            setNewXmlStructure(mostLikelySectionTree, contentRoot);
+            Grammar dg=new DocumentGrammar();
+            List<Terminal> words = new ArrayList<>(tags.size());
+            for (int i = 0; i < tags.size(); i++) {
+                words.add(new Terminal(tags.get(i), tokenList.get(i)));
+            }
+            CYK.ParseTreeContainer bestParseTree = CYK.getBestParseTree(words, dg);
+            setNewXmlStructure(bestParseTree, contentRoot);
         }
 
         // Set tag values on elements (we can do this another way)
-        Collections3.zip(tokenList.stream(), tags.stream()).forEach(paire -> {
-            Label label = paire.getValue();
-            TokenTreeLeaf token = paire.getKey();
+        Collections3.zip(tokenList.stream(), tags.stream()).forEach(pair -> {
+            Label label = pair.getValue();
+            TokenTreeLeaf token = pair.getKey();
             if (token instanceof RechtspraakElement) {
                 Element element = ((RechtspraakElement) token).getElement();
                 switch (label) {
@@ -105,15 +113,13 @@ public class Enrich {
      *
      * @param tree
      */
-    private void setNewXmlStructure(ImmutableTree tree, Element contentRoot) {
-        if (!(tree instanceof NamedImmutableTree)) throw new IllegalStateException();
-
+    private void setNewXmlStructure(CYK.ParseTreeContainer tree, Element contentRoot) {
         // TODO less destructive XML change
-        for (Node n : Xml.getChildren(contentRoot)) contentRoot.removeChild(n);
-
-        for (int i = 0; i < tree.getChildren().size(); i++) {
-            contentRoot.appendChild(recursiveCreateXml(tree.getChildren().get(i), contentRoot.getOwnerDocument()));
-        }
+//        for (Node n : Xml.getChildren(contentRoot)) contentRoot.removeChild(n);
+//
+//        for (int i = 0; i < tree.getChildren().size(); i++) {
+//            contentRoot.appendChild(recursiveCreateXml(tree.getChildren().get(i), contentRoot.getOwnerDocument()));
+//        }
     }
 
     private Node recursiveCreateXml(ImmutableTree root, Document ownerDocument) {

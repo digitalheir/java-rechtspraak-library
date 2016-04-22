@@ -16,8 +16,8 @@ public class NonTerminal implements Type {
      * @param name String to represent this terminal. Must be capitalized.
      */
     public NonTerminal(@NotNull String name) {
-        if (!REGEX.matcher(name).matches())
-            throw new InvalidParameterException("Non-terminal must start with uppercase letter");
+//        if (!REGEX.matcher(name).matches())
+//            throw new InvalidParameterException("Non-terminal must start with uppercase letter");
         this.name = name;
     }
 
@@ -39,7 +39,7 @@ public class NonTerminal implements Type {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (o == null || !(o instanceof NonTerminal)) return false;
 
         NonTerminal that = (NonTerminal) o;
 

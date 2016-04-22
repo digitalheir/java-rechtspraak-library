@@ -46,4 +46,10 @@ public class Collections3 {
     public static <R> R last(List<R> list) {
         return (list == null || list.size() <= 0) ? null : list.get(list.size() - 1);
     }
+
+    public static <T> List<T> subList(List<T> l, int start) {
+        List<T> newList = new ArrayList<>(l.size() - start);
+        for (int i = start; i < l.size(); i++) newList.add(l.get(i));
+        return newList;
+    }
 }
