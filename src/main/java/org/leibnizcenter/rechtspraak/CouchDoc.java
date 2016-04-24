@@ -2,15 +2,13 @@ package org.leibnizcenter.rechtspraak;
 
 import com.google.common.base.Preconditions;
 import com.google.common.io.BaseEncoding;
-import com.google.gson.Gson;
-import com.google.gson.JsonElement;
 import com.google.gson.annotations.SerializedName;
 import generated.OpenRechtspraak;
 import nl.rechtspraak.psi.Procedure;
-import nl.rechtspraak.schema.rechtspraak_1.RechtspraakContent;
 import org.joda.time.DateTime;
-import org.leibnizcenter.xml.DomHelper;
+import org.leibnizcenter.xml.NotImplemented;
 import org.leibnizcenter.xml.TerseJson;
+import org.leibnizcenter.xml.helpers.DomHelper;
 import org.purl.dc.terms.*;
 import org.w3._1999._02._22_rdf_syntax_ns_.Description;
 import org.xml.sax.SAXException;
@@ -18,7 +16,6 @@ import org.xml.sax.SAXException;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 import java.io.IOException;
-import java.io.NotSerializableException;
 import java.io.UnsupportedEncodingException;
 import java.net.URISyntaxException;
 import java.net.URLEncoder;
@@ -34,8 +31,10 @@ import static org.leibnizcenter.rechtspraak.RechtspraakNlInterface.xmlToHtml;
  * <p/>
  * Created by Maarten on 29/09/2015.
  */
+@SuppressWarnings("WeakerAccess")
 public class CouchDoc {
     public String _id;
+    @SuppressWarnings("unused")
     public String _rev;
     @SerializedName("@context")
     public Object[] context = {
@@ -78,14 +77,15 @@ public class CouchDoc {
     protected List<RechtsResource> references;
     protected Object xml;
 
-    public CouchDoc(OpenRechtspraak doc, String xmlStr) throws TransformerException, URISyntaxException, IOException, SAXException, ParserConfigurationException {
+    public CouchDoc(OpenRechtspraak doc, String xmlStr) throws TransformerException, URISyntaxException, IOException, SAXException, ParserConfigurationException, NotImplemented {
         //Set attachments
         this._attachments = new Attachments(xmlStr);
 
         //Set content json
         //RechtspraakContent content = RechtspraakNlInterface.getUitspraakOrConclusie(doc);
         //simplifiedContent = content.toJson();// remove
-        xml = new TerseJson(TerseJson.WhiteSpace.Preserve).convert(DomHelper.parse(xmlStr));
+        xml = new TerseJson(TerseJson.Options.with(TerseJson.WhitespaceBehaviour.Preserve))
+                .convert(DomHelper.parse(xmlStr));
 
         /**
          * ECLI:NL:CRVB:2013:1886, ECLI:NL:RBZWB:2013:901 only have 1 description tag: desc1
@@ -475,7 +475,7 @@ public class CouchDoc {
         }
     }
 
-    @SuppressWarnings("unused")
+    @SuppressWarnings({"unused"})
     static class ContextValues {
         String Vervangt = "http://purl.org/dc/terms/replaces",
                 Procedure = "http://psi.rechtspraak.nl/procedure",

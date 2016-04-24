@@ -1,12 +1,13 @@
 package org.leibnizcenter.rechtspraak;
 
 import com.google.common.base.Preconditions;
-import com.squareup.okhttp.HttpUrl;
-import com.squareup.okhttp.Response;
+import okhttp3.HttpUrl;
+import okhttp3.Response;
 import generated.OpenRechtspraak;
 import nl.rechtspraak.schema.rechtspraak_1.Conclusie;
 import nl.rechtspraak.schema.rechtspraak_1.RechtspraakContent;
 import nl.rechtspraak.schema.rechtspraak_1.Uitspraak;
+import okhttp3.HttpUrl;
 import org.w3._1999._02._22_rdf_syntax_ns_.Description;
 
 import javax.xml.bind.JAXBContext;
@@ -27,6 +28,15 @@ import java.net.URISyntaxException;
  */
 public class RechtspraakNlInterface {
     public static Response requestXmlForEcli(String ecli) throws IOException, JAXBException, XPathExpressionException {
+        return requestXmlForEcli(ecli, SearchRequest.ReturnType.DOC);
+    }
+    public static Response requestXmlForEcli(String ecli, SearchRequest.ReturnType type) throws IOException, JAXBException, XPathExpressionException {
+        switch (type){
+            case META:
+                break;
+            case DOC:
+                break;
+        }
         URI uri = URI.create(getXmlUrl(ecli));
         HttpUrl url = HttpUrl.get(uri);
         return new DocumentRequest(url).execute();

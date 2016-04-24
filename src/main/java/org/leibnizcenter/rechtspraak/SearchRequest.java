@@ -1,10 +1,10 @@
 package org.leibnizcenter.rechtspraak;
 
 import com.google.common.base.Preconditions;
-import com.squareup.okhttp.HttpUrl;
-import com.squareup.okhttp.OkHttpClient;
-import com.squareup.okhttp.Request;
-import com.squareup.okhttp.Response;
+import okhttp3.HttpUrl;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 import org.jsoup.HttpStatusException;
 import org.xml.sax.Attributes;
 import org.xml.sax.InputSource;

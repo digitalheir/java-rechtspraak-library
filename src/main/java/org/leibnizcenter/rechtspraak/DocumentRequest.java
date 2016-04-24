@@ -1,10 +1,10 @@
 package org.leibnizcenter.rechtspraak;
 
-import com.squareup.okhttp.HttpUrl;
-import com.squareup.okhttp.OkHttpClient;
-import com.squareup.okhttp.Request;
-import com.squareup.okhttp.Response;
 import generated.OpenRechtspraak;
+import okhttp3.HttpUrl;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 import org.jsoup.HttpStatusException;
 
 import javax.xml.bind.JAXBException;
@@ -16,6 +16,7 @@ import java.io.IOException;
  * <p/>
  * Created by maarten on 31-7-15.
  */
+@SuppressWarnings("WeakerAccess")
 public class DocumentRequest {
 
     //    private static final HashMap<String, String> prefMap = new HashMap<String, String>() {{
@@ -26,18 +27,10 @@ public class DocumentRequest {
     /**
      * Client for doing HTTP requests
      */
-    private final OkHttpClient httpClient = new OkHttpClient();
-
-    {
-        httpClient.setFollowRedirects(false);
-    }
-
-    public DocumentRequest(HttpUrl url, org.leibnizcenter.rechtspraak.SearchRequest.ReturnType type) {
-        request = (new Request.Builder().url(url)).build();
-    }
+    private final OkHttpClient httpClient = new OkHttpClient.Builder().followRedirects(false).build();
 
     public DocumentRequest(HttpUrl url) {
-        this(url, org.leibnizcenter.rechtspraak.SearchRequest.ReturnType.DOC);
+        request = (new Request.Builder().url(url)).build();
     }
 
     /**
@@ -54,6 +47,7 @@ public class DocumentRequest {
         return response;
     }
 
+    @SuppressWarnings("unused")
     public OpenRechtspraak executeAndParse() throws IOException, XPathExpressionException, JAXBException {
         return RechtspraakNlInterface.parseXml(execute().body().byteStream());
     }

@@ -1,6 +1,6 @@
 //package org.leibnizcenter.rechtspraak;
 //
-//import com.squareup.okhttp.HttpUrl;
+//import okhttp3.HttpUrl;
 //
 //public class DocRequestBuilder {
 //    private final UkUriObject url;
