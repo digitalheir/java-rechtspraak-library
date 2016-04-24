@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:tr="http://tuchtrecht.overheid.nl/" xmlns:eu="http://publications.europa.eu/celex/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:HR:1997:AA3245</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2015-06-28T20:47:52</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">AA3245</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Hoge_Raad_der_Nederlanden" scheme="overheid.RechterlijkeMacht">Hoge Raad</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">1997-02-05</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">31818</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#cassatie">Cassatie</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht_belastingrecht">Bestuursrecht; Belastingrecht</dcterms:subject>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0002672&amp;artikel=20&amp;g=1997-02-05">Wet op de vennootschapsbelasting 1969 20</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0002672&amp;artikel=21&amp;g=1997-02-05">Wet op de vennootschapsbelasting 1969 21</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0002672&amp;artikel=21&amp;g=1997-02-05">Wet op de vennootschapsbelasting 1969 21</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0002672&amp;artikel=21&amp;g=1997-02-05">Wet op de vennootschapsbelasting 1969 21</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0002672&amp;artikel=21&amp;g=1997-02-05">Wet op de vennootschapsbelasting 1969 21</dcterms:references>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+          <rdf:li>BNB 1997/118 met annotatie door J.W. Zwemmer</rdf:li>
+          <rdf:li>WFR 1997/231</rdf:li>
+          <rdf:li>FED 1997/408 met annotatie door R.J. KOOPMAN</rdf:li>
+          <rdf:li>V-N 1997/818, 4 met annotatie door Kluwer</rdf:li>
+          <rdf:li>FED 1997/109</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:HR:1997:AA3245">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:HR:1997:AA3245</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-04T15:50:34</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2001-07-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:HR:1997:AA3245 Hoge Raad , 05-02-1997 / 31818</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:HR:1997:AA3245:INH" lang="nl" xml:space="preserve">
+      <para>-</para>
+    </inhoudsindicatie>
+  <uitspraak xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:HR:1997:AA3245:DOC" lang="nl" xml:space="preserve">
+      <parablock>
+        <para>gewezen op het beroep in cassatie van de besloten vennootschap met beperkte aansprakelijkheid X B.V. te Z tegen de uitspraak van het Gerechtshof te Arnhem van 7 december 1995 betreffende na te melden beschikking van de Inspecteur. </para>
+        <para>1. Beschikking, bezwaar en geding voor het Hof Bij beschikking van 31 maart 1994 heeft de Inspecteur een voorlopige teruggaaf wegens terugwenteling van verlies over 1990 naar 1987 gedeeltelijk teruggenomen, met vaststelling van het door belanghebbende te betalen bedrag op ƒ 185.884,--, welke beschikking, na daartegen gemaakt bezwaar, bij uitspraak van de Inspecteur is gehandhaafd. Belanghebbende is tegen die uitspraak in beroep gekomen bij het Hof, dat deze uitspraak heeft vernietigd en belanghebbende niet-ontvankelijk heeft verklaard in haar bezwaar. De uitspraak van het Hof is aan dit arrest gehecht. </para>
+        <para>2. Geding in cassatie Belanghebbende heeft tegen de uitspraak van het Hof beroep in cassatie ingesteld. Het beroepschrift in cassatie is aan dit arrest gehecht en maakt daarvan deel uit. De Staatssecretaris van Financiën heeft bij vertoogschrift het cassatieberoep bestreden. De Plaatsvervangend Procureur-Generaal Van Soest heeft op 31 juli 1996 geconcludeerd tot vernietiging van de bestreden uitspraak, van de uitspraak van de Inspecteur en van de beschikking van 31 maart 1994. </para>
+        <para>3. Beoordeling van de middelen van cassatie 3.1. In cassatie kan van het volgende worden uitgegaan: </para>
+        <para>3.1.1. Het belastbare bedrag voor de vennootschapsbelasting is ten aanzien van belanghebbende voor het jaar 1987 vastgesteld op ƒ 1.102.870,--. </para>
+        <para>3.1.2. Naar aanleiding van belanghebbendes aangifte voor het jaar 1990 van een negatieve winst van ƒ 1.289.198,-- heeft de Inspecteur bij beschikking van 31 juli 1992 een voorlopige teruggaaf inzake terugwenteling van verlies naar het jaar 1987 verleend, welke teruggaaf ƒ 339.563,-- bedroeg. </para>
+        <para>3.1.3. Bij beschikking van 30 september 1992 is van de negatieve belastbare winst voor het jaar 1989 een bedrag van ƒ 442.580,-- verrekend met het jaar 1987, hetgeen tot een teruggaaf van ƒ 185.884,-- heeft geleid. </para>
+        <para>3.1.4. Bij beschikking, eveneens gedagtekend 30 september 1992, heeft de Inspecteur van de negatieve belastbare winst voor het jaar 1990 een bedrag van</para>
+        <para>ƒ 660.290,-- verrekend met het jaar 1987. De uit deze verliesverrekening voortvloeiende teruggaaf van ƒ 153.679,-- is verrekend met de hiervóór in 3.1.2. vermelde voorlopige teruggaaf, zodat van deze voorlopige teruggaaf  nog ƒ 153.679,-- - ƒ 339.563,-- =  -/- ƒ 185.884,-- voor verrekening resteerde. Laatstgenoemde beschikking vermeldt: "Het bedrag ƒ 185.884,-- zal worden ingevorderd". </para>
+        <para>3.1.5. Vervolgens heeft de Inspecteur de litigieuze beschikking, gedagtekend 31 maart 1994, genomen. De tekst van deze beschikking luidt - voor zover van belang -: "Afschrift van de beschikking inzake de terugwenteling van verlies na verrekening van tot een te hoog bedrag verleende voorlopige teruggaaf/teruggaven. Gezien de aangifte voor het jaar 1990 verleende voorlopige teruggaaf/teruggaven over het jaar 1987. </para>
+        <para>Overwegende, voorts dat eerder een voorlopige teruggaaf c.q. teruggaven tot een te hoog bedrag werd(en) verleend welke met genoemde vermindering dient c.q. dienen te worden verrekend. </para>
+        <para>Gelet op artikel 21, derde lid, van de Wet op de vennootschapsbelasting 1969; </para>
+        <para>Besluit tengevolge van de verrekening van de voorlopige teruggaaf/teruggaven, deze beschikking vast te stellen op het in de rubriek "verschil" vermelde bedrag. De inspecteur. </para>
+        <para>N.B. een eventueel bezwaarschrift tegen deze beschikking moet binnen de wettelijke termijn na dagtekening van deze beschikking ter post zijn bezorgd. U moet het bezwaarschrift indienen bij de op dit formulier genoemde inspecteur. Per saldo te betalen 185884" </para>
+        <para>3.2. Het Hof heeft geoordeeld dat bij de - hiervóór in 3.1.4 bedoelde - beschikking van 30 september 1992 is vastgesteld in hoeverre het verlies van het jaar 1990 met het jaar 1987 werd verrekend en dat belanghebbende na verrekening van de voorlopige teruggaaf over het jaar 1987 ƒ 185.884,-- verschuldigd was. Bij het geven van dit oordeel, dat als van feitelijke aard en niet onbegrijpelijk in cassatie niet met vrucht kan worden bestreden, is het Hof kennelijk - en terecht - ervan uitgegaan  dat evenvermelde beschikking is aan te merken als een beschikking in de zin van artikel 21, lid 1, van de Wet op de vennootschapsbelasting 1969, zodat belanghebbende daartegen op de voet van lid 2 van dat artikel rechtsmiddelen had kunnen aanwenden. Mitsdien falen de middelen voor zover zij van een andere opvatting uitgaan. </para>
+        <para>3.3. Voor zover de middelen ten betoge strekken dat het Hof ten onrechte de onderhavige beschikking niet heeft vernietigd, treffen zij evenwel doel. Gelijk in de hiervóór in 3.2 genoemde beschikking van 30 september 1992 is vastgesteld, is immers ook in de onderhavige beschikking vastgesteld dat belanghebbende - in het kader van de terugwenteling van het verlies over het jaar 1990 naar het jaar 1987 - na verrekening van de voorlopige teruggaaf over het jaar 1987 een bedrag van ƒ 185.884,-- is verschuldigd. Belanghebbende is echter niet ten tweede male dit zelfde bedrag, op dezelfde grond, verschuldigd geworden, zodat de litigieuze beschikking niet in stand kan blijven. 3.4. Uit het vorenoverwogene volgt dat het Hof ten onrechte in plaats van de onderhavige beschikking te vernietigen belanghebbende niet-ontvankelijk heeft verklaard in haar bezwaar. 's Hofs uitspraak kan mitsdien niet in stand blijven. De Hoge Raad kan zelf de zaak afdoen. </para>
+        <para>4. Proceskosten De Hoge Raad acht termen aanwezig om ten aanzien van de proceskosten die belanghebbende in verband met de behandeling van het geding in cassatie redelijkerwijs heeft moeten maken, te beslissen als hierna zal worden vermeld. </para>
+        <para>5. Beslissing De Hoge Raad vernietigt de uitspraak van het Hof, behoudens de beslissingen omtrent het griffierecht en omtrent de proceskosten, vernietigt de uitspraak van de Inspecteur alsmede de beschikking, gelast dat door de Staatssecretaris van Financiën aan belanghebbende  wordt vergoed het door deze ter zake van de behandeling van het beroep in cassatie verschuldigd geworden griffierecht van ƒ 300,--, en veroordeelt de Staatssecretaris van Financiën in de kosten van het geding in cassatie aan de zijde van belanghebbende, vastgesteld op ƒ 2.840,-- voor beroepsmatig verleende rechtsbijstand. </para>
+        <para>Dit arrest is op 5 februari 1997 vastgesteld door de raadsheer Van der Linde als voorzitter, en de raadsheren Bellaart, Van der Putt-Lauwers, Van Brun- schot en Meij, in tegenwoordigheid van de waarnemend griffier Van Hooff, en op die datum in het openbaar uitgesproken.</para>
+      </parablock>
+    </uitspraak>
+</open-rechtspraak>

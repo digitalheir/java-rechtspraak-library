@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:tr="http://tuchtrecht.overheid.nl/" xmlns:eu="http://publications.europa.eu/celex/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:PHR:1995:AA3092</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2015-06-09T01:23:23</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">AA3092</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Parket_bij_de_Hoge_Raad" scheme="overheid.RechterlijkeMacht">Parket bij de Hoge Raad</dcterms:creator>
+      <dcterms:date rdfs:label="Datum genomen">1995-03-01</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">29494</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/conclusie">Conclusie</dcterms:type>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht_belastingrecht">Bestuursrecht; Belastingrecht</dcterms:subject>
+      <dcterms:relation rdfs:label="Formele relatie" ecli:resourceIdentifier="ECLI:NL:HR:1995:AA3092" psi:type="http://psi.rechtspraak.nl/conclusie" psi:aanleg="http://psi.rechtspraak.nl/latereAanleg">Arrest Hoge Raad: ECLI:NL:HR:1995:AA3092</dcterms:relation>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+          <rdf:li>Belastingblad 1995/235 met annotatie door PdB</rdf:li>
+          <rdf:li>BNB 1995/133 met annotatie door G.J. van Leijenhorst</rdf:li>
+          <rdf:li>FED 1995/203</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:PHR:1995:AA3092">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:PHR:1995:AA3092</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-04T15:48:57</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2001-07-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:PHR:1995:AA3092 Parket bij de Hoge Raad , 01-03-1995 / 29494</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:PHR:1995:AA3092:INH" lang="nl" xml:space="preserve">
+      <para>-</para>
+    </inhoudsindicatie>
+  <conclusie xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:PHR:1995:AA3092:DOC" lang="nl" xml:space="preserve">
+      <para>Nr. 29.494                              Mr. Moltmaker</para>
+      <para/>
+      <para>Derde kamer B                          Conclusie inzake</para>
+      <para/>
+      <parablock>
+        <para>Waterschapslasten                   WATERSCHAP OOST-VELUWE</para>
+        <para>                                            tegen</para>
+        <para>Parket, 13 september 1994          X</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para/>
+      <para>Edelhoogachtbaar College</para>
+      <para/>
+      <para>1 Feiten en geschil</para>
+      <para/>
+      <para>1.1 Voor de feiten verwijs ik naar de uitspraak van het hof. De wettelijke bepalingen waarop de heffing berust zijn al herhaaldelijk aan de orde geweest. Ik verwijs naar mijn conclusies voor HR 19 september 1990, BNB 1990/307, HR 19 december 1990, BNB 1991/51 en BNB 1991/53 en HR 19 juli 1994, nr. 28.875.</para>
+      <para/>
+      <parablock>
+        <para>1.2 Het geschil betreft de vraag of belanghebbendes in de gemeente Z gelegen perceel terecht is betrokken in de omslag waterschapslasten van het Waterschap betreffende het jaar 1991. </para>
+        <para>Volgens belanghebbende heeft haar perceel geen belang bij de vervulling van de waterbeheersingstaak van het Waterschap. Het Waterschap is van mening, dat dit wel het geval is, althans dat het perceel door het opleveren van wateroverlast die taakvervulling noodzakelijk maakt.</para>
+      </parablock>
+      <para/>
+      <para>1.3Het hof heeft belanghebbende in het gelijk gesteld. Tegen de uitspraak van het hof heeft het Waterschap beroep in cassatie ingesteld. Het cassatiemiddel bestaat uit 15 onderdelen.</para>
+      <para/>
+      <parablock>
+        <para>1.4De onderdelen kunnen globaal als volgt worden gegroepeerd:</para>
+        <para>- Binnen een waterstaatkundige eenheid waarvan belanghebbendes perceel deel uitmaakt, past geen tariefsdifferentiatie. Waar het om gaat is de waterstaatkundige verzorging van het gebied als geheel en niet die van de afzonderlijke, binnen dat gebied gelegen percelen (onderdelen 1, 2 en 3).</para>
+        <para>- Voor zover de belastingrechter al mag toetsen, dient die toetsing terughoudend te zijn (onderdelen 4 en 5).</para>
+        <para>- In verband met het gestelde in de onderdelen 1 tot en met 5 heeft het hof de bewijslast onjuist verdeeld, althans aan het door het Waterschap te leveren bewijs te hoge eisen gesteld (onderdelen 6, 7 en 8).</para>
+        <para>- In het bijzonder heeft het hof ten onrechte geen rekening gehouden met het feit, </para>
+        <para>a. dat percelen in het gebied zijn aangesloten op een rioleringssysteem, hetgeen het Waterschap noopt tot het treffen van voorzieningen (onderdeel 9);</para>
+        <para>b. dat er in het gebied percelen zijn met kruipruimten waarin zonder waterbeheersing af en toe water zou staan (onderdeel 10);</para>
+        <para>c. dat het overstortwater van de gemeentelijke riolering wordt afgevoerd via watergangen die in beheer en onderhoud zijn bij het Waterschap (onderdelen 11, 12 en 13);</para>
+        <para>d. dat de voorzieningen van het Waterschap voor de afvoer van kwelwater via B in het belang zijn van het gehele gebied (onderdelen 14 en 15).</para>
+      </parablock>
+      <para/>
+      <para>1.5 Namens belanghebbende is een vertoogschrift in cassatie ingediend.</para>
+      <para/>
+      <para>1.6 Ik heb de conclusie in deze zaak (de zaken nrs. 29.104 tot en met 29.107 betreffen hetzelfde waterschap en hetzelfde belastingjaar; in die zaken zal ik niet afzonderlijk concluderen) aangehouden in afwachting van de afdoening van de zaak nr. 28.875. In die zaak heeft Uw Raad bij arrest van 19 juli 1994 beslist, dat de door het Waterschap opgelegde aanslag rechtsgeldig is ingevolge de Wet van 18 december 1991, Stb. 1992,19, ook al is door Gedeputeerde Staten nog niet beslist op het beroep tegen het classificatiebesluit.</para>
+      <para/>
+      <parablock>
+        <para>2 Beschouwingen</para>
+        <para>2.1 Algemeen</para>
+      </parablock>
+      <para/>
+      <para>2.1.1 In het onderhavige geval is de principiële vraag aan de orde, of de binnen de gebiedsomschrijving van het Waterschap gelegen gronden op de oostflank van het T-massief belang hebben bij de door het Waterschap verzorgde zgn. waterbeheersing. Deze gronden hebben in het algemeen geen zichtbare afwatering. De neerslag (het hemelwater) wordt voor wat betreft de onverharde oppervlakten afgevoerd via het grondwater en voor wat betreft de verharde oppervlakten (in verstedelijkte gebieden) via de gemeentelijke riolering. </para>
+      <para/>
+      <parablock>
+        <para>2.1.2 Het waterschap verdedigt, dat zijn gebied een waterstaatkundige eenheid vormt, waarin weliswaar gradaties zijn in de mate van het belang - zoals tot uitdrukking gebracht in het classificatiebesluit - maar dat binnen de verschillende categorieën niet voor ieder perceel afzonderlijk het belang kan (en ook niet behoeft te) worden aangetoond. Deze stellingname loopt als een rode draad door het cassatiemiddel heen. Zo verdedigt het Waterschap bijv. dat als bij gebreke van waterbeheersing op lager gelegen gebieden de grondwaterstand in het hoger gelegen gebied zo hoog kan worden, dat er kruipruimten vochtig worden, het er niet toe doet of het onderhavige per-</para>
+        <para>ceel al dan niet een kruipruimte heeft. Idem voor afvoer via riolering: indien daarin een taakvervulling van het Waterschap valt te onderkennen, is het niet van belang of het onderhavige perceel op de riolering is aangesloten.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>2.1.3 Belanghebbendes perceel ligt in de overgangszône tussen hoog en laag gebied en is door het waterschap ingedeeld in klasse III. Tot die klasse behoren de ongebouwde onroerende zaken die door hun ligging minder belang, d.w.z. door hun hoogte en profielopbouw geen rechtstreeks belang hebben bij de werken van het waterschap. Volgens het waterschap hebben deze onroerende zaken evenwel een indirect belang bij die werken (veelal aanwezig in het gebied van klasse II) en wel om drie redenen:</para>
+        <para>a. voor zover (hemel)water van de gronden van klasse III (als ondiepe, snel reagerende stroming van het grondwater) wordt afgevoerd via watergangen (beken en sprengen) die in beheer en onderhoud bij het waterschap zijn, blijft de grondwaterstand van de onroerende zaken van klasse III op een niveau dat de noodzaak van afwateringsmiddelen overbodig maakt;</para>
+        <para>b. voor zover het water als diepe en trage stroming van het grondwater tot afstroming komt, vormt dit kwel in de lagere gronden van klasse II, dat via de daar aanwezige afwateringsmiddelen moet worden afgevoerd.</para>
+        <para>c. voor zover het overstortwater van de gemeentelijke riolering wordt afgevoerd via watergangen die in beheer en onderhoud zijn bij het Waterschap, ontbreekt de noodzaak het rioleringsstelsel vele malen ruimer te dimensioneren en betalen de aangeslotenen dus minder rioolrecht.</para>
+      </parablock>
+      <para/>
+      <para>2.1.4 In zijn vertoogschrift voor het hof lijkt het Waterschap de discussie te beperken tot de in het vorige punt genoemde redenen sub b en c. Naast de stelling omtrent de afvoer van kwelwater (reden sub c), vermeldt het Waterschap slechts dat de woning van belanghebbende is aangesloten op de gemeentelijke riolering en laat direct daarop de volzin volgen:</para>
+      <para/>
+      <para>"Zij heeft derhalve belang bij de afvoer van overstortwater, dat in voorkomende gevallen indirect wordt afgevoerd via watergangen, die in beheer en onderhoud zijn bij het waterschap."</para>
+      <para/>
+      <para/>
+      <parablock>
+        <para>2.1.5 Naar het mij voorkomt, blijft echter ook reden sub a in deze procedure een rol spelen. Ter zitting van het hof van 4 maart 1992 heeft het Waterschap overgelegd een "Toelichting inzake klassificatie en indeling in omslagklasse III van het onderwerpelijke perceel", waarin wordt gezegd:</para>
+        <para>"Indien deze hoeveelheid grondwater niet wordt afgevoerd leidt dit tot een stijging van de G.H.G. (gemiddelde hoogste grondwaterstand, M.) in het betreffende perceel tot een niveau waarbij in natte periode (winter) wateroverlast ontstaat (zie bijgaande tekening)."</para>
+      </parablock>
+      <para/>
+      <para>Bovendien heeft het hof in rov. 4.4 een overweging gewijd aan de aanwezigheid c.q. vochtigheid van kruipruimten. Dit past slechts in een discussie over de reden sub a (grondwaterstand) en zou overbodig zijn als de discussie zich beperkte tot de reden b (kwelwaterafvoer) en c (afvoer via riolering).</para>
+      <para/>
+      <parablock>
+        <para>2.1.6 Ik vermeld volledigheidshalve nog, dat de vraag of de op 1 januari 1992 in werking getreden Waterschapswet al dan niet op het onderhavige geval van toepassing is, niet van belang is, aangezien ook de Waterschapswet blijkens art. 119, zesde lid, uitdrukkelijk verband legt met de omslagheffing en de omvang van het belang van de omslagplichtigen bij de behartiging van de taken waarmee het waterschap is belast. Zie bijv. K.B. 8 november 1991, AB 1992,642 m.nt. JJIV en voorts over deze bepaling (toen nog art. 4.18, vijfde lid, Ontwerp Waterschapswet) uitvoerig mijn conclusie voor HR 1 juli 1988,</para>
+        <para>BNB 1988/293* m.nt. H. J. Hofstra.</para>
+      </parablock>
+      <para/>
+      <para>2.2 De bewijsvoering in het algemeen (onderdelen 1 tot en met 8)</para>
+      <para> </para>
+      <para>2.2.1 Met betrekking tot de bewijsvoering inzake het - door het Waterschap als "indirect" omschreven - belang, is er een bijzonder probleem, dat in het cassatiemiddel wordt aangeduid als een probatio diabolica: juist doordat het Waterschap zijn waterbeheersingstaak uitvoert, blijft de grondwaterstand laag genoeg en is er geen kwelwater omdat dat wordt afgevoerd. Dit is mede aanleiding voor het Waterschap om te bepleiten dat de belastingrechter zich terughoudend moet opstellen als het gaat om de begrenzing van op waterstaatkundige gronden gevormde waterschapsgebieden en slechts in evidente gevallen mag ingrijpen.</para>
+      <para/>
+      <para>2.2.2 De gebiedsomschrijving van een waterschap is slechts van belang voor de omslagplicht in de zin, dat die omschrijving de heffingsbevoegdheid van het waterschap tot dat gebied beperkt. De gebiedsomschrijving is echter niet bepalend voor de omslagplicht in de zin dat de daarin liggende percelen (zonder meer) geacht worden belang te hebben bij de taakvervulling van het waterschap. Dit blijkt uit HR 11 juli 1984, BNB 1984/259* m.nt. H. J. Hofstra en HR 22 februari 1989, BNB 1989/215* m.nt. J. P. Scheltens (met als vervolg HR 11 december 1991, BNB 1992/67* m.nt. G. J. van Leijenhorst). Het hof brengt dit tot uitdrukking door in rov. 4.2 met verwijzing naar art. 119, eerste en zesde lid, Waterschapswet (in werking getreden op 1 januari 1992), te overwegen, dat het waterschap geen "gebiedscorporatie" maar een "doelcorporatie" is. Vgl. ook J. J. I. Verburg, De Waterschapswet (1992) blz. 21, die (in ander verband) met verwijzing naar HR 7 mei 1957, NJ 1957,516, opmerkt:</para>
+      <para/>
+      <para/>
+      <para>"Het zal duidelijk zijn dat het waterschap zich .... onderscheidt van andere overheidslichamen zoals provincie en gemeente. Waar laatstgenoemde lichamen zich laten karakteriseren als vormen van territoriale decentralisatie, is het waterschap een vorm van functionele decentralisatie waarbij het territoir wel een voorwaarde is voor het functioneren maar het functionele meebrengt dat dit niet beslissend is voor de begrenzing van zijn competentie."</para>
+      <para/>
+      <para>2.2.3 Uw Raad overwoog in rov. 5.4 van eerdervermeld arrest BNB 1988/293*:</para>
+      <para/>
+      <para/>
+      <para>"Voor een groot waterschap als het onderwerpelijke, dat is ontstaan door samenvoeging van ..... vroegere "waterstaatkundige eenheden", moet in het algemeen ervan worden uitgegaan dat het een zodanig samenhangend geheel vormt, dat voor differentiatie van kosten bij de omslag geen plaats is op de grond dat die kosten worden gemaakt voor het uitvoeren van werkzaamheden of het beheer welke niet de vroegere waterstaatkundige eenheid betreffen waarin het omslagplichtige onroerende goed is gelegen."</para>
+      <para/>
+      <para>2.2.4 In het geval van dit arrest BNB 1988/293* ging het om de vraag in hoeverre belanghebbendes perceel moest bijdragen in een niet rechtstreeks op dat perceel betrekking hebbende activiteit van het waterschap. Niet in discussie was, dat het perceel in algemene zin belang had bij de taakvervulling van het waterschap. Het Waterschap acht dit arrest evenwel in zoverre van betekenis voor het onderhavige geval, dat daaruit blijkt, dat omslag mogelijk is van kosten voor een activiteit van het waterschap welke in het geheel geen betrekking heeft op het perceel van belanghebbende, zulks op grond van het feit, dat om waterstaatkundige redenen het gebied van het waterschap een samenhangend geheel vormt. Dit laatste doet zich volgens het Waterschap ook in het onderhavige geval voor.</para>
+      <para/>
+      <para>2.2.5 In mijn conclusie voor meergenoemd arrest BNB 1988/293*  citeerde ik onder punt 6.6 uit de MvT op de Waterschapswet (Tweede Kamer, vergaderjaar 1986-1987, 19 995, nr. 3) blz. 83/84 de volgende passage (met mijn cursivering):</para>
+      <para/>
+      <parablock>
+        <para>"Essentieel uit een oogpunt van belang, betaling en zeggenschap is ook de norm die wordt gehanteerd bij het betrekken van belanghebbenden in de omslagplicht, en meer in het bijzonder bij de toedeling van de kosten aan de onderscheidene groepen wegens hun belang ...</para>
+        <para>Het begrip belang heeft hier de ruime betekenis die het gedurende de ontwikkeling van het waterschapsbestel heeft verkregen: en wel in die zin dat het belang bij de waterstaatkundige verzorging van het waterschapsgebied wordt aangemerkt als een belang dat gemeen is aan allen wier onroerende goederen (waarvan zij het gebruik of genot hebben) in dat gebied zijn gelegen. Tot dat "gemeen" belang behoort - wat de waterbeheersing betreft -niet enkel het belang van degenen die daardoor rechtstreeks worden gebaat maar ook het belang dat het waterschap voorzieningen treft tot opheffing van waterstaatkundige bezwaren voortvloeiende uit de vrije afstroming van hoger gelegen grond op lage gronden (die afwateren op het stelsel van watergangen) en uit lozingen."</para>
+      </parablock>
+      <para/>
+      <para>2.2.6 In punt 5 van mijn conclusie voor het arrest BNB 1988/293* en punt 3.3 van mijn conclusie voor het arrest BNB 1989/215* bepleitte ik een marginale en terughoudende toetsing als het gaat om de vraag of er sprake is van een willekeurige en onredelijke heffing die de wetgever bij het toekennen van de heffingsbevoegdheid niet op het oog kan hebben gehad. Zie ook de noot van Hofstra onder HR 1 juli 1987, BNB 1987/309* en onder BNB 1988/293*.</para>
+      <para/>
+      <para>2.2.7 In de genoemde arresten BNB 1984/259* en BNB 1989/215* formuleerde Uw Raad het begrip "belang" zodanig ruim, dat daaronder ook valt de situatie waarin een perceel door het veroorzaken van wateroverlast de taakvervulling van het waterschap noodzakelijk maakt. Dit impliceert, dat die taakvervulling zich ook geheel buiten het wateroverlast veroorzakende perceel kan afspelen.</para>
+      <para/>
+      <para>2.2.8 Hoewel - zoals uit de in punt 2.2.2 vermelde jurisprudentie blijkt - de gebiedsomschrijving niet zonder meer doorslaggevend is voor de omslagplicht, heeft in het licht van het vorenstaande het hof m.i. een te strenge maatstaf aangelegd door van het Waterschap bewijs te verlangen met betrekking tot het specifieke belang van belanghebbendes perceel. M.i. levert het door het waterschap gestelde, afzonderlijk en in onderling verband beschouwd, voldoende bewijs voor de stelling dat het gebied waarin het perceel van belanghebbende ligt en dus ook dat perceel zelf (indirect) belang heeft bij de taakvervulling van het waterschap in de ruime zin als hierboven omschreven. De onderdelen 1 tot en met 8 van het cassatiemiddel, gelezen in hun onderling verband, slagen derhalve.</para>
+      <para/>
+      <para>2.3 De bewijsvoering in het bijzonder (onderdelen 9 tot en met 15)</para>
+      <para/>
+      <para>2.3.1 Het hierna volgende is slechts van belang indien Uw Raad mijn opvatting als verdedigd in punt 2.2 niet deelt.</para>
+      <para/>
+      <parablock>
+        <para>2.3.2 Uit rov. 4.4 volgt, dat het hof slechts een belang aanneemt, indien de woning op belanghebbendes perceel een kruipruimte heeft en zo ja, dat zonder de waterbeheersing er af en toe water in zou staan. Een en ander is volgens het hof niet gesteld of gebleken. Met betrekking tot de aanwezigheid van een kruipruimte is dit laatste juist. </para>
+        <para>Met betrekking tot de vraag of àls er een kruipruimte zou zijn, daar af en toe water in zou staan, lijkt mij de overweging van het hof niet in overeenstemming met hetgeen door het waterschap voor het hof is gesteld. Ik verwijs naar het citaat in punt 2.1.5 hiervóór. </para>
+        <para>Dit laatste kan echter niet tot cassatie leiden, indien Uw Raad met het hof van oordeel is, dat als belanghebbendes perceel geen kruipruimte heeft, dat perceel geen belang bij de hoogte van het grondwater heeft en dus ook geen belang bij de taakvervulling van het waterschap. In dat geval kan onderdeel 10 van het middel niet tot cassatie leiden.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>2.3.3 Rov. 4.5 van de uitspraak van het hof betreft de - door het hof ontkennend beantwoorde - vraag of het afvoeren van overstortwater via de gemeentelijke riolering een belang vormt dat de waterschapsomslag rechtvaardigt (onderdelen 9, 11, 12 en 13 van het cassatiemiddel).</para>
+        <para>Volgens het hof is dit een belang van de gemeente en hebben degenen die op de riolering zijn aangesloten slechts in zoverre een (afgeleid) belang, dat zij daardoor minder rioolrecht behoeven te betalen. Het hof acht dit (afgeleide) belang een onvoldoende aanwijsbaar belang bij de waterbeheersingstaak van het Waterschap.</para>
+        <para>Het Waterschap bestrijdt dit met o.m. de stelling (zie onderdeel 12 van het cassatiemiddel), dat de kosten van het overstorten ingevolge art. 2 van de Belastingverordening van het Waterschap, juncto art. 101, eerste lid, van het Gelders Waterschapsreglement (geciteerd in punt 2.1 van mijn conclusie BNB 1990/307) niet worden verhaald op de gemeente, maar op de aangesloten gebouwen.</para>
+        <para>Met het Waterschap ben ik van mening dat aldus voldoende is aangetoond, dat belanghebbendes perceel (althans enig, indirect) belang heeft bij de taakvervulling door het Waterschap, zodat de onderdelen 9, 11, 12 en 13, in hun onderling verband gelezen, terecht zijn voorgesteld.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>2.3.4Belanghebbende heeft nog voor het hof gesteld, dat de riolering niet loost op watergangen in beheer en onderhoud bij het waterschap, maar op rijkswater en dat in de hooggelegen delen van de gemeente Q de riolering overstort in infiltratievijvers. Bovendien betreft de overstort geen afvalwater, maar slechts hemelwater waaraan de bijdrage van belanghebbendes bebouwde oppervlakte van 100 m² verwaarloosbaar klein is.</para>
+        <para>Het hof is aan deze verweren in rov. 4.5 niet toegekomen, zodat daarop na verwijzing alsnog zou moeten worden beslist, indien Uw Raad mijn mening van punt 2.3.3 laatste alinea deelt. Volledigheidshalve merk ik nog op, dat zodanige verwijzing niet nodig is als de onderdelen 1 tot en met 8 van het middel slagen zoals door mij in punt 2.2.8 werd betoogd.</para>
+      </parablock>
+      <para/>
+      <para>2.3.5 In rov. 4.6 oordeelt het hof dat een indirect belang bij de afvoer van kwelwater slechts aanwezig is, indien zich bij belanghebbendes perceel kwel voordoet of, bij het ontbreken van watergangen, wateroverlast aan dat perceel zou berokkenen. Dat zulks het geval is, is door het Waterschap niet gesteld en uitgaande van de vorenomschreven beperkte opvatting van het hof over het begrip belang, worden de onderdelen 14 en 15 vruchteloos voorgesteld.</para>
+      <para/>
+      <para>3Conclusie</para>
+      <para/>
+      <para>De onderdelen 1 tot en met 8 van het cassatiemiddel, gelezen in hun onderling verband, gegrond bevindend, concludeer ik tot vernietiging van de uitspraak van het hof en tot bevestiging van de uitspraak op het bezwaarschrift.</para>
+      <para/>
+      <parablock>
+        <para>                                De Procureur-Generaal bij de</para>
+        <para>                                  Hoge Raad der Nederlanden</para>
+      </parablock>
+    </conclusie>
+</open-rechtspraak>

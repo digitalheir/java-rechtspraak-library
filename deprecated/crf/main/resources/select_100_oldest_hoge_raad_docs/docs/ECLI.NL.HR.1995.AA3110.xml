@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:tr="http://tuchtrecht.overheid.nl/" xmlns:eu="http://publications.europa.eu/celex/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:HR:1995:AA3110</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2015-06-28T20:37:58</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">AA3110</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Hoge_Raad_der_Nederlanden" scheme="overheid.RechterlijkeMacht">Hoge Raad</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">1995-12-06</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">30704</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#cassatie">Cassatie</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht_belastingrecht">Bestuursrecht; Belastingrecht</dcterms:subject>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0002740&amp;artikel=2&amp;g=1995-12-06">Wet op belastingen van rechtsverkeer 2</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0002740&amp;artikel=9&amp;g=1995-12-06">Wet op belastingen van rechtsverkeer 9</dcterms:references>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+          <rdf:li>Belastingblad 1996/550</rdf:li>
+          <rdf:li>BNB 1996/59 met annotatie door J.W. Zwemmer</rdf:li>
+          <rdf:li>WFR 1995/1929</rdf:li>
+          <rdf:li>FED 1996/58 met annotatie door J.S. RIJKELS</rdf:li>
+          <rdf:li>V-N 1996/398, 17 met annotatie door Kluwer</rdf:li>
+          <rdf:li>FED 1995/910</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:HR:1995:AA3110">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:HR:1995:AA3110</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-04T15:49:05</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2001-07-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:HR:1995:AA3110 Hoge Raad , 06-12-1995 / 30704</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:HR:1995:AA3110:INH" lang="nl" xml:space="preserve">
+      <para>-</para>
+    </inhoudsindicatie>
+  <uitspraak xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:HR:1995:AA3110:DOC" lang="nl" xml:space="preserve">
+      <parablock>
+        <para>gewezen op het beroep in cassatie van de vennoten van de vennootschap  onder  firma X te Z tegen de uitspraak van het Gerechtshof te 's-Hertogenbosch van 28 oktober 1994 betreffende na te melden aan hen opgelegde naheffingsaanslag in de overdrachtsbelasting. </para>
+        <para>1. Naheffingsaanslag, bezwaar en geding voor het Hof Aan de vennoten van de vennootschap onder firma X (hierna: belanghebbenden) is ter zake van een door hen verkregen onroerende zaak een naheffingsaanslag in de overdrachtsbelasting opgelegd ten bedrage van ƒ 23.100,-- zonder verhoging, welke aanslag, na daartegen gemaakt bezwaar, bij uitspraak van de Inspecteur is gehandhaafd. Belanghebbenden zijn tegen de uitspraak van de Inspecteur in beroep gekomen bij het Hof. Het Hof heeft die uitspraak bevestigd. De uitspraak van het Hof is aan dit arrest gehecht. </para>
+        <para>2. Geding in cassatie Belanghebbenden hebben tegen de uitspraak van het Hof beroep in cassatie ingesteld. Het beroepschrift in cassatie is aan dit arrest gehecht en maakt daarvan deel uit. De Staatssecretaris van Financiën heeft een vertoogschrift ingediend. </para>
+        <para>3. Ambtshalve aanwezig bevonden grond voor cassatie 3.1. In cassatie kan van het volgende worden uitgegaan. Blijkens een notariële akte van 7 november 1991 hebben belanghebbenden een op verontreinigde grond staand tankstation verkregen met de daarbij behorende inventaris. In die akte is vermeld dat belanghebbenden en de verkoopster van het tankstation zijn overeengekomen dat laatstgenoemde "alle kosten verbonden aan het schoonmaken van de ondergrondse bodemverontreiniging" voor haar rekening zal nemen. totale tegenprestatie bedroeg ƒ 550.000,--, waarvan ƒ 40.000,-- is toe te rekenen aan de verkregen inventaris. 3.2. De onder 3.1 vermelde feiten laten geen andere gevolgtrekking toe dan dat tegenover de verbintenis van belanghebbenden tot betaling van een geldsom van ƒ 510.000,-- niet alleen stond de verkrijging van het onderhavige tankstation maar ook de verplichting van de verkoopster om alle kosten verbonden aan het schoonmaken van de grond voor haar rekening te nemen. Aldus vormde het door belanghebbenden betaalde bedrag van ƒ 510.000,-- de prijs voor twee prestaties, waarvan één niet was de overdracht van het tankstation. 3.3. Onjuist is mitsdien het oordeel van het Hof, dat het gehele bedrag van ƒ 510.000,-- als tegenprestatie voor de verkrijging van de onderhavige onroerende zaak moet worden aangemerkt. 3.4. Uit het vorenoverwogene volgt dat 's Hofs uitspraak niet in stand kan blijven. Verwijzing moet volgen. </para>
+        <para>4. Proceskosten De Hoge Raad acht termen aanwezig voor een veroordeling in de proceskosten als hierna vermeld. </para>
+        <para>5. Beslissing De Hoge Raad vernietigt de uitspraak van het Hof, verwijst het geding naar het Gerechtshof te 's-Gravenhage ter verdere behandeling en beslissing van de zaak in meervoudige kamer met inachtneming van dit arrest, gelast dat door de Staatssecretaris van Financiën aan belanghebbenden wordt vergoed het door hen ter zake van het beroep in cassatie verschuldigd geworden griffierecht ten bedrage van ƒ 300,-- en veroordeelt de Staatssecretaris van Financiën in de kosten van het geding in cassatie aan de zijde van belanghebbenden, vastgesteld op ƒ 2.130,-- voor beroepsmatig verleende rechtsbijstand. </para>
+        <para>Dit arrest is op 6 december 1995 vastgesteld door de vice-president Stoffer als voorzitter, en de raadsheren Urlings, Zuurmond, Herrmann en C.H.M. Jansen, in tegenwoordigheid van de waarnemend griffier Den Ouden, en op die datum in het openbaar uitgesproken</para>
+      </parablock>
+    </uitspraak>
+</open-rechtspraak>

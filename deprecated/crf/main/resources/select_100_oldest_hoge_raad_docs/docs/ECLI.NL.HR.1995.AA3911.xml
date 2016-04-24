@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:tr="http://tuchtrecht.overheid.nl/" xmlns:eu="http://publications.europa.eu/celex/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:HR:1995:AA3911</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2015-06-06T07:00:46</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">AA3911</dcterms:replaces>
+      <dcterms:replaces rdfs:label="Vervangt">AG7030</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Hoge_Raad_der_Nederlanden" scheme="overheid.RechterlijkeMacht">Hoge Raad</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">1995-06-23</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">8627 (R94/89)</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#cassatie">Cassatie</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#civielRecht">Civiel recht</dcterms:subject>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#civielRecht_personenEnFamilierecht">Civiel recht; Personen- en familierecht</dcterms:subject>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+          <rdf:li>RvdW 1995, 143</rdf:li>
+          <rdf:li>NJ 1996, 17 met annotatie door J. de Boer</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:HR:1995:AA3911">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:HR:1995:AA3911</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-04T15:54:36</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2001-07-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:HR:1995:AA3911 Hoge Raad , 23-06-1995 / 8627 (R94/89)</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:HR:1995:AA3911:INH" lang="nl" xml:space="preserve">
+      <para>-</para>
+    </inhoudsindicatie>
+  <uitspraak xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:HR:1995:AA3911:DOC" lang="nl" xml:space="preserve">
+      <para>Rek.nr. 8627 (R94/89) </para>
+      <para/>
+      <para>Beschikking </para>
+      <para/>
+      <para>in de zaak van: </para>
+      <para/>
+      <parablock>
+        <para>[de man], </para>
+        <para>wonende te [woonplaats], </para>
+        <para>VERZOEKER tot cassatie, </para>
+        <para>advocaat: mr J.H.F. Schultz van Haegen, </para>
+      </parablock>
+      <para/>
+      <para>t e g e n </para>
+      <para/>
+      <parablock>
+        <para>[de vrouw], </para>
+        <para>wonende te [woonplaats], </para>
+        <para>VERWEERSTER in cassatie, </para>
+        <para>advocaat: mr P.B. Kamminga. </para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>1.     Het geding in feitelijke instanties </para>
+        <para>Met een op 5 april 1994 gedateerd verzoekschrift heeft verzoeker tot cassatie - verder te noemen: de man - zich gewend tot de Rechtbank te Maastricht met het verzoek een omgangs-regeling vast te stellen tussen hem en de uit het door echtscheiding van verweerster in cassatie - verder te noemen: </para>
+        <para>de moeder - met de [ex-man] op [geboortejaar] 1981 te [woonplaats] geboren minderjarige [dochter], zoals in het petitum van het verzoekschrift omschreven. De moeder heeft primair verzocht de man niet ontvankelijk te verklaren in zijn verzoek, subsidiair het verzoek af te wijzen als zijnde ongegrond,</para>
+        <para> onbewezen en of in strijd met de wet. </para>
+        <para>Bij beschikking van 19 september 1994 heeft de Rechtbank de man ontvankelijk verklaard in zijn verzoek en hem het recht op omgang van voornoemde minderjarige ontzegd. </para>
+        <para>Tegen deze beschikking heeft de man hoger beroep ingesteld bij het Gerechtshof te </para>
+        <para>'s-Hertogenbosch. De vrouw heeft incidenteel hoger beroep ingesteld. </para>
+        <para>Bij beschikking van 18 november 1994 heeft het Hof de bestreden beschikking van de Rechtbank te Maastricht vernietigd en de man alsnog niet ontvankelijk verklaard in zijn deze procedure inleidende verzoek. </para>
+        <para>De beschikking van het Hof is aan deze beschikking gehecht. </para>
+        <para>2.     Het geding in cassatie </para>
+        <para>Tegen de beschikking van het Hof heeft de man beroep in cassatie ingesteld. Het cassatierekest en het aanvullend verzoekschrift in cassatie zijn aan deze beschikking gehecht en maken daarvan deel uit. De vrouw heeft verzocht het beroep te verwerpen. De conclusie van de Advocaat-Generaal Moltmaker strekt tot vernietiging van de beschikking van het Hof en tot verwijzing van de zaak naar een aangrenzend hof ter verdere behandeling en beslissing. </para>
+        <para>3.     Beoordeling van het middel </para>
+        <para>3.1    In cassatie kan van het volgende worden uitgegaan. </para>
+        <para>(i) Uit het door echtscheiding ontbonden huwelijk van de moeder en [de ex-man] is op [geboortejaar] 1981 een dochter genaamd [de dochter] geboren. </para>
+        <para>(ii) In de periode maart 1987 tot juli 1993 hebben de moeder en de man een LAT-relatie gehad. In die tijd brachten de moeder en [dochter] elk weekeinde en de vakanties bij de man door. </para>
+        <para>(iii) De man is niet de biologische vader van het kind. </para>
+        <para>(iv) Na het verbreken van de LAT-relatie is in onderling overleg tussen partijen een omgangsregeling vastgesteld. In februari 1994 heeft de moeder geweigerd langer medewerking te verlenen aan de uitvoering van de getroffen regeling. </para>
+        <para>3.2    De Rechtbank heeft de man op grond van de omgangsregeling, die enige tijd had bestaan, ontvankelijk geoordeeld in zijn verzoek om vaststelling van een omgangsregeling, doch dat verzoek afgewezen omdat [de dochter] ter zitting te kennen had gegeven ernstige bezwaren  te hebben tegen omgang met de man. Het Hof heeft op het incidenteel beroep van de moeder de man alsnog niet ontvankelijk verklaard in zijn verzoek. Daartoe heeft het Hof in rov. 4.1 overwogen: </para>
+        <para>"Naar het oordeel van het Hof zijn door de man - die niet de biologische vader is van [de dochter] - onvoldoende feiten en omstandigheden naar voren gebracht die - objectief bezien - duiden op een zo nauwe persoonlijke betrekking tussen hem en [de dochter] dat "family life" in de zin van artikel 8 van het E.V.R.M. aangenomen zou moeten worden. Partijen hebben nimmer samengewoond. De man is weliswaar van mening, dat hij in de tijd, dat partijen een lat-relatie hebben onderhouden, waarin de vrouw en [de dochter] afgezien van vakanties ieder weekend bij de man verbleven, activiteiten heeft ontplooid, die tot de verzorging en opvoeding van [de dochter] hebben bijgedragen, maar objectief bezien staat zulks niet vast, nu onvoldoende is gebleken dat de gedragingen waarop de man hier het oog heeft door [de dochter] als zodanig zijn ervaren en aanvaard". Tegen deze rechtsoverweging keert zich het middel in beide onderdelen met rechts- en motiveringsklachten. </para>
+        <para>3.3    Het middel kan niet tot cassatie leiden. </para>
+        <para>'s Hofs oordeel, dat sterk is verweven met waarderingen van feitelijke aard, geeft niet blijk van een onjuiste rechtsopvatting. Nu in het onderhavige geval een beroep werd gedaan op zogenaamd "sociaal ouderschap", is het Hof terecht ervan uitgegaan dat bij de beoordeling van de ontvankelijkheid van </para>
+        <para>het verzoek strenge eisen gelden voor wat betreft de aan te voeren concrete omstandigheden met betrekking tot het bestaan tussen de man en het kind van gezinsleven als bedoeld in art. 8 EVRM. De in het middel op verschillende plaatsen vervatte klacht dat het Hof een te strenge maatstaf heeft </para>
+        <para>gehanteerd, faalt dan ook. Ook de andere in het middel vervatte rechsklachten falen. </para>
+        <para>In de tweede alinea van rov. 4.1 heeft het Hof tot uitdrukking gebracht dat ook de daar bedoelde activiteiten van de man niet ertoe hebben geleid dat [de dochter] een nauwe persoonlijke band met de man had en hem aanvaardde als stiefvader. Het Hof heeft geen rechtsregel geschonden door aldus bij zijn oordeel betreffende het ontbreken van een als "family life" aan te merken betrekking tussen de man en [de dochter] mede betekenis toe te kennen aan de wijze waarop [de dochter] haar contact </para>
+        <para>met de man heeft ervaren. Ook het feit dat partijen na het verbreken van hun LAT-relatie een omgangsregeling afspraken en enige tijd nakwamen, behoefde het Hof niet tot een ander oordeel te leiden. </para>
+        <para>In het licht van de gedingstukken behoefde 's Hofs oordeel voorts geen nadere motivering en is het alleszins begrijpelijk. Hierop stuiten alle onderdelen van het middel af, waarbij ter zake van de verschillende onderdelen nog slechts het volgende aantekening verdient. </para>
+        <para>3.4    Onderdeel 1b berust op een verkeerde lezing van de bestreden rechtsoverweging en mist dus feitelijke grondslag voor zover het veronderstelt dat het Hof het door de man gestelde "sociaal ouderschap", voortvloeiend uit de tussen tijen bestaand hebbende LAT-relatie niet in zijn beoordeling </para>
+        <para>heeft betrokken. </para>
+        <para>3.5    Het oordeel van het Hof dat partijen nimmer hebben samengewoond, moet kennelijk aldus worden verstaan dat het Hof hier doelt op een volledige samenwoning, waarvan in de </para>
+        <para>LAT-relatie tussen partijen geen sprake was. </para>
+        <para>Aldus verstaan is dit oordeel, anders dan in onderdeel 1c wordt aangevoerd, niet onjuist. </para>
+        <para>3.6    De in de onderdelen 1d en 1e vervatte klachten gaan uit van een onjuiste lezing van de bestreden beslissing en missen dus feitelijke grondslag. </para>
+        <para>4.     Beslissing </para>
+        <para>De Hoge Raad verwerpt het beroep. </para>
+        <para>Deze beschikking is gegeven door de vice-president Snijders als voorzitter en de raadsheren Roelvink, Mijnssen, Nieuwenhuis en Swens-Donner, en in het openbaar uitgesproken door de raadsheer Heemskerk op 23 juni 1995.</para>
+      </parablock>
+    </uitspraak>
+</open-rechtspraak>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:tr="http://tuchtrecht.overheid.nl/" xmlns:eu="http://publications.europa.eu/celex/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:HR:1996:AA1964</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2015-06-28T20:45:56</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">AA1964</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Hoge_Raad_der_Nederlanden" scheme="overheid.RechterlijkeMacht">Hoge Raad</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">1996-05-29</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">31038</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#cassatie">Cassatie</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht_belastingrecht">Bestuursrecht; Belastingrecht</dcterms:subject>
+      <dcterms:relation rdfs:label="Formele relatie" ecli:resourceIdentifier="ECLI:NL:PHR:1996:AA1964" psi:type="http://psi.rechtspraak.nl/conclusie" psi:aanleg="http://psi.rechtspraak.nl/eerdereAanleg">Conclusie: ECLI:NL:PHR:1996:AA1964</dcterms:relation>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+          <rdf:li>BNB 1996/224</rdf:li>
+          <rdf:li>WFR 1996/826</rdf:li>
+          <rdf:li>FED 1996/538 met annotatie door J.A. SMIT</rdf:li>
+          <rdf:li>WFR 1996/826, 2</rdf:li>
+          <rdf:li>V-N 1996/2315, 7 met annotatie door Kluwer</rdf:li>
+          <rdf:li>V-N 1996/2307, 4 met annotatie door Kluwer</rdf:li>
+          <rdf:li>BNB 1996/223</rdf:li>
+          <rdf:li>FED 1996/445</rdf:li>
+          <rdf:li>FED 1996/447</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:HR:1996:AA1964">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:HR:1996:AA1964</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-04T15:37:48</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2001-07-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:HR:1996:AA1964 Hoge Raad , 29-05-1996 / 31038</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:HR:1996:AA1964:INH" lang="nl" xml:space="preserve">
+      <para>-</para>
+    </inhoudsindicatie>
+  <uitspraak xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:HR:1996:AA1964:DOC" lang="nl" xml:space="preserve">
+      <parablock>
+        <para>gewezen op het beroep in cassatie van X te Z tegen de uitspraak van het Gerechtshof te Amsterdam van 23 januari 1995 betreffende een verzoek tot een veroordeling in de proceskosten ingevolge artikel 5a, lid 3, (tekst vóór 17 mei 1995) van de Wet administratieve rechtspraak belastingzaken. </para>
+        <para>1. Geding voor het Hof Bij de intrekking van een beroepschrift betreffende een aan belanghebbende opgelegde aanslag in de inkomstenbelasting/premie volksverzekeringen voor het jaar 1990 is op 25 januari 1994 een verzoek gedaan om de Inspecteur te veroordelen in de kosten in verband met de behandeling van het beroep bij het Hof. Het Hof heeft de Inspecteur veroordeeld in de proceskosten van belanghebbende tot een beloop van ƒ 710,--, en gelast dat de Staat dit bedrag aan belanghebbende betaalt. De uitspraak van het Hof is aan dit arrest gehecht. </para>
+        <para>2. Geding in cassatie Belanghebbende heeft tegen 's Hofs uitspraak beroep in cassatie ingesteld. Het beroepschrift in cassatie is aan dit arrest gehecht en maakt daarvan deel uit. De Staatssecretaris van Financiën heeft bij vertoogschrift het cassatieberoep bestreden. De Plaatsvervangend Procureur-Generaal Van Soest heeft op 16 oktober 1995 geconcludeerd tot vernietiging van de bestreden uitspraak en tot zodanige beslissingen omtrent de proceskosten in beide instanties als de Hoge Raad juist acht. </para>
+        <para>3. Beoordeling van het middel van cassatie Met betrekking tot een veroordeling in de proceskosten is, indien het een aanslag betreft, als het in de rechtsstrijd betrokken belang in beginsel te zien het in geschil zijnde bedrag aan belasting. Er bestaat geen grond om dit anders te zien, indien het gaat om verrekening van een voorlopige aanslag. 's Hofs oordeel volgens hetwelk in dit geval -  waar het gaat om verrekening van een voorlopige aanslag tot een bedrag van  ƒ 16.438,--  -  de proceskosten overeenkomstig het bepaalde in het Besluit proceskosten fiscale procedures dienen te worden vastgesteld met "1" als wegingsfactor, geeft blijk van een onjuiste opvatting omtrent het in dit besluit bepaalde, nu geen omstandigheden aan dit oordeel ten grondslag zijn gelegd, die een afwijking van de voor een belang van ƒ 15.001,-- tot en met ƒ 50.000,-- geldende wegingsfactor "1,5" rechtvaardigen. Het middel treft derhalve doel. 's Hofs uitspraak kan niet in stand blijven. De Hoge Raad kan zelf de zaak afdoen. </para>
+        <para>4. Proceskosten De Hoge Raad acht, gelet op de inhoud van het procesdossier, termen aanwezig om ten aanzien van de proceskosten die belanghebbende in verband met het geding in cassatie redelijkerwijs heeft moeten maken, te beslissen als hierna zal worden vermeld. </para>
+        <para>5. Beslissing De Hoge Raad vernietigt de uitspraak van het Hof, veroordeelt de Inspecteur in de kosten van het geding voor het Hof aan de zijde van belanghebbende, vastgesteld op ƒ 1.065,--, gelast dat de Staat dit bedrag aan belanghebbende betaalt alsmede dat door de Staatssecretaris van Financiën aan belanghebbende wordt vergoed het door deze ter zake van de behandeling van het beroep in cassatie verschuldigd geworden griffierecht ten bedrage van ƒ 300,--, en veroordeelt de Staatssecretaris van Financiën in de kosten van het geding in cassatie aan de zijde van belanghebbende, vastgesteld op ƒ 355,-- voor beroepsmatig verleende rechtsbijstand. </para>
+        <para>Dit arrest is op 29 mei 1996 vastgesteld door de vice-president R.J.J. Jansen als voorzitter, en de raadsheren Bellaart, De Moor, Van der Putt-Lauwers en Van Brunschot, in tegenwoordigheid van de waarnemend griffier Van Hooff, en op die datum in het openbaar uitgesproken.Nr. 31.038                                  Mr Van Soest</para>
+        <para>Derde Kamer A                           Conclusie inzake:</para>
+        <para>Inkomstenbel./premie 1990          X</para>
+        <para>Parket,    oktober 1995                tegen</para>
+        <para>                                                 de staatssecretaris van Financiën</para>
+      </parablock>
+      <para/>
+      <para>Edelhoogachtbaar College,</para>
+      <para/>
+      <para>I. . Korte beschrijving van de zaak.</para>
+      <para/>
+      <parablock>
+        <para>A. . Het beroep in cassatie is gericht tegen de schriftelijke uitspraak van het gerechtshof te Amsterdam (hierna te noemen het Hof) van 23 januari 1995, nr. 93/0813. Het is ingesteld door de belanghebbende, X.</para>
+        <para>B. . Bij de intrekking van het door de belanghebbende bij het Hof ingediende beroepschrift heeft de belanghebbende verzocht de belastingdienst Particulieren/Ondernemingen te P (hierna te noemen de Inspecteur) te veroordelen in de proceskosten.</para>
+        <para>C. . Het Hof heeft overwogen (onder 6, blz. 1):</para>
+      </parablock>
+      <para> </para>
+      <para> "(...) Nu het gaat om verrekening van een voorlopige aanslag schat het Hof het belang op een bedrag tussen f. 2.001,-- en f. 15.000,--. (...)"</para>
+      <para> </para>
+      <para>D. . Het beroep in cassatie is volgens de voorschriften ingesteld. Het steunt op een middel van cassatie, waarvan de grond wordt aangeduid als (beroepschrift in cassatie, blz. 1)</para>
+      <para> </para>
+      <para> "(...) toelichting (...)"</para>
+      <para> </para>
+      <parablock>
+        <para>E. . De staatssecretaris van Financiën heeft bij vertoogschrift in cassatie het middel bestreden.</para>
+        <para>II. . Proceskosten.</para>
+        <para>A. . Art. 5a Wet administratieve rechtspraak belastingzaken, tekst geldend met ingang van 1 januari 1994, houdt in (ik nummer de volzinnen):</para>
+      </parablock>
+      <para> </para>
+      <para> "1. (1e volzin) Het gerechtshof is bij uitsluiting bevoegd een partij te veroordelen in de kosten die een andere partij in verband met de behandeling van het beroep bij het gerechtshof redelijkerwijs heeft moeten maken. (3e volzin) Bij algemene maatregel van bestuur worden nadere regels gesteld. (...) 3. (1e volzin) In geval van intrekking van het beroep omdat de (...) ambtenaar geheel of gedeeltelijk aan de indiener van het beroepschrift is tegemoetgekomen, kan de ambtenaar op verzoek van de indiener (...) in de kosten worden veroordeeld. (...)"</para>
+      <para> </para>
+      <para>B. . De Bijlage bij Besluit proceskosten fiscale procedures, Stb. 1993, 762 (hierna te noemen Bijlage BPF), houdt in:</para>
+      <para> </para>
+      <parablock>
+        <para> "(...) Het bedrag van de kosten (...) wordt vastgesteld door aan de verrichte proceshandelingen punten toe te kennen (...) en die punten te vermenigvuldigen met de (...) toepasselijke wegingsfactoren (C). (...) C. WEGINGSFACTOREN C1. gewicht van de zaak</para>
+        <para> belangfactor</para>
+        <para> (...)</para>
+        <para> 3. f  2.001 tot en met f 15.000 1</para>
+        <para> 4. f 15.001 tot en met f 50.000  1,5</para>
+        <para>(...)"</para>
+      </parablock>
+      <para> </para>
+      <para>C. . De in het Stb. opgenomen Nota van toelichting, onder II, Artikel 2, Eerste lid, onderdeel a/bijlage, hield in:</para>
+      <para> </para>
+      <para> "(...) het belang van de zaak (...) is doorgaans het bedrag waarvoor men in het gelijk is gesteld (...) Indien de fiscus de procedure wint en de rechter een kostenvergoeding op zijn plaats acht, is het criterium [niet] direct toepasbaar. Dit laatste bezwaar zou kunnen worden ondervangen door het "belang van de zaak" niet op te vatten als het "gewonnen", maar als het "betwiste" bedrag. Daarvan is echter afgezien, omdat dit zou uitlokken tot het betwisten van onredelijk hoge bedragen (...) In die gevallen dat het belang-criterium niet direct toepasbaar is, is het aan de rechter om, op basis van de uitgangspunten van de regeling, een passende wegingsfactor vast te stellen. (...)"</para>
+      <para> </para>
+      <parablock>
+        <para>III. . De ontwikkeling van de oorspronkelijke rechtsstrijd.</para>
+        <para>A. . In de aanvulling van het beroepschrift voerde de gemachtigde van de belanghebbende aan dat een voorlopige aanslag ten bedrage van ƒ 16.438,- ten onrechte niet verrekend was.</para>
+        <para>B. . De Inspecteur betoogde in zijn vertoogschrift primair dat de belanghebbende niet ontvankelijk was in zijn bezwaar en subsidiair dat de voorlopige aanslag reeds op andere wijze verrekend was.</para>
+        <para>C. . Nader is de Inspecteur geheel aan het petitum van de belanghebbende tegemoet gekomen.</para>
+        <para>IV. . Het middel.</para>
+        <para>Het middel klaagt over (beroepschrift in cassatie, blz. 1)</para>
+      </parablock>
+      <para> </para>
+      <para> "(...) schending van het recht. (...) Blijkens (...) beroepschrift (...) was de beschikking van de inspecteur op de aanslag te verhogen met f 16.438, exclusief heffingsrente. Het belang van de zaak is hierdoor te stellen op f 15.001 t/m f 50.000 (...)"</para>
+      <para> </para>
+      <parablock>
+        <para>V. . Beoordeling van het middel.</para>
+        <para>A. . Naar het mij voorkomt, moet het in guldens uitgedrukte belang als bedoeld in de Bijlage BPF, onder C1, aanvankelijk bepaald worden op het verschil tussen enerzijds het volgens de inspecteur te betalen of terug te geven bedrag en anderzijds het volgens de belanghebbende minder te betalen onderscheidenlijk meer terug te geven bedrag.</para>
+        <para>B. . Indien dat verschil uitsluitend bepaald wordt door de omstandigheid dat een voorlopige aanslag ten bedrage van </para>
+        <para> ƒ 16.438,- door de inspecteur niet verrekend is en volgens de belanghebbende wel verrekend had moeten worden, dunkt mij dat dit geschil per definitie een belang heeft, gelijk aan het bedrag van de voorlopige aanslag, derhalve ƒ 16.438,-.</para>
+        <para>C. . Indien nu gedurende de procedure de standpunten geleidelijk naar elkaar toe groeien, zou men kunnen stellen dat het belang afneemt.</para>
+        <para>D. . Dat is echter in het onderhavige geval niet gebeurd: in het vertoogschrift hield de Inspecteur ten volle aan de afwijzing van de verrekening vast en eerst daarna gaf hij de belanghebbende ten volle gelijk.</para>
+        <para>E. . Het verloop van de procedure tot aan de intrekking van het beroep staat dus op een lijn met een door de belanghebbende geheel gewonnen zaak.</para>
+        <para>F. . In de gedachtengang van de Nota van toelichting was het belang dus gelijk aan het volle bedrag van de verrekening.</para>
+        <para>G. . Nu volgens de aanvulling van het beroepschrift de voorlopige aanslag ƒ 16.438,- bedroeg, overtrof het belang dus het door het Hof aangegeven maximum van ƒ 15.000,-.</para>
+        <para>H. . Het is mij uit de bestreden uitspraak niet duidelijk geworden of het Hof een andere rechtsopvatting aanhangt dan de hiervóór onder 5.2 omschreven opvatting dat het belang bij verrekening van een voorlopige aanslag per definitie gelijk is aan het bedrag van de voorlopige aanslag, dan wel, uitgaande van deze opvatting, zich eenvoudig vergist heeft in de getallen.</para>
+        <para>I. . Beide mogelijkheden leiden evenwel tot het oordeel dat de uitspraak niet in stand kan blijven. </para>
+        <para>VI. . Conclusie.</para>
+        <para>Het middel gegrond bevindende, concludeer ik tot vernietiging van de bestreden uitspraak en tot zodanige beslissingen omtrent de proceskosten in beide instanties als Uw Raad juist acht.</para>
+        <para>De Procureur-Generaal bij de Hoge Raad der Nederlanden,</para>
+      </parablock>
+    </uitspraak>
+</open-rechtspraak>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:tr="http://tuchtrecht.overheid.nl/" xmlns:eu="http://publications.europa.eu/celex/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:HR:1995:AA3165</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2015-06-28T20:38:38</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">AA3165</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Hoge_Raad_der_Nederlanden" scheme="overheid.RechterlijkeMacht">Hoge Raad</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">1995-12-06</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">29664</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#cassatie">Cassatie</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht_belastingrecht">Bestuursrecht; Belastingrecht</dcterms:subject>
+      <dcterms:relation rdfs:label="Formele relatie" ecli:resourceIdentifier="ECLI:NL:PHR:1995:AA3165" psi:type="http://psi.rechtspraak.nl/conclusie" psi:aanleg="http://psi.rechtspraak.nl/eerdereAanleg">Conclusie: ECLI:NL:PHR:1995:AA3165</dcterms:relation>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0002226&amp;artikel=24&amp;g=1995-12-06">Successiewet 1956 24</dcterms:references>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+          <rdf:li>BNB 1996/86 met annotatie door I.J.F.A. van Vijfeijken</rdf:li>
+          <rdf:li>WFR 1995/1966</rdf:li>
+          <rdf:li>FED 1996/620 met annotatie door C.J.M. MARTENS</rdf:li>
+          <rdf:li>WFR 1995/1966, 1</rdf:li>
+          <rdf:li>V-N 1995/4494, 14 met annotatie door Kluwer</rdf:li>
+          <rdf:li>FED 1996/18</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:HR:1995:AA3165">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:HR:1995:AA3165</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-04T15:49:45</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2001-07-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:HR:1995:AA3165 Hoge Raad , 06-12-1995 / 29664</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:HR:1995:AA3165:INH" lang="nl" xml:space="preserve">
+      <para>-</para>
+    </inhoudsindicatie>
+  <uitspraak xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:HR:1995:AA3165:DOC" lang="nl" xml:space="preserve">
+      <parablock>
+        <para>gewezen op het beroep in cassatie van X te Z tegen de uitspraak van het Gerechtshof te 's-Hertogenbosch van 4 maart 1993 betreffende de ter zake van de hierna vermelde verkrijging opgelegde aanslag in het recht van schenking. </para>
+        <para>1. Aanslag, bezwaar en geding voor het Hof 1.1. Ter zake van een verkrijging van ƒ 73.287,-- is een aanslag in het recht van schenking opgelegd, welke aanslag, na daartegen gemaakt bezwaar, bij uitspraak van de Inspecteur is gehandhaafd. 1.2. Belanghebbende is van de uitspraak van de Inspecteur in beroep gekomen bij het Hof. 1.3. Het Hof heeft die uitspraak bevestigd. De uitspraak van het Hof is aan dit arrest gehecht. </para>
+        <para>2. Geding in cassatie 2.1. Belanghebbende heeft tegen de uitspraak van het Hof beroep in cassatie ingesteld. Het beroepschrift in cassatie is aan dit arrest gehecht en maakt daarvan deel uit. 2.2. De Staatssecretaris van Financiën heeft het beroep bij vertoogschrift bestreden. 2.3. De Advocaat-Generaal Moltmaker heeft op 14 maart 1995 geconcludeerd tot verwerping van het beroep. </para>
+        <para>3. Beoordeling van de klachten 3.1. In cassatie kan van het volgende worden uitgegaan. Bij notariële akte van 24 oktober 1989 heeft belanghebbende tegen een koopsom van ƒ 125.000,-- aan haar zoon A verkocht en overgedragen de economische eigendom van een onroerende zaak. Bij diezelfde akte is van de geheel schuldig gebleven koopsom een bedrag van ƒ 6.564,-- kwijtgescholden. Vervolgens heeft belanghebbende bij akte van 20 september 1990 de juridische eigendom van de onroerende zaak aan die zoon overgedragen, waarbij zij van het restant van de schuldig gebleven koopsom van de economische eigendom een bedrag van ƒ 73.287,-- heeft kwijtgescholden. De Inspecteur heeft zonder toepassing van het bepaalde in artikel 24, lid 5 van de Successiewet 1956 (hierna: de Wet) overdrachtsbelasting geheven over een bedrag van ƒ 125.000,-- en schenkingsrecht over het kwijtgescholden bedrag van ƒ 73.287,--. 3.2. Het Hof heeft geoordeeld dat de Inspecteur terecht geen toepassing heeft gegeven aan het bepaalde in artikel 24, lid 5 van de Wet. Aan dit oordeel heeft het Hof, door overneming van hetgeen de Inspecteur daaromtrent in diens vertoogschrift had gesteld, kort samengevat ten grondslag gelegd dat de overdracht van de economische eigendom en de overdracht van de juridische eigendom, en daarmee de kwijtschelding en de overdracht van de juridische eigendom, niet een als één geheel te beschouwen samenstel van rechtshandelingen vormen dat toepassing van artikel 24, lid 5 van de Wet rechtvaardigt. 3.3. Laatstvermeld oordeel geeft niet blijk van een onjuiste rechtsopvatting en kan voor het overige als van feitelijke aard en niet onbegrijpelijk in cassatie niet met vrucht worden bestreden. De tegen dit oordeel gerichte klacht faalt derhalve. 3.4. Ook de overige klachten kunnen niet tot cassatie leiden. Zulks behoeft, gezien artikel 101a van de Wet op de rechterlijke organisatie, geen nadere motivering nu deze klachten niet nopen tot beantwoording van rechtsvragen in het belang van de rechtseenheid of de rechtsontwikkeling. </para>
+        <para>4. Proceskosten De Hoge Raad acht geen termen aanwezig voor een veroordeling in de proceskosten als bedoeld in artikel 5a van de Wet administratieve rechtspraak belastingzaken. </para>
+        <para>5. Beslissing De Hoge Raad verwerpt het beroep en bepaalt dat door de Griffier van de Hoge Raad aan belanghebbende wordt terugbetaald het ter zake van de vervanging van de mondelinge uitspraak bij het Hof gestorte bedrag van ƒ 150,--. </para>
+        <para>Dit arrest is gewezen door de vice-president Stoffer als voorzitter, en de raadsheren Urlings, Herrmann, C.H.M. Jansen en Fleers, in tegenwoordigheid van de waarnemend griffier Den Ouden, in raadkamer van 6 december 1995.Nr. 29.664                                 Mr Moltmaker</para>
+        <para>Derde Kamer B                          Conclusie inzake:</para>
+        <para>Schenkingsrecht                        X</para>
+        <para>                                                tegen:</para>
+        <para>Parket, 14 maart 1995                De Staatssecretaris  van Financiën   </para>
+      </parablock>
+      <para/>
+      <para/>
+      <para>Edelhoogachtbaar College</para>
+      <para/>
+      <para>I. . Feiten en geschil</para>
+      <para/>
+      <para> </para>
+      <parablock>
+        <para>A. . Bij notariële akte van 24 oktober 1989 verkocht belanghebbende aan haar zoon A en droeg aan hem in economische eigendom over een huis te R voor een koopsom van ƒ 125.000,--.</para>
+        <para>In de akte werd vermeld, dat de verplichting tot betaling van deze koopsom door novatie was teniet gegaan en was omgezet in een geldlening tot hetzelfde bedrag. </para>
+        <para>Bij de akte werd vervolgens een gedeelte groot ƒ 6.564,-- van dit bedrag door de verkoopster kwijtgescholden.</para>
+      </parablock>
+      <para> </para>
+      <para>B. . Bij notariële akte van 20 september 1990 droeg de verkoopster "ter uitvoering van het vorenstaande" de juridische eigendom aan haar zoon over. In deze akte wordt vermeld:</para>
+      <para> </para>
+      <para> </para>
+      <para> "Verkoopster verklaarde bij deze van gemelde geldlening een gedeelte ad drieenzeventigduizend tweehonderd zevenentachtig gulden (f. 73.287,00) aan de koper kwijt te schelden..... Mitsdien is koper aan verkoopster uit hoofde van geldlening nog schuldig een resterend bedrag van vijfenveertigduizend eenhonderdnegenenveertig gulden (f. 45.149,00), onder de bepalingen en bedingen zoals overeengekomen in gemelde akte de dato vierentwintig oktober negentienhonderd negenentachtig."</para>
+      <para> </para>
+      <para>C. . Ter zake van deze juridische eigendomsoverdracht is 6 % van ƒ 125.000,-- = ƒ 7.500,-- aan overdrachtsbelasting geheven. Daarnaast hief de Inspecteur over voormeld kwijtgescholden bedrag van ƒ 73.287,-- een bedrag van ƒ 4.330,-- aan schenkingsrecht. Dit schenkingsrecht werd berekend zonder dat daarop een bedrag aan overdrachtsbelasting in mindering werd gebracht.</para>
+      <para> </para>
+      <parablock>
+        <para>D. . Volgens belanghebbende had ingevolge art. 24, vijfde lid, der Successiewet 1956 (Sw. 1956) op het schenkingsrecht in mindering moeten zijn gebracht een bedrag aan overdrachtsbelasting van {(ƒ 73.287 - ƒ 6.662 ) : ƒ 125.000} x ƒ 7.500 = </para>
+        <para> ƒ 3.997,50.</para>
+      </parablock>
+      <para> </para>
+      <para>E. . Het hof heeft belanghebbende in het ongelijk gesteld, waarbij het hof als enige motivering verwijst naar de door de Inspecteur in zijn vertoogschrift aangevoerde gronden.</para>
+      <para> </para>
+      <para>F. . Belanghebbende heeft beroep in cassatie ingesteld, aanvoerend dat het hof aldus aan haar argumenten voor de toepasselijkheid van art. 24, vijfde lid, Sw. 1956 is voorbijgegaan. 	Belanghebbende verwijst naar haar pleitnota voor het hof en betoogt o.m., dat bij de juridische eigendomsoverdracht een gedeelte van de tegenprestatie, zoals die bij de economische overdracht reeds is overeengekomen, is kwijtgescholden.</para>
+      <para> </para>
+      <para>G. . De Staatssecretaris heeft een vertoogschrift in cassatie ingediend.</para>
+      <para> </para>
+      <para>H. . De uitspraak van het hof is gepubliceerd in PW 20257 en vermeld in de Vakstudie Successiewet 1956, art. 24, aant. 27. De daaraan voorafgaande mondelinge uitspraak ter zitting van 30 oktober 1992 (waarvan het proces-verbaal werd vastgesteld op 13 november 1992) werd gepubliceerd in Infobulletin 93/111.</para>
+      <para> </para>
+      <para> </para>
+      <para>II. . Beschouwingen</para>
+      <para> </para>
+      <para>A. . Algemeen</para>
+      <para> </para>
+      <para>1. . Art. 24, vijfde lid, Sw. 1956 bepaalt, dat de overdrachtsbelasting, betaald over het bedrag, waarover het recht van schenking verschuldigd is, in mindering strekt van laatstvermeld recht.</para>
+      <para> </para>
+      <para>2. . Een dergelijke bepaling kwam al voor in art. 73, lid 7, van de Successiewet van 1859. Naar algemene opvatting was de bepaling bedoeld om heffing van beide belastingen over hetzelfde object te voorkomen. Met name werd daarbij gedacht aan het geval dat iemand uit vrijgevigheid een onroerende zaak verkoopt tegen te lage prijs. Zie PW 14458 (1940) en H. Schuttevâer, Handboek inzake de wetgeving op de rechten van successie, van overgang en van schenking (1956), blz. 414. </para>
+      <para> </para>
+      <para>3. . Aanvankelijk werd aangenomen dat van gelijkheid van object geen sprake was ingeval van verkoop van een onroerende zaak tegen een normale koopprijs, gevolgd door kwijtschelding van de koopprijs. Bij PW 14761 (1943) werd overigens reeds een ruimer standpunt ingenomen "gelet op het nauwe verband dat bestond tusschen den verkoop en de daarop gevolgde kwijtschelding". Zie daartegen Schuttevâer t.a.p.</para>
+      <para> </para>
+      <para>B. . Jurisprudentie</para>
+      <para> </para>
+      <parablock>
+        <para>1. . Uit de hierna te vermelde jurisprudentie blijkt, dat de vorm van verkoop en overdracht tegen een normale koopprijs, gevolgd door kwijtschelding van (een gedeelte van) een - eventueel bij wege van schuldvernieuwing in een geldlening omgezette - koopprijs, door partijen werd gekozen met het oog op het beveiligen van verdere verkrijgers en van hypotheekgevers tegen een eventueel beroep op een wettelijke erfdeel.</para>
+        <para>Dat een dergelijk samenstel van rechtshandelingen ook civielrechtelijk als één geheel, d.w.z. als een "gift" van de onroerende zaak zelf, zou kunnen worden beschouwd, blijkt uit HR 19 maart 1982, NJ 1983,250 m.nt. WMK, PW 19069. Uit het arrest is af te leiden, dat het verschil kan maken of de kwijtschelding binnen een jaar na de overdracht heeft plaatsgevonden, dan wel op een later tijdstip. Het arrest heeft betrekking op de toepassing van de art. 4:968 en 4:969 BW en het is dus niet gezegd, dat de in de eerste alinea van dit punt bedoelde beveiliging faalt. Zie punt 6 van de noot van Kleijn onder het arrest en uitvoerig Asser-Meijers-van der Ploeg, Erfrecht, 11e druk (1992) noot 179 op blz. 211.</para>
+      </parablock>
+      <para> </para>
+      <para>2. . Hof Arnhem 6 december 1960, BNB 1961/153, PW 17214, overwoog, dat partijen met het bedingen van een koopprijs onder gelijktijdige kwijtschelding van een gedeelte daarvan naar de werkelijke aard en inhoud van die rechtshandelingen één transactie beoogden.</para>
+      <para> </para>
+      <para>3. . Hof 's-Hertogenbosch 3 januari 1964, BNB 1964/230, overwoog in een soortgelijke geval, dat naar de werkelijke aard en inhoud van de rechtshandelingen partijen een materiële schenking in de vorm van een verkoop tegen een uit vrijgevigheid laag bepaalde koopprijs hebben beoogd.</para>
+      <para> </para>
+      <para>4. . Ik verwijs voor overeenkomstige beslissingen naar Hof Amsterdam 28 maart 1966, V-N 1967, blz. 82 en Hof Arnhem 18 december 1967, V-N 1968, blz. 694.</para>
+      <para> </para>
+      <parablock>
+        <para>5. . In het geval Hof Amsterdam 13 november 1965, BNB 1966/   167, PW 17699, werd bij notariële akte een woonhuis verkocht en in eigendom overgedragen tegen een bepaalde koopprijs, waarna op dezelfde dag bij een tweede akte de schuld wegens de koopprijs werd omgezet in een schuld wegens geldlening en vervolgens een gedeelte van de laatstbedoelde schuld werd kwijtgescholden. </para>
+        <para> 	Het hof overwoog, dat het geval van verkoop tegen te lage prijs naar doel en effect zozeer gelijk staat met het daar aan de orde zijnde geval, dat volgens de strekking van art. 24, I, sub 5 (thans: art. 24, lid 5), Sw. 1956 beide gevallen voor wat de rechtsheffing betreft gelijk behoren te worden behandeld.</para>
+      </parablock>
+      <para> </para>
+      <para>6. . Hof Leeuwarden 19 oktober 1981, BNB 1982/316, PW 18924, oordeelde een samenstel van rechtshandelingen aanwezig ook al waren de verkoop en de kwijtschelding van de koopsom geconstateerd bij twee verschillende akten, twee dagen na elkaar verleden voor twee verschillende notarissen.  </para>
+      <para/>
+      <parablock>
+        <para>7. . HR 2 juni 1982, BNB 1982/323* m.nt. J. P. Scheltens, PW 18975, betrof het volgende samenstel van rechtshandelingen:</para>
+        <para> 	a. verkoop en overdracht door de ouders aan hun zes kinderen onder voorbehoud van vruchtgebruik;</para>
+        <para> 	b. verdeling van de blote eigendom tussen de kinderen met toedeling van het geheel aan twee van hen, onder de verplichting de aan de ouders schuldig gebleven koopprijs voor het geheel voor hun rekening te nemen;</para>
+        <para> 	c.kwijtschelding door de ouders aan de twee kinderen van de gehele koopprijs.</para>
+        <para> 	Uw Raad overwoog:</para>
+      </parablock>
+      <para> </para>
+      <para> </para>
+      <parablock>
+        <para> "dat zich hier derhalve het geval voordoet dat de overdrachtsbelasting is betaald ter zake van de verkrijging door belanghebbenden van hun ouders - zijnde de verkrijging door de kinderen gezamenlijk met de toedeling aan belanghebbenden als één geheel te beschouwen - en het schenkingsrecht is verschuldigd ter zake van de tot hetzelfde samenstel van rechtshandelingen behorende materiële schenking aan belanghebbenden door hun ouders;</para>
+        <para> 	dat kan worden gezegd dat de ter zake van de verkrijging betaalde overdrachtsbelasting is voldaan over het bedrag waarover recht van schenking is verschuldigd en mitsdien artikel 24, onder I, laatste alinea, van de Successiewet 1956 toepasselijk is;</para>
+        <para> 	dat deze bepaling immers strekt ter voorkoming van dubbele belasting in gevallen waarin ter zake van één rechtshandeling of een samenstel van rechtshandelingen dat als één geheel is te beschouwen overdrachtsbelasting en schenkingsrecht over hetzelfde bedrag zouden worden geheven."</para>
+      </parablock>
+      <para> </para>
+      <para>8. . In een geval waarin de verkoop geschiedde op 8 september en de kwijtschelding op 22 september achtte Hof 's-Gravenhage 30 november 1983, PW 19200, de tussenliggende periode niet zo lang, dat alleen daardoor het tussen de rechtshandelingen bestaande verband zou worden verbroken.</para>
+      <para> </para>
+      <para>9. . In het geval Hof Amsterdam 15 juni 1990, PW 19900, vond de kwijtschelding van de koopprijs in twee gedeelten plaats, het eerste gedeelte eind december 1986 bij een akte op dezelfde dag verleden als de transportakte en het tweede gedeelte elf dagen later in januari 1987. Het hof oordeelde art. 24, vijfde lid, Sw. 1956 ook van toepassing op het tweede gedeelte. Het om fiscale redenen laten verlopen van een dergelijke betrekkelijk korte periode achtte het Hof niet voldoende om de samenhang tussen de rechtshandelingen te doorbreken.</para>
+      <para> </para>
+      <para>10. . In Hof Amsterdam 3 februari 1994, V-N 1994, blz. 2173, PW 20367, lag de situatie materieel gelijk aan die van punt 2.2.9. Het Hof oordeelde echter, dat nu de kwijtscheldingen bewust waren gesplitst vanwege de fiscale voordelen, de tweede kwijtschelding in januari 1991 los moest worden gezien van de overdracht van de onroerende zaak in december 1990 en er dus voor het terzake van die kwijtschelding verschuldigde schenkingsrecht geen recht op verrekening van overdrachtsbelasting bestond.</para>
+      <para> </para>
+      <para>C. . Het onderhavige geval</para>
+      <para> </para>
+      <para>1. . Het hof baseert zijn oordeel i.c. op de door de inspecteur in zijn vertoogschrift aangevoerde gronden. De Inspecteur had onder meer gesteld:</para>
+      <para> </para>
+      <para> </para>
+      <parablock>
+        <para> "Bewust kiezen partijen voor een overdracht van de economische eigendom om zodoende geen overdrachtsbelasting te hoeven betalen. Hierdoor bewerkstelligen zij dat er een koopsom en vervolgens een schuld ontstaat welke niets te maken heeft met een juridische levering (anders zou er op dat moment overdrachtsbelasting verschuldigd zijn) doch slechts met een economisch gebeuren. </para>
+        <para> 	Door deze handeling bewerkstelligen zij tevens dat de juridische eigendom in hun ogen vrijwel waardeloos wordt. Reden om deze later zonder tegenprestatie te doen overgaan.</para>
+      </parablock>
+      <para> </para>
+      <para> Bijna een jaar later realiseren partijen zich waarschijnlijk dat het beter is ook de juridische eigendom te leveren. Zij gaan hiertoe alsnog over en komen in dezelfde akte tot een gedeeltelijk kwijtschelding van de koopsom voor de economische eigendom. Er bestaat hiertussen geen enkel verband! De juridische eigendom is immers vrijwel waardeloos, er is geen koopsom verschuldigd. De kwijtscheldingen zijn afhankelijk van de wil van belanghebbende en kunnen op elk gewenst moment geschieden, dus ook - toevallig of bewust - is (bedoeld zal zijn: in, M.) deze tweede akte....."</para>
+      <para> </para>
+      <para>2. . Voor de vraag of de overdrachtsbelasting in mindering kan worden gebracht op het schenkingsrecht is beslissend, of deze heffingen voortvloeien uit met elkaar samenhangende rechtshandelingen. Een kort tijdsverloop tussen de rechtshandelingen behoeft blijkens de voormelde jurisprudentie aan de samenhang geen afbreuk te doen.</para>
+      <para> </para>
+      <parablock>
+        <para>3. . Tussen de overdracht van economische eigendom en een daarop volgende overdracht van juridische eigendom bestaat ongetwijfeld verband (anders gezegd: een zekere samenhang). De overdracht van de juridische eigendom is een logisch vervolg van de overdracht van de economische eigendom. Het is echter geen noodzakelijk vervolg daarvan. In vele gevallen vindt een overdracht van economische eigendom plaats die pas vele jaren later of soms in het geheel niet wordt gevolgd door een overdracht van de juridische eigendom. </para>
+        <para> 	Naar het mij voorkomt kan van een samenhang tussen deze overdrachten welke toepassing van art. 24, vijfde lid, Sw. 1956 rechtvaardigt slechts sprake zijn, indien partijen reeds op het moment van de overdracht van de economische eigendom zijn overeengekomen om op korte termijn ook de juridische eigendom te zullen overdragen (met - zoals i.c. - daaraan gekoppeld een gedeeltelijke kwijtschelding van de koopsom voor de economische eigendom).</para>
+      </parablock>
+      <para> </para>
+      <para>4. . Juist het feit dat partijen beginnen met een overdracht van de economische eigendom schept een zeker vermoeden, dat een overeenkomst als bedoeld in het slot van het vorige punt niet is gesloten. Dit vermoeden zal door partijen tegenover de fiscus moeten worden ontzenuwd, hetgeen - indien partijen daarover niets op schrift hebben gezet - niet eenvoudig zal zijn en alleen maar moeilijker wordt naarmate de tussen de overdrachten liggende periode langer is. </para>
+      <para> </para>
+      <para>5. . In het onderhavige geval is door belanghebbende niet gesteld, dat er een overeenkomst is gesloten als bedoeld in het slot van punt 2.3.3. In zijn vertoogschrift, geciteerd in punt 2.3.1, heeft inspecteur betoogd dat van samenhang geen sprake is, welk betoog door het hof is overgenomen. Daarmee heeft het hof feitelijk en niet onbegrijpelijk geoordeeld, dat de economische en de juridische eigendomsoverdracht geen samenstel van rechtshandelingen vormden. </para>
+      <para> </para>
+      <para>6. . Hieruit volgt, dat hoezeer ook de kwijtschelding en de overdracht van de juridische eigendom in de tijd samenvielen, dit de toepassing van art. 24, vijfde lid, Sw. 1956 niet rechtvaardigt, aangezien de kwijtschelding betrekking had op een schuld die niet in samenhang met de overdracht van de juridische eigendom is ontstaan.   </para>
+      <para> </para>
+      <para>D. . Maatstaf van heffing</para>
+      <para> </para>
+      <para>1. . De inspecteur heeft nog opgemerkt, dat door de overdracht van de economische eigendom de juridische eigendom vrijwel waardeloos is geworden en daarom later zonder tegenprestatie is overgegaan. In aansluiting daarop heeft belanghebbende in haar beroepschrift in cassatie betoogd, dat de inspecteur dan ten onrechte overdrachtsbelasting zou hebben berekend en uit het feit, dat hij overdrachtsbelasting heeft berekend zou moeten worden afgeleid, dat de juridische eigendom wel waarde heeft en tenminste gelijk is aan de tegenprestatie zoals deze bij de economische eigendom is overeengekomen. Belanghebbende zoekt daarin kennelijk een rechtvaardiging voor de toepassing van art. 24, vijfde lid, Sw. 1956.</para>
+      <para> </para>
+      <para>2. . Met betrekking tot de waarde als maatstaf van heffing merk ik het volgende op. Economische eigendom is geen eigendom in juridische zin, maar slechts een verkorte aanduiding van een complex van obligatoire rechten en verplichtingen, die tussen de juridische en de "economische" eigenaar gelden en die erin resulteren, dat het economisch belang bij het goed geheel berust bij de "economische" eigenaar. De waarde van een goed wordt in beginsel niet beïnvloed door obligatoire rechten en verplichtingen, maar slechts door goederenrechtelijke rechten en verplichtingen (met inbegrip van huur- en pachtrechten). Dit betekent, dat een overdracht in economische eigendom de waarde van een goed niet vermindert en dat die waarde bij een daarop volgende overdracht van de juridische eigendom de maatstaf van heffing vormt.</para>
+      <para> </para>
+      <para>3. . Ook met betrekking tot de tegenprestatie als maatstaf van heffing lijken mij enige opmerkingen op hun plaats. De tegenprestatie als bedoeld in art. 9 WBR bestaat uit prijs en lasten. Weliswaar wordt bij de overdracht van de juridische eigendom geen koopprijs bedongen, maar hoe zit het met de lasten? Op de vervreemder (de juridisch eigenaar) rust een complex van verplichtingen (de economische eigendom), welke in hun totaliteit de waarde van het goed vertegenwoordigen. De verkrijger van de juridische eigendom neemt deze verplichtingen van de vervreemder over (waarbij zij, indien de verkrijger de economisch eigenaar zelf is, door vermenging teniet gaan). Deze door verkrijger overgenomen verplichtingen vormen diens tegenprestatie (welke gelijk is aan de waarde van het goed).</para>
+      <para> </para>
+      <para>4. . Uit deze opmerkingen vloeit naar mijn mening geenszins voort, dat er een nauwere samenhang bestaat tussen de economische en juridische eigendomsoverdracht dan is omschreven in punt 2.3.3.</para>
+      <para> </para>
+      <para>III. . Conclusie</para>
+      <para> </para>
+      <para> Het cassatiemiddel ongegrond bevindend, concludeer ik tot verwerping van het beroep.</para>
+      <para> </para>
+      <para> </para>
+      <parablock>
+        <para>                                  De Procureur-Generaal bij de</para>
+        <para>                                   Hoge Raad der Nederlanden</para>
+      </parablock>
+    </uitspraak>
+</open-rechtspraak>

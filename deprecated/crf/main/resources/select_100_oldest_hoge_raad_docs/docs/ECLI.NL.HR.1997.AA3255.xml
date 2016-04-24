@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:tr="http://tuchtrecht.overheid.nl/" xmlns:eu="http://publications.europa.eu/celex/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:HR:1997:AA3255</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2015-06-28T20:47:52</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">AA3255</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Hoge_Raad_der_Nederlanden" scheme="overheid.RechterlijkeMacht">Hoge Raad</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">1997-01-22</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">31134</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#cassatie">Cassatie</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht_belastingrecht">Bestuursrecht; Belastingrecht</dcterms:subject>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+          <rdf:li>BNB 1997/100 met annotatie door I.J.F.A. van Vijfeijken</rdf:li>
+          <rdf:li>FED 1997/193 met annotatie door Blokland</rdf:li>
+          <rdf:li>WFR 1997/149</rdf:li>
+          <rdf:li>V-N 1997/644, 18 met annotatie door Kluwer</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:HR:1997:AA3255">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:HR:1997:AA3255</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-04T15:50:40</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2001-07-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:HR:1997:AA3255 Hoge Raad , 22-01-1997 / 31134</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:HR:1997:AA3255:INH" lang="nl" xml:space="preserve">
+      <para>-</para>
+    </inhoudsindicatie>
+  <uitspraak xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:HR:1997:AA3255:DOC" lang="nl" xml:space="preserve">
+      <parablock>
+        <para>gewezen op het beroep in cassatie van de Staatssecretaris van Financiën  tegen de uitspraak van het Gerechtshof te Arnhem van 6 maart 1995 betreffende de aan X te Z voor het jaar 1991 opgelegde aanslag in de inkomstenbelasting/premie volksverzekeringen. </para>
+        <para>1. Aanslag, bezwaar en geding voor het Hof Aan belanghebbende is voor het jaar 1991 een aanslag in de inkomstenbelasting/premie volksverzekeringen opgelegd naar een belastbaar inkomen van ƒ 92.620,--, welke aanslag, na daartegen gemaakt bezwaar, bij uitspraak van de Inspecteur is gehandhaafd. Belanghebbende is tegen die uitspraak in beroep gekomen bij het Hof, dat deze uitspraak heeft vernietigd en de aanslag heeft verminderd tot op nihil. De uitspraak van het Hof is aan dit arrest gehecht. </para>
+        <para>2. Geding in cassatie De Staatssecretaris heeft tegen 's Hofs uitspraak beroep in cassatie ingesteld. Het beroepschrift in cassatie is aan dit arrest gehecht en maakt daarvan deel uit. Belanghebbende heeft bij vertoogschrift het cassatieberoep bestreden. De Advocaat-Generaal Van den Berge heeft op 4 april 1996 geconcludeerd tot vernietiging van de bestreden uitspraak en tot bevestiging van de uitspraak van de Inspecteur. </para>
+        <para>3. Beoordeling van de middelen van cassatie 3.1. Belanghebbende bezat een pakket aandelen in de A B.V. De nominale waarde van deze aandelen bedroeg aanvankelijk ƒ 587.900,--. Het pakket, dat a pari was verworven, vormde niet een aanmerkelijk belang in de zin van artikel 39 van de Wet op de inkomstenbelasting 1964 (hierna: de Wet).    In 1986 werden de aandelen in verband met geleden verliezen afgestempeld tot op 40%. In 1988 werd de B.V. failliet verklaard. In 1991 verkocht belanghebbende de aandelen, die inmiddels deel uitmaakten van een aanmerkelijk belang, voor ƒ 1,--. Belanghebbende heeft zich op het standpunt gesteld dat door voormelde afstempeling het gemiddeld op de aandelen gestorte kapitaal als bedoeld in artikel 39, lid 4, laatste volzin, van de Wet dienovereenkomstig is verminderd en dat, daarvan uitgaande, de overdrachtsprijs van de aandelen dient te worden gesteld op ƒ 235.160,--, hetgeen meebrengt dat de vervreemding van de onderhavige aandelen in 1991 heeft geleid tot een verlies uit aanmerkelijk belang ten bedrage van </para>
+        <para>ƒ 352.740,--. De Inspecteur heeft zich op het standpunt gesteld dat de overdrachtsprijs van de aandelen dient te worden gesteld op ƒ 587.900,--, zijnde het gemiddeld op de aandelen gestorte kapitaal als bedoeld in voormelde wetsbepaling indien geen rekening wordt gehouden met de afstempeling; daarvan uitgaande heeft hij bij de vaststelling van de aanslag het verlies uit aanmerkelijk belang op nihil gesteld. </para>
+        <para>3.2. Het Hof heeft geoordeeld, verkort weergegeven: dat in artikel 39, lid 4, laatste volzin, van de Wet met betrekking tot de overdrachtsprijs in beginsel wordt gedoeld op het kapitaal dat ten tijde van de vervreemding daarop was gestort; dat bij de toepassing van het begrip "gemiddeld op de desbetreffende aandelen gestorte kapitaal" in art. 25, lid onderdeel e, van de Wet een eventuele afstempeling in aanmerking moet worden genomen en dat het daarbij past aan artikel 39, lid 4, laatste volzin, een overeenkomstige toepassing te geven; dat de afstempeling van de aandelen niet is geschied met het doel om voor belanghebbende een verlies uit aanmerkelijk belang te creëren. Op deze gronden heeft het Hof overeenkomstig het standpunt van belanghebbende beslist. </para>
+        <para>3.3. Middel I strekt ten betoge dat het Hof ten onrechte de oorspronkelijke tegenprestatie bij de verkrijging heeft aangemerkt als de verkrijgingsprijs, daar het door de afstempeling op de aandelen afgeschreven bedrag niet meer kan worden gerekend tot de verkrijgingsprijs in de zin van artikel 39, lid 4, van de Wet. Het middel faalt. Een afstempeling van het kapitaal die niet leidt tot enigerlei uitkering aan de aandeelhouder brengt geen verandering in het bedrag van de tegenprestatie bij de verkrijging van de aandelen en kan - anders dan een teruggaaf van hetgeen op de aandelen is gestort - aan die tegenprestatie niet worden toegerekend. Aangezien de verkrijgingsprijs, naar is neergelegd in voormeld artikel 39, lid 4, - afgezien van de te dezen niet van belang zijnde ten laste van de verkrijgers gekomen kosten - dient te worden gesteld op de tegenprestatie bij de verkrijging, is een afstempeling als vorenbedoeld derhalve niet van invloed op de verkrijgingsprijs. 3.4. Middel II bestrijdt 's Hofs oordeel volgens hetwelk ten aanzien van de overdrachtsprijs als het gemiddeld op de aandelen gestorte kapitaal in de zin van artikel 39, lid 4, van de Wet heeft te gelden het nominale bedrag van het aandelenkapitaal na de afstempeling. Ook dit middel faalt, daar het Hof te dezer zake op goede gronden een juiste beslissing heeft gegeven. </para>
+        <para>4. Proceskosten 4.1. Ambtshalve beoordeling van 's Hofs beslissing omtrent de proceskosten. Het Hof heeft ter bepaling van de vergoeding voor de proceskosten die belanghebbende in verband de behandeling van zijn beroep redelijkerwijs heeft moeten maken de wegingsfactor bedoeld in onderdeel C1 van de Bijlage bij het Besluit proceskosten fiscale procedures gesteld op 1,5, daarbij klaarblijkelijk ervan uitgaande dat het belang van de zaak diende te worden gesteld op het bedrag waarmee de onderhavige aanslag volgens het standpunt van belanghebbende diende te worden verminderd. Daar de uitkomst van de procedure rechtstreeks van betekenis is voor de in het voorafgaande jaar en in volgende jaren te heffen belasting, en daarvan uitgaande het belang van de zaak ƒ 50.000,-- te boven gaat, diende de vergoeding voor de proceskosten, overeenkomstig hetgeen belanghebbende in het vertoogschrift in cassatie heeft opgemerkt, te worden berekend met toepassing van de factor 2. 's Hofs uitspraak kan derhalve, voor zover zij betrekking heeft op de vergoeding voor proceskosten, niet in stand blijven. De Hoge Raad kan zelf de zaak afdoen. De vergoeding dient te worden gesteld op </para>
+        <para>ƒ 1.420,--. </para>
+        <para>4.2. Proceskosten ter zake van de behandeling van het beroep in cassatie. De Hoge Raad acht termen aanwezig om ten aanzien van de proceskosten die belanghebbende in verband met de behandeling van het geding in cassatie redelijkerwijs heeft moeten maken, te beslissen als hierna zal worden vermeld. </para>
+        <para>5. Beslissing De Hoge Raad vernietigt de uitspraak van het Hof, voor zover deze betrekking heeft op de proceskosten, verwerpt het beroep voor het overige, veroordeelt de Staatssecretaris van Financiën in de kosten van het geding in cassatie aan de zijde van belanghebbende, vastgesteld op ƒ 2.840,-- voor beroepsmatig verleende rechtsbijstand, veroordeelt voorts de Inspecteur in de kosten van het geding voor het Hof aan de zijde van belanghebbende, vastgesteld op </para>
+        <para>ƒ 1.420,-- voor beroepsmatig verleende rechtsbijstand, wijst aan de Staat als de rechtspersoon die de bij het Hof gemaakte kosten moet vergoeden, en bepaalt dat door de Griffier van de Hoge Raad aan de Staatssecretaris van Financiën wordt terugbetaald het ter zake van de vervanging van de mondelinge uitspraak bij het Hof gestorte bedrag van ƒ 150,--. </para>
+        <para>Dit arrest is op 22 januari 1997 vastgesteld door de vice-president R.J.J. Jansen als voorzitter, en de raadsheren Van der Linde, De Moor, Van der Putt-Lauwers en Van Brunschot, in tegenwoordigheid van de waarnemend griffier Van Hooff, en op die dag in het openbaar uitgesproken.</para>
+      </parablock>
+    </uitspraak>
+</open-rechtspraak>

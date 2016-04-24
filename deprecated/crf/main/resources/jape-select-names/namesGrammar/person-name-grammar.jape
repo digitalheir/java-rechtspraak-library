@@ -1,0 +1,632 @@
+Phase:   Names
+Input:   Token Sentence Lookup 
+Options: control = appelt debug = true
+
+/* `!Sentence` was added to most macros so that last names don't flow over into new sentences.
+ * If we don't provision for this, we get cases like
+ *
+ * ```
+ *   w.g [van de Berg
+ *   Voorzitter] ambtenaar van Staat
+ * ```
+ *
+ * i.e., we should ignore the word 'Voorzitter'
+ */
+
+Macro: KNOWN_TITLE
+// ex. 'prof.'
+(
+    ({Lookup.majorType==title})
+   |
+    ({Lookup.majorType==title, Token.string ==~ ".*\\p{L}.*\\.$"}) //If the title ends with a period, we're all good
+   |
+    ({Lookup.majorType==title, Token.length == 1}{Token.string=="."}) //Need a period for titles with length 1
+   |
+    ({Lookup.majorType==title, Token.length == 2}{Token.string=="."}) //Need a period for titles with length 2
+)
+
+
+Macro: HIGHCONFGEXXXD
+(
+  (
+    ({Token.string == "laten"}{Token.string ==~ "vertegenwoordigen"})
+    |
+    ({Token.string ==~ "(vertegenwoordigd|bijgestaan)"})
+  )
+  {Token.string == "door"}
+)
+
+Macro: TITLELOWCONF
+(
+   {Token.string ==~ "[\\p{L}]{2,3}"}{Token.string == "."}
+)
+
+Macro: STRICTINITIAL
+// ex. '[A.] Th. C.'
+(
+  ({Token.orth == upperInitial, Token.length >= 1,Token.length < 3, !Token.string ==~ "^St"})
+  ({Token.string == "."})
+)
+
+
+Macro: INITIAL
+// ex. '[A.] Th. C.'
+(
+  ({Token.orth == upperInitial, Token.length >= 1,Token.length < 3, !Lookup.majorType==nonperson})
+  ({Token.string == "."})?
+)
+
+Macro: INITIALS
+(
+  INITIAL
+)+
+
+Macro: FIRSTNAME
+({Token.orth == "upperInitial", Token.string ==~ "\\p{Lu}(\\p{Ll}|-)+\\p{Ll}", !Lookup.majorType==nonperson, !Sentence})
+
+Macro: VANDE
+({Token.string ==~ "[\\p{L}']{1,3}", Token.string !=~ "en|te", !Sentence})[1,2]
+
+Macro: SINGLETOLERANTLASTNAME
+// ex. van der Laan
+(
+  (VANDE)*
+  (
+    {
+    Token.string ==~ "\\p{L}*\\p{Lu}(\\p{Ll}[\\p{L}-]*)?[\\p{Ll}-]",
+    //Token.string ==~ ".*[aeiouy].*", //At least one vowel
+    !Sentence}
+  )
+)
+
+Macro: INTEGENWOORDIGHEIDVAN
+(
+  {Token.string == "in"}
+  ({Token.string ==~ "het|de"})?
+  {Token.string ==~ "(bijzijn|tegenwoordigheid)"}
+  {Token.string == "van"}
+)
+
+Macro: TOLERANTLASTNAME
+// ex. 'van der Laan-Wijngaerde'
+// ex. 'de Beer de Laer Dupont'
+(
+  (SINGLETOLERANTLASTNAME)+
+  // Arbitrary amount of hyphens
+  (
+   {Token.string=="-"}
+   (SINGLETOLERANTLASTNAME)
+  )*
+)
+
+Macro: KNOWNSURNAME
+(
+  {Lookup.majorType == surname}
+  // Married ppl may have a double name such as  mr. E.J. de Lange-Bekker, which does not appear in the lookup list for last names
+  (
+    {Token.string == "-"}
+    {Lookup.majorType == surname}
+  )?
+)
+
+Macro: TITLEDNAME
+(
+ (KNOWN_TITLE)+
+ ((FIRSTNAME)*|(INITIALS)*)
+ (TOLERANTLASTNAME)
+)
+
+Macro: TITLEDNAMEKNOWN
+(
+ (KNOWN_TITLE)+
+ ((FIRSTNAME)*|(INITIALS)*)
+ (KNOWNSURNAME)
+)
+
+Macro: STRICTINITIALSNAMEKNOWN
+(
+ (KNOWN_TITLE)*
+ (STRICTINITIAL)+
+ (KNOWNSURNAME)
+)
+
+Macro: STRICTINITIALSNAMEWITHMULTIPLEINITIALS
+(
+ (KNOWN_TITLE)*
+ (STRICTINITIAL)
+ (STRICTINITIAL)+
+ (KNOWNSURNAME)
+)
+
+Macro: SEMITOLERANTFULLNAME
+// Ex. [mr. Vox], [mr. A.D.W. de Heyde], [Vincent Willems]
+(
+  (KNOWN_TITLE)*
+  ((FIRSTNAME)*|(STRICTINITIAL)*)
+  (TOLERANTLASTNAME)
+)
+
+Macro: TOLERANTFULLNAME
+// Ex. [mr. Vox], [mr. A.D.W. de Heyde], [Vincent Willems]
+(
+  (KNOWN_TITLE)*
+  ((FIRSTNAME)*|((INITIALS)*):ini)
+  TOLERANTLASTNAME
+)
+
+Macro: TOLERANTFULLNAMEKNOWN
+// Last name from gazetteer
+(
+  (KNOWN_TITLE)*
+  ((FIRSTNAME)*|(INITIALS)*)
+  (KNOWNSURNAME)
+)
+
+Macro: ROLEPRESINGLE
+(
+  ({Token.string ==~ "[Dd]e"})?
+  ({Lookup.majorType == pre_role, Lookup.minorType==singular}):rolePre
+  ({Token.string ==~ "[:;]"})?
+)
+
+Macro: ROLEPREMULTIPLE
+(
+  ({Token.string ==~ "[Dd]e"})?
+  ({Lookup.majorType == pre_role, Lookup.minorType==multiple}):roleGroup
+  ({Token.string ==~ "[:;]"})?
+)
+
+Macro: TOLERANTFULLNAME_1
+(
+    (
+      ((KNOWN_TITLE)*):titlesLast
+      (((FIRSTNAME)*):firstnamesLast|((INITIALS)*):initialsLast)
+      (TOLERANTLASTNAME):lastnameLast
+    ):nameLast
+    (({Token.string == ","})({Lookup.majorType == role, Lookup.minorType==singular}):roleLast)?
+)
+    
+Macro: TOLERANTFULLNAME_2
+(   (
+      ((KNOWN_TITLE)*):titlesSecondToLast
+      (((FIRSTNAME)*):firstnamesSecondToLast|((INITIALS)*):initialsSecondToLast)
+      (TOLERANTLASTNAME):lastnameSecondToLast
+    ):nameSecondToLast
+    (({Token.string == ","})({Lookup.majorType == role, Lookup.minorType==singular}):roleSecondToLast({Token.string == ","})?)?
+    ({Token.string == "en"})
+    TOLERANTFULLNAME_1
+)    
+    
+Macro: TOLERANTFULLNAME_3
+(   (
+      ((KNOWN_TITLE)*):titlesThirdToLast
+      (((FIRSTNAME)*):firstnamesThirdToLast|((INITIALS)*):initialsThirdToLast)
+      (TOLERANTLASTNAME):lastnameThirdToLast
+    ):nameThirdToLast
+    (({Token.string == ","})({Lookup.majorType == role, Lookup.minorType==singular}):roleThirdToLast)?
+    ({Token.string == ","})
+    TOLERANTFULLNAME_2
+)
+    
+Macro: TOLERANTFULLNAME_4
+(
+    (
+      ((KNOWN_TITLE)*):titlesFourthToLast
+      (((FIRSTNAME)*):firstnamesFourthToLast|((INITIALS)*):initialsFourthToLast)
+      (TOLERANTLASTNAME):lastnameFourthToLast
+    ):nameFourthToLast
+    (({Token.string == ","})({Lookup.majorType == role, Lookup.minorType==singular}):roleFourthToLast)?
+    ({Token.string == ","})
+    TOLERANTFULLNAME_3
+)
+
+Macro: GROUP_ROLE
+(
+   {Token.string == ","}
+   ({Token.string == "allen"})?
+   ({Lookup.majorType == role}):roleGroup
+   ({Token.string == ","})?
+) 
+
+//////////
+// Rules
+//////////
+
+Rule: Meesters4
+(
+    ({Lookup.string ==~ "[Mm][Rr][Ss]\\.?"})
+    TOLERANTFULLNAME_4
+):namegroup
+//Followed by the group role possibly
+ (GROUP_ROLE)?
+ -->
+      :nameFourthToLast.Name = {
+                        titles=:titlesFourthToLast@cleanString, 
+                        initials=:initialsFourthToLast@cleanString,
+                        firstnames=:firstnamesFourthToLast@cleanString,
+                        lastname=:lastnameFourthToLast@cleanString, 
+                        role=:roleFourthToLast@cleanString, 
+                        confidence=medium
+                    },
+      :nameThirdToLast.Name = {
+                        titles=:titlesThirdToLast@cleanString, 
+                        initials=:initialsThirdToLast@cleanString,
+                        firstnames=:firstnamesThirdToLast@cleanString,
+                        lastname=:lastnameThirdToLast@cleanString, 
+                        role=:roleThirdToLast@cleanString, 
+                        confidence=medium
+                    },
+      :nameSecondToLast.Name = {
+                        titles=:titlesSecondToLast@cleanString, 
+                        initials=:initialsSecondToLast@cleanString,
+                        firstnames=:firstnamesSecondToLast@cleanString,
+                        lastname=:lastnameSecondToLast@cleanString, 
+                        role=:roleSecondToLast@cleanString, 
+                        confidence=medium
+                    },
+      :nameLast.Name = {
+                        titles=:titlesLast@cleanString, 
+                        initials=:initialsLast@cleanString,
+                        firstnames=:firstnamesLast@cleanString,
+                        lastname=:lastnameLast@cleanString, 
+                        role=:roleLast@cleanString, 
+                        confidence=medium
+                    },
+      :namegroup.Namegroup = {role=:roleGroup@cleanString}
+      
+Rule: Meesters3
+(
+    ({Lookup.string ==~ "[Mm][Rr][Ss]\\.?"})
+    TOLERANTFULLNAME_3
+):namegroup
+//Followed by the group role possibly
+ (GROUP_ROLE)?
+ -->
+      :nameThirdToLast.Name = {
+                        titles=:titlesThirdToLast@cleanString, 
+                        initials=:initialsThirdToLast@cleanString,
+                        firstnames=:firstnamesThirdToLast@cleanString,
+                        lastname=:lastnameThirdToLast@cleanString, 
+                        role=:roleThirdToLast@cleanString, 
+                        confidence=medium
+                    },
+      :nameSecondToLast.Name = {
+                        titles=:titlesSecondToLast@cleanString, 
+                        initials=:initialsSecondToLast@cleanString,
+                        firstnames=:firstnamesSecondToLast@cleanString,
+                        lastname=:lastnameSecondToLast@cleanString, 
+                        role=:roleSecondToLast@cleanString, 
+                        confidence=medium
+                    },
+      :nameLast.Name = {
+                        titles=:titlesLast@cleanString, 
+                        initials=:initialsLast@cleanString,
+                        firstnames=:firstnamesLast@cleanString,
+                        lastname=:lastnameLast@cleanString, 
+                        role=:roleLast@cleanString, 
+                        confidence=medium
+                    },
+      :namegroup.Namegroup = {role=:roleGroup@cleanString}      
+
+Rule: Meesters2
+(
+    ({Lookup.string ==~ "[Mm][Rr][Ss]\\.?"})
+    TOLERANTFULLNAME_2
+):namegroup
+//Followed by the group role possibly
+ (GROUP_ROLE)?
+ -->
+       :nameSecondToLast.Name = {
+                        titles=:titlesSecondToLast@cleanString, 
+                        initials=:initialsSecondToLast@cleanString,
+                        firstnames=:firstnamesSecondToLast@cleanString,
+                        lastname=:lastnameSecondToLast@cleanString, 
+                        role=:roleSecondToLast@cleanString, 
+                        confidence=medium
+                    },
+      :nameLast.Name = {
+                        titles=:titlesLast@cleanString, 
+                        initials=:initialsLast@cleanString,
+                        firstnames=:firstnamesLast@cleanString,
+                        lastname=:lastnameLast@cleanString, 
+                        role=:roleLast@cleanString, 
+                        confidence=medium
+                    },
+      :namegroup.Namegroup = {role=:roleGroup@cleanString}      
+
+Rule: InTegenwoordigheidVanAls
+  (INTEGENWOORDIGHEIDVAN)
+  (TOLERANTFULLNAME):name
+  {Token.string ==~ "(als|,)"}
+  ({Lookup.majorType == role, Lookup.minorType==singular}):role
+-->
+  :name.Name = {role=:role@cleanString,  confidence="high"}
+
+Rule: InTegenwoordigheidVanDe
+(INTEGENWOORDIGHEIDVAN)
+({Token.string == "de"})?
+({Lookup.majorType == role, Lookup.minorType==singular}):role
+(TOLERANTFULLNAME):name
+-->
+  :name.Name = {role=:role@cleanString,  confidence="high"}
+
+/**
+ * Getekend
+ */
+Rule: Get
+{Token.string == "("}
+(
+  ({Token.string == "get"}{Token.string == "."})
+    |
+  ({Token.string == "getekend"}({Token.string == "."})?)
+)
+{Token.string == ")"}
+(TOLERANTFULLNAME):name
+-->
+  :name.Name = {role=getekend,  confidence=high}
+
+
+Rule: WasGetekend
+(
+  (
+    ({Token.string=="w"}{Token.string=="."}{Token.string=="g"}({Token.string=="."})?)
+      |
+    ({Token.string==~"^w\\.( )?g\\.$"})
+      |
+    ({Token.string=="was|werd"}{Token.string=="getekend"})
+  )
+  ((TOLERANTFULLNAME)|(TOLERANTLASTNAME)):name
+)
+-->
+  :name.Name = {role=getekend,  confidence=high}
+
+
+Rule: RolePost
+////
+// [mr. A. B. van der Werf], gemachtigde
+////
+Priority: 100
+    (ROLEPRESINGLE)?
+    (TOLERANTFULLNAME):name
+    {Token.string ==~ ",|als"}
+    ({Lookup.majorType == role}):rolePost
+-->
+    :name.Name = {
+                   rolePre=:rolePre@cleanString, 
+                   rolePost=:rolePost@cleanString,
+                   confidence=high
+                 }
+
+Rule: AdvocaatPre
+////
+// advocaat [mr. A.B. van Wiel]
+////
+Priority: 100
+    ({Token.string ==~ "[Aa]dvocaat"}):designator
+    ({Token.string ==~ "[:;]"})?
+    (
+     (KNOWN_TITLE)*
+     ((FIRSTNAME)|(INITIALS))
+     (TOLERANTLASTNAME)
+    ):name
+-->
+    :name.Name = {role="advocaat",  confidence=high}
+
+
+
+Rule: RolePre4
+  (ROLEPREMULTIPLE)
+  (  
+    TOLERANTFULLNAME_4
+  ):namegroup
+ -->
+      :nameFourthToLast.Name = {
+                        titles=:titlesFourthToLast@cleanString, 
+                        initials=:initialsFourthToLast@cleanString,
+                        firstnames=:firstnamesFourthToLast@cleanString,
+                        lastname=:lastnameFourthToLast@cleanString, 
+                        role=:roleFourthToLast@cleanString, 
+                        confidence=medium
+                    },
+      :nameThirdToLast.Name = {
+                        titles=:titlesThirdToLast@cleanString, 
+                        initials=:initialsThirdToLast@cleanString,
+                        firstnames=:firstnamesThirdToLast@cleanString,
+                        lastname=:lastnameThirdToLast@cleanString, 
+                        role=:roleThirdToLast@cleanString, 
+                        confidence=medium
+                    },
+      :nameSecondToLast.Name = {
+                        titles=:titlesSecondToLast@cleanString, 
+                        initials=:initialsSecondToLast@cleanString,
+                        firstnames=:firstnamesSecondToLast@cleanString,
+                        lastname=:lastnameSecondToLast@cleanString, 
+                        role=:roleSecondToLast@cleanString, 
+                        confidence=medium
+                    },
+      :nameLast.Name = {
+                        titles=:titlesLast@cleanString, 
+                        initials=:initialsLast@cleanString,
+                        firstnames=:firstnamesLast@cleanString,
+                        lastname=:lastnameLast@cleanString, 
+                        role=:roleLast@cleanString, 
+                        confidence=medium
+                    },
+      :namegroup.Namegroup = {role=:roleGroup@cleanString}
+
+Rule: RolePre3
+  (ROLEPREMULTIPLE)
+  (  
+    TOLERANTFULLNAME_3
+  ):namegroup
+ -->
+      :nameThirdToLast.Name = {
+                        titles=:titlesThirdToLast@cleanString, 
+                        initials=:initialsThirdToLast@cleanString,
+                        firstnames=:firstnamesThirdToLast@cleanString,
+                        lastname=:lastnameThirdToLast@cleanString, 
+                        role=:roleThirdToLast@cleanString, 
+                        confidence=medium
+                    },
+      :nameSecondToLast.Name = {
+                        titles=:titlesSecondToLast@cleanString, 
+                        initials=:initialsSecondToLast@cleanString,
+                        firstnames=:firstnamesSecondToLast@cleanString,
+                        lastname=:lastnameSecondToLast@cleanString, 
+                        role=:roleSecondToLast@cleanString, 
+                        confidence=medium
+                    },
+      :nameLast.Name = {
+                        titles=:titlesLast@cleanString, 
+                        initials=:initialsLast@cleanString,
+                        firstnames=:firstnamesLast@cleanString,
+                        lastname=:lastnameLast@cleanString, 
+                        role=:roleLast@cleanString, 
+                        confidence=medium
+                    },
+      :namegroup.Namegroup = {role=:roleGroup@cleanString}
+
+
+
+Rule: RolePre2
+  (ROLEPREMULTIPLE)
+  (  
+    TOLERANTFULLNAME_2
+  ):namegroup
+ -->
+       :nameSecondToLast.Name = {
+                        titles=:titlesSecondToLast@cleanString, 
+                        initials=:initialsSecondToLast@cleanString,
+                        firstnames=:firstnamesSecondToLast@cleanString,
+                        lastname=:lastnameSecondToLast@cleanString, 
+                        role=:roleSecondToLast@cleanString, 
+                        confidence=medium
+                    },
+      :nameLast.Name = {
+                        titles=:titlesLast@cleanString, 
+                        initials=:initialsLast@cleanString,
+                        firstnames=:firstnamesLast@cleanString,
+                        lastname=:lastnameLast@cleanString, 
+                        role=:roleLast@cleanString, 
+                        confidence=medium
+                    },
+      :namegroup.Namegroup = {role=:roleGroup@cleanString}      
+      
+Rule: RolePre
+////
+// griffier [mr. A. B. van der Werf]
+////
+    ({Token.string ==~ "[Dd]e"})?
+    ({Lookup.majorType == pre_role, Lookup.minorType==singular}):role
+    ({Token.string ==~ "[:;]"})?
+  // Having two or more initials makes the name more probable, or alternatively a title
+( (
+   (((KNOWN_TITLE)*(STRICTINITIAL)+)(KNOWNSURNAME)) | ((KNOWN_TITLE)+(STRICTINITIAL)*(TOLERANTLASTNAME))
+  )
+):name
+    ({Token.string==","})?
+-->
+    :name.Name = {role=:role@cleanString,  confidence=medium}//, :name.CheckOut={}
+    
+Rule: GewezenDoor
+{Token.string == "gewezen"}
+{Token.string == "door"}
+(TOLERANTFULLNAME):name
+-->
+  :name.Name = {role="rechter", confidence=high}
+
+
+Rule: GexxxDoor4HighConf
+  (HIGHCONFGEXXXD)
+  ((TOLERANTFULLNAME_4)):namegroup
+//Followed by the group role possibly
+ (GROUP_ROLE)?
+ -->
+      :nameFourthToLast.Name = {
+                        titles=:titlesFourthToLast@cleanString, 
+                        initials=:initialsFourthToLast@cleanString,
+                        firstnames=:firstnamesFourthToLast@cleanString,
+                        lastname=:lastnameFourthToLast@cleanString, 
+                        role=:roleFourthToLast@cleanString, 
+                        confidence=high
+                    },
+      :nameThirdToLast.Name = {
+                        titles=:titlesThirdToLast@cleanString, 
+                        initials=:initialsThirdToLast@cleanString,
+                        firstnames=:firstnamesThirdToLast@cleanString,
+                        lastname=:lastnameThirdToLast@cleanString, 
+                        role=:roleThirdToLast@cleanString, 
+                        confidence=high
+                    },
+      :nameSecondToLast.Name = {
+                        titles=:titlesSecondToLast@cleanString, 
+                        initials=:initialsSecondToLast@cleanString,
+                        firstnames=:firstnamesSecondToLast@cleanString,
+                        lastname=:lastnameSecondToLast@cleanString, 
+                        role=:roleSecondToLast@cleanString, 
+                        confidence=high
+                    },
+      :nameLast.Name = {
+                        titles=:titlesLast@cleanString, 
+                        initials=:initialsLast@cleanString,
+                        firstnames=:firstnamesLast@cleanString,
+                        lastname=:lastnameLast@cleanString, 
+                        role=:roleLast@cleanString, 
+                        confidence=high
+                    },
+      :namegroup.Namegroup = {role=:roleGroup@cleanString}
+
+
+////
+// bijgestaan door [mr. A. B. van der Werf], gemachtigde
+////
+Rule: GexxxDoorRolePost
+Priority: 100
+    {Token.string ==~ "(vertegenwoordigd|bijgestaan)|(\\p{L}*ge\\p{L}{3,}(en|d|t)$)"}
+    {Token.string == "door"}
+    (TOLERANTFULLNAMEKNOWN):name
+    {Token.string ==~ ",|als"}
+    ({Lookup.majorType == role}):role
+-->
+    :name.Name = {role=:role@cleanString, confidence=high}
+
+Rule: DeXConcludeert
+    {Token.string == "de"}
+    ({Lookup.majorType == role}):role
+    (TOLERANTFULLNAMEKNOWN):name
+    ({Token.string == "heeft"})?
+    ({Token.string ==~ "(ge)?concludeer(t|d)"})
+-->
+    :name.Name = {role=:role@cleanString, confidence=high}
+
+
+Rule: AlsX
+(TOLERANTFULLNAMEKNOWN):name
+{Token.string == "als"}
+({Lookup.majorType == role}):role
+-->
+  :name.Name = {role=:role@cleanString, confidence=high}
+
+
+
+///////////////////////////////////////////////////
+
+/**
+ * To make it easier to spot false negatives, we annotate all spans that look like a name (...if we squint)
+*/
+Phase:   PossibleNames
+Input:   Token Sentence Lookup
+Options: control = appelt debug = true
+
+Rule: TolerantName
+(
+    (KNOWN_TITLE)*
+    ((FIRSTNAME)+|(INITIAL)+)
+    (TOLERANTLASTNAME)
+):name
+-->
+:name.Name = {confidence=low}
+
+Rule: Title
+(KNOWN_TITLE):t --> :t.Title = {}
+

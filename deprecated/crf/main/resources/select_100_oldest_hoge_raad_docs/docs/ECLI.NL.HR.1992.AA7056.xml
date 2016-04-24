@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:tr="http://tuchtrecht.overheid.nl/" xmlns:eu="http://publications.europa.eu/celex/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:HR:1992:AA7056</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2015-06-28T20:28:28</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">AA7056</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Hoge_Raad_der_Nederlanden" scheme="overheid.RechterlijkeMacht">Hoge Raad</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">1992-12-16</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">27969</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#cassatie">Cassatie</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht_belastingrecht">Bestuursrecht; Belastingrecht</dcterms:subject>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0002629&amp;artikel=4&amp;g=1992-12-16">Wet op de omzetbelasting 1968 4</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0002629&amp;artikel=6&amp;g=1992-12-16">Wet op de omzetbelasting 1968 6</dcterms:references>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+          <rdf:li>BNB 1993/69</rdf:li>
+          <rdf:li>FED 1993/31</rdf:li>
+          <rdf:li>WFR 1993/39</rdf:li>
+          <rdf:li>V-N 1993/256, 14 met annotatie door Kluwer</rdf:li>
+          <rdf:li>FED 1993/128 met annotatie door M.E. VAN HILTEN</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:HR:1992:AA7056">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:HR:1992:AA7056</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-04T16:08:06</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2001-07-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:HR:1992:AA7056 Hoge Raad , 16-12-1992 / 27969</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:HR:1992:AA7056:INH" lang="nl" xml:space="preserve">
+      <para>-</para>
+    </inhoudsindicatie>
+  <uitspraak xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:HR:1992:AA7056:DOC" lang="nl" xml:space="preserve">
+      <para>27969</para>
+      <para/>
+      <para>Gewezen op het beroep in cassatie van de vereniging X te Z tegen de uitspraak van het Gerechtshof te Amsterdam van 26 februari 1991 betreffende het bedrag dat door haar als omzetbelasting op aangifte is voldaan over het tijdvak mei 1989. </para>
+      <para> </para>
+      <para>1.	Aangifte en geding voor het Hof </para>
+      <para/>
+      <parablock>
+        <para>Belanghebbende heeft over voormeld tijdvak op aangifte voldaan een bedrag van f a,-- aan omzetbelasting. Belanghebbende is tegen dit bedrag, met schriftelijke toestemming van de Inspecteur op de voet van artikel 26, lid</para>
+        <para>3, van de Algemene wet inzake rijksbelastin-gen, rechtstreeks in beroep gekomen bij het Hof. Het beroep strekte tot teruggaaf van een bedrag van f b,-- aan omzetbelasting. </para>
+        <para>Het Hof heeft het op aangifte voldane bedrag gehandhaafd. </para>
+        <para>De uitspraak van het Hof is aan dit arrest gehecht. </para>
+      </parablock>
+      <para> </para>
+      <para>2.	Geding in cassatie </para>
+      <para/>
+      <parablock>
+        <para>Belanghebbende heeft tegen de uitspraak van het Hof beroep in cassatie ingesteld. Het beroepschrift in cassatie is aan dit arrest gehecht en maakt daarvan deel uit. </para>
+        <para>De Staatssecretaris van Financiën heeft bij vertoogschrift het cassatieberoep bestreden. </para>
+      </parablock>
+      <para> </para>
+      <para>3.	Beoordeling van de middelen </para>
+      <para/>
+      <parablock>
+        <para>3.1. In cassatie kan van het volgende worden uitgegaan: </para>
+        <para>Belanghebbende had arbeidsovereenkomsten gesloten met A en B, welke overeenkom-sten een looptijd hadden tot 30 juni 1990, respectievelijk tot 30 juni 1989.</para>
+        <para>In mei 1989 heeft belanghebbende in verband met de overgang van voornoemde spelers naar de voetbalclubs C (K-land) onderscheidenlijk D</para>
+        <para>(L-land) aan vergoedingen ontvangen f c,-- onder-scheidenlijk f d,--, exclusief omzetbelasting. </para>
+        <para>Belanghebbende is lid van de Koninklijke Nederlandse Voetbal Bond (de KNVB), hetgeen meebrengt dat zij is onderworpen aan het reglement van de Fédération Internationale de Football Asso-cations (de FIFA).</para>
+        <para>Krachtens dit reglement kan degene die met een club een contract heeft of had als beroepsspeler slechts voor een nieuwe club in een ander land uitkomen, indien de nationale bond in dat land in het bezit is van een zogenoemde</para>
+        <para>verklaring van speelgerechtigdheid, afgege-ven door de nationale bond van het land waarin de oor-spronkelijke club is gevestigd. Een dergelijke verklaring kan de nationale bond in het andere land slechts verlangen indien de destreffende speler geen verplichtingen meer heeft op grond van met de oorspronkelijke club gesloten overeenkomst, dan wel die overeenkomst met toestemming van beide partijen is beëindigd. </para>
+        <para>Blijkens artikel 49 van het Reglement Be-taald Voetbal van de KNVB wordt deze verklaring pas afgegeven nadat aan de oorspronkelijke club een vergoeding is betaald, ongeacht of het contract tussen de oorspronkelijke club en de beroepsspeler tussentijds is beëindigd dan wel afgelopen. </para>
+        <para>Ook de artikelen 5 en 13 van de "Principles of Cooperation between Clubs of different National Associa-tions of the EEC Countries" van de Union des Associations Européennes de Foot- ball (de UEFA), waarvan de KNVB deel uitmaakt, gaan uit van de betaling van een bedrag aan geld aan de oorspronkelijke club, zowel ingeval een contract reeds afgelopen is als indien   het nog van kracht is. </para>
+      </parablock>
+      <para> </para>
+      <parablock>
+        <para>3.2.1. Het Hof heeft - in cassatie niet bestreden - aangenomen dat C   het door haar gewenste doel - het verrichten van presentaties door A ten behoeve</para>
+        <para>van die club vanaf mei 1989  - slechts kon bereiken indien belanghebbende afstand deed van haar rechten uit de met A gesloten arbeidsovereenkomst, omdat enkel in dat geval de nationale bond in K-land op grond van het</para>
+        <para>reglement van de FIFA een verklaring van speelgerechtigdheid kon verlangen van de KNVB. Hiervan uitgaande heeft het Hof geoordeeld dat er tussen het bewilligen door belanghebbende in de beëindiging van de met A geslo-ten</para>
+        <para>arbeidsovereenkomst en de betaling van een bedrag van f c,-- door C aan belangheb-bende een zodanig nauw verband bestaat dat dit bedrag moet worden aangemerkt als de vergoeding voor een door belangheb-bende verrichte prestatie. In dit oordeel ligt besloten 's Hofs oordeel dat er een rechtstreeks verband bestaat tussen de bewilliging in de beëindiging van de onderhavige arbeids-overeenkomst en de betaling van de transfersom door C. Dit onderdeel geeft niet blijk van een onjuiste rechtsop-vatting en kan,</para>
+        <para>als verweven met waarderingen van feitelijke aard, voor het overige in</para>
+        <para>cassatie niet op zijn juistheid worden getoetst. Het behoefde ook geen nadere motivering dan door het Hof is gegeven. </para>
+        <para>Aan de juistheid van dit oordeel wordt niet afgedaan door de omstandigheid dat belanghebbende bij overgang van A naar een andere club na expiratie van de arbeidsovereenkomst ook aanspraak had kunnen maken op een vergoeding van die andere club. Middel I faalt derhalve. </para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>3.2.2. Het onder 3.2.1 overwogene is even-eens van toepassing</para>
+        <para>ten aanzien van de beslissing van het Hof omtrent de betaling wegens de transfer van B. </para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>3.3.	Het Hof is ervan uitgegaan dat de onderhavige door belanghebbende verrichte diensten, bestaande uit het bewilligen in de beëindiging van een ar-beidsovereenkomst in Nederland zijn verricht, nu in een geval als het onderhavige geen sprake is van een sportieve of soortge-lijke activiteit in de zin van artikel 6, lid 2, letter c, van de Wet op de omzetbelasting 1968, en dat, ook indien op grond van het bepaalde in artikel 9, lid 2, letter c, van de Zesde Richtlijn aangenomen zou dienen te worden dat bedoelde diensten wel onder de onderhavige categorie diensten zijn te rangschikken, die diensten in Nederland zouden zijn verricht omdat het bewilligen in de beeindiging van de arbeidsovereenkomst feitelijk in Nederland plaatsvindt. </para>
+        <para>Dit uitgangspunt geeft niet blijk van een onjuiste rechtsopvatting en kan als verweven met waarderingen van feitelijke aard voor het overige in cassatie niet op zijn juistheid worden getoetst. De in middel II aangevoerde stelling dat diensten die met sportieve prestaties samenhangen in de zin van artikel 9, lid 2, letter c, van de Zesde Richtlijn, in alle gevallen dienen te worden gelocaliseerd ter plaatse waar de sportieve prestaties worden verricht, vindt geen steun in die bepaling. </para>
+      </parablock>
+      <para/>
+      <para>3.4. De middelen kunnen derhalve niet tot cassatie leiden. </para>
+      <para> </para>
+      <para>4.	Beslissing </para>
+      <para/>
+      <parablock>
+        <para>De Hoge Raad verwerpt het beroep. </para>
+        <para>Dit arrest is gewezen door de vice-president R.J.J. Jansen als voorzitter, en de raadsheren  Van der Linde, Bellaart, De Moor en Van der Putt-Lauwers, in tegen-woordigheid van de waarnemend griffier Van Hooff, in raadkamer van 16 december 1992.</para>
+      </parablock>
+    </uitspraak>
+</open-rechtspraak>

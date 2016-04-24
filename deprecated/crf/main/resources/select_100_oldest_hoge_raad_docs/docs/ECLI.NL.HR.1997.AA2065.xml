@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:tr="http://tuchtrecht.overheid.nl/" xmlns:eu="http://publications.europa.eu/celex/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:HR:1997:AA2065</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2015-06-28T20:49:04</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">AA2065</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Hoge_Raad_der_Nederlanden" scheme="overheid.RechterlijkeMacht">Hoge Raad</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">1997-05-07</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">32408</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#cassatie">Cassatie</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht_belastingrecht">Bestuursrecht; Belastingrecht</dcterms:subject>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+          <rdf:li>BNB 1997/238 met annotatie door R.E.C.M. Niessen</rdf:li>
+          <rdf:li>WFR 1997/838</rdf:li>
+          <rdf:li>FED 1997/351</rdf:li>
+          <rdf:li>WFR 1997/838, 2</rdf:li>
+          <rdf:li>V-N 1997/1919, 12 met annotatie door Kluwer</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:HR:1997:AA2065">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:HR:1997:AA2065</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-04T15:38:36</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2001-07-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:HR:1997:AA2065 Hoge Raad , 07-05-1997 / 32408</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:HR:1997:AA2065:INH" lang="nl" xml:space="preserve">
+      <para>-</para>
+    </inhoudsindicatie>
+  <uitspraak xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:HR:1997:AA2065:DOC" lang="nl" xml:space="preserve">
+      <parablock>
+        <para>gewezen op het beroep in cassatie van X te Z tegen de uitspraak van het Gerechtshof te 's-Hertogenbosch van 9 mei 1996 betreffende de hem voor het jaar 1989 opgelegde aanslag in de inkomstenbelasting. </para>
+        <para>1. Aanslag, bezwaar en geding voor het Hof Aan belanghebbende is voor het jaar 1989 een aanslag in de inkomstenbelasting opgelegd naar een belastbaar inkomen van ƒ 163.293,--, welke aanslag, na daartegen gemaakt bezwaar, bij uitspraak van de Inspecteur is gehandhaafd. Belanghebbende is van de uitspraak van de Inspecteur in beroep gekomen bij het Hof. Het Hof heeft die uitspraak bevestigd. De uitspraak van het Hof is aan dit arrest gehecht. </para>
+        <para>2. Geding in cassatie Belanghebbende heeft tegen de uitspraak van het Hof beroep in cassatie ingesteld. Het beroepschrift in cassatie is aan dit arrest gehecht en maakt daarvan deel uit. De Staatssecretaris van Financiën heeft een vertoogschrift ingediend. </para>
+        <para>3. Beoordeling van de middelen 3.1. In cassatie kan van het volgende worden uitgegaan. Belanghebbende heeft bij akte van 16 januari 1989 ten behoeve van een besloten vennootschap een zakelijk recht van vruchtgebruik gevestigd op een stuk grond dat tot zijn privévermogen behoorde. In de akte is opgenomen dat het recht van vruchtgebruik gevestigd is voor een periode van dertig jaren en mede eindigt bij faillissement van de vennootschap, en indien de vennootschap surséance van betaling aanvraagt of wordt geliquideerd. De Inspecteur heeft de ter zake van de vestiging van het recht van vruchtgebruik ontvangen vergoeding belast als inkomsten uit vermogen. 3.2. Wil de vestiging van een zakelijk genotsrecht ten behoeve van een rechtspersoon in de onbelaste vermogenssfeer liggen, dan is, zoals het Hof terecht heeft overwogen, ten minste vereist dat de bij de overeenkomst van vestiging van het genotsrecht uitgedrukte tijdsduur van dat genotsrecht aansluit bij de voor een dergelijk genotsrecht ten behoeve van een rechtspersoon toegestane maximale termijn. Een beding, zoals hier aanwezig, dat een voor een termijn van dertig jaren gevestigd vruchtgebruik tevens eindigt bij faillissement of surséance van betaling van de vruchtgebruiker, is voor de tijdsduur van dat recht steeds van wezenlijke betekenis. De in dit geval overeengekomen tijdsduur sluit derhalve niet aan bij de wettelijk toegestane maximale termijn. Reeds hierom falen de middelen, die beide berusten op de opvatting dat niet reeds het enkele opnemen van het beding omtrent beëindiging in geval van faillissement of surséance van betaling beslissend is. </para>
+        <para>4. Proceskosten De Hoge Raad acht geen termen aanwezig voor een veroordeling in de proceskosten als bedoeld in artikel 5a van de Wet administratieve rechtspraak belastingzaken. </para>
+        <para>5. Beslissing De Hoge Raad verwerpt het beroep. </para>
+        <para>Dit arrest is op 7 mei 1997 vastgesteld door de vice-president Stoffer als voorzitter, en de raadsheren Urlings, Zuurmond, Fleers en Pos, in tegenwoordigheid van de waarnemend griffier Reijngoud, en op die datum in het openbaar uitgesproken.</para>
+      </parablock>
+    </uitspraak>
+</open-rechtspraak>
