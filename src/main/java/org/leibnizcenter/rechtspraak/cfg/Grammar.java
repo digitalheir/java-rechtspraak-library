@@ -49,7 +49,6 @@ import org.leibnizcenter.rechtspraak.cfg.rule.type.NonTerminal;
 import org.leibnizcenter.rechtspraak.cfg.rule.type.Terminal;
 import org.leibnizcenter.rechtspraak.cfg.rule.type.Type;
 import org.leibnizcenter.rechtspraak.util.Collections3;
-import org.leibnizcenter.rechtspraak.util.Pair;
 
 import java.util.*;
 import java.util.function.Consumer;
@@ -79,11 +78,11 @@ public class Grammar implements Iterable<Term> {
     /**
      * Maps from RHS to LHS -> RHS
      */
-    final Multimap<NonTerminal, Rule> unaryProductionRules;
+    final Map<NonTerminal, Set<Rule>> unaryProductionRules;
     /**
      * Maps from RHS to LHS -> RHS
      */
-    final Map<NonTerminal, Multimap<NonTerminal, Rule>> binaryProductionRules;
+    final Map<NonTerminal, Map<NonTerminal, Set<Rule>>> binaryProductionRules;
 
     public Grammar(
             NonTerminal start,
@@ -104,25 +103,33 @@ public class Grammar implements Iterable<Term> {
         return mmb.build();
     }
 
-    private static ImmutableMultimap<NonTerminal, Rule> getUnaryProductionRules(SortedSet<Rule> ruleSet) {
-        ImmutableMultimap.Builder<NonTerminal, Rule> mmb3 = new ImmutableMultimap.Builder<>();
+    private static Map<NonTerminal, Set<Rule>> getUnaryProductionRules(SortedSet<Rule> ruleSet) {
+        Map<NonTerminal, Set<Rule>> mmb3 = new HashMap<>(ruleSet.size());
         ruleSet.stream()
                 .filter(Rule::isUnaryProduction)
-                .forEach((r) -> mmb3.put((NonTerminal) r.getRHS().get(0), r));
-        return mmb3.build();
+                .forEach((r) -> {
+                            NonTerminal rhs = (NonTerminal) r.getRHS().get(0);
+                            Set<Rule> set = mmb3.getOrDefault(rhs, new HashSet<>());
+                            set.add(r);
+                            if (!mmb3.containsKey(rhs)) mmb3.put(rhs, set);
+                        }
+                );
+        return mmb3;
     }
 
-    private static Map<NonTerminal, Multimap<NonTerminal, Rule>> getBinaryProductionRules(SortedSet<Rule> ruleSet) {
-        Map<NonTerminal, Multimap<NonTerminal, Rule>> BtoCtoRules = new HashMap<>(ruleSet.size());
+    private static Map<NonTerminal, Map<NonTerminal, Set<Rule>>> getBinaryProductionRules(SortedSet<Rule> ruleSet) {
+        Map<NonTerminal, Map<NonTerminal, Set<Rule>>> BtoCtoRules = new HashMap<>(ruleSet.size());
 
         ruleSet.stream()
                 .filter(Rule::isBinaryProduction)
                 .forEach((r) -> {
                     @NotNull NonTerminal B = (NonTerminal) r.getRHS().get(0);
                     @NotNull NonTerminal C = (NonTerminal) r.getRHS().get(1);
-                    Multimap<NonTerminal, Rule> CtoRules = BtoCtoRules.getOrDefault(B, ArrayListMultimap.create());
-                    CtoRules.put(C, r);
-                    BtoCtoRules.put(B, CtoRules);
+                    Map<NonTerminal, Set<Rule>> CtoRules = BtoCtoRules.getOrDefault(B, new HashMap<>());
+                    Set<Rule> rules = CtoRules.getOrDefault(C, new HashSet<>());
+                    rules.add(r);
+                    if (!CtoRules.containsKey(C)) CtoRules.put(C, rules);
+                    if (!BtoCtoRules.containsKey(B)) BtoCtoRules.put(B, CtoRules);
                 });
         return BtoCtoRules;
     }
@@ -584,8 +591,8 @@ public class Grammar implements Iterable<Term> {
             if (r.getRHS().containsAny(nullables)) {
                 newRules.addAll(r.getRHS()
                         .enumerateWaysToOmit(nullables).stream().map(rhs -> new Rule(r.getLHS(), rhs,
-                        r.getPriorProbability()//TODO probability applied
-                )).collect(Collectors.toSet()));
+                                r.getPriorProbability()//TODO probability applied
+                        )).collect(Collectors.toSet()));
             }
         });
         return newRules;
@@ -779,9 +786,15 @@ public class Grammar implements Iterable<Term> {
     }
 
     public Collection<Rule> getBinaryProductionRules(NonTerminal B, NonTerminal C) {
-        Multimap<NonTerminal, Rule> fromCtoRules = binaryProductionRules.get(B);
+        Map<NonTerminal, Set<Rule>> fromCtoRules = binaryProductionRules.get(B);
         if (fromCtoRules == null) return Collections.emptySet();
-        return fromCtoRules.get(C);
+        Set<Rule> rules = fromCtoRules.get(C);
+        return rules == null ? Collections.emptySet() : rules;
+    }
+
+    public Set<Rule> getUnaryProductionRules(NonTerminal key) {
+        Set<Rule> v = unaryProductionRules.get(key);
+        return v != null ? v : Collections.emptySet();
     }
 
     // TODO return term with probability

@@ -102,9 +102,8 @@ public class CYK {
                                            Grammar grammar,
                                            MutableMatrix<Map<NonTerminal, ParseTreeContainer>> builder) {
         for (int span = 2; span <= words.size(); span++) {
-            int numberOfSpans  = words.size()-span+1;
-            int numberOfSplits  = span-1;
-            System.out.println(span + " / " + words.size() + " : "+(numberOfSpans*numberOfSplits));
+            int numberOfSpans = words.size() - span + 1;
+            System.out.println(span + " / " + words.size() + " : " + numberOfSpans);
             for (int begin = 0; begin <= words.size() - span; begin++) { // first word
                 int end = begin + span; // exclusive end
                 Map<NonTerminal, ParseTreeContainer> cell = new HashMap<>(grammar.variableSet.size());
@@ -141,23 +140,50 @@ public class CYK {
         boolean added;
         do {
             added = false;
+            Map<NonTerminal, ParseTreeContainer> toAdd = null;
+
             Set<Map.Entry<NonTerminal, ParseTreeContainer>> entries = map.entrySet();
-            Collection<ParseTreeContainer> toAdd = new ArrayList<>(entries.size());
-
-
             // Find all applicable unary rules
             for (Map.Entry<NonTerminal, ParseTreeContainer> B : entries) {
-                toAdd.addAll(
-                        grammar.unaryProductionRules.get(B.getKey()).stream()
-                                .map(r -> new ParseTreeContainer(r, B.getValue()))
-                                .collect(Collectors.toList())
-                );
+                Set<Rule> unaryProductionRules = grammar.getUnaryProductionRules(B.getKey());
+                //noinspection Convert2streamapi
+                for (Rule r : unaryProductionRules) {
+                    if (isBiggerThanExisting(map, toAdd, B.getValue(), r)) {
+                        toAdd = toAdd == null ? new HashMap<>(entries.size()) : toAdd; // init if necessary
+                        toAdd.put(B.getKey(), new ParseTreeContainer(r, B.getValue()));
+                    }
+                }
             }
 
             // See if we can add the results
-            for (ParseTreeContainer ptc : toAdd) if (addScore(map, ptc)) added = true;
-
+            if (toAdd != null) {
+                if (toAdd.values().size() > 0) added = true;
+                for (ParseTreeContainer ptc : toAdd.values()) map.put(ptc.getResult(), ptc);
+            }
         } while (added);
+    }
+
+    private static boolean isBiggerThanExisting(
+            Map<NonTerminal, ParseTreeContainer> map1,
+            Map<NonTerminal, ParseTreeContainer> map2,
+            ParseTreeContainer candidate,
+            Rule r) {
+        double logProb = r.getLogProbability(candidate);
+
+        if (map2 != null) {
+            ParseTreeContainer inMap2 = map2.get(r.getLHS());
+            if (inMap2 != null && Double.compare(logProb, inMap2.logProbability) <= 0) {
+                return false;
+            }
+        }
+
+        if (map1 != null) {
+            ParseTreeContainer inMap1 = map1.get(r.getLHS());
+            if (inMap1 != null && Double.compare(logProb, inMap1.logProbability) <= 0) {
+                return false;
+            }
+        }
+        return true;
     }
 
     public static ParseTreeContainer getBestParseTree(List<Terminal> words, Grammar dg) {
@@ -217,6 +243,10 @@ public class CYK {
                     && inputs.equals(that.inputs)
                     && rule.equals(that.rule);
 
+        }
+
+        public List<TypeContainer> getInputs() {
+            return inputs;
         }
 
         @Override

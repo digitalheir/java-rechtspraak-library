@@ -3,6 +3,7 @@ package org.leibnizcenter.rechtspraak.enricher;
 import cc.mallet.fst.CRF;
 import org.leibnizcenter.rechtspraak.cfg.CYK;
 import org.leibnizcenter.rechtspraak.cfg.Grammar;
+import org.leibnizcenter.rechtspraak.cfg.rule.TypeContainer;
 import org.leibnizcenter.rechtspraak.cfg.rule.type.Terminal;
 import org.leibnizcenter.rechtspraak.crf.ApplyCrf;
 import org.leibnizcenter.rechtspraak.enricher.mostlikelytreefromlist.ExhaustiveMostLikelyTreeFromList;
@@ -60,15 +61,17 @@ public class Enrich {
         List<Label> tags = DeterministicTagger.tag(tokenList);
 
         // Make sectioning tree if there is no section tag already
-        if (!Xml.containsTag(contentRoot, "section")) {
-            Grammar dg=new DocumentGrammar();
-            List<Terminal> words = new ArrayList<>(tags.size());
-            for (int i = 0; i < tags.size(); i++) {
-                words.add(new Terminal(tags.get(i), tokenList.get(i)));
-            }
-            CYK.ParseTreeContainer bestParseTree = CYK.getBestParseTree(words, dg);
-            setNewXmlStructure(bestParseTree, contentRoot);
+//        if (!Xml.containsTag(contentRoot, "section")) {
+        Grammar dg = new DocumentGrammar();
+        List<Terminal> words = new ArrayList<>(tags.size());
+        for (int i = 0; i < tags.size(); i++) {
+            words.add(new Terminal(tags.get(i), tokenList.get(i)));
         }
+        CYK.ParseTreeContainer bestParseTree = CYK.getBestParseTree(words, dg);
+        if (bestParseTree == null)
+            throw new NullPointerException();
+        setNewXmlStructure(bestParseTree, contentRoot);
+//        }
 
         // Set tag values on elements (we can do this another way)
         Collections3.zip(tokenList.stream(), tags.stream()).forEach(pair -> {
@@ -83,7 +86,7 @@ public class Enrich {
                         element = Xml.setElementNameTo(element, null, "nr");
                         break;
                     case SECTION_TITLE:
-                        element = Xml.setElementNameTo(element, null, "title");
+                        element = Xml.setElementNameTo(element, null, "text");
                         break;
                     case TEXT_BLOCK:
                         switch (element.getTagName()) {
@@ -114,28 +117,34 @@ public class Enrich {
      * @param tree
      */
     private void setNewXmlStructure(CYK.ParseTreeContainer tree, Element contentRoot) {
-        // TODO less destructive XML change
-//        for (Node n : Xml.getChildren(contentRoot)) contentRoot.removeChild(n);
-//
-//        for (int i = 0; i < tree.getChildren().size(); i++) {
-//            contentRoot.appendChild(recursiveCreateXml(tree.getChildren().get(i), contentRoot.getOwnerDocument()));
-//        }
+//        for (Node n : Xml.getChildren(contentRoot))
+//            contentRoot.removeChild(n);
+        Element newContentRoot = contentRoot.getOwnerDocument().createElement(contentRoot.getTagName());
+        Xml.copyAttributes(contentRoot, newContentRoot);
+        recursiveCreateXml(tree, newContentRoot);
+        contentRoot.getParentNode().replaceChild(newContentRoot, contentRoot);
     }
 
-    private Node recursiveCreateXml(ImmutableTree root, Document ownerDocument) {
-        if (root instanceof NamedImmutableTree) {
-            Element newElement = ownerDocument.createElement(((NamedImmutableTree) root).getName());
-            if (!Collections3.isNullOrEmpty(root.getChildren()))
-                for (int i = 0; i < root.getChildren().size(); i++) {
-                    ImmutableTree child = root.getChildren().get(i);
-                    if (child instanceof LabeledTokenNode)
-                        appendPrevSiblings(newElement, ((LabeledTokenNode) child).token.getToken().getNode());
-                    newElement.appendChild(recursiveCreateXml(child, ownerDocument));
-                }
-            return newElement;
-        } else if (root instanceof LabeledTokenNode) {
-            return ((LabeledTokenNode) root).token.getToken().getNode();
-        } else throw new InvalidParameterException();
+    private void recursiveCreateXml(TypeContainer root, Node addTo) {
+        if (root instanceof CYK.ParseTreeContainer) {
+            if (root.getType().equals(DocumentGrammar.SECTION)) {
+                Element newElement = addTo.getOwnerDocument().createElement("section");
+                addTo.appendChild(newElement);
+                addTo = newElement;
+            } else if (root.getType().equals(DocumentGrammar.SECTION_TITLE)) {
+                Element newElement = addTo.getOwnerDocument().createElement("title");
+                addTo.appendChild(newElement);
+                addTo = newElement;
+            }
+            for (TypeContainer inp : ((CYK.ParseTreeContainer) root).getInputs()) {
+                recursiveCreateXml(inp, addTo);
+            }
+        } else if (root instanceof Terminal) {
+            TokenTreeLeaf data = (TokenTreeLeaf) ((Terminal) root).getData();
+            if (data == null) throw new NullPointerException();
+            addTo.appendChild(data.getNode());
+        } else
+            throw new InvalidParameterException();
     }
 
     /**

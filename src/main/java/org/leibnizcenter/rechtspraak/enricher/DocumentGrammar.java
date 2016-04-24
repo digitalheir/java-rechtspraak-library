@@ -15,17 +15,17 @@ import java.util.Collection;
  * Created by maarten on 19-4-16.
  */
 public class DocumentGrammar extends Grammar {
-    private static final NonTerminal DOCUMENT = new NonTerminal("#root");
-    private static final NonTerminal SECTIONS = new NonTerminal("Sections");
-    private static final NonTerminal DOCUMENT_CONTENT = new NonTerminal("Content");
-    private static final NonTerminal HEADER = new NonTerminal("Header");
-    private static final NonTerminal SECTION = new NonTerminal("Section");
-    private static final NonTerminal SECTION_TITLE = new NonTerminal("SectionTitle");
-    private static final NonTerminal SECTION_CONTENT = new NonTerminal("SectionContent");
-    private static final NonTerminal TEXT_BLOB = new NonTerminal("Text");
-    private static final NonTerminal SECTION_TITLE_TEXT = new NonTerminal("SECTION_TITLE_TEXT");
-    private static final NonTerminal SINGLE_TITLE_TEXT = new NonTerminal("SINGLE_TITLE_TEXT");
-    private static final NonTerminal SINGLE_NUMBERING = new NonTerminal("SINGLE_NUMBERING");
+    public static final NonTerminal DOCUMENT = new NonTerminal("#root");
+    public static final NonTerminal SECTIONS = new NonTerminal("Sections");
+    public static final NonTerminal DOCUMENT_CONTENT = new NonTerminal("Content");
+    public static final NonTerminal HEADER = new NonTerminal("Header");
+    public static final NonTerminal SECTION = new NonTerminal("Section");
+    public static final NonTerminal SECTION_TITLE = new NonTerminal("SectionTitle");
+    public static final NonTerminal SECTION_CONTENT = new NonTerminal("SectionContent");
+    public static final NonTerminal TEXT_BLOB = new NonTerminal("Text");
+    public static final NonTerminal SECTION_TITLE_TEXT = new NonTerminal("SECTION_TITLE_TEXT");
+    public static final NonTerminal SINGLE_TITLE_TEXT = new NonTerminal("SINGLE_TITLE_TEXT");
+    public static final NonTerminal SINGLE_NUMBERING = new NonTerminal("SINGLE_NUMBERING");
 //    private static final NonTerminal SECTIONS_POSSIBLY_FOLLOWED_BY_TEXT = new NonTerminal("SECTIONS_POSSIBLY_FOLLOWED_BY_TEXT");
 
 

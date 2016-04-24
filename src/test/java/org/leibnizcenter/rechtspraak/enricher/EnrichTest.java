@@ -24,7 +24,8 @@ public class EnrichTest {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
 
-        InputStream is = XmlTest.class.getResourceAsStream("/docs/ECLI.NL.RVS.2015.3394.xml");
+//        InputStream is = XmlTest.class.getResourceAsStream("/docs/ECLI.NL.RVS.2015.3394.xml");
+        InputStream is = XmlTest.class.getResourceAsStream("/docs/ECLI.NL.CBB.2013.345.xml");
         Document doc = builder.parse(new InputSource(new InputStreamReader(is)));
 
         new Enrich().enrich("someecli", doc);

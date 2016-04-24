@@ -38,7 +38,7 @@ public abstract class RechtspraakElement extends org.leibnizcenter.rechtspraak.t
 
     @Override
     public String getAttribute(String name) {
-        return e.getAttribute(name);
+        return ((Element)getNode()).getAttribute(name);
     }
 
     @Override
