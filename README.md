@@ -25,5 +25,9 @@ or Gradle:
 compile 'org.leibnizcenter:rechtspraak:1.3.1'
 ```
 
+## Requirements
+Versions 1.X require Java 7
+Versions 2.X require Java 8
+
 ## More
 Inquiries go to m.f.a.trompper@uva.nl.
