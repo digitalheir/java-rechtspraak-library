@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:eu="http://publications.europa.eu/celex/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:tr="http://tuchtrecht.overheid.nl/">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:RBSGR:2012:BX2021</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2014-04-13T14:06:15</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-05</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">BX2021</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Rechtbank_s-Gravenhage" scheme="overheid.RechterlijkeMacht">Rechtbank 's-Gravenhage</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">2012-07-06</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">414505 - HA RK 12-123</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#eersteAanlegEnkelvoudig">Eerste aanleg - enkelvoudig</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:spatial rdfs:label="Zittingsplaats">'s-Gravenhage</dcterms:spatial>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#civielRecht">Civiel recht</dcterms:subject>
+      <dcterms:references bwb:resourceIdentifier="1.0:v:BWB:BWBR0005289" rdfs:label="Wetsverwijzing">Burgerlijk Wetboek Boek 6</dcterms:references>
+      <dcterms:references bwb:resourceIdentifier="1.0:v:BWB:BWBR0005289&amp;artikel=100" rdfs:label="Wetsverwijzing">Burgerlijk Wetboek Boek 6 100</dcterms:references>
+      <dcterms:references bwb:resourceIdentifier="1.0:v:BWB:BWBR0005289&amp;artikel=101" rdfs:label="Wetsverwijzing">Burgerlijk Wetboek Boek 6 101</dcterms:references>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+          <rdf:li>JA 2012/183 met annotatie door L. Stevens en M. Verheijden</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBSGR:2012:BX2021">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBSGR:2012:BX2021</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-05T10:31:16</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2012-07-18</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:RBSGR:2012:BX2021 Rechtbank 's-Gravenhage , 06-07-2012 / 414505 - HA RK 12-123</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie id="ECLI:NL:RBSGR:2012:BX2021:INH" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <para>Letselschade. Deelgeschilprocedure. AOV: schade- of sommenverzekering, wel of geen verrekening.</para>
+    </inhoudsindicatie>
+  <uitspraak id="ECLI:NL:RBSGR:2012:BX2021:DOC" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">beschikking</para>
+        <para manualAnnotation="TEXT_BLOCK">RECHTBANK 'S-GRAVENHAGE</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Sector civiel recht</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">zaaknummer / rekestnummer: 414505 / HA RK 12-123</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Beschikking van 6 juli 2012</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">in de zaak van</para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">[verzoekster],</para>
+        <para manualAnnotation="TEXT_BLOCK">wonende te [woonplaats],</para>
+        <para manualAnnotation="TEXT_BLOCK">verzoekster,</para>
+        <para manualAnnotation="TEXT_BLOCK">advocaat mr. H.A.M. van den Berg-Van den Berg te Rotterdam,</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">tegen</para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">1.</potentialnr><text manualAnnotation="TEXT_BLOCK">[verweerder sub 1],</text></para>
+        <para manualAnnotation="TEXT_BLOCK">wonende te [woonplaats],</para>
+        <para><potentialnr manualAnnotation="NR">2.</potentialnr><text manualAnnotation="TEXT_BLOCK">de naamloze vennootschap </text></para>
+        <para manualAnnotation="TEXT_BLOCK">ACHMEA SCHADEVERZEKERING N.V.,</para>
+        <para manualAnnotation="TEXT_BLOCK">gevestigd te Apeldoorn,</para>
+        <para manualAnnotation="TEXT_BLOCK">verweerders,</para>
+        <para manualAnnotation="TEXT_BLOCK">advocaat mr. M.T. Spronck te Apeldoorn.</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Verzoekster wordt hierna "[verzoekster]" genoemd. Verweerders worden hierna afzonderlijk "[verweerder sub 1]" en "Achmea" genoemd en gezamenlijk "verweerders".</para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">1.</potentialnr><text manualAnnotation="SECTION_TITLE">De procedure</text></para>
+        <para manualAnnotation="TEXT_BLOCK">Het verloop van de procedure blijkt uit:</para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> het verzoekschrift, ter griffie ingekomen op 5 maart 2012, met vijf producties;</text></para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> het verweerschrift, met vier producties;</text></para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> het proces-verbaal van de mondelinge behandeling van 25 mei 2012.</text></para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">1.1.</potentialnr><text manualAnnotation="TEXT_BLOCK">Ten slotte is een datum voor beschikking bepaald.</text></para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">2.</potentialnr><text manualAnnotation="SECTION_TITLE">De feiten</text></para>
+        <para><potentialnr manualAnnotation="NR">2.1.</potentialnr><text manualAnnotation="TEXT_BLOCK">[verzoekster] is sedert 1997 zelfstandig onderneemster en werkte als interim-manager/consultant finance. In verband daarmee heeft zij in 1997 bij De Goudse Verzekering Maatschappij (hierna: "De Goudse") een particuliere arbeidsongeschiktheidsverzekering (hierna: "AOV") afgesloten op basis van een bij de aanvang van de AOV overeengekomen verzekerde jaarrente.</text></para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.2.</potentialnr><text manualAnnotation="TEXT_BLOCK">[verzoekster] is op 21 maart 2009 als bestuurder van een motor in aanrijding gekomen met [verweerder sub 1], die op een fiets reed (hierna: "het ongeval"). Ten gevolge van het ongeval heeft [verzoekster] blijvende lichamelijke schade en mogelijk blijvend psychisch letsel opgelopen. Sedert het ongeval is [verzoekster] volledig arbeidsongeschikt voor haar eigen functie van interim-manager.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.3.</potentialnr><text manualAnnotation="TEXT_BLOCK">Sinds het ongeval beschouwt De Goudse [verzoekster] als volledig (80-100%) arbeidsongeschikt en keer zij conform artikel 3 van de polisvoorwaarden behorende bij de AOV in maandelijkse termijnen de verzekerde uitkering van 100% aan [verzoekster] uit.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.4.</potentialnr><text manualAnnotation="TEXT_BLOCK">Achmea, de particuliere aansprakelijkheidsverzekeraar van [verweerder sub 1], heeft voor 75% aansprakelijkheid erkend voor de schade die [verzoekster] ten gevolge van het ongeval heeft geleden. [verzoekster] heeft ingestemd met een eigen schuld percentage van 25%.</text></para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">3.</potentialnr><text manualAnnotation="SECTION_TITLE">Het geschil</text></para>
+        <para><potentialnr manualAnnotation="NR">3.1.</potentialnr><text manualAnnotation="TEXT_BLOCK">[verzoekster] verzoekt - zakelijk weergegeven en na aanvulling van het verzoek ter zitting - bij wijze van deelgeschil ex artikel 1019w-1019cc van het Wetboek van Burgerlijke Rechtsvordering (hierna: "Rv"):</text></para>
+        <para><potentialnr manualAnnotation="NR">i.</potentialnr><text manualAnnotation="TEXT_BLOCK">voor recht te verklaren dat de AOV een sommenverzekering is, zoals bedoeld in artikel 7:964 BW);</text></para>
+        <para><potentialnr manualAnnotation="NR">ii.</potentialnr><text manualAnnotation="TEXT_BLOCK">primair: voor recht te verklaren dat de uitkeringspenningen uit hoofde van de AOV niet (ex artikel 6:100 BW) als voordeel dienen te worden toegerekend c.q. niet in mindering dienen te worden gebracht bij de vaststelling van het verlies aan arbeidsvermogen van [verzoekster];</text></para>
+        <para><potentialnr manualAnnotation="NR">iii.</potentialnr><text manualAnnotation="TEXT_BLOCK">subsidiair, voor het geval verrekening is toegestaan: voor recht te verklaren dat 25% van de uitkeringspenningen uit hoofde van de AOV niet (ex artikel 6:100 BW) als voordeel mogen worden verrekend; </text></para>
+        <para><potentialnr manualAnnotation="NR">iv.</potentialnr><text manualAnnotation="TEXT_BLOCK">begroting van de proceskosten en hoofdelijke veroordeling van verweerders tot betaling daarvan.</text></para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">3.2.</potentialnr><text manualAnnotation="TEXT_BLOCK">[verzoekster] legt aan haar verzoek ten grondslag dat de tussen haar en De Goudse gesloten AOV een sommenverzekering is, zodat op grond van de geldende jurisprudentie in het onderhavige geval geen plaats is voor verrekening van de uitkeringspenningen uit hoofde van de AOV met de schadepost verlies aan arbeidsvermogen, waar [verweerder sub 1] aansprakelijk voor is. Het verzoek richt zich tevens jegens Achmea omdat zij Achmea op grond van de directe actie van artikel 7:942 BW tot vergoeding van haar geleden schade aanspreekt. Subsidiair, voor het geval verrekening van het genoten voordeel, is [verzoekster] van oordeel dat in verband met het eigen schuld percentage 25% van de uitkeringspenningen niet als voordeel mag worden verrekend.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">3.3.</potentialnr><text manualAnnotation="TEXT_BLOCK">Verweerders voeren verweer. Op de stellingen van partijen wordt hierna, voor zover van belang, nader ingegaan.</text></para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">4.</potentialnr><text manualAnnotation="SECTION_TITLE">De beoordeling</text></para>
+        <para manualAnnotation="SECTION_TITLE">Behandeling van de zaak in een deelgeschilprocedure</para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.1.</potentialnr><text manualAnnotation="TEXT_BLOCK">In de eerste plaats dient te worden beoordeeld of het verzoek zich leent voor behandeling in een deelgeschilprocedure ex artikel 1019w-1019cc Rv.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.2.</potentialnr><text manualAnnotation="TEXT_BLOCK">Verweerders erkennen dat onderhavige verzoeken in een deelgeschilprocedure aan de orde kunnen komen. Zij betogen echter dat de in het verzoekschrift aan de orde gestelde rechtsvragen en de in rechte te verstrekken antwoorden daarop, een groot belang hebben, niet alleen voor de onderhavige zaak maar ook voor andere letselschadezaken waarin de vraag naar verrekening van uitkeringen uit hoofde van arbeidsongeschiktheidsverzekeringen een rol speelt. Volgens verweerders is sprake van een principiële zaak met een dossieroverschrijdend karakter. Dat leidt er volgens verweerders toe dat - ongeacht de beslissing op het verzoek - een der partijen zal doorprocederen teneinde een uitspraak van het gerechtshof te verkrijgen. Volgens verweerders lenen de rechtsvragen die aan de orde zijn zich meer voor behandeling in een bodemprocedure.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.3.</potentialnr><text manualAnnotation="TEXT_BLOCK">De rechtbank is van oordeel dat het onderhavige geschil zich leent voor behandeling in een deelgeschil. Uit de Parlementaire Geschiedenis blijkt in het geheel niet dat beperkingen worden gesteld aan de in een deelgeschil aan de orde te stellen rechtsvragen, of dat bij de beoordeling van de vraag of een zaak zich leent voor een deelgeschil rekening dient te worden gehouden met de mogelijke gevolgen van de uitspraak voor andere geschillen. De door verweerders geuite vrees dat naar aanleiding van de beslissing in deelgeschil zal worden doorgeprocedeerd, is blijkens de Parlementaire Geschiedenis evenmin een omstandigheid die een rol van betekenis speelt bij de beoordeling van de vraag of een zaak zich leent voor behandeling in deelgeschil. De rechtbank komt aldus toe aan een inhoudelijke beoordeling van het geschil.</text></para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="SECTION_TITLE">AOV: schade- of sommenverzekering</para>
+        <para><potentialnr manualAnnotation="NR">4.4.</potentialnr><text manualAnnotation="TEXT_BLOCK">Partijen verschillen van mening over de vraag of de AOV een schade- of een sommenverzekering is. Omdat dit onderscheid gevolgen heeft voor de mogelijkheden van verrekening alsmede voor de omvang van de verrekening, zal de rechtbank eerst beoordelen of de AOV een schade- of een sommenverzekering is. </text></para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.5.</potentialnr><text manualAnnotation="TEXT_BLOCK">De rechtbank stelt voorop dat de Hoge Raad in zijn arrest van 3 oktober 2008 (LJN: BD5828) onder verwijzing naar de Parlementaire Geschiedenis bij artikel 7:925 lid 2 BW tot uitgangspunt heeft genomen dat een particuliere arbeidsongeschiktheidsverzekering in het algemeen een sommenverzekering is. Naar het oordeel van de rechtbank is daarmee het onder het oude verzekeringsrecht gewezen arrest van de Hoge Raad van 6 juni 2003 (LJN: AF6203) achterhaald. Doorslaggevend voor het onderscheid tussen een schade- en een sommenverzekering bij de arbeidsongeschiktheidsverzekering is of het inkomen zowel bij de totstandkoming van de verzekering als bij het bepalen van de hoogte van de uitkering een rol heeft gespeeld, in welk geval er een koppeling bestaat tussen de daadwerkelijk geleden schade en de hoogte van de uitkering. Is dit het geval, dan is sprake van een schadeverzekering. Indien het inkomen echter uitsluitend bij de totstandkoming van de verzekering een rol speelt, en nadien niet meer, noch bij de eventuele aanpassing van de verzekerde jaarschades, noch bij de vaststelling van de hoogte van de daadwerkelijk te verlenen uitkering, is sprake van een sommenverzekering. Het doel waarmee de arbeidsongeschiktheidsverzekering wordt gesloten is derhalve niet maatgevend.  </text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.6.</potentialnr><text manualAnnotation="TEXT_BLOCK">De rechtbank zal dan ook beoordelen of ná het sluiten van de AOV het daadwerkelijk door [verzoekster] genoten inkomen nog een rol van betekenis heeft gespeeld bij het bepalen van de hoogte van de uitkering. Naar het oordeel van de rechtbank is dit niet het geval. In de polisvoorwaarden ontbreken bepalingen die de hoogte van de bij arbeidsongeschiktheid te ontvangen uitkering afhankelijk maken van het inkomen dat [verzoekster] op dat moment geniet. Zo was [verzoekster] na het sluiten van de AOV, zoals zij onbestreden heeft gesteld en ook uit de polisvoorwaarden blijkt, niet gehouden om De Goudse te voorzien van inkomensgegevens en bepalen de polisvoorwaarden evenmin dat op de hoogte van de uitkering een correctie kan worden toegepast wanneer de uitkering hoger is dan het daadwerkelijk genoten inkomen.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.7.</potentialnr><text manualAnnotation="TEXT_BLOCK">Voor het onderscheid is, gezien het voorgaande en in tegenstelling tot hetgeen verweerders betogen, niet relevant of in de polisvoorwaarden de gebruikelijke bepaling is opgenomen dat de verzekering ten doel heeft uitkering te verlenen bij derving van inkomen door de verzekerde ten gevolge van zijn arbeidsongeschiktheid (artikel 2 van de bij de AOV behorende polisvoorwaarden). De omvang van de AOV is in de polisvoorwaarden immers uitsluitend gekoppeld aan de mate van arbeidsongeschiktheid (artikel 16) en niet aan de hoogte van de inkomensderving. </text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.8.</potentialnr><text manualAnnotation="TEXT_BLOCK">Nu de AOV, gezien al het voorgaande, een sommenverzekering is, dient te worden beoordeeld of de uitkering uit hoofde van de AOV wel of niet in mindering mag komen op de aan [verzoekster] toekomende schadevergoeding.</text></para>
+      <para/>
+      <para manualAnnotation="SECTION_TITLE">Wel of geen verrekening</para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.9.</potentialnr><text manualAnnotation="TEXT_BLOCK">Uit het arrest van de Hoge Raad van 1 oktober 2010 (LJN: BM7808) komt naar voren dat verrekening in het algemeen aan de orde kan zijn wanneer dezelfde schade wordt vergoed, als die waarvoor de partij die zich op de voordeelstoerekening beroept, aansprakelijk is. Terughoudendheid dient alleen te worden betracht in gevallen waarin schade is verzekerd, die rechtens of in de praktijk niet voor volledige vergoeding in aanmerking komt. </text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.10.</potentialnr><text manualAnnotation="TEXT_BLOCK">De rechtbank is van oordeel dat de uitkering uit hoofde van de AOV strekt tot vergoeding van inkomensschade. Zoals uit artikel 2 van de polisvoorwaarden blijkt, is het doel van de uitkering de vergoeding van derving van inkomen door [verzoekster] ten gevolge van haar arbeidsongeschiktheid. Derving van inkomen is schade die rechtens voor volledige vergoeding in aanmerking komt en derhalve geen componenten bevat die pleiten voor terughoudendheid in het kader van de verrekening. Bovendien is [verweerder sub 1] gehouden tot vergoeding van (75%) van de inkomensschade van [verzoekster], zodat de uitkering strekt tot vergoeding van dezelfde schade als die waarvoor [verweerder sub 1] aansprakelijk is en Achmea op grond van artikel 7:942 BW tot vergoeding gehouden is. Op grond van voornoemd arrest van de Hoge Raad dient de rechtbank voor iedere schadepost afzonderlijk te beoordelen of verrekening met het genoten voordeel redelijk is. In het onderhavige geval heeft de uitkering betrekking op de schadepost "verlies aan inkomen".</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.11.</potentialnr><text manualAnnotation="TEXT_BLOCK">Nu aan de randvoorwaarden voor verrekening is voldaan, dient te worden beoordeeld of de onderhavige uitkering voor verrekening met de door [verweerder sub 1] en Achmea te vergoeden schade in aanmerking komt, waarbij de rechtbank eerdergenoemd arrest van de Hoge Raad tot uitgangspunt neemt. Daarbij stelt de rechtbank voorop dat in het onderhavige geval sprake is van een arbeidsongeschiktheidsverzekering, terwijl in het door de Hoge Raad gewezen arrest een collectief afgesloten ongevallenverzekering aan de orde was, die een eenmalige uitkering bood ingeval van blijvende invaliditeit als gevolg van een ongeval.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.12.</potentialnr><text manualAnnotation="TEXT_BLOCK">De rechtbank is - anders dan [verzoekster] - van oordeel dat het in het onderhavige geval redelijk is om tot verrekening over te gaan. De rechtbank neemt daarbij in overweging dat sprake is van een arbeidsongeschiktheidsverzekering die voorziet in een periodieke uitkering die strekt tot vergoeding van inkomensschade van [verzoekster], welke inkomensschade in het onderhavige geval ook daadwerkelijk door [verzoekster] is geleden. Tevens hecht de rechtbank belang aan het feit dat de wetgever bij de beantwoording van de vraag of verrekening op zijn plaats is als een factor van bijzonder gewicht heeft aangemerkt de mate waarin de betrokken sommenverzekering voorziet in een periodieke uitkering ter compensatie van inkomstenderving (zie concl. A-G Wuisman bij voornoemd arrest van de Hoge Raad, onder 2.2.3 en 2.2.4. en de aldaar genoemde Parlementaire Geschiedenis).</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.13.</potentialnr><text manualAnnotation="TEXT_BLOCK">In het licht van het voorgaande leggen de door [verzoekster] aangevoerde en aan voornoemde uitspraak van de Hoge Raad ontleende omstandigheden dat (i) [verzoekster] zelf de AOV heeft gesloten en betaald, (ii) de in het geding zijnde aansprakelijkheid is gedekt door een verzekering van de aansprakelijke partij en (iii) sprake is van een ernstige mate van schuld (75%), onvoldoende gewicht in de schaal om tot een ander oordeel te komen. </text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.13.</potentialnr><text manualAnnotation="TEXT_BLOCK">Het betoog van [verzoekster] dat zij vanwege het eigen schuld percentage van 25% niet daadwerkelijk voordeel heeft genoten omdat zij in verband met de schadepost immateriële schade niet volledig zal worden gecompenseerd, faalt nu, zoals hiervoor reeds is overwogen, per schadepost dient te worden beoordeeld of verrekening van het genoten voordeel redelijk is. Nu de uitkeringen uitsluitend betrekking hebben op de schadepost "verlies aan inkomen", strekt het voordeel niet (mede) tot vergoeding van immateriële schade die niet voor volledige vergoeding in aanmerking komt.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.14.</potentialnr><text manualAnnotation="TEXT_BLOCK">Nu de rechtbank van oordeel is dat de uitkeringen die [verzoekster] ontvangt uit hoofde van de AOV voor verrekening met de schadevergoeding die verweerders aan [verzoekster] dienen te betalen in aanmerking komen, zal de rechtbank het (primaire) verzoek van [verzoekster] om te verklaren voor recht dat de uitkeringspenningen uit hoofde van de AOV niet als voordeel dienen te worden toegerekend c.q. niet in mindering dienen te worden gebracht bij de vaststelling van haar verlies aan arbeidsvermogen afwijzen.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.15.</potentialnr><text manualAnnotation="TEXT_BLOCK">Subsidiair, voor het geval de rechtbank zou oordelen dat de uitkeringen voor verrekening in aanmerking komen, heeft [verzoekster] verzocht om een verklaring voor recht dat 25% van de uitkeringen aan haar dient toe te komen in verband met de door verweerders niet te vergoeden inkomensschade. Verweerders hebben in dit verband betoogd dat 100% van de uitkeringen dient te worden verrekend, omdat uitgangspunt hoort te zijn dat op de schade eerst in mindering wordt gebracht het voordeel als bedoeld in artikel 6:100 BW (de uitkeringen uit hoofde van de AOV) en vervolgens (op het restant) het deel van de schade dat [verzoekster] wegens eigen schuld als bedoeld in artikel 6:101 BW zelf dient te dragen. </text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.16.</potentialnr><text manualAnnotation="TEXT_BLOCK">Wanneer de redenering van verweerders wordt gevolgd, zou dat er toe leiden dat [verzoekster] een deel van haar inkomensschade op grond van eigen schuld niet vergoed zou krijgen. Blijkens de polisvoorwaarden van de AOV biedt de AOV echter ook dekking voor arbeidsongeschiktheid die door toedoen van eigen schuld is veroorzaakt (artikel 13; behoudens opzet of grove schuld, hetgeen hier niet aan de orde is). Het genoten voordeel ziet derhalve ook op de schade wegens eigen schuld. De redelijkheid brengt onder deze omstandigheden mee dat het nadeel dat [verzoekster] leidt ten gevolge van eigen schuld in mindering dient te worden gebracht op het genoten voordeel. De hoogte van het nadeel wegens eigen schuld dat op het genoten voordeel in mindering dient te worden gebracht bedraagt in het onderhavige geval 25% (het eigen schuld percentage) van de totale door [verzoekster] geleden schade in verband met de schadepost "verlies aan inkomen". Een rekenvoorbeeld ter verduidelijking. Stel dat de totale inkomensschade € 100.000,-- bedraagt, het genoten voordeel (de uitkeringen uit hoofde van de AOV) bedraagt € 80.000,-- en het percentage eigen schuld is 25%. Zonder het genoten voordeel dient de schadeveroorzakende partij op grond van een schuldpercentage van 75% een bedrag van € 75.000,-- van de totale inkomensschade moeten betalen (€ 100.000,-- x 75%). In dat geval zou de schadeleidende partij een bedrag van € 25.000,-- (25% x € 100.000,--) zelf moeten dragen. In geval van een genoten voordeel dat mede strekt ter compensatie van schade wegens eigen schuld die niet voor vergoeding door de schadeveroorzaker in aanmerking komt, dient dit bedrag aan eigen schuld in mindering te worden gebracht op het genoten voordeel, zodat in het rekenvoorbeeld een bedrag van € 55.000,-- (€ 80.000,-- - € 25.000,--) verrekend mag worden met de door de schadeveroorzakende partij te vergoeden schade. De schadeveroorzaker hoeft dan slechts een bedrag van € 20.000,-- te vergoeden. In dat geval ontvangt de schadeleidende partij vergoeding van zijn volledige inkomensschade van € 100.000,-- (€ 80.000,00 aan genoten voordeel en € 20.000,-- aan schadevergoeding), terwijl de schadeveroorzaker een bedrag van € 55.000,-- niet hoeft te vergoeden. Dit is onder de gegeven omstandigheden waar de AOV uitdrukkelijk strekt tot vergoeding van de inkomensschade ten gevolge van eigen schuld een redelijker uitkomst dan wanneer de redenering van verweerders wordt gevolgd en een deel van de inkomensschade wegens eigen schuld voor rekening van de schadeleidende partij zou blijven. Bovendien doet het recht aan de door de Hoge Raad in voornoemd arrest geventileerde uitgangspunt dat de aansprakelijke persoon niet het profijt mag hebben van een door of ten behoeve van de benadeelde afgesloten verzekering, zolang een deel van de schade waarvoor die verzekering beoogd een uitkering te verstrekken, niet is vergoed. Van genoten voordeel is immers pas sprake wanneer in verband met een schadepost al het nadeel (in casu dus ook het nadeel ten gevolge van eigen schuld) is gecompenseerd. Pas dan mag de schadeveroorzaker profiteren van de uitkeringen onder de AOV. Het voorgaande impliceert derhalve dat in verband met de schadepost "verlies aan inkomen" eerst artikel 6:101 BW dient te worden toegepast en pas daarna artikel 6:100 BW.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.17.</potentialnr><text manualAnnotation="TEXT_BLOCK">Het voorgaande leidt ertoe dat de rechtbank de subsidiair gevorderde verklaring van recht in zoverre zal toewijzen dat zij voor recht zal verklaren dat op het te verrekenen genoten voordeel in mindering moet worden gebracht 25% van de totale inkomensschade van [verzoekster], waarna het restant mag worden verrekend.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.18.</potentialnr><text manualAnnotation="TEXT_BLOCK">De rechtbank merkt ten overvloede nog op dat in verband met de hoogte van het te verrekenen bedrag in het licht van meermaals genoemd arrest van de Hoge Raad nog dient te worden beoordeeld of de redelijkheid meebrengt dat de te verrekenen uitkeringen moeten worden verminderd met de betaalde premies ten behoeve van de AOV. Aan deze beoordeling komt de rechtbank vanwege de aan haar voorgelegde verzoeken niet toe. De rechtbank merkt in verband met het betoog van verweerders nog op dat de Hoge Raad in voornoemd arrest uitdrukkelijk op het oog heeft de premies die "in de loop der tijd" voor de verzekering zijn betaald. </text></para>
+      <para/>
+      <para manualAnnotation="SECTION_TITLE">Kosten</para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.19.</potentialnr><text manualAnnotation="TEXT_BLOCK">Ingevolge artikel 1019aa Rv dient de rechtbank de kosten bij de behandeling van het verzoek aan de zijde van de persoon die schade door dood of letsel lijdt te begroten. De kosten dienen te voldoen aan de dubbele redelijkheidstoets van artikel 6:96 lid 2 BW. </text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.20.</potentialnr><text manualAnnotation="TEXT_BLOCK">Mr. Van den Berg-Van den Berg voert aan € 5.929,49 aan kosten te hebben gemaakt. Daarbij is hij uitgegaan van 16 uur à € 275,-- per uur, 7% kantoorkosten en 19% BTW, reiskosten en verschotten. Mr. Van den Berg-Van den Berg heeft uren in rekening gebracht voor bestuderen jurisprudentie, het opstellen van het verzoekschrift, het besturen van het verweerschrift, correspondentie met/van cliënte, voorbereiden mondelinge behandeling en bijwonen mondelinge behandeling. Verweerder betogen dat het uurtarief te hoog is en dat een uurtarief van maximaal € 225,-- redelijk is. Tevens betwist zij de redelijkheid van het hanteren van kantoorkosten, en zeker voor een percentage van 7%. Ook dient volgens verweerders van 9 uur uit te worden gegaan. </text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.21.</potentialnr><text manualAnnotation="TEXT_BLOCK">De rechtbank is van oordeel dat het aantal in rekening gebrachte uren bovenmatig is en het gehanteerde uurtarief en het percentage kantoorkosten te hoog en zal, in het licht van de aard en de omvang van het deelgeschil de uren matigen tot 14 uur tegen een tarief van € 250,-- per uur en 6% kantoorkosten, zodat het totaal uitkomt op € 4.741,87 (inclusief BTW). Nu [verzoekster] deels in het ongelijk is gesteld, ziet de rechtbank aanleiding op verweerders te veroordelen tot betaling van € 3.500,00 aan proceskosten.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.22.</potentialnr><text manualAnnotation="TEXT_BLOCK">Om organisatorische redenen is dit vonnis gewezen door een andere rechter dan de rechter ten overstaan van wie de mondelinge behandeling is gehouden. </text></para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">5.</potentialnr><text manualAnnotation="SECTION_TITLE">De beslissing</text></para>
+        <para manualAnnotation="TEXT_BLOCK">De rechtbank</para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">5.1.</potentialnr><text manualAnnotation="TEXT_BLOCK">verklaart voor recht dat de verzekeringsovereenkomst van [verzoekster] met De Goudse een sommenverzekering is;</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">5.2.</potentialnr><text manualAnnotation="TEXT_BLOCK">verklaart voor recht dat op de uitkeringen uit hoofde van de OAV in mindering moet worden gebracht 25% van de totale schade van [verzoekster] die het gevolg is van "verlies aan inkomen";</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">5.3.</potentialnr><text manualAnnotation="TEXT_BLOCK">begroot de kosten van dit verzoek aan de zijde van [verzoekster] op € 3.500,-- en veroordeeld verweerders hoofdelijk tot betaling van deze kosten;</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">5.4.</potentialnr><text manualAnnotation="TEXT_BLOCK">wijst het verzoek voor het overige af.</text></para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Deze beschikking is gegeven door mr. J.L.M. Luiten en in het openbaar uitgesproken op 6 juli 2012, in tegenwoordigheid van de griffier.</para>
+    </uitspraak>
+</open-rechtspraak>

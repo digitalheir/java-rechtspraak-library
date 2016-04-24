@@ -1,0 +1,69 @@
+Token count: 3868824
+Title count: 211836
+True  positive: 171654
+False positive: 47935
+___true positive___% 81.03155271058742
+___true negative___% 98.6892218404873
+________________________________________________________
+Top 20 false negatives: 
+rechtsmiddel (5423)
+proceskosten (2856)
+de strafbaarheid van verdachte (1586)
+bewezenverklaring (1373)
+de strafbaarheid van de verdachte (1059)
+de strafbaarheid van het feit (965)
+kosten (801)
+de strafoplegging (715)
+het geschil de standpunten en conclusies van partijen (691)
+de strafbaarheid van het bewezenverklaarde (671)
+de kwalificatie van het bewezenverklaarde (503)
+de vordering van de officier van justitie (457)
+de strafbaarheid van de feiten (457)
+de strafbaarheid (433)
+de op te leggen straf of maatregel (424)
+de standpunten van partijen (401)
+de benadeelde partij (381)
+het beslag (376)
+geschil alsmede standpunten en conclusies van partijen (374)
+strafbaarheid (284)
+________________________________________________________
+Top 20 false positives: 
+vonnis (6242)
+het oordeel van de rechtbank (6183)
+beslissing (2318)
+slotsom (2268)
+conclusie (2196)
+uitspraak (1354)
+beoordeling door de rechtbank (1225)
+in de hoofdzaak (1201)
+inleiding (1113)
+de feiten (1103)
+feiten (1080)
+de beslissing (1054)
+vrijspraak (946)
+beoordeling van het geschil (703)
+de bewijsoverwegingen van de rechtbank (563)
+oordeel van de rechtbank (539)
+de beoordeling (481)
+de conclusie (473)
+beoordeling (461)
+overwegingen (431)
+________________________________________________________
+
+28.97 INTRO      460        1128      
+73.31 JUDGMENT   66869      24346     
+75.54 CASE       36973      11972     
+80.43 FACTS      14221      3460      
+81.39 CONSIDERATIONS 43706      9992      
+81.79 LAWS_APPLICABLE 4165       927       
+82.34 DEFENSE    900        193       
+82.81 PIECES     53         11        
+85.48 GUARANTEE  53         9         
+93.39 INDICTMENT 4325       306       
+93.88 INVESTIGATION 3820       249       
+94.82 GRONDSLAG  1832       100       
+94.92 CASSATIE   355        19        
+95.08 PROCEEDINGS 24626      1274      
+95.43 QUESTIONS  2841       136       
+98.45 EAB        190        3         
+99.50 IDENTITY   198        1         

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:tr="http://tuchtrecht.overheid.nl/" xmlns:eu="http://publications.europa.eu/celex/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:PHR:1995:AA1555</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2015-06-28T20:36:41</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">AA1555</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Parket_bij_de_Hoge_Raad" scheme="overheid.RechterlijkeMacht">Parket bij de Hoge Raad</dcterms:creator>
+      <dcterms:date rdfs:label="Datum genomen">1995-04-12</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">29714</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/conclusie">Conclusie</dcterms:type>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht_belastingrecht">Bestuursrecht; Belastingrecht</dcterms:subject>
+      <dcterms:relation rdfs:label="Formele relatie" ecli:resourceIdentifier="ECLI:NL:HR:1995:AA1555" psi:type="http://psi.rechtspraak.nl/conclusie" psi:aanleg="http://psi.rechtspraak.nl/latereAanleg">Arrest Hoge Raad: ECLI:NL:HR:1995:AA1555</dcterms:relation>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+          <rdf:li>BNB 1995/190 met annotatie door P.H.J. Essers</rdf:li>
+          <rdf:li>WFR 1995/633</rdf:li>
+          <rdf:li>FED 1995/574 met annotatie door J. RENSEMA</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:PHR:1995:AA1555">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:PHR:1995:AA1555</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-04T15:33:46</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2001-07-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:PHR:1995:AA1555 Parket bij de Hoge Raad , 12-04-1995 / 29714</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:PHR:1995:AA1555:INH" lang="nl" xml:space="preserve">
+      <para>-</para>
+    </inhoudsindicatie>
+  <conclusie xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:PHR:1995:AA1555:DOC" lang="nl" xml:space="preserve">
+      <parablock>
+        <para>Nr. 29.714                           Mr. Van Soest</para>
+        <para>Derde Kamer A                   Conclusie inzake:</para>
+        <para>Inkomstenbelasting 1989     Erven X</para>
+        <para>Parket,    september 1994   tegen</para>
+        <para>                                         de staatssecretaris van Financiën</para>
+      </parablock>
+      <para/>
+      <para>Edelhoogachtbaar College,</para>
+      <para/>
+      <parablock>
+        <para>1. Korte beschrijving van de zaak.</para>
+        <para>1.1. Het beroep in cassatie is gericht tegen de schriftelijke uitspraak van het gerechtshof te Arnhem (hierna te noemen het Hof) van 2 juni 1993, nr. 921556 . Het is ingesteld door de belanghebbenden, de erfgenamen van X (hierna te noemen de Erflater). Van het beroep in cassatie is melding gemaakt in Fiscaal up to date 16 september 1993, blz. 24, punt 93-1312 .</para>
+        <para>1.2. In leven exploiteerde de Erflater een landbouwbedrijf op grond die ten dele aan hem toebehoorde, ten dele door hem gepacht was van de gemeente Q (hierna te noemen de Gemeente).</para>
+        <para>1.3. Op 26 november 1986 en in april 1987 heeft de Erflater grond verkocht aan de maatschap A, met daarbij rechten op melkquotum met betrekking tot onderscheidenlijk 42.000 kg en 68.500 kg, dat is dus in totaal 110.500 kg, melk, de zojuist bedoelde rechten voor een prijs van ƒ 2,- per kg, dat is dus voor in totaal ƒ 221.000,_ .</para>
+        <para>1.4. Voor de heffing van de inkomstenbelasting 1986 en 1987 van de Erflater werden, naar het Hof bij de aangevallen uitspraak als vaststaand heeft (blz. 2)</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>"(...) aangemerkt: (...) (1.3) De opbrengsten van de verkochte rechten op melkquotum ten bedrage van respectievelijk 42.000 x ƒ 2,-- = ƒ 84.000,-- en </para>
+        <para>68.500 x ƒ 2,-- = ƒ 137.000,-- (...) met toepassing van de resolutie van 7 april 1986, nr. 285-17529 (VN 1986, blz. 861 e.v.) in de heffing betrokken voor gedeelten van respectievelijk 42.000 x ƒ 0,325 = ƒ 13.650,-- en</para>
+        <para>68.500 x ƒ 0,325 (...) = ƒ 22.262,--. (...)"</para>
+      </parablock>
+      <para/>
+      <para>1.5. Bij arrest van 17 april 1989, nr. P72/88, in fotokopie als vijfde bijlage bij de aanvulling van het beroepschrift tot de stukken van het geding behorende, heeft de pachtkamer van het Hof (hierna te noemen de Pachtkamer) de Erflater veroordeeld, onder meer, aan de Gemeente een bedrag van ƒ 74.000,- te voldoen wegens wanprestatie, zulks op grond dat van de verkochte rechten gedeelten met betrekking tot in totaal 74.000 kg melk niet (alleen) aan hem, maar (mede) aan haar toekwamen. De Pachtkamer overwoog (onder 3, blz. 4):</para>
+      <para/>
+      <parablock>
+        <para>"(...) X heeft (...) 74.000 kg (afgerond) melk verkocht die naar evenredigheid van de voor de melkproductie gebruikte oppervlakte "behoorde" bij de door hem van de Gemeente gepachte oppervlakte land. (...) een redelijke vergoeding van de schade ter zake van de onderhavige wanprestatie [is] de helft van de waarde van de genoemde hoeveelheid melk ten tijde van de litigieuze verkopen. X heeft de betreffende melk verkocht voor f.2,__ per kg (...) De door X aan de Gemeente te betalen schadevergoeding dient derhalve te worden bepaald op </para>
+        <para>74.000 x f.1,__ = f.74.000,__."</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>1.6. In geschil is primair of de schadevergoeding voor de heffing van de inkomstenbelasting 1989 van de Erflater in mindering gebracht behoort te worden bij de bepaling van het belastbare inkomen, en subsidiair of dit voor een gedeelte behoort te geschieden en, zo ja, voor welk gedeelte.</para>
+        <para>1.7. Het Hof heeft het primaire geschil ten nadele van de belanghebbenden beslecht.</para>
+        <para>1.8. Het tijdig en regelmatig ingestelde beroep in cassatie steunt op een middel van cassatie, waarvan de grond wordt aangeduid als (beroepschrift in cassatie, blz. 1)</para>
+      </parablock>
+      <para/>
+      <para>"(...) toelichting (...)"</para>
+      <para/>
+      <parablock>
+        <para>en bestaat uit een primair, een subsidiair en een meer subsidiair onderdeel.</para>
+        <para>1.9. De staatssecretaris van Financiën (hierna te noemen de Staatssecretaris) heeft bij vertoogschrift in cassatie het middel bestreden.</para>
+        <para>2. De ontwikkeling van de rechtsstrijd inzake het primaire geschilpunt.</para>
+        <para>2.1.In zijn aangifte voor de inkomstenbelasting 1989 heeft de Erflater het bedrag van ƒ 74.000,- in mindering gebracht bij de bepaling van het belastbare inkomen.</para>
+        <para>2.2. De inspecteur van de Belastingdienst/Ondernemingen te P (hierna te noemen de Inspecteur) is van de aangifte afgeweken door, onder meer, het belastbare inkomen te verhogen met het bedrag van ƒ 74.000,_. Het afwijkingenformulier behoort niet tot de stukken van het geding, maar zowel de aanvulling van het beroepschrift als het vertoogschrift van de Inspecteur vermelden deze afwijking.</para>
+        <para>2.3. Naar aanleiding van het bezwaarschrift van de belanghebbenden schreef de Inspecteur bij brief van 13 mei 1992, die in fotokopie als (ongenummerde) bijlage bij het vertoogschrift van de Inspecteur tot de stukken van het geding behoort:</para>
+      </parablock>
+      <para/>
+      <para>"(...) Het bedrag dat [de Erflater] ontving en als opbrengst van het melkquotum in zijn boekhouding dient te verantwoorden is de som van de ontvangst van de maatschap A en het bedrag dat daarvan aan de Gemeente moest worden betaald. Bij een reguliere gang van zaken (zonder de gang naar het Gerechtshof) was ook een dergelijk bedrag in de boeken voorgekomen. Nu op grond van de toen geldende bepalingen de verkoopprijs slechts voor een bedrag van ƒ 0,325 per verkochte kilo melk fiscaal afgerekend diende te worden kan het naar mijn mening niet zo zijn dat enerzijds slechts een deel van de opbrengst in het belastbaar inkomen wordt begrepen en daarnaast de doorbetaling in zijn geheel van de belastbare bedrijfswinst kan worden afgetrokken. (...)"</para>
+      <para/>
+      <parablock>
+        <para>2.4. De uitspraak op het bezwaarschrift d. d. 22 juni 1992 strekte onder verwijzing naar de zojuist geciteerde brief tot handhaving van de aanslag.</para>
+        <para>2.5. De aanvulling van het beroepschrift hield in (onder IV):</para>
+      </parablock>
+      <para/>
+      <para>"(blad 7) (...) Primair (...) De kosten van de betaling wegens wanprestatie zijn géén kosten die verband houden met de vrijgestelde bate uit een eerder jaar. (...) (blad 8) (...) Subsidiair (...) de kosten [worden] beheerst (...) door de aanschrijving van 1 juli 1988 (...)"</para>
+      <para/>
+      <para>2.6. Het vertoogschrift van de Inspecteur hield in (ik nummer de bladen):</para>
+      <para/>
+      <parablock>
+        <para>"(blad 2) (...) In 1986 en 1987 is voor het verkochte melkquotum in totaal f 221.000,_ ontvangen. Op grond van de aanschrijving ((...) '86 (...)) is van dit bedrag f 35.912,_ in de heffing betrokken en was derhalve f 185.088,_ vrijgesteld van heffing. Indien de belanghebbende door uw Hof in het gelijk gesteld zou worden dan zou dit betekenen dat van de uiteindelijke opbrengst ad </para>
+        <para>f 147.000,_ (f 221.000,_ -/_ f 74.000,_) niets in de heffing wordt betrokken. Integendeel zelfs, per saldo zou met betrekking tot de met het quotum behaalde winst een aftrekpost ontstaan ad f 38.088,- (het in '86 en '87 aangegeven bedrag ad f 35.912,_ minus het in '89 afgetrokken bedrag ad f 74.000,_). Dit gevolg zou niet zijn opgetreden wanneer direct na de verkoop f 74.000,_ was doorbetaald aan de gemeente. (...) De resolutie stoelt op de gedachte dat de prijs voor het melkquotum niet meer zou bedragen dan (het door de overheid in het kader van de opkoopregeling te betalen bedrag ad) f 0,75 per kg. Bepaald werd dat hiervan de helft kon worden toegerekend aan de grond (landbouwvrijstelling) en de andere helft aan het quotum ("Dit gedeelte is in elk geval belast"). Toen later bleek dat de prijzen voor het quotum opliepen tot soms f 5,_ p/kg en op grond van de aanschrijving de heffing beperkt bleef tot f 0,325 p/kg werd aan deze onbevredigende situatie een eind gemaakt door het intrekken van de resolutie. Gelet op het voorgaande bevat de resolutie een tegemoetkoming ten opzichte van de wet. Een tegemoetkoming dient beperkt te worden uitgelegd. Nu is bepaald: "Dit gedeelte is in elk geval belast" kan het, gelet op de vereiste beperkte uitleg, niet zo zijn dat de resolutie de mogelijkheid een verlies op te voeren daar waar winst wordt gemaakt. Nog afgezien van de resolutie, een dergelijk resultaat kan door de wetgever niet zijn bedoeld. (blad 3) (...) De gebeurtenis uit 1989 was (...) onverbrekelijk verbonden met de uit 1986 en 1987 daterende transacties. Gelet op deze onverbrekelijke verbondenheid is de resolutie van toepassing bij het vaststellen van de fiscale gevolgen van de doorbetaling van een deel van de opbrengst: f 35.912,_ aan het quotum toe te rekenen en f 111.088,_ aan de onder de landbouwvrijstelling vallende grond. Het gevolg is dat aangezien de in 1986 en 1987 behaalde opbrengst ad </para>
+        <para>f 185.088,_ (mogelijk fictief) onder de landbouwvrijstelling viel, de latere doorbetaling niet aftrekbaar is. Stel dat de benadering die in de resolutie gevolgd werd niet juist is en dat hetgeen meer wordt ontvangen dan f 0,325 niet aan de grond moet worden toegerekend maar ook op het quotum betrekking heeft. Ook in dat geval kom ik tot dezelfde conclusie. Alsdan was immers in 1986 en 1987 het bedrag ad f 185.088,_ ook vrijgesteld van heffing: niet op grond van de landbouwvrijstelling maar op grond van de resolutie. Ook in dat geval beïnvloedde de opbrengst de winst niet en dient een latere doorbetaling eveneens geen gevolgen te hebben voor de hoogte van de winst. (...)"</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>Voorts betoogde de Inspecteur dat de verplichting tot schadevergoeding in een aan 1989 voorafgaand jaar gepassiveerd had moeten zijn.	</para>
+        <para>2.7. Het Hof heeft de van de zijde van de belanghebbenden overgelegde notities van het gehouden pleidooi als in zijn uitspraak, blz. 1, ingelast aangemerkt. Deze notities hielden in:</para>
+      </parablock>
+      <para/>
+      <para>"(blad 1) (...) De resolutie (...) is (...) recht in de zin van artikel 99 R.O. waaraan de gevolgtrekking is te verbinden dat de resolutie aan te merken is als een objectieve landbouwvrijstelling. De vraag of de wetgever een dergelijk effect bedoeld kan hebben (...), is niet langer relevant, nu de resolutie een objectieve landbouwvrijstelling tot gevolg heeft. (...) (blad 3) (...) Anders dan de inspecteur stelt is er geen sprake van doorbetaling maar van een vergoeding wegens wanprestatie. (...)"</para>
+      <para/>
+      <parablock>
+        <para>3. De aangevallen uitspraak.</para>
+        <para>Het Hof heeft overwogen (blz. 2):</para>
+      </parablock>
+      <para/>
+      <para>"(...) (3.1) Ingeval belastingplichtige de gedeelten van de opbrengsten van de verkochte rechten op melkquotum die aan zijn verpachter toekwamen, in 1986 en 1987 aan hem had doorbetaald, zou in die jaren niet minder aan belasting zijn geheven dan thans is geschied. De afgedwongen betaling van schadevergoeding in 1989 beïnvloedt belanghebbendes winst uit onderneming niet, omdat de schadevergoeding betrekking heeft op baten die niet tot belanghebbendes winst zijn gerekend. Het standpunt van de inspecteur dat de door belastingplichtige betaalde schadevergoeding in het geheel niet ten laste van zijn winst uit onderneming komt, is juist. (3.2) Aan het vorenstaande doet (...) niet af, a. dat in het (...) arrest van de pachtkamer (...) niet wordt gerept van een schadevergoeding voor een waardeverandering van landbouwgrond (...)"</para>
+      <para/>
+      <parablock>
+        <para>4. Het primaire middelonderdeel.</para>
+        <para>Het primaire middelonderdeel houdt in (ik vermeld nadere vindplaatsen in het beroepschrift in cassatie):</para>
+      </parablock>
+      <para/>
+      <para>"(blad 2) (...) Ten eerste is de schadevergoeding die thans wordt betaald geheel anders van karakter dan de in het verleden gegenereerde opbrengsten van het melkquotum. Er is thans met name geen sprake van een terugbetaling of doorbetaling van quotumrechten, doch van een zakelijke schadevergoeding. Ten tweede is in het verleden een deel van de opbrengst van het melkquotum weliswaar buiten de heffing gebleven op grond van de resolutie van (...) 1986 (...), maar in principe waren de baten wel degelijk tot belanghebbendes winst te rekenen. (blad 3) De resolutie is met ingang van 1 mei 1987, dus ruim voordat in casu de veroordeling wegens wanprestatie plaatsvond, buiten werking getreden. (...)"</para>
+      <para/>
+      <parablock>
+        <para>5. Beoordeling van het primaire middelonderdeel.</para>
+        <para>5.1. In de bij deze conclusie gevoegde bijlage zijn gegevens en beschouwingen opgenomen omtrent de belastingheffing bij vervreemding van melkquota.</para>
+        <para>5.2. Ik betoog aldaar, dat de pachter/gebruiker als zodanig bij verkoop van melkquota geen beroep kan doen op de in de resolutie van 1986 neergelegde vrijstelling van hetgeen ƒ 0,325 per kg overtreft.</para>
+        <para>5.3. Zou in 1986 en 1987 meteen de verkoop van de melkquota in de onderscheiden kwaliteiten van de Erflater op de juiste wijze zijn behandeld, dan zou derhalve de landbouwvrijstelling slechts betrokken zijn op de tegenwaarde van </para>
+        <para>(110.500 - 74.000 =) 36.500 kg, zodat belast zou zijn </para>
+        <para>ƒ (36.500 x 0,325 + 74.000 x 2,- =) 159.862,50 en vrijgesteld</para>
+        <para>ƒ {36.500 x (2,- - 0,325) =} 61.137,50.</para>
+        <para>5.4. Aangezien het hierbij gaat om een vrijstelling die betrekking heeft op het totale-winstbegrip, wordt zij telkens toegepast op de bedragen die volgens goed koopmansgebruik in een bepaald jaar in aanmerking genomen worden.</para>
+        <para>5.5. Zou derhalve eerst in 1986 en 1987 de volle verkoopprijs ten gunste van de jaarwinst van de Erflater gebracht zijn en zou pas later het aandeel van de Gemeente in mindering gebracht zijn, dan zou de vrijstelling aldus moeten zijn toegepast, dat per saldo de juiste hiervóór onder 5.3 berekende bedragen belast en vrijgesteld zouden zijn.</para>
+        <para>5.6. De belanghebbenden houden echter staande, dat een schadevergoeding als de onderhavige strikt onderscheiden moet worden van doorbetalingen.</para>
+        <para>5.7. Ik kan hen daarin niet volgen.</para>
+        <para>5.8. Het komt mij rationeel voor een goedkeuring die betrekking heeft op hetgeen bij verkoop wordt verkregen, te betrekken op het saldo  van de verkoopprijs enerzijds en de door de verkoop opgeroepen lasten anderzijds.</para>
+        <para>5.9. Dat nu de schadevergoeding door de verkoop opgeroepen werd, lijkt mij duidelijk. Zelfs bij een andere wijze van berekening van de schadevergoeding zou dit zo zijn, maar nu de Pachtkamer rechtstreeks bij de verkregen verkoopprijs heeft aangesloten, is het te sterker het geval.</para>
+        <para>5.10. Ik meen dan ook dat, voor geval de schadevergoeding nog vóór 1 mei 1987 betaald zou zijn, slechts het saldo van de verkoopprijs en de schadevergoeding onder de werking van de resolutie van 1986 gebracht had kunnen worden en derhalve, voor zover ƒ 0,325 x 36.500 overtreffend, vrijgesteld zou zijn.</para>
+        <para>5.11. Nu is, gelijk uit de hiervóór onder 1.4 weergegeven berekening blijkt, in 1986 en 1987 in totaal ƒ 35.912,- belast en ƒ 185.088,- vrijgesteld. Wordt in 1989 ƒ 74.000,- in het geheel niet afgetrokken, dan is het vrijgestelde gedeelte nog hoger dan het volgens de hiervóór onder 5.3 uitgevoerde berekening had moeten zijn.</para>
+        <para>5.12. Ik meen dan ook, dat het Hof terecht de aftrek geweigerd heeft.</para>
+        <para>5.13. Nu beroepen de belanghebbenden zich erop, dat de schadevergoeding beheerst zou worden door de sindsdien gewijzigde resoluties.</para>
+        <para>5.14. Ik kan hen ook daarin niet volgen. Immers is de overgang in lid 2 van de in de bijlage onder 1.8.1 geciteerde resolutie van 29 april 1987 uitdrukkelijk geregeld in die zin dat de datum van overgang van de melkquota beslissend is; daarin is immers sprake van "winst behaald ter zake van overgang van melkquota na 30 april 1987".</para>
+        <para>5.15. Derhalve bevind ik het primaire middel ongegrond.</para>
+        <para>6. Aftrek voor een gedeelte.</para>
+        <para>Uit mijn uiteenzetting volgt, dat ook voor aftrek van een gedeelte geen ruimte is: de berekeningen wijzen uit dat er per saldo reeds te veel vrijgesteld is.</para>
+        <para>7. Conclusie.</para>
+        <para>Het middel ongegrond bevindende, concludeer ik tot verwerping van het beroep.</para>
+        <para>De Procureur-Generaal bij de Hoge Raad der Nederlanden,</para>
+      </parablock>
+    </conclusie>
+</open-rechtspraak>

@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:eu="http://publications.europa.eu/celex/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:tr="http://tuchtrecht.overheid.nl/">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:RBLEE:2011:BP2417</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-05T07:35:26</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-05</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">BP2417</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Rechtbank_Leeuwarden" scheme="overheid.RechterlijkeMacht">Rechtbank Leeuwarden</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">2011-01-27</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">17/880137-10 VON</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#eersteAanlegMeervoudig">Eerste aanleg - meervoudig</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#strafrecht">Strafrecht</dcterms:subject>
+      <dcterms:references bwb:resourceIdentifier="1.0:v:BWB:BWBR0001854&amp;artikel=287" rdfs:label="Wetsverwijzing">Wetboek van Strafrecht 287</dcterms:references>
+      <dcterms:references bwb:resourceIdentifier="1.0:v:BWB:BWBR0001854&amp;artikel=45" rdfs:label="Wetsverwijzing">Wetboek van Strafrecht 45</dcterms:references>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBLEE:2011:BP2417">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBLEE:2011:BP2417</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-05T07:35:26</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2011-01-31</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:RBLEE:2011:BP2417 Rechtbank Leeuwarden , 27-01-2011 / 17/880137-10 VON</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie id="ECLI:NL:RBLEE:2011:BP2417:INH" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <para>Poging doodslag, voorwaardelijk opzet, stekende beweging, voorbedachte raad,  veroordeling</para>
+    </inhoudsindicatie>
+  <uitspraak id="ECLI:NL:RBLEE:2011:BP2417:DOC" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">RECHTBANK LEEUWARDEN</para>
+        <para manualAnnotation="TEXT_BLOCK">Sector straf</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">parketnummer 17/880137-10 VON</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">vonnis van de meervoudige kamer voor de behandeling van strafzaken d.d. 27 januari 2011 in de zaak van het openbaar ministerie tegen de verdachte</para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">[verdachte], </para>
+        <para manualAnnotation="TEXT_BLOCK">geboren op [geboortedatum] te [geboorteplaats],</para>
+        <para manualAnnotation="TEXT_BLOCK">wonende te [adres],</para>
+        <para manualAnnotation="TEXT_BLOCK">thans gedetineerd in PI Noord, gevangenis De Marwei, Leeuwarden, Holstmeerweg 7.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">De rechtbank heeft gelet op de ter terechtzitting gehouden onderzoeken van 13 januari 2011.</para>
+        <para manualAnnotation="TEXT_BLOCK">De verdachte is verschenen, bijgestaan door mr. J.P. Plasman, advocaat te Amsterdam.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para manualAnnotation="SECTION_TITLE">Tenlastelegging</para>
+        <para manualAnnotation="TEXT_BLOCK">Aan verdachte is ten laste gelegd dat:</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">hij op of omstreeks 2 april 2010 te Drachten, (althans) in de gemeente Smallingerland, ter uitvoering van het door verdachte voorgenomen misdrijf om opzettelijk en met voorbedachte rade, in elk geval opzettelijk, [naam] van het leven te beroven, met dat opzet en na kalm beraad en rustig overleg, in elk geval met dat opzet, die [naam] met een (groot) (keuken)mes in de buik, althans het (boven)lichaam te steken, terwijl de uitvoering van dat</para>
+        <para manualAnnotation="TEXT_BLOCK">voorgenomen misdrijf niet is voltooid;</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Subsidiair zo het vorenstaande niet mocht leiden tot schuldigverklaring van en strafoplegging aan verdachte</para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">hij op of omstreeks 2 april 2010 te Drachten, (althans) in de gemeente Smallingerland, ter uitvoering van het door verdachte voorgenomen misdrijf om aan een persoon genaamd [naam], opzettelijk en met voorbedachte rade, in elk geval opzettelijk, zwaar lichamelijk letsel toe te brengen, met dat opzet en na kalm beraad en rustig overleg, in elk geval met dat opzet, die [naam] met een (groot) (keuken)mes in de buik, althans het (boven)lichaam te</para>
+        <para manualAnnotation="TEXT_BLOCK">steken, terwijl de uitvoering van dat voorgenomen misdrijf niet is voltooid.</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">In de tenlastelegging voorkomende schrijffouten of kennelijke misslagen worden verbeterd gelezen. De verdachte is hierdoor niet in zijn belangen geschaad.</para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="SECTION_TITLE">Vordering officier van justitie</para>
+        <para manualAnnotation="TEXT_BLOCK">De officier van justitie heeft ter terechtzitting gevorderd:</para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> veroordeling voor primair ten laste gelegde, te weten poging tot moord;</text></para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> oplegging van een gevangenisstraf voor de duur van vier jaren waarvan één jaar voorwaardelijk met een proeftijd van twee jaren; </text></para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> oplegging van de bijzondere voorwaarde van reclasseringstoezicht;</text></para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> toewijzing van de vordering van de benadeelde partij [naam] tot een bedrag van </text></para>
+        <para manualAnnotation="TEXT_BLOCK">€ 1502,23;</para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> oplegging van de schadevergoedingsmaatregel voor een bedrag van € 1502,23.</text></para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para manualAnnotation="SECTION_TITLE">Beoordeling van het bewijs</para>
+        <para manualAnnotation="TEXT_BLOCK">De rechtbank past de hierna te noemen bewijsmiddelen1 toe die de voor de bewezenverklaring  redengevende feiten en omstandigheden bevatten zoals hieronder weergegeven.</para>
+      </parablock>
+      <para> </para>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">1. </potentialnr><text manualAnnotation="TEXT_BLOCK">De verklaring van verdachte2, inhoudende:</text></para>
+        <para manualAnnotation="TEXT_BLOCK">Ik heb op 2 april 2010 te Drachten ruzie gehad met [naam], waarbij ik een groot mes voor mij heb gehouden.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">2. </potentialnr><text manualAnnotation="TEXT_BLOCK">De verklaring van aangever3, inhoudende:</text></para>
+        <para manualAnnotation="TEXT_BLOCK">[verdachte] zwaaide met het mes naar mij toe. </para>
+        <para manualAnnotation="TEXT_BLOCK">Hij liep naar mij toe en maakte stekende bewegingen met het mes. </para>
+        <para manualAnnotation="TEXT_BLOCK">Ik had een snee van ongeveer vier centimeter. De wond is gehecht met vier hechtingen.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">3. </potentialnr><text manualAnnotation="TEXT_BLOCK">Een schriftelijk stuk, te weten een geneeskundige verklaring4, inhoudende: </text></para>
+        <para manualAnnotation="TEXT_BLOCK">Medische informatie betreffende: [naam]. </para>
+        <para manualAnnotation="TEXT_BLOCK">Datum waarop voornoemde persoon werd onderzocht: 2 april 2010. </para>
+        <para manualAnnotation="TEXT_BLOCK">Uitwendig waargenomen letsel:	steekwond in de buik.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">4. </potentialnr><text manualAnnotation="TEXT_BLOCK">Een schriftelijk stuk, te weten een onderzoeksverslag5, inhoudende:</text></para>
+        <para manualAnnotation="TEXT_BLOCK">Uit het gegeven dat er een insteek en een uitsteekopening is waargenomen concludeer ik dat dit waarschijnlijk ten gevolge van een stekende beweging is ontstaan.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">5. </potentialnr><text manualAnnotation="TEXT_BLOCK">Een schriftelijk stuk, te weten een onderzoeksverslag6, inhoudende:</text></para>
+        <para manualAnnotation="TEXT_BLOCK">De steekwond kan zowel door een stekende als een zwaaiende beweging zijn veroorzaakt.</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">De rechtbank stelt op basis van de bewijsmiddelen vast dat verdachte ruzie heeft gehad met het slachtoffer [naam]. Tijdens deze ruzie heeft verdachte een mes in de hand gehad dat hij voor zich heeft bewogen. Het slachtoffer heeft hierbij een wond in zijn buik opgelopen, die even later in het ziekenhuis is gehecht. De rechtbank acht derhalve bewezen dat de wond in de buik van het slachtoffer door toedoen van verdachte is ontstaan. </para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">Nu voor de rechtbank is vast komen te staan dat verdachte de wond aan het slachtoffer heeft toegebracht, is de vraag aan de orde of verdachte hierbij opzet op de dood van het slachtoffer had. In dat verband acht de rechtbank van belang of verdachte een zwaaiende of een stekende beweging heeft gemaakt, nu slechts in geval van steken sprake kan zijn van een aanmerkelijke kans op de dood. De rechtbank overweegt hiertoe als volgt. </para>
+        <para manualAnnotation="TEXT_BLOCK">Uit het aanvullend onderzoek van het NFI met betrekking tot de vraag of er sprake was van steken of zwaaien met het mes is gebleken dat de wond van verdachte door zowel een stekende als een zwaaiende beweging van het mes kan zijn ontstaan. In het aanvullend onderzoek van de GGD Fryslan wordt geconcludeerd dat de wond waarschijnlijk door een stekende beweging is ontstaan. </para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">De rechtbank acht op basis van deze onderzoeken in combinatie met de verklaring van aangever bewezen dat verdachte met het mes in de buik van het slachtoffer heeft gestoken. </para>
+        <para manualAnnotation="TEXT_BLOCK">Het is een feit van algemene bekendheid dat de buik - door de zich daar bevindende vitale organen - een kwetsbaar onderdeel van het lichaam is en dat het steken met een mes in de buik een aanmerkelijke kans op de dood oplevert. Dat de wond van het slachtoffer niet groot en diep was, doet hier niet aan af. De tegen het slachtoffer gerichte handelingen van verdachte kunnen naar hun uiterlijke verschijningsvorm dan ook worden aangemerkt als zozeer te zijn gericht op het toebrengen van dodelijk letsel dat het niet anders kan dan dat verdachte verdachte willens en wetens de aanmerkelijke kans heeft aanvaard dat het slachtoffer zou overlijden en dat bij hem dus sprake was van voorwaardelijk opzet op de dood van het slachtoffer. </para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">Vervolgens dient de vraag te worden beantwoord of er bij verdachte sprake is van poging tot moord, dan wel poging tot doodslag. De rechtbank overweegt hiertoe dat het verschil tussen poging tot moord en poging tot doodslag is gelegen in het antwoord op de vraag of de poging tot opzettelijke levensberoving door verdachte al dan niet met voorbedachte raad is gedaan. </para>
+        <para manualAnnotation="TEXT_BLOCK">Blijkens de Memorie van Toelichting wijst voorbedachte raad op een moment van kalm overleg, van bedaard nadenken voorafgaand aan de uitvoering. </para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">De officier van justitie heeft veroordeling van verdachte voor poging tot moord gevorderd. Hiertoe voerde de officier van justitie aan dat verdachte bewust met een mes van huis is gegaan, wetende dat hij de confrontatie met het latere slachtoffer [naam] aan zou gaan. Verdachte heeft enige minuten gelopen alvorens hij bij [naam] aan kwam. Tijdens de ruzie heeft verdachte het mes nog weggelegd, om deze vervolgens weer te pakken en de bewuste steek met het mes uit te delen. De officier van justitie stelt dat verdachte aldus heeft gestoken na kalm beraad en dat er geen sprake was van een opwelling.</para>
+        <para manualAnnotation="TEXT_BLOCK">De raadsman heeft bepleit dat met betrekking tot de voorbedachte raad moet worden uitgegaan van het moment dat verdachte het mes voor de tweede keer heeft gepakt. Immers, zo bepleit de raadsman, blijkt uit het weggooien van het mes dat verdachte op dat moment niet de bedoeling had om [naam] om het leven te brengen. </para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">De rechtbank volgt de raadsman in deze lezing. De rechtbank overweegt dat het wilsbesluit van verdachte is onderbroken op het moment dat hij het mes heeft weggegooid. Op het moment dat verdachte het mes weer heeft opgepakt, ontstaat het wilsbesluit opnieuw. Om voorbedachte raad bewezen te kunnen verklaren is de mogelijkheid van een moment van bezinning bij verdachte reeds voldoende. Blijkens de stukken is hiervan echter geen sprake geweest. Verdachte heeft het mes opgepakt en heeft hiermee direct bewegingen naar het slachtoffer gemaakt, waarbij deze gewond is geraakt. </para>
+        <para manualAnnotation="TEXT_BLOCK">Aan de rechtbank is niet gebleken dat verdachte in deze korte tijdspanne de mogelijkheid van een moment van bezinning heeft gehad. Dit betekent dat er naar het oordeel van de rechtbank geen sprake is van voorbedachte raad en dat verdachte derhalve dient te worden vrijgesproken van de primair tenlastegelegde poging tot moord. </para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">De rechtbank is op grond van hetgeen hiervoor is overwogen van oordeel dat wettig en overtuigend is bewezen dat verdachte zich schuldig heeft gemaakt aan de (eveneens) primair tenlastegelegde poging tot doodslag.</para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="SECTION_TITLE">Bewezenverklaring</para>
+        <para manualAnnotation="TEXT_BLOCK">De rechtbank acht het primair tenlastegelegde bewezen, met dien verstande dat: </para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">hij op 2 april 2010 te Drachten, in de gemeente Smallingerland, ter uitvoering van het door verdachte voorgenomen misdrijf om opzettelijk [naam] van het leven te beroven, met dat opzet die [naam] met een groot keukenmes in de buik heeft gestoken, terwijl de uitvoering van dat voorgenomen misdrijf niet is voltooid.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">De verdachte zal van het meer of anders ten laste gelegde worden vrijgesproken, aangezien de rechtbank dat niet bewezen acht.</para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="SECTION_TITLE">Strafbaarheid van het bewezenverklaarde</para>
+        <para manualAnnotation="TEXT_BLOCK">Het bewezenverklaarde levert op het misdrijf:</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">primair		Poging tot doodslag. </para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Dit feit is strafbaar nu geen omstandigheden aannemelijk zijn geworden die de strafbaarheid uitsluiten. </para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="SECTION_TITLE">Strafbaarheid van verdachte</para>
+        <para manualAnnotation="TEXT_BLOCK">De rechtbank acht verdachte strafbaar nu niet van enige strafuitsluitingsgrond is gebleken.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para manualAnnotation="SECTION_TITLE">Strafmotivering</para>
+        <para manualAnnotation="TEXT_BLOCK">De rechtbank neemt bij de bepaling van de hierna te vermelden strafsoort en strafmaat in aanmerking:</para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> de aard en de ernst van het gepleegde feit; </text></para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> de omstandigheden waaronder dit is begaan;</text></para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> de persoon van verdachte, zoals daarvan ter terechtzitting is gebleken en deze naar voren komt uit het uittreksel uit het algemeen documentatieregister;</text></para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> het voorlichtingsrapport van Reclassering Nederland d.d. 15 juni 2010;</text></para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> de vordering van de officier van justitie;</text></para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> het pleidooi van de raadsman.</text></para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Verdachte heeft geprobeerd een andere man met een mes dood te steken. Hij heeft daarmee het hoogste rechtsgoed geschonden dat door de wet beschermd wordt, namelijk het menselijk leven. Verdachte is niet eerder veroordeeld. Volgens de reclassering zou verdachte baat kunnen hebben bij toezicht door de reclassering en zijn er invalshoeken om met hem aan de slag te gaan. De rechtbank deelt dit oordeel. Contact met de reclassering kan leiden tot beter zelfinzicht en zelfbeheersing als verdachte in zekere risicovolle omstandigheden verzeild raakt. De aard van het feit maakt een gevangenisstraf onvermijdelijk. Deze dient tevens om het aangerichte leed te compenseren en de norm te onderstrepen dat men andermans leven moet respecteren. De rechtbank zal een deel van de straf voorwaardelijk opleggen om het mogelijk te maken dat verdachte door de reclassering wordt begeleid. De straf valt lager uit dan door de officier van justitie gevorderd, omdat de vordering is gebaseerd op poging tot moord, waarvan verdachte wordt vrijgesproken.</para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="SECTION_TITLE">Benadeelde partij</para>
+        <para manualAnnotation="TEXT_BLOCK">[naam] heeft zich voor de aanvang van de terechtzitting als benadeelde partij in het strafproces gevoegd door middel van indiening van het voorgeschreven formulier bevattende de opgave van een vordering tot vergoeding van door hem geleden schade ten gevolge van het aan verdachte primair ten laste gelegde en bewezenverklaarde feit alsmede de gronden waarop deze berust.</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">De rechtbank is van oordeel dat de gestelde materiële schade, groot € 502,23, voldoende aannemelijk is geworden en in zodanig verband staat met het door verdachte gepleegde strafbare feit, dat deze aan hem als een gevolg van zijn handelen kan worden toegerekend. Voor wat betreft de immateriële schade zoals door [naam] gesteld, overweegt de rechtbank dat er weliswaar sprake was van een poging tot doodslag, maar dat het letsel beperkt is gebleven. De rechtbank zal het toe te wijzen bedrag voor vergoeding van de immateriële schade naar redelijkheid matigen tot € 500,00. Dit brengt de door verdachte te vergoeden schade in totaal op € 1002,23, te vermeerderen met de wettelijke rente vanaf 2 april 2010.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">De rechtbank acht daarnaast oplegging van de schadevergoedingsmaatregel aangewezen.</para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="SECTION_TITLE">Toepassing van wetsartikelen</para>
+        <para manualAnnotation="TEXT_BLOCK">De rechtbank heeft gelet op de artikelen 14a, 14b, 14c, 14d, 36f, 45 en 287 van het Wetboek van Strafrecht, zoals deze artikelen golden ten tijde van het bewezenverklaarde. </para>
+      </parablock>
+      <para/>
+      <para/>
+      <para manualAnnotation="SECTION_TITLE">DE UITSPRAAK VAN DE RECHTBANK LUIDT, RECHTDOENDE:</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Verklaart het primair ten laste gelegde bewezen, te kwalificeren en strafbaar in voege als voormeld en verdachte deswege strafbaar.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Veroordeelt verdachte te dier zake tot:</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Een gevangenisstraf voor de duur van achttien maanden. </para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Bepaalt, dat van deze gevangenisstraf een gedeelte, groot zes maanden niet zal worden tenuitvoergelegd, tenzij de rechter later anders mocht gelasten, op grond, dat de veroordeelde voor het einde van de proeftijd, welke hierbij wordt vastgesteld op twee jaren, de hierna te noemen algemene of bijzondere voorwaarden niet heeft nageleefd.</para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">Stelt als algemene voorwaarden:</para>
+        <para><potentialnr manualAnnotation="NR">a. </potentialnr><text manualAnnotation="TEXT_BLOCK">dat de veroordeelde zich voor het einde van de proeftijd niet schuldig maakt aan een strafbaar feit;</text></para>
+        <para><potentialnr manualAnnotation="NR">b. </potentialnr><text manualAnnotation="TEXT_BLOCK">dat de veroordeelde ten behoeve van het vaststellen van zijn identiteit, medewerking verleent aan het nemen van een of meer vingerafdrukken of een identiteitsbewijs als bedoeld in artikel 1 van de Wet op de identificatieplicht ter inzage aanbiedt. </text></para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">Stelt als bijzondere voorwaarde, dat de veroordeelde:</para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> zich bij het ingaan van de proeftijd meldt bij Reclassering Nederland te Leeuwarden;</text></para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> ervoor zorgt dat hij gedurende de proeftijd bereikbaar is voor deze reclasseringsinstelling;</text></para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> zich gedurende de proeftijd gedraagt naar de voorschriften en aanwijzingen hem te geven door of namens genoemde reclasseringsinstelling.</text></para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Draagt genoemde reclasseringsinstelling op de veroordeelde bij de naleving van de voorwaarden hulp en steun te verlenen. </para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Beveelt, dat de tijd door de veroordeelde voor de tenuitvoerlegging van deze uitspraak in verzekering en/of voorlopige hechtenis doorgebracht, bij de uitvoering van de opgelegde gevangenisstraf geheel in mindering zal worden gebracht. </para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Verklaart niet bewezen hetgeen aan verdachte meer of anders is ten laste gelegd dan het bewezenverklaarde en spreekt verdachte daarvan vrij. </para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Wijst de vordering van de benadeelde partij [naam], [adres], toe tot na te melden bedrag en veroordeelt verdachte mitsdien tot betaling aan deze benadeelde partij van een bedrag van € 1002,23 (zegge: duizendtwee euro en drieëntwintig eurocent), te vermeerderen met de wettelijke rente vanaf 2 april 2010. </para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Bepaalt dat de benadeelde partij [naam] in het overige deel van de vordering niet ontvankelijk is en dat dit deel van de vordering slechts bij de burgerlijke rechter kan worden aangebracht</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Veroordeelt verdachte in de kosten van het geding door de benadeelde partij gemaakt en ten behoeve van de tenuitvoerlegging van deze uitspraak alsnog te maken, tot heden begroot op nihil.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Legt aan verdachte de verplichting op aan de staat, ten behoeve van het slachtoffer [naam], te betalen een som geld ten bedrage van € 1002,23 (zegge: duizendtwee euro en drieëntwintig eurocent), bij gebreke van betaling en verhaal te vervangen door hechtenis voor de duur van 20 dagen, met dien verstande dat de toepassing van de vervangende hechtenis de hiervoor opgelegde verplichting niet opheft. </para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Bepaalt daarbij dat, indien verdachte heeft voldaan aan de verplichting tot betaling aan de staat ten behoeve van het slachtoffer [naam], daarmee de verplichting van verdachte om aan de benadeelde partij dit bedrag te betalen komt te vervallen en vice versa, dat, indien verdachte aan de benadeelde partij het opgelegde bedrag heeft betaald, daarmee de verplichting tot betaling aan de staat van dit bedrag komt te vervallen.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Dit vonnis is gewezen door mr. M.H. Severein, voorzitter, mr. H. van der Werff en mr. Y. Huizing, rechters, bijgestaan door mr. C.L. van der Woude, griffier, en uitgesproken ter openbare terechtzitting van deze rechtbank op 27 januari 2011.</para>
+      <para/>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">1 </potentialnr><text manualAnnotation="TEXT_BLOCK">De genoemde processen-verbaal zijn in de wettelijke vorm en door daartoe bevoegde opsporingsambtenaren opgemaakt; de genoemde pagina's bevinden zich in het doorgenummerde proces-verbaal met OPS-dossiernummer PLO2R2 2010032748-1, gesloten op 14 juni 2010.</text></para>
+        <para><potentialnr manualAnnotation="NR">2 </potentialnr><text manualAnnotation="TEXT_BLOCK">De verklaring van verdachte, afgelegd ter terechtzitting van 15 juli 2010.</text></para>
+        <para><potentialnr manualAnnotation="NR">3 </potentialnr><text manualAnnotation="TEXT_BLOCK">Het proces-verbaal van aangifte door [naam], d.d. 2 april 2010, pagina 30-31.</text></para>
+        <para><potentialnr manualAnnotation="NR">4 </potentialnr><text manualAnnotation="TEXT_BLOCK">De geneeskundige verklaring d.d. 26 april 2010.</text></para>
+        <para><potentialnr manualAnnotation="NR">5 </potentialnr><text manualAnnotation="TEXT_BLOCK">Het onderzoeksrapport opgemaakt door GGD Fryslan d.d. 18 oktober 2010.</text></para>
+        <para><potentialnr manualAnnotation="NR">6 </potentialnr><text manualAnnotation="TEXT_BLOCK">Het onderzoeksrapport opgemaakt door het NFI d.d. 5 januari 2011.</text></para>
+      </parablock>
+    </uitspraak>
+</open-rechtspraak>

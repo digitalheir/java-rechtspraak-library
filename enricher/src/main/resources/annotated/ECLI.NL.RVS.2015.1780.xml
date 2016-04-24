@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:eu="http://publications.europa.eu/celex/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:tr="http://tuchtrecht.overheid.nl/">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:RVS:2015:1780</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2015-06-10T11:59:21</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2015-06-03</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Raad_van_State" scheme="overheid.RechterlijkeMacht">Raad van State</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">2015-05-28</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">201502374/1/A1 en 201502374/2/A1</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#voorlopigeVoorzieningbodemzaak">Voorlopige voorziening+bodemzaak</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:spatial rdfs:label="Zittingsplaats">'s-Gravenhage</dcterms:spatial>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht">Bestuursrecht</dcterms:subject>
+      <dcterms:relation ecli:resourceIdentifier="ECLI:NL:RBZWB:2015:1838" psi:aanleg="http://psi.rechtspraak.nl/eerdereAanleg" psi:gevolg="http://psi.rechtspraak.nl/gevolg#bekrachtiging/bevestiging" psi:type="http://psi.rechtspraak.nl/hogerBeroep" rdfs:label="Formele relatie">Eerste aanleg: ECLI:NL:RBZWB:2015:1838, Bekrachtiging/bevestiging</dcterms:relation>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2015:1780">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2015:1780</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2015-06-03T10:00:45</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2015-06-03</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:RVS:2015:1780 Raad van State , 28-05-2015 / 201502374/1/A1 en 201502374/2/A1</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie id="ECLI:NL:RVS:2015:1780:INH" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <para>Bij afzonderlijke besluiten van 14 oktober 2014 heeft de RDW de keuringsbevoegdheid van [appellant A] voor de categorie voertuigen tot 3500 kg per direct voor zes maanden ingetrokken en de aan APK Keuringsstation 013 verleende erkenning voor het uitvoeren van periodieke keuringen van de categorie voertuigen tot en met 3500 kg (hierna: de erkenning) met ingang van 22 oktober 2014 voor twaalf weken ingetrokken.</para>
+    </inhoudsindicatie>
+  <uitspraak id="ECLI:NL:RVS:2015:1780:DOC" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <parablock>
+        <para><potentialnr manualAnnotation="TEXT_BLOCK">201502374/</potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">1/</potentialnr><text manualAnnotation="TEXT_BLOCK">A1 en 201502374/2/A1.</text></para>
+        <para manualAnnotation="TEXT_BLOCK">Datum uitspraak: 28 mei 2015</para>
+        <para/>
+        <para manualAnnotation="SECTION_TITLE">AFDELING</para>
+        <para manualAnnotation="SECTION_TITLE">BESTUURSRECHTSPRAAK</para>
+        <para/>
+        <para manualAnnotation="TEXT_BLOCK">Uitspraak van de voorzieningenrechter van de Afdeling bestuursrechtspraak van de Raad van State op een verzoek om het treffen van een voorlopige voorziening (artikel 8:81 van de Algemene wet bestuursrecht (hierna: de Awb)) en, met toepassing van artikel 8:86 van die wet, op het hoger beroep van:</para>
+        <para/>
+        <para manualAnnotation="TEXT_BLOCK">[appellant A], wonend te [woonplaats], en APK Keuringsstation 013, gevestigd te [plaats],</para>
+        <para manualAnnotation="TEXT_BLOCK">appellanten,</para>
+        <para/>
+        <para manualAnnotation="TEXT_BLOCK">tegen de uitspraak van de rechtbank Zeeland-West-Brabant van 10 maart 2015 in zaken nrs. 14/6719 en 14/6722 in het geding tussen:</para>
+        <para/>
+        <para manualAnnotation="TEXT_BLOCK">[appellant A] en APK Keuringsstation 013</para>
+        <para/>
+        <para manualAnnotation="TEXT_BLOCK">en</para>
+        <para/>
+        <para manualAnnotation="TEXT_BLOCK">de directie van de Dienst Wegverkeer (hierna: de RDW).</para>
+        <para/>
+        <para manualAnnotation="SECTION_TITLE">Procesverloop</para>
+        <para/>
+        <para manualAnnotation="TEXT_BLOCK">Bij afzonderlijke besluiten van 14 oktober 2014 heeft de RDW de keuringsbevoegdheid van [appellant A] voor de categorie voertuigen tot 3500 kg per direct voor zes maanden ingetrokken en de aan APK Keuringsstation 013 verleende erkenning voor het uitvoeren van periodieke keuringen van de categorie voertuigen tot en met 3500 kg (hierna: de erkenning) met ingang van 22 oktober 2014 voor twaalf weken ingetrokken.</para>
+        <para/>
+        <para manualAnnotation="TEXT_BLOCK">Bij afzonderlijke besluiten van 4 november 2014 heeft de RDW de door [appellant A] en APK Keuringsstation 013 (hierna tezamen: [appellant]) tegen de besluiten van 14 oktober 2014 gemaakte bezwaren ongegrond verklaard.</para>
+        <para/>
+        <para manualAnnotation="TEXT_BLOCK">Bij uitspraak van 10 maart 2015 heeft de rechtbank de door [appellant] tegen de besluiten van 4 november 2014 ingestelde beroepen ongegrond verklaard. Deze uitspraak is aangehecht.</para>
+        <para/>
+        <para manualAnnotation="TEXT_BLOCK">Tegen deze uitspraak heeft [appellant] hoger beroep ingesteld. Hij heeft de voorzieningenrechter tevens verzocht een voorlopige voorziening te treffen.</para>
+        <para/>
+        <para manualAnnotation="TEXT_BLOCK">De voorzieningenrechter heeft het verzoek ter zitting behandeld op 9 april 2015, waar [appellant], bijgestaan door mr. P van de Kerkhof, advocaat te Tilburg, en de RDW, vertegenwoordigd door M.A. Groenewoud, werkzaam bij de RDW, zijn verschenen.</para>
+        <para/>
+        <para manualAnnotation="SECTION_TITLE">Overwegingen</para>
+        <para/>
+        <para><potentialnr manualAnnotation="NR">1. </potentialnr><text manualAnnotation="TEXT_BLOCK">In dit geval kan nader onderzoek redelijkerwijs niet bijdragen aan de beoordeling van de zaak en bestaat ook overigens geen beletsel om met toepassing van artikel 8:86, eerste lid, van de Awb onmiddellijk uitspraak te doen in de hoofdzaak.</text></para>
+        <para/>
+        <para><potentialnr manualAnnotation="NR">2. </potentialnr><text manualAnnotation="TEXT_BLOCK">Ingevolge artikel 87, tweede lid, aanhef en onder f, van de Wegenverkeerswet 1994 kan de RDW een erkenning intrekken of wijzigen, indien degene, aan wie de erkenning is verleend, in strijd handelt met een of meer uit de erkenning voortvloeiende verplichtingen.</text></para>
+        <para/>
+        <para manualAnnotation="TEXT_BLOCK">Ingevolge artikel 87a, tweede lid, aanhef en onder c, kan de RDW de bevoegdheid voertuigen aan een keuring te onderwerpen intrekken of de daaraan verbonden voorschriften wijzigen, indien degene, aan wie die bevoegdheid is verleend, in strijd handelt met een of meer uit de bevoegdheid voertuigen aan een keuring te onderwerpen voortvloeiende verplichtingen.</para>
+        <para/>
+        <para manualAnnotation="TEXT_BLOCK">Ingevolge artikel 31, eerste lid, van de Regeling erkenning en keuringsbevoegdheid APK (hierna: de Regeling) gelden, indien het voertuig blijkens de mededeling van de RDW wordt onderworpen aan een steekproef, de in het tweede tot en met zesde lid genoemde verplichtingen.</para>
+        <para/>
+        <para manualAnnotation="TEXT_BLOCK">Ingevolge het tweede lid, worden in de staat van het voertuig dat aan een steekproef wordt onderworpen, gedurende negentig minuten na het tijdstip van de afmelding geen wijzigingen aangebracht en worden geen metingen met betrekking tot het voertuig verricht.</para>
+        <para/>
+        <para manualAnnotation="TEXT_BLOCK">Bij het toezicht op keuringen en het opleggen van sancties past de RDW beleidsregels toe die zijn neergelegd in de Toezichtbeleidsbrief Erkenninghouders RDW van, ten tijde van belang, 1 oktober 2012, welke aan elke erkenninghouder en keurmeester bekend zijn gemaakt.</para>
+        <para/>
+        <para><potentialnr manualAnnotation="NR">3. </potentialnr><text manualAnnotation="TEXT_BLOCK">Het geschil spitst zich toe op de vraag of sprake is van een overtreding op grond waarvan de RDW bevoegd was om de sancties op te leggen.</text></para>
+        <para/>
+        <para><potentialnr manualAnnotation="NR">4. </potentialnr><text manualAnnotation="TEXT_BLOCK">De RDW heeft aan de besluiten van 14 oktober 2014 ten grondslag gelegd dat artikel 31, tweede lid, van de Regeling is overtreden. Volgens de RDW heeft [appellant] blijkens de verklaring van de steekproefcontroleur in quarantainetijd gesleuteld aan het voertuig dat aan de steekproef werd onderworpen door een band met behulp van een bandenspanningsmeter op druk te brengen.</text></para>
+        <para/>
+        <para><potentialnr manualAnnotation="NR">5. </potentialnr><text manualAnnotation="TEXT_BLOCK">[appellant] betoogt dat de rechtbank niet heeft onderkend dat geen overtreding is gepleegd. Hij voert hiertoe aan dat hij de bevindingen van de steekproefcontroleur voldoende gemotiveerd heeft betwist, zodat deze aan twijfel onderhevig zijn en de RDW haar beslissing niet op de bevindingen van de steekproefcontroleur mocht baseren. [appellant] wijst er op dat hij direct na de controle heeft geweigerd om het controlerapport van de steekproefcontroleur mede te ondertekenen. Voorts wijst hij er op dat er geen ander bewijsmateriaal voor de gestelde overtreding voorhanden is dan de verklaring van de steekproefcontroleur, terwijl hij een verklaring van een getuige heeft overgelegd die overeenkomt met hetgeen hij zelf heeft verklaard en die de verklaring van de steekproefcontroleur weerspreekt, namelijk dat hij de bandenspanningsmeter aan het opruimen was en hij de band niet aan het bijvullen was. De rechtbank heeft volgens [appellant] onvoldoende gewicht aan deze getuigenverklaring toegekend.</text></para>
+        <para/>
+        <para><potentialnr manualAnnotation="NR">5.1. </potentialnr><text manualAnnotation="TEXT_BLOCK">Zoals de Afdeling eerder heeft overwogen (uitspraak van 21 augustus 2013 in zaak nr. 201300426/1/A3) mag in beginsel van de juistheid van een verklaring van een steekproefcontroleur worden uitgegaan en komt aan de inhoud van een dergelijke verklaring een sterke bewijskracht toe.</text></para>
+        <para/>
+        <para manualAnnotation="TEXT_BLOCK">De steekproefcontroleur heeft in het bezoekverslag van 24 september 2014 verklaard dat hij constateerde dat [appellant] gehurkt bij het rechtervoorwiel van het voertuig zat, [appellant] een bandenvulpistool in zijn handen had en de vulslang aan het ventiel gekoppeld was. Volgens de verklaring van de steekproefcontroleur schrok [appellant] toen hij hem zag en trok hij de vulslang van het ventiel af waardoor er lucht ontsnapte. De steekproefcontroleur heeft verklaard dat hij door dat geluid wist dat de band op dat moment gevuld werd.</para>
+        <para/>
+        <para manualAnnotation="TEXT_BLOCK">De rechtbank heeft terecht geen aanleiding gezien voor het oordeel dat de RDW zich niet mocht baseren op de verklaring van de steekproefcontroleur, die de rechtbank ter zitting als getuige onder ede heeft gehoord. De enkele omstandigheid dat [appellant] heeft geweigerd het steekproefcontrolerapport te ondertekenen is onvoldoende voor dat oordeel. Ook de omstandigheid dat er geen ander bewijsmateriaal is dat de verklaring van de steekproefcontroleur ondersteunt brengt niet met zich dat de RDW zich niet op deze verklaring mocht baseren. De rechtbank heeft daarbij gewicht mogen toekennen aan het feit dat de steekproefcontroleur, die al dertien jaar voor de RDW werkt, als ter zake kundig kan worden beschouwd. De rechtbank heeft voorts aan de door [appellant] overgelegde verklaring van de tijdens de steekproef aanwezige klant, die zijn stelling dat hij de bandenspanningsmeter aan het opruimen was en hij de band niet aan bijvullen was onderschrijft, terecht niet het gewicht toegekend dat [appellant] daaraan gehecht wenst te zien. Daarbij heeft zij in aanmerking mogen nemen dat de klant in die verklaring vaktaal bezigt, terwijl niet is gebleken dat deze klant kennis heeft van auto’s in het algemeen en APK-keuringen in het bijzonder, en bovendien in die verklaring de woorden "Zoals gewoonlijk.." over de handelwijze van [appellant] bij het uitvoeren van zijn werkzaamheden zijn gebruikt, terwijl deze klant het bedrijf van [appellant] op de dag van de steekproef pas voor de tweede keer bezocht. De rechtbank heeft, gelet hierop, vraagtekens mogen stellen bij hetgeen de klant heeft verklaard over wat hij zelf heeft waargenomen bij de steekproefcontrole.</para>
+        <para/>
+        <para manualAnnotation="TEXT_BLOCK">Het betoog faalt.</para>
+        <para/>
+        <para><potentialnr manualAnnotation="NR">6. </potentialnr><text manualAnnotation="TEXT_BLOCK">Het hoger beroep is ongegrond. De aangevallen uitspraak dient te worden bevestigd.</text></para>
+        <para/>
+        <para><potentialnr manualAnnotation="NR">7. </potentialnr><text manualAnnotation="TEXT_BLOCK">Gelet hierop bestaat aanleiding het verzoek om het treffen van een voorlopige voorziening af te wijzen.</text></para>
+        <para/>
+        <para><potentialnr manualAnnotation="NR">8. </potentialnr><text manualAnnotation="TEXT_BLOCK">Voor een proceskostenveroordeling bestaat geen aanleiding.</text></para>
+        <para/>
+        <para manualAnnotation="SECTION_TITLE">Beslissing</para>
+        <para/>
+        <para manualAnnotation="TEXT_BLOCK">De voorzieningenrechter van de Afdeling bestuursrechtspraak van de Raad van State:</para>
+        <para/>
+        <para><potentialnr manualAnnotation="NR">I. </potentialnr><text manualAnnotation="TEXT_BLOCK">bevestigt de aangevallen uitspraak;</text></para>
+        <para/>
+        <para><potentialnr manualAnnotation="NR">II. </potentialnr><text manualAnnotation="TEXT_BLOCK">wijst het verzoek af.</text></para>
+        <para/>
+        <para manualAnnotation="TEXT_BLOCK">Aldus vastgesteld door mr. J.A.W. Scholten-Hinloopen, als voorzieningenrechter, in tegenwoordigheid van mr. R.J. van den Berg, griffier.</para>
+        <para/>
+        <para><potentialnr manualAnnotation="TEXT_BLOCK">w.</potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">g. </potentialnr><text manualAnnotation="TEXT_BLOCK">Scholten-Hinloopen w.g. Van den Berg</text></para>
+        <para manualAnnotation="TEXT_BLOCK">voorzieningenrechter griffier</para>
+        <para/>
+        <para manualAnnotation="TEXT_BLOCK">Uitgesproken in het openbaar op 28 mei 2015</para>
+        <para/>
+        <para><potentialnr manualAnnotation="TEXT_BLOCK">580.</potentialnr></para>
+      </parablock>
+    </uitspraak>
+</open-rechtspraak>

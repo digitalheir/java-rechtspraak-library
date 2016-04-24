@@ -1,0 +1,428 @@
+Phase:   Names
+Input:   Token Sentence Lookup 
+Options: control = appelt debug = true
+
+
+
+//////////
+// Rules
+//////////
+
+
+
+
+
+
+
+
+
+Rule: WerkzaamBij
+(TOLERANTFULLNAME):name
+{Token.string == ","}
+{Token.string == "werkzaam"}
+{Token.string == "bij"}
+-->
+  :name.Name = { confidence=high}
+
+/**
+ * Single titled name, eg. mr. Jan de Waal
+ */
+
+Rule: TitledName
+Priority: 100
+(TITLEDNAMEKNOWN):name
+-->
+  :name.Name = { confidence=medium}
+
+Rule: OpDeTerechtzittingVan
+{Token.string == "op"}
+{Token.string == "de"}
+{Token.string ==~ "(te)?rechts?zitting"}
+{Token.string == "van"}
+(STRICTINITIALSNAMEKNOWN):name
+-->
+  :name.Name = { confidence=high}
+
+
+Rule: AnnotatieDoor1
+{Token.string == "annotatie"}
+{Token.string == "door"}
+(TOLERANTFULLNAME):annotator
+-->
+  :annotator.Annotator = {role="annotator", confidence=high}
+
+
+Rule: AnnotatieDoor2
+{Token.string == "annotatie"}
+{Token.string == "door"}
+((TOLERANTFULLNAME):name1
+{Token.string ==~ "en|,"}
+(TOLERANTFULLNAME):name2):namegroup
+-->
+  :name1.Name = { role="annotator", confidence=high},
+  :name2.Name = { role="annotator", confidence=high},
+  :namegroup.Namegroup = {}
+
+Rule: AnnotatieDoor3
+{Token.string == "annotatie"}
+{Token.string == "door"}
+((TOLERANTFULLNAME):name1
+{Token.string ==~ ",|;"}
+(TOLERANTFULLNAME):name2
+{Token.string ==~ "en|,"}
+(TOLERANTFULLNAME):name3):namegroup
+-->
+  :name1.Name = { role="annotator", confidence=high},
+  :name2.Name = { role="annotator", confidence=high},
+  :name3.Name = { role="annotator", confidence=high},
+  :namegroup.Namegroup = {}
+
+Rule: AnnotatieIn1
+(TOLERANTFULLNAME):name1
+({Token.string ==~ ","})?
+{Token.string == "annotatie"}
+{Token.string == "in"}
+-->
+  :name1.Name = { role="annotator", confidence=high}
+
+Rule: AnnotatieIn2
+((TOLERANTFULLNAME):name1
+{Token.string ==~ "en|,"}
+(TOLERANTFULLNAME):name2):namegroup
+({Token.string ==~ ","})?
+{Token.string == "annotatie"}
+{Token.string == "in"}
+-->
+  :name1.Name = { role="annotator", confidence=high},
+  :name2.Name = { role="annotator", confidence=high},
+  :namegroup.Namegroup = {}
+
+
+
+Rule: GexxxDoor3HighConf
+(
+ ({Token.string ==~ "[Dd]eze"}{Token.string == "beschikking"}{Token.string == "is"}{Token.string == "gegeven"})
+|
+ (({Token.string == "laten"}{Token.string ==~ "vertegenwoordigen"})|({Token.string ==~ "(vertegenwoordigd|bijgestaan)"}))
+)
+{Token.string == "door"}
+(
+    (TOLERANTFULLNAME):name1
+    (({Token.string == ","})({Lookup.majorType == role, Lookup.minorType==singular}):role1({Token.string == ","})?)?
+    ({Token.string == ","})
+    (TOLERANTFULLNAME):name2
+    (({Token.string == ","})({Lookup.majorType == role, Lookup.minorType==singular}):role2({Token.string == ","})?)?
+    ({Token.string == "en"})
+    (TOLERANTFULLNAME):name3
+    (({Token.string == ","})({Lookup.majorType == role, Lookup.minorType==singular}):role3({Token.string == ","})?)?
+):namegroup
+//Followed by the group role possibly
+ (
+   {Token.string == ","}
+   ({Token.string==~"allen"})?
+   ({Lookup.majorType == role}):roleGroup
+   ({Token.string == ","})?
+ )?
+-->
+  :name1.Name = { role=:role1@cleanString, confidence=high},
+  :name2.Name = { role=:role2@cleanString, confidence=high},
+  :name3.Name = { role=:role3@cleanString, confidence=high},
+  :namegroup.Namegroup = { role=:roleGroup@cleanString}
+
+Rule: GexxxDoor2HighConf
+(({Token.string == "laten"}{Token.string ==~ "vertegenwoordigen"})|({Token.string ==~ "(vertegenwoordigd|bijgestaan)"}))
+{Token.string == "door"}
+(
+    (TOLERANTFULLNAME):name1
+    (({Token.string == ","})({Lookup.majorType == role, Lookup.minorType==singular}):role1({Token.string == ","})?)?
+    ({Token.string == "en"})
+    (TOLERANTFULLNAME):name2
+    (({Token.string == ","})({Lookup.majorType == role, Lookup.minorType==singular}):role2({Token.string == ","})?)?
+):namegroup
+//Followed by the group role possibly
+ (
+   {Token.string == ","}
+   ({Token.string==~"allen|beiden"})?
+   ({Lookup.majorType == role}):roleGroup
+   ({Token.string == ","})?
+ )?
+-->
+  :name1.Name = { role=:role1@cleanString, confidence=high},
+  :name2.Name = { role=:role2@cleanString, confidence=high},
+  :namegroup.Namegroup = { role=:roleGroup@cleanString}
+
+Rule: GexxxDoor1HighConf
+(({Token.string == "laten"}{Token.string ==~ "vertegenwoordigen"})|({Token.string ==~ "(vertegenwoordigd|bijgestaan)"}))
+{Token.string == "door"}
+(TOLERANTFULLNAME):name
+-->
+  :name.Name = { confidence=high}
+
+
+Rule: GexxxDoor4
+{Token.string ==~ "(vertegenwoordigd|bijgestaan)|(\\p{L}*ge\\p{L}{3,}(en|d|t))$"}
+{Token.string == "door"}
+(
+    (TOLERANTFULLNAMEKNOWN):name1
+    (({Token.string == ","})({Lookup.majorType == role, Lookup.minorType==singular}):role1({Token.string == ","})?)?
+    ({Token.string == ","})
+    (TOLERANTFULLNAMEKNOWN):name2
+    (({Token.string == ","})({Lookup.majorType == role, Lookup.minorType==singular}):role2({Token.string == ","})?)?
+    ({Token.string == ","})
+    (TOLERANTFULLNAMEKNOWN):name3
+    (({Token.string == ","})({Lookup.majorType == role, Lookup.minorType==singular}):role3({Token.string == ","})?)?
+    ({Token.string == "en"})
+    (TOLERANTFULLNAMEKNOWN):name4
+    (({Token.string == ","})({Lookup.majorType == role, Lookup.minorType==singular}):role4({Token.string == ","})?)?
+):namegroup
+//Followed by the group role possibly
+ (
+   {Token.string == ","}
+   ({Token.string==~"allen"})?
+   ({Lookup.majorType == role}):roleGroup
+   ({Token.string == ","})?
+ )?
+-->
+  :name1.Name = { role=:role1@cleanString, confidence=medium},
+  :name2.Name = { role=:role2@cleanString, confidence=medium},
+  :name3.Name = { role=:role3@cleanString, confidence=medium},
+  :name4.Name = { role=:role4@cleanString, confidence=medium},
+  :namegroup.Namegroup = { role=:roleGroup@cleanString}
+
+Rule: GexxxDoor3
+{Token.string ==~ "(vertegenwoordigd|bijgestaan)|(\\p{L}*ge\\p{L}{3,}(en|d|t)$)"}
+{Token.string == "door"}
+(
+    (TOLERANTFULLNAMEKNOWN):name1
+    (({Token.string == ","})({Lookup.majorType == role, Lookup.minorType==singular}):role1({Token.string == ","})?)?
+    ({Token.string == ","})
+    (TOLERANTFULLNAMEKNOWN):name2
+    (({Token.string == ","})({Lookup.majorType == role, Lookup.minorType==singular}):role2({Token.string == ","})?)?
+    ({Token.string == "en"})
+    (TOLERANTFULLNAMEKNOWN):name3
+    (({Token.string == ","})({Lookup.majorType == role, Lookup.minorType==singular}):role3({Token.string == ","})?)?
+):namegroup
+//Followed by the group role possibly
+ (
+   {Token.string == ","}
+   ({Token.string==~"allen"})?
+   ({Lookup.majorType == role}):roleGroup
+   ({Token.string == ","})?
+ )?
+-->
+  :name1.Name = { role=:role1@cleanString, confidence=medium},
+  :name2.Name = { role=:role2@cleanString, confidence=medium},
+  :name3.Name = { role=:role3@cleanString, confidence=medium},
+  :namegroup.Namegroup = { role=:roleGroup@cleanString}
+
+Rule: GexxxDoor2
+{Token.string ==~ "(vertegenwoordigd|bijgestaan)|(\\p{L}*ge\\p{L}{3,}(en|d|t)$)"}
+{Token.string == "door"}
+(
+    (TOLERANTFULLNAMEKNOWN):name1
+    (({Token.string == ","})({Lookup.majorType == role, Lookup.minorType==singular}):role1({Token.string == ","})?)?
+    ({Token.string == "en"})
+    (TOLERANTFULLNAMEKNOWN):name2
+    (({Token.string == ","})({Lookup.majorType == role, Lookup.minorType==singular}):role2({Token.string == ","})?)?
+):namegroup
+//Followed by the group role possibly
+ (
+   {Token.string == ","}
+   ({Token.string==~"allen|beiden"})?
+   ({Lookup.majorType == role}):roleGroup
+   ({Token.string == ","})?
+ )?
+-->
+  :name1.Name = { role=:role1@cleanString, confidence=medium},
+  :name2.Name = { role=:role2@cleanString, confidence=medium},
+  :namegroup.Namegroup = { role=:roleGroup@cleanString}
+
+Rule: GexxxDoor1
+{Token.string ==~ "(vertegenwoordigd|bijgestaan)|(\\p{L}*ge\\p{L}{3,}(en|d|t)$)"}
+{Token.string == "door"}
+(TOLERANTFULLNAMEKNOWN):name
+-->
+  :name.Name = { confidence=medium}
+
+
+/**
+ * General conjunctions
+ **/
+Rule: NameConjunction4
+(
+    ({Lookup.majorType == role}):rolePre
+    ({Token.string ==~ "[:;]"})?
+)?
+(
+    ((TITLEDNAME)|(STRICTINITIALSNAMEKNOWN)):name1
+    (({Token.string == ","})({Lookup.majorType == role, Lookup.minorType==singular}):role1({Token.string == ","})?)?
+    ({Token.string == ","})
+    ((TITLEDNAME)|(STRICTINITIALSNAMEKNOWN)):name2
+    (({Token.string == ","})({Lookup.majorType == role, Lookup.minorType==singular}):role2({Token.string == ","})?)?
+    ({Token.string == ","})
+    ((TITLEDNAME)|(STRICTINITIALSNAMEKNOWN)):name3
+    (({Token.string == ","})({Lookup.majorType == role, Lookup.minorType==singular}):role3({Token.string == ","})?)?
+    ({Token.string == "en"})
+    ((TITLEDNAME)|(STRICTINITIALSNAMEKNOWN)):name4
+    (({Token.string == ","})({Lookup.majorType == role, Lookup.minorType==singular}):role4({Token.string == ","})?)?
+):namegroup
+//Followed by the group role possibly
+ (
+   {Token.string == ","}
+   ({Token.string==~"allen"})?
+   ({Lookup.majorType == role}):roleGroup
+   ({Token.string == ","})?
+ )?
+-->
+  :name1.Name = { role=:role1@cleanString, confidence=medium},
+  :name2.Name = { role=:role2@cleanString, confidence=medium},
+  :name3.Name = { role=:role3@cleanString, confidence=medium},
+  :name4.Name = { role=:role4@cleanString, confidence=medium},
+  :namegroup.Namegroup = { role=:roleGroup@cleanString, rolePre=:rolePre@cleanString}
+
+Rule: NameConjunction3
+(
+    ({Lookup.majorType == role}):rolePre
+    ({Token.string ==~ "[:;]"})?
+)?
+(
+    ((TITLEDNAME)|(STRICTINITIALSNAMEKNOWN)):name1
+    (({Token.string == ","})({Lookup.majorType == role, Lookup.minorType==singular}):role1({Token.string == ","})?)?
+    ({Token.string == ","})
+    ((TITLEDNAME)|(STRICTINITIALSNAMEKNOWN)):name2
+    (({Token.string == ","})({Lookup.majorType == role, Lookup.minorType==singular}):role2({Token.string == ","})?)?
+    ({Token.string == "en"})
+    ((TITLEDNAME)|(STRICTINITIALSNAMEKNOWN)):name3
+    (({Token.string == ","})({Lookup.majorType == role, Lookup.minorType==singular}):role3({Token.string == ","})?)?
+):namegroup
+//Followed by the group role possibly
+ (
+   {Token.string == ","}
+   ({Token.string==~"allen"})?
+   ({Lookup.majorType == role}):roleGroup
+   ({Token.string == ","})?
+ )?
+-->
+  :name1.Name = { role=:role1@cleanString, confidence=medium},
+  :name2.Name = { role=:role2@cleanString, confidence=medium},
+  :name3.Name = { role=:role3@cleanString, confidence=medium},
+  :namegroup.Namegroup = { role=:roleGroup@cleanString, rolePre=:rolePre@cleanString}
+
+Rule: NameConjunction2
+(
+    ({Lookup.majorType == role}):rolePre
+    ({Token.string ==~ "[:;]"})?
+)?
+(
+    ((TITLEDNAME)|(STRICTINITIALSNAMEKNOWN)):name1
+    (({Token.string == ","})({Lookup.majorType == role, Lookup.minorType==singular}):role1({Token.string == ","})?)?
+    ({Token.string == "en"})
+    ((TITLEDNAME)|(STRICTINITIALSNAMEKNOWN)):name2
+    (({Token.string == ","})({Lookup.majorType == role, Lookup.minorType==singular}):role2({Token.string == ","})?)?
+):namegroup
+//Followed by the group role possibly
+ (
+   {Token.string == ","}
+   ({Token.string==~"allen|beiden"})?
+   ({Lookup.majorType == role}):roleGroup
+   ({Token.string == ","})?
+ )?
+-->
+  :name1.Name = { role=:role1@cleanString, confidence=medium},
+  :name2.Name = { role=:role2@cleanString, confidence=medium},
+  :namegroup.Namegroup = { role=:roleGroup@cleanString, rolePre=:rolePre@cleanString}
+
+
+Rule: Door
+{Token.string ==~ "[Dd]oor"}
+(STRICTINITIALSNAMEKNOWN):name
+-->
+  :name.Name = { confidence=medium}
+
+/**
+ * See, e.g., ECLI:NL:RBUTR:2009:BN6330: "thans verblijvende in [P.I. Utrecht],"
+ *   
+ */
+Rule: VerblijvendeIn
+Priority: 150
+{Token.string ==~ "(verblijvende?)|gedetineerd"}
+{Token.string ==~ "in"}
+(TOLERANTFULLNAME):pi
+-->
+  :pi.Inrichting = {}
+
+/** 
+ * This patterns get more wrong than right
+ */
+
+/**
+ * Note: These rules ('ProbableName') are sensitive to patterns like the following.
+ * A. Bla bla bla
+ * [B. Good] thing bla bla bla
+ * C. Bla bla bla
+ */
+//Rule: ProbableName1
+//Priority: 100
+//  // Having two or more initials makes the name more probable, or alternatively a title
+//( (
+//   ((TITLE)*(STRICTINITIAL)) | (TITLE)+
+//  )
+//  // At least one initial
+//  (STRICTINITIAL)+
+//  (KNOWNSURNAME)
+//):name
+//-->
+//  :name.Name = { confidence=low},
+//  :name.CheckMe = {}
+//
+//Rule: ProbableName2
+//Priority: 100
+//(
+//  (TITLE)*
+//  (STRICTINITIAL)+
+//  // Surname: more common surnames are more probable, or alternatively a longer word
+//  (
+//    (
+//     {Lookup.majorType == surname, Lookup.minorType == common}
+//     (
+//       {Token.string == "-"}
+//       {Lookup.majorType == surname, Lookup.minorType == common}
+//     )?
+//    )
+//    |
+//    (
+//     {Lookup.majorType == surname, Token.length > 4}
+//     (
+//       {Token.string == "-"}
+//       {Lookup.majorType == surname}
+//     )?
+//    )
+//  )
+//):name
+//-->
+//  :name.Name = { confidence=low},
+//  :name.CheckMe = {}
+
+
+
+/**
+ * To make it easier to spot false negatives, we annotate all spans that look like a name (...if we squint real hard)
+ */
+Phase:   PossibleNames
+Input:   Token Sentence Lookup
+Options: control = appelt debug = true
+
+
+Rule: TolerantName
+(
+    (TITLE)*
+    ((FIRSTNAME)+|(INITIAL)+)
+    (TOLERANTLASTNAME)
+
+):name
+-->
+:name.PossibleName = {confidence=low}
+
+Rule: Title
+(TITLE):t --> :t.Title = {}
+

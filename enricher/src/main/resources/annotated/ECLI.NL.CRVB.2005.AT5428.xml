@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:eu="http://publications.europa.eu/celex/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:tr="http://tuchtrecht.overheid.nl/">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:CRVB:2005:AT5428</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-04T22:18:12</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">AT5428</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Centrale_Raad_van_Beroep" scheme="overheid.RechterlijkeMacht">Centrale Raad van Beroep</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">2005-05-03</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">03/2489 WAO</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#hogerBeroep">Hoger beroep</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht_socialezekerheidsrecht">Bestuursrecht; Socialezekerheidsrecht</dcterms:subject>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CRVB:2005:AT5428">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CRVB:2005:AT5428</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-04T22:18:12</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2005-05-12</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:CRVB:2005:AT5428 Centrale Raad van Beroep , 03-05-2005 / 03/2489 WAO</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie id="ECLI:NL:CRVB:2005:AT5428:INH" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <para>Weigering WAO-uitkering omdat betrokkene binnen zes maanden na aanvang van de verzekering arbeidsongeschikt is geworden en dat, gelet op betrokkenes gezondheidstoestand bij aanvang van de verzekering, deze uitval te verwachten was.</para>
+    </inhoudsindicatie>
+  <uitspraak id="ECLI:NL:CRVB:2005:AT5428:DOC" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <para><potentialnr manualAnnotation="TEXT_BLOCK">03/</potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">2489 </potentialnr><text manualAnnotation="TEXT_BLOCK">WAO</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="TEXT_BLOCK">U </potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">I </potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">T </potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">S </potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">P </potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">R </potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">A </potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">A </potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">K</potentialnr></para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">in het geding tussen:</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">[appellant], wonende te [woonplaats], appellant,</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">en</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">de Raad van bestuur van het Uitvoeringsinstituut werknemersverzekeringen, gedaagde.</para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">I. </potentialnr><text manualAnnotation="SECTION_TITLE">ONTSTAAN EN LOOP VAN HET GEDING</text></para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Met ingang van 1 januari 2002 is de Wet structuur uitvoeringsorganisatie werk en inkomen in werking getreden. Ingevolge de Invoeringswet Wet structuur uitvoeringsorganisatie werk en inkomen treedt in dit geding de Raad van bestuur van het Uitvoeringsinstituut werknemersverzekeringen (Uwv) in de plaats van het Landelijk instituut sociale verzekeringen (Lisv). In deze uitspraak wordt onder gedaagde tevens verstaan het Lisv.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Namens appellant heeft mr. E.J.W.F. Deen, advocaat te ’s-Gravenhage, hoger beroep ingesteld tegen de uitspraak van de rechtbank Rotterdam van 8 april 2003 reg.nr. WAO 02/1418-LAME, waarnaar hierbij wordt verwezen.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Gedaagde heeft een verweerschrift ingediend.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Het geding is behandeld ter zitting van de Raad op 8 februari 2005, waar voor appellant is verschenen mr. Deen en waar namens gedaagde is verschenen mr. H. van Wijngaarden, werkzaam bij Uwv.</para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">II. </potentialnr><text manualAnnotation="SECTION_TITLE">MOTIVERING</text></para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Op 12 juni 2000 heeft appellant zijn werkzaamheden als agrarisch medewerker aangevangen. Op 2 juli 2000 heeft hij zich ziek gemeld als gevolg van -met name- psychische klachten. </para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">Bij besluit van 13 november 2001 heeft gedaagde aan appellant een uitkering ingevolge de Wet op de arbeidsongeschikt- heidsverzekering (WAO) geweigerd onder overweging dat appellant, na afloop van de wettelijke wachttijd van 52 weken, op </para>
+        <para manualAnnotation="TEXT_BLOCK">2 juli 2001 minder dan 15% arbeidsongeschikt is, althans dat de mate van arbeidsongeschiktheid niet met ten minste 15% is toegenomen na de datum van de aanvang van de verzekering ingevolge de WAO, zijnde 12 juni 2000.</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Het namens appellant tegen voormeld besluit gemaakte bezwaar is bij besluit van 7 mei 2002, hierna het bestreden besluit, gegrond verklaard. Gedaagde heeft hierbij overwogen dat de WAO terecht is geweigerd, maar heeft de grondslag van de weigering gewijzigd en heeft, onder verwijzing naar artikel 30, eerste lid onder b, van de WAO, gesteld dat appellant binnen zes maanden na aanvang van de verzekering arbeidsongeschikt is geworden en dat, gelet op appellants gezond- heidstoestand bij aanvang van de verzekering, deze uitval te verwachten was.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">De rechtbank heeft bij de in rubriek I vermelde uitspraak het beroep tegen het bestreden besluit ongegrond verklaard. Aan de orde is de vraag of de Raad de rechtbank kan volgen in haar oordeel dat het bestreden besluit in rechte kan standhouden. </para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">In hoger beroep heeft de gemachtigde van appellant zijn in eerste aanleg naar voren gebrachte grieven herhaald en gesteld dat appellant niet arbeidsongeschikt was bij de aanvang van de verzekering, terwijl evenmin de arbeidsongeschiktheid, gelet op de gezondheidstoestand van appellant ten tijde van de aanvang van de verzekering, voorzienbaar is geweest.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">De gemachtigde van gedaagde heeft ter zitting naar voren gebracht dat, gelet op de conclusies van de rapportage van gedaagdes verzekeringsarts en de rapportage van gedaagdes arbeidsdeskundige, appellant voor aanvang van de verzekering op 12 juni 2000 reeds volledig arbeidsongeschikt wordt geacht, in verband waarmee de primaire grond tot weigering van een WAO-uitkering per 2 juli 2001 aan appellant is gelegen in toepassing van artikel 30, eerste lid onder a, van de WAO. De gemachtigde van gedaagde heeft tevens aangegeven dat gedaagde subsidiair de weigering tot het toekennen van een WAO-uitkering aan appellant per 2 juli 2001 op grond van artikel 30, eerste lid onder b, van de WAO handhaaft. </para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">De Raad overweegt als volgt.</para>
+        <para manualAnnotation="TEXT_BLOCK">De Raad is tot het oordeel gekomen dat de beschikbare gegevens voldoende steun bieden aan het oordeel dat appellant ten tijde van de aanvang van de verzekering op 12 juni 2000 reeds volledig arbeidsongeschikt was. De Raad verwijst hierbij naar het rapport van gedaagdes verzekeringsarts S.R. Portier, die bij zijn oordeelsvorming rekening gehouden heeft met informatie van de behandelend sector. Verzekeringsarts Portier heeft een belastbaarheidspatroon opgesteld waarin appellant, naast een aantal fysieke beperkingen, met name beperkt geacht wordt ten aanzien van psychisch belastende factoren, te weten werken onder tijdsdruk, dwingend tempo, conflicterende functie-eisen, kortcyclisch repetitief werk, verantwoordelijkheid, afbreukrisico en het hebben van contact. Voorts heeft de verzekeringsarts geconcludeerd dat het vastgestelde belastbaarheidspatroon per 2 juli 2001 -datum einde wachttijd- eveneens per aanvang van de verzekering op appellant van toepassing kan worden geacht te zijn. De arbeidsdeskundige, J. Sonneveld, heeft vervolgens vastgesteld dat, rekening houdende met het belastbaarheidspatroon van appellant, het niet mogelijk is om functies te duiden, zodat tot algehele arbeidsongeschiktheid moet worden geconcludeerd. </para>
+        <para manualAnnotation="TEXT_BLOCK">Verder verwijst de Raad naar de tijdens de hoorzitting door appellant afgegeven eigen verklaring waarin hij aangeeft dat hij al jaren heel erg ziek is, veel medicijnen moet slikken en al jaren onder behandeling bij de Riagg is. De Raad ziet geen reden, mede in het licht van bovenstaande, deze verklaring voor onjuist te houden.  </para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Derhalve is de Raad van oordeel dat gedaagde bevoegd was tot weigering van een uitkering ingevolge de WAO aan appellant per 2 juli 2001 met toepassing van het bepaalde in artikel 30, eerste lid, onder a, van die wet. De Raad heeft voorts geen aanknopingspunten om de wijze van gebruikmaking van die bevoegdheid door gedaagde rechtens niet aanvaardbaar te achten.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Op grond van het vorenoverwoge komt de aangevallen uitspraak, zij het met verbetering van gronden, voor bevestiging in aanmerking.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">De Raad acht geen termen aanwezig om toepassing te geven aan artikel 8:75 van de Algemene wet bestuursrecht.</para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">III. </potentialnr><text manualAnnotation="SECTION_TITLE">BESLISSING</text></para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">De Centrale Raad van Beroep,</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Recht doende:</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Bevestigt de aangevallen uitspraak.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Aldus gegeven door mr. K.J.S. Spaas als voorzitter en mr. J.W. Schuttel en mr. OJ.D.M.L. Jansen als leden, in tegenwoordigheid van H.H.M. Ho als griffier en uitgesproken in het openbaar op 3 mei 2005.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">(get.) K.J.S. Spaas.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">(get.) H.H.M. Ho.</para>
+    </uitspraak>
+</open-rechtspraak>

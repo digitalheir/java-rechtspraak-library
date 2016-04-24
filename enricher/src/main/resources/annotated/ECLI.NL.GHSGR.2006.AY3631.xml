@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:eu="http://publications.europa.eu/celex/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:tr="http://tuchtrecht.overheid.nl/">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:GHSGR:2006:AY3631</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2014-04-23T02:00:26</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-05</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">AY3631</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Gerechtshof_'s-Gravenhage" scheme="overheid.RechterlijkeMacht">Gerechtshof 's-Gravenhage</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">2006-07-05</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">1447-H-05</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#hogerBeroep">Hoger beroep</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#civielRecht_personenEnFamilierecht">Civiel recht; Personen- en familierecht</dcterms:subject>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+          <rdf:li>RFR 2006, 103</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:GHSGR:2006:AY3631">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:GHSGR:2006:AY3631</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-05T00:18:46</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2006-07-14</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:GHSGR:2006:AY3631 Gerechtshof 's-Gravenhage , 05-07-2006 / 1447-H-05</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie id="ECLI:NL:GHSGR:2006:AY3631:INH" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <para>Overeenkomst waarbij is afgezien van kinderalimentatie (en omgang) is nietig.</para>
+    </inhoudsindicatie>
+  <uitspraak id="ECLI:NL:GHSGR:2006:AY3631:DOC" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">GERECHTSHOF ‘s-GRAVENHAGE</para>
+        <para manualAnnotation="TEXT_BLOCK">Familiesector</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para/>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">Uitspraak		:  5 juli 2006 </para>
+        <para manualAnnotation="TEXT_BLOCK">Rekestnummer.	: 1447-H-05</para>
+        <para manualAnnotation="TEXT_BLOCK">Rekestnr. rechtbank	: 05-2801</para>
+      </parablock>
+      <para/>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">[verzoeker]</para>
+        <para manualAnnotation="TEXT_BLOCK">wonende te Warmond,</para>
+        <para manualAnnotation="TEXT_BLOCK">verzoeker in hoger beroep, </para>
+        <para manualAnnotation="TEXT_BLOCK">hierna te noemen: de vader,</para>
+        <para manualAnnotation="TEXT_BLOCK">procureur mr. V.L.T. van Roy,</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">tegen</para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">[verweerster], </para>
+        <para manualAnnotation="TEXT_BLOCK">wonende te Wassenaar,</para>
+        <para manualAnnotation="TEXT_BLOCK">verweerster in hoger beroep, </para>
+        <para manualAnnotation="TEXT_BLOCK">hierna te noemen: de moeder,</para>
+        <para manualAnnotation="TEXT_BLOCK">procureur mr. J.W. Bogaardt.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para manualAnnotation="SECTION_TITLE">PROCESVERLOOP IN HOGER BEROEP</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">De vader is op 5 december 2005 in hoger beroep gekomen van een beschikking van de rechtbank te ‘s-Gravenhage van 6 september 2005. </para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">De moeder heeft geen verweerschrift ingediend. Zij heeft het hof op voorhand een pleitnota doen toekomen, ingekomen op 18 mei 2006.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Van de zijde van de vader zijn bij het hof op 27 december 2005 aanvullende stukken ingekomen.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Op 31 mei 2006 is de zaak mondeling behandeld. Verschenen zijn: de vader, bijgestaan door zijn procureur, en de moeder, bijgestaan door haar procureur. Partijen hebben het woord gevoerd, de raadslieden van partijen onder meer aan de hand van de bij de stukken gevoegde pleitnotities.</para>
+      <para/>
+      <para manualAnnotation="SECTION_TITLE">VASTSTAANDE FEITEN EN HET PROCESVERLOOP IN EERSTE AANLEG</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Op grond van de stukken en het verhandelde ter terechtzitting staat - voor zover in hoger beroep van belang - tussen de ouders het volgende vast.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">De vader en de moeder hebben een affectieve relatie met elkaar gehad, waaruit [in] 2002 is geboren [kind] hierna te noemen: [het kind]. De vader heeft [het kind] erkend. De moeder heeft alleen het gezag over haar.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Op 13 mei 2005 heeft de moeder de rechtbank te ’s-Gravenhage verzocht, voor zover mogelijk uitvoerbaar bij voorraad, te bepalen dat de vader met ingang van 1 september 2004, subsidiair met ingang van de datum van indiening van haar verzoekschrift, aan haar een bijdrage zal dienen te voldoen in de kosten van verzorging en opvoeding van [het kind] van € 175,- per maand, telkens bij vooruitbetaling te voldoen, dan wel deze kinderbijdrage vast te stellen op een zodanig bedrag en met ingang van een zodanige datum als de rechtbank juist acht. De vader heeft tegen dit inleidende verzoek geen verweer gevoerd.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Bij de bestreden beschikking is, uitvoerbaar bij voorraad, de door de vader met ingang van 1 september 2004 te betalen bijdrage ter voorziening in de kosten van verzorging en opvoeding van [het kind] bepaald op € 175,- per maand, telkens bij vooruitbetaling aan de moeder te voldoen. </para>
+      <para/>
+      <para/>
+      <para manualAnnotation="SECTION_TITLE">BEOORDELING VAN HET HOGER BEROEP</para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">1. </potentialnr><text manualAnnotation="TEXT_BLOCK">De vader verzoekt de bestreden beschikking te vernietigen en, opnieuw beschikkende, voor zoveel mogelijk uitvoerbaar bij voorraad, het inleidend verzoek van de moeder alsnog af te wijzen. De moeder bestrijdt zijn beroep.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2. </potentialnr><text manualAnnotation="TEXT_BLOCK">De vader heeft twee grieven opgeworpen tegen de bestreden beschikking.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">3. </potentialnr><text manualAnnotation="TEXT_BLOCK">In zijn eerste grief stelt de vader dat de rechtbank ten onrechte heeft geoordeeld dat het verzoek van de moeder gegrond voorkomt. Daartoe voert de vader onder meer het volgende aan. Partijen hebben volgens de vader in oktober 2002 een overeenkomst gesloten, waarbij de moeder afstand heeft gedaan van het recht op kinderalimentatie en de vader afstand heeft gedaan van het recht op omgang met [het kind]. In eerste aanleg heeft de moeder, volgens de vader, geen wijziging van omstandigheden gesteld, die met zich meebrengt dat de overeenkomst tussen partijen niet meer aan de wettelijke maatstaven voldoet. De vader betwist dat een dergelijke wijziging van omstandigheden zich voordoet. Daarnaast stelt de vader dat er evenmin sprake is van grove miskenning van de wettelijke maatstaven. Immers, bij het aangaan van de overeenkomst was de bedoeling van partijen duidelijk.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4. </potentialnr><text manualAnnotation="TEXT_BLOCK">De moeder erkent dat partijen destijds een overeenkomst hebben gesloten, waarbij zij  afstand heeft gedaan van het recht op kinderalimentatie. Echter, deze overeenkomst is tot stand gekomen door de dreigende houding van de vader, zo stelt de moeder. [het kind] is inmiddels ongeveer vier jaar ouder. De moeder zorgt alleen voor haar. [het kind] gaat volgens de moeder steeds meer geld kosten. Het inkomen van de moeder bedraagt thans € 840,- netto per maand.  Er is dus behoefte aan alimentatie, zo stelt de moeder. De vader is volgens de moeder verplicht bij te dragen in de kosten van levensonderhoud van [het kind]. De moeder stelt dat de tussen partijen gesloten overeenkomst door een rechterlijke uitspraak opzij gezet kan worden.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">5. </potentialnr><text manualAnnotation="TEXT_BLOCK">Het hof overweegt als volgt. Tussen partijen staat vast dat zij een overeenkomst hebben gesloten, waarbij zij onder meer zijn overeengekomen dat de moeder zal afzien van haar recht aanspraak te maken op kinderalimentatie. Conform artikel 1:392 BW rust op de ouder een wettelijke verplichting tot onderhoud van zijn of haar kinderen. Op grond van artikel 1:400 lid 2 BW zijn overeenkomsten zoals de onderhavige, waarbij van het volgens de wet verschuldigde levensonderhoud wordt afgezien nietig. De moeder kan derhalve op elk gewenst moment een verzoek indienen tot het vaststellen van een kinderalimentatie ten laste van de vader. De eerste grief van de vader faalt derhalve.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">6. </potentialnr><text manualAnnotation="TEXT_BLOCK">In eerste aanleg heeft de moeder verzocht een bijdrage ten behoeve van [het kind] vast te stellen van € 175,- per maand. Het hof stelt vast dat de vader in hoger beroep de behoefte van [het kind] aan deze bijdrage ten laste van hem niet gemotiveerd heeft weersproken. De vader heeft evenmin een draagkrachtverweer gevoerd. De behoefte van [het kind], alsmede de draagkracht van de vader staan derhalve vast en behoeven mitsdien geen bespreking. </text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">7. </potentialnr><text manualAnnotation="TEXT_BLOCK">In zijn tweede grief stelt de vader dat de rechtbank ten onrechte de kinderalimentatie heeft vastgesteld met ingang van 1 september 2004. De moeder heeft deze stelling van de vader gemotiveerd weersproken. </text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">8. </potentialnr><text manualAnnotation="TEXT_BLOCK">Het hof overweegt als volgt. Hoewel de moeder bij brief van 2 september 2004 de vader heeft medegedeeld dat zij bij de rechtbank een verzoek zal indienen tot het vaststellen van een kinderalimentatie ten laste van hem van € 175,- per maand, met ingang van 1 september 2004, heeft zij uiteindelijk pas in mei 2005 haar verzoekschrift bij de rechtbank ingediend. Het verzoekschrift van de moeder is op 13 mei 2005 bij de rechtbank ingekomen. Het hof is van oordeel dat de moeder vanaf dat moment ondubbelzinnig te kennen heeft gegeven dat zij aanspraak maakt op een kinderalimentatie ten laste van de vader. Het hof ziet in het vorenstaande aanleiding te bepalen dat de alimentatieverplichting van de vader zal ingaan op 13 mei 2005. De tweede grief van de vader slaagt derhalve.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">9. </potentialnr><text manualAnnotation="TEXT_BLOCK">Het vorenstaande brengt met zich mee dat de bestreden beschikking ten aanzien van de ingangsdatum dient te worden vernietigd. </text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">10. </potentialnr><text manualAnnotation="TEXT_BLOCK">Hetgeen partijen ieder voor zich voorts nog naar voren hebben gebracht behoeft, gelet op het vorenstaande, naar het oordeel van het hof geen bespreking meer, omdat dat niet tot een ander oordeel kan leiden.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">11. </potentialnr><text manualAnnotation="TEXT_BLOCK">Mitsdien dient als volgt te worden beslist. </text></para>
+      <para/>
+      <para/>
+      <para manualAnnotation="SECTION_TITLE">BESLISSING OP HET HOGER BEROEP</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Het hof:</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">vernietigt de bestreden beschikking ten aanzien van de ingangsdatum en, in zoverre opnieuw beschikkende:</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">bepaalt de ingangsdatum van de kinderalimentatie ten behoeve van [het kind] op 13 mei 2005;</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">wijst het in hoger beroep meer of anders verzochte af. </para>
+      <para/>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Deze beschikking is gegeven door mrs. Gerretsen-Visser, Labohm en Van Leuven, bijgestaan door mr. Wijtzes als griffier, en uitgesproken ter openbare terechtzitting van 5 juli 2006.</para>
+    </uitspraak>
+</open-rechtspraak>

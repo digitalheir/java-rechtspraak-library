@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:tr="http://tuchtrecht.overheid.nl/" xmlns:eu="http://publications.europa.eu/celex/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:HR:1995:AA3039</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2015-06-28T20:40:30</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">AA3039</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Hoge_Raad_der_Nederlanden" scheme="overheid.RechterlijkeMacht">Hoge Raad</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">1995-02-22</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">29690</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#cassatie">Cassatie</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht_belastingrecht">Bestuursrecht; Belastingrecht</dcterms:subject>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0002320&amp;artikel=18&amp;g=1995-02-22">Algemene wet inzake rijksbelastingen 18</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBV0001017&amp;artikel=14&amp;g=1995-02-22">Internationaal Verdrag inzake burgerrechten en politieke rechten, New York, 16-12-1966 14</dcterms:references>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+          <rdf:li>BNB 1995/131 met annotatie door P.J. Wattel</rdf:li>
+          <rdf:li>WFR 1995/423</rdf:li>
+          <rdf:li>FED 1995/254 met annotatie door J.A. SMIT</rdf:li>
+          <rdf:li>V-N 1995/1016, 5 met annotatie door Kluwer</rdf:li>
+          <rdf:li>FED 1995/200</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:HR:1995:AA3039">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:HR:1995:AA3039</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-04T15:48:17</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2001-07-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:HR:1995:AA3039 Hoge Raad , 22-02-1995 / 29690</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:HR:1995:AA3039:INH" lang="nl" xml:space="preserve">
+      <para>-</para>
+    </inhoudsindicatie>
+  <uitspraak xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:HR:1995:AA3039:DOC" lang="nl" xml:space="preserve">
+      <parablock>
+        <para>gewezen op het beroep in cassatie van de besloten vennootschap met beperkte aansprakelijkheid X B.V. te Z tegen de uitspraak van het Gerechtshof te Arnhem van 14 mei 1993 betreffende na te melden navorderingsaanslag in de vennootschapsbelasting. </para>
+        <para>1. Aanslag en geding voor het Hof Aan belanghebbende, die aanvankelijk voor het jaar 1985 in de vennootschapsbelasting was aangeslagen naar een belastbaar bedrag van f 2.427.970,--, is over dat jaar een navorderingsaanslag opgelegd naar een belastbaar bedrag van f 2.950.410,--, met een verhoging van de nagevorderde belasting van 100 percent, van welke verhoging bij besluit van de Inspecteur kwijtschelding is verleend tot op f 221.217,--. Belanghebbende is tegen die aanslag en dat besluit in beroep gekomen bij het Hof, dat de navorderingsaanslag heeft verminderd tot een aanslag naar een belastbaar bedrag van f 2.570.418,-- met een verhoging van de nagevorderde belasting met 100 percent voor zover deze betrekking heeft op een winstcorrectie van f 134.469,--, en met kwijtschelding van de verhoging tot op 50 percent. De uitspraak van het Hof is aan dit arrest gehecht. </para>
+        <para>2. Geding in cassatie Belanghebbende heeft tegen 's Hofs uitspraak beroep in cassatie ingesteld. Het beroepschrift in cassatie is aan dit arrest gehecht en maakt daarvan deel uit. De Staatssecretaris van Financiën heeft bij vertoogschrift het cassatieberoep bestreden. </para>
+        <para>3. Beoordeling van de middelen van cassatie 3.1. Voor het Hof was in geschil of de onderhavige verhoging achterwege had moeten blijven dan wel geheel had moeten worden kwijtgescholden, omdat belanghebbende niet tijdig op een naar haar mening bestaand zwijgrecht zou zijn gewezen en omdat, als gevolg daarvan, het tegen belanghebbende gebezigde bewijs onrechtmatig zou zijn verkregen. </para>
+        <para>3.2. Deze vraag is door het Hof ontkennend beantwoord. Daarbij werd uitgegaan van de volgende - in cassatie niet bestreden - feiten en omstandigheden: De onderhavige verhoging betreft een winstcorrectie van f 134.469,-- in verband met een eerder door belanghebbende aangegeven verlies op aandelen in een vennootschap, thans genaamd A B.V., waarvan later bleek dat dit niet belanghebbende maar haar aandeelhouders - twee beheermaatschappijen - aanging. Tot deze correctie is de Inspecteur overgegaan nadat een controlerend accountant tijdens een boekenonderzoek in april 1988 bij belanghebbende had ontdekt dat een akte van overdracht met betrekking tot bedoelde aandelen geantedateerd was. Deze accountant heeft na die ontdekking in april 1988 aan belanghebbende medegedeeld dat hier sprake was van fraude en dat dit strafrechtelijk zou worden vervolgd. Belanghebbende is toen echter niet gewezen op een eventueel bestaand zwijgrecht. Na de hier bedoelde mededeling heeft belanghebbende volledig aan het verdere boekenonderzoek meegewerkt en heeft zij relevante akten aan de rijksaccountant overhandigd. Vervolgens heeft ook de FIOD nog een onderzoek bij belanghebbende ingesteld. Voor het eerst tijdens dit onderzoek is aan belanghebbende en aan de andere betrokkenen medegedeeld dat zij niet tot antwoorden verplicht waren. De zaak is echter niet voor de strafrechter gebracht. In plaats daarvan is aan belanghebbende een verhoging van in beginsel 100% opgelegd. Mede als gevolg van een tussen partijen overeengekomen compromis is deze verhoging uiteindelijk beperkt tot slechts die belasting, die betrekking had op de eerder genoemde winstcorrectie, en is de aldus beperkte verhoging tot op 50% kwijtgescholden. </para>
+        <para>3.3. Middel I komt in zijn beide onderdelen, kort gezegd, hierop neer dat in casu  de verhoging niet had mogen worden opgelegd dan wel geheel had moeten worden kwijtgescholden, omdat in april 1988 aan belanghebbende geen zogenoemde cautie is gegeven, derhalve niet is medegedeeld dat zij niet tot antwoorden verplicht was, en omdat de verhoging mede gebaseerd is op "uitlatingen" die harerzijds tegenover de accountant waren gedaan. Daarbij stelt het middel zich op het standpunt dat de eerder omschreven medewerking aan het boekenonderzoek en overhandiging van de akten als zulke "uitlatingen" moeten worden beschouwd. </para>
+        <para>3.4. Dit middel faalt reeds omdat het Hof tegen de achtergrond van de hiervóór in 3.2 vermelde feiten en omstandigheden kennelijk ervan uitging dat, toen de controlerend accountant de geantedateerde akte bij belanghebbende aantrof en haar mededeelde dat hier sprake was van fraude en dat dit strafrechtelijk zou worden vervolgd, daarmee tevens vaststond dat de belasting die aldus buiten de heffing was gebleven, opzettelijk door belanghebbende was ontdoken: enige uitlating of medewerking van de zijde van belanghebbende was hiervoor dus niet meer nodig. </para>
+        <para>3.5. Middel II klaagt, onder verwijzing naar artikel 18, lid 3, van de Algemene wet inzake rijksbelastingen, erover dat het Hof ten onrechte niet heeft geoordeeld dat de verhoging eveneens geheel behoort te vervallen indien een belastingplichtige, zoals in casu belanghebbende, aanvankelijk als verdachte wordt aangemerkt en vervolgens, omdat het openbaar ministerie de zaak niet vervolgt, strafrechtelijk alsnog vrijuit gaat. Belanghebbende is van oordeel dat een redelijke uitlegging van genoemde bepaling een dergelijke slotsom rechtvaardigt. </para>
+        <para>3.6. Dit middel faalt eveneens. Er is geen reden om de bepaling van artikel 18, lid 3, van genoemde wet, behalve op de gevallen die daarin uitdrukkelijk worden genoemd, ook nog op andere gevallen toe te passen: de onderhavige bepaling hierop neerkomend dat een verhoging vervalt indien ofwel de strafrechter over de zaak heeft geoordeeld ofwel het bestuur van 's Rijksbelastingen met betrekking tot de zaak een schikking heeft aanvaard, berust immers op het ne bis in idem-beginsel - in beide gevallen staat dat beginsel aan een verhoging in de weg - en deze strekking rechtvaardigt geen uitbreiding tot andere gevallen, derhalve ook niet tot een geval als dat van belanghebbende, waarin het openbaar ministerie niet tot vervolging is overgegaan. </para>
+        <para>4. Proceskosten De Hoge Raad acht geen termen aanwezig voor een veroordeling in de proceskosten als bedoeld in artikel 5a van de Wet administratieve rechtspraak belastingzaken. </para>
+        <para>5. Beslissing De Hoge Raad verwerpt het beroep. </para>
+        <para>Dit arrest is gewezen door de vice-president R.J.J. Jansen als voorzitter, en de raadsheren Van der Linde, Bellaart, C.H.M. Jansen en Van der Putt-Lauwers, in tegenwoordigheid van de waarnemend griffier Van Hooff, in raadkamer van 22 februari 1995.</para>
+      </parablock>
+    </uitspraak>
+</open-rechtspraak>

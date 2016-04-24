@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:eu="http://publications.europa.eu/celex/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:tr="http://tuchtrecht.overheid.nl/">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:RBDHA:2014:8504</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2014-10-30T14:34:01</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2014-07-11</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Rechtbank_Den_Haag" scheme="overheid.RechterlijkeMacht">Rechtbank Den Haag</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">2014-07-10</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">AWB 14/12595</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#eersteAanlegMeervoudig">Eerste aanleg - meervoudig</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:spatial rdfs:label="Zittingsplaats">Utrecht</dcterms:spatial>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht_vreemdelingenrecht">Bestuursrecht; Vreemdelingenrecht</dcterms:subject>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+  </rdf:RDF>
+  <uitspraak id="ECLI:NL:RBDHA:2014:8504:DOC" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <uitspraak.info>
+        <bridgehead manualAnnotation="TEXT_BLOCK" role="bold">RECHTBANK DEN HAAG</bridgehead>
+        <para manualAnnotation="TEXT_BLOCK">Zittingsplaats Utrecht</para>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">Bestuursrecht</para>
+        </parablock>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">zaaknummer: AWB 14/12595</para>
+        </parablock>
+        <para/>
+        <bridgehead manualAnnotation="TEXT_BLOCK" role="bold">uitspraak van de meervoudige kamer van 10 juli 2014 in de zaak tussen</bridgehead>
+        <para/>
+        <parablock>
+          <para>
+            <emphasis manualAnnotation="TEXT_BLOCK" role="bold">[eiser], geboren op [1987], van Somalische nationaliteit</emphasis><text manualAnnotation="TEXT_BLOCK">, eiser</text></para>
+          <para manualAnnotation="TEXT_BLOCK">(gemachtigde: mr. J.C.E. Hoftijzer),</para>
+        </parablock>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">en</para>
+        </parablock>
+        <para/>
+        <bridgehead manualAnnotation="TEXT_BLOCK" role="bold">de Staatssecretaris van Veiligheid en Justitie, verweerder</bridgehead>
+        <para manualAnnotation="TEXT_BLOCK">(gemachtigden: mr. J.E.J. ten Berg en drs. F. Heinink).  </para>
+        <para/>
+        <para/>
+      </uitspraak.info>
+      <section role="procesverloop">
+        <title><text manualAnnotation="SECTION_TITLE">Procesverloop</text></title>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">Bij besluit van 23 mei 2014 (het bestreden besluit) heeft verweerder de aanvraag van eiser van 13 maart 2014 tot het verlenen van een verblijfsvergunning asiel voor bepaalde tijd als bedoeld in artikel 28 van de Vreemdelingenwet 2000 (Vw) afgewezen en aan hem een inreisverbod voor de duur van tien jaar opgelegd. </para>
+        </parablock>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">Eiser heeft tegen het bestreden besluit beroep ingesteld. </para>
+        </parablock>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">Verweerder heeft een verweerschrift ingediend.</para>
+        </parablock>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">Het onderzoek ter zitting heeft plaatsgevonden op 3 juli 2014. Eiser is verschenen, bijgestaan door zijn gemachtigde. Verweerder heeft zich laten vertegenwoordigen door zijn gemachtigde. </para>
+        </parablock>
+        <para/>
+      </section>
+      <section role="overwegingen">
+        <title><text manualAnnotation="SECTION_TITLE">Overwegingen</text></title>
+        <para/>
+        <paragroup>
+          <nr manualAnnotation="NR">1.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Eiser is op 18 april 2011 naar Nederland overgebracht in het kader van een strafrechtelijk onderzoek. Bij vonnis van 12 oktober 2012 is eiser door de rechtbank Rotterdam veroordeeld voor het medeplegen van zeeroof (artikel 381 van het Wetboek van Strafrecht) tot een gevangenisstraf voor de duur van vier jaar en zes maanden. Bij arrest van 21 maart 2014 is eiser door het gerechtshof te ’s-Gravenhage ter zake van hetzelfde feit tot een gevangenisstraf van dezelfde duur veroordeeld.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">2.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Op 13 maart 2014 heeft eiser de genoemde aanvraag ingediend tot het verlenen van een verblijfsvergunning asiel voor bepaalde tijd. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">3.</nr>
+          <para manualAnnotation="TEXT_BLOCK">De rechtbank stelt voorop dat eisers beroepsgronden betrekking hebben op zowel de afwijzing van de door eiser gevraagde verblijfsvergunning asiel voor bepaalde tijd, als op het hem opgelegde inreisverbod. Dit inreisverbod heeft de rechtsgevolgen bedoeld in artikel 66a, zevende lid, van de Vw. Zoals volgt uit vaste jurisprudentie van de Afdeling bestuursrechtspraak van de Raad van State (ABRvS) (bijvoorbeeld de uitspraak van 9 juli 2013, ECLI:NL:RVS:2013:298), heeft een vreemdeling tegen wie een dergelijk inreisverbod is uitgevaardigd, zolang dat inreisverbod voortduurt, geen belang bij de beoordeling van het beroep tegen de afwijzing van een aanvraag om verlening of verlenging van de geldigheidsduur van een verblijfsvergunning, dan wel intrekking van een zodanige vergunning. Dat beroep kan immers nimmer leiden tot de door die vreemdeling beoogde verblijfsvergunning. Of verweerder de aanvraag om een verblijfsvergunning asiel van de desbetreffende vreemdeling heeft kunnen afwijzen kan ten volle in het kader van de toetsing van het inreisverbod aan de orde worden gesteld. De rechtbank ziet daarom aanleiding eerst de gronden van eiser gericht tegen de afwijzing van zijn aanvraag om een verblijfsvergunning asiel voor bepaalde tijd in het kader van het beroep tegen het inreisverbod te bespreken.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">4.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Verweerder heeft eisers asielaanvraag afgewezen met toepassing van artikel 31, eerste lid, van de Vw, in samenhang met het tweede lid, aanhef en onder k. Verweerder heeft zich op het standpunt gesteld dat op eiser artikel 1(F), aanhef en onder b, van het Verdrag betreffende de status van Vluchtelingen van Genève van 28 juli 1951, zoals gewijzigd bij Protocol van New York van 31 januari 1967 (Vluchtelingenverdrag) van toepassing is en dat eiser aldus een gevaar vormt voor de openbare orde. Dit leidt er volgens verweerder toe dat eiser geen aanspraak kan maken op de bescherming die de overige artikelen van het Vluchtelingenverdrag bieden en dat eiser daarom niet kan worden aangemerkt als verdragsvluchteling. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">5.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Op grond van artikel 1(A) van het Vluchtelingenverdrag worden vreemdelingen die afkomstig zijn uit een land waarin zij gegronde redenen hebben te vrezen voor vervolging wegens hun godsdienstige, levensbeschouwelijke of politieke overtuiging of hun nationaliteit dan wel wegens het behoren tot een bepaald ras of een bepaalde sociale groep, als vluchteling beschouwd. </para>
+          <para/>
+          <parablock>
+            <para manualAnnotation="TEXT_BLOCK">In artikel 1(F) van het Vluchtelingenverdrag is bepaald dat de in het verdrag neergelegde bepalingen niet van toepassing zijn op een persoon ten aanzien van wie er ernstige redenen zijn om te veronderstellen dat: </para>
+          </parablock>
+          <para><potentialnr manualAnnotation="NR">a. </potentialnr><text manualAnnotation="TEXT_BLOCK">hij een misdrijf tegen de vrede, een oorlogsmisdrijf of een misdrijf tegen de menselijkheid heeft begaan, zoals omschreven in de internationale overeenkomsten welke zijn opgesteld om bepalingen met betrekking tot deze misdrijven in het leven te roepen; </text></para>
+          <para><potentialnr manualAnnotation="NR">b. </potentialnr><text manualAnnotation="TEXT_BLOCK">hij een ernstig, niet-politiek misdrijf heeft begaan buiten het land van toevlucht, voordat hij tot dit land als vluchteling is toegelaten; </text></para>
+          <para><potentialnr manualAnnotation="NR">c. </potentialnr><text manualAnnotation="TEXT_BLOCK">hij zich schuldig heeft gemaakt aan handelingen welke in strijd zijn met de doelstellingen en beginselen van de Verenigde Naties.</text></para>
+          <para/>
+          <parablock>
+            <para manualAnnotation="TEXT_BLOCK">Ingevolge artikel 31, eerste lid, van de Vw wordt een aanvraag tot het verlenen van een verblijfsvergunning asiel voor bepaalde tijd afgewezen indien de desbetreffende vreemdeling niet aannemelijk heeft gemaakt dat zijn aanvraag is gegrond op omstandigheden die, hetzij op zichzelf, hetzij in verband met andere feiten, een rechtsgrond voor verlening vormen. Ingevolge het derde lid, zoals geldend ten tijde van belang, kunnen bij of krachtens algemene maatregel van bestuur regels worden gesteld met betrekking tot het eerste lid. Ingevolge het tweede lid, aanhef en onder k, wordt bij het onderzoek naar de aanvraag mede betrokken de omstandigheid dat de vreemdeling een gevaar vormt voor de openbare orde of nationale veiligheid.  </para>
+          </parablock>
+          <para/>
+          <parablock>
+            <para manualAnnotation="TEXT_BLOCK">Ingevolge artikel 3.107, eerste lid, van het Vreemdelingenbesluit 2000 (Vb) wordt onder een persoon als bedoeld in artikel 1(F) van het Vluchtelingenverdrag mede verstaan een persoon die heeft aangezet tot of anderszins heeft deelgenomen aan de in dat artikel genoemde misdrijven of daden. Ingevolge het tweede lid wordt, indien artikel 1(F) aan het verlenen van een verblijfsvergunning krachtens artikel 29, eerste lid, onder a, van de Vw in de weg staat, aan de desbetreffende vreemdeling evenmin een verblijfsvergunning verleend op één van de andere gronden bedoeld in artikel 29.</para>
+          </parablock>
+          <para/>
+          <parablock>
+            <para manualAnnotation="TEXT_BLOCK">Volgens paragraaf C2/6.2.8 van de Vreemdelingencirculaire 2000 (Vc) moet verweerder om artikel 1(F) van het Vluchtelingenverdrag te kunnen tegenwerpen aantonen dat er ‘ernstige redenen’ zijn dat de vreemdeling één van de strafbare feiten genoemd in dit artikel gepleegd heeft. Indien de IND ‘ernstige redenen’ heeft aangetoond, moet de vreemdeling dit gemotiveerd weerleggen, om toepassing van artikel 1(F) van het Vluchtelingenverdrag te voorkomen. Om te bepalen of de vreemdeling voor strafbare feiten, als bedoeld in artikel 1(F) van het Vluchtelingenverdrag, verantwoordelijk moet worden gehouden, onderzoekt verweerder of de vreemdeling weet heeft gehad of had behoren te hebben van het plegen van het betreffende strafbare feit (‘knowing participation’) en of hij op enige wijze hieraan persoonlijk heeft deelgenomen (‘personal participation’).</para>
+          </parablock>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Eiser heeft in de eerste plaats aangevoerd, samengevat, dat verweerder ten onrechte niet heeft onderzocht of hij vluchteling is als bedoeld in artikel 1(A) van het Vluchtelingenverdrag. Volgens eiser kan de toepassing van artikel 1(F) van het Vluchtelingenverdrag pas aan de orde komen nadat is vastgesteld dat een asielzoeker voldoet aan de criteria van artikel 1(A) van het Vluchtelingenverdrag. Eiser heeft ter onderbouwing van zijn standpunt verwezen naar artikel 28, eerste lid, aanhef en onder a, sub (ii), van richtlijn 2001/55/EG van de Raad van 20 juli 2001 betreffende minimumnormen voor het verlenen van tĳdelĳke bescherming in geval van massale toestroom van ontheemden en maatregelen ter bevordering van een evenwicht tussen de inspanning van de lidstaten voor de opvang en het dragen van de consequenties van de opvang van deze personen (Richtlijn tijdelijke bescherming). </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">7.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Verweerder heeft zich op het standpunt gesteld, samengevat, dat hij direct aan artikel 1(F) van het Vluchtelingenverdrag mag toetsen, zonder eerst te onderzoeken of sprake is van vluchtelingschap. Volgens verweerder is de Richtlijn tijdelijke bescherming in eisers situatie niet van toepassing.   </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">8.</nr>
+          <para manualAnnotation="TEXT_BLOCK">De rechtbank stelt vast dat uit de tekst van het Vluchtelingenverdrag geen verplichting volgt om eerst te toetsen of de asielzoeker als vluchteling in de zin van artikel 1(A) van het Vluchtelingenverdrag kan worden aangemerkt, alvorens de toepassing van de uitsluitingsgronden van dat verdrag aan de orde kan komen. De tekst van artikel 1(F) van het Vluchtelingenverdrag wijst veeleer op het tegendeel, nu hierin is bepaald dat in de daar genoemde gevallen de in het verdrag neergelegde bepalingen niet van toepassing zijn op ‘een persoon’ (in de Engelstalige tekst: ‘any person’) en niet ‘de vluchteling’. Naar het oordeel van de rechtbank kan uit (de tekst van) het Vluchtelingenverdrag dan ook niet worden afgeleid dat de, in het bestreden besluit toegepaste, praktijk van verweerder om in voorkomende gevallen artikel 1(F) aan de vreemdeling tegen te werpen voordat is vastgesteld of hij vluchteling is in de zin van artikel 1(A), onjuist is. Daarbij wijst de rechtbank ook op de uitspraak van de ABRvS van 8 april 1995 (RV 1995, 1), waarin is bepaald dat verweerder direct aan artikel 1(F) van het Vluchtelingenverdrag mag toetsen.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">9.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Het voorgaande vindt naar het oordeel van de rechtbank ook steun in de artikelen 2, aanhef en onder c, en 12, tweede lid, aanhef en onder b en c, van richtlijn 2004/83/EG van de Raad van 29 april 2004 inzake minimumnormen voor de erkenning van onderdanen van derde landen en staatlozen als vluchteling of als persoon die anderszins internationale bescherming behoeft, en de inhoud van de verleende bescherming (Definitierichtlijn). Immers, volgens de tekst van artikel 12, tweede lid, wordt de betrokken persoon van de vluchtelingenstatus ‘uitgesloten’ wanneer de aldaar gestelde voorwaarden zijn vervuld. In artikel 2, aanhef en onder c is de hoedanigheid van ‘vluchteling’ voorts uitdrukkelijk afhankelijk gesteld van het feit dat artikel 12 niet op de betrokkene van toepassing is.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">10.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Artikel 28, eerste lid, aanhef en onder a, sub (ii), van de Richtlijn tijdelijke bescherming mist, anders dan eiser heeft betoogd, in deze zaak relevantie. Blijkens artikel 1 van de Richtlijn tijdelijke bescherming beoogt deze richtlijn minimumnormen vast te stellen voor het verlenen van tĳdelĳke bescherming in geval van massale toestroom van ontheemden uit derde landen die niet naar hun land van oorsprong kunnen terugkeren en, voorts, een evenwicht te bevorderen tussen de inspanning van de lidstaten voor de opvang en het dragen van de consequenties van de opvang van ontheemden. Deze richtlijn is in eisers zaak niet van toepassing. Ook overigens kan uit artikel 28, eerste lid, aanhef en onder a, sub (ii), van de Richtlijn tijdelijke bescherming niet worden afgeleid dat aan artikel 1(A) van het Vluchtelingenverdrag dient te worden getoetst alvorens aan artikel 1(F) te toetsen. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">11.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Uit het voorgaande volgt dat verweerder in het bestreden besluit terecht direct aan artikel 1(F) van het Vluchtelingenverdrag heeft getoetst. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">12.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Eiser heeft vervolgens aangevoerd dat artikel 31, tweede lid, aanhef en onder k, van de Vw in dit geval niet ten grondslag kan worden gelegd aan de weigering om hem een verblijfsvergunning asiel te verstrekken. Volgens eiser ziet dit artikel, dat is gebaseerd op artikel 33, tweede lid, van het Vluchtelingenverdrag, op andere rechtsfeiten dan artikel 1(F) van het Vluchtelingenverdrag. In het geval van artikel 1(F) van het Vluchtelingenverdrag gaat het om feiten die buiten het land van toevlucht zijn gepleegd, terwijl het in het geval van artikel 33, tweede lid, van het Vluchtelingenverdrag en het daarop gebaseerde artikel 31, tweede lid, aanhef en onder k, van de Vw gaat om feiten die in het land van toevlucht zijn gepleegd. Nu artikel 31, tweede lid, aanhef en onder k, van de Vw is gebaseerd op artikel 33, tweede lid, van het Vluchtelingenverdrag, dient de rechtbank volgens eiser voorts te wachten op de beantwoording door het Hof van Justitie van de Europese Unie (Hof van Justitie) van de prejudiciële vragen van het Verwaltungsgerichthof Baden-Württemberg over – onder meer – de reikwijdte van artikel 33, tweede lid, van het Vluchtelingenverdrag. Indien artikel 31, tweede lid, aanhef en onder k, van de Vw al aan het bestreden besluit ten grondslag gelegd zou kunnen worden, dan is op grond van het in hoofdstuk C2/6.2.7 van de Vc neergelegde beleid bij de toepassing van dit artikelonderdeel vereist dat sprake is van een onherroepelijk strafvonnis, waarvan in deze zaak geen sprake is.  </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">13.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Verweerder heeft zich in het bestreden besluit, nader toegelicht in het verweerschrift, op het standpunt gesteld dat artikel 31, tweede lid, aanhef en onder k, van de Vw blijkens de letterlijke tekst daarvan ziet op aanvragen om een verblijfsvergunning asiel. Voorts blijkt uit de redactie van het artikel niet dat het bij de toepassing ervan slechts zou kunnen gaan om onherroepelijke veroordelingen. Verweerder heeft voorts toegelicht dat hij bij aanvragen om een verblijfsvergunning asiel, waarbij artikel 1(F) van het Vluchtelingenverdrag van toepassing is, hoofdstuk C2/6.2.8 – en niet hoofdstuk C2/6.2.7 – van de Vc toepast. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">14.</nr>
+          <para manualAnnotation="TEXT_BLOCK">In artikel 31, tweede lid, aanhef en onder k, van de Vw is bepaald dat bij het onderzoek naar de aanvraag mede wordt betrokken de omstandigheid dat de vreemdeling een gevaar vormt voor de openbare orde of nationale veiligheid. Uit de tekst van dit artikelonderdeel kan, zoals verweerder terecht heeft opgemerkt, niet worden afgeleid dat het enkel betrekking heeft op feiten die in het land van toevlucht zijn gepleegd. In algemene zin is bepaald dat bij het onderzoek naar de aanvraag wordt betrokken dat de vreemdeling een gevaar vormt voor de openbare orde of nationale veiligheid, zonder dat daarbij een restrictie is opgenomen ten aanzien van de feiten waaruit dit gevaar blijkt, en de plaats waar deze feiten zich hebben voorgedaan. Ook in de parlementaire geschiedenis van artikel 31, tweede lid, aanhef en onder k, van de Vw heeft de rechtbank geen steun gevonden voor eisers standpunt dat het artikelonderdeel enkel betrekking heeft op feiten die in het land van toevlucht zijn gepleegd. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">15.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Eiser heeft ter onderbouwing van zijn standpunt ter zitting voorts opgemerkt dat artikel 31, tweede lid, aanhef en onder k, van de Vw is uitgewerkt in hoofdstuk C2/6.2.7 van de Vc. Volgens eiser gaat het in dit hoofdstuk van de Vc om in Nederland gepleegde strafbare feiten. De rechtbank volgt eiser niet in dit betoog. Zoals verweerder ter zitting heeft toegelicht, is niet alleen in hoofdstuk C2/6.2.7, maar ook in hoofdstuk C2/6.2.8 van de Vc invulling gegeven aan artikel 31, tweede lid, aanhef en onder k, van de Vw. Hoofdstuk C2/6.2.7 van de Vc bevat het algemene beleid over de omstandigheden waaronder aangenomen dient te worden dat een vreemdeling een gevaar vormt voor de openbare orde of nationale veiligheid, terwijl hoofdstuk C2/6.2.8 het specifieke beleid over artikel 1(F) van het Vluchtelingenverdrag bevat. Aldus kan ook uit het in de Vc neergelegde beleid niet worden afgeleid dat artikel 31, tweede lid, aanhef en onder k, van de Vw enkel betrekking heeft op feiten die in het land van toevlucht zijn gepleegd. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">16.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Uit het voorgaande volgt dat eisers beroepsgrond niet slaagt. De rechtbank ziet geen aanleiding om voor dit oordeel de beantwoording door het Hof van Justitie van de door het Verwaltungsgerichthof Baden-Württemberg op 2 juli 2013 gestelde prejudiciële vragen af te wachten. Deze vragen hebben betrekking op de voorwaarden waaronder een verblijfsvergunning asiel kan worden ingetrokken of beëindigd, in welk kader ook artikel 33, tweede lid, van het Vluchtelingenverdrag aan de orde is gesteld. In de onderhavige zaak is evenwel sprake van een weigering om een verblijfsvergunning asiel te verlenen vanwege de toepasselijkheid van artikel 31, tweede lid, aanhef en onder k, van de Vw in samenhang met artikel 1(F) van het Vluchtelingenverdrag – en dus niet van een vergelijkbare kwestie. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">17.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Eiser heeft voorts aangevoerd dat hij door het gerechtshof te ’s-Gravenhage op 21 maart 2014 is vrijgesproken van plegen en medeplegen van beschieting van personeel van de Nederlandse marine en van gijzeling van de bemanning van de Iraanse vissersboot. Eiser is weliswaar veroordeeld voor het medeplegen van zeeroof, maar deze veroordeling staat nog niet in rechte vast. Zowel de uitkomst van het arrest als de strafmaat kunnen nog door de Hoge Raad worden aangepast. Indien op de uitspraak van de Hoge Raad wordt vooruitgelopen, is dit volgens eiser strijdig met artikel 6 van het Verdrag tot bescherming van de rechten van de mens en de fundamentele vrijheden (EVRM), de artikelen 47 en 48 van het Handvest van de grondrechten van de Europese Unie (Handvest) en artikel 3:2 van de Algemene wet bestuursrecht (Awb). </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">18.</nr>
+          <para manualAnnotation="TEXT_BLOCK">De rechtbank volgt eiser niet in diens betoog. Voor de tegenwerping van artikel 1(F) van het Vluchtelingenverdrag is niet een strafrechtelijke veroordeling van de betrokken vreemdeling vereist, laat staan dat deze veroordeling in rechte vaststaat. Zoals ook volgt uit vaste jurisprudentie van de ABRvS (bijvoorbeeld de uitspraak van 27 juni 2005, ECLI:NL:RVS:2005:AT8926), dient verweerder de vraag of aan een vreemdeling artikel 1(F) van het Vluchtelingenverdrag moet worden tegengeworpen zelfstandig te beantwoorden. Daarbij dient verweerder in een zaak als de onderhavige de vraag te beantwoorden of de inhoud van het dossier de conclusie rechtvaardigt dat sprake is van ‘personal’ en ‘knowing participation’, zoals volgt uit (thans) hoofdstuk C2/6.2.8 van de Vc. Deze vraag valt niet samen met de vraag of sprake is van strafrechtelijke aansprakelijkheid. In dit verband is van betekenis dat het Openbaar Ministerie niet ten aanzien van alle in artikel 1(F) van het Vluchtelingenverdrag genoemde misdrijven rechtsmacht heeft en voorts dat om redenen van opportuniteit van vervolging kan worden afgezien. Verweerder heeft dan ook in het bestreden besluit terecht geconcludeerd dat de bestuursrechtelijke bewijsmaatstaf verschilt van de strafrechtelijke bewijsmaatstaf en dat handelingen in de zin van artikel 1(F) van het Vluchtelingenverdrag niet hoeven te worden bewezen volgens de in het strafrecht gehanteerde, en in een onherroepelijk strafvonnis neergelegde, bewijsmaatstaf. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">19.</nr>
+          <para manualAnnotation="TEXT_BLOCK">De rechtbank vindt voor dit oordeel ook steun in het Handbook on Procedures and Criteria for Determining Refugee Status under the 1951 Convention and the 1967 Protocol relating to the Status of Refugees van de UNHCR. Hierin is over artikel 1(F) van het Vluchtelingenverdrag, voor zover hier van belang, het volgende overwogen: </para>
+          <para/>
+          <parablock>
+            <para><quote manualAnnotation="TEXT_BLOCK">‘</quote><text manualAnnotation="TEXT_BLOCK">[…] </text><emphasis manualAnnotation="TEXT_BLOCK" role="italic">The competence to decide whether any of these exclusion clauses are applicable is incumbent upon the Contracting State in whose territory the applicant seeks recognition of his refugee status. For these clauses to apply, it is sufficient to establish that there are “serious reasons for considering” that one of the acts described has been committed. Formal proof of previous penal prosecution is not required.</emphasis><text manualAnnotation="TEXT_BLOCK"> […]’</text></para>
+          </parablock>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">20.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Ook uit artikel 48 van het Handvest kan niet worden afgeleid dat in deze zaak voor de tegenwerping van artikel 1(F) van het Vluchtelingenverdrag een onherroepelijk strafvonnis vereist is, reeds omdat dit artikel in deze zaak toepassing mist. De afwijzing van eisers aanvraag voor een verblijfsvergunning asiel voor bepaalde tijd met toepassing van artikel 1(F) van het Vluchtelingenverdrag vormt immers niet een ‘criminal charge’ als bedoeld in dit artikel.  </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">21.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Uit het voorgaande volgt dat het bestreden besluit geen inbreuk maakt op de in artikel 6, tweede lid, van het EVRM neergelegde onschuldpresumptie. Op deze grond is dus evenmin sprake van strijd met artikel 47 van het Handvest of artikel 3:2 van de Awb. Eisers beroepsgrond faalt. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">22.</nr>
+          <para manualAnnotation="TEXT_BLOCK">De rechtbank zal vervolgens beoordelen of verweerder in het kader van artikel 1(F) van het Vluchtelingenverdrag aan eiser heeft mogen tegenwerpen dat hij zich schuldig heeft gemaakt aan zeeroof. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">23.</nr>
+          <para manualAnnotation="TEXT_BLOCK">In dit kader houdt partijen in de eerste plaats verdeeld of verweerder zeeroof als een ernstig, niet-politiek misdrijf heeft mogen kwalificeren. Daarbij is niet in geschil dat in dit geval geen sprake is van een misdrijf met een politieke component. Het geschil spitst zich derhalve toe op de vraag of zeeroof als een ernstig misdrijf moet worden gekwalificeerd. De rechtbank volgt verweerder in zijn standpunt dat dit het geval is en zij overweegt daartoe als volgt.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">24.</nr>
+          <para manualAnnotation="TEXT_BLOCK">In het genoemde arrest van 21 maart 2014 heeft het gerechtshof te ’s-Gravenhage over de ernst van de zeeroof onder meer het volgende overwogen: </para>
+          <para/>
+          <parablock>
+            <para><quote manualAnnotation="TEXT_BLOCK">‘</quote><text manualAnnotation="TEXT_BLOCK">[…] </text><emphasis manualAnnotation="TEXT_BLOCK" role="italic">De afgelopen jaren heeft er een groot aantal gevallen van piraterij plaatsgevonden rondom de kuststreek van Somalië en de nabijgelegen internationale wateren. </emphasis></para>
+          </parablock>
+          <para/>
+          <parablock>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">Door het gevaar van tegen schepen gerichte piraterij en gewapende overvallen is de veiligheid van de handelsroutes over zee en de internationale zeevaart onder druk komen te staan en daarmee ook de levering van humanitaire hulp in Somalië. Met grote - ook internationale en militaire - inspanningen wordt getracht de piraterij een halt toe te roepen. </emphasis>
+            </para>
+          </parablock>
+          <para/>
+          <parablock>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">Het is gebleken dat door piraterij grote sommen geld als losgeld voor gegijzelde bemanningsleden en gekaapte schepen zijn afgedwongen. De opbrengsten zijn kennelijk ook geïnvesteerd in middelen om de zeeroof te professionaliseren. Tegen deze achtergrond vraagt de ernst van de bewezen verklaarde feiten om oplegging van forse gevangenisstraffen, waarbij de - ook internationale - uitstraling van de berechting en bestraffing een strafverzwarend effect moet hebben om een duidelijk signaal af te geven.</emphasis>
+            </para>
+          </parablock>
+          <para/>
+          <parablock>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">De verdachte heeft zich samen met anderen schuldig gemaakt aan zeeroof. De controle van een aan Iraniërs toebehorend schip is overgenomen (“gekaapt” heeft de Iraanse kapitein verklaard) met de kennelijke bedoeling om dat schip bij verdere kapingspogingen te gebruiken en de beschikking over de boot is pas door het optreden van de Nederlandse marine - na ongeveer twee maanden - weer in handen van de Iraanse bemanning teruggekeerd. De verdachte heeft aldus bijgedragen aan langdurige angsten en onzekerheden bij die bemanning.</emphasis><text manualAnnotation="TEXT_BLOCK"> […]’ </text></para>
+          </parablock>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">25.</nr>
+          <para manualAnnotation="TEXT_BLOCK">In het licht hiervan heeft verweerder naar het oordeel van de rechtbank terecht vastgesteld dat het misdrijf zeeroof waarvoor eiser is veroordeeld als ernstig moet worden gekwalificeerd, te meer nu voor de beoogde kaping zware wapens, waaronder een raketwerper, zijn gebruikt. Verweerder heeft in dit verband ook terecht gewezen op de preambule en de tekst (met name artikel 105) van het Verdrag van de Verenigde Naties inzake het Recht van de Zee en de preambule en de tekst van het Verdrag tot bestrijding van wederrechtelijke gedragingen gericht tegen de veiligheid van de zeevaart, waaruit eenduidig de ernst van het misdrijf waarvoor eiser is veroordeeld, volgt. Ook heeft verweerder in het bestreden besluit terecht in aanmerking genomen de verschillende in dit kader door de VN Veiligheidsraad genomen resoluties, in het bijzonder de resolutie nr. 2125 (2013), waarin de VN Veiligheidsraad onder meer het volgende heeft overwogen:    </para>
+          <para/>
+          <parablock>
+            <para><quote manualAnnotation="TEXT_BLOCK">‘</quote><text manualAnnotation="TEXT_BLOCK">[…] </text><emphasis manualAnnotation="TEXT_BLOCK" role="italic">The Security Council </emphasis><text manualAnnotation="TEXT_BLOCK">[…]</text><emphasis manualAnnotation="TEXT_BLOCK" role="italic"> Reaffirming international condemnation of acts of kidnapping and hostage-taking, including offences contained within the International Convention against the Taking of Hostages, strongly condemning the continuing practice of hostage-taking by pirates operating off the coast of Somalia, expressing serious concern at the inhuman conditions hostages face in captivity, recognizing the adverse impact on their families, calling for the immediate release of all hostages, and noting the importance of cooperation between Member States on the issue of hostage-taking and the prosecution of suspected pirates for taking hostages </emphasis><text manualAnnotation="TEXT_BLOCK">[…].’</text></para>
+          </parablock>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">26.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Vervolgens is tussen partijen in geschil of verweerder in het bestreden besluit eiser terecht individueel verantwoordelijk heeft gehouden voor de zeeroof. Bij de beantwoording van deze vraag dient te worden beoordeeld of bij eiser sprake is van ‘knowing’ en ‘personal participation’. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">27.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Op grond van hoofdstuk C2/6.2.8 van de Vc is sprake van ‘knowing participation’ bij de vreemdeling in in ieder geval één van de volgende situaties:</para>
+          <para><potentialnr manualAnnotation="NR">a. </potentialnr><text manualAnnotation="TEXT_BLOCK">de vreemdeling heeft gewerkt bij een organisatie, waarvan de IND heeft aangetoond dat deze organisatie op systematische wijze en/of op grote schaal zich schuldig heeft gemaakt aan strafbare feiten die genoemd worden in artikel 1F Vluchtelingenverdrag;</text></para>
+          <para><potentialnr manualAnnotation="NR">b. </potentialnr><text manualAnnotation="TEXT_BLOCK">de vreemdeling heeft behoord tot een groep die door de Minister is aangewezen als groep, waarop in de regel artikel 1F Vluchtelingenverdrag van toepassing is;</text></para>
+          <para><potentialnr manualAnnotation="NR">c. </potentialnr><text manualAnnotation="TEXT_BLOCK">de vreemdeling heeft deelgenomen aan handelingen, waarvan hij wist of had moeten weten dat het strafbare feiten betrof zoals bedoeld in artikel 1F Vluchtelingenverdrag.</text></para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">28.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Met verweerder is de rechtbank van oordeel dat voor eiser evident moet zijn geweest dat zeeroof een ernstig misdrijf is. Dit volgt reeds uit de aard van het misdrijf, waarbij de rechtbank verwijst naar hetgeen in punt 24 is overwogen. Voorts is van belang, zoals verweerder in het bestreden besluit terecht heeft opgemerkt, dat de internationale gemeenschap al jaren sterk militair in de regio aanwezig is om piraterij te bestrijden, zodat ook op basis hiervan de strafbaarheid van zeeroof bekend mag worden verondersteld. De omstandigheid dat zeeroof in hoofdstuk C2/6.2.8 van de Vc niet is opgenomen in de opsomming van de gedragingen die een misdrijf in de zin van artikel 1(F) van het Vluchtelingenverdrag kunnen opleveren doet aan het voorgaande niet af, nu door verweerder niet is beoogd om in dit hoofdstuk een limitatieve opsomming van dergelijke gedragingen te geven. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">29.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Vervolgens dient te worden beoordeeld of sprake is van ‘personal participation’. Volgens hoofdstuk C2/6.2.8 van de Vc is hiervan sprake bij de vreemdeling in tenminste één van de volgende situaties:</para>
+          <para><potentialnr manualAnnotation="NR">a. </potentialnr><text manualAnnotation="TEXT_BLOCK">de vreemdeling heeft een strafbaar feit als bedoeld in artikel 1F Vluchtelingenverdrag gepleegd;</text></para>
+          <para><potentialnr manualAnnotation="NR">b. </potentialnr><text manualAnnotation="TEXT_BLOCK">de vreemdeling heeft opdracht gegeven tot, of onder zijn verantwoordelijkheid is een strafbaar feit als bedoeld in artikel 1F Vluchtelingenverdrag gepleegd;</text></para>
+          <para><potentialnr manualAnnotation="NR">c. </potentialnr><text manualAnnotation="TEXT_BLOCK">de vreemdeling heeft een strafbaar feit als bedoeld in artikel 1F Vluchtelingenverdrag gefaciliteerd;</text></para>
+          <para><potentialnr manualAnnotation="NR">d. </potentialnr><text manualAnnotation="TEXT_BLOCK">de vreemdeling behoort tot een groep die door de Minister is aangewezen als groep die in de regel artikel 1F Vluchtelingenverdrag tegengeworpen krijgt.</text></para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">30.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Naar het oordeel van de rechtbank heeft verweerder bij de beoordeling van artikel 1(F) van het Vluchtelingenverdrag terecht aan de hand van de in het genoemde arrest van 21 maart 2014 weergegeven bewijsmiddelen vastgesteld dat eiser zich persoonlijk schuldig heeft gemaakt aan zeeroof. Verweerder heeft daarbij, op basis van deze bewijsmiddelen, aansluiting mogen zoeken bij de volgende overwegingen van het gerechtshof:</para>
+          <para/>
+          <parablock>
+            <para><quote manualAnnotation="TEXT_BLOCK">‘</quote><text manualAnnotation="TEXT_BLOCK">[…] </text><emphasis manualAnnotation="TEXT_BLOCK" role="italic">Het hof is van oordeel dat uit de bewijsmiddelen – in onderling verband en samenhang bezien – buiten redelijke twijfel kan worden vastgesteld dat de verdachten een hechte dadergroep vormden die gewapend met zware (automatische) vuurwapens en munitie en de nodige brandstof, water, voedsel en ladders met de Iraanse [naam] en haar gegijzelde bemanning naar de open zee zijn gevaren met als doel om een schip te kapen. </emphasis></para>
+          </parablock>
+          <para/>
+          <parablock>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">Het hof betrekt daarbij de modus operandi, de plaats van aantreffen van de [naam], de aangetroffen wapens en munitie, ladders, brandstof en skiffs. Aan boord van de [naam] was sprake van een duidelijke leider (betrokkene 1) en daaruit voortkomende taakverdeling. Dit leiderschap is naar het oordeel van het hof noodzakelijk om een schip op zee te kunnen laten varen en, zoals in het onderhavige geval, aan boord van dat schip een groep mensen in gijzeling te houden en nadien andere schepen te kapen. Daarbij blijkt uit de verklaring van G14 dat het voor de verdachte meteen duidelijk was wat de bedoeling aan boord van de [naam] was, dat de verdachte ook daadwerkelijk aan het werk moest en dat de verdachte op zee is gegaan om mensen te beroven. Gelet hierop valt genoegzaam af te leiden dat de verdachte minst genomen op het moment dat hij aan boord van de [naam] ging wist dat de [naam] bestemd was om daden van geweld op open zee te plegen. </emphasis>
+            </para>
+          </parablock>
+          <para/>
+          <parablock>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">Het is voorts niet aannemelijk dat de verdachte tegen zijn wil is meegenomen en de gepresenteerde alternatieve scenario’s zijn, zoals hierna wordt overwogen, evenmin aannemelijk. Onder die omstandigheden is het redelijkerwijs uitgesloten dat de verdachte of een van zijn medeverdachten niet wist wat er gaande was. </emphasis>
+            </para>
+          </parablock>
+          <para/>
+          <parablock>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">Hierbij merkt het hof op dat niet is gebleken dat de verdachte zich op enig moment van het doel van de zeeroof heeft gedistantieerd ofschoon daar, gelet op de aanwezigheid van twee skiffs aan boord van de [naam], naar het oordeel van het hof wel degelijk de mogelijkheid toe was. Het feit dat een aantal verdachten na de confrontatie met de marine in een skiff trachtte te vluchten is daartoe onvoldoende en deze omstandigheid doet evenmin af aan het oordeel dat alle verdachten in ieder geval tot dat moment als één groep zijn opgetreden. </emphasis>
+            </para>
+          </parablock>
+          <para/>
+          <parablock>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">Alles afwegende is het hof derhalve van oordeel dat genoegzaam is gebleken dat de samenwerking van de verdachte en zijn mededaders zodanig nauw is geweest dat er sprake is van medeplegen van zeeroof in de zin der wet.</emphasis><text manualAnnotation="TEXT_BLOCK"> […]’</text></para>
+          </parablock>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">31.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Dit oordeel is, anders dan eiser heeft betoogd, niet in strijd met het arrest van het Hof van Justitie van 9 november 2010 (C 57/09 en C 101/09) in de zaak van Duitsland tegen B. en D. (www.curia.europa.eu). In dit arrest heeft het Hof van Justitie, voor zover hier van belang, bepaald dat een persoon die heeft behoord tot een organisatie die terroristische methoden toepast, slechts van de vluchtelingenstatus kan worden uitgesloten na een individueel onderzoek van specifieke feiten waaruit kan worden opgemaakt of er ernstige redenen zijn om aan te nemen dat deze persoon in het kader van zijn activiteiten binnen die organisatie een ernstig, niet-politiek misdrijf heeft begaan. De betrokken persoon moet ten dele verantwoordelijk kunnen worden gesteld voor de daden die de betrokken organisatie heeft gesteld in de periode waarin hij er lid van was en deze individuele verantwoordelijkheid moet zowel aan de hand van objectieve criteria als aan de hand van subjectieve criteria worden vastgesteld. Zoals uit het hiervoor overwogene volgt, heeft verweerder in het bestreden besluit deze vaststelling op juiste wijze gedaan: aan de hand van de in het genoemde arrest van 21 maart 2014 weergegeven bewijsmiddelen heeft verweerder terecht vastgesteld dat eiser zich persoonlijk schuldig heeft gemaakt aan zeeroof. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">32.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Uit het voorgaande volgt dat verweerder in het bestreden besluit terecht heeft geconcludeerd dat bij eiser ter zake van zeeroof sprake is van ‘knowing’ en ‘personal participation’. Nu uit het voorgaande tevens volgt dat zeeroof een ernstig, niet-politiek misdrijf is, heeft verweerder reeds op deze grond aan eiser artikel 1(F) van het Vluchtelingenverdrag mogen tegenwerpen. De vraag of eiser ook persoonlijk verantwoordelijk kan worden gehouden voor gijzeling van de bemanning van de Iraanse vissersboot en voor het beschieten van leden van de Nederlandse marine behoeft gelet hierop geen beantwoording meer. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">33.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Nu verweerder terecht artikel 1(F) van het Vluchtelingenverdrag aan eiser heeft tegengeworpen, heeft hij eisers aanvraag voor een verblijfsvergunning asiel - met toepassing van artikel 31, tweede lid, aanhef en onder k, van de Vw en artikel 3.107, tweede lid, van het Vb - terecht afgewezen.      </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">34.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Gelet op de hiervoor reeds genoemde uitspraak van de ABRvS van 9 juli 2013, zal de rechtbank voorts hetgeen eiser in beroep heeft aangevoerd over artikel 3 van het EVRM beoordelen. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">35.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Volgens verweerder heeft eiser niet aannemelijk gemaakt dat terugkeer naar Somalië een schending van artikel 3 van het EVRM oplevert. Hiertoe heeft verweerder overwogen dat er in [woonplaats], waar eiser vandaan komt, en [woonplaats], waar eiser in 2006/2007 naar toe is gegaan, geen sprake is van een situatie als bedoeld in artikel 15, eerste lid, aanhef en onder c, van de Definitierichtlijn. Verder heeft verweerder overwogen dat eiser geen lid is van een groep die systematisch wordt blootgesteld aan een schending van artikel 3 van het EVRM en dat hij evenmin behoort tot een andere kwetsbare minderheidsgroep. Eiser heeft volgens verweerder bovendien geen persoonlijke feiten en omstandigheden aangetoond die maken dat hij een risico loopt op een schending van voornoemd artikel. De algemene situatie in Somalië is hiertoe onvoldoende. Er is niet gebleken dat er voor eiser ernstige beperkingen in zijn bestaansmogelijkheden en dat voor hem de situatie onhoudbaar was. Voorts staan [woonplaats] en [woonplaats] niet onder controle van Al Shabaab, zodat het in het Wijzigingsbesluit Vreemdelingencirculaire (WBV) 2014/6 neergelegde beleid niet van toepassing is. Daarbij is uit de verklaringen van eiser ook niet gebleken dat hij zich niet kan handhaven onder het bewind van Al Shabaab, aangezien zijn eerdere problemen met Al Shabaab geen reden waren om uit Somalië te vluchten. Ook heeft eiser vage, bevreemdingwekkende, tegenstrijdige en onlogische verklaringen overgelegd over zijn gestelde problemen met Al Shabaab. Eiser heeft verder niet onderbouwd dat hij te vrezen heeft voor de Somalische autoriteiten. De medische klachten van eiser leveren evenmin een schending van artikel 3 van het EVRM op. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">36.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Eiser heeft aangevoerd dat hij bij terugkeer naar Somalië een reëel risico loopt op schending van artikel 3 van het EVRM, nu hij zowel van Al Shabaab als de Somalische autoriteiten te vrezen heeft. Eiser heeft in dit kader allereerst verwezen naar zijn asielrelaas. Hieraan heeft – kort gezegd – ten grondslag gelegd dat vijf van zijn broers en zijn oom zijn vermoord door Al Shabaab. Eiser werd ook door Al Shabaab gezocht en is daarom met zijn gezin in 2006 of 2007 vanuit [woonplaats] gevlucht naar [woonplaats]. Eiser heeft van zijn zus vernomen dat Al Shabaab nog steeds naar hem op zoek is en daarom vreest hij bij terugkeer door hun te worden vermoord.  </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">37.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Verweerder heeft hierover in het voornemen overwogen dat het asielrelaas van eiser ongeloofwaardig is. Verweerder heeft er allereerst op gewezen dat de gestelde problemen van eiser met Al Shabaab geen aanleiding voor eiser waren om uit Somalië te vertrekken. Verder heeft eiser vage, bevreemdingwekkende, tegenstrijdige en onlogische verklaringen afgelegd over deze problemen. In de zienswijze heeft eiser hier tegenover gesteld dat hij niet wisselend, maar aanvullend heeft verklaard. Verweerder heeft volgens eiser onvoldoende daadkrachtig gemotiveerd dat eiser vage, bevreemdingwekkende, tegenstrijdige en onlogische verklaringen heeft afgelegd. Verweerder heeft in hetgeen in de zienswijze is aangevoerd geen aanleiding gezien om zijn standpunt te wijzigen. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">38.</nr>
+          <para manualAnnotation="TEXT_BLOCK">De rechtbank is van oordeel dat verweerder zich in redelijkheid op het standpunt heeft kunnen stellen dat het asielrelaas van eiser ongeloofwaardig is en dat de verklaringen van eiser over zijn problemen met Al Shabaab ongeloofwaardig zijn. Verweerder heeft daarbij onder andere in aanmerking kunnen nemen dat eiser wisselend heeft verklaard over de reden voor zijn vertrek uit [woonplaats] in 2006/2007. Zo heeft eiser eerst verklaard dat hij is gevlucht vanwege de burgeroorlog; toen de Ethiopische soldaten kwamen is eiser gevlucht met zijn familie. Daarna heeft eiser echter verklaard dat hij in [woonplaats] (indirect) werd benaderd om zich aan te sluiten bij Al Shabaab en dat dat de reden was voor zijn vertrek. Verder heeft verweerder het bevreemdingwekkend kunnen vinden dat Al Shabaab een bijzondere negatieve aandacht voor de gehele familie van eiser zou hebben opgevat, doordat de oom en vader van eiser zich negatief zouden hebben uitgelaten over Al Shabaab. Het ligt in de rede dat Al Shabaab dan juist zou optreden tegen de oom en vader van eiser. Uit de verklaringen van eiser is echter gebleken dat zijn vader helemaal niet door Al Shabaab is bedreigd. Dat dit enkel vanwege zijn slechte gezondheid zou zijn, heeft verweerder bevreemdingwekkend kunnen achten. Niet valt in te zien waarom Al Shabaab, indien zij de vader van eiser daadwerkelijk willen doden, dit zou nalaten omdat hij al in een slechte gezondheid verkeert. Voorts valt niet in te zien dat mannen van Al Shabaab, indien zij het daadwerkelijk zouden hebben voorzien op eiser, hem nimmer persoonlijk hebben benaderd. Verweerder heeft verder mogen betrekken dat eiser heeft verklaard gedurende zijn verblijf in [woonplaats] geen problemen van de zijde van Al Shabaab heeft ondervonden. De rechtbank is tevens van oordeel dat verweerder bij de ongeloofwaardigheid van eisers asielrelaas heeft mogen betrekken dat eiser niet uit zichzelf uit Somalië is gevlucht, maar door de Nederlandse marine is aangehouden.  </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">39.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Eiser heeft verder ten aanzien van zijn stelling dat hij bij terugkeer naar Somalië een reëel risico loopt op schending van artikel 3 van het EVRM een beroep gedaan op de algemene situatie in Somalië. Daartoe heeft hij aangevoerd dat hij [woonplaats] niet veilig zal kunnen bereiken vanuit [woonplaats]. [woonplaats] is voor eiser de logische bestemming, nu zijn gezin en zijn vader daar verblijven en eiser daar vanaf 2006 heeft gewoond. Eiser kan niet terug naar [woonplaats], nu hij deze plaats juist is ontvlucht. Verder heeft eiser een hoog risicoprofiel, nu hij gedurende langere tijd in het westen heeft verbleven. Eiser behoort daarbij tot een aandachtsgroep als bedoeld in WBV 2014/6, nu hij als vermeend spion door Al Shabaab zal worden behandeld. De Somalische autoriteiten zullen eiser niet kunnen en willen beschermen tegen het gevaar van Al Shabaab. Eiser heeft in dit kader nog verwezen naar de volgende documenten: </para>
+          <para/>
+          <itemizedlist manualAnnotation="TEXT_BLOCK" mark="-">
+            <listitem>
+              <para>het algemeen ambtsbericht van de Minister van Buitenlandse Zaken inzake Somalië van december 2013 (het ambtsbericht);</para>
+            </listitem>
+            <listitem>
+              <para>een publicatie van UNHCR van 17 juni 2014, getiteld ‘UNCHR Position on Returns to Southern and Central Somalia’; </para>
+            </listitem>
+            <listitem>
+              <para>een artikel uit The Guardian van 29 oktober 2013;</para>
+            </listitem>
+            <listitem>
+              <para>een artikel uit The Associated Press van 27 januari 2014; </para>
+            </listitem>
+            <listitem>
+              <para>een publicatie van de Secretaris-Generaal van de VN van 3 maart 2014, getiteld ‘Report of the Secretary-General on Somalia’; en</para>
+            </listitem>
+            <listitem>
+              <para>een publicatie van UNHCR van 17 januari 2014, getiteld ‘International Protection Considerations with Regard to people fleeing Southern and Central Somalia’.</para>
+            </listitem>
+          </itemizedlist>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">40.</nr>
+          <para manualAnnotation="TEXT_BLOCK">De rechtbank stelt vast dat eiser heeft verklaard dat hij afkomstig is uit [woonplaats] en vanaf 2006/2007 tot aan zijn vertrek uit Somalië heeft verbleven in respectievelijk [woonplaats] en [woonplaats]. Nu eisers verblijf in [woonplaats] slechts kortdurend en van tijdelijke aard was, kunnen naar het oordeel van de rechtbank zowel [woonplaats] als [woonplaats] als herkomstgebied van eiser worden aangemerkt. Eiser heeft zich op het standpunt gesteld dat [woonplaats] niet veilig is, maar uit het ambtsbericht volgt dat Al Shabaab in [woonplaats] niet de feitelijke macht heeft. De rechtbank ziet geen aanleiding om te twijfelen aan de juistheid van de door verweerder gehanteerde (als bijlage bij het ambtsbericht gevoegde) landkaart, waarop staat aangegeven in welke gebieden Al Shabaab momenteel de feitelijke macht heeft. Ook eisers betoog ter zitting dat Al Shabaab thans minder belang hecht aan een uitbreiding van zijn gebied, maar zich meer richt op – bijvoorbeeld – het vergaren van politieke invloed, leidt naar het oordeel van de rechtbank niet tot de conclusie dat [woonplaats] momenteel als een door Al Shabaab bezet gebied moet worden aangemerkt, waar eiser (om die reden) een risico op schending van artikel 3 van het EVRM zou lopen. Uit de genoemde landkaart blijkt verder, zoals verweerder in het bestreden besluit heeft toegelicht, dat ook [woonplaats] niet onder invloed van Al Shabaab staat. Weliswaar is [woonplaats] vanuit [woonplaats] niet over land te bereiken zonder een gebied te doorkruisen dat onder invloed van Al Shabaab staat, maar verweerder heeft – met het overleggen van een uitdraai van een vluchtschema van Jubba Airways – toegelicht dat eiser desgewenst gebruik kan maken van een lijnvlucht van [woonplaats] naar [woonplaats]. Vanuit [woonplaats] kan eiser vervolgens over land naar [woonplaats] reizen zonder zich te begeven in door Al Shabaab gecontroleerd gebied. Ter zitting heeft verweerder voorts opgemerkt dat hij bereid is, mocht eiser van deze lijnvlucht gebruik wensen te maken, hiervoor financiële middelen ter beschikking te stellen. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">41.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Met betrekking tot eisers betoog dat het beleid van verweerder neergelegd in WBV 2014/6 niet in overeenstemming is met het ambtsbericht en dat hij het risico loopt om als spion te worden aangemerkt door Al Shabaab overweegt de rechtbank dat in verweerders beleid aandachtsgroepen zijn vermeld die op basis van geringe indicaties in aanmerking komen voor een verblijfsvergunning asiel voor bepaalde tijd op grond van artikel 29, eerste lid, aanhef en onder b, van de Vw. De vraag of eiser tot één van deze aandachtsgroepen behoort is echter alleen van belang in gebieden in Zuid- of Centraal-Somalië die onder controle staan van Al Shabaab of waar Al Shabaab een reële bedreiging vormt. Zoals hiervoor is overwogen is dat in de herkomstplaatsen van eiser, [woonplaats] en [woonplaats], niet het geval. Deze beroepsgrond faalt derhalve.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">42.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Eiser heeft zich verder op het standpunt gesteld dat hij het risico loopt op schending van het ne-bis-in-idembeginsel en daarmee op een behandeling die strijdig is met artikel 3 van het EVRM. Volgens eiser loopt hij als verdachte van piraterij in Somalië het risico op arrestatie, detentie en strafrechtelijke vervolging voor hetzelfde feit waarvoor hij in Nederland ook is veroordeeld. Hij heeft hierbij verwezen naar de volgende documenten: </para>
+          <para/>
+          <itemizedlist manualAnnotation="TEXT_BLOCK" mark="-">
+            <listitem>
+              <para>een brief van het hoofd van de Afdeling Internationale Rechtshulp in Strafzaken, M.E. Coffeng, van 5 december 2013; </para>
+            </listitem>
+            <listitem>
+              <para>een brief van de directeur Consulaire Zaken en Migratiebeleid van 7 mei 2014; </para>
+            </listitem>
+            <listitem>
+              <para>een brief van de directeur Consulaire Zaken en Migratiebeleid van 3 november 2009; en </para>
+            </listitem>
+            <listitem>
+              <para>en het ambtsbericht. </para>
+            </listitem>
+          </itemizedlist>
+          <para/>
+          <parablock>
+            <para manualAnnotation="TEXT_BLOCK">Het risico op schending van het ne-bis-in-idembeginsel is volgens eiser bovendien vergroot nu verweerder de Somalische autoriteiten heeft ingelicht over het feit dat hij in Nederland is veroordeeld voor (medeplegen van) zeeroof. </para>
+          </parablock>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">43.</nr>
+          <para manualAnnotation="TEXT_BLOCK">De rechtbank stelt voorop dat op eiser de bewijslast rust voor zijn betoog dat hij een reëel risico loopt dat hij bij terugkeer naar Somalië opnieuw berecht zal worden door de Somalische autoriteiten voor zeeroof. Met zijn betoog dat deze bewijslast op verweerder rust heeft eiser miskend dat het – anders dan het geval is bij de tegenwerping van artikel 1(F) van het Vluchtelingenverdrag, waar de bewijslast op verweerder rust – op zijn weg ligt om aannemelijk te maken dat hem bij terugkeer naar Somalië een met artikel 3 van het EVRM strijdige behandeling staat te wachten. De rechtbank is van oordeel dat eiser dit met de door hem overgelegde informatie niet aannemelijk heeft gemaakt. Uit de brief van 5 december 2013 blijkt weliswaar dat de kwaliteit van het justitieel bestel in Somalië slecht is en dat er een klimaat van wetteloosheid heerst waarbinnen willekeurige arrestaties en detenties kunnen plaatsvinden, maar hieruit kan niet worden afgeleid dat juist eiser het risico loopt om opnieuw vervolgd te worden voor daden waarvoor hij in Nederland reeds is berecht en bestraft, wat ook bekend is bij de Somalische autoriteiten. Verder blijkt uit de brief dat het niet is uitgesloten dat de Somalische overheid personen die als getuige optreden dan wel hebben opgetreden, in strafzaken als verdachten ziet, waardoor hun veiligheid wordt gecompromitteerd en zij de kans lopen te worden geïntimideerd, gearresteerd en berecht. Nu eiser geen getuige in een strafzaak is geweest, kan ook hieruit niet worden afgeleid dat specifiek eiser bij terugkeer een risico als bedoeld in artikel 3 van het EVRM zal lopen. Ook uit de brieven van 3 november 2009 en 7 mei 2014 kan niet worden opgemaakt dat eiser bij terugkeer daadwerkelijk het risico loopt dat hij opnieuw wordt gearresteerd en vervolgd. Uit deze brieven kan worden afgeleid dat, indien eiser in Somalië opnieuw zou worden vervolgd voor zeeroof, het geenszins is uitgesloten dat het Nederlandse vonnis niet zal worden erkend. Dit laat echter onverlet, zoals verweerder ter zitting terecht heeft betoogd, dat eiser niet aannemelijk heeft gemaakt dàt hij een reëel risico loopt in Somalië nogmaals te worden vervolgd. Ten slotte blijkt ook uit het ambtsbericht niet dat eiser, vanwege de door verweerder gedane mededeling aan de Somalische autoriteiten, bij terugkeer een risico loopt te worden vervolgd door die autoriteiten. Daarbij heeft verweerder er terecht op gewezen dat dit niet zou stroken met de afspraken die hierover (recent) met de Somalische autoriteiten zijn gemaakt. Ook heeft verweerder toegelicht dat reeds twaalf, voor zeeroof veroordeelde vreemdelingen vrijwillig naar Somalië zijn teruggekeerd en dat omstreeks 5 mei 2014 één van hen bij aankomst op de luchthaven in [woonplaats] bij de Somalische autoriteiten heeft aangegeven dat hij in Nederland is veroordeeld voor zeeroof, waarbij niet is gebleken dat hij problemen van de autoriteiten heeft ondervonden. Ook is op 22 mei 2014 een Somalische, voor zeeroof veroordeelde, vreemdeling gedwongen teruggekeerd naar Somalië waarbij melding is gemaakt van zijn veroordeling in Nederland en voor zover verweerder bekend hebben zich bij die uitzetting evenmin problemen voorgedaan. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">44.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Gelet op het voorgaande heeft verweerder in het bestreden besluit terecht geconcludeerd dat eiser niet aannemelijk heeft gemaakt dat hij bij terugkeer naar Somalië een reëel en voorzienbaar risico loopt op een met artikel 3 van het EVRM strijdige behandeling door ofwel Al Shabaab, ofwel de Somalische autoriteiten. Het door eiser in dit verband gedane beroep op artikel 6 van het EVRM en de artikelen 47 en 50 van het Handvest slaagt dus ook niet. De rechtbank is voorts van oordeel dat, anders dan eiser heeft betoogd, verweerder bij de beoordeling van de vraag of eiser een reëel risico loopt het juiste toetsingscriterium heeft toegepast en voldoende oog heeft gehad voor de verschillende risicofactoren die door eiser zijn genoemd. Daarbij wordt nog overwogen dat verweerder zich terecht op het standpunt heeft gesteld dat eiser niet behoort tot een groep die systematisch wordt blootgesteld aan een praktijk van onmenselijke behandeling zoals aan de orde was in het arrest van het Europees Hof voor de Rechten van de Mens van 11 januari 2007 in de zaak van Salah Sheek tegen Nederland (nr. 1948/04, JV2007/30).  </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">45.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Eiser heeft zich op het standpunt gesteld dat het inreisverbod in strijd is genomen met richtlijn 2008/115/EG van het Europees Parlement en de Raad van 16 december 2008 over gemeenschappelijke normen en procedures in de lidstaten voor de terugkeer van onderdanen van derde landen die illegaal op hun grondgebied verblijven (Terugkeerrichtlijn). In dit verband heeft eiser verwezen naar de door de ABRvS op 23 oktober 2013 gestelde prejudiciële vragen over de reikwijdte van het begrip ‘openbare orde’ (ECLI:NL:RVS:2013:1695) en aangevoerd dat, zolang er nog twijfel is over de uitleg van het Unierecht, niet kan worden gesteld dat het opleggen van een inreisverbod om redenen van openbare orde op grond van een herroepelijke veroordeling en/of verdenking in overeenstemming is met de Terugkeerrichtlijn. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">46.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Verweerder heeft zich op het standpunt gesteld dat de toepassing van artikel 1(F) van het Vluchtelingenverdrag tevens inhoudt dat artikel 66a, zevende lid, van de Vw van toepassing is. en dat aan eiser een inreisverbod voor de duur van tien jaar kan worden opgelegd. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">47.</nr>
+          <para manualAnnotation="TEXT_BLOCK">In artikel 62, eerste lid, van de Vw is, voor zover thans van belang, bepaald dat nadat tegen een vreemdeling een terugkeerbesluit is uitgevaardigd hij Nederland uit eigen beweging binnen vier weken dient te verlaten. In het tweede lid is bepaald dat verweerder de voor een vreemdeling geldende termijn, bedoeld in het eerste lid, in bepaalde gevallen kan verkorten, dan wel kan bepalen dat een vreemdeling Nederland onmiddellijk moet verlaten. Dit is bijvoorbeeld het geval indien er een risico bestaat dat de vreemdeling zich aan het toezicht zal onttrekken (a), of indien de vreemdeling een gevaar vormt voor de openbare orde, de openbare veiligheid of de nationale veiligheid (c).</para>
+          <para/>
+          <parablock>
+            <para manualAnnotation="TEXT_BLOCK">In artikel 66a, eerste lid, aanhef en onder a, van de Vw is bepaald dat verweerder een inreisverbod uitvaardigt tegen de vreemdeling, die geen gemeenschapsonderdaan is, op wie artikel 64 van de Vw niet van toepassing is en die Nederland onmiddellijk moet verlaten ingevolge artikel 62, tweede lid, van de Vw. </para>
+          </parablock>
+          <para/>
+          <parablock>
+            <para manualAnnotation="TEXT_BLOCK">In het vierde lid is bepaald dat het inreisverbod wordt gegeven voor een bepaalde duur, die ten hoogste vijf jaren bedraagt, tenzij de desbetreffende vreemdeling naar het oordeel van de minister een ernstige bedreiging vormt voor de openbare orde, de openbare veiligheid of de nationale veiligheid. De duur wordt berekend met ingang van de datum waarop de vreemdeling Nederland daadwerkelijk heeft verlaten.</para>
+          </parablock>
+          <para/>
+          <parablock>
+            <para manualAnnotation="TEXT_BLOCK">Ter uitvoering van artikel 66a, vierde lid, van de Vw is in artikel 6.5a, eerste lid, van het Vb met betrekking tot de duur van het inreisverbod de hoofdregel neergelegd dat de maximale duur twee jaren bedraagt. In het tweede tot en met zesde lid is bepaald in welke gevallen naar beneden of naar boven wordt afgeweken van deze duur. </para>
+          </parablock>
+          <para/>
+          <parablock>
+            <para manualAnnotation="TEXT_BLOCK">In het vijfde lid, aanhef en onder c, is bepaald dat in afwijking van het eerste tot en met het vierde lid, de duur van een inreisverbod ten hoogste tien jaren bedraagt, indien het betreft een vreemdeling die een ernstige bedreiging vormt voor de openbare orde of de openbare veiligheid. Deze ernstige bedreiging kan blijken uit onder meer de omstandigheid dat hem artikel 1(F) van het Vluchtelingenverdrag wordt tegengeworpen.</para>
+          </parablock>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">48.</nr>
+          <para manualAnnotation="TEXT_BLOCK">De rechtbank stelt allereerst vast dat eiser geen gronden heeft gericht tegen het bestaan van een risico op onttrekking aan het toezicht, zoals genoemd in artikel 62, tweede lid, aanhef en onder a, van de Vw, in samenhang met artikel 5.1b van het Vb. Daarmee is reeds gegeven dat aan eiser een vertrektermijn kan worden onthouden en dat hij Nederland onmiddellijk dient te verlaten. Ten aanzien van de in artikel 62, tweede lid, aanhef en onder c, van de Vw genoemde grond voor het onthouden van een vertrektermijn en ten aanzien van het in artikel 11, tweede lid, van de Terugkeerrichtlijn neergelegde begrip ‘openbare orde’ is de rechtbank, anders dan eiser, van oordeel dat er in dit geval geen sprake is van een tot prejudiciële vragen nopende twijfel dat eiser een gevaar vormt voor de openbare orde. In punt 32 van deze uitspraak is immers reeds geoordeeld dat artikel 1(F) van het Vluchtelingenverdrag op eiser van toepassing is. Zoals ook volgt uit de uitspraak van de ABRvS van 20 december 2013 (ECLI:Nl:RVS:2013:2558) en eerder de uitspraak van 12 september 2008 in zaak nr. 200704924/1, blijkt uit de toepasselijkheid van artikel 1(F) van het Vluchtelingenverdrag dat de ernst van eisers gedragingen door de internationale gemeenschap is onderkend en is vastgelegd in het internationale recht. Voorts is in artikel 17, tweede lid, van de Definitierichtlijn vastgelegd dat gedragingen als bedoeld in artikel 1(F) van het Vluchtelingenverdrag leiden tot uitsluiting van subsidiaire bescherming. Aldus is sprake is van een werkelijke en ernstige bedreiging voor de openbare orde. Gelet hierop heeft verweerder zich terecht op het standpunt gesteld dat eiser een ernstige bedreiging vormt voor de openbare orde en dat hem op grond daarvan een vertrektermijn kan worden onthouden en voorts dat aan hem een inreisverbod kan worden opgelegd voor de duur van tien jaar. Eiser heeft geen individuele omstandigheden aangevoerd waarin verweerder aanleiding heeft hoeven zien om af te zien van het opleggen van een inreisverbod, dan wel een inreisverbod op te leggen met een kortere duur dan tien jaar.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">49.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Uit het voorgaande volgt dat het beroep van eiser, voor zover dit is gericht tegen het inreisverbod, ongegrond is. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">50.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Uit hetgeen is overwogen in punt 3 van deze uitspraak   volgt dat het beroep, voor zover dit is gericht tegen de afwijzing van eisers aanvraag om verlening van een verblijfsvergunning asiel voor bepaalde tijd, niet-ontvankelijk is. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">51.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Voor een proceskostenveroordeling bestaat geen aanleiding.</para>
+          <para/>
+          <para/>
+          <para/>
+        </paragroup>
+      </section>
+      <section role="beslissing">
+        <title><text manualAnnotation="SECTION_TITLE">Beslissing</text></title>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">De rechtbank:</para>
+        </parablock>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> verklaart het beroep gericht tegen het inreisverbod ongegrond;</text></para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> verklaart het beroep gericht tegen de afwijzing van de aanvraag tot verlening van een verblijfsvergunning asiel voor bepaalde tijd niet-ontvankelijk.</text></para>
+        <para/>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">Deze uitspraak is gedaan door mr. K.J. Veenstra, voorzitter, en mr. M.C. Verra en mr. L.M. Reijnierse, leden, in aanwezigheid van L.S. Lodder, griffier. De beslissing is in het openbaar uitgesproken op 10 juli 2014.</para>
+        </parablock>
+        <para/>
+        <para/>
+        <para/>
+        <para/>
+        <para/>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">griffier													voorzitter</para>
+        </parablock>
+        <para/>
+        <para/>
+        <para/>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">Afschrift verzonden aan partijen op:</para>
+        </parablock>
+        <para/>
+        <para/>
+      </section>
+      <section>
+        <title><text manualAnnotation="SECTION_TITLE">Rechtsmiddel</text></title>
+        <para manualAnnotation="TEXT_BLOCK">Tegen deze uitspraak kan binnen vier weken na de dag van verzending daarvan hoger beroep worden ingesteld bij de Afdeling bestuursrechtspraak van de Raad van State. Als hoger beroep is ingesteld, kan bij de voorzieningenrechter van de hogerberoepsrechter worden verzocht om het treffen van een voorlopige voorziening of om het opheffen of wijzigen van een bij deze uitspraak getroffen voorlopige voorziening. </para>
+        <para/>
+      </section>
+    </uitspraak>
+</open-rechtspraak>

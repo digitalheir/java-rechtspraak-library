@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:eu="http://publications.europa.eu/celex/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:tr="http://tuchtrecht.overheid.nl/">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:GHSHE:2007:BC1129</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2015-06-08T21:45:54</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-05</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">BC1129</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Gerechtshof_'s-Hertogenbosch" scheme="overheid.RechterlijkeMacht">Gerechtshof 's-Hertogenbosch</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">2007-12-04</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">C0600382-HE</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#hogerBeroep">Hoger beroep</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:spatial rdfs:label="Zittingsplaats">'s-Hertogenbosch</dcterms:spatial>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#civielRecht">Civiel recht</dcterms:subject>
+      <dcterms:references bwb:resourceIdentifier="1.0:v:BWB:BWBR0005289" rdfs:label="Wetsverwijzing">Burgerlijk Wetboek Boek 6</dcterms:references>
+      <dcterms:references bwb:resourceIdentifier="1.0:v:BWB:BWBR0005289&amp;artikel=162" rdfs:label="Wetsverwijzing">Burgerlijk Wetboek Boek 6 162</dcterms:references>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+          <rdf:li>JOR 2008/30</rdf:li>
+          <rdf:li>RON 2008, 19</rdf:li>
+          <rdf:li>JRV 2008, 164</rdf:li>
+          <rdf:li>RO 2008, 19</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:GHSHE:2007:BC1129">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:GHSHE:2007:BC1129</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-05T02:14:12</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2008-01-03</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:GHSHE:2007:BC1129 Gerechtshof 's-Hertogenbosch , 04-12-2007 / C0600382-HE</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie id="ECLI:NL:GHSHE:2007:BC1129:INH" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <parablock>
+        <para>De bestuurder die in naam en voor rekening van een vennootschap een verplichting is aangegaan, terwijl hij weet of redelijkerwijs behoort te weten dat de vennootschap niet aan haar verplichtingen kan voldoen en geen verhaal zal bieden voor de schade ten gevolge van de niet-nakoming, treft een zodanig verwijt dat hij persoonlijk jegens de wederpartij van de vennootschap aansprakelijk is op grond van onrechtmatig handelen, behoudens door de bestuurder aan te voeren omstandigheden die zijn handelwijze rechtvaardigen of verontschuldigen (vgl. recent HR 8 december 2006, NJ 2006, 659).</para>
+        <para>Wetenschap bij de bestuurder dat er enig risico is dat de vennootschap een verplichting niet zal kunnen nakomen en geen verhaal zal bieden, is niet zonder meer voldoende. Dat is wel het geval, als de bestuurder had behoren te voorzien dat het risico verkeerd zou uitpakken. Het nemen van een verantwoord risico leidt dus nog niet tot aansprakelijkheid op deze grond. De norm dient voorts met enige terughoudendheid te worden toegepast</para>
+      </parablock>
+    </inhoudsindicatie>
+  <uitspraak id="ECLI:NL:GHSHE:2007:BC1129:DOC" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">typ. NJ</para>
+        <para manualAnnotation="TEXT_BLOCK">rolnr. C0600382/HE</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">ARREST VAN HET GERECHTSHOF 's-HERTOGENBOSCH,</para>
+        <para manualAnnotation="TEXT_BLOCK">sector civiel recht,</para>
+        <para manualAnnotation="TEXT_BLOCK">vierde kamer, van 4 december 2007,</para>
+        <para manualAnnotation="TEXT_BLOCK">gewezen in de zaak van:</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">de vennootschap onder firma [APPELLANTE],</para>
+        <para manualAnnotation="TEXT_BLOCK">gevestigd en kantoorhoudend te [plaats], [gemeente], </para>
+        <para manualAnnotation="TEXT_BLOCK">appellante bij exploot van dagvaarding van 23 februari 2006,</para>
+        <para manualAnnotation="TEXT_BLOCK">procureur: mr. P.A.J.M. Baudoin,</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">tegen:</para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">[GEÏNTIMEERDE],</para>
+        <para manualAnnotation="TEXT_BLOCK">wonende te [plaats],</para>
+        <para manualAnnotation="TEXT_BLOCK">geïntimeerde bij gemeld exploot,	</para>
+        <para manualAnnotation="TEXT_BLOCK">procureur: mr. M.J.W. Schollen,</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">op het hoger beroep van het door de rechtbank 's-Hertogenbosch gewezen vonnis van 23 november 2005 tussen appellante - [appellante] - als eiseres en geïntimeerde - [geïntimeerde] - als gedaagde.</para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">1. </potentialnr><text manualAnnotation="SECTION_TITLE">Het geding in eerste aanleg (zaaknr. 98120-1469) </text></para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Voor het geding in eerste aanleg verwijst het hof naar voormeld vonnis, alsmede naar het tussenvonnis van 1 september 2004.</para>
+      <para>			</para>
+      <para><potentialnr manualAnnotation="NR">2. </potentialnr><text manualAnnotation="SECTION_TITLE">Het geding in hoger beroep</text></para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">2.1. </potentialnr><text manualAnnotation="TEXT_BLOCK">Bij memorie van grieven, tevens houdende wijziging </text></para>
+        <para manualAnnotation="TEXT_BLOCK">en vermeerdering van eis, heeft [appellante] onder overlegging van twee producties negen grieven aangevoerd en geconcludeerd tot vernietiging van het vonnis waarvan beroep en, kort gezegd, tot alsnog toewijzing bij arrest, uitvoerbaar bij voorraad, van de vorderingen van [appellante], met veroordeling van [geïntimeerde] tot restitutie van de onverschuldigd door [appellante] betaalde proceskosten in eerste aanleg, kosten rechtens. </para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.2. </potentialnr><text manualAnnotation="TEXT_BLOCK">Bij memorie van antwoord heeft [geïntimeerde] onder overlegging van een productie de grieven bestreden.</text></para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">2.3. </potentialnr><text manualAnnotation="SECTION_TITLE">De zaak is vervolgens ter zitting van het hof van </text></para>
+        <para manualAnnotation="TEXT_BLOCK">27 september 2007 mondeling bepleit, waarbij voor [appellante] het woord is gevoerd door mr. G.A. van Gorcom en voor [geïntimeerde] door mr. M.J.W. Schollen, beiden aan de hand van een pleitnota die deel uitmaakt van het dossier.</para>
+        <para manualAnnotation="TEXT_BLOCK">Volgens een ter zitting gemaakte afspraak heeft mr. Schollen daarna aan het hof en aan [appellante] nog een uitspraak toegezonden van dit hof van 28 augustus 2007 inzake Berkers/De Boo Eindhoven B.V. (rolnr. C0501070). Eveneens volgens een ter zitting gemaakte afspraak heeft [appellante] daarop niet meer gereageerd.</para>
+      </parablock>
+      <para> </para>
+      <para><potentialnr manualAnnotation="NR">2.4. </potentialnr><text manualAnnotation="TEXT_BLOCK">Partijen hebben daarna de gedingstukken overgelegd en uitspraak gevraagd.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">3. </potentialnr><text manualAnnotation="SECTION_TITLE">De gronden van het hoger beroep</text></para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">Met de grieven beoogt [appellante] het geschil in volle omvang aan het hof voor te leggen.</para>
+        <para manualAnnotation="TEXT_BLOCK">Op de inhoud van de afzonderlijke grieven zal het hof in het navolgende nader ingaan.</para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4. </potentialnr><text manualAnnotation="SECTION_TITLE">De beoordeling</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.1.1. </potentialnr><text manualAnnotation="TEXT_BLOCK">Het gaat in dit hoger beroep, kort weergegeven, om het volgende.</text></para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">4.1.2. </potentialnr><text manualAnnotation="TEXT_BLOCK">[geïntimeerde] is indirect enig bestuurder en enig aandeelhouder van [bedrijf 1] (verder: [bedrijf 1]) geweest.</text></para>
+        <para manualAnnotation="TEXT_BLOCK">Het bedrijfspand van [bedrijf 1] werd in die periode gehuurd van [geïntimeerde], die daarvan eigenaar was.</para>
+        <para manualAnnotation="TEXT_BLOCK">[appellante] heeft een afbouwbedrijf en heeft onder meer in de eerste helft van 2003 op verschillende projecten stuka-doorswerkzaamheden verricht voor [bedrijf 1].</para>
+        <para manualAnnotation="TEXT_BLOCK">De voor die werkzaamheden door [appellante] aan [bedrijf 1] verzonden facturen zijn deels onbetaald gebleven.</para>
+        <para manualAnnotation="TEXT_BLOCK">[bedrijf 1] is op 18 juni 2003 failliet verklaard met benoeming van mr. R.J.A. Slag tot curator. Op 3 juli 2003 is  mr. S.M.M. van Dooren benoemd tot medecurator.</para>
+        <para manualAnnotation="TEXT_BLOCK">De huur van het bedrijfspand was t/m het tweede kwartaal betaald.</para>
+        <para manualAnnotation="TEXT_BLOCK">Ten tijde van de faillietverklaring had [bedrijf 1] 25 gerechtelijke procedures lopen.</para>
+        <para manualAnnotation="TEXT_BLOCK">Daaronder was een procedure tegen een zeker bedrijf genaamd Kero, waarin Kero van [bedrijf 1] een bedrag van plm. EUR 3,6 mln plus schadevergoeding bij staat vorderde en [bedrijf 1] van Kero in reconventie een bedrag van plm. EUR 2 mln. Die laatste vordering is na de faillietverklaring van [bedrijf 1] tezamen met de rest van de debiteurenportefeuille door curatoren voor een gering bedrag aan een derde verkocht.</para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.1.3. </potentialnr><text manualAnnotation="TEXT_BLOCK">Medio 2002 heeft een sanering plaatsgevonden bij [bedrijf 1] in die zin dat aan crediteuren en onderaannemers van [appellante] werd gevraagd om tegen finale kwijting een deel van hun vorderingen te laten vallen omdat [bedrijf 1] niet in staat was te betalen, waarna [bedrijf 1] als gezond bedrijf verder zou kunnen. Ook [appellante] heeft toen een deel van haar vorderingen op [bedrijf 1] laten vallen.</text></para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">4.1.4. </potentialnr><text manualAnnotation="TEXT_BLOCK">In november 2002 heeft [bedrijf 1] na overleg met de bank een extra krediet ter beschikking gekregen van EUR 250.000,-- tot uiterlijk 7 april 2003 (boven het reeds bestaande en opgenomen basiskrediet van EUR 1.135.000,--) tegen onder meer een borgstelling door [geïntimeerde] van EUR 450.000,-- (was EUR 200.000,--). </text></para>
+        <para manualAnnotation="TEXT_BLOCK">Op 12 maart 2003 heeft de bank aan [bedrijf 1] een overdispositie toegestaan van EUR 700.000,--, eveneens tot uiterlijk 7 april 2003.</para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.1.5. </potentialnr><text manualAnnotation="TEXT_BLOCK">Op 15 mei 2003 heeft [geïntimeerde] ten laste van een op zijn naam staande bankrekening een bedrag van EUR 10.000,-- overgemaakt aan [appellante] als betaling voor de aan [bedrijf 1] gerichte factuur 20030157/14203. Deze bankrekening werd door [geïntimeerde] ten behoeve van [bedrijf 1] gebruikt in verband met de beslaglegging door een zekere crediteur [crediteur 1] op de rekening van [bedrijf 1] en in verband met het door de bank aan [geïntimeerde] ten behoeve van [bedrijf 1] verleende krediet.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.1.6. </potentialnr><text manualAnnotation="TEXT_BLOCK">[appellante] heeft op 9 juli 2003 conservatoir beslag doen leggen op het woonhuis en een tuin van [geïntimeerde].</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.1.7. </potentialnr><text manualAnnotation="TEXT_BLOCK">Op 4 mei 2004, 19 juli 2004 en 28 juli 2004 hebben op verzoek van [appellante] voorlopig getuigenverhoren plaatsgevonden in verband met de aansprakelijkstelling van [geïntimeerde] door [appellante]. [geïntimeerde] is daar steeds bij aanwezig geweest en heeft ook getuigen in contra-enquête doen horen. </text></para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">4.1.8. </potentialnr><text manualAnnotation="TEXT_BLOCK">De raadsman van [appellante] heeft ter comparitie op 26 november 2004 verklaard dat de vordering tot betaling van de factuur 20020477/60209 ad EUR 20.000,-- (terzake verbouwing RIVAS ziekenhuis Gorinchem) werd ingetrokken.</text></para>
+        <para manualAnnotation="TEXT_BLOCK">In de conclusie van repliek (sub 37) heeft [appellante] opnieuw betaling van deze factuur gevorderd.</para>
+        <para manualAnnotation="TEXT_BLOCK">Het verzet hiertegen door [geïntimeerde] is bij rolbeslissing van 16 februari 2005 door de rechtbank afgewezen.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">4.1.9. </potentialnr><text manualAnnotation="TEXT_BLOCK">In het faillissementsverslag van de curatoren van [bedrijf 1] van 10 januari 2006 is onder "Bestuursaansprakelijkheid" opgenomen:</text></para>
+        <para><quote manualAnnotation="TEXT_BLOCK">"</quote><text manualAnnotation="TEXT_BLOCK">Van wanbeleid is niet gebleken. De curatoren achten het aannemelijk dat het faillissement met name een gevolg is van de opschorting van betalingen aan de vennootschap door Kero B.V. tengevolge waarvan een zodanige liquiditeitskrapte is ontstaan dat lopende verplichtingen niet meer konden worden voldaan."</text></para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">4.2.1. </potentialnr><text manualAnnotation="TEXT_BLOCK">[appellante] heeft [geïntimeerde] bij exploot van 14 juli 2003 gedagvaard en gevorderd [geïntimeerde] te veroordelen tot betaling van EUR 93.005,50 met wettelijke rente en veroordeling van [geïntimeerde] in de kosten van de procedure, die van het beslag daaronder begrepen.</text></para>
+        <para manualAnnotation="TEXT_BLOCK">Nadat een comparitie van partijen was gehouden heeft de rechtbank de vordering bij vonnis van 23 november 2005 afgewezen en [appellante] in de proceskosten veroordeeld.</para>
+        <para manualAnnotation="TEXT_BLOCK">De rechtbank heeft daartoe overwogen, kort gezegd, dat noch van een garantstelling, noch van een onrechtmatig handelen door [geïntimeerde] sprake is.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">4.2.2. </potentialnr><text manualAnnotation="TEXT_BLOCK">[appellante] is van dat vonnis tijdig in hoger beroep gekomen. Zij heeft haar vordering vermeerderd met de vordering dat [geïntimeerde] zal worden veroordeeld tot terugbetaling van de onverschuldigd door [appellante] betaalde proceskosten in eerste aanleg, en zij heeft de grondslagen van haar vordering gewijzigd en/of anders gegroepeerd in die zin dat zij thans haar vordering baseert:</text></para>
+        <para manualAnnotation="TEXT_BLOCK">primair, op een garantstelling door [geïntimeerde] jegens [appellante],</para>
+        <para manualAnnotation="TEXT_BLOCK">subsidiair, op onrechtmatige daad van [geïntimeerde] door garanties te geven c.q. uitlatingen te doen waardoor [appellante] schade heeft geleden,</para>
+        <para manualAnnotation="TEXT_BLOCK">meer subsidiair op bestuurdersaansprakelijkheid (de zogenaamde Beklamelnorm, HR 6 oktober 1989, NJ 1990, 286), en</para>
+        <para manualAnnotation="TEXT_BLOCK">nog meer subsidiair op grond van een waarschuwingsplicht van [geïntimeerde] jegens [appellante].</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">4.3. </potentialnr><text manualAnnotation="TEXT_BLOCK">[geïntimeerde] heeft de vordering van [appellante] bestreden, zowel wat de grondslagen daarvan betreft, als wat betreft de hoogte van het gevorderde bedrag.</text></para>
+        <para manualAnnotation="TEXT_BLOCK">In het navolgende komt het hof voor zover nodig op die verweren terug.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">4.4. </potentialnr><text manualAnnotation="TEXT_BLOCK">Grief 1 acht het hof te zijn behandeld door de weergave van de feiten in r.o. 4.1 van dit arrest. </text></para>
+        <para manualAnnotation="TEXT_BLOCK">De rechtbank hoefde overigens slechts die feiten als vaststaand te vermelden die zij relevant achtte voor haar uitspraak. Hetzelfde geldt voor het hof.</para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.5. </potentialnr><text manualAnnotation="TEXT_BLOCK">Aan grief 2, die inhoudt dat de rechtbank de stellingen van [appellante] te beperkt heeft weergegeven, is het hof tegemoet gekomen met de weergave in r.o. 4.2.2 van de grondslagen van de vorderingen van [appellante] zoals die thans luiden.</text></para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">4.6. </potentialnr><text manualAnnotation="TEXT_BLOCK">De grieven 3 t/m 6 zijn gericht tegen de oordelen van de rechtbank die te maken hebben met de grondslag onrechtmatige daad (Beklamelnorm), grief 7 betreft de grondslag garantstelling of borgstelling, en grief 8 de grondslag waarschuwingsplicht.</text></para>
+        <para manualAnnotation="TEXT_BLOCK">Het hof ziet, gelet op de wijze waarop [appellante] haar vordering thans heeft ingekleed en gegrond, aanleiding eerst grief 7 (de garantstelling) te behandelen.</para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.7.1. </potentialnr><text manualAnnotation="TEXT_BLOCK">[appellante] stelt zich op het standpunt dat [geïntimeerde] tegen haar heeft gezegd dat hij de werkzaamheden van [appellante] desnoods uit privé-gelden zou betalen en dat hij persoonlijk borg stond voor de betaling van openstaande facturen. Daarop vertrouwend heeft [appellante] werkzaamheden aangenomen of verder uitgevoerd, nadat zij de uitvoering daarvan had gestaakt omdat tijdige betaling door [bedrijf 1] uitbleef. Deze toezeggingen heeft [geïntimeerde] vanaf januari of februari 2003, zeker in het gesprek op 10 of 11 februari 2003 en op of kort voor 15 mei 2003, gedaan en tot begin juni 2003 regelmatig herhaald. [geïntimeerde] heeft daaraan onder meer uitvoering gegeven door de betaling aan [appellante] van EUR 10.000,-- ten laste van zijn privé-rekening op 15 mei 2003, aldus [appellante].</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.7.2. </potentialnr><text manualAnnotation="TEXT_BLOCK">[geïntimeerde] heeft betwist dat hij dergelijke toezeggingen heeft gedaan. De bankrekening op zijn naam waarvan op 15 mei 2003 een bedrag van EUR 10.000,-- aan [appellante] is betaald, fungeerde vanaf maart 2003 als bedrijfsrekening van [bedrijf 1]. [appellante] hervatte zijn werkzaamheden niet naar aanleiding van een toezegging door [geïntimeerde], maar na een betaling door [bedrijf 1]. Subsidiair stelt [geïntimeerde] dat het hier om een particuliere borgtocht gaat die slechts door een geschrift kan worden bewezen (art. 7:859 lid 1 BW). Een dergelijk geschrift bestaat echter niet. [geïntimeerde] verwijst naar het arrest van het hof inzake [geïntimeerde]/De Boo Eindhoven B.V., waarin het hof heeft geoordeeld dat dergelijke toezeggingen door [geïntimeerde] niet zijn komen vast te staan. </text></para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">4.7.3. </potentialnr><text manualAnnotation="TEXT_BLOCK">Het hof overweegt allereerst dat - voor het geval dat een toezegging tot garantstelling of borgstelling van [geïntimeerde] jegens [appellante] komt vast te staan - geen sprake is van een borgstelling door een particuliere borg als bedoeld in art. 7:857 BW.</text></para>
+        <para manualAnnotation="TEXT_BLOCK">Onder een particuliere borg in deze zin moet immers verstaan worden een consument, een natuurlijk persoon die niet handelde ten behoeve van de normale uitoefening van het bedrijf van een N.V. of B.V. waarvan hij bestuurder/groot-aandeelhouder is. De beschermende bepalingen die de wetgever voor de particuliere borg noodzakelijk heeft geacht in verband met diens ondoordachtheid, misplaatst vertrouwen of gebrek aan inzicht in de gevolgen van de borgstelling zijn niet nodig en mitsdien niet van toepassing indien een bestuurder zich privé als borg verbindt ten behoeve van "zijn" vennootschap door middel van een borgstelling op zakelijke grondslag. Daarvan is in dit geval sprake. Een toezegging door een directeur/grootaandeelhouder aan een onderaannemer en crediteur van de vennootschap om de werkzaamheden van de onderaannemer zo nodig privé te zullen betalen, teneinde te bewerkstelligen dat die onderaannemer aan het werk gaat of blijft, is in dit opzicht sterk verge-lijkbaar met de persoonlijke garantstelling door een direc-teur/grootaandeelhouder ten behoeve van de verkrijging van krediet voor zijn vennootschap, welke handeling algemeen wordt beschouwd als de normale uitoefening van het bedrijf betreffend (MvT Parl.Gesch. Inv.W. 7, p. 420). Dat [bedrijf 1] bij een dergelijke toezegging niets te winnen zou hebben omdat deze (deels) oude facturen betroffen is onjuist, nu [appellante] het werk enkele malen heeft stilgelegd en dit - zoals zij stelt - pas wilde hervatten nadat de door haar gestelde toezegging was gedaan. </para>
+        <para manualAnnotation="TEXT_BLOCK">Art. 7:857 BW is hier dus niet van toepassing, zodat ook art. 7:859 lid 2 BW toepassing mist en de discussie of hier sprake was van een gedeeltelijke betaling in de zin van art. 7:859 lid 2 BW niet relevant is.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">4.7.4. </potentialnr><text manualAnnotation="TEXT_BLOCK">De bewijslast van door [geïntimeerde] gedane toezeggingen omtrent zijn persoonlijke garantstelling rust op [appellante].</text></para>
+        <para manualAnnotation="TEXT_BLOCK">In de voorlopig getuigenverhoren, waarvan de daarin afgelegde getuigenverklaringen dezelfde bewijskracht hebben als waren zij in de onderhavige procedure afgelegd (art. 192 Rv), zijn daarover de navolgende verklaringen afgelegd.</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">[getuige 1], directeur van [appellante], heeft als getuige verklaard dat hij eind januari, begin februari 2003 heeft gesproken met [geïntimeerde] over betalingen die [appellante] van [bedrijf 1] moest ontvangen. [appellante] heeft toen haar werkzaamheden opgeschort. Er werd toen een deel betaald, waarna [appellante] verder ging. Vanaf de tweede helft van januari 2003 heeft hij meerdere malen met [geïntimeerde] om de tafel gezeten, waarbij meerdere malen door [geïntimeerde] is aangegeven dat hij uit privé-gelden de facturen van [appellante] zou voldoen indien [bedrijf 1] dat niet zou doen in geval van faillissement. Iedere keer dat [appellante] de werkzaamheden opschortte werd er een betaling verricht. Eenmaal, rond mei 2003, heeft [geïntimeerde] uit privé-gelden EUR 10.000,-- betaald. </para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">De getuige [getuige 2], onderaannemer voor [bedrijf 1], verklaart dat [geïntimeerde] toezeggingen deed aan [appellante] dat er (gedeeltelijk) betaald zou worden, waarna [appellante], die haar werkzaamheden had opgeschort, weer aan het werk ging. Hij is aanwezig geweest bij een toezegging dat [geïntimeerde] in privé zou betalen aan [appellante] als [bedrijf 1] niet zou kunnen betalen. Dat betrof een deelbetaling van oude schulden. De besprekingen waren in maart, april en mei 2003.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">De getuige [getuige 3], destijds bij [bedrijf 1] in dienst als cal-culator/inkoper, verklaart dat [appellante] had aangegeven te willen stoppen met haar werkzaamheden als [bedrijf 1] niet betaalde. Er werd door [geïntimeerde] een toezegging gedaan waardoor [appellante] weer aan het werk ging. Van maart t/m juni 2003 werden meerdere malen bij besprekingen en een maal telefonisch toezeggingen gedaan door [geïntimeerde]. Eén van de toezeggingen die meerdere malen is gedaan was: "[voornaam getuige 1], ga maar verder. Indien niet betaald kan worden betaal ik jou privé" of "[voornaam getuige 1], als er wat met de BV gebeurt betaal ik jou privé". De reactie van [appellante] op die toezeggingen was dat hij het werk hervatte. De toezeggingen zijn gedaan vanaf februari 2003.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">[geïntimeerde], als getuige in contra-enquête gehoord, heeft verklaard dat [appellante] haar werkzaamheden een aantal malen heeft stopgezet vanwege een betalingsachterstand. Als [appellante] wel eens kwam binnenlopen bij een bespreking en om betaling vroeg, zei [geïntimeerde] dat hij zou kijken welk bedrag hij zou overmaken, waarop [appellante] zei dat hij het werk binnen enkele dagen zou hervatten. Hij heeft nooit gezegd dat hij uit privé-gelden zou betalen. </para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">De getuige [getuige 4], destijds uitvoerder in dienst van [bedrijf 1], is op één keer na niet aanwezig geweest bij gesprekken tussen [appellante] en [geïntimeerde]. Die ene keer liep het gesprek tussen hun hoog op en toen is [getuige 4] weggegaan.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">De getuige [getuige 5], van maart 2003 tot aan het faillissement van [bedrijf 1] als uitzendkracht in de functie van hoofd administratie werkzaam bij [bedrijf 1], heeft verklaard dat hij eind april, begin mei aanwezig is geweest bij een gesprek tussen [appellante] en [geïntimeerde]. [getuige 5] heeft toen bevestigd dat facturen van [appellante] open stonden. Daarna is [getuige 5] weggegaan. Facturen werden betaald via de normale bedrijfsrekening van [bedrijf 1] en incidenteel ook van de privé-rekening op naam van [geïntimeerde]. [getuige 5] kreeg voor alle betalingen opdracht van [geïntimeerde], die ook bepaalde vanaf welke rekening de betaling werd verricht. </para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">De getuige [getuige 6] was destijds als directiesecretaresse in dienst van [bedrijf 1]. Zij verklaart dat [appellante] nooit werkzaamheden heeft stopgezet. Wel waren er soms minder mensen werkzaam op een project. Alle rekeningen werden altijd betaald, ook die van [appellante]. De rekeningen werden ook op tijd betaald, hoewel er ook een uitloop van meerdere dagen was. Er waren twee rekeningen, één op naam van [bedrijf 1] en één op naam van [geïntimeerde] privé. Meestal werd betaald vanaf de eerste rekening, maar soms als er haast bij was van de tweede rekening. Zij denkt dat dat 1 of 2 keer is gebeurd. [geïntimeerde] heeft nooit gezegd dat hij [appellante] privé zou betalen. Daar is zij zeker van omdat alles door [geïntimeerde] werd teruggekoppeld naar haar. [appellante] is 1 of 2 keer tijdens een bespreking binnengekomen, zij denkt in november of december 2002, en vroeg om betaling. [geïntimeerde] heeft geantwoord dat hij het na de bespreking zou uitzoeken en zou betalen. </para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">4.7.5. </potentialnr><text manualAnnotation="TEXT_BLOCK">De getuige [getuige 1] heeft, zoals uit het bovenstaande blijkt, bevestigd dat [geïntimeerde] hem, meerdere malen, heeft toegezegd uit privé-gelden de facturen van [appellante] te zullen betalen als [bedrijf 1] daartoe niet in staat zou zijn. </text></para>
+        <para manualAnnotation="TEXT_BLOCK">Nu [getuige 1] als partijgetuige moet worden aangemerkt heeft zijn verklaring beperkte bewijskracht, behalve indien aanvullende bewijzen voorhanden zijn die zodanig sterk zijn en zodanig essentiële punten betreffen dat zij de partijgetuigenverklaring voldoende geloofwaardig maken. </para>
+        <para manualAnnotation="TEXT_BLOCK">Het hof is van oordeel dat dat het geval is.</para>
+        <para manualAnnotation="TEXT_BLOCK">De getuigen [getuige 2] en [getuige 3] verklaren immers beiden dat zij erbij aanwezig zijn geweest toen [geïntimeerde] dergelijke toezeggingen deed en zij bevestigen derhalve de verklaring van [getuige 1].</para>
+        <para manualAnnotation="TEXT_BLOCK">De getuigen [getuige 4] en [getuige 5] kunnen in feite niets terzake dienends verklaren.</para>
+        <para manualAnnotation="TEXT_BLOCK">Naar het oordeel van het hof ontzenuwen de verklaringen van de getuigen [geïntimeerde] en [getuige 6] de verklaringen van [appellante], [getuige 2] en [getuige 3] niet. </para>
+        <para manualAnnotation="TEXT_BLOCK">De getuige [getuige 6] heeft verklaard dat zij een relatie heeft gehad met [geïntimeerde] en namens [bedrijf 1] is de stelling van [appellante] ter zitting van het hof dat dat nog steeds het geval is, niet betwist. Dat maakt dat het voor de hand ligt dat zij een zodanige loyaliteit jegens [geïntimeerde] heeft dat dat de objectiviteit van haar verklaring aantast. </para>
+        <para manualAnnotation="TEXT_BLOCK">Haar verklaring is ook op meerdere punten niet in overeenstemming met hetgeen de andere getuigen verklaren (onder meer over het stopzetten van de werkzaamheden door [appellante], de stipte betalingen, de betalingen van de op naam van [geïntimeerde] staande rekeningen). Het hof kent aan de verklaring van deze getuige dan ook slechts een geringe bewijskracht toe.</para>
+        <para manualAnnotation="TEXT_BLOCK">De enkele verklaring van [geïntimeerde] weegt vervolgens niet op tegen die van [getuige 2], [getuige 3] en [appellante].</para>
+        <para manualAnnotation="TEXT_BLOCK">Het hof heeft bij deze bewijswaardering ook de verklaringen van [getuige 1] en van [geïntimeerde] ter comparitie op 26 november 2004 in aanmerking genomen.</para>
+        <para manualAnnotation="TEXT_BLOCK">[geïntimeerde] heeft daarbij kennelijk schoorvoetend erkend dat [getuige 1] wel vaker binnenliep tijdens een vergadering en dat hij of zijn medewerker hem dan terugbelde om te zeggen dat de betaling onderweg was of dat er volgende week werd betaald. Verder heeft [geïntimeerde] daar verklaard, in afwijking van hetgeen [getuige 5] onder ede heeft verklaard, dat hij, [geïntimeerde], niet uitmaakte van welke rekening de boekhouder de afschrijvingen deed.</para>
+        <para manualAnnotation="TEXT_BLOCK">[getuige 1] heeft bij die gelegenheid verklaard, in lijn met hetgeen hij en de getuigen [getuige 2] en [getuige 3] onder ede hebben verklaard:</para>
+        <para><quote manualAnnotation="TEXT_BLOCK">"</quote><text manualAnnotation="TEXT_BLOCK">De heer [geïntimeerde] heeft steeds gezegd: "als mijn bedrijf failliet gaat, betaal ik jou uit privé."Ik maakte me zorgen en heb hem wel eens gevraagd of hij niet failliet zou gaan. Hij zei me dan dat ik me geen zorgen hoefde te maken omdat hij orders genoeg had. Hij heeft me ook een keer uit privé EUR 10.000,-- betaald, omdat de B.V. op dat moment dat bedrag niet kon betalen. Daaruit heb ik opgemaakt dat hij zijn belofte privé gestand zou doen." </text></para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.7.6. </potentialnr><text manualAnnotation="TEXT_BLOCK">Het hof verbindt geen consequenties aan de stellingen van [bedrijf 1] omtrent de slechte verstandhouding tussen [geïntimeerde] enerzijds en [getuige 3] (en [getuige 2]) anderzijds. Volgens de stellingen van [bedrijf 1] zou dit voortvloeien uit teleurstelling bij [getuige 2] en [getuige 3] en fricties tussen hen en [geïntimeerde] na het uitspreken van het faillissement van [bedrijf 1]. Dit zijn echter in de situatie van een faillissement geen bijzondere omstandigheden, terwijl uit niets gebleken is dat dit hun verklaring in voor [geïntimeerde] negatieve zin heeft beïnvloed. Het hof neemt tenslotte in aanmerking dat hun verklaringen onderling en met die van [getuige 1] overeenstemmen.</text></para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">4.7.7. </potentialnr><text manualAnnotation="TEXT_BLOCK">Het hof hecht, anders dan de rechtbank, geen belang aan de omstandigheid dat niet alle getuigen hetzelfde aantal besprekingen noemen of niet allemaal dezelfde aanwezige personen bij bepaalde besprekingen opgeven.</text></para>
+        <para manualAnnotation="TEXT_BLOCK">Het hof acht dit niet van groot belang en geen aanwijzing voor de (on)betrouwbaarheid van hun verklaring over de inhoud van hetgeen is toegezegd.</para>
+        <para manualAnnotation="TEXT_BLOCK">Voor alle getuigen geldt immers dat de gebeurtenissen waarnaar zij werden gevraagd alweer een jaar geleden waren en dat zij, gelet op hun beroep en het feit dat zij regelmatig met elkaar werkten, sindsdien vele van dergelijke besprekingen gevoerd zullen hebben zodat niet relevant is dat  zij niet precies per bespreking de daarbij aanwezige personen hebben onthouden. </para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">4.7.8. </potentialnr><text manualAnnotation="TEXT_BLOCK">Het hof acht mitsdien bewezen dat [geïntimeerde] aan [appellante] de toezegging heeft gedaan dat hij zelf de facturen van [appellante] aan [bedrijf 1] zou voldoen, indien en voor zover [bedrijf 1] deze niet zou kunnen betalen. Ook al zijn niet met zoveel woorden de termen "borgtocht" of "garantie" gebruikt, toch mocht [appellante] op de toezegging vertrouwen als ware met zoveel woorden een borgstelling afgegeven. Dit vertrouwen van [appellante] werd nog eens bevestigd door de betaling op 15 mei 2003 van een bedrag van EUR 10.000,-- ten laste van een ten name van [geïntimeerde] privé staande bankrekening. [appellante] wist immers niet, noch hoefde te weten, dat [geïntimeerde] deze rekening meerdere malen als bedrijfsrekening gebruikte.</text></para>
+        <para manualAnnotation="TEXT_BLOCK">Dat het hof in de zaak van De Boo Eindhoven B.V. tegen [geïntimeerde] een zodanige toezegging niet bewezen achtte heeft geen betekenis voor het bewijsoordeel in deze zaak over een toezegging door [geïntimeerde] aan een ander bedrijf.</para>
+        <para manualAnnotation="TEXT_BLOCK">De negende grief van [appellante] slaagt derhalve.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">4.7.9. </potentialnr><text manualAnnotation="TEXT_BLOCK">Voorts overweegt het hof dat er op grond van de verklaringen van [getuige 1], [getuige 2] en [getuige 3] van uit moet worden gegaan dat de toezeggingen de ten tijde van de toezegging al verzonden facturen van [appellante] betroffen. De verklaringen betreffen immers verzoeken om betaling door [appellante] van reeds uitgegane facturen, waarop ten aanzien daarvan door [appellante] de toezegging werd gedaan dat deze zonodig privé door hem zouden worden betaald.</text></para>
+        <para manualAnnotation="TEXT_BLOCK">Nu niet gebleken is van een latere toezegging door [geïntimeerde] dan kort voor of op 15 mei 2003, terwijl [appellante] stelt dat [geïntimeerde] voor de laatste maal op 15 mei 2003 heeft gedaan (cvr sub 33), gold de garantstelling naar het oordeel van het hof voor de facturen tot aan deze datum, maar niet voor latere facturen.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">4.7.10. </potentialnr><text manualAnnotation="TEXT_BLOCK">[appellante] heeft de hoogte en de samenstelling van haar vordering tot dusver betrekkelijk chaotisch gepresenteerd.</text></para>
+        <para manualAnnotation="TEXT_BLOCK">Uit prod. 12 bij akte van 26 november 2004 maakt het hof voorshands op dat de vordering van [appellante] bestaat uit de navolgende facturen (waarvan de optelling niet in overeenstemming is met het door [appellante] gevorderde bedrag):</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="TEXT_BLOCK">1) </potentialnr><text manualAnnotation="TEXT_BLOCK">factuurnr. 20020477/60209 d.d. 3-10-2002</text></para>
+        <para manualAnnotation="TEXT_BLOCK">Rivas Ziekenhuis Gorinchem EUR 20.000,--</para>
+        <para><potentialnr manualAnnotation="TEXT_BLOCK">2) </potentialnr><text manualAnnotation="TEXT_BLOCK">Creditnota 28-1-2003 -/- EUR 880,--</text></para>
+        <para><potentialnr manualAnnotation="TEXT_BLOCK">3) </potentialnr><text manualAnnotation="TEXT_BLOCK">factuurnr. 20030138/60209 d.d. 30-1-2003</text></para>
+        <para><potentialnr manualAnnotation="TEXT_BLOCK">10 </potentialnr><text manualAnnotation="TEXT_BLOCK">appartementen te Asten EUR 15.000,--</text></para>
+        <para><potentialnr manualAnnotation="TEXT_BLOCK">4) </potentialnr><text manualAnnotation="TEXT_BLOCK">factuurnr. 20030155/60209 d.d. 14-2-2003</text></para>
+        <para manualAnnotation="TEXT_BLOCK">Willem de Haasstraat Gemert EUR 18.385,50</para>
+        <para><potentialnr manualAnnotation="TEXT_BLOCK">5) </potentialnr><text manualAnnotation="TEXT_BLOCK">factuurnr. 20030157/60209 d.d. 14-2-2003</text></para>
+        <para manualAnnotation="TEXT_BLOCK">Largo te Groesbeek EUR 10.000,--; echter deze is betaald door [geïntimeerde] op </para>
+        <para manualAnnotation="TEXT_BLOCK">15 mei 2003 (cvr sub 18).</para>
+        <para><potentialnr manualAnnotation="TEXT_BLOCK">6) </potentialnr><text manualAnnotation="TEXT_BLOCK">factuurnr. 20030177/60209 d.d. 28-2-2003</text></para>
+        <para><potentialnr manualAnnotation="TEXT_BLOCK">10 </potentialnr><text manualAnnotation="TEXT_BLOCK">appartementen te Asten, stucwerk EUR 15.000,--</text></para>
+        <para><potentialnr manualAnnotation="TEXT_BLOCK">7) </potentialnr><text manualAnnotation="TEXT_BLOCK">factuurnr. 20030222/60209 d.d. 2-4-2003</text></para>
+        <para manualAnnotation="TEXT_BLOCK">Dommeldal Eindhoven EUR 8.000,--</para>
+        <para><potentialnr manualAnnotation="TEXT_BLOCK">8) </potentialnr><text manualAnnotation="TEXT_BLOCK">factuurnr. 20030331/60209 d.d. 24-6-2003</text></para>
+        <para><potentialnr manualAnnotation="TEXT_BLOCK">10 </potentialnr><text manualAnnotation="TEXT_BLOCK">appartementen te Asten Eur 10.000,--  </text></para>
+        <para><potentialnr manualAnnotation="TEXT_BLOCK">9) </potentialnr><text manualAnnotation="TEXT_BLOCK">factuurnr. 20030332/60209 d.d. 24-6-2003</text></para>
+        <para manualAnnotation="TEXT_BLOCK">Dommeldal Eur 7.500,--</para>
+        <para><potentialnr manualAnnotation="TEXT_BLOCK">10) </potentialnr><text manualAnnotation="TEXT_BLOCK">werk Broecks, Verzetsheldenlaan te Eindhoven ?</text></para>
+        <para manualAnnotation="TEXT_BLOCK">factuurnr. 20030284/62999 d.d. 28-5-2003</para>
+        <para manualAnnotation="TEXT_BLOCK">EUR 11.500,-- ? (prod. 20b bij cvr).</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">[geïntimeerde] heeft de verschuldigdheid van deze facturen (ten dele) betwist (cvd 45 e.v. en prod. 36).</para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">4.7.11. </potentialnr><text manualAnnotation="TEXT_BLOCK">[geïntimeerde] heeft er in eerste aanleg bezwaar tegen gemaakt dat de vordering terzake Rivas in de beoordeling wordt betrokken, aangezien deze vordering ter comparitie namens [appellante] was ingetrokken, maar weer is opgevoerd in de conclusie van repliek. Het verzet van [geïntimeerde] tegen de vermeerdering van eis is bij rolbeschikking van de rechtbank van 16 februari 2005 afgewezen.</text></para>
+        <para manualAnnotation="TEXT_BLOCK">Nu grief 9 slaagt komen op grond van de devolutieve werking van het appel alle niet behandelde of verworpen stellingen van [geïntimeerde] - geïntimeerde - opnieuw aan de orde, voor zover deze stellingen relevant zijn voor het opnieuw openliggende geschilpunt. Het bezwaar van [geïntimeerde] tegen het in de beoordeling betrekken van de vordering terzake Rivas valt hieronder.</para>
+        <para manualAnnotation="TEXT_BLOCK">Het hof verwerpt het bezwaar evenwel.</para>
+        <para manualAnnotation="TEXT_BLOCK">De verklaring van de raadsman van [appellante] ter comparitie dat deze vordering werd ingetrokken brengt nog niet mee dat [appellante] daarmee haar recht heeft verwerkt om vervolgens alsnog deze vordering in te stellen. [geïntimeerde] heeft onvoldoende gesteld op grond waarvan zou moeten worden geoordeeld dat het opnieuw instellen van die vordering in de gegeven omstandigheden naar maatstaven van redelijkheid en billijkheid onaanvaardbaar, dan wel in strijd met een goede procesorde, zou zijn. </para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">4.7.12. </potentialnr><text manualAnnotation="TEXT_BLOCK">In beginsel kunnen de hierboven genoemde facturen genummerd 1 t/m 7, die dateren van vóór 15 mei 2003, bij de vordering van [appellante] op [geïntimeerde] wegens de door [geïntimeerde] gedane garantstelling in aanmerking worden genomen.</text></para>
+        <para manualAnnotation="TEXT_BLOCK">[appellante] zal in de gelegenheid gesteld worden een duidelijk overzicht van de volgens haar verschuldigde bedragen, onderbouwd met stukken en met vermelding of de gefactureerde werkzaamheden volledig zijn uitgevoerd en zo nee, voor welk deel wel, in het geding te brengen. [geïntimeerde] kan daarop bij antwoordakte reageren.</para>
+        <para manualAnnotation="TEXT_BLOCK">[geïntimeerde] heeft in eerste aanleg het verweer gevoerd dat niet alle facturen opeisbaar zijn omdat [appellante] bij bepaalde projecten haar werkzaamheden niet goed of niet geheel heeft uitgevoerd. [geïntimeerde] kan dit verweer desgewenst aan de hand van de door [appellante] aangegeven facturen nader concretiseren, met vermelding of en op welke wijze zij [appellante] des-tijd in gebreke heeft gesteld.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">4.8.1. </potentialnr><text manualAnnotation="TEXT_BLOCK">De facturen hierboven genummerd 8, 9 en 10 zijn mitsdien niet op de primaire grondslag toewijsbaar.</text></para>
+        <para manualAnnotation="TEXT_BLOCK">Voor deze facturen dient nog onderzocht te worden of deze wellicht op één van de (nog) (meer) subsidiaire grond(en) toewijsbaar zijn.</para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.8.2. </potentialnr><text manualAnnotation="TEXT_BLOCK">De subsidiaire grond faalt, aangezien het hof heeft geoordeeld dat voor deze facturen van na 15 mei 2003 geen garanties door [geïntimeerde] zijn afgegeven, zodat het feit dat [geïntimeerde] aan een zodanige garantie geen gevolg heeft gegeven geen onrechtmatig handelen van [geïntimeerde] oplevert.</text></para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">4.9.1. </potentialnr><text manualAnnotation="TEXT_BLOCK">Als meer subsidiaire grondslag heeft [appellante] zich beroepen op de zgn. Beklamel-norm (HR 6 oktober 1989, NJ 1990, 286) en gesteld dat nu [geïntimeerde] wist, dan wel er niet aan hoefde te twijfelen, dat [bedrijf 1] niet (binnen redelijke termijn) aan haar verplichtingen zou kunnen voldoen en geen verhaal zou bieden voor de schade die [appellante] daardoor zou lijden, hij persoonlijk jegens [appellante] uit onrechtmatige daad aansprakelijk is.</text></para>
+        <para manualAnnotation="TEXT_BLOCK">[geïntimeerde] had de betreffende opdrachten niet meer aan [appellante] mogen verstrekken gezien de zeer slechte financiële situatie van [bedrijf 1] en het onafwendbare faillissement, dat [geïntimeerde] al vanaf 1 januari 2003 had moeten voorzien. [bedrijf 1] had immers hoge schulden, nauwelijks enige debiteurenportefeuille, slechts vier onderhanden werken en geen orderportefeuille. Bovendien waren er meerdere beslagen gelegd en liepen er vele geschillen. </para>
+        <para manualAnnotation="TEXT_BLOCK">Volgens [appellante] is tot het werk Asten (factuur nr. 8) opdracht gegeven op 13 maart 2003 (prod. 18 akte 26-121-04), tot het werk Dommeldal (factuur nr. 9) begin april 2003 (cvr sub 19) en tot het werk Verzetsheldenlaan (factuur nr. 10) medio april 2003 (cvr sub 20).</para>
+        <para manualAnnotation="TEXT_BLOCK">[geïntimeerde] heeft deze stellingen gemotiveerd bestreden.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">4.9.2. </potentialnr><text manualAnnotation="TEXT_BLOCK">Het hof overweegt als volgt.</text></para>
+        <para manualAnnotation="TEXT_BLOCK">De bestuurder die in naam en voor rekening van een vennootschap een verplichting is aangegaan, terwijl hij weet of redelijkerwijs behoort te weten dat de vennootschap niet aan haar verplichtingen kan voldoen en geen verhaal zal bieden voor de schade ten gevolge van de niet-nakoming, treft een zodanig verwijt dat hij persoonlijk jegens de wederpartij van de vennootschap aansprakelijk is op grond van onrechtmatig handelen, behoudens door de bestuurder aan te voeren omstandigheden die zijn handelwijze rechtvaardigen of verontschuldigen (vgl. recent HR 8 december 2006, NJ 2006, 659).</para>
+        <para manualAnnotation="TEXT_BLOCK">Wetenschap bij de bestuurder dat er enig risico is dat de vennootschap een verplichting niet zal kunnen nakomen en geen verhaal zal bieden, is niet zonder meer voldoende. Dat is wel het geval, als de bestuurder had behoren te voorzien dat het risico verkeerd zou uitpakken. Het nemen van een verantwoord risico leidt dus nog niet tot aansprakelijkheid op deze grond. De norm dient voorts met enige terughoudendheid te worden toegepast (zie concl. OM bij HR 18 oktober 2002, JOR 2003, 22).</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">4.9.3. </potentialnr><text manualAnnotation="TEXT_BLOCK">De bewijslast dat de bestuurder onrechtmatig heeft gehandeld, rust volgens de hoofdregel op degene die stelt dat de bestuurder onrechtmatig heeft gehandeld. Voor omkering van de bewijslast is in het algemeen geen aanleiding (HR 20 november 1998, NJ 1999, 684, ook concl. OM). </text></para>
+        <para manualAnnotation="TEXT_BLOCK">[appellante] heeft naar het oordeel van het hof geen zodanig bijzondere omstandigheden aangevoerd dat op die grond in dit geval de bewijslast toch zou moeten worden omgekeerd, zodat haar derde grief faalt.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">4.9.4. </potentialnr><text manualAnnotation="TEXT_BLOCK">Als voorwaarde voor aansprakelijkheid uit onrechtmatige daad geldt, dat de bestuurder ten tijde van het aangaan van de overeenkomst moet hebben voorzien dat de vennootschap niet aan haar verplichtingen zou kunnen voldoen. In het onderhavige geval zou [geïntimeerde] dit dus resp. half maart, begin april en medio april 2003 moeten hebben voorzien. </text></para>
+        <para manualAnnotation="TEXT_BLOCK">Uit de faillissementsverslagen van de curatoren van [bedrijf 1] kan het navolgende worden afgeleid.</para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> Debiteuren: op de faillissementsdatum was er een nominaal debiteurensaldo van ruim EUR 2,5 mln, waarvan 2 mln Kero, alles verpand aan de bank. De reële waarde bleek slechts een fractie hiervan te zijn.</text></para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> Onderhanden werk: er waren vier grote projecten in uitvoering.</text></para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> concurrente crediteuren: volgens de crediteurenlijst EUR 3,4 mln, waarvan Kero EUR 1,8 mln. Naderhand zijn nog tot EUR 3,75 mln vorderingen bij de curatoren ingediend.</text></para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">4.9.5. </potentialnr><text manualAnnotation="TEXT_BLOCK">Het hof neemt verder in aanmerking, dat de bank nog in maart 2003 - zij het tijdelijk - aan [bedrijf 1] extra kredietruimte heeft gegeven door overdisposities van € 700.000,-- en 250.000,-- toe te staan. Deze toestemming kan gezien worden als een teken van enig vertrouwen in de toekomst van [bedrijf 1].</text></para>
+        <para manualAnnotation="TEXT_BLOCK">Daar staat tegenover dat [bedrijf 1] al sinds 2000 verlies leed en dat [bedrijf 1], gelet op het grote aantal lopende geschillen, waaronder met beslagleggingen en twee eerdere dreigende faillissementsaanvragen, kennelijk de nodige moeite had het bedrijf draaiende te houden. Als enige mogelijkheid om zo'n periode te boven te komen heeft [geïntimeerde] gezien dat er werd doorgewerkt zodat geld vrij zou komen van opdrachtgevers, waarmee de crediteuren konden worden voldaan. Dat dat niet een volstrekt kansloze operatie was, kan worden afgeleid uit het feit dat de bank hieraan in maart 2003 nog heeft willen meewerken. Dit wordt ondersteund door de schriftelijke verklaringen van de belasting-adviseur van [bedrijf 1] mr. J.C.F. Swinkels van Berk Accountants en Belastingadviseurs van 4 april 2005 (prod. 27 cvd) en 9 februari 2007 (prod. 1 mva), die betrokken is geweest bij de gesprekken met de bank in deze periode en die verklaart dat er toen geen sprake was van enige vrees voor een dreigend faillissement, noch bij de kredietbeoordelaars, noch bij de directie en de adviseurs. De bank heeft de kredietfaciliteiten verhoogd op basis van gegevens over de omvang van de orderportefeuille, de stand van het onderhanden werk en het verloop van de procedure tegen Kero. Er was met name liquiditeitsspanning ontstaan door het onbetaald blijven van deze grote vordering (EUR 1,8 mln), aldus Swinkels. Dat de problemen met Kero later zo uit de hand liepen was volgens hem niet voorzienbaar; de gesprekken met de advocaat van [bedrijf 1] in de procedure tegen Kero gaven aanvankelijk geen aanleiding te menen dat [bedrijf 1] die procedure niet zou winnen.  </para>
+        <para manualAnnotation="TEXT_BLOCK">Bij dit alles sluit aan de visie van de curatoren in hun verslag van 21 januari 2004 (prod. bij akte 27 april 2005) dat het er alle schijn van heeft dat [bedrijf 1] door problemen met een of meer grote opdrachtgevers, waaronder Kero, in een neerwaartse negatieve spiraal is terechtgekomen, welke spiraal door gebrek aan liquiditeiten niet kon worden doorbroken. </para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">4.9.6. </potentialnr><text manualAnnotation="TEXT_BLOCK">Het geheel overziende is het hof van oordeel dat [geïntimeerde] geen onaanvaardbaar risico nam toen hij tussen half maart en half april 2003 aan [appellante] nog opdrachten verstrekte en dat hem niet verweten kan worden dat hij niet toen al de onderneming van [bedrijf 1] heeft gestaakt.</text></para>
+        <para manualAnnotation="TEXT_BLOCK">Uit hetgeen over de toestand van [bedrijf 1] in deze periode is komen vast te staan kan het hof niet tot het oordeel komen dat [geïntimeerde] toen heeft (moeten) voorzien dat [bedrijf 1] niet aan haar verplichtingen jegens [appellante] zou kunnen voldoen. </para>
+        <para manualAnnotation="TEXT_BLOCK">De vorderingen wegens de facturen nrs. 8, 9 en 10 (r.o. 4.7.10) kunnen ook op de grondslag onrechtmatige daad/bestuurdersaansprakelijkheid niet worden toegewezen.</para>
+        <para manualAnnotation="TEXT_BLOCK">De grieven 3 t/m 6 van [appellante] worden verworpen. </para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">4.10. </potentialnr><text manualAnnotation="TEXT_BLOCK">Tenslotte heeft [appellante] zich, nog meer subsidiair, beroepen op een waarschuwingsplicht van [geïntimeerde] jegens [appellante]. Met grief 8 betoogt zij, dat [geïntimeerde] onrechtmatig jegens [appellante] heeft gehandeld door telkens geruststellende uitlatingen jegens [appellante] te doen, welke uitlatingen [appellante] aan het werk hebben gehouden en de schade hebben doen ontstaan. </text></para>
+        <para manualAnnotation="TEXT_BLOCK">Het hof is in de eerste plaats van oordeel dat deze grond materieel geen andere grond is dan de primaire grondslag, waarvan het hof heeft geoordeeld dat die niet slaagt voor zover het betreft vorderingen van na 15 mei 2003. </para>
+        <para manualAnnotation="TEXT_BLOCK">Gelet op het oordeel van het hof over de meer subsidiaire grondslag - de "Beklamel-norm"- kunnen bovendien geruststellende uitlatingen door [geïntimeerde], of het achterwege laten van waarschuwingen over een dreigend faillissement, niet als onrechtmatig gezien worden aangezien [geïntimeerde] mocht menen dat de situatie zich nog ten goede zou keren en van een dreigend faillissement vooralsnog geen sprake was, en een waarschuwing als door [appellante] bedoeld op zichzelf al een negatief effect zou sorteren.  </para>
+        <para manualAnnotation="TEXT_BLOCK">Ook de achtste grief moet worden verworpen.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">4.11. </potentialnr><text manualAnnotation="TEXT_BLOCK">De zaak zal thans verwezen worden naar de rol voor het verschaffen van nadere inlichtingen door [appellante] als bedoeld in r.o. 4.7.12.</text></para>
+        <para manualAnnotation="TEXT_BLOCK">Iedere verdere beslissing wordt aangehouden.</para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">5. </potentialnr><text manualAnnotation="SECTION_TITLE">De uitspraak</text></para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Het hof:</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">verwijst de zaak naar de zitting van dinsdag 8 januari 2008 voor het nemen van een akte door [appellante] als bedoeld in r.o. 4.7.12 van dit arrest;</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">houdt voor het overige iedere uitspraak aan.  </para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Dit arrest is gewezen door mrs. De Groot-van Dijken, De Kok en Deurvorst en uitgesproken door de rolraadsheer ter openbare terechtzitting van dit hof op 4 december 2007.</para>
+    </uitspraak>
+</open-rechtspraak>

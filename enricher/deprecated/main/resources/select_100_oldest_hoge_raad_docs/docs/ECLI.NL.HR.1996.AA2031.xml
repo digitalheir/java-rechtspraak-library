@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:tr="http://tuchtrecht.overheid.nl/" xmlns:eu="http://publications.europa.eu/celex/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:HR:1996:AA2031</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2015-06-28T20:45:18</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">AA2031</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Hoge_Raad_der_Nederlanden" scheme="overheid.RechterlijkeMacht">Hoge Raad</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">1996-07-08</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">31496</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#cassatie">Cassatie</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht_belastingrecht">Bestuursrecht; Belastingrecht</dcterms:subject>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0002672&amp;artikel=13 (oud)&amp;g=1996-07-08">Wet op de vennootschapsbelasting 1969 13 (oud)</dcterms:references>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+          <rdf:li>BNB 1996/368 met annotatie door A.H.M. Daniels</rdf:li>
+          <rdf:li>FED 1996/573</rdf:li>
+          <rdf:li>WFR 1996/1100, 1</rdf:li>
+          <rdf:li>V-N 1996/2888, 19 met annotatie door Kluwer</rdf:li>
+          <rdf:li>FED 1996/1001 met annotatie door P.M. VERHAGEN</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:HR:1996:AA2031">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:HR:1996:AA2031</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-04T15:38:25</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2001-07-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:HR:1996:AA2031 Hoge Raad , 08-07-1996 / 31496</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:HR:1996:AA2031:INH" lang="nl" xml:space="preserve">
+      <para>-</para>
+    </inhoudsindicatie>
+  <uitspraak xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:HR:1996:AA2031:DOC" lang="nl" xml:space="preserve">
+      <parablock>
+        <para>gewezen op het beroep in cassatie van de naamloze vennootschap X N.V. te Z tegen de uitspraak van het Gerechtshof te Arnhem van 4 augustus 1995 betreffende de haar voor het jaar 1990 opgelegde aanslag in de vennootschapsbelasting. </para>
+        <para>1. Aanslag, bezwaar en geding voor het Hof Aan belanghebbende is voor het jaar 1990 een aanslag in de vennootschapsbelasting opgelegd, welke aanslag, na daartegen gemaakt bezwaar, bij uitspraak van de Inspecteur is verminderd tot een aanslag naar een belastbaar bedrag van ƒ 12.197.490,--. Belanghebbende is tegen die uitspraak in beroep gekomen bij het Hof, dat deze uitspraak heeft bevestigd. De uitspraak van het Hof is aan dit arrest gehecht. </para>
+        <para>2. Geding in cassatie Belanghebbende heeft tegen de uitspraak van het Hof beroep in cassatie ingesteld. Het beroepschrift in cassatie is aan dit arrest gehecht en maakt daarvan deel uit. De Staatssecretaris van Financiën heeft bij vertoogschrift het cassatieberoep bestreden. </para>
+        <para>3. Beoordeling van het middel van cassatie 3.1. In cassatie kan van het volgende worden uitgegaan: Belanghebbende heeft op 4 januari van het onderhavige jaar (1990) alle aandelen in een in Nederland gevestigde B.V. (hierna: de deelneming) gekocht. Ter zake van deze aankoop heeft belanghebbende een bemiddelingsvergoeding van ƒ 270.000,-- betaald aan een bank. </para>
+        <para>3.2. Tussen partijen was voor het Hof in geschil of de door belanghebbende gemaakte kosten ter zake van de bemiddelingsactiviteiten van de bank dienen te worden gerekend tot de aanschaffingskosten van de deelneming. Het Hof heeft deze vraag bevestigend beantwoord. </para>
+        <para>3.3. 's Hofs beslissing is juist. Indien een belastingplichtige een deelneming verwerft, behoren immers de op de verwerving drukkende kosten - zoals de onderhavige bemiddelingskosten - tot de kostprijs van die deelneming. Het van een andere opvatting uitgaande middel faalt derhalve in zoverre. </para>
+        <para>3.4. Het middel faalt ook voor het overige. Zulks behoeft, gezien artikel 101a van de Wet op de rechterlijke organisatie, geen nadere motivering, nu het middel in zoverre niet noopt tot beantwoording van rechtsvragen in het belang van de rechtseenheid of de rechtsontwikkeling. 4. Proceskosten De Hoge Raad acht geen termen aanwezig voor een veroordeling in de proceskosten als bedoeld in artikel 5a van de Wet administratieve rechtspraak belastingzaken. </para>
+        <para>5. Beslissing De Hoge Raad verwerpt het beroep. </para>
+        <para>Dit arrest is op 8 juli 1996 vastgesteld door de vice-president R.J.J. Jansen als voorzitter, en de raadsheren Van der Linde en Bellaart, in tegenwoordigheid van de waarnemend griffier Van Hooff, en op die datum in het openbaar uitgesproken.</para>
+      </parablock>
+    </uitspraak>
+</open-rechtspraak>

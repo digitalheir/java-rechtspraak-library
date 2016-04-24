@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:eu="http://publications.europa.eu/celex/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:tr="http://tuchtrecht.overheid.nl/">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:GHSHE:2010:BM0881</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2015-06-08T23:05:32</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-05</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">BM0881</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Gerechtshof_'s-Hertogenbosch" scheme="overheid.RechterlijkeMacht">Gerechtshof 's-Hertogenbosch</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">2010-04-13</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">20-003490-08</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#hogerBeroep">Hoger beroep</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:spatial rdfs:label="Zittingsplaats">'s-Hertogenbosch</dcterms:spatial>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#strafrecht">Strafrecht</dcterms:subject>
+      <dcterms:references bwb:resourceIdentifier="1.0:v:BWB:BWBR0002063&amp;g=2010-04-13" rdfs:label="Wetsverwijzing">Wet op de economische delicten</dcterms:references>
+      <dcterms:references bwb:resourceIdentifier="1.0:v:BWB:BWBR0005181&amp;artikel=7b&amp;g=2010-04-13" rdfs:label="Wetsverwijzing">Woningwet 7b</dcterms:references>
+      <dcterms:references bwb:resourceIdentifier="1.0:v:BWB:BWBR0005181&amp;artikel=8&amp;g=2010-04-13" rdfs:label="Wetsverwijzing">Woningwet 8</dcterms:references>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+          <rdf:li>JM 2010/107 met annotatie door De Kok</rdf:li>
+          <rdf:li>M en R 2010, 22K (2010, 6)</rdf:li>
+          <rdf:li>JBO 2010/31 met annotatie door D. van der Meijden</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:GHSHE:2010:BM0881">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:GHSHE:2010:BM0881</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-05T06:14:13</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2010-04-13</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:GHSHE:2010:BM0881 Gerechtshof 's-Hertogenbosch , 13-04-2010 / 20-003490-08</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie id="ECLI:NL:GHSHE:2010:BM0881:INH" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <para>1. Asbest: Slopen van een asbesthoudend bouwwerk zonder vergunning. 2. Opzettelijk op en/of in de bodem en/of in de lucht brengen van asbesthoudend materiaal, terwijl daarvan gevaar voor de openbare gezondheid te duchten is. Ad 1. a) Verdachte was niet vrijgesteld van de vergunningsplicht, aangezien de asbestplaten niet uitsluitend geschroefd, maar deels gespijkerd waren. b) Verdachte had niet mogen vertrouwen op informatie die hij op de website van het Ministerie van VROM heeft gevonden over het verwijderen van asbest door particulieren. Ad 2. Verdachte heeft onvoldoende maatregelen getroffen om te voorkomen dat asbest in contact met de lucht en bodem zou komen.</para>
+    </inhoudsindicatie>
+  <uitspraak id="ECLI:NL:GHSHE:2010:BM0881:DOC" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">Parketnummer: 20-003490-08</para>
+        <para manualAnnotation="TEXT_BLOCK">Uitspraak : 13 april 2010</para>
+        <para manualAnnotation="TEXT_BLOCK">TEGENSPRAAK</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Arrest van de economische kamer van het gerechtshof 's-Hertogenbosch</para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">gewezen op het hoger beroep, ingesteld tegen het vonnis van de economische politierechter in de rechtbank Maastricht van 9 september 2008 in de strafzaak met parketnummer </para>
+        <para><potentialnr manualAnnotation="TEXT_BLOCK">03-</potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">994027-</potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">08 </potentialnr><text manualAnnotation="TEXT_BLOCK">tegen:</text></para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">[verdachte],</para>
+        <para manualAnnotation="TEXT_BLOCK">geboren te [geboorteplaats] op [1978], </para>
+        <para manualAnnotation="TEXT_BLOCK">wonende te [woonplaats], [adres].</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para manualAnnotation="SECTION_TITLE">Hoger beroep</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">De officier van justitie heeft tegen voormeld vonnis hoger beroep ingesteld.</para>
+      <para/>
+      <para/>
+      <para manualAnnotation="SECTION_TITLE">Onderzoek van de zaak</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Dit arrest is gewezen naar aanleiding van het onderzoek op de terechtzitting in hoger beroep, alsmede het onderzoek op de terechtzitting in eerste aanleg.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Het hof heeft kennisgenomen van de vordering van de advocaat-generaal en van hetgeen door en namens de verdachte naar voren is gebracht.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">De advocaat-generaal heeft gevorderd dat het hof het beroepen vonnis zal vernietigen en, opnieuw rechtdoende, verdachte zal veroordelen tot een geldboete van EUR 3.000,00, subsidiair zestig dagen vervangende hechtenis.</para>
+      <para/>
+      <para/>
+      <para manualAnnotation="SECTION_TITLE">Vonnis waarvan beroep</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Het beroepen vonnis zal worden vernietigd omdat in hoger beroep de tenlastelegging - en aldus de grondslag van het onderzoek - is gewijzigd.</para>
+      <para/>
+      <para/>
+      <para manualAnnotation="SECTION_TITLE">Tenlastelegging</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Aan verdachte is - na wijziging van de tenlastelegging ter terechtzitting in hoger beroep - ten laste gelegd dat:</para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">1.</potentialnr></para>
+        <para manualAnnotation="TEXT_BLOCK">hij in of omstreeks de periode van 8 juni 2007 tot en met 9 juni 2007 in de gemeente Landgraaf, tezamen en in vereniging met een ander of anderen, althans alleen, al dan niet opzettelijk, een bouwwerk aan de [adres], heeft/hebben gesloopt zonder vergunning van burgemeester en wethouders van de gemeente Landgraaf, terwijl in het bouwwerk dat (gedeeltelijk) werd gesloopt asbest of een asbesthoudend product aanwezig was;</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">2.</potentialnr></para>
+        <para manualAnnotation="TEXT_BLOCK">hij in of omstreeks de periode van 8 juni 2007 tot en met 9 juni 2007 in de gemeente Landgraaf, tezamen en in vereniging met een ander of anderen, althans alleen, opzettelijk en wederrechtelijk een stof, te weten asbest en/of asbestdeeltjes en/of asbesthoudend </para>
+        <para manualAnnotation="TEXT_BLOCK">(plaat-)materiaal op en/of in de bodem en/of in de lucht heeft gebracht, terwijl daarvan gevaar voor de openbare  gezondheid en/of levensgevaar voor (een) ander(en) te duchten was, aangezien toen aldaar bij een sloop van een pand aan de [adres] door het naar beneden gooien of laten vallen en/of onachtzaam behandelen van asbesthoudend (plaat-)materiaal, dat (vervolgens) brak, asbest(vezels) vrijkwam(en), terwijl geen, althans onvoldoende maatregelen waren/werden genomen om te voorkomen dat voorbijgangers, buren en/of spelende kinderen in aanraking kwam(en) of zou(den) kunnen komen met dat/die vrijkomend(e) asbest(vezels);</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">subsidiair, althans, indien het vorenstaande niet tot een veroordeling mocht of zou kunnen leiden, dat:</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">het aan zijn, verdachtes, schuld, althans aan zijn grovelijk, in elk geval aanmerkelijk onvoorzichtig en/of onachtzaam en/of nalatig en/of ondeskundig handelen te wijten is dat in of omstreeks de periode van 8 juni 2007 tot en met 9 juni 2007 in de gemeente Landgraaf, tezamen en in vereniging met een ander of anderen, althans alleen, wederrechtelijk een stof, te weten asbest en/of asbestdeeltjes en/of asbesthoudend (plaat-)materiaal op en/of in de bodem en/of in de lucht werd(en) gebracht, terwijl daarvan gevaar voor de openbare gezondheid en/of levensgevaar voor (een) ander(en) te duchten was, aangezien toen aldaar bij een sloop van een pand aan de [adres] door het naar beneden gooien of laten vallen of onachtzaam behandelen van asbesthoudend (plaat-)materiaal, dat (vervolgens) brak, asbest(vezels) vrijkwam(en), terwijl geen, althans onvoldoende maatregelen waren/werden genomen om te voorkomen dat voorbijgangers, buren en/of spelende kinderen in aanraking kwam(en) of zou(den) kunnen komen met dat/die vrijkomend(e) asbest(vezels);</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">meer subsidiair, althans, indien het vorenstaande niet tot een veroordeling mocht of zou kunnen leiden:</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">hij in of omstreeks de periode van 08 juni 2007 tot en met 09 juni 2007 in de gemeente Landgraaf, tezamen en in vereniging met een ander of anderen, althans alleen, al dan niet opzettelijk, als degene(n) die handelingen met afvalstoffen verrichtte(n) of naliet(en) en die wist(en) of redelijkerwijs had(den) kunnen weten dat daardoor nadelige gevolgen voor het milieu ontstonden of konden ontstaan, niet alle maatregelen heeft/hebben genomen of nagelaten die redelijkerwijs van hem/hen hadden kunnen worden gevergd, teneinde die gevolgen zoveel mogelijk te voorkomen of te beperken, immers heeft/hebben hij/zij toen aldaar bij een sloop van een pand aan de [adres] asbesthoudend (plaat)materiaal naar beneden gegooid of laten vallen en/of onachtzaam behandeld, dat (vervolgens) brak, waardoor asbest(vezels) vrijkwam(en), terwijl geen, althans onvoldoende maatregelen waren/werden genomen om te voorkomen dat voorbijgangers, buren en/of spelende kinderen in aanraking kwam(en) of zou(den) kunnen komen met dat/die vrijkomend(e) asbest(vezels).</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Voor zover in de tenlastelegging taal- en/of schrijffouten voorkomen, zijn deze verbeterd. De verdachte is daardoor niet geschaad in de verdediging.</para>
+      <para/>
+      <para/>
+      <para manualAnnotation="SECTION_TITLE">Bewezenverklaring</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Het hof acht wettig en overtuigend bewezen dat de verdachte het onder 1 en 2 primair ten laste gelegde heeft begaan, met dien verstande dat:</para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">1.</potentialnr></para>
+        <para manualAnnotation="TEXT_BLOCK">hij in de periode van 8 juni 2007 tot en met 9 juni 2007 in de gemeente Landgraaf opzettelijk een bouwwerk aan de [adres], heeft gesloopt zonder vergunning van burgemeester en wethouders van de gemeente Landgraaf, terwijl in het bouwwerk dat gedeeltelijk werd gesloopt asbest of een asbesthoudend product aanwezig was;</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">2.</potentialnr></para>
+        <para manualAnnotation="TEXT_BLOCK">hij in de periode van 8 juni 2007 tot en met 9 juni 2007 in de gemeente Landgraaf opzettelijk en wederrechtelijk een stof, te weten asbest en/of asbestdeeltjes en/of asbesthoudend (plaat-)materiaal op en/of in de bodem en/of in de lucht heeft gebracht, terwijl daarvan gevaar voor de openbare gezondheid te duchten was, aangezien toen aldaar bij een sloop van een pand aan de [adres] door het laten vallen en onachtzaam behandelen van asbesthoudend (plaat-)materiaal, dat vervolgens brak, asbestvezels vrijkwamen, terwijl geen, althans onvoldoende maatregelen waren/werden genomen om te voorkomen dat voorbijgangers, buren en/of spelende kinderen in aanraking kwamen of zouden kunnen komen met die vrijkomende asbestvezels.</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Het hof acht niet bewezen hetgeen verdachte meer of anders is ten laste gelegd dan hierboven is bewezen verklaard, zodat deze daarvan wordt vrijgesproken.</para>
+      <para/>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Door het hof gebruikte bewijsmiddelen</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Indien tegen dit verkort arrest beroep in cassatie wordt ingesteld, worden de door het hof gebruikte bewijsmiddelen die redengevend zijn voor de bewezenverklaring opgenomen in een aanvulling op het verkort arrest. Deze aanvulling wordt dan aan het verkort arrest gehecht.</para>
+      <para/>
+      <para/>
+      <para manualAnnotation="SECTION_TITLE">Bijzondere overwegingen omtrent het bewijs</para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">A.</potentialnr></para>
+        <para manualAnnotation="TEXT_BLOCK">De beslissing dat het bewezen verklaarde door de verdachte is begaan berust op de feiten en omstandigheden als vervat in de hierboven bedoelde bewijsmiddelen, in onderlinge samenhang beschouwd.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">B.</potentialnr></para>
+        <para manualAnnotation="TEXT_BLOCK">Elk bewijsmiddel wordt - ook in zijn onderdelen - slechts gebruikt tot bewijs van dat bewezen verklaarde feit, of die bewezen verklaarde feiten, waarop het, blijkens zijn inhoud, betrekking heeft.</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Ten aanzien van feit 1</para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">C.</potentialnr></para>
+        <para manualAnnotation="TEXT_BLOCK">Het hof stelt voorop dat de werkzaamheden die verdachte verrichtte op 8 en 9 juni 2007 moeten worden aangemerkt als ‘slopen’, nu blijkens artikel 1, eerste lid, aanhef en onder b, van de Woningwet onder slopen wordt verstaan ‘het afbreken van een bouwwerk of een gedeelte daarvan’.</para>
+        <para manualAnnotation="TEXT_BLOCK">Voorts stelt het hof vast dat het dak dat verdachte onderhanden had, asbesthoudend materiaal bevatte en dat verdachte niet over een sloopvergunning beschikte.</para>
+        <para manualAnnotation="TEXT_BLOCK">Een en ander heeft verdachte ook erkend.</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Dit betekent dat het onder 1 ten laste gelegde wettig en overtuigend bewezen kan worden geacht.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Ten aanzien van feit 2</para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">D. </potentialnr><text manualAnnotation="TEXT_BLOCK">Met betrekking tot het onder 2 ten laste gelegde heeft de raadsman aangevoerd dat er geen asbestvezels in de lucht of in de bodem zijn geraakt, omdat verdachte het vrijgekomen asbesthoudende materiaal op juiste wijze heeft verzameld en afgevoerd. Zo heeft verdachte de verwijderde asbestdelen in speciale zakken in een afgesloten ruimte opgeslagen. Bovendien was het bouwterrein betegeld, waardoor werd voorkomen dat asbest in de grond kon geraken. De raadsman merkt in dit kader nog op dat van hechtgebonden asbest, dat aanwezig was in het dak dat verdachte verwijderde, vrijwel geen vezels vrijkomen.</text></para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">E.</potentialnr></para>
+        <para manualAnnotation="TEXT_BLOCK">Voorts heeft de raadsman met betrekking tot het onder 2 ten laste gelegde aangevoerd dat verdachte niet het opzet had een schadelijke stof in de lucht of bodem te brengen. Dit volgt onder meer uit het feit dat verdachte maatregelen heeft getroffen om het in de bodem of lucht geraken van de schadelijke stof te voorkomen, aldus de raadsman.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">F.</potentialnr></para>
+        <para manualAnnotation="TEXT_BLOCK">Het hof overweegt ten aanzien van het verweer onder D het volgende.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">G.</potentialnr></para>
+        <para manualAnnotation="TEXT_BLOCK">Op 8 juni 2007 is de bouwplaats aan de [adres] gecontroleerd. Tijdens de controle was er niemand aanwezig. Er lagen stukken asbesthoudend materiaal op de betegelde grond van het bouwterrein. De grond was bedekt met ongelijkliggende trottoirtegels en was niet hermetisch afgesloten, zodat het asbesthoudend materiaal rondom en onder de tegels op en/of in de bodem kon raken.</para>
+        <para manualAnnotation="TEXT_BLOCK">Verdachte heeft verklaard dat het asbesthoudende materiaal is afgebrokkeld en vanaf het dak naar beneden is gevallen. Het asbestmateriaal is door de val van het dak en het laten liggen op de tegelvloer ook in contact gekomen met de lucht</para>
+        <para manualAnnotation="TEXT_BLOCK">Verdachte heeft het asbestmateriaal onbeheerd en onverpakt laten liggen, omdat hij eerst zijn bouwwerkzaamheden volledig wilde afronden. Die bouwwerkzaamheden verrichtte verdachte in de avonduren, omdat hij overdag ander werk had. Al die tijd lag het asbest open en bloot op de niet van de bodem geïsoleerde tegels in de buitenlucht en stond het derhalve in rechtstreeks contact met de bodem en de lucht. Mede gelet op de omstandigheid dat het asbesthoudende materiaal was gebroken en dat het Bureau Safety B.V. vezels heeft aangetroffen in dat materiaal, staat naar het oordeel van het hof vast dat verdachte door zijn handelwijze asbest, asbestdeeltjes dan wel asbesthoudend materiaal op en/of in de bodem en/of in de lucht heeft gebracht. </para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">H.</potentialnr></para>
+        <para manualAnnotation="TEXT_BLOCK">Gelet op het voorgaande, verwerpt het hof het verweer onder D.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">I.</potentialnr></para>
+        <para manualAnnotation="TEXT_BLOCK">Blijkens het dossier en het verhandelde ter terechtzitting wist verdachte dat er asbest zat in het dak dat hij sloopte. Hij wist ook dat asbest gevaarlijk kan zijn voor de volksgezondheid. Verdachte heeft zichzelf hiertegen beschermd door een mondkapje te dragen. Nu hij ondanks zijn wetenschap de sloopwerkzaamheden heeft verricht, zonder de vereiste maatregelen te treffen om contact van het asbesthoudend materiaal met de bodem en de lucht tegen te gaan, heeft hij met opzet, althans met opzet in voorwaardelijke zin, de schadelijke stof op/of in de bodem en/of in de lucht gebracht.</para>
+        <para manualAnnotation="TEXT_BLOCK">Dat verdachtes handelwijze tevens wederrechtelijk was, volgt uit het onder 1 bewezen verklaarde.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">J.</potentialnr></para>
+        <para manualAnnotation="TEXT_BLOCK">Gelet op het voorgaande, verwerpt het hof het verweer onder E.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para manualAnnotation="SECTION_TITLE">Strafbaarheid van het bewezen verklaarde</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Bouwverordening gemeente Landgraaf 2004 (verder: de Bouwverordening) bevat regels voor het slopen van bouwwerken. Artikel 8.1.1, eerste lid, van de Bouwverordening luidde ten tijde van het ten laste gelegde:</para>
+      <para/>
+      <para><quote manualAnnotation="TEXT_BLOCK">“</quote><text manualAnnotation="TEXT_BLOCK">Het is verboden bouwwerken, standplaatsen en woonwagens daaronder begrepen, te slopen zonder of in afwijking van een vergunning van burgemeester en wethouders (sloopvergunning).”</text></para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">De hoofdregel is derhalve dat een sloopvergunning vereist is.</para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">K.</potentialnr></para>
+        <para manualAnnotation="TEXT_BLOCK">Op de hoofdregel zijn in de Bouwverordening enkele uitzonderlingen gemaakt. Artikel 8.1.1, tweede lid, van de Bouwverordening luidde ten tijde van het ten laste gelegde, voor zover relevant:</para>
+      </parablock>
+      <para/>
+      <para><quote manualAnnotation="TEXT_BLOCK">“</quote><text manualAnnotation="TEXT_BLOCK">De in het eerste lid bedoelde vergunning is niet vereist indien naar redelijke schatting de hoeveelheid sloopafval niet meer zal bedragen dan 10 m3, tenzij het slopen mede betreft het verwijderen van asbest. […]”</text></para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Voorts luidde artikel 8.2.1, eerste lid tot en met vijfde lid, ten tijde van het ten laste gelegde:</para>
+      <para/>
+      <parablock>
+        <para><quote manualAnnotation="TEXT_BLOCK">“</quote><potentialnr manualAnnotation="NR">1. </potentialnr><text manualAnnotation="TEXT_BLOCK">In afwijking van artikel 8.1.1, eerste lid, is geen sloopvergunning vereist voor het door of vanwege de bewoner/gebruiker van een woning, woonkeet, woonwagen of logiesverblijf en de op het erf van dat bouwwerk staande bouwwerken slopen van:</text></para>
+        <para><potentialnr manualAnnotation="NR">a. </potentialnr><text manualAnnotation="TEXT_BLOCK">gelijmde asbest bevattende vloerbedekking;</text></para>
+        <para><potentialnr manualAnnotation="NR">b. </potentialnr><text manualAnnotation="TEXT_BLOCK">gelijmde asbest bevattende vloertegels;</text></para>
+        <para><potentialnr manualAnnotation="NR">c. </potentialnr><text manualAnnotation="TEXT_BLOCK">geschroefde hechtgebonden asbest bevattende bouwmaterialen, met dien verstande dat voor het verwijderen van deze bouwmaterialen, voor zover deze aan de buitenzijde van een bouwwerk zijn toegepast en bestaan uit platen, een maximum geldt van 35 m2 plaatoppervlakte, mits het voornemen tot dit slopen is gemeld bij burgemeester en wethouders en door burgemeester en wethouders binnen acht dagen na de dag waarop dit is gemeld is medegedeeld dat geen sloopvergunning is vereist.</text></para>
+        <para><potentialnr manualAnnotation="NR">2. </potentialnr><text manualAnnotation="TEXT_BLOCK">Het voornemen tot slopen als bedoeld in het eerste lid moet worden gemeld met gebruikmaking van een door of namens burgemeester en wethouders vastgesteld formulier.</text></para>
+        <para><potentialnr manualAnnotation="NR">3. </potentialnr><text manualAnnotation="TEXT_BLOCK">De melding in enkelvoud en de daarbij behorende tekeningen moeten in tweevoud worden ingediend.</text></para>
+        <para><potentialnr manualAnnotation="NR">4. </potentialnr><text manualAnnotation="TEXT_BLOCK">De melding en de daarbij behorende bescheiden moeten in het Nederlands zijn gesteld.</text></para>
+        <para><potentialnr manualAnnotation="NR">5. </potentialnr><text manualAnnotation="TEXT_BLOCK">In de melding moeten zijn opgenomen de plaats, het adres, de aard en het gebruik van het bouwwerk.”</text></para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Ten slotte staan in artikel 8.2.2 van de Bouwverordening nog enkele uitzonderingen op de vergunningsplicht, maar deze zijn slechts van toepassing indien de sloopwerkzaamheden worden verricht in het kader van de uitoefening van een beroep of bedrijf. Nu verdachte als particulier heeft gehandeld, komt hem geen beroep op deze laatstbedoelde uitzonderingen toe.</para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">L.</potentialnr></para>
+        <para manualAnnotation="TEXT_BLOCK">Uit de hiervoor geciteerde bepalingen volgt dat - nu het slopen mede het verwijderen van asbest betrof - verdachte slechts was vrijgesteld van een vergunningsplicht, indien hij voldeed aan de voorwaarden van artikel 8.2.1, eerste lid, van de Bouwverordening.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">M.</potentialnr></para>
+        <para manualAnnotation="TEXT_BLOCK">Uit het dossier en het verhandelde ter terechtzitting is het hof het volgende gebleken.</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Nog afgezien van de vraag of verdachte ten tijde van het ten laste gelegde reeds als bewoner of gebruiker van het bouwwerk aan de [adres] kon worden aangemerkt, staat vast dat het asbesthoudende bouwmateriaal althans deels niet geschroefd maar gespijkerd was. Nu het niet uitsluitend geschroefd materiaal was, werd aan onderdeel c van het eerste lid van artikel 8.2.1 al niet voldaan en gold voor verdachte reeds daarom geen vrijstelling van een vergunningsplicht.</para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">N.</potentialnr></para>
+        <para manualAnnotation="TEXT_BLOCK">Bovendien gold als voorwaarde voor vrijstelling van een vergunningsplicht, dat verdachte zijn voornemen tot slopen zou melden conform het bepaalde in artikel 8.2.1, eerste tot en met vijfde lid. Gelet op de eisen die deze artikelonderdelen stellen aan een aan een melding, kan verdachtes correspondentie met de gemeente over de voorgenomen renovatie-werkzaamheden en over de geweigerde bouwvergunning, anders dan de raadsman kennelijk heeft willen betogen, niet als een zodanige melding worden aangemerkt. </para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">O.</potentialnr></para>
+        <para manualAnnotation="TEXT_BLOCK">Derhalve gold in het onderhavige geval geen uitzondering op het vereiste van een sloopvergunning.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">P.</potentialnr></para>
+        <para manualAnnotation="TEXT_BLOCK">Het bewezen verklaarde onder 1 is voorzien bij artikel 7b, tweede lid, aanhef en onder d, Woningwet junctis</para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> artikel 8, tweede lid, aanhef en onder d en g, Woningwet; </text></para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> artikel 8.1.1, eerste lid, Bouwverordening gemeente Landgraaf 2004 en</text></para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> artikel 1a, aanhef en onder 2º, en artikel 2, eerste lid, Wet op de economische delicten</text></para>
+        <para manualAnnotation="TEXT_BLOCK">en strafbaar gesteld bij artikel 6, eerste lid, aanhef en onder 2º, van de Wet op de economische delicten, zoals deze artikelen luidden ten tijde van het ten laste gelegde.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">Q.</potentialnr></para>
+        <para manualAnnotation="TEXT_BLOCK">Het bewezen verklaarde onder 2 is voorzien en strafbaar gesteld bij artikel 173a, aanhef en onder 1º, van het Wetboek van Strafrecht.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">R.</potentialnr></para>
+        <para manualAnnotation="TEXT_BLOCK">Er zijn geen feiten of omstandigheden aannemelijk geworden die de strafbaarheid van de feiten uitsluiten.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">S.</potentialnr></para>
+        <para manualAnnotation="TEXT_BLOCK">Het wordt gekwalificeerd zoals hierna in de beslissing wordt vermeld.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para manualAnnotation="SECTION_TITLE">Strafbaarheid van de verdachte</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Er zijn geen feiten of omstandigheden aannemelijk geworden die de strafbaarheid van verdachte uitsluiten.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Voor zover betoogd is dat verdachte mocht vertrouwen op de informatie die hij op de website van het Ministerie van VROM had gevonden, is het hof van oordeel dat verdachte, zeker gelet op zijn bouwkundige achtergrond, had moeten begrijpen dat de gemeente regels stelt voor het slopen van bouwwerken en dat hij zich derhalve tot de gemeente had moeten wenden. Het hof merkt daarbij op dat verdachte eerder, toen hij een bouwvergunning aanvroeg voor de dezelfde werkzaamheden, wel de weg naar de gemeente wist te vinden.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">De verdachte is daarom strafbaar voor het hiervoor bewezen verklaarde.</para>
+      <para/>
+      <para/>
+      <para manualAnnotation="SECTION_TITLE">Op te leggen straf of maatregel</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Bij de bepaling van de op te leggen straf is gelet op de aard en de ernst van hetgeen bewezen is verklaard, op de omstandigheden waaronder het bewezen verklaarde is begaan en op de persoon van de verdachte, zoals een en ander bij het onderzoek ter terechtzitting naar voren is gekomen.</para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">Het is een feit van algemene bekendheid dat asbest een stof is die schadelijk kan zijn voor het milieu en de volksgezondheid. Regels die erop gericht zijn te voorkomen dat asbest in het milieu en de leefomgeving terecht komt, moeten derhalve strikt worden nageleefd. Het hof vat overtreding van die regels niet licht op.</para>
+        <para manualAnnotation="TEXT_BLOCK">Verdachte heeft sloopwerkzaamheden met betrekking tot asbesthoudend materiaal verricht, terwijl hij daar niet de vereiste vergunning voor had. Bovendien is hij op zodanige wijze te werk gegaan dat er een reëel gevaar voor de volksgezondheid kon ontstaan. Verdachte heeft immers asbesthoudend materiaal vanaf het dak op de grond laten vallen, hij heeft geen voorzieningen getroffen om te voorkomen dat tijdens de werkzaamheden asbest vrij zou komen op of in de bodem en/of in de lucht en hij heeft niet direct aansluitend aan de verwijderingshandelingen het verwijderde asbesthoudend materiaal opgeruimd en verpakt. Integendeel, hij heeft het asbesthoudende materiaal enkele dagen laten liggen op de bouwplaats, terwijl anderen daar dichtbij konden komen.</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Gelet op het voorgaande acht het hof een geldboete als geëist door de advocaat-generaal passend en geboden.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Bij de vaststelling van de hoogte van de geldboete heeft het hof rekening gehouden met de financiële draagkracht van de verdachte, voor zover daarvan ter terechtzitting is gebleken.</para>
+      <para/>
+      <para/>
+      <para manualAnnotation="SECTION_TITLE">Toepasselijke wettelijke voorschriften</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">De beslissing is gegrond op de artikelen 23, 24, 24c, 57 en 173a van het Wetboek van Strafrecht, de artikelen 1a, 2 en 6  van de Wet op de economische delicten, de artikelen 7b en 8 van de Woningwet en artikel 8.1.1 van de Bouwverordening gemeente Landgraaf 2004, zoals deze luidden ten tijde van het bewezen verklaarde.</para>
+      <para/>
+      <para/>
+      <para/>
+      <para manualAnnotation="SECTION_TITLE">BESLISSING</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Het hof:</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Vernietigt het vonnis, waarvan beroep, en doet opnieuw recht.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Verklaart, zoals hiervoor overwogen, wettig en overtuigend bewezen, dat verdachte het onder 1 en 2 primair ten laste gelegde heeft begaan.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Verklaart niet bewezen hetgeen verdachte meer of anders is ten laste gelegd dan hierboven is bewezen verklaard en spreekt hem daarvan vrij.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Verklaart dat het bewezen verklaarde oplevert:</para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">1. </potentialnr><text manualAnnotation="TEXT_BLOCK">Overtreding van een voorschrift, gesteld bij artikel 7b van de Woningwet, opzettelijk begaan</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2. </potentialnr><text manualAnnotation="TEXT_BLOCK">Opzettelijk en wederrechtelijk een stof op of in de bodem of in de lucht brengen, terwijl daarvan gevaar voor de openbare gezondheid te duchten is</text></para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Verklaart verdachte deswege strafbaar.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Veroordeelt verdachte tot een geldboete van EUR 3.000,00 (drieduizend euro), bij gebreke van betaling en verhaal te vervangen door 60 (zestig) dagen hechtenis.</para>
+      <para/>
+      <para> </para>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">Aldus gewezen door</para>
+        <para manualAnnotation="TEXT_BLOCK">mr. H. Harmsen, voorzitter,</para>
+        <para manualAnnotation="TEXT_BLOCK">mr. K. van der Meijde en mr. J.H.M. Westenbroek,</para>
+        <para manualAnnotation="TEXT_BLOCK">in tegenwoordigheid van mr. R. van den Munckhof, griffier,</para>
+        <para manualAnnotation="TEXT_BLOCK">en op 13 april 2010 ter openbare terechtzitting uitgesproken.</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">mr. K. van der Meijde is buiten staat dit arrest mede te ondertekenen.</para>
+    </uitspraak>
+</open-rechtspraak>

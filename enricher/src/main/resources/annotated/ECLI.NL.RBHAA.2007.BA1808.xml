@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:eu="http://publications.europa.eu/celex/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:tr="http://tuchtrecht.overheid.nl/">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:RBHAA:2007:BA1808</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-05T01:14:16</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-05</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">BA1808</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Rechtbank_Haarlem" scheme="overheid.RechterlijkeMacht">Rechtbank Haarlem</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">2007-01-31</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">15/630790-06</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#eersteAanlegMeervoudig">Eerste aanleg - meervoudig</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#strafrecht">Strafrecht</dcterms:subject>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBHAA:2007:BA1808">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBHAA:2007:BA1808</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-05T01:14:16</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2007-03-28</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:RBHAA:2007:BA1808 Rechtbank Haarlem , 31-01-2007 / 15/630790-06</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie id="ECLI:NL:RBHAA:2007:BA1808:INH" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <para>Verdachte heeft zich schuldig gemaakt aan een tasjesroof. Teneinde in zijn behoefte aan drugs te kunnen voorzien, heeft hij een oudere dame die hij als gemakkelijk slachtoffer beschouwde, op straat beroofd van haar handtas. Daarbij heeft hij geweld toegepast, als gevolg waarvan het 85-jarige slachtoffer bijna ten val is gekomen. Verdachte heeft zich verder schuldig gemaakt aan diefstal en verduistering van goederen van zijn vader. De vader van verdachte heeft in zijn aangifte aangegeven dat het niet de eerste keer is dat verdachte goederen van zijn ouders wegneemt en dat het hem veel moeite kost om zijn eigen zoon aan te geven. Hij heeft daartoe besloten in de hoop dat het verdachte ervan zal weerhouden in de toekomst goederen van hem te stelen en dat verdachte door een daartoe geëquipeerde instantie geholpen zal gaan worden om van zijn drugsverslaving af te komen.</para>
+    </inhoudsindicatie>
+  <uitspraak id="ECLI:NL:RBHAA:2007:BA1808:DOC" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">RECHTBANK HAARLEM</para>
+        <para manualAnnotation="TEXT_BLOCK">SECTOR STRAFRECHT</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">MEERVOUDIGE STRAFKAMER </para>
+      <para/>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">Parketnummer: 15/630790-06 </para>
+        <para manualAnnotation="TEXT_BLOCK">Uitspraakdatum: 31 januari 2007</para>
+        <para manualAnnotation="TEXT_BLOCK">Tegenspraak </para>
+      </parablock>
+      <para/>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">VERKORT STRAFVONNIS (art. 138b Sv) </para>
+      <para/>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Dit vonnis is gewezen naar aanleiding van het onderzoek op de openbare terechtzitting van 17 januari 2007 in de zaak tegen:</para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">[verdachte], </para>
+        <para manualAnnotation="TEXT_BLOCK">geboren op [geboortedatum] te [geboorteplaats],</para>
+        <para manualAnnotation="TEXT_BLOCK">wonende te [woonplaats],</para>
+        <para manualAnnotation="TEXT_BLOCK">thans gedetineerd in P.I. Midden Holland, HvB Haarlem te Haarlem.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">1. </potentialnr><text manualAnnotation="SECTION_TITLE">Tenlastelegging </text></para>
+        <para manualAnnotation="TEXT_BLOCK">Aan verdachte is tenlastegelegd dat </para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">1.</potentialnr></para>
+        <para manualAnnotation="TEXT_BLOCK">hij op of omstreeks 07 oktober 2006 te IJmuiden, gemeente Velsen, op of aan de openbare weg de [a-straat], in elk geval op de openbare weg, met het oogmerk van wederrechtelijke toe-eigening heeft weggenomen een handtas (met inhoud), in elk geval enig goed, geheel of ten dele toebehorende aan [slachtoffer 1] (geboren [geboortedatum]), in elk geval aan een ander of anderen dan aan verdachte, welke diefstal werd voorafgegaan en/of vergezeld en/of gevolgd van geweld en/of bedreiging met geweld tegen die [slachtoffer 1], gepleegd met het oogmerk om die diefstal voor te bereiden en/of gemakkelijk te maken en/of om bij betrapping op heterdaad aan zichzelf hetzij de vlucht mogelijk te maken, hetzij het bezit van het gestolene te verzekeren, welk geweld en/of welke bedreiging met geweld hierin bestond(en) dat hij, verdachte, (terwijl hij langs die [slachtoffer 1] fietste) onverhoeds en met kracht de handtas van de linkerarm van die [slachtoffer 1] heeft gerukt;</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">2.</potentialnr></para>
+        <para manualAnnotation="TEXT_BLOCK">hij op of omstreeks 22 september 2006 te IJmuiden, gemeente Velsen, met het oogmerk van wederrechtelijke toe-eigening heeft weggenomen een gouden (ketting)hanger, in elk geval enig goed, geheel of ten dele toebehorende aan [slachtoffer 2], in elk geval aan een ander of anderen dan aan verdachte;</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">3.</potentialnr></para>
+        <para manualAnnotation="TEXT_BLOCK">hij in of omstreeks de periode van 20 september 2006 tot en met 22 september 2006 te IJmuiden, gemeente Velsen en/of te Beverwijk, opzettelijk een aggregaat, in elk geval enig goed, geheel of ten dele toebehorende aan [slachtoffer 2], in elk geval aan een ander of anderen dan aan verdachte, welk(e) goed(eren) verdachte anders dan door misdrijf, te weten als (bruik)lener, onder zich had, wederrechtelijk zich heeft toegeëigend;</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">4.</potentialnr></para>
+        <para manualAnnotation="TEXT_BLOCK">PRIMAIR:</para>
+        <para manualAnnotation="TEXT_BLOCK">hij op of omstreeks 01 oktober 2006 te IJmuiden, gemeente Velsen, met het oogmerk van wederrechtelijke toe-eigening heeft weggenomen 10,23 liter benzine in elk geval enig goed, geheel of ten dele toebehorende aan [bedrijf B], in elk geval aan een ander of anderen dan aan verdachte;</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">SUBSIDIAIR:</para>
+        <para manualAnnotation="TEXT_BLOCK">hij op of omstreeks 01 oktober 2006 te IJmuiden, gemeente Velsen, opzettelijk 10,23 liter benzine, in elk geval een hoeveelheid brandstof, geheel of ten dele toebehorende aan [bedrijf B], in elk geval aan een ander of anderen dan aan verdachte en welke benzine verdachte bij een voor zelfbediening ingerichte benzinepompinstallatie, gelegen aan de [c-weg], had getankt, onder gehoudenheid die benzine te betalen en welke benzine verdachte aldus en in elk geval anders dan door misdrijf onder zich had, wederrechtelijk zich heeft toegeëigend.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">2. </potentialnr><text manualAnnotation="SECTION_TITLE">Voorvragen</text></para>
+        <para manualAnnotation="TEXT_BLOCK">De rechtbank heeft vastgesteld dat de dagvaarding geldig is, dat zijzelf bevoegd is tot kennisneming van de zaak, dat het openbaar ministerie ontvankelijk is in zijn vervolging en dat er geen redenen zijn voor schorsing van de vervolging.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">3. </potentialnr><text manualAnnotation="SECTION_TITLE">Bewezenverklaring</text></para>
+        <para manualAnnotation="TEXT_BLOCK">De rechtbank acht wettig en overtuigend bewezen dat verdachte de tenlastegelegde feiten heeft begaan in dier voege dat </para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">1.</potentialnr></para>
+        <para manualAnnotation="TEXT_BLOCK">hij op 7 oktober 2006 te IJmuiden, gemeente Velsen, op de openbare weg de [a-straat], met het oogmerk van wederrechtelijke toe-eigening heeft weggenomen een handtas (met inhoud), toebehorende aan [slachtoffer 1] (geboren [geboortedatum]), welke diefstal werd vergezeld van geweld tegen die [slachtoffer 1], gepleegd met het oogmerk om die diefstal gemakkelijk te maken, welk geweld hierin bestond dat hij, verdachte, terwijl hij langs die [slachtoffer 1] fietste, onverhoeds en met kracht de handtas van de linkerarm van die [slachtoffer 1] heeft gerukt;</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">2.</potentialnr></para>
+        <para manualAnnotation="TEXT_BLOCK">hij op 22 september 2006 te IJmuiden, gemeente Velsen, met het oogmerk van wederrechtelijke toe-eigening heeft weggenomen een gouden (ketting)hanger, toebehorende aan [slachtoffer 2];</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">3.</potentialnr></para>
+        <para manualAnnotation="TEXT_BLOCK">hij omstreeks de periode van 20 september 2006 tot en met 22 september 2006 te IJmuiden, gemeente Velsen en/of te Beverwijk, opzettelijk een aggregaat, toebehorende aan [slachtoffer 2], welk goed verdachte anders dan door misdrijf, te weten als (bruik)lener, onder zich had, wederrechtelijk zich heeft toegeëigend;</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">4.</potentialnr></para>
+        <para manualAnnotation="TEXT_BLOCK">PRIMAIR:</para>
+        <para manualAnnotation="TEXT_BLOCK">hij op 01 oktober 2006 te IJmuiden, gemeente Velsen, met het oogmerk van wederrechtelijke toe-eigening heeft weggenomen 10,23 liter benzine, toebehorende aan [bedrijf B].</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Voorzover in de bewezenverklaarde tenlastelegging taal- en/of schrijffouten voorkomen, zijn deze verbeterd. Blijkens het verhandelde op de terechtzitting is de verdachte daardoor niet geschaad in zijn verdediging.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Hetgeen aan verdachte meer of anders is tenlastegelegd dan hier als bewezen is aangenomen, is niet bewezen. De verdachte moet hiervan worden vrijgesproken.</para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">4. </potentialnr><text manualAnnotation="SECTION_TITLE">Strafbaarheid van de feiten</text></para>
+        <para manualAnnotation="TEXT_BLOCK">Het bewezenverklaarde levert op:</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">Feit 1: diefstal, vergezeld van geweld tegen personen, gepleegd met het oogmerk om die diefstal gemakkelijk te maken;</para>
+        <para manualAnnotation="TEXT_BLOCK">Feit 2 en 4 primair: diefstal, meermalen gepleegd;</para>
+        <para manualAnnotation="TEXT_BLOCK">Feit 3: verduistering.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">5. </potentialnr><text manualAnnotation="SECTION_TITLE">Strafbaarheid van verdachte</text></para>
+        <para manualAnnotation="TEXT_BLOCK">Er is geen omstandigheid aannemelijk geworden die de strafbaarheid van verdachte uitsluit. Verdachte is dus strafbaar.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">6. </potentialnr><text manualAnnotation="SECTION_TITLE">Motivering van sanctie en van overige beslissingen</text></para>
+        <para><potentialnr manualAnnotation="NR">6.1 </potentialnr><text manualAnnotation="SECTION_TITLE">De vordering van de officier van justitie</text></para>
+        <para manualAnnotation="TEXT_BLOCK">De officier van justitie heeft gerekwireerd tot bewezenverklaring van de onder 1, 2, 3 en 4 primair tenlastegelegde feiten en gevorderd dat verdachte terzake zal worden veroordeeld tot een gevangenisstraf voor de duur van eenentwintig maanden, waarvan acht maanden voorwaardelijk met een proeftijd van twee jaar, met aftrek van de tijd die verdachte reeds in verzekering en voorlopige hechtenis heeft doorgebracht. </para>
+        <para manualAnnotation="TEXT_BLOCK">Als bijzondere voorwaarde bij het voorwaardelijk deel van de door haar gevorderde straf heeft de officier van justitie verplicht reclasseringscontact bij de Brijder reclassering gevorderd, ook als dat deelname aan (klinische) behandeling bij de Brijder Verslavingszorg en bij De Waag inhoudt.</para>
+        <para manualAnnotation="TEXT_BLOCK">Ten aanzien van de vordering van de benadeelde partij [benadeelde partij] heeft de officier van justitie gevorderd dat de vordering geheel wordt toegewezen en dat een schadevergoedingsmaatregel aan verdachte wordt opgelegd.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">6.2 </potentialnr><text manualAnnotation="SECTION_TITLE">Hoofdstraf</text></para>
+        <para manualAnnotation="TEXT_BLOCK">Bij de beslissing over de straf die aan verdachte moet worden opgelegd, heeft de rechtbank zich laten leiden door de aard en de ernst van de feiten en de omstandigheden waaronder deze zijn begaan, alsmede de persoon van verdachte zoals van een en ander uit het onderzoek ter terechtzitting en uit de bespreking aldaar van het vanwege de Brijder Verslavingszorg uitgebrachte rapport van 8 december 2006 is gebleken. </para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">In het bijzonder heeft de rechtbank het navolgende in aanmerking genomen. </para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Verdachte heeft zich schuldig gemaakt aan een tasjesroof. Teneinde in zijn behoefte aan drugs te kunnen voorzien, heeft hij een oudere dame die hij als gemakkelijk slachtoffer beschouwde, op straat beroofd van haar handtas. Daarbij heeft hij geweld toegepast, als gevolg waarvan het 85-jarige slachtoffer bijna ten val is gekomen. Feiten als de onderhavige veroorzaken in zijn algemeenheid gevoelens van onrust en onveiligheid in de samenleving en bij de slachtoffers van dit soort feiten in het bijzonder. Dat blijkt ook wel uit de verklaring van het slachtoffer, dat zij het gebeuren niet van zich af kan zetten. Verdachte is hier evenwel volledig aan voorbij gegaan en heeft zich uitsluitend door zijn eigen gewin laten leiden. </para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Verdachte heeft zich verder schuldig gemaakt aan diefstal en verduistering van goederen van zijn vader. De vader van verdachte heeft in zijn aangifte aangegeven dat het niet de eerste keer is dat verdachte goederen van zijn ouders wegneemt en dat het hem veel moeite kost om zijn eigen zoon aan te geven. Hij heeft daartoe besloten in de hoop dat het verdachte ervan zal weerhouden in de toekomst goederen van hem te stelen en dat verdachte door een daartoe geëquipeerde instantie geholpen zal gaan worden om van zijn drugsverslaving af te komen.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Naast genoemde feiten heeft verdachte ook een hoeveelheid benzine gestolen van een tankstation. Verdachte heeft ook hierbij louter uit eigen gewin gehandeld en hierdoor schade en overlast voor de benadeelden veroorzaakt. </para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">In het voordeel van verdachte neemt de rechtbank in aanmerking dat hij niet eerder is veroordeeld voor een strafbaar feit. Om die reden zal de rechtbank een lagere straf opleggen dan die door de officier van justitie is gevorderd. De gepleegde feiten acht de rechtbank echter dermate ernstig dat zij de strafmaat zoals die door de raadsvrouwe is voorgesteld, te weten een gevangenisstraf van vier maanden waarvan één maand voorwaardelijk, al dan niet gecombineerd met een werkstraf, niet passend acht.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Op grond van het vorenoverwogene is de rechtbank van oordeel dat een vrijheidsbenemende straf van na te noemen duur moet worden opgelegd. In het eerder genoemde rapport van de Brijder Verslavingszorg ziet de rechtbank aanleiding te bepalen dat een gedeelte van de op te leggen gevangenisstraf vooralsnog niet ten uitvoer behoeft te worden gelegd. Dit om verdachte ervan te weerhouden in de toekomst opnieuw (soortgelijke) strafbare feiten te begaan. Daarnaast acht de rechtbank verplicht reclasseringscontact bij de Brijder reclassering gedurende de proeftijd noodzakelijk, ook als dat inhoudt deelname aan (klinische) behandeling bij de Brijder Verslavingszorg en deelname aan een behandeling bij De Waag. Een voorwaarde van die strekking zal aan het voorwaardelijk deel van de op te leggen straf worden verbonden.</para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">6.3 </potentialnr><text manualAnnotation="SECTION_TITLE">Vordering benadeelde partij</text></para>
+        <para manualAnnotation="TEXT_BLOCK">De benadeelde partij [benadeelde partij] heeft ter terechtzitting mondeling een vordering tot schadevergoeding van € 173,87 tegen verdachte ingediend wegens materië-le schade die zij als gevolg van het onder 1 tenlastegelegde feit zou hebben geleden. Deze schade bestaat uit de kosten van het vervangen van het slot van haar voordeur, hetgeen nodig was aangezien haar huissleutels in de door verdachte gestolen tas zaten. </para>
+        <para manualAnnotation="TEXT_BLOCK">De rechtbank is van oordeel dat deze schade tot het gevorderde bedrag eenvoudig is vast te stellen en rechtstreeks voortvloeit uit dit bewezenverklaarde feit. De vordering zal dan ook worden toegewezen.</para>
+        <para manualAnnotation="TEXT_BLOCK">Daarnaast dient verdachte te worden veroordeeld in de kosten die de benadeelde partij heeft gemaakt en ten behoeve van de tenuitvoerlegging nog moet maken. De door de benadeelde partij gemaakte kosten worden tot op heden begroot op nihil.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">6.4 </potentialnr><text manualAnnotation="SECTION_TITLE">Schadevergoedingsmaatregel</text></para>
+        <para manualAnnotation="TEXT_BLOCK">Tevens acht de rechtbank termen aanwezig om een schadevergoedingsmaatregel aan verdachte op te leggen tot het bedrag waartoe de vordering van de benadeelde partij is toegewezen, te weten € 173,87.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">7. </potentialnr><text manualAnnotation="SECTION_TITLE">Toepasselijke wettelijke voorschriften</text></para>
+        <para manualAnnotation="TEXT_BLOCK">De volgende wetsartikelen zijn van toepassing:</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Wetboek van Strafrecht, artikelen: 14a, 14b, 14c, 36f, 57, 310, 312 en 321.</para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">8. </potentialnr><text manualAnnotation="SECTION_TITLE">Beslissing</text></para>
+        <para manualAnnotation="TEXT_BLOCK">De rechtbank:</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Verklaart bewezen dat verdachte de onder 1, 2, 3 en 4 primair tenlastegelegde feiten heeft begaan zoals hiervoor onder 3. vermeld.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Verklaart niet bewezen wat aan verdachte meer of anders is tenlastegelegd dan hierboven als bewezen is aangenomen en spreekt verdachte daarvan vrij.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Bepaalt dat de bewezenverklaarde feiten de hierboven onder 4. vermelde strafbare feiten opleveren.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Verklaart verdachte hiervoor strafbaar.</para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">Veroordeelt verdachte tot een gevangenisstraf voor de duur van ACHTTIEN (18) MAANDEN.</para>
+        <para manualAnnotation="TEXT_BLOCK">Beveelt dat van deze gevangenisstraf een gedeelte, groot ZES (6) MAANDEN niet ten uitvoer zal worden gelegd en stelt daarbij een proeftijd vast van twee jaar.</para>
+        <para manualAnnotation="TEXT_BLOCK">Bepaalt dat de tenuitvoerlegging kan worden gelast, indien:</para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> verdachte zich voor het einde van de proeftijd aan een strafbaar feit schuldig maakt;</text></para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> verdachte niet naleeft de bijzondere voorwaarde dat hij zich gedurende de proeftijd zal gedragen naar de voorschriften en aanwijzingen te geven door of namens de Brijder reclassering, thans in de persoon van [reclaseringsmedewerker], ook als zulks inhoudt dat verdachte dient deel te nemen aan (klinische) behandeling bij de Brijder Verslavingszorg en aan een behandeling bij De Waag.</text></para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Bepaalt dat de tijd die verdachte vóór de tenuitvoerlegging van dit vonnis in verzekering en voorlopige hechtenis heeft doorgebracht, bij de tenuitvoerlegging van de thans opgelegde gevangenisstraf in mindering wordt gebracht, voorzover die tijd niet reeds op een andere vrijheidsstraf in mindering is gebracht.</para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">Wijst toe de vordering tot vergoeding van de door de benadeelde partij [benadeelde partij] geleden schade tot een bedrag van € 173,87 en veroordeelt verdachte tot betaling van dit bedrag aan [benadeelde partij], voornoemd, tegen behoorlijk bewijs van kwijting.</para>
+        <para manualAnnotation="TEXT_BLOCK">Veroordeelt verdachte in de kosten door de benadeelde partij gemaakt, tot op heden vastgesteld op nihil, en in de kosten die de benadeelde partij ten behoeve van de tenuitvoerlegging alsnog dient te maken.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">Legt verdachte als schadevergoedingsmaatregel ten behoeve van het slachtoffer [benadeelde partij] de verplichting op tot betaling aan de staat van een bedrag van € 173,87, bij gebreke van betaling of verhaal te vervangen door drie dagen hechtenis. </para>
+        <para manualAnnotation="TEXT_BLOCK">Bepaalt dat betalingen aan de benadeelde partij, voornoemd, in mindering strekken op de verplichting tot betaling aan de staat en dat betalingen aan de staat in mindering strekken op de verplichting tot betaling aan de benadeelde partij.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">9. </potentialnr><text manualAnnotation="TEXT_BLOCK">Samenstelling rechtbank en uitspraakdatum</text></para>
+        <para manualAnnotation="TEXT_BLOCK">Dit vonnis is gewezen door</para>
+        <para manualAnnotation="TEXT_BLOCK">mr. E.B.de Vries-Van den Heuvel, voorzitter,</para>
+        <para manualAnnotation="TEXT_BLOCK">mrs. M.H.L.C. Bijvoet en M.E. Fortuin, rechters,</para>
+        <para manualAnnotation="TEXT_BLOCK">in tegenwoordigheid van de griffier mr. J.A.M. Jansen,</para>
+        <para manualAnnotation="TEXT_BLOCK">en uitgesproken op de openbare terechtzitting van 31 januari 2007.</para>
+      </parablock>
+    </uitspraak>
+</open-rechtspraak>

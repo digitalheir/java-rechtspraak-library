@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:eu="http://publications.europa.eu/celex/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:tr="http://tuchtrecht.overheid.nl/">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:CRVB:2008:BD8928</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-26T01:26:41</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-05</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">BD8928</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Centrale_Raad_van_Beroep" scheme="overheid.RechterlijkeMacht">Centrale Raad van Beroep</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">2008-07-18</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">06-1634 WAO</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#hogerBeroep">Hoger beroep</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:spatial rdfs:label="Zittingsplaats">Utrecht</dcterms:spatial>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht">Bestuursrecht</dcterms:subject>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht_socialezekerheidsrecht">Bestuursrecht; Socialezekerheidsrecht</dcterms:subject>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CRVB:2008:BD8928">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CRVB:2008:BD8928</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-05T03:04:37</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2008-07-31</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:CRVB:2008:BD8928 Centrale Raad van Beroep , 18-07-2008 / 06-1634 WAO</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie id="ECLI:NL:CRVB:2008:BD8928:INH" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <para>Geen procesbelang meer.</para>
+    </inhoudsindicatie>
+  <uitspraak id="ECLI:NL:CRVB:2008:BD8928:DOC" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <para><potentialnr manualAnnotation="TEXT_BLOCK">06/</potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">1634 </potentialnr><text manualAnnotation="TEXT_BLOCK">WAO</text></para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Centrale Raad van Beroep</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Meervoudige kamer</para>
+      <para/>
+      <para><potentialnr manualAnnotation="TEXT_BLOCK">U </potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">I </potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">T </potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">S </potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">P </potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">R </potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">A </potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">A </potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">K</potentialnr></para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">op het hoger beroep van:</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">[Naam appellant], wonende te [woonplaats] (hierna: appellant),</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">tegen de uitspraak van de rechtbank Haarlem van 3 februari 2006, 05/3960 (hierna: aangevallen uitspraak),</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">in het geding tussen:</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">appellant</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">en</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">de Raad van bestuur van het Uitvoeringsinstituut werknemersverzekeringen (hierna: Uwv).</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Datum uitspraak: 18 juli 2008</para>
+      <para> </para>
+      <para><potentialnr manualAnnotation="NR">I. </potentialnr><text manualAnnotation="SECTION_TITLE">PROCESVERLOOP</text></para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Namens appellant heeft mr. C.F.M. Raaijmakers, advocaat te Haarlem, hoger beroep ingesteld.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Het Uwv heeft een verweerschrift ingediend.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Het onderzoek ter zitting heeft plaatsgevonden op 23 mei 2008. Appellant heeft zich laten vertegenwoordigen door mr. Raaijmakers. Het Uwv heeft zich laten vertegenwoordigen door mr. M.H.A.H. Smithuysen.</para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">II. </potentialnr><text manualAnnotation="SECTION_TITLE">OVERWEGINGEN </text></para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">1.1. </potentialnr><text manualAnnotation="TEXT_BLOCK">Bij de aangevallen uitspraak heeft de rechtbank het beroep van appellant, gericht tegen het besluit op bezwaar van </text></para>
+        <para manualAnnotation="TEXT_BLOCK">28 juli 2005, ongegrond verklaard. Bij dat het besluit heeft het Uwv het bezwaar van appellant, gericht tegen het besluit van </para>
+        <para manualAnnotation="TEXT_BLOCK">25 mei 2005 waarbij zijn uitkering krachtens de Wet op de arbeidsongeschiktheidsverzekering (WAO) ingaande 20 juli 2005 werd ingetrokken, niet-ontvankelijk verklaard op de grond dat appellant buiten de bezwaartermijn van zes weken bezwaar heeft gemaakt.</para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">1.2. </potentialnr><text manualAnnotation="TEXT_BLOCK">De rechtbank heeft, met inachtneming van de vaste rechtspraak van de Raad ter zake, geoordeeld dat er in dit geval geen reden is aan te nemen dat het besluit van 25 mei 2005 niet daadwerkelijk is verzonden en dat de tijdige ontvangst van dit besluit door appellant niet geloofwaardig is ontkend. Ook heeft de rechtbank geen aanleiding gezien het verzuim verschoonbaar te achten.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.1. </potentialnr><text manualAnnotation="TEXT_BLOCK">Ter zitting van de Raad is gebleken dat het Uwv heeft beslist dat appellant ingaande 20 juli 2005 alsnog voor 80 tot 100% arbeidsongeschikt wordt geacht. </text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.2. </potentialnr><text manualAnnotation="TEXT_BLOCK">Desgevraagd is namens appellant verklaard dat er (nog) procesbelang bestaat bij een oordeel van de Raad over de aangevallen uitspraak en het bestreden besluit vanwege de proceskosten en meer in het algemeen vanwege de positie van bezwaarden die het moeten stellen zonder professionele rechtsbijstand.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">3.1. </potentialnr><text manualAnnotation="TEXT_BLOCK">De Raad overweegt dat de administratieve rechter in het kader van de Algemene wet bestuursrecht (Awb) alleen dan tot het beantwoorden van rechtsvragen is geroepen indien nog sprake is van een geschil met betrekking tot een besluit van een bestuursorgaan. Van een geschil over een besluit is in dit geval, waar immers het Uwv op en na 20 juli 2005 weer een WAO-uitkering verstrekt berekend naar een mate van arbeidsongeschiktheid van 80 tot 100%, geen sprake meer.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">3.2. </potentialnr><text manualAnnotation="TEXT_BLOCK">De Raad is van oordeel dat daarmee tevens het procesbelang is komen te vervallen. Een belang bij gegrondverklaring van het ingestelde beroep en bij vernietiging van het bestreden besluit kan niet uitsluitend gelegen zijn in het verkrijgen van een veroordeling in proceskosten noch in vergoeding van griffierecht.  </text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">3.3. </potentialnr><text manualAnnotation="TEXT_BLOCK">Op grond van het onder 3.1 en 3.2 overwogene is de Raad van oordeel dat het hoger beroep niet-ontvankelijk moet worden verklaard.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4. </potentialnr><text manualAnnotation="TEXT_BLOCK">De Raad acht termen aanwezig om op grond van artikel 8:75 van de Awb het Uwv te veroordelen in de proceskosten van appellant in beroep en in hoger beroep. Deze kosten worden begroot op € 644,- voor verleende rechtsbijstand in beroep en op € 644,- voor verleende rechtsbijstand in hoger beroep, in totaal derhalve € 1288,-.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">III. </potentialnr><text manualAnnotation="SECTION_TITLE">BESLISSING</text></para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">De Centrale Raad van Beroep,</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Recht doende:</para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">Verklaart het hoger beroep niet-ontvankelijk;</para>
+        <para manualAnnotation="TEXT_BLOCK">Veroordeelt de Raad van bestuur van het Uitvoeringsinstituut werknemersverzekeringen in de proceskosten van appellant in beroep en in hoger beroep tot een bedrag groot </para>
+        <para manualAnnotation="TEXT_BLOCK">€ 1288,-, te betalen door het Uitvoeringsinstituut werknemersverzekeringen aan de griffier van de Raad;</para>
+        <para manualAnnotation="TEXT_BLOCK">Bepaalt dat het Uitvoeringsinstituut werknemersverzekeringen aan appellant het betaalde griffierecht van € 143,- vergoedt.</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Deze uitspraak is gedaan door J.W. Schuttel als voorzitter en J.P.M. Zeijen en R. Kruisdijk als leden. De beslissing is, in tegenwoordigheid van M. Lochs als griffier, uitgesproken in het openbaar op 18 juli 2008.</para>
+      <para>						</para>
+      <para manualAnnotation="TEXT_BLOCK">(get.) J.W. Schuttel.</para>
+      <para>						</para>
+      <para manualAnnotation="TEXT_BLOCK">(get.) M. Lochs.</para>
+      <para/>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">RB</para>
+    </uitspraak>
+</open-rechtspraak>

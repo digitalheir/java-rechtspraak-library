@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:tr="http://tuchtrecht.overheid.nl/" xmlns:eu="http://publications.europa.eu/celex/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:HR:1992:AA7057</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2015-06-28T20:25:23</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">AA7057</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Hoge_Raad_der_Nederlanden" scheme="overheid.RechterlijkeMacht">Hoge Raad</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">1992-09-09</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">28414</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#cassatie">Cassatie</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht_belastingrecht">Bestuursrecht; Belastingrecht</dcterms:subject>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0002629&amp;artikel=4&amp;g=1992-09-09">Wet op de omzetbelasting 1968 4</dcterms:references>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0002629&amp;artikel=8&amp;g=1992-09-09">Wet op de omzetbelasting 1968 8</dcterms:references>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+          <rdf:li>BNB 1992/352</rdf:li>
+          <rdf:li>FED 1992/708</rdf:li>
+          <rdf:li>WFR 1992/1327</rdf:li>
+          <rdf:li>V-N 1992/2869, 19 met annotatie door Kluwer</rdf:li>
+          <rdf:li>FED 1992/884 met annotatie door C.J. HUMMEL</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:HR:1992:AA7057">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:HR:1992:AA7057</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-04T16:08:06</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2001-07-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:HR:1992:AA7057 Hoge Raad , 09-09-1992 / 28414</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:HR:1992:AA7057:INH" lang="nl" xml:space="preserve">
+      <para>-</para>
+    </inhoudsindicatie>
+  <uitspraak xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:HR:1992:AA7057:DOC" lang="nl" xml:space="preserve">
+      <para>28414</para>
+      <para/>
+      <para>Gewezen op het beroep in cassatie van X te Z tegen de uitspraak van het Gerechtshof te 's-Gravenhage van 26 juni 1991 betreffende na te melden naheffingsaanslag in de omzetbelasting. </para>
+      <para> </para>
+      <para>1.	Aanslag, bezwaar en geding voor het Hof. </para>
+      <para/>
+      <parablock>
+        <para>Aan belanghebbende is over het tijdvak 1 januari 1983 tot en met 31 december 1986 een naheffingsaanslag in de omzetbelasting opgelegd ten bedrage van f 45.798,--, zonder verhoging, welke aanslag, na daartegen gemaakt bezwaar, bij uitspraak van de Inspecteur is gehandhaafd. </para>
+        <para>Belanghebbende is tegen de uitspraak van de Inspecteur in beroep gekomen bij het Hof, dat de uitspraak van de Inspecteur heeft bevestigd. </para>
+        <para>De uitspraak van het Hof is aan dit arrest gehecht. </para>
+      </parablock>
+      <para> </para>
+      <para>2.	Geding in cassatie. </para>
+      <para/>
+      <parablock>
+        <para>Belanghebbende heeft tegen 's Hofs uitspraak beroep in cassatie ingesteld. Het beroepschrift in cassatie in aan dit arrest gehecht en maakt daarvan deel uit. </para>
+        <para>De Staatssecretaris van Financiën heeft bij vertoogschrift het cassatieberoep bestreden. </para>
+      </parablock>
+      <para> </para>
+      <para>3.	Beoordeling van het middel. </para>
+      <para/>
+      <parablock>
+        <para>3.1.	In cassatie kan van het volgende worden uitgegaan: </para>
+        <para>Belanghebbende, een watersportvereniging, exploiteert een van de gemeente P (hierna: de gemeente) gehuurde jachthaven in Z en is als zodanig ondernemer in de zin van de Wet op de omzetbelasting 1968 (hierna: de</para>
+        <para>Wet). Door het Ministerie van Cultuur, Recreatie en Maatschappelijk werk is aan de gemeente in het kader van de uitvoering van het beleid inzake openluchtrecreatie ten algemenen nutte in 1981 onder voorwaarden een subsidie van f 300.235,-- toegekend ten einde in de onderwerpelijke</para>
+        <para>jachthaven een aantal passantenplaatsen te reserveren en gedurende minstens twintig jaar te garanderen. </para>
+        <para>Op 1 december 1981 sloten Burgemeester en Wethouders van de gemeente, uitvoering gevend aan het hierboven bedoelde beleid, in aanvulling op de tussen partijen bestaande huurovereenkomst, met belanghebbende een overeenkomst, waarin is bepaald dat de watersportvereniging zich verplicht</para>
+        <para>het passantengedeelte van de jachthaven te Z op een juiste wijze ten genoege van Burgemeester en Wethouders te beheren.</para>
+      </parablock>
+      <para> </para>
+      <parablock>
+        <para>3.2. Het Hof heeft uitgaande van die overeenkomst overwogen dat de daaruit voor belanghebbende voortvloeiende verplichting onder meer behelst het gedurende twintig jaar beschikbaar houden van een passantensteiger in haar</para>
+        <para>jachthaven alsmede het verschaffen aan passanten van het recht gebruik te maken van de aldaar aanwezige voorzieningen en het verschaffen aan de gemeente van een vetorecht omtrent de hoogte van de passantentarieven. Hierop heeft het Hof zijn oordeel gegrond dat belanghebbende op zich heeft</para>
+        <para>genomen jegens de gemeente een voor de Wet relevante prestatie te verrichten, niet zijnde een levering van goederen, welke prestatie, gelet op karakter en tijdsduur, als een doorlopende dienst moet worden aangemerkt. </para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para>3.3. Het middel strekt ten betoge dat belanghebbende door te voldoen aan de in het normale patroon van publiekrechtelijke subsidiëring gestelde voorwaarden niet een prestatie in het economische verkeer heeft verricht. </para>
+        <para>Het middel faalt echter, daar 's Hofs oordeel niet blijk geeft van een onjuiste opvatting van artikel 4 van de Wet en voor het overige in cassatie niet met vrucht kan worden bestreden, omdat het berust op de aan het Hof voorbehouden uitlegging van de op 1 december 1981 tussen belanghebbende</para>
+        <para>en de gemeente gesloten overeenkomst. </para>
+      </parablock>
+      <para/>
+      <para>3.4.  De klacht dat het Hof niet is ingegaan op de in belanghebbendes pleitnota voor het Hof aangevoerde stelling dat het subsidiebedrag als zodanig in geen verhouding stond met het zogenoemde beheren van ligplaatsen, kan evenmin tot cassatie leiden, aangezien deze stelling niet van belang is voor de vaststelling van de aard van de in geding zijnde prestatie. </para>
+      <para> </para>
+      <para>4.	Beslissing. </para>
+      <para/>
+      <parablock>
+        <para>De Hoge Raad verwerpt het beroep. </para>
+        <para>Dit arrest is gewezen door de raadsheer Van der Linde als voorzitter, en de raadsheren Bellaart en De Moor, in tegenwoordigheid van de waarnemend griffier Van Hooff, in raadkamer van 9 september 1992.</para>
+      </parablock>
+    </uitspraak>
+</open-rechtspraak>

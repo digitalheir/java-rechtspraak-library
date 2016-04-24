@@ -1,0 +1,6 @@
+functies_als/roles_single.lst:role:singular:nl
+functies_als/roles_multiple.lst:role:multiple:nl
+functies_pre/roles_single.lst:pre_role:singular:nl
+functies_pre/roles_multiple.lst:pre_role:multiple:nl
+titles/titles.lst:title::nl
+non_person/non_person.lst:nonperson::nl

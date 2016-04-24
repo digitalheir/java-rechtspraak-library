@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:eu="http://publications.europa.eu/celex/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:tr="http://tuchtrecht.overheid.nl/">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:RVS:2005:AU8740</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-04T22:59:48</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">AU8740</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Raad_van_State" scheme="overheid.RechterlijkeMacht">Raad van State</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">2005-12-28</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">200503102/1</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#hogerBeroep">Hoger beroep</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht_omgevingsrecht">Bestuursrecht; Omgevingsrecht</dcterms:subject>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2005:AU8740">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2005:AU8740</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-04T22:59:48</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2005-12-28</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:RVS:2005:AU8740 Raad van State , 28-12-2005 / 200503102/1</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie id="ECLI:NL:RVS:2005:AU8740:INH" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <para>Bij besluit van 22 mei 2003 heeft het college van burgemeester en wethouders van Enschede (hierna: het college) aan appellant geweigerd vrijstelling en bouwvergunning te verlenen voor het bouwen van een bedrijfswoning op het perceel, plaatselijk bekend [locatie] te [plaats] (hierna: het perceel).</para>
+    </inhoudsindicatie>
+  <uitspraak id="ECLI:NL:RVS:2005:AU8740:DOC" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <parablock>
+        <para><potentialnr manualAnnotation="TEXT_BLOCK">200503102/</potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">1.</potentialnr></para>
+        <para manualAnnotation="TEXT_BLOCK">Datum uitspraak: 28 december 2005</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">AFDELING</para>
+        <para manualAnnotation="TEXT_BLOCK">BESTUURSRECHTSPRAAK</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Uitspraak op het hoger beroep van:</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">[appellant], wonend te [woonplaats],</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">tegen de uitspraak in zaak no. 04/134 van de rechtbank Almelo van 25 februari 2005 in het geding tussen:</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">appellant</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">en</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">het college van burgemeester en wethouders van Enschede.</para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">1. </potentialnr><text manualAnnotation="SECTION_TITLE">   Procesverloop</text></para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Bij besluit van 22 mei 2003 heeft het college van burgemeester en wethouders van Enschede (hierna: het college) aan appellant geweigerd vrijstelling en bouwvergunning te verlenen voor het bouwen van een bedrijfswoning op het perceel, plaatselijk bekend [locatie] te [plaats] (hierna: het perceel).</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Bij besluit van 12 januari 2004 heeft het college het daartegen gemaakte bezwaar ongegrond verklaard.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Bij uitspraak van 25 februari 2005, verzonden op dezelfde datum, heeft de rechtbank Almelo (hierna: de rechtbank) het daartegen ingestelde beroep gegrond verklaard, de bestreden beslissing op bezwaar vernietigd en bepaald dat de rechtsgevolgen van het bestreden besluit in stand blijven. Deze uitspraak is aangehecht.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Tegen deze uitspraak heeft appellant bij brief van 6 april 2005, bij de Raad van State ingekomen op 7 april 2005, hoger beroep ingesteld. De gronden zijn aangevuld bij brief van 27 april 2005. Deze brieven zijn aangehecht.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Bij brief van 27 mei 2005 heeft het college van antwoord gediend.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">De zaak is door een meervoudige kamer van de Afdeling verwezen naar een enkelvoudige.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">De Afdeling heeft de zaak ter zitting behandeld op 15 november 2005, waar appellant, vertegenwoordigd door mr. E.W. Roessingh, advocaat te Hengelo, en het college, vertegenwoordigd door M.C. Zondag, ambtenaar van de gemeente, zijn verschenen.</para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2. </potentialnr><text manualAnnotation="SECTION_TITLE">   Overwegingen</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.1. </potentialnr><text manualAnnotation="TEXT_BLOCK">   Het bouwplan ziet op het oprichten van een bedrijfswoning naast de reeds bestaande bedrijfswoning op het perceel.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.2. </potentialnr><text manualAnnotation="TEXT_BLOCK">   Ingevolge artikel 44, eerste lid, onder c, van de Woningwet mag de reguliere bouwvergunning slechts en moet hij geweigerd worden indien het bouwen in strijd is met een bestemmingsplan of met de eisen die krachtens zodanig plan zijn gesteld.</text></para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">    Ingevolge artikel 46, derde lid, van de Woningwet, voor zover hier van belang, wordt een aanvraag om bouwvergunning die slechts kan worden ingewilligd na vrijstelling als bedoeld in de artikelen 15, 17 of 19 van de Wet op de Ruimtelijke Ordening (hierna: WRO) geacht mede een verzoek om zodanige vrijstelling in te houden.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">    Ingevolge artikel 19, eerste lid, van de WRO, voor zover hier van belang, kan de gemeenteraad behoudens het gestelde in het tweede en het derde lid, ten behoeve van de verwezenlijking van een project vrijstelling verlenen van het geldende bestemmingsplan, mits dat project is voorzien van een goede ruimtelijke onderbouwing en vooraf van gedeputeerde staten de verklaring is ontvangen, dat zij tegen het verlenen van de vrijstelling geen bezwaar hebben. De gemeenteraad kan de vrijstellingsbevoegdheid delegeren aan burgemeester en wethouders.</para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.2.1. </potentialnr><text manualAnnotation="TEXT_BLOCK">   Op het perceel rust ingevolge het vigerende bestemmingsplan "Buitengebied 1996" de bestemming "Agrarisch gebied met landschappelijke waarden".</text></para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">    Ingevolge artikel 8.1.1 van de planvoorschriften zijn de op de plankaart voor "Agrarisch gebied met landschappelijke waarden" aangewezen gronden bestemd voor de uitoefening van het grondgebonden agrarisch bedrijf en voor het behoud en het herstel van de aanwezige landschappelijke waarden.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">    Ingevolge artikel 8.2.8 van de bij het bestemmingsplan behorende voorschriften is de bouw van één dienstwoning toegestaan; de inhoud daarvan mag ten hoogste 600 m³ bedragen; de goothoogte mag ten hoogste 4 meter bedragen.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">    Ingevolge artikel 8.3.2 van de planvoorschriften zijn, voor zover hier van belang, burgemeester en wethouders bevoegd vrijstelling te verlenen van het bepaalde onder 8.2.8 voor de bouw van een tweede dienstwoning met een inhoud van maximaal 600m³ en een goothoogte van ten hoogste 4 meter, mits de arbeidsbehoefte van het bedrijf ten minste 1,75 volwaardige arbeidskracht (v.a.k.) bedraagt en de woning noodzakelijk is uit een oogpunt van doelmatige agrarische bedrijfsvoering.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">    Ingevolge artikel 4.1, eerste lid, van de planvoorschriften kan een bedrijfs- of dienstwoning, die afgesplitst wordt van het bedrijf, niet gewijzigd worden in een burgerwoning dan wel worden beschouwd als een eerste bedrijfs- of dienstwoning behorende bij een ander bedrijf en zal te allen tijde gerekend worden als behorende bij het oorspronkelijke bedrijf, tenzij het bedrijf in zijn geheel is beëindigd.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">    Ingevolge artikel 44.1, aanhef, van de planvoorschriften mag ter plaatse van de gastbestemmingsaanduiding "w" op de plankaart per "w" één woning aanwezig zijn.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">    Ingevolge artikel 44.7 van de planvoorschriften blijven de bepalingen omtrent de hoofdbestemmingen ter plaatse van de gastbestemming "Woning" van toepassing.</para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.3. </potentialnr><text manualAnnotation="TEXT_BLOCK">   Appellant betoogt dat de rechtbank ten onrechte artikel 44.7 van de planvoorschriften van toepassing heeft geacht. Dit betoog faalt.</text></para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">De woningen aan het Wiefkerpad 40 en de Wiefkerweg 9 zijn opgericht als dienstwoning behorende bij de oorspronkelijke woning op het perceel.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">De twee eerstgenoemde woningen, die als burgerwoning in gebruik zijn, hebben naast de hoofdbestemming "Agrarisch gebied met landschappelijke waarden" de gastbestemming "Woning". De rechtbank heeft terecht overwogen dat, gelet op artikel 44.7 van de planvoorschriften, deze percelen en de daarop aanwezige woningen hun oorspronkelijke agrarische bestemming hebben behouden. Het voorgaande brengt met zich, zoals de rechtbank met juistheid met verwijzing naar de uitspraak van de Afdeling van 26 maart 2003, no. &amp;lt;a target="_blank"  href='http://www.raadvanstate.nl/verdicts/verdict_details.asp?verdict_id=3339'&amp;gt;200204310/1&amp;lt;/a&amp;gt; heeft overwogen, dat deze woningen voor de uitleg van artikel 8.2.8 van de planvoorschriften nog steeds als agrarische dienstwoning behorende bij het perceel dienen te worden aangemerkt.</para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.3.1. </potentialnr><text manualAnnotation="TEXT_BLOCK">   Appellants betoog dat indien uit de gastbestemming enige beperking zou voortvloeien voor de hoofdbestemming een dergelijke beperking zou moeten blijken uit de bepalingen behorende bij de hoofdbestemming kan, gelet op het bepaalde in artikel 4.1 van de planvoorschriften, evenmin doel treffen.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.4. </potentialnr><text manualAnnotation="TEXT_BLOCK">   Voorts betoogt appellant dat de rechtbank de betekenis van artikel 4.1, eerste lid, van de planvoorschriften heeft miskend. Anders dan appellant betoogt ziet artikel 4.1, gelet op de plansystematiek, niet uitsluitend op toekomstige situaties maar ook op in het verleden plaatsgevonden afsplitsingen.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.5. </potentialnr><text manualAnnotation="TEXT_BLOCK">   Appellant betoogt dat de rechtbank ten onrechte heeft geoordeeld dat de aan het slot van artikel 4.1 van de planvoorschriften genoemde uitzondering in dit geval niet aan de orde is. Dit betoog faalt.</text></para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Met het bepaalde aan het slot van dit artikel is beoogd om een uitzondering te maken in het geval het agrarisch bedrijf in zijn geheel is beëindigd. De rechtbank heeft terecht overwogen dat daarvan in dit geval geen sprake is, nu geen wijziging van het feitelijke gebruik van de gronden en het agrarische bedrijf heeft plaatsgevonden. De rechtbank heeft hierbij terecht geoordeeld dat het bestemmingsplan in het algemeen het feitelijke gebruik van de grond centraal stelt en niet de persoon van de gebruiker.</para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.6. </potentialnr><text manualAnnotation="TEXT_BLOCK">   Appellant stelt dat hij destijds niet vrijwillig naar het perceel is verhuisd. Wat hier ook van zij, dit laat onverlet dat het op de weg van appellant had gelegen zelfstandig onderzoek te verrichten naar de voor het perceel geldende bouwmogelijkheden en beperkingen.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.7. </potentialnr><text manualAnnotation="TEXT_BLOCK">   Tot slot betoogt appellant dat de rechtbank ten onrechte de rechtsgevolgen van het vernietigde besluit van 12 januari 2004 in stand heeft gelaten en de eigen beleidsvrijheid van het college om in uitzonderingsgevallen van provinciaal en gemeentelijk beleid af te wijken heeft miskend. Dit betoog slaagt. De onderhavige bouwaanvraag kan slechts ingewilligd worden na verlening van vrijstelling als bedoeld in artikel 19, eerste lid, van de WRO. Gelet op het bepaalde in artikel 46, derde lid, van de Woningwet dient zo een bouwaanvraag mede in te houden een verzoek om verlening van voornoemde vrijstelling. Het college heeft verzuimd de bouwaanvraag als zodanig aan te merken. De rechtbank heeft dan ook terecht overwogen dat het bestreden besluit hierom voor vernietiging in aanmerking komt. De rechtbank heeft evenwel miskend dat de toepassing van artikel 8:72, derde lid, van de Algemene wet bestuursrecht slechts toelaatbaar is als geen andere beslissing dan waartoe het vernietigde besluit strekt mogelijk is. Nu het college niet heeft beslist omtrent het verzoek om vrijstelling, kan niet staande worden gehouden dat van een dergelijke situatie sprake is.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.8. </potentialnr><text manualAnnotation="TEXT_BLOCK">   Het hoger beroep is gegrond. De aangevallen uitspraak dient in zoverre te worden vernietigd.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.9. </potentialnr><text manualAnnotation="TEXT_BLOCK">   Het college dient op na te vermelden wijze in de proceskosten te worden veroordeeld.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">3. </potentialnr><text manualAnnotation="SECTION_TITLE">   Beslissing</text></para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">De Afdeling bestuursrechtspraak van de Raad van State</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Recht doende in naam der Koningin:</para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">I. </potentialnr><text manualAnnotation="TEXT_BLOCK">   verklaart het hoger beroep gegrond;</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">II. </potentialnr><text manualAnnotation="TEXT_BLOCK">   vernietigt de uitspraak van de rechtbank Almelo van 25 februari 2005, 04/134, voor zover daarbij de rechtsgevolgen van het vernietigde besluit van 12 januari 2004 in stand zijn gelaten;</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">III. </potentialnr><text manualAnnotation="TEXT_BLOCK">   veroordeelt het college van burgemeester en wethouders van Enschede tot vergoeding van bij appellant in verband met de behandeling van het hoger beroep opgekomen proceskosten tot een bedrag van € 644,00 (zegge: zeshonderdvierenveertig euro), geheel toe te rekenen aan door een derde beroepsmatig verleende rechtsbijstand; het dient door het college van burgemeester en wethouders van Enschede aan appellant onder vermelding van het zaaknummer te worden betaald;</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">IV. </potentialnr><text manualAnnotation="TEXT_BLOCK">   gelast dat de gemeente Enschede aan appellant het door hem voor de behandeling van het hoger beroep betaalde griffierecht ten bedrage van € 207,00 (zegge: tweehonderdzeven euro) vergoedt;</text></para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Aldus vastgesteld door mr. W. van den Brink, Lid van de enkelvoudige kamer, in tegenwoordigheid van mr. A.L.M. Steinebach-de Wit, ambtenaar van Staat.</para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="TEXT_BLOCK">w.</potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">g. </potentialnr><text manualAnnotation="TEXT_BLOCK">Van den Brink    w.g. Steinebach-de Wit</text></para>
+        <para manualAnnotation="TEXT_BLOCK">Lid van de enkelvoudige kamer    ambtenaar van Staat</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Uitgesproken in het openbaar op 28 december 2005</para>
+      <para/>
+      <para><potentialnr manualAnnotation="TEXT_BLOCK">328-</potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">503.</potentialnr></para>
+    </uitspraak>
+</open-rechtspraak>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:eu="http://publications.europa.eu/celex/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:tr="http://tuchtrecht.overheid.nl/">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:RVS:2009:BI4498</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-05T04:39:07</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-05</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">BI4498</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Raad_van_State" scheme="overheid.RechterlijkeMacht">Raad van State</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">2009-05-20</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">200808149/1/H2</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#hogerBeroep">Hoger beroep</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht">Bestuursrecht</dcterms:subject>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2009:BI4498">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RVS:2009:BI4498</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-05T04:39:07</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2009-05-20</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:RVS:2009:BI4498 Raad van State , 20-05-2009 / 200808149/1/H2</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie id="ECLI:NL:RVS:2009:BI4498:INH" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <parablock>
+        <para>Bij besluit van 10 augustus 2006 heeft het college van burgemeester en wethouders van Blaricum (hierna: het college) aan [vergunninghouder] een vergunning verleend voor de kap van 23 eiken, 2 beuken en</para>
+        <para>2 berken op het perceel [locatie], kadastraal bekend gemeente Blaricum, sectie D, nrs. 786 (ged.) en 1040 (ged.) (hierna: het perceel).</para>
+      </parablock>
+    </inhoudsindicatie>
+  <uitspraak id="ECLI:NL:RVS:2009:BI4498:DOC" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <parablock>
+        <para><potentialnr manualAnnotation="TEXT_BLOCK">200808149/</potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">1/</potentialnr><text manualAnnotation="TEXT_BLOCK">H2.</text></para>
+        <para manualAnnotation="TEXT_BLOCK">Datum uitspraak: 20 mei 2009</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">AFDELING</para>
+        <para manualAnnotation="TEXT_BLOCK">BESTUURSRECHTSPRAAK</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Uitspraak op het hoger beroep van:</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">[appellanten], wonend te [woonplaats],</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">tegen de uitspraak van de rechtbank Amsterdam van 25 september 2008 in zaak nr. 07/3773 in het geding tussen:</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">appellanten</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">en</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">het college van burgemeester en wethouders van Blaricum.</para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">1. </potentialnr><text manualAnnotation="SECTION_TITLE">Procesverloop</text></para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">Bij besluit van 10 augustus 2006 heeft het college van burgemeester en wethouders van Blaricum (hierna: het college) aan [vergunninghouder] een vergunning verleend voor de kap van 23 eiken, 2 beuken en</para>
+        <para><potentialnr manualAnnotation="TEXT_BLOCK">2 </potentialnr><text manualAnnotation="TEXT_BLOCK">berken op het perceel [locatie], kadastraal bekend gemeente Blaricum, sectie D, nrs. 786 (ged.) en 1040 (ged.) (hierna: het perceel).</text></para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Bij besluit van 7 augustus 2007 heeft het college het door [appellanten] daartegen gemaakte bezwaar ongegrond verklaard.</para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">Bij uitspraak van 25 september 2008, verzonden op 29 september 2008, heeft de rechtbank Amsterdam (hierna: de rechtbank) het door [appellanten] daartegen ingestelde beroep ongegrond verklaard.</para>
+        <para manualAnnotation="TEXT_BLOCK">Deze uitspraak is aangehecht.</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Tegen deze uitspraak hebben [appellanten] bij brief, bij de Raad van State ingekomen op 10 november 2008, hoger beroep ingesteld.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Het college heeft een verweerschrift ingediend.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">De vergunninghouder heeft een schriftelijke uiteenzetting ingediend.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">[appellanten] hebben nadere stukken ingediend.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">De Afdeling heeft de zaak ter zitting behandeld op 17 april 2009, waar [een der appellanten], bijgestaan door mr. L.J.H. de Vink, het college, vertegenwoordigd door mr. S.J. Kist, werkzaam bij de gemeente Blaricum, en [vergunninghouder] zijn verschenen.</para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2. </potentialnr><text manualAnnotation="SECTION_TITLE">Overwegingen</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.1. </potentialnr><text manualAnnotation="TEXT_BLOCK">De vergunning is verleend in verband met het bouwplan van [vergunninghouder] voor de bouw van een woning met garage/berging op het perceel. [appellanten] wonen op aangrenzende percelen.</text></para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Aan de vergunning is de plicht verbonden tot herplant van 6 eiken met een stamdiameter van 20-25 centimeter, te plaatsen naast het voetpad en langs de Dr. Catzlaan 26.</para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.2. </potentialnr><text manualAnnotation="TEXT_BLOCK">Ingevolge artikel 4.5.2, eerste lid, van de Algemene Plaatselijke Verordening Blaricum (hierna: APV) is het verboden zonder vergunning van burgemeester en wethouders houtopstand te vellen of te doen vellen.</text></para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Ingevolge artikel 4.5.3a kunnen burgemeester en wethouders de vergunning weigeren dan wel onder voorschriften verlenen in het belang van de natuurwaarde en landschappelijke waarde van de houtopstand, de waarde van de houtopstand voor het dorpsschoon en -karakter, de beeldbepalende en cultuurhistorische waarde van de houtopstand en de waarde van de houtopstand voor de recreatie en de leefbaarheid.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Ingevolge artikel 4.5.9 is het toegestaan om bomen, heesters en heggen te plaatsen en aanwezig te hebben, ongeacht de hoogte, tot aan de grenslijn van eens ander erf.</para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.3. </potentialnr><text manualAnnotation="TEXT_BLOCK">[appellanten] betogen dat de rechtbank ten onrechte heeft overwogen dat het college de verleende vergunning terecht slechts heeft getoetst aan het bepaalde in de APV.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.3.1. </potentialnr><text manualAnnotation="TEXT_BLOCK">Dit betoog faalt. De rechtbank heeft terecht overwogen dat het college terecht slechts de APV als toetsingskader heeft genomen bij het verlenen van de vergunning. Het feit dat de vergunning is aangevraagd in verband met de bouw van een woning met garage/berging, betekent niet dat die aanvraag aan het bestemmingsplan diende te worden getoetst.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.4. </potentialnr><text manualAnnotation="TEXT_BLOCK">[appellanten] betogen voorts dat de rechtbank ten onrechte heeft overwogen dat er tussen de te bouwen woning en de erfgrens voldoende ruimte is om te kunnen voldoen aan de opgelegde herplantplicht. Zij voeren aan dat ter plaatse nog slechts 30 centimeter resteert.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.4.1. </potentialnr><text manualAnnotation="TEXT_BLOCK">Niet duidelijk is geworden waarop de door [appellanten] genoemde afstand van 30 centimeter is gebaseerd. Gemeten op de kaart behorend bij de verleende bouwvergunning resteert tussen de te bouwen woning en de erfgrens een afstand van ongeveer een meter. Nu ingevolge artikel 4.5.9 van de APV bomen tot aan de grenslijn van eens ander erf mogen worden geplaatst, heeft de rechtbank terecht overwogen dat er voldoende ruimte is om aan de opgelegde herplantplicht te kunnen voldoen. Het betoog faalt.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.5. </potentialnr><text manualAnnotation="TEXT_BLOCK">[appellanten] betogen ten slotte dat de rechtbank ten onrechte heeft overwogen dat de door het college verrichte belangenafweging niet onredelijk is. Zij voeren aan dat bij die afweging de privacybeschermende bedoelingen van het bestemmingsplan niet zijn betrokken.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.5.1. </potentialnr><text manualAnnotation="TEXT_BLOCK">Het door appellanten gestelde belang van behoud van hun privacy is geen belang dat ingevolge artikel 4.5.3a van de APV in de belangenafweging dient te worden betrokken. De rechtbank heeft in die gestelde inbreuk op de privacy dan ook terecht geen grond gevonden voor het oordeel dat het college de vergunning had moeten weigeren.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.6. </potentialnr><text manualAnnotation="TEXT_BLOCK">Het hoger beroep is ongegrond. De aangevallen uitspraak dient te worden bevestigd.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.7. </potentialnr><text manualAnnotation="TEXT_BLOCK">Voor een proceskostenveroordeling bestaat geen aanleiding.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">3. </potentialnr><text manualAnnotation="SECTION_TITLE">Beslissing</text></para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">De Afdeling bestuursrechtspraak van de Raad van State</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Recht doende in naam der Koningin:</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">bevestigt de aangevallen uitspraak.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Aldus vastgesteld door mr. C.M. Ligtelijn-van Bilderbeek, voorzitter, en mr. O. de Savornin Lohman en mr. B.P. Vermeulen, leden, in tegenwoordigheid van mr. A.C. Rop, ambtenaar van Staat.</para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="TEXT_BLOCK">w.</potentialnr><potentialnr manualAnnotation="TEXT_BLOCK">g. </potentialnr><text manualAnnotation="TEXT_BLOCK">Ligtelijn-van Bilderbeek w.g. Rop</text></para>
+        <para manualAnnotation="TEXT_BLOCK">voorzitter ambtenaar van Staat</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Uitgesproken in het openbaar op 20 mei 2009</para>
+      <para/>
+      <para><potentialnr manualAnnotation="TEXT_BLOCK">417.</potentialnr></para>
+    </uitspraak>
+</open-rechtspraak>
