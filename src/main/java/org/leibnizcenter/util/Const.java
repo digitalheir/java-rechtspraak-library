@@ -1,4 +1,4 @@
-package org.leibnizcenter.rechtspraak.util;
+package org.leibnizcenter.util;
 
 /**
  * Created by maarten on 28-2-16.

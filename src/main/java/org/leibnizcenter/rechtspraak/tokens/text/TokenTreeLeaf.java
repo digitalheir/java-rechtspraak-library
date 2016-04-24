@@ -3,9 +3,9 @@ package org.leibnizcenter.rechtspraak.tokens.text;
 import com.google.common.base.Strings;
 import com.google.common.collect.Sets;
 import org.leibnizcenter.rechtspraak.tokens.tokentree.TokenTreeVertex;
-import org.leibnizcenter.rechtspraak.util.Regex;
-import org.leibnizcenter.rechtspraak.util.Strings2;
-import org.leibnizcenter.rechtspraak.util.Xml;
+import org.leibnizcenter.util.Regex;
+import org.leibnizcenter.util.Strings2;
+import org.leibnizcenter.util.Xml;
 import org.w3c.dom.*;
 
 import java.util.*;

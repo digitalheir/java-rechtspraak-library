@@ -3,9 +3,9 @@ package org.leibnizcenter.rechtspraak.enricher.mostlikelytreefromlist.abstracts;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Maps;
 import org.leibnizcenter.rechtspraak.enricher.mostlikelytreefromlist.interfaces.PenaltyCalculator;
-import org.leibnizcenter.rechtspraak.util.Collections3;
-import org.leibnizcenter.rechtspraak.util.immutabletree.ImmutableTree;
-import org.leibnizcenter.rechtspraak.util.immutabletree.NamedImmutableTree;
+import org.leibnizcenter.util.Collections3;
+import org.leibnizcenter.util.immutabletree.ImmutableTree;
+import org.leibnizcenter.util.immutabletree.NamedImmutableTree;
 
 import java.util.*;
 

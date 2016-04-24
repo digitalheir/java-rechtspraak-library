@@ -1,4 +1,4 @@
-package org.leibnizcenter.helpers;
+package org.leibnizcenter.util;
 
 import javax.xml.namespace.NamespaceContext;
 import java.util.HashMap;

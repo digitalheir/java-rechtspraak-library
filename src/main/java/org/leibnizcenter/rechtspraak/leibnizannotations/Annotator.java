@@ -1,7 +1,5 @@
 package org.leibnizcenter.rechtspraak.leibnizannotations;
 
-import com.google.common.base.Strings;
-import org.leibnizcenter.rechtspraak.tokens.features.elementpatterns.ElementFeature;
 import org.leibnizcenter.rechtspraak.tokens.features.textpatterns.TitlePatterns;
 import org.leibnizcenter.rechtspraak.tokens.RechtspraakElement;
 import org.leibnizcenter.rechtspraak.tokens.TokenList;
@@ -11,8 +9,8 @@ import org.leibnizcenter.rechtspraak.tokens.text.Newline;
 import org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf;
 import org.leibnizcenter.rechtspraak.tokens.tokentree.SameKindOfNumbering;
 import org.leibnizcenter.rechtspraak.tokens.tokentree.leibniztags.LeibnizTags;
-import org.leibnizcenter.rechtspraak.util.Collections3;
-import org.leibnizcenter.rechtspraak.util.Xml;
+import org.leibnizcenter.util.Collections3;
+import org.leibnizcenter.util.Xml;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.xml.sax.SAXException;

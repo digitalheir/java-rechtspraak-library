@@ -1,6 +1,7 @@
-package org.leibnizcenter.rechtspraak.util;
+package org.leibnizcenter.util;
 
 import org.junit.Test;
+import org.leibnizcenter.util.Xml;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;

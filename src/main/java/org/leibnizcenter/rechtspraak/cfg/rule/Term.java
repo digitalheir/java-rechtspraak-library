@@ -4,7 +4,7 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.UnmodifiableIterator;
 import com.google.common.collect.UnmodifiableListIterator;
 import org.jetbrains.annotations.NotNull;
-import org.leibnizcenter.rechtspraak.cfg.rule.type.Type;
+import org.leibnizcenter.rechtspraak.cfg.rule.type.interfaces.Type;
 
 import java.util.*;
 import java.util.function.Consumer;

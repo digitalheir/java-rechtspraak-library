@@ -5,8 +5,8 @@ import cc.mallet.fst.SimpleTagger;
 import cc.mallet.types.Instance;
 import cc.mallet.types.Sequence;
 import org.leibnizcenter.rechtspraak.tokens.TokenList;
-import org.leibnizcenter.rechtspraak.util.Const;
-import org.leibnizcenter.rechtspraak.util.Xml;
+import org.leibnizcenter.util.Const;
+import org.leibnizcenter.util.Xml;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;

@@ -1,41 +1,30 @@
 package org.leibnizcenter.rechtspraak.cfg.rule.type;
 
 import org.jetbrains.annotations.NotNull;
+import org.leibnizcenter.rechtspraak.cfg.rule.type.interfaces.NonTerminal;
 
-import java.security.InvalidParameterException;
 import java.util.regex.Pattern;
 
 /**
- * Created by maarten on 18-4-16.
+ * Created by Maarten on 2016-04-24.
  */
-public class NonTerminal implements Type {
+public class NonTerminalImpl implements NonTerminal{
     private final String name;
+    @SuppressWarnings("unused")
     private static final Pattern REGEX = Pattern.compile("\\p{Lu}[\\p{L}0-9'\"]*");
 
     /**
      * @param name String to represent this terminal. Must be capitalized.
      */
-    public NonTerminal(@NotNull String name) {
+    public NonTerminalImpl(@NotNull String name) {
 //        if (!REGEX.matcher(name).matches())
 //            throw new InvalidParameterException("Non-terminal must start with uppercase letter");
         this.name = name;
     }
-
-    @Override
-    public boolean isTerminal() {
-        return false;
-    }
-
     @Override
     public String toString() {
-        return name;
+        return getName();
     }
-
-    @Override
-    public int compareTo(@NotNull Type o) {
-        return toString().compareTo(o.toString());
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -43,11 +32,15 @@ public class NonTerminal implements Type {
 
         NonTerminal that = (NonTerminal) o;
 
-        return name.equals(that.name);
+        return getName().equals(that.getName());
     }
 
     @Override
     public int hashCode() {
-        return name.hashCode();
+        return getName().hashCode();
+    }
+
+    public String getName() {
+        return name;
     }
 }

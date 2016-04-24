@@ -10,8 +10,8 @@ import org.leibnizcenter.rechtspraak.tokens.*;
 import org.leibnizcenter.rechtspraak.leibnizannotations.Label;
 import org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf;
 import org.leibnizcenter.rechtspraak.tokens.tokentree.TokenTree;
-import org.leibnizcenter.rechtspraak.util.Const;
-import org.leibnizcenter.rechtspraak.util.Xml;
+import org.leibnizcenter.util.Const;
+import org.leibnizcenter.util.Xml;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;

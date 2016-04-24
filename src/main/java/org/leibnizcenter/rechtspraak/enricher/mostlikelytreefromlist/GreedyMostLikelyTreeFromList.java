@@ -1,19 +1,11 @@
 package org.leibnizcenter.rechtspraak.enricher.mostlikelytreefromlist;
 
-import com.google.common.collect.Maps;
-import org.leibnizcenter.rechtspraak.enricher.mostlikelytreefromlist.abstracts.MostLikelyTreeFromList;
 import org.leibnizcenter.rechtspraak.enricher.mostlikelytreefromlist.interfaces.PenaltyCalculator;
 import org.leibnizcenter.rechtspraak.leibnizannotations.Label;
-import org.leibnizcenter.rechtspraak.tokens.TaggedToken;
 import org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf;
-import org.leibnizcenter.rechtspraak.tokens.tokentree.TokenTree;
-import org.leibnizcenter.rechtspraak.util.immutabletree.ImmutableTree;
-import org.leibnizcenter.rechtspraak.util.immutabletree.LabeledTokenNode;
-import org.leibnizcenter.rechtspraak.util.immutabletree.NamedImmutableTree;
+import org.leibnizcenter.util.immutabletree.ImmutableTree;
 
 import java.util.*;
-import java.util.function.BiFunction;
-import java.util.function.BinaryOperator;
 import java.util.stream.Collectors;
 
 /**

@@ -16,12 +16,7 @@ import org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf;
 import org.leibnizcenter.rechtspraak.tokens.numbering.Numbering;
 import org.leibnizcenter.rechtspraak.tokens.numbering.interfaces.NumberingNumber;
 import org.leibnizcenter.rechtspraak.tokens.quote.Quote;
-import org.leibnizcenter.rechtspraak.util.Regex;
-import org.leibnizcenter.rechtspraak.util.Xml;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-import org.w3c.dom.Text;
+import org.leibnizcenter.util.Regex;
 
 import java.util.List;
 import java.util.Set;

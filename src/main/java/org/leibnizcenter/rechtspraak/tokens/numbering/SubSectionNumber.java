@@ -4,15 +4,12 @@ import com.google.common.collect.Lists;
 import org.leibnizcenter.rechtspraak.tokens.numbering.interfaces.FullNumber;
 import org.leibnizcenter.rechtspraak.tokens.numbering.interfaces.NumberingNumber;
 import org.leibnizcenter.rechtspraak.tokens.numbering.interfaces.SingleTokenNumbering;
-import org.leibnizcenter.rechtspraak.util.Collections3;
-import org.leibnizcenter.rechtspraak.util.Pair;
-import org.leibnizcenter.rechtspraak.util.Regex;
+import org.leibnizcenter.util.Collections3;
+import org.leibnizcenter.util.Regex;
 
 import java.security.InvalidParameterException;
 import java.util.*;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /**
  * Created by maarten on 16-2-16.

@@ -2,10 +2,10 @@ package org.leibnizcenter.rechtspraak.cfg.rule.type;
 
 import org.jetbrains.annotations.NotNull;
 import org.leibnizcenter.rechtspraak.cfg.rule.TypeContainer;
-import org.leibnizcenter.rechtspraak.leibnizannotations.Label;
-import org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf;
+import org.leibnizcenter.rechtspraak.cfg.rule.type.interfaces.Type;
 
 /**
+ * TODO make interface
  * Created by maarten on 18-4-16.
  */
 public class Terminal implements Type, TypeContainer {

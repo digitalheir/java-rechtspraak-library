@@ -13,9 +13,9 @@ import org.leibnizcenter.rechtspraak.tokens.numbering.*;
 import org.leibnizcenter.rechtspraak.tokens.numbering.interfaces.AlphabeticNumbering;
 import org.leibnizcenter.rechtspraak.tokens.numbering.interfaces.NumberingNumber;
 import org.leibnizcenter.rechtspraak.tokens.tokentree.SameKindOfNumbering;
-import org.leibnizcenter.rechtspraak.util.Collections3;
-import org.leibnizcenter.rechtspraak.util.Regex;
-import org.leibnizcenter.rechtspraak.util.Strings2;
+import org.leibnizcenter.util.Collections3;
+import org.leibnizcenter.util.Regex;
+import org.leibnizcenter.util.Strings2;
 
 import java.util.List;
 import java.util.stream.Collectors;

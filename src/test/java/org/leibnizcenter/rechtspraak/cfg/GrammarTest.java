@@ -2,8 +2,10 @@ package org.leibnizcenter.rechtspraak.cfg;
 
 import com.google.common.collect.Sets;
 import org.junit.Test;
-import org.leibnizcenter.rechtspraak.cfg.rule.Rule;
-import org.leibnizcenter.rechtspraak.cfg.rule.type.NonTerminal;
+import org.leibnizcenter.rechtspraak.cfg.rule.StandardRule;
+import org.leibnizcenter.rechtspraak.cfg.rule.interfaces.Rule;
+import org.leibnizcenter.rechtspraak.cfg.rule.type.NonTerminalImpl;
+import org.leibnizcenter.rechtspraak.cfg.rule.type.interfaces.NonTerminal;
 
 import java.util.Collection;
 import java.util.Set;
@@ -83,7 +85,7 @@ public class GrammarTest {
      */
     @Test
     public void CNF_DEL() throws Exception {
-        Collection<Rule> rules = Rule.parseRules(
+        Collection<Rule> rules = StandardRule.parseRules(
                 String.join("\n",
                         "S0 → A b B | C",
                         "B → A A | A C",
@@ -91,7 +93,7 @@ public class GrammarTest {
                         "A → a | ε"
                 )
         );
-        Grammar g = new Grammar(new NonTerminal("S0"), rules);
+        Grammar g = new Grammar(new NonTerminalImpl("S0"), rules);
 
         Set<String> words = Sets.newHashSet(g).stream().map(Object::toString).collect(Collectors.toSet());
         assertEquals(words, Sets.newHashSet(

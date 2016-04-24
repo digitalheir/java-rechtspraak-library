@@ -3,8 +3,8 @@ package org.leibnizcenter.rechtspraak.tokens.features.textpatterns;
 import com.google.common.io.LineReader;
 import org.leibnizcenter.rechtspraak.tokens.features.elementpatterns.interfaces.NamedElementFeatureFunction;
 import org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf;
-import org.leibnizcenter.rechtspraak.util.StringFeature;
-import org.leibnizcenter.rechtspraak.util.TextPattern;
+import org.leibnizcenter.util.StringFeature;
+import org.leibnizcenter.util.TextPattern;
 
 import java.io.IOException;
 import java.io.InputStream;

@@ -2,7 +2,7 @@ package org.leibnizcenter.rechtspraak.tokens;
 
 import org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf;
 import org.leibnizcenter.rechtspraak.tokens.tokentree.TokenTree;
-import org.leibnizcenter.rechtspraak.util.Xml;
+import org.leibnizcenter.util.Xml;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.xml.sax.InputSource;

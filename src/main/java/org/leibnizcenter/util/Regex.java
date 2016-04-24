@@ -1,4 +1,4 @@
-package org.leibnizcenter.rechtspraak.util;
+package org.leibnizcenter.util;
 
 import java.util.regex.Pattern;
 

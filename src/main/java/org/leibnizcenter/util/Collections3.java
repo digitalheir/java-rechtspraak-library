@@ -1,9 +1,7 @@
-package org.leibnizcenter.rechtspraak.util;
+package org.leibnizcenter.util;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
-import org.leibnizcenter.rechtspraak.util.immutabletree.ImmutableTree;
-import org.w3c.dom.Node;
 
 import java.util.*;
 import java.util.stream.Stream;

@@ -5,9 +5,9 @@ import org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf;
 import org.leibnizcenter.rechtspraak.tokens.numbering.ListMarking;
 import org.leibnizcenter.rechtspraak.tokens.quote.Quote;
 import org.leibnizcenter.rechtspraak.tokens.text.Newline;
-import org.leibnizcenter.rechtspraak.util.Regex;
-import org.leibnizcenter.rechtspraak.util.StringFeature;
-import org.leibnizcenter.rechtspraak.util.Strings2;
+import org.leibnizcenter.util.Regex;
+import org.leibnizcenter.util.StringFeature;
+import org.leibnizcenter.util.Strings2;
 
 import java.util.List;
 import java.util.function.Function;

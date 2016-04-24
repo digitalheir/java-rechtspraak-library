@@ -1,13 +1,7 @@
 package org.leibnizcenter.rechtspraak.tokens;
 
-import org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf;
-import org.leibnizcenter.rechtspraak.tokens.tokentree.TokenTreeVertex;
-import org.leibnizcenter.rechtspraak.util.Regex;
-import org.leibnizcenter.rechtspraak.util.Xml;
+import org.leibnizcenter.util.Xml;
 import org.w3c.dom.*;
-
-import java.util.Locale;
-import java.util.regex.Pattern;
 
 /**
  * XML element from Rechtspraak.nl with some pre-processing applied

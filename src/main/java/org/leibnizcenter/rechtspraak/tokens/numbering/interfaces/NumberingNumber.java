@@ -1,7 +1,7 @@
 package org.leibnizcenter.rechtspraak.tokens.numbering.interfaces;
 
 import org.leibnizcenter.rechtspraak.tokens.numbering.*;
-import org.leibnizcenter.rechtspraak.util.Regex;
+import org.leibnizcenter.util.Regex;
 
 import java.util.function.Function;
 import java.util.regex.Matcher;

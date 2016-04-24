@@ -2,7 +2,7 @@
 //
 //import org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf;
 //import org.leibnizcenter.rechtspraak.tokens.TokenList;
-//import org.leibnizcenter.rechtspraak.util.Xml;
+//import org.leibnizcenter.util.Xml;
 //
 //import javax.xml.parsers.ParserConfigurationException;
 //import java.io.File;

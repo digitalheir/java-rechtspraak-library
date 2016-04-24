@@ -1,7 +1,8 @@
-package org.leibnizcenter.rechtspraak.util;
+package org.leibnizcenter.util;
 
 import com.google.common.collect.Sets;
 import org.junit.Test;
+import org.leibnizcenter.util.Strings2;
 
 import static org.junit.Assert.*;
 

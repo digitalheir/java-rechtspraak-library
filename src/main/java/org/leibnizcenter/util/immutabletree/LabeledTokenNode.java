@@ -1,4 +1,4 @@
-package org.leibnizcenter.rechtspraak.util.immutabletree;
+package org.leibnizcenter.util.immutabletree;
 
 import com.google.common.collect.ImmutableList;
 import org.leibnizcenter.rechtspraak.leibnizannotations.Label;

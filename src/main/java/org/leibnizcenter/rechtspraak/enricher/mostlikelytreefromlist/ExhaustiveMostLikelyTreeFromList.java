@@ -6,9 +6,9 @@ import org.leibnizcenter.rechtspraak.leibnizannotations.Label;
 import org.leibnizcenter.rechtspraak.tokens.TaggedToken;
 import org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf;
 import org.leibnizcenter.rechtspraak.tokens.tokentree.TokenTree;
-import org.leibnizcenter.rechtspraak.util.immutabletree.ImmutableTree;
-import org.leibnizcenter.rechtspraak.util.immutabletree.NamedImmutableTree;
-import org.leibnizcenter.rechtspraak.util.immutabletree.LabeledTokenNode;
+import org.leibnizcenter.util.immutabletree.ImmutableTree;
+import org.leibnizcenter.util.immutabletree.NamedImmutableTree;
+import org.leibnizcenter.util.immutabletree.LabeledTokenNode;
 
 import java.util.*;
 

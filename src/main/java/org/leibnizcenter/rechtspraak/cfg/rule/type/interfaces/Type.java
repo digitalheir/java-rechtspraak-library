@@ -1,6 +1,7 @@
-package org.leibnizcenter.rechtspraak.cfg.rule.type;
+package org.leibnizcenter.rechtspraak.cfg.rule.type.interfaces;
 
-import org.leibnizcenter.rechtspraak.cfg.rule.RightHandSide;
+import org.leibnizcenter.rechtspraak.cfg.rule.type.NonTerminalImpl;
+import org.leibnizcenter.rechtspraak.cfg.rule.type.Terminal;
 
 /**
  * Created by maarten on 18-4-16.
@@ -33,7 +34,7 @@ public interface Type extends Comparable<Type> {
                 return null;
             default:
                 if (Character.isUpperCase(typeString.charAt(0))) {
-                    return new NonTerminal(typeString);
+                    return new NonTerminalImpl(typeString);
                 } else {
                     return new Terminal(typeString);
                 }

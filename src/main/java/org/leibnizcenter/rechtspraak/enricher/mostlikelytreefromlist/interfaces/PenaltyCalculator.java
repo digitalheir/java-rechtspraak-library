@@ -1,6 +1,6 @@
 package org.leibnizcenter.rechtspraak.enricher.mostlikelytreefromlist.interfaces;
 
-import org.leibnizcenter.rechtspraak.util.immutabletree.ImmutableTree;
+import org.leibnizcenter.util.immutabletree.ImmutableTree;
 
 import java.util.Deque;
 

@@ -1,7 +1,7 @@
-package org.leibnizcenter.rechtspraak.util.immutabletree;
+package org.leibnizcenter.util.immutabletree;
 
 import com.google.common.collect.ImmutableList;
-import org.leibnizcenter.rechtspraak.util.Collections3;
+import org.leibnizcenter.util.Collections3;
 
 import java.security.InvalidParameterException;
 import java.util.List;

@@ -1,8 +1,11 @@
-package org.leibnizcenter.rechtspraak.util;
+package org.leibnizcenter.util;
 
 import com.google.common.base.Strings;
 import com.google.common.collect.Lists;
 import com.sun.org.apache.xerces.internal.dom.DOMOutputImpl;
+import org.leibnizcenter.util.Const;
+import org.leibnizcenter.util.Pair;
+import org.leibnizcenter.util.Regex;
 import org.w3c.dom.*;
 import org.w3c.dom.bootstrap.DOMImplementationRegistry;
 import org.w3c.dom.ls.DOMImplementationLS;

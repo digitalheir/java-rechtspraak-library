@@ -3,36 +3,36 @@ package org.leibnizcenter.rechtspraak.enricher;
 import cc.mallet.fst.CRF;
 import org.leibnizcenter.rechtspraak.cfg.CYK;
 import org.leibnizcenter.rechtspraak.cfg.Grammar;
+import org.leibnizcenter.rechtspraak.cfg.rule.RightHandSide;
+import org.leibnizcenter.rechtspraak.cfg.rule.StandardRule;
 import org.leibnizcenter.rechtspraak.cfg.rule.TypeContainer;
+import org.leibnizcenter.rechtspraak.cfg.rule.type.NonTerminalImpl;
 import org.leibnizcenter.rechtspraak.cfg.rule.type.Terminal;
+import org.leibnizcenter.rechtspraak.cfg.rule.type.interfaces.NonTerminal;
 import org.leibnizcenter.rechtspraak.crf.ApplyCrf;
-import org.leibnizcenter.rechtspraak.enricher.mostlikelytreefromlist.ExhaustiveMostLikelyTreeFromList;
-import org.leibnizcenter.rechtspraak.enricher.mostlikelytreefromlist.GreedyMostLikelyTreeFromList;
-import org.leibnizcenter.rechtspraak.enricher.mostlikelytreefromlist.PenaltyCalculatorImpl;
-import org.leibnizcenter.rechtspraak.enricher.mostlikelytreefromlist.abstracts.MostLikelyTreeFromList;
 import org.leibnizcenter.rechtspraak.leibnizannotations.DeterministicTagger;
 import org.leibnizcenter.rechtspraak.leibnizannotations.Label;
 import org.leibnizcenter.rechtspraak.tokens.RechtspraakElement;
 import org.leibnizcenter.rechtspraak.tokens.TokenList;
 import org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf;
 import org.leibnizcenter.rechtspraak.tokens.tokentree.leibniztags.LeibnizTags;
-import org.leibnizcenter.rechtspraak.util.Collections3;
-import org.leibnizcenter.rechtspraak.util.Const;
-import org.leibnizcenter.rechtspraak.util.Xml;
-import org.leibnizcenter.rechtspraak.util.immutabletree.ImmutableTree;
-import org.leibnizcenter.rechtspraak.util.immutabletree.LabeledTokenNode;
-import org.leibnizcenter.rechtspraak.util.immutabletree.NamedImmutableTree;
+import org.leibnizcenter.util.Collections3;
+import org.leibnizcenter.util.Const;
+import org.leibnizcenter.util.Xml;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.security.InvalidParameterException;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Deque;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * Helpers functions enriching Rechtspraak XML
@@ -42,8 +42,8 @@ import java.util.List;
 public class Enrich {
     private final CRF crf;
 
-    public Enrich() throws IOException, ClassNotFoundException {
-        this(new File(Const.RECHTSPRAAK_MARKUP_TAGGER_CRF));
+    public Enrich() throws IOException, ClassNotFoundException, URISyntaxException {
+        this(new File(Enrich.class.getClassLoader().getResource(Const.RECHTSPRAAK_MARKUP_TAGGER_CRF).toURI()));
     }
 
     public Enrich(File crfModelFile) throws IOException, ClassNotFoundException {
@@ -52,6 +52,7 @@ public class Enrich {
         this.crf = ApplyCrf.loadCrf(crfModelFile);
     }
 
+    @SuppressWarnings("WeakerAccess")
     public void enrich(String ecli, Document doc) {
         // Tokenize 
         Element contentRoot = Xml.getContentRoot(doc);
@@ -68,6 +69,8 @@ public class Enrich {
             words.add(new Terminal(tags.get(i), tokenList.get(i)));
         }
         CYK.ParseTreeContainer bestParseTree = CYK.getBestParseTree(words, dg);
+        bestParseTree = flattenTree(bestParseTree);
+
         if (bestParseTree == null)
             throw new NullPointerException();
         setNewXmlStructure(bestParseTree, contentRoot);
@@ -110,6 +113,39 @@ public class Enrich {
         cleanUp(doc.getDocumentElement());
     }
 
+    private static final NonTerminalImpl a = new NonTerminalImpl(" "); // placeholder
+    private static final StandardRule PLACE_HOLDER_RULE = new StandardRule(a, new RightHandSide(a, a), 1.0);
+
+    private static CYK.ParseTreeContainer flattenTree(CYK.ParseTreeContainer t) {
+        return new CYK.ParseTreeContainer(
+                PLACE_HOLDER_RULE,
+                flattenTreeR(t).collect(Collectors.toList())
+        );
+    }
+
+    private static Stream<TypeContainer> flattenTreeR(CYK.ParseTreeContainer t) {
+        return t.getInputs().stream().flatMap(tt -> {
+                    if (DocumentGrammar.SECTION_BLOB.equals(tt.getType()))
+                        return flattenTreeR((CYK.ParseTreeContainer) tt);
+                    if (DocumentGrammar.SINGLE_NUMBERING.equals(tt.getType()))
+                        return flattenTreeR((CYK.ParseTreeContainer) tt);
+                    if (DocumentGrammar.SECTION_TITLE_TEXT.equals(tt.getType()))
+                        return flattenTreeR((CYK.ParseTreeContainer) tt);
+                    if (DocumentGrammar.TEXT_BLOB.equals(tt.getType()))
+                        return flattenTreeR((CYK.ParseTreeContainer) tt);
+                    if (DocumentGrammar.SECTION_CONTENT.equals(tt.getType()))
+                        return flattenTreeR((CYK.ParseTreeContainer) tt);
+
+                    if (tt instanceof Terminal) return Stream.of(tt);
+
+                    return Stream.of(new CYK.ParseTreeContainer(
+                            new StandardRule((NonTerminal) tt.getType(), new RightHandSide(), 1.0),
+                            flattenTreeR((CYK.ParseTreeContainer) tt).collect(Collectors.toList())
+                    ));
+                }
+        );
+    }
+
     /**
      * We assume the nodes in the tree are title for sections that span up to and including all children, up to the
      * next sibling node
@@ -150,8 +186,8 @@ public class Enrich {
     /**
      * Append child and all preceding nodes (which are automatically removed from the original container)
      *
-     * @param newElement
-     * @param child
+     * @param newElement element to add to
+     * @param child      child to add
      */
     private void appendPrevSiblings(Element newElement, Node child) {
         Deque<Node> previousSiblings = new ArrayDeque<>(child.getParentNode().getChildNodes().getLength());

@@ -2,6 +2,7 @@ import generated.OpenRechtspraak;
 import org.junit.Test;
 import org.leibnizcenter.rechtspraak.CouchDoc;
 import org.leibnizcenter.rechtspraak.CouchInterface;
+import org.leibnizcenter.xml.NotImplemented;
 import org.xml.sax.SAXException;
 
 import javax.xml.bind.JAXBException;
@@ -19,14 +20,13 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 /**
+ * <p>
  * Test the JSON-LD output of Rechtspraak.nl XML documents
  * <p/>
  * Created by maarten on 31-7-15.
  */
 public class ToJsonTest {
-
-    ArrayList<String> testDocs = new ArrayList<>();
-
+    private ArrayList<String> testDocs = new ArrayList<>();
 
     {
         testDocs.add("ECLI:NL:GHSHE:2014:1641");
@@ -88,7 +88,7 @@ public class ToJsonTest {
     }
 
     @Test
-    public void testDoc() {
+    public void testDoc() throws NotImplemented {
         List<CouchDoc> parsedDocs = new ArrayList<>(testDocs.size());
 
         try {

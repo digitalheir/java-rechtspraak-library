@@ -9,10 +9,10 @@ import org.leibnizcenter.rechtspraak.tokens.numbering.Numbering;
 import org.leibnizcenter.rechtspraak.tokens.numbering.SubSectionNumber;
 import org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf;
 import org.leibnizcenter.rechtspraak.tokens.tokentree.TokenTree;
-import org.leibnizcenter.rechtspraak.util.Collections3;
-import org.leibnizcenter.rechtspraak.util.immutabletree.ImmutableTree;
-import org.leibnizcenter.rechtspraak.util.immutabletree.NamedImmutableTree;
-import org.leibnizcenter.rechtspraak.util.immutabletree.LabeledTokenNode;
+import org.leibnizcenter.util.Collections3;
+import org.leibnizcenter.util.immutabletree.ImmutableTree;
+import org.leibnizcenter.util.immutabletree.NamedImmutableTree;
+import org.leibnizcenter.util.immutabletree.LabeledTokenNode;
 
 import java.security.InvalidParameterException;
 import java.util.*;
@@ -238,8 +238,7 @@ public class PenaltyCalculatorImpl implements PenaltyCalculator {
      */
     private static boolean isNumberingInDirectSequence(Numbering first, Numbering second) {
         return (second == null && first == null)
-                || (second != null
-                && first != null
+                || (second != null && first != null
                 && second.isSuccedentOf(first)
                 && !(isPlausibleFirstSubsection(second))
         );

@@ -43,12 +43,14 @@ package org.leibnizcenter.rechtspraak.cfg;
 import com.google.common.collect.*;
 import org.jetbrains.annotations.NotNull;
 import org.leibnizcenter.rechtspraak.cfg.rule.RightHandSide;
-import org.leibnizcenter.rechtspraak.cfg.rule.Rule;
+import org.leibnizcenter.rechtspraak.cfg.rule.StandardRule;
+import org.leibnizcenter.rechtspraak.cfg.rule.interfaces.Rule;
 import org.leibnizcenter.rechtspraak.cfg.rule.Term;
-import org.leibnizcenter.rechtspraak.cfg.rule.type.NonTerminal;
+import org.leibnizcenter.rechtspraak.cfg.rule.type.NonTerminalImpl;
+import org.leibnizcenter.rechtspraak.cfg.rule.type.interfaces.NonTerminal;
 import org.leibnizcenter.rechtspraak.cfg.rule.type.Terminal;
-import org.leibnizcenter.rechtspraak.cfg.rule.type.Type;
-import org.leibnizcenter.rechtspraak.util.Collections3;
+import org.leibnizcenter.rechtspraak.cfg.rule.type.interfaces.Type;
+import org.leibnizcenter.util.Collections3;
 
 import java.util.*;
 import java.util.function.Consumer;
@@ -578,7 +580,7 @@ public class Grammar implements Iterable<Term> {
         // Create intermediate grammar where we omit epsilon rules
         Set<Rule> newRules = possibleRulesWithEpsilonsOmitted(ruleSet, nullableNonTerminals);
         // Remove all epsilon rules
-        newRules = newRules.stream().filter(r -> r.getLHS().equals(start) || !r.isEpsilonRule()).collect(Collectors.toSet());
+        newRules = newRules.stream().filter(r -> r.getLHS().equals(start) || !Rule.isEpsilonRule(r)).collect(Collectors.toSet());
         return new Grammar(start, newRules);
     }
 
@@ -590,7 +592,7 @@ public class Grammar implements Iterable<Term> {
             // Get all versions with nullable's omitted
             if (r.getRHS().containsAny(nullables)) {
                 newRules.addAll(r.getRHS()
-                        .enumerateWaysToOmit(nullables).stream().map(rhs -> new Rule(r.getLHS(), rhs,
+                        .enumerateWaysToOmit(nullables).stream().map(rhs -> new StandardRule(r.getLHS(), rhs,
                                 r.getPriorProbability()//TODO probability applied
                         )).collect(Collectors.toSet()));
             }
@@ -632,7 +634,7 @@ public class Grammar implements Iterable<Term> {
         Collection<Rule> newRules = new HashSet<>(ruleSet.size() ^ 2);
 
         ruleSet.stream().forEach(rule -> {
-                    if (rule.RHS.size() > 2) {
+                    if (rule.getRHS().size() > 2) {
                         newRules.addAll(makeBinaryProductionRules(rule, new ArrayList<>(rule.getRHS().size())));
                     } else {
                         newRules.add(rule);
@@ -643,15 +645,15 @@ public class Grammar implements Iterable<Term> {
     }
 
     private Collection<? extends Rule> makeBinaryProductionRules(Rule rule, List<Rule> accumulator) {
-        if (rule.RHS.hasNonSolitaryTerminal())
+        if (rule.getRHS().hasNonSolitaryTerminal())
             throw new IllegalStateException("Rule is not supposed to contain terminals at this point");
 
         if (rule.getRHS().size() > 2) {
             NonTerminal newNonTerminal = getUnusedNonTerminal(null, Sets.union(variableSet, accumulator.stream().map(Rule::getLHS).collect(Collectors.toSet())));
-            Rule newBinaryRule = new Rule(rule.getLHS(), new RightHandSide(rule.getRHS().get(0), newNonTerminal), rule.getPriorProbability());
+            Rule newBinaryRule = new StandardRule(rule.getLHS(), new RightHandSide(rule.getRHS().get(0), newNonTerminal), rule.getPriorProbability());
 
             List<Type> term = rule.getRHS().getTerm();
-            Rule remainderRule = new Rule(newNonTerminal, new RightHandSide(Collections3.subList(term, 1)), 1.0);
+            Rule remainderRule = new StandardRule(newNonTerminal, new RightHandSide(Collections3.subList(term, 1)), 1.0);
 
             accumulator.add(newBinaryRule);
             return makeBinaryProductionRules(remainderRule, accumulator);
@@ -679,18 +681,18 @@ public class Grammar implements Iterable<Term> {
         Set<Rule> newRules = Sets.newHashSet(g.ruleSet);
 
         NonTerminal newStartSymbol = getUnusedNonTerminal("s0", variableSet);
-        newRules.add(new Rule(newStartSymbol, new RightHandSide(startSymbol), 1.0));
+        newRules.add(new StandardRule(newStartSymbol, new RightHandSide(startSymbol), 1.0));
         return new Grammar(newStartSymbol, newRules);
     }
 
     @NotNull
     private NonTerminal getUnusedNonTerminal(String pref, Collection<NonTerminal> existingVars) {
         NonTerminal newStartSymbol;
-        if (pref == null || existingVars.contains(new NonTerminal(pref))) {
+        if (pref == null || existingVars.contains(new NonTerminalImpl(pref))) {
             do {
-                newStartSymbol = new NonTerminal(UUID.randomUUID().toString());
+                newStartSymbol = new NonTerminalImpl(UUID.randomUUID().toString());
             } while (existingVars.contains(newStartSymbol));
-        } else newStartSymbol = new NonTerminal(pref);
+        } else newStartSymbol = new NonTerminalImpl(pref);
         return newStartSymbol;
     }
 
@@ -726,13 +728,13 @@ public class Grammar implements Iterable<Term> {
                                         .map(t -> {
                                             if (t.isTerminal()) {
                                                 NonTerminal newNonTerminal = getUnusedNonTerminal("N_" + t.toString(), Sets.union(g.variableSet, newRules.stream().map(Rule::getLHS).collect(Collectors.toSet())));
-                                                Rule newRule = new Rule(newNonTerminal, new RightHandSide(t), 1.0);
+                                                Rule newRule = new StandardRule(newNonTerminal, new RightHandSide(t), 1.0);
                                                 newRules.add(newRule);
                                                 return newNonTerminal;
                                             } else return t;
                                         })
                                         .collect(Collectors.toList()));
-                                newRules.add(new Rule(r.getLHS(), newRhs,
+                                newRules.add(new StandardRule(r.getLHS(), newRhs,
                                         r.getPriorProbability()
                                 ));
                             } else newRules.add(r);

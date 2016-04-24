@@ -11,9 +11,9 @@ import org.leibnizcenter.rechtspraak.tokens.quote.Quote;
 import org.leibnizcenter.rechtspraak.tokens.text.Newline;
 import org.leibnizcenter.rechtspraak.tokens.text.TextElement;
 import org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf;
-import org.leibnizcenter.rechtspraak.util.Collections3;
-import org.leibnizcenter.rechtspraak.util.Regex;
-import org.leibnizcenter.rechtspraak.util.Xml;
+import org.leibnizcenter.util.Collections3;
+import org.leibnizcenter.util.Regex;
+import org.leibnizcenter.util.Xml;
 import org.leibnizcenter.rechtspraak.tokens.text.IgnoreElement;
 import org.w3c.dom.*;
 

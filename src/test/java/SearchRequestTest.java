@@ -8,6 +8,8 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
 
 /**
+ * Tests a simple search request
+ *
  * Created by maarten on 9-3-16.
  */
 public class SearchRequestTest {

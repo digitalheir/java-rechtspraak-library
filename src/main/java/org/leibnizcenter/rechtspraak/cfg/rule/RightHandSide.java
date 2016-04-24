@@ -3,7 +3,7 @@ package org.leibnizcenter.rechtspraak.cfg.rule;
 import com.google.common.collect.ImmutableList;
 import org.jetbrains.annotations.NotNull;
 import org.leibnizcenter.rechtspraak.cfg.rule.type.Terminal;
-import org.leibnizcenter.rechtspraak.cfg.rule.type.Type;
+import org.leibnizcenter.rechtspraak.cfg.rule.type.interfaces.Type;
 
 import java.util.*;
 import java.util.stream.Collectors;

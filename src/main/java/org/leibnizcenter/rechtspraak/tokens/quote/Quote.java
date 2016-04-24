@@ -4,7 +4,7 @@ import com.google.common.collect.Sets;
 import org.leibnizcenter.rechtspraak.tokens.features.textpatterns.GeneralTextFeature;
 import org.leibnizcenter.rechtspraak.tokens.RechtspraakElement;
 import org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf;
-import org.leibnizcenter.rechtspraak.util.Strings2;
+import org.leibnizcenter.util.Strings2;
 import org.w3c.dom.Element;
 
 import java.util.List;

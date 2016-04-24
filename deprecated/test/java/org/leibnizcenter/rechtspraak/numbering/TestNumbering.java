@@ -1,9 +1,9 @@
 package org.leibnizcenter.rechtspraak.numbering;
 
 import org.junit.Test;
-import org.leibnizcenter.rechtspraak.util.numbering.ArabicNumbering;
-import org.leibnizcenter.rechtspraak.util.numbering.RomanNumeral;
-import org.leibnizcenter.rechtspraak.util.numbering.SubSectionNumber;
+import org.leibnizcenter.util.numbering.ArabicNumbering;
+import org.leibnizcenter.util.numbering.RomanNumeral;
+import org.leibnizcenter.util.numbering.SubSectionNumber;
 
 import static org.junit.Assert.assertTrue;
 
