@@ -54242,20 +54242,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(_Math2.default, { l: 'v' }),
 	                    ' in ',
 	                    _react2.default.createElement(_Math2.default, { l: 'G' }),
-	                    '. A directed model in which all labels ',
+	                    '. Generative models are directed models in which all labels ',
 	                    _react2.default.createElement(_Math2.default, { l: 'y \\in Y' }),
 	                    ' are parents of ',
 	                    _react2.default.createElement(_Math2.default, { l: 'x\\in X' }),
-	                    ' are called generative models, because the labels "generate" the output.'
+	                    '. This name is due to the labels "generating" the output: the labels are the contingencies upon which the probability of the output depends.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'Graphical model described as ',
+	                    'Using Bayes rule, we can rewrite distributions of generative models as conditional distributions ',
 	                    _react2.default.createElement(_Math2.default, { l: 'p\\left ( \\mathbf y|\\mathbf x\\right )' }),
-	                    ' are called discriminative models. Using Bayes rule, we can rewrite distributions of generative models as conditional distributions ',
+	                    ' and vice versa. When we describe a graphical model as ',
 	                    _react2.default.createElement(_Math2.default, { l: 'p\\left ( \\mathbf y|\\mathbf x\\right )' }),
-	                    ' and vice versa. In the words of ',
+	                    ', we call it a discriminative model. In the words of ',
 	                    _references2.default.cite(_bib2.default.jordan2002discriminative),
 	                    ', these models form generative-discriminative pairs.'
 	                ),
