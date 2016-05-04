@@ -1,0 +1,73 @@
+#fig-parsing-triangle {
+  .table-container {
+    position: relative;
+    margin-left: -100px;
+    display: inline-block;
+    transform-origin: 100% 0%;
+    transform: rotate(-45deg);
+  }
+  th:empty, td:empty {
+    border: 0;
+  }
+  .cyk-cell-content {
+    width: 70px;
+    min-width: 70px;
+    max-width: 70px;
+    overflow: visible;
+    height: 70px;
+    min-height: 70px;
+    max-height: 70px;
+    position: relative;
+    transform: rotate(45deg);
+    display: table-cell;
+    vertical-align: middle;
+    ol {
+      width: 100%;
+      li {
+        text-align: center;
+        display: list-item;
+        border: none;
+        margin: 0;
+        background: none;
+        padding: 0;
+        font-size: 9px;
+        line-height: 1.3em;
+        code {
+          display: inline;
+          border: none;
+          margin: 0;
+          background: none;
+          padding: 0;
+          font-size: 9px;
+          line-height: 1.3em;
+        }
+      }
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+    }
+    .word {
+      display: block;
+      line-height: 1.4em;
+      padding: 0;
+      background: none;
+      border: none;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      margin: 0 0 -42px;
+    }
+  }
+  table {
+    border-collapse: collapse;
+    td {
+      overflow: visible;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      border: solid black 1px;
+    }
+  }
+}
