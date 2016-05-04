@@ -43,7 +43,8 @@ export default class CRF extends Component {
 
 
             <p>
-                In this thesis, we limit ourselves to a subclass of CRFs called Linear-Chain Conditional Random Fields,
+                In this thesis, we limit ourselves to a subclass of CRFs called Linear-Chain Conditional Random Fields 
+                (LC-CRFs or Linear Chain CRFs),
                 which is very similar to HMMs in graph structure.
 
                 <strike>In this thesis, we

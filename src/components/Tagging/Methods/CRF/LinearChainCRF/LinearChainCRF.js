@@ -23,15 +23,7 @@ export default class LinearChainCRF extends Component {
             <p>
                 This is a fundamental difference: we don't
                 assume that the labels generate observations, but rather that the observations provide support
-                for the probability of labels. In the words of {ref.cite(bib.jordan2002discriminative)},
-                HMMs and LC-CRFs form a generative-discriminative pair. This means that training a
-                Linear Chain CRF 
-                to maximize joint probability <F l="p(\mathbf x,\mathbf y)"/> (instead 
-                of <F latex="p(\mathbf y|\mathbf x)"/>) results in the same model 
-                as training an HMM, and conversely training an
-                HMM to maximize <F latex="p(\mathbf y|\mathbf x)"/> would
-                result in the same model as
-                training a CRF.
+                for the probability of labels. 
             </p>
 
             <p>
