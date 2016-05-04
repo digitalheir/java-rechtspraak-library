@@ -114,14 +114,16 @@ export default class CRF extends Component {
                 A directed model is a model that factorizes as:
                 <F l="p\left ( \mathbf x_A, \mathbf y_A\right )=\prod _{v\in V}p(v|\pi(v))" display="true"/>
                 where <F l="\pi(v)"/> are the parents of <F l="v"/> in <F l="G"/>.
-                A directed model in which all labels <F l="y \in Y"/> are parents of <F l="x\in X"/> are
-                called generative models, because the labels "generate" the output.
+                Generative models are directed models in which all
+                labels <F l="y \in Y"/> are parents of <F l="x\in X"/>. This name is due
+                to the labels "generating" the output: the labels are the contingencies upon which the
+                probability of the output depends.
             </p>
             <p>
-                Graphical model
-                described as <F l="p\left ( \mathbf y|\mathbf x\right )"/> are called discriminative models.
                 Using Bayes rule, we can rewrite distributions of generative models as
                 conditional distributions <F l="p\left ( \mathbf y|\mathbf x\right )"/> and vice versa.
+                When we describe a graphical model as <F l="p\left ( \mathbf y|\mathbf x\right )"/>,
+                we call it a discriminative model.
                 In the words of {ref.cite(bib.jordan2002discriminative)},
                 these models form generative-discriminative pairs.
             </p>
@@ -132,18 +134,23 @@ export default class CRF extends Component {
                 as training a generative model. Conversely, training a
                 generative model to maximize <F latex="p(\mathbf y|\mathbf x)"/> would
                 result in the same model as
-                training a disriminative model.
+                training a discriminative model.
             </p>
             <p>
                 It turns out that when we model a conditional distribution,
                 we are not interested in parameter values for <F l="p\left ( \mathbf x\right )"/>, and so
-                we have more freedom in modeling <F l="p\left ( \mathbf y|\mathbf x\right )"/>. In practice,
-                this means that discriminative models tend to out-perform generative models in classification tasks.
-                For a thorough explanation of this principle, see {ref.cite(bib.jordan2002discriminative)}.
+                we have more freedom in modeling <F l="p\left ( \mathbf y|\mathbf x\right )"/>, without
+                burdening ourselves with modeling the potentially very complicated
+                inter-dependencies of <F l="p\left ( \mathbf x\right )"/>. In classification tasks,
+                this means that we are better able to use observations
+                and so in practice discriminative models tend to out-perform generative models.
+                For a thorough explanation of the principle of generative-discriminative pairs,
+                see {ref.cite(bib.jordan2002discriminative)}.
             </p>
+
             <p>
                 One generative-discriminative pair is formed by Hidden Markov Models (HMMs) and Linear Chain CRFs.
-                In following,
+                In the following,
                 we introduce HMMs (generative) to support a definition of
                 Linear-Chain CRFs (discriminative).
             </p>
