@@ -54268,7 +54268,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(_Math2.default, { latex: 'p(\\mathbf y|\\mathbf x)' }),
 	                    ') results in the same model as training a generative model. Conversely, training a generative model to maximize ',
 	                    _react2.default.createElement(_Math2.default, { latex: 'p(\\mathbf y|\\mathbf x)' }),
-	                    ' would result in the same model as training a disriminative model.'
+	                    ' would result in the same model as training a discriminative model.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -54277,14 +54277,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(_Math2.default, { l: 'p\\left ( \\mathbf x\\right )' }),
 	                    ', and so we have more freedom in modeling ',
 	                    _react2.default.createElement(_Math2.default, { l: 'p\\left ( \\mathbf y|\\mathbf x\\right )' }),
-	                    '. In practice, this means that discriminative models tend to out-perform generative models in classification tasks. For a thorough explanation of this principle, see ',
+	                    ', without burdening ourselves with modeling the potentially very complicated inter-dependencies of ',
+	                    _react2.default.createElement(_Math2.default, { l: 'p\\left ( \\mathbf x\\right )' }),
+	                    '. In classification tasks, this means that we are better able to use observations and so in practice discriminative models tend to out-perform generative models. For a thorough explanation of the principle of generative-discriminative pairs, see ',
 	                    _references2.default.cite(_bib2.default.jordan2002discriminative),
 	                    '.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'One generative-discriminative pair is formed by Hidden Markov Models (HMMs) and Linear Chain CRFs. In following, we introduce HMMs (generative) to support a definition of Linear-Chain CRFs (discriminative).'
+	                    'One generative-discriminative pair is formed by Hidden Markov Models (HMMs) and Linear Chain CRFs. In the following, we introduce HMMs (generative) to support a definition of Linear-Chain CRFs (discriminative).'
 	                )
 	            );
 	        }
