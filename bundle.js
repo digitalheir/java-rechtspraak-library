@@ -45461,7 +45461,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'In this thesis, we limit ourselves to a subclass of CRFs called Linear-Chain Conditional Random Fields, which is very similar to HMMs in graph structure.',
+	                    'In this thesis, we limit ourselves to a subclass of CRFs called Linear-Chain Conditional Random Fields (LC-CRFs or Linear Chain CRFs), which is very similar to HMMs in graph structure.',
 	                    _react2.default.createElement(
 	                        'strike',
 	                        null,
@@ -54246,12 +54246,45 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(_Math2.default, { l: 'y \\in Y' }),
 	                    ' are parents of ',
 	                    _react2.default.createElement(_Math2.default, { l: 'x\\in X' }),
-	                    ', so graphs in which outputs precede the inputs, are called generative models.'
+	                    ' are called generative models, because the labels "generate" the output.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'In the next sub-section, we discuss an often-used generative model called the Hidden Markov Model, of which Linear-Chain Conditional Random Fields are the undirected versions.'
+	                    'Graphical model described as ',
+	                    _react2.default.createElement(_Math2.default, { l: 'p\\left ( \\mathbf y|\\mathbf x\\right )' }),
+	                    ' are called discriminative models. Using Bayes rule, we can rewrite distributions of generative models as conditional distributions ',
+	                    _react2.default.createElement(_Math2.default, { l: 'p\\left ( \\mathbf y|\\mathbf x\\right )' }),
+	                    ' and vice versa. In the words of ',
+	                    _references2.default.cite(_bib2.default.jordan2002discriminative),
+	                    ', these models form generative-discriminative pairs.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'This means that training a discriminative model to maximize the joint probability ',
+	                    _react2.default.createElement(_Math2.default, { l: 'p(\\mathbf x,\\mathbf y)' }),
+	                    ' (instead of ',
+	                    _react2.default.createElement(_Math2.default, { latex: 'p(\\mathbf y|\\mathbf x)' }),
+	                    ') results in the same model as training a generative model. Conversely, training a generative model to maximize ',
+	                    _react2.default.createElement(_Math2.default, { latex: 'p(\\mathbf y|\\mathbf x)' }),
+	                    ' would result in the same model as training a disriminative model.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'It turns out that when we model a conditional distribution, we are not interested in parameter values for ',
+	                    _react2.default.createElement(_Math2.default, { l: 'p\\left ( \\mathbf x\\right )' }),
+	                    ', and so we have more freedom in modeling ',
+	                    _react2.default.createElement(_Math2.default, { l: 'p\\left ( \\mathbf y|\\mathbf x\\right )' }),
+	                    '. In practice, this means that discriminative models tend to out-perform generative models in classification tasks. For a thorough explanation of this principle, see ',
+	                    _references2.default.cite(_bib2.default.jordan2002discriminative),
+	                    '.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'One generative-discriminative pair is formed by Hidden Markov Models (HMMs) and Linear Chain CRFs. In following, we introduce HMMs (generative) to support a definition of Linear-Chain CRFs (discriminative).'
 	                )
 	            );
 	        }
@@ -54349,15 +54382,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'This is a fundamental difference: we don\'t assume that the labels generate observations, but rather that the observations provide support for the probability of labels. In the words of ',
-	                    _references2.default.cite(_bib2.default.jordan2002discriminative),
-	                    ', HMMs and LC-CRFs form a generative-discriminative pair. This means that training a Linear Chain CRF to maximize joint probability ',
-	                    _react2.default.createElement(_Math2.default, { l: 'p(\\mathbf x,\\mathbf y)' }),
-	                    ' (instead of ',
-	                    _react2.default.createElement(_Math2.default, { latex: 'p(\\mathbf y|\\mathbf x)' }),
-	                    ') results in the same model as training an HMM, and conversely training an HMM to maximize ',
-	                    _react2.default.createElement(_Math2.default, { latex: 'p(\\mathbf y|\\mathbf x)' }),
-	                    ' would result in the same model as training a CRF.'
+	                    'This is a fundamental difference: we don\'t assume that the labels generate observations, but rather that the observations provide support for the probability of labels.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
