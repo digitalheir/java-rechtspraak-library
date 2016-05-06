@@ -1,19 +1,11 @@
-const data = require('./get-term-frequency-data');
-const React = require('react');
-const _ = require('underscore');
-const PureRenderMixin = require('react-addons-pure-render-mixin');
-const figs = require('../../../../../figures/figs.jsx');
-const PercentageBar = require('../figure-relative-title-count-for-terms/PercentageBar.jsx');
+import data  from './get-term-frequency-data'
+import React  from 'react'
+import _  from 'underscore'
+import figs  from '../figs'
+import PercentageBar  from '../../PercentageBar/PercentageBar'
 
-
-var Fgiure = React.createClass({
-    mixins: [PureRenderMixin],
-
-    getDefaultProps: function () {
-        return {}
-    },
-
-    render: function () {
+export default class FigureTitleTfIdf extends React.Component {
+    render() {
         var nTerms = 20;
         var tfIdfScores = data.tfidfForAllTerms(nTerms);
         var maxVal = tfIdfScores[0][1];
@@ -53,6 +45,4 @@ var Fgiure = React.createClass({
             </figcaption>
         </figure>;
     }
-});
-
-module.exports = Fgiure;
+}

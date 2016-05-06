@@ -14,7 +14,7 @@ export default class PercentageBar extends React.Component {
             </svg>
         );
     }
-}
+}   
 PercentageBar.propTypes = {
     percentage: React.PropTypes.string.isRequired,
     text: React.PropTypes.string.isRequired

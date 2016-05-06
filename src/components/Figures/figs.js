@@ -1,6 +1,6 @@
 import {url as markupStatsUrl} from './MarkupStatsFigure/data';
 
-export default {
+const figs = {
     markupStats: {
         id: 'markup-stats',
         num: 1,
@@ -67,3 +67,5 @@ export default {
         };
     }()
 };
+
+export default figs;

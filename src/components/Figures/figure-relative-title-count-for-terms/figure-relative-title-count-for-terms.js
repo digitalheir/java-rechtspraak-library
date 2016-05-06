@@ -1,12 +1,7 @@
-"use strict";
-
 const React = require('react');
 const _ = require('underscore');
-const PureRenderMixin = require('react-addons-pure-render-mixin');
-
-const PercentageBar = require('./PercentageBar.jsx');
-const figs = require('../../../../../figures/figs.jsx');
-
+const PercentageBar = require('../../PercentageBar/PercentageBar');
+const figs = require('../figs');
 
 
 const numberOfTerms = 10;
@@ -14,14 +9,9 @@ const data =require('./raw-data');
 data.splice(numberOfTerms);
 
 
-var Fgiure = React.createClass({
-    mixins: [PureRenderMixin],
-
-    getDefaultProps: function () {
-        return {}
-    },
-
-    render: function () {
+export default class FigureRelativeTitleCountForTerms extends React.Component {
+    //noinspection JSMethodCanBeStatic
+    render() {
         return <figure id={figs.titleTf.id}>
             <table className="chart table">
                 <thead>
@@ -56,6 +46,4 @@ var Fgiure = React.createClass({
             </figcaption>
         </figure>;
     }
-});
-
-module.exports = Fgiure;
+}

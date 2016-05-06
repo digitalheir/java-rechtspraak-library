@@ -1,5 +1,6 @@
 const _ = require('underscore');
-const downloadString = require('../../../../../download-string-sync');
+const downloadString = require('../../../../download-string-sync');
+const fs = require ('fs');
 
 var baseUrl = "https://rechtspraak.cloudant.com/docs/_design/stats/_view/" +
     "word_count_for_title_elements?group_level=1&stale=ok";
@@ -16,9 +17,13 @@ var values = _.sortBy(_.map(json.rows, function (row) {
     return el.wordCount;
 });
 
-
-module.exports = {
+fs.writeFile('./data-full.js', "export default " + JSON.stringify({
+        url: baseUrl,
+        data: values,
+        totalCount: totalCount
+    }));
+fs.writeFile('./data.js', "export default "+JSON.stringify({
     url: baseUrl,
-    data: values,
+    data: values.splice(15),
     totalCount: totalCount
-};
+}));

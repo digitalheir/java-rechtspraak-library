@@ -1,11 +1,8 @@
-"use strict";
-
-const data = require('./get-term-frequency-data');
-const React = require('react');
-const _ = require('underscore');
-const PureRenderMixin = require('react-addons-pure-render-mixin');
-const figs = require('../../../../../figures/figs.jsx');
-const PercentageBar = require('../figure-relative-title-count-for-terms/PercentageBar.jsx');
+import tfidfForAllTerms from './get-term-frequency-data';
+import React from 'react';
+import _ from 'underscore';
+import figs from '../figs';
+import PercentageBar from '../../PercentageBar/PercentageBar';
 
 
 function getTablesForTfIdfScores(tfIdfScores) {
@@ -25,33 +22,28 @@ function getTablesForTfIdfScores(tfIdfScores) {
                 </tr>
                 </thead>
                 <tbody>
-                {_.map(tfIdfScoresForRole, function (term,o) {
-                    const tfIdfScoreStr = term[1].toFixed(2);return <tr key={term[0]}>
-                    <th className="nr">{o+1}</th>
-                    <td>{term[0]}</td>
-                    <td className="tf-idf-score">
-                        <PercentageBar percentage={term[2]} text={tfIdfScoreStr+''}/>
-                        <span className="perc-text">{tfIdfScoreStr}</span>
-                    </td>
-                </tr>;
-                    })
-                    }
+                {_.map(tfIdfScoresForRole, function (term, o) {
+                    const tfIdfScoreStr = term[1].toFixed(2);
+                    return <tr key={term[0]}>
+                        <th className="nr">{o + 1}</th>
+                        <td>{term[0]}</td>
+                        <td className="tf-idf-score">
+                            <PercentageBar percentage={term[2]} text={tfIdfScoreStr+''}/>
+                            <span className="perc-text">{tfIdfScoreStr}</span>
+                        </td>
+                    </tr>;
+                })
+                }
                 </tbody>
             </table>);
     }
     return tables;
 }
-var Fgiure = React.createClass({
-    mixins: [PureRenderMixin],
-
-    getDefaultProps: function () {
-        return {}
-    },
-
-    render: function () {
+export default class FigureSectionTitleTfIdf extends React.Component {
+    render() {
         var nTerms = 10;
 
-        var tfIdfScores = data.tfidfForAllTerms(nTerms);
+        var tfIdfScores = tfidfForAllTerms(nTerms);
         for (var sectionRole in tfIdfScores) {
             //noinspection JSUnfilteredForInLoop
             let tfIdfScoresForRole = tfIdfScores[sectionRole];
@@ -76,6 +68,4 @@ var Fgiure = React.createClass({
             </figcaption>
         </figure>;
     }
-});
-
-module.exports = Fgiure;
+}

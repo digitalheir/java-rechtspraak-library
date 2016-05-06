@@ -1,9 +1,12 @@
-const _ = require('underscore');
+import _ from 'underscore';
+import beslissing from './section/beslissing';
+import overwegingen from './section/overwegingen';
+import procesverloop from './section/procesverloop';
 
 const rawData = {
-    beslissing: (require('./section/beslissing')),
-    overwegingen: (require('./section/overwegingen')),
-    procesverloop: (require('./section/procesverloop'))
+    beslissing: beslissing,
+    overwegingen: overwegingen,
+    procesverloop: procesverloop
 };
 
 function tfidfForAllTerms(topN) {
@@ -23,6 +26,4 @@ function tfidfForAllTerms(topN) {
 }
 
 
-module.exports = {
-    tfidfForAllTerms: tfidfForAllTerms
-};
+export default tfidfForAllTerms;
