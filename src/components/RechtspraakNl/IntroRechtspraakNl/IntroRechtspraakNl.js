@@ -68,13 +68,6 @@ export default class Introduction extends Component {
     //                    </p>    Refer to <a href="http://rechtspraak.cloudant.com/ecli/_design/term_frequency">http://rechtspraak.cloudant.com/ecli/_design/term_frequency</a>    for the implemented design document.
     //                </section>
     render() {
-        const nonValidatingXml = "https://validator.w3.org/nu/?useragent=Validator.nu%2FLV+http%3A%2F%2Fvalidator.w3.org%2Fservices&amp;doc=http%3A%2F%2Fuitspraken.rechtspraak.nl%2Finziendocument%3Fid%3DECLI%3ANL%3ACBB%3A2010%3ABN1294";
-
-        const htmlManifestation = "http://uitspraken.rechtspraak.nl/inziendocument?id=ECLI:NL:CBB:2010:BN1294";
-        const xmlManifestation = "http://data.rechtspraak.nl/uitspraken/content?id=ECLI:NL:CBB:2010:BN1294";
-
-        const urlSchemeText = "http://data.rechtspraak.nl/uitspraken/content?id={ecli}";
-        const urlSchemeUrl = "http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:2010:BN1294";
 
         return <div>
             <p><a href="http://www.rechtspraak.nl/">Rechtspraak.nl</a> is the official website of the Dutch
@@ -139,30 +132,11 @@ export default class Introduction extends Component {
                 on GitHub</a>).
             </p>
 
-            <p>
-                The latter project was created in order to facilitate the collection
-                of statistics of case law documents. CouchDB makes it easy to
-                define MapReduce jobs on the documents to generate the statistics
-                used in this thesis.
-                This portion of work is discussed in the section <a href="#couchdb">case law in CouchDB</a>.
-            </p>
 
             <p>
                 For a comprehensive study on the legal and technical background
                 of the digital publication of Dutch case law, see {ref.cite(bib.vanopijnen2014)}.
                 For a general overview of Rechtspraak.nl's web service, see {ref.cite(bib.trompper2014)}.
-            </p>
-            
-            -----------------------------------
-
-            <p>
-                todo: delet this
-                In the remainder of this thesis, we motivate and discuss the creation of a Java library
-                for querying and parsing the case law register of Rechtspraak.nl. We provide an <a
-                href="#markup">introduction
-                to the case law XML markup</a> <strike>and an <a
-                href="#metadata">introduction
-                to the case law metadata</a></strike>.
             </p>
 
         </div>;

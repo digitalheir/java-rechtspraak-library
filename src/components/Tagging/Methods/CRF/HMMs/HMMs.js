@@ -42,13 +42,15 @@ export default class CRF extends Component {
             </p>
 
             <p>
-                If we return to the representation of HMMs in <FigRef fig={figs.graphicalModels}/>, we see then that
+                It can be shown that HMMs are generative models.
+                If we return to the representation of HMMs in <FigRef fig={figs.graphicalModels}/>, we see that
                 the
                 white nodes represent labels
                 and the grey nodes
-                the observations. Typically, observations are known, but the labels need to be estimated. This is
+                the observations. Typically, observations are given, but the labels need to be guessed. This is
                 done by
-                looping over all <F l="\mathbf y\in Y"/> and selecting <F l="\mathbf y^*\in Y"/> with the highest likelihood.
+                looping over all <F l="\mathbf y\in Y"/> and selecting <F l="\mathbf y^*\in Y"/> with the
+                highest likelihood.
             </p>
 
             <p>

@@ -6,6 +6,7 @@ import Methods from './Methods/Methods';
 import Evaluation from './Evaluation/Evaluation';
 import DeterministicTagger from './Methods/DeterministicTagger/DeterministicTagger';
 import CRF from './Methods/CRF/CRF';
+import FeatureSelection from './Methods/FeatureSelection/FeatureSelection';
 import chapters from '../../../chapters';
 
 const taggingSections = {
@@ -24,6 +25,11 @@ const taggingSections = {
         title: "Conditional Random Fields",
         component: CRF
     },
+    featureSelection: {
+        id: 'featureSelection',
+        title: 'Feature Selection',
+        component: FeatureSelection
+    },
     manual: {
         id: 'manual',
         title: 'Deterministic Tagger',
@@ -37,6 +43,7 @@ const taggingSections = {
 };
 
 taggingSections.inOrder = [
+    taggingSections.featureSelection,
     taggingSections.methods,
     taggingSections.manual,
     taggingSections.evaluation
@@ -44,18 +51,22 @@ taggingSections.inOrder = [
 
 
 export default class Tagging extends Component {
+    static chapterInfo() {
+        return chapters.tagging;
+    }
+
     static title() {
-        return chapters.tagging.title;
+        return Tagging.chapterInfo().title;
     }
 
     //noinspection JSUnusedGlobalSymbols
-    getSections() {
+    static getSections() {
         return taggingSections;
     }
 
     render() {
         var relativeToRoot = this.props.path.match(/\//g).slice(1).map(_ => "../").join("");
-        const urlToRs = relativeToRoot + chapters.rechtspraakNl.route.replace('/', '');
+        const urlToRs = relativeToRoot + Tagging.chapterInfo().route.replace('/', '');
         return <Chapter
             path={this.props.path}
             title={Tagging.title()}

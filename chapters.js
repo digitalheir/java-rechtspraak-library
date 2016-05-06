@@ -23,9 +23,13 @@ var chapters = {
 
 chapters.inOrder = [
     chapters.introduction,
-    chapters.rechtspraakNl,
+    // chapters.rechtspraakNl,
     chapters.tagging,
     chapters.documentStructure
 ];
+
+chapters.inOrder.forEach(ch=> {
+    if (!ch) throw new Error("Chapters object contains null or undefined item.");
+});
 
 module.exports = chapters;
