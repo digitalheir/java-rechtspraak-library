@@ -7,11 +7,11 @@ import ref from '../../../Bibliography/References/references'
 import bib from  '../../../Bibliography/bib';
 import F from  '../../../Math/Math';
 
-const FigureInfoText = require('../../../Figures/figure-info-tf-idf/figure-info-tf-idf');
-const TitleTfIdfFigure = require('../../../Figures/figure-title-tf-idf/figure-title-tf-idf');
-const TitleTfIdfFigurePerSection = require('../../../Figures/figure-section-title-tf-idf/figure-section-tf-idf');
-const WordCountFig = require('../../../Figures/figure-word-count-title/figure-title-word-count');
-const Source = require('./../../../Source/Source');
+import FigureInfoText from '../../../Figures/figure-info-tf-idf/figure-info-tf-idf';
+import TitleTfIdfFigure from '../../../Figures/figure-title-tf-idf/figure-title-tf-idf';
+import TitleTfIdfFigurePerSection from '../../../Figures/figure-section-title-tf-idf/figure-section-tf-idf';
+import WordCountFig from '../../../Figures/figure-word-count-title/figure-title-word-count';
+import Source from './../../../Source/Source';
 
 export default class FeatureSelection extends Component {
     render() {

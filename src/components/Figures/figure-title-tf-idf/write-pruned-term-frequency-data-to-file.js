@@ -1,5 +1,8 @@
-import _ from 'underscore';
-import dataTfIdf from './data.js';
+const _ = require('underscore');
+
+const dataTfIdf = require('./raw-data.js');
+const fs = require('fs');
+
 
 function tfidfForAllTerms(topN) {
     var sorted = _.map(dataTfIdf, function (e) {
@@ -10,4 +13,4 @@ function tfidfForAllTerms(topN) {
     return sorted;
 }
 
-export default tfidfForAllTerms;
+fs.writeFile('./data.js',"export default "+JSON.stringify(tfidfForAllTerms(100)));

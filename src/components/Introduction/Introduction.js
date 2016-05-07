@@ -27,7 +27,6 @@ introIntroSections.inOrder = [
     introIntroSections.rechtspraakNl,
     introIntroSections.rechtspraakNlMarkup,
     introIntroSections.importing,
-    introIntroSections.tokenization,
 ];
 
 

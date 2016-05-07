@@ -4,9 +4,7 @@ const PercentageBar = require('../../PercentageBar/PercentageBar');
 const figs = require('../figs');
 
 
-const numberOfTerms = 10;
-const data =require('./raw-data');
-data.splice(numberOfTerms);
+const data =require('./data');
 
 
 export default class FigureRelativeTitleCountForTerms extends React.Component {
@@ -22,7 +20,7 @@ export default class FigureRelativeTitleCountForTerms extends React.Component {
                 </tr>
                 </thead>
                 <tbody>
-                {_.map(data, function (term,o) {
+                {_.map(data.data, function (term,o) {
                     let percentageTxt = term[1].toFixed(2)+"%";
                     return <tr key={term[0]}>
                         <th className="nr">{o+1}</th>
@@ -37,7 +35,7 @@ export default class FigureRelativeTitleCountForTerms extends React.Component {
                 </tbody>
             </table>
             <figcaption>
-                <span className="figure-number">Fig {figs.titleTf.num}.</span> Top {numberOfTerms}
+                <span className="figure-number">Fig {figs.titleTf.num}.</span> Top {data.numberOfTerms}
                 word stems in occurring
                 section titles. Percentages are the percentage of titles texts that the word stem occurs in.
                 Stemming is performed using

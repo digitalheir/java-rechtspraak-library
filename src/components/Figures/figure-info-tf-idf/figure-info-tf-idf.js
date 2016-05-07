@@ -1,11 +1,10 @@
-const data = require('./get-term-frequency-data');
-const React = require('react');
-const _ = require('underscore');
-const figs = require('../figs');
-const PercentageBar = require('../../PercentageBar/PercentageBar');
+import data  from './get-term-frequency-data';
+import React  from 'react';
+import _  from 'underscore';
+import figs  from '../figs';
+import PercentageBar  from '../../PercentageBar/PercentageBar';
 
-
-export default class Fgiure extends React.Component {
+export default class FigureTfIdf extends React.Component {
     render() {
         var nTerms = 20;
         var tfIdfScores = data.tfidfForAllTerms(nTerms);

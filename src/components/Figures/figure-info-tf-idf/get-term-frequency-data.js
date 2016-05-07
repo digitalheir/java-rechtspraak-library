@@ -7,8 +7,9 @@ function tfidfForAllTerms(topN) {
     var sorted = _.map(dataTfIdf, function (e) {
         return [e.term, e.score]
     });
-    if (topN)
-        sorted.splice(topN);
+    if (topN) sorted.splice(topN);
+
+    console.log(sorted)
     return sorted;
 }
 

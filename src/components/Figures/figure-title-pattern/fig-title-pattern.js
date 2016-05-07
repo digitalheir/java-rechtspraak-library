@@ -1,4 +1,4 @@
-import data from './get-title-patterns-data';
+import data from './raw-data';
 import React from 'react';
 import figs from '../figs';
 import TreeMap from '../../Chart/TreeMap/TreeMap';
@@ -6,7 +6,7 @@ import TreeMap from '../../Chart/TreeMap/TreeMap';
 export default class FigureTitlePattern extends React.Component {
     render() {
         return <figure id={figs.figTitleTreemap.id}>
-            <TreeMap data={data.download()} sourceHref={data.href}/>
+            <TreeMap data={data.data} sourceHref={data.href}/>
             <figcaption>
                 <span className="figure-number">Fig {figs.figTitleTreemap.num}.</span> Absolute frequency of title
                 patterns

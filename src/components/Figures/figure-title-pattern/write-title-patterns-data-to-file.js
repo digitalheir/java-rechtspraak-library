@@ -1,4 +1,5 @@
-const downloadString = require('../../../../../download-string-sync');
+const downloadString = require('../../../../download-string-sync');
+const fs = require('fs');
 var encodeUri = require("querystring").escape;
 
 var OTHER = '_OTHER';
@@ -9,8 +10,8 @@ var URL = "https://rechtspraak.cloudant.com/docs/" +
     "section_roles?" +
     "group_level=2" +
     "&stale=ok" +
-    "&startkey="+encodeUri("[\"\"]") +
-    "&endkey="+encodeUri("[\"z\"]");
+    "&startkey=" + encodeUri("[\"\"]") +
+    "&endkey=" + encodeUri("[\"z\"]");
 
 function download() {
     var result = JSON.parse(downloadString(URL));
@@ -53,7 +54,8 @@ function download() {
         children: rootChildren
     };
 }
-module.exports = {
-    download: download,
-    href: URL
-};
+fs.writeFile('./raw-data.js',
+    "export default " + JSON.stringify({
+        data: download(),
+        href: URL
+    }));

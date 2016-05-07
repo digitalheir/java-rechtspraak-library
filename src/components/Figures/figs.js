@@ -53,6 +53,15 @@ const figs = {
         }
     }(),
 
+    tfidf: function () {
+        const id = "tfidf";
+        const num = 1;
+
+        return {
+            id: id,
+            num: num
+        };
+    }(),
     factorGraph: function () {
         const id = "fig-factor-graph";
         const src = "/img/factor-graph.svg";//// TODO relativeurl
