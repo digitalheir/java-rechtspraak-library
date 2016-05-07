@@ -22949,6 +22949,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+	exports.getHandler = undefined;
 
 	var _react = __webpack_require__(4);
 
@@ -22966,19 +22967,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Index2 = _interopRequireDefault(_Index);
 
-	var _RechtspraakNl = __webpack_require__(218);
-
-	var _RechtspraakNl2 = _interopRequireDefault(_RechtspraakNl);
-
-	var _Introduction = __webpack_require__(248);
+	var _Introduction = __webpack_require__(218);
 
 	var _Introduction2 = _interopRequireDefault(_Introduction);
 
-	var _Tagging = __webpack_require__(250);
+	var _Tagging = __webpack_require__(249);
 
 	var _Tagging2 = _interopRequireDefault(_Tagging);
 
-	var _InferringDocumentStructure = __webpack_require__(284);
+	var _InferringDocumentStructure = __webpack_require__(298);
 
 	var _InferringDocumentStructure2 = _interopRequireDefault(_InferringDocumentStructure);
 
@@ -22996,23 +22993,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	    { handler: _Root2.default, path: '/' },
 	    _react2.default.createElement(DefaultRoute, { handler: _Index2.default }),
 	    _chapters2.default.inOrder.map(function (chapter) {
-	        switch (chapter.route) {
-	            // case chapters.documentStructure.route:
-	            case _chapters2.default.introduction.route:
-	                return _react2.default.createElement(Route, { path: chapter.route, handler: _Introduction2.default });
-	            case _chapters2.default.rechtspraakNl.route:
-	                return _react2.default.createElement(Route, { path: chapter.route, handler: _RechtspraakNl2.default });
-	            case _chapters2.default.tagging.route:
-	                return _react2.default.createElement(Route, { path: chapter.route, handler: _Tagging2.default });
-	            case _chapters2.default.documentStructure.route:
-	                return _react2.default.createElement(Route, { path: chapter.route, handler: _InferringDocumentStructure2.default });
-	            default:
-	                return "";
-	        }
-	        return;
-	    })
+	        return _react2.default.createElement(Route, { path: chapter.route, handler: getHandler(chapter.route) });
+	    }),
+	    ')}'
 	);
 
+	function getHandler(route) {
+	    switch (route) {
+	        case _chapters2.default.introduction.route:
+	            return _Introduction2.default;
+	        case _chapters2.default.tagging.route:
+	            return _Tagging2.default;
+	        case _chapters2.default.documentStructure.route:
+	            return _InferringDocumentStructure2.default;
+	        default:
+	            throw Error("No handler for route " + route);
+	    }
+	}
+
+	exports.getHandler = getHandler;
 	exports.default = Routes;
 
 /***/ },
@@ -25461,6 +25460,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
+	var _Routes = __webpack_require__(204);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -25470,8 +25471,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	// import Router from 'react-router'
 
-
 	// let Link = Router.Link;
+
 
 	var ToC = function (_React$Component) {
 	    _inherits(ToC, _React$Component);
@@ -25507,10 +25508,31 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            { href: relativeToRoot + chapter.route.replace('/', ''),
 	                                className: 'nav-link' },
 	                            chapter.title
-	                        )
+	                        ),
+	                        ToC.getSubSections((0, _Routes.getHandler)(chapter.route))
 	                    );
 	                })
 	            );
+	        }
+	    }], [{
+	        key: 'getSubSections',
+	        value: function getSubSections(chapter) {
+	            if (chapter.getSections && chapter.getSections()) {
+	                // console.log(chapter.getSections());
+	                return _react2.default.createElement(
+	                    'ol',
+	                    null,
+	                    chapter.getSections().inOrder.map(function (section) {
+	                        if (!!section) return _react2.default.createElement(
+	                            'li',
+	                            null,
+	                            section.title
+	                        );else throw Error("Null section found in " + JSON.stringify(chapter.getSections()));
+	                    })
+	                );
+	            } else {
+	                return "";
+	            }
 	        }
 	    }]);
 
@@ -25551,7 +25573,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	    // }
 	};
 
-	chapters.inOrder = [chapters.introduction, chapters.rechtspraakNl, chapters.tagging, chapters.documentStructure];
+	chapters.inOrder = [chapters.introduction,
+	// chapters.rechtspraakNl,
+	chapters.tagging, chapters.documentStructure];
+
+	chapters.inOrder.forEach(function (ch) {
+	    if (!ch) throw new Error("Chapters object contains null or undefined item.");
+	});
 
 	module.exports = chapters;
 
@@ -25571,21 +25599,21 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Markup = __webpack_require__(219);
+	var _IntroRechtspraakNl = __webpack_require__(219);
 
-	var _Markup2 = _interopRequireDefault(_Markup);
+	var _IntroRechtspraakNl2 = _interopRequireDefault(_IntroRechtspraakNl);
 
-	var _Importing = __webpack_require__(243);
+	var _RechtspraakNlMarkup = __webpack_require__(246);
+
+	var _RechtspraakNlMarkup2 = _interopRequireDefault(_RechtspraakNlMarkup);
+
+	var _Importing = __webpack_require__(247);
 
 	var _Importing2 = _interopRequireDefault(_Importing);
 
-	var _Chapter = __webpack_require__(247);
+	var _Chapter = __webpack_require__(248);
 
 	var _Chapter2 = _interopRequireDefault(_Chapter);
-
-	var _chapters = __webpack_require__(217);
-
-	var _chapters2 = _interopRequireDefault(_chapters);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -25596,41 +25624,74 @@ return /******/ (function(modules) { // webpackBootstrap
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } //noinspection JSUnresolvedVariable
 
 
-	var rechtspraakNlSections = {
-	    //metadata: {
-	    //    id: 'metadata',
-	    //    title: "Metadata"
-	    //},
-	    // markup: {
-	    //     id: 'markup',
-	    //     title: "Markup",
-	    //     component: Markup
-	    // },
+	var introIntroSections = {
+	    rechtspraakNl: {
+	        id: 'rechtspraak-nl',
+	        title: "Rechtspraak.nl",
+	        component: _IntroRechtspraakNl2.default
+	    }, rechtspraakNlMarkup: {
+	        id: 'rechtspraak-nl-markup',
+	        title: "Rechtspraak.nl markup",
+	        component: _RechtspraakNlMarkup2.default
+	    },
 	    importing: {
 	        id: 'importing',
-	        title: 'Importing data',
+	        title: 'Importing & Tokenizing Data',
 	        component: _Importing2.default
 	    }
 	};
 
-	rechtspraakNlSections.inOrder = [
-	//sections.metadata,
-	// sections.markup,
-	rechtspraakNlSections.importing];
+	introIntroSections.inOrder = [introIntroSections.rechtspraakNl, introIntroSections.rechtspraakNlMarkup, introIntroSections.importing];
 
-	var _class = function (_Component) {
-	    _inherits(_class, _Component);
+	var Introduction = function (_Component) {
+	    _inherits(Introduction, _Component);
 
-	    function _class() {
-	        _classCallCheck(this, _class);
+	    function Introduction() {
+	        _classCallCheck(this, Introduction);
 
-	        return _possibleConstructorReturn(this, Object.getPrototypeOf(_class).apply(this, arguments));
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(Introduction).apply(this, arguments));
 	    }
 
-	    _createClass(_class, [{
+	    _createClass(Introduction, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                _Chapter2.default,
+	                { path: this.props.path, title: Introduction.title(), sections: introIntroSections.inOrder },
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'In this thesis, we explore the problem of automatically assigning a document structure to sparsely marked up documents in the Dutch case law repository of ',
+	                    _react2.default.createElement(
+	                        'a',
+	                        { href: 'http://www.rechtspraak.nl/' },
+	                        'Rechtspraak.nl'
+	                    ),
+	                    '.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Assigning a document structure is obviously useful in rendering the documents to human users (it allows us to display a table of content and style section titles), but it is also interesting for more advanced text mining applications such as topic modeling and information extraction. For example, we may want to represent some metadata in a machine-readable manner (e.g., the judgment: \'claimant won\', \'claimant lost\', etc.). It would then be useful to know which text block contains the text to this judgment.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'In this chapter, we provide an introduction to the Rechtspraak.nl data set that we use, with an ',
+	                    _react2.default.createElement(
+	                        'a',
+	                        {
+	                            href: '#markup' },
+	                        'introduction to the case law XML markup'
+	                    ),
+	                    '. We present Java library for querying and parsing the case law register of Rechtspraak.nl. TODO ...'
+	                )
+	            );
+	        }
+	    }], [{
 	        key: 'title',
 	        value: function title() {
-	            return _chapters2.default.rechtspraakNl.title;
+	            return "Introduction";
 	        }
 
 	        //noinspection JSUnusedGlobalSymbols
@@ -25638,333 +25699,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }, {
 	        key: 'getSections',
 	        value: function getSections() {
-	            return rechtspraakNlSections;
-	        }
-	    }, {
-	        key: 'render',
-	        value: function render() {
-	            var nonValidatingXml = "https://validator.w3.org/nu/?useragent=Validator.nu%2FLV+http%3A%2F%2Fvalidator.w3.org%2Fservices&amp;doc=http%3A%2F%2Fuitspraken.rechtspraak.nl%2Finziendocument%3Fid%3DECLI%3ANL%3ACBB%3A2010%3ABN1294";
-
-	            var htmlManifestation = "http://uitspraken.rechtspraak.nl/inziendocument?id=ECLI:NL:CBB:2010:BN1294";
-	            var xmlManifestation = "http://data.rechtspraak.nl/uitspraken/content?id=ECLI:NL:CBB:2010:BN1294";
-
-	            var urlSchemeText = "http://data.rechtspraak.nl/uitspraken/content?id={ecli}";
-	            var urlSchemeUrl = "http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:2010:BN1294";
-
-	            var relativeToRoot = this.props.path.match(/\//g).slice(1).map(function (_) {
-	                return "../";
-	            }).join("");
-	            return _react2.default.createElement(
-	                _Chapter2.default,
-	                {
-	                    path: this.props.path,
-	                    title: this.title(),
-	                    sections: rechtspraakNlSections.inOrder },
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'In this chapter, we consider the Rechtspraak.nl data service, present a Java library for working with it, and align our goals of enriching markup with existing Rechtspraak.nl document.'
-	                ),
-	                _react2.default.createElement(
-	                    'section',
-	                    null,
-	                    _react2.default.createElement(
-	                        'h3',
-	                        null,
-	                        'Rechtspraak.nl markup'
-	                    ),
-	                    _react2.default.createElement(
-	                        'p',
-	                        null,
-	                        'If we are to automatically annotate documents in the corpus with some semantic mark up, it is helpful to see what is already done in this regard by Rechtspraak.nl. As we have seen in the ',
-	                        _react2.default.createElement(
-	                            'a',
-	                            {
-	                                href: relativeToRoot + _chapters2.default.introduction.route.substring(1) },
-	                            'introduction'
-	                        ),
-	                        ', in recent years documents are more richly marked up than older documents. Indeed: most older documents consist exclusively of ',
-	                        _react2.default.createElement(
-	                            'code',
-	                            null,
-	                            'para'
-	                        ),
-	                        ' and ',
-	                        _react2.default.createElement(
-	                            'code',
-	                            null,
-	                            'paragroup'
-	                        ),
-	                        ' tags, denoting paragraphs and groups of paragraphs respectively. Sampling documents, we see that important structural tags are ',
-	                        _react2.default.createElement(
-	                            'code',
-	                            null,
-	                            'section'
-	                        ),
-	                        ' tags, which are sometimes annotated with a ',
-	                        _react2.default.createElement(
-	                            'code',
-	                            null,
-	                            'role'
-	                        ),
-	                        ' attribute representing the type of section this is.'
-	                    ),
-	                    _react2.default.createElement(
-	                        'section',
-	                        { id: 'xml-schema' },
-	                        _react2.default.createElement(
-	                            'h4',
-	                            null,
-	                            'XML Schema'
-	                        ),
-	                        _react2.default.createElement(
-	                            'p',
-	                            null,
-	                            'Sadly, Rechtspraak.nl does not offer an XML schema. This makes it a little more difficult to create programs that work with the XML data, such as a ',
-	                            _react2.default.createElement(
-	                                'a',
-	                                { href: '#html' },
-	                                'converter to HTML'
-	                            ),
-	                            '. This is because we don\'t know exactly which elements we may expect in the XML documents. In the absence of an official schema, we have created a makeshift XML schema, that was automatically generated from a random sample of 500 documents, and then manually corrected.'
-	                        ),
-	                        _react2.default.createElement(
-	                            'p',
-	                            null,
-	                            'Using this schema, we can utilize a technology called ',
-	                            _react2.default.createElement(
-	                                'a',
-	                                { href: 'https://en.wikipedia.org/wiki/Java_Architecture_for_XML_Binding' },
-	                                'JAXB'
-	                            ),
-	                            ' to automatically marshall and demarshall Rechtspraak.nl XML documents to and from Java objects. (Source code and schema available ',
-	                            _react2.default.createElement(
-	                                'a',
-	                                { href: 'https://github.com/digitalheir/java-rechtspraak-library' },
-	                                'on Github.'
-	                            ),
-	                            ')'
-	                        )
-	                    ),
-	                    _react2.default.createElement(
-	                        'section',
-	                        { id: 'html' },
-	                        _react2.default.createElement(
-	                            'h4',
-	                            null,
-	                            'HTML'
-	                        ),
-	                        _react2.default.createElement(
-	                            'p',
-	                            null,
-	                            'Rechtspraak.nl offers HTML manifestations on its website through the URL scheme ',
-	                            _react2.default.createElement(
-	                                'a',
-	                                { href: urlSchemeUrl },
-	                                _react2.default.createElement(
-	                                    'code',
-	                                    null,
-	                                    urlSchemeText
-	                                )
-	                            ),
-	                            '.'
-	                        ),
-	                        _react2.default.createElement(
-	                            'p',
-	                            null,
-	                            'Although the generated HTML snippet for document content is generally valid HTML (the ',
-	                            _react2.default.createElement(
-	                                'a',
-	                                { href: nonValidatingXml },
-	                                'full page is not'
-	                            ),
-	                            '), we still convert XML to HTML. The reason for this is that the semantic richness of some XML is abated by the transformation process of Rechtspraak.nl. For example, consider the HTML manifestation for ',
-	                            _react2.default.createElement(
-	                                'a',
-	                                {
-	                                    href: htmlManifestation },
-	                                'ECLI:NL:CBB:2010:BN1294'
-	                            ),
-	                            '.'
-	                        ),
-	                        _react2.default.createElement(
-	                            'p',
-	                            null,
-	                            'In the ',
-	                            _react2.default.createElement(
-	                                'a',
-	                                { href: xmlManifestation },
-	                                'XML manifestation'
-	                            ),
-	                            ', sections are described as such (e.g, ',
-	                            _react2.default.createElement(
-	                                'code',
-	                                null,
-	                                '<section role="beslissing">'
-	                            ),
-	                            '). In the HTML manifestation, however, these sections are homogenized with most other block elements to ',
-	                            _react2.default.createElement(
-	                                'code',
-	                                null,
-	                                '<div>'
-	                            ),
-	                            'tags (e.g.,',
-	                            _react2.default.createElement(
-	                                'code',
-	                                null,
-	                                '<div class="section beslissing">'
-	                            ),
-	                            ').'
-	                        )
-	                    )
-	                )
-	            );
+	            return introIntroSections;
 	        }
 	    }]);
 
-	    return _class;
+	    return Introduction;
 	}(_react.Component);
 
-	exports.default = _class;
+	exports.default = Introduction;
 
 /***/ },
 /* 219 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(4);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _MarkupStatsFigure = __webpack_require__(220);
-
-	var _MarkupStatsFigure2 = _interopRequireDefault(_MarkupStatsFigure);
-
-	var _FigRef = __webpack_require__(242);
-
-	var _FigRef2 = _interopRequireDefault(_FigRef);
-
-	var _figs = __webpack_require__(221);
-
-	var _figs2 = _interopRequireDefault(_figs);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } //noinspection JSUnresolvedVariable
-
-
-	var _class = function (_Component) {
-	  _inherits(_class, _Component);
-
-	  function _class() {
-	    _classCallCheck(this, _class);
-
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(_class).apply(this, arguments));
-	  }
-
-	  _createClass(_class, [{
-	    key: 'render',
-	    value: function render() {
-
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'p',
-	          null,
-	          'Rechtspraak.nl supplies case law documents in both XML and HTML. In this chapter, we only consider XML.'
-	        ),
-	        _react2.default.createElement(
-	          'section',
-	          { id: 'markup' },
-	          _react2.default.createElement(
-	            'h3',
-	            null,
-	            'Case law register markup'
-	          )
-	        )
-	      );
-	    }
-	  }]);
-
-	  return _class;
-	}(_react.Component);
-	//pre>\nfunction (doc)
-	//
-	//    var Snowball = require('views/lib/snowball');
-	//    if (doc['corpus'] == 'Rechtspraak.nl' && doc['tokens']) {
-	//    for (var i in doc['tokens']) {
-	//    for (var j in doc['tokens'][i]) {
-	//    var token = doc['tokens'][i][j];
-	//    var stemmer = new Snowball('Dutch');
-	//    stemmer.setCurrent(token);
-	//    stemmer.stem();
-	//    emit([stemmer.getCurrent(), token], 1);
-	//}
-	//}
-	//}
-	// }/pre>
-	//                </section:h2>
-	//                <section:h2>-</section:h2>
-	//                <section:h2>Data set statistics
-	//                    <p>
-	//                        In this section, we explore some basic statistics to get a feel for the database. A conversation that has
-	//                        repeatedly come up is whether
-	//                    </p>
-	//                    <div id="canvas-svg"></div>
-	//                </section:h2>
-	//                <section>
-	//                    <h2>Counting terms</h2>
-	//                    <p>Initial tokenization is performed server-side, using Alpino.</p>
-	//                    <p>Then, in a MapReduce task we reduce these inflected words to lemmas and count lemma occurrences for each document. We use a<a href="https://github.com/fortnightlabs/snowball-js">Javascript port</a> of the <a href="http://snowball.tartarus.org/algorithms/dutch/stemmer.html">
-	//                        Snowball stemming algorithm for
-	//                        Dutch</a>, along with some additional normalization rules which mainly handle special characters (consider,
-	//                        for example, that <code>'s ochtends</code> represents the same phrase as <code>`s ochtends</code>
-	//                    </p>). For
-	//                    this, we use a slug-generator algorithm.
-	//                    <p>The stemming phase is implemented as a CommonJS module in the map function for our term count:</p><code>term_document_count</code><strong>Map</strong>
-	//  <pre>\nfunction (doc) {"{"}
-	//      var Snowball = require('views/lib/snowball');
-	//      if (doc['corpus'] == 'Rechtspraak.nl' && doc['tokens']) {"{"}
-	//      for (var i in doc['tokens']) {"{"}
-	//      for (var j in doc['tokens'][i]) {"{"}
-	//      var token = doc['tokens'][i][j];
-	//      var stemmer = new Snowball('Dutch');
-	//      stemmer.setCurrent(token);
-	//      stemmer.stem();
-	//      emit([stemmer.getCurrent(), doc['_id']], 1);
-	//  {"}"}
-	//  {"}"}
-	//  {"}"}
-	//  {"}"}</pre><strong>Reduce</strong>
-	//                    <pre>\n_sum</pre><code>term_token_count</code><strong>Map</strong>
-	//  <strong>Reduce</strong>
-	//                    <pre>\n_sum</pre>
-	//                    <p>The difference between <code>term_document_count</code> and <code>term_token_count</code> is the keys they produce in the map function:<code>term_document_count</code> groups stemmed terms together with their document identifier, where <code>term_token_count</code> groups
-	//                        these terms with their original token.
-	//                    </p>
-	//                    <p><code>term_document_count</code> is useful to .</p>    https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation
-	//                    <p><code>term_token_count</code> is useful when we want to know where a stemmed term comes
-	//                        from, i.e., its manifestation in the source documents.
-	//                    </p>    Refer to <a href="http://rechtspraak.cloudant.com/ecli/_design/term_frequency">http://rechtspraak.cloudant.com/ecli/_design/term_frequency</a>    for the implemented design document.
-	//                </section>
-
-
-	exports.default = _class;
-
-/***/ },
-/* 220 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25979,15 +25724,429 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _figs = __webpack_require__(221);
+	var _Source = __webpack_require__(220);
+
+	var _Source2 = _interopRequireDefault(_Source);
+
+	var _references = __webpack_require__(221);
+
+	var _references2 = _interopRequireDefault(_references);
+
+	var _bib = __webpack_require__(211);
+
+	var _bib2 = _interopRequireDefault(_bib);
+
+	var _MarkupStatsFigure = __webpack_require__(223);
+
+	var _MarkupStatsFigure2 = _interopRequireDefault(_MarkupStatsFigure);
+
+	var _FigRef = __webpack_require__(245);
+
+	var _FigRef2 = _interopRequireDefault(_FigRef);
+
+	var _figs = __webpack_require__(224);
 
 	var _figs2 = _interopRequireDefault(_figs);
 
-	var _StackedBarChart = __webpack_require__(223);
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } //noinspection JSUnresolvedVariable
+
+
+	var Introduction = function (_Component) {
+	    _inherits(Introduction, _Component);
+
+	    function Introduction() {
+	        _classCallCheck(this, Introduction);
+
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(Introduction).apply(this, arguments));
+	    }
+
+	    _createClass(Introduction, [{
+	        key: 'render',
+
+	        //pre>\nfunction (doc)
+	        //
+	        //    var Snowball = require('views/lib/snowball');
+	        //    if (doc['corpus'] == 'Rechtspraak.nl' && doc['tokens']) {
+	        //    for (var i in doc['tokens']) {
+	        //    for (var j in doc['tokens'][i]) {
+	        //    var token = doc['tokens'][i][j];
+	        //    var stemmer = new Snowball('Dutch');
+	        //    stemmer.setCurrent(token);
+	        //    stemmer.stem();
+	        //    emit([stemmer.getCurrent(), token], 1);
+	        //}
+	        //}
+	        //}
+	        // }/pre>
+	        //                </section:h2>
+	        //                <section:h2>-</section:h2>
+	        //                <section:h2>Data set statistics
+	        //                    <p>
+	        //                        In this section, we explore some basic statistics to get a feel for the database. A conversation that has
+	        //                        repeatedly come up is whether
+	        //                    </p>
+	        //                    <div id="canvas-svg"></div>
+	        //                </section:h2>
+	        //                <section>
+	        //                    <h2>Counting terms</h2>
+	        //                    <p>Initial tokenization is performed server-side, using Alpino.</p>
+	        //                    <p>Then, in a MapReduce task we reduce these inflected words to lemmas and count lemma occurrences for each document. We use a<a href="https://github.com/fortnightlabs/snowball-js">Javascript port</a> of the <a href="http://snowball.tartarus.org/algorithms/dutch/stemmer.html">
+	        //                        Snowball stemming algorithm for
+	        //                        Dutch</a>, along with some additional normalization rules which mainly handle special characters (consider,
+	        //                        for example, that <code>'s ochtends</code> represents the same phrase as <code>`s ochtends</code>
+	        //                    </p>). For
+	        //                    this, we use a slug-generator algorithm.
+	        //                    <p>The stemming phase is implemented as a CommonJS module in the map function for our term count:</p><code>term_document_count</code><strong>Map</strong>
+	        //  <pre>\nfunction (doc) {"{"}
+	        //      var Snowball = require('views/lib/snowball');
+	        //      if (doc['corpus'] == 'Rechtspraak.nl' && doc['tokens']) {"{"}
+	        //      for (var i in doc['tokens']) {"{"}
+	        //      for (var j in doc['tokens'][i]) {"{"}
+	        //      var token = doc['tokens'][i][j];
+	        //      var stemmer = new Snowball('Dutch');
+	        //      stemmer.setCurrent(token);
+	        //      stemmer.stem();
+	        //      emit([stemmer.getCurrent(), doc['_id']], 1);
+	        //  {"}"}
+	        //  {"}"}
+	        //  {"}"}
+	        //  {"}"}</pre><strong>Reduce</strong>
+	        //                    <pre>\n_sum</pre><code>term_token_count</code><strong>Map</strong>
+	        //  <strong>Reduce</strong>
+	        //                    <pre>\n_sum</pre>
+	        //                    <p>The difference between <code>term_document_count</code> and <code>term_token_count</code> is the keys they produce in the map function:<code>term_document_count</code> groups stemmed terms together with their document identifier, where <code>term_token_count</code> groups
+	        //                        these terms with their original token.
+	        //                    </p>
+	        //                    <p><code>term_document_count</code> is useful to .</p>    https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation
+	        //                    <p><code>term_token_count</code> is useful when we want to know where a stemmed term comes
+	        //                        from, i.e., its manifestation in the source documents.
+	        //                    </p>    Refer to <a href="http://rechtspraak.cloudant.com/ecli/_design/term_frequency">http://rechtspraak.cloudant.com/ecli/_design/term_frequency</a>    for the implemented design document.
+	        //                </section>
+	        value: function render() {
+
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    _react2.default.createElement(
+	                        'a',
+	                        { href: 'http://www.rechtspraak.nl/' },
+	                        'Rechtspraak.nl'
+	                    ),
+	                    ' is the official website of the Dutch judiciary. The website hosts an open data portal for Dutch case law, containing metadata for about 2 million cases',
+	                    _react2.default.createElement(_Source2.default, { href: 'http://data.rechtspraak.nl/uitspraken/zoeken?' }),
+	                    ' and judgments texts for about 350.000 cases in XML',
+	                    _react2.default.createElement(_Source2.default, {
+	                        href: 'http://data.rechtspraak.nl/uitspraken/zoeken?return=doc' }),
+	                    '. In this thesis, we are interested in markup, so we only consider those documents that contain text. As explained by ',
+	                    _references2.default.cite(_bib2.default.vanopijnen2014),
+	                    ', the full data set of Rechtspraak.nl contains only a fraction of the total case law that exists in the Netherlands, but the collection is curated so that it is representative of court decisions in the Netherlands.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'If we turn to ',
+	                    _react2.default.createElement(_FigRef2.default, {
+	                        fig: _figs2.default.markupStats }),
+	                    ', we see that many modern documents are richly marked up. However, there remains a overwhelmingly large portion of older documents that contain no or only sparse semantic markup. To illustrate: at the time of writing, 78.7% of all case law texts on Rechtspraak.nl do not contain any ',
+	                    _react2.default.createElement(
+	                        'code',
+	                        null,
+	                        'section'
+	                    ),
+	                    ' tag, implying that a large amount of documents are barely marked up. This is unfortunate, because having proper markup makes documents better searchable and more easy to style.'
+	                ),
+	                _react2.default.createElement(_MarkupStatsFigure2.default, null),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'The problem that we investigate in this thesis, then, is whether we can enrich the markup of documents in Rechtspraak.nl by automatically assigning a section hierarchy among the text elements. To this end, we develop methods for: TODO add links to relevant chapters'
+	                ),
+	                _react2.default.createElement(
+	                    'ol',
+	                    null,
+	                    _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        'importing documents from the Rechtspraak.nl web service;'
+	                    ),
+	                    _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        'tokenizing relevant text elements;'
+	                    ),
+	                    _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        'labeling these text elements with their respective roles (e.g., ',
+	                        _react2.default.createElement(
+	                            'code',
+	                            null,
+	                            'section title'
+	                        ),
+	                        '; ',
+	                        _react2.default.createElement(
+	                            'code',
+	                            null,
+	                            'text block'
+	                        ),
+	                        ');'
+	                    ),
+	                    _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        'combining the tokens in such a way that they represent the most likely section hierarchy'
+	                    ),
+	                    _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        'Publish the resulting documents so that search engines can make use of the enriched markup'
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'The project in published as two separate Java libraries: one for importing and enriching documents from Rechtspraak.nl (',
+	                    _react2.default.createElement(
+	                        'a',
+	                        { href: 'https://github.com/digitalheir/java-rechtspraak-library' },
+	                        'source code on GitHub'
+	                    ),
+	                    '), and one for mirroring the Rechtspraak.nl corpus on a CouchDB database (',
+	                    _react2.default.createElement(
+	                        'a',
+	                        { href: 'https://github.com/digitalheir/dutch-case-law-to-couchdb' },
+	                        'source code on GitHub'
+	                    ),
+	                    ').'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'For a comprehensive study on the legal and technical background of the digital publication of Dutch case law, see ',
+	                    _references2.default.cite(_bib2.default.vanopijnen2014),
+	                    '. For a general overview of Rechtspraak.nl\'s web service, see ',
+	                    _references2.default.cite(_bib2.default.trompper2014),
+	                    '.'
+	                )
+	            );
+	        }
+	    }]);
+
+	    return Introduction;
+	}(_react.Component);
+
+	exports.default = Introduction;
+
+/***/ },
+/* 220 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(4);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } //noinspection JSUnresolvedVariable
+
+
+	var Source = function (_Component) {
+	  _inherits(Source, _Component);
+
+	  function Source() {
+	    _classCallCheck(this, Source);
+
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Source).apply(this, arguments));
+	  }
+
+	  _createClass(Source, [{
+	    key: "render",
+	    value: function render() {
+	      return _react2.default.createElement(
+	        "sup",
+	        { className: "data-source", style: this.props.styles },
+	        _react2.default.createElement(
+	          "a",
+	          {
+	            href: this.props.href },
+	          "[source]"
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Source;
+	}(_react.Component);
+
+	Source.defaultProps = {
+	  href: undefined,
+	  styles: {}
+	};
+
+	exports.default = Source;
+
+/***/ },
+/* 221 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _ParentheticalReference = __webpack_require__(222);
+
+	var _ParentheticalReference2 = _interopRequireDefault(_ParentheticalReference);
+
+	var _bib = __webpack_require__(211);
+
+	var _bib2 = _interopRequireDefault(_bib);
+
+	var _react = __webpack_require__(4);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
+	  ref: _bib2.default,
+	  cite: function cite(refId, page) {
+	    return _react2.default.createElement(_ParentheticalReference2.default, {
+	      refId: refId,
+	      page: page
+	    });
+	  }
+	};
+	//noinspection JSUnresolvedVariable
+
+/***/ },
+/* 222 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(4);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } //noinspection JSUnresolvedVariable
+
+
+	var bibliography = __webpack_require__(211);
+
+	var _class = function (_Component) {
+	    _inherits(_class, _Component);
+
+	    function _class() {
+	        _classCallCheck(this, _class);
+
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(_class).apply(this, arguments));
+	    }
+
+	    _createClass(_class, [{
+	        key: 'render',
+	        value: function render() {
+	            var refId = this.props.refId;
+	            var page = this.props.page;
+
+	            var reference = refId;
+	            if (typeof refId == 'string') {
+	                reference = bibliography[refId];
+	            }
+
+	            if (!reference) {
+	                throw new Error("Reference not found: " + refId);
+	            }
+
+	            // Create string for page
+	            var strPage = reference.pages ? ", pp. " + reference.pages : "";
+	            page = page ? page : reference.page;
+	            if (page) {
+	                strPage = ", p. " + page;
+	            }
+
+	            //Create string for name
+	            var name = reference.author.lastName ? reference.author.lastName.toString() : reference.author.abbr;
+
+	            //Create element
+	            return _react2.default.createElement(
+	                'a',
+	                { className: 'inline-citation',
+	                    href: "#" + reference.id.toString()
+	                },
+	                name,
+	                ' (',
+	                reference.year.toString(),
+	                strPage.toString(),
+	                ')'
+	            );
+	        }
+	    }]);
+
+	    return _class;
+	}(_react.Component);
+
+	exports.default = _class;
+
+/***/ },
+/* 223 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(4);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _figs = __webpack_require__(224);
+
+	var _figs2 = _interopRequireDefault(_figs);
+
+	var _StackedBarChart = __webpack_require__(226);
 
 	var _StackedBarChart2 = _interopRequireDefault(_StackedBarChart);
 
-	var _getData = __webpack_require__(240);
+	var _getData = __webpack_require__(243);
 
 	var _getData2 = _interopRequireDefault(_getData);
 
@@ -26059,7 +26218,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = _class;
 
 /***/ },
-/* 221 */
+/* 224 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26068,9 +26227,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: true
 	});
 
-	var _data = __webpack_require__(222);
+	var _figs;
 
-	exports.default = {
+	var _data = __webpack_require__(225);
+
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+	var figs = (_figs = {
 	    markupStats: {
 	        id: 'markup-stats',
 	        num: 1,
@@ -26120,25 +26283,34 @@ return /******/ (function(modules) { // webpackBootstrap
 	            alt: alt,
 	            num: num
 	        };
-	    }(),
-
-	    factorGraph: function () {
-	        var id = "fig-factor-graph";
-	        var src = "/img/factor-graph.svg"; //// TODO relativeurl
-	        var alt = "Illustration of a factor graph. The set V represents all variable nodes; the set F represents all function nodes.";
-	        var num = 1;
-
-	        return {
-	            id: id,
-	            src: src,
-	            alt: alt,
-	            num: num
-	        };
 	    }()
-	};
+
+	}, _defineProperty(_figs, 'tfidf', function () {
+	    var id = "tfidf";
+	    var num = 1;
+
+	    return {
+	        id: id,
+	        num: num
+	    };
+	}()), _defineProperty(_figs, 'factorGraph', function () {
+	    var id = "fig-factor-graph";
+	    var src = "/img/factor-graph.svg"; //// TODO relativeurl
+	    var alt = "Illustration of a factor graph. The set V represents all variable nodes; the set F represents all function nodes.";
+	    var num = 1;
+
+	    return {
+	        id: id,
+	        src: src,
+	        alt: alt,
+	        num: num
+	    };
+	}()), _figs);
+
+	exports.default = figs;
 
 /***/ },
-/* 222 */
+/* 225 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -26390,7 +26562,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 223 */
+/* 226 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26409,15 +26581,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _underscore2 = _interopRequireDefault(_underscore);
 
-	var _d = __webpack_require__(224);
+	var _d = __webpack_require__(227);
 
 	var _d2 = _interopRequireDefault(_d);
 
-	var _Bar = __webpack_require__(225);
+	var _Bar = __webpack_require__(228);
 
 	var _Bar2 = _interopRequireDefault(_Bar);
 
-	var _reactFauxDom = __webpack_require__(226);
+	var _reactFauxDom = __webpack_require__(229);
 
 	var _reactFauxDom2 = _interopRequireDefault(_reactFauxDom);
 
@@ -26694,7 +26866,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = StackedBarChart;
 
 /***/ },
-/* 224 */
+/* 227 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;!function() {
@@ -36253,7 +36425,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}();
 
 /***/ },
-/* 225 */
+/* 228 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -36347,11 +36519,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = _class;
 
 /***/ },
-/* 226 */
+/* 229 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Element = __webpack_require__(227)
-	var Window = __webpack_require__(239)
+	var Element = __webpack_require__(230)
+	var Window = __webpack_require__(242)
 
 	var ReactFauxDOM = {
 	  Element: Element,
@@ -36375,18 +36547,18 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 227 */
+/* 230 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(4)
-	var styleAttr = __webpack_require__(228)
-	var querySelectorAll = __webpack_require__(229)
-	var camelCase = __webpack_require__(233)
-	var isString = __webpack_require__(234)
-	var isUndefined = __webpack_require__(235)
-	var assign = __webpack_require__(236)
-	var mapValues = __webpack_require__(237)
-	var styleCamelCase = __webpack_require__(238)
+	var styleAttr = __webpack_require__(231)
+	var querySelectorAll = __webpack_require__(232)
+	var camelCase = __webpack_require__(236)
+	var isString = __webpack_require__(237)
+	var isUndefined = __webpack_require__(238)
+	var assign = __webpack_require__(239)
+	var mapValues = __webpack_require__(240)
+	var styleCamelCase = __webpack_require__(241)
 
 	function Element (nodeName, parentNode) {
 	  this.nodeName = nodeName
@@ -36726,7 +36898,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 228 */
+/* 231 */
 /***/ function(module, exports) {
 
 	
@@ -36831,13 +37003,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports.normalize = normalize;
 
 /***/ },
-/* 229 */
+/* 232 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(230);
+	module.exports = __webpack_require__(233);
 
 /***/ },
-/* 230 */
+/* 233 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -36846,8 +37018,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * @author yiminghe@gmail.com
 	 */
 
-	var util = __webpack_require__(231);
-	var parser = __webpack_require__(232);
+	var util = __webpack_require__(234);
+	var parser = __webpack_require__(235);
 
 	var EXPANDO_SELECTOR_KEY = '_ks_data_selector_id_',
 	  caches = {},
@@ -37540,7 +37712,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 */
 
 /***/ },
-/* 231 */
+/* 234 */
 /***/ function(module, exports) {
 
 	/**
@@ -37891,7 +38063,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 232 */
+/* 235 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -39100,7 +39272,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 233 */
+/* 236 */
 /***/ function(module, exports) {
 
 	var hyphenExpression = /\-+([a-z])/gi
@@ -39123,7 +39295,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 234 */
+/* 237 */
 /***/ function(module, exports) {
 
 	function isString (value) {
@@ -39134,7 +39306,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 235 */
+/* 238 */
 /***/ function(module, exports) {
 
 	function isUndefined (value) {
@@ -39145,7 +39317,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 236 */
+/* 239 */
 /***/ function(module, exports) {
 
 	function assign (dest) {
@@ -39167,7 +39339,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 237 */
+/* 240 */
 /***/ function(module, exports) {
 
 	function mapValues (source, fn) {
@@ -39186,10 +39358,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 238 */
+/* 241 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var camelCase = __webpack_require__(233)
+	var camelCase = __webpack_require__(236)
 
 	function styleCamelCase (name) {
 	  var camel = camelCase(name)
@@ -39212,7 +39384,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 239 */
+/* 242 */
 /***/ function(module, exports) {
 
 	var Window = {
@@ -39227,7 +39399,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 240 */
+/* 243 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -39240,11 +39412,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _underscore2 = _interopRequireDefault(_underscore);
 
-	var _immutable = __webpack_require__(241);
+	var _immutable = __webpack_require__(244);
 
 	var _immutable2 = _interopRequireDefault(_immutable);
 
-	var _data = __webpack_require__(222);
+	var _data = __webpack_require__(225);
 
 	var _data2 = _interopRequireDefault(_data);
 
@@ -39311,7 +39483,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = markupStats;
 
 /***/ },
-/* 241 */
+/* 244 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -44295,7 +44467,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}));
 
 /***/ },
-/* 242 */
+/* 245 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -44360,7 +44532,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	;
 
 /***/ },
-/* 243 */
+/* 246 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44375,11 +44547,213 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Source = __webpack_require__(244);
+	var _chapters = __webpack_require__(217);
+
+	var _chapters2 = _interopRequireDefault(_chapters);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } //noinspection JSUnresolvedVariable
+
+
+	var Introduction = function (_Component) {
+	    _inherits(Introduction, _Component);
+
+	    function Introduction() {
+	        _classCallCheck(this, Introduction);
+
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(Introduction).apply(this, arguments));
+	    }
+
+	    _createClass(Introduction, [{
+	        key: 'render',
+	        value: function render() {
+	            var nonValidatingXml = "https://validator.w3.org/nu/?useragent=Validator.nu%2FLV+http%3A%2F%2Fvalidator.w3.org%2Fservices&amp;doc=http%3A%2F%2Fuitspraken.rechtspraak.nl%2Finziendocument%3Fid%3DECLI%3ANL%3ACBB%3A2010%3ABN1294";
+
+	            var htmlManifestation = "http://uitspraken.rechtspraak.nl/inziendocument?id=ECLI:NL:CBB:2010:BN1294";
+	            var xmlManifestation = "http://data.rechtspraak.nl/uitspraken/content?id=ECLI:NL:CBB:2010:BN1294";
+
+	            var urlSchemeText = "http://data.rechtspraak.nl/uitspraken/content?id={ecli}";
+	            var urlSchemeUrl = "http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:2010:BN1294";
+
+	            var relativeToRoot = this.props.path.match(/\//g).slice(1).map(function (_) {
+	                return "../";
+	            }).join("");
+
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'If we are to automatically annotate documents in the corpus with some semantic mark up, it is helpful to see what is already done in this regard by Rechtspraak.nl. As we have seen, in recent years documents are more richly marked up than older documents. Indeed: most older documents consist exclusively of ',
+	                    _react2.default.createElement(
+	                        'code',
+	                        null,
+	                        'para'
+	                    ),
+	                    ' and ',
+	                    _react2.default.createElement(
+	                        'code',
+	                        null,
+	                        'paragroup'
+	                    ),
+	                    ' tags, denoting paragraphs and groups of paragraphs respectively. Sampling documents, we see that important structural tags are ',
+	                    _react2.default.createElement(
+	                        'code',
+	                        null,
+	                        'section'
+	                    ),
+	                    ' tags, which are sometimes annotated with a ',
+	                    _react2.default.createElement(
+	                        'code',
+	                        null,
+	                        'role'
+	                    ),
+	                    ' attribute, which represents the role of the section within the proceedings (e.g., \'considerations\', \'judgment\').'
+	                ),
+	                _react2.default.createElement(
+	                    'section',
+	                    { id: 'xml-schema' },
+	                    _react2.default.createElement(
+	                        'h4',
+	                        null,
+	                        'XML Schema'
+	                    ),
+	                    _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        'Sadly, Rechtspraak.nl does not offer an XML schema. This makes it a little more difficult to create programs that work with the XML data, such as a ',
+	                        _react2.default.createElement(
+	                            'a',
+	                            { href: '#html' },
+	                            'converter to HTML'
+	                        ),
+	                        '. This is because we don\'t know exactly which elements we may expect in the XML documents. In the absence of an official schema, we have created a makeshift XML schema, that was automatically generated from a random sample of 500 documents, and then manually corrected.'
+	                    ),
+	                    _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        'Using this schema, we can utilize a technology called ',
+	                        _react2.default.createElement(
+	                            'a',
+	                            { href: 'https://en.wikipedia.org/wiki/Java_Architecture_for_XML_Binding' },
+	                            'JAXB'
+	                        ),
+	                        ' to automatically marshall and demarshall Rechtspraak.nl XML documents to and from Java objects. (Source code and schema available ',
+	                        _react2.default.createElement(
+	                            'a',
+	                            { href: 'https://github.com/digitalheir/java-rechtspraak-library' },
+	                            'on Github.'
+	                        ),
+	                        ')'
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'section',
+	                    { id: 'html' },
+	                    _react2.default.createElement(
+	                        'h4',
+	                        null,
+	                        'HTML'
+	                    ),
+	                    _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        'Rechtspraak.nl offers HTML manifestations on its website through the URL scheme ',
+	                        _react2.default.createElement(
+	                            'a',
+	                            { href: urlSchemeUrl },
+	                            _react2.default.createElement(
+	                                'code',
+	                                null,
+	                                urlSchemeText
+	                            )
+	                        ),
+	                        '.'
+	                    ),
+	                    _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        'Although the generated HTML snippet for document content is generally valid HTML (the ',
+	                        _react2.default.createElement(
+	                            'a',
+	                            { href: nonValidatingXml },
+	                            'full page is not'
+	                        ),
+	                        '), we still convert XML to HTML. The reason for this is that the semantic richness of some XML is abated by the transformation process of Rechtspraak.nl. For example, consider the HTML manifestation for ',
+	                        _react2.default.createElement(
+	                            'a',
+	                            {
+	                                href: htmlManifestation },
+	                            'ECLI:NL:CBB:2010:BN1294'
+	                        ),
+	                        '.'
+	                    ),
+	                    _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        'In the ',
+	                        _react2.default.createElement(
+	                            'a',
+	                            { href: xmlManifestation },
+	                            'XML manifestation'
+	                        ),
+	                        ', sections are described as such (e.g, ',
+	                        _react2.default.createElement(
+	                            'code',
+	                            null,
+	                            '<section role="beslissing">'
+	                        ),
+	                        '). In the HTML manifestation, however, these sections are homogenized with most other block elements to ',
+	                        _react2.default.createElement(
+	                            'code',
+	                            null,
+	                            '<div>'
+	                        ),
+	                        'tags (e.g.,',
+	                        _react2.default.createElement(
+	                            'code',
+	                            null,
+	                            '<div class="section beslissing">'
+	                        ),
+	                        ').'
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+
+	    return Introduction;
+	}(_react.Component);
+
+	exports.default = Introduction;
+
+/***/ },
+/* 247 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(4);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Source = __webpack_require__(220);
 
 	var _Source2 = _interopRequireDefault(_Source);
 
-	var _references = __webpack_require__(245);
+	var _references = __webpack_require__(221);
 
 	var _references2 = _interopRequireDefault(_references);
 
@@ -44408,7 +44782,135 @@ return /******/ (function(modules) { // webpackBootstrap
 	    _createClass(Importing, [{
 	        key: 'render',
 	        value: function render() {
-	            return _react2.default.createElement('p', null);
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Importing and tokenizing documents on Rechtspraak.nl is theoretically straightforward, so a couple of short comments on this.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'We have developed two separate Java libraries: one for importing (and enriching) documents from Rechtspraak.nl (',
+	                    _react2.default.createElement(
+	                        'a',
+	                        { href: 'https://github.com/digitalheir/java-rechtspraak-library' },
+	                        'source code on GitHub'
+	                    ),
+	                    '), and one for mirroring the Rechtspraak.nl corpus as a CouchDB database.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'The latter project was created in order to facilitate the collection of statistics of case law documents used in this document, includes a module to convert XML to JSON and a number of MapReduce functions to generate statistics. The source code is available ',
+	                    _react2.default.createElement(
+	                        'a',
+	                        {
+	                            href: 'https://github.com/digitalheir/dutch-case-law-to-couchdb' },
+	                        'on GitHub'
+	                    ),
+	                    '.'
+	                ),
+	                _react2.default.createElement(
+	                    'section',
+	                    null,
+	                    _react2.default.createElement(
+	                        'h4',
+	                        null,
+	                        'Tokenizing text elements'
+	                    ),
+	                    _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        'In the next chapter, we explore a method to tag text elements as one of four labels:'
+	                    ),
+	                    _react2.default.createElement(
+	                        'ol',
+	                        null,
+	                        _react2.default.createElement(
+	                            'li',
+	                            null,
+	                            _react2.default.createElement(
+	                                'code',
+	                                null,
+	                                'numbering'
+	                            ),
+	                            ', for numbering in a section heading'
+	                        ),
+	                        _react2.default.createElement(
+	                            'li',
+	                            null,
+	                            _react2.default.createElement(
+	                                'code',
+	                                null,
+	                                'title text'
+	                            ),
+	                            ', for text in a section heading'
+	                        ),
+	                        _react2.default.createElement(
+	                            'li',
+	                            null,
+	                            _react2.default.createElement(
+	                                'code',
+	                                null,
+	                                'text block'
+	                            ),
+	                            ', for running text outside of a section heading'
+	                        ),
+	                        _react2.default.createElement(
+	                            'li',
+	                            null,
+	                            _react2.default.createElement(
+	                                'code',
+	                                null,
+	                                'newline'
+	                            ),
+	                            ', for newlines'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        'Of course, first we need to identify the shape of these text elements. In this regard, newlines and text blocks are trivial to detect. We assume that these already been set by Rechtspraak.nl.'
+	                    ),
+	                    _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        'One complication is that Rechtspraak.nl delivers an XML tree, which is more rich than a linear array of words. Indeed, it often happens that multiple ',
+	                        _react2.default.createElement(
+	                            'code',
+	                            null,
+	                            'para'
+	                        ),
+	                        ' tags are wrapped in a ',
+	                        _react2.default.createElement(
+	                            'code',
+	                            null,
+	                            'paragroup'
+	                        ),
+	                        ', which sometimes represents a coherent set of paragraphs and sometimes makes no sense. In general, some arbitrary decisions must be made about the granularity of text blocks.'
+	                    ),
+	                    _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        'Another note is that numberings are often not annotated. In tokenization, we assume that a potential numbering occurs as the beginning of a text block and represents Arabic or Roman numerals, alphabetic numbering or a list marking (some symbol such as ',
+	                        _react2.default.createElement(
+	                            'code',
+	                            null,
+	                            '-'
+	                        ),
+	                        ' or ',
+	                        _react2.default.createElement(
+	                            'code',
+	                            null,
+	                            '*'
+	                        ),
+	                        ').'
+	                    )
+	                )
+	            );
 	        }
 	    }]);
 
@@ -44418,183 +44920,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Importing;
 
 /***/ },
-/* 244 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(4);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } //noinspection JSUnresolvedVariable
-
-
-	var Source = function (_Component) {
-	  _inherits(Source, _Component);
-
-	  function Source() {
-	    _classCallCheck(this, Source);
-
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Source).apply(this, arguments));
-	  }
-
-	  _createClass(Source, [{
-	    key: "render",
-	    value: function render() {
-	      return _react2.default.createElement(
-	        "sup",
-	        { className: "data-source", style: this.props.styles },
-	        _react2.default.createElement(
-	          "a",
-	          {
-	            href: this.props.href },
-	          "[source]"
-	        )
-	      );
-	    }
-	  }]);
-
-	  return Source;
-	}(_react.Component);
-
-	Source.defaultProps = {
-	  href: undefined,
-	  styles: {}
-	};
-
-	exports.default = Source;
-
-/***/ },
-/* 245 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _ParentheticalReference = __webpack_require__(246);
-
-	var _ParentheticalReference2 = _interopRequireDefault(_ParentheticalReference);
-
-	var _bib = __webpack_require__(211);
-
-	var _bib2 = _interopRequireDefault(_bib);
-
-	var _react = __webpack_require__(4);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = {
-	  ref: _bib2.default,
-	  cite: function cite(refId, page) {
-	    return _react2.default.createElement(_ParentheticalReference2.default, {
-	      refId: refId,
-	      page: page
-	    });
-	  }
-	};
-	//noinspection JSUnresolvedVariable
-
-/***/ },
-/* 246 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(4);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } //noinspection JSUnresolvedVariable
-
-
-	var bibliography = __webpack_require__(211);
-
-	var _class = function (_Component) {
-	    _inherits(_class, _Component);
-
-	    function _class() {
-	        _classCallCheck(this, _class);
-
-	        return _possibleConstructorReturn(this, Object.getPrototypeOf(_class).apply(this, arguments));
-	    }
-
-	    _createClass(_class, [{
-	        key: 'render',
-	        value: function render() {
-	            var refId = this.props.refId;
-	            var page = this.props.page;
-
-	            var reference = refId;
-	            if (typeof refId == 'string') {
-	                reference = bibliography[refId];
-	            }
-
-	            if (!reference) {
-	                throw new Error("Reference not found: " + refId);
-	            }
-
-	            // Create string for page
-	            var strPage = reference.pages ? ", pp. " + reference.pages : "";
-	            page = page ? page : reference.page;
-	            if (page) {
-	                strPage = ", p. " + page;
-	            }
-
-	            //Create string for name
-	            var name = reference.author.lastName ? reference.author.lastName.toString() : reference.author.abbr;
-
-	            //Create element
-	            return _react2.default.createElement(
-	                'a',
-	                { className: 'inline-citation',
-	                    href: "#" + reference.id.toString()
-	                },
-	                name,
-	                ' (',
-	                reference.year.toString(),
-	                strPage.toString(),
-	                ')'
-	            );
-	        }
-	    }]);
-
-	    return _class;
-	}(_react.Component);
-
-	exports.default = _class;
-
-/***/ },
-/* 247 */
+/* 248 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44684,83 +45010,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = Chapter;
 
 /***/ },
-/* 248 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(4);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _IntroRechtspraakNl = __webpack_require__(249);
-
-	var _IntroRechtspraakNl2 = _interopRequireDefault(_IntroRechtspraakNl);
-
-	var _Chapter = __webpack_require__(247);
-
-	var _Chapter2 = _interopRequireDefault(_Chapter);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } //noinspection JSUnresolvedVariable
-
-
-	var introIntroSections = {
-	    rechtspraakNl: {
-	        id: 'rechtspraak-nl',
-	        title: "Rechtspraak.nl",
-	        component: _IntroRechtspraakNl2.default
-	    }
-	};
-
-	introIntroSections.inOrder = [introIntroSections.rechtspraakNl];
-
-	var _class = function (_Component) {
-	    _inherits(_class, _Component);
-
-	    function _class() {
-	        _classCallCheck(this, _class);
-
-	        return _possibleConstructorReturn(this, Object.getPrototypeOf(_class).apply(this, arguments));
-	    }
-
-	    _createClass(_class, [{
-	        key: 'title',
-	        value: function title() {
-	            return "Introduction";
-	        }
-
-	        //noinspection JSUnusedGlobalSymbols
-
-	    }, {
-	        key: 'getSections',
-	        value: function getSections() {
-	            return introIntroSections;
-	        }
-	    }, {
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(_Chapter2.default, { path: this.props.path, title: this.title(), sections: introIntroSections.inOrder });
-	        }
-	    }]);
-
-	    return _class;
-	}(_react.Component);
-
-	exports.default = _class;
-
-/***/ },
 /* 249 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -44776,306 +45025,29 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Source = __webpack_require__(244);
-
-	var _Source2 = _interopRequireDefault(_Source);
-
-	var _references = __webpack_require__(245);
-
-	var _references2 = _interopRequireDefault(_references);
-
-	var _bib = __webpack_require__(211);
-
-	var _bib2 = _interopRequireDefault(_bib);
-
-	var _MarkupStatsFigure = __webpack_require__(220);
-
-	var _MarkupStatsFigure2 = _interopRequireDefault(_MarkupStatsFigure);
-
-	var _FigRef = __webpack_require__(242);
-
-	var _FigRef2 = _interopRequireDefault(_FigRef);
-
-	var _figs = __webpack_require__(221);
-
-	var _figs2 = _interopRequireDefault(_figs);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } //noinspection JSUnresolvedVariable
-
-
-	var Introduction = function (_Component) {
-	    _inherits(Introduction, _Component);
-
-	    function Introduction() {
-	        _classCallCheck(this, Introduction);
-
-	        return _possibleConstructorReturn(this, Object.getPrototypeOf(Introduction).apply(this, arguments));
-	    }
-
-	    _createClass(Introduction, [{
-	        key: 'render',
-
-	        //pre>\nfunction (doc)
-	        //
-	        //    var Snowball = require('views/lib/snowball');
-	        //    if (doc['corpus'] == 'Rechtspraak.nl' && doc['tokens']) {
-	        //    for (var i in doc['tokens']) {
-	        //    for (var j in doc['tokens'][i]) {
-	        //    var token = doc['tokens'][i][j];
-	        //    var stemmer = new Snowball('Dutch');
-	        //    stemmer.setCurrent(token);
-	        //    stemmer.stem();
-	        //    emit([stemmer.getCurrent(), token], 1);
-	        //}
-	        //}
-	        //}
-	        // }/pre>
-	        //                </section:h2>
-	        //                <section:h2>-</section:h2>
-	        //                <section:h2>Data set statistics
-	        //                    <p>
-	        //                        In this section, we explore some basic statistics to get a feel for the database. A conversation that has
-	        //                        repeatedly come up is whether
-	        //                    </p>
-	        //                    <div id="canvas-svg"></div>
-	        //                </section:h2>
-	        //                <section>
-	        //                    <h2>Counting terms</h2>
-	        //                    <p>Initial tokenization is performed server-side, using Alpino.</p>
-	        //                    <p>Then, in a MapReduce task we reduce these inflected words to lemmas and count lemma occurrences for each document. We use a<a href="https://github.com/fortnightlabs/snowball-js">Javascript port</a> of the <a href="http://snowball.tartarus.org/algorithms/dutch/stemmer.html">
-	        //                        Snowball stemming algorithm for
-	        //                        Dutch</a>, along with some additional normalization rules which mainly handle special characters (consider,
-	        //                        for example, that <code>'s ochtends</code> represents the same phrase as <code>`s ochtends</code>
-	        //                    </p>). For
-	        //                    this, we use a slug-generator algorithm.
-	        //                    <p>The stemming phase is implemented as a CommonJS module in the map function for our term count:</p><code>term_document_count</code><strong>Map</strong>
-	        //  <pre>\nfunction (doc) {"{"}
-	        //      var Snowball = require('views/lib/snowball');
-	        //      if (doc['corpus'] == 'Rechtspraak.nl' && doc['tokens']) {"{"}
-	        //      for (var i in doc['tokens']) {"{"}
-	        //      for (var j in doc['tokens'][i]) {"{"}
-	        //      var token = doc['tokens'][i][j];
-	        //      var stemmer = new Snowball('Dutch');
-	        //      stemmer.setCurrent(token);
-	        //      stemmer.stem();
-	        //      emit([stemmer.getCurrent(), doc['_id']], 1);
-	        //  {"}"}
-	        //  {"}"}
-	        //  {"}"}
-	        //  {"}"}</pre><strong>Reduce</strong>
-	        //                    <pre>\n_sum</pre><code>term_token_count</code><strong>Map</strong>
-	        //  <strong>Reduce</strong>
-	        //                    <pre>\n_sum</pre>
-	        //                    <p>The difference between <code>term_document_count</code> and <code>term_token_count</code> is the keys they produce in the map function:<code>term_document_count</code> groups stemmed terms together with their document identifier, where <code>term_token_count</code> groups
-	        //                        these terms with their original token.
-	        //                    </p>
-	        //                    <p><code>term_document_count</code> is useful to .</p>    https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation
-	        //                    <p><code>term_token_count</code> is useful when we want to know where a stemmed term comes
-	        //                        from, i.e., its manifestation in the source documents.
-	        //                    </p>    Refer to <a href="http://rechtspraak.cloudant.com/ecli/_design/term_frequency">http://rechtspraak.cloudant.com/ecli/_design/term_frequency</a>    for the implemented design document.
-	        //                </section>
-	        value: function render() {
-	            var nonValidatingXml = "https://validator.w3.org/nu/?useragent=Validator.nu%2FLV+http%3A%2F%2Fvalidator.w3.org%2Fservices&amp;doc=http%3A%2F%2Fuitspraken.rechtspraak.nl%2Finziendocument%3Fid%3DECLI%3ANL%3ACBB%3A2010%3ABN1294";
-
-	            var htmlManifestation = "http://uitspraken.rechtspraak.nl/inziendocument?id=ECLI:NL:CBB:2010:BN1294";
-	            var xmlManifestation = "http://data.rechtspraak.nl/uitspraken/content?id=ECLI:NL:CBB:2010:BN1294";
-
-	            var urlSchemeText = "http://data.rechtspraak.nl/uitspraken/content?id={ecli}";
-	            var urlSchemeUrl = "http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CBB:2010:BN1294";
-
-	            return _react2.default.createElement(
-	                'div',
-	                null,
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    _react2.default.createElement(
-	                        'a',
-	                        { href: 'http://www.rechtspraak.nl/' },
-	                        'Rechtspraak.nl'
-	                    ),
-	                    ' is the official website of the Dutch judiciary. The website hosts an open data portal for Dutch case law, containing metadata for about 2 million cases',
-	                    _react2.default.createElement(_Source2.default, { href: 'http://data.rechtspraak.nl/uitspraken/zoeken?' }),
-	                    ' and judgments texts for about 350.000 cases in XML',
-	                    _react2.default.createElement(_Source2.default, {
-	                        href: 'http://data.rechtspraak.nl/uitspraken/zoeken?return=doc' }),
-	                    '. In this thesis, we are interested in markup, so we only consider those documents that contain text. As explained by ',
-	                    _references2.default.cite(_bib2.default.vanopijnen2014),
-	                    ', the full data set of Rechtspraak.nl contains only a fraction of the total case law that exists in the Netherlands, but the collection is curated so that it is representative of court decisions in the Netherlands.'
-	                ),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'If we turn to ',
-	                    _react2.default.createElement(_FigRef2.default, {
-	                        fig: _figs2.default.markupStats }),
-	                    ', we see that many modern documents are richly marked up. However, there remains a overwhelmingly large portion of older documents that contain no or only sparse semantic markup. To illustrate: at the time of writing, 78.7% of all case law texts on Rechtspraak.nl do not contain any ',
-	                    _react2.default.createElement(
-	                        'code',
-	                        null,
-	                        'section'
-	                    ),
-	                    ' tag, implying that a large amount of documents are barely marked up. This is unfortunate, because having proper markup makes documents better searchable and more easy to style.'
-	                ),
-	                _react2.default.createElement(_MarkupStatsFigure2.default, null),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'The problem that we investigate in this thesis, then, is whether we can enrich the markup of documents in Rechtspraak.nl by automatically assigning a section hierarchy among the text elements. To this end, we develop methods for: TODO add links to relevant chapters'
-	                ),
-	                _react2.default.createElement(
-	                    'ol',
-	                    null,
-	                    _react2.default.createElement(
-	                        'li',
-	                        null,
-	                        'importing documents from the Rechtspraak.nl web service;'
-	                    ),
-	                    _react2.default.createElement(
-	                        'li',
-	                        null,
-	                        'tokenizing relevant text elements;'
-	                    ),
-	                    _react2.default.createElement(
-	                        'li',
-	                        null,
-	                        'labeling these text elements with their respective roles (e.g., ',
-	                        _react2.default.createElement(
-	                            'code',
-	                            null,
-	                            'section title'
-	                        ),
-	                        '; ',
-	                        _react2.default.createElement(
-	                            'code',
-	                            null,
-	                            'text block'
-	                        ),
-	                        ');'
-	                    ),
-	                    _react2.default.createElement(
-	                        'li',
-	                        null,
-	                        'combining the tokens in such a way that they represent the most likely section hierarchy'
-	                    ),
-	                    _react2.default.createElement(
-	                        'li',
-	                        null,
-	                        'Publish the resulting documents so that search engines can make use of the enriched markup'
-	                    )
-	                ),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'The project in published as two separate Java libraries: one for importing and enriching documents from Rechtspraak.nl (',
-	                    _react2.default.createElement(
-	                        'a',
-	                        { href: 'https://github.com/digitalheir/java-rechtspraak-library' },
-	                        'source code on GitHub'
-	                    ),
-	                    '), and one for mirroring the Rechtspraak.nl corpus on a CouchDB database (',
-	                    _react2.default.createElement(
-	                        'a',
-	                        { href: 'https://github.com/digitalheir/dutch-case-law-to-couchdb' },
-	                        'source code on GitHub'
-	                    ),
-	                    ').'
-	                ),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'The latter project was created in order to facilitate the collection of statistics of case law documents. CouchDB makes it easy to define MapReduce jobs on the documents to generate the statistics used in this thesis. This portion of work is discussed in the section ',
-	                    _react2.default.createElement(
-	                        'a',
-	                        { href: '#couchdb' },
-	                        'case law in CouchDB'
-	                    ),
-	                    '.'
-	                ),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'For a comprehensive study on the legal and technical background of the digital publication of Dutch case law, see ',
-	                    _references2.default.cite(_bib2.default.vanopijnen2014),
-	                    '. For a general overview of Rechtspraak.nl\'s web service, see ',
-	                    _references2.default.cite(_bib2.default.trompper2014),
-	                    '.'
-	                ),
-	                '-----------------------------------',
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'todo: delet this In the remainder of this thesis, we motivate and discuss the creation of a Java library for querying and parsing the case law register of Rechtspraak.nl. We provide an ',
-	                    _react2.default.createElement(
-	                        'a',
-	                        {
-	                            href: '#markup' },
-	                        'introduction to the case law XML markup'
-	                    ),
-	                    ' ',
-	                    _react2.default.createElement(
-	                        'strike',
-	                        null,
-	                        'and an ',
-	                        _react2.default.createElement(
-	                            'a',
-	                            {
-	                                href: '#metadata' },
-	                            'introduction to the case law metadata'
-	                        )
-	                    ),
-	                    '.'
-	                )
-	            );
-	        }
-	    }]);
-
-	    return Introduction;
-	}(_react.Component);
-
-	exports.default = Introduction;
-
-/***/ },
-/* 250 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(4);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _Chapter = __webpack_require__(247);
+	var _Chapter = __webpack_require__(248);
 
 	var _Chapter2 = _interopRequireDefault(_Chapter);
 
-	var _Methods = __webpack_require__(251);
+	var _Methods = __webpack_require__(250);
 
 	var _Methods2 = _interopRequireDefault(_Methods);
 
-	var _Evaluation = __webpack_require__(283);
+	var _Evaluation = __webpack_require__(282);
 
 	var _Evaluation2 = _interopRequireDefault(_Evaluation);
 
-	var _DeterministicTagger = __webpack_require__(282);
+	var _DeterministicTagger = __webpack_require__(281);
 
 	var _DeterministicTagger2 = _interopRequireDefault(_DeterministicTagger);
 
-	var _CRF = __webpack_require__(252);
+	var _CRF = __webpack_require__(251);
 
 	var _CRF2 = _interopRequireDefault(_CRF);
+
+	var _FeatureSelection = __webpack_require__(283);
+
+	var _FeatureSelection2 = _interopRequireDefault(_FeatureSelection);
 
 	var _chapters = __webpack_require__(217);
 
@@ -45108,6 +45080,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	        title: "Conditional Random Fields",
 	        component: _CRF2.default
 	    },
+	    featureSelection: {
+	        id: 'featureSelection',
+	        title: 'Feature Selection',
+	        component: _FeatureSelection2.default
+	    },
 	    manual: {
 	        id: 'manual',
 	        title: 'Deterministic Tagger',
@@ -45120,7 +45097,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	};
 
-	taggingSections.inOrder = [taggingSections.methods, taggingSections.manual, taggingSections.evaluation];
+	taggingSections.inOrder = [taggingSections.featureSelection, taggingSections.methods, taggingSections.manual, taggingSections.evaluation];
 
 	var Tagging = function (_Component) {
 	    _inherits(Tagging, _Component);
@@ -45132,20 +45109,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 
 	    _createClass(Tagging, [{
-	        key: 'getSections',
-
-
-	        //noinspection JSUnusedGlobalSymbols
-	        value: function getSections() {
-	            return taggingSections;
-	        }
-	    }, {
 	        key: 'render',
 	        value: function render() {
 	            var relativeToRoot = this.props.path.match(/\//g).slice(1).map(function (_) {
 	                return "../";
 	            }).join("");
-	            var urlToRs = relativeToRoot + _chapters2.default.rechtspraakNl.route.replace('/', '');
+	            var urlToRs = relativeToRoot + Tagging.chapterInfo().route.replace('/', '');
 	            return _react2.default.createElement(
 	                _Chapter2.default,
 	                {
@@ -45232,9 +45201,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	            );
 	        }
 	    }], [{
+	        key: 'chapterInfo',
+	        value: function chapterInfo() {
+	            return _chapters2.default.tagging;
+	        }
+	    }, {
 	        key: 'title',
 	        value: function title() {
-	            return _chapters2.default.tagging.title;
+	            return Tagging.chapterInfo().title;
+	        }
+
+	        //noinspection JSUnusedGlobalSymbols
+
+	    }, {
+	        key: 'getSections',
+	        value: function getSections() {
+	            return taggingSections;
 	        }
 	    }]);
 
@@ -45244,7 +45226,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Tagging;
 
 /***/ },
-/* 251 */
+/* 250 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45259,15 +45241,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Chapter = __webpack_require__(247);
+	var _Chapter = __webpack_require__(248);
 
 	var _Chapter2 = _interopRequireDefault(_Chapter);
 
-	var _CRF = __webpack_require__(252);
+	var _CRF = __webpack_require__(251);
 
 	var _CRF2 = _interopRequireDefault(_CRF);
 
-	var _DeterministicTagger = __webpack_require__(282);
+	var _DeterministicTagger = __webpack_require__(281);
 
 	var _DeterministicTagger2 = _interopRequireDefault(_DeterministicTagger);
 
@@ -45342,7 +45324,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Tagging;
 
 /***/ },
-/* 252 */
+/* 251 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45357,19 +45339,19 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _FigRef = __webpack_require__(242);
+	var _FigRef = __webpack_require__(245);
 
 	var _FigRef2 = _interopRequireDefault(_FigRef);
 
-	var _Image = __webpack_require__(253);
+	var _Image = __webpack_require__(252);
 
 	var _Image2 = _interopRequireDefault(_Image);
 
-	var _figs = __webpack_require__(221);
+	var _figs = __webpack_require__(224);
 
 	var _figs2 = _interopRequireDefault(_figs);
 
-	var _references = __webpack_require__(245);
+	var _references = __webpack_require__(221);
 
 	var _references2 = _interopRequireDefault(_references);
 
@@ -45377,23 +45359,23 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _bib2 = _interopRequireDefault(_bib);
 
-	var _Math = __webpack_require__(254);
+	var _Math = __webpack_require__(253);
 
 	var _Math2 = _interopRequireDefault(_Math);
 
-	var _GraphicalModels = __webpack_require__(278);
+	var _GraphicalModels = __webpack_require__(277);
 
 	var _GraphicalModels2 = _interopRequireDefault(_GraphicalModels);
 
-	var _LinearChainCRF = __webpack_require__(279);
+	var _LinearChainCRF = __webpack_require__(278);
 
 	var _LinearChainCRF2 = _interopRequireDefault(_LinearChainCRF);
 
-	var _HMMs = __webpack_require__(280);
+	var _HMMs = __webpack_require__(279);
 
 	var _HMMs2 = _interopRequireDefault(_HMMs);
 
-	var _LogRes = __webpack_require__(281);
+	var _LogRes = __webpack_require__(280);
 
 	var _LogRes2 = _interopRequireDefault(_LogRes);
 
@@ -45538,7 +45520,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = CRF;
 
 /***/ },
-/* 253 */
+/* 252 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -45623,7 +45605,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = _class;
 
 /***/ },
-/* 254 */
+/* 253 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45638,7 +45620,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _katex = __webpack_require__(255);
+	var _katex = __webpack_require__(254);
 
 	var _katex2 = _interopRequireDefault(_katex);
 
@@ -45686,7 +45668,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Math;
 
 /***/ },
-/* 255 */
+/* 254 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* eslint no-console:0 */
@@ -45698,12 +45680,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * errors in the expression, or errors in javascript handling.
 	 */
 
-	var ParseError = __webpack_require__(256);
-	var Settings = __webpack_require__(257);
+	var ParseError = __webpack_require__(255);
+	var Settings = __webpack_require__(256);
 
-	var buildTree = __webpack_require__(258);
-	var parseTree = __webpack_require__(271);
-	var utils = __webpack_require__(263);
+	var buildTree = __webpack_require__(257);
+	var parseTree = __webpack_require__(270);
+	var utils = __webpack_require__(262);
 
 	/**
 	 * Parse and build an expression, and place that expression in the DOM node
@@ -45766,7 +45748,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 256 */
+/* 255 */
 /***/ function(module, exports) {
 
 	/**
@@ -45812,7 +45794,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 257 */
+/* 256 */
 /***/ function(module, exports) {
 
 	/**
@@ -45846,15 +45828,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 258 */
+/* 257 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var buildHTML = __webpack_require__(259);
-	var buildMathML = __webpack_require__(268);
-	var buildCommon = __webpack_require__(261);
-	var Options = __webpack_require__(270);
-	var Settings = __webpack_require__(257);
-	var Style = __webpack_require__(260);
+	var buildHTML = __webpack_require__(258);
+	var buildMathML = __webpack_require__(267);
+	var buildCommon = __webpack_require__(260);
+	var Options = __webpack_require__(269);
+	var Settings = __webpack_require__(256);
+	var Style = __webpack_require__(259);
 
 	var makeSpan = buildCommon.makeSpan;
 
@@ -45892,7 +45874,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 259 */
+/* 258 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* eslint no-console:0 */
@@ -45903,14 +45885,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * called, to produce a final HTML tree.
 	 */
 
-	var ParseError = __webpack_require__(256);
-	var Style = __webpack_require__(260);
+	var ParseError = __webpack_require__(255);
+	var Style = __webpack_require__(259);
 
-	var buildCommon = __webpack_require__(261);
-	var delimiter = __webpack_require__(267);
-	var domTree = __webpack_require__(262);
-	var fontMetrics = __webpack_require__(264);
-	var utils = __webpack_require__(263);
+	var buildCommon = __webpack_require__(260);
+	var delimiter = __webpack_require__(266);
+	var domTree = __webpack_require__(261);
+	var fontMetrics = __webpack_require__(263);
+	var utils = __webpack_require__(262);
 
 	var makeSpan = buildCommon.makeSpan;
 
@@ -47300,7 +47282,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 260 */
+/* 259 */
 /***/ function(module, exports) {
 
 	/**
@@ -47432,7 +47414,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 261 */
+/* 260 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* eslint no-console:0 */
@@ -47441,10 +47423,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * different kinds of domTree nodes in a consistent manner.
 	 */
 
-	var domTree = __webpack_require__(262);
-	var fontMetrics = __webpack_require__(264);
-	var symbols = __webpack_require__(266);
-	var utils = __webpack_require__(263);
+	var domTree = __webpack_require__(261);
+	var fontMetrics = __webpack_require__(263);
+	var symbols = __webpack_require__(265);
+	var utils = __webpack_require__(262);
 
 	var greekCapitals = [
 	    "\\Gamma",
@@ -47888,7 +47870,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 262 */
+/* 261 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -47901,7 +47883,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * Similar functions for working with MathML nodes exist in mathMLTree.js.
 	 */
 
-	var utils = __webpack_require__(263);
+	var utils = __webpack_require__(262);
 
 	/**
 	 * Create an HTML className based on a list of classes. In addition to joining
@@ -48163,7 +48145,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 263 */
+/* 262 */
 /***/ function(module, exports) {
 
 	/**
@@ -48275,12 +48257,12 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 264 */
+/* 263 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* eslint no-unused-vars:0 */
 
-	var Style = __webpack_require__(260);
+	var Style = __webpack_require__(259);
 
 	/**
 	 * This file contains metrics regarding fonts and individual symbols. The sigma
@@ -48399,7 +48381,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	// metrics, including height, depth, italic correction, and skew (kern from the
 	// character to the corresponding \skewchar)
 	// This map is generated via `make metrics`. It should not be changed manually.
-	var metricMap = __webpack_require__(265);
+	var metricMap = __webpack_require__(264);
 
 	/**
 	 * This function is a convenience function for looking up information in the
@@ -48428,7 +48410,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 265 */
+/* 264 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -50186,7 +50168,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 266 */
+/* 265 */
 /***/ function(module, exports) {
 
 	/**
@@ -50812,7 +50794,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 267 */
+/* 266 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -50837,13 +50819,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * used in `\left` and `\right`.
 	 */
 
-	var ParseError = __webpack_require__(256);
-	var Style = __webpack_require__(260);
+	var ParseError = __webpack_require__(255);
+	var Style = __webpack_require__(259);
 
-	var buildCommon = __webpack_require__(261);
-	var fontMetrics = __webpack_require__(264);
-	var symbols = __webpack_require__(266);
-	var utils = __webpack_require__(263);
+	var buildCommon = __webpack_require__(260);
+	var fontMetrics = __webpack_require__(263);
+	var symbols = __webpack_require__(265);
+	var utils = __webpack_require__(262);
 
 	var makeSpan = buildCommon.makeSpan;
 
@@ -51360,7 +51342,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 268 */
+/* 267 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -51369,12 +51351,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * parser.
 	 */
 
-	var buildCommon = __webpack_require__(261);
-	var fontMetrics = __webpack_require__(264);
-	var mathMLTree = __webpack_require__(269);
-	var ParseError = __webpack_require__(256);
-	var symbols = __webpack_require__(266);
-	var utils = __webpack_require__(263);
+	var buildCommon = __webpack_require__(260);
+	var fontMetrics = __webpack_require__(263);
+	var mathMLTree = __webpack_require__(268);
+	var ParseError = __webpack_require__(255);
+	var symbols = __webpack_require__(265);
+	var utils = __webpack_require__(262);
 
 	var makeSpan = buildCommon.makeSpan;
 	var fontMap = buildCommon.fontMap;
@@ -51899,7 +51881,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 269 */
+/* 268 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -51912,7 +51894,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * domTree.js, creating namespaced DOM nodes and HTML text markup respectively.
 	 */
 
-	var utils = __webpack_require__(263);
+	var utils = __webpack_require__(262);
 
 	/**
 	 * This node represents a general purpose MathML node of any type. The
@@ -52007,7 +51989,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 270 */
+/* 269 */
 /***/ function(module, exports) {
 
 	/**
@@ -52202,7 +52184,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 271 */
+/* 270 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -52210,7 +52192,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * TODO(emily): Remove this
 	 */
 
-	var Parser = __webpack_require__(272);
+	var Parser = __webpack_require__(271);
 
 	/**
 	 * Parses an expression using a Parser, then returns the parsed result.
@@ -52225,18 +52207,18 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 272 */
+/* 271 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* eslint no-constant-condition:0 */
-	var functions = __webpack_require__(273);
-	var environments = __webpack_require__(274);
-	var Lexer = __webpack_require__(276);
-	var symbols = __webpack_require__(266);
-	var utils = __webpack_require__(263);
+	var functions = __webpack_require__(272);
+	var environments = __webpack_require__(273);
+	var Lexer = __webpack_require__(275);
+	var symbols = __webpack_require__(265);
+	var utils = __webpack_require__(262);
 
-	var parseData = __webpack_require__(275);
-	var ParseError = __webpack_require__(256);
+	var parseData = __webpack_require__(274);
+	var ParseError = __webpack_require__(255);
 
 	/**
 	 * This file contains the parser used to parse out a TeX expression from the
@@ -52968,11 +52950,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 273 */
+/* 272 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var utils = __webpack_require__(263);
-	var ParseError = __webpack_require__(256);
+	var utils = __webpack_require__(262);
+	var ParseError = __webpack_require__(255);
 
 	/* This file contains a list of functions that we parse, identified by
 	 * the calls to defineFunction.
@@ -53554,13 +53536,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 274 */
+/* 273 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* eslint no-constant-condition:0 */
-	var fontMetrics = __webpack_require__(264);
-	var parseData = __webpack_require__(275);
-	var ParseError = __webpack_require__(256);
+	var fontMetrics = __webpack_require__(263);
+	var parseData = __webpack_require__(274);
+	var ParseError = __webpack_require__(255);
 
 	var ParseNode = parseData.ParseNode;
 
@@ -53781,7 +53763,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 275 */
+/* 274 */
 /***/ function(module, exports) {
 
 	/**
@@ -53800,7 +53782,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 276 */
+/* 275 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -53816,9 +53798,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * kinds.
 	 */
 
-	var matchAt = __webpack_require__(277);
+	var matchAt = __webpack_require__(276);
 
-	var ParseError = __webpack_require__(256);
+	var ParseError = __webpack_require__(255);
 
 	// The main lexer class
 	function Lexer(input) {
@@ -53968,7 +53950,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 277 */
+/* 276 */
 /***/ function(module, exports) {
 
 	/** @flow */
@@ -54015,7 +53997,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = matchAt;
 
 /***/ },
-/* 278 */
+/* 277 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -54030,19 +54012,19 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _FigRef = __webpack_require__(242);
+	var _FigRef = __webpack_require__(245);
 
 	var _FigRef2 = _interopRequireDefault(_FigRef);
 
-	var _Image = __webpack_require__(253);
+	var _Image = __webpack_require__(252);
 
 	var _Image2 = _interopRequireDefault(_Image);
 
-	var _figs = __webpack_require__(221);
+	var _figs = __webpack_require__(224);
 
 	var _figs2 = _interopRequireDefault(_figs);
 
-	var _references = __webpack_require__(245);
+	var _references = __webpack_require__(221);
 
 	var _references2 = _interopRequireDefault(_references);
 
@@ -54050,7 +54032,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _bib2 = _interopRequireDefault(_bib);
 
-	var _Math = __webpack_require__(254);
+	var _Math = __webpack_require__(253);
 
 	var _Math2 = _interopRequireDefault(_Math);
 
@@ -54303,7 +54285,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = CRF;
 
 /***/ },
-/* 279 */
+/* 278 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -54318,15 +54300,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _FigRef = __webpack_require__(242);
+	var _FigRef = __webpack_require__(245);
 
 	var _FigRef2 = _interopRequireDefault(_FigRef);
 
-	var _figs = __webpack_require__(221);
+	var _figs = __webpack_require__(224);
 
 	var _figs2 = _interopRequireDefault(_figs);
 
-	var _references = __webpack_require__(245);
+	var _references = __webpack_require__(221);
 
 	var _references2 = _interopRequireDefault(_references);
 
@@ -54334,7 +54316,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _bib2 = _interopRequireDefault(_bib);
 
-	var _Math = __webpack_require__(254);
+	var _Math = __webpack_require__(253);
 
 	var _Math2 = _interopRequireDefault(_Math);
 
@@ -54504,7 +54486,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = LinearChainCRF;
 
 /***/ },
-/* 280 */
+/* 279 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -54519,19 +54501,19 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _FigRef = __webpack_require__(242);
+	var _FigRef = __webpack_require__(245);
 
 	var _FigRef2 = _interopRequireDefault(_FigRef);
 
-	var _Image = __webpack_require__(253);
+	var _Image = __webpack_require__(252);
 
 	var _Image2 = _interopRequireDefault(_Image);
 
-	var _figs = __webpack_require__(221);
+	var _figs = __webpack_require__(224);
 
 	var _figs2 = _interopRequireDefault(_figs);
 
-	var _references = __webpack_require__(245);
+	var _references = __webpack_require__(221);
 
 	var _references2 = _interopRequireDefault(_references);
 
@@ -54539,7 +54521,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _bib2 = _interopRequireDefault(_bib);
 
-	var _Math = __webpack_require__(254);
+	var _Math = __webpack_require__(253);
 
 	var _Math2 = _interopRequireDefault(_Math);
 
@@ -54636,9 +54618,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'If we return to the representation of HMMs in ',
+	                    'It can be shown that HMMs are generative models. If we return to the representation of HMMs in ',
 	                    _react2.default.createElement(_FigRef2.default, { fig: _figs2.default.graphicalModels }),
-	                    ', we see then that the white nodes represent labels and the grey nodes the observations. Typically, observations are known, but the labels need to be estimated. This is done by looping over all ',
+	                    ', we see that the white nodes represent labels and the grey nodes the observations. Typically, observations are given, but the labels need to be guessed. This is done by looping over all ',
 	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf y\\in Y' }),
 	                    ' and selecting ',
 	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf y^*\\in Y' }),
@@ -54671,7 +54653,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = CRF;
 
 /***/ },
-/* 281 */
+/* 280 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -54686,19 +54668,19 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _FigRef = __webpack_require__(242);
+	var _FigRef = __webpack_require__(245);
 
 	var _FigRef2 = _interopRequireDefault(_FigRef);
 
-	var _Image = __webpack_require__(253);
+	var _Image = __webpack_require__(252);
 
 	var _Image2 = _interopRequireDefault(_Image);
 
-	var _figs = __webpack_require__(221);
+	var _figs = __webpack_require__(224);
 
 	var _figs2 = _interopRequireDefault(_figs);
 
-	var _references = __webpack_require__(245);
+	var _references = __webpack_require__(221);
 
 	var _references2 = _interopRequireDefault(_references);
 
@@ -54706,7 +54688,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _bib2 = _interopRequireDefault(_bib);
 
-	var _Math = __webpack_require__(254);
+	var _Math = __webpack_require__(253);
 
 	var _Math2 = _interopRequireDefault(_Math);
 
@@ -54767,7 +54749,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = LogRes;
 
 /***/ },
-/* 282 */
+/* 281 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -54782,19 +54764,19 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _FigRef = __webpack_require__(242);
+	var _FigRef = __webpack_require__(245);
 
 	var _FigRef2 = _interopRequireDefault(_FigRef);
 
-	var _Image = __webpack_require__(253);
+	var _Image = __webpack_require__(252);
 
 	var _Image2 = _interopRequireDefault(_Image);
 
-	var _figs = __webpack_require__(221);
+	var _figs = __webpack_require__(224);
 
 	var _figs2 = _interopRequireDefault(_figs);
 
-	var _references = __webpack_require__(245);
+	var _references = __webpack_require__(221);
 
 	var _references2 = _interopRequireDefault(_references);
 
@@ -54802,7 +54784,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _bib2 = _interopRequireDefault(_bib);
 
-	var _Math = __webpack_require__(254);
+	var _Math = __webpack_require__(253);
 
 	var _Math2 = _interopRequireDefault(_Math);
 
@@ -54837,7 +54819,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = DeterministicTagger;
 
 /***/ },
-/* 283 */
+/* 282 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -54852,7 +54834,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _references = __webpack_require__(245);
+	var _references = __webpack_require__(221);
 
 	var _references2 = _interopRequireDefault(_references);
 
@@ -54941,7 +54923,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = CRF;
 
 /***/ },
-/* 284 */
+/* 283 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -54956,23 +54938,1764 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Introduction = __webpack_require__(285);
+	var _FigRef = __webpack_require__(245);
+
+	var _FigRef2 = _interopRequireDefault(_FigRef);
+
+	var _Image = __webpack_require__(252);
+
+	var _Image2 = _interopRequireDefault(_Image);
+
+	var _figs = __webpack_require__(224);
+
+	var _figs2 = _interopRequireDefault(_figs);
+
+	var _references = __webpack_require__(221);
+
+	var _references2 = _interopRequireDefault(_references);
+
+	var _bib = __webpack_require__(211);
+
+	var _bib2 = _interopRequireDefault(_bib);
+
+	var _Math = __webpack_require__(253);
+
+	var _Math2 = _interopRequireDefault(_Math);
+
+	var _figureInfoTfIdf = __webpack_require__(284);
+
+	var _figureInfoTfIdf2 = _interopRequireDefault(_figureInfoTfIdf);
+
+	var _figureTitleTfIdf = __webpack_require__(288);
+
+	var _figureTitleTfIdf2 = _interopRequireDefault(_figureTitleTfIdf);
+
+	var _figureSectionTfIdf = __webpack_require__(291);
+
+	var _figureSectionTfIdf2 = _interopRequireDefault(_figureSectionTfIdf);
+
+	var _figureTitleWordCount = __webpack_require__(296);
+
+	var _figureTitleWordCount2 = _interopRequireDefault(_figureTitleWordCount);
+
+	var _Source = __webpack_require__(220);
+
+	var _Source2 = _interopRequireDefault(_Source);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } //noinspection JSUnresolvedVariable
+
+
+	var FeatureSelection = function (_Component) {
+	    _inherits(FeatureSelection, _Component);
+
+	    function FeatureSelection() {
+	        _classCallCheck(this, FeatureSelection);
+
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(FeatureSelection).apply(this, arguments));
+	    }
+
+	    _createClass(FeatureSelection, [{
+	        key: 'render',
+	        value: function render() {
+	            var relativeToRoot = this.props.path.match(/\//g).slice(1).map(function (_) {
+	                return "../";
+	            }).join("");
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Regarding ideally marked-up documents, we make a number of assumptions that may be validated empirically. We assume that a case law document typically consists of the following sections:'
+	                ),
+	                _react2.default.createElement(
+	                    'ul',
+	                    null,
+	                    _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(
+	                            'p',
+	                            null,
+	                            'The first element in a document is typically a unique header element with a tagname of either ',
+	                            _react2.default.createElement(
+	                                'code',
+	                                null,
+	                                'uitspraak.info'
+	                            ),
+	                            ' or ',
+	                            _react2.default.createElement(
+	                                'code',
+	                                null,
+	                                'conclusie.info'
+	                            ),
+	                            ' for two types of case law (judgments and conclusions, respectively). We refer to these jointly as ',
+	                            _react2.default.createElement(
+	                                'code',
+	                                null,
+	                                '*.info'
+	                            ),
+	                            '. This element contains interesting metadata and has no formal semantics, but is reasonably easy to discern thanks to style consistencies in authors (e.g., most units of metadata are on a separate line, and so wrapped in a ',
+	                            _react2.default.createElement(
+	                                'code',
+	                                null,
+	                                'para'
+	                            ),
+	                            ' element).'
+	                        ),
+	                        _react2.default.createElement(
+	                            'p',
+	                            null,
+	                            'The contents of ',
+	                            _react2.default.createElement(
+	                                'code',
+	                                null,
+	                                'info.*'
+	                            ),
+	                            ' elements are explored ',
+	                            _react2.default.createElement(
+	                                'a',
+	                                { href: '#info' },
+	                                'below'
+	                            ),
+	                            '.'
+	                        ),
+	                        _react2.default.createElement(
+	                            'p',
+	                            null,
+	                            _react2.default.createElement(
+	                                'code',
+	                                null,
+	                                '*.info'
+	                            ),
+	                            ' elements may be followed by a number of sections:'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(
+	                            'p',
+	                            null,
+	                            'A ',
+	                            _react2.default.createElement(
+	                                'code',
+	                                null,
+	                                'section'
+	                            ),
+	                            ' element, containing, which may have a role assigned as an attribute, of either:'
+	                        ),
+	                        _react2.default.createElement(
+	                            'ul',
+	                            null,
+	                            _react2.default.createElement(
+	                                'li',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'code',
+	                                    null,
+	                                    'beslissing'
+	                                ),
+	                                ' (judgment)'
+	                            ),
+	                            _react2.default.createElement(
+	                                'li',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'code',
+	                                    null,
+	                                    'overwegingen'
+	                                ),
+	                                ' (considerations)'
+	                            ),
+	                            _react2.default.createElement(
+	                                'li',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'code',
+	                                    null,
+	                                    'procesverloop'
+	                                ),
+	                                ' (proceedings)'
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            'p',
+	                            null,
+	                            'Many sections have no role, although one may imagine other roles than the above, such as ',
+	                            _react2.default.createElement(
+	                                'code',
+	                                null,
+	                                'feiten'
+	                            ),
+	                            ' (facts). The above three are the only roles that currently appear in markup from Rechtspraak.nl. This is a venture for future work.'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(
+	                            'p',
+	                            null,
+	                            _react2.default.createElement(
+	                                'code',
+	                                null,
+	                                'title'
+	                            ),
+	                            ' elements may appear anywhere, but typically as the first descendent of a ',
+	                            _react2.default.createElement(
+	                                'code',
+	                                null,
+	                                'section'
+	                            ),
+	                            ' element.'
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'section',
+	                    { id: 'info' },
+	                    _react2.default.createElement(
+	                        'h3',
+	                        null,
+	                        _react2.default.createElement(
+	                            'code',
+	                            null,
+	                            '*.info'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        'The ',
+	                        _react2.default.createElement(
+	                            'code',
+	                            null,
+	                            '*.info'
+	                        ),
+	                        ' element typically contains metadata about the legal case, such as:'
+	                    ),
+	                    _react2.default.createElement(
+	                        'ul',
+	                        null,
+	                        _react2.default.createElement(
+	                            'li',
+	                            null,
+	                            'A case law identifier following some identification scheme'
+	                        ),
+	                        _react2.default.createElement(
+	                            'li',
+	                            null,
+	                            'Heading on the type of judgment (e.g. "U I T S P R A A K")'
+	                        ),
+	                        _react2.default.createElement(
+	                            'li',
+	                            null,
+	                            'Date of judgment'
+	                        ),
+	                        _react2.default.createElement(
+	                            'li',
+	                            null,
+	                            'Branch of the judiciary (i.e. type of court)'
+	                        ),
+	                        _react2.default.createElement(
+	                            'li',
+	                            null,
+	                            'Location of the judgment (i.e. court, jurisdiction)'
+	                        ),
+	                        _react2.default.createElement(
+	                            'li',
+	                            null,
+	                            'A description of the parties involved, possibly detailing their names, roles, locations, representatives'
+	                        ),
+	                        _react2.default.createElement(
+	                            'li',
+	                            null,
+	                            'A reference to preceding cases, for example in the case of an appeal to a previous judgment'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        'The order and formatting of this information appears in a multitude of order and formatting, making it difficult to write a deterministic grammar for recognizing a header section. [TODO figref] suggests that analyzing tf-idf in ',
+	                        _react2.default.createElement(
+	                            'code',
+	                            null,
+	                            '*.info'
+	                        ),
+	                        ' elements does not seem to be a particularly useful method of generating features that select for these metadata items. But it is easy for the human eye to recognize some recurring patterns.'
+	                    ),
+	                    _react2.default.createElement(_figureInfoTfIdf2.default, null),
+	                    _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        'See, e.g., ',
+	                        _react2.default.createElement(
+	                            'cite',
+	                            null,
+	                            _react2.default.createElement(
+	                                'a',
+	                                {
+	                                    href: 'https://rechtspraak.lawreader.nl/ecli/ECLI:NL:GHARL:2014:9139' },
+	                                'ECLI:NL:GHARL:2014:9139'
+	                            )
+	                        ),
+	                        ' for an example.'
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'section',
+	                    null,
+	                    _react2.default.createElement(
+	                        'h3',
+	                        null,
+	                        _react2.default.createElement(
+	                            'code',
+	                            null,
+	                            'section'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        _react2.default.createElement(
+	                            'code',
+	                            null,
+	                            'section'
+	                        ),
+	                        ' tags generally follow ',
+	                        _react2.default.createElement(
+	                            'code',
+	                            null,
+	                            '*.info'
+	                        ),
+	                        ' tags and contain a title element denoting the section role.'
+	                    ),
+	                    _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        'We assume that ',
+	                        _react2.default.createElement(
+	                            'code',
+	                            null,
+	                            'title'
+	                        ),
+	                        ' elements consist of an optional numbering, followed by a handful of words. [fig xx]'
+	                    ),
+	                    _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        'Note that, realistically, there are more types of sections than just ',
+	                        _react2.default.createElement(
+	                            'code',
+	                            null,
+	                            'beslissing'
+	                        ),
+	                        ',',
+	                        _react2.default.createElement(
+	                            'code',
+	                            null,
+	                            'overwegingen'
+	                        ),
+	                        ' and ',
+	                        _react2.default.createElement(
+	                            'code',
+	                            null,
+	                            'procesverloop'
+	                        ),
+	                        '. One example of this is in ',
+	                        _react2.default.createElement(
+	                            'cite',
+	                            null,
+	                            _react2.default.createElement(
+	                                'a',
+	                                {
+	                                    href: 'https://rechtspraak.lawreader.nl/ecli/ECLI:NL:GHARL:2014:9139' },
+	                                'ECLI:NL:GHARL:2014:9139'
+	                            )
+	                        ),
+	                        ', which contains additional sections on facts and on costs. In tagging section roles, we limit ourselves to the above three, since those are the only values that Rechtspraak.nl uses.',
+	                        _react2.default.createElement(_Source2.default, {
+	                            href: 'https://rechtspraak.cloudant.com/docs/_design/stats/_view/section_roles?group_level=1' })
+	                    )
+	                ),
+	                _react2.default.createElement('p', null),
+	                _react2.default.createElement('p', null),
+	                _react2.default.createElement('p', null),
+	                _react2.default.createElement('p', null),
+	                _react2.default.createElement(_figureTitleWordCount2.default, null),
+	                'of ',
+	                _react2.default.createElement(_FigRef2.default, { fig: _figs2.default.figTitleTreemap }),
+	                ', ',
+	                _react2.default.createElement(_FigRef2.default, {
+	                    fig: _figs2.default.titleTf }),
+	                ' and ',
+	                _react2.default.createElement(_FigRef2.default, { fig: _figs2.default.tfidf }),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Based metrics above, we pick the following word features for our Linear Chain CRF:'
+	                ),
+	                _react2.default.createElement(
+	                    'table',
+	                    null,
+	                    _react2.default.createElement(
+	                        'thead',
+	                        null,
+	                        _react2.default.createElement(
+	                            'tr',
+	                            null,
+	                            _react2.default.createElement(
+	                                'th',
+	                                null,
+	                                'Name'
+	                            ),
+	                            _react2.default.createElement(
+	                                'th',
+	                                null,
+	                                'Regular expression'
+	                            ),
+	                            _react2.default.createElement(
+	                                'th',
+	                                null,
+	                                'Description'
+	                            )
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'tbody',
+	                        null,
+	                        _react2.default.createElement(
+	                            'tr',
+	                            null,
+	                            _react2.default.createElement(
+	                                'td',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'code',
+	                                    null,
+	                                    '_NUM'
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'td',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'code',
+	                                    { className: 'prettify' },
+	                                    '/\\b([0-9]+|i{1,3}|i?vi{0,3}|i?xi{ 0,3})\\b/'
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'td',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'p',
+	                                    null,
+	                                    'describes a number (a sequence of digits, or a roman numeral)'
+	                                )
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            'tr',
+	                            null,
+	                            _react2.default.createElement(
+	                                'td',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'code',
+	                                    null,
+	                                    '_ART'
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'td',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'code',
+	                                    { className: 'prettify' },
+	                                    '/\\b(de|het|een)\\b/'
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'td',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'p',
+	                                    null,
+	                                    'describes an article (the/a)'
+	                                )
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            'tr',
+	                            null,
+	                            _react2.default.createElement(
+	                                'td',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'code',
+	                                    null,
+	                                    '_PREP'
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'td',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'code',
+	                                    { className: 'prettify' },
+	                                    '/\\b(van|in|op)\\b/'
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'td',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'p',
+	                                    null,
+	                                    'describes a preposition'
+	                                )
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            'tr',
+	                            null,
+	                            _react2.default.createElement(
+	                                'td',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'code',
+	                                    null,
+	                                    '_MISC_LEGAL_TERMS'
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'td',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'code',
+	                                    { className: 'prettify' },
+	                                    '/(rechtbank|hoger|beroep|eerst|tweed)/'
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'td',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'p',
+	                                    null,
+	                                    '\'\''
+	                                )
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            'tr',
+	                            null,
+	                            _react2.default.createElement(
+	                                'td',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'code',
+	                                    null,
+	                                    '_CASE'
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'td',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'code',
+	                                    { className: 'prettify' },
+	                                    '/(geschil|geding|aanleg)/'
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'td',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'p',
+	                                    null,
+	                                    '\'\''
+	                                )
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            'tr',
+	                            null,
+	                            _react2.default.createElement(
+	                                'td',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'code',
+	                                    null,
+	                                    '_FACT'
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'td',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'code',
+	                                    { className: 'prettify' },
+	                                    '/feit/'
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'td',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'p',
+	                                    null,
+	                                    'stem of \'feit\' (\'fact\')'
+	                                )
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            'tr',
+	                            null,
+	                            _react2.default.createElement(
+	                                'td',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'code',
+	                                    null,
+	                                    '_GROUND'
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'td',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'code',
+	                                    { className: 'prettify' },
+	                                    '/grond/'
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'td',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'p',
+	                                    null,
+	                                    'stem of \'grond\' (\'ground\')'
+	                                )
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            'tr',
+	                            null,
+	                            _react2.default.createElement(
+	                                'td',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'code',
+	                                    null,
+	                                    '_JUDGMENT'
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'td',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'code',
+	                                    { className: 'prettify' },
+	                                    '/(slotsom|beslis|motiver)/'
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'td',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'p',
+	                                    null,
+	                                    'stem of words pertaining to a \'judgment\' section'
+	                                )
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            'tr',
+	                            null,
+	                            _react2.default.createElement(
+	                                'td',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'code',
+	                                    null,
+	                                    '_CONSIDERATION'
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'td',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'code',
+	                                    {
+	                                        className: 'prettify' },
+	                                    '/((bewijs)?overweg|beoordel|(straf)?motivering|beschouwing)/'
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'td',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'p',
+	                                    null,
+	                                    'stem of words pertaining to a \'considerations\' section'
+	                                )
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            'tr',
+	                            null,
+	                            _react2.default.createElement(
+	                                'td',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'code',
+	                                    null,
+	                                    '_PROCEEDINGS'
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'td',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'code',
+	                                    {
+	                                        className: 'prettify' },
+	                                    '/voorgeschied|onsta|((proces)?(verlo|gang)|procedu|ontstaan|loop)/'
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'td',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'p',
+	                                    null,
+	                                    'stem of words pertaining to a \'proceedings\' section'
+	                                )
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            'tr',
+	                            null,
+	                            _react2.default.createElement(
+	                                'td',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'code',
+	                                    null,
+	                                    '_UP_TO_6'
+	                                )
+	                            ),
+	                            _react2.default.createElement('td', null),
+	                            _react2.default.createElement(
+	                                'td',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'p',
+	                                    null,
+	                                    'Whether the containing text block contains six words or less'
+	                                )
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            'tr',
+	                            null,
+	                            _react2.default.createElement(
+	                                'td',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'code',
+	                                    null,
+	                                    '_UP_TO_10'
+	                                )
+	                            ),
+	                            _react2.default.createElement('td', null),
+	                            _react2.default.createElement(
+	                                'td',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'p',
+	                                    null,
+	                                    'Whether the containing text block contains 10 words or less'
+	                                )
+	                            )
+	                        )
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+
+	    return FeatureSelection;
+	}(_react.Component);
+
+	exports.default = FeatureSelection;
+
+/***/ },
+/* 284 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _getTermFrequencyData = __webpack_require__(285);
+
+	var _getTermFrequencyData2 = _interopRequireDefault(_getTermFrequencyData);
+
+	var _react = __webpack_require__(4);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _underscore = __webpack_require__(210);
+
+	var _underscore2 = _interopRequireDefault(_underscore);
+
+	var _figs = __webpack_require__(224);
+
+	var _figs2 = _interopRequireDefault(_figs);
+
+	var _PercentageBar = __webpack_require__(287);
+
+	var _PercentageBar2 = _interopRequireDefault(_PercentageBar);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var FigureTfIdf = function (_React$Component) {
+	    _inherits(FigureTfIdf, _React$Component);
+
+	    function FigureTfIdf() {
+	        _classCallCheck(this, FigureTfIdf);
+
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(FigureTfIdf).apply(this, arguments));
+	    }
+
+	    _createClass(FigureTfIdf, [{
+	        key: 'render',
+	        value: function render() {
+	            var nTerms = 20;
+	            var tfIdfScores = _getTermFrequencyData2.default.tfidfForAllTerms(nTerms);
+	            var maxVal = tfIdfScores[0][1];
+	            _underscore2.default.map(tfIdfScores, function (arr) {
+	                arr[2] = (100 * arr[1] / maxVal).toFixed(2) + "%";
+	            });
+
+	            return _react2.default.createElement(
+	                'figure',
+	                { id: _figs2.default.tfidf.id },
+	                _react2.default.createElement(
+	                    'table',
+	                    { className: ' table' },
+	                    _react2.default.createElement(
+	                        'thead',
+	                        null,
+	                        _react2.default.createElement(
+	                            'tr',
+	                            null,
+	                            _react2.default.createElement('th', null),
+	                            _react2.default.createElement(
+	                                'th',
+	                                null,
+	                                'term'
+	                            ),
+	                            _react2.default.createElement(
+	                                'th',
+	                                null,
+	                                'tf-idf score'
+	                            )
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'tbody',
+	                        null,
+	                        _underscore2.default.map(tfIdfScores, function (term, o) {
+	                            var tfIdfScoreStr = term[1].toFixed(2);
+	                            return _react2.default.createElement(
+	                                'tr',
+	                                { key: term[0] },
+	                                _react2.default.createElement(
+	                                    'th',
+	                                    { className: 'nr' },
+	                                    o + 1
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    term[0]
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    { className: 'tf-idf-score' },
+	                                    _react2.default.createElement(_PercentageBar2.default, { percentage: term[2], text: tfIdfScoreStr + '' }),
+	                                    _react2.default.createElement(
+	                                        'span',
+	                                        { className: 'perc-text' },
+	                                        tfIdfScoreStr
+	                                    )
+	                                )
+	                            );
+	                        })
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'figcaption',
+	                    null,
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'figure-number' },
+	                        'Fig ',
+	                        _figs2.default.tfidf.num,
+	                        '.'
+	                    ),
+	                    ' Top ',
+	                    nTerms,
+	                    ' tf-idf scores for stemmed words in ',
+	                    _react2.default.createElement(
+	                        'code',
+	                        null,
+	                        '*.info'
+	                    ),
+	                    ' elements. Stemming is performed using the ',
+	                    _react2.default.createElement(
+	                        'a',
+	                        { href: 'http://snowball.tartarus.org/algorithms/dutch/stemmer.html' },
+	                        'Snowball algorithm for Dutch'
+	                    ),
+	                    '.'
+	                )
+	            );
+	        }
+	    }]);
+
+	    return FigureTfIdf;
+	}(_react2.default.Component);
+
+	exports.default = FigureTfIdf;
+
+/***/ },
+/* 285 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _ = __webpack_require__(210);
+
+	var dataTfIdf = __webpack_require__(286);
+
+	function tfidfForAllTerms(topN) {
+	    var sorted = _.map(dataTfIdf, function (e) {
+	        return [e.term, e.score];
+	    });
+	    if (topN) sorted.splice(topN);
+
+	    console.log(sorted);
+	    return sorted;
+	}
+
+	module.exports = {
+	    tfidfForAllTerms: tfidfForAllTerms
+	};
+
+/***/ },
+/* 286 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	module.exports = [{ "term": "_NUM", "score": 863541.2613095865 }, { "term": "_PUNCT", "score": 849119.0060654248 }, {
+	    "term": "_ART",
+	    "score": 624798.3127026781
+	}, { "term": ",", "score": 606224.7574059183 }, { "term": "[", "score": 462440.5252064248 }, {
+	    "term": "van",
+	    "score": 438068.95202317025
+	}, { "term": "/", "score": 433333.48285467044 }, { "term": "te", "score": 378547.33573643764 }, {
+	    "term": "],",
+	    "score": 271151.8072226816
+	}, { "term": "in", "score": 270082.1073347967 }, { "term": "]", "score": 265397.7547965963 }, {
+	    "term": "-",
+	    "score": 263263.7804801338
+	}, { "term": "mr", "score": 262910.44169437274 }, { "term": "en", "score": 233666.5256017004 }, {
+	    "term": "zaaknummer",
+	    "score": 205373.72233549555
+	}, { "term": "advocat", "score": 186789.6501626982 }, {
+	    "term": "rechtbank",
+	    "score": 168679.9979446142
+	}, { "term": "wonend", "score": 165746.15115876673 }, { "term": "(", "score": 157894.32180234598 }, {
+	    "term": "zak",
+	    "score": 156488.76634784217
+	}, { "term": "teg", "score": 152962.8730120228 }, { "term": "woonplat", "score": 144234.9968097035 }, {
+	    "term": "hierna",
+	    "score": 141307.63209192973
+	}, { "term": "gevestigd", "score": 137097.51857341675 }, {
+	    "term": "gemachtigd",
+	    "score": 136029.85622169368
+	}, { "term": ")", "score": 129446.697784994 }, {
+	    "term": "amsterdam",
+	    "score": 126881.60051673395
+	}, { "term": "uitsprak", "score": 121640.61270640766 }, {
+	    "term": "op",
+	    "score": 119851.98129427247
+	}, { "term": "gerechtshof", "score": 119263.23217349063 }, {
+	    "term": "vonnis",
+	    "score": 116247.43484509361
+	}, { "term": "kamer", "score": 108401.80933697626 }, { "term": "afdel", "score": 106916.94730486015 }, {
+	    "term": "m",
+	    "score": 103635.12768152743
+	}, { "term": "j", "score": 103090.72317496609 }, { "term": "b", "score": 100072.07817053328 }, {
+	    "term": "c",
+	    "score": 98010.64409801581
+	}, { "term": "eiser", "score": 94120.74147300371 }, {
+	    "term": "meervoud",
+	    "score": 90973.752537538
+	}, { "term": "gedaagd", "score": 90014.02190824946 }, {
+	    "term": "a",
+	    "score": 88214.9108694203
+	}, { "term": "vennootschap", "score": 86136.80402385052 }, {
+	    "term": "beroep",
+	    "score": 86088.65660626792
+	}, { "term": "met", "score": 83533.38322507023 }, { "term": "appellant", "score": 82957.94390502897 }, {
+	    "term": "noem",
+	    "score": 82898.82341830924
+	}, { "term": "s", "score": 81614.1650656842 }, { "term": "eiseres", "score": 81597.17713425799 }, {
+	    "term": "verdacht",
+	    "score": 81514.02299370199
+	}, { "term": "arrest", "score": 80662.1537426054 }];
+
+/***/ },
+/* 287 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(4);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var PercentageBar = function (_React$Component) {
+	    _inherits(PercentageBar, _React$Component);
+
+	    function PercentageBar() {
+	        _classCallCheck(this, PercentageBar);
+
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(PercentageBar).apply(this, arguments));
+	    }
+
+	    _createClass(PercentageBar, [{
+	        key: "render",
+	        value: function render() {
+	            var txt = this.props.text ? this.props.text : this.props.percentage;
+	            return _react2.default.createElement(
+	                "svg",
+	                { width: "80", height: "10" },
+	                _react2.default.createElement(
+	                    "rect",
+	                    { className: "perc-bar bg", width: "100%", height: "100%" },
+	                    _react2.default.createElement(
+	                        "title",
+	                        null,
+	                        txt
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "rect",
+	                    { className: "perc-bar", width: this.props.percentage, height: "100%" },
+	                    _react2.default.createElement(
+	                        "title",
+	                        null,
+	                        txt
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+
+	    return PercentageBar;
+	}(_react2.default.Component);
+
+	exports.default = PercentageBar;
+
+	PercentageBar.propTypes = {
+	    percentage: _react2.default.PropTypes.string.isRequired,
+	    text: _react2.default.PropTypes.string.isRequired
+	};
+
+/***/ },
+/* 288 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _getTermFrequencyData = __webpack_require__(289);
+
+	var _getTermFrequencyData2 = _interopRequireDefault(_getTermFrequencyData);
+
+	var _react = __webpack_require__(4);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _underscore = __webpack_require__(210);
+
+	var _underscore2 = _interopRequireDefault(_underscore);
+
+	var _figs = __webpack_require__(224);
+
+	var _figs2 = _interopRequireDefault(_figs);
+
+	var _PercentageBar = __webpack_require__(287);
+
+	var _PercentageBar2 = _interopRequireDefault(_PercentageBar);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var FigureTitleTfIdf = function (_React$Component) {
+	    _inherits(FigureTitleTfIdf, _React$Component);
+
+	    function FigureTitleTfIdf() {
+	        _classCallCheck(this, FigureTitleTfIdf);
+
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(FigureTitleTfIdf).apply(this, arguments));
+	    }
+
+	    _createClass(FigureTitleTfIdf, [{
+	        key: 'render',
+	        value: function render() {
+	            var nTerms = 20;
+	            var tfIdfScores = _getTermFrequencyData2.default.tfidfForAllTerms(nTerms);
+	            var maxVal = tfIdfScores[0][1];
+	            _underscore2.default.map(tfIdfScores, function (arr) {
+	                arr[2] = (100 * arr[1] / maxVal).toFixed(2) + "%";
+	            });
+
+	            return _react2.default.createElement(
+	                'figure',
+	                { className: 'chart', id: _figs2.default.tfidf.id },
+	                _react2.default.createElement(
+	                    'table',
+	                    { className: 'chart table' },
+	                    _react2.default.createElement(
+	                        'thead',
+	                        null,
+	                        _react2.default.createElement(
+	                            'tr',
+	                            null,
+	                            _react2.default.createElement('th', null),
+	                            _react2.default.createElement(
+	                                'th',
+	                                null,
+	                                'term'
+	                            ),
+	                            _react2.default.createElement(
+	                                'th',
+	                                null,
+	                                'tf-idf score'
+	                            )
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'tbody',
+	                        null,
+	                        _underscore2.default.map(tfIdfScores, function (term, o) {
+	                            var tfIdfScoreStr = term[1].toFixed(2);return _react2.default.createElement(
+	                                'tr',
+	                                { key: term[0] },
+	                                _react2.default.createElement(
+	                                    'th',
+	                                    { className: 'nr' },
+	                                    o + 1
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    term[0]
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    { className: 'tf-idf-score' },
+	                                    _react2.default.createElement(_PercentageBar2.default, { percentage: term[2], text: tfIdfScoreStr + '' }),
+	                                    _react2.default.createElement(
+	                                        'span',
+	                                        { className: 'perc-text' },
+	                                        tfIdfScoreStr
+	                                    )
+	                                )
+	                            );
+	                        })
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'figcaption',
+	                    null,
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'figure-number' },
+	                        'Fig ',
+	                        _figs2.default.tfidf.num,
+	                        '.'
+	                    ),
+	                    ' Top ',
+	                    nTerms,
+	                    ' tf-idf scores for stemmed words in section titles. We take as document here any string block (such as a paragraph, or title). Stemming is performed using the ',
+	                    _react2.default.createElement(
+	                        'a',
+	                        { href: 'http://snowball.tartarus.org/algorithms/dutch/stemmer.html' },
+	                        'Snowball algorithm for Dutch'
+	                    ),
+	                    '.'
+	                )
+	            );
+	        }
+	    }]);
+
+	    return FigureTitleTfIdf;
+	}(_react2.default.Component);
+
+	exports.default = FigureTitleTfIdf;
+
+/***/ },
+/* 289 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _underscore = __webpack_require__(210);
+
+	var _underscore2 = _interopRequireDefault(_underscore);
+
+	var _data = __webpack_require__(290);
+
+	var _data2 = _interopRequireDefault(_data);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function tfidfForAllTerms(topN) {
+	    var sorted = _underscore2.default.map(_data2.default, function (e) {
+	        return [e.term, e.score];
+	    });
+	    if (topN) sorted.splice(topN);
+	    return sorted;
+	}
+
+	exports.default = tfidfForAllTerms;
+
+/***/ },
+/* 290 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = [["_NUM", 393148.64984127437], ["_ART", 384454.94465026655], ["besliss", 285029.4092010561], ["beoordel", 173667.48901928248], ["van", 160068.16835130303], ["geding", 132553.36627456188], ["overweg", 114450.42138161842], ["feit", 94987.7575340151], ["in", 84479.5955831566], ["geschil", 83552.951798064], ["beroep", 80581.06155389751], ["hoger", 78759.22665234478], ["procesverlop", 78414.24015429006], ["strafbar", 64106.45720681872], ["procedur", 60542.15965272519], ["[", 50862.212958176715], ["en", 48121.63668133538], ["tenlastelegg", 47570.337113122696], ["],", 45122.38467212454], ["_PUNCT", 44995.937026929], ["rechtsmiddel", 43423.98725925943], ["verdacht", 37414.63723701132], ["partij", 36229.81445717601], ["aanleg", 34518.122715103396], ["cassatie", 34318.58420647567], ["vorder", 34130.27882844579], ["eerst", 32325.21297540525], ["voorvrag", 31468.69911651183], ["vaststaand", 30947.28653615719], ["benadeeld", 30859.55069801901], ["onderzoek", 29965.315476095308], ["motiver", 29003.672700981006], ["voorschrift", 28846.963724279987], ["standpunt", 28590.09431692155], ["middel", 27397.0297607832], ["wettelijk", 26790.96178786555], ["verlop", 25548.78138054091], ["toepass", 25315.994199633806], [",", 24636.858078484336], ["bewezenverklar", 24344.144910443094], ["bewijs", 24254.874937055618], ["uitsprak", 23000.678655192387], ["lop", 22226.884508587253], ["proceskost", 21779.743390281168], ["rechtbank", 21027.646269244677], ["verder", 20395.114609103864], ["/", 19623.631328836702], ["slotsom", 19097.139716256414], ["maatregel", 18678.706608807188], ["]", 18281.82578795572], ["terechtzit", 18257.716523616506], ["straf", 17984.994367117954], ["-", 17872.335611780854], ["zak", 17795.235905653513], ["ontstan", 16508.310609239732], ["verzoek", 15777.680847909283], ["verwer", 14876.889404205815], ["bewezenverklaard", 14205.485394996227], ["gerechtshof", 14102.67830413882], ["wetsartikel", 13853.527654867596], ["arrest", 13783.8271845514], ["(", 13172.163086607885], ["of", 13016.119754741998], ["grond", 12870.120229629722], ["conclusies", 12839.988899653486], [")", 12711.700938706379], ["ontvank", 12706.016761899218], ["kwalificatie", 12287.588335969971], ["ter", 11847.037047359183], ["hag", 11167.28504490736], ["oplegg", 11113.414502283445], ["vonnis", 10866.9936912091], ["instanties", 10761.396167106896], ["den", 10565.709036479593], ["te", 10488.277302703456], ["justitie", 10389.54792603545], ["officier", 10381.56346133334], ["feitelijk", 10376.454231194171], ["op", 10033.774456076591], ["d", 9935.444264565063], ["strafoplegg", 8944.406590996019], ["hd", 8803.113433348472], ["conventie", 8618.266400955583], ["waarder", 8607.55589745038], ["zaaknr", 8599.556527091627], ["reconventie", 8508.12780480283], ["bewijsoverweg", 8307.359486274245], ["waarvan", 8137.758118655883], ["toegepast", 7814.787603379457], ["besprek", 7727.537005984668], ["strafzak", 7631.219433865774], ["ten", 7615.142548285799], ["aanzien", 7539.929192303387], ["kamer", 7496.831079757541], ["tot", 7485.371965237582], ["b", 7477.083576515316], ["] ,", 7462.699800534515], ["vrijsprak", 7452.772952100351], ["straff", 7177.592281379058], ["sub", 6912.785082521852]];
+
+/***/ },
+/* 291 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _getTermFrequencyData = __webpack_require__(292);
+
+	var _getTermFrequencyData2 = _interopRequireDefault(_getTermFrequencyData);
+
+	var _react = __webpack_require__(4);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _underscore = __webpack_require__(210);
+
+	var _underscore2 = _interopRequireDefault(_underscore);
+
+	var _figs = __webpack_require__(224);
+
+	var _figs2 = _interopRequireDefault(_figs);
+
+	var _PercentageBar = __webpack_require__(287);
+
+	var _PercentageBar2 = _interopRequireDefault(_PercentageBar);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	function getTablesForTfIdfScores(tfIdfScores) {
+	    var tables = [];
+	    for (var sectionRole in tfIdfScores) {
+	        //noinspection JSUnfilteredForInLoop
+	        var tfIdfScoresForRole = tfIdfScores[sectionRole];
+	        //noinspection JSUnfilteredForInLoop
+	        tables.push(_react2.default.createElement(
+	            'table',
+	            { key: sectionRole, className: 'table inline-table' },
+	            _react2.default.createElement(
+	                'caption',
+	                null,
+	                sectionRole
+	            ),
+	            _react2.default.createElement(
+	                'thead',
+	                null,
+	                _react2.default.createElement(
+	                    'tr',
+	                    null,
+	                    _react2.default.createElement('th', null),
+	                    _react2.default.createElement(
+	                        'th',
+	                        null,
+	                        'term'
+	                    ),
+	                    _react2.default.createElement(
+	                        'th',
+	                        null,
+	                        'tf-idf score'
+	                    )
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'tbody',
+	                null,
+	                _underscore2.default.map(tfIdfScoresForRole, function (term, o) {
+	                    var tfIdfScoreStr = term[1].toFixed(2);
+	                    return _react2.default.createElement(
+	                        'tr',
+	                        { key: term[0] },
+	                        _react2.default.createElement(
+	                            'th',
+	                            { className: 'nr' },
+	                            o + 1
+	                        ),
+	                        _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            term[0]
+	                        ),
+	                        _react2.default.createElement(
+	                            'td',
+	                            { className: 'tf-idf-score' },
+	                            _react2.default.createElement(_PercentageBar2.default, { percentage: term[2], text: tfIdfScoreStr + '' }),
+	                            _react2.default.createElement(
+	                                'span',
+	                                { className: 'perc-text' },
+	                                tfIdfScoreStr
+	                            )
+	                        )
+	                    );
+	                })
+	            )
+	        ));
+	    }
+	    return tables;
+	}
+
+	var FigureSectionTitleTfIdf = function (_React$Component) {
+	    _inherits(FigureSectionTitleTfIdf, _React$Component);
+
+	    function FigureSectionTitleTfIdf() {
+	        _classCallCheck(this, FigureSectionTitleTfIdf);
+
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(FigureSectionTitleTfIdf).apply(this, arguments));
+	    }
+
+	    _createClass(FigureSectionTitleTfIdf, [{
+	        key: 'render',
+	        value: function render() {
+	            var nTerms = 10;
+
+	            var tfIdfScores = (0, _getTermFrequencyData2.default)(nTerms);
+
+	            var _loop = function _loop() {
+	                //noinspection JSUnfilteredForInLoop
+	                var tfIdfScoresForRole = tfIdfScores[sectionRole];
+
+	                var maxVal = tfIdfScoresForRole[0][1];
+	                _underscore2.default.map(tfIdfScoresForRole, function (arr) {
+	                    arr[2] = (100 * arr[1] / maxVal).toFixed(2) + "%";
+	                });
+	            };
+
+	            for (var sectionRole in tfIdfScores) {
+	                _loop();
+	            }
+
+	            return _react2.default.createElement(
+	                'figure',
+	                { className: 'chart', id: _figs2.default.tfidf.id },
+	                _react2.default.createElement(
+	                    'div',
+	                    null,
+	                    getTablesForTfIdfScores(tfIdfScores)
+	                ),
+	                _react2.default.createElement(
+	                    'figcaption',
+	                    null,
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'figure-number' },
+	                        'Fig ',
+	                        _figs2.default.tfidf.num,
+	                        '.'
+	                    ),
+	                    ' Top ',
+	                    nTerms,
+	                    ' tf-idf scores for stemmed words in section titles, per section role. We take as document here any string block (such as a paragraph, or title). Stemming is performed using the ',
+	                    _react2.default.createElement(
+	                        'a',
+	                        { href: 'http://snowball.tartarus.org/algorithms/dutch/stemmer.html' },
+	                        'Snowball algorithm for Dutch'
+	                    ),
+	                    '.'
+	                )
+	            );
+	        }
+	    }]);
+
+	    return FigureSectionTitleTfIdf;
+	}(_react2.default.Component);
+
+	exports.default = FigureSectionTitleTfIdf;
+
+/***/ },
+/* 292 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _underscore = __webpack_require__(210);
+
+	var _underscore2 = _interopRequireDefault(_underscore);
+
+	var _beslissing = __webpack_require__(293);
+
+	var _beslissing2 = _interopRequireDefault(_beslissing);
+
+	var _overwegingen = __webpack_require__(294);
+
+	var _overwegingen2 = _interopRequireDefault(_overwegingen);
+
+	var _procesverloop = __webpack_require__(295);
+
+	var _procesverloop2 = _interopRequireDefault(_procesverloop);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var rawData = {
+	    beslissing: _beslissing2.default,
+	    overwegingen: _overwegingen2.default,
+	    procesverloop: _procesverloop2.default
+	};
+
+	function tfidfForAllTerms(topN) {
+	    var returnObj = Object.create(null);
+	    for (var sectionRole in rawData) {
+	        if (rawData.hasOwnProperty(sectionRole)) {
+	            var sorted = _underscore2.default.sortBy(rawData[sectionRole], function (e) {
+	                return -e[1];
+	            });
+	            if (topN) {
+	                sorted.splice(topN);
+	            }
+	            returnObj[sectionRole] = sorted;
+	        }
+	    }
+	    return returnObj;
+	}
+
+	exports.default = tfidfForAllTerms;
+
+/***/ },
+/* 293 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = [["besliss", 7.956591778188496], ["_NUM", 4.605893573909974], ["_ART", 3.08221514837768], ["van", 0.4703645139566689], ["slotsom", 0.3748379460007891], ["motiver", 0.2678897231806194], ["in", 0.20781478525805525], ["_PUNCT", 0.16850649254329103], ["beroep", 0.1639081639615639], ["hoger", 0.16005150128011533], ["grond", 0.10902488734094974], ["en", 0.10679988964011404], ["op", 0.0691232619059627], ["eerst", 0.04909828259844132], ["aanleg", 0.048949949418385603], ["geschil", 0.046724951717549895], ["rechtbank", 0.04079162451532133], ["vorder", 0.034413297772925636], ["verleng", 0.028479970570697077], ["terbeschikkingstell", 0.028331637390641363], [",", 0.026996638770139938], ["partij", 0.019431646587298526], ["beoordel", 0.015871650265961393], ["benadeeld", 0.01572331708590568], ["bewijs", 0.014981651185627108], ["feit", 0.014981651185627108], ["verder", 0.01468498482551568], ["inzak", 0.014239985285348538], ["voorwaard", 0.013349986205014255], ["tot", 0.013349986205014255], ["vor", 0.012163320764568544], ["geding", 0.01201498758451283], ["aan", 0.011421654864289973], ["[", 0.011124988504178545], ["verzoek", 0.010976655324122831], ["]", 0.010828322144067117], ["na", 0.010679988964011403], ["veroordel", 0.010679988964011403], ["met", 0.009493323523565692], ["-", 0.009493323523565692], [")", 0.009344990343509978], ["kort", 0.009196657163454264], ["gerechtshof", 0.00904832398339855], ["(", 0.008751657623287123], ["incident", 0.008603324443231409], ["te", 0.008009991723008553], ["bewijsbesliss", 0.008009991723008553], ["proceskost", 0.007268325822729983], ["kantonrechter", 0.007268325822729983], ["principal", 0.006971659462618555], ["dez", 0.006971659462618555], ["kost", 0.0066749931025071275], ["zak", 0.0066749931025071275], ["incidentel", 0.0066749931025071275], ["dat", 0.0063783267423957], ["is", 0.006229993562339986], ["/", 0.006229993562339986], ["vonnis", 0.005784994022172843], ["€", 0.0056366608421171294], ["appellant", 0.005339994482005702], ["over", 0.005339994482005702], ["verpleg", 0.004598328581727132], ["overheidsweg", 0.004598328581727132], ["heeft", 0.004449995401671418], ["veroordeelt", 0.004449995401671418], ["dor", 0.0043016622216157045], ["hof", 0.004153329041559991], ["daarop", 0.004153329041559991], ["bij", 0.004004995861504277], ["niet", 0.004004995861504277], ["ten", 0.004004995861504277], ["ge", 0.0038566626814485624], ["griev", 0.0037083295013928485], [",-", 0.0037083295013928485], ["zover", 0.0035599963213371346], ["voorzieningenrechter", 0.0034116631412814207], ["i", 0.0034116631412814207], ["aanzien", 0.0034116631412814207], ["waarvan", 0.003263329961225707], ["beid", 0.003263329961225707], ["af", 0.003114996781169993], ["conventie", 0.003114996781169993], ["reconventie", 0.003114996781169993], ["zijn", 0.003114996781169993], ["ntimeerd", 0.003114996781169993], ["begrot", 0.003114996781169993], ["beslag", 0.003114996781169993], ["wijst", 0.002966663601114279], ["om", 0.002966663601114279], ["verklaart", 0.002966663601114279], ["teg", 0.002966663601114279], ["eind", 0.002966663601114279], ["artikel", 0.002966663601114279], ["advocat", 0.002966663601114279], ["tuss", 0.0028183304210585647], ["word", 0.0028183304210585647], ["bedrag", 0.0028183304210585647], ["bekrachtigt", 0.0028183304210585647], ["die", 0.002669997241002851], ["dit", 0.002669997241002851], ["betrek", 0.002669997241002851], ["inleid", 0.002669997241002851], ["bestred", 0.002669997241002851], ["salaris", 0.002669997241002851], ["gen", 0.002521664060947137], ["vernietigt", 0.002521664060947137], ["rechtdoend", 0.002521664060947137], ["heden", 0.002521664060947137], ["zijd", 0.002521664060947137], ["januari", 0.002373330880891423], ["of", 0.002373330880891423], ["uitgesprok", 0.002373330880891423], ["als", 0.002373330880891423], ["procedur", 0.002373330880891423], ["verschot", 0.002373330880891423], ["geliquideerd", 0.002373330880891423], ["ander", 0.002224997700835709], ["wettelijk", 0.002224997700835709], ["zal", 0.002224997700835709], ["d", 0.002224997700835709], ["ieder", 0.0020766645207799953], ["nader", 0.0020766645207799953], ["voorlop", 0.0020766645207799953], ["voortgezet", 0.0020766645207799953], ["betal", 0.0020766645207799953], ["opnieuw", 0.0020766645207799953], ["gevall", 0.0020766645207799953], ["april", 0.0019283313407242812], ["mer", 0.0019283313407242812], ["oktober", 0.0019283313407242812], ["gewez", 0.0019283313407242812], ["voorzitter", 0.0017799981606685673], ["omtrent", 0.0017799981606685673], ["nummer", 0.0017799981606685673], ["juli", 0.0017799981606685673], ["“", 0.0017799981606685673], ["aanduid", 0.0017799981606685673], ["rent", 0.0017799981606685673], ["voldoen", 0.0017799981606685673], ["vermeerder", 0.0017799981606685673], ["onder", 0.0017799981606685673], ["genom", 0.0017799981606685673], ["vanaf", 0.0017799981606685673], ["uitvoer", 0.0017799981606685673], ["voorrad", 0.0017799981606685673], ["februari", 0.0017799981606685673], ["houdt", 0.0016316649806128534], ["open", 0.0016316649806128534], ["c", 0.0016316649806128534], ["appel", 0.0016316649806128534], ["voorwerp", 0.0016316649806128534], ["overweg", 0.0016316649806128534], ["stat", 0.0014833318005571395], ["recht", 0.0014833318005571395], ["oordel", 0.0014833318005571395], ["dag", 0.0014833318005571395], ["hechtenis", 0.0014833318005571395], ["nar", 0.0014833318005571395], ["e", 0.0014833318005571395], ["bezwar", 0.0014833318005571395], ["betreft", 0.0013349986205014254], ["ter", 0.0013349986205014254], ["rechter", 0.0013349986205014254], ["slachtoffer", 0.0013349986205014254], ["december", 0.0013349986205014254], ["zoverr", 0.0013349986205014254], ["tijdstip", 0.0013349986205014254], ["conclusie", 0.0013349986205014254], ["verzoeker", 0.0013349986205014254], ["uitsprak", 0.0011866654404457115], ["zoal", 0.0011866654404457115], ["ongegrond", 0.0011866654404457115], ["bijkom", 0.0011866654404457115], ["er", 0.0011866654404457115], ["onderzoek", 0.0011866654404457115], ["proceskostenveroordel", 0.0011866654404457115], ["gevorderd", 0.0011866654404457115], ["tussenbesliss", 0.0010383322603899976], ["verdacht", 0.0010383322603899976], ["november", 0.0010383322603899976], ["zij", 0.0010383322603899976], ["har", 0.0010383322603899976], ["verwijz", 0.0010383322603899976], ["kernpunt", 0.0010383322603899976], ["verwijst", 0.0010383322603899976], ["le", 0.0010383322603899976], ["mr", 0.0010383322603899976], ["afwijz", 0.0010383322603899976], ["aangevoerd", 0.0008899990803342836], ["uit", 0.0008899990803342836], ["nog", 0.0008899990803342836], ["moet", 0.0008899990803342836], ["bijzonder", 0.0008899990803342836], ["september", 0.0008899990803342836], ["augustus", 0.0008899990803342836], ["mei", 0.0008899990803342836], ["ook", 0.0008899990803342836], ["zich", 0.0008899990803342836], ["verwer", 0.0008899990803342836], ["commissaris", 0.0008899990803342836], ["s", 0.0008899990803342836], ["akt", 0.0008899990803342836], ["rol", 0.0008899990803342836], ["wat", 0.0008899990803342836], ["veertien", 0.0008899990803342836], ["teruggegev", 0.0008899990803342836], ["dient", 0.0008899990803342836], ["behor", 0.0008899990803342836], ["subsidiair", 0.0008899990803342836], ["getuig", 0.0007416659002785698], ["ontvank", 0.0007416659002785698], ["dan", 0.0007416659002785698], ["voorzien", 0.0007416659002785698], ["hoofdzak", 0.0007416659002785698], ["der", 0.0007416659002785698], [",-,", 0.0007416659002785698], ["all", 0.0007416659002785698], ["plaatsing", 0.0007416659002785698], ["inricht", 0.0007416659002785698], ["jeugdig", 0.0007416659002785698], ["toepass", 0.0007416659002785698], ["bepal", 0.0007416659002785698], ["vaststell", 0.0007416659002785698], ["hebb", 0.0007416659002785698], ["terechtzit", 0.0007416659002785698], ["vermeld", 0.0007416659002785698], ["’", 0.0007416659002785698], ["betreff", 0.0007416659002785698], ["bestat", 0.0007416659002785698], ["wijzig", 0.0007416659002785698], ["alsnog", 0.0007416659002785698], ["griffier", 0.0007416659002785698], ["dinsdag", 0.0007416659002785698], ["uitlat", 0.0007416659002785698], ["justitie", 0.0007416659002785698], ["gegev", 0.0007416659002785698], ["- €", 0.0007416659002785698], ["ondernem", 0.0007416659002785698], ["leid", 0.0007416659002785698], ["kan", 0.0007416659002785698], ["alvoren", 0.0007416659002785698], ["eventueel", 0.0007416659002785698], ["daarvor", 0.0007416659002785698], ["zwoll", 0.0007416659002785698], ["lelystad", 0.0007416659002785698], ["aangaand", 0.0005933327202228558], ["besprek", 0.0005933327202228558], ["lid", 0.0005933327202228558], ["wet", 0.0005933327202228558], ["verzet", 0.0005933327202228558], ["rechtsmiddel", 0.0005933327202228558], ["hij", 0.0005933327202228558], ["verklaard", 0.0005933327202228558], ["doend", 0.0005933327202228558], ["a", 0.0005933327202228558], ["omstand", 0.0005933327202228558], ["algemen", 0.0005933327202228558], ["colleg", 0.0005933327202228558], ["verded", 0.0005933327202228558], ["b", 0.0005933327202228558], ["hervat", 0.0005933327202228558], ["verstekvonnis", 0.0005933327202228558], ["toegewez", 0.0005933327202228558], ["per", 0.0005933327202228558], ["vervolgen", 0.0005933327202228558], ["punt", 0.0005933327202228558], ["verzocht", 0.0005933327202228558], ["aangezien", 0.0005933327202228558], ["gegeven", 0.0005933327202228558], ["aanwez", 0.0005933327202228558], ["”", 0.0005933327202228558], ["havr", 0.0005933327202228558], ["schadevergoed", 0.0005933327202228558], ["schad", 0.0005933327202228558], ["schip", 0.0005933327202228558], ["grief", 0.0005933327202228558], ["wordt", 0.0005933327202228558], ["hun", 0.0005933327202228558], ["j", 0.0005933327202228558], ["n", 0.0005933327202228558], ["ex", 0.0005933327202228558], ["geval", 0.0005933327202228558], ["nasalaris", 0.0005933327202228558], ["binn", 0.0005933327202228558], ["vonniss", 0.0005933327202228558], ["overeenkomst", 0.0005933327202228558], ["wetboek", 0.0005933327202228558], ["omdat", 0.0005933327202228558], ["onvoldo", 0.0005933327202228558], ["rapport", 0.0005933327202228558], ["gelast", 0.0005933327202228558], ["wanner", 0.0005933327202228558], ["eig", 0.0005933327202228558], ["herzien", 0.0005933327202228558], ["arrest", 0.0005933327202228558], ["h", 0.0005933327202228558], ["verricht", 0.0005933327202228558], ["bedoeld", 0.0005933327202228558], ["geldt", 0.0005933327202228558], ["lc", 0.0005933327202228558], ["leeuward", 0.0005933327202228558], ["wetterskip", 0.0005933327202228558], ["instructie", 0.0004449995401671418], ["iiibesliss", 0.0004449995401671418], ["iibesliss", 0.0004449995401671418], ["straf", 0.0004449995401671418], ["indien", 0.0004449995401671418], ["zitting", 0.0004449995401671418], ["redelijkerwijs", 0.0004449995401671418], ["ad", 0.0004449995401671418], ["namen", 0.0004449995401671418], ["genoemd", 0.0004449995401671418], ["had", 0.0004449995401671418], ["was", 0.0004449995401671418], ["opmerk", 0.0004449995401671418], ["ingang", 0.0004449995401671418], ["algehel", 0.0004449995401671418], ["herroep", 0.0004449995401671418], ["verschuldigd", 0.0004449995401671418], ["aansprak", 0.0004449995401671418], ["gemaakt", 0.0004449995401671418], ["rechtsoverweg", 0.0004449995401671418], ["bw", 0.0004449995401671418], ["afgewez", 0.0004449995401671418], ["nieuw", 0.0004449995401671418], ["gesteld", 0.0004449995401671418], ["nu", 0.0004449995401671418], ["slecht", 0.0004449995401671418], ["aangehoud", 0.0004449995401671418], ["tpi", 0.0004449995401671418], ["des", 0.0004449995401671418], ["l", 0.0004449995401671418], ["ingesteld", 0.0004449995401671418], ["nem", 0.0004449995401671418], ["vast", 0.0004449995401671418], ["primair", 0.0004449995401671418], ["fal", 0.0004449995401671418], ["aanvull", 0.0004449995401671418], ["verweerder", 0.0004449995401671418], ["_NUMvor", 0.0004449995401671418], ["deskundigenbericht", 0.0004449995401671418], ["bewijsvoer", 0.0004449995401671418], ["gevoerd", 0.0004449995401671418], ["goeder", 0.0004449995401671418], ["voldan", 0.0004449995401671418], ["beteken", 0.0004449995401671418], ["plaatsgevond", 0.0004449995401671418], ["*", 0.0004449995401671418], ["omvang", 0.0004449995401671418], ["beschik", 0.0004449995401671418], ["burger", 0.0004449995401671418], ["hor", 0.0004449995401671418], ["–", 0.0004449995401671418], ["jar", 0.0004449995401671418], ["hem", 0.0004449995401671418], ["goed", 0.0004449995401671418], ["aegon", 0.0004449995401671418], ["beperk", 0.0004449995401671418], ["aangenom", 0.0004449995401671418], ["kruithof", 0.0004449995401671418], ["bindend", 0.0004449995401671418], ["houd", 0.0004449995401671418], ["gehandeld", 0.0004449995401671418], ["benoem", 0.0004449995401671418], ["nihil", 0.0004449995401671418], ["hek", 0.0004449995401671418], ["tegenwoord", 0.0004449995401671418], ["bekracht", 0.0004449995401671418], ["_NUMa", 0.0004449995401671418], ["curator", 0.0004449995401671418], ["afdoen", 0.0004449995401671418], ["hoofdelijk", 0.0004449995401671418], ["inbeslaggenom", 0.0004449995401671418], ["definities", 0.0004449995401671418], ["begrip", 0.0004449995401671418], ["‘", 0.0004449995401671418], ["rijnvar", 0.0004449995401671418], ["werknemer", 0.0004449995401671418], ["zelfstand", 0.0004449995401671418], ["verstan", 0.0004449995401671418], [", (…),", 0.0004449995401671418], ["varend", 0.0004449995401671418], ["personel", 0.0004449995401671418], ["beroepsarbeid", 0.0004449995401671418], ["boord", 0.0004449995401671418], ["winstoogmerk", 0.0004449995401671418], ["rijnvaart", 0.0004449995401671418], ["gebruikt", 0.0004449995401671418], ["certificat", 0.0004449995401671418], ["rijnvaartakt", 0.0004449995401671418], [", (…)", 0.0004449995401671418], ["uitdruk", 0.0004449995401671418], ["waartoe", 0.0004449995401671418], ["behoort", 0.0004449995401671418], ["vennootschap", 0.0004449995401671418], ["betrok", 0.0004449995401671418], ["exploiteert", 0.0004449995401671418], ["ongeacht", 0.0004449995401671418], ["eigenar", 0.0004449995401671418], ["meerder", 0.0004449995401671418], ["vennootschapp", 0.0004449995401671418], ["xploiteerd", 0.0004449995401671418], ["exploitant", 0.0004449995401671418], ["daadwerk", 0.0004449995401671418], ["beslissingsbevoegd", 0.0004449995401671418], ["economisch", 0.0004449995401671418], ["commerci", 0.0004449995401671418], ["management", 0.0004449995401671418], ["rijnvaartverklar", 0.0004449995401671418], ["maatgev", 0.0004449995401671418], ["afrond", 0.0004449995401671418], ["aangemerkt", 0.0004449995401671418], ["juni", 0.0004449995401671418], ["jegen", 0.0004449995401671418], ["bepaalt", 0.0004449995401671418], ["onrechtmat", 0.0004449995401671418], ["werkzam", 0.0004449995401671418], ["bevestigt", 0.0002966663601114279], ["wraking", 0.0002966663601114279], ["dictum", 0.0002966663601114279], ["omschrev", 0.0002966663601114279], ["oplegg", 0.0002966663601114279], ["kamer", 0.0002966663601114279], ["gelet", 0.0002966663601114279], ["geslot", 0.0002966663601114279], ["klacht", 0.0002966663601114279], ["zou", 0.0002966663601114279], ["voorgaand", 0.0002966663601114279], ["weg", 0.0002966663601114279], ["ilt", 0.0002966663601114279], ["gegrond", 0.0002966663601114279], ["del", 0.0002966663601114279], ["overwog", 0.0002966663601114279], ["sprak", 0.0002966663601114279], ["zin", 0.0002966663601114279], ["volgen", 0.0002966663601114279], ["pro", 0.0002966663601114279], ["forma", 0.0002966663601114279], ["informatie", 0.0002966663601114279], ["politierechter", 0.0002966663601114279], ["vermeerderd", 0.0002966663601114279], ["vernietigd", 0.0002966663601114279], ["behouden", 0.0002966663601114279], ["daarin", 0.0002966663601114279], ["beslissingskader", 0.0002966663601114279], ["inmiddel", 0.0002966663601114279], ["sol", 0.0002966663601114279], ["mallorca", 0.0002966663601114279], ["voorafgaand", 0.0002966663601114279], ["aanpass", 0.0002966663601114279], ["deskund", 0.0002966663601114279], ["zie", 0.0002966663601114279], ["conform", 0.0002966663601114279], ["] (", 0.0002966663601114279], ["uitdraai", 0.0002966663601114279], ["brp", 0.0002966663601114279], ["dossier", 0.0002966663601114279], ["toe", 0.0002966663601114279], ["voeg", 0.0002966663601114279], ["zoud", 0.0002966663601114279], ["noodzak", 0.0002966663601114279], ["war", 0.0002966663601114279], ["system", 0.0002966663601114279], ["mar", 0.0002966663601114279], ["hetgen", 0.0002966663601114279], ["geblek", 0.0002966663601114279], ["geword", 0.0002966663601114279], ["overigen", 0.0002966663601114279], ["bevoegd", 0.0002966663601114279], ["onderhav", 0.0002966663601114279], ["hoofdprocedur", 0.0002966663601114279], ["onbevoegd", 0.0002966663601114279], ["t", 0.0002966663601114279], ["vergoed", 0.0002966663601114279], ["gevolg", 0.0002966663601114279], ["wijz", 0.0002966663601114279], ["kennis", 0.0002966663601114279], ["than", 0.0002966663601114279], ["mag", 0.0002966663601114279], ["gedan", 0.0002966663601114279], ["m", 0.0002966663601114279], ["scher", 0.0002966663601114279], ["middel", 0.0002966663601114279], ["officier", 0.0002966663601114279], ["beperkt", 0.0002966663601114279], ["vaststaand", 0.0002966663601114279], ["gehuurd", 0.0002966663601114279], ["ontruimd", 0.0002966663601114279], ["woning", 0.0002966663601114279], ["dur", 0.0002966663601114279], ["aanleid", 0.0002966663601114279], ["verbalisant", 0.0002966663601114279], ["maart", 0.0002966663601114279], ["lever", 0.0002966663601114279], ["ontbond", 0.0002966663601114279], ["saver", 0.0002966663601114279], ["vco", 0.0002966663601114279], ["arnhem", 0.0002966663601114279], ["locatie", 0.0002966663601114279], ["arbeidsovereenkomst", 0.0002966663601114279], ["hierna", 0.0002966663601114279], ["gericht", 0.0002966663601114279], ["verworp", 0.0002966663601114279], ["geschond", 0.0002966663601114279], ["gunningsbesliss", 0.0002966663601114279], ["verlies", 0.0002966663601114279], ["verdienvermog", 0.0002966663601114279], ["berek", 0.0002966663601114279], ["althan", 0.0002966663601114279], ["vermeent", 0.0002966663601114279], ["gehoud", 0.0002966663601114279], ["uur", 0.0002966663601114279], ["griffierecht", 0.0002966663601114279], ["behandel", 0.0002966663601114279], ["veroordeeld", 0.0002966663601114279], ["gedur", 0.0002966663601114279], ["leent", 0.0002966663601114279], ["deelgeschil", 0.0002966663601114279], ["bovendien", 0.0002966663601114279], ["procesrecht", 0.0002966663601114279], ["instrument", 0.0002966663601114279], ["hand", 0.0002966663601114279], ["art", 0.0002966663601114279], ["stell", 0.0002966663601114279], ["stand", 0.0002966663601114279], ["betwist", 0.0002966663601114279], ["artos", 0.0002966663601114279], ["urenbeperk", 0.0002966663601114279], ["licht", 0.0002966663601114279], ["zo", 0.0002966663601114279], ["gebaseerd", 0.0002966663601114279], ["vastgesteld", 0.0002966663601114279], ["al", 0.0002966663601114279], ["gemachtigd", 0.0002966663601114279], ["rolraadsher", 0.0002966663601114279], ["herstelbesliss", 0.0002966663601114279], ["onderzoekswens", 0.0002966663601114279], ["strafvorder", 0.0002966663601114279], ["hersteld", 0.0002966663601114279], ["voortzet", 0.0002966663601114279], ["invrijheidstell", 0.0002966663601114279], ["bekrachtigd", 0.0002966663601114279], ["tarief", 0.0002966663601114279], ["moment", 0.0002966663601114279], ["invorderingsbesliss", 0.0002966663601114279], ["last", 0.0002966663601114279], ["gelegd", 0.0002966663601114279], ["tussenvonnis", 0.0002966663601114279], ["eindvonnis", 0.0002966663601114279], ["compenseert", 0.0002966663601114279], ["drag", 0.0002966663601114279], ["bot", 0.0002966663601114279], ["instanties", 0.0002966663601114279], ["verhoogd", 0.0002966663601114279], ["uw", 0.0002966663601114279], ["ingevolg", 0.0002966663601114279], ["teruggav", 0.0002966663601114279], ["deg", 0.0002966663601114279], ["gehecht", 0.0002966663601114279], ["lijst", 0.0002966663601114279], ["voort", 0.0002966663601114279], ["hoofdsom", 0.0002966663601114279], ["beroepschrift", 0.0002966663601114279], ["administratief", 0.0002966663601114279], ["noord", 0.0002966663601114279], ["nederland", 0.0002966663601114279], ["groning", 0.0002966663601114279], ["den", 0.0002966663601114279], ["hag", 0.0002966663601114279], ["doordat", 0.0002966663601114279], ["bevrijd", 0.0002966663601114279], ["bevestigd", 0.0002966663601114279], ["rabobank", 0.0002966663601114279], ["verdel", 0.0002966663601114279], ["gea", 0.0002966663601114279], ["tussenkomst", 0.0002966663601114279], ["proceskostenbesliss", 0.0002966663601114279], ["hen", 0.0002966663601114279], ["grondwater", 0.0002966663601114279], ["percel", 0.0002966663601114279], ["dar", 0.0002966663601114279], ["aldus", 0.0002966663601114279], ["inspecteur", 0.00014833318005571394], ["luidt", 0.00014833318005571394], ["krijgt", 0.00014833318005571394], ["geleg", 0.00014833318005571394], ["breng", 0.00014833318005571394], ["hieronder", 0.00014833318005571394], ["akteverzoek", 0.00014833318005571394], ["notarisambt", 0.00014833318005571394], ["geldend", 0.00014833318005571394], ["kon", 0.00014833318005571394], ["klager", 0.00014833318005571394], ["plaatsvervang", 0.00014833318005571394], ["doen", 0.00014833318005571394], ["stelsel", 0.00014833318005571394], ["brief", 0.00014833318005571394], ["secretariaat", 0.00014833318005571394], ["afgeleid", 0.00014833318005571394], ["behandeld", 0.00014833318005571394], ["doet", 0.00014833318005571394], ["los", 0.00014833318005571394], ["vrag", 0.00014833318005571394], ["mocht", 0.00014833318005571394], ["afleid", 0.00014833318005571394], ["leidt", 0.00014833318005571394], ["ertoe", 0.00014833318005571394], ["rechtskracht", 0.00014833318005571394], ["euclaim", 0.00014833318005571394], ["passagier", 0.00014833318005571394], ["_NUMen", 0.00014833318005571394], ["handhav", 0.00014833318005571394], ["verorden", 0.00014833318005571394], ["ingedi", 0.00014833318005571394], ["voorganger", 0.00014833318005571394], ["inspectie", 0.00014833318005571394], ["verker", 0.00014833318005571394], ["waterstat", 0.00014833318005571394], ["ministerie", 0.00014833318005571394], ["- ,", 0.00014833318005571394], ["hebbend", 0.00014833318005571394], ["vertrag", 0.00014833318005571394], ["hier", 0.00014833318005571394], ["zijnd", 0.00014833318005571394], ["vlucht", 0.00014833318005571394], ["_NUMdel", 0.00014833318005571394], ["relevant", 0.00014833318005571394], ["vervoerder", 0.00014833318005571394], ["aangetoond", 0.00014833318005571394], ["nadien", 0.00014833318005571394], ["zg", 0.00014833318005571394], ["handhavingstraject", 0.00014833318005571394], ["gestart", 0.00014833318005571394], ["merkt", 0.00014833318005571394], ["awb", 0.00014833318005571394], ["zaterdag", 0.00014833318005571394], ["belangrijk", 0.00014833318005571394], ["betaalbesliss", 0.00014833318005571394], ["snl", 0.00014833318005571394], ["nam", 0.00014833318005571394], ["eiseress", 0.00014833318005571394], ["som", 0.00014833318005571394], [",--,", 0.00014833318005571394], ["aangevall", 0.00014833318005571394], ["ingaand", 0.00014833318005571394], ["drie", 0.00014833318005571394], ["meest", 0.00014833318005571394], ["prangend", 0.00014833318005571394], ["kwestie", 0.00014833318005571394], ["jaarhur", 0.00014833318005571394], ["huurcontract", 0.00014833318005571394], ["juncto", 0.00014833318005571394], ["strekkend", 0.00014833318005571394], ["huurprijs", 0.00014833318005571394], ["markthuurwaard", 0.00014833318005571394], ["hiertoe", 0.00014833318005571394], ["aangewez", 0.00014833318005571394], ["gewend", 0.00014833318005571394], ["hur", 0.00014833318005571394], ["dus", 0.00014833318005571394], ["marktwaardemaatstaf", 0.00014833318005571394], ["dagvaard", 0.00014833318005571394], ["vorderingingedi", 0.00014833318005571394], ["volstan", 0.00014833318005571394], ["voer", 0.00014833318005571394], ["beslist", 0.00014833318005571394], ["maatstaf", 0.00014833318005571394], ["geklaagd", 0.00014833318005571394], ["pleitnota", 0.00014833318005571394], ["kunn", 0.00014833318005571394], ["nop", 0.00014833318005571394], ["toevoeg", 0.00014833318005571394], ["via", 0.00014833318005571394], ["webbr", 0.00014833318005571394], ["raadpleg", 0.00014833318005571394], ["uitgangspunt", 0.00014833318005571394], ["agh", 0.00014833318005571394], ["statusbeoordel", 0.00014833318005571394], ["toegevoegd", 0.00014833318005571394], ["dien", 0.00014833318005571394], ["discrepanties", 0.00014833318005571394], ["echter", 0.00014833318005571394], ["noch", 0.00014833318005571394], ["aannem", 0.00014833318005571394], ["totdat", 0.00014833318005571394], ["vaststat", 0.00014833318005571394], ["dezelfd", 0.00014833318005571394], ["namelijk", 0.00014833318005571394], ["la", 0.00014833318005571394], ["demand", 0.00014833318005571394], ["soci", 0.00014833318005571394], ["tendant", 0.00014833318005571394], ["à", 0.00014833318005571394], ["obtenir", 0.00014833318005571394], ["dommages", 0.00014833318005571394], ["et", 0.00014833318005571394], ["int", 0.00014833318005571394], ["r", 0.00014833318005571394], ["ê", 0.00014833318005571394], ["ts", 0.00014833318005571394], ["sur", 0.00014833318005571394], ["fondement", 0.00014833318005571394], ["articl", 0.00014833318005571394], ["afin", 0.00014833318005571394], ["parer", 0.00014833318005571394], ["pr", 0.00014833318005571394], ["judic", 0.00014833318005571394], ["con", 0.00014833318005571394], ["cutif", 0.00014833318005571394], ["saisie", 0.00014833318005571394], ["conservatoir", 0.00014833318005571394], ["du", 0.00014833318005571394], ["navir", 0.00014833318005571394], ["”,", 0.00014833318005571394], ["cod", 0.00014833318005571394], ["civil", 0.00014833318005571394], ["beslaglegg", 0.00014833318005571394], ["tijd", 0.00014833318005571394], ["aanhang", 0.00014833318005571394], ["ingetrok", 0.00014833318005571394], ["rouen", 0.00014833318005571394], ["intrekt", 0.00014833318005571394], ["hiermee", 0.00014833318005571394], ["onbevoegdverklar", 0.00014833318005571394], ["grondslag", 0.00014833318005571394], ["scheldepoort", 0.00014833318005571394], ["hierdor", 0.00014833318005571394], ["kom", 0.00014833318005571394], ["vervall", 0.00014833318005571394], ["behoev", 0.00014833318005571394], ["vooralsnog", 0.00014833318005571394], ["lat", 0.00014833318005571394], ["rust", 0.00014833318005571394], ["repla", 0.00014833318005571394], [", [", 0.00014833318005571394], ["reager", 0.00014833318005571394], ["jan", 0.00014833318005571394], ["mantgem", 0.00014833318005571394], ["joacim", 0.00014833318005571394], ["status", 0.00014833318005571394], ["anoniem", 0.00014833318005571394], ["getuiget", 0.00014833318005571394], ["verlen", 0.00014833318005571394], ["bopz", 0.00014833318005571394], ["rad", 0.00014833318005571394], ["tucht", 0.00014833318005571394], ["organogram", 0.00014833318005571394], ["bedrijv", 0.00014833318005571394], ["instantie", 0.00014833318005571394], ["be", 0.00014833318005571394], ["indigt", 0.00014833318005571394], ["huurovereenkomst", 0.00014833318005571394], ["person", 0.00014833318005571394], ["uiter", 0.00014833318005571394], ["uba", 0.00014833318005571394], ["dkcl", 0.00014833318005571394], ["aanschrijv", 0.00014833318005571394], ["dagteken", 0.00014833318005571394], ["handelsrent", 0.00014833318005571394], ["helft", 0.00014833318005571394], ["aed", 0.00014833318005571394], ["'", 0.00014833318005571394], ["serienummer", 0.00014833318005571394], ["beginn", 0.00014833318005571394], ["cardio", 0.00014833318005571394], ["cadrio", 0.00014833318005571394], ["sector", 0.00014833318005571394], ["kanton", 0.00014833318005571394], ["tiel", 0.00014833318005571394], ["tsb", 0.00014833318005571394], ["voet", 0.00014833318005571394], ["daarbij", 0.00014833318005571394], ["ontslagvergoed", 0.00014833318005571394], ["toegek", 0.00014833318005571394], ["zaaknummer", 0.00014833318005571394], ["onderbouwd", 0.00014833318005571394], ["fundamentel", 0.00014833318005571394], ["beginsel", 0.00014833318005571394], ["wederhor", 0.00014833318005571394], ["_NUMw", 0.00014833318005571394], ["rechtsvorder", 0.00014833318005571394], ["rv", 0.00014833318005571394], [") –", 0.00014833318005571394], ["samengevat", 0.00014833318005571394], ["vrij", 0.00014833318005571394], ["partner", 0.00014833318005571394], ["arbeidsbelon", 0.00014833318005571394], ["gev", 0.00014833318005571394], ["tabel", 0.00014833318005571394], ["onderan", 0.00014833318005571394], ["pagina", 0.00014833318005571394], ["eijk", 0.00014833318005571394], ["swienink", 0.00014833318005571394], [", €", 0.00014833318005571394], ["bedraagt", 0.00014833318005571394], ["nvesteerd", 0.00014833318005571394], ["voorschot", 0.00014833318005571394], ["titel", 0.00014833318005571394], ["],", 0.00014833318005571394], ["uurtarief", 0.00014833318005571394], ["exclusief", 0.00014833318005571394], ["%", 0.00014833318005571394], ["kantoorkost", 0.00014833318005571394], ["btw", 0.00014833318005571394], ["alsmed", 0.00014833318005571394], ["onderscheid", 0.00014833318005571394], ["voldoet", 0.00014833318005571394], ["eis", 0.00014833318005571394], ["krachten", 0.00014833318005571394], ["stan", 0.00014833318005571394], ["proeftijd", 0.00014833318005571394], ["strafbar", 0.00014833318005571394], ["schuldig", 0.00014833318005571394], ["allianz", 0.00014833318005571394], ["voert", 0.00014833318005571394], ["navolg", 0.00014833318005571394], ["deelgeschilprocedur", 0.00014833318005571394], ["opstell", 0.00014833318005571394], ["schaderegelingsproces", 0.00014833318005571394], ["rechtvaardigt", 0.00014833318005571394], ["gedacht", 0.00014833318005571394], ["vaststellingsovereenkomst", 0.00014833318005571394], ["komt", 0.00014833318005571394], ["wez", 0.00014833318005571394], ["ner", 0.00014833318005571394], ["waarvor", 0.00014833318005571394], ["plausibiliteitscriterium", 0.00014833318005571394], ["basis", 0.00014833318005571394], ["klachtenpatron", 0.00014833318005571394], ["plausibel", 0.00014833318005571394], ["objectief", 0.00014833318005571394], ["vindt", 0.00014833318005571394], ["plat", 0.00014833318005571394], ["geschiedt", 0.00014833318005571394], ["neurolog", 0.00014833318005571394], ["verzeker", 0.00014833318005571394], ["ongevalsgerelateerd", 0.00014833318005571394], ["gerapporteerd", 0.00014833318005571394], ["gezamen", 0.00014833318005571394], ["juist", 0.00014833318005571394], ["criteria", 0.00014833318005571394], ["gekom", 0.00014833318005571394], ["kwaliteit", 0.00014833318005571394], ["bruikbar", 0.00014833318005571394], ["pas", 0.00014833318005571394], ["nadat", 0.00014833318005571394], ["conceptrapport", 0.00014833318005571394], ["uitgat", 0.00014833318005571394], ["gebruik", 0.00014833318005571394], ["nek", 0.00014833318005571394], ["nodig", 0.00014833318005571394], ["werkdag", 0.00014833318005571394], ["hoofd", 0.00014833318005571394], ["bepaald", 0.00014833318005571394], ["dijk", 0.00014833318005571394], ["zelf", 0.00014833318005571394], ["aangegev", 0.00014833318005571394], ["afwez", 0.00014833318005571394], ["arbeidsduurbeperk", 0.00014833318005571394], ["geduid", 0.00014833318005571394], ["terwijl", 0.00014833318005571394], ["medisch", 0.00014833318005571394], ["objectiver", 0.00014833318005571394], ["stoorniss", 0.00014833318005571394], ["blijkt", 0.00014833318005571394], ["geest", 0.00014833318005571394], ["twed", 0.00014833318005571394], ["uitgegan", 0.00014833318005571394], ["toetsingsmaatstaf", 0.00014833318005571394], ["weinig", 0.00014833318005571394], ["onrecht", 0.00014833318005571394], ["terecht", 0.00014833318005571394], ["uitgebracht", 0.00014833318005571394], ["nogmal", 0.00014833318005571394], ["verzekeringsart", 0.00014833318005571394], ["arbeidsdeskund", 0.00014833318005571394], ["kostenbegrot", 0.00014833318005571394], ["volstrekt", 0.00014833318005571394], ["onnod", 0.00014833318005571394], ["onterecht", 0.00014833318005571394], ["bekend", 0.00014833318005571394], ["verondersteld", 0.00014833318005571394], ["deelgeschilrechter", 0.00014833318005571394], ["oploss", 0.00014833318005571394], ["passend", 0.00014833318005571394], ["voorhand", 0.00014833318005571394], ["erflater", 0.00014833318005571394], ["producties", 0.00014833318005571394], ["kuiper", 0.00014833318005571394], ["groefsema", 0.00014833318005571394], ["tenuitvoerlegg", 0.00014833318005571394], ["betekent", 0.00014833318005571394], ["vrouw", 0.00014833318005571394], ["faalt", 0.00014833318005571394], ["vermeend", 0.00014833318005571394], ["getuigenverzoek", 0.00014833318005571394], ["hierop", 0.00014833318005571394], ["volg", 0.00014833318005571394], ["onderzoekswen", 0.00014833318005571394], ["elk", 0.00014833318005571394], ["beslagbesliss", 0.00014833318005571394], ["wrakingskamer", 0.00014833318005571394], ["gerechthof", 0.00014833318005571394], ["doch", 0.00014833318005571394], ["allen", 0.00014833318005571394], ["interbank", 0.00014833318005571394], ["kredietvergoed", 0.00014833318005571394], ["legg", 0.00014833318005571394], ["waard", 0.00014833318005571394], ["toedel", 0.00014833318005571394], ["recreatievilla", 0.00014833318005571394], ["ameland", 0.00014833318005571394], ["pand", 0.00014833318005571394], ["adres", 0.00014833318005571394], ["vervolg", 0.00014833318005571394], ["standpunt", 0.00014833318005571394], ["_NUMg", 0.00014833318005571394], ["sr", 0.00014833318005571394], ["ongelijk", 0.00014833318005571394], ["tenlastelegg", 0.00014833318005571394], ["bewijsoverweg", 0.00014833318005571394], ["gedeputeerd", 0.00014833318005571394], ["schriftelijk", 0.00014833318005571394], ["_NUMbesliss", 0.00014833318005571394], ["vrijwaringszak", 0.00014833318005571394], ["bronnenbad", 0.00014833318005571394], ["belang", 0.00014833318005571394], ["opheff", 0.00014833318005571394], ["international", 0.00014833318005571394], ["karakter", 0.00014833318005571394], ["estro", 0.00014833318005571394], ["datum", 0.00014833318005571394], ["onbetaald", 0.00014833318005571394], ["geblev", 0.00014833318005571394], ["factur", 0.00014833318005571394], ["data", 0.00014833318005571394], ["geleid", 0.00014833318005571394], ["gezinsvoogdijinstell", 0.00014833318005571394], ["verzoekt", 0.00014833318005571394], ["machtig", 0.00014833318005571394], ["verstrek", 0.00014833318005571394], ["plaats", 0.00014833318005571394], ["minderjar", 0.00014833318005571394], ["pleegzorg", 0.00014833318005571394], ["ondertoezichtstell", 0.00014833318005571394], ["olthof", 0.00014833318005571394], ["bokhov", 0.00014833318005571394], ["general", 0.00014833318005571394], ["wetsartikel", 0.00014833318005571394], ["_NUMc", 0.00014833318005571394], ["_NUMb", 0.00014833318005571394], ["_NUMf", 0.00014833318005571394], ["lang", 0.00014833318005571394], ["brugg", 0.00014833318005571394], ["parketnummer_NUM", 0.00014833318005571394], ["bewez", 0.00014833318005571394], ["uitgeleverd", 0.00014833318005571394], ["stuk", 0.00014833318005571394], ["voormeld", 0.00014833318005571394], ["rechtsgeld", 0.00014833318005571394], ["convenant", 0.00014833318005571394], ["voornemen", 0.00014833318005571394], ["dier", 0.00014833318005571394], ["es", 0.00014833318005571394], ["rk", 0.00014833318005571394], ["vierd", 0.00014833318005571394], ["middelniet", 0.00014833318005571394], ["cassatie", 0.00014833318005571394], ["behoeft", 0.00014833318005571394], ["eiser", 0.00014833318005571394], ["enkelvoud", 0.00014833318005571394], ["gezag", 0.00014833318005571394], ["gewijsd", 0.00014833318005571394], ["eindbesliss", 0.00014833318005571394], ["?", 0.00014833318005571394], ["terugbetal", 0.00014833318005571394], ["€ €", 0.00014833318005571394], ["mat", 0.00014833318005571394], ["arbeidsongeschikt", 0.00014833318005571394], ["uitker", 0.00014833318005571394], ["slaagt", 0.00014833318005571394], ["zodat", 0.00014833318005571394], ["verhog", 0.00014833318005571394], ["toewijz", 0.00014833318005571394], ["(à €", 0.00014833318005571394], [", - )", 0.00014833318005571394], ["doorgeleid", 0.00014833318005571394], ["zesd", 0.00014833318005571394], ["brussel", 0.00014833318005571394], ["iibis", 0.00014833318005571394], ["commissariss", 0.00014833318005571394], ["alsrechthebb", 0.00014833318005571394], ["opd", 0.00014833318005571394], ["februari_NUM", 0.00014833318005571394], ["rechthebb", 0.00014833318005571394], ["omgang", 0.00014833318005571394], ["gang", 0.00014833318005571394], ["tussenvonniss", 0.00014833318005571394], ["verbeter", 0.00014833318005571394], ["hiervor", 0.00014833318005571394], ["),", 0.00014833318005571394], ["delta", 0.00014833318005571394], ["lloyd", 0.00014833318005571394], ["fikker", 0.00014833318005571394], ["wit", 0.00014833318005571394], ["aangevang", 0.00014833318005571394], ["rechtsweg", 0.00014833318005571394], ["geschorst", 0.00014833318005571394], ["eerstdien", 0.00014833318005571394], ["sindsdien", 0.00014833318005571394], ["rechtshandel", 0.00014833318005571394], ["nietig", 0.00014833318005571394], ["schorsing", 0.00014833318005571394], ["duurt", 0.00014833318005571394], ["kenbar", 0.00014833318005571394], ["maakt", 0.00014833318005571394], ["verificatie", 0.00014833318005571394], ["laatst", 0.00014833318005571394], ["afdel", 0.00014833318005571394], ["privaatrecht", 0.00014833318005571394], ["onderworp", 0.00014833318005571394], ["kwijting", 0.00014833318005571394], ["reken", 0.00014833318005571394], ["verzoekschrift", 0.00014833318005571394], ["ingekom", 0.00014833318005571394], ["the", 0.00014833318005571394], ["united", 0.00014833318005571394], ["states", 0.00014833318005571394], ["district", 0.00014833318005571394], ["court", 0.00014833318005571394], ["for", 0.00014833318005571394], ["delawar", 0.00014833318005571394], ["verenigd", 0.00014833318005571394], ["amerika", 0.00014833318005571394], ["verdrag", 0.00014833318005571394], ["verkrijg", 0.00014833318005571394], ["buitenland", 0.00014833318005571394], ["handelszak", 0.00014833318005571394], ["gravenhag", 0.00014833318005571394], ["bewijsverdrag", 0.00014833318005571394], ["getuigenverhor", 0.00014833318005571394], ["sub", 0.00014833318005571394], ["inachtnem", 0.00014833318005571394], ["aantal", 0.00014833318005571394], ["special", 0.00014833318005571394], ["vorm", 0.00014833318005571394], ["opgesteld", 0.00014833318005571394], ["opgenom", 0.00014833318005571394], ["bestemd", 0.00014833318005571394], ["waarder", 0.00014833318005571394], ["aandel", 0.00014833318005571394], ["dientengevolg", 0.00014833318005571394], ["geled", 0.00014833318005571394], ["lijd", 0.00014833318005571394], ["welk", 0.00014833318005571394], ["opgemaakt", 0.00014833318005571394], ["vereff", 0.00014833318005571394], ["(€", 0.00014833318005571394], ["dagvaardingskost", 0.00014833318005571394], ["+ €", 0.00014833318005571394], ["bewijslever", 0.00014833318005571394], ["gefourneerd", 0.00014833318005571394], ["procesdossier", 0.00014833318005571394], ["aktewissel", 0.00014833318005571394], ["zull", 0.00014833318005571394], ["fourner", 0.00014833318005571394], ["voormal", 0.00014833318005571394], ["kostenvergoed", 0.00014833318005571394], ["bewezenverklar", 0.00014833318005571394], ["wm", 0.00014833318005571394], ["verz", 0.00014833318005571394], ["ontvankelijkheidsincident", 0.00014833318005571394], ["[…]", 0.00014833318005571394], ["vve", 0.00014833318005571394], ["ondersplits", 0.00014833318005571394], ["verschotten", 0.00014833318005571394], ["duiding", 0.00014833318005571394], ["gom", 0.00014833318005571394], ["ouder", 0.00014833318005571394], ["onderl", 0.00014833318005571394], ["getroff", 0.00014833318005571394], ["regel", 0.00014833318005571394], ["zorg", 0.00014833318005571394], ["opvoedingstak", 0.00014833318005571394], ["onherroep", 0.00014833318005571394], ["parketnummer", 0.00014833318005571394], ["wenst", 0.00014833318005571394], ["verhor", 0.00014833318005571394], ["geschied", 0.00014833318005571394], ["overstan", 0.00014833318005571394], ["hierbij", 0.00014833318005571394], ["raadsher", 0.00014833318005571394], ["benoemd", 0.00014833318005571394], ["daartoe", 0.00014833318005571394], ["paleis", 0.00014833318005571394], ["wilhelminaplein", 0.00014833318005571394], ["wel", 0.00014833318005571394], ["|", 0.00014833318005571394], ["geschill", 0.00014833318005571394], ["salarisverzoek", 0.00014833318005571394], ["koopprijs", 0.00014833318005571394], ["hofstad", 0.00014833318005571394], ["rixtel", 0.00014833318005571394], ["ntimeerde_NUM", 0.00014833318005571394], ["ontbindt", 0.00014833318005571394], ["draagt", 0.00014833318005571394], ["verniet", 0.00014833318005571394], ["besluit", 0.00014833318005571394], ["verhal", 0.00014833318005571394], ["verklar", 0.00014833318005571394], ["kader", 0.00014833318005571394], ["vervang", 0.00014833318005571394], ["gemal", 0.00014833318005571394], ["onttrek", 0.00014833318005571394], ["waardor", 0.00014833318005571394], ["gan", 0.00014833318005571394], ["verzak", 0.00014833318005571394], ["mak", 0.00014833318005571394], ["gemotiveerd", 0.00014833318005571394], ["bewijsaanbod", 0.00014833318005571394], ["gepasseerd", 0.00014833318005571394], ["onderbouw", 0.00014833318005571394], ["gevoegd", 0.00014833318005571394], ["tijden", 0.00014833318005571394], ["werd", 0.00014833318005571394], ["uitgevoerd", 0.00014833318005571394], ["aannemer", 0.00014833318005571394], ["oosterhuis", 0.00014833318005571394], ["onttrok", 0.00014833318005571394], ["toegerek", 0.00014833318005571394], ["handel", 0.00014833318005571394], ["situatie", 0.00014833318005571394], ["opdrachtgever", 0.00014833318005571394], ["zeker", 0.00014833318005571394], ["eenheid", 0.00014833318005571394], ["stelling", 0.00014833318005571394], ["toezicht", 0.00014833318005571394], ["zorgplicht", 0.00014833318005571394], ["voorbij", 0.00014833318005571394], ["gegan", 0.00014833318005571394]];
+
+/***/ },
+/* 294 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = [["_NUM", 4.744733430442122], ["_ART", 4.6254735536773275], ["beoordel", 4.578600268779723], ["van", 2.5373873780330425], ["overweg", 2.204231055627909], ["beroep", 0.6894526208989584], ["middel", 0.5934810534029115], ["hoger", 0.4989928177074217], ["geschil", 0.4979544854470317], ["in", 0.44232954292613896], ["en", 0.40480124837204334], ["motiver", 0.32722299520290493], ["verder", 0.28984303382886506], ["grond", 0.2739713835629036], ["bewijs", 0.248903076133488], ["maatregel", 0.17725815016657817], ["ontvank", 0.15693650449894536], ["_PUNCT", 0.15678817131888964], ["straff", 0.12281987308613114], ["cassatie", 0.10561322419966833], ["eerst", 0.10279489377860976], ["verzoek", 0.09300490389493264], ["bewijsoverweg", 0.09300490389493264], ["strafmotiver", 0.0861815776123698], ["straf", 0.0808415831303641], ["sanctie", 0.07728158680902697], [")", 0.07297992458741126], ["klacht", 0.07297992458741126], ["daarvan", 0.07253492504724411], ["(", 0.07253492504724411], ["twed", 0.06318993470373414], ["ten", 0.0563666084211713], ["conventie", 0.05488327662061416], ["reconventie", 0.0542899439003913], ["s", 0.053548278000112734], ["vorder", 0.05295494527988988], ["incident", 0.05117494711922131], ["aanzien", 0.04983994849871989], ["of", 0.04835661669816275], ["principal", 0.04524161991699275], ["incidentel", 0.04227495631587847], ["/", 0.03945662589481991], ["voorgesteld", 0.037824960914207055], ["tot", 0.034413297772925636], ["bewijsmiddel", 0.03203996689203421], ["griev", 0.031298300991755644], ["rechtbank", 0.031001634631644213], ["derd", 0.0308533014515885], ["zak", 0.029666636011142788], ["dor", 0.02892497011086422], ["aanleg", 0.02862830375075279], ["over", 0.028034971030529935], ["uitsprak", 0.027738304670418507], ["bewijsmotiver", 0.027589971490362793], ["bestred", 0.02744163831030708], ["ambtshalv", 0.02744163831030708], ["feit", 0.026996638770139938], [",", 0.02521664060947137], ["met", 0.02269497654852423], ["vor", 0.021359977928022807], ["nader", 0.02076664520779995], ["hoofdzak", 0.0180966479667971], ["op", 0.014536651645459966], ["na", 0.014536651645459966], ["cassatieberoep", 0.014536651645459966], ["aanvrag", 0.013498319385069969], ["betrek", 0.0127566534847914], ["vierd", 0.012608320304735686], ["verwijz", 0.01201498758451283], ["te", 0.010976655324122831], ["is", 0.010828322144067117], ["bij", 0.010828322144067117], ["]", 0.010679988964011403], ["[", 0.01053165578395569], ["wrakingsverzoek", 0.01053165578395569], ["-", 0.00978998988367712], ["dat", 0.00978998988367712], ["namen", 0.00978998988367712], ["voorwaard", 0.009493323523565692], ["verzet", 0.009344990343509978], ["verdacht", 0.009196657163454264], ["partij", 0.008899990803342837], ["sancties", 0.008306658083119981], ["heeft", 0.008306658083119981], ["standpunt", 0.008306658083119981], ["aan", 0.008158324903064267], ["belanghebb", 0.007564992182841411], ["appel", 0.007416659002785697], ["daarvor", 0.007268325822729983], ["artikel", 0.007268325822729983], ["verzocht", 0.007119992642674269], ["staatssecretaris", 0.007119992642674269], ["vrijsprak", 0.007119992642674269], ["onder", 0.006971659462618555], ["beschouw", 0.006971659462618555], ["rechtsoverweg", 0.006823326282562841], ["verwer", 0.006526659922451414], ["herzien", 0.0063783267423957], ["omtrent", 0.006229993562339986], ["gelegd", 0.006229993562339986], ["zijn", 0.006081660382284272], ["vijfd", 0.005933327202228558], ["last", 0.005933327202228558], ["kantonrechter", 0.005933327202228558], ["word", 0.005784994022172843], ["bijzonder", 0.0054883276620614155], ["hof", 0.0054883276620614155], ["zaaknummer", 0.0054883276620614155], ["niet", 0.005339994482005702], ["hoofdelijk", 0.005191661301949988], ["teg", 0.005043328121894274], ["achtergrond", 0.004746661761782846], ["beid", 0.004598328581727132], ["vaststell", 0.004598328581727132], ["beklag", 0.004598328581727132], ["als", 0.004449995401671418], ["vaststaand", 0.0043016622216157045], ["eiser", 0.0043016622216157045], ["dez", 0.004153329041559991], ["legg", 0.004153329041559991], ["benadeeld", 0.004153329041559991], ["die", 0.004004995861504277], ["aangevoerd", 0.004004995861504277], ["“", 0.0038566626814485624], ["algemen", 0.0038566626814485624], ["bezwar", 0.0035599963213371346], ["om", 0.0035599963213371346], ["zij", 0.0035599963213371346], ["wraking", 0.0035599963213371346], ["ter", 0.003263329961225707], ["wet", 0.003263329961225707], ["geschill", 0.003114996781169993], ["procedur", 0.003114996781169993], ["eis", 0.003114996781169993], ["zesd", 0.002966663601114279], ["kan", 0.002966663601114279], ["jar", 0.002966663601114279], ["nieuw", 0.002966663601114279], ["lid", 0.0028183304210585647], ["vrijwaringszak", 0.002669997241002851], ["all", 0.002669997241002851], ["dit", 0.002669997241002851], ["ex", 0.002669997241002851], ["rv", 0.002669997241002851], ["inhoud", 0.002669997241002851], ["bewezenverklar", 0.002521664060947137], ["oordel", 0.002521664060947137], ["gen", 0.002373330880891423], ["person", 0.002373330880891423], ["verzoeker", 0.002373330880891423], ["belang", 0.002373330880891423], ["hebb", 0.002373330880891423], ["justitie", 0.002373330880891423], ["primair", 0.002373330880891423], ["e", 0.002224997700835709], ["ervan", 0.002224997700835709], ["eiswijz", 0.002224997700835709], ["betrok", 0.002224997700835709], ["officier", 0.002224997700835709], ["cassatiemiddel", 0.002224997700835709], ["stat", 0.002224997700835709], ["uitgangspunt", 0.002224997700835709], ["vrijspraakmotiver", 0.002224997700835709], ["tenlastegelegd", 0.0020766645207799953], ["schorsing", 0.0020766645207799953], ["tenlastelegg", 0.0020766645207799953], ["wijzig", 0.0020766645207799953], ["a", 0.0020766645207799953], ["omdat", 0.0020766645207799953], ["voorzien", 0.0020766645207799953], ["zevend", 0.0020766645207799953], ["onderdel", 0.0020766645207799953], ["rad", 0.0019283313407242812], ["gedaagd", 0.0019283313407242812], ["zich", 0.0019283313407242812], ["moet", 0.0019283313407242812], ["voorafgaand", 0.0019283313407242812], ["bevoegd", 0.0019283313407242812], ["besprek", 0.0019283313407242812], ["verker", 0.0017799981606685673], ["beschik", 0.0017799981606685673], ["er", 0.0017799981606685673], ["uit", 0.0017799981606685673], ["voort", 0.0017799981606685673], ["har", 0.0017799981606685673], ["recht", 0.0017799981606685673], ["bedoeld", 0.0017799981606685673], ["ander", 0.0017799981606685673], ["onttrek", 0.0016316649806128534], ["vrijwar", 0.0016316649806128534], ["hog", 0.0016316649806128534], ["inleid", 0.0016316649806128534], ["voorlop", 0.0016316649806128534], ["omstand", 0.0016316649806128534], ["was", 0.0016316649806128534], ["producties", 0.0016316649806128534], ["beslag", 0.0016316649806128534], ["voorzieningenrechter", 0.0016316649806128534], ["tussenkomst", 0.0016316649806128534], ["verweerder", 0.0016316649806128534], ["gegev", 0.0016316649806128534], ["wettelijk", 0.0016316649806128534], ["genoemd", 0.0016316649806128534], ["stelt", 0.0014833318005571395], ["zal", 0.0014833318005571395], ["geval", 0.0014833318005571395], ["veroordeeld", 0.0014833318005571395], ["nar", 0.0014833318005571395], ["subsidiair", 0.0014833318005571395], ["waarop", 0.0014833318005571395], ["voeging", 0.0014833318005571395], ["schriftur", 0.0014833318005571395], ["aanvull", 0.0014833318005571395], ["b", 0.0014833318005571395], ["vast", 0.0014833318005571395], ["c", 0.0014833318005571395], ["dan", 0.0014833318005571395], ["art", 0.0014833318005571395], ["aanduid", 0.0014833318005571395], ["volgend", 0.0014833318005571395], ["toepass", 0.0014833318005571395], ["gemaakt", 0.0014833318005571395], ["arbeidsgehandicapt", 0.0014833318005571395], ["nu", 0.0014833318005571395], ["schad", 0.0014833318005571395], ["onderzoek", 0.0013349986205014254], ["vonnis", 0.0013349986205014254], ["wel", 0.0013349986205014254], ["besluit", 0.0013349986205014254], ["bewez", 0.0013349986205014254], ["gepleegd", 0.0013349986205014254], ["verband", 0.0013349986205014254], ["civiel", 0.0013349986205014254], ["onrechtmat", 0.0013349986205014254], ["tiend", 0.0013349986205014254], ["zaaksdossier", 0.0013349986205014254], ["ingevolg", 0.0011866654404457115], ["plaatsing", 0.0011866654404457115], ["terbeschikkingstell", 0.0011866654404457115], ["voorrad", 0.0011866654404457115], ["slecht", 0.0011866654404457115], ["war", 0.0011866654404457115], ["handel", 0.0011866654404457115], ["?", 0.0011866654404457115], ["o", 0.0011866654404457115], ["had", 0.0011866654404457115], ["kunn", 0.0011866654404457115], ["tuss", 0.0011866654404457115], ["€", 0.0011866654404457115], ["mer", 0.0011866654404457115], ["strafbar", 0.0011866654404457115], ["achtst", 0.0011866654404457115], ["‘", 0.0011866654404457115], ["dag", 0.0011866654404457115], ["bepal", 0.0011866654404457115], ["acht", 0.0011866654404457115], ["behandel", 0.0011866654404457115], ["ontvang", 0.0011866654404457115], ["adres", 0.0011866654404457115], ["jegen", 0.0011866654404457115], ["awb", 0.0010383322603899976], ["vijf", 0.0010383322603899976], ["rechter", 0.0010383322603899976], ["drie", 0.0010383322603899976], ["geding", 0.0010383322603899976], ["betreff", 0.0010383322603899976], ["twee", 0.0010383322603899976], ["verklar", 0.0010383322603899976], ["negend", 0.0010383322603899976], ["betal", 0.0010383322603899976], ["volgen", 0.0010383322603899976], ["dient", 0.0010383322603899976], ["gesteld", 0.0010383322603899976], ["tussenvonnis", 0.0010383322603899976], ["waarvan", 0.0010383322603899976], ["dwangakkoord", 0.0010383322603899976], ["zonder", 0.0010383322603899976], ["per", 0.0010383322603899976], ["januari", 0.0010383322603899976], ["ingesteld", 0.0010383322603899976], ["bevoegdheidsincident", 0.0010383322603899976], ["gedur", 0.0010383322603899976], ["tijdig", 0.0010383322603899976], ["period", 0.0010383322603899976], ["opgenom", 0.0010383322603899976], ["tijd", 0.0010383322603899976], ["datum", 0.0010383322603899976], ["werknemer", 0.0010383322603899976], ["regel", 0.0010383322603899976], ["zoal", 0.0010383322603899976], ["t", 0.0010383322603899976], ["toelat", 0.0010383322603899976], ["dad", 0.0010383322603899976], ["aansprak", 0.0010383322603899976], ["houd", 0.0010383322603899976], ["productie", 0.0010383322603899976], ["misbruik", 0.0010383322603899976], ["bepaald", 0.0008899990803342836], ["wetboek", 0.0008899990803342836], ["verbeurdverklar", 0.0008899990803342836], ["werking", 0.0008899990803342836], ["uitvoerbaarverklar", 0.0008899990803342836], ["(…)", 0.0008899990803342836], ["sprak", 0.0008899990803342836], ["indien", 0.0008899990803342836], ["hij", 0.0008899990803342836], ["geword", 0.0008899990803342836], ["’", 0.0008899990803342836], ["arrest", 0.0008899990803342836], ["ingedi", 0.0008899990803342836], ["terechtzit", 0.0008899990803342836], ["gevorderd", 0.0008899990803342836], ["mededader", 0.0008899990803342836], ["daartoe", 0.0008899990803342836], ["formel", 0.0008899990803342836], ["kost", 0.0008899990803342836], ["status", 0.0008899990803342836], ["gelet", 0.0008899990803342836], ["wijz", 0.0008899990803342836], ["af", 0.0008899990803342836], ["strafoplegg", 0.0008899990803342836], ["betwist", 0.0008899990803342836], ["criminel", 0.0008899990803342836], ["organisatie", 0.0008899990803342836], ["uitlever", 0.0008899990803342836], ["juli", 0.0008899990803342836], ["nederland", 0.0008899990803342836], ["sam", 0.0008899990803342836], ["volgt", 0.0008899990803342836], ["procesbevoegd", 0.0008899990803342836], ["verlop", 0.0007416659002785698], ["ge", 0.0007416659002785698], ["dader", 0.0007416659002785698], ["berust", 0.0007416659002785698], ["sub", 0.0007416659002785698], ["slachtoffer", 0.0007416659002785698], ["december", 0.0007416659002785698], ["treff", 0.0007416659002785698], ["([", 0.0007416659002785698], ["nam", 0.0007416659002785698], ["ook", 0.0007416659002785698], ["werd", 0.0007416659002785698], ["vrag", 0.0007416659002785698], ["gat", 0.0007416659002785698], ["red", 0.0007416659002785698], ["grief", 0.0007416659002785698], ["goed", 0.0007416659002785698], ["mei", 0.0007416659002785698], ["verklaard", 0.0007416659002785698], ["strijd", 0.0007416659002785698], ["wordt", 0.0007416659002785698], ["_NUMbeoordel", 0.0007416659002785698], ["uitsluitingsgrond", 0.0007416659002785698], ["verzoekschrift", 0.0007416659002785698], ["appellant", 0.0007416659002785698], ["re", 0.0007416659002785698], ["integratie", 0.0007416659002785698], ["colleg", 0.0007416659002785698], ["m", 0.0007416659002785698], ["onderhav", 0.0007416659002785698], ["des", 0.0007416659002785698], ["zodat", 0.0007416659002785698], ["gebrek", 0.0007416659002785698], ["verricht", 0.0007416659002785698], ["reken", 0.0007416659002785698], ["gebezigd", 0.0007416659002785698], ["plat", 0.0007416659002785698], ["gedeelt", 0.0007416659002785698], ["_NUMa", 0.0007416659002785698], ["vervolg", 0.0007416659002785698], ["grondslag", 0.0007416659002785698], ["deelnam", 0.0007416659002785698], ["tegenverzoek", 0.0007416659002785698], ["mogelijk", 0.0007416659002785698], ["nodig", 0.0007416659002785698], ["psychiatrisch", 0.0007416659002785698], ["rolnummer", 0.0007416659002785698], ["\"", 0.0007416659002785698], ["total", 0.0007416659002785698], ["veroordel", 0.0007416659002785698], ["binn", 0.0007416659002785698], ["witwass", 0.0007416659002785698], ["reclasser", 0.0007416659002785698], ["”", 0.0005933327202228558], ["beperk", 0.0005933327202228558], ["strafrecht", 0.0005933327202228558], ["inricht", 0.0005933327202228558], ["stelselmat", 0.0005933327202228558], ["geldig", 0.0005933327202228558], ["dagvaard", 0.0005933327202228558], ["_NUMinleid", 0.0005933327202228558], ["regelgev", 0.0005933327202228558], ["betreft", 0.0005933327202228558], ["overwog", 0.0005933327202228558], ["situatie", 0.0005933327202228558], ["relevant", 0.0005933327202228558], ["leid", 0.0005933327202228558], ["daarbij", 0.0005933327202228558], ["dienst", 0.0005933327202228558], ["waarin", 0.0005933327202228558], ["genom", 0.0005933327202228558], ["lat", 0.0005933327202228558], ["militair", 0.0005933327202228558], ["arnhem", 0.0005933327202228558], ["gedrag", 0.0005933327202228558], ["bestaand", 0.0005933327202228558], ["ontslag", 0.0005933327202228558], ["maart", 0.0005933327202228558], ["dien", 0.0005933327202228558], ["termijn", 0.0005933327202228558], ["rabobank", 0.0005933327202228558], ["k", 0.0005933327202228558], ["open", 0.0005933327202228558], ["ministerie", 0.0005933327202228558], ["overweegt", 0.0005933327202228558], ["immer", 0.0005933327202228558], ["uwv", 0.0005933327202228558], ["stell", 0.0005933327202228558], ["], [", 0.0005933327202228558], ["zakelijk", 0.0005933327202228558], ["weergegev", 0.0005933327202228558], ["zin", 0.0005933327202228558], ["aldus", 0.0005933327202228558], ["onrecht", 0.0005933327202228558], ["efficiency", 0.0005933327202228558], ["del", 0.0005933327202228558], ["opgevoerd", 0.0005933327202228558], ["gehel", 0.0005933327202228558], ["nem", 0.0005933327202228558], ["terecht", 0.0005933327202228558], ["zover", 0.0005933327202228558], ["hun", 0.0005933327202228558], ["werkgever", 0.0005933327202228558], ["herroep", 0.0005933327202228558], ["daarmee", 0.0005933327202228558], ["bewijsverwer", 0.0005933327202228558], ["akt", 0.0005933327202228558], ["])", 0.0005933327202228558], ["bestuursrecht", 0.0005933327202228558], ["vereist", 0.0005933327202228558], ["besliss", 0.0005933327202228558], ["gevraagd", 0.0005933327202228558], ["eiseres", 0.0005933327202228558], ["n", 0.0005933327202228558], ["ziekenhuis", 0.0005933327202228558], ["onz", 0.0005933327202228558], ["minister", 0.0005933327202228558], ["vergunn", 0.0005933327202228558], ["http", 0.0005933327202228558], ["//", 0.0005933327202228558], ["nl", 0.0005933327202228558], ["bwbr_NUM", 0.0005933327202228558], ["geldigheidsdatum__NUM", 0.0005933327202228558], ["bestur", 0.0005933327202228558], ["burger", 0.0005933327202228558], ["september", 0.0005933327202228558], ["zo", 0.0005933327202228558], ["instructie", 0.0005933327202228558], ["althan", 0.0005933327202228558], ["november", 0.0005933327202228558], ["belanghebbendes", 0.0005933327202228558], ["curator", 0.0005933327202228558], ["al", 0.0005933327202228558], ["maand", 0.0005933327202228558], ["requisitoir", 0.0005933327202228558], ["hem", 0.0005933327202228558], ["geacht", 0.0005933327202228558], ["gevangenisstraf", 0.0005933327202228558], ["aftrek", 0.0005933327202228558], ["voorarrest", 0.0005933327202228558], ["proeftijd", 0.0005933327202228558], ["uiteenzet", 0.0004449995401671418], ["beslist", 0.0004449995401671418], ["toegepast", 0.0004449995401671418], ["pseudokop", 0.0004449995401671418], ["bovenvermeld", 0.0004449995401671418], ["ha", 0.0004449995401671418], ["ioverweg", 0.0004449995401671418], ["herzieningsverzoek", 0.0004449995401671418], ["aangaand", 0.0004449995401671418], ["–", 0.0004449995401671418], ["waarder", 0.0004449995401671418], ["r", 0.0004449995401671418], ["verorden", 0.0004449995401671418], ["kond", 0.0004449995401671418], ["le", 0.0004449995401671418], ["voorop", 0.0004449995401671418], ["februari", 0.0004449995401671418], ["bereken", 0.0004449995401671418], ["zou", 0.0004449995401671418], ["waarbij", 0.0004449995401671418], ["verhoogd", 0.0004449995401671418], ["werkzam", 0.0004449995401671418], ["geschilpunt", 0.0004449995401671418], ["verschen", 0.0004449995401671418], ["aanhef", 0.0004449995401671418], ["ingang", 0.0004449995401671418], ["vanuit", 0.0004449995401671418], ["bezit", 0.0004449995401671418], ["gedan", 0.0004449995401671418], ["politierechter", 0.0004449995401671418], ["wegen", 0.0004449995401671418], ["dur", 0.0004449995401671418], ["l", 0.0004449995401671418], ["juni", 0.0004449995401671418], ["gerechtshof", 0.0004449995401671418], ["verbod", 0.0004449995401671418], ["gewijzigd", 0.0004449995401671418], ["bedrag", 0.0004449995401671418], ["aangenom", 0.0004449995401671418], ["zulk", 0.0004449995401671418], ["stelling", 0.0004449995401671418], ["samenhang", 0.0004449995401671418], ["central", 0.0004449995401671418], ["verstrek", 0.0004449995401671418], ["geblek", 0.0004449995401671418], ["indigd", 0.0004449995401671418], ["wie", 0.0004449995401671418], ["behoud", 0.0004449995401671418], ["bevorder", 0.0004449995401671418], ["behoev", 0.0004449995401671418], ["houdend", 0.0004449995401671418], ["wsw", 0.0004449995401671418], ["behoort", 0.0004449995401671418], ["vastgesteld", 0.0004449995401671418], ["enkel", 0.0004449995401671418], ["kader", 0.0004449995401671418], ["voorgaand", 0.0004449995401671418], ["sv", 0.0004449995401671418], ["gevoegd", 0.0004449995401671418], ["lijst", 0.0004449995401671418], ["valselijk", 0.0004449995401671418], ["waarheid", 0.0004449995401671418], ["premiejar", 0.0004449995401671418], ["basis", 0.0004449995401671418], ["tijden", 0.0004449995401671418], ["f", 0.0004449995401671418], ["gev", 0.0004449995401671418], ["verzoekt", 0.0004449995401671418], ["toegewez", 0.0004449995401671418], ["waardor", 0.0004449995401671418], ["daarom", 0.0004449995401671418], ["komt", 0.0004449995401671418], ["opmerk", 0.0004449995401671418], ["namelijk", 0.0004449995401671418], ["grot", 0.0004449995401671418], ["notaris", 0.0004449995401671418], ["beoordelingskader", 0.0004449995401671418], ["onverwijld", 0.0004449995401671418], ["spoed", 0.0004449995401671418], ["ee", 0.0004449995401671418], ["schorsingsverzoek", 0.0004449995401671418], ["beoordelingsprocedur", 0.0004449995401671418], ["beroepsgrond", 0.0004449995401671418], ["svb", 0.0004449995401671418], ["voorwerp", 0.0004449995401671418], ["beoordelingsmethodiek", 0.0004449995401671418], ["intrek", 0.0004449995401671418], ["betrekt", 0.0004449995401671418], ["document", 0.0004449995401671418], ["verwet", 0.0004449995401671418], ["reikwijdt", 0.0004449995401671418], ["verklaart", 0.0004449995401671418], ["maatstaf", 0.0004449995401671418], ["bw", 0.0004449995401671418], ["rent", 0.0004449995401671418], ["hen", 0.0004449995401671418], ["g", 0.0004449995401671418], ["kort", 0.0004449995401671418], ["’ [", 0.0004449995401671418], ["veroordeelt", 0.0004449995401671418], ["mak", 0.0004449995401671418], ["ontzegg", 0.0004449995401671418], ["rijbevoegd", 0.0004449995401671418], ["omgang", 0.0004449995401671418], ["strafoverweg", 0.0004449995401671418], ["omvang", 0.0004449995401671418], ["afgewez", 0.0004449995401671418], ["afdel", 0.0004449995401671418], ["overeenkomst", 0.0004449995401671418], ["uren", 0.0004449995401671418], ["poging", 0.0004449995401671418], ["geweld", 0.0004449995401671418], ["geadviseerd", 0.0004449995401671418], ["meldplicht", 0.0004449995401671418], ["hierna", 0.0004449995401671418], ["juist", 0.0004449995401671418], ["verhoud", 0.0004449995401671418], ["bestuursorgan", 0.0002966663601114279], ["geleg", 0.0002966663601114279], ["opgeworp", 0.0002966663601114279], ["iioverweg", 0.0002966663601114279], ["deskundigenbericht", 0.0002966663601114279], ["medisch", 0.0002966663601114279], ["bezwaarschrift", 0.0002966663601114279], ["rk", 0.0002966663601114279], ["ontvankelijkverklar", 0.0002966663601114279], ["getuig", 0.0002966663601114279], ["advies", 0.0002966663601114279], ["zedenzak", 0.0002966663601114279], ["vel", 0.0002966663601114279], ["doorgan", 0.0002966663601114279], ["aanwez", 0.0002966663601114279], ["beweerd", 0.0002966663601114279], ["seksuel", 0.0002966663601114279], ["extra", 0.0002966663601114279], ["zeker", 0.0002966663601114279], ["ontkenn", 0.0002966663601114279], ["international", 0.0002966663601114279], ["buitengewon", 0.0002966663601114279], ["verplicht", 0.0002966663601114279], ["gevolg", 0.0002966663601114279], ["redelijk", 0.0002966663601114279], ["hvjeu", 0.0002966663601114279], ["hoe", 0.0002966663601114279], ["materi", 0.0002966663601114279], ["onaanvaard", 0.0002966663601114279], ["ondernem", 0.0002966663601114279], ["gebracht", 0.0002966663601114279], ["ligt", 0.0002966663601114279], ["zijnd", 0.0002966663601114279], ["schending", 0.0002966663601114279], ["kern", 0.0002966663601114279], ["ongeval", 0.0002966663601114279], ["vennootschap", 0.0002966663601114279], ["functie", 0.0002966663601114279], ["hetzelfd", 0.0002966663601114279], ["boet", 0.0002966663601114279], ["onbevoegd", 0.0002966663601114279], ["amar", 0.0002966663601114279], ["blijv", 0.0002966663601114279], ["computerbestand", 0.0002966663601114279], ["kinder", 0.0002966663601114279], ["ongegrond", 0.0002966663601114279], ["parketnummer", 0.0002966663601114279], ["opzet", 0.0002966663601114279], ["voornoemd", 0.0002966663601114279], ["ieder", 0.0002966663601114279], ["vordert", 0.0002966663601114279], ["geslot", 0.0002966663601114279], ["proceskost", 0.0002966663601114279], ["bmax", 0.0002966663601114279], ["inzak", 0.0002966663601114279], ["zull", 0.0002966663601114279], ["krijg", 0.0002966663601114279], ["verander", 0.0002966663601114279], ["motiveringsklacht", 0.0002966663601114279], ["geschiktheidseis", 0.0002966663601114279], ["inspann", 0.0002966663601114279], ["verded", 0.0002966663601114279], ["noch", 0.0002966663601114279], ["aannem", 0.0002966663601114279], ["verwerpt", 0.0002966663601114279], ["buit", 0.0002966663601114279], ["aangemerkt", 0.0002966663601114279], ["wao", 0.0002966663601114279], ["verminder", 0.0002966663601114279], ["ziekt", 0.0002966663601114279], ["herstel", 0.0002966663601114279], ["verstrekt", 0.0002966663601114279], ["herindicatiebeschik", 0.0002966663601114279], ["doelgroep", 0.0002966663601114279], ["be", 0.0002966663601114279], ["indig", 0.0002966663601114279], ["arbeid", 0.0002966663601114279], ["belemmer", 0.0002966663601114279], ["vanaf", 0.0002966663601114279], ["blijken", 0.0002966663601114279], ["uitker", 0.0002966663601114279], ["dergelijk", 0.0002966663601114279], ["kantor", 0.0002966663601114279], ["eindhov", 0.0002966663601114279], ["afdoen", 0.0002966663601114279], ["doet", 0.0002966663601114279], ["opgegev", 0.0002966663601114279], ["sted", 0.0002966663601114279], ["slot", 0.0002966663601114279], ["wettig", 0.0002966663601114279], ["overtu", 0.0002966663601114279], ["dienstverband", 0.0002966663601114279], ["karakter", 0.0002966663601114279], ["fout", 0.0002966663601114279], ["percel", 0.0002966663601114279], ["mar", 0.0002966663601114279], ["rechtsvervolg", 0.0002966663601114279], ["klager", 0.0002966663601114279], ["procesdossier", 0.0002966663601114279], ["uitvaard", 0.0002966663601114279], ["wetgev", 0.0002966663601114279], ["wnt", 0.0002966663601114279], ["der", 0.0002966663601114279], ["ontvanger", 0.0002966663601114279], ["instantie", 0.0002966663601114279], ["markt", 0.0002966663601114279], ["ker", 0.0002966663601114279], ["verbeter", 0.0002966663601114279], ["amsterdam", 0.0002966663601114279], ["provisionel", 0.0002966663601114279], ["wrakingskamer", 0.0002966663601114279], ["inschrijv", 0.0002966663601114279], ["nt", 0.0002966663601114279], ["administratief", 0.0002966663601114279], ["voegingsincident", 0.0002966663601114279], ["slotsom", 0.0002966663601114279], ["gemeent", 0.0002966663601114279], ["uitgeslot", 0.0002966663601114279], ["voldan", 0.0002966663601114279], ["voormal", 0.0002966663601114279], ["second", 0.0002966663601114279], ["opinion", 0.0002966663601114279], ["schriftelijk", 0.0002966663601114279], ["aanleid", 0.0002966663601114279], ["punt", 0.0002966663601114279], ["bijlag", 0.0002966663601114279], ["voorstel", 0.0002966663601114279], ["inbeslaggenom", 0.0002966663601114279], ["),", 0.0002966663601114279], ["schors", 0.0002966663601114279], ["integriteitsbeoordel", 0.0002966663601114279], ["ʺ", 0.0002966663601114279], ["zoverr", 0.0002966663601114279], ["verblijf", 0.0002966663601114279], ["mevrouw", 0.0002966663601114279], ["],", 0.0002966663601114279], ["ondertek", 0.0002966663601114279], ["samenwon", 0.0002966663601114279], ["rester", 0.0002966663601114279], ["ljn", 0.0002966663601114279], ["bz_NUM", 0.0002966663601114279], ["digital", 0.0002966663601114279], ["bewijsbeslag", 0.0002966663601114279], ["ingrijp", 0.0002966663601114279], ["dwangmiddel", 0.0002966663601114279], ["wederpartij", 0.0002966663601114279], ["hinder", 0.0002966663601114279], ["toegebracht", 0.0002966663601114279], ["mag", 0.0002966663601114279], ["bescheid", 0.0002966663601114279], ["geld", 0.0002966663601114279], ["plausibel", 0.0002966663601114279], ["hetgen", 0.0002966663601114279], ["ingeschakeld", 0.0002966663601114279], ["deskund", 0.0002966663601114279], ["uitvoer", 0.0002966663601114279], ["allereerst", 0.0002966663601114279], ["buitengerecht", 0.0002966663601114279], ["vervolgen", 0.0002966663601114279], ["sluit", 0.0002966663601114279], ["vaststellingsovereenkomst", 0.0002966663601114279], ["gewoont", 0.0002966663601114279], ["mensenhandel", 0.0002966663601114279], ["valsheid", 0.0002966663601114279], ["geschrift", 0.0002966663601114279], ["geldbedrag", 0.0002966663601114279], [",-", 0.0002966663601114279], ["tussenarrest", 0.0002966663601114279], ["beroepsfout", 0.0002966663601114279], ["zorgplicht", 0.0002966663601114279], ["geschond", 0.0002966663601114279], ["eig", 0.0002966663601114279], ["nummer", 0.0002966663601114279], ["personenvervoer", 0.0002966663601114279], ["wp", 0.0002966663601114279], ["taxivervoer", 0.0002966663601114279], ["verleend", 0.0002966663601114279], ["pva", 0.0002966663601114279], ["geconstateerd", 0.0002966663601114279], ["ziet", 0.0002966663601114279], ["vermeerderd", 0.0002966663601114279], ["d", 0.0002966663601114279], ["stichting", 0.0002966663601114279], ["heffingsrent", 0.0002966663601114279], ["tussentijd", 0.0002966663601114279], ["moeder", 0.0002966663601114279], ["minderjar", 0.0002966663601114279], ["wek", 0.0002966663601114279], ["rechtsmacht", 0.0002966663601114279], ["aangezien", 0.0002966663601114279], ["eex", 0.0002966663601114279], ["gunning", 0.0002966663601114279], ["ingeleid", 0.0002966663601114279], ["procesverlop", 0.0002966663601114279], ["ep", 0.0002966663601114279], ["conclusies", 0.0002966663601114279], ["zorginstell", 0.0002966663601114279], ["gebruikt", 0.0002966663601114279], ["vermog", 0.0002966663601114279], ["voorvrag", 0.0002966663601114279], ["kennis", 0.0002966663601114279], ["strekkend", 0.0002966663601114279], ["bewijsuitsluit", 0.0002966663601114279], ["augustus", 0.0002966663601114279], ["ontbind", 0.0002966663601114279], ["vergoed", 0.0002966663601114279], ["kracht", 0.0002966663601114279], ["kenbar", 0.0002966663601114279], ["meest", 0.0002966663601114279], ["beoordelingspunt", 0.0002966663601114279], ["klaagschrift", 0.0002966663601114279], ["april", 0.0002966663601114279], ["hoofdstraff", 0.0002966663601114279], ["verstekverlen", 0.0002966663601114279], ["conclusie", 0.0002966663601114279], ["wat", 0.0002966663601114279], ["keuz", 0.0002966663601114279], ["onherroep", 0.0002966663601114279], ["dus", 0.0002966663601114279], ["vier", 0.0002966663601114279], ["alsmed", 0.0002966663601114279], ["doodslag", 0.0002966663601114279], ["achttien", 0.0002966663601114279], ["zes", 0.0002966663601114279], ["gedragsinterventie", 0.0002966663601114279], ["alcohol", 0.0002966663601114279], ["behaald", 0.0002966663601114279], ["ggz", 0.0002966663601114279], ["instell", 0.0002966663601114279], ["fw", 0.0002966663601114279], ["hier", 0.0002966663601114279], ["brengt", 0.0002966663601114279], ["`", 0.0002966663601114279], ["gvb", 0.0002966663601114279], ["opgebouwd", 0.0002966663601114279], ["vp", 0.0002966663601114279], ["standaardregel", 0.0002966663601114279], ["beginsel", 0.0002966663601114279], ["kredietfaciliteit", 0.0002966663601114279], ["kredietrelatie", 0.0002966663601114279], ["advistal", 0.0002966663601114279], ["opzegg", 0.0002966663601114279], ["voldoend", 0.0002966663601114279], ["novum", 0.0002966663601114279], ["bewijsconstructie", 0.0002966663601114279], ["voordat", 0.00014833318005571394], ["gehoord", 0.00014833318005571394], ["i", 0.00014833318005571394], ["ntimeerd", 0.00014833318005571394], ["aanhoudingsincident", 0.00014833318005571394], ["brouwer", 0.00014833318005571394], ["dam", 0.00014833318005571394], ["onderbouw", 0.00014833318005571394], ["vergelijk", 0.00014833318005571394], ["claim", 0.00014833318005571394], ["motiveringsgebrek", 0.00014833318005571394], ["krachten", 0.00014833318005571394], ["_NUMwc", 0.00014833318005571394], ["beveelt", 0.00014833318005571394], ["vervang", 0.00014833318005571394], ["jeugddetentie", 0.00014833318005571394], ["behor", 0.00014833318005571394], ["tenuitvoerlegg", 0.00014833318005571394], ["meegewerkt", 0.00014833318005571394], ["start", 0.00014833318005571394], ["ondervrijwar", 0.00014833318005571394], ["oeganda", 0.00014833318005571394], ["verdragsstat", 0.00014833318005571394], ["hag", 0.00014833318005571394], ["adoptieverdrag", 0.00014833318005571394], ["verschon", 0.00014833318005571394], ["daisycon", 0.00014833318005571394], ["reacties", 0.00014833318005571394], ["kenmerk", 0.00014833318005571394], ["vermeend", 0.00014833318005571394], ["maakt", 0.00014833318005571394], ["zorgvuld", 0.00014833318005571394], ["afgelegd", 0.00014833318005571394], ["gekek", 0.00014833318005571394], ["elfd", 0.00014833318005571394], ["ad", 0.00014833318005571394], ["_NUMis", 0.00014833318005571394], ["luchtvaartmaatschappij", 0.00014833318005571394], ["compensatie", 0.00014833318005571394], ["aanton", 0.00014833318005571394], ["annuler", 0.00014833318005571394], ["ondank", 0.00014833318005571394], ["voorkom", 0.00014833318005571394], ["jurisprudentie", 0.00014833318005571394], ["vervoerder", 0.00014833318005571394], ["aangepast", 0.00014833318005571394], ["zelf", 0.00014833318005571394], ["inzet", 0.00014833318005571394], ["personeelsmiddel", 0.00014833318005571394], ["behouden", 0.00014833318005571394], ["tijdstip", 0.00014833318005571394], ["offer", 0.00014833318005571394], ["oogpunt", 0.00014833318005571394], ["kennelijk", 0.00014833318005571394], ["vermijd", 0.00014833318005571394], ["waarmee", 0.00014833318005571394], ["geconfronteerd", 0.00014833318005571394], ["vertrag", 0.00014833318005571394], ["vlucht", 0.00014833318005571394], ["derhalv", 0.00014833318005571394], ["stelplicht", 0.00014833318005571394], ["bewijslast", 0.00014833318005571394], ["bevestigt", 0.00014833318005571394], ["discriminatieverbod", 0.00014833318005571394], ["protocol", 0.00014833318005571394], ["evrm", 0.00014833318005571394], ["verlies", 0.00014833318005571394], ["verdienvermog", 0.00014833318005571394], ["carri", 0.00014833318005571394], ["è", 0.00014833318005571394], ["reverlop", 0.00014833318005571394], ["salarisontwikkel", 0.00014833318005571394], ["geweest", 0.00014833318005571394], ["hypothetisch", 0.00014833318005571394], ["uitgegan", 0.00014833318005571394], ["weggedacht", 0.00014833318005571394], ["titulair", 0.00014833318005571394], ["directeur", 0.00014833318005571394], ["brutosalaris", 0.00014833318005571394], [",-,", 0.00014833318005571394], ["uitlop", 0.00014833318005571394], ["enig", 0.00014833318005571394], ["moment", 0.00014833318005571394], ["euro", 0.00014833318005571394], ["insuranc", 0.00014833318005571394], ["dezelfd", 0.00014833318005571394], ["geblev", 0.00014833318005571394], ["salaris", 0.00014833318005571394], ["memorie", 0.00014833318005571394], ["antwoord", 0.00014833318005571394], ["beiderzijd", 0.00014833318005571394], ["teruggav", 0.00014833318005571394], ["relatiev", 0.00014833318005571394], ["risicobeoordel", 0.00014833318005571394], ["geschilomschrijv", 0.00014833318005571394], ["vrijspraakoverweg", 0.00014833318005571394], ["ernstig", 0.00014833318005571394], ["zitting", 0.00014833318005571394], ["behandeld", 0.00014833318005571394], ["bijgestan", 0.00014833318005571394], ["mr", 0.00014833318005571394], ["speksnijder", 0.00014833318005571394], ["raadsman", 0.00014833318005571394], ["vertegenwoord", 0.00014833318005571394], ["gemachtigd", 0.00014833318005571394], ["_NUMde", 0.00014833318005571394], ["_NUMeiser", 0.00014833318005571394], ["destijd", 0.00014833318005571394], ["korporal", 0.00014833318005571394], ["bataljon", 0.00014833318005571394], ["konink", 0.00014833318005571394], ["landmacht", 0.00014833318005571394], ["ambtenarenreglement", 0.00014833318005571394], ["ambt", 0.00014833318005571394], ["geschorst", 0.00014833318005571394], ["eenheid", 0.00014833318005571394], ["aangift", 0.00014833318005571394], ["kinderpornografisch", 0.00014833318005571394], ["materiaal", 0.00014833318005571394], ["gehandhaafd", 0.00014833318005571394], ["multimediafiles", 0.00014833318005571394], ["filmfragment", 0.00014833318005571394], ["foto", 0.00014833318005571394], ["jonger", 0.00014833318005571394], ["werkstraf", 0.00014833318005571394], ["uur", 0.00014833318005571394], ["wangedrag", 0.00014833318005571394], ["pornografisch", 0.00014833318005571394], ["rechtsmiddel", 0.00014833318005571394], ["aangew", 0.00014833318005571394], ["_NUMbij", 0.00014833318005571394], ["vernietigd", 0.00014833318005571394], ["began", 0.00014833318005571394], ["vrijgesprok", 0.00014833318005571394], ["asielrelas", 0.00014833318005571394], ["medepleg", 0.00014833318005571394], ["opiumwet", 0.00014833318005571394], ["meermal", 0.00014833318005571394], ["wederrecht", 0.00014833318005571394], ["verkreg", 0.00014833318005571394], ["voordel", 0.00014833318005571394], ["evenen", 0.00014833318005571394], ["gebaseerd", 0.00014833318005571394], ["rapportag", 0.00014833318005571394], ["verstand", 0.00014833318005571394], [",--", 0.00014833318005571394], ["uitgat", 0.00014833318005571394], ["gehandeld", 0.00014833318005571394], ["hennep", 0.00014833318005571394], ["hiervan", 0.00014833318005571394], ["unigarant", 0.00014833318005571394], ["bedrijfsactiviteit", 0.00014833318005571394], ["megahom", 0.00014833318005571394], ["npb", 0.00014833318005571394], ["bestan", 0.00014833318005571394], ["hieruit", 0.00014833318005571394], ["koopt", 0.00014833318005571394], ["verwacht", 0.00014833318005571394], ["bestemm", 0.00014833318005571394], ["woningbouw", 0.00014833318005571394], ["daardor", 0.00014833318005571394], ["sterk", 0.00014833318005571394], ["waard", 0.00014833318005571394], ["stijg", 0.00014833318005571394], ["aankop", 0.00014833318005571394], ["sedert", 0.00014833318005571394], ["omstrek", 0.00014833318005571394], ["gefinancierd", 0.00014833318005571394], ["kortlop", 0.00014833318005571394], ["lening", 0.00014833318005571394], ["lop", 0.00014833318005571394], ["meningsverschill", 0.00014833318005571394], ["gerez", 0.00014833318005571394], ["financieringswijz", 0.00014833318005571394], ["ongunst", 0.00014833318005571394], ["rentestructur", 0.00014833318005571394], ["geldmarkt", 0.00014833318005571394], ["cassatieklacht", 0.00014833318005571394], ["veertiend", 0.00014833318005571394], ["uw", 0.00014833318005571394], ["boetebeoordel", 0.00014833318005571394], ["bov", 0.00014833318005571394], ["elkar", 0.00014833318005571394], ["bezien", 0.00014833318005571394], ["strafvervolg", 0.00014833318005571394], ["evenmin", 0.00014833318005571394], ["overigen", 0.00014833318005571394], ["ler", 0.00014833318005571394], ["rechtskracht", 0.00014833318005571394], ["ord", 0.00014833318005571394], ["bestuursrechter", 0.00014833318005571394], ["toegekom", 0.00014833318005571394], ["materie", 0.00014833318005571394], ["geoordeeld", 0.00014833318005571394], ["co", 0.00014833318005571394], ["rdinatiewet", 0.00014833318005571394], ["social", 0.00014833318005571394], ["verzeker", 0.00014833318005571394], ["verjaringstermijn", 0.00014833318005571394], ["premievaststell", 0.00014833318005571394], ["gav", 0.00014833318005571394], ["premie", 0.00014833318005571394], ["betoogd", 0.00014833318005571394], ["eendagsmeld", 0.00014833318005571394], ["eran", 0.00014833318005571394], ["degelijk", 0.00014833318005571394], ["arbeidsongeschiktheidsuitker", 0.00014833318005571394], ["waz", 0.00014833318005571394], ["wajong", 0.00014833318005571394], ["arbeidsongeschikt", 0.00014833318005571394], ["voorschrift", 0.00014833318005571394], ["toegek", 0.00014833318005571394], ["strekt", 0.00014833318005571394], ["arbeidsgeschikt", 0.00014833318005571394], ["subsidie", 0.00014833318005571394], ["indicatiebeschik", 0.00014833318005571394], ["doch", 0.00014833318005571394], ["arbeidsovereenkomst", 0.00014833318005571394], ["dienstbetrek", 0.00014833318005571394], ["herindicatie", 0.00014833318005571394], ["arbeidskund", 0.00014833318005571394], ["verkrijg", 0.00014833318005571394], ["stond", 0.00014833318005571394], ["geregistreerd", 0.00014833318005571394], ["aaw", 0.00014833318005571394], ["ingangsdatum", 0.00014833318005571394], ["einddatum", 0.00014833318005571394], ["wa", 0.00014833318005571394], ["ren", 0.00014833318005571394], ["gevall", 0.00014833318005571394], ["diend", 0.00014833318005571394], ["dossieronderzoek", 0.00014833318005571394], ["vind", 0.00014833318005571394], ["getuigenverklar", 0.00014833318005571394], ["aannam", 0.00014833318005571394], ["definitie", 0.00014833318005571394], ["omwill", 0.00014833318005571394], ["meegenom", 0.00014833318005571394], ["hel", 0.00014833318005571394], ["merkt", 0.00014833318005571394], ["aanvraagformulier", 0.00014833318005571394], ["inhield", 0.00014833318005571394], ["gewerkt", 0.00014833318005571394], ["aantal", 0.00014833318005571394], ["brutolon", 0.00014833318005571394], ["apart", 0.00014833318005571394], ["moest", 0.00014833318005571394], ["evenwel", 0.00014833318005571394], ["nagelat", 0.00014833318005571394], ["aanmerk", 0.00014833318005571394], ["vastgelegd", 0.00014833318005571394], ["] (", 0.00014833318005571394], ["), [", 0.00014833318005571394], ["desbetreff", 0.00014833318005571394], ["gesprok", 0.00014833318005571394], ["oplicht", 0.00014833318005571394], ["behoeft", 0.00014833318005571394], ["lastegelegd", 0.00014833318005571394], ["_NUMv", 0.00014833318005571394], ["bindt", 0.00014833318005571394], ["eventueel", 0.00014833318005571394], ["bodemged", 0.00014833318005571394], ["uitbetal", 0.00014833318005571394], ["toeslagrecht", 0.00014833318005571394], ["erkent", 0.00014833318005571394], ["meent", 0.00014833318005571394], ["begrijp", 0.00014833318005571394], ["will", 0.00014833318005571394], ["opgev", 0.00014833318005571394], ["coulanc", 0.00014833318005571394], ["bewar", 0.00014833318005571394], ["opgehev", 0.00014833318005571394], ["connex", 0.00014833318005571394], ["asielberoep", 0.00014833318005571394], ["uitzet", 0.00014833318005571394], ["wijst", 0.00014833318005571394], ["toegezond", 0.00014833318005571394], ["gemoeid", 0.00014833318005571394], ["wrakingsgrond", 0.00014833318005571394], ["tegenargument", 0.00014833318005571394], ["mailincident", 0.00014833318005571394], ["nvbw", 0.00014833318005571394], ["vtw", 0.00014833318005571394], ["dringend", 0.00014833318005571394], ["tijdelijk", 0.00014833318005571394], ["plaatsvind", 0.00014833318005571394], ["locatie", 0.00014833318005571394], ["afgelast", 0.00014833318005571394], ["maximal", 0.00014833318005571394], ["marktdag", 0.00014833318005571394], ["warenmarkt", 0.00014833318005571394], ["grootschal", 0.00014833318005571394], ["evenement", 0.00014833318005571394], ["verplaatst", 0.00014833318005571394], ["gehoud", 0.00014833318005571394], ["oud", 0.00014833318005571394], ["les", 0.00014833318005571394], ["steekpartij", 0.00014833318005571394], ["klaagt", 0.00014833318005571394], ["delictgevar", 0.00014833318005571394], ["stoornis", 0.00014833318005571394], ["sen", 0.00014833318005571394], ["hoofdlijn", 0.00014833318005571394], ["bedenk", 0.00014833318005571394], ["interveni", 0.00014833318005571394], ["famvo", 0.00014833318005571394], ["hernieuwd", 0.00014833318005571394], ["toewijz", 0.00014833318005571394], ["vatbar", 0.00014833318005571394], ["aanbested", 0.00014833318005571394], ["inderdad", 0.00014833318005571394], ["stuk", 0.00014833318005571394], ["knock", 0.00014833318005571394], ["out", 0.00014833318005571394], ["’-", 0.00014833318005571394], ["uitsluit", 0.00014833318005571394], ["geschied", 0.00014833318005571394], ["natura", 0.00014833318005571394], ["ehs", 0.00014833318005571394], ["omschrijv", 0.00014833318005571394], ["uitleg", 0.00014833318005571394], ["pleidooi", 0.00014833318005571394], ["weergav", 0.00014833318005571394], ["preliminair", 0.00014833318005571394], ["scores", 0.00014833318005571394], ["hogeschol", 0.00014833318005571394], ["centres", 0.00014833318005571394], ["expertis", 0.00014833318005571394], ["voorzitter", 0.00014833318005571394], ["wijzigt", 0.00014833318005571394], ["albanes", 0.00014833318005571394], ["nationaliteit", 0.00014833318005571394], ["afgift", 0.00014833318005571394], ["vw", 0.00014833318005571394], ["familielid", 0.00014833318005571394], ["unie", 0.00014833318005571394], ["referent", 0.00014833318005571394], ["roemen", 0.00014833318005571394], ["woont", 0.00014833318005571394], ["werkt", 0.00014833318005571394], ["relatieverklar", 0.00014833318005571394], ["levenspartner", 0.00014833318005571394], ["gemeenschapp", 0.00014833318005571394], ["huishoud", 0.00014833318005571394], ["voer", 0.00014833318005571394], ["feitelijk", 0.00014833318005571394], ["griffie", 0.00014833318005571394], ["bevat", 0.00014833318005571394], ["noem", 0.00014833318005571394], ["precies", 0.00014833318005571394], ["omschrev", 0.00014833318005571394], ["redelijkerwijs", 0.00014833318005571394], ["verlangd", 0.00014833318005571394], ["beslaglegg", 0.00014833318005571394], ["ontaard", 0.00014833318005571394], ["fishing", 0.00014833318005571394], ["expedition", 0.00014833318005571394], ["toe", 0.00014833318005571394], ["rechtsprak", 0.00014833318005571394], ["plausibiliteitscriterium", 0.00014833318005571394], ["voortvloei", 0.00014833318005571394], ["geuit", 0.00014833318005571394], ["wanner", 0.00014833318005571394], ["klachtenpatron", 0.00014833318005571394], ["consistent", 0.00014833318005571394], ["consequent", 0.00014833318005571394], ["patron", 0.00014833318005571394], ["nog", 0.00014833318005571394], ["schakel", 0.00014833318005571394], ["instruer", 0.00014833318005571394], ["criterium", 0.00014833318005571394], ["onderzocht", 0.00014833318005571394], ["ondervond", 0.00014833318005571394], ["navolg", 0.00014833318005571394], ["zozer", 0.00014833318005571394], ["meetbar", 0.00014833318005571394], ["functionel", 0.00014833318005571394], ["mat", 0.00014833318005571394], ["activiteit", 0.00014833318005571394], ["participatie", 0.00014833318005571394], ["allen", 0.00014833318005571394], ["lichaamsfuncties", 0.00014833318005571394], ["anatomisch", 0.00014833318005571394], ["eigenschapp", 0.00014833318005571394], ["omgevingsfactor", 0.00014833318005571394], ["gewog", 0.00014833318005571394], ["”,", 0.00014833318005571394], ["allianz", 0.00014833318005571394], ["medewerk", 0.00014833318005571394], ["verlen", 0.00014833318005571394], ["gedog", 0.00014833318005571394], ["verzekeringsgeneeskund", 0.00014833318005571394], ["kruithof", 0.00014833318005571394], ["arbeidsdeskund", 0.00014833318005571394], ["artos", 0.00014833318005571394], ["rapport", 0.00014833318005571394], ["oog", 0.00014833318005571394], ["_NUMaa", 0.00014833318005571394], ["rechtsvorder", 0.00014833318005571394], ["begrot", 0.00014833318005571394], ["dagteken", 0.00014833318005571394], ["aanzegg", 0.00014833318005571394], ["verschuldigd", 0.00014833318005571394], ["len", 0.00014833318005571394], ["deelgeschilprocedur", 0.00014833318005571394], ["onderhandelingstraject", 0.00014833318005571394], ["stuit", 0.00014833318005571394], ["afwikkel", 0.00014833318005571394], ["onderhandel", 0.00014833318005571394], ["doel", 0.00014833318005571394], ["_NUMw", 0.00014833318005571394], ["argument", 0.00014833318005571394], ["voorhand", 0.00014833318005571394], ["wapen", 0.00014833318005571394], ["munitie", 0.00014833318005571394], ["verblijfsvergunn", 0.00014833318005571394], ["holdi", 0.00014833318005571394], ["zer", 0.00014833318005571394], ["stringent", 0.00014833318005571394], ["beschikt", 0.00014833318005571394], ["transactie", 0.00014833318005571394], ["overzien", 0.00014833318005571394], ["justitieel", 0.00014833318005571394], ["incassobureau", 0.00014833318005571394], ["cjib", 0.00014833318005571394], ["zekerheidsstell", 0.00014833318005571394], ["antwoordakt", 0.00014833318005571394], ["centrada", 0.00014833318005571394], ["economisch", 0.00014833318005571394], ["feitenvaststell", 0.00014833318005571394], ["onbevoegdheidsverklar", 0.00014833318005571394], ["uitstel", 0.00014833318005571394], ["geheimhoud", 0.00014833318005571394], ["beoordelingscriteria", 0.00014833318005571394], ["debeoordelingvanhetbewijs", 0.00014833318005571394], ["ruimtelijk", 0.00014833318005571394], ["kwaliteit", 0.00014833318005571394], ["zorg", 0.00014833318005571394], ["omgev", 0.00014833318005571394], ["rva", 0.00014833318005571394], ["grondstrom", 0.00014833318005571394], ["gemotiveerd", 0.00014833318005571394], ["valt", 0.00014833318005571394], ["repliek", 0.00014833318005571394], ["wetgever", 0.00014833318005571394], ["onbehor", 0.00014833318005571394], ["taakvervull", 0.00014833318005571394], ["bestuurder", 0.00014833318005571394], ["rechtsperson", 0.00014833318005571394], ["uitgewerkt", 0.00014833318005571394], ["aangedrag", 0.00014833318005571394], ["juridisch", 0.00014833318005571394], ["aangevuld", 0.00014833318005571394], ["rolvoeg", 0.00014833318005571394], ["provincie", 0.00014833318005571394], ["executiegeschil", 0.00014833318005571394], ["procesrecht", 0.00014833318005571394], ["gevoerd", 0.00014833318005571394], ["verkort", 0.00014833318005571394], ["buitenland", 0.00014833318005571394], ["afzegg", 0.00014833318005571394], ["vergader", 0.00014833318005571394], ["taliban", 0.00014833318005571394], ["commandant", 0.00014833318005571394], ["lek", 0.00014833318005571394], ["doen", 0.00014833318005571394], ["navrag", 0.00014833318005571394], ["netwerk", 0.00014833318005571394], ["defensie", 0.00014833318005571394], ["plicht", 0.00014833318005571394], ["voldoen", 0.00014833318005571394], ["inlicht", 0.00014833318005571394], ["veiligheidsdienst", 0.00014833318005571394], ["wiv", 0.00014833318005571394], ["schadevergoed", 0.00014833318005571394], ["nakost", 0.00014833318005571394], ["verweerster", 0.00014833318005571394], ["strafzak", 0.00014833318005571394], ["derdenamen", 0.00014833318005571394], ["vierdenamen", 0.00014833318005571394], ["verhog", 0.00014833318005571394], ["toegelicht", 0.00014833318005571394], ["advocat", 0.00014833318005571394], ["contact", 0.00014833318005571394], ["bureau", 0.00014833318005571394], ["jeugdzorg", 0.00014833318005571394], ["psycholog", 0.00014833318005571394], ["vakantie", 0.00014833318005571394], ["gan", 0.00014833318005571394], ["hechting", 0.00014833318005571394], ["daarnaast", 0.00014833318005571394], ["bang", 0.00014833318005571394], ["letsel", 0.00014833318005571394], ["vak", 0.00014833318005571394], ["pleeggezin", 0.00014833318005571394], ["stil", 0.00014833318005571394], ["kom", 0.00014833318005571394], ["ligg", 0.00014833318005571394], ["identiteitskaart", 0.00014833318005571394], ["paspoort", 0.00014833318005571394], ["voortgezet", 0.00014833318005571394], ["duitsland", 0.00014833318005571394], ["woonacht", 0.00014833318005571394], ["mid", 0.00014833318005571394], ["situaties", 0.00014833318005571394], ["toekomt", 0.00014833318005571394], ["vooronderzoek", 0.00014833318005571394], ["hoofdstaf", 0.00014833318005571394], ["executie", 0.00014833318005571394], ["iibeoordel", 0.00014833318005571394], ["inventiviteit", 0.00014833318005571394], ["verblijft", 0.00014833318005571394], ["ziektekost", 0.00014833318005571394], ["awbz", 0.00014833318005571394], ["bijdrag", 0.00014833318005571394], ["kalendermaand", 0.00014833318005571394], ["inkomensgegeven", 0.00014833318005571394], ["teven", 0.00014833318005571394], ["%", 0.00014833318005571394], ["spar", 0.00014833318005571394], ["belegg", 0.00014833318005571394], ["meegeteld", 0.00014833318005571394], ["box", 0.00014833318005571394], ["(€", 0.00014833318005571394], [",-)", 0.00014833318005571394], ["spoedeis", 0.00014833318005571394], ["aard", 0.00014833318005571394], ["in_NUMwater", 0.00014833318005571394], ["mening", 0.00014833318005571394], ["geschikt", 0.00014833318005571394], ["weiger", 0.00014833318005571394], ["jurisdictiegeschil", 0.00014833318005571394], ["alsnog", 0.00014833318005571394], ["verpleg", 0.00014833318005571394], ["overheidsweg", 0.00014833318005571394], ["verleng", 0.00014833318005571394], ["faillissement", 0.00014833318005571394], ["estro", 0.00014833318005571394], ["parti", 0.00014833318005571394], ["beschouwd", 0.00014833318005571394], ["middelenklag", 0.00014833318005571394], ["vijfjar", 0.00014833318005571394], ["leeftijd", 0.00014833318005571394], ["ouder", 0.00014833318005571394], ["zus", 0.00014833318005571394], ["oma", 0.00014833318005571394], ["georgi", 0.00014833318005571394], ["binnengekom", 0.00014833318005571394], ["asielaanvrag", 0.00014833318005571394], ["hierteg", 0.00014833318005571394], ["bestuursrechtsprak", 0.00014833318005571394], ["nr", 0.00014833318005571394], ["v_NUM", 0.00014833318005571394], ["bevestigd", 0.00014833318005571394], ["twaalfd", 0.00014833318005571394], ["bestrijdt", 0.00014833318005571394], ["verscheid", 0.00014833318005571394], ["voert", 0.00014833318005571394], ["uiter", 0.00014833318005571394], ["welk", 0.00014833318005571394], ["firma", 0.00014833318005571394], ["gepasseerd", 0.00014833318005571394], ["hoogt", 0.00014833318005571394], ["aangesprok", 0.00014833318005571394], ["lang", 0.00014833318005571394], ["overschred", 0.00014833318005571394], ["sind", 0.00014833318005571394], ["gehanteerd", 0.00014833318005571394], ["vervall", 0.00014833318005571394], ["opdrachtgever", 0.00014833318005571394], ["reclam", 0.00014833318005571394], ["ontdek", 0.00014833318005571394], ["opdrachtnemer", 0.00014833318005571394], ["helemal", 0.00014833318005571394], ["stand", 0.00014833318005571394], ["gekom", 0.00014833318005571394], ["scenario", 0.00014833318005571394], ["middelonderdel", 0.00014833318005571394], ["vertrouwensbeginsel", 0.00014833318005571394], ["var", 0.00014833318005571394], ["wuo", 0.00014833318005571394], ["oordeelsvorm", 0.00014833318005571394], ["exceptie", 0.00014833318005571394], ["constateert", 0.00014833318005571394], ["daarin", 0.00014833318005571394], ["handelszak", 0.00014833318005571394], ["kantonzak", 0.00014833318005571394], ["vrijwaringsprocedur", 0.00014833318005571394], ["explot", 0.00014833318005571394], ["anticipatie", 0.00014833318005571394], ["kwad", 0.00014833318005571394], ["trouw", 0.00014833318005571394], ["ondernemingsvermog", 0.00014833318005571394], ["vorm", 0.00014833318005571394], ["nietig", 0.00014833318005571394], ["appeldagvaard", 0.00014833318005571394], ["oproep", 0.00014833318005571394], ["beoordelingssystematiek", 0.00014833318005571394], ["vormverzuim", 0.00014833318005571394], ["kempenban", 0.00014833318005571394], ["gruis", 0.00014833318005571394], ["samenvat", 0.00014833318005571394], ["goeder", 0.00014833318005571394], ["gunningscriterium", 0.00014833318005571394], ["beoordelingsaspect", 0.00014833318005571394], ["ontvankelijkheidsverwer", 0.00014833318005571394], ["gts", 0.00014833318005571394], ["dynamisch", 0.00014833318005571394], ["effici", 0.00014833318005571394], ["ntieparameter", 0.00014833318005571394], ["slaagt", 0.00014833318005571394], ["‑", 0.00014833318005571394], ["factorbesluit", 0.00014833318005571394], ["verniet", 0.00014833318005571394], ["lijdt", 0.00014833318005571394], ["methodebesluit", 0.00014833318005571394], ["vreemd", 0.00014833318005571394], ["wacc", 0.00014833318005571394], ["gebrekk", 0.00014833318005571394], ["busines", 0.00014833318005571394], ["cycles", 0.00014833318005571394], ["ntie", 0.00014833318005571394], ["acm", 0.00014833318005571394], ["opdrag", 0.00014833318005571394], ["herstell", 0.00014833318005571394], ["strafkamer", 0.00014833318005571394], ["noord", 0.00014833318005571394], ["holland", 0.00014833318005571394], ["gevang", 0.00014833318005571394], ["nisstraf", 0.00014833318005571394], ["overtred", 0.00014833318005571394], ["diefstal", 0.00014833318005571394], ["voorafgegan", 0.00014833318005571394], ["vergezeld", 0.00014833318005571394], ["oogmerk", 0.00014833318005571394], ["bereid", 0.00014833318005571394], ["gemak", 0.00014833318005571394], ["terwijl", 0.00014833318005571394], ["verenigd", 0.00014833318005571394], ["schuldig", 0.00014833318005571394], ["toegang", 0.00014833318005571394], ["misdrijf", 0.00014833318005571394], ["verschaft", 0.00014833318005571394], ["val", 0.00014833318005571394], ["kostum", 0.00014833318005571394], ["alvoren", 0.00014833318005571394], ["man", 0.00014833318005571394], ["dwangsom", 0.00014833318005571394], ["invorder", 0.00014833318005571394], ["gemeentewet", 0.00014833318005571394], ["hond", 0.00014833318005571394], ["houder", 0.00014833318005571394], ["hondenbelast", 0.00014833318005571394], ["gehev", 0.00014833318005571394], ["minimumeis", 0.00014833318005571394], ["uitnod", 0.00014833318005571394], ["bedrijfsgroep", 0.00014833318005571394], ["zwembad", 0.00014833318005571394], ["hoofdstraf", 0.00014833318005571394], ["oplegg", 0.00014833318005571394], ["verzuim", 0.00014833318005571394], ["aa", 0.00014833318005571394], ["gva", 0.00014833318005571394], ["commissaris", 0.00014833318005571394], ["on", 0.00014833318005571394], ["sandton", 0.00014833318005571394], ["cas", 0.00014833318005571394], ["eerder", 0.00014833318005571394], ["verdenk", 0.00014833318005571394], ["beklaagd", 0.00014833318005571394], ["taakstraf", 0.00014833318005571394], ["behandelverplicht", 0.00014833318005571394], ["xs_NUMall", 0.00014833318005571394], ["een", 0.00014833318005571394], ["cijfer", 0.00014833318005571394], ["beperkt", 0.00014833318005571394], ["kennisnem", 0.00014833318005571394], ["meregaard", 0.00014833318005571394], ["almer", 0.00014833318005571394], ["beoordelingsliss", 0.00014833318005571394], ["weigeringsgrond", 0.00014833318005571394], ["olw", 0.00014833318005571394], ["beginseluitsprak", 0.00014833318005571394], ["grondrecht", 0.00014833318005571394], ["toetsingskader", 0.00014833318005571394], ["betrouw", 0.00014833318005571394], ["partneralimentatie", 0.00014833318005571394], ["fa", 0.00014833318005571394], ["onteigeningsvonnis", 0.00014833318005571394], ["vervroegd", 0.00014833318005571394], ["onteigen", 0.00014833318005571394], ["uitgesprok", 0.00014833318005571394], ["kadastral", 0.00014833318005571394], ["bekend", 0.00014833318005571394], ["kadasternummer", 0.00014833318005571394], ["informatiebeschik", 0.00014833318005571394], ["pand", 0.00014833318005571394], ["bv", 0.00014833318005571394], ["resultat", 0.00014833318005571394], ["ontvangt", 0.00014833318005571394], ["ioaw", 0.00014833318005571394], ["ontbreekt", 0.00014833318005571394], ["causal", 0.00014833318005571394], ["onbevoegdverklar", 0.00014833318005571394], ["rechtsbijstand", 0.00014833318005571394], ["naamswijz", 0.00014833318005571394], ["navorderingsaanslag", 0.00014833318005571394], ["gezag", 0.00014833318005571394], ["beroepschrift", 0.00014833318005571394], ["procespartij", 0.00014833318005571394], ["deskundigenonderzoek", 0.00014833318005571394], ["verschill", 0.00014833318005571394], ["zichzelf", 0.00014833318005571394], ["respecter", 0.00014833318005571394], ["huidig", 0.00014833318005571394], ["partner", 0.00014833318005571394], ["wil", 0.00014833318005571394], ["vader", 0.00014833318005571394], ["verhuiz", 0.00014833318005571394], ["cura", 0.00014833318005571394], ["ç", 0.00014833318005571394], ["ao", 0.00014833318005571394], ["iederen", 0.00014833318005571394], ["onzeker", 0.00014833318005571394], ["ondertoezichtstell", 0.00014833318005571394], ["bewijslever", 0.00014833318005571394], ["opheff", 0.00014833318005571394], ["zekerheidstell", 0.00014833318005571394], ["wijzigingsgrond", 0.00014833318005571394], ["hoofzak", 0.00014833318005571394], ["taxatierapport", 0.00014833318005571394], ["makelar", 0.00014833318005571394], ["taxateur", 0.00014833318005571394], ["procedures", 0.00014833318005571394], ["zijden", 0.00014833318005571394], ["gedaagde_NUM", 0.00014833318005571394], ["vermeerder", 0.00014833318005571394], ["nesia", 0.00014833318005571394], ["wwz", 0.00014833318005571394], ["gegan", 0.00014833318005571394], ["motiveringseis", 0.00014833318005571394], ["verdel", 0.00014833318005571394], ["pensioenaansprak", 0.00014833318005571394], ["bindend", 0.00014833318005571394], ["afsprak", 0.00014833318005571394], ["aegon", 0.00014833318005571394], ["abp", 0.00014833318005571394], ["pensioen", 0.00014833318005571394], ["mercer", 0.00014833318005571394], ["afgewek", 0.00014833318005571394], ["huwelijkssluit", 0.00014833318005571394], ["pensioenrecht", 0.00014833318005571394], ["scheiding", 0.00014833318005571394], ["verev", 0.00014833318005571394], ["echtelied", 0.00014833318005571394], ["helft", 0.00014833318005571394], ["ouderdomspensioen", 0.00014833318005571394], ["huwelijk", 0.00014833318005571394], ["ontstat", 0.00014833318005571394], ["rechtsweg", 0.00014833318005571394], ["definitief", 0.00014833318005571394], ["brandsticht", 0.00014833318005571394], ["interventie", 0.00014833318005571394], ["fairstar", 0.00014833318005571394], ["dockwis", 0.00014833318005571394], ["bewijsmiddelen", 0.00014833318005571394], ["daarteg", 0.00014833318005571394], ["slotoverweg", 0.00014833318005571394], ["dertiend", 0.00014833318005571394], ["uitlat", 0.00014833318005571394], ["zijd", 0.00014833318005571394], ["gezien", 0.00014833318005571394], ["verkapt", 0.00014833318005571394], ["gevolgd", 0.00014833318005571394], ["aanvaard", 0.00014833318005571394], ["oplevert", 0.00014833318005571394], ["hor", 0.00014833318005571394], ["wederhor", 0.00014833318005571394], ["procesord", 0.00014833318005571394], ["gereageerd", 0.00014833318005571394], ["reactie", 0.00014833318005571394], ["blijkt", 0.00014833318005571394], ["afdoend", 0.00014833318005571394], ["geschad", 0.00014833318005571394], ["processuel", 0.00014833318005571394], ["anderzijd", 0.00014833318005571394], ["kreg", 0.00014833318005571394], ["weerwoord", 0.00014833318005571394], ["beslot", 0.00014833318005571394], ["besprok", 0.00014833318005571394], ["rechtsgeld", 0.00014833318005571394], ["opgezegd", 0.00014833318005571394], ["ab", 0.00014833318005571394], ["av", 0.00014833318005571394], ["zie", 0.00014833318005571394], ["kon", 0.00014833318005571394], ["leidrad", 0.00014833318005571394], ["direct", 0.00014833318005571394], ["mocht", 0.00014833318005571394], ["beoordeeld", 0.00014833318005571394], ["hand", 0.00014833318005571394], ["kredietovereenkomst", 0.00014833318005571394], ["laatst", 0.00014833318005571394], ["mee", 0.00014833318005571394], ["kredietverlener", 0.00014833318005571394], ["gebruikmak", 0.00014833318005571394], ["concret", 0.00014833318005571394], ["maatstav", 0.00014833318005571394], ["billijk", 0.00014833318005571394], ["zwaarweg", 0.00014833318005571394], ["bestat", 0.00014833318005571394], ["leidt", 0.00014833318005571394], ["bank", 0.00014833318005571394], ["geldt", 0.00014833318005571394], ["daarenbov", 0.00014833318005571394], ["maatschapp", 0.00014833318005571394], ["zowel", 0.00014833318005571394], ["cli", 0.00014833318005571394], ["nten", 0.00014833318005571394], ["contractuel", 0.00014833318005571394], ["opzicht", 0.00014833318005571394], ["ongeschrev", 0.00014833318005571394], ["betaamt", 0.00014833318005571394], ["hangt", 0.00014833318005571394], ["kredietopzegg", 0.00014833318005571394], ["elk", 0.00014833318005571394], ["overeenstemm", 0.00014833318005571394], ["proportionaliteit", 0.00014833318005571394], ["subsidiariteit", 0.00014833318005571394], ["gezichtspunt", 0.00014833318005571394], ["zojuist", 0.00014833318005571394], ["vermeld", 0.00014833318005571394], ["bankrelatie", 0.00014833318005571394], ["circa", 0.00014833318005571394], ["onderhoud", 0.00014833318005571394], ["vaststat", 0.00014833318005571394], ["nimmer", 0.00014833318005571394], ["afgegev", 0.00014833318005571394], ["getred", 0.00014833318005571394], ["altijd", 0.00014833318005571394], ["volled", 0.00014833318005571394], ["nagekom", 0.00014833318005571394], ["krediet", 0.00014833318005571394], ["vertoond", 0.00014833318005571394], ["courantverhoud", 0.00014833318005571394], ["creditsaldo", 0.00014833318005571394], ["onvoldo", 0.00014833318005571394], ["weersprok", 0.00014833318005571394], ["dekking", 0.00014833318005571394], ["bestond", 0.00014833318005571394], ["kredietaanpass", 0.00014833318005571394], ["oktober", 0.00014833318005571394], ["gekreg", 0.00014833318005571394], ["doordat", 0.00014833318005571394], ["gerelateerd", 0.00014833318005571394], ["openstaand", 0.00014833318005571394], ["ruim", 0.00014833318005571394], ["debiteurenstand", 0.00014833318005571394], ["borgtocht", 0.00014833318005571394], ["voornem", 0.00014833318005571394], ["bijvoorbeeld", 0.00014833318005571394], ["waarschuw", 0.00014833318005571394], ["dar", 0.00014833318005571394], ["nooit", 0.00014833318005571394], ["beher", 0.00014833318005571394], ["doorverwez", 0.00014833318005571394], ["gericht", 0.00014833318005571394], ["zwar", 0.00014833318005571394], ["wer", 0.00014833318005571394], ["begeleid", 0.00014833318005571394], ["aanwijz", 0.00014833318005571394], ["geeft", 0.00014833318005571394], ["uitsprek", 0.00014833318005571394], ["meld", 0.00014833318005571394], ["frequent", 0.00014833318005571394], ["forensisch", 0.00014833318005571394], ["polikliniek", 0.00014833318005571394], ["max", 0.00014833318005571394], ["ernst", 0.00014833318005571394], ["soortgelijk", 0.00014833318005571394], ["plaats", 0.00014833318005571394], ["teneind", 0.00014833318005571394], ["psychisch", 0.00014833318005571394], ["problematiek", 0.00014833318005571394], ["doorbrekingsgrond", 0.00014833318005571394], ["h", 0.00014833318005571394], ["j", 0.00014833318005571394], ["wanbeleid", 0.00014833318005571394], ["verantwoord", 0.00014833318005571394], ["samenstell", 0.00014833318005571394]];
+
+/***/ },
+/* 295 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = [["procesverlop", 1.635966642834469], ["_NUM", 0.716597592849154], ["_ART", 0.6421343364611857], ["en", 0.493652823225416], ["van", 0.37513461236090057], ["ontstan", 0.3668279542777806], ["lop", 0.3668279542777806], ["geding", 0.3592629620949392], ["in", 0.12578653668724543], ["feit", 0.09137323891431978], ["beroep", 0.08662657715253694], ["hoger", 0.08647824397248123], ["procesgang", 0.0744632563879684], ["eerst", 0.03456163095298135], ["aanleg", 0.034413297772925636], ["vaststaand", 0.033968298232758494], ["verder", 0.02076664520779995], ["_PUNCT", 0.01957997976735424], ["voorgeschiedenis", 0.01646498298618425], ["processtuk", 0.013794985745181397], ["procedur", 0.007119992642674269], [",", 0.005043328121894274], ["zak", 0.0034116631412814207], ["op", 0.003114996781169993], ["-", 0.002966663601114279], ["is", 0.0028183304210585647], ["heeft", 0.002669997241002851], ["tot", 0.0020766645207799953], [")", 0.0020766645207799953], ["vor", 0.0020766645207799953], ["inleid", 0.0019283313407242812], ["met", 0.0019283313407242812], ["/", 0.0019283313407242812], ["(", 0.0017799981606685673], ["teg", 0.0017799981606685673], ["[", 0.0016316649806128534], ["uitsprak", 0.0016316649806128534], ["hierna", 0.0014833318005571395], ["verzoek", 0.0014833318005571395], ["bij", 0.0014833318005571395], ["dor", 0.0014833318005571395], ["producties", 0.0014833318005571395], ["cassatie", 0.0013349986205014254], ["ingesteld", 0.0013349986205014254], ["j", 0.0013349986205014254], ["nar", 0.0013349986205014254], ["accountantskamer", 0.0013349986205014254], ["te", 0.0011866654404457115], ["onderzoek", 0.0011866654404457115], ["die", 0.0011866654404457115], ["bovenvermeld", 0.0011866654404457115], ["klacht", 0.0011866654404457115], ["ingedi", 0.0011866654404457115], ["volgend", 0.0010383322603899976], ["dat", 0.0010383322603899976], ["verdacht", 0.0010383322603899976], ["incident", 0.0008899990803342836], ["tussenkomst", 0.0008899990803342836], ["brief", 0.0008899990803342836], ["uit", 0.0008899990803342836], ["onder", 0.0008899990803342836], ["aan", 0.0008899990803342836], ["augustus", 0.0008899990803342836], ["aanleid", 0.0008899990803342836], ["]", 0.0008899990803342836], ["nam", 0.0008899990803342836], ["verwijz", 0.0008899990803342836], ["stuk", 0.0008899990803342836], ["conclusie", 0.0008899990803342836], ["weergav", 0.0007416659002785698], ["feitelijk", 0.0007416659002785698], ["instantie", 0.0007416659002785698], ["hof", 0.0007416659002785698], ["rechtbank", 0.0007416659002785698], ["januari", 0.0007416659002785698], ["blijkt", 0.0007416659002785698], ["termijn", 0.0007416659002785698], ["zijn", 0.0007416659002785698], ["ter", 0.0007416659002785698], ["appellant", 0.0007416659002785698], ["redelijk", 0.0005933327202228558], ["verded", 0.0005933327202228558], ["open", 0.0005933327202228558], ["dez", 0.0005933327202228558], ["mer", 0.0005933327202228558], ["als", 0.0005933327202228558], ["artikel", 0.0005933327202228558], ["word", 0.0005933327202228558], ["gerek", 0.0005933327202228558], ["vonnis", 0.0005933327202228558], ["doen", 0.0005933327202228558], ["terechtzit", 0.0005933327202228558], ["vervolgen", 0.0005933327202228558], ["oordel", 0.0005933327202228558], ["juli", 0.0005933327202228558], ["] (", 0.0005933327202228558], ["colleg", 0.0005933327202228558], ["],", 0.0004449995401671418], ["])", 0.0004449995401671418], ["all", 0.0004449995401671418], ["hoofdzak", 0.0004449995401671418], ["eiser", 0.0004449995401671418], ["verweerder", 0.0004449995401671418], ["verlop", 0.0004449995401671418], ["rechter", 0.0004449995401671418], ["mei", 0.0004449995401671418], ["sprak", 0.0004449995401671418], ["twee", 0.0004449995401671418], ["december", 0.0004449995401671418], ["aangehoud", 0.0004449995401671418], ["moet", 0.0004449995401671418], ["stat", 0.0004449995401671418], ["verricht", 0.0004449995401671418], ["opmak", 0.0004449995401671418], ["ministerie", 0.0004449995401671418], ["gewez", 0.0004449995401671418], ["waartoe", 0.0004449995401671418], ["omvang", 0.0004449995401671418], ["opsporingsonderzoek", 0.0004449995401671418], ["juni", 0.0004449995401671418], ["verbal", 0.0004449995401671418], ["niet", 0.0004449995401671418], ["bepaald", 0.0004449995401671418], ["september", 0.0004449995401671418], ["verband", 0.0004449995401671418], ["klager", 0.0004449995401671418], ["november", 0.0004449995401671418], ["binnengekom", 0.0004449995401671418], ["gegev", 0.0004449995401671418], ["dagvaard", 0.0004449995401671418], ["antwoord", 0.0004449995401671418], ["repliek", 0.0004449995401671418], ["dupliek", 0.0004449995401671418], ["bestred", 0.0004449995401671418], ["beschik", 0.0004449995401671418], ["iprocesverlop", 0.0002966663601114279], ["geschil", 0.0002966663601114279], ["genoemd", 0.0002966663601114279], ["herzien", 0.0002966663601114279], ["vrijwaringszak", 0.0002966663601114279], ["stelt", 0.0002966663601114279], ["wat", 0.0002966663601114279], ["februari", 0.0002966663601114279], ["besluit", 0.0002966663601114279], ["hiervor", 0.0002966663601114279], ["gesteld", 0.0002966663601114279], ["geschond", 0.0002966663601114279], ["ten", 0.0002966663601114279], ["gelegd", 0.0002966663601114279], ["vanaf", 0.0002966663601114279], ["commissaris", 0.0002966663601114279], ["jar", 0.0002966663601114279], ["datum", 0.0002966663601114279], ["er", 0.0002966663601114279], ["dan", 0.0002966663601114279], ["strafvervolg", 0.0002966663601114279], ["bedoeld", 0.0002966663601114279], ["evrm", 0.0002966663601114279], ["onderhav", 0.0002966663601114279], ["waarop", 0.0002966663601114279], ["april", 0.0002966663601114279], ["na", 0.0002966663601114279], ["aanvang", 0.0002966663601114279], ["dur", 0.0002966663601114279], ["kan", 0.0002966663601114279], ["alsmed", 0.0002966663601114279], ["of", 0.0002966663601114279], ["behandeld", 0.0002966663601114279], ["siod", 0.0002966663601114279], ["’", 0.0002966663601114279], ["werd", 0.0002966663601114279], ["person", 0.0002966663601114279], ["vier", 0.0002966663601114279], ["aangemerkt", 0.0002966663601114279], ["gedagvaard", 0.0002966663601114279], ["om", 0.0002966663601114279], ["med", 0.0002966663601114279], ["onderzoekswens", 0.0002966663601114279], ["geschorst", 0.0002966663601114279], ["teneind", 0.0002966663601114279], ["aanvull", 0.0002966663601114279], ["process", 0.0002966663601114279], ["lat", 0.0002966663601114279], ["zestien", 0.0002966663601114279], ["getuig", 0.0002966663601114279], ["hor", 0.0002966663601114279], ["gelet", 0.0002966663601114279], ["omstand", 0.0002966663601114279], ["kader", 0.0002966663601114279], ["partij", 0.0002966663601114279], ["eiseres", 0.0002966663601114279], ["hij", 0.0002966663601114279], ["registeraccountant", 0.0002966663601114279], ["woonplat", 0.0002966663601114279], ["betrok", 0.0002966663601114279], ["omtrent", 0.0002966663601114279], ["ra", 0.0002966663601114279], ["zover", 0.0002966663601114279], ["nog", 0.0002966663601114279], ["belang", 0.0002966663601114279], ["fas", 0.0002966663601114279], ["akt", 0.0002966663601114279], ["houdend", 0.0002966663601114279], ["uitlat", 0.0002966663601114279], ["rigas", 0.0002966663601114279], ["marthedes", 0.0002966663601114279], ["tussenarrest", 0.00014833318005571394], ["deskund", 0.00014833318005571394], ["oogart", 0.00014833318005571394], [", (", 0.00014833318005571394], ["benoemd", 0.00014833318005571394], ["verzet", 0.00014833318005571394], ["beid", 0.00014833318005571394], ["procedures", 0.00014833318005571394], ["afzonder", 0.00014833318005571394], ["navolg", 0.00014833318005571394], ["betreft", 0.00014833318005571394], ["vast", 0.00014833318005571394], ["“", 0.00014833318005571394], ["betrek", 0.00014833318005571394], ["f", 0.00014833318005571394], ["verwer", 0.00014833318005571394], ["grondslag", 0.00014833318005571394], ["inval", 0.00014833318005571394], ["leiding", 0.00014833318005571394], ["bijna", 0.00014833318005571394], ["drie", 0.00014833318005571394], ["geduurd", 0.00014833318005571394], ["terwijl", 0.00014833318005571394], ["geweest", 0.00014833318005571394], ["period", 0.00014833318005571394], ["inactiviteit", 0.00014833318005571394], ["tuss", 0.00014833318005571394], ["aanhoud", 0.00014833318005571394], ["eind", 0.00014833318005571394], ["zitting", 0.00014833318005571394], ["subsidiair", 0.00014833318005571394], ["zich", 0.00014833318005571394], ["standpunt", 0.00014833318005571394], ["aanving", 0.00014833318005571394], ["welk", 0.00014833318005571394], ["was", 0.00014833318005571394], ["voorop", 0.00014833318005571394], ["elk", 0.00014833318005571394], ["recht", 0.00014833318005571394], ["behandel", 0.00014833318005571394], ["binn", 0.00014833318005571394], ["waarborg", 0.00014833318005571394], ["strekt", 0.00014833318005571394], ["toe", 0.00014833318005571394], ["voorkom", 0.00014833318005571394], ["langer", 0.00014833318005571394], ["dreiging", 0.00014833318005571394], ["zou", 0.00014833318005571394], ["lev", 0.00014833318005571394], ["vangt", 0.00014833318005571394], ["moment", 0.00014833318005571394], ["vanweg", 0.00014833318005571394], ["jegen", 0.00014833318005571394], ["handel", 0.00014833318005571394], ["waaruit", 0.00014833318005571394], ["opgemaakt", 0.00014833318005571394], ["redelijkerwijs", 0.00014833318005571394], ["kunn", 0.00014833318005571394], ["ernstig", 0.00014833318005571394], ["voornem", 0.00014833318005571394], ["had", 0.00014833318005571394], ["stell", 0.00014833318005571394], ["geval", 0.00014833318005571394], ["dag", 0.00014833318005571394], ["dus", 0.00014833318005571394], ["tijdsverlop", 0.00014833318005571394], ["strafzak", 0.00014833318005571394], ["afhank", 0.00014833318005571394], ["ingewikkeld", 0.00014833318005571394], ["gelijktijd", 0.00014833318005571394], ["berecht", 0.00014833318005571394], ["medeverdacht", 0.00014833318005571394], ["invloed", 0.00014833318005571394], ["raadsman", 0.00014833318005571394], ["kanword", 0.00014833318005571394], ["leid", 0.00014833318005571394], ["vertrag", 0.00014833318005571394], ["afdoen", 0.00014833318005571394], ["wijz", 0.00014833318005571394], ["bevoegd", 0.00014833318005571394], ["autoriteit", 0.00014833318005571394], ["mat", 0.00014833318005571394], ["voortvar", 0.00014833318005571394], ["betracht", 0.00014833318005571394], ["geblek", 0.00014833318005571394], ["social", 0.00014833318005571394], ["inlicht", 0.00014833318005571394], ["opsporingsdienst", 0.00014833318005571394], ["geslot", 0.00014833318005571394], ["officier", 0.00014833318005571394], ["justitie", 0.00014833318005571394], ["bericht", 0.00014833318005571394], ["procesdossier", 0.00014833318005571394], ["gezien", 0.00014833318005571394], ["akkoord", 0.00014833318005571394], ["getek", 0.00014833318005571394], ["beslan", 0.00014833318005571394], ["ordner", 0.00014833318005571394], ["bevat", 0.00014833318005571394], ["pagina", 0.00014833318005571394], ["s", 0.00014833318005571394], ["blijken", 0.00014833318005571394], ["neg", 0.00014833318005571394], ["natur", 0.00014833318005571394], ["rechtsperson", 0.00014833318005571394], ["verschijn", 0.00014833318005571394], ["meervoud", 0.00014833318005571394], ["strafkamer", 0.00014833318005571394], ["hervat", 0.00014833318005571394], ["onbepaald", 0.00014833318005571394], ["tijd", 0.00014833318005571394], ["rechtercommissaris", 0.00014833318005571394], ["gehoord", 0.00014833318005571394], ["oktober", 0.00014833318005571394], ["slot", 0.00014833318005571394], ["inhoud", 0.00014833318005571394], ["[]", 0.00014833318005571394], ["tenlastelegg", 0.00014833318005571394], ["weergegev", 0.00014833318005571394], ["bijzonder", 0.00014833318005571394], ["aanwez", 0.00014833318005571394], ["overschrijd", 0.00014833318005571394], ["rechtvaard", 0.00014833318005571394], ["wet", 0.00014833318005571394], ["complexiteit", 0.00014833318005571394], ["strafbar", 0.00014833318005571394], ["aantal", 0.00014833318005571394], ["- (", 0.00014833318005571394], ["respectiev", 0.00014833318005571394], ["aldus", 0.00014833318005571394], ["vormverzuim", 0.00014833318005571394], ["vorenstaand", 0.00014833318005571394], ["gen", 0.00014833318005571394], ["_NUMa", 0.00014833318005571394], ["sv", 0.00014833318005571394], ["mist", 0.00014833318005571394], ["derhalv", 0.00014833318005571394], ["toepass", 0.00014833318005571394], ["zodat", 0.00014833318005571394], ["ontvankelijkverklar", 0.00014833318005571394], ["vervolg", 0.00014833318005571394], ["red", 0.00014833318005571394], ["daarom", 0.00014833318005571394], ["ord", 0.00014833318005571394], ["verwez", 0.00014833318005571394], ["daarover", 0.00014833318005571394], ["vermeld", 0.00014833318005571394], ["tussenvonnis", 0.00014833318005571394], ["daarin", 0.00014833318005571394], ["comparitie", 0.00014833318005571394], ["plaatsgevond", 0.00014833318005571394], ["gedaagd", 0.00014833318005571394], ["geleg", 0.00014833318005571394], ["verschen", 0.00014833318005571394], ["daarna", 0.00014833318005571394], ["namen", 0.00014833318005571394], ["gevraagd", 0.00014833318005571394], ["waarvan", 0.00014833318005571394], ["heden", 0.00014833318005571394], ["navorder", 0.00014833318005571394], ["aanslag", 0.00014833318005571394], ["vergrijpboetes", 0.00014833318005571394], ["opgelegd", 0.00014833318005571394], ["vrijwar", 0.00014833318005571394], ["destukkenendeprocesgang", 0.00014833318005571394], ["bet", 0.00014833318005571394], ["functionel", 0.00014833318005571394], ["parket", 0.00014833318005571394], ["),", 0.00014833318005571394], ["gedan", 0.00014833318005571394], ["toekom", 0.00014833318005571394], ["waaronder", 0.00014833318005571394], ["fotokopie", 0.00014833318005571394], ["proces", 0.00014833318005571394], ["fiod", 0.00014833318005571394], ["betreff", 0.00014833318005571394], ["verzeker", 0.00014833318005571394], ["vorder", 0.00014833318005571394], ["conservatoir", 0.00014833318005571394], ["beslag", 0.00014833318005571394], ["bre", 0.00014833318005571394], ["she", 0.00014833318005571394], ["afm", 0.00014833318005571394], ["dezelfd", 0.00014833318005571394], ["dit", 0.00014833318005571394], ["geregistreerd", 0.00014833318005571394], ["zaaknummer", 0.00014833318005571394], ["dusverr", 0.00014833318005571394], ["deprocesgang", 0.00014833318005571394], ["wettelijk", 0.00014833318005571394], ["bestur", 0.00014833318005571394], ["²", 0.00014833318005571394], ["primair", 0.00014833318005571394], ["aanvrag", 0.00014833318005571394], ["verzoekster", 0.00014833318005571394], ["noem", 0.00014833318005571394], ["krachten", 0.00014833318005571394], ["vreemdelingenwet", 0.00014833318005571394], ["vw", 0.00014833318005571394], ["bepal", 0.00014833318005571394], ["har", 0.00014833318005571394], ["uitzet", 0.00014833318005571394], ["achterweg", 0.00014833318005571394], ["blijft", 0.00014833318005571394], ["ingewilligd", 0.00014833318005571394], ["uitstel", 0.00014833318005571394], ["verleend", 0.00014833318005571394], ["opnam", 0.00014833318005571394], ["ingang", 0.00014833318005571394], ["uiter", 0.00014833318005571394], ["conventie", 0.00014833318005571394], ["reconventie", 0.00014833318005571394], ["vijftien", 0.00014833318005571394], ["zev", 0.00014833318005571394], ["‘", 0.00014833318005571394], ["zijden", 0.00014833318005571394], ["geconcludeerd", 0.00014833318005571394], ["teven", 0.00014833318005571394], ["wijzig", 0.00014833318005571394], ["eis", 0.00014833318005571394], ["antwoordakt", 0.00014833318005571394], ["hebb", 0.00014833318005571394], ["verzocht", 0.00014833318005571394]];
+
+/***/ },
+/* 296 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _data = __webpack_require__(297);
+
+	var _data2 = _interopRequireDefault(_data);
+
+	var _react = __webpack_require__(4);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _underscore = __webpack_require__(210);
+
+	var _underscore2 = _interopRequireDefault(_underscore);
+
+	var _figs = __webpack_require__(224);
+
+	var _figs2 = _interopRequireDefault(_figs);
+
+	var _PercentageBar = __webpack_require__(287);
+
+	var _PercentageBar2 = _interopRequireDefault(_PercentageBar);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	//const LineChart = require('../../../../../charts/bar-chart/BarChart.jsx');
+
+	var FigureWordCount = function (_React$Component) {
+	    _inherits(FigureWordCount, _React$Component);
+
+	    function FigureWordCount() {
+	        _classCallCheck(this, FigureWordCount);
+
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(FigureWordCount).apply(this, arguments));
+	    }
+
+	    _createClass(FigureWordCount, [{
+	        key: 'render',
+	        value: function render() {
+	            //<LineChart labelY='²log frequency' sourceHref={data.url} data={data.data}/>
+	            return _react2.default.createElement(
+	                'figure',
+	                { className: 'chart', id: _figs2.default.tfidf.id },
+	                _react2.default.createElement(
+	                    'table',
+	                    { className: ' table' },
+	                    _react2.default.createElement(
+	                        'thead',
+	                        null,
+	                        _react2.default.createElement(
+	                            'tr',
+	                            null,
+	                            _react2.default.createElement(
+	                                'th',
+	                                null,
+	                                'Word #'
+	                            ),
+	                            _react2.default.createElement(
+	                                'th',
+	                                null,
+	                                'Relative frequency'
+	                            ),
+	                            _react2.default.createElement(
+	                                'th',
+	                                null,
+	                                'Absolute frequency'
+	                            )
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'tbody',
+	                        null,
+	                        _underscore2.default.map(_data2.default.data, function (obj) {
+	                            var percentageTxt = (100 * obj.titleCount / _data2.default.totalCount).toFixed(2) + "%";
+	                            return _react2.default.createElement(
+	                                'tr',
+	                                { key: obj.wordCount },
+	                                _react2.default.createElement(
+	                                    'th',
+	                                    { className: 'nr' },
+	                                    obj.wordCount
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_PercentageBar2.default, { percentage: percentageTxt, text: percentageTxt }),
+	                                    _react2.default.createElement(
+	                                        'span',
+	                                        { className: 'perc-text' },
+	                                        percentageTxt
+	                                    )
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(
+	                                        'span',
+	                                        { className: 'perc-text' },
+	                                        obj.titleCount
+	                                    )
+	                                )
+	                            );
+	                        })
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'figcaption',
+	                    null,
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'figure-number' },
+	                        'Fig ',
+	                        _figs2.default.tfidf.num,
+	                        '.'
+	                    ),
+	                    ' Word count in titles.'
+	                )
+	            );
+	        }
+	    }]);
+
+	    return FigureWordCount;
+	}(_react2.default.Component);
+
+	exports.default = FigureWordCount;
+
+/***/ },
+/* 297 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = {
+	    "url": "https://rechtspraak.cloudant.com/docs/_design/stats/_view/word_count_for_title_elements?group_level=1&stale=ok",
+	    "data": [{ "wordCount": 1, "titleCount": 74646 }, { "wordCount": 2, "titleCount": 51409 }, {
+	        "wordCount": 3,
+	        "titleCount": 67914
+	    }, { "wordCount": 4, "titleCount": 23850 }, { "wordCount": 5, "titleCount": 28579 }, {
+	        "wordCount": 6,
+	        "titleCount": 33224
+	    }, { "wordCount": 7, "titleCount": 11728 }, { "wordCount": 8, "titleCount": 5950 }, {
+	        "wordCount": 9,
+	        "titleCount": 4947
+	    }, { "wordCount": 10, "titleCount": 4661 }],
+	    "totalCount": 311368
+	};
+
+/***/ },
+/* 298 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(4);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Introduction = __webpack_require__(299);
 
 	var _Introduction2 = _interopRequireDefault(_Introduction);
 
-	var _Evaluation = __webpack_require__(286);
+	var _Evaluation = __webpack_require__(300);
 
 	var _Evaluation2 = _interopRequireDefault(_Evaluation);
 
-	var _ContextFreeGrammars = __webpack_require__(287);
+	var _ContextFreeGrammars = __webpack_require__(301);
 
 	var _ContextFreeGrammars2 = _interopRequireDefault(_ContextFreeGrammars);
 
-	var _CYK = __webpack_require__(288);
+	var _CYK = __webpack_require__(302);
 
 	var _CYK2 = _interopRequireDefault(_CYK);
 
-	var _Chapter = __webpack_require__(247);
+	var _Chapter = __webpack_require__(248);
 
 	var _Chapter2 = _interopRequireDefault(_Chapter);
 
@@ -55052,7 +56775,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Inferring;
 
 /***/ },
-/* 285 */
+/* 299 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -55111,7 +56834,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = InferringDocumentStructureIntroduction;
 
 /***/ },
-/* 286 */
+/* 300 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -55165,7 +56888,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Evaluation;
 
 /***/ },
-/* 287 */
+/* 301 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -55180,7 +56903,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Math = __webpack_require__(254);
+	var _Math = __webpack_require__(253);
 
 	var _Math2 = _interopRequireDefault(_Math);
 
@@ -55232,7 +56955,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = ContextFreeGrammars;
 
 /***/ },
-/* 288 */
+/* 302 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -55247,7 +56970,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _references = __webpack_require__(245);
+	var _references = __webpack_require__(221);
 
 	var _references2 = _interopRequireDefault(_references);
 
@@ -55255,11 +56978,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _bib2 = _interopRequireDefault(_bib);
 
-	var _Math = __webpack_require__(254);
+	var _Math = __webpack_require__(253);
 
 	var _Math2 = _interopRequireDefault(_Math);
 
-	var _FigRef = __webpack_require__(242);
+	var _FigRef = __webpack_require__(245);
 
 	var _FigRef2 = _interopRequireDefault(_FigRef);
 
