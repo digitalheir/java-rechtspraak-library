@@ -54,21 +54,20 @@ svg text {
 /*
  *
  */
-html, body {
+html {
   margin: 0;
-  padding: $body-padding;
+  padding: 0;
   background-color: $body-bg;
   color: $text-color;
   font: 14px/1.5 $font-family-base;
 
   //font-weight: 400;
 }
-html {
-  margin: 0 2em;
-}
 
-.Layout {
-  margin: 0 auto;
+body {
+  max-width: 800px;
+  margin: auto;
+  padding: $body-padding;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -98,6 +97,7 @@ h3, h4, h5, h6 {
 
 a {
   color: #39c;
+  text-decoration: none;
 }
 
 a:hover, header a:visited:hover, footer a:visited:hover {
@@ -183,7 +183,6 @@ header a, footer a, header a:visited, footer a:visited {
   text-decoration: none;
 }
 
-
 /*header ul {*/
 /*list-style: none;*/
 /*height: 40px;*/
@@ -238,7 +237,7 @@ header a, footer a, header a:visited, footer a:visited {
 /*color: #222;*/
 /*}*/
 
- section {
+section {
   border: 0 solid #e5e5e5;
   border-top-width: 1px;
 }
@@ -328,10 +327,14 @@ hr {
     left: -$body-padding;
     position: relative;
   }
+  figure {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
 }
-@media print, screen and (max-width: 480px) {
 
-}
 @media print, screen and (max-width: 480px) {
   body {
     padding: $body-padding-narrow;
@@ -376,7 +379,6 @@ hr {
   }
 }
 
-
 .perc-bar {
   fill: #3182BD;
 }
@@ -399,7 +401,7 @@ hr {
     //padding: 5px;
   }
 
-  .tf-idf-score{
+  .tf-idf-score {
     font-size: small;
   }
 }
@@ -431,10 +433,6 @@ hr {
 }
 
 @media only screen and (max-width: 767px) {
-  /* phones */
-  html {
-    margin: 0 1em;
-  }
   figure {
     margin: 1em 10px;
   }

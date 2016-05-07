@@ -1,4 +1,15 @@
 const bib = {
+    bradley2010learning: {
+        id: 'bradley2010learning', type: 'inproceedings',
+        title: "Learning tree conditional random fields",
+        author: {
+            abbr: "Bradley & Guestrin",
+            full: "Bradley, Joseph K and Guestrin, Carlos"
+        },
+        booktitle: "Proceedings of the 27th International Conference on Machine Learning (ICML-10)",
+        pages: "127—134",
+        year: 2010
+    },
     jordan2002discriminative: {
         id: 'jordan2002discriminative',
         title: "On discriminative vs. generative classifiers: A comparison of logistic regression and naive bayes",
@@ -177,7 +188,7 @@ const bib = {
         year: 2006,
         publisher: "Association for Computational Linguistics"
     }
-    
+
 };
 export default bib;
 

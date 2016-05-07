@@ -22,9 +22,12 @@ export default class Introduction extends Component {
                 documents. Indeed: most older documents consist exclusively
                 of <code>para</code> and <code>paragroup</code> tags, denoting paragraphs
                 and groups of paragraphs respectively.
-                Sampling documents, we see that important structural tags are <code>
-                section</code> tags, which are sometimes annotated with a <
-                code>role</code> attribute, which represents the role of the section
+                We observe that important structural tags are <code>uitspraak.info</code>, <code>conclusie.info</code>
+                and <code>
+                section</code>. The first two denote a header section containing general metadata about a case,
+                and we will refer to these tags as <code>*.info</code>. <code>section</code> tags obviously
+                denote a sections. <code>section</code> tags optionally
+                contain a <code>role</code> attribute, which represents the role of the section
                 within the proceedings (e.g., 'considerations', 'judgment').
             </p>
             <section id="xml-schema">
@@ -32,8 +35,8 @@ export default class Introduction extends Component {
                 <p>
                     Sadly, Rechtspraak.nl does not offer an XML schema. This makes it a little more difficult to
                     create
-                    programs that work with the XML data, such as a <a href="#html">converter to
-                    HTML</a>. This is because we don't know exactly which elements we may expect in the
+                    programs that work with the XML data, such as a converter to
+                    HTML. This is because we don't know exactly which elements we can expect in the
                     XML documents.
 
                     In the absence of an official schema,
@@ -54,6 +57,8 @@ export default class Introduction extends Component {
             <section id="html">
                 <h4>HTML</h4>
 
+                <strong>TODO: delete section?</strong>
+
                 <p>Rechtspraak.nl offers HTML manifestations on its website through the URL
                     scheme <a href={urlSchemeUrl}><code>{urlSchemeText}</code></a>.
                 </p>
@@ -63,8 +68,8 @@ export default class Introduction extends Component {
                     reason
                     for this is that the semantic richness of some XML
                     is abated by the transformation process of Rechtspraak.nl.
-                    For example, consider the HTML manifestation for <a
-                        href={ htmlManifestation}>ECLI:NL:CBB:2010:BN1294</a>.
+                    <strike>For example, consider the HTML manifestation for <a
+                        href={ htmlManifestation}>ECLI:NL:CBB:2010:BN1294</a></strike>.
                 </p>
 
                 <p>

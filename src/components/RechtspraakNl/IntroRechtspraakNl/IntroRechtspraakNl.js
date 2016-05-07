@@ -5,7 +5,9 @@ import ref from '../../Bibliography/References/references'
 import bib from  '../../Bibliography/bib';
 import MarkupStatsFigure from '../../Figures/MarkupStatsFigure/MarkupStatsFigure'
 import FigRef from './../../Figures/FigRef'
-import figs from './../../Figures/figs'
+import figs from '../../Figures/figs'
+import chapters from '../../../../chapters'
+import introSections from './../../Introduction/sections'
 
 export default class Introduction extends Component {
 //pre>\nfunction (doc)
@@ -72,24 +74,25 @@ export default class Introduction extends Component {
         return <div>
             <p><a href="http://www.rechtspraak.nl/">Rechtspraak.nl</a> is the official website of the Dutch
                 judiciary. The website hosts an open data portal for Dutch case law, containing metadata for
-                about 2 million cases<Source href="http://data.rechtspraak.nl/uitspraken/zoeken?"/> and
-                judgments texts for about 350.000 cases in XML<Source
+                about 2 million court judgments<Source href="http://data.rechtspraak.nl/uitspraken/zoeken?"/> and
+                judgments texts for about 350.000 judgments in XML<Source
                     href="http://data.rechtspraak.nl/uitspraken/zoeken?return=doc"/>.
                 In this thesis, we are interested in markup, so we only consider those documents that
                 contain text.
-                As explained by {ref.cite(bib.vanopijnen2014)}, the full
+                As {ref.cite(bib.vanopijnen2014)} explains, the full
                 data set of Rechtspraak.nl contains
-                only a fraction of the total case law that exists
+                only a fraction of all court judgments that exist
                 in the Netherlands, but the collection is curated so that it is representative of
-                court decisions in the Netherlands.
+                case law in the Netherlands.
             </p>
-
 
             <p>
                 If we turn to <FigRef
-                fig={figs.markupStats}/>, we see that many modern documents are richly marked up. However, there remains
-                a overwhelmingly large portion of older documents that contain no or only sparse semantic markup.
-                To illustrate: at the time of writing, 78.7% of all case law texts on Rechtspraak.nl do not
+                fig={figs.markupStats}/>, we see that there is a recent trend for more richly marked up documents.
+                However,
+                a overwhelmingly large portion of older documents remains that contain no or
+                only sparse markup.
+                To illustrate: at the time of writing, 78.7% of all judgment texts on Rechtspraak.nl do not
                 contain any <code>section</code> tag, implying that a large amount of
                 documents are barely marked up. This is unfortunate, because having proper markup makes
                 documents better searchable and more easy to style.
@@ -101,24 +104,22 @@ export default class Introduction extends Component {
                 The problem that we investigate in this thesis, then, is whether we can
                 enrich the markup of documents in Rechtspraak.nl by automatically assigning a
                 section hierarchy among the text elements.
-                To this end, we develop
-                methods for:
+                This task is split in the following subtasks:
 
-                TODO add links to relevant chapters
             </p>
                 <ol>
-                    <li>importing documents from the Rechtspraak.nl web service;</li>
-                    <li>tokenizing relevant text elements;</li>
-                    <li>labeling these text elements
-                        with their respective roles (e.g., <code>section title</code>; <code>text
-                            block</code>);
+                    <li><a href={"#"+introSections.importing}>importing documents from the Rechtspraak.nl web service;</a></li>
+                    <li><a href={"#"+introSections.importing}>tokenizing relevant text elements;</a></li>
+                    <li><a href={chapters.pathTo(this.props.path, chapters.tagging)}>labeling these text elements
+                        with their respective roles (e.g., "<code>section title</code>" and "<code>text
+                            block</code>");</a>
                     </li>
-                    <li>
+                    <li><a href={chapters.pathTo(this.props.path, chapters.documentStructure)}>
                         combining the tokens in such a way that they represent the
-                        most likely section hierarchy
+                        most likely section hierarchy;</a>
                     </li>
                     <li>
-                        Publish the resulting documents so that search engines
+                        publishing the resulting documents so that search engines
                         can make use of the enriched markup
                     </li>
                 </ol>

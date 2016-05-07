@@ -43,8 +43,7 @@
     "style-loader": "^0.13.1",
     "underscore": "latest",
     "webpack": "^1.13.0",
-    "webpack-dev-server": "^1.14.1",
-    "copy-webpack-plugin": "latest"
+    "webpack-dev-server": "^1.14.1"
   },
   "babel": {
     "presets": [

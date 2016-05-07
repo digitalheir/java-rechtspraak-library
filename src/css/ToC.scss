@@ -1,0 +1,48 @@
+.toc {
+  & > ol ol {
+    font-size: 0.8em;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  ol {
+    /* Creates a new instance of the section counter with each ol
+                                            element */
+    counter-reset: subsection;
+    list-style-type: none;
+    margin: 0 0 1em;
+    padding: 0 0 0 1em;
+  }
+  li::before {
+    /* Increments only this instance of the section counter */
+    counter-increment: subsection;
+
+    /* Adds the value of all instances of the section counter separated by a ".". */
+    content: counters(subsection, ".") " ";
+  }
+  & > ol > li::before {
+    content: counters(subsection, ".") ". ";
+  }
+}
+
+.title {
+  position: relative;
+  &:hover {
+    .link-up {
+      position: absolute;
+      left: -24px;
+      height: 24px;
+      width: 24px;
+      line-height: 24px;
+      text-align: center;
+      text-decoration: none;
+      color: #8c8c8c;
+      font-style: normal;
+      &::before {
+        content: '∧';
+      }
+    }
+  }
+}

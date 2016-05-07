@@ -14,11 +14,16 @@ var chapters = {
     documentStructure: {
         title: "Inferring a Document Structure",
         route: '/document-structure/'
-    }//,
+    },
     // presentation: {
     //     title: "Dissemination",
     //     route: '/dissemination/'
     // }
+    
+    pathTo: function(fromPath,toChapter){
+        const relativeToRoot = fromPath.match(/\//g).slice(1).map(_ => "../").join("");
+        return relativeToRoot+toChapter.route.replace('/','');
+    }
 };
 
 chapters.inOrder = [

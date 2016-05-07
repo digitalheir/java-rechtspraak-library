@@ -10,7 +10,7 @@ import F from  '../../../../Math/Math';
 export default class LogRes extends Component {
     render() {
         return <section>
-    <h4>Logistic regression</h4>
+    <h4><strike>Logistic regression</strike></h4>
 
     <p>
 
@@ -18,12 +18,13 @@ export default class LogRes extends Component {
 
 
     <section>
-        <h5>Logit function</h5>
+        <h5><strike>Logit function</strike></h5>
 
-        <p>
+        <p><strike>
             We assume that the natural logarithm of the odds ratio
             is equivalent to a linear function of the independent variables. Id est, <F
             l="logit(p) = \ln \left(\frac{p}{1-p} \right) = \beta_0 + \beta_1 x_1 + ..."/>
+            </strike>
         </p>
 
         <p>

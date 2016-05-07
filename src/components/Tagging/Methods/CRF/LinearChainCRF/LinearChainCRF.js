@@ -23,11 +23,11 @@ export default class LinearChainCRF extends Component {
             <p>
                 This is a fundamental difference: we don't
                 assume that the labels generate observations, but rather that the observations provide support
-                for the probability of labels. 
+                for the probability of labels.
             </p>
 
             <p>
-                LC-CRFs factorize differently than HMMs. We define a linear-chain
+                We define a linear-chain
                 conditional random field as follows:
             </p>
 
@@ -35,8 +35,8 @@ export default class LinearChainCRF extends Component {
                 Let
             </p>
             <ul>
-                <li><F l="Y,X"/> be random vectors taking valuations from <F l="V"/></li>
-                <li><F l="\mathbf{\Phi}=\{\phi_1, \ldots\phi_k\}"/> be a set of feature functions <F
+                <li><F l="Y,X"/> be random vectors taking valuations from  <F l="\mathcal{V}"/></li>
+                <li><F l="F=\{\Phi_1, \ldots\Phi_k\}"/> be a set of local functions <F
                     l="V^n\rightarrow \mathbb{R}^+"/></li>
             </ul>
 
@@ -44,7 +44,7 @@ export default class LinearChainCRF extends Component {
                 We then define the un-normalized CRF distribution as:
 
                 <F
-                    l="\hat{p}(\mathbf x, \mathbf y)=\prod_{i=1}^k\phi_i(D_i)"
+                    l="\hat{p}(\mathbf x, \mathbf y)=\prod_{i=1}^k\Phi_i(D_i)"
                     displayMode={true}/>
             </p>
 
@@ -67,14 +67,10 @@ export default class LinearChainCRF extends Component {
             </p>
 
             <p>
-                <strong>
-                    yada yadayada yadayada yadayada yadayada yadayada yadayada yadayada yadayada yadayada yadayada
-                    yadayada
-                    yadayada yadayada yadayada yada
-                </strong>
+            Now let
             </p>
             <li><F l="\Lambda=\{\lambda_k\} \in \mathbb{R}^K"/> be the parameter vector</li>
-            <li><F l="\{f_k(y,y',\mathbf{x}_t)\}"/> be a set of feature functions</li>
+            <li><F l="F_{eatures}=\{f_k(y,y',\mathbf{x}_t)\}"/> be a set of feature functions</li>
 
 
             <p>
@@ -92,11 +88,12 @@ export default class LinearChainCRF extends Component {
             </p>
 
             <p>
-                Note that a logistic regression model is a simple CRF, and also note that if one
-                understands an HMM in conditional terms, one ends up with a linear-chain CRF.
-                See e.g. {ref.cite(bib.sutton2006introduction)} for more information.
+                {ref.cite(bib.sutton2006introduction)} show that a logistic regression model is a simple CRF,
+                and also 
+                that rewriting
+                the probability distribution <F latex="p(\mathbf x,\mathbf y)"/> of a HMM yields a Conditional
+                Random Field with a particular choice of feature functions.
             </p>
-
         </section>
             ;
     }

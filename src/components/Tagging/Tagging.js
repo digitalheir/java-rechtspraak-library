@@ -8,47 +8,7 @@ import DeterministicTagger from './Methods/DeterministicTagger/DeterministicTagg
 import CRF from './Methods/CRF/CRF';
 import FeatureSelection from './Methods/FeatureSelection/FeatureSelection';
 import chapters from '../../../chapters';
-
-const taggingSections = {
-    // intro: {
-    //     id: 'introduction',
-    //     title: "Introduction",
-    //     component: Introduction
-    // },
-    // methods: {
-    //     id: 'methods',
-    //     title: "Methods",
-    //     component: Methods
-    // },
-    methods: {
-        id: 'crf',
-        title: "Conditional Random Fields",
-        component: CRF
-    },
-    featureSelection: {
-        id: 'featureSelection',
-        title: 'Feature Selection',
-        component: FeatureSelection
-    },
-    manual: {
-        id: 'manual',
-        title: 'Deterministic Tagger',
-        component: DeterministicTagger
-    },
-    evaluation: {
-        id: 'evaluation',
-        title: 'Evaluation',
-        component: Evaluation
-    }
-};
-
-taggingSections.inOrder = [
-    taggingSections.featureSelection,
-    taggingSections.methods,
-    taggingSections.manual,
-    taggingSections.evaluation
-];
-
+import taggingSections from './sections'
 
 export default class Tagging extends Component {
     static chapterInfo() {

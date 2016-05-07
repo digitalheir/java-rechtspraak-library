@@ -5,12 +5,12 @@ import chapters from '../../../chapters'
 import {getHandler} from '../../Routes.jsx'
 
 class ToC extends React.Component {
-    static getSubSections(chapter) {
+    static getSubSections(chapter, urlSection) {
         if (chapter.getSections && chapter.getSections()) {
             // console.log(chapter.getSections());
             return <ol>
                 {chapter.getSections().inOrder.map(section => {
-                    if (!!section) return <li>{section.title}</li>;
+                    if (!!section) return <li><a href={urlSection+"#"+section.id}>{section.title}</a></li>;
                     else throw Error("Null section found in " + JSON.stringify(chapter.getSections()
                         ))
                 })}
@@ -21,21 +21,29 @@ class ToC extends React.Component {
     }
 
     render() {
-        var relativeToRoot = this.props.path.match(/\//g).slice(1).map(_ => "../").join("");
+        const relativeToRoot = this.props.path.match(/\//g).slice(1).map(_ => "../").join("");
+        const path = this.props.path;
 
-        return <ol className='mxn2'>
-            {
-                chapters.inOrder.map(chapter =>
-                    <li key={chapter.route}>
-                        {this.props.path == chapter.route
-                            ? <span>{chapter.title}</span>
-                            : <a href={relativeToRoot+chapter.route.replace('/','')}
-                                 className='nav-link'>{chapter.title}</a>}
-                        {ToC.getSubSections(getHandler(chapter.route))}
-                    </li>
-                )
-            }
-        </ol>;
+
+        return <nav className='toc'>
+            <ol>
+                {this.props.showHome ? <a href={relativeToRoot}>Home</a> : ""}
+                {
+                    chapters.inOrder.map((chapter) => {
+                            const urlSection = relativeToRoot + chapter.route.replace('/', '');
+
+                            return <li key={chapter.route}>
+                                {path == chapter.route
+                                    ? <strong>{chapter.title}</strong>
+                                    : <a href={urlSection}
+                                         className='nav-link'>{chapter.title}</a>}
+                                {ToC.getSubSections(getHandler(chapter.route), urlSection)}
+                            </li>
+                        }
+                    )
+                }
+            </ol>
+        </nav>;
     }
 
 }

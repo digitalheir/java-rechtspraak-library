@@ -34,11 +34,9 @@ export default class CRF extends Component {
 
             <p>
                 As illustrated in <FigRef fig={figs.graphicalModels}/>,
-                CRFs can be understood as a graphical version of logistic regression in which we have not one dependant
-                variable, but an arbitrary number of dependant variables that are conditioned on a number of explanatory
-                variables.
-                This means that CRFs are to Hidden Markov Models (HMMs) as logistic
-                regression is to Naive Bayes classifiers.
+                CRFs can be understood as a graphical version of logistic regression, in which we have an arbitrary
+                number of dependant variables that are conditioned on a number of explanatory
+                variables (instead of just one dependant variable).
             </p>
 
 

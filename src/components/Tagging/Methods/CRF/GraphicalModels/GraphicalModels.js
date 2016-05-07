@@ -26,51 +26,48 @@ export default class CRF extends Component {
             </p>
 
             <p>
+                We now formally define graphical models.
                 Assume we have a set <F l="V=X\cup Y"/> of random variables which can
                 take values from a set <F l="\mathcal{V}"/>. Here <F l="X"/>
                 denotes a set of input variables (for example, word features)
                 and <F l="Y"/> denotes a set of
                 output variables (for example, part-of-speech tags).
-                We denote an assignment to <F l="X"/> and <F l="Y"/> as <F
+                We denote an assignment to <F l="X"/> and <F l="Y"/> with <F
                 l="\mathbf x"/> and <F
                 l="\mathbf y"/>, respectively.
 
-                We define
-                an undirected graphical model as the set of all probability distributions
+                An undirected graphical model is defined as the set of all probability distributions
                 that can be written as <F
-                l="p\left ( \mathbf x_A, \mathbf y_A\right )=\frac{1}{Z}\prod _A \Phi_A\left ( \mathbf x_A,\mathbf y_A\right )"
+                l="p( \mathbf x_A, \mathbf y_A)=\frac{1}{Z}\prod _A \Phi_A( \mathbf x_A,\mathbf y_A)"
                 displayMode={true}/>
                 where <F l="\Phi_A \in F"/> is a factor defined on some subset of
                 variables <F l="A \subseteq V"/> and <F
-                l="Z=\sum _{\mathbf x, \mathbf y} \left ( \prod _A \Phi_A\left ( \mathbf x_A,\mathbf y_A\right )\right )"
+                l="Z=\sum _{\mathbf x, \mathbf y} ( \prod _A \Phi_A( \mathbf x_A,\mathbf y_A))"
                 displayMode={true}/>
             </p>
             <p>
-                Intuitively, <F l="p\left ( \mathbf x_A, \mathbf y_A\right )"/> describes
+                Intuitively, <F l="p( \mathbf x_A, \mathbf y_A)"/> describes
                 the joint probability of input and output
-                vectors in terms of functions <F
-                l="F = \left \{  \Phi_A\right \}"/> that are summed, along with a
-                normalization <F l="Z"/> that ensures the
-                probability function ranges between <F l="0"/> and <F l="1"/>.
-            </p>
-
-            <p>
-                <F l="F"/> is specific to the
-                modeling application. <F l="\Phi_A \in F"/> can be any function from <F l="A \subset V"/> to
+                vectors in terms of some set of functions <F
+                l="F = \{  \Phi_A\}"/>, collectively known as the factors.
+                We will see that these factors wrap feature values (for example, <F l="1"/> if a word is capitalized),
+                multiplied together. The
+                normalization term <F l="Z"/> ensures that the
+                probability function ranges between <F l="0"/> and <F l="1"/>: it sums every possible value
+                of the the multiplied factors. <F l="\Phi_A \in F"/> can be any function from <F l="A \subset V"/> to
                 a positive real number,
-                i.e. <F l="\Phi_A:V^n\rightarrow\ \mathbb{R}^+"/>. <F l="F"/> is
-                collectively known as the factors, and
-                individually the functions <F l="\Phi_A \in F"/> are known as local
+                i.e. <F l="\Phi_A:V^n\rightarrow\ \mathbb{R}^+"/>. Individually the
+                functions <F l="\Phi_A \in F"/> are known as local
                 functions or compatibility functions.
-
+            </p>
+            <p>
+                It is important to note that <F l="F"/> is specific to the
+                modeling application.
                 Our choice of factors is what distinguishes
-                graphical models from each other, for they are the
+                graphical models from each other; they are the
                 functions that determine the probability
                 of a given
                 input to have a certain output.
-                For example: part-of-speech tagging makes use of
-                different features than
-                image recognition.
             </p>
 
             <p>
@@ -84,7 +81,7 @@ export default class CRF extends Component {
 
             <p>
                 The factorization of the function for <F
-                l="p\left ( \mathbf x_A,\mathbf y_A\right )"/> can be represented
+                l="p( \mathbf x_A,\mathbf y_A)"/> can be represented
                 as graph, called a <a href="https://en.wikipedia.org/wiki/Factor_graph">
                 factor graph</a>. (Illustrated in <FigRef fig={figs.factorGraph}/>.)
             </p>
@@ -94,56 +91,48 @@ export default class CRF extends Component {
                 Factor graphs are <a className="wiki" href="https://en.wikipedia.org/wiki/Bipartite_graph">
                 bipartite graphs</a> <F l="G=(V,F,E)"/> that link variable nodes <F
                 l="v_s\in V"/> to function nodes <F
-                l="\Phi_A\in F"/> through edge <F l={"e_{{\\Phi_A},{v_s}}"}
-            /> iff <F l="v_s\in \mathbf{arg} \left ( \Phi_A \right )"/>. The
+                l="\Phi_A\in F"/> through edge <F l={"e^{\\Phi_A}_{v_s}"}
+            /> iff <F l="v_s\in \mathbf{arg} ( \Phi_A )"/>. The
                 graph thus allows us to graphically represent how
                 input and output variables
                 interact with our
-                compatibility functions to generate a probability distribution.
+                local functions to generate a probability distribution.
             </p>
 
             <FigImg relativeToRoot={relativeToRoot} width="55%" fig={figs.factorGraph}/>
 
             <p>
-                Graphical models hence allow us to
-                intuitively display the interdependence of
-                a number of variables.
-            </p>
+                We define a directed model (or Bayesian Network) as a graphical model that factorizes as:
+                <F l="p( \mathbf x_A, \mathbf y_A)=\prod _{v\in V}p(v|\pi(v))" display="true"/>
+                where <F l="\pi(v)"/> are the parents of <F l="v"/> in <F l="G"/>.</p>
 
-            <p>
-                A directed model is a model that factorizes as:
-                <F l="p\left ( \mathbf x_A, \mathbf y_A\right )=\prod _{v\in V}p(v|\pi(v))" display="true"/>
-                where <F l="\pi(v)"/> are the parents of <F l="v"/> in <F l="G"/>.
-                Generative models are directed models in which all
+                <p>
+                We define generative models as directed models in which all
                 labels <F l="y \in Y"/> are parents of <F l="x\in X"/>. This name is due
                 to the labels "generating" the output: the labels are the contingencies upon which the
                 probability of the output depends.
             </p>
             <p>
-                Using Bayes rule, we can rewrite distributions of generative models as
-                conditional distributions <F l="p\left ( \mathbf y|\mathbf x\right )"/> and vice versa.
-                When we describe a graphical model as <F l="p\left ( \mathbf y|\mathbf x\right )"/>,
-                we call it a discriminative model.
+                When we describe the probability distribution <F l="p( \mathbf y|\mathbf x)"/>,
+                we speak of a discriminative model. Every generative model has a discriminative counterpart.
                 In the words of {ref.cite(bib.jordan2002discriminative)},
-                these models form generative-discriminative pairs.
-            </p>
-            <p>
-                This means that training a discriminative model to maximize
+                we call these generative-discriminative pairs.
+                Training a
+                generative model to maximize <F latex="p(\mathbf y|\mathbf x)"/>  yields the same model as
+                training its discriminative counterpart.
+                Conversely, training a discriminative model to maximize
                 the joint probability <F l="p(\mathbf x,\mathbf y)"/> (instead
                 of <F latex="p(\mathbf y|\mathbf x)"/>) results in the same model
-                as training a generative model. Conversely, training a
-                generative model to maximize <F latex="p(\mathbf y|\mathbf x)"/> would
-                result in the same model as
-                training a discriminative model.
+                as training the generative counterpart.  
             </p>
             <p>
                 It turns out that when we model a conditional distribution,
-                we are not interested in parameter values for <F l="p\left ( \mathbf x\right )"/>, and so
-                we have more freedom in modeling <F l="p\left ( \mathbf y|\mathbf x\right )"/>, without
-                burdening ourselves with modeling the potentially very complicated
-                inter-dependencies of <F l="p\left ( \mathbf x\right )"/>. In classification tasks,
-                this means that we are better able to use observations
-                and so in practice discriminative models tend to out-perform generative models.
+                we have more parameter freedom for <F l="p(\mathbf y)"/>, because we are not interested 
+                in parameter values for <F l="p( \mathbf x)"/>. Modeling <F l="p( \mathbf y|\mathbf x)"/>
+                unburdens us with modeling the potentially very complicated
+                inter-dependencies of <F l="p(\mathbf x)"/>. In classification tasks,
+                this means that we are better able to use observations,
+                and so discriminative models tend to out-perform generative models in practice.
                 For a thorough explanation of the principle of generative-discriminative pairs,
                 see {ref.cite(bib.jordan2002discriminative)}.
             </p>

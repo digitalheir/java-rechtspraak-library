@@ -1,5 +1,5 @@
 import _ from 'underscore';
-import dataTfIdf from './data.js';
+import dataTfIdf from './raw-data.js';
 
 function tfidfForAllTerms(topN) {
     var sorted = _.map(dataTfIdf, function (e) {
