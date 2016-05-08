@@ -35,7 +35,7 @@ export default class LinearChainCRF extends Component {
                 Let
             </p>
             <ul>
-                <li><F l="Y,X"/> be random vectors taking valuations from  <F l="\mathcal{V}"/></li>
+                <li><F l="Y,X"/> be random vectors taking valuations from <F l="\mathcal{V}"/></li>
                 <li><F l="F=\{\Phi_1, \ldots\Phi_k\}"/> be a set of local functions <F
                     l="V^n\rightarrow \mathbb{R}^+"/></li>
             </ul>
@@ -67,34 +67,48 @@ export default class LinearChainCRF extends Component {
             </p>
 
             <p>
-            Now let
+                In CRFs, each local feature has the form
             </p>
-            <li><F l="\Lambda=\{\lambda_k\} \in \mathbb{R}^K"/> be the parameter vector</li>
-            <li><F l="F_{eatures}=\{f_k(y,y',\mathbf{x}_t)\}"/> be a set of feature functions</li>
-
-
-            <p>
-                A linear-chain conditional random field is then a probability distribution <F
-                l="p(\mathbf{x},\mathbf{y})"/> that has the form:
-                <F l="p(\mathbf{x},\mathbf{y})=
+            <F display={true}
+               l="\Phi_{Ak}(\mathbf x_t,\mathbf y_t)=\lambda_{Ak} f_{Ak}(y_{t},y_{t-1},x_t)"/>
+                <p>
+                    For some</p>
+                    <ol>
+                        <li><F l="\Lambda=\{\lambda_k\} \in \mathbb{R}^K"/> is a vector of weight parameters</li>
+                        <li><F l="F_{eatures}=\{f_k(y,y',\mathbf{x}_t)\}"/> be a set of real-valued feature functions</li>
+                    </ol>
+                <p>
+                    where <F l="\mathbf{x}_t"/> and <F l="\mathbf{y}_t"/> are the current values of
+                    <F l="\mathbf x_t"/> and <F l="\mathbf y_t"/> respectively, i.e., the current observation
+                    and the current label, and <F l="\mathbf{y}_{t-1}"/> is the previous label.
+                    And so, recalling that the
+                    product of exponents equals the logarithm of their sum we can re-write <F
+                    l="p(\mathbf y|\mathbf x)"/> as
+                </p>
+                    <F
+                    l="p(\mathbf{x},\mathbf{y})"/> that has the form:
+                    <F l="p(\mathbf{x},\mathbf{y})=
             \frac{1}{Z(\mathbf x)}\exp\left \{\sum_{k=1}^{K} \lambda_k f_k(y_t, y_{t-1},\mathbf x_t)\right \}"
-                   display="true"/>
-            </p>
+                       display="true"/>
+                <p>
+                    This is the canonical form of Conditional Random Fields.
+                </p>
 
 
-            <p>Where <F l="Z(\mathbf x)"/> is a normalization function that takes the observation vector as a parameter:
-                <F l="Z(\mathbf x)=\sum_{\mathbf{y}} \exp\left \{\sum_{k=1}^{K} \lambda_k f_k(y_t, y_{t-1},\mathbf x_t)\right \}"
-                   display="true"/>
-            </p>
+                <p>Where <F l="Z(\mathbf x)"/> is a normalization function that takes the observation vector as a
+                    parameter:
+                    <F l="Z(\mathbf x)=\sum_{\mathbf{y}} \exp\left \{\sum_{k=1}^{K} \lambda_k f_k(y_t, y_{t-1},\mathbf x_t)\right \}"
+                       display="true"/>
+                </p>
 
-            <p>
-                {ref.cite(bib.sutton2006introduction)} show that a logistic regression model is a simple CRF,
-                and also 
-                that rewriting
-                the probability distribution <F latex="p(\mathbf x,\mathbf y)"/> of a HMM yields a Conditional
-                Random Field with a particular choice of feature functions.
-            </p>
+                <p>
+                    {ref.cite(bib.sutton2006introduction)} show that a logistic regression model is a simple CRF,
+                    and also
+                    that rewriting
+                    the probability distribution <F latex="p(\mathbf x,\mathbf y)"/> of a HMM yields a Conditional
+                    Random Field with a particular choice of feature functions.
+                </p>
         </section>
-            ;
+    ;
     }
-}
+    }

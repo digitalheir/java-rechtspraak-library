@@ -13,7 +13,7 @@ export default class Header extends React.Component {
                 </p>
 
                 <p>
-                    In this thesis, we explore the problem of automatically assigning a document
+                    In this thesis, we explore the problem of automatically assigning a section
                     structure to the texts of Dutch court judgments. To this end, we develop a database that
                     mirrors the XML data offering of Rechtspraak.nl. We
                     experiment with Linear-Chain

@@ -79,8 +79,8 @@ export default class CRF extends Component {
 
             <GraphicalModels {...this.props}/>
             <HMMs {...this.props}/>
-            <LogRes {...this.props}/>
             <LinearChainCRF {...this.props}/>
         </div>;
+            // <LogRes {...this.props}/>
     }
 }

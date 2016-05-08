@@ -9,7 +9,7 @@ function tfidfForAllTerms(topN) {
     });
     if (topN) sorted.splice(topN);
 
-    console.log(sorted)
+    // console.log(sorted)
     return sorted;
 }
 
