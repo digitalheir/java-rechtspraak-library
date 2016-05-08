@@ -575,19 +575,18 @@ svg text {
 /*
  *
  */
-html, body {
+html {
     margin: 0;
-    padding: 50px;
+    padding: 0;
     background-color: #fff;
     color: #727272;
     font: 14px/1.5 'Noto Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
     //font-weight: 400;
 }
-html {
-    margin: 0 2em;
-}
-.Layout {
-    margin: 0 auto;
+body {
+    max-width: 800px;
+    margin: auto;
+    padding: 50px;
 }
 h1, h2, h3, h4, h5, h6 {
     color: #222;
@@ -610,6 +609,7 @@ h3, h4, h5, h6 {
 }
 a {
     color: #39c;
+    text-decoration: none;
 }
 a:hover, header a:visited:hover, footer a:visited:hover {
     color: #069;
@@ -795,8 +795,13 @@ hr {
         left: -50px;
         position: relative;
     }
+    figure {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
 }
-@media print, screen and (max-width: 480px) {}
 @media print, screen and (max-width: 480px) {
     body {
         padding: 15px;
@@ -876,10 +881,6 @@ hr {
     }
 }
 @media only screen and (max-width: 767px) {
-    /* phones */
-    html {
-        margin: 0 1em;
-    }
     figure {
         margin: 1em 10px;
     }
@@ -987,4 +988,83 @@ hr {
     padding: 0;
     text-align: center;
     border: solid black 1px;
+}
+.tree-map {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: auto;
+    position: relative;
+    color: #333;
+    display: inline-block;
+    padding: 8px;
+}
+.tree-map .legend .cell {
+    vertical-align: middle;
+}
+.tree-map .node {
+    border: solid 1px white;
+    font: 10px sans-serif;
+    line-height: 12px;
+    overflow: hidden;
+    position: absolute;
+    text-indent: 2px;
+}
+.tree-map .node:hover {
+    background: beige !important;
+    min-width: 65px !important;
+    height: auto !important;
+    z-index: 9999 !important;
+}
+.tree-map .label-pattern-count:before {
+    content: " (";
+}
+.tree-map .label-pattern-count:after {
+    content: ")";
+}
+.tree-map .label-pattern-count {
+    font-size: 0.8em;
+}
+@media only screen and (max-width: 700px) {
+    .tree-map {
+        padding: 8px 0;
+    }
+}
+.toc a {
+    text-decoration: none;
+}
+.toc ol {
+    /* Creates a new instance of the section counter with each ol
+                                            element */
+    counter-reset: subsection;
+    list-style-type: none;
+    margin: 0 0 1em;
+    padding: 0 0 0 1em;
+}
+.toc li::before {
+    /* Increments only this instance of the section counter */
+    counter-increment: subsection;
+    /* Adds the value of all instances of the section counter separated by a ".". */
+    content: counters(subsection, ".") " ";
+}
+.toc > ol ol {
+    font-size: 0.8em;
+}
+.toc > ol > li::before {
+    content: counters(subsection, ".") ". ";
+}
+.title {
+    position: relative;
+}
+.title:hover .link-up {
+    position: absolute;
+    left: -24px;
+    height: 24px;
+    width: 24px;
+    line-height: 24px;
+    text-align: center;
+    text-decoration: none;
+    color: #8c8c8c;
+    font-style: normal;
+}
+.title:hover .link-up::before {
+    content: '\2227';
 }
