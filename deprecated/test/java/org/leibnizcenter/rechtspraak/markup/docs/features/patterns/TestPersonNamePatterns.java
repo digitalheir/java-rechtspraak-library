@@ -1,7 +1,7 @@
 package org.leibnizcenter.rechtspraak.markup.docs.features.patterns;
 
 import org.junit.Test;
-import org.leibnizcenter.rechtspraak.tokens.features.KnownSurnamesNl;
+import org.leibnizcenter.rechtspraak.enricher.crf.features.KnownSurnamesNl;
 import org.leibnizcenter.rechtspraak.markup.docs.nameparser.Names;
 
 import java.util.List;

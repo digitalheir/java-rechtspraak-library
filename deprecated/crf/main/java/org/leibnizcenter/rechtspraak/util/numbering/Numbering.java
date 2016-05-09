@@ -1,7 +1,7 @@
 package org.leibnizcenter.util.numbering;
 
 import com.google.common.base.Strings;
-import org.leibnizcenter.rechtspraak.tokens.features.KnownSurnamesNl;
+import org.leibnizcenter.rechtspraak.enricher.crf.features.KnownSurnamesNl;
 import org.leibnizcenter.rechtspraak.markup.docs.RechtspraakElement;
 
 import java.util.ArrayList;

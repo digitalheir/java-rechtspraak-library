@@ -1,6 +1,6 @@
 package org.leibnizcenter.rechtspraak.leibnizannotations;
 
-import org.leibnizcenter.rechtspraak.tokens.features.textpatterns.TitlePatterns;
+import org.leibnizcenter.rechtspraak.enricher.crf.features.textpatterns.TitlePatterns;
 import org.leibnizcenter.rechtspraak.tokens.RechtspraakElement;
 import org.leibnizcenter.rechtspraak.tokens.TokenList;
 import org.leibnizcenter.rechtspraak.tokens.numbering.Numbering;

@@ -1,7 +1,7 @@
 package org.leibnizcenter.rechtspraak.tokens.quote;
 
 import com.google.common.collect.Sets;
-import org.leibnizcenter.rechtspraak.tokens.features.textpatterns.GeneralTextFeature;
+import org.leibnizcenter.rechtspraak.enricher.crf.features.textpatterns.GeneralTextFeature;
 import org.leibnizcenter.rechtspraak.tokens.RechtspraakElement;
 import org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf;
 import org.leibnizcenter.util.Strings2;

@@ -1,6 +1,6 @@
 package org.leibnizcenter.rechtspraak.leibnizannotations;
 
-import org.leibnizcenter.rechtspraak.tokens.features.title.TitlePatterns;
+import org.leibnizcenter.rechtspraak.enricher.crf.features.title.TitlePatterns;
 import org.leibnizcenter.rechtspraak.markup.docs.Label;
 import org.leibnizcenter.rechtspraak.markup.docs.LabeledToken;
 import org.leibnizcenter.rechtspraak.markup.docs.LabeledTokenList;

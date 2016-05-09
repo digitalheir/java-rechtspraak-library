@@ -1,7 +1,7 @@
-package org.leibnizcenter.rechtspraak.tokens.features.info;
+package org.leibnizcenter.rechtspraak.enricher.crf.features.info;
 
 import cc.mallet.types.Token;
-import org.leibnizcenter.rechtspraak.tokens.features.ElementHandler;
+import org.leibnizcenter.rechtspraak.enricher.crf.features.ElementHandler;
 import org.leibnizcenter.rechtspraak.markup.docs.RechtspraakElement;
 import org.leibnizcenter.rechtspraak.markup.docs.features.Patterns;
 import org.leibnizcenter.util.TextPattern;

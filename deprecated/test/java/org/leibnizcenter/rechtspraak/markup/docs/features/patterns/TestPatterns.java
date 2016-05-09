@@ -1,9 +1,9 @@
 package org.leibnizcenter.rechtspraak.markup.docs.features.patterns;
 
 import org.junit.Test;
-import org.leibnizcenter.rechtspraak.tokens.features.info.InfoPatterns;
-import org.leibnizcenter.rechtspraak.tokens.features.quote.PreBlockQuotePattrns;
-import org.leibnizcenter.rechtspraak.tokens.features.title.TitlePatterns;
+import org.leibnizcenter.rechtspraak.enricher.crf.features.info.InfoPatterns;
+import org.leibnizcenter.rechtspraak.enricher.crf.features.quote.PreBlockQuotePattrns;
+import org.leibnizcenter.rechtspraak.enricher.crf.features.title.TitlePatterns;
 
 import static junit.framework.TestCase.assertTrue;
 import static org.junit.Assert.assertFalse;

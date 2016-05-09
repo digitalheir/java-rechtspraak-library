@@ -1,6 +1,6 @@
 package org.leibnizcenter.rechtspraak.markup.docs.tokentree;
 
-import org.leibnizcenter.rechtspraak.tokens.features.quote.BlockQuotePatterns;
+import org.leibnizcenter.rechtspraak.enricher.crf.features.quote.BlockQuotePatterns;
 import org.leibnizcenter.rechtspraak.markup.docs.Label;
 import org.leibnizcenter.rechtspraak.markup.docs.LabeledToken;
 import org.leibnizcenter.rechtspraak.markup.docs.RechtspraakElement;

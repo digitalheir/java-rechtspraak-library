@@ -1,4 +1,4 @@
-package org.leibnizcenter.rechtspraak.tokens.features;
+package org.leibnizcenter.rechtspraak.enricher.crf.features;
 
 import org.leibnizcenter.rechtspraak.markup.docs.RechtspraakElement;
 

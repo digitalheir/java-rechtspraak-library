@@ -2,10 +2,10 @@ package org.leibnizcenter.rechtspraak.enricher;
 
 import com.google.common.collect.Lists;
 import org.junit.Test;
-import org.leibnizcenter.rechtspraak.cfg.CYK;
-import org.leibnizcenter.rechtspraak.cfg.ScoreChart;
-import org.leibnizcenter.rechtspraak.cfg.rule.Term;
-import org.leibnizcenter.rechtspraak.cfg.rule.type.Terminal;
+import org.leibnizcenter.rechtspraak.enricher.cfg.CYK;
+import org.leibnizcenter.rechtspraak.enricher.cfg.ScoreChart;
+import org.leibnizcenter.rechtspraak.enricher.cfg.rule.Term;
+import org.leibnizcenter.rechtspraak.enricher.cfg.rule.type.Terminal;
 
 import java.util.Iterator;
 import java.util.List;

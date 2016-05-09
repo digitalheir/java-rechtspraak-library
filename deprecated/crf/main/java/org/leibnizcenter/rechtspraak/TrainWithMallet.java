@@ -6,7 +6,7 @@ import cc.mallet.pipe.TokenSequence2FeatureVectorSequence;
 import cc.mallet.types.*;
 import cc.mallet.util.CommandOption;
 import deprecated.org.crf.utilities.TaggedToken;
-import org.leibnizcenter.rechtspraak.tokens.features.Features;
+import org.leibnizcenter.rechtspraak.enricher.crf.features.Features;
 import org.leibnizcenter.rechtspraak.leibnizannotations.Annotator;
 import org.leibnizcenter.rechtspraak.markup.docs.Const;
 import org.leibnizcenter.rechtspraak.markup.docs.Label;

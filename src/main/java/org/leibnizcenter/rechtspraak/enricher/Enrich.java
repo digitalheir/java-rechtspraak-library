@@ -1,16 +1,16 @@
 package org.leibnizcenter.rechtspraak.enricher;
 
 import cc.mallet.fst.CRF;
-import org.leibnizcenter.rechtspraak.cfg.CYK;
-import org.leibnizcenter.rechtspraak.cfg.Grammar;
-import org.leibnizcenter.rechtspraak.cfg.ScoreChart;
-import org.leibnizcenter.rechtspraak.cfg.rule.RightHandSide;
-import org.leibnizcenter.rechtspraak.cfg.rule.StandardRule;
-import org.leibnizcenter.rechtspraak.cfg.rule.TypeContainer;
-import org.leibnizcenter.rechtspraak.cfg.rule.type.NonTerminalImpl;
-import org.leibnizcenter.rechtspraak.cfg.rule.type.Terminal;
-import org.leibnizcenter.rechtspraak.cfg.rule.type.interfaces.Type;
-import org.leibnizcenter.rechtspraak.crf.ApplyCrf;
+import org.leibnizcenter.rechtspraak.enricher.cfg.CYK;
+import org.leibnizcenter.rechtspraak.enricher.cfg.Grammar;
+import org.leibnizcenter.rechtspraak.enricher.cfg.ScoreChart;
+import org.leibnizcenter.rechtspraak.enricher.cfg.rule.RightHandSide;
+import org.leibnizcenter.rechtspraak.enricher.cfg.rule.StandardRule;
+import org.leibnizcenter.rechtspraak.enricher.cfg.rule.TypeContainer;
+import org.leibnizcenter.rechtspraak.enricher.cfg.rule.type.NonTerminalImpl;
+import org.leibnizcenter.rechtspraak.enricher.cfg.rule.type.Terminal;
+import org.leibnizcenter.rechtspraak.enricher.cfg.rule.type.interfaces.Type;
+import org.leibnizcenter.rechtspraak.enricher.crf.ApplyCrf;
 import org.leibnizcenter.rechtspraak.leibnizannotations.DeterministicTagger;
 import org.leibnizcenter.rechtspraak.leibnizannotations.Label;
 import org.leibnizcenter.rechtspraak.tokens.RechtspraakElement;
