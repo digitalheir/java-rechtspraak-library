@@ -1,18 +1,13 @@
 package org.leibnizcenter.rechtspraak.cfg;
 
-import com.google.common.collect.Lists;
-import org.jetbrains.annotations.NotNull;
 import org.leibnizcenter.rechtspraak.cfg.rule.interfaces.Rule;
-import org.leibnizcenter.rechtspraak.cfg.rule.TypeContainer;
 import org.leibnizcenter.rechtspraak.cfg.rule.type.interfaces.NonTerminal;
 import org.leibnizcenter.rechtspraak.cfg.rule.type.Terminal;
-import org.leibnizcenter.rechtspraak.cfg.rule.type.interfaces.Type;
 import org.leibnizcenter.util.MutableMatrix;
 
 import java.security.InvalidParameterException;
 import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import java.util.stream.IntStream;
 
 /**
  * Implements CKY algorithm with unary production. Works on grammar in Chomsky Normal Form (with unary production
@@ -36,8 +31,8 @@ public class CYK {
      *
      * @return Parse with the highest score, null if none found
      */
-    public static ParseTreeContainer getBestParseTree(List<Terminal> words, Grammar grammar, NonTerminal goal) {
-        MutableMatrix<Map<NonTerminal, ParseTreeContainer>> scoreMap = getParseTrees(words, grammar);
+    public static ScoreChart.ParseTreeContainer getBestParseTree(List<Terminal> words, Grammar grammar, NonTerminal goal) {
+        MutableMatrix<Map<NonTerminal, ScoreChart.ParseTreeContainer>> scoreMap = getParseTrees(words, grammar);
 
         return scoreMap
                 .get(0, words.size() - 1)
@@ -45,15 +40,14 @@ public class CYK {
     }
 
     @SuppressWarnings("WeakerAccess")
-    public static MutableMatrix<Map<NonTerminal, ParseTreeContainer>> getParseTrees(List<Terminal> words, Grammar grammar) {
+    public static MutableMatrix<Map<NonTerminal, ScoreChart.ParseTreeContainer>> getParseTrees(List<Terminal> words, Grammar grammar) {
         if (!grammar.isInChomskyNormalFormWithUnaries())
             throw new InvalidParameterException("Given grammar should be in Chomsky normal form (unaries are allowed)");
 
-
-        MutableMatrix<Map<NonTerminal, ParseTreeContainer>> mutable = new MutableMatrix<>(words.size(), words.size());
+        MutableMatrix<Map<NonTerminal, ScoreChart.ParseTreeContainer>> mutable = new MutableMatrix<>(words.size(), words.size());
         for (int i = 0; i < words.size(); i++)
             for (int j = i; j >= i && j < words.size(); j++)
-                mutable.set(i, j, new HashMap<>(grammar.variableSet.size()));
+                mutable.set(i, j, new LinkedHashMap<>(grammar.variableSet.size()));
 
         handleTerminals(words, grammar, mutable);
         handleNonTerminals(words, grammar, mutable);
@@ -62,19 +56,26 @@ public class CYK {
 
     private static void handleTerminals(List<Terminal> words,
                                         Grammar grammar,
-                                        MutableMatrix<Map<NonTerminal, ParseTreeContainer>> scoreMap) {
+                                        MutableMatrix<Map<NonTerminal, ScoreChart.ParseTreeContainer>> scoreMap) {
         // Init score keeper
-        Vector<Map<NonTerminal, ParseTreeContainer>> scoresToAdd = new Vector<>(words.size());
-        for (int i = 0; i < words.size(); i++) scoresToAdd.add(new HashMap<>(grammar.variableSet.size()));
+        Vector<Map<NonTerminal, ScoreChart.ParseTreeContainer>> scoresToAdd = new Vector<>(words.size());
+        for (int i = 0; i < words.size(); i++) scoresToAdd.add(new LinkedHashMap<>(grammar.variableSet.size()));
 
         ////////////
-
         // Handle terminal rules
         for (int i = 0; i < words.size(); i++) {
             Terminal terminal = words.get(i);
             for (Rule nt : grammar.terminals.get(terminal)) {
                 // Add all terminals that can be made, IF they are higher than the current score
-                addScore(scoresToAdd.get(i), new ParseTreeContainer(nt, terminal));
+                NonTerminal result = nt.getLHS();
+                ScoreChart.ParseTreeContainer score = new ScoreChart.ParseTreeContainer(nt, terminal);
+                Map<NonTerminal, ScoreChart.ParseTreeContainer> cell = scoresToAdd.get(i);
+                ScoreChart.ParseTreeContainer alreadyPresent = cell.get(result);
+                if ((alreadyPresent == null || score.logProbability > alreadyPresent.logProbability )) {
+//                    if(alreadyPresent!=null) System.out.println(score.logProbability +">"+ alreadyPresent.logProbability );
+                    // in log prob, less negative is better (e^0 meaning probability=1)
+                    cell.put(result, score);
+                }
             }
         }
 
@@ -89,193 +90,144 @@ public class CYK {
         }
     }
 
-    private static boolean addScore(Map<NonTerminal, ParseTreeContainer> cell, ParseTreeContainer score) {
-        assert cell != null;
-
-        NonTerminal result = score.getResult();
-
-        ParseTreeContainer alreadyPresent = cell.get(result);
-
-        if ((alreadyPresent == null || alreadyPresent.compareTo(score) > 0)) {
-            cell.put(result, score);
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-
-    private static void handleNonTerminals(List<Terminal> words,
+    private static void handleNonTerminals(final List<Terminal> words,
                                            Grammar grammar,
-                                           MutableMatrix<Map<NonTerminal, ParseTreeContainer>> builder) {
+                                           MutableMatrix<Map<NonTerminal, ScoreChart.ParseTreeContainer>> builder) {
         for (int span = 2; span <= words.size(); span++) {
             // int numberOfSpans = words.size() - span + 1;
             // System.out.println(span + " / " + words.size() + " : " + numberOfSpans);
-            for (int begin = 0; begin <= words.size() - span; begin++) { // first word
-                int end = begin + span; // exclusive end
-                Map<NonTerminal, ParseTreeContainer> cell = new HashMap<>(grammar.variableSet.size());
-                builder.set(begin, end - 1, cell);
-                // A -> B C
-                for (int split = begin + 1; split < end; split++) { // first word of second part
+            int spanSize = span;
 
-                    // Try out all rules; add those that stick
-                    Set<Map.Entry<NonTerminal, ParseTreeContainer>> possibleBValues = builder.get(begin, split - 1).entrySet();//ImmutableSet.copyOf(  );
-                    //System.out.println("|B| = " + possibleBValues.size());
-                    for (Map.Entry<NonTerminal, ParseTreeContainer> B : possibleBValues) {
-                        Set<Map.Entry<NonTerminal, ParseTreeContainer>> possibleCValues = builder.get(split, end - 1).entrySet();//ImmutableSet.copyOf(  );
-                        //System.out.println("|C| = " + possibleCValues.size());
-                        for (Map.Entry<NonTerminal, ParseTreeContainer> C : possibleCValues) {
-                            for (Rule r : grammar.getBinaryProductionRules(B.getKey(), C.getKey())) {
-                                addScore(cell, new ParseTreeContainer(r, B.getValue(), C.getValue()));
-                            }
+            IntStream.range(0, words.size() - span + 1)         // For each possible span
+                    .parallel()                                 // Parallelize for performance
+                    .mapToObj(begin -> {                        // For each possible span, return its cell
+                        final int end = begin + spanSize;       // exclusive end
+                        //noinspection UnnecessaryLocalVariable
+                        final List<Terminal> wordz = words;
+
+                        /**
+                         * LinkedHashMap has somewhat faster iteration, which is done a lot on these cells:
+                         *
+                         * "Iteration over the collection-views of a
+                         * LinkedHashMap requires time proportional to the size of the map, regardless of its capacity.
+                         * Iteration over a HashMap is likely to be more expensive, requiring time proportional to its
+                         * capacity."
+                         */
+                        final Map<NonTerminal, ScoreChart.ParseTreeContainer> cell = new LinkedHashMap<>(grammar.variableSet.size());
+                        // try out each possible split between [begin, end]
+
+                        for (int splitAtIndex = begin + 1; splitAtIndex < end; splitAtIndex++) {
+                            // For each possible split, fill the cell with possible values
+                            fillCellAtSplit(
+                                    grammar,
+                                    builder.get(begin, splitAtIndex - 1),
+                                    builder.get(splitAtIndex, end - 1),
+                                    cell);
                         }
-                    }
+                        if (cell.size() > 0) handleUnaryRules(grammar, cell);
+//                 else
+//                    System.err.println(
+//                            "WARNING: No rules found to be applied for span from " + begin + " to " + end
+//                    );
 
-                    ///////////////////////////////////////////////////
-
-//                    if (cell.size() == 0) {
-//                        System.err.println("WARNING: No rules found ");
-//                    }
-                    //handle unary rules
-                    handleUnaryRules(grammar, cell);
-                }
-            }
+                        return new ScoreChart.Cell(
+                                begin,
+                                end - 1,
+                                cell
+                        );
+                    })
+                    .forEach(cell -> builder.set(cell.row, cell.column, cell.cell));
         }
     }
 
-    private static void handleUnaryRules(Grammar grammar, Map<NonTerminal, ParseTreeContainer> map) {
+    /**
+     * @param grammar   CFG
+     * @param cellLeft  begin of span
+     * @param cellRight end of span
+     * @param cell      cell at scoreChart[begin,end]
+     */
+    private static void fillCellAtSplit(final Grammar grammar,
+                                        final Map<NonTerminal, ScoreChart.ParseTreeContainer> cellLeft,
+                                        final Map<NonTerminal, ScoreChart.ParseTreeContainer> cellRight,
+                                        final Map<NonTerminal, ScoreChart.ParseTreeContainer> cell) {
+        // Try out all rules; add those that stick
+
+        //System.out.println("|B| = " + possibleBValues.size());
+
+        for (Map.Entry<NonTerminal, ScoreChart.ParseTreeContainer> possibleB : cellLeft.entrySet()) {
+            //System.out.println("|C| = " + possibleCValues.size());
+
+
+            for (Map.Entry<NonTerminal, ScoreChart.ParseTreeContainer> possibleC : cellRight.entrySet()) {
+                for (Rule r : grammar.getBinaryProductionRules(possibleB.getKey(), possibleC.getKey())) {
+
+                    // Add rule score, IF it is better than any existing production with the same LHS (if any)
+                    NonTerminal result = r.getLHS();
+                    ScoreChart.ParseTreeContainer alreadyPresent = cell.get(result);
+                    ScoreChart.ParseTreeContainer[] inputs = new ScoreChart.ParseTreeContainer[]{possibleB.getValue(), possibleC.getValue()};
+                    double logProb = r.getLogProbability(inputs);
+                    if ((alreadyPresent == null || logProb > alreadyPresent.logProbability)) // in log prob, less negative is better (e^0 meaning probability=1)
+//                        if(alreadyPresent!=null) System.out.println(logProb +">"+ alreadyPresent.logProbability );
+                        cell.put(result, r.apply(logProb, inputs));
+                }
+            }
+
+        }
+    }
+
+    private static void handleUnaryRules(final Grammar grammar, final Map<NonTerminal, ScoreChart.ParseTreeContainer> cell) {
         boolean addedNewResultType;
         do {
             addedNewResultType = false;
-            Map<NonTerminal, ParseTreeContainer> toAdd = null;
+            Map<NonTerminal, ScoreChart.ParseTreeContainer> toAdd = null;
 
-            Set<Map.Entry<NonTerminal, ParseTreeContainer>> entries = map.entrySet();
+            Set<Map.Entry<NonTerminal, ScoreChart.ParseTreeContainer>> entries = cell.entrySet();
 
             // Find all applicable unary rules
-            for (Map.Entry<NonTerminal, ParseTreeContainer> B : entries) {
+            for (Map.Entry<NonTerminal, ScoreChart.ParseTreeContainer> B : entries) {
                 Set<Rule> unaryProductionRules = grammar.getUnaryProductionRules(B.getKey());
                 for (Rule r : unaryProductionRules) {
-                    if (isBiggerThanExisting(map, toAdd, B.getValue(), r)) {
+                    double logProbCandidateRule = r.getLogProbability(B.getValue());
+                    if (ruleGivesBetterLikelihoodThanExisting(cell, toAdd, r.getLHS(), logProbCandidateRule)) {
                         toAdd = toAdd == null ? new HashMap<>(entries.size()) : toAdd; // init if necessary
-                        toAdd.put(r.getLHS(), new ParseTreeContainer(r, B.getValue()));
+                        toAdd.put(r.getLHS(), new ScoreChart.ParseTreeContainer(logProbCandidateRule, r, B.getValue()));
                     }
                 }
             }
 
             // See if we can add the results
             if (toAdd != null) {
-                addedNewResultType = toAdd.keySet().stream().anyMatch(k -> map.get(k) == null);
+                addedNewResultType = toAdd.keySet().stream().anyMatch(k -> cell.get(k) == null);
                 if (toAdd.entrySet().stream().anyMatch(pair -> !pair.getKey().equals(pair.getValue().getResult())))
                     throw new IllegalStateException();
-                toAdd.values().forEach(ptc -> map.put(ptc.getResult(), ptc));
+                toAdd.values().forEach(ptc -> cell.put(ptc.getResult(), ptc));
             }
         } while (addedNewResultType);
     }
 
-    private static boolean isBiggerThanExisting(
-            Map<NonTerminal, ParseTreeContainer> map1,
-            Map<NonTerminal, ParseTreeContainer> map2,
-            ParseTreeContainer candidate,
-            Rule r) {
-        double logProb = r.getLogProbability(candidate);
-
+    private static boolean ruleGivesBetterLikelihoodThanExisting(
+            Map<NonTerminal, ScoreChart.ParseTreeContainer> map1,
+            Map<NonTerminal, ScoreChart.ParseTreeContainer> map2,
+            NonTerminal candidateResult,
+            double logProbCandidateRule) {
         if (map2 != null) {
-            ParseTreeContainer inMap2 = map2.get(r.getLHS());
-            if (inMap2 != null && Double.compare(logProb, inMap2.logProbability) <= 0) {
+            ScoreChart.ParseTreeContainer inMap2 = map2.get(candidateResult);
+            if (inMap2 != null && Double.compare(logProbCandidateRule, inMap2.logProbability) <= 0) {
                 return false;
             }
         }
 
         if (map1 != null) {
-            ParseTreeContainer inMap1 = map1.get(r.getLHS());
-            if (inMap1 != null && Double.compare(logProb, inMap1.logProbability) <= 0) {
+            ScoreChart.ParseTreeContainer inMap1 = map1.get(candidateResult);
+            if (inMap1 != null && Double.compare(logProbCandidateRule, inMap1.logProbability) <= 0) {
                 return false;
             }
         }
         return true;
     }
 
-    public static ParseTreeContainer getBestParseTree(List<Terminal> words, Grammar dg) {
+    public static ScoreChart.ParseTreeContainer getBestParseTree(List<Terminal> words, Grammar dg) {
         return getBestParseTree(words, dg, dg.getStartSymbol());
     }
 
-    public static class ParseTreeContainer implements Comparable<ParseTreeContainer>, TypeContainer {
-        private final double logProbability;
-        private final List<TypeContainer> inputs;
-        private final Rule rule;
-
-        public ParseTreeContainer(Rule rule, ParseTreeContainer... inputs) {
-            ArrayList<TypeContainer> ins = Lists.newArrayList(inputs);
-            if (inputs.length != rule.getRHS().size()
-                    || !rule.getRHS().match(ins.stream().map(TypeContainer::getType).collect(Collectors.toList())))
-                throw new InvalidParameterException();
-
-            this.rule = rule;
-
-            this.logProbability = rule.getLogProbability(inputs);
-            this.inputs = ins;
-        }
-
-        public ParseTreeContainer(Rule rule, Terminal terminal) {
-            this.rule = rule;
-            this.logProbability = rule.getLogProbability();
-            this.inputs = Collections.singletonList(terminal);
-        }
-
-        public ParseTreeContainer(Rule rule, List<TypeContainer> inputs) {
-            this.rule = rule;
-            this.logProbability = rule.getLogProbability();
-            this.inputs = inputs;
-        }
-
-        public Type getType() {
-            return rule.getLHS();
-        }
-
-        public NonTerminal getResult() {
-            return rule.getLHS();
-        }
-
-        @Override
-        public int compareTo(@NotNull ParseTreeContainer o) {
-            return Double.compare(logProbability, o.getLogProbability());
-        }
-
-        @Override
-        public String toString() {
-            return rule + " (e^" + logProbability + ")";
-        }
-
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-
-            ParseTreeContainer that = (ParseTreeContainer) o;
-
-            return Double.compare(that.logProbability, logProbability) == 0
-                    && inputs.equals(that.inputs)
-                    && rule.equals(that.rule);
-
-        }
-
-        public List<TypeContainer> getInputs() {
-            return inputs;
-        }
-
-        @Override
-        public int hashCode() {
-            int result;
-            long temp;
-            temp = Double.doubleToLongBits(logProbability);
-            result = (int) (temp ^ (temp >>> 32));
-            result = 31 * result + inputs.hashCode();
-            result = 31 * result + rule.hashCode();
-            return result;
-        }
-
-        public double getLogProbability() {
-            return logProbability;
-        }
-    }
 }

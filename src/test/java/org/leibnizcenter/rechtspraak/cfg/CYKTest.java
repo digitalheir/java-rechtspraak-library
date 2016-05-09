@@ -39,7 +39,7 @@ public class CYKTest {
 
         System.out.println(grammar);
 
-        CYK.ParseTreeContainer bestParseTree = CYK.getBestParseTree(words, grammar, goal);
+        ScoreChart.ParseTreeContainer bestParseTree = CYK.getBestParseTree(words, grammar, goal);
         Assert.assertNotNull(bestParseTree);
         Assert.assertTrue(Math.exp(bestParseTree.getLogProbability()) > 0.0);
         Assert.assertTrue(Math.exp(bestParseTree.getLogProbability()) < 1.0);

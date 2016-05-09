@@ -1,6 +1,6 @@
 package org.leibnizcenter.rechtspraak.cfg.rule.interfaces;
 
-import org.leibnizcenter.rechtspraak.cfg.CYK;
+import org.leibnizcenter.rechtspraak.cfg.ScoreChart;
 import org.leibnizcenter.rechtspraak.cfg.rule.RightHandSide;
 import org.leibnizcenter.rechtspraak.cfg.rule.type.interfaces.NonTerminal;
 import org.leibnizcenter.rechtspraak.cfg.rule.type.Terminal;
@@ -51,7 +51,8 @@ public interface Rule {
 
     RightHandSide getRHS();
 
-    double getLogProbability(CYK.ParseTreeContainer... inputs);
+    double getLogProbability(ScoreChart.ParseTreeContainer... inputs);
     double getPriorProbability();
 
+    ScoreChart.ParseTreeContainer apply(double logProb, ScoreChart.ParseTreeContainer... inputs);
 }

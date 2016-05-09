@@ -111,7 +111,7 @@ public class Grammar implements Iterable<Term> {
                 .filter(Rule::isUnaryProduction)
                 .forEach((r) -> {
                             NonTerminal rhs = (NonTerminal) r.getRHS().get(0);
-                            Set<Rule> set = mmb3.getOrDefault(rhs, new HashSet<>());
+                            Set<Rule> set = mmb3.getOrDefault(rhs, new LinkedHashSet<>());
                             set.add(r);
                             if (!mmb3.containsKey(rhs)) mmb3.put(rhs, set);
                         }
@@ -128,7 +128,7 @@ public class Grammar implements Iterable<Term> {
                     @NotNull NonTerminal B = (NonTerminal) r.getRHS().get(0);
                     @NotNull NonTerminal C = (NonTerminal) r.getRHS().get(1);
                     Map<NonTerminal, Set<Rule>> CtoRules = BtoCtoRules.getOrDefault(B, new HashMap<>());
-                    Set<Rule> rules = CtoRules.getOrDefault(C, new HashSet<>());
+                    Set<Rule> rules = CtoRules.getOrDefault(C, new LinkedHashSet<>());
                     rules.add(r);
                     if (!CtoRules.containsKey(C)) CtoRules.put(C, rules);
                     if (!BtoCtoRules.containsKey(B)) BtoCtoRules.put(B, CtoRules);

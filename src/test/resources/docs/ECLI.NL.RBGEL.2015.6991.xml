@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<open-rechtspraak>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:tr="http://tuchtrecht.overheid.nl/" xmlns:eu="http://publications.europa.eu/celex/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+        <rdf:Description>
+            <dcterms:identifier>ECLI:NL:RBGEL:2015:6991</dcterms:identifier>
+            <dcterms:format>text/xml</dcterms:format>
+            <dcterms:accessRights>public</dcterms:accessRights>
+            <dcterms:modified>2015-12-11T16:03:12</dcterms:modified>
+            <dcterms:issued rdfs:label="Publicatiedatum">2015-11-11</dcterms:issued>
+            <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+            <dcterms:language>nl</dcterms:language>
+            <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Rechtbank_Gelderland" scheme="overheid.RechterlijkeMacht">Rechtbank Gelderland</dcterms:creator>
+            <dcterms:date rdfs:label="Uitspraakdatum">2015-11-12</dcterms:date>
+            <psi:zaaknummer rdfs:label="Zaaknr">AWB - 13 _ 7992</psi:zaaknummer>
+            <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+            <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#eersteAanlegMeervoudig">Eerste aanleg - meervoudig</psi:procedure>
+            <dcterms:coverage>NL</dcterms:coverage>
+            <dcterms:spatial rdfs:label="Zittingsplaats">Arnhem</dcterms:spatial>
+            <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht_ambtenarenrecht">Bestuursrecht; Ambtenarenrecht</dcterms:subject>
+            <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+                <rdf:list>
+                    <rdf:li>Rechtspraak.nl</rdf:li>
+                </rdf:list>
+            </dcterms:hasVersion>
+        </rdf:Description>
+        <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBGEL:2015:6991">
+            <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBGEL:2015:6991</dcterms:identifier>
+            <dcterms:format>text/html</dcterms:format>
+            <dcterms:accessRights>public</dcterms:accessRights>
+            <dcterms:modified>2015-12-11T16:01:16</dcterms:modified>
+            <dcterms:issued rdfs:label="Publicatiedatum">2015-12-11</dcterms:issued>
+            <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+            <dcterms:language>nl</dcterms:language>
+            <dcterms:title rdf:language="nl">ECLI:NL:RBGEL:2015:6991 Rechtbank Gelderland , 12-11-2015 / AWB - 13 _ 7992</dcterms:title>
+            <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie" />
+        </rdf:Description>
+    </rdf:RDF>
+    <inhoudsindicatie id="ECLI:NL:RBGEL:2015:6991:INH" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <para>HAPII. Voormalig politiekorps Gelderland-Zuid. Met de keuze om het begrip ‘boven de norm’ zo in te vullen dat alleen diegenen met een beoordeling waarbij alle competenties op tenminste niveau 2 zijn gewaardeerd voor bevordering in aanmerking komen, is verweerder binnen de kaders van het loopbaanbeleid en het kaderdocument gebleven. Deze keuze komt er immers op neer dat sprake moet zijn van  beoordeling met een eindscore ‘uitstekend’, waarbij geen van de competenties onder niveau 2 mag zijn, dan wel van een beoordeling met een eindscore tegen uitstekend aan, te weten een eindscore ‘goed’, waarbij alle competenties op tenminste niveau 2 zijn gewaardeerd. Verweerder is hiermee binnen de grenzen van een redelijke beleidsbepaling gebleven.</para>
+    </inhoudsindicatie>
+  <uitspraak id="ECLI:NL:RBGEL:2015:6991:DOC" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <uitspraak.info>
+        <bridgehead role="bold">RECHTBANK GELDERLAND</bridgehead>
+        <para>Zittingsplaats Arnhem</para>
+        <para />
+        <parablock>
+          <para>Bestuursrecht</para>
+        </parablock>
+        <para />
+        <parablock>
+          <para>zaaknummer: 13/7992</para>
+        </parablock>
+        <para />
+        <bridgehead role="bold">uitspraak van de meervoudige kamer van</bridgehead>
+        <para />
+        <parablock>
+          <para>in de zaak tussen</para>
+        </parablock>
+        <para />
+        <bridgehead role="bold">[eiseres], eiseres</bridgehead>
+        <para>(gemachtigde: mr. K.C.T. Putman),</para>
+        <para />
+        <parablock>
+          <para>en</para>
+        </parablock>
+        <para />
+        <bridgehead role="bold">de korpschef van politie, verweerder.</bridgehead>
+        <para />
+        <para />
+      </uitspraak.info>
+      <section role="procesverloop">
+        <title>Procesverloop</title>
+        <para />
+        <parablock>
+          <para>De rechtbank heeft op 30 april 2015 een tussenuitspraak gedaan (ECLI:NL:RBGEL:2015:2838).</para>
+        </parablock>
+        <para />
+        <parablock>
+          <para>Ter uitvoering van deze tussenuitspraak heeft verweerder bij brief van 17 augustus 2015 een aanvullende motivering toegezonden.</para>
+        </parablock>
+        <para />
+        <parablock>
+          <para>Eiseres heeft bij brief van 16 september 2015 een zienswijze ingediend.</para>
+        </parablock>
+        <para />
+        <parablock>
+          <para>Met schriftelijke toestemming van partijen is een nadere zitting achterwege gebleven. Het onderzoek is op 28 oktober 2015 gesloten.</para>
+        </parablock>
+        <para />
+      </section>
+      <section role="overwegingen">
+        <title>Overwegingen</title>
+        <para />
+        <parablock>
+          <para>1.	In de tussenuitspraak heeft de rechtbank geoordeeld dat binnen de beoordelingssystematiek van het voormalige politiekorps Gelderland-Zuid ‘een beoordeling boven de norm’ een beoordeling met het eindoordeel ‘goed’ is en dat verweerder, door een beoordeling te eisen waarbij alle competenties op tenminste niveau 2 zijn gewaardeerd, een hogere score dan een eindoordeel ‘goed’ vereist. De rechtbank heeft geoordeeld dat verweerder deze eis in redelijkheid niet heeft kunnen stellen. Nu eiseres beschikt over een recente beoordeling met eindoordeel ‘goed’ en daarmee over een recente ‘beoordeling boven de norm’ over het tijdvak 7 februari 2010 tot en met 19 april 2011, is geoordeeld dat de aanvraag van eiseres ten onrechte is afgewezen op de grond dat zij niet over een recente ‘beoordeling boven de norm’ beschikt. Dit heeft tot het oordeel geleid dat het bestreden besluit ondeugdelijk is gemotiveerd en wegens strijd met artikel 7:12, eerste lid, van de Algemene wet bestuursrecht (Awb) dient te worden vernietigd. Verweerder is in de gelegenheid gesteld dit gebrek te helen.</para>
+        </parablock>
+        <para />
+        <para />
+        <paragroup>
+          <nr>2.1</nr>
+          <para>Verweerder heeft in zijn aanvullende motivering van 17 augustus 2015 allereerst verwezen naar de uitspraken van de Centrale Raad van Beroep van 30 juli 2015, ECLI:NL:CRVB:2015:2551 en 2552. Hierin is geoordeeld dat aan de toenmalige beheerders van de korpsen die vielen onder de politieregio’s van Oost-Nederland de bevoegdheid toekwam voor de politieregio IJsselland aan het in het loopbaanbeleid en het kaderdocument opgenomen begrip ‘boven de norm’ een nadere invulling te geven. Met de keuze om het begrip ‘boven de norm’ zo in te vullen dat alleen aan diegenen met het beoordelingsresultaat ‘uitstekend’ dan wel ‘tegen uitstekend aan’ voor bevordering in aanmerking komen, is de korpschef gebleven binnen de grenzen van een redelijke beleidsbepaling. Het is niet zo dat de enig mogelijke uitleg van het begrip ‘boven de norm’ het eerstvolgende niveau na ‘voldoende’ is.</para>
+          <para />
+        </paragroup>
+        <paragroup>
+          <nr>2.2</nr>
+          <para>Gelet op deze uitspraken is verweerder van mening dat hij ook met de nadere invulling van het begrip ‘boven de norm’ voor de politieregio Gelderland-Zuid binnen de grenzen van een redelijke beleidsbepaling is gebleven. Nu eiseres niet voldoet aan de aan doorstroming gestelde eis van ‘een beoordeling boven de norm’, omdat in haar beoordeling één competentie op niveau 1 is gewaardeerd, heeft verweerder de aanvraag van eiseres om haar met ingang van 1 november 2010 te bevorderen terecht afgewezen. Daarbij is opgemerkt dat eiseres wel voldoet aan het vereiste van ‘verwachte geschiktheid’ voor senior GGP vanaf 1 november 2010, aangezien dit uit haar beoordeling blijkt.</para>
+          <para />
+          <parablock>
+            <para>3.	Eiseres heeft primair aangevoerd dat, gelet op de tussenuitspraak, en het feit dat verweerder heeft aangegeven dat eiseres voldoet aan het vereiste van ‘verwachte geschiktheid’ voor senior GGP, de uitkomst niet anders kan zijn dan dat de aanvraag van eiseres moet worden toegewezen. Verzocht is om zelf in de zaak te voorzien.</para>
+            <para>Subsidiair is aangevoerd dat verweerder niet bevoegd is om het begrip ‘boven de norm’ zo in te vullen dat alleen diegenen met een beoordeling waarbij alle competenties op tenminste niveau 2 zijn gewaardeerd voor bevordering in aanmerking komen. Zoals de rechtbank in de tussenuitspraak heeft overwogen en ook blijkt uit de in rechtsoverweging 2 genoemde uitspraken van de CRvB wordt het antwoord op de vraag of er sprake is van ‘een beoordeling boven de norm’ bepaald door de eindscore van de beoordeling en niet door de beoordeling van de competenties. Overigens is eiseres van mening dat de door verweerder gestelde nadere voorwaarden aan een beoordeling met een eindscore ‘goed’ onredelijk zijn, omdat uit de beoordeling van eiseres blijkt dat zij al heeft voldaan aan het vereiste van ‘verwachte geschiktheid’. </para>
+          </parablock>
+          <para />
+        </paragroup>
+        <paragroup>
+          <nr>4.1</nr>
+          <para>De rechtbank stelt voorop dat zij behoudens zeer bijzondere gevallen niet kan terugkomen op een in de tussenuitspraak gegeven oordeel. De rechtbank is van oordeel dat in dit geval sprake is van een zeer bijzonder geval, omdat het in de tussenuitspraak gegeven oordeel, gelet op de in rechtsoverweging 2 genoemde uitspraken van de CRvB, niet juist is en een einduitspraak in lijn met de tussenuitspraak eveneens onjuist zal zijn en in hoger beroep geen stand zal kunnen houden. Daartoe wordt het volgende overwogen.</para>
+          <para />
+        </paragroup>
+        <paragroup>
+          <nr>4.2</nr>
+          <para>De rechtbank is van oordeel dat verweerder met de keuze om het begrip ‘boven de norm’ zo in te vullen dat alleen diegenen met een beoordeling waarbij alle competenties op tenminste niveau 2 zijn gewaardeerd binnen de kaders van het loopbaanbeleid en het kaderdocument is gebleven. Deze keuze komt er immers op neer dat sprake moet zijn van  beoordeling met een eindscore ‘uitstekend’, waarbij geen van de competenties onder niveau 2 mag zijn, dan wel van een beoordeling met een eindscore tegen uitstekend aan, te weten een eindscore ‘goed’, waarbij alle competenties op tenminste niveau 2 zijn gewaardeerd. Gelet op de in rechtsoverweging 2 genoemde uitspraken van de CRvB is de rechtbank van oordeel dat verweerder hiermee binnen de grenzen van een redelijke beleidsbepaling is gebleven.</para>
+          <para />
+          <para>5. Het beroep is ongegrond. Voor een proceskostenveroordeling bestaat geen aanleiding. </para>
+          <para />
+          <para>6. Eiseres heeft verzocht om schadevergoeding. Dit verzoek wordt afgewezen, omdat het bestreden besluit niet onrechtmatig is.</para>
+          <para />
+        </paragroup>
+      </section>
+      <section role="beslissing">
+        <title>Beslissing</title>
+        <para />
+        <parablock>
+          <para>De rechtbank:</para>
+        </parablock>
+        <para>- verklaart het beroep ongegrond;</para>
+        <para>- wijst het verzoek om schadevergoeding af.</para>
+        <para />
+        <parablock>
+          <para>Deze uitspraak is gedaan door mr. P.P.T. Bovend’Eert, voorzitter, mr. M.J.P. Heijmans en </para>
+          <para>mr. Y. van Wezel, rechters, in tegenwoordigheid van mr. G.A. Kajim-Panjer, griffier. De beslissing is in het openbaar uitgesproken op: </para>
+        </parablock>
+        <para />
+        <para />
+        <informaltable>
+          <tgroup cols="3">
+            <colspec colname="colA" />
+            <colspec colname="colB" />
+            <colspec colname="colC" />
+            <tbody>
+              <row>
+                <entry namest="colA" nameend="colC">
+                  <para />
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <para />
+                  <para />
+                  <para />
+                  <para />
+                  <para>griffier</para>
+                </entry>
+                <entry>
+                  <para />
+                </entry>
+                <entry>
+                  <para />
+                  <para />
+                  <para />
+                  <para />
+                  <para>voorzitter</para>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <para />
+                </entry>
+                <entry>
+                  <para />
+                </entry>
+                <entry>
+                  <para />
+                </entry>
+              </row>
+              <row>
+                <entry namest="colA" nameend="colC">
+                  <para>Afschrift verzonden aan partijen op:</para>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <para />
+                </entry>
+                <entry>
+                  <para />
+                </entry>
+                <entry>
+                  <para />
+                </entry>
+              </row>
+              <row>
+                <entry namest="colA" nameend="colC">
+                  <para>
+                    <emphasis role="bold">Rechtsmiddel</emphasis>
+                  </para>
+                  <para>Tegen deze uitspraak kan binnen zes weken na de dag van verzending daarvan hoger beroep worden ingesteld bij de Centrale Raad van Beroep. Als hoger beroep is ingesteld, kan bij de voorzieningenrechter van de hogerberoepsrechter worden verzocht om het treffen van een voorlopige voorziening of om het opheffen of wijzigen van een bij deze uitspraak getroffen voorlopige voorziening.</para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+        <para />
+        <para />
+      </section>
+    </uitspraak>
+</open-rechtspraak>

@@ -1,8 +1,8 @@
 package org.leibnizcenter.rechtspraak.cfg.rule;
 
 import org.jetbrains.annotations.NotNull;
-import org.leibnizcenter.rechtspraak.cfg.CYK;
 import org.leibnizcenter.rechtspraak.cfg.MalformedGrammarException;
+import org.leibnizcenter.rechtspraak.cfg.ScoreChart;
 import org.leibnizcenter.rechtspraak.cfg.rule.interfaces.Rule;
 import org.leibnizcenter.rechtspraak.cfg.rule.type.NonTerminalImpl;
 import org.leibnizcenter.rechtspraak.cfg.rule.type.interfaces.NonTerminal;
@@ -38,13 +38,18 @@ public class StandardRule extends StochasticRule {
      *
      * @return Logarithm of a number between 0 and 1 inclusive
      */
-    public double getLogProbability(CYK.ParseTreeContainer... inputs) {
+    public double getLogProbability(ScoreChart.ParseTreeContainer... inputs) {
         return getLogProbability(getPriorProbability(), inputs);
     }
 
-    public static double getLogProbability(double priorProbability, CYK.ParseTreeContainer... inputs) {
+    @Override
+    public ScoreChart.ParseTreeContainer apply(double logProb, ScoreChart.ParseTreeContainer... inputs) {
+        return new ScoreChart.ParseTreeContainer(logProb, this, inputs);
+    }
+
+    public static double getLogProbability(double priorProbability, ScoreChart.ParseTreeContainer... inputs) {
         double prob = Math.log(priorProbability);
-        for (CYK.ParseTreeContainer s : inputs)
+        for (ScoreChart.ParseTreeContainer s : inputs)
             prob += s.getLogProbability();
         return prob;
     }

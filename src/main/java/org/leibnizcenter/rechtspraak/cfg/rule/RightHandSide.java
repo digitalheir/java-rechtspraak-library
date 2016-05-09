@@ -2,6 +2,7 @@ package org.leibnizcenter.rechtspraak.cfg.rule;
 
 import com.google.common.collect.ImmutableList;
 import org.jetbrains.annotations.NotNull;
+import org.leibnizcenter.rechtspraak.cfg.ScoreChart;
 import org.leibnizcenter.rechtspraak.cfg.rule.type.Terminal;
 import org.leibnizcenter.rechtspraak.cfg.rule.type.interfaces.Type;
 
@@ -83,6 +84,13 @@ public class RightHandSide implements Comparable<RightHandSide> {
         return true;
     }
 
+
+    public boolean match(ScoreChart.ParseTreeContainer[] elements) {
+        if (elements.length != size()) return false;
+        for (int i = 0; i < elements.length; i++) if (!elements[i].getType().equals(get(i))) return false;
+        return true;
+    }
+
     public boolean match(List<Type> elements) {
         return term.equals(elements);
     }
@@ -124,4 +132,5 @@ public class RightHandSide implements Comparable<RightHandSide> {
     public boolean containsAny(Set<Type> searchFor) {
         return term.stream().filter(searchFor::contains).limit(1).count() > 0;
     }
+
 }

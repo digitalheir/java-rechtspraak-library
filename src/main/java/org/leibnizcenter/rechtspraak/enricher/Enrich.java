@@ -3,12 +3,13 @@ package org.leibnizcenter.rechtspraak.enricher;
 import cc.mallet.fst.CRF;
 import org.leibnizcenter.rechtspraak.cfg.CYK;
 import org.leibnizcenter.rechtspraak.cfg.Grammar;
+import org.leibnizcenter.rechtspraak.cfg.ScoreChart;
 import org.leibnizcenter.rechtspraak.cfg.rule.RightHandSide;
 import org.leibnizcenter.rechtspraak.cfg.rule.StandardRule;
 import org.leibnizcenter.rechtspraak.cfg.rule.TypeContainer;
 import org.leibnizcenter.rechtspraak.cfg.rule.type.NonTerminalImpl;
 import org.leibnizcenter.rechtspraak.cfg.rule.type.Terminal;
-import org.leibnizcenter.rechtspraak.cfg.rule.type.interfaces.NonTerminal;
+import org.leibnizcenter.rechtspraak.cfg.rule.type.interfaces.Type;
 import org.leibnizcenter.rechtspraak.crf.ApplyCrf;
 import org.leibnizcenter.rechtspraak.leibnizannotations.DeterministicTagger;
 import org.leibnizcenter.rechtspraak.leibnizannotations.Label;
@@ -27,12 +28,7 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.security.InvalidParameterException;
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Deque;
-import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import java.util.*;
 
 /**
  * Helpers functions enriching Rechtspraak XML
@@ -62,19 +58,18 @@ public class Enrich {
         List<Label> tags = DeterministicTagger.tag(tokenList);
 
         // Make sectioning tree if there is no section tag already
+        //TODO
 //        if (!Xml.containsTag(contentRoot, "section")) {
         Grammar dg = new DocumentGrammar();
+
         List<Terminal> words = new ArrayList<>(tags.size());
         for (int i = 0; i < tags.size(); i++) {
             words.add(new Terminal(tags.get(i), tokenList.get(i)));
         }
-        CYK.ParseTreeContainer bestParseTree = CYK.getBestParseTree(words, dg);
-        bestParseTree = flattenTree(bestParseTree);
+        ScoreChart.ParseTreeContainer bestParseTree = CYK.getBestParseTree(words, dg);
+        if (bestParseTree == null) throw new NullPointerException();
 
-        if (bestParseTree == null)
-            throw new NullPointerException();
         setNewXmlStructure(bestParseTree, contentRoot);
-//        }
 
         // Set tag values on elements (we can do this another way)
         Collections3.zip(tokenList.stream(), tags.stream()).forEach(pair -> {
@@ -116,63 +111,100 @@ public class Enrich {
     private static final NonTerminalImpl a = new NonTerminalImpl(" "); // placeholder
     private static final StandardRule PLACE_HOLDER_RULE = new StandardRule(a, new RightHandSide(a, a), 1.0);
 
-    private static CYK.ParseTreeContainer flattenTree(CYK.ParseTreeContainer t) {
-        return new CYK.ParseTreeContainer(
-                PLACE_HOLDER_RULE,
-                flattenTreeR(t).collect(Collectors.toList())
-        );
-    }
-
-    private static Stream<TypeContainer> flattenTreeR(CYK.ParseTreeContainer t) {
-        return t.getInputs().stream().flatMap(tt -> {
-                    if (DocumentGrammar.SECTION_BLOB.equals(tt.getType()))
-                        return flattenTreeR((CYK.ParseTreeContainer) tt);
-                    if (DocumentGrammar.SINGLE_NUMBERING.equals(tt.getType()))
-                        return flattenTreeR((CYK.ParseTreeContainer) tt);
-                    if (DocumentGrammar.SECTION_TITLE_TEXT.equals(tt.getType()))
-                        return flattenTreeR((CYK.ParseTreeContainer) tt);
-                    if (DocumentGrammar.TEXT_BLOB.equals(tt.getType()))
-                        return flattenTreeR((CYK.ParseTreeContainer) tt);
-                    if (DocumentGrammar.SECTION_CONTENT.equals(tt.getType()))
-                        return flattenTreeR((CYK.ParseTreeContainer) tt);
-
-                    if (tt instanceof Terminal) return Stream.of(tt);
-
-                    return Stream.of(new CYK.ParseTreeContainer(
-                            new StandardRule((NonTerminal) tt.getType(), new RightHandSide(), 1.0),
-                            flattenTreeR((CYK.ParseTreeContainer) tt).collect(Collectors.toList())
-                    ));
-                }
-        );
-    }
+//    private static CYK.ParseTreeContainer flattenTree(CYK.ParseTreeContainer t) {
+//        if(t==null)throw new NullPointerException();
+//        List<TypeContainer> flattenedTree = flattenTreeR(t);
+//
+//        if (flattenedTree.size() == 1 && flattenedTree.get(0) instanceof Terminal) {
+//            return new CYK.ParseTreeContainer(
+//                    PLACE_HOLDER_RULE,
+//                    (Terminal) flattenedTree.get(0)
+//            );
+//        } else {
+//            CYK.ParseTreeContainer[] inputs = new CYK.ParseTreeContainer[flattenedTree.size()];
+//            for (int i = 0; i < inputs.length; i++) inputs[i] = (CYK.ParseTreeContainer) flattenedTree.get(i);
+//            return new CYK.ParseTreeContainer(
+//                    PLACE_HOLDER_RULE,
+//                    inputs
+//            );
+//        }
+//    }
+//
+//    private static List<TypeContainer> flattenTreeR(CYK.ParseTreeContainer t) {
+//        List<TypeContainer> streamz = new ArrayList<>(100);
+//
+//        for(TypeContainer tt :t.getInputs()){
+//            if (DocumentGrammar.SECTION_BLOB.equals(tt.getType()))
+//                return flattenTreeR((CYK.ParseTreeContainer) tt);
+//            if (DocumentGrammar.SINGLE_NUMBERING.equals(tt.getType()))
+//                return flattenTreeR((CYK.ParseTreeContainer) tt);
+//            if (DocumentGrammar.SECTION_TITLE_TEXT.equals(tt.getType()))
+//                return flattenTreeR((CYK.ParseTreeContainer) tt);
+//            if (DocumentGrammar.TEXT_BLOB.equals(tt.getType()))
+//                return flattenTreeR((CYK.ParseTreeContainer) tt);
+//            if (DocumentGrammar.SECTION_CONTENT.equals(tt.getType()))
+//                return flattenTreeR((CYK.ParseTreeContainer) tt);
+//
+//            if (tt instanceof Terminal) return Collections.singletonList(tt);
+//
+//
+//            List<TypeContainer> inputs = flattenTreeR((CYK.ParseTreeContainer) tt);
+//            if (inputs.size() == 1 && inputs.get(0) instanceof Terminal) {
+//                streamz.add(new CYK.ParseTreeContainer(
+//                        new StandardRule((NonTerminal) tt.getType(), new RightHandSide(), 1.0),
+//                        (Terminal) inputs.get(0)
+//                ));
+//            } else {
+//                CYK.ParseTreeContainer[] inputz = new CYK.ParseTreeContainer[inputs.size()];
+//                for (int i = 0; i < inputz.length; i++) inputz[i] = (CYK.ParseTreeContainer) inputs.get(i);
+//                streamz.add(new CYK.ParseTreeContainer(
+//                        new StandardRule((NonTerminal) tt.getType(), new RightHandSide(), 1.0),
+//                        inputz
+//                )    );
+//            }
+//        }
+//        return streamz;
+//    }
 
     /**
-     * We assume the nodes in the tree are title for sections that span up to and including all children, up to the
-     * next sibling node
+     * <strike>We assume the nodes in the tree are title for sections that span up to and including all children, up to the
+     * next sibling node</strike>
      *
      * @param tree
      */
-    private void setNewXmlStructure(CYK.ParseTreeContainer tree, Element contentRoot) {
+    private void setNewXmlStructure(ScoreChart.ParseTreeContainer tree, Element contentRoot) {
 //        for (Node n : Xml.getChildren(contentRoot))
 //            contentRoot.removeChild(n);
+
+        // Make copy of <uitspraak>/<conclusie>
         Element newContentRoot = contentRoot.getOwnerDocument().createElement(contentRoot.getTagName());
         Xml.copyAttributes(contentRoot, newContentRoot);
+
+        // Add XML nodes
         recursiveCreateXml(tree, newContentRoot);
+
+        // Replace old <uitspraak>/<conclusie> with new one
         contentRoot.getParentNode().replaceChild(newContentRoot, contentRoot);
     }
 
     private void recursiveCreateXml(TypeContainer root, Node addTo) {
-        if (root instanceof CYK.ParseTreeContainer) {
-            if (root.getType().equals(DocumentGrammar.SECTION)) {
-                Element newElement = addTo.getOwnerDocument().createElement("section");
-                addTo.appendChild(newElement);
-                addTo = newElement;
-            } else if (root.getType().equals(DocumentGrammar.SECTION_TITLE)) {
-                Element newElement = addTo.getOwnerDocument().createElement("title");
+        if (root instanceof ScoreChart.ParseTreeContainer) {
+            // Container
+            Type type = root.getType();
+            Element newElement;
+            if (type.equals(DocumentGrammar.SECTION)) {
+                newElement = addTo.getOwnerDocument().createElement("section");
+            } else if (type.equals(DocumentGrammar.SECTION_TITLE)) {
+                newElement = addTo.getOwnerDocument().createElement("title");
+            }else{
+                //addTo.getOwnerDocument().createElement("div");
+                newElement = null;
+            }
+            if(newElement!=null){
                 addTo.appendChild(newElement);
                 addTo = newElement;
             }
-            for (TypeContainer inp : ((CYK.ParseTreeContainer) root).getInputs()) {
+            for (TypeContainer inp : ((ScoreChart.ParseTreeContainer) root).getInputs()) {
                 recursiveCreateXml(inp, addTo);
             }
         } else if (root instanceof Terminal) {

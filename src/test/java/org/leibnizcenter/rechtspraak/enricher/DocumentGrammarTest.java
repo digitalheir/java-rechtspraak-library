@@ -3,6 +3,7 @@ package org.leibnizcenter.rechtspraak.enricher;
 import com.google.common.collect.Lists;
 import org.junit.Test;
 import org.leibnizcenter.rechtspraak.cfg.CYK;
+import org.leibnizcenter.rechtspraak.cfg.ScoreChart;
 import org.leibnizcenter.rechtspraak.cfg.rule.Term;
 import org.leibnizcenter.rechtspraak.cfg.rule.type.Terminal;
 
@@ -44,7 +45,7 @@ public class DocumentGrammarTest {
                 DocumentGrammar.TERMINAL_SECTION_TITLE,
                 DocumentGrammar.TERMINAL_NEWLINE
         );
-        CYK.ParseTreeContainer tree = CYK.getBestParseTree(
+        ScoreChart.ParseTreeContainer tree = CYK.getBestParseTree(
                 sentence, grammar, grammar.getStartSymbol()
         );
 

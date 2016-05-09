@@ -2,7 +2,7 @@
 package org.leibnizcenter.rechtspraak.cfg.rule;
 
 import org.jetbrains.annotations.NotNull;
-import org.leibnizcenter.rechtspraak.cfg.CYK;
+import org.leibnizcenter.rechtspraak.cfg.ScoreChart;
 import org.leibnizcenter.rechtspraak.cfg.rule.interfaces.Rule;
 import org.leibnizcenter.rechtspraak.cfg.rule.type.interfaces.NonTerminal;
 
@@ -63,7 +63,7 @@ public abstract class StochasticRule implements Comparable,Rule {
     public double getPriorProbability() {
         return priorProbability;
     }
-    public abstract double getLogProbability(CYK.ParseTreeContainer... inputs);
+    public abstract double getLogProbability(ScoreChart.ParseTreeContainer... inputs);
 }
 
 
