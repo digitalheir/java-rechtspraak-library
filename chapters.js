@@ -15,6 +15,10 @@ var chapters = {
         title: "Inferring a Document Structure",
         route: '/document-structure/'
     },
+    dissemination: {
+        title: "Dissemination of Enrich Dataset",
+        route: '/dissemination/'
+    },
     // presentation: {
     //     title: "Dissemination",
     //     route: '/dissemination/'

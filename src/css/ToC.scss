@@ -1,8 +1,9 @@
 .toc {
-  & > ol ol {
+  & > ol > li > ol {
     font-size: 0.8em;
+    margin-top: 0;
+    margin-bottom: 0;
   }
-
   a {
     text-decoration: none;
   }

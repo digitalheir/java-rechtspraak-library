@@ -5,6 +5,7 @@ import Index from './components/Index'
 import Introduction from './components/Introduction/Introduction'
 import Tagging from './components/Tagging/Tagging'
 import InferringDocumentStructure from './components/InferringDocumentStructure/InferringDocumentStructure'
+import Dissemination from './components/Dissemination/Dissemination'
 import chapters from '../chapters'
 
 let Route = Router.Route;
@@ -26,8 +27,10 @@ function getHandler(route) {
             return Tagging;
         case chapters.documentStructure.route:
             return InferringDocumentStructure;
+        case chapters.dissemination.route:
+            return Dissemination;
         default:
-            throw Error("No handler for route " + route);
+            throw Error("No handler for route " + route+". You should edit Routes.jsx.");
     }
 }
 

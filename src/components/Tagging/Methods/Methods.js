@@ -4,6 +4,7 @@ import Chapter from '../../Chapter/Chapter';
 import CRF from './CRF/CRF';
 import DeterministicTagger from './DeterministicTagger/DeterministicTagger';
 import chapters from '../../../../chapters';
+import ChapterSectionContent from '../../Chapter/ChapterSectionContent';
 
 const methodsSections = {
     crf: {
@@ -30,14 +31,11 @@ export default class Tagging extends Component {
     }
 
     //noinspection JSUnusedGlobalSymbols
-    getSections() {
+   static getSections() {
         return methodsSections;
     }
 
     render() {
-        return <div>
-            <h4>Methods</h4>
-            
-        </div>
+        return <ChapterSectionContent {...this.props} sections={methodsSections.inOrder}/>;
     }
 }

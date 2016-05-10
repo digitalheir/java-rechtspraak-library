@@ -3,13 +3,9 @@ const inferringSections = {
         id: 'parse-tree-introduction',
         title: "Introduction",
     },
-    scfg: {
-        id: 'scfg',
-        title: 'Stochastic Context Free Grammars',
-    },
-    cyk: {
-        id: 'cyk',
-        title: 'CYK Algorithm',
+    methods: {
+        id: 'parse-tree-methods',
+        title: "Methods",
     },
     evaluation: {
         id: 'parse-tree-evaluation',
@@ -19,8 +15,7 @@ const inferringSections = {
 
 inferringSections.inOrder = [
     inferringSections.intro,
-    inferringSections.scfg,
-    inferringSections.cyk,
+    inferringSections.methods,
     inferringSections.evaluation
 ];
 export default inferringSections;
