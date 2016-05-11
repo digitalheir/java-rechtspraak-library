@@ -1045,8 +1045,12 @@ hr {
     /* Adds the value of all instances of the section counter separated by a ".". */
     content: counters(subsection, ".") " ";
 }
-.toc > ol ol {
+.toc > ol > li > ol {
     font-size: 0.8em;
+}
+.toc > ol ol {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 .toc > ol > li::before {
     content: counters(subsection, ".") ". ";
