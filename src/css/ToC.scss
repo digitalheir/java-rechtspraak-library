@@ -1,6 +1,8 @@
 .toc {
   & > ol > li > ol {
     font-size: 0.8em;
+  }
+  & > ol ol {
     margin-top: 0;
     margin-bottom: 0;
   }

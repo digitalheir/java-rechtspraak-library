@@ -10,7 +10,7 @@ export default class FigureTitlePattern extends React.Component {
             <figcaption>
                 <span className="figure-number">Fig {figs.figTitleTreemap.num}.</span> Absolute frequency of title
                 patterns
-                that occur more than 5 times in the corpus, for the three types of
+                that occur more than 5 times in the corpus, for all types of
                 section that Rechtspraak.nl divides documents in.
             </figcaption>
         </figure>;

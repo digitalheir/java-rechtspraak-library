@@ -48,13 +48,14 @@ export default class Importing extends Component {
             </ol>
 
             <p>
-                So we attempt to corce tokens to portions of the document that are potentially any of the above.
+                So we tokenize a document for portions of the document that are could be labeled any of the above.
                 In this regard, newlines are trivial to detect, and we assume
                 that Rechtspraak.nl has already done a job of splitting text blocks in <code>para</code> tags,
-                but still there are a number of arbitrary decisions we need to make for token granularity, which can be
-                consulted from the <a
+                but still there are a number of arbitrary decisions we need to make about how granular a token must be.
+                These detailed can be
+                consulted in the <a
                 href="https://github.com/digitalheir/java-rechtspraak-library/blob/master/src/main/java/org/leibnizcenter/rechtspraak/tokens/tokentree/TokenTree.java">
-                source code
+                tokenization source code
             </a>.
             </p>
 
@@ -62,23 +63,23 @@ export default class Importing extends Component {
                 One complication is that Rechtspraak.nl delivers an XML tree, which is more
                 rich than a linear array of words. Indeed, it often happens that multiple <code>para</code> tags
                 are wrapped in
-                a <code>paragroup</code>, which sometimes represents a coherent set of paragraphs and sometimes
-                makes no sense. Although it is possible to efficiently tag tree
-                structures ({ref.cite(bib.bradley2010learning)}),
-                the tagging algorithm that we use in the following presupposes
-                a linear sequence of tokens. So it is possible
+                a <code>paragroup</code>, which sometimes represents a coherent set of paragraphs. On the other hand,
+                sometimes the paragraph grouping makes no sense. Although it is possible to efficiently tag tree
+                structures instead of a linear list of tokens ({ref.cite(bib.bradley2010learning)}), this requires more
+                somewhat more complicated machinery. So the tagging algorithm that we use in the following supposes
+                a linear sequence of tokens. This means that it is possible
                 that we lose some information in the process, because we coerce a tree structure into a linear
-                sequence.
+                sequence, and then build a tree structure which may clash with the original tree structure.
+                Merging the two resulting tree structures is a possibility, but we do not currently consider this.
             </p>
 
             <p>
-                Another note is that numberings are often not annotated. In our algorithms, we assume that
+                Another noteworthy issue is that numberings are often not annotated. In our parsing algorithm, we
+                assume that
                 a potential numbering occurs as the beginning of a text block and represents Arabic or Roman
-                numerals, alphabetic numbering or a list marking (some symbol such
+                numerals, alphabetic numbering or a list marking (i.e. some symbol such
                 as '-' or '*').
             </p>
-
-
         </div>;
     }
 }

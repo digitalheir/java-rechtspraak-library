@@ -1,25 +1,25 @@
 //noinspection JSUnresolvedVariable
 import React, {Component} from 'react';
-import Chapter from '../../Chapter/Chapter';
-import CRF from './CRF/CRF';
-import DeterministicTagger from './DeterministicTagger/DeterministicTagger';
 import chapters from '../../../../chapters';
 import ChapterSectionContent from '../../Chapter/ChapterSectionContent';
 
 const methodsSections = {
+    featureSelection: {
+        id: 'feature-selection',
+        title: "Feature Selection"
+    },
     crf: {
         id: 'crf',
-        title: "Conditional Random Fields",
-        component: CRF
+        title: "Conditional Random Fields"
     },
     deterministic: {
         id: 'deterministic-tagger',
-        title: "Deterministic tagger",
-        component: DeterministicTagger
+        title: "Deterministic tagger"
     }
 };
 
 methodsSections.inOrder = [
+    methodsSections.featureSelection,
     methodsSections.crf,
     methodsSections.deterministic
 ];

@@ -11,6 +11,14 @@ const figs = {
         id: "fig-title-tf",
         num: 3
     },
+    figTitleWordCount: {
+        id: "fig-title-word-count",
+        num: 3
+    },
+    titleRelativeWordCount: {
+        id: "fig-title-relative-word-count",
+        num: 3
+    },
 
     tfidf: {
         id: "fig-title-tf-idf",

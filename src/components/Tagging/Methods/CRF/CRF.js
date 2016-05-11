@@ -16,21 +16,21 @@ export default class CRF extends Component {
         const relativeToRoot = this.props.path.match(/\//g).slice(1).map(_ => "../").join("");
         return <div>
             <p>Conditional Random Fields (CRFs) are a class of statistical modelling methods that were first introduced
-                in {ref.cite(bib.mccallum2000maximum)} as a non-generative (i.e., discriminative) alternative for Hidden
+                in {ref.cite(bib.mccallum2000maximum)} as a non-generative (i.e., discriminative) alternative to Hidden
                 Markov
                 Models (HMMs). This means that instead of modeling the joint probability <Math
                     l="p(\mathbf x,\mathbf y)"/> of the
-                observations <Math l="\mathbf x"/> and labels <Math l="\mathbf y"/> occurring together,
+                observation vector <Math l="\mathbf x"/> and label vector <Math l="\mathbf y"/> occurring together,
                 we model the conditional
                 probability <Math l="p(\mathbf y|\mathbf x)"/> of
                 labels <em>given</em> the observations.
-                This means that we can tractibly use a rich set of features <Math
-                    l="\mathbf x"/>, because CRFs do not explicitly
-                model <Math l="p(\mathbf x)"/>. CRFs can model a complex
-                interdependence of variables, and are therefore popular
+                CRFs do not explicitly
+                model <Math l="p(\mathbf x)"/>, just <Math l="p(\mathbf y|\mathbf x)"/>, and so we can
+                use a very rich set of features <Math
+                    l="\mathbf x"/> and still have a tractable model. As such, CRFs can model a complex
+                interdependence of observation variables, and are therefore popular
                 in pattern recognition tasks.
             </p>
-
 
             <p>
                 As illustrated in <FigRef fig={figs.graphicalModels}/>,
@@ -41,20 +41,14 @@ export default class CRF extends Component {
 
 
             <p>
-                In this thesis, we limit ourselves to a subclass of CRFs called Linear-Chain Conditional Random Fields 
+                In this thesis, we limit ourselves to a subclass of CRFs called Linear-Chain Conditional Random Fields
                 (LC-CRFs or Linear Chain CRFs),
-                which is very similar to HMMs in graph structure.
-
-                <strike>In this thesis, we
-                    see a document as a string of words (or word features), where each word is connected to one
-                    hidden variable, which corresponds to the label that we wish to assign to that word. An example of a
-                    word
-                    feature would be a variable <code>is_capitalized</code> which can be true or false depending on
-                    whether
-                    the given word
-                    is capitalized,
-                    and an example of a label would be <code>surname</code> to indicate whether the given word denotes a
-                    surname.</strike>
+                which is topologically very similar to HMMs: both model a probability distribution along a
+                chain of input variables, where each input variable is also connected to a single output variable.
+                To clarify, in our experiments we
+                see a input document as a string document elements,
+                where each element should correspond to a label of either <code>title</code>, <code>nr</code>, <
+                code>text</code> or <code>newline</code>.
             </p>
 
             <p>
@@ -64,23 +58,16 @@ export default class CRF extends Component {
                 sections on <a href={"#"+GraphicalModels.id()}>graphical models</a>, <a href="#logistic-regression">logistic
                 regression</a> and <a href="#hmm">Hidden Markov Models</a>.
             </p>
+            
             <p>
                 For a more thorough tutorial into CRFs, including skip-chain CRFs, one could refer
                 to {ref.cite(bib.sutton2006introduction)}.
             </p>
-
-            <FigImg relativeToRoot={relativeToRoot} fig={figs.graphicalModels}>
-                <span className="figure-number">Fig {figs.graphicalModels.num}.</span> Diagram of the relationship
-                between naive Bayes,
-                logistic regression, HMMs, linear-chain CRFs,
-                Bayesian
-                models, and general CRFs. Image adapted from {ref.cite(bib.sutton2006introduction)}.
-            </FigImg>
-
+            
             <GraphicalModels {...this.props}/>
             <HMMs {...this.props}/>
             <LinearChainCRF {...this.props}/>
         </div>;
-            // <LogRes {...this.props}/>
+        // <LogRes {...this.props}/>
     }
 }

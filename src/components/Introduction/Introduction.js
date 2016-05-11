@@ -29,15 +29,14 @@ export default class Introduction extends Component {
             </p>
             <p>
                 Having a section hierarchy
-                is obviously useful when rendering the documents to human users: it
+                is obviously useful for rendering the documents to human users: it
                 allows us to display a table of contents and to style section titles. But
                 it is also interesting for more advanced text mining
                 applications such as topic modeling and information extraction. For example, we may
                 want to represent some metadata in
                 a machine-readable manner (e.g., the judgment: 'claimant won',
                 'claimant lost', etc.). It would then be
-                useful to know which text block
-                contains the text to this judgment.
+                useful to get some context about the section hierarchy.
             </p>
             <p>
                 In this chapter, we provide an introduction to the Rechtspraak.nl data set that we use, with an <a
@@ -45,7 +44,7 @@ export default class Introduction extends Component {
                 to the case law XML markup</a>.
 
                 In the final section of this chapter, we present the Java library
-                that contains all the work we have undertaken in this thesis, which effectively is
+                that contains all the work that we have undertaken in this thesis, which effectively is
                 a pipeline for  enriching Dutch case law markup. We make some remarks on
                 importing and tokenization of Dutch case law documents, followed by chapters
                 on element tagging and parsing a section tree, which both require more complicated 

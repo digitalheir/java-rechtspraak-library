@@ -5,5 +5,5 @@ const numberOfTerms = 10;
 
 
 fs.writeFile('./data.js',"export default "+JSON.stringify( {
-    numberOfTerms: numberOfTerms, data: raw.splice(numberOfTerms)
+    numberOfTerms: numberOfTerms, data: raw.splice(0,numberOfTerms)
 }));

@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 // import Introduction from './Introduction/Introduction';
 import Chapter from '../Chapter/Chapter';
 import Methods from './Methods/Methods';
-import Evaluation from './Evaluation/Evaluation';
+import Evaluation from './Results/Results';
 import DeterministicTagger from './Methods/DeterministicTagger/DeterministicTagger';
 import CRF from './Methods/CRF/CRF';
 import FeatureSelection from './Methods/FeatureSelection/FeatureSelection';

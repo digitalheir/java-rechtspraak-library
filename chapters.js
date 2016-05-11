@@ -16,7 +16,7 @@ var chapters = {
         route: '/document-structure/'
     },
     dissemination: {
-        title: "Dissemination of Enrich Dataset",
+        title: "Dissemination of Enriched Dataset",
         route: '/dissemination/'
     },
     // presentation: {
@@ -34,7 +34,8 @@ chapters.inOrder = [
     chapters.introduction,
     // chapters.rechtspraakNl,
     chapters.tagging,
-    chapters.documentStructure
+    chapters.documentStructure,
+    chapters.dissemination
 ];
 
 chapters.inOrder.forEach(ch=> {

@@ -9,9 +9,7 @@ var URL = "https://rechtspraak.cloudant.com/docs/" +
     "_list/value_large_enough/" +
     "section_roles?" +
     "group_level=2" +
-    "&stale=ok" +
-    "&startkey=" + encodeUri("[\"\"]") +
-    "&endkey=" + encodeUri("[\"z\"]");
+    "&stale=ok" ;
 
 function download() {
     var result = JSON.parse(downloadString(URL));

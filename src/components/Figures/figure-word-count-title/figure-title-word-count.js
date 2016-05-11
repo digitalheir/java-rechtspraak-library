@@ -8,11 +8,12 @@ import PercentageBar from '../../PercentageBar/PercentageBar';
 export default class FigureWordCount extends React.Component {
     render() {
         //<LineChart labelY='²log frequency' sourceHref={data.url} data={data.data}/>
-        return <figure className="chart" id={figs.tfidf.id}>
+        return <figure className="chart" id={figs.figTitleWordCount.id}>
+            <a href={data.url}>Data source</a>
             <table className=" table">
                 <thead>
                 <tr>
-                    <th>Word #</th>
+                    <th>Number of words</th>
                     <th>Relative frequency</th>
                     <th>Absolute frequency</th>
                 </tr>
@@ -34,7 +35,7 @@ export default class FigureWordCount extends React.Component {
             </table>
             <figcaption>
                 <span className="figure-number">Fig {figs.tfidf.num}.</span> Word count in
-                titles.
+                titles, excluding numbering.
             </figcaption>
         </figure>;
     }

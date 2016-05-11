@@ -7,12 +7,9 @@ import ref from '../../Bibliography/References/references'
 import bib from  '../../Bibliography/bib';
 // import F from  '../../Math/Math';
 
-export default class CRF extends Component {
+export default class Results extends Component {
     render() {
-        return <section>
-            <h4>Results</h4>
-
-            
-        </section>;
+        return <div>
+        </div>;
     }
 }

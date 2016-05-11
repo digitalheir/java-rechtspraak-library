@@ -40,7 +40,7 @@ export default class Chapter extends React.Component {
         let found = false;
         for (const chapter of chapters.inOrder) {
             if (found) {
-                return <p class="link-to-next-chapter">
+                return <p className="link-to-next-chapter">
                     Next chapter: <a href={chapters.pathTo(this.props.path,chapter)}>{chapter.title}</a>
                 </p>
             }

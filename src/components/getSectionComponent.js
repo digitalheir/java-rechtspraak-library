@@ -6,7 +6,7 @@ import sectionsTagging from './Tagging/sections'
 import sectionsTaggingMethods from './Tagging/Methods/sections'
 import sectionsInferringDocumentStructure from './InferringDocumentStructure/sections'
 import sectionsInferringDocumentStructureMethods from './InferringDocumentStructure/Methods/sections'
-import TaggingEvaluation from './Tagging/Evaluation/Evaluation';
+import TaggingEvaluation from './Tagging/Results/Results';
 import TaggingDiscussion from './Tagging/Discussion/Discussion';
 import TaggingMethods from './Tagging/Methods/Methods';
 import TaggingIntroduction from './Tagging/Introduction/Introduction';
