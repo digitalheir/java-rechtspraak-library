@@ -36,7 +36,7 @@ public class RechtspraakCorpus extends ArrayList<List<? extends TaggedToken<Rech
 //                    LabeledTokenList instance = LabeledTokenList.fromAnnotations()
 ////                System.out.println("Instance made for " + ecli + "("
 ////                        + ((TokenSequence) instance.getData()).size() + ")");
-////                System.out.println("Added " + ecli + " through pipe");
+////                System.out.println("Added " + ecli + " through inPipe");
 //                    add(instance);
 //                } catch (IOException e) {
 //                    throw new Error(e);

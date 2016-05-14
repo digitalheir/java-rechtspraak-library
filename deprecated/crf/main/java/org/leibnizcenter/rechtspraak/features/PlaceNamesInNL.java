@@ -1,4 +1,4 @@
-package org.leibnizcenter.rechtspraak.enricher.crf.features;
+package org.leibnizcenter.rechtspraak.tagging.crf.features;
 
 import cc.mallet.types.Token;
 import com.google.common.io.LineReader;

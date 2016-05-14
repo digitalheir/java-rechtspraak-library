@@ -1,10 +1,10 @@
-package org.leibnizcenter.rechtspraak.enricher.crf.features;
+package org.leibnizcenter.rechtspraak.tagging.crf.features;
 
 import cc.mallet.types.Token;
-import org.leibnizcenter.rechtspraak.enricher.crf.features.info.InfoPatterns;
-import org.leibnizcenter.rechtspraak.enricher.crf.features.quote.BlockQuotePatterns;
-import org.leibnizcenter.rechtspraak.enricher.crf.features.quote.PreBlockQuotePattrns;
-import org.leibnizcenter.rechtspraak.enricher.crf.features.title.TitlePatterns;
+import org.leibnizcenter.rechtspraak.tagging.crf.features.info.InfoPatterns;
+import org.leibnizcenter.rechtspraak.tagging.crf.features.quote.BlockQuotePatterns;
+import org.leibnizcenter.rechtspraak.tagging.crf.features.quote.PreBlockQuotePattrns;
+import org.leibnizcenter.rechtspraak.tagging.crf.features.title.TitlePatterns;
 import org.leibnizcenter.rechtspraak.leibnizannotations.DeterministicTagger;
 import org.leibnizcenter.rechtspraak.markup.docs.LabeledToken;
 import org.leibnizcenter.rechtspraak.markup.docs.LabeledTokenList;
@@ -19,7 +19,7 @@ import java.util.List;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
-import static org.leibnizcenter.rechtspraak.enricher.crf.features.quote.BlockQuotePatterns.END_W_QUOTE;
+import static org.leibnizcenter.rechtspraak.tagging.crf.features.quote.BlockQuotePatterns.END_W_QUOTE;
 
 /**
  * Created by Maarten on 2016-03-21.

@@ -26,11 +26,17 @@ public class Numbering extends RechtspraakElement {
     private final SortedSet<Map.Entry<Integer, Numbering>> plausibleSuccessors = new TreeSet<>(sortByKey);
     private final SortedSet<Map.Entry<Integer, Numbering>> plausiblePredecessors = new TreeSet<>(sortByKey);
 
-    public Numbering(Element element) {
+    public Numbering(Element element, boolean forceParse) {
         super(element);
-        this.numbering = NumberingNumber.startsWithNumbering(this.getTextContent());
-        if (numbering == null)
-            throw new NullPointerException();
+        String txt = this.getTextContent();
+        this.numbering = NumberingNumber.startsWithNumbering(txt);
+        if (this.numbering == null) {
+            while (forceParse && this.numbering == null && txt.length() > 1) {
+                txt = txt.substring(1);
+                this.numbering = NumberingNumber.startsWithNumbering(txt);
+            }
+            if (this.numbering == null) throw new NullPointerException();
+        }
     }
 
 
@@ -119,11 +125,12 @@ public class Numbering extends RechtspraakElement {
     }
 
     public static Collection<Map.Entry<Integer, Numbering>> getPlausibleSuccessors(TokenTreeLeaf tokenTreeLeaf) {
-        if(tokenTreeLeaf instanceof Numbering) return ((Numbering) tokenTreeLeaf).getPlausibleSuccessors();
+        if (tokenTreeLeaf instanceof Numbering) return ((Numbering) tokenTreeLeaf).getPlausibleSuccessors();
         else return null;
     }
+
     public static Collection<Map.Entry<Integer, Numbering>> getPlausiblePredecessors(TokenTreeLeaf tokenTreeLeaf) {
-        if(tokenTreeLeaf instanceof Numbering) return ((Numbering) tokenTreeLeaf).getPlausiblePredecessors();
+        if (tokenTreeLeaf instanceof Numbering) return ((Numbering) tokenTreeLeaf).getPlausiblePredecessors();
         else return null;
     }
 

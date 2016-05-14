@@ -2,7 +2,7 @@ package org.leibnizcenter.rechtspraak.markup.docs.nameparser;
 
 import cc.mallet.types.Token;
 import gate.util.GateException;
-import org.leibnizcenter.rechtspraak.enricher.crf.features.KnownSurnamesNl;
+import org.leibnizcenter.rechtspraak.tagging.crf.features.KnownSurnamesNl;
 import org.leibnizcenter.rechtspraak.markup.docs.RechtspraakElement;
 import org.leibnizcenter.rechtspraak.markup.docs.features.Patterns;
 import org.leibnizcenter.util.TextPattern;

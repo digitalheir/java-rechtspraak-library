@@ -12,7 +12,7 @@ import org.leibnizcenter.rechtspraak.enricher.cfg.rule.type.NonTerminalImpl;
 import org.leibnizcenter.rechtspraak.enricher.cfg.rule.type.Terminal;
 import org.leibnizcenter.rechtspraak.enricher.cfg.rule.type.interfaces.NonTerminal;
 import org.leibnizcenter.rechtspraak.enricher.cfg.rule.type.interfaces.Type;
-import org.leibnizcenter.rechtspraak.leibnizannotations.Label;
+import org.leibnizcenter.rechtspraak.tagging.Label;
 import org.leibnizcenter.rechtspraak.tokens.numbering.Numbering;
 import org.leibnizcenter.rechtspraak.tokens.numbering.SubSectionNumber;
 import org.leibnizcenter.rechtspraak.tokens.numbering.interfaces.NumberingNumber;
@@ -40,6 +40,7 @@ public class DocumentGrammar extends Grammar {
 
     public static final NonTerminal SECTION = new NonTerminalImpl("Section");
     public static final NonTerminal SECTION_TITLE = new NonTerminalImpl("SectionTitle");
+    public static final NonTerminal NEWLINE_AND_TITLE_TEXT = new NonTerminalImpl("NEWLINE_AND_TITLE_TEXT");
     public static final NonTerminal SECTION_CONTENT = new NonTerminalImpl("SectionContent");
     public static final NonTerminal COMPLETE_SECTION_BLOB = new NonTerminalImpl("COMPLETE_SECTION_BLOB");
     public static final NonTerminal COMPLETE_SECTION_BLOB_W_TRAILING_TEXT = new NonTerminalImpl("COMPLETE_SECTION_BLOB_W_TRAILING_TEXT");
@@ -95,7 +96,7 @@ public class DocumentGrammar extends Grammar {
             new StandardRule(SECTION_TITLE, rhs(SINGLE_NUMBERING, SECTION_TITLE_TEXT), 1.0),
 
             new StandardRule(SECTION_TITLE_TEXT, rhs(SINGLE_TITLE_TEXT), 1.0),
-            new StandardRule(SECTION_TITLE_TEXT, rhs(SINGLE_TITLE_TEXT, SINGLE_TITLE_TEXT), 1.0),
+            new StandardRule(SECTION_TITLE_TEXT, rhs(TERMINAL_NEWLINE, SINGLE_TITLE_TEXT), 1.0),
 
             new StandardRule(SINGLE_TITLE_TEXT, rhs(TERMINAL_SECTION_TITLE), 1.0),
 

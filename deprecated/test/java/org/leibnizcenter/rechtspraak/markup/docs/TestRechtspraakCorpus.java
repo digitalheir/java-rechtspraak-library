@@ -7,8 +7,8 @@ import com.google.common.collect.Lists;
 import org.junit.Assert;
 import org.junit.Test;
 import org.leibnizcenter.rechtspraak.TrainWithMallet;
-import org.leibnizcenter.rechtspraak.enricher.crf.features.info.InfoPatterns;
-import org.leibnizcenter.rechtspraak.enricher.crf.features.title.TitlePatterns;
+import org.leibnizcenter.rechtspraak.tagging.crf.features.info.InfoPatterns;
+import org.leibnizcenter.rechtspraak.tagging.crf.features.title.TitlePatterns;
 import org.leibnizcenter.util.Xml;
 import org.leibnizcenter.util.numbering.ArabicNumbering;
 import org.leibnizcenter.util.numbering.NumberingNumber;
@@ -28,8 +28,8 @@ import java.util.HashSet;
 import java.util.List;
 
 import static junit.framework.Assert.assertTrue;
-import static org.leibnizcenter.rechtspraak.enricher.crf.features.Features.CLOSE_TO_ADJACENT_NUMBERING;
-import static org.leibnizcenter.rechtspraak.enricher.crf.features.info.InfoPatterns.InfoPatternsUnormalizedContains.CONTAINS_BRACKETED_TEXT;
+import static org.leibnizcenter.rechtspraak.tagging.crf.features.Features.CLOSE_TO_ADJACENT_NUMBERING;
+import static org.leibnizcenter.rechtspraak.tagging.crf.features.info.InfoPatterns.InfoPatternsUnormalizedContains.CONTAINS_BRACKETED_TEXT;
 
 /**
  * Tests for correct feature vector sequence initialization

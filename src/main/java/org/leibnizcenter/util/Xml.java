@@ -24,8 +24,10 @@ import java.util.regex.Matcher;
  * Created by maarten on 22-12-15.
  */
 public class Xml {
-    public static String OUT_FOLDER = "/media/maarten/Media/rechtspraak-rich-docs-20160221-annotated/";
-    public static String IN_FOLDER = "/media/maarten/Media/rechtspraak-rich-docs-20160221/";
+    public static String OUT_FOLDER_MANUAL_TAGGING = "/media/maarten/Media/rechtspraak-rich-docs-20160221-annotated/";
+    public static String OUT_FOLDER_AUTOMATIC_TAGGING = "/media/maarten/Media/rechtspraak-rich-docs-20160221-annotated-automatically/";
+    public static String IN_FOLDER_AUTOMATIC_TAGGING = "/media/maarten/Media/rechtspraak-rich-docs-20160221/";
+    public static String IN_FOLDER_MANUAL_TAGGING = "/home/maarten/IdeaProjects/data-mining-dutch-case-law/ecli-dump";
 
     public static Element wrapRemainderInElement(Element e, int startFromChildIx, String tagName) {
         Element newElement = e.getOwnerDocument().createElement(tagName);
@@ -255,7 +257,8 @@ public class Xml {
 
     public static List<File> listXmlFiles(File folder, int max, boolean shuffle) {
         File[] files = folder.listFiles();
-        if (files == null) throw new NullPointerException();
+        if (files == null)
+            throw new NullPointerException();
 
         List<File> xmls = new ArrayList<>(files.length);
         if (shuffle) {
@@ -300,10 +303,6 @@ public class Xml {
         return originalChildren;
     }
 
-    public static void setFolders(String[] args) {
-        if (args.length > 0 && !Strings.isNullOrEmpty(args[0])) IN_FOLDER = args[0];
-        if (args.length > 1 && !Strings.isNullOrEmpty(args[1])) OUT_FOLDER = args[1];
-    }
 
     public static Element setElementNameTo(Element element, String ns, String tagName) {
         Node parent = element.getParentNode();

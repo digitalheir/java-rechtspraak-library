@@ -1,10 +1,11 @@
 package org.leibnizcenter.rechtspraak.tokens.tokentree;
 
 import com.google.common.collect.Maps;
-import org.leibnizcenter.rechtspraak.leibnizannotations.DeterministicTagger;
-import org.leibnizcenter.rechtspraak.leibnizannotations.Label;
+import org.leibnizcenter.rechtspraak.tagging.DeterministicTagger;
+import org.leibnizcenter.rechtspraak.tagging.Label;
 import org.leibnizcenter.rechtspraak.tokens.LabeledToken;
 import org.leibnizcenter.rechtspraak.tokens.RechtspraakElement;
+import org.leibnizcenter.rechtspraak.tokens.TokenList;
 import org.leibnizcenter.rechtspraak.tokens.numbering.ListMarking;
 import org.leibnizcenter.rechtspraak.tokens.numbering.Numbering;
 import org.leibnizcenter.rechtspraak.tokens.quote.Quote;
@@ -16,7 +17,16 @@ import org.leibnizcenter.util.Regex;
 import org.leibnizcenter.util.Xml;
 import org.leibnizcenter.rechtspraak.tokens.text.IgnoreElement;
 import org.w3c.dom.*;
+import org.xml.sax.InputSource;
+import org.xml.sax.SAXException;
 
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.security.InvalidParameterException;
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +48,7 @@ public class TokenTree implements TokenTreeVertex {
     public static final String TAG_TITLE = "title";
     public static final String TAG_NR = "nr";
     public static final String TAG_PARA = "para";
-    
+
 
     private static final Pattern KNOWN_ELEMENTS = Pattern.compile("(itemized|ordered)list" +
             "|footnote" +
@@ -58,7 +68,8 @@ public class TokenTree implements TokenTreeVertex {
             "|(rs:)?para(block|group)?" +
             "|" + TAG_TITLE +
             "|(informal)?table" +
-            "|mediaobject");
+            "|(inline)?mediaobject" +
+            "");
 
     public TokenTree(Element root) {
         element = root;
@@ -115,9 +126,10 @@ public class TokenTree implements TokenTreeVertex {
             Label l = Label.fromString.get(((RechtspraakElement) el).getAttribute("manualAnnotation"));
             if (l == null)
                 if (el instanceof ListMarking ||
+//                     el instanceof IgnoreElement ||
                         ((RechtspraakElement) el).getTagName().matches("quote|footnote\\-ref")) return Label.TEXT_BLOCK;
                 else
-            throw new NullPointerException();
+                    throw new NullPointerException();
             return l;
         } else if (el instanceof Newline) {
             return Label.NEWLINE;
@@ -165,6 +177,21 @@ public class TokenTree implements TokenTreeVertex {
         if (!KNOWN_ELEMENTS.matcher(e.getNodeName()).matches())
             System.err.println("? " + e.getNodeName() + " ?");
 
+        if (e.hasAttribute("manualAnnotation")) {
+            switch (Label.fromString.get(e.getAttribute("manualAnnotation"))) {
+                case NEWLINE:
+                    return new Newline(e);
+                case NR:
+                    return new Numbering(e, true);
+                case SECTION_TITLE:
+                    return new TextElement(e);
+                case TEXT_BLOCK:
+                    return new TextElement(e);
+                default:
+                    throw new Error();
+            }
+        }
+
 
         switch (e.getTagName()) {
             case "para":
@@ -179,8 +206,9 @@ public class TokenTree implements TokenTreeVertex {
                 // If this is a node with a numbering, create a <potentialnumber/> in front
                 return fromPotentiallyMixed(e);
             case "nr":
+                if (e.getTextContent() == null || e.getTextContent().length() == 0) return new TextElement(e);
             case "potentialnr":
-                return new Numbering(e);
+                return new Numbering(e, e.getTagName().equals("nr"));
             case "listmarking":
                 return new TextElement(e);
             case "quote":
@@ -191,6 +219,20 @@ public class TokenTree implements TokenTreeVertex {
         }
     }
 
+//    /**
+//     * Parse all docs
+//     */
+//    public static void main(String[] args) throws IOException, SAXException, ParserConfigurationException {
+//        List<File> xmlFiles = Xml.listXmlFiles(new File(Xml.OUT_FOLDER_AUTOMATIC_TAGGING), -1, false);
+//        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+//        DocumentBuilder builder = factory.newDocumentBuilder();
+//
+//        int i = 0;
+//        for (File file : xmlFiles) {
+//            FileInputStream is = new FileInputStream(file);
+//            builder.parse(new InputSource(new InputStreamReader(is)));
+//        }
+//    }
     private static TokenTreeVertex fromPotentiallyMixed(Element e) {
         Node[] children = Xml.getChildren(e);
 
@@ -215,8 +257,10 @@ public class TokenTree implements TokenTreeVertex {
                         } else {
                             if (children.length == 1) return new TextElement(e);
                             else {
-                                Element wrapped = Xml.wrapNodeInElement(c, TAG_TEXT);
-                                tokenSiblings.add(new TextElement(wrapped));
+                                if (text.trim().length() > 0) {
+                                    Element wrapped = Xml.wrapNodeInElement(c, TAG_TEXT);
+                                    tokenSiblings.add(new TextElement(wrapped));
+                                }
                             }
                         }
                     }
@@ -249,7 +293,7 @@ public class TokenTree implements TokenTreeVertex {
 
         int listMarking = ListMarking.startsWithListMarkingAtChar(txt.getTextContent());
         if (listMarking > -1) {
-            Element element = Xml.wrapSubstringInElement(txt, 0, listMarking+1, TAG_LIST_MARKING);
+            Element element = Xml.wrapSubstringInElement(txt, 0, listMarking + 1, TAG_LIST_MARKING);
             txt = (Text) element.getNextSibling();
             children.add(new ListMarking(element));
         }
@@ -262,7 +306,7 @@ public class TokenTree implements TokenTreeVertex {
             Element potentialNr = Xml.wrapSubstringInElement(txt, numberMatcher.start(1),
                     numberMatcher.end(1) - numberMatcher.start(1), TAG_POTENTIAL_NR);
             txt = (Text) potentialNr.getNextSibling();
-            children.add(new Numbering(potentialNr));
+            children.add(new Numbering(potentialNr, false));
             numberMatcher = Regex.START_WITH_NUM.matcher(txt.getTextContent());
         }
         if (children.size() > 0) {
@@ -277,6 +321,8 @@ public class TokenTree implements TokenTreeVertex {
         Matcher quoteMatcher = Quote.START_WITH_QUOTE.matcher(textContent);
         if (quoteMatcher.find()) {
             Element wrappedText = Xml.wrapNodeInElement(child, TAG_TEXTGROUP);
+            if (quoteMatcher.groupCount() < 2)
+                System.err.println("No group 1");
             Xml.wrapSubstringInElement(child,
                     quoteMatcher.start(1),
                     quoteMatcher.end(1) - quoteMatcher.start(1),

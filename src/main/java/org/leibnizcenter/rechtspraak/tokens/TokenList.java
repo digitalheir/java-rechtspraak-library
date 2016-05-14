@@ -17,6 +17,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 import java.util.function.Consumer;
+import java.util.stream.Collectors;
 
 /**
  * A list of tokens plus some metadata like source doc and ECLI
@@ -84,6 +85,10 @@ public class TokenList extends ArrayList<TokenTreeLeaf> {
         return doc;
     }
 
+    public TokenList getFromIndexes(List<Integer> useIndexes) {
+        return new TokenList(ecli, doc, useIndexes.stream().map(this::get).collect(Collectors.toList()));
+    }
+
     public static class FileIterator implements Iterator<TokenList> {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         private DocumentBuilder builder = factory.newDocumentBuilder();
@@ -107,7 +112,7 @@ public class TokenList extends ArrayList<TokenTreeLeaf> {
                 File file = files[index];
                 files[index] = null; // Allow to be garbage collected
                 index++;
-                System.out.println(file.getAbsolutePath());
+                //System.out.println(file.getAbsolutePath());
                 if (index % 1000 == 0) System.out.println("Cycled through " + index);
                 String ecli = getEcliFromFileName(file);
                 Document doc = getDoc(builder, file);

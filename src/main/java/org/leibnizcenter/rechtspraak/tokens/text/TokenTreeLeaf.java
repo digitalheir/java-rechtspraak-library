@@ -274,7 +274,11 @@ public abstract class TokenTreeLeaf implements TokenTreeVertex, Node {
     private Element findEmphasis() {
         TokenTreeLeaf e = this;
         if (e.getNodeType() == Element.ELEMENT_NODE
-                && e.getNodeName().equals("emphasis")) return (Element) e;
+                && e.getNodeName().equals("emphasis")
+                && e instanceof Element
+                ){
+            return (Element) e;
+        }
         NodeList children = e.getChildNodes();
         for (int j = 0; j < children.getLength(); j++) {
             Node child = children.item(j);

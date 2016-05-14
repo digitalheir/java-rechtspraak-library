@@ -169,4 +169,8 @@ public class Regex {
 
     public static final Pattern END_W_BV = Pattern.compile("B\\.?V\\.?$", Pattern.CASE_INSENSITIVE);
     public static final Pattern START_W_NON_LETTER = Pattern.compile("^[^\\p{L}]");
+    public static final Pattern ARTIKEL = Pattern.compile("artikel(en)\\s+.{0,5}", Pattern.CASE_INSENSITIVE);
+    public static final Pattern FEIT = Pattern.compile("feit(en)\\s+.{0,5}", Pattern.CASE_INSENSITIVE);
+    public static final Pattern START_W_FEIT = Pattern.compile("^feit", Pattern.CASE_INSENSITIVE);
+    public static final Pattern START_W_ARTIKEL = Pattern.compile("^artikel", Pattern.CASE_INSENSITIVE);
 }

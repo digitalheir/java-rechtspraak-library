@@ -1,4 +1,4 @@
-package org.leibnizcenter.rechtspraak.enricher.crf.features.title;
+package org.leibnizcenter.rechtspraak.tagging.crf.features.title;
 
 import cc.mallet.types.Token;
 import org.leibnizcenter.rechtspraak.markup.docs.RechtspraakElement;

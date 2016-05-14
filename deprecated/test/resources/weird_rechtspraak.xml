@@ -3,6 +3,11 @@
         <id>ECLI:NL:RBNHO:2014:347</id>
     </doc>
     <doc>
+        <id>ECLI:NL:RBHAA:2011:BW5844</id>
+        <id>ECLI:NL:RBAMS:2010:BN0717</id>
+        <comment>Doesn't tokenize right (see a. b. c. d. near the end)</comment>
+    </doc>
+    <doc>
         <id>ECLI:NL:RBAMS:2014:2748</id>
     </doc>
     <doc>

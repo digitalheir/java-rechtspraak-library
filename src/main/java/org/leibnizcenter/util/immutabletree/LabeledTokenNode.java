@@ -1,7 +1,7 @@
 package org.leibnizcenter.util.immutabletree;
 
 import com.google.common.collect.ImmutableList;
-import org.leibnizcenter.rechtspraak.leibnizannotations.Label;
+import org.leibnizcenter.rechtspraak.tagging.Label;
 import org.leibnizcenter.rechtspraak.tokens.TaggedToken;
 import org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf;
 

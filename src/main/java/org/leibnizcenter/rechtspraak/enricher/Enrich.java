@@ -10,9 +10,9 @@ import org.leibnizcenter.rechtspraak.enricher.cfg.rule.TypeContainer;
 import org.leibnizcenter.rechtspraak.enricher.cfg.rule.type.NonTerminalImpl;
 import org.leibnizcenter.rechtspraak.enricher.cfg.rule.type.Terminal;
 import org.leibnizcenter.rechtspraak.enricher.cfg.rule.type.interfaces.Type;
-import org.leibnizcenter.rechtspraak.enricher.crf.ApplyCrf;
-import org.leibnizcenter.rechtspraak.leibnizannotations.DeterministicTagger;
-import org.leibnizcenter.rechtspraak.leibnizannotations.Label;
+import org.leibnizcenter.rechtspraak.tagging.DeterministicTagger;
+import org.leibnizcenter.rechtspraak.tagging.Label;
+import org.leibnizcenter.rechtspraak.tagging.crf.ApplyCrf;
 import org.leibnizcenter.rechtspraak.tokens.RechtspraakElement;
 import org.leibnizcenter.rechtspraak.tokens.TokenList;
 import org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf;
@@ -39,7 +39,10 @@ public class Enrich {
     private final CRF crf;
 
     public Enrich() throws IOException, ClassNotFoundException, URISyntaxException {
-        this(new File(Enrich.class.getClassLoader().getResource(Const.RECHTSPRAAK_MARKUP_TAGGER_CRF).toURI()));
+        this(new File(Enrich.class.getClassLoader()
+                .getResource(Const.RECHTSPRAAK_MARKUP_TAGGER_CRF_TRAINED_ON_AUTO_ANNOTATED)
+                .toURI())
+        );
     }
 
     public Enrich(File crfModelFile) throws IOException, ClassNotFoundException {

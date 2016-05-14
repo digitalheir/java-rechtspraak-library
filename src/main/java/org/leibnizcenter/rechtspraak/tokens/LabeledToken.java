@@ -1,7 +1,6 @@
 package org.leibnizcenter.rechtspraak.tokens;
 
-import org.leibnizcenter.rechtspraak.leibnizannotations.Label;
-import org.leibnizcenter.rechtspraak.tokens.TaggedToken;
+import org.leibnizcenter.rechtspraak.tagging.Label;
 import org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf;
 import org.leibnizcenter.rechtspraak.tokens.tokentree.TokenTreeVertex;
 

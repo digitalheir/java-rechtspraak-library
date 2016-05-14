@@ -1,7 +1,7 @@
 package org.leibnizcenter.rechtspraak.tokens.quote;
 
 import com.google.common.collect.Sets;
-import org.leibnizcenter.rechtspraak.enricher.crf.features.textpatterns.GeneralTextFeature;
+import org.leibnizcenter.rechtspraak.tagging.crf.features.textpatterns.GeneralTextFeature;
 import org.leibnizcenter.rechtspraak.tokens.RechtspraakElement;
 import org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf;
 import org.leibnizcenter.util.Strings2;
@@ -46,27 +46,27 @@ public class Quote extends RechtspraakElement {
     }
 
     public static boolean endsWithDoubleQuote(String s) {
-        return END_W_DOUBLE_QUOTE.matcher(s.trim()).find();
+        return s != null && END_W_DOUBLE_QUOTE.matcher(s.trim()).find();
     }
 
     public static boolean endsWithDoubleQuoteStrict(String s) {
-        return END_W_DOUBLE_QUOTE_STRICT.matcher(s.trim()).find();
+        return s != null && END_W_DOUBLE_QUOTE_STRICT.matcher(s.trim()).find();
     }
 
     public static boolean startsWithQuote(String s) {
-        return Strings2.firstNonWhitespaceCharIsAny(s.trim(), CHARS_QUOTE) > -1;
+        return s != null && Strings2.firstNonWhitespaceCharIsAny(s.trim(), CHARS_QUOTE) > -1;
     }
 
     public static boolean endsWithSingleQuote(String s) {
-        return END_W_SINGLE_QUOTE.matcher(s.trim()).find();
+        return s != null && END_W_SINGLE_QUOTE.matcher(s.trim()).find();
     }
 
     public static boolean endsWithQuoteStrict(String s) {
-        return END_W_ANY_QUOTE_STRICT.matcher(s.trim()).find();
+        return s != null && END_W_ANY_QUOTE_STRICT.matcher(s.trim()).find();
     }
 
     public static boolean endsWithQuote(String s) {
-        return END_W_ANY_QUOTE.matcher(s.trim()).find();
+        return s != null && END_W_ANY_QUOTE.matcher(s.trim()).find();
     }
 
     public static boolean quoteIntroduced(List<TokenTreeLeaf> tokens, int ix) {
