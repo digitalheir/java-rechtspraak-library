@@ -24954,6 +24954,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	        pages: "127—134",
 	        year: 2010
 	    },
+	    abney1991procedure: {
+	        type: 'inproceedings',
+	        id: 'abney1991procedure',
+	        title: 'Procedure for quantitatively comparing the syntactic coverage of English grammars',
+	        author: {
+	            abbr: "Abney et al.",
+	            full: 'Abney, Steven and Flickenger, S and Gdaniec, Claudia and Grishman, C and Harrison, Philip and Hindle, Donald and Ingria, Robert and Jelinek, Frederick and Klavans, Judith and Liberman, Mark and others'
+	        },
+	        booktitle: 'Proceedings of the workshop on Speech and Natural Language',
+	        pages: '306--311',
+	        year: '1991',
+	        organization: 'Association for Computational Linguistics'
+	    },
 	    sakakibara1994stochastic: {
 	        type: 'article', id: 'sakakibara1994stochastic',
 	        title: 'Stochastic context-free grammers for tRNA modeling',
@@ -59537,6 +59550,14 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _references = __webpack_require__(221);
+
+	var _references2 = _interopRequireDefault(_references);
+
+	var _bib = __webpack_require__(211);
+
+	var _bib2 = _interopRequireDefault(_bib);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -59564,8 +59585,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    '- minimal edit distance? -'
-	                )
+	                    'Like in the previous chapter, we evaluate our grammar using an F-score, except with a subtle change in the meaning of precision and recall, because now we\'re comparing dealing trees. This definition is due to ',
+	                    _references2.default.cite(_bib2.default.abney1991procedure),
+	                    '.'
+	                ),
+	                _react2.default.createElement(
+	                    'ul',
+	                    null,
+	                    _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        'Precision is the fraction of correct constituents out of the total number of constituents in the candidate parse'
+	                    ),
+	                    _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        'Recall is the fraction of correct constituents out of the total number of constituents in the gold standard'
+	                    )
+	                ),
+	                _react2.default.createElement('p', null)
 	            );
 	        }
 	    }]);
@@ -59810,7 +59848,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'The standard version of the CYK algorithm is defined for ordinary context free grammars that are given in Chomsky normal form (CNF), but is is easy to extend the algorithm to work on stochastic grammars with unary rules, as we do in this section. Note that any CFG may be transformed into an equivalent grammar in Chomsky normal form, and this also holds for stochastic CFGs (',
+	                    'The standard version of the CYK algorithm is defined for ordinary context free grammars that are given in Chomsky normal form (CNF), but is is easy to extend the algorithm to include support for unary rules as well, as we do in this section. Note that any CFG may be transformed into an equivalent grammar in Chomsky normal form, and this also holds for stochastic CFGs (',
 	                    _references2.default.cite(_bib2.default.huang1971stochastic),
 	                    '). Also note that converting a grammar to CNF is not without cost: the increase in grammar size is ',
 	                    _react2.default.createElement(_Math2.default, {
@@ -59868,6 +59906,39 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'figure',
 	                    { id: parseFig.id },
 	                    _react2.default.createElement(
+	                        'strong',
+	                        null,
+	                        'Grammar'
+	                    ),
+	                    _react2.default.createElement(
+	                        'pre',
+	                        { style: { display: 'inline-block' } },
+	                        'S  → NP VP  (90%)',
+	                        _react2.default.createElement('br', null),
+	                        'S  → VP     (10%)',
+	                        _react2.default.createElement('br', null),
+	                        'VP → V NP   (50%)',
+	                        _react2.default.createElement('br', null),
+	                        'VP → V      (10%)',
+	                        _react2.default.createElement('br', null),
+	                        'NP → NP NP  (10%)',
+	                        _react2.default.createElement('br', null),
+	                        'NP → N      (70%)',
+	                        _react2.default.createElement('br', null),
+	                        _react2.default.createElement('br', null),
+	                        'N  → fish   (20%)',
+	                        _react2.default.createElement('br', null),
+	                        'N  → people (50%)',
+	                        _react2.default.createElement('br', null),
+	                        'N  → tanks  (20%)',
+	                        _react2.default.createElement('br', null),
+	                        'V  → people (10%)',
+	                        _react2.default.createElement('br', null),
+	                        'V  → fish   (60%)',
+	                        _react2.default.createElement('br', null),
+	                        'V  → tanks  (30%)'
+	                    ),
+	                    _react2.default.createElement(
 	                        'div',
 	                        { className: 'table-container' },
 	                        _react2.default.createElement(
@@ -59915,40 +59986,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            parseFig.num,
 	                            '.'
 	                        ),
-	                        ' An example parse chart for the sentence "fish people fish tanks", with the following grammar:',
-	                        _react2.default.createElement(
-	                            'div',
-	                            null,
-	                            _react2.default.createElement(
-	                                'pre',
-	                                { style: { display: 'inline-block' } },
-	                                'S  → NP VP  (90%)',
-	                                _react2.default.createElement('br', null),
-	                                'S  → VP     (10%)',
-	                                _react2.default.createElement('br', null),
-	                                'VP → V NP   (50%)',
-	                                _react2.default.createElement('br', null),
-	                                'VP → V      (10%)',
-	                                _react2.default.createElement('br', null),
-	                                'NP → NP NP  (10%)',
-	                                _react2.default.createElement('br', null),
-	                                'NP → N      (70%)',
-	                                _react2.default.createElement('br', null),
-	                                _react2.default.createElement('br', null),
-	                                'N  → fish   (20%)',
-	                                _react2.default.createElement('br', null),
-	                                'N  → people (50%)',
-	                                _react2.default.createElement('br', null),
-	                                'N  → tanks  (20%)',
-	                                _react2.default.createElement('br', null),
-	                                'V  → people (10%)',
-	                                _react2.default.createElement('br', null),
-	                                'V  → fish   (60%)',
-	                                _react2.default.createElement('br', null),
-	                                'V  → tanks  (30%)'
-	                            )
-	                        ),
-	                        'The top of the triangle represents the substring ',
+	                        ' An example parse chart for the sentence "fish people fish tanks", with the constituents that make up the resulting parse marked in bold. The top of the triangle represents the substring ',
 	                        _react2.default.createElement(_Math2.default, { l: '1' }),
 	                        ' to ',
 	                        _react2.default.createElement(_Math2.default, { l: '4' }),
@@ -60459,7 +60497,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'In this chapter, we provide an introduction to the Rechtspraak.nl data set that we use, with an introduction to the case law XML markup. In the final section of this chapter, we present a Java library that contains all the work that we have undertaken in this thesis, which effectively is a pipeline for enriching Dutch case law markup. In this chapter, we also make some remarks on importing and tokenization of Dutch case law documents. Element tagging both require more complicated machinery than tokenization, so merit their own chapter.'
+	                    'In this chapter, we provide an introduction to the Rechtspraak.nl data set that we use, with an introduction to the case law XML markup. In the final section of this chapter, we present a Java library that contains all the work that we have undertaken in this thesis, which effectively is a pipeline for enriching Dutch case law markup. In this chapter, we also make some remarks on importing and tokenization of Dutch case law documents. Element tagging and section parsing both require more complicated machinery than tokenization, so these topics merit their own chapter.'
 	                )
 	            );
 	        }
