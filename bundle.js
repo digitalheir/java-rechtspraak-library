@@ -24954,6 +24954,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	        pages: "127—134",
 	        year: 2010
 	    },
+	    sakakibara1994stochastic: {
+	        type: 'article', id: 'sakakibara1994stochastic',
+	        title: 'Stochastic context-free grammers for tRNA modeling',
+	        author: {
+	            abbr: "Sakakibara et al.",
+	            full: "Sakakibara, Yasubumi and Brown, Michael and Hughey, Richard and Mian, I Saira and Sjölander, Kimmen and Underwood, Rebecca C and Haussler, David"
+	        },
+	        journal: 'Nucleic acids research',
+	        volume: '22',
+	        number: '23',
+	        pages: '5112—5120',
+	        year: '1994',
+	        publisher: 'Oxford Univ Press'
+	    },
 	    jordan2002discriminative: {
 	        id: 'jordan2002discriminative',
 	        title: "On discriminative vs. generative classifiers: A comparison of logistic regression and naive bayes",
@@ -59581,6 +59595,14 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Math2 = _interopRequireDefault(_Math);
 
+	var _references = __webpack_require__(221);
+
+	var _references2 = _interopRequireDefault(_references);
+
+	var _bib = __webpack_require__(211);
+
+	var _bib2 = _interopRequireDefault(_bib);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -59625,7 +59647,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'A Probabilistic Context Free Grammar (PCFG) is then a Context Free Grammar in which each rule has a probability assigned to it, and every application of a rule multiplies its probabilities with the probabilities of all previously applied rules.'
+	                    'A Probabilistic Context Free Grammar (PCFG) is then a Context Free Grammar in which each rule has a probability assigned to it, and every application of a rule multiplies its probability with the probabilities of all previously applied rules.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'A lot of work has been done in parsing (subsets of) (P)CFGs in applications of natural language processing and parsing programming languages. More recently, PCFGs have been used for modeling RNA structures, such as in ',
+	                    _references2.default.cite(_bib2.default.sakakibara1994stochastic),
+	                    '.'
 	                )
 	            );
 	        }
