@@ -11,6 +11,14 @@ const figs = {
         id: "fig-title-tf",
         num: 3
     },
+    taggingResults: {
+        id: "fig-results",
+        num: 3
+    },
+    confusionMatrix: {
+        id: "fig-confusion-matrix",
+        num: 4
+    },
     figTitleWordCount: {
         id: "fig-title-word-count",
         num: 3

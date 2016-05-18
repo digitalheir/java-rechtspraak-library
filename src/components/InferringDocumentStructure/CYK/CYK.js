@@ -30,8 +30,8 @@ export default class CYK extends Component {
             <p>The standard version of the CYK algorithm is defined for
                 ordinary context
                 free grammars that are given in Chomsky normal form (CNF),
-                but is is easy to extend the algorithm to work on
-                stochastic grammars with unary rules, as we do in this
+                but is is easy to extend the algorithm to include support
+                for unary rules as well, as we do in this
                 section.
                 Note that any CFG may be transformed into an equivalent
                 grammar in Chomsky normal form, and this also holds for
@@ -60,7 +60,7 @@ export default class CYK extends Component {
                 of the form <code>A → B</code>, where <code>A</code> and <code>B</code> are nonterminals.
                 Extension of the algorith is simple:
                 at the end of every substring assignment, we apply unary rules, and add the result
-                if the rule produces a non-terminal that does not 
+                if the rule produces a non-terminal that does not
                 exist with at least that score in the table. We repeat until the cell does not change anymore.
             </p>
             <p>
@@ -68,6 +68,21 @@ export default class CYK extends Component {
             </p>
 
             <figure id={parseFig.id}>
+                <strong>Grammar</strong>
+                    <pre style={{display: 'inline-block'}}>S  → NP VP  (90%)<br/>
+S  → VP     (10%)<br/>
+VP → V NP   (50%)<br/>
+VP → V      (10%)<br/>
+NP → NP NP  (10%)<br/>
+NP → N      (70%)<br/>
+<br/>
+N  → fish   (20%)<br/>
+N  → people (50%)<br/>
+N  → tanks  (20%)<br/>
+V  → people (10%)<br/>
+V  → fish   (60%)<br/>
+V  → tanks  (30%)</pre>
+
                 <div className="table-container">
                     <table>
                         <tbody>
@@ -90,22 +105,7 @@ export default class CYK extends Component {
                 <figcaption>
                     <span className="figure-number">Fig {parseFig.num}.</span> An example parse chart for the
                     sentence
-                    "fish people fish tanks", with the following grammar:
-                    <div>
-                    <pre style={{display: 'inline-block'}}>S  → NP VP  (90%)<br/>
-S  → VP     (10%)<br/>
-VP → V NP   (50%)<br/>
-VP → V      (10%)<br/>
-NP → NP NP  (10%)<br/>
-NP → N      (70%)<br/>
-<br/>
-N  → fish   (20%)<br/>
-N  → people (50%)<br/>
-N  → tanks  (20%)<br/>
-V  → people (10%)<br/>
-V  → fish   (60%)<br/>
-V  → tanks  (30%)</pre>
-                    </div>
+                    "fish people fish tanks", with the constituents that make up the resulting parse marked in bold.
                     The top of the triangle represents the
                     substring <F l="1"/> to <F l="4"/>, i.e.
                     the entire sentence. We can derive <code>S</code> by

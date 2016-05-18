@@ -10,10 +10,6 @@ const taggingSections = {
     taggingResults: {
         id: 'tagging-results',
         title: 'Results',
-    },
-    taggingDiscussion: {
-        id: 'tagging-discussion',
-        title: 'Evaluation',
     }
 };
 
@@ -21,6 +17,5 @@ taggingSections.inOrder = [
     taggingSections.taggingIntroduction,
     taggingSections.taggingMethods,
     taggingSections.taggingResults,
-    taggingSections.taggingDiscussion
 ];
 export default taggingSections;

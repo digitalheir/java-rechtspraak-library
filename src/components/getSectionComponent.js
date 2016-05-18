@@ -10,7 +10,7 @@ import TaggingEvaluation from './Tagging/Results/Results';
 import TaggingDiscussion from './Tagging/Discussion/Discussion';
 import TaggingMethods from './Tagging/Methods/Methods';
 import TaggingIntroduction from './Tagging/Introduction/Introduction';
-import ManualTagger from './Tagging/Methods/ManualTagger/ManualTagger';
+// import ManualTagger from './Tagging/Methods/ManualTagger/ManualTagger';
 import DeterministicTagger from './Tagging/Methods/DeterministicTagger/DeterministicTagger';
 import CRF from './Tagging/Methods/CRF/CRF';
 import FeatureSelection from './Tagging/Methods/FeatureSelection/FeatureSelection';
@@ -44,8 +44,8 @@ export default function (route) {
         case sectionsTaggingMethods.deterministic.id:
             return DeterministicTagger;
         case sectionsTaggingMethods.manual.id:
-            return ManualTagger;
-        case sectionsTagging.taggingDiscussion.id:
+            // return ManualTagger;
+        // case sectionsTagging.taggingDiscussion.id:
             return TaggingDiscussion;
         case sectionsTagging.taggingResults.id:
             return TaggingEvaluation;

@@ -51,9 +51,9 @@ export default class TaggingIntroduction extends Component {
                 In this chapter, we experiment with CRFs
                 for labeling our tokens, and we compare the results
                 to a hand-written deterministic tagger that utilizes similar features.
+                It turns out that CRFs out-perform the hand-written tagger with a F<sub>0.5</sub> score
+                of 0.92 on <code>title text</code>, and F<sub>0.5</sub> scores of around 1.0 on the other labels.
             </p>
-
-            TODO a quick summary of results?
         </div>;
     }
 }

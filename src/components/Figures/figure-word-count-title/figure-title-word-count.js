@@ -34,8 +34,8 @@ export default class FigureWordCount extends React.Component {
                 </tbody>
             </table>
             <figcaption>
-                <span className="figure-number">Fig {figs.tfidf.num}.</span> Word count in
-                titles, excluding numbering.
+                <span className="figure-number">Fig {figs.figTitleWordCount.num}.</span> Word count in
+               section titles, excluding numbering.
             </figcaption>
         </figure>;
     }

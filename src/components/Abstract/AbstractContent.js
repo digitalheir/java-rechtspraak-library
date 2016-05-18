@@ -18,8 +18,8 @@ export default class Header extends React.Component {
                     mirrors the XML data offering of Rechtspraak.nl. We
                     experiment with Linear-Chain
                     Conditional Random Fields to label text elements with their role in the document (text,
-                    title or numbering). Afterwards, we experiment with stochastic context free grammars to generate a
-                    parse tree to model section nesting.
+                    title or numbering). Afterwards, we experiment with stochastic context free grammars
+                    to generate a parse tree to represent the section hierarchy of a document.
                 </p>
 
                 <p>

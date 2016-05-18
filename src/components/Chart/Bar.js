@@ -37,7 +37,7 @@ export default class extends Component {
       <rect
         className={"bar series-" + (i + 1)}
         x={xScale(d.x)}
-        y={yScale(d.y + d.y0)}
+        y={yScale(d.y + (d.y0?d.y0:0))}
         fill={this.props.fill}
         width={xScale.rangeBand()}
         height={height}

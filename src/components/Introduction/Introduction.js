@@ -33,22 +33,19 @@ export default class Introduction extends Component {
                 allows us to display a table of contents and to style section titles. But
                 it is also interesting for more advanced text mining
                 applications such as topic modeling and information extraction. For example, we may
-                want to represent some metadata in
-                a machine-readable manner (e.g., the judgment: 'claimant won',
-                'claimant lost', etc.). It would then be
-                useful to get some context about the section hierarchy.
+                want to assign sections with some metadata (such as a summary). It would then be
+                useful to have a section hierarchy ready.
             </p>
             <p>
-                In this chapter, we provide an introduction to the Rechtspraak.nl data set that we use, with an <a
-                href="#markup">introduction
-                to the case law XML markup</a>.
+                In this chapter, we provide an introduction to the Rechtspraak.nl data set that we use, with an
+                introduction
+                to the case law XML markup.
 
-                In the final section of this chapter, we present the Java library
+                In the final section of this chapter, we present a Java library
                 that contains all the work that we have undertaken in this thesis, which effectively is
-                a pipeline for  enriching Dutch case law markup. We make some remarks on
-                importing and tokenization of Dutch case law documents, followed by chapters
-                on element tagging and parsing a section tree, which both require more complicated 
-                machinery than tokenization.
+                a pipeline for enriching Dutch case law markup. In this chapter, we also make some remarks on
+                importing and tokenization of Dutch case law documents. Element tagging and section parsing
+                both require more complicated machinery than tokenization, so these topics merit their own chapter.
             </p>
         </Chapter>
     }

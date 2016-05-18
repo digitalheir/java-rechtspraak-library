@@ -90,7 +90,7 @@ export default class Introduction extends Component {
                 If we turn to <FigRef
                 fig={figs.markupStats}/>, we see that there is a recent trend for more richly marked up documents.
                 However,
-                a overwhelmingly large portion of older documents remains that contain no or
+                an overwhelmingly large portion of older documents remains that contain no or
                 only sparse markup.
                 To illustrate: at the time of writing, 78.7% of all judgment texts on Rechtspraak.nl do not
                 contain any <code>section</code> tag, implying that a large amount of
@@ -103,16 +103,16 @@ export default class Introduction extends Component {
             <p>
                 The problem that we investigate in this thesis, then, is whether we can
                 enrich the markup of documents in Rechtspraak.nl by automatically assigning a
-                section hierarchy among the text elements.
-                This task is split in the following subtasks:
+                section hierarchy to the text elements.
+                We can divide this problem in the following subtasks:
 
             </p>
                 <ol>
-                    <li><a href={"#"+introSections.importing}>importing documents from the Rechtspraak.nl web service;</a></li>
-                    <li><a href={"#"+introSections.importing}>tokenizing relevant text elements;</a></li>
+                    <li><a href={"#"+introSections.importing.id}>importing documents from the Rechtspraak.nl web service;</a></li>
+                    <li><a href={"#"+introSections.importing.id}>tokenizing relevant text elements;</a></li>
                     <li><a href={chapters.pathTo(this.props.path, chapters.tagging)}>labeling these text elements
-                        with their respective roles (e.g., "<code>section title</code>" and "<code>text
-                            block</code>");</a>
+                        with their respective roles (e.g., <code>section title</code>; <code>text
+                            block</code>);</a>
                     </li>
                     <li><a href={chapters.pathTo(this.props.path, chapters.documentStructure)}>
                         combining the tokens in such a way that they represent the

@@ -7,6 +7,11 @@ figure {
   margin: 1em 40px;
 }
 
+.minus90 {
+  display: inline-block;
+  transform: rotate(-90deg);
+}
+
 .figure-img-container {
   text-align: center;
 }

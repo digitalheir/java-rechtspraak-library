@@ -9,7 +9,7 @@ const inferringSections = {
     },
     evaluation: {
         id: 'parse-tree-evaluation',
-        title: 'Evaluation',
+        title: 'Results',
     }
 };
 

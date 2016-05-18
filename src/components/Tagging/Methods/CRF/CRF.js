@@ -7,6 +7,7 @@ import ref from '../../../Bibliography/References/references'
 import bib from  '../../../Bibliography/bib';
 import Math from  '../../../Math/Math';
 import GraphicalModels from  './GraphicalModels/GraphicalModels';
+import Performance from  './Performance/Performance';
 import LinearChainCRF from  './LinearChainCRF/LinearChainCRF';
 import HMMs from  './HMMs/HMMs';
 import LogRes from  './LogRes/LogRes';
@@ -67,6 +68,7 @@ export default class CRF extends Component {
             <GraphicalModels {...this.props}/>
             <HMMs {...this.props}/>
             <LinearChainCRF {...this.props}/>
+            <Performance {...this.props}/>
         </div>;
         // <LogRes {...this.props}/>
     }

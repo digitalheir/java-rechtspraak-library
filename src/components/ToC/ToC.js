@@ -11,7 +11,6 @@ class ToC extends React.Component {
             // console.log(chapter.getSections());
             return <ol>
                 {chapter.getSections().inOrder.map(section => {
-
                     if (!!section) return <li>
                         <a href={urlSection+"#"+section.id}>{section.title}</a>
                         {ToC.getSubSections(getSectionComponent(section.id), urlSection, depth + 1)}

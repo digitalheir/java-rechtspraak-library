@@ -10,6 +10,33 @@ const bib = {
         pages: "127—134",
         year: 2010
     },
+    abney1991procedure:{
+        type: 'inproceedings',
+    id:'abney1991procedure',
+    title: 'Procedure for quantitatively comparing the syntactic coverage of English grammars',
+    author: {
+        abbr: "Abney et al.",
+        full: 'Abney, Steven and Flickenger, S and Gdaniec, Claudia and Grishman, C and Harrison, Philip and Hindle, Donald and Ingria, Robert and Jelinek, Frederick and Klavans, Judith and Liberman, Mark and others'
+    },
+    booktitle: 'Proceedings of the workshop on Speech and Natural Language',
+    pages: '306--311',
+    year: '1991',
+    organization: 'Association for Computational Linguistics'
+    },
+    sakakibara1994stochastic: {
+        type: 'article', id: 'sakakibara1994stochastic',
+        title: 'Stochastic context-free grammers for tRNA modeling',
+        author: {
+            abbr: "Sakakibara et al.",
+            full: "Sakakibara, Yasubumi and Brown, Michael and Hughey, Richard and Mian, I Saira and Sjölander, Kimmen and Underwood, Rebecca C and Haussler, David"
+        },
+        journal: 'Nucleic acids research',
+        volume: '22',
+        number: '23',
+        pages: '5112—5120',
+        year: '1994',
+        publisher: 'Oxford Univ Press'
+    },
     jordan2002discriminative: {
         id: 'jordan2002discriminative',
         title: "On discriminative vs. generative classifiers: A comparison of logistic regression and naive bayes",
