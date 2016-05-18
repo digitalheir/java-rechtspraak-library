@@ -538,6 +538,11 @@ textarea {
 figure {
     margin: 1em 40px;
 }
+.minus90 {
+    display: inline-block;
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+}
 .figure-img-container {
     text-align: center;
 }
