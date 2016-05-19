@@ -1,5 +1,7 @@
 package org.leibnizcenter.rechtspraak.tagging.crf.features.textpatterns;
 
+import org.leibnizcenter.rechtspraak.tagging.crf.features.elementpatterns.ElementFeature;
+import org.leibnizcenter.rechtspraak.tagging.crf.features.elementpatterns.interfaces.ElementFeatureFunction;
 import org.leibnizcenter.rechtspraak.tagging.crf.features.elementpatterns.interfaces.NamedElementFeatureFunction;
 import org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf;
 import org.leibnizcenter.rechtspraak.tokens.numbering.ListMarking;

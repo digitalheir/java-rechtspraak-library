@@ -28,10 +28,10 @@ public class Quote extends RechtspraakElement {
             + Strings2.appendChars(CHARS_SINGLE_QUOTE)
             + "]";
     private static final String DOUBLE_QUOTE = "["
-            + Strings2.appendChars(CHARS_SINGLE_QUOTE)
+            + Strings2.appendChars(CHARS_DOUBLE_QUOTE)
             + "]";
     private static final String SINGLE_QUOTE = "["
-            + Strings2.appendChars(CHARS_DOUBLE_QUOTE)
+            + Strings2.appendChars(CHARS_SINGLE_QUOTE)
             + "]";
     private static final Pattern END_W_DOUBLE_QUOTE_STRICT = Pattern.compile(DOUBLE_QUOTE + "$");
     private static final Pattern END_W_DOUBLE_QUOTE = Pattern.compile(DOUBLE_QUOTE + "[^\\p{L}]{0,5}$");

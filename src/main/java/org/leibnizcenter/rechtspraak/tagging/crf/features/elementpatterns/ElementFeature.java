@@ -122,7 +122,6 @@ public enum ElementFeature implements NamedElementFeatureFunction {
     // We see these often in quotes
     //
     START_W_LID(ElementFeatureFunction.find(Constants.START_W_LID)),
-    START_W_ARTIKEL(ElementFeatureFunction.find(Constants.START_W_ARTIKEL)),
     CONTAINS_DOTDOTDOT(ElementFeatureFunction.find(Constants.DOTDOTDOT)),
     CONTAINS_IK(ElementFeatureFunction.find(Constants.IK)),
     CONTAINS_U(ElementFeatureFunction.find(Constants.UW)),
