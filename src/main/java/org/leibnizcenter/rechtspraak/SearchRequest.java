@@ -62,24 +62,26 @@ public class SearchRequest {
 //        System.out.println(getResponse().body().string().toString());
         Response response = getResponse();
 
-        if (response.code() == 200) {
-            //String str = response.body().string();
+        try {
+            if (response.code() == 200) {
+                //String str = response.body().string();
 
-            SAXParser saxParser = factory.newSAXParser();
-            ResultHandler handler = new ResultHandler();
-            try {
-                saxParser.parse(new InputSource(response.body().byteStream()), handler);
-                response.body().close(); // Make sure it's closed
-            } catch (SAXException e) {
-                response.body().close(); // Make sure it's closed
-                //System.err.println(str);
-                throw e;
+                SAXParser saxParser = factory.newSAXParser();
+                ResultHandler handler = new ResultHandler();
+                try {
+                    saxParser.parse(new InputSource(response.body().byteStream()), handler);
+
+                } catch (SAXException e) {
+                    //System.err.println(str);
+                    throw e;
+                }
+
+                return new SearchResult(this, handler.judgments);
+            } else {
+                throw new HttpStatusException("Code was not 200 but " + response.code(), response.code(), getRequest().url().toString());
             }
-
-            return new SearchResult(this, handler.judgments);
-        } else {
+        } finally {
             response.body().close(); // Make sure it's closed
-            throw new HttpStatusException("Code was not 200 but " + response.code(), response.code(), getRequest().url().toString());
         }
     }
 
