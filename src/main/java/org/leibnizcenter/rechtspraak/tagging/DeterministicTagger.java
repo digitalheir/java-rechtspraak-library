@@ -1,9 +1,11 @@
 package org.leibnizcenter.rechtspraak.tagging;
 
+import cc.mallet.types.TokenSequence;
 import org.leibnizcenter.rechtspraak.tagging.crf.features.elementpatterns.ElementFeature;
 import org.leibnizcenter.rechtspraak.tagging.crf.features.elementpatterns.NumberingFeature;
 import org.leibnizcenter.rechtspraak.tagging.crf.features.textpatterns.TitlePatterns;
 import org.leibnizcenter.rechtspraak.tokens.numbering.Numbering;
+import org.leibnizcenter.rechtspraak.tokens.text.Newline;
 import org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf;
 
 import java.util.ArrayList;
@@ -14,6 +16,7 @@ import java.util.List;
  */
 public class DeterministicTagger {
     // TODO make feature functions
+
 
     public static List<Label> tag(List<TokenTreeLeaf> untagged) {
         List<Label> tagged = new ArrayList<>(untagged.size());
@@ -74,7 +77,9 @@ public class DeterministicTagger {
 
     public static Label firstPass(List<TokenTreeLeaf> untagged, int ix) {
         TokenTreeLeaf token = untagged.get(ix);
-        if (ElementFeature.dontTryToLabel.apply(untagged,ix)) {
+        if (untagged.get(ix) instanceof Newline) {
+            return Label.NEWLINE;
+        } else if (ElementFeature.dontTryToLabel.apply(untagged, ix)) {
             return Label.TEXT_BLOCK;
         } else if (ElementFeature.probablySectionTitle.apply(untagged, ix)) {
             //if (probablyInfoTag(untagged, ix, tagged)) return Label.TEXT_BLOCK;
@@ -87,8 +92,6 @@ public class DeterministicTagger {
             return Label.TEXT_BLOCK;
         }
     }
-
-
 
 
     private static boolean probablyInfoTag(List<TokenTreeLeaf> untagged, int ix, List<Label> tagged) {
@@ -120,4 +123,5 @@ public class DeterministicTagger {
         );
         //|| (isProbablyJustStartOfSentence,) // 7 patronen //TODO
     }
+
 }

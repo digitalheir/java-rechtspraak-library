@@ -129,8 +129,7 @@ public class ListMarking extends RechtspraakElement {
     public static int startsWithListMarkingAtChar(String s) {
         int at = Strings2.firstNonWhitespaceCharIsAny(s, all);
         if (at > -1
-                && s.length() > at + 1
-                && !(Strings2.firstNonWhitespaceCharIsAny(s, all, at + 1) > -1)) return at;
+                && !(s.length() >= at + 1 && Strings2.firstNonWhitespaceCharIsAny(s, all, at + 1) > -1)) return at;
         else return -1;
     }
 }

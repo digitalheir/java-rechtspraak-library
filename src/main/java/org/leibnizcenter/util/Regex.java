@@ -41,7 +41,7 @@ public class Regex {
      * Starts with whitespace, then a decimal or roman numeral
      */
     public static final Pattern START_WITH_NUM = Pattern.compile(
-            "^(" +
+            "^(\\s*" +
                     // Leading parenthesis
                     "(?:\\( {0,2})?" +
                     "(" +
@@ -54,7 +54,7 @@ public class Regex {
                     //
                     "(?:(?:[0-9]+)" +
                     "|(?:i{1,3}\\b)" +
-                    "|(?:i?vi{0,3}\\b)" +
+                    "|(?:i?[xv]i{0,3}\\b)" +
                     "|(?:[a-z]\\b)" +
                     ")" +
                     ")" +
@@ -173,4 +173,5 @@ public class Regex {
     public static final Pattern FEIT = Pattern.compile("feit(en)\\s+.{0,5}", Pattern.CASE_INSENSITIVE);
     public static final Pattern START_W_FEIT = Pattern.compile("^feit", Pattern.CASE_INSENSITIVE);
     public static final Pattern START_W_ARTIKEL = Pattern.compile("^artikel", Pattern.CASE_INSENSITIVE);
+    public static final Pattern START_W_AANZIEN_VAN = Pattern.compile("^ten aanzien van", Pattern.CASE_INSENSITIVE);
 }

@@ -40,7 +40,7 @@ public class Enrich {
 
     public Enrich() throws IOException, ClassNotFoundException, URISyntaxException {
         this(new File(Enrich.class.getClassLoader()
-                .getResource(Const.RECHTSPRAAK_MARKUP_TAGGER_CRF_TRAINED_ON_AUTO_ANNOTATED)
+                .getResource(Const.RECHTSPRAAK_MARKUP_TAGGER_CRF_TRAINED_ON_MANUALLY_ANNOTATED)
                 .toURI())
         );
     }

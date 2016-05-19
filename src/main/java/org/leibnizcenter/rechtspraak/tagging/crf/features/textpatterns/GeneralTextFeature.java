@@ -45,6 +45,7 @@ public enum GeneralTextFeature implements StringFeature, NamedElementFeatureFunc
     FEIT(s -> Regex.FEIT.matcher(s.trim()).matches()),
     START_W_FEIT(s -> Regex.START_W_FEIT.matcher(s.trim()).find()),
     START_W_ARTIKEL(s -> Regex.START_W_ARTIKEL.matcher(s.trim()).find()),
+    START_W_TEN_AANZIEN_VAN(s -> Regex.START_W_AANZIEN_VAN.matcher(s.trim()).find()),
     START_W_LOWER_CASE_LETTER(s -> Regex.START_W_LOWERCASE_LETTER.matcher(s.trim()).find()),
     START_W_UPPER_CASE_LETTER(s -> Regex.START_W_UPPERCASE_LETTER.matcher(s.trim()).find()),
 

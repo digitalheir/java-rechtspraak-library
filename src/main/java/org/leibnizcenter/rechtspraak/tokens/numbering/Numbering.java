@@ -29,13 +29,18 @@ public class Numbering extends RechtspraakElement {
     public Numbering(Element element, boolean forceParse) {
         super(element);
         String txt = this.getTextContent();
-        this.numbering = NumberingNumber.startsWithNumbering(txt);
+        this.numbering = NumberingNumber.startsWithNumericNumbering(txt);
         if (this.numbering == null) {
-            while (forceParse && this.numbering == null && txt.length() > 1) {
-                txt = txt.substring(1);
-                this.numbering = NumberingNumber.startsWithNumbering(txt);
+            if (ListMarking.startsWithListMarking(txt) && forceParse) {
+                this.numbering = new NonNumericNumbering(txt, null); // TODO terminal...
+            } else {
+                while (forceParse && this.numbering == null && txt.length() > 1) {
+                    txt = txt.substring(1);
+                    this.numbering = NumberingNumber.startsWithNumericNumbering(txt);
+                }
             }
-            if (this.numbering == null) throw new NullPointerException();
+            if (this.numbering == null)
+                throw new NullPointerException();
         }
     }
 

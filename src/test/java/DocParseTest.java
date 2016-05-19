@@ -1,3 +1,5 @@
+import com.google.common.base.Charsets;
+import com.google.common.io.CharStreams;
 import generated.OpenRechtspraak;
 import nl.rechtspraak.schema.rechtspraak_1.TRechtspraakMarkup;
 import org.jsoup.HttpStatusException;
@@ -10,6 +12,8 @@ import javax.xml.bind.JAXBException;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.xpath.XPathExpressionException;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.file.Files;
@@ -71,7 +75,10 @@ public class DocParseTest {
     private void parseFirst(ArrayList<String> list) {
         String ecli = list.get(0);
         try {
-            OpenRechtspraak doc = parseXml(requestXmlForEcli(ecli).body().byteStream());
+            InputStream isXml = requestXmlForEcli(ecli).body().byteStream();
+            //String str = CharStreams.toString(new InputStreamReader(isXml, Charsets.UTF_8));
+            //System.out.println(str);
+            OpenRechtspraak doc = parseXml(isXml);
 
             List<Description> descs = doc.getRDF().getDescription();
             assertEquals(descs.size(), 2);

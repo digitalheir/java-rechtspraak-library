@@ -352,8 +352,12 @@ public class TrainCrf {
         private final boolean useNewlines;
 
         public RsInstanceIterator(List<File> xmlFiles, boolean preserveInfo, boolean useNewlines) throws ParserConfigurationException {
-            it = new TokenList.FileIterable(
-                    new TokenList.FileIterator(xmlFiles.toArray(new File[xmlFiles.size()]))).iterator();
+            this(new TokenList.FileIterable(new TokenList.FileIterator(xmlFiles.toArray(new File[xmlFiles.size()])))
+                    .iterator(), preserveInfo, useNewlines);
+        }
+
+        public RsInstanceIterator(TokenList.FileIterator it, boolean preserveInfo, boolean useNewlines) throws ParserConfigurationException {
+            this.it = it;
             this.preserveInfo = preserveInfo;
             this.useNewlines = useNewlines;
         }

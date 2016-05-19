@@ -63,7 +63,7 @@ public interface NumberingNumber {
                         && ((SubSectionNumber) startsWithNumbering).firstSubsectionOf().isSuccedentOf(precedingNumber));
     }
 
-    static NumberingNumber startsWithNumbering(String textContent) {
+    static NumberingNumber startsWithNumericNumbering(String textContent) {
         Matcher numberMatcher = Regex.START_WITH_NUM.matcher(textContent);
         if (numberMatcher.find()) {
             if (!Regex.YYYY_MM_DD.matcher(textContent).find()

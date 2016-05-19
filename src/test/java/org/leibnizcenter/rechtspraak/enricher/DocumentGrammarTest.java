@@ -17,20 +17,6 @@ public class DocumentGrammarTest {
     @Test
     public void test() {
         DocumentGrammar grammar = new DocumentGrammar();
-        Iterator<Term> iterator = grammar.iterator();
-        System.out.println(iterator.next());
-        System.out.println(iterator.next());
-        System.out.println(iterator.next());
-        System.out.println(iterator.next());
-        System.out.println(iterator.next());
-        System.out.println(iterator.next());
-        System.out.println(iterator.next());
-        System.out.println(iterator.next());
-        System.out.println(iterator.next());
-        System.out.println(iterator.next());
-        System.out.println(iterator.next());
-        System.out.println(iterator.next());
-        System.out.println(iterator.next());
 
         List<Terminal> sentence = Lists.newArrayList(
                 DocumentGrammar.TERMINAL_NEWLINE,

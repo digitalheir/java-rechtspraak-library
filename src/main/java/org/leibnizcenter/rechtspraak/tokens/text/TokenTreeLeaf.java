@@ -21,7 +21,7 @@ public abstract class TokenTreeLeaf implements TokenTreeVertex, Node {
     private static final String SPACE = " ";
 
     private final Node node;
-    private final String textContent;
+    private final String txt;
     private final static Pattern LEADING_ARTICLE = Pattern.compile("^\\s*(de|het|een)\\b\\s*");
     private final String normalizedText;
     public final String[] words;
@@ -33,9 +33,9 @@ public abstract class TokenTreeLeaf implements TokenTreeVertex, Node {
     public TokenTreeLeaf(Node n) {
         this.node = n;
         String textContent = n.getTextContent();
-        this.textContent = textContent == null ? null : textContent.trim();
+        this.txt = textContent == null ? null : textContent.trim();
 
-        words = this.textContent == null ? ZERO_STRINGS : getWords(textContent);
+        words = this.txt == null ? ZERO_STRINGS : getWords(textContent);
         wordsBeforeOpeningBracket = getWordsBeforeOpeningBracket(words);
 
         emphasis = findEmphasis();
@@ -227,7 +227,7 @@ public abstract class TokenTreeLeaf implements TokenTreeVertex, Node {
 
     @Override
     public String getTextContent() throws DOMException {
-        return textContent;
+        return txt;
     }
 
     @Override
@@ -301,7 +301,7 @@ public abstract class TokenTreeLeaf implements TokenTreeVertex, Node {
 
     @Override
     public String toString() {
-        return node.getNodeName() + ": " + textContent;
+        return node.getNodeName() + ": " + txt;
     }
 
     public Set<String> getEmphasis() {

@@ -50,6 +50,7 @@ public class DocumentGrammar extends Grammar {
     public static final NonTerminal SINGLE_TITLE_TEXT = new NonTerminalImpl("SINGLE_TITLE_TEXT");
     public static final NonTerminal SINGLE_NUMBERING = new NonTerminalImpl("SINGLE_NUMBERING");
     public static final NonTerminal COMPLETE_SECTION_CONTENT = new NonTerminalImpl("COMPLETE_SECTION_CONTENT");
+    public static final NonTerminal NONTERMINAL_NEWLINE = new NonTerminalImpl("NONTERMINAL_NEWLINE");
 
 
     public static final Terminal TERMINAL_NUMBERING = new Terminal(Label.NR);
@@ -95,8 +96,9 @@ public class DocumentGrammar extends Grammar {
             new StandardRule(SECTION_TITLE, rhs(SECTION_TITLE_TEXT), 1.0),
             new StandardRule(SECTION_TITLE, rhs(SINGLE_NUMBERING, SECTION_TITLE_TEXT), 1.0),
 
+            new StandardRule(NONTERMINAL_NEWLINE, rhs(TERMINAL_NEWLINE), 1.0),
             new StandardRule(SECTION_TITLE_TEXT, rhs(SINGLE_TITLE_TEXT), 1.0),
-            new StandardRule(SECTION_TITLE_TEXT, rhs(TERMINAL_NEWLINE, SINGLE_TITLE_TEXT), 1.0),
+            new StandardRule(SECTION_TITLE_TEXT, rhs(NONTERMINAL_NEWLINE,SECTION_TITLE_TEXT), 0.99),
 
             new StandardRule(SINGLE_TITLE_TEXT, rhs(TERMINAL_SECTION_TITLE), 1.0),
 
