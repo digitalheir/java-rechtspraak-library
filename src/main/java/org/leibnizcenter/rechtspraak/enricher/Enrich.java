@@ -39,9 +39,8 @@ public class Enrich {
     private final CRF crf;
 
     public Enrich() throws IOException, ClassNotFoundException, URISyntaxException {
-        this(new File(Enrich.class.getClassLoader()
-                .getResource(Const.RECHTSPRAAK_MARKUP_TAGGER_CRF_TRAINED_ON_MANUALLY_ANNOTATED)
-                .toURI())
+        this.crf = ApplyCrf.loadCrf(Enrich.class.getClassLoader()
+                .getResourceAsStream(Const.RECHTSPRAAK_MARKUP_TAGGER_CRF_TRAINED_ON_MANUALLY_ANNOTATED)
         );
     }
 

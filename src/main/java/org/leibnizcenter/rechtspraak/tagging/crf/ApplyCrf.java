@@ -1,20 +1,14 @@
 package org.leibnizcenter.rechtspraak.tagging.crf;
 
 import cc.mallet.fst.CRF;
-import cc.mallet.fst.SimpleTagger;
-import cc.mallet.pipe.Pipe;
 import cc.mallet.types.Instance;
 import cc.mallet.types.Sequence;
 import cc.mallet.types.TokenSequence;
-import org.leibnizcenter.rechtspraak.tokens.TokenList;
 import org.leibnizcenter.util.Const;
 import org.leibnizcenter.util.Xml;
 
 import javax.xml.parsers.ParserConfigurationException;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
+import java.io.*;
 import java.util.Iterator;
 import java.util.List;
 
@@ -56,6 +50,10 @@ public class ApplyCrf {
 
     public static CRF loadCrf(File file) throws IOException, ClassNotFoundException {
         FileInputStream fis = new FileInputStream(file);
+        return loadCrf(fis);
+    }
+
+    public static CRF loadCrf(InputStream fis) throws IOException, ClassNotFoundException {
         ObjectInputStream ois = new ObjectInputStream(fis);
         return (CRF) ois.readObject();
     }
