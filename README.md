@@ -26,8 +26,8 @@ compile 'org.leibnizcenter:rechtspraak:2.0.0'
 ```
 
 ## Requirements
-Versions 1.X require Java 7
-Versions 2.X require Java 8
+* Versions 1.X.X require Java 7
+* Versions 2.X.X require Java 8
 
 ## More
-Inquiries go to m.f.a.trompper@uva.nl.
+Inquiries go to maarten.trompper@gmail.com.
