@@ -60,23 +60,26 @@ public class SearchRequest {
 
     public SearchResult execute() throws IOException, ParserConfigurationException, SAXException {
 //        System.out.println(getResponse().body().string().toString());
-        Response resp = getResponse();
+        Response response = getResponse();
 
-        if (resp.code() == 200) {
-
-            String str = getResponse().body().string();
+        if (response.code() == 200) {
+            //String str = response.body().string();
 
             SAXParser saxParser = factory.newSAXParser();
             ResultHandler handler = new ResultHandler();
             try {
-                saxParser.parse(new InputSource(new StringReader(str)), handler);
+                saxParser.parse(new InputSource(response.body().byteStream()), handler);
+                response.body().close(); // Make sure it's closed
             } catch (SAXException e) {
-                System.err.println(str);
+                response.body().close(); // Make sure it's closed
+                //System.err.println(str);
                 throw e;
             }
+
             return new SearchResult(this, handler.judgments);
         } else {
-            throw new HttpStatusException("Code was not 200 but " + resp.code(), resp.code(), getRequest().url().toString());
+            response.body().close(); // Make sure it's closed
+            throw new HttpStatusException("Code was not 200 but " + response.code(), response.code(), getRequest().url().toString());
         }
     }
 
