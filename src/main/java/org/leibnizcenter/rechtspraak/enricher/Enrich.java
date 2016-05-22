@@ -59,6 +59,10 @@ public class Enrich {
         // Apply tagging
         List<Label> tags = DeterministicTagger.tag(tokenList);
 
+        parseTree(contentRoot, tokenList, tags);
+    }
+
+    public static void parseTree(Element contentRoot, TokenList tokenList, List<Label> tags) {
         // Make sectioning tree if there is no section tag already
         //TODO
 //        if (!Xml.containsTag(contentRoot, "section")) {
@@ -107,7 +111,7 @@ public class Enrich {
         });
 
         // Dissolve intermediate tags
-        cleanUp(doc.getDocumentElement());
+        cleanUp(tokenList.getSource().getDocumentElement());
     }
 
     private static final NonTerminalImpl a = new NonTerminalImpl(" "); // placeholder
@@ -174,7 +178,7 @@ public class Enrich {
      *
      * @param tree
      */
-    private void setNewXmlStructure(ScoreChart.ParseTreeContainer tree, Element contentRoot) {
+    private static void setNewXmlStructure(ScoreChart.ParseTreeContainer tree, Element contentRoot) {
 //        for (Node n : Xml.getChildren(contentRoot))
 //            contentRoot.removeChild(n);
 
@@ -189,7 +193,7 @@ public class Enrich {
         contentRoot.getParentNode().replaceChild(newContentRoot, contentRoot);
     }
 
-    private void recursiveCreateXml(TypeContainer root, Node addTo) {
+    private static void recursiveCreateXml(TypeContainer root, Node addTo) {
         if (root instanceof ScoreChart.ParseTreeContainer) {
             // Container
             Type type = root.getType();

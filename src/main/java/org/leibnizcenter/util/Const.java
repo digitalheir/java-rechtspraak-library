@@ -12,4 +12,5 @@ public class Const {
     public static final String RECHTSPRAAK_MARKUP_TAGGER_CRF_TRAINED_ON_MANUALLY_ANNOTATED_NO_NEWLINES = "tagger-trained-on-manually-annotated-no-newlines.crf";
     public static final String RECHTSPRAAK_TOKEN = "LabeledToken";
     public static final String IN_FOLDER_TESTING = "/media/maarten/Media/rechtspraak-rich-docs-20160221-annotated-for-testing/";
+    public static final String OUT_FOLDER_PARSE_TEST = "/media/maarten/Media/rechtspraak-rich-docs-20160221-auto-parsed-doc/";
 }
