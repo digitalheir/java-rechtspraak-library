@@ -70,7 +70,7 @@ public class DocumentGrammar extends Grammar {
             new StandardRule(DOCUMENT_CONTENT, rhs(TEXT_BLOB, COMPLETE_SECTION_BLOB_W_TRAILING_TEXT), 0.8),
 
             new CompletedSectionBlob(COMPLETE_SECTION_BLOB, rhs(SECTION_BLOB)),
-            new StandardRule(COMPLETE_SECTION_BLOB_W_TRAILING_TEXT, rhs(COMPLETE_SECTION_BLOB, TEXT_BLOB), 1.0),
+            new StandardRule(COMPLETE_SECTION_BLOB_W_TRAILING_TEXT, rhs(COMPLETE_SECTION_BLOB, TEXT_BLOB), 0.9),
 
             new TwoSectionBlobs(SECTION_BLOB, rhs(SECTION_BLOB, SECTION_BLOB)),
             new StandardRule(SECTION_BLOB, rhs(SECTION), 1.0),
@@ -91,7 +91,6 @@ public class DocumentGrammar extends Grammar {
             //
             // Section Title
             //
-
             new StandardRule(SECTION_TITLE, rhs(SINGLE_NUMBERING), 1.0),
             new StandardRule(SECTION_TITLE, rhs(SECTION_TITLE_TEXT), 1.0),
             new StandardRule(SECTION_TITLE, rhs(SINGLE_NUMBERING, SECTION_TITLE_TEXT), 1.0),
