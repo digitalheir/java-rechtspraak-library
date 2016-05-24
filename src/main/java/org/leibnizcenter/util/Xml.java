@@ -455,4 +455,14 @@ public class Xml {
 
         throw new InvalidParameterException("No common ancestors exists for given nodes.");
     }
+
+    public static List<Element> getElementChildren(Element manualParsed) {
+        NodeList children = manualParsed.getChildNodes();
+        List<Element> l = new ArrayList<>(children.getLength());
+        for (int i = 0; i < children.getLength(); i++) {
+            Node candidate = children.item(i);
+            if(candidate.getNodeType()==Node.ELEMENT_NODE) l.add((Element) candidate);
+        }
+        return l;
+    }
 }
