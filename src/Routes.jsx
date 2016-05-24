@@ -3,6 +3,7 @@ import Router from 'react-router'
 import Root from './components/Root'
 import Index from './components/Index'
 import Introduction from './components/Introduction/Introduction'
+import FullThesis from './components/FullThesis/FullThesis'
 import Tagging from './components/Tagging/Tagging'
 import InferringDocumentStructure from './components/InferringDocumentStructure/InferringDocumentStructure'
 import Dissemination from './components/Dissemination/Dissemination'
@@ -16,7 +17,9 @@ let Routes = <Route handler={Root} path='/'>
     <DefaultRoute handler={Index}/>
     {
         chapters.inOrder.map(chapter => <Route path={chapter.route} handler={getHandler(chapter.route)}/>)
-    })}
+    }
+    <Route path={'/full/'} handler={FullThesis}/>
+    )}
 </Route>;
 
 function getHandler(route) {

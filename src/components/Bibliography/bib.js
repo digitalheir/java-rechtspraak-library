@@ -10,18 +10,30 @@ const bib = {
         pages: "127—134",
         year: 2010
     },
-    abney1991procedure:{
-        type: 'inproceedings',
-    id:'abney1991procedure',
-    title: 'Procedure for quantitatively comparing the syntactic coverage of English grammars',
-    author: {
-        abbr: "Abney et al.",
-        full: 'Abney, Steven and Flickenger, S and Gdaniec, Claudia and Grishman, C and Harrison, Philip and Hindle, Donald and Ingria, Robert and Jelinek, Frederick and Klavans, Judith and Liberman, Mark and others'
+    collins1997three: {
+        id: 'collins1997three', type: 'inproceedings',
+        title: "Three generative, lexicalised models for statistical parsing",
+        author: {
+            firstName: 'Michael',
+            lastName: 'Collins'
+        },
+        booktitle: "Proceedings of the 35th Annual Meeting of the Association for Computational Linguistics and Eighth Conference of the European Chapter of the Association for Computational Linguistics",
+        pages: "16—23",
+        organization: 'Association for Computational Linguistics',
+        year: 1997
     },
-    booktitle: 'Proceedings of the workshop on Speech and Natural Language',
-    pages: '306--311',
-    year: '1991',
-    organization: 'Association for Computational Linguistics'
+    abney1991procedure: {
+        type: 'inproceedings',
+        id: 'abney1991procedure',
+        title: 'Procedure for quantitatively comparing the syntactic coverage of English grammars',
+        author: {
+            abbr: "Abney et al.",
+            full: 'Abney, Steven and Flickenger, S and Gdaniec, Claudia and Grishman, C and Harrison, Philip and Hindle, Donald and Ingria, Robert and Jelinek, Frederick and Klavans, Judith and Liberman, Mark and others'
+        },
+        booktitle: 'Proceedings of the workshop on Speech and Natural Language',
+        pages: '306--311',
+        year: '1991',
+        organization: 'Association for Computational Linguistics'
     },
     sakakibara1994stochastic: {
         type: 'article', id: 'sakakibara1994stochastic',
