@@ -22967,23 +22967,23 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Index2 = _interopRequireDefault(_Index);
 
-	var _Introduction = __webpack_require__(321);
+	var _Introduction = __webpack_require__(317);
 
 	var _Introduction2 = _interopRequireDefault(_Introduction);
 
-	var _FullThesis = __webpack_require__(323);
+	var _FullThesis = __webpack_require__(319);
 
 	var _FullThesis2 = _interopRequireDefault(_FullThesis);
 
-	var _Tagging = __webpack_require__(324);
+	var _Tagging = __webpack_require__(320);
 
 	var _Tagging2 = _interopRequireDefault(_Tagging);
 
-	var _InferringDocumentStructure = __webpack_require__(325);
+	var _InferringDocumentStructure = __webpack_require__(321);
 
 	var _InferringDocumentStructure2 = _interopRequireDefault(_InferringDocumentStructure);
 
-	var _Dissemination = __webpack_require__(326);
+	var _Dissemination = __webpack_require__(322);
 
 	var _Dissemination2 = _interopRequireDefault(_Dissemination);
 
@@ -25485,12 +25485,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    "p",
 	                    null,
-	                    "In this thesis, we explore the problem of automatically assigning a section structure to the texts of Dutch court judgments. To this end, we develop a database that mirrors the XML data offering of Rechtspraak.nl. We experiment with Linear-Chain Conditional Random Fields to label text elements with their role in the document (text, title or numbering). Afterwards, we experiment with stochastic context free grammars to generate a parse tree to represent the section hierarchy of a document."
+	                    "In this thesis, we explore the problem of automatically assigning a section structure to the texts of Dutch court judgments. To this end, we develop a database that mirrors the XML data offering of Rechtspraak.nl. We experiment with Linear-Chain Conditional Random Fields to label text elements with their role in the document (text, title or numbering). Given a list of labels, we experiment with stochastic context free grammars to generate a parse tree to represent the section hierarchy of a document."
 	                ),
 	                _react2.default.createElement(
 	                    "p",
 	                    null,
-	                    "TODO: results"
+	                    "We report F",
+	                    _react2.default.createElement(
+	                        "sub",
+	                        null,
+	                        "1"
+	                    ),
+	                    " scores of around 0.91 for tagging and 0.92 for parsing."
 	                )
 	            );
 	        }
@@ -25765,59 +25771,59 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _sections10 = _interopRequireDefault(_sections9);
 
-	var _Results = __webpack_require__(297);
+	var _Results = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./Tagging/Results/Results\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 
 	var _Results2 = _interopRequireDefault(_Results);
 
-	var _Discussion = __webpack_require__(302);
+	var _Discussion = __webpack_require__(298);
 
 	var _Discussion2 = _interopRequireDefault(_Discussion);
 
-	var _Methods = __webpack_require__(303);
+	var _Methods = __webpack_require__(299);
 
 	var _Methods2 = _interopRequireDefault(_Methods);
 
-	var _Introduction = __webpack_require__(305);
+	var _Introduction = __webpack_require__(301);
 
 	var _Introduction2 = _interopRequireDefault(_Introduction);
 
-	var _DeterministicTagger = __webpack_require__(306);
+	var _DeterministicTagger = __webpack_require__(302);
 
 	var _DeterministicTagger2 = _interopRequireDefault(_DeterministicTagger);
 
-	var _CRF = __webpack_require__(307);
+	var _CRF = __webpack_require__(303);
 
 	var _CRF2 = _interopRequireDefault(_CRF);
 
-	var _FeatureSelection = __webpack_require__(313);
+	var _FeatureSelection = __webpack_require__(309);
 
 	var _FeatureSelection2 = _interopRequireDefault(_FeatureSelection);
 
-	var _Introduction3 = __webpack_require__(314);
+	var _Introduction3 = __webpack_require__(310);
 
 	var _Introduction4 = _interopRequireDefault(_Introduction3);
 
-	var _Methods3 = __webpack_require__(315);
+	var _Methods3 = __webpack_require__(311);
 
 	var _Methods4 = _interopRequireDefault(_Methods3);
 
-	var _Evaluation = __webpack_require__(316);
+	var _Evaluation = __webpack_require__(312);
 
 	var _Evaluation2 = _interopRequireDefault(_Evaluation);
 
-	var _ContextFreeGrammars = __webpack_require__(317);
+	var _ContextFreeGrammars = __webpack_require__(313);
 
 	var _ContextFreeGrammars2 = _interopRequireDefault(_ContextFreeGrammars);
 
-	var _AdditionalEnrichment = __webpack_require__(318);
+	var _AdditionalEnrichment = __webpack_require__(314);
 
 	var _AdditionalEnrichment2 = _interopRequireDefault(_AdditionalEnrichment);
 
-	var _CYK = __webpack_require__(319);
+	var _CYK = __webpack_require__(315);
 
 	var _CYK2 = _interopRequireDefault(_CYK);
 
-	var _sections11 = __webpack_require__(320);
+	var _sections11 = __webpack_require__(316);
 
 	var _sections12 = _interopRequireDefault(_sections11);
 
@@ -25969,9 +25975,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ' and judgments texts for about 350.000 judgments in XML',
 	                    _react2.default.createElement(_Source2.default, {
 	                        href: 'http://data.rechtspraak.nl/uitspraken/zoeken?return=doc' }),
-	                    '. In this thesis, we are interested in markup, so we only consider those documents that contain text. As ',
+	                    '. In this thesis, we only consider those documents that contain text because we are interested in markup. The full data set of ',
+	                    _react2.default.createElement(
+	                        'a',
+	                        { href: 'http://www.rechtspraak.nl/' },
+	                        'Rechtspraak.nl'
+	                    ),
+	                    ' court judgments contains only a fraction of all court judgments that exist in the Netherlands, but the collection is curated so that it is representative of case law in the Netherlands. (',
 	                    _references2.default.cite(_bib2.default.vanopijnen2014),
-	                    ' explains, the full data set of Rechtspraak.nl contains only a fraction of all court judgments that exist in the Netherlands, but the collection is curated so that it is representative of case law in the Netherlands.'
+	                    '.)'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -25979,7 +25991,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'If we turn to ',
 	                    _react2.default.createElement(_FigRef2.default, {
 	                        fig: _figs2.default.markupStats }),
-	                    ', we see that there is a recent trend for more richly marked up documents. However, an overwhelmingly large portion of older documents remains that contain no or only sparse markup. To illustrate: at the time of writing, 78.7% of all judgment texts on Rechtspraak.nl do not contain any ',
+	                    ', we see that there is a recent trend for more richly marked up documents. However, an overwhelmingly large portion of older documents remains, which contain no or only sparse markup. To illustrate: at the time of writing, 78.7% of all judgment texts on Rechtspraak.nl do not contain any ',
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -26020,7 +26032,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        _react2.default.createElement(
 	                            'a',
 	                            { href: _chapters2.default.pathTo(this.props.path, _chapters2.default.tagging) },
-	                            'labeling these text elements with their respective roles (e.g., ',
+	                            'labeling these text elements with their respective roles (i.e. ',
 	                            _react2.default.createElement(
 	                                'code',
 	                                null,
@@ -26030,7 +26042,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            _react2.default.createElement(
 	                                'code',
 	                                null,
+	                                'numbering'
+	                            ),
+	                            '; ',
+	                            _react2.default.createElement(
+	                                'code',
+	                                null,
 	                                'text block'
+	                            ),
+	                            '; ',
+	                            _react2.default.createElement(
+	                                'code',
+	                                null,
+	                                'newline'
 	                            ),
 	                            ');'
 	                        )
@@ -26053,13 +26077,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'The project in published as two separate Java libraries: one for importing and enriching documents from Rechtspraak.nl (',
+	                    'The source code for this undertaking in published as two separate Java libraries: one for importing and enriching documents from Rechtspraak.nl (',
 	                    _react2.default.createElement(
 	                        'a',
 	                        { href: 'https://github.com/digitalheir/java-rechtspraak-library' },
 	                        'source code on GitHub'
 	                    ),
-	                    '), and one for mirroring the Rechtspraak.nl corpus on a CouchDB database (',
+	                    '), and one for mirroring the Rechtspraak.nl corpus to a CouchDB database (',
 	                    _react2.default.createElement(
 	                        'a',
 	                        { href: 'https://github.com/digitalheir/dutch-case-law-to-couchdb' },
@@ -26413,6 +26437,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	        id: "fig-title-patterns",
 	        num: 2
 	    },
+	    sectionsTfidf: {
+	        id: "fig-tfidf-sections",
+	        num: 4
+	    },
 
 	    hmm: function () {
 	        var id = "fig-hmm";
@@ -26442,7 +26470,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	}, _defineProperty(_figs, 'tfidf', function () {
 	    var id = "tfidf";
-	    var num = 1;
+	    var num = 3;
 
 	    return {
 	        id: id,
@@ -44848,7 +44876,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                ),
 	                _react2.default.createElement(
 	                    'section',
-	                    { id: 'info' },
+	                    { 'class': 'noborder', id: 'info' },
 	                    _react2.default.createElement(
 	                        'h3',
 	                        null,
@@ -45118,31 +45146,33 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            null,
 	                            'nr'
 	                        ),
-	                        ' node, or some text, or both.'
+	                        ' element, or some text, or both.'
 	                    ),
 	                    _react2.default.createElement(
 	                        'p',
 	                        null,
-	                        'We assume that ',
+	                        'In ',
+	                        _react2.default.createElement(_FigRef2.default, { fig: _figs2.default.figTitleWordCount }),
+	                        ', we see that if a ',
 	                        _react2.default.createElement(
 	                            'code',
 	                            null,
 	                            'title'
 	                        ),
-	                        ' elements consist of an optional numbering, followed by a handful of words (see ',
-	                        _react2.default.createElement(_FigRef2.default, { fig: _figs2.default.figTitleWordCount }),
-	                        ').'
+	                        ' element contains text, it usually only contains a handful of words, with close to 99% of titles contains 10 words or less.'
 	                    ),
 	                    _react2.default.createElement(_figureTitleWordCount2.default, null),
 	                    _react2.default.createElement(
 	                        'p',
 	                        null,
-	                        'Titles have a number of patterns that often recur. See ',
+	                        'Titles texts have a number of patterns that often recur. See ',
 	                        _react2.default.createElement(_FigRef2.default, {
 	                            fig: _figs2.default.figTitleTreemap }),
 	                        ' for a tree map for the occurrence title texts, and ',
 	                        _react2.default.createElement(_FigRef2.default, { fig: _figs2.default.tfidf }),
-	                        ' for a chart of the terms with the highest tf-idf scores.'
+	                        ' & ',
+	                        _react2.default.createElement(_FigRef2.default, { fig: _figs2.default.sectionsTfidf }),
+	                        ' for charts of the terms with the highest tf-idf scores.'
 	                    ),
 	                    _react2.default.createElement(_figTitlePattern2.default, null),
 	                    _react2.default.createElement(_figureTitleTfIdf2.default, null),
@@ -45159,7 +45189,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(
 	                        'p',
 	                        null,
-	                        'Sadly, Rechtspraak.nl does not offer an XML schema. This makes it a little more difficult to create programs that work with the XML data, such as a converter to HTML. This is because we don\'t know exactly which elements we can expect in the XML documents. In the absence of an official schema, we have created a makeshift XML schema, that was automatically generated from a random sample of 500 documents, and then manually corrected.'
+	                        'Sadly, Rechtspraak.nl does not offer an XML schema. This makes it a little more difficult to create programs that work with the XML data, such as a converter to HTML. This is because we don\'t know exactly which elements we can expect in the XML documents. In the absence of an official schema, we have created a makeshift XML schema that was automatically generated from a random sample of 500 documents, and then manually corrected.'
 	                    ),
 	                    _react2.default.createElement(
 	                        'p',
@@ -54763,7 +54793,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	            return _react2.default.createElement(
 	                'figure',
-	                { className: 'chart', id: _figs2.default.tfidf.id },
+	                { className: 'chart', id: _figs2.default.sectionsTfidf.id },
 	                _react2.default.createElement(
 	                    'div',
 	                    null,
@@ -54776,7 +54806,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        'span',
 	                        { className: 'figure-number' },
 	                        'Fig ',
-	                        _figs2.default.tfidf.num,
+	                        _figs2.default.sectionsTfidf.num,
 	                        '.'
 	                    ),
 	                    ' Top ',
@@ -55113,7 +55143,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'As noted above, we have a separate library for importing mirroring the Rechtspraak.nl corpus as a CouchDB database. The mirroring of data was done in order to facilitate the collection of statistics of case law documents used in this document. The project includes a module to convert XML to JSON and a number of MapReduce functions to generate the statistics used in this thesis. The source code for this project is available ',
+	                    'As noted above, we have a separate library for importing mirroring the Rechtspraak.nl corpus as a CouchDB database. The mirroring of data was done in order to facilitate the collection of statistics of case law documents used in this thesis. The Java project includes a module to convert XML to JSON and a number of MapReduce functions to generate the statistics used in this thesis. Source code for this project is available ',
 	                    _react2.default.createElement(
 	                        'a',
 	                        {
@@ -55125,7 +55155,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'Regarding tokenization, we need to so some forward thinking to determine how to split Rechtspraak.nl XML texts. We use four terminal nodes in our section hierarchy:'
+	                    'Regarding tokenization, we need some forward thinking to determine how to split Rechtspraak.nl XML texts. We are going to use four terminal nodes in our section hierarchy:'
 	                ),
 	                _react2.default.createElement(
 	                    'ol',
@@ -55174,7 +55204,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'So we should tokenize a document in portions that could be labeled any of the above. In this regard, newlines are trivial to detect, and we assume that Rechtspraak.nl has already done a job of splitting text blocks through ',
+	                    'So we should tokenize XML documents into portions that could be labeled any of the above. In this regard, newlines are trivial to detect, and we assume that Rechtspraak.nl has already done a job of splitting text blocks through ',
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -55185,19 +55215,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'One noteworthy issue is that numberings are often not annotated. In our parsing algorithm, we assume that a potential numbering occurs as the beginning of a text block and represents Arabic or Roman numerals, alphabetic numbering or a list marking (i.e. some symbol such as \'-\' or \'*\'). The complete tokenization algorithm can be consulted in the ',
-	                    _react2.default.createElement(
-	                        'a',
-	                        {
-	                            href: 'https://github.com/digitalheir/java-rechtspraak-library/blob/master/src/main/java/org/leibnizcenter/rechtspraak/tokens/tokentree/TokenTree.java' },
-	                        'source code'
-	                    ),
-	                    '.'
+	                    'One noteworthy issue is that numberings are often not annotated as such, and so are part of a running text. In our parsing algorithm, we assume that potential numberings occur as the beginning of a text block and represents Arabic or Roman numerals, alphabetic numbering or a list marking (i.e. some symbol such as \'-\' or \'*\').'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'One complication is that Rechtspraak.nl delivers an XML tree, which is potentially more rich than the linear list of tokens that we are creating. Indeed, it often happens that multiple ',
+	                    'Another complication is that Rechtspraak.nl delivers an XML tree, which is potentially more rich than the linear list of tokens that we are creating. Indeed, it often happens that multiple ',
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -55209,9 +55232,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        null,
 	                        'paragroup'
 	                    ),
-	                    ', which sometimes represents a coherent set of paragraphs. On the other hand, sometimes the paragraph grouping makes no sense. Although it is possible to efficiently tag tree structures instead of a linear list of tokens (',
+	                    ', which sometimes represents a coherent set of paragraphs. On the other hand, sometimes the specified paragraph grouping makes no sense. Although it is possible to efficiently tag tree structures instead of a linear list of tokens (',
 	                    _references2.default.cite(_bib2.default.bradley2010learning),
-	                    '), this requires somewhat more complicated machinery and may be problematic when creating the document hierarchy. So the tagging algorithm that we use in the following supposes a linear sequence of tokens. This means that it is possible that we lose some information in the process, because we coerce a tree structure into a linear sequence, and then build a tree structure which may clash with the original tree structure. Merging the two resulting tree structures is possible, but not currently implemented.'
+	                    '), this requires a somewhat more complicated pipeline, and may also be problematic when creating the document hierarchy.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'So the tagging algorithm that we use supposes a linear sequence of tokens. This means that it is possible that we lose some information in the process, because we coerce a tree structure into a linear sequence, and then build a tree structure which may clash with the original tree structure. Merging the two resulting tree structures is possible, but not currently implemented.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'In the next chapter, we explore how to tag the tokens that we have created from source XML. That is: given a list of text elements, we would like to assign each element a label.'
 	                )
 	            );
 	        }
@@ -55341,2329 +55374,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = methodsSections;
 
 /***/ },
-/* 297 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(4);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _FigRef = __webpack_require__(245);
-
-	var _FigRef2 = _interopRequireDefault(_FigRef);
-
-	var _FigureResults = __webpack_require__(298);
-
-	var _FigureResults2 = _interopRequireDefault(_FigureResults);
-
-	var _ConfusionMatrix = __webpack_require__(301);
-
-	var _ConfusionMatrix2 = _interopRequireDefault(_ConfusionMatrix);
-
-	var _Image = __webpack_require__(248);
-
-	var _Image2 = _interopRequireDefault(_Image);
-
-	var _figs = __webpack_require__(224);
-
-	var _figs2 = _interopRequireDefault(_figs);
-
-	var _references = __webpack_require__(221);
-
-	var _references2 = _interopRequireDefault(_references);
-
-	var _bib = __webpack_require__(211);
-
-	var _bib2 = _interopRequireDefault(_bib);
-
-	var _Math = __webpack_require__(249);
-
-	var _Math2 = _interopRequireDefault(_Math);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } //noinspection JSUnresolvedVariable
-
-
-	var Results = function (_Component) {
-	    _inherits(Results, _Component);
-
-	    function Results() {
-	        _classCallCheck(this, Results);
-
-	        return _possibleConstructorReturn(this, Object.getPrototypeOf(Results).apply(this, arguments));
-	    }
-
-	    _createClass(Results, [{
-	        key: 'render',
-	        value: function render() {
-	            var relativeToRoot = this.props.path.match(/\//g).slice(1).map(function (_) {
-	                return "../";
-	            }).join("");
-
-	            return _react2.default.createElement(
-	                'div',
-	                null,
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'For assessing the performance of our trained CRFs, we compare three conditions:'
-	                ),
-	                _react2.default.createElement(
-	                    'ol',
-	                    null,
-	                    _react2.default.createElement(
-	                        'li',
-	                        null,
-	                        'The deterministic tagger as a baseline'
-	                    ),
-	                    _react2.default.createElement(
-	                        'li',
-	                        null,
-	                        'One CRF trained on 100 documents that are randomly selected and manually annotated'
-	                    ),
-	                    _react2.default.createElement(
-	                        'li',
-	                        null,
-	                        'One CRF trained on 100 documents that are randomly selected and manually annotated, but with all newline tokens omitted'
-	                    )
-	                ),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'We include the newline condition, because including newlines could either positively or negatively affect performance. On the one hand, newlines carry semantic information information: the author thought it appropriate to demarcate something with whitespace. But on the other hand they might obscure information about the previous label. Consider a numbering, followed by a newline, followed by a section title. Our CRFs only consider one previous label, so the relationship between the numbering and the title might not be modeled well. However, we see in ',
-	                    _react2.default.createElement(_FigRef2.default, { fig: _figs2.default.taggingResults }),
-	                    ' that including newline tokens performs slightly better than not including newlines.'
-	                ),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'As a performance metric we use the common F',
-	                    _react2.default.createElement(
-	                        'sub',
-	                        null,
-	                        '1'
-	                    ),
-	                    ' and F',
-	                    _react2.default.createElement(
-	                        'sub',
-	                        null,
-	                        '0.5'
-	                    ),
-	                    ' scores. These are a composite number consisting of the precision and recall of a classifier, where'
-	                ),
-	                _react2.default.createElement(
-	                    'ul',
-	                    null,
-	                    _react2.default.createElement(
-	                        'li',
-	                        null,
-	                        'Precision is defined as the fraction of true positives out of all positives, i.e. ',
-	                        _react2.default.createElement(_Math2.default, {
-	                            l: '\\text{precision}=\\frac{|\\text{true positives}|}{|\\text{true positives}|+|\\text{false positives}|}' })
-	                    ),
-	                    _react2.default.createElement(
-	                        'li',
-	                        null,
-	                        'Recall is defined as the fraction of true positives out of all relevant elements, i.e. ',
-	                        _react2.default.createElement(_Math2.default, {
-	                            l: '\\text{recall}=\\frac{|\\text{true positives}|}{|\\text{true positives}|+|\\text{false negative}|}' })
-	                    )
-	                ),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'We define the general F-measure as:'
-	                ),
-	                _react2.default.createElement(_Math2.default, { l: 'F_\\beta = (1+\\beta^2)\\cdot\\frac{\\text{precision}\\cdot\\text{recall}}{(\\beta^2\\cdot\\text{precision})+\\text{recall}}',
-	                    display: 'true' }),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'Where ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\beta\\in\\mathbb{R}' }),
-	                    ' is a number that represents amount of times we place the importance of the recall metric above that of precision. For ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\beta = 1' }),
-	                    ', precision is equally as important as recall, and so ',
-	                    _react2.default.createElement(_Math2.default, { l: 'F_1' }),
-	                    ' describes the harmonic mean of precision and recall (',
-	                    _react2.default.createElement(_Math2.default, { l: 'F_1 = 2\\cdot\\frac{\\text{precision}\\cdot\\text{recall}}{\\text{precision}+\\text{recall}}' }),
-	                    '). For ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\beta = 0.5' }),
-	                    ', precision is twice as important as recall.'
-	                ),
-	                _react2.default.createElement(_ConfusionMatrix2.default, null),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'For all tokens except for section titles, all models yield F-scores between 0.98 and 1.0. Section titles are hardest to label, so in ',
-	                    _react2.default.createElement(_FigRef2.default, { fig: _figs2.default.taggingResults }),
-	                    ', we consider the F-score for these. We can see that the CRFs out-perform the baseline task mostly by increasing the recall, although the CRFs have slightly worse precision (0.91 contra 0.95). Neither the deterministic tagger nor the CRFs have been extensively optimized, so these are promising results.'
-	                ),
-	                _react2.default.createElement(_FigureResults2.default, { url: relativeToRoot + "js/tagger-results.json" })
-	            );
-	        }
-	    }]);
-
-	    return Results;
-	}(_react.Component);
-
-	exports.default = Results;
-
-/***/ },
+/* 297 */,
 /* 298 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _data = __webpack_require__(299);
-
-	var _data2 = _interopRequireDefault(_data);
-
-	var _react = __webpack_require__(4);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _underscore = __webpack_require__(210);
-
-	var _underscore2 = _interopRequireDefault(_underscore);
-
-	var _figs = __webpack_require__(224);
-
-	var _figs2 = _interopRequireDefault(_figs);
-
-	var _GroupedBarChart = __webpack_require__(300);
-
-	var _GroupedBarChart2 = _interopRequireDefault(_GroupedBarChart);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var FigureResults = function (_React$Component) {
-	    _inherits(FigureResults, _React$Component);
-
-	    function FigureResults() {
-	        _classCallCheck(this, FigureResults);
-
-	        return _possibleConstructorReturn(this, Object.getPrototypeOf(FigureResults).apply(this, arguments));
-	    }
-
-	    _createClass(FigureResults, [{
-	        key: 'render',
-	        value: function render() {
-	            // [{
-	            //   title: string,
-	            //   data{
-	            //       x: any,
-	            //       y: any,
-	            //   },*
-	            // },*]
-	            var formattedData = [{
-	                title: 'F1 scores',
-	                data: _underscore2.default.map(_data2.default, function (val, key) {
-	                    return { x: key, y: val.scores.SECTION_TITLE.f1 };
-	                })
-	            }, {
-	                title: 'F0.5 scores',
-	                data: _underscore2.default.map(_data2.default, function (val, key) {
-	                    return { x: key, y: val.scores.SECTION_TITLE.f0_5 };
-	                })
-	            }
-	            //
-	            // {
-	            //     y: data["tagger-trained-on-auto-annotated.crf"],
-	            //     x: 'Trained on automatically tagged corpus, without newlines'
-	            // },
-	            // {
-	            //     y: data["tagger-trained-on-auto-annotated.crf"].scores.SECTION_TITLE.f2,
-	            //     x: 'Trained on manually tagged corpus'
-	            // },
-	            // {
-	            //     y: data["tagger-trained-on-auto-annotated.crf"].scores.SECTION_TITLE.f2,
-	            //     x: 'Trained on manually tagged corpus, without newlines'
-	            // }
-	            ];
-	            return _react2.default.createElement(
-	                'figure',
-	                { className: 'chart', id: _figs2.default.taggingResults.id },
-	                _react2.default.createElement(
-	                    'h4',
-	                    { style: { textAlign: 'center', width: '402px', margin: 0 } },
-	                    'F-scores for tagging section titles'
-	                ),
-	                _react2.default.createElement(_GroupedBarChart2.default, { sourceHref: this.props.url, data: formattedData }),
-	                _react2.default.createElement(
-	                    'figcaption',
-	                    null,
-	                    _react2.default.createElement(
-	                        'span',
-	                        { className: 'figure-number' },
-	                        'Fig ',
-	                        _figs2.default.taggingResults.num,
-	                        '.'
-	                    ),
-	                    ' F',
-	                    _react2.default.createElement(
-	                        'sub',
-	                        null,
-	                        '1'
-	                    ),
-	                    ' scores and F',
-	                    _react2.default.createElement(
-	                        'sub',
-	                        null,
-	                        '0.5'
-	                    ),
-	                    ' scores for different training conditions of Conditional Random Fields.'
-	                )
-	            );
-	        }
-	    }]);
-
-	    return FigureResults;
-	}(_react2.default.Component);
-
-	exports.default = FigureResults;
+	"use strict";
 
 /***/ },
 /* 299 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports.default = {
-	    "Deterministic tagger (baseline)": {
-	        "confusionMatrix": {
-	            "NEWLINE": { "m": { "NEWLINE": 3557 } },
-	            "NR": { "m": { "NR": 1593, "TEXT_BLOCK": 10 } },
-	            "SECTION_TITLE": { "m": { "SECTION_TITLE": 381, "TEXT_BLOCK": 132 } },
-	            "TEXT_BLOCK": { "m": { "SECTION_TITLE": 18, "TEXT_BLOCK": 5417 } }
-	        },
-	        "scores": {
-	            "NEWLINE": {
-	                "truePositive": 3557,
-	                "trueNegative": 7551,
-	                "falseNegative": 0,
-	                "falsePositive": 0,
-	                "precision": 1.0,
-	                "recall": 1.0,
-	                "f1": 1.0,
-	                "f0_5": 1.0
-	            },
-	            "NR": {
-	                "truePositive": 1593,
-	                "trueNegative": 9505,
-	                "falseNegative": 10,
-	                "falsePositive": 0,
-	                "precision": 1.0,
-	                "recall": 0.9937616968184654,
-	                "f1": 0.9968710888610764,
-	                "f0_5": 0.9987460815047023
-	            },
-	            "SECTION_TITLE": {
-	                "truePositive": 381,
-	                "trueNegative": 10577,
-	                "falseNegative": 132,
-	                "falsePositive": 18,
-	                "precision": 0.9548872180451128,
-	                "recall": 0.7426900584795322,
-	                "f1": 0.8355263157894737,
-	                "f0_5": 0.9032716927453769
-	            },
-	            "TEXT_BLOCK": {
-	                "truePositive": 5417,
-	                "trueNegative": 5531,
-	                "falseNegative": 18,
-	                "falsePositive": 142,
-	                "precision": 0.9744558373808239,
-	                "recall": 0.996688132474701,
-	                "f1": 0.985446607240313,
-	                "f0_5": 0.978822594051534
-	            }
-	        },
-	        "wrongs": [{
-	            "text": "o",
-	            "actual": "NR",
-	            "ecli": "ECLI:NL:RBNNE:2013:BZ3452",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "maximale afmeting gehard glas",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBNNE:2013:BZ3452",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "standpunt van de verdachte  de verdediging",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBGEL:2014:6020",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "beschikking bezwaar en geding voor het hof",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:HR:2002:AD8769",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "behoefte van de vrouw",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHARL:2013:7996",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "productie 5bi",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "gronden van het beroep in cassatie",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:GHAMS:2002:AE3880",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "formele voorvragen",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBZLY:2008:BD9013",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "productie 5a i",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "proceskosten",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:HR:2009:BJ2011",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "de ingangsdatum",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHARL:2013:7996",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "poging tot doodslag",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHSHE:2012:BY4227",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "proceskosten",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:HR:2002:AD8769",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "productie 5biii",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "behoefte van de vrouw aan een bijdrage van de zijde van de man",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHARL:2013:7996",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "in reconventie",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBDHA:2015:3551",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "kosten van de inventaris",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHSHE:2006:BA2526",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "beslissing de hoge raad verwerpt het beroep",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:HR:1996:AA1944",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "herstelmogelijkheden",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBNNE:2013:BZ3452",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "geen erkenning",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBNNE:2013:BZ3452",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "vrijspraak ten aanzien van het onder 1 en 2 tenlastegelegde",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBGEL:2014:6020",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "beslag",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHSHE:2012:BY4227",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "het beslag",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBMAA:2007:BB2701",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "de duur van de alimentatieverplichting",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHARL:2013:7996",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "belanghebbende",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHSHE:2006:BA2526",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "aanleiding van het onderzoek",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBGEL:2014:6020",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "vrijspraak van het meer of anders ten laste gelegde",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBGEL:2014:4337",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "begunstiging",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2007:BB0311",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "echtscheiding of scheiding van tafel en bed",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHARL:2013:7996",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "proceskosten",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:HR:2015:1200",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "vonnis",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBAMS:2010:BN0717",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "proceskosten",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHSHE:2006:BA2526",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "productie 22",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "geen uitsluiting van aansprakelijkheid",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBNNE:2013:BZ3452",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "lotsverbondenheid",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHARL:2013:7996",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "onderzoek van de zaak",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:GHAMS:2014:2752",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "wijze van vervanging",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBNNE:2013:BZ3452",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "feit 2",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBGEL:2014:4337",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "gronden van het beroep in cassatie",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:GHSGR:2003:AN9319",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "inkomen",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHARL:2013:7996",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "x",
-	            "actual": "NR",
-	            "ecli": "ECLI:NL:RBAMS:2010:BN0717",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "verzoek grondslag en verweer",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBMAA:2009:BK1763",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "de behoefte van de vrouw",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHARL:2013:7996",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "ten aanzien van feit 2",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBGEL:2014:4337",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "141",
-	            "actual": "NR",
-	            "ecli": "ECLI:NL:RBNNE:2013:BZ3452",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "de jusvergelijking",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHARL:2013:7996",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "vordering van de advocaatgeneraal",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHSGR:2012:BV8404",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "primair",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBLEE:2008:BE9193",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "standpunt van de verdachte  de verdediging",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBGEL:2014:4337",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "vonnis",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBGEL:2014:6020",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "benadeelde partijen",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBLEE:2008:BE9193",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "gevorderde kosten van juridisch advies",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBDHA:2015:3551",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "benadeelde partij",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBZLY:2008:BD9013",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "beschikking bezwaar en geding voor het hof",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:HR:2007:AZ7460",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "ziektekosten",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHARL:2013:7996",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "ten aanzien van feit 2",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBMAA:2007:BB2701",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "woonlasten",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHARL:2013:7996",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "proceskosten",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBNNE:2013:BZ3452",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "vordering officier van justitie",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBLEE:2008:BE9193",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "vorderingen na voorwaardelijke veroordeling",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBLEE:2008:BE9193",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "producties 5aii 20 en 21",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "de kostenveroordeling",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "rechten verzekeringnemer",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2007:BB0311",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "productie 5aiii",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "nihilbeding",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHARL:2013:7996",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "productie 20",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "artikel 21",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHARN:2012:BW6258",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "aanslag bezwaar en geding voor het hof",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHARN:1998:AA1313",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "onderzoeksvragen srk",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBNNE:2013:BZ3452",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "vonnis",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBNNE:2013:BZ3452",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "slotsom met betrekking tot het testament van 4 april 2007",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBDHA:2015:3551",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "uitspraak",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBSGR:2000:AA6276",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "draagkracht",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHARL:2013:7996",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "de procedures in beide zaken",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBMAA:2011:BQ0812",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "het standpunt van de officier van justitie",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBAMS:2010:BN0717",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "in conventie",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBDHA:2015:3551",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "vonnis",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBSHE:2012:BV3010",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "ten aanzien van feit 3",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBMAA:2007:BB2701",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "de gemiddelde engelse consument",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "producties 5aiii 20 21 en 22",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "ten aanzien van feit 1 meer subsidiair",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBGEL:2014:4337",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "artikel 72r",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:CBB:2008:BD2958",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "144",
-	            "actual": "NR",
-	            "ecli": "ECLI:NL:RBNNE:2013:BZ3452",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "productie 5aiv",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "conclusies van partijen",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHSGR:2003:AN9319",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "artikel 13",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHARN:2012:BW6258",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "1",
-	            "actual": "NR",
-	            "ecli": "ECLI:NL:GHAMS:2014:2752",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "ten aanzien van de tenlastelegging",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBZLY:2008:BD9013",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "verzoeken in het kader van artikel 1253a bw",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBSGR:2012:BY8779",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "proceskosten",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2007:BB0311",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "ondeugdelijk werk",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBNNE:2013:BZ3452",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "wijziging voorlopige zorgregeling",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBSGR:2012:BY8779",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "in conventie en in reconventie",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBDHA:2015:3551",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "proceskosten",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHAMS:2002:AE3880",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "3 het geschil de standpunten en conclusies van partijen",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHARN:1998:AA1313",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "buitengerechtelijke incassokosten",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBDHA:2015:3551",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "proceskosten",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHARN:1998:AA1313",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "productie 5ai",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "feit 1 meer subsidiair",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBGEL:2014:4337",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "in de zaak 09283",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBMAA:2011:BQ0812",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "glasschade",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBNNE:2013:BZ3452",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "primair",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHSHE:2012:BY4227",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "proceskosten",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBLEE:2010:BZ8239",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "artikel 72m",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:CBB:2008:BD2958",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "griffierecht",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHSHE:2006:BA2526",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "arrest",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:HR:2011:BT6827",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "oorzaak thermische breuk",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBNNE:2013:BZ3452",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "proceskosten",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBDHA:2013:8514",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "2",
-	            "actual": "NR",
-	            "ecli": "ECLI:NL:GHAMS:2014:2752",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "productie 5aii en 21",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "beslissing op de vordering na voorwaardelijke veroordeling onder parketnummer",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBLEE:2008:BE9193",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "producties 20 en 22",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "ten aanzien van feit 1",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBMAA:2007:BB2701",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "de inspecteur",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHSHE:2006:BA2526",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "proceskosten",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBHAA:2011:BW5844",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "productie 5bii",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "de beslissing is in het openbaar uitgesproken op",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBLIM:2015:3625",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "artikel 15",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:CBB:2008:BD2958",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "bewijsoverweging",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBLEE:2008:BE9193",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "1410",
-	            "actual": "NR",
-	            "ecli": "ECLI:NL:RBNNE:2013:BZ3452",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "vaststaande feiten  aanleiding van het onderzoek",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBGEL:2014:4337",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "proceskosten",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:HR:2011:BT6827",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "vonnis",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "proceskosten",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBDHA:2015:3551",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "bewijslast",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBDHA:2015:3551",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "1",
-	            "actual": "NR",
-	            "ecli": "ECLI:NL:GHSHE:2012:BY4227",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "omschrijving geschil en standpunten van partijen",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHSGR:2003:AN9319",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "geschil alsmede standpunten en conclusies van partijen",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHSHE:2006:BA2526",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "proceskosten",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHSGR:2003:AN9319",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "artikel 14  garantie",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBNNE:2013:BZ3452",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "proceskosten",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBSGR:2012:BY8779",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "vonnis",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBMAA:2011:BQ0812",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "behoeftigheid",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHARL:2013:7996",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "vonnis",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBGEL:2014:4337",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "de redengeving van de op te leggen straffen",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBMAA:2007:BB2701",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "kosten",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHARN:2012:BW6258",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "arrest",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:HR:2003:AF3100",
-	            "predicted": "SECTION_TITLE"
-	        }, { "text": "vonnis", "actual": "TEXT_BLOCK", "ecli": "ECLI:NL:RBDHA:2015:3551", "predicted": "SECTION_TITLE" }]
-	    },
-	    "CRF trained on manually annotated (with newlines)": {
-	        "confusionMatrix": {
-	            "NEWLINE": { "m": { "NEWLINE": 3557 } },
-	            "NR": { "m": { "NR": 1603 } },
-	            "SECTION_TITLE": { "m": { "SECTION_TITLE": 468, "TEXT_BLOCK": 45 } },
-	            "TEXT_BLOCK": { "m": { "SECTION_TITLE": 45, "TEXT_BLOCK": 5390 } }
-	        },
-	        "scores": {
-	            "NEWLINE": {
-	                "truePositive": 3557,
-	                "trueNegative": 7551,
-	                "falseNegative": 0,
-	                "falsePositive": 0,
-	                "precision": 1.0,
-	                "recall": 1.0,
-	                "f1": 1.0,
-	                "f0_5": 1.0
-	            },
-	            "NR": {
-	                "truePositive": 1603,
-	                "trueNegative": 9505,
-	                "falseNegative": 0,
-	                "falsePositive": 0,
-	                "precision": 1.0,
-	                "recall": 1.0,
-	                "f1": 1.0,
-	                "f0_5": 1.0
-	            },
-	            "SECTION_TITLE": {
-	                "truePositive": 468,
-	                "trueNegative": 10550,
-	                "falseNegative": 45,
-	                "falsePositive": 45,
-	                "precision": 0.9122807017543859,
-	                "recall": 0.9122807017543859,
-	                "f1": 0.9122807017543859,
-	                "f0_5": 0.9122807017543858
-	            },
-	            "TEXT_BLOCK": {
-	                "truePositive": 5390,
-	                "trueNegative": 5628,
-	                "falseNegative": 45,
-	                "falsePositive": 45,
-	                "precision": 0.9917203311867525,
-	                "recall": 0.9917203311867525,
-	                "f1": 0.9917203311867525,
-	                "f0_5": 0.9917203311867525
-	            }
-	        },
-	        "wrongs": [{
-	            "text": "uitspraak",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBSGR:2000:AA6276",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "totaal 415222",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:GHSHE:2006:BA2526",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "vernietigt de bestreden uitspraak",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:HR:2007:AZ1706",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "productie 5bi",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "vonnis",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBSHE:2012:BV3010",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "behoefte van de vrouw",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHARL:2013:7996",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "zaaknummer 770098 blad 6",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBSHE:2012:BV3010",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "ten aanzien van feit 3",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBMAA:2007:BB2701",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "antwoord",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBNNE:2013:BZ3452",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "gronden van het beroep in cassatie",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:GHAMS:2002:AE3880",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "productie 5a i",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "in conventie",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBDHA:2015:3551",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "premiebetaling",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBBRE:2007:BB0311",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "de gemiddelde engelse consument",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "weging stellingen a",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBDHA:2015:3551",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "vernietigt de aangevallen uitspraak",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:CRVB:2002:BJ3072",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "poging tot doodslag",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHSHE:2012:BY4227",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "gemengd kapitaal",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBBRE:2007:BB0311",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "productie 5biii",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "behoefte van de vrouw aan een bijdrage van de zijde van de man",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHARL:2013:7996",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "kosten van de inventaris",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHSHE:2006:BA2526",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "producties 5aiii 20 21 en 22",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "beslissing de hoge raad verwerpt het beroep",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:HR:1996:AA1944",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "belanghebbende",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBBRE:2007:BB0311",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "standpunt van de officier van justitie",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBAMS:2010:BN0717",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "productie 5aiv",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "artikel 13",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHARN:2012:BW6258",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "de draagkracht van de man",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:GHARL:2013:7996",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "mrs mclachlan",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "stokke nederland bv",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:HR:2015:1200",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "in conventie en in reconventie",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBDHA:2015:3551",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "3 het geschil de standpunten en conclusies van partijen",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHARN:1998:AA1313",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "begunstiging",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2007:BB0311",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "vonnis",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBAMS:2010:BN0717",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "productie 5ai",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "feit 1 meer subsidiair",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBGEL:2014:4337",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "productie 22",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "primair",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHSHE:2012:BY4227",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "onderzoek van de zaak",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:GHAMS:2014:2752",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "arrest",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:HR:2011:BT6827",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "productie 5aii en 21",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "beslissing op de vordering na voorwaardelijke veroordeling onder parketnummer",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBLEE:2008:BE9193",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "producties 20 en 22",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "ten aanzien van feit 1",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBMAA:2007:BB2701",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "parketnummer 1353301209",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBAMS:2010:BN0717",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "artikel 10d wet vpb 0",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:GHARN:2012:BW6258",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "in de zaak 09172",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBMAA:2011:BQ0812",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "aanslag beschikking en bezwaar",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:GHSGR:2003:AN9319",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "productie 5bii",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "vordering van de benadeelde partij benadeelde 1",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:GHSHE:2012:BY4227",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "de partiële vrijspraak",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBMAA:2007:BB2701",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "de beslissing is in het openbaar uitgesproken op",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBLIM:2015:3625",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "uitspraak",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHAMS:2002:AE3880",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "vonnis",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBGEL:2014:6020",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "beschikking bezwaar en geding voor het hof",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:HR:2007:AZ7460",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "als gesteld en onvoldoende weersproken staat vast",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBAMS:2009:BK6193",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "ten aanzien van feit 2",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBMAA:2007:BB2701",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "stellingen a",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBDHA:2015:3551",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "geschil alsmede standpunten en conclusies van partijen",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHSHE:2006:BA2526",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "proceskosten",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:HR:2007:AZ7460",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "producties 5aii 20 en 21",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "ten aanzien van het onder 3 ten laste gelegde",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBAMS:2010:BN0717",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "rechten verzekeringnemer",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2007:BB0311",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "productie 5aiii",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "vordering van de benadeelde partij benadeelde 2",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:GHSHE:2012:BY4227",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "vordering van de benadeelde partij verbalisant 1 politie",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:GHSHE:2012:BY4227",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "nader vast te stellen belastbaar inkomen f 123698",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:GHSHE:2006:BA2526",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "productie 20",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "bedreiging met enig misdrijf tegen het leven gericht",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBGEL:2014:4337",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "vonnis",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBGEL:2014:4337",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "de redengeving van de op te leggen straffen",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBMAA:2007:BB2701",
-	            "predicted": "TEXT_BLOCK"
-	        }, { "text": "arrest", "actual": "TEXT_BLOCK", "ecli": "ECLI:NL:HR:2003:AF3100", "predicted": "SECTION_TITLE" }]
-	    },
-	    "CRF trained on manually annotated (no newlines)": {
-	        "confusionMatrix": {
-	            "NR": { "m": { "NR": 1603 } },
-	            "SECTION_TITLE": { "m": { "SECTION_TITLE": 469, "TEXT_BLOCK": 44 } },
-	            "TEXT_BLOCK": { "m": { "SECTION_TITLE": 47, "TEXT_BLOCK": 5388 } }
-	        },
-	        "scores": {
-	            "NR": {
-	                "truePositive": 1603,
-	                "trueNegative": 5948,
-	                "falseNegative": 0,
-	                "falsePositive": 0,
-	                "precision": 1.0,
-	                "recall": 1.0,
-	                "f1": 1.0,
-	                "f0_5": 1.0
-	            },
-	            "SECTION_TITLE": {
-	                "truePositive": 469,
-	                "trueNegative": 6991,
-	                "falseNegative": 44,
-	                "falsePositive": 47,
-	                "precision": 0.9089147286821705,
-	                "recall": 0.9142300194931774,
-	                "f1": 0.91156462585034,
-	                "f0_5": 0.9099728366317423
-	            },
-	            "TEXT_BLOCK": {
-	                "truePositive": 5388,
-	                "trueNegative": 2072,
-	                "falseNegative": 47,
-	                "falsePositive": 44,
-	                "precision": 0.991899852724595,
-	                "recall": 0.9913523459061637,
-	                "f1": 0.991626023741603,
-	                "f0_5": 0.991790302985679
-	            }
-	        },
-	        "wrongs": [{
-	            "text": "totaal 415222",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:GHSHE:2006:BA2526",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "uitspraak",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBSGR:2000:AA6276",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "behoefte van de vrouw",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHARL:2013:7996",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "productie 5bi",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "vonnis",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBSHE:2012:BV3010",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "zaaknummer 770098 blad 6",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBSHE:2012:BV3010",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "ten aanzien van feit 3",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBMAA:2007:BB2701",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "gronden van het beroep in cassatie",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:GHAMS:2002:AE3880",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "productie 5a i",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "in conventie",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBDHA:2015:3551",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "ten aanzien van de tenlastegelegde feiten",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBZLY:2008:BD9013",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "is in 2003 geliquideerd",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:HR:2011:BT6827",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "poging tot doodslag",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHSHE:2012:BY4227",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "weging stellingen a",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBDHA:2015:3551",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "productie 5biii",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "behoefte van de vrouw aan een bijdrage van de zijde van de man",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHARL:2013:7996",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "kosten van de inventaris",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHSHE:2006:BA2526",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "beslissing de hoge raad verwerpt het beroep",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:HR:1996:AA1944",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "producties 5aiii 20 21 en 22",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "standpunt van de officier van justitie",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBAMS:2010:BN0717",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "ondergetekenden",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBBRE:2007:BB0311",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "u",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBDOR:2010:BM8492",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "de draagkracht van de man",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:GHARL:2013:7996",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "productie 5aiv",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "vrijspraak ten aanzien van het onder 1 en 2 tenlastegelegde",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBGEL:2014:6020",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "dat verdachte het",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBGEL:2014:6020",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "belanghebbende",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHSHE:2006:BA2526",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "mrs mclachlan",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "ontbrekende bescheiden  70",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:GHSHE:2006:BA2526",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "c",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:HR:2011:BT6827",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "official declaration of win",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "begunstiging",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2007:BB0311",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "onnodig grievend",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:GHAMS:2014:2752",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "productie 5ai",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "feit 1 meer subsidiair",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBGEL:2014:4337",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "productie 22",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "primair",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHSHE:2012:BY4227",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "onderzoek van de zaak",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:GHAMS:2014:2752",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "feit 2",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBGEL:2014:4337",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "gronden van het beroep in cassatie",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:GHSGR:2003:AN9319",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "arrest",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:HR:2011:BT6827",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "productie 5aii en 21",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "beslissing op de vordering na voorwaardelijke veroordeling onder parketnummer",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBLEE:2008:BE9193",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "producties 20 en 22",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "onder 1 en 2 tenlastegelegde",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBGEL:2014:6020",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "ten aanzien van feit 1",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBMAA:2007:BB2701",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "artikel 10d wet vpb 0",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:GHARN:2012:BW6258",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "niet bewezen",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBGEL:2014:6020",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "in de zaak 09172",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBMAA:2011:BQ0812",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "aanslag beschikking en bezwaar",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:GHSGR:2003:AN9319",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "totaal fl 53228",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:GHSHE:2006:BA2526",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "productie 5bii",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "bewijsverweren",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:GHAMS:2014:2752",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "de partiële vrijspraak",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBMAA:2007:BB2701",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "de beslissing is in het openbaar uitgesproken op",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBLIM:2015:3625",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "uitspraak",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHAMS:2002:AE3880",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "beledigend karakter uitlatingen",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:GHAMS:2014:2752",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "direct aansluitend",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBZWB:2013:5906",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "arrest",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:HR:2005:AU3949",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "arrest",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:HR:2007:AZ1706",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "omschrijving geschil en standpunten van partijen",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:GHSGR:2003:AN9319",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "winners certificate",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "ten aanzien van het onder 1 en 2 ten laste gelegde",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBAMS:2010:BN0717",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "ten aanzien van feit 2",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBMAA:2007:BB2701",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "stellingen a",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBDHA:2015:3551",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "vordering officier van justitie",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBLEE:2008:BE9193",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "proceskosten",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:HR:2007:AZ7460",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "ten aanzien van het onder 3 ten laste gelegde",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:RBAMS:2010:BN0717",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "producties 5aii 20 en 21",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "rechten verzekeringnemer",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2007:BB0311",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "productie 5aiii",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "overige kosten 214944",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:GHSHE:2006:BA2526",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "vordering van de benadeelde partij verbalisant 1 politie",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:GHSHE:2012:BY4227",
-	            "predicted": "SECTION_TITLE"
-	        }, {
-	            "text": "productie 20",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBBRE:2008:BD6815",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "de redengeving van de op te leggen straffen",
-	            "actual": "SECTION_TITLE",
-	            "ecli": "ECLI:NL:RBMAA:2007:BB2701",
-	            "predicted": "TEXT_BLOCK"
-	        }, {
-	            "text": "6 vervanging directie",
-	            "actual": "TEXT_BLOCK",
-	            "ecli": "ECLI:NL:GHARN:2012:BW6258",
-	            "predicted": "SECTION_TITLE"
-	        }, { "text": "vonnis", "actual": "TEXT_BLOCK", "ecli": "ECLI:NL:RBDHA:2015:3551", "predicted": "SECTION_TITLE" }]
-	    }
-	};
-
-/***/ },
-/* 300 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(4);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _underscore = __webpack_require__(210);
-
-	var _underscore2 = _interopRequireDefault(_underscore);
-
-	var _d = __webpack_require__(227);
-
-	var _d2 = _interopRequireDefault(_d);
-
-	var _Bar = __webpack_require__(228);
-
-	var _Bar2 = _interopRequireDefault(_Bar);
-
-	var _reactFauxDom = __webpack_require__(229);
-
-	var _reactFauxDom2 = _interopRequireDefault(_reactFauxDom);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } //noinspection JSUnresolvedVariable
-
-
-	var GroupedBarChart = function (_Component) {
-	    _inherits(GroupedBarChart, _Component);
-
-	    function GroupedBarChart() {
-	        _classCallCheck(this, GroupedBarChart);
-
-	        return _possibleConstructorReturn(this, Object.getPrototypeOf(GroupedBarChart).apply(this, arguments));
-	    }
-
-	    _createClass(GroupedBarChart, [{
-	        key: 'render',
-	        value: function render() {
-	            //noinspection JSUnresolvedVariable
-	            var size = {
-	                width: this.props.width,
-	                height: this.props.height
-	            };
-	            var margin = {
-	                top: 72, right: 20, bottom: 30, left: 50
-	            };
-	            var innerWidth = this.props.width - margin.left - margin.right;
-	            var innerHeight = this.props.height - margin.top - margin.bottom;
-
-	            var data = this.props.data;
-
-	            var titles = new Set();
-	            console.log(JSON.stringify(data));
-	            data.forEach(function (d) {
-	                return d.data.forEach(function (data) {
-	                    return titles.add(data.x);
-	                });
-	            });
-
-	            var color = _d2.default.scale.ordinal().range(this.props.colorRange).domain([].concat(_toConsumableArray(titles)));
-
-	            var xScale = _d2.default.scale.ordinal().rangeRoundBands([0, innerWidth], .2).domain(data.map(function (d) {
-	                return d.title;
-	            }));
-
-	            var yScale = _d2.default.scale.linear().range([innerHeight, 0]).domain([0, this.props.maxY]);
-
-	            var bars = _underscore2.default.map(data, function (d) {
-	                var x1 = _d2.default.scale.ordinal();
-	                x1.domain(d.data.map(function (da) {
-	                    return da.x;
-	                })).rangeRoundBands([0, xScale.rangeBand()]);
-	                return _react2.default.createElement(
-	                    'g',
-	                    {
-	                        className: 'f-score-group',
-	                        transform: "translate(" + xScale(d.title) + ",0)" },
-	                    d.data.map(function (data) {
-	                        //console.log(data);
-	                        data.title = d.x;
-	                        return _react2.default.createElement(_Bar2.default, { xScale: x1,
-	                            yScale: yScale,
-	                            fill: color(data.x),
-	                            height: innerHeight - yScale(data.y),
-	                            data: data,
-	                            i: 0 });
-	                    })
-	                );
-	            });
-
-	            // Add horizontal grid lines
-	            var gridLines = GroupedBarChart.getHorizontalGridlines(yScale, margin, innerWidth);
-
-	            var ax1 = GroupedBarChart.createXAxis(xScale, innerHeight);
-	            var ax2 = GroupedBarChart.createYAxis(yScale, this.props.textY);
-
-	            return _react2.default.createElement(
-	                'svg',
-	                {
-	                    className: 'chart',
-	                    width: size.width,
-	                    height: size.height
-	                },
-	                _react2.default.createElement(
-	                    'g',
-	                    { transform: "translate(" + margin.left + "," + margin.top + ")" },
-	                    ax1,
-	                    ax2,
-	                    gridLines,
-	                    _react2.default.createElement(
-	                        'g',
-	                        null,
-	                        bars
-	                    )
-	                ),
-	                GroupedBarChart.createLegend(margin, [].concat(_toConsumableArray(titles)), 10, color, innerWidth),
-	                _react2.default.createElement(
-	                    'a',
-	                    { xlinkHref: this.props.sourceHref },
-	                    _react2.default.createElement(
-	                        'text',
-	                        { style: { textDecoration: "underline", fill: "#0000EE" }, textAnchor: 'start', x: 12, y: 20 },
-	                        'Data source'
-	                    )
-	                )
-	            );
-	        }
-	    }], [{
-	        key: 'getHorizontalGridlines',
-	        value: function getHorizontalGridlines(yScale, margin, innerWidth) {
-	            var g = _reactFauxDom2.default.createElement('g');
-	            _d2.default.select(g).selectAll("line.horizontalGrid").data(yScale.ticks(10)).enter().append("line").attr({
-	                "class": "horizontalGrid",
-	                "x1": margin.right,
-	                "x2": innerWidth,
-	                "y1": function y1(d) {
-	                    return yScale(d);
-	                },
-	                "y2": function y2(d) {
-	                    return yScale(d);
-	                },
-
-	                "fill": "none",
-	                "shape-rendering": "crispEdges",
-	                "stroke": "lightgray",
-	                "stroke-width": "1px"
-	            });
-	            return _react2.default.createElement('g', {}, g.toReact());
-	        }
-	    }, {
-	        key: 'createYAxis',
-	        value: function createYAxis(yScale, text) {
-	            var yAxis = _d2.default.svg.axis().scale(yScale).orient("left").tickSize(0.1);
-
-	            var yAxisEl = _reactFauxDom2.default.createElement("g");
-	            _d2.default.select(yAxisEl).attr("class", "y axis").call(yAxis).append("text").attr("transform", "rotate(-90)").attr("y", 6).attr("dy", ".71em").style("text-anchor", "end").text(text);
-	            return _react2.default.createElement('g', { className: "axis" }, yAxisEl.toReact());
-	        }
-	    }, {
-	        key: 'createLegend',
-	        value: function createLegend(outerMargin, label, textSize, color, innerWidth) {
-	            var legendHeight = 12;
-	            var legendWidth = 20;
-	            var legendSpacing = 4;
-	            var labelMargin = {
-	                top: 4,
-	                right: 5,
-	                bottom: 4,
-	                left: 5
-	            };
-	            var labelOffsetLeft = outerMargin.right + labelMargin.left;
-	            var labelOffsetTop = labelMargin.top;
-
-	            var legendItems = _underscore2.default.map(label, function (title, i) {
-	                var yPos = i * (legendHeight + legendSpacing) + labelOffsetTop;
-
-	                return _react2.default.createElement(
-	                    'g',
-	                    {
-	                        key: i,
-	                        className: "label series-" + (i + 1) },
-	                    _react2.default.createElement('rect', {
-	                        x: innerWidth + outerMargin.left - 10,
-	                        y: yPos,
-	                        fill: color(title),
-	                        width: legendWidth,
-	                        height: legendHeight,
-	                        className: "series-" + (i + 1) }),
-	                    _react2.default.createElement(
-	                        'text',
-	                        { fill: '#000',
-	                            textAnchor: 'end',
-	                            x: innerWidth + outerMargin.left - 15,
-	                            y: yPos + textSize
-	                        },
-	                        title
-	                    )
-	                );
-	            });
-
-	            // legend.append("rect")
-	            //     .attr("x", width - 18)
-	            //     .attr("width", 18)
-	            //     .attr("height", 18)
-	            //     .style("fill", color);
-	            //
-	            // legend.append("text")
-	            //     .attr("x", width - 24)
-	            //     .attr("y", 9)
-	            //     .attr("dy", ".35em")
-	            //     .text(function(d) { return d; });
-
-	            // <rect
-	            //
-	            //     x={outerMargin.right}
-	            //     height={((legendSpacing+legendHeight)*legendItems.length)-legendSpacing+labelMargin.top+labelMargin.bottom}
-	            //     fill="#FFFFFF"
-	            // />
-	            return _react2.default.createElement(
-	                'g',
-	                {
-	                    width: innerWidth - 18,
-	                    className: 'legend' },
-	                legendItems
-	            );
-	        }
-	    }, {
-	        key: 'createXAxis',
-	        value: function createXAxis(xScale, innerHeight) {
-	            var xAxis = _d2.default.svg.axis().scale(xScale).orient("bottom");
-
-	            var xAxisEl = _reactFauxDom2.default.createElement("g");
-
-	            _d2.default.select(xAxisEl).attr("class", "x axis").attr("transform", "translate(0," + innerHeight + ")").call(xAxis);
-	            return _react2.default.createElement('g', { className: "axis" }, xAxisEl.toReact());
-	        }
-	    }]);
-
-	    return GroupedBarChart;
-	}(_react.Component);
-
-	GroupedBarChart.defaultProps = {
-	    alignLegend: 'left',
-	    sourceHref: undefined,
-	    textY: undefined,
-	    maxY: 1,
-	    width: 400,
-	    height: 300,
-	    stackLabels: undefined,
-	    colorRange: ["#AA0A0A", "#1E405C", "#2C70A9", /*"#56a0dd", "#9DCBF1", "#6b486b", "#a05d56",*/"#d0743c", "#ff8c00"]
-	};
-	GroupedBarChart.propTypes = {
-	    // Looks like
-	    // [
-	    //    {
-	    //      title: string,
-	    //      data: [ {x: any,
-	    //        y: any}, *]
-	    //    }
-	    //   ,*
-	    // ]
-	    data: _react2.default.PropTypes.array.isRequired
-	};
-	exports.default = GroupedBarChart;
-
-/***/ },
-/* 301 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _data = __webpack_require__(299);
-
-	var _data2 = _interopRequireDefault(_data);
-
-	var _react = __webpack_require__(4);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _underscore = __webpack_require__(210);
-
-	var _underscore2 = _interopRequireDefault(_underscore);
-
-	var _figs = __webpack_require__(224);
-
-	var _figs2 = _interopRequireDefault(_figs);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	function getTable(d, key) {
-	    var labels = _underscore2.default.map(d.confusionMatrix, function (val, k) {
-	        return k;
-	    });
-
-	    return _react2.default.createElement(
-	        'table',
-	        { style: { margin: '0 0 ' + (false ? '2' : '8') + '0px 0' }, key: key },
-	        _react2.default.createElement(
-	            'caption',
-	            null,
-	            key
-	        ),
-	        _react2.default.createElement(
-	            'tbody',
-	            null,
-	            _react2.default.createElement(
-	                'thead',
-	                null,
-	                _react2.default.createElement(
-	                    'tr',
-	                    null,
-	                    _react2.default.createElement('td', null),
-	                    _react2.default.createElement('td', null),
-	                    _react2.default.createElement(
-	                        'th',
-	                        { style: { textAlign: 'center', fontWeight: 'normal' }, colSpan: labels.length },
-	                        'Predicted'
-	                    )
-	                ),
-	                _react2.default.createElement(
-	                    'tr',
-	                    null,
-	                    _react2.default.createElement('td', null),
-	                    _react2.default.createElement('td', null),
-	                    labels.map(function (l) {
-	                        return _react2.default.createElement(
-	                            'th',
-	                            null,
-	                            l
-	                        );
-	                    })
-	                )
-	            ),
-	            labels.map(function (l, i) {
-	                return _react2.default.createElement(
-	                    'tr',
-	                    { key: 'row' + i + '-' + l },
-	                    i == 0 ? _react2.default.createElement(
-	                        'th',
-	                        { style: { fontWeight: 'normal' },
-	                            key: "head-90",
-	                            rowSpan: labels.length },
-	                        _react2.default.createElement(
-	                            'div',
-	                            {
-	                                className: 'minus90' },
-	                            'Actual'
-	                        )
-	                    ) : '',
-	                    _react2.default.createElement(
-	                        'th',
-	                        { key: i + '-' + l },
-	                        l
-	                    ),
-	                    labels.map(function (l2) {
-	                        return _react2.default.createElement(
-	                            'td',
-	                            { key: i + '-' + l + '-' + l2 },
-	                            d.confusionMatrix[l].m[l2] ? d.confusionMatrix[l].m[l2] : 0
-	                        );
-	                    })
-	                );
-	            })
-	        )
-	    );
-	}
-
-	var ConfusionMatrix = function (_React$Component) {
-	    _inherits(ConfusionMatrix, _React$Component);
-
-	    function ConfusionMatrix() {
-	        _classCallCheck(this, ConfusionMatrix);
-
-	        return _possibleConstructorReturn(this, Object.getPrototypeOf(ConfusionMatrix).apply(this, arguments));
-	    }
-
-	    _createClass(ConfusionMatrix, [{
-	        key: 'render',
-	        value: function render() {
-	            // class="wikitable" style="border:none; float:left; margin-top:0;"
-	            return _react2.default.createElement(
-	                'figure',
-	                { className: 'chart', id: _figs2.default.confusionMatrix.id },
-	                _underscore2.default.map(_data2.default, getTable),
-	                _react2.default.createElement(
-	                    'figcaption',
-	                    null,
-	                    _react2.default.createElement(
-	                        'span',
-	                        { className: 'figure-number' },
-	                        'Fig ',
-	                        _figs2.default.confusionMatrix.num,
-	                        '.'
-	                    ),
-	                    'Confusion matrices for the three test conditions.'
-	                )
-	            );
-	        }
-	    }]);
-
-	    return ConfusionMatrix;
-	}(_react2.default.Component);
-
-	exports.default = ConfusionMatrix;
-
-/***/ },
-/* 302 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-/***/ },
-/* 303 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -57684,7 +55402,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
-	var _ChapterSectionContent = __webpack_require__(304);
+	var _ChapterSectionContent = __webpack_require__(300);
 
 	var _ChapterSectionContent2 = _interopRequireDefault(_ChapterSectionContent);
 
@@ -57712,7 +55430,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	};
 
-	methodsSections.inOrder = [methodsSections.featureSelection, methodsSections.crf, methodsSections.deterministic];
+	methodsSections.inOrder = [methodsSections.featureSelection, methodsSections.crf
+	// methodsSections.deterministic
+	];
 
 	var Tagging = function (_Component) {
 	    _inherits(Tagging, _Component);
@@ -57749,7 +55469,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Tagging;
 
 /***/ },
-/* 304 */
+/* 300 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -57842,7 +55562,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = Chapter;
 
 /***/ },
-/* 305 */
+/* 301 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -57963,25 +55683,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'Labeling a string of tokens is a task that has been widely covered in literature, mostly in the application of part-of-speech tagging in natural language. Popular methods include graphical models, which model the probability distributions of labels and observations occurring together. These include Hidden Markov Models (HMMs) and the closely related Conditional Random Fields (CRFs). In this chapter, we experiment with CRFs for labeling our tokens, and we compare the results to a hand-written deterministic tagger that utilizes similar features. It turns out that CRFs out-perform the hand-written tagger with a F',
-	                    _react2.default.createElement(
-	                        'sub',
-	                        null,
-	                        '0.5'
-	                    ),
-	                    ' score of 0.92 on ',
-	                    _react2.default.createElement(
-	                        'code',
-	                        null,
-	                        'title text'
-	                    ),
-	                    ', and F',
-	                    _react2.default.createElement(
-	                        'sub',
-	                        null,
-	                        '0.5'
-	                    ),
-	                    ' scores of around 1.0 on the other labels.'
+	                    'Labeling a string of tokens is a task that has been widely covered in literature, mostly in the application of part-of-speech tagging in natural language. Popular methods include graphical models, which model the probability distributions of labels and observations occurring together. These include Hidden Markov Models (HMMs) and the closely related Conditional Random Fields (CRFs). In this chapter, we experiment with CRFs for labeling our tokens, and we compare the results to a hand-written deterministic tagger that utilizes similar features. It turns out that both models score around 1.0 on all labels except section titles. For section titles, CRFs significantly out-perform the hand-written tagger in terms of recall, while trading in some precision. For section titles, the hand-written tagger has a precision of 0.96 and recall of 0.74; the trained CRF of 0.91 and 0.91, respectively.'
 	                )
 	            );
 	        }
@@ -57993,7 +55695,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = TaggingIntroduction;
 
 /***/ },
-/* 306 */
+/* 302 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -58053,23 +55755,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    _createClass(DeterministicTagger, [{
 	        key: 'render',
 	        value: function render() {
-	            return _react2.default.createElement(
-	                'div',
-	                null,
-	                'To compare the performance of CRFs, we also define a deterministic algorithm which serves as a baseline. The tagger uses many of the same features that the CRFs use to determine the labels for given tokens. (e.g. \'if it looks like a known title, assign it to ',
-	                _react2.default.createElement(
-	                    'code',
-	                    null,
-	                    'title'
-	                ),
-	                '\'; \'if it looks like a number and is congruent with previous numbers, assign it to ',
-	                _react2.default.createElement(
-	                    'code',
-	                    null,
-	                    'nr'
-	                ),
-	                '\'.)'
-	            );
+	            return _react2.default.createElement('div', null);
 	        }
 	    }]);
 
@@ -58079,7 +55765,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = DeterministicTagger;
 
 /***/ },
-/* 307 */
+/* 303 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -58118,23 +55804,23 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Math2 = _interopRequireDefault(_Math);
 
-	var _GraphicalModels = __webpack_require__(308);
+	var _GraphicalModels = __webpack_require__(304);
 
 	var _GraphicalModels2 = _interopRequireDefault(_GraphicalModels);
 
-	var _Performance = __webpack_require__(309);
+	var _Performance = __webpack_require__(305);
 
 	var _Performance2 = _interopRequireDefault(_Performance);
 
-	var _LinearChainCRF = __webpack_require__(310);
+	var _LinearChainCRF = __webpack_require__(306);
 
 	var _LinearChainCRF2 = _interopRequireDefault(_LinearChainCRF);
 
-	var _HMMs = __webpack_require__(311);
+	var _HMMs = __webpack_require__(307);
 
 	var _HMMs2 = _interopRequireDefault(_HMMs);
 
-	var _LogRes = __webpack_require__(312);
+	var _LogRes = __webpack_require__(308);
 
 	var _LogRes2 = _interopRequireDefault(_LogRes);
 
@@ -58204,7 +55890,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'In this thesis, we limit ourselves to a subclass of CRFs called Linear-Chain Conditional Random Fields (LC-CRFs or Linear Chain CRFs), which is topologically very similar to HMMs: both model a probability distribution along a chain of input variables, where each input variable is also connected to a single output variable. To clarify, in our experiments we see a input document as a string document elements, where each element should correspond to a label of either ',
+	                    'In this thesis, we limit ourselves to a subclass of CRFs called Linear-Chain Conditional Random Fields (LC-CRFs or Linear Chain CRFs), which is topologically very similar to HMMs: both model a probability distribution along a chain of input variables, where each input variable is also connected to a single output variable.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'To clarify: in our experiments we consider an input document as a string of tokens, where each token should correspond to a label of either ',
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -58239,12 +55930,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        { href: "#" + _GraphicalModels2.default.id() },
 	                        'graphical models'
 	                    ),
-	                    ', ',
-	                    _react2.default.createElement(
-	                        'a',
-	                        { href: '#logistic-regression' },
-	                        'logistic regression'
-	                    ),
 	                    ' and ',
 	                    _react2.default.createElement(
 	                        'a',
@@ -58256,7 +55941,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'For a more thorough tutorial into CRFs, including skip-chain CRFs, one could refer to ',
+	                    'For a more thorough tutorial into CRFs, including skip-chain CRFs, one may refer to ',
 	                    _references2.default.cite(_bib2.default.sutton2006introduction),
 	                    '.'
 	                ),
@@ -58275,7 +55960,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = CRF;
 
 /***/ },
-/* 308 */
+/* 304 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -58566,7 +56251,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = CRF;
 
 /***/ },
-/* 309 */
+/* 305 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -58641,16 +56326,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'CRFs tend to have state-of-the-art performance on NLP tasks such as part-of-speech tagging, but that appears to depend on extensive feature engineering. As a result, it is likely that a given model is fitted to a particular corpus, and suffers in portability with respect to other copora. (Consider ',
-	                    _references2.default.cite(_bib2.default.finkel2004exploiting),
-	                    '.) In our case, this is not a problem because we train explicitly for one corpus, and do not aspire to full language abstraction.'
+	                    'Because of the freedom that CRFs permit for the input vector, CRFs tend to have many features: ',
+	                    _references2.default.cite(_bib2.default.klinger2009feature),
+	                    ' even reports millions of  features.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'Because of the freedom that CRFs permit for the input vector, CRFs tend to have many features: ',
-	                    _references2.default.cite(_bib2.default.klinger2009feature),
-	                    ' even reports millions of  features.'
+	                    'This abundance of features likely explains that CRFs tend to have state-of-the-art performance on NLP tasks such as part-of-speech tagging, since this kind of perofmance appears to depend on extensive feature engineering. As a downside, it is probable that a given model is fitted to a particular corpus, and suffers in portability with respect to other copora. (Consider ',
+	                    _references2.default.cite(_bib2.default.finkel2004exploiting),
+	                    '.) In our case, this is not a problem because we train explicitly for one corpus, and do not aspire to full language abstraction.'
 	                )
 	            );
 	        }
@@ -58667,7 +56352,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = CRF;
 
 /***/ },
-/* 310 */
+/* 306 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -58894,7 +56579,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = LinearChainCRF;
 
 /***/ },
-/* 311 */
+/* 307 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59061,7 +56746,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = CRF;
 
 /***/ },
-/* 312 */
+/* 308 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59169,7 +56854,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = LogRes;
 
 /***/ },
-/* 313 */
+/* 309 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59326,7 +57011,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'We use these features in a probabilistic tagger for which we train a CRF model, and also for a deterministic tagger. We now introduce these models, and report their results.'
+	                    'We use these features in a probabilistic tagger for which we train a CRF model, and also for a hand-written deterministic tagger. We now introduce these models, with a sizeable introduction on Conditional Random Fields, and conclude with a section that reports their experimental results.'
 	                )
 	            );
 	        }
@@ -59420,7 +57105,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = FeatureSelection;
 
 /***/ },
-/* 314 */
+/* 310 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59479,7 +57164,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = InferringDocumentStructureIntroduction;
 
 /***/ },
-/* 315 */
+/* 311 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59496,7 +57181,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _ChapterSectionContent = __webpack_require__(304);
+	var _ChapterSectionContent = __webpack_require__(300);
 
 	var _ChapterSectionContent2 = _interopRequireDefault(_ChapterSectionContent);
 
@@ -59552,7 +57237,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Methods;
 
 /***/ },
-/* 316 */
+/* 312 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59680,7 +57365,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Evaluation;
 
 /***/ },
-/* 317 */
+/* 313 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59770,7 +57455,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = ContextFreeGrammars;
 
 /***/ },
-/* 318 */
+/* 314 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59832,7 +57517,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = AdditionalEnrichment;
 
 /***/ },
-/* 319 */
+/* 315 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60465,7 +58150,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = CYK;
 
 /***/ },
-/* 320 */
+/* 316 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -60485,7 +58170,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = disseminationSections;
 
 /***/ },
-/* 321 */
+/* 317 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60512,7 +58197,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Importing2 = _interopRequireDefault(_Importing);
 
-	var _Chapter = __webpack_require__(322);
+	var _Chapter = __webpack_require__(318);
 
 	var _Chapter2 = _interopRequireDefault(_Chapter);
 
@@ -60559,12 +58244,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'Having a section hierarchy is obviously useful for rendering the documents to human users: it allows us to display a table of contents and to style section titles. But it is also interesting for more advanced text mining applications such as topic modeling and information extraction. For example, we may want to supply sections with some metadata (such as a summary). It would then be useful to have the section hierarchy handy.'
+	                    'Having a section hierarchy is obviously useful for rendering the documents to human users: it allows us to display a table of contents and to style section titles. But it is also interesting for more advanced text mining applications, such as topic modeling and information extraction. For example, we may want to supply sections with some metadata (such as a summary). It would then be useful to have the section hierarchy available.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'In this chapter, we provide an introduction to the Rechtspraak.nl data set that we use, with an introduction to the case law XML markup.'
+	                    'In this chapter, we provide an introduction to the Rechtspraak.nl data set that we experiment on, with an introduction to the case law XML markup.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -60574,7 +58259,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'The next chapters are on element tagging and section parsing. These topics require more complicated machinery than tokenization, and some experimentations, so these topics merit their own chapter.'
+	                    'The following two chapters are on element tagging and section parsing. These topics require more complicated machinery than tokenization, and some experimentation, so these topics merit their own chapter.'
 	                )
 	            );
 	        }
@@ -60599,7 +58284,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Introduction;
 
 /***/ },
-/* 322 */
+/* 318 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60757,7 +58442,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = Chapter;
 
 /***/ },
-/* 323 */
+/* 319 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60774,19 +58459,19 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Chapter = __webpack_require__(322);
+	var _Chapter = __webpack_require__(318);
 
 	var _Chapter2 = _interopRequireDefault(_Chapter);
 
-	var _Introduction = __webpack_require__(321);
+	var _Introduction = __webpack_require__(317);
 
 	var _Introduction2 = _interopRequireDefault(_Introduction);
 
-	var _Tagging = __webpack_require__(324);
+	var _Tagging = __webpack_require__(320);
 
 	var _Tagging2 = _interopRequireDefault(_Tagging);
 
-	var _InferringDocumentStructure = __webpack_require__(325);
+	var _InferringDocumentStructure = __webpack_require__(321);
 
 	var _InferringDocumentStructure2 = _interopRequireDefault(_InferringDocumentStructure);
 
@@ -60827,7 +58512,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = FullThesis;
 
 /***/ },
-/* 324 */
+/* 320 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60842,27 +58527,27 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Chapter = __webpack_require__(322);
+	var _Chapter = __webpack_require__(318);
 
 	var _Chapter2 = _interopRequireDefault(_Chapter);
 
-	var _Methods = __webpack_require__(303);
+	var _Methods = __webpack_require__(299);
 
 	var _Methods2 = _interopRequireDefault(_Methods);
 
-	var _Results = __webpack_require__(297);
+	var _Results = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./Results/Results\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 
 	var _Results2 = _interopRequireDefault(_Results);
 
-	var _DeterministicTagger = __webpack_require__(306);
+	var _DeterministicTagger = __webpack_require__(302);
 
 	var _DeterministicTagger2 = _interopRequireDefault(_DeterministicTagger);
 
-	var _CRF = __webpack_require__(307);
+	var _CRF = __webpack_require__(303);
 
 	var _CRF2 = _interopRequireDefault(_CRF);
 
-	var _FeatureSelection = __webpack_require__(313);
+	var _FeatureSelection = __webpack_require__(309);
 
 	var _FeatureSelection2 = _interopRequireDefault(_FeatureSelection);
 
@@ -60931,7 +58616,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Tagging;
 
 /***/ },
-/* 325 */
+/* 321 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60946,7 +58631,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Chapter = __webpack_require__(322);
+	var _Chapter = __webpack_require__(318);
 
 	var _Chapter2 = _interopRequireDefault(_Chapter);
 
@@ -61005,7 +58690,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Inferring;
 
 /***/ },
-/* 326 */
+/* 322 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61020,7 +58705,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Chapter = __webpack_require__(322);
+	var _Chapter = __webpack_require__(318);
 
 	var _Chapter2 = _interopRequireDefault(_Chapter);
 
@@ -61028,7 +58713,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
-	var _sections = __webpack_require__(320);
+	var _sections = __webpack_require__(316);
 
 	var _sections2 = _interopRequireDefault(_sections);
 

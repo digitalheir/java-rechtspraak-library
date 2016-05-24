@@ -538,6 +538,9 @@ textarea {
 figure {
     margin: 1em 40px;
 }
+.noborder {
+    border: none;
+}
 .minus90 {
     display: inline-block;
     -webkit-transform: rotate(-90deg);
