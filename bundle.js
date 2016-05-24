@@ -22971,15 +22971,19 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Introduction2 = _interopRequireDefault(_Introduction);
 
-	var _Tagging = __webpack_require__(323);
+	var _FullThesis = __webpack_require__(323);
+
+	var _FullThesis2 = _interopRequireDefault(_FullThesis);
+
+	var _Tagging = __webpack_require__(324);
 
 	var _Tagging2 = _interopRequireDefault(_Tagging);
 
-	var _InferringDocumentStructure = __webpack_require__(324);
+	var _InferringDocumentStructure = __webpack_require__(325);
 
 	var _InferringDocumentStructure2 = _interopRequireDefault(_InferringDocumentStructure);
 
-	var _Dissemination = __webpack_require__(325);
+	var _Dissemination = __webpack_require__(326);
 
 	var _Dissemination2 = _interopRequireDefault(_Dissemination);
 
@@ -22999,6 +23003,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    _chapters2.default.inOrder.map(function (chapter) {
 	        return _react2.default.createElement(Route, { path: chapter.route, handler: getHandler(chapter.route) });
 	    }),
+	    _react2.default.createElement(Route, { path: '/full/', handler: _FullThesis2.default }),
 	    ')}'
 	);
 
@@ -24953,6 +24958,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	        booktitle: "Proceedings of the 27th International Conference on Machine Learning (ICML-10)",
 	        pages: "127—134",
 	        year: 2010
+	    },
+	    collins1997three: {
+	        id: 'collins1997three', type: 'inproceedings',
+	        title: "Three generative, lexicalised models for statistical parsing",
+	        author: {
+	            firstName: 'Michael',
+	            lastName: 'Collins'
+	        },
+	        booktitle: "Proceedings of the 35th Annual Meeting of the Association for Computational Linguistics and Eighth Conference of the European Chapter of the Association for Computational Linguistics",
+	        pages: "16—23",
+	        organization: 'Association for Computational Linguistics',
+	        year: 1997
 	    },
 	    abney1991procedure: {
 	        type: 'inproceedings',
@@ -55096,7 +55113,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'As noted above, we have a separate library for importing mirroring the Rechtspraak.nl corpus as a CouchDB database. The mirroring of data was done in order to facilitate the collection of statistics of case law documents used in this document. The project includes a module to convert XML to JSON and a number of MapReduce functions to generate statistics. The source code for this projects is available ',
+	                    'As noted above, we have a separate library for importing mirroring the Rechtspraak.nl corpus as a CouchDB database. The mirroring of data was done in order to facilitate the collection of statistics of case law documents used in this document. The project includes a module to convert XML to JSON and a number of MapReduce functions to generate the statistics used in this thesis. The source code for this project is available ',
 	                    _react2.default.createElement(
 	                        'a',
 	                        {
@@ -55108,7 +55125,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'Regarding tokenization, we need to so some forward thinking to determine how to split Rechtspraak.nl XML texts. We will use four terminal nodes in our section hierarchy:'
+	                    'Regarding tokenization, we need to so some forward thinking to determine how to split Rechtspraak.nl XML texts. We use four terminal nodes in our section hierarchy:'
 	                ),
 	                _react2.default.createElement(
 	                    'ol',
@@ -55157,7 +55174,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'So we tokenize a document for portions of the document that could be labeled any of the above. In this regard, newlines are trivial to detect, and we assume that Rechtspraak.nl has already done a job of splitting text blocks through ',
+	                    'So we should tokenize a document in portions that could be labeled any of the above. In this regard, newlines are trivial to detect, and we assume that Rechtspraak.nl has already done a job of splitting text blocks through ',
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -55194,7 +55211,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ),
 	                    ', which sometimes represents a coherent set of paragraphs. On the other hand, sometimes the paragraph grouping makes no sense. Although it is possible to efficiently tag tree structures instead of a linear list of tokens (',
 	                    _references2.default.cite(_bib2.default.bradley2010learning),
-	                    '), this requires somewhat more complicated machinery and may be problematic when creating the document hierarchy. So the tagging algorithm that we use in the following supposes a linear sequence of tokens. This means that it is possible that we lose some information in the process, because we coerce a tree structure into a linear sequence, and then build a tree structure which may clash with the original tree structure. Merging the two resulting tree structures is a possible, but this is not currently implemented.'
+	                    '), this requires somewhat more complicated machinery and may be problematic when creating the document hierarchy. So the tagging algorithm that we use in the following supposes a linear sequence of tokens. This means that it is possible that we lose some information in the process, because we coerce a tree structure into a linear sequence, and then build a tree structure which may clash with the original tree structure. Merging the two resulting tree structures is possible, but not currently implemented.'
 	                )
 	            );
 	        }
@@ -59585,9 +59602,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'Like in the previous chapter, we evaluate our grammar using an F-score, except with a subtle change in the meaning of precision and recall, because now we\'re comparing dealing trees. This definition is due to ',
+	                    'Evaluating performance on a parse tree is not as straightforward as it is for classification. Like in the previous chapter, we evaluate our grammar using an F-score, except notions of precision and recall are harder to define. For evaluating the parser, we use a metric known as PARSEVAL (due to ',
 	                    _references2.default.cite(_bib2.default.abney1991procedure),
-	                    '.'
+	                    ') with labelled precision and labelled recall (as in ',
+	                    _references2.default.cite(_bib2.default.collins1997three),
+	                    ').'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'In this metric, precision and recall are defined as follows:'
 	                ),
 	                _react2.default.createElement(
 	                    'ul',
@@ -59603,7 +59627,49 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        'Recall is the fraction of correct constituents out of the total number of constituents in the gold standard'
 	                    )
 	                ),
-	                _react2.default.createElement('p', null)
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Where \'correct constituent\' means that each non-terminal node has the same label and the same yield (where \'yield\' means: the ordered list of leaf nodes).'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Over a set of 10 random documents, we report an average F',
+	                    _react2.default.createElement(
+	                        'sub',
+	                        null,
+	                        '1'
+	                    ),
+	                    '-score of 0.92 (precision 0.93; recall 0.92).'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Delving deeper into problematic parses, we see that there are a number of recurring types of errors that our parsing grammar makes. Firstly, it often occurs that subsections are not preceded by a full numbering. For example, consider the following section sequence:'
+	                ),
+	                _react2.default.createElement(
+	                    'pre',
+	                    null,
+	                    '1.',
+	                    _react2.default.createElement('br', null),
+	                    '2.',
+	                    _react2.default.createElement('br', null),
+	                    '3.1',
+	                    _react2.default.createElement('br', null),
+	                    '3.2',
+	                    _react2.default.createElement('br', null)
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Our grammar assumes that section 3.1 is a subsection of section 2, since section 2 is the first preceding supersection to 3.1. However, this not the desired result. The desired result would be to wrap the 3.X subsections in a section that represents section 3, even though there is no explicit numbering for section 3. This could be achieved with an extension to the section grammar.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Another issue is that the grammar has difficulty in deciding whether non-numbered sections should be subsections or not. Indeed, this can be difficult to determine purely on typography. One possible method to resolve this is to incorporate some extra domain-specific knowledge on sections. For example, sections with titles like \'OVERWEGINGEN\' (considerations) and \'CONCLUSIE\' (conclusion) are almost never subsections.'
+	                )
 	            );
 	        }
 	    }]);
@@ -60477,7 +60543,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	        value: function render() {
 	            return _react2.default.createElement(
 	                _Chapter2.default,
-	                { path: this.props.path, title: Introduction.title(), sections: _sections2.default.inOrder },
+	                { inline: !!this.props.inline, path: this.props.path, title: Introduction.title(),
+	                    sections: _sections2.default.inOrder },
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
@@ -60492,12 +60559,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'Having a section hierarchy is obviously useful for rendering the documents to human users: it allows us to display a table of contents and to style section titles. But it is also interesting for more advanced text mining applications such as topic modeling and information extraction. For example, we may want to assign sections with some metadata (such as a summary). It would then be useful to have a section hierarchy ready.'
+	                    'Having a section hierarchy is obviously useful for rendering the documents to human users: it allows us to display a table of contents and to style section titles. But it is also interesting for more advanced text mining applications such as topic modeling and information extraction. For example, we may want to supply sections with some metadata (such as a summary). It would then be useful to have the section hierarchy handy.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'In this chapter, we provide an introduction to the Rechtspraak.nl data set that we use, with an introduction to the case law XML markup. In the final section of this chapter, we present a Java library that contains all the work that we have undertaken in this thesis, which effectively is a pipeline for enriching Dutch case law markup. In this chapter, we also make some remarks on importing and tokenization of Dutch case law documents. Element tagging and section parsing both require more complicated machinery than tokenization, so these topics merit their own chapter.'
+	                    'In this chapter, we provide an introduction to the Rechtspraak.nl data set that we use, with an introduction to the case law XML markup.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Near the end of this chapter, we present a Java library that bundles all the work that we have undertaken in this thesis. This library is effectively a pipeline for enriching Dutch case law markup with a section hierarchy. In the final section, we make some remarks on importing and tokenization of Dutch case law documents.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'The next chapters are on element tagging and section parsing. These topics require more complicated machinery than tokenization, and some experimentations, so these topics merit their own chapter.'
 	                )
 	            );
 	        }
@@ -60593,15 +60670,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	                );
 	            });
 
+	            var standaloneChapter = !this.props.inline;
 	            return _react2.default.createElement(
 	                'div',
 	                null,
-	                _react2.default.createElement(
+	                standaloneChapter ? _react2.default.createElement(
 	                    'h2',
 	                    null,
 	                    'Table of Contents'
-	                ),
-	                _react2.default.createElement(_ToC2.default, _extends({ showHome: true }, this.props)),
+	                ) : '',
+	                standaloneChapter ? _react2.default.createElement(_ToC2.default, _extends({ showHome: true }, this.props)) : '',
 	                _react2.default.createElement(
 	                    'section',
 	                    null,
@@ -60614,7 +60692,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    this.props.children,
 	                    subsections
 	                ),
-	                this.linkToNextChapter(this.props.title)
+	                standaloneChapter ? this.linkToNextChapter(this.props.title) : ''
 	            );
 	        }
 	    }, {
@@ -60688,6 +60766,76 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: true
 	});
 
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(4);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Chapter = __webpack_require__(322);
+
+	var _Chapter2 = _interopRequireDefault(_Chapter);
+
+	var _Introduction = __webpack_require__(321);
+
+	var _Introduction2 = _interopRequireDefault(_Introduction);
+
+	var _Tagging = __webpack_require__(324);
+
+	var _Tagging2 = _interopRequireDefault(_Tagging);
+
+	var _InferringDocumentStructure = __webpack_require__(325);
+
+	var _InferringDocumentStructure2 = _interopRequireDefault(_InferringDocumentStructure);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } //noinspection JSUnresolvedVariable
+
+
+	var FullThesis = function (_Component) {
+	    _inherits(FullThesis, _Component);
+
+	    function FullThesis() {
+	        _classCallCheck(this, FullThesis);
+
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(FullThesis).apply(this, arguments));
+	    }
+
+	    _createClass(FullThesis, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(_Introduction2.default, _extends({ inline: true }, this.props)),
+	                _react2.default.createElement(_Tagging2.default, _extends({ inline: true }, this.props)),
+	                _react2.default.createElement(_InferringDocumentStructure2.default, _extends({ inline: true }, this.props))
+	            );
+	        }
+	    }]);
+
+	    return FullThesis;
+	}(_react.Component);
+
+	exports.default = FullThesis;
+
+/***/ },
+/* 324 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(4);
@@ -60753,7 +60901,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                return "../";
 	            }).join("");
 	            return _react2.default.createElement(_Chapter2.default, {
-	                path: this.props.path,
+	                inline: !!this.props.inline, path: this.props.path,
 	                title: Tagging.title(),
 	                sections: _sections2.default.inOrder });
 	        }
@@ -60783,7 +60931,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Tagging;
 
 /***/ },
-/* 324 */
+/* 325 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60833,7 +60981,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        value: function render() {
 	            return _react2.default.createElement(_Chapter2.default, {
 	                path: this.props.path,
-	                title: Inferring.title(),
+	                inline: !!this.props.inline, title: Inferring.title(),
 	                sections: _sections2.default.inOrder });
 	        }
 	    }], [{
@@ -60857,7 +61005,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Inferring;
 
 /***/ },
-/* 325 */
+/* 326 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
