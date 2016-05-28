@@ -1,0 +1,319 @@
+{  "deterministicTagger": {
+  "confusionMatrix": {
+    "NEWLINE": {
+      "m": {
+        "NEWLINE": 2105
+      }
+    },
+    "NR": {
+      "m": {
+        "NR": 827,
+        "TEXT_BLOCK": 11
+      }
+    },
+    "SECTION_TITLE": {
+      "m": {
+        "SECTION_TITLE": 222,
+        "TEXT_BLOCK": 74
+      }
+    },
+    "TEXT_BLOCK": {
+      "m": {
+        "SECTION_TITLE": 8,
+        "TEXT_BLOCK": 3219
+      }
+    }
+  },
+  "scores": {
+    "NEWLINE": {
+      "truePositive": 2105,
+      "trueNegative": 4361,
+      "falseNegative": 0,
+      "falsePositive": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "f2": 1.0
+    },
+    "NR": {
+      "truePositive": 827,
+      "trueNegative": 5628,
+      "falseNegative": 11,
+      "falsePositive": 0,
+      "precision": 1.0,
+      "recall": 0.986873508353222,
+      "f1": 0.9933933933933935,
+      "f2": 0.9894711653505625
+    },
+    "SECTION_TITLE": {
+      "truePositive": 222,
+      "trueNegative": 6162,
+      "falseNegative": 74,
+      "falsePositive": 8,
+      "precision": 0.9652173913043478,
+      "recall": 0.75,
+      "f1": 0.8441064638783269,
+      "f2": 0.7850070721357849
+    },
+    "TEXT_BLOCK": {
+      "truePositive": 3219,
+      "trueNegative": 3154,
+      "falseNegative": 8,
+      "falsePositive": 85,
+      "precision": 0.9742736077481841,
+      "recall": 0.9975209172606135,
+      "f1": 0.9857602204869086,
+      "f2": 0.9927831236121392
+    }
+  }
+},
+  "tagger-trained-on-auto-annotated.crf": {
+    "confusionMatrix": {
+      "NEWLINE": {
+        "m": {
+          "NEWLINE": 2105
+        }
+      },
+      "NR": {
+        "m": {
+          "NR": 838
+        }
+      },
+      "SECTION_TITLE": {
+        "m": {
+          "SECTION_TITLE": 222,
+          "TEXT_BLOCK": 74
+        }
+      },
+      "TEXT_BLOCK": {
+        "m": {
+          "SECTION_TITLE": 7,
+          "TEXT_BLOCK": 3220
+        }
+      }
+    },
+    "scores": {
+      "NEWLINE": {
+        "truePositive": 2105,
+        "trueNegative": 4361,
+        "falseNegative": 0,
+        "falsePositive": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "f2": 1.0
+      },
+      "NR": {
+        "truePositive": 838,
+        "trueNegative": 5628,
+        "falseNegative": 0,
+        "falsePositive": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "f2": 1.0
+      },
+      "SECTION_TITLE": {
+        "truePositive": 222,
+        "trueNegative": 6163,
+        "falseNegative": 74,
+        "falsePositive": 7,
+        "precision": 0.9694323144104804,
+        "recall": 0.75,
+        "f1": 0.8457142857142858,
+        "f2": 0.7855626326963907
+      },
+      "TEXT_BLOCK": {
+        "truePositive": 3220,
+        "trueNegative": 3165,
+        "falseNegative": 7,
+        "falsePositive": 74,
+        "precision": 0.9775349119611415,
+        "recall": 0.9978308026030369,
+        "f1": 0.9875785922404539,
+        "f2": 0.9937044809282805
+      }
+    }
+  },
+  "tagger-trained-on-manually-annotated.crf": {
+    "confusionMatrix": {
+      "NEWLINE": {
+        "m": {
+          "NEWLINE": 2105
+        }
+      },
+      "NR": {
+        "m": {
+          "NR": 836,
+          "TEXT_BLOCK": 2
+        }
+      },
+      "SECTION_TITLE": {
+        "m": {
+          "SECTION_TITLE": 253,
+          "TEXT_BLOCK": 43
+        }
+      },
+      "TEXT_BLOCK": {
+        "m": {
+          "SECTION_TITLE": 18,
+          "TEXT_BLOCK": 3209
+        }
+      }
+    },
+    "scores": {
+      "NEWLINE": {
+        "truePositive": 2105,
+        "trueNegative": 4361,
+        "falseNegative": 0,
+        "falsePositive": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "f2": 1.0
+      },
+      "NR": {
+        "truePositive": 836,
+        "trueNegative": 5628,
+        "falseNegative": 2,
+        "falsePositive": 0,
+        "precision": 1.0,
+        "recall": 0.9976133651551312,
+        "f1": 0.998805256869773,
+        "f2": 0.9980897803247372
+      },
+      "SECTION_TITLE": {
+        "truePositive": 253,
+        "trueNegative": 6152,
+        "falseNegative": 43,
+        "falsePositive": 18,
+        "precision": 0.933579335793358,
+        "recall": 0.8547297297297297,
+        "f1": 0.892416225749559,
+        "f2": 0.8694158075601375
+      },
+      "TEXT_BLOCK": {
+        "truePositive": 3209,
+        "trueNegative": 3194,
+        "falseNegative": 18,
+        "falsePositive": 45,
+        "precision": 0.9861708666256914,
+        "recall": 0.9944220638363805,
+        "f1": 0.9902792778892147,
+        "f2": 0.9927607969310728
+      }
+    }
+  },
+  "tagger-trained-on-auto-annotated-no-newlines.crf": {
+    "confusionMatrix": {
+      "NEWLINE": {
+        "m": {}
+      },
+      "NR": {
+        "m": {
+          "NR": 838
+        }
+      },
+      "SECTION_TITLE": {
+        "m": {
+          "SECTION_TITLE": 222,
+          "TEXT_BLOCK": 74
+        }
+      },
+      "TEXT_BLOCK": {
+        "m": {
+          "SECTION_TITLE": 7,
+          "TEXT_BLOCK": 3220
+        }
+      }
+    },
+    "scores": {
+      "NR": {
+        "truePositive": 838,
+        "trueNegative": 3523,
+        "falseNegative": 0,
+        "falsePositive": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "f2": 1.0
+      },
+      "SECTION_TITLE": {
+        "truePositive": 222,
+        "trueNegative": 4058,
+        "falseNegative": 74,
+        "falsePositive": 7,
+        "precision": 0.9694323144104804,
+        "recall": 0.75,
+        "f1": 0.8457142857142858,
+        "f2": 0.7855626326963907
+      },
+      "TEXT_BLOCK": {
+        "truePositive": 3220,
+        "trueNegative": 1060,
+        "falseNegative": 7,
+        "falsePositive": 74,
+        "precision": 0.9775349119611415,
+        "recall": 0.9978308026030369,
+        "f1": 0.9875785922404539,
+        "f2": 0.9937044809282805
+      }
+    }
+  },
+  "tagger-trained-on-manually-annotated-no-newlines.crf": {
+    "confusionMatrix": {
+      "NEWLINE": {
+        "m": {}
+      },
+      "NR": {
+        "m": {
+          "NR": 838
+        }
+      },
+      "SECTION_TITLE": {
+        "m": {
+          "SECTION_TITLE": 250,
+          "TEXT_BLOCK": 46
+        }
+      },
+      "TEXT_BLOCK": {
+        "m": {
+          "SECTION_TITLE": 22,
+          "TEXT_BLOCK": 3205
+        }
+      }
+    },
+    "scores": {
+      "NR": {
+        "truePositive": 838,
+        "trueNegative": 3523,
+        "falseNegative": 0,
+        "falsePositive": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "f2": 1.0
+      },
+      "SECTION_TITLE": {
+        "truePositive": 250,
+        "trueNegative": 4043,
+        "falseNegative": 46,
+        "falsePositive": 22,
+        "precision": 0.9191176470588235,
+        "recall": 0.8445945945945946,
+        "f1": 0.880281690140845,
+        "f2": 0.8585164835164836
+      },
+      "TEXT_BLOCK": {
+        "truePositive": 3205,
+        "trueNegative": 1088,
+        "falseNegative": 22,
+        "falsePositive": 46,
+        "precision": 0.9858505075361427,
+        "recall": 0.9931825224666874,
+        "f1": 0.9895029330040136,
+        "f2": 0.9917074076366111
+      }
+    }
+  }
+}
