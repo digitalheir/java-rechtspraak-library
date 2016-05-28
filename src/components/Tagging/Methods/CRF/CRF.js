@@ -1,18 +1,25 @@
 //noinspection JSUnresolvedVariable
 import React, {Component} from 'react';
 import FigRef from './../../../Figures/FigRef'
-import FigImg from './../../../Figures/Image/Image'
+// import FigImg from './../../../Figures/Image/Image'
 import figs from './../../../Figures/figs'
 import ref from '../../../Bibliography/References/references'
 import bib from  '../../../Bibliography/bib';
 import Math from  '../../../Math/Math';
 import GraphicalModels from  './GraphicalModels/GraphicalModels';
-import Performance from  './Performance/Performance';
-import LinearChainCRF from  './LinearChainCRF/LinearChainCRF';
-import HMMs from  './HMMs/HMMs';
-import LogRes from  './LogRes/LogRes';
+// import Performance from  './Performance/Performance';
+// import LinearChainCRF from  './LinearChainCRF/LinearChainCRF';
+// import HMMs from  './HMMs/HMMs';
+// import LogRes from  './LogRes/LogRes';
+import crfSections from './sections';
 
 export default class CRF extends Component {
+
+    //noinspection JSUnusedGlobalSymbols
+    static getSections() {
+        return crfSections;
+    }
+
     render() {
         const relativeToRoot = this.props.path.match(/\//g).slice(1).map(_ => "../").join("");
         return <div>
@@ -30,8 +37,9 @@ export default class CRF extends Component {
                 use a very rich set of features <Math
                     l="\mathbf x"/> and still have a tractable model. As such, CRFs can model a complex
                 interdependence of observation variables, and are therefore popular
-                in pattern recognition tasks.
+                in pattern recognition tasks
             </p>
+
 
             <p>
                 As illustrated in <FigRef fig={figs.graphicalModels}/>,
@@ -45,30 +53,44 @@ export default class CRF extends Component {
                 In this thesis, we limit ourselves to a subclass of CRFs called Linear-Chain Conditional Random Fields
                 (LC-CRFs or Linear Chain CRFs),
                 which is topologically very similar to HMMs: both model a probability distribution along a
-                chain of input variables, where each input variable is also connected to a single output variable.
-                To clarify, in our experiments we
-                see a input document as a string document elements,
-                where each element should correspond to a label of either <code>title</code>, <code>nr</code>, <
+                chain of input variables, where each input variable is also connected to a single output
+                variable.
+            </p>
+            <p>
+                To clarify: in our experiments we
+                consider an input document as a string of tokens,
+                where each token should correspond to a label of either <code>title</code>, <code>nr</code>, <
                 code>text</code> or <code>newline</code>.
             </p>
-
+            <p>
+                Because of the freedom that CRFs permit for the input vector,
+                CRFs tend to have many features: {ref.cite(bib.klinger2009feature)} even reports
+                millions of features.
+            </p>
+            <p>
+                This abundance of features likely explains
+                that CRFs tend to have state-of-the-art performance on NLP tasks such as
+                part-of-speech tagging, since this kind of performance
+                appears to depend on extensive feature
+                engineering. As a downside, it is more likely that a model overfits
+                to a particular corpus, and so suffers in portability with respect to other copora.
+                (Consider {ref.cite(bib.finkel2004exploiting)}.) In our case, this
+                is likely not a problem because we train explicitly for
+                one corpus, and do not aspire to full language abstraction.
+            </p>
             <p>
                 In this section,
                 we provide a definition of Linear-Chain Conditional Random Fields,
                 supported first by introductory
-                sections on <a href={"#"+GraphicalModels.id()}>graphical models</a>, <a href="#logistic-regression">logistic
-                regression</a> and <a href="#hmm">Hidden Markov Models</a>.
+                sections on <a href={"#"+GraphicalModels.id()}>graphical
+                models</a> and <a href="#hmm">Hidden Markov Models</a>.
             </p>
-            
+
             <p>
-                For a more thorough tutorial into CRFs, including skip-chain CRFs, one could refer
+                For a more thorough tutorial into CRFs, including skip-chain CRFs, one may refer
                 to {ref.cite(bib.sutton2006introduction)}.
             </p>
-            
-            <GraphicalModels {...this.props}/>
-            <HMMs {...this.props}/>
-            <LinearChainCRF {...this.props}/>
-            <Performance {...this.props}/>
+
         </div>;
         // <LogRes {...this.props}/>
     }

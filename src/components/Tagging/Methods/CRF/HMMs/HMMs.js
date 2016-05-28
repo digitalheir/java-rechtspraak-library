@@ -9,9 +9,7 @@ import F from  '../../../../Math/Math';
 
 export default class CRF extends Component {
     render() {
-        return <section id="hmm">
-            <h4>Hidden Markov Models</h4>
-
+        return <div>
             <p>
                 Hidden Markov Models (HMMs) are a subclass of graphical models in which
                 we model a linear sequence of observations <F l="\mathbf x=\{x_t\}_{t=1}^T"/> that are assumed
@@ -61,7 +59,7 @@ export default class CRF extends Component {
                 href="https://en.wikipedia.org/wiki/Baum%E2%80%93Welch_algorithm">Baum-Welch algorithm</a>[TODO
                 ref?].
             </p>
-        </section>;
+        </div>;
     }
 }
             

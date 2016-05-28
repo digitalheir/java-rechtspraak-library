@@ -38,7 +38,7 @@ class Root extends React.Component {
                 <link rel="stylesheet" href={relativeToRoot+"style.css"}/>
             </head>
             <body className='p2'>
-            <Header {...this.props} />
+            {this.props.path=='/full/'?'':<Header {...this.props} />}
             <RouteHandler {...this.props} />
             <Bibliography/>
             <script

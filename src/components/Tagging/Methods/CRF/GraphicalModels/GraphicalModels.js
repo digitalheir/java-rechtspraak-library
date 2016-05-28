@@ -15,9 +15,7 @@ export default class CRF extends Component {
     render() {
         const relativeToRoot = this.props.path.match(/\//g).slice(1).map(_ => "../").join("");
 
-        return <section id={CRF.id()}>
-            <h4>Graphical models</h4>
-
+        return <div>
             <p>
                 Graphical models are statistical models where the probility function can
                 be represented
@@ -151,6 +149,6 @@ export default class CRF extends Component {
                 Linear-Chain CRFs (discriminative).
             </p>
 
-        </section>;
+        </div>;
     }
 }

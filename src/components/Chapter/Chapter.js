@@ -1,5 +1,5 @@
 import React from 'react';
-import getHandler from '../getSectionComponent';
+import {getSubSections} from '../getSectionComponent';
 import chapters from '../../../chapters';
 import ToC from '../ToC/ToC'
 /**
@@ -7,31 +7,21 @@ import ToC from '../ToC/ToC'
  */
 export default class Chapter extends React.Component {
     render() {
-        var subsections = this.props.sections.map(section => {
-                var SectionContent = getHandler(section.id);
-                return <section key={section.id}
-                                id={section.id}>
-                    <h3 className="title">
-                        <a className="link-up" href="#"/>
-                        {section.title}
-                    </h3>
-                    <SectionContent {...this.props}/>
-                </section>;
-            }
-        );
+        var subsections = this.props.sections.map(getSubSections(this.props, 3));
 
+        const standaloneChapter = !this.props.inline;
         return (
             <div>
-                <h2>Table of Contents</h2>
-                <ToC showHome={true} {...this.props} />
+                {standaloneChapter ? <h2>Table of Contents</h2> : ''}
+                {standaloneChapter ? <ToC showHome={true} {...this.props} /> : ''}
 
-                <section>
+                <section className="chapter">
                     <h2 className="title"><a className="link-up" href="#"/>{this.props.title}</h2>
                     {this.props.children}
                     {subsections}
                 </section>
 
-                {this.linkToNextChapter(this.props.title)}
+                {standaloneChapter ? this.linkToNextChapter(this.props.title) : ''}
             </div>
         );
     }

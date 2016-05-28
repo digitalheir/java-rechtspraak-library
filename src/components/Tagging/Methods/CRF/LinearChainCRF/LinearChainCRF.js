@@ -9,9 +9,7 @@ import F from  '../../../../Math/Math';
 
 export default class LinearChainCRF extends Component {
     render() {
-        return <section id="linear-chain-crf">
-            <h4>Linear Chain CRFs</h4>
-
+        return <div>
             <p>
                 On the surface, linear-chain CRFs (LC-CRFs) look much like Hidden Markov Models: as we see in <FigRef
                 fig={figs.graphicalModels}/>, LC-CRFs also model a sequence of observations along a
@@ -108,7 +106,7 @@ export default class LinearChainCRF extends Component {
                     the probability distribution <F latex="p(\mathbf x,\mathbf y)"/> of a HMM yields a Conditional
                     Random Field with a particular choice of feature functions.
                 </p>
-        </section>
+        </div>
     ;
     }
     }

@@ -16,21 +16,7 @@ export default class CRF extends Component {
         const relativeToRoot = this.props.path.match(/\//g).slice(1).map(_ => "../").join("");
 
         return <div>
-            <h4>CRF discussion</h4>
-            <p>
-                CRFs tend to have state-of-the-art performance on NLP tasks such as
-                part-of-speech tagging, but that appears to depend on extensive feature
-                engineering. As a result, it is likely that a given model is fitted
-                to a particular corpus, and suffers in portability with respect to other copora.
-                (Consider {ref.cite(bib.finkel2004exploiting)}.) In our case, this 
-                is not a problem because we train explicitly for 
-                one corpus, and do not aspire to full language abstraction.
-            </p>
-            <p>
-                Because of the freedom that CRFs permit for the input vector,
-                CRFs tend to have many features: {ref.cite(bib.klinger2009feature)} even reports 
-                millions of  features.
-            </p>
+            
         </div>;
     }
 }

@@ -4,11 +4,12 @@ import references from '../bib';
 import React, {Component} from 'react';
 
 export default {
-  ref: references,
-  cite: function (refId, page) {
-    return <Inl
-      refId={refId}
-      page={page}
-    />
-  }
+    ref: references,
+    cite: function (refId, page) {
+        if (!refId) throw new Error("Reference not defined");
+        return <Inl
+            refId={refId}
+            page={page}
+        />
+    }
 };

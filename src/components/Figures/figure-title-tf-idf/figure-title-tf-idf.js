@@ -6,7 +6,7 @@ import PercentageBar  from '../../PercentageBar/PercentageBar'
 
 export default class FigureTitleTfIdf extends React.Component {
     render() {
-        var nTerms = 20;
+        var nTerms = 15;
         var tfIdfScores = tfidfForAllTerms(nTerms);
         var maxVal = tfIdfScores[0][1];
         _.map(tfIdfScores,function(arr){
@@ -40,9 +40,9 @@ export default class FigureTitleTfIdf extends React.Component {
                 <span className="figure-number">Fig {figs.tfidf.num}.</span> Top {nTerms} tf-idf
                 scores for stemmed words in
                 section titles.
-                We take as document here any string block (such as a paragraph, or title). Stemming is performed using
+                Stemming is performed using
                 the <a href="http://snowball.tartarus.org/algorithms/dutch/stemmer.html">Snowball algorithm for
-                Dutch</a>.
+                Dutch</a>. '_NUM' and '_ART' stand for 'number' and 'article' (de/het/een), respectively.
             </figcaption>
         </figure>;
     }

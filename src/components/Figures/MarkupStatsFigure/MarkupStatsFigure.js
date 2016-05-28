@@ -17,7 +17,7 @@ export default class extends Component {
             </div>
             <figcaption>
                 <span className="figure-number">Fig {figs.markupStats.num}.</span> Chart
-                showing the number documents with different kinds of markup. In particular,
+                showing the number of documents with different kinds of markup. In particular,
                 we are interested in the number of <code>*.info</code> tags, which are
                 headers that contain metadata about the case,
                 and <code>section</code> tags, denoting sections.

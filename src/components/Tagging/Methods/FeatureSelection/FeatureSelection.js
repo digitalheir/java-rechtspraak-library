@@ -47,7 +47,9 @@ export default class FeatureSelection extends Component {
 
             <p>
                 We use these features in a probabilistic tagger for which we train a CRF model, and also for a
-                deterministic tagger. We now introduce these models, and report their results.
+                hand-written deterministic tagger. We now introduce these models, with a sizeable introduction
+                on Conditional Random Fields,
+                and conclude with a section that reports their experimental results.
             </p>
         </div>;
     }

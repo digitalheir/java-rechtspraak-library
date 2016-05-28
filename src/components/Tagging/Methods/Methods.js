@@ -20,8 +20,8 @@ const methodsSections = {
 
 methodsSections.inOrder = [
     methodsSections.featureSelection,
-    methodsSections.crf,
-    methodsSections.deterministic
+    methodsSections.crf
+    // methodsSections.deterministic
 ];
 
 

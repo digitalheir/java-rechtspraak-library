@@ -10,6 +10,30 @@ const bib = {
         pages: "127—134",
         year: 2010
     },
+    zhu2013fast: {
+        type: 'inproceedings',
+        id: 'zhu2013fast',
+        title: 'Fast and Accurate Shift-Reduce Constituent Parsing.',
+        author: {
+            abbr: "Zhu et al.",
+            full: 'Zhu, Muhua and Zhang, Yue and Chen, Wenliang and Zhang, Min and Zhu, Jingbo'
+        },
+        booktitle: 'ACL (1)',
+        pages: '434—443',
+        year: 2013
+    },
+    hale2001probabilistic: {
+        id: 'hale2001probabilistic', type: 'inproceedings',
+        title: "A probabilistic Earley parser as a psycholinguistic model",
+        author: {
+            firstName: 'John',
+            lastName: 'Hale'
+        },
+        booktitle: "Proceedings of the second meeting of the North American Chapter of the Association for Computational Linguistics on Language technologies",
+        organization: 'Association for Computational Linguistics',
+        pages: "1—8",
+        year: 2001
+    },
     collins1997three: {
         id: 'collins1997three', type: 'inproceedings',
         title: "Three generative, lexicalised models for statistical parsing",
@@ -31,7 +55,7 @@ const bib = {
             full: 'Abney, Steven and Flickenger, S and Gdaniec, Claudia and Grishman, C and Harrison, Philip and Hindle, Donald and Ingria, Robert and Jelinek, Frederick and Klavans, Judith and Liberman, Mark and others'
         },
         booktitle: 'Proceedings of the workshop on Speech and Natural Language',
-        pages: '306--311',
+        pages: '306—311',
         year: '1991',
         organization: 'Association for Computational Linguistics'
     },
@@ -175,6 +199,17 @@ const bib = {
         title: "MALLET: A Machine Learning for Language Toolkit",
         href: "http://mallet.cs.umass.edu",
         year: 2002
+    },
+    sutton2004conditional: {
+        id: 'sutton2004conditional',
+        type: 'phdthesis',
+        title: 'Conditional probabilistic context-free grammars',
+        author: {
+            abbr: "McCallum & Sutton",
+            full: "Sutton, Charles and McCallum, Andrew"
+        },
+        year: '2004',
+        school: 'Citeseer'
     },
     sutton2006introduction: {
         id: 'sutton2006introduction',

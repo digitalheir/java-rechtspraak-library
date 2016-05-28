@@ -29,11 +29,11 @@ export default class Introduction extends Component {
 
         return <div>
             <p>
-                We want to automatically annotate documents in the corpus with some semantic mark
+                We wish to automatically annotate documents in the corpus with some semantic mark
                 up, so it is helpful to see what is already done in this regard
                 by <a href="http://www.rechtspraak.nl/">Rechtspraak.nl</a>.
-                As we have seen, in recent years documents are more richly marked up than older
-                documents. Indeed: most older documents consist exclusively
+                As we have seen, recent documents are more richly marked up than older
+                documents. Indeed, most older documents consist exclusively
                 of <code>para</code> and <code>paragroup</code> tags, denoting paragraphs
                 and groups of paragraphs respectively.
             </p>
@@ -41,7 +41,7 @@ export default class Introduction extends Component {
                 We observe that a richly marked up case law document
                 typically consists of the following parts:
             </p>
-            <section id="info">
+            <section className="noborder" id="info">
                 <h3><code>*.info</code></h3>
                 <p>
                     The first element in a document is typically a unique header element with
@@ -53,7 +53,7 @@ export default class Introduction extends Component {
                     to style consistencies in authors (e.g., most units of metadata are on a separate line).
                 </p>
 
-                <strike>
+                <strike style={{display: 'gone'}}>
                     <p>The <code>*.info</code> element typically
                         contains metadata about the legal case, such as:
                     </p>
@@ -75,12 +75,11 @@ export default class Introduction extends Component {
                     <p>
                         The order and formatting of this information appears in a multitude of order and
                         formatting, making it difficult to write a deterministic grammar for recognizing
-                        a header section. [TODO figref] suggests that analyzing tf-idf in <code>*.info</code> elements
+                        a header section. [TODO figref] suggests that analyzing tf–idf in <code>*.info</code> elements
                         does not seem to be a particularly useful method of generating features
                         that select for these metadata items. But it
                         is easy for the human eye to recognize some recurring patterns.
                     </p>
-                    <FigureInfoText/>
                     <p>See, e.g., <cite><a
                         href="https://rechtspraak.lawreader.nl/ecli/ECLI:NL:GHARL:2014:9139">ECLI:NL:GHARL:2014:9139</a>
                     </cite> for an example.</p>
@@ -92,7 +91,7 @@ export default class Introduction extends Component {
                     to include a <code>*.info</code> tag.
                 </p>
                 <p>
-                    A <code>*.info</code> element is followed by any number of sections.
+                    A <code>*.info</code> element is followed by any number of <code>section</code> tags.
                 </p>
             </section>
             <section>
@@ -104,9 +103,11 @@ export default class Introduction extends Component {
                     to create a section hierarchy.
                 </p>
                 <p>
-                    In practice<Source
-                    href="https://rechtspraak.cloudant.com/docs/_design/stats/_view/section_roles?group_level=1"/> we
-                    see three values for the <code>role</code> attribute, of either
+                    In practice we
+                    see three values for the <code>role</code> attribute.<Source
+                    href=
+                        "https://rechtspraak.cloudant.com/docs/_design/stats/_view/section_roles?group_level=1"/> These
+                    values are either
                 </p>
                 <ul>
                     <li>
@@ -120,7 +121,8 @@ export default class Introduction extends Component {
                     </li>
                 </ul>
                 <p>
-                    Many sections have no role, although one may imagine other roles than the above, such
+                    Many <code>section</code> elements have no role, although one may imagine other roles
+                    than the above, such
                     as <code>feiten</code> (facts). Assigning roles to sections
                     is an interesting avenue of research, but we do not explore this in this thesis. Instead,
                     we limit ourselves to demarcating sections and assigning some hierarchical section structure.
@@ -132,22 +134,77 @@ export default class Introduction extends Component {
                     <code>title</code> elements typically occur as the
                     first descendant of
                     a <code>section</code> element, and contain either a
-                    numbering in a <code>nr</code> node, or some text, or both.
+                    numbering or some text, or both.
                 </p>
+
                 <p>
-                    We assume that <code>title</code> elements consist of an optional
-                    numbering, followed by a
-                    handful of words (see <FigRef fig={figs.figTitleWordCount}/>).
+                    In our tagging operation, these elements are the hardest to label, so we make
+                    a special effort to describe some common patterns.
                 </p>
+
+                <p>
+                    In <FigRef fig={figs.figTitleWordCount}/>, we see that if
+                    a <code>title</code> element contains text, it usually only contains
+                    a handful of words, with close to 99% of section titles
+                    containing 10 words or less.
+                </p>
+
                 <WordCountFig/>
 
-                <p>Titles have a number of patterns that often recur. See <FigRef
-                    fig={figs.figTitleTreemap}/> for a tree map for the occurrence
-                    title texts, and <FigRef fig={figs.tfidf}/> for a chart of the terms with the
-                    highest tf-idf scores.  
+                <p>
+                    Titles texts have a number of patterns that often recur. See <FigRef
+                    fig={figs.figTitleTreemap}/> for a tree map of the distribution of
+                    normalized title texts.
+                    </p>
+                <FigTitlePattern/>
+
+
+                <p>
+                    See <FigRef fig={figs.tfidf}/> & <FigRef fig={figs.sectionsTfidf}/> for
+                    charts of terms within section title elements with the
+                    highest tf–idf scores.
+
+                </p>
+                <p>
+                    tf–idf is short for 'term frequency–inverse document frequency',
+                    which is a number that reflects how important a given word is
+                    within a collection of documents.
+
+                    It represents the importance of a given word by taking the number of times
+                    that word occurs in the document, and offsetting it against the amount of
+                    times that word occurs elsewhere.
                 </p>
 
-                <FigTitlePattern/>
+                <p>tf–idf is defined is defined as follows: </p>
+
+                <F display={true} l="\text{tfidf}(t, d, D) = \text{tf}(t, d)\cdot \text{idf}(t, D)"/>
+                <p>where</p>
+                <ul>
+                    <li><F l="tf(t,d)"/> is a measure of the importance of a
+                        term <F l="t"/> in a
+                        given document <F l="d"/>. Let the raw frequency <F l="f_{t,d}"/> be
+                        the plain number of times the term <F l="t"/> in occurs in a
+                        given document <F l="d"/>. We use the logarithmically scaled term
+                        count: <F l="tf(t,d) = 1 + \log{f_{t,d}}"/>, or <F l="0"/> if <F l="f_{t,d} = 0"/>.
+                    </li>
+                    <li><F l="idf(t, D)"/> is a measure of how rare it is to find a
+                        term <F l="t"/> in a
+                        given document corpus <F l="D"/>. We obtain this measure
+                        by calculating the logarithmically scaled inverse
+                        fraction of documents in <F l="D"/> that contain the term <F l="t"/>.
+                        Let <F l="D"/> be the collection of documents, we then define
+                        the standard idf measure as:
+                        <F display="true" l="idf(t, D) = \log{\frac{|D|}{|\{d \in D:t \in d\}|}}"/>
+                    </li>
+                </ul>
+                <p>
+                    In our case, we take as a document
+                    text elements (such as a paragraph, or title), because we
+                    want to derive at the most important words within title elements.
+                </p>
+                <p>
+
+                </p>
                 <TitleTfIdfFigure/>
                 <TitleTfIdfFigurePerSection/>
             </section>
@@ -162,7 +219,7 @@ export default class Introduction extends Component {
                     XML documents.
 
                     In the absence of an official schema,
-                    we have created a makeshift XML schema,
+                    we have created a makeshift XML schema
                     that was automatically generated from a random sample of
                     500 documents, and then manually corrected.
                 </p>

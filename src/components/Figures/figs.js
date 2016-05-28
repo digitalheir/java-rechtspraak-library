@@ -40,6 +40,10 @@ const figs = {
     figTitleTreemap: {
         id: "fig-title-patterns",
         num: 2
+    }, 
+    sectionsTfidf: {
+        id: "fig-tfidf-sections",
+        num: 4
     },
 
     hmm: function () {
@@ -71,7 +75,7 @@ const figs = {
 
     tfidf: function () {
         const id = "tfidf";
-        const num = 1;
+        const num = 3;
 
         return {
             id: id,

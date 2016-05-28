@@ -25,23 +25,28 @@ class ToC extends React.Component {
     }
 
     render() {
-        const relativeToRoot = this.props.path.match(/\//g).slice(1).map(_ => "../").join("");
+        let relativeToRoot = this.props.path.match(/\//g).slice(1).map(_ => "../").join("");
+
         const path = this.props.path;
 
 
-        return <nav className='toc'>
+        var props = this.props;
+        return <nav className={'chapter toc'}>
             <ol>
                 {this.props.showHome ? <a href={relativeToRoot}>Home</a> : ""}
                 {
                     chapters.inOrder.map((chapter) => {
-                            const urlSection = relativeToRoot + chapter.route.replace('/', '');
+                            let urlSection;
+
+                            if (!props.singlePage)  urlSection = relativeToRoot + chapter.route.replace('/', '');
+                            else  urlSection = "#" + chapter.id;
 
                             return <li key={chapter.route}>
                                 {path == chapter.route
                                     ? <strong>{chapter.title}</strong>
                                     : <a href={urlSection}
                                          className='nav-link'>{chapter.title}</a>}
-                                {ToC.getSubSections(getHandler(chapter.route), urlSection, 1)}
+                                {ToC.getSubSections(getHandler(chapter.route), props.singlePage?'':urlSection, 1)}
                             </li>
                         }
                     )

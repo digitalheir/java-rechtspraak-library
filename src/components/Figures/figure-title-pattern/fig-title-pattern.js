@@ -8,8 +8,8 @@ export default class FigureTitlePattern extends React.Component {
         return <figure id={figs.figTitleTreemap.id}>
             <TreeMap data={data.data} sourceHref={data.href}/>
             <figcaption>
-                <span className="figure-number">Fig {figs.figTitleTreemap.num}.</span> Absolute frequency of title
-                patterns
+                <span className="figure-number">Fig {figs.figTitleTreemap.num}.</span> Frequency of
+                normalized title patterns
                 that occur more than 5 times in the corpus, for all types of
                 section that Rechtspraak.nl divides documents in.
             </figcaption>

@@ -1,8 +1,10 @@
-var cssnext = require('cssnext');
-var chapters = require('./chapters');
+const cssnext = require('cssnext');
+const chapters = require('./chapters');
 
+
+const title = require('./title');
 
 module.exports = {
-    title: 'Enriching Dutch Case Law Markup',
-    routes: ['/'].concat(chapters.inOrder.map(chapter=>chapter.route))
+    title: title,
+    routes: ['/'].concat(chapters.inOrder.map(chapter=>chapter.route)).concat(['/full/'])
 };

@@ -77,20 +77,21 @@ export default class Introduction extends Component {
                 about 2 million court judgments<Source href="http://data.rechtspraak.nl/uitspraken/zoeken?"/> and
                 judgments texts for about 350.000 judgments in XML<Source
                     href="http://data.rechtspraak.nl/uitspraken/zoeken?return=doc"/>.
-                In this thesis, we are interested in markup, so we only consider those documents that
+                In this thesis, we only consider those documents that
                 contain text.
-                As {ref.cite(bib.vanopijnen2014)} explains, the full
-                data set of Rechtspraak.nl contains
+                The full data set
+                of <a href="http://www.rechtspraak.nl/">Rechtspraak.nl</a> court
+                judgments contains
                 only a fraction of all court judgments that exist
                 in the Netherlands, but the collection is curated so that it is representative of
-                case law in the Netherlands.
+                case law in the Netherlands ({ref.cite(bib.vanopijnen2014)}).
             </p>
 
             <p>
                 If we turn to <FigRef
                 fig={figs.markupStats}/>, we see that there is a recent trend for more richly marked up documents.
                 However,
-                an overwhelmingly large portion of older documents remains that contain no or
+                an overwhelmingly large portion of older documents remains, which contain no or
                 only sparse markup.
                 To illustrate: at the time of writing, 78.7% of all judgment texts on Rechtspraak.nl do not
                 contain any <code>section</code> tag, implying that a large amount of
@@ -100,37 +101,51 @@ export default class Introduction extends Component {
 
             <MarkupStatsFigure/>
 
-            <p>
-                The problem that we investigate in this thesis, then, is whether we can
-                enrich the markup of documents in Rechtspraak.nl by automatically assigning a
-                section hierarchy to the text elements.
-                We can divide this problem in the following subtasks:
-
-            </p>
+            <div style={{pageBreakInside: 'avoid'}}>
+                <p>
+                    The problem that we investigate in this thesis, then, is whether we can
+                    enrich the markup of documents in Rechtspraak.nl by automatically assigning a
+                    section hierarchy to the text elements.
+                    We divide this problem in the following subtasks:
+                </p>
                 <ol>
-                    <li><a href={"#"+introSections.importing.id}>importing documents from the Rechtspraak.nl web service;</a></li>
-                    <li><a href={"#"+introSections.importing.id}>tokenizing relevant text elements;</a></li>
-                    <li><a href={chapters.pathTo(this.props.path, chapters.tagging)}>labeling these text elements
-                        with their respective roles (e.g., <code>section title</code>; <code>text
-                            block</code>);</a>
+                    <li><a href={"#"+introSections.importing.id}>Importing documents from the Rechtspraak.nl web
+                        service;</a></li>
+                    <li><a href={"#"+introSections.importing.id}>Tokenizing relevant text elements;</a></li>
+                    <li><a href={chapters.pathTo(this.props.path, chapters.tagging)}>Labeling these text elements
+                        with their respective roles (i.e. <code>section title</code>; <code>numbering</code>; <code>text
+                            block</code>; <code>newline</code>);</a>
                     </li>
                     <li><a href={chapters.pathTo(this.props.path, chapters.documentStructure)}>
-                        combining the tokens in such a way that they represent the
+                        Combining the tokens in such a way that they represent the
                         most likely section hierarchy;</a>
                     </li>
-                    <li>
-                        publishing the resulting documents so that search engines
+                    <li style={{display:'none'}}>
+                        Publishing the resulting documents so that search engines
                         can make use of the enriched markup
                     </li>
                 </ol>
+            </div>
+            <p>
+                Tasks 1 and 2 are theoretically straightforward and mostly a
+                problem of implementation, which we describe
+                with a short section near the end of this chapter.
+            </p>
+            <p>
+                Tasks 3 and 4 require more complicated machinery than
+                importing and tokenization,
+                so these topics get their own chapter,
+                containing in some detail an explication of the
+                methods used and results obtained.
+            </p>
 
             <p>
-                The project in published as two separate Java libraries:
+                The source code for this undertaking in published in two separate Java libraries:
                 one for importing and enriching documents from Rechtspraak.nl (
-                <a href="https://github.com/digitalheir/java-rechtspraak-library">source
-                    code on GitHub</a>), and one for mirroring the Rechtspraak.nl corpus
-                on a CouchDB database (<a href="https://github.com/digitalheir/dutch-case-law-to-couchdb">source code
-                on GitHub</a>).
+                <a href="https://github.com/digitalheir/java-rechtspraak-library">on GitHub</a>),
+                and one for mirroring the Rechtspraak.nl corpus
+                to a CouchDB database (<a href="https://github.com/digitalheir/dutch-case-law-to-couchdb">on
+                GitHub</a>).
             </p>
 
 

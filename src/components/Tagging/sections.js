@@ -8,8 +8,8 @@ const taggingSections = {
         title: 'Methods',
     }, 
     taggingResults: {
-        id: 'tagging-results',
-        title: 'Results',
+        id: 'tagging-evaluation',
+        title: 'Evaluation',
     }
 };
 

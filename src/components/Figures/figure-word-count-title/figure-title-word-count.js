@@ -15,7 +15,6 @@ export default class FigureWordCount extends React.Component {
                 <tr>
                     <th>Number of words</th>
                     <th>Relative frequency</th>
-                    <th>Absolute frequency</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -27,9 +26,8 @@ export default class FigureWordCount extends React.Component {
                             <PercentageBar percentage={percentageTxt} text={percentageTxt}/>
                             <span className="perc-text">{percentageTxt}</span>
                         </td>
-                        <td><span className='perc-text'>{obj.titleCount}</span></td>
                     </tr>;
-                })
+                })// <td><span className='perc-text'>{obj.titleCount}</span></td>
                 }
                 </tbody>
             </table>

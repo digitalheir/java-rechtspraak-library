@@ -1,23 +1,28 @@
 var chapters = {
     introduction: {
+        id: "chapter-introduction",
         title: "Introduction",
         route: '/introduction/'
     },
     rechtspraakNl: {
+        id: "chapter-rechtspraak-nl",
         title: "Rechtspraak.nl Data Set",
         route: '/rechtspraak-nl/'
     },
     tagging: {
+        id: "tagging",
         title: "Tagging Elements",
         route: '/tagging/'
     },
     documentStructure: {
+        id: "parsing",
         title: "Inferring a Document Structure",
         route: '/document-structure/'
     },
     dissemination: {
-        title: "Dissemination of Enriched Dataset",
-        route: '/dissemination/'
+        id: "conclusion",
+        title: "Conclusion",
+        route: '/conclusion/'
     },
     // presentation: {
     //     title: "Dissemination",

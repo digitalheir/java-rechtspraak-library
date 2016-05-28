@@ -54,15 +54,15 @@ export default class FigureSectionTitleTfIdf extends React.Component {
             });
         }
 
-        return <figure className="chart" id={figs.tfidf.id}>
+        return <figure className="chart" id={figs.sectionsTfidf.id}>
             <div >
                 {getTablesForTfIdfScores(tfIdfScores)}
             </div>
             <figcaption>
-                <span className="figure-number">Fig {figs.tfidf.num}.</span> Top {nTerms} tf-idf scores for stemmed
+                <span className="figure-number">Fig {figs.sectionsTfidf.num}.</span> Top {nTerms} tf-idf scores for stemmed
                 words in
                 section titles, per section role.
-                We take as document here any string block (such as a paragraph, or title). Stemming is performed using
+                Stemming is performed using
                 the <a href="http://snowball.tartarus.org/algorithms/dutch/stemmer.html">Snowball algorithm for
                 Dutch</a>.
             </figcaption>
