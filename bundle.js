@@ -22970,25 +22970,29 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Index2 = _interopRequireDefault(_Index);
 
-	var _Introduction = __webpack_require__(331);
+	var _Introduction = __webpack_require__(334);
 
 	var _Introduction2 = _interopRequireDefault(_Introduction);
 
-	var _FullThesis = __webpack_require__(333);
+	var _FullThesis = __webpack_require__(336);
 
 	var _FullThesis2 = _interopRequireDefault(_FullThesis);
 
-	var _Tagging = __webpack_require__(334);
+	var _Tagging = __webpack_require__(337);
 
 	var _Tagging2 = _interopRequireDefault(_Tagging);
 
-	var _InferringDocumentStructure = __webpack_require__(335);
+	var _InferringDocumentStructure = __webpack_require__(338);
 
 	var _InferringDocumentStructure2 = _interopRequireDefault(_InferringDocumentStructure);
 
-	var _Dissemination = __webpack_require__(337);
+	var _Dissemination = __webpack_require__(340);
 
 	var _Dissemination2 = _interopRequireDefault(_Dissemination);
+
+	var _ImportingAndTokenizing = __webpack_require__(341);
+
+	var _ImportingAndTokenizing2 = _interopRequireDefault(_ImportingAndTokenizing);
 
 	var _chapters = __webpack_require__(217);
 
@@ -23020,6 +23024,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	            return _InferringDocumentStructure2.default;
 	        case _chapters2.default.dissemination.route:
 	            return _Dissemination2.default;
+	        case _chapters2.default.importing.route:
+	            return _ImportingAndTokenizing2.default;
 	        default:
 	            throw Error("No handler for route " + route + ". You should edit Routes.jsx.");
 	    }
@@ -25684,6 +25690,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	        title: "Introduction",
 	        route: '/introduction/'
 	    },
+	    importing: {
+	        id: "chapter-importing-and-tokenizing",
+	        title: "Importing & Tokenizing Data",
+	        route: '/importing-and-tokenizing/'
+	    },
 	    rechtspraakNl: {
 	        id: "chapter-rechtspraak-nl",
 	        title: "Rechtspraak.nl Data Set",
@@ -25696,7 +25707,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    },
 	    documentStructure: {
 	        id: "parsing",
-	        title: "Inferring a Document Structure",
+	        title: "Inferring a Section Hierarchy",
 	        route: '/document-structure/'
 	    },
 	    dissemination: {
@@ -25717,9 +25728,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	};
 
-	chapters.inOrder = [chapters.introduction,
-	// chapters.rechtspraakNl,
-	chapters.tagging, chapters.documentStructure, chapters.dissemination];
+	chapters.inOrder = [chapters.introduction, chapters.importing, chapters.tagging, chapters.documentStructure, chapters.dissemination];
 
 	chapters.inOrder.forEach(function (ch) {
 	    if (!ch) throw new Error("Chapters object contains null or undefined item.");
@@ -25736,7 +25745,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports.default = getHandler;
 	exports.getSubSections = getSubSections;
 
 	var _react = __webpack_require__(4);
@@ -25767,33 +25775,33 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _sections6 = _interopRequireDefault(_sections5);
 
-	var _PARSEVAL = __webpack_require__(297);
-
-	var _PARSEVAL2 = _interopRequireDefault(_PARSEVAL);
-
-	var _Results = __webpack_require__(302);
-
-	var _Results2 = _interopRequireDefault(_Results);
-
-	var _FutureWork = __webpack_require__(303);
-
-	var _FutureWork2 = _interopRequireDefault(_FutureWork);
-
-	var _sections7 = __webpack_require__(304);
+	var _sections7 = __webpack_require__(297);
 
 	var _sections8 = _interopRequireDefault(_sections7);
 
-	var _FScores = __webpack_require__(305);
+	var _PARSEVAL = __webpack_require__(298);
+
+	var _PARSEVAL2 = _interopRequireDefault(_PARSEVAL);
+
+	var _Results = __webpack_require__(303);
+
+	var _Results2 = _interopRequireDefault(_Results);
+
+	var _FutureWork = __webpack_require__(304);
+
+	var _FutureWork2 = _interopRequireDefault(_FutureWork);
+
+	var _sections9 = __webpack_require__(305);
+
+	var _sections10 = _interopRequireDefault(_sections9);
+
+	var _FScores = __webpack_require__(306);
 
 	var _FScores2 = _interopRequireDefault(_FScores);
 
-	var _Resultz = __webpack_require__(306);
+	var _Resultz = __webpack_require__(307);
 
 	var _Resultz2 = _interopRequireDefault(_Resultz);
-
-	var _sections9 = __webpack_require__(307);
-
-	var _sections10 = _interopRequireDefault(_sections9);
 
 	var _sections11 = __webpack_require__(308);
 
@@ -25807,91 +25815,110 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _sections16 = _interopRequireDefault(_sections15);
 
-	var _GraphicalModels = __webpack_require__(311);
+	var _sections17 = __webpack_require__(311);
+
+	var _sections18 = _interopRequireDefault(_sections17);
+
+	var _ProblemDescription = __webpack_require__(312);
+
+	var _ProblemDescription2 = _interopRequireDefault(_ProblemDescription);
+
+	var _IntroMotivation = __webpack_require__(313);
+
+	var _IntroMotivation2 = _interopRequireDefault(_IntroMotivation);
+
+	var _GraphicalModels = __webpack_require__(314);
 
 	var _GraphicalModels2 = _interopRequireDefault(_GraphicalModels);
 
-	var _HMMs = __webpack_require__(312);
+	var _HMMs = __webpack_require__(315);
 
 	var _HMMs2 = _interopRequireDefault(_HMMs);
 
-	var _LinearChainCRF = __webpack_require__(313);
+	var _LinearChainCRF = __webpack_require__(316);
 
 	var _LinearChainCRF2 = _interopRequireDefault(_LinearChainCRF);
 
-	var _Inference = __webpack_require__(314);
+	var _Inference = __webpack_require__(317);
 
 	var _Inference2 = _interopRequireDefault(_Inference);
 
-	var _ParameterEstimation = __webpack_require__(315);
+	var _ParameterEstimation = __webpack_require__(318);
 
 	var _ParameterEstimation2 = _interopRequireDefault(_ParameterEstimation);
 
-	var _Performance = __webpack_require__(316);
+	var _Performance = __webpack_require__(319);
 
 	var _Performance2 = _interopRequireDefault(_Performance);
 
-	var _Results3 = __webpack_require__(317);
+	var _Results3 = __webpack_require__(320);
 
 	var _Results4 = _interopRequireDefault(_Results3);
 
-	var _Methods = __webpack_require__(318);
+	var _Methods = __webpack_require__(321);
 
 	var _Methods2 = _interopRequireDefault(_Methods);
 
-	var _Introduction = __webpack_require__(320);
+	var _Introduction = __webpack_require__(323);
 
 	var _Introduction2 = _interopRequireDefault(_Introduction);
 
-	var _DeterministicTagger = __webpack_require__(321);
+	var _DeterministicTagger = __webpack_require__(324);
 
 	var _DeterministicTagger2 = _interopRequireDefault(_DeterministicTagger);
 
-	var _CRF = __webpack_require__(322);
+	var _CRF = __webpack_require__(325);
 
 	var _CRF2 = _interopRequireDefault(_CRF);
 
-	var _FeatureSelection = __webpack_require__(323);
+	var _FeatureSelection = __webpack_require__(326);
 
 	var _FeatureSelection2 = _interopRequireDefault(_FeatureSelection);
 
-	var _Introduction3 = __webpack_require__(324);
+	var _Introduction3 = __webpack_require__(327);
 
 	var _Introduction4 = _interopRequireDefault(_Introduction3);
 
-	var _Methods3 = __webpack_require__(325);
+	var _Methods3 = __webpack_require__(328);
 
 	var _Methods4 = _interopRequireDefault(_Methods3);
 
-	var _Evaluation = __webpack_require__(326);
+	var _Evaluation = __webpack_require__(329);
 
 	var _Evaluation2 = _interopRequireDefault(_Evaluation);
 
-	var _ContextFreeGrammars = __webpack_require__(327);
+	var _ContextFreeGrammars = __webpack_require__(330);
 
 	var _ContextFreeGrammars2 = _interopRequireDefault(_ContextFreeGrammars);
 
-	var _AdditionalEnrichment = __webpack_require__(328);
+	var _AdditionalEnrichment = __webpack_require__(331);
 
 	var _AdditionalEnrichment2 = _interopRequireDefault(_AdditionalEnrichment);
 
-	var _CYK = __webpack_require__(329);
+	var _CYK = __webpack_require__(332);
 
 	var _CYK2 = _interopRequireDefault(_CYK);
 
-	var _sections17 = __webpack_require__(330);
+	var _sections19 = __webpack_require__(333);
 
-	var _sections18 = _interopRequireDefault(_sections17);
+	var _sections20 = _interopRequireDefault(_sections19);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	// import ManualTagger from './Tagging/Methods/ManualTagger/ManualTagger';
 
 	//import TaggingDiscussion from './Tagging/Discussion/Discussion';
-	//noinspection JSUnresolvedVariable
+
+
 	function getHandler(route) {
 	    switch (route) {
 	        //Introduction
+	        case _sections4.default.problemDescription.id:
+	            return _ProblemDescription2.default;
+	        case _sections4.default.motivation.id:
+	            return _IntroMotivation2.default;
+
+	        //Importing
 	        case _sections2.default.rechtspraakNl.id:
 	            return _IntroRechtspraakNl2.default;
 	        case _sections2.default.rechtspraakNlMarkup.id:
@@ -25900,72 +25927,73 @@ return /******/ (function(modules) { // webpackBootstrap
 	            return _Importing2.default;
 
 	        // Tagging
-	        case _sections4.default.taggingIntroduction.id:
+	        case _sections6.default.taggingIntroduction.id:
 	            return _Introduction2.default;
-	        case _sections4.default.taggingMethods.id:
+	        case _sections6.default.taggingMethods.id:
 	            return _Methods2.default;
-	        case _sections10.default.featureSelection.id:
+	        case _sections12.default.featureSelection.id:
 	            return _FeatureSelection2.default;
-	        case _sections10.default.crf.id:
+	        case _sections12.default.crf.id:
 	            return _CRF2.default;
-	        case _sections10.default.deterministic.id:
+	        case _sections12.default.deterministic.id:
 	            return _DeterministicTagger2.default;
 	        //case sectionsTaggingMethods.manual.id:
 	        // return ManualTagger;
 	        // case sectionsTagging.taggingDiscussion.id:
 	        //     return TaggingDiscussion;
-	        case _sections4.default.taggingResults.id:
+	        case _sections6.default.taggingResults.id:
 	            return _Results4.default;
 
 	        // CRF
-	        case _sections16.default.graphicalModels.id:
+	        case _sections18.default.graphicalModels.id:
 	            return _GraphicalModels2.default;
-	        case _sections16.default.crfPerformance.id:
+	        case _sections18.default.crfPerformance.id:
 	            return _Performance2.default;
-	        case _sections16.default.linearChain.id:
+	        case _sections18.default.linearChain.id:
 	            return _LinearChainCRF2.default;
-	        case _sections16.default.inference.id:
+	        case _sections18.default.inference.id:
 	            return _Inference2.default;
-	        case _sections16.default.parameterEstimation.id:
+	        case _sections18.default.parameterEstimation.id:
 	            return _ParameterEstimation2.default;
-	        case _sections16.default.hmm.id:
+	        case _sections18.default.hmm.id:
 	            return _HMMs2.default;
 
 	        // evaluation
-	        case _sections8.default.fScores.id:
+	        case _sections10.default.fScores.id:
 	            return _FScores2.default;
-	        case _sections8.default.results.id:
+	        case _sections10.default.results.id:
 	            return _Resultz2.default;
 
 	        // sectionsParsingEvaluation
-	        case _sections6.default.parseval.id:
+	        case _sections8.default.parseval.id:
 	            return _PARSEVAL2.default;
-	        case _sections6.default.results.id:
+	        case _sections8.default.results.id:
 	            return _Results2.default;
-	        case _sections6.default.futureWork.id:
+	        case _sections8.default.futureWork.id:
 	            return _FutureWork2.default;
 
 	        // InferringDocumentStructure
-	        case _sections12.default.intro.id:
+	        case _sections14.default.intro.id:
 	            return _Introduction4.default;
-	        case _sections12.default.methods.id:
+	        case _sections14.default.methods.id:
 	            return _Methods4.default;
-	        case _sections14.default.scfg.id:
+	        case _sections16.default.scfg.id:
 	            return _ContextFreeGrammars2.default;
-	        case _sections14.default.cyk.id:
+	        case _sections16.default.cyk.id:
 	            return _CYK2.default;
-	        case _sections12.default.evaluation.id:
+	        case _sections14.default.evaluation.id:
 	            return _Evaluation2.default;
 
 	        //  Dissemination
-	        case _sections18.default.additionalEnrichment.id:
+	        case _sections20.default.additionalEnrichment.id:
 	            return _AdditionalEnrichment2.default;
 
 	        default:
 	            throw Error("No handler for route " + route + ". You should edit getSectionComponent.js");
 	    }
-	}
+	} //noinspection JSUnresolvedVariable
 
+	exports.default = getHandler;
 	function getSubSections(props, headerLevel) {
 	    return function (section) {
 	        if (!section || !section.id) throw new Error("Subsection was invalid: " + section);
@@ -26046,16 +26074,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } //noinspection JSUnresolvedVariable
 
 
-	var Introduction = function (_Component) {
-	    _inherits(Introduction, _Component);
+	var IntroductionRsNl = function (_Component) {
+	    _inherits(IntroductionRsNl, _Component);
 
-	    function Introduction() {
-	        _classCallCheck(this, Introduction);
+	    function IntroductionRsNl() {
+	        _classCallCheck(this, IntroductionRsNl);
 
-	        return _possibleConstructorReturn(this, Object.getPrototypeOf(Introduction).apply(this, arguments));
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(IntroductionRsNl).apply(this, arguments));
 	    }
 
-	    _createClass(Introduction, [{
+	    _createClass(IntroductionRsNl, [{
 	        key: 'render',
 
 	        //pre>\nfunction (doc)
@@ -26119,169 +26147,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	        //                </section>
 	        value: function render() {
 
-	            return _react2.default.createElement(
-	                'div',
-	                null,
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    _react2.default.createElement(
-	                        'a',
-	                        { href: 'http://www.rechtspraak.nl/' },
-	                        'Rechtspraak.nl'
-	                    ),
-	                    ' is the official website of the Dutch judiciary. The website hosts an open data portal for Dutch case law, containing metadata for about 2 million court judgments',
-	                    _react2.default.createElement(_Source2.default, { href: 'http://data.rechtspraak.nl/uitspraken/zoeken?' }),
-	                    ' and judgments texts for about 350.000 judgments in XML',
-	                    _react2.default.createElement(_Source2.default, {
-	                        href: 'http://data.rechtspraak.nl/uitspraken/zoeken?return=doc' }),
-	                    '. In this thesis, we only consider those documents that contain text. The full data set of ',
-	                    _react2.default.createElement(
-	                        'a',
-	                        { href: 'http://www.rechtspraak.nl/' },
-	                        'Rechtspraak.nl'
-	                    ),
-	                    ' court judgments contains only a fraction of all court judgments that exist in the Netherlands, but the collection is curated so that it is representative of case law in the Netherlands (',
-	                    _references2.default.cite(_bib2.default.vanopijnen2014),
-	                    ').'
-	                ),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'If we turn to ',
-	                    _react2.default.createElement(_FigRef2.default, {
-	                        fig: _figs2.default.markupStats }),
-	                    ', we see that there is a recent trend for more richly marked up documents. However, an overwhelmingly large portion of older documents remains, which contain no or only sparse markup. To illustrate: at the time of writing, 78.7% of all judgment texts on Rechtspraak.nl do not contain any ',
-	                    _react2.default.createElement(
-	                        'code',
-	                        null,
-	                        'section'
-	                    ),
-	                    ' tag, implying that a large amount of documents are barely marked up. This is unfortunate, because having proper markup makes documents better searchable and more easy to style.'
-	                ),
-	                _react2.default.createElement(_MarkupStatsFigure2.default, null),
-	                _react2.default.createElement(
-	                    'div',
-	                    { style: { pageBreakInside: 'avoid' } },
-	                    _react2.default.createElement(
-	                        'p',
-	                        null,
-	                        'The problem that we investigate in this thesis, then, is whether we can enrich the markup of documents in Rechtspraak.nl by automatically assigning a section hierarchy to the text elements. We divide this problem in the following subtasks:'
-	                    ),
-	                    _react2.default.createElement(
-	                        'ol',
-	                        null,
-	                        _react2.default.createElement(
-	                            'li',
-	                            null,
-	                            _react2.default.createElement(
-	                                'a',
-	                                { href: "#" + _sections2.default.importing.id },
-	                                'Importing documents from the Rechtspraak.nl web service;'
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'li',
-	                            null,
-	                            _react2.default.createElement(
-	                                'a',
-	                                { href: "#" + _sections2.default.importing.id },
-	                                'Tokenizing relevant text elements;'
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'li',
-	                            null,
-	                            _react2.default.createElement(
-	                                'a',
-	                                { href: _chapters2.default.pathTo(this.props.path, _chapters2.default.tagging) },
-	                                'Labeling these text elements with their respective roles (i.e. ',
-	                                _react2.default.createElement(
-	                                    'code',
-	                                    null,
-	                                    'section title'
-	                                ),
-	                                '; ',
-	                                _react2.default.createElement(
-	                                    'code',
-	                                    null,
-	                                    'numbering'
-	                                ),
-	                                '; ',
-	                                _react2.default.createElement(
-	                                    'code',
-	                                    null,
-	                                    'text block'
-	                                ),
-	                                '; ',
-	                                _react2.default.createElement(
-	                                    'code',
-	                                    null,
-	                                    'newline'
-	                                ),
-	                                ');'
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'li',
-	                            null,
-	                            _react2.default.createElement(
-	                                'a',
-	                                { href: _chapters2.default.pathTo(this.props.path, _chapters2.default.documentStructure) },
-	                                'Combining the tokens in such a way that they represent the most likely section hierarchy;'
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'li',
-	                            { style: { display: 'none' } },
-	                            'Publishing the resulting documents so that search engines can make use of the enriched markup'
-	                        )
-	                    )
-	                ),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'Tasks 1 and 2 are theoretically straightforward and mostly a problem of implementation, which we describe with a short section near the end of this chapter.'
-	                ),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'Tasks 3 and 4 require more complicated machinery than importing and tokenization, so these topics get their own chapter, containing in some detail an explication of the methods used and results obtained.'
-	                ),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'The source code for this undertaking in published in two separate Java libraries: one for importing and enriching documents from Rechtspraak.nl (',
-	                    _react2.default.createElement(
-	                        'a',
-	                        { href: 'https://github.com/digitalheir/java-rechtspraak-library' },
-	                        'on GitHub'
-	                    ),
-	                    '), and one for mirroring the Rechtspraak.nl corpus to a CouchDB database (',
-	                    _react2.default.createElement(
-	                        'a',
-	                        { href: 'https://github.com/digitalheir/dutch-case-law-to-couchdb' },
-	                        'on GitHub'
-	                    ),
-	                    ').'
-	                ),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'For a comprehensive study on the legal and technical background of the digital publication of Dutch case law, see ',
-	                    _references2.default.cite(_bib2.default.vanopijnen2014),
-	                    '. For a general overview of Rechtspraak.nl\'s web service, see ',
-	                    _references2.default.cite(_bib2.default.trompper2014),
-	                    '.'
-	                )
-	            );
+	            return _react2.default.createElement('div', null);
 	        }
 	    }]);
 
-	    return Introduction;
+	    return IntroductionRsNl;
 	}(_react.Component);
 
-	exports.default = Introduction;
+	exports.default = IntroductionRsNl;
 
 /***/ },
 /* 220 */
@@ -44964,14 +44837,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	var introIntroSections = {
+	var importingSections = {
 	    rechtspraakNl: {
 	        id: 'rechtspraak-nl',
 	        title: "Rechtspraak.nl"
 	    },
 	    rechtspraakNlMarkup: {
-	        id: 'rechtspraak-nl-markup',
-	        title: "Rechtspraak.nl markup"
+	        id: 'rechtspraak-nl-data-set',
+	        title: "Rechtspraak.nl Data Set"
 	    },
 	    importing: {
 	        id: 'importing',
@@ -44979,9 +44852,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	};
 
-	introIntroSections.inOrder = [introIntroSections.rechtspraakNl, introIntroSections.rechtspraakNlMarkup, introIntroSections.importing];
+	importingSections.inOrder = [
+	// importingSections.rechtspraakNl,
+	importingSections.rechtspraakNlMarkup, importingSections.importing];
 
-	exports.default = introIntroSections;
+	exports.default = importingSections;
 
 /***/ },
 /* 249 */
@@ -45090,13 +44965,43 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
+	                    _react2.default.createElement(
+	                        'a',
+	                        { href: 'http://www.rechtspraak.nl/' },
+	                        'Rechtspraak.nl'
+	                    ),
+	                    ' is the official website of the Dutch judiciary. The website hosts an open data portal for Dutch case law, containing metadata for about 2 million court judgments',
+	                    _react2.default.createElement(_Source2.default, { href: 'http://data.rechtspraak.nl/uitspraken/zoeken?' }),
+	                    ' and judgments texts for about 350.000 judgments in XML',
+	                    _react2.default.createElement(_Source2.default, {
+	                        href: 'http://data.rechtspraak.nl/uitspraken/zoeken?return=doc' }),
+	                    '. In this thesis, we only consider those documents that contain text. The full data set of ',
+	                    _react2.default.createElement(
+	                        'a',
+	                        { href: 'http://www.rechtspraak.nl/' },
+	                        'Rechtspraak.nl'
+	                    ),
+	                    ' court judgments contains only a fraction of all court judgments that exist in the Netherlands, but the collection is curated so that it is representative of case law in the Netherlands.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'For a comprehensive study on the legal and technical background of the digital publication of Dutch case law, see ',
+	                    _references2.default.cite(_bib2.default.vanopijnen2014),
+	                    '. For a general overview of Rechtspraak.nl\'s web service, see ',
+	                    _references2.default.cite(_bib2.default.trompper2014),
+	                    '.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
 	                    'We wish to automatically annotate documents in the corpus with some semantic mark up, so it is helpful to see what is already done in this regard by ',
 	                    _react2.default.createElement(
 	                        'a',
 	                        { href: 'http://www.rechtspraak.nl/' },
 	                        'Rechtspraak.nl'
 	                    ),
-	                    '. As we have seen, recent documents are more richly marked up than older documents. Indeed, most older documents consist exclusively of ',
+	                    '. As notes earlier, recent documents tend to be more richly marked up than older documents. Indeed, most older documents consist exclusively of ',
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -45116,59 +45021,206 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'We observe that a richly marked up case law document typically consists of the following parts:'
 	                ),
 	                _react2.default.createElement(
-	                    'section',
-	                    { className: 'noborder', id: 'info' },
+	                    'ol',
+	                    null,
 	                    _react2.default.createElement(
-	                        'h3',
-	                        null,
-	                        _react2.default.createElement(
-	                            'code',
-	                            null,
-	                            '*.info'
-	                        )
-	                    ),
-	                    _react2.default.createElement(
-	                        'p',
-	                        null,
-	                        'The first element in a document is typically a unique header element with a tagname of either ',
-	                        _react2.default.createElement(
-	                            'code',
-	                            null,
-	                            'uitspraak.info'
-	                        ),
-	                        ' or ',
-	                        _react2.default.createElement(
-	                            'code',
-	                            null,
-	                            'conclusie.info'
-	                        ),
-	                        ' for two types of case law (judgments and conclusions, respectively). We refer to either of these as ',
-	                        _react2.default.createElement(
-	                            'code',
-	                            null,
-	                            '*.info'
-	                        ),
-	                        '. ',
-	                        _react2.default.createElement(
-	                            'code',
-	                            null,
-	                            '*.info'
-	                        ),
-	                        ' elements contain interesting metadata such as names an court location. The information is generally not semantically marked up, but is reasonably easy to parse thanks to style consistencies in authors (e.g., most units of metadata are on a separate line).'
-	                    ),
-	                    _react2.default.createElement(
-	                        'strike',
-	                        { style: { display: 'gone' } },
+	                        'li',
+	                        { className: 'noborder', id: 'info' },
 	                        _react2.default.createElement(
 	                            'p',
 	                            null,
-	                            'The ',
+	                            _react2.default.createElement(
+	                                'em',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'code',
+	                                    null,
+	                                    '*.info'
+	                                )
+	                            ),
+	                            'The first element in a document is typically a unique header element with a tagname of either ',
+	                            _react2.default.createElement(
+	                                'code',
+	                                null,
+	                                'uitspraak.info'
+	                            ),
+	                            ' or ',
+	                            _react2.default.createElement(
+	                                'code',
+	                                null,
+	                                'conclusie.info'
+	                            ),
+	                            ' for two types of case law (judgments and conclusions, respectively). We refer to either of these as ',
 	                            _react2.default.createElement(
 	                                'code',
 	                                null,
 	                                '*.info'
 	                            ),
-	                            ' element typically contains metadata about the legal case, such as:'
+	                            '. ',
+	                            _react2.default.createElement(
+	                                'code',
+	                                null,
+	                                '*.info'
+	                            ),
+	                            ' elements contain interesting metadata such as names an court location. The information is generally not semantically marked up, but is reasonably easy to parse thanks to style consistencies in authors (e.g., most units of metadata are on a separate line).'
+	                        ),
+	                        _react2.default.createElement(
+	                            'strike',
+	                            { style: { display: 'gone' } },
+	                            _react2.default.createElement(
+	                                'p',
+	                                null,
+	                                'The ',
+	                                _react2.default.createElement(
+	                                    'code',
+	                                    null,
+	                                    '*.info'
+	                                ),
+	                                ' element typically contains metadata about the legal case, such as:'
+	                            ),
+	                            _react2.default.createElement(
+	                                'ul',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'li',
+	                                    null,
+	                                    'A case law identifier following some identification scheme'
+	                                ),
+	                                _react2.default.createElement(
+	                                    'li',
+	                                    null,
+	                                    'Heading on the type of judgment (e.g. "U I T S P R A A K")'
+	                                ),
+	                                _react2.default.createElement(
+	                                    'li',
+	                                    null,
+	                                    'Date of judgment'
+	                                ),
+	                                _react2.default.createElement(
+	                                    'li',
+	                                    null,
+	                                    'Branch of the judiciary (i.e. type of court)'
+	                                ),
+	                                _react2.default.createElement(
+	                                    'li',
+	                                    null,
+	                                    'Location of the judgment (i.e. court, jurisdiction)'
+	                                ),
+	                                _react2.default.createElement(
+	                                    'li',
+	                                    null,
+	                                    'A description of the parties involved, possibly detailing their names, roles, locations, representatives'
+	                                ),
+	                                _react2.default.createElement(
+	                                    'li',
+	                                    null,
+	                                    'A reference to preceding cases, for example in the case of an appeal to a previous judgment'
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'p',
+	                                null,
+	                                'The order and formatting of this information appears in a multitude of order and formatting, making it difficult to write a deterministic grammar for recognizing a header section. [TODO figref] suggests that analyzing tf–idf in ',
+	                                _react2.default.createElement(
+	                                    'code',
+	                                    null,
+	                                    '*.info'
+	                                ),
+	                                'elements does not seem to be a particularly useful method of generating features that select for these metadata items. But it is easy for the human eye to recognize some recurring patterns.'
+	                            ),
+	                            _react2.default.createElement(
+	                                'p',
+	                                null,
+	                                'See, e.g., ',
+	                                _react2.default.createElement(
+	                                    'cite',
+	                                    null,
+	                                    _react2.default.createElement(
+	                                        'a',
+	                                        {
+	                                            href: 'https://rechtspraak.lawreader.nl/ecli/ECLI:NL:GHARL:2014:9139' },
+	                                        'ECLI:NL:GHARL:2014:9139'
+	                                    )
+	                                ),
+	                                ' for an example.'
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            'p',
+	                            null,
+	                            'Automatically marking up text portions with ',
+	                            _react2.default.createElement(
+	                                'code',
+	                                null,
+	                                '*.info'
+	                            ),
+	                            ' tags is outside of the scope of this thesis, although it can easily be achieved by extending the label set to include a ',
+	                            _react2.default.createElement(
+	                                'code',
+	                                null,
+	                                '*.info'
+	                            ),
+	                            ' tag.'
+	                        ),
+	                        _react2.default.createElement(
+	                            'p',
+	                            null,
+	                            'A ',
+	                            _react2.default.createElement(
+	                                'code',
+	                                null,
+	                                '*.info'
+	                            ),
+	                            ' element is generally followed by any number of ',
+	                            _react2.default.createElement(
+	                                'code',
+	                                null,
+	                                'section'
+	                            ),
+	                            ' tags.'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(
+	                            'p',
+	                            null,
+	                            _react2.default.createElement(
+	                                'em',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'code',
+	                                    null,
+	                                    'section'
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'code',
+	                                null,
+	                                'section'
+	                            ),
+	                            ' tags generally contain a title element, and optionally contain an attribute which denotes the section role. A ',
+	                            _react2.default.createElement(
+	                                'code',
+	                                null,
+	                                'section'
+	                            ),
+	                            ' is a generic grouping of running text, and can be nested to create a section hierarchy.'
+	                        ),
+	                        _react2.default.createElement(
+	                            'p',
+	                            null,
+	                            'In practice we see three values for the ',
+	                            _react2.default.createElement(
+	                                'code',
+	                                null,
+	                                'role'
+	                            ),
+	                            ' attribute.',
+	                            _react2.default.createElement(_Source2.default, {
+	                                href: 'https://rechtspraak.cloudant.com/docs/_design/stats/_view/section_roles?group_level=1' }),
+	                            'These values are either'
 	                        ),
 	                        _react2.default.createElement(
 	                            'ul',
@@ -45176,328 +45228,194 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            _react2.default.createElement(
 	                                'li',
 	                                null,
-	                                'A case law identifier following some identification scheme'
+	                                _react2.default.createElement(
+	                                    'code',
+	                                    null,
+	                                    'beslissing'
+	                                ),
+	                                ' (judgment)'
 	                            ),
 	                            _react2.default.createElement(
 	                                'li',
 	                                null,
-	                                'Heading on the type of judgment (e.g. "U I T S P R A A K")'
+	                                _react2.default.createElement(
+	                                    'code',
+	                                    null,
+	                                    'overwegingen'
+	                                ),
+	                                ' (considerations)'
 	                            ),
 	                            _react2.default.createElement(
 	                                'li',
 	                                null,
-	                                'Date of judgment'
-	                            ),
-	                            _react2.default.createElement(
-	                                'li',
-	                                null,
-	                                'Branch of the judiciary (i.e. type of court)'
-	                            ),
-	                            _react2.default.createElement(
-	                                'li',
-	                                null,
-	                                'Location of the judgment (i.e. court, jurisdiction)'
-	                            ),
-	                            _react2.default.createElement(
-	                                'li',
-	                                null,
-	                                'A description of the parties involved, possibly detailing their names, roles, locations, representatives'
-	                            ),
-	                            _react2.default.createElement(
-	                                'li',
-	                                null,
-	                                'A reference to preceding cases, for example in the case of an appeal to a previous judgment'
+	                                _react2.default.createElement(
+	                                    'code',
+	                                    null,
+	                                    'procesverloop'
+	                                ),
+	                                ' (proceedings)'
 	                            )
 	                        ),
 	                        _react2.default.createElement(
 	                            'p',
 	                            null,
-	                            'The order and formatting of this information appears in a multitude of order and formatting, making it difficult to write a deterministic grammar for recognizing a header section. [TODO figref] suggests that analyzing tf–idf in ',
+	                            'Many ',
 	                            _react2.default.createElement(
 	                                'code',
 	                                null,
-	                                '*.info'
+	                                'section'
 	                            ),
-	                            ' elements does not seem to be a particularly useful method of generating features that select for these metadata items. But it is easy for the human eye to recognize some recurring patterns.'
+	                            ' elements have no role, although one may imagine other roles than the above, such as ',
+	                            _react2.default.createElement(
+	                                'code',
+	                                null,
+	                                'feiten'
+	                            ),
+	                            ' (facts). Assigning roles to sections is an interesting avenue of research, but we do not explore this in this thesis. Instead, we limit ourselves to demarcating sections and assigning some hierarchical section structure.'
 	                        ),
 	                        _react2.default.createElement(
-	                            'p',
+	                            'ol',
 	                            null,
-	                            'See, e.g., ',
 	                            _react2.default.createElement(
-	                                'cite',
+	                                'li',
 	                                null,
 	                                _react2.default.createElement(
-	                                    'a',
-	                                    {
-	                                        href: 'https://rechtspraak.lawreader.nl/ecli/ECLI:NL:GHARL:2014:9139' },
-	                                    'ECLI:NL:GHARL:2014:9139'
-	                                )
-	                            ),
-	                            ' for an example.'
+	                                    'p',
+	                                    null,
+	                                    _react2.default.createElement(
+	                                        'h3',
+	                                        null,
+	                                        _react2.default.createElement(
+	                                            'code',
+	                                            null,
+	                                            'title'
+	                                        )
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'code',
+	                                        null,
+	                                        'title'
+	                                    ),
+	                                    ' elements typically occur as the first descendant of a ',
+	                                    _react2.default.createElement(
+	                                        'code',
+	                                        null,
+	                                        'section'
+	                                    ),
+	                                    ' element, and contain either a numbering or some text, or both. ',
+	                                    _react2.default.createElement(
+	                                        'code',
+	                                        null,
+	                                        'title'
+	                                    ),
+	                                    ' elements may occur elsewhere, such as to label figures, but we do not consider these titles in this thesis.'
+	                                ),
+	                                _react2.default.createElement(
+	                                    'p',
+	                                    null,
+	                                    'In our tagging operation, titles are the elements are the hardest to label, so we make a special effort to describe common patterns.'
+	                                ),
+	                                _react2.default.createElement(
+	                                    'p',
+	                                    null,
+	                                    'In ',
+	                                    _react2.default.createElement(_FigRef2.default, { fig: _figs2.default.figTitleWordCount }),
+	                                    ', we see that if a ',
+	                                    _react2.default.createElement(
+	                                        'code',
+	                                        null,
+	                                        'title'
+	                                    ),
+	                                    ' element contains text, it usually only contains only a handful of words, with close to 99% of section titles containing 10 words or less.'
+	                                ),
+	                                _react2.default.createElement(_figureTitleWordCount2.default, null),
+	                                _react2.default.createElement(
+	                                    'p',
+	                                    null,
+	                                    'Titles texts have a number of patterns that often recur. See ',
+	                                    _react2.default.createElement(_FigRef2.default, {
+	                                        fig: _figs2.default.figTitleTreemap }),
+	                                    ' for a tree map of the distribution of normalized title texts.'
+	                                ),
+	                                _react2.default.createElement(_figTitlePattern2.default, null),
+	                                _react2.default.createElement(
+	                                    'p',
+	                                    null,
+	                                    'See ',
+	                                    _react2.default.createElement(_FigRef2.default, { fig: _figs2.default.tfidf }),
+	                                    ' & ',
+	                                    _react2.default.createElement(_FigRef2.default, { fig: _figs2.default.sectionsTfidf }),
+	                                    ' for charts of terms within section title elements with the highest tf–idf scores.'
+	                                ),
+	                                _react2.default.createElement(
+	                                    'p',
+	                                    null,
+	                                    'tf–idf is short for \'term frequency–inverse document frequency\', which is a number that reflects how important a given word is within a collection of documents. It represents the importance of a given word by taking the number of times that word occurs in the document, and offsetting it against the amount of times that word occurs elsewhere.'
+	                                ),
+	                                _react2.default.createElement(
+	                                    'p',
+	                                    null,
+	                                    'tf–idf is defined is defined as follows: '
+	                                ),
+	                                _react2.default.createElement(_Math2.default, { display: true, l: '\\text{tfidf}(t, d, D) = \\text{tf}(t, d)\\cdot \\text{idf}(t, D)' }),
+	                                _react2.default.createElement(
+	                                    'p',
+	                                    null,
+	                                    'where'
+	                                ),
+	                                _react2.default.createElement(
+	                                    'ul',
+	                                    null,
+	                                    _react2.default.createElement(
+	                                        'li',
+	                                        null,
+	                                        _react2.default.createElement(_Math2.default, { l: 'tf(t,d)' }),
+	                                        ' is a measure of the importance of a term ',
+	                                        _react2.default.createElement(_Math2.default, { l: 't' }),
+	                                        ' in a given document ',
+	                                        _react2.default.createElement(_Math2.default, { l: 'd' }),
+	                                        '. Let the raw frequency ',
+	                                        _react2.default.createElement(_Math2.default, { l: 'f_{t,d}' }),
+	                                        ' be the plain number of times the term ',
+	                                        _react2.default.createElement(_Math2.default, { l: 't' }),
+	                                        ' in occurs in a given document ',
+	                                        _react2.default.createElement(_Math2.default, { l: 'd' }),
+	                                        '. We use the logarithmically scaled term count: ',
+	                                        _react2.default.createElement(_Math2.default, { l: 'tf(t,d) = 1 + \\log{f_{t,d}}' }),
+	                                        ', or ',
+	                                        _react2.default.createElement(_Math2.default, { l: '0' }),
+	                                        ' if ',
+	                                        _react2.default.createElement(_Math2.default, { l: 'f_{t,d} = 0' }),
+	                                        '.'
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'li',
+	                                        null,
+	                                        _react2.default.createElement(_Math2.default, { l: 'idf(t, D)' }),
+	                                        ' is a measure of how rare it is to find a term ',
+	                                        _react2.default.createElement(_Math2.default, { l: 't' }),
+	                                        ' in a given document corpus ',
+	                                        _react2.default.createElement(_Math2.default, { l: 'D' }),
+	                                        '. We obtain this measure by calculating the logarithmically scaled inverse fraction of documents in ',
+	                                        _react2.default.createElement(_Math2.default, { l: 'D' }),
+	                                        ' that contain the term ',
+	                                        _react2.default.createElement(_Math2.default, { l: 't' }),
+	                                        '. Let ',
+	                                        _react2.default.createElement(_Math2.default, { l: 'D' }),
+	                                        ' be the collection of documents, we then define the standard idf measure as:',
+	                                        _react2.default.createElement(_Math2.default, { display: 'true', l: 'idf(t, D) = \\log{\\frac{|D|}{|\\{d \\in D:t \\in d\\}|}}' })
+	                                    )
+	                                ),
+	                                _react2.default.createElement(
+	                                    'p',
+	                                    null,
+	                                    'In our case, we take as a document text elements (such as a paragraph, or title), because we want to derive at the most important words within title elements.'
+	                                ),
+	                                _react2.default.createElement(_figureTitleTfIdf2.default, null),
+	                                _react2.default.createElement(_figureSectionTfIdf2.default, null)
+	                            )
 	                        )
-	                    ),
-	                    _react2.default.createElement(
-	                        'p',
-	                        null,
-	                        'Automatically marking up text portions with ',
-	                        _react2.default.createElement(
-	                            'code',
-	                            null,
-	                            '*.info'
-	                        ),
-	                        ' tags is outside of the scope of this thesis, although it can be achieved by simply extending the label set to include a ',
-	                        _react2.default.createElement(
-	                            'code',
-	                            null,
-	                            '*.info'
-	                        ),
-	                        ' tag.'
-	                    ),
-	                    _react2.default.createElement(
-	                        'p',
-	                        null,
-	                        'A ',
-	                        _react2.default.createElement(
-	                            'code',
-	                            null,
-	                            '*.info'
-	                        ),
-	                        ' element is followed by any number of ',
-	                        _react2.default.createElement(
-	                            'code',
-	                            null,
-	                            'section'
-	                        ),
-	                        ' tags.'
 	                    )
-	                ),
-	                _react2.default.createElement(
-	                    'section',
-	                    null,
-	                    _react2.default.createElement(
-	                        'h3',
-	                        null,
-	                        _react2.default.createElement(
-	                            'code',
-	                            null,
-	                            'section'
-	                        )
-	                    ),
-	                    _react2.default.createElement(
-	                        'p',
-	                        null,
-	                        _react2.default.createElement(
-	                            'code',
-	                            null,
-	                            'section'
-	                        ),
-	                        ' tags generally contain a title element, and optionally contain an attribute which denotes the section role. A ',
-	                        _react2.default.createElement(
-	                            'code',
-	                            null,
-	                            'section'
-	                        ),
-	                        ' is a generic grouping of running text, and can be nested to create a section hierarchy.'
-	                    ),
-	                    _react2.default.createElement(
-	                        'p',
-	                        null,
-	                        'In practice we see three values for the ',
-	                        _react2.default.createElement(
-	                            'code',
-	                            null,
-	                            'role'
-	                        ),
-	                        ' attribute.',
-	                        _react2.default.createElement(_Source2.default, {
-	                            href: 'https://rechtspraak.cloudant.com/docs/_design/stats/_view/section_roles?group_level=1' }),
-	                        ' These values are either'
-	                    ),
-	                    _react2.default.createElement(
-	                        'ul',
-	                        null,
-	                        _react2.default.createElement(
-	                            'li',
-	                            null,
-	                            _react2.default.createElement(
-	                                'code',
-	                                null,
-	                                'beslissing'
-	                            ),
-	                            ' (judgment)'
-	                        ),
-	                        _react2.default.createElement(
-	                            'li',
-	                            null,
-	                            _react2.default.createElement(
-	                                'code',
-	                                null,
-	                                'overwegingen'
-	                            ),
-	                            ' (considerations)'
-	                        ),
-	                        _react2.default.createElement(
-	                            'li',
-	                            null,
-	                            _react2.default.createElement(
-	                                'code',
-	                                null,
-	                                'procesverloop'
-	                            ),
-	                            ' (proceedings)'
-	                        )
-	                    ),
-	                    _react2.default.createElement(
-	                        'p',
-	                        null,
-	                        'Many ',
-	                        _react2.default.createElement(
-	                            'code',
-	                            null,
-	                            'section'
-	                        ),
-	                        ' elements have no role, although one may imagine other roles than the above, such as ',
-	                        _react2.default.createElement(
-	                            'code',
-	                            null,
-	                            'feiten'
-	                        ),
-	                        ' (facts). Assigning roles to sections is an interesting avenue of research, but we do not explore this in this thesis. Instead, we limit ourselves to demarcating sections and assigning some hierarchical section structure.'
-	                    )
-	                ),
-	                _react2.default.createElement(
-	                    'section',
-	                    null,
-	                    _react2.default.createElement(
-	                        'h3',
-	                        null,
-	                        _react2.default.createElement(
-	                            'code',
-	                            null,
-	                            'title'
-	                        )
-	                    ),
-	                    _react2.default.createElement(
-	                        'p',
-	                        null,
-	                        _react2.default.createElement(
-	                            'code',
-	                            null,
-	                            'title'
-	                        ),
-	                        ' elements typically occur as the first descendant of a ',
-	                        _react2.default.createElement(
-	                            'code',
-	                            null,
-	                            'section'
-	                        ),
-	                        ' element, and contain either a numbering or some text, or both.'
-	                    ),
-	                    _react2.default.createElement(
-	                        'p',
-	                        null,
-	                        'In our tagging operation, these elements are the hardest to label, so we make a special effort to describe some common patterns.'
-	                    ),
-	                    _react2.default.createElement(
-	                        'p',
-	                        null,
-	                        'In ',
-	                        _react2.default.createElement(_FigRef2.default, { fig: _figs2.default.figTitleWordCount }),
-	                        ', we see that if a ',
-	                        _react2.default.createElement(
-	                            'code',
-	                            null,
-	                            'title'
-	                        ),
-	                        ' element contains text, it usually only contains a handful of words, with close to 99% of section titles containing 10 words or less.'
-	                    ),
-	                    _react2.default.createElement(_figureTitleWordCount2.default, null),
-	                    _react2.default.createElement(
-	                        'p',
-	                        null,
-	                        'Titles texts have a number of patterns that often recur. See ',
-	                        _react2.default.createElement(_FigRef2.default, {
-	                            fig: _figs2.default.figTitleTreemap }),
-	                        ' for a tree map of the distribution of normalized title texts.'
-	                    ),
-	                    _react2.default.createElement(_figTitlePattern2.default, null),
-	                    _react2.default.createElement(
-	                        'p',
-	                        null,
-	                        'See ',
-	                        _react2.default.createElement(_FigRef2.default, { fig: _figs2.default.tfidf }),
-	                        ' & ',
-	                        _react2.default.createElement(_FigRef2.default, { fig: _figs2.default.sectionsTfidf }),
-	                        ' for charts of terms within section title elements with the highest tf–idf scores.'
-	                    ),
-	                    _react2.default.createElement(
-	                        'p',
-	                        null,
-	                        'tf–idf is short for \'term frequency–inverse document frequency\', which is a number that reflects how important a given word is within a collection of documents. It represents the importance of a given word by taking the number of times that word occurs in the document, and offsetting it against the amount of times that word occurs elsewhere.'
-	                    ),
-	                    _react2.default.createElement(
-	                        'p',
-	                        null,
-	                        'tf–idf is defined is defined as follows: '
-	                    ),
-	                    _react2.default.createElement(_Math2.default, { display: true, l: '\\text{tfidf}(t, d, D) = \\text{tf}(t, d)\\cdot \\text{idf}(t, D)' }),
-	                    _react2.default.createElement(
-	                        'p',
-	                        null,
-	                        'where'
-	                    ),
-	                    _react2.default.createElement(
-	                        'ul',
-	                        null,
-	                        _react2.default.createElement(
-	                            'li',
-	                            null,
-	                            _react2.default.createElement(_Math2.default, { l: 'tf(t,d)' }),
-	                            ' is a measure of the importance of a term ',
-	                            _react2.default.createElement(_Math2.default, { l: 't' }),
-	                            ' in a given document ',
-	                            _react2.default.createElement(_Math2.default, { l: 'd' }),
-	                            '. Let the raw frequency ',
-	                            _react2.default.createElement(_Math2.default, { l: 'f_{t,d}' }),
-	                            ' be the plain number of times the term ',
-	                            _react2.default.createElement(_Math2.default, { l: 't' }),
-	                            ' in occurs in a given document ',
-	                            _react2.default.createElement(_Math2.default, { l: 'd' }),
-	                            '. We use the logarithmically scaled term count: ',
-	                            _react2.default.createElement(_Math2.default, { l: 'tf(t,d) = 1 + \\log{f_{t,d}}' }),
-	                            ', or ',
-	                            _react2.default.createElement(_Math2.default, { l: '0' }),
-	                            ' if ',
-	                            _react2.default.createElement(_Math2.default, { l: 'f_{t,d} = 0' }),
-	                            '.'
-	                        ),
-	                        _react2.default.createElement(
-	                            'li',
-	                            null,
-	                            _react2.default.createElement(_Math2.default, { l: 'idf(t, D)' }),
-	                            ' is a measure of how rare it is to find a term ',
-	                            _react2.default.createElement(_Math2.default, { l: 't' }),
-	                            ' in a given document corpus ',
-	                            _react2.default.createElement(_Math2.default, { l: 'D' }),
-	                            '. We obtain this measure by calculating the logarithmically scaled inverse fraction of documents in ',
-	                            _react2.default.createElement(_Math2.default, { l: 'D' }),
-	                            ' that contain the term ',
-	                            _react2.default.createElement(_Math2.default, { l: 't' }),
-	                            '. Let ',
-	                            _react2.default.createElement(_Math2.default, { l: 'D' }),
-	                            ' be the collection of documents, we then define the standard idf measure as:',
-	                            _react2.default.createElement(_Math2.default, { display: 'true', l: 'idf(t, D) = \\log{\\frac{|D|}{|\\{d \\in D:t \\in d\\}|}}' })
-	                        )
-	                    ),
-	                    _react2.default.createElement(
-	                        'p',
-	                        null,
-	                        'In our case, we take as a document text elements (such as a paragraph, or title), because we want to derive at the most important words within title elements.'
-	                    ),
-	                    _react2.default.createElement('p', null),
-	                    _react2.default.createElement(_figureTitleTfIdf2.default, null),
-	                    _react2.default.createElement(_figureSectionTfIdf2.default, null)
 	                ),
 	                _react2.default.createElement(
 	                    'section',
@@ -55567,6 +55485,30 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+	var introIntroSections = {
+	    motivation: {
+	        id: 'motivation',
+	        title: "Motivation"
+	    },
+	    problemDescription: {
+	        id: 'problem-description',
+	        title: "Problem Description"
+	    }
+	};
+
+	introIntroSections.inOrder = [introIntroSections.motivation, introIntroSections.problemDescription];
+
+	exports.default = introIntroSections;
+
+/***/ },
+/* 296 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
 	var taggingSections = {
 	    taggingIntroduction: {
 	        id: 'tagging-introduction',
@@ -55586,7 +55528,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = taggingSections;
 
 /***/ },
-/* 296 */
+/* 297 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -55615,7 +55557,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = disseminationSections;
 
 /***/ },
-/* 297 */
+/* 298 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -55654,11 +55596,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Math2 = _interopRequireDefault(_Math);
 
-	var _FigureResults = __webpack_require__(298);
+	var _FigureResults = __webpack_require__(299);
 
 	var _FigureResults2 = _interopRequireDefault(_FigureResults);
 
-	var _ConfusionMatrix = __webpack_require__(301);
+	var _ConfusionMatrix = __webpack_require__(302);
 
 	var _ConfusionMatrix2 = _interopRequireDefault(_ConfusionMatrix);
 
@@ -55738,7 +55680,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = PARSEVAL;
 
 /***/ },
-/* 298 */
+/* 299 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -55749,7 +55691,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _data = __webpack_require__(299);
+	var _data = __webpack_require__(300);
 
 	var _data2 = _interopRequireDefault(_data);
 
@@ -55765,7 +55707,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _figs2 = _interopRequireDefault(_figs);
 
-	var _GroupedBarChart = __webpack_require__(300);
+	var _GroupedBarChart = __webpack_require__(301);
 
 	var _GroupedBarChart2 = _interopRequireDefault(_GroupedBarChart);
 
@@ -55864,7 +55806,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = FigureResults;
 
 /***/ },
-/* 299 */
+/* 300 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -57438,7 +57380,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 300 */
+/* 301 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -57720,7 +57662,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = GroupedBarChart;
 
 /***/ },
-/* 301 */
+/* 302 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -57731,7 +57673,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _data = __webpack_require__(299);
+	var _data = __webpack_require__(300);
 
 	var _data2 = _interopRequireDefault(_data);
 
@@ -57876,7 +57818,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = ConfusionMatrix;
 
 /***/ },
-/* 302 */
+/* 303 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -57976,7 +57918,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = ParsingEval;
 
 /***/ },
-/* 303 */
+/* 304 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -58054,7 +57996,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = FutureWork;
 
 /***/ },
-/* 304 */
+/* 305 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -58078,7 +58020,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = disseminationSections;
 
 /***/ },
-/* 305 */
+/* 306 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -58223,7 +58165,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = FScorez;
 
 /***/ },
-/* 306 */
+/* 307 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -58262,11 +58204,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Math2 = _interopRequireDefault(_Math);
 
-	var _FigureResults = __webpack_require__(298);
+	var _FigureResults = __webpack_require__(299);
 
 	var _FigureResults2 = _interopRequireDefault(_FigureResults);
 
-	var _ConfusionMatrix = __webpack_require__(301);
+	var _ConfusionMatrix = __webpack_require__(302);
 
 	var _ConfusionMatrix2 = _interopRequireDefault(_ConfusionMatrix);
 
@@ -58329,7 +58271,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Resultz;
 
 /***/ },
-/* 307 */
+/* 308 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -58370,7 +58312,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = taggingSections;
 
 /***/ },
-/* 308 */
+/* 309 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -58397,7 +58339,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = inferringSections;
 
 /***/ },
-/* 309 */
+/* 310 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -58420,7 +58362,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = methodsSections;
 
 /***/ },
-/* 310 */
+/* 311 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -58455,13 +58397,301 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	};
 
-	crfSections.inOrder = [crfSections.graphicalModels, crfSections.hmm, crfSections.linearChain, crfSections.inference, crfSections.parameterEstimation];
+	crfSections.inOrder = [crfSections.graphicalModels, crfSections.hmm, crfSections.linearChain, crfSections.parameterEstimation, crfSections.inference];
 
 	// crfSections.crfPerformance,
 	exports.default = crfSections;
 
 /***/ },
-/* 311 */
+/* 312 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(4);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _FigRef = __webpack_require__(247);
+
+	var _FigRef2 = _interopRequireDefault(_FigRef);
+
+	var _Image = __webpack_require__(250);
+
+	var _Image2 = _interopRequireDefault(_Image);
+
+	var _figs = __webpack_require__(224);
+
+	var _figs2 = _interopRequireDefault(_figs);
+
+	var _references = __webpack_require__(221);
+
+	var _references2 = _interopRequireDefault(_references);
+
+	var _bib = __webpack_require__(211);
+
+	var _bib2 = _interopRequireDefault(_bib);
+
+	var _Math = __webpack_require__(251);
+
+	var _Math2 = _interopRequireDefault(_Math);
+
+	var _Source = __webpack_require__(220);
+
+	var _Source2 = _interopRequireDefault(_Source);
+
+	var _chapters = __webpack_require__(217);
+
+	var _chapters2 = _interopRequireDefault(_chapters);
+
+	var _sections = __webpack_require__(248);
+
+	var _sections2 = _interopRequireDefault(_sections);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } //noinspection JSUnresolvedVariable
+
+
+	var ProblemDescription = function (_Component) {
+	    _inherits(ProblemDescription, _Component);
+
+	    function ProblemDescription() {
+	        _classCallCheck(this, ProblemDescription);
+
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(ProblemDescription).apply(this, arguments));
+	    }
+
+	    _createClass(ProblemDescription, [{
+	        key: 'render',
+	        value: function render() {
+	            var relativeToRoot = this.props.path.match(/\//g).slice(1).map(function (_) {
+	                return "../";
+	            }).join("");
+
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(
+	                    'div',
+	                    { style: { pageBreakInside: 'avoid' } },
+	                    _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        'The problem that we investigate in this thesis, then, is whether we can enrich the markup of scarcely marked up documents in Rechtspraak.nl by automatically assigning a section hierarchy to the text elements. We divide this problem in the following subtasks:'
+	                    ),
+	                    _react2.default.createElement(
+	                        'ol',
+	                        null,
+	                        _react2.default.createElement(
+	                            'li',
+	                            null,
+	                            _react2.default.createElement(
+	                                'a',
+	                                { href: "#" + _sections2.default.importing.id },
+	                                'Importing documents from the Rechtspraak.nl web service;'
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            'li',
+	                            null,
+	                            _react2.default.createElement(
+	                                'a',
+	                                { href: "#" + _sections2.default.importing.id },
+	                                'Tokenizing relevant text elements;'
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            'li',
+	                            null,
+	                            _react2.default.createElement(
+	                                'a',
+	                                { href: _chapters2.default.pathTo(this.props.path, _chapters2.default.tagging) },
+	                                'Labeling these text elements with their respective roles (i.e. ',
+	                                _react2.default.createElement(
+	                                    'code',
+	                                    null,
+	                                    'section title'
+	                                ),
+	                                '; ',
+	                                _react2.default.createElement(
+	                                    'code',
+	                                    null,
+	                                    'numbering'
+	                                ),
+	                                '; ',
+	                                _react2.default.createElement(
+	                                    'code',
+	                                    null,
+	                                    'text block'
+	                                ),
+	                                '; ',
+	                                _react2.default.createElement(
+	                                    'code',
+	                                    null,
+	                                    'newline'
+	                                ),
+	                                ');'
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            'li',
+	                            null,
+	                            _react2.default.createElement(
+	                                'a',
+	                                { href: _chapters2.default.pathTo(this.props.path, _chapters2.default.documentStructure) },
+	                                'Combining the tokens in such a way that they represent the most likely section hierarchy;'
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            'li',
+	                            { style: { display: 'none' } },
+	                            'Publishing the resulting documents so that search engines can make use of the enriched markup'
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Tasks 1 and 2 are theoretically straightforward and mostly a problem of implementation, and the following chapter touches on these subject briefly, including a specification of the data set used.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Tasks 3 and 4 require more complicated machinery than importing and tokenization, so these topics merit their own chapter. These chapters are similarly structured: we introduce the problem to solve, the methods used, and report experimental results.'
+	                )
+	            );
+	        }
+	    }], [{
+	        key: 'id',
+	        value: function id() {
+	            return "problem-description";
+	        }
+	    }]);
+
+	    return ProblemDescription;
+	}(_react.Component);
+
+	exports.default = ProblemDescription;
+
+/***/ },
+/* 313 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(4);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _MarkupStatsFigure = __webpack_require__(223);
+
+	var _MarkupStatsFigure2 = _interopRequireDefault(_MarkupStatsFigure);
+
+	var _FigRef = __webpack_require__(247);
+
+	var _FigRef2 = _interopRequireDefault(_FigRef);
+
+	var _Image = __webpack_require__(250);
+
+	var _Image2 = _interopRequireDefault(_Image);
+
+	var _figs = __webpack_require__(224);
+
+	var _figs2 = _interopRequireDefault(_figs);
+
+	var _references = __webpack_require__(221);
+
+	var _references2 = _interopRequireDefault(_references);
+
+	var _bib = __webpack_require__(211);
+
+	var _bib2 = _interopRequireDefault(_bib);
+
+	var _Math = __webpack_require__(251);
+
+	var _Math2 = _interopRequireDefault(_Math);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } //noinspection JSUnresolvedVariable
+
+
+	var IntroMotivation = function (_Component) {
+	    _inherits(IntroMotivation, _Component);
+
+	    function IntroMotivation() {
+	        _classCallCheck(this, IntroMotivation);
+
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(IntroMotivation).apply(this, arguments));
+	    }
+
+	    _createClass(IntroMotivation, [{
+	        key: 'render',
+	        value: function render() {
+	            var relativeToRoot = this.props.path.match(/\//g).slice(1).map(function (_) {
+	                return "../";
+	            }).join("");
+
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Having a section hierarchy in case law documents is obviously useful for rendering the documents to human users: it allows us to display a table of contents and to style section titles. It also allows search engines to better index the subsections of a text to make it better searchable for legal users, and is a stepping stone to more advanced text mining operations, such as singling out the final judgment, perform information extraction, etc.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'There is a recent trend among the court judgments on Rechtspraak.nl towards more richly marked up documents, as we can see in ',
+	                    _react2.default.createElement(_FigRef2.default, {
+	                        fig: _figs2.default.markupStats }),
+	                    '. However, an overwhelmingly large portion of documents remains which contain no or only sparse markup. To illustrate: at the time of writing, 78.7% of all judgment texts on Rechtspraak.nl do not contain any ',
+	                    _react2.default.createElement(
+	                        'code',
+	                        null,
+	                        'section'
+	                    ),
+	                    ' tag, implying that a large amount of documents are barely marked up. Even older documents produce legal knowledge, so it is desirable to have these documents in good shape.'
+	                ),
+	                _react2.default.createElement(_MarkupStatsFigure2.default, null)
+	            );
+	        }
+	    }], [{
+	        key: 'id',
+	        value: function id() {
+	            return "motivation";
+	        }
+	    }]);
+
+	    return IntroMotivation;
+	}(_react.Component);
+
+	exports.default = IntroMotivation;
+
+/***/ },
+/* 314 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -58747,7 +58977,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = CRF;
 
 /***/ },
-/* 312 */
+/* 315 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -58909,7 +59139,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = CRF;
 
 /***/ },
-/* 313 */
+/* 316 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -58967,6 +59197,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    _createClass(LinearChainCRF, [{
 	        key: 'render',
 	        value: function render() {
+	            var canonicalCrfFormula = "\\frac{\\exp\\left \\{\\sum_{t=1}^T\\sum_{k=1}^{K} \\lambda_k f_k(\\mathbf y_t, \\mathbf y_{t-1}, \\mathbf x_t)\\right \\}}{\\sum_{\\mathbf y'}\\exp\\left \\{\\sum_{t=1}^T\\sum_{k=1}^{K} \\lambda_k f_k(\\mathbf y_{t}', y'_{t-1}, \\mathbf x_t)\\right \\}}";
 	            return _react2.default.createElement(
 	                'div',
 	                null,
@@ -59019,9 +59250,53 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
+	                    'Where each local function ',
+	                    _react2.default.createElement(_Math2.default, {
+	                        display: false,
+	                        l: '\\Phi_{k,t}(\\mathbf x,\\mathbf y)=\\lambda_{k} f_{k}(\\mathbf y_{t},\\mathbf y_{t-1},\\mathbf x_t)'
+	                    }),
+	                    ' for some'
+	                ),
+	                _react2.default.createElement(
+	                    'ul',
+	                    null,
+	                    _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf x_t' }),
+	                        ' and ',
+	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf y_t' }),
+	                        ' be elements of ',
+	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf x' }),
+	                        ' and ',
+	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf y' }),
+	                        ' respectively, i.e., ',
+	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf x_t' }),
+	                        ' is the current observation and ',
+	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf y_t' }),
+	                        ' is the current label, and ',
+	                        _react2.default.createElement(_Math2.default, { l: 'y_{t-1}' }),
+	                        ' is the previous label.'
+	                    ),
+	                    _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(_Math2.default, { l: '\\mathcal F=\\{f_k(y, y\', x)\\}' }),
+	                        ' be a set of feature functions that give a real-valued score given a current label, the previous label and the current output token. These functions are defined by the CRF designer.'
+	                    ),
+	                    _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(_Math2.default, { l: '\\Lambda=\\{\\lambda_k\\} \\in \\mathbb{R}^K' }),
+	                        ' be a vector of weight parameters that give a measure of how important a given feature function is. These parameters are found by training the CRF.'
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
 	                    'We then define the un-normalized CRF distribution as:',
 	                    _react2.default.createElement(_Math2.default, {
-	                        l: '\\hat{p}(\\mathbf x, \\mathbf y)=\\prod_{i=1}^k\\Phi_i(D_i)',
+	                        l: '\\hat{p}(\\mathbf x, \\mathbf y)=\\prod_{t=1}^T\\prod_{k=1}^K\\Phi_{k,t}(\\mathbf x, \\mathbf y)',
 	                        displayMode: true })
 	                ),
 	                _react2.default.createElement(
@@ -59041,77 +59316,29 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        l: 'p(\\mathbf y|\\mathbf x)' }),
 	                    ', so we use a normalization function that assumes ',
 	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf x' }),
-	                    ' is given, i.e.:',
+	                    ' is given and sums over every possible string of labels ',
+	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf{y}' }),
+	                    ', i.e.:',
 	                    _react2.default.createElement(_Math2.default, { l: 'Z(\\mathbf x)=\\sum_{\\mathbf{y}}\\hat{p}(\\mathbf x, \\mathbf y)', displayMode: true }),
 	                    'and so',
 	                    _react2.default.createElement(_Math2.default, {
-	                        l: 'p(\\mathbf y|\\mathbf x)= \\frac{1}{Z(\\mathbf x)}\\hat{p}(\\mathbf x, \\mathbf y)',
+	                        l: 'p(\\mathbf y|\\mathbf x)= \\frac{1}{Z(\\mathbf x)}\\hat{p}(\\mathbf x, \\mathbf y) = \\frac{1}{Z(\\mathbf x)}\\prod_{t=1}^T\\prod_{k=1}^{K} \\lambda_k f_k(\\mathbf y_t, \\mathbf y_{t-1}, \\mathbf x_t)',
 	                        displayMode: true })
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'In CRFs, each local feature has the form'
-	                ),
-	                _react2.default.createElement(_Math2.default, { display: true,
-	                    l: '\\Phi_{Ak}(\\mathbf x_t,\\mathbf y_t)=\\lambda_{Ak} f_{Ak}(y_{t},y_{t-1},x_t)' }),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'For some'
-	                ),
-	                _react2.default.createElement(
-	                    'ol',
-	                    null,
-	                    _react2.default.createElement(
-	                        'li',
-	                        null,
-	                        _react2.default.createElement(_Math2.default, { l: '\\Lambda=\\{\\lambda_k\\} \\in \\mathbb{R}^K' }),
-	                        ' is a vector of weight parameters'
-	                    ),
-	                    _react2.default.createElement(
-	                        'li',
-	                        null,
-	                        _react2.default.createElement(_Math2.default, { l: 'F_{eatures}=\\{f_k(y,y\',\\mathbf{x}_t)\\}' }),
-	                        ' be a set of real-valued feature functions'
-	                    )
-	                ),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'where ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf{x}_t' }),
-	                    ' and ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf{y}_t' }),
-	                    ' are the current values of',
-	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf x_t' }),
-	                    ' and ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf y_t' }),
-	                    ' respectively, i.e., the current observation and the current label, and ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf{y}_{t-1}' }),
-	                    ' is the previous label. And so, recalling that the product of exponents equals the logarithm of their sum we can re-write ',
+	                    'When we recall that the product of exponents equals the logarithm of their sum, we can re-write ',
 	                    _react2.default.createElement(_Math2.default, {
 	                        l: 'p(\\mathbf y|\\mathbf x)' }),
 	                    ' as'
 	                ),
-	                _react2.default.createElement(_Math2.default, {
-	                    l: 'p(\\mathbf{x},\\mathbf{y})' }),
-	                ' that has the form:',
-	                _react2.default.createElement(_Math2.default, { l: 'p(\\mathbf{x},\\mathbf{y})= \\frac{1}{Z(\\mathbf x)}\\exp\\left \\{\\sum_{k=1}^{K} \\lambda_k f_k(y_t, y_{t-1},\\mathbf x_t)\\right \\}',
-	                    display: 'true' }),
+	                _react2.default.createElement(_Math2.default, { display: 'true',
+	                    l: "p(\\mathbf y|\\mathbf x) = " + canonicalCrfFormula }),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
 	                    'This is the canonical form of Conditional Random Fields.'
-	                ),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'Where ',
-	                    _react2.default.createElement(_Math2.default, { l: 'Z(\\mathbf x)' }),
-	                    ' is a normalization function that takes the observation vector as a parameter:',
-	                    _react2.default.createElement(_Math2.default, { l: 'Z(\\mathbf x)=\\sum_{\\mathbf{y}} \\exp\\left \\{\\sum_{k=1}^{K} \\lambda_k f_k(y_t, y_{t-1},\\mathbf x_t)\\right \\}',
-	                        display: 'true' })
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -59131,7 +59358,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = LinearChainCRF;
 
 /***/ },
-/* 314 */
+/* 317 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59208,9 +59435,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ', i.e. ',
 	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf y' }),
 	                    ' such that ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf y*=\\text{argmax}_{\\mathbf y}p(\\mathbf y|\\mathbf x)'
+	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf y^*=\\text{argmax}_{\\mathbf y}p(\\mathbf y|\\mathbf x)'
 	                    }),
-	                    ', known as the Viterbi sequence. Thanks to the structure of linear-chain CRFs, this can be efficiently computed through a dynamic programming algorithm called the Viterbi algorithm, which is very similar to the forward-backward algorithm.'
+	                    '. This path is known as the Viterbi sequence. Thanks to the structure of linear-chain CRFs, we can be efficiently compute the Viterbi sequence through a dynamic programming algorithm called the Viterbi algorithm, which is very similar to the forward-backward algorithm.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -59219,8 +59446,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(_Math2.default, { l: 'p(\\mathbf y|\\mathbf x)' }),
 	                    ', we get:'
 	                ),
-	                _react2.default.createElement(_Math2.default, { display: 'true', l: '\\mathbf y*=\\text{argmax}_{\\mathbf y}\\frac{1}{Z(\\mathbf x)}\\exp\\left \\{\\sum_{k=1}^{K} \\lambda_k f_k(y_t, y_{t-1},\\mathbf x_t)\\right \\}' }),
-	                _react2.default.createElement('p', null)
+	                _react2.default.createElement(_Math2.default, { display: 'true',
+	                    l: '\\mathbf y^*=\\text{argmax}_{\\mathbf y}\\frac{1}{Z(\\mathbf x)}\\exp\\left \\{\\sum_{t=1}^T\\sum_{k=1}^{K} \\lambda_k f_k(y_t, y_{t-1},\\mathbf x_t)\\right \\}' }),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'We can leave out the normalization factor ',
+	                    _react2.default.createElement(_Math2.default, { l: '\\frac{1}{Z(\\mathbf x)}' }),
+	                    ', because the ',
+	                    _react2.default.createElement(_Math2.default, { l: '\\text{argmax}' }),
+	                    ' will be the same with or without:'
+	                ),
+	                _react2.default.createElement(_Math2.default, { display: 'true',
+	                    l: '\\mathbf y^*=\\text{argmax}_{\\mathbf y}\\exp\\left \\{\\sum_{t=1}^T\\sum_{k=1}^{K} \\lambda_k f_k(y_t, y_{t-1},\\mathbf x_t)\\right \\}' }),
+	                '-------------------------',
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    _react2.default.createElement(_Math2.default, { l: 'p(\\mathbf x)=\\sum_{\\mathbf y}\\prod' })
+	                )
 	            );
 	        }
 	    }], [{
@@ -59236,7 +59480,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = FScorez;
 
 /***/ },
-/* 315 */
+/* 318 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59299,61 +59543,124 @@ return /******/ (function(modules) { // webpackBootstrap
 	            var relativeToRoot = this.props.path.match(/\//g).slice(1).map(function (_) {
 	                return "../";
 	            }).join("");
-
+	            var canonicalUnnormalizedCrf = "\\exp\\left \\{\\sum_{t=1}^T\\sum_{k=1}^{K} \\lambda_k f_k(\\mathbf y^i_t, \\mathbf y^i_{t-1}, \\mathbf x^i_t)\\right \\}";
+	            var canonicalZ = "\\sum_{\\mathbf y'}\\exp\\left \\{\\sum_{t=1}^T\\sum_{k=1}^{K} \\lambda_k f_k(\\mathbf y^i_{t}', y'_{t-1}, \\mathbf x^i_t)\\right \\}";
 	            return _react2.default.createElement(
 	                'div',
 	                null,
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'Training a CRF amounts to estimating parameters ',
+	                    'As we saw in the previous section, we obtain parameters ',
 	                    _react2.default.createElement(_Math2.default, { l: '\\Lambda' }),
-	                    ' such that some likelihood function ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\mathcal{l}(\\Lambda)' }),
-	                    ' is maximized maximized, given a given pre-labeled training set of token-tag pairs ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\mathcal D=\\{\\mathbf{x}^{(i)},\\mathbf{y}^{(i)}\\}_{i=1}^N'
+	                    ' by training our CRF on a pre-labeled training set of pairs ',
+	                    _react2.default.createElement(_Math2.default, { l: '\\mathcal D=\\{\\mathbf{x}^{i},\\mathbf{y}^{i}\\}_{i=1}^N'
 	                    }),
-	                    ' where for each ',
+	                    ' where each ',
 	                    _react2.default.createElement(_Math2.default, { l: 'i' }),
-	                    ' and ',
-	                    _react2.default.createElement(_Math2.default, { l: 'T' }),
-	                    ', ',
+	                    ' indexes an example instance: ',
 	                    _react2.default.createElement(_Math2.default, {
-	                        l: '\\mathbf{x}^{(i)}=\\{x^{(i)}_1, x^{(i)}_2, \\cdots, x^{(i)}_T\\}'
+	                        l: '\\mathbf{x}^{i}=\\{x^{i}_1, x^{i}_2, \\cdots, x^{i}_T\\}'
 	                    }),
 	                    ' is a set of input tokens, and ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf{y}^{(i)}=\\{y^{(i)}_1, y^{(i)}_2, \\cdots, y^{(i)}_T\\}'
+	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf{y}^{i}=\\{y^{i}_1, y^{i}_2, \\cdots, y^{i}_T\\}'
 	                    }),
-	                    ' is a set of output tags.'
+	                    ' is a set of output tags for instance length ',
+	                    _react2.default.createElement(_Math2.default, { l: 'T' }),
+	                    '.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'We are modeling a conditional distribution, so it makes sense to use the conditional log likelihood function for optimizating ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\Lambda' }),
-	                    ':'
+	                    'The training process will maximize some likelihood function ',
+	                    _react2.default.createElement(_Math2.default, { l: '\\ell(\\Lambda)' }),
+	                    '. We are modeling a conditional distribution, so it makes sense to use the conditional log likelihood function:'
 	                ),
-	                _react2.default.createElement(_Math2.default, { display: 'true', l: '\\mathcal{l}(\\Lambda)=\\sum_{i=1}^N \\log{p(\\mathbf y^{(i)}|\\mathbf x^{(i)}}' }),
+	                _react2.default.createElement(_Math2.default, { display: 'true', l: '\\ell(\\Lambda)=\\sum_{i=1}^N \\log{p(\\mathbf y^{i}|\\mathbf x^{i}})' }),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
 	                    'Where ',
-	                    _react2.default.createElement(_Math2.default, { l: 'p(\\mathbf y^{(i)}|\\mathbf x^{(i)})' }),
-	                    ' is the CRF distribution as we have seen earlier.'
+	                    _react2.default.createElement(_Math2.default, { l: 'p' }),
+	                    ' is the CRF distribution as we saw in the previous section:'
 	                ),
+	                _react2.default.createElement(_Math2.default, { display: 'true',
+	                    l: "\\ell(\\Lambda) = \\sum_{i=1}^N\\log{\\frac{" + canonicalUnnormalizedCrf + "}{" + canonicalZ + "}" + "}" }),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'Because finding the exact parameters is generally intractable, we use a hill-climbing algorithm, specifically the Limited-memory Broyden–Fletcher–Goldfarb–Shanno algorithm (LM-BVFGS), which approximates Newton\'s Method. The general idea of this algorithm is that we maximize the likelihood function by starting out at some initial point, and iteratively moving toward the global maximum.'
+	                    'Simplifying, we have:'
+	                ),
+	                _react2.default.createElement(_Math2.default, { display: 'true',
+	                    l: '\\ell(\\Lambda) = \\sum_{i=1}^N\\sum_{t=1}^T\\sum_{k=1}^K \\lambda_kf_k(y^i_t,y^i_{t-1},\\mathbf x^i_t)-\\sum_{i=1}^N\\log{Z(\\mathbf x^i})' }),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'We also add a penalty term to the likelihood function to avoid overfitting. This is called regularization, and in this particular instance we use L2 regularization:'
+	                ),
+	                _react2.default.createElement(_Math2.default, { display: 'true',
+	                    l: '\\ell(\\Lambda) = \\sum_{i=1}^N\\sum_{t=1}^T\\sum_{k=1}^K \\lambda_kf_k(y^i_t,y^i_{t-1},\\mathbf x^i_t)-\\sum_{i=1}^N\\log{Z(\\mathbf x^i)} - \\sum_{k=1}^K\\frac{\\lambda_{k}^2}{2\\sigma^2}' }),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Because it is generally intractable to find the exact parameters ',
+	                    _react2.default.createElement(_Math2.default, {
+	                        l: '\\Lambda' }),
+	                    ' that maximize the likelihood function ',
+	                    _react2.default.createElement(_Math2.default, { l: '\\ell' }),
+	                    ', we use a hill-climbing algorithm. The general idea of hill-climbing algorithms is that we start out with some random assignment to the parameters ',
+	                    _react2.default.createElement(_Math2.default, {
+	                        l: '\\Lambda' }),
+	                    ', and estimate the parameters that maximize ',
+	                    _react2.default.createElement(_Math2.default, { l: '\\ell' }),
+	                    ' by iteratively moving along the gradient toward the global maximum. We find the direction to move in by taking the derivative of ',
+	                    _react2.default.createElement(_Math2.default, { l: '\\ell' }),
+	                    ' with respect to ',
+	                    _react2.default.createElement(_Math2.default, { l: '\\Lambda' }),
+	                    ':'
+	                ),
+	                _react2.default.createElement(_Math2.default, { display: 'true', l: '\\frac{\\partial\\ell}{\\partial\\lambda_k} = \\sum_{i=1}^N\\sum_{t=1}^Tf_k(y_t^i,y_{t-1}^i,x_t^i) -\\sum_{i=1}^N\\sum_{t=1}^T\\sum_{y,y\'}f_k(y,y,\\mathbf x_t^i) p(y,y\'|\\mathbf x^i)-\\sum_{k=1}^K\\frac{\\lambda_k}{\\sigma^2} ' }),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'And then update parameter ',
+	                    _react2.default.createElement(_Math2.default, { l: '\\lambda_i' }),
+	                    ' along this gradient:'
+	                ),
+	                _react2.default.createElement(_Math2.default, { display: 'true', l: '\\lambda_i := \\lambda_i + \\alpha \\frac{\\partial\\ell}{\\partial\\lambda_k}' }),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Where ',
+	                    _react2.default.createElement(_Math2.default, { l: '\\alpha' }),
+	                    ' is some learning rate between ',
+	                    _react2.default.createElement(_Math2.default, { l: '0' }),
+	                    ' and ',
+	                    _react2.default.createElement(_Math2.default, { l: '1' }),
+	                    '.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
 	                    'Thanks to the fact that the distribution ',
-	                    _react2.default.createElement(_Math2.default, { l: 'p(\\mathbf{y}^{(i)}|\\mathbf{x}^{(i)})' }),
+	                    _react2.default.createElement(_Math2.default, { l: 'p(\\mathbf{y}^{i}|\\mathbf{x}^{i})' }),
 	                    ' is concave, the function ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\mathcal{l}(\\Lambda)' }),
-	                    ' is also concave. This ensures that any local optimum will be a global optimum. Adding regularization ensures that there is only one unique global optimum, and also avoids overfitting.'
+	                    _react2.default.createElement(_Math2.default, { l: '\\ell(\\Lambda)' }),
+	                    ' is also concave. This ensures that any local optimum will be a global optimum. The regularization term also ensures any global optimum is a unique optimum, in addition to avoid overfitting.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'In our experiment, we use the ',
+	                    _react2.default.createElement(
+	                        'a',
+	                        {
+	                            href: 'https://en.wikipedia.org/wiki/Limited-memory_BFGS' },
+	                        'Limited-memory Broyden–Fletcher–Goldfarb–Shanno algorithm (LM-BVFGS)'
+	                    ),
+	                    ', which approximates Newton\'s Method. This algorithm is optimized for the memory-contrained conditions in real-world computers, and also converges much faster than is naive implementation, because it works on the double derivative of ',
+	                    _react2.default.createElement(_Math2.default, { l: '\\ell' }),
+	                    '.'
 	                )
 	            );
 	        }
@@ -59370,7 +59677,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = ParameterEstimation;
 
 /***/ },
-/* 316 */
+/* 319 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59449,7 +59756,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = CRF;
 
 /***/ },
-/* 317 */
+/* 320 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59488,7 +59795,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Math2 = _interopRequireDefault(_Math);
 
-	var _sections = __webpack_require__(304);
+	var _sections = __webpack_require__(305);
 
 	var _sections2 = _interopRequireDefault(_sections);
 
@@ -59586,7 +59893,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Results;
 
 /***/ },
-/* 318 */
+/* 321 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59607,7 +59914,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
-	var _ChapterSectionContent = __webpack_require__(319);
+	var _ChapterSectionContent = __webpack_require__(322);
 
 	var _ChapterSectionContent2 = _interopRequireDefault(_ChapterSectionContent);
 
@@ -59674,7 +59981,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Tagging;
 
 /***/ },
-/* 319 */
+/* 322 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59767,7 +60074,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = Chapter;
 
 /***/ },
-/* 320 */
+/* 323 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59900,7 +60207,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = TaggingIntroduction;
 
 /***/ },
-/* 321 */
+/* 324 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59970,7 +60277,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = DeterministicTagger;
 
 /***/ },
-/* 322 */
+/* 325 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60005,11 +60312,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Math2 = _interopRequireDefault(_Math);
 
-	var _GraphicalModels = __webpack_require__(311);
+	var _GraphicalModels = __webpack_require__(314);
 
 	var _GraphicalModels2 = _interopRequireDefault(_GraphicalModels);
 
-	var _sections = __webpack_require__(310);
+	var _sections = __webpack_require__(311);
 
 	var _sections2 = _interopRequireDefault(_sections);
 
@@ -60174,7 +60481,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = CRF;
 
 /***/ },
-/* 323 */
+/* 326 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60425,7 +60732,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = FeatureSelection;
 
 /***/ },
-/* 324 */
+/* 327 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60484,7 +60791,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = InferringDocumentStructureIntroduction;
 
 /***/ },
-/* 325 */
+/* 328 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60501,7 +60808,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _ChapterSectionContent = __webpack_require__(319);
+	var _ChapterSectionContent = __webpack_require__(322);
 
 	var _ChapterSectionContent2 = _interopRequireDefault(_ChapterSectionContent);
 
@@ -60509,7 +60816,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
-	var _sections = __webpack_require__(309);
+	var _sections = __webpack_require__(310);
 
 	var _sections2 = _interopRequireDefault(_sections);
 
@@ -60557,7 +60864,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Methods;
 
 /***/ },
-/* 326 */
+/* 329 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60580,7 +60887,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _bib2 = _interopRequireDefault(_bib);
 
-	var _sections = __webpack_require__(296);
+	var _sections = __webpack_require__(297);
 
 	var _sections2 = _interopRequireDefault(_sections);
 
@@ -60622,7 +60929,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Evaluation;
 
 /***/ },
-/* 327 */
+/* 330 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60712,7 +61019,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = ContextFreeGrammars;
 
 /***/ },
-/* 328 */
+/* 331 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60774,7 +61081,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = AdditionalEnrichment;
 
 /***/ },
-/* 329 */
+/* 332 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61407,7 +61714,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = CYK;
 
 /***/ },
-/* 330 */
+/* 333 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -61422,12 +61729,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	};
 
-	disseminationSections.inOrder = [disseminationSections.additionalEnrichment];
+	disseminationSections.inOrder = [
+	    // disseminationSections.additionalEnrichment,
+	];
 
 	exports.default = disseminationSections;
 
 /***/ },
-/* 331 */
+/* 334 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61454,11 +61763,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Importing2 = _interopRequireDefault(_Importing);
 
-	var _Chapter = __webpack_require__(332);
+	var _Chapter = __webpack_require__(335);
 
 	var _Chapter2 = _interopRequireDefault(_Chapter);
 
-	var _sections = __webpack_require__(248);
+	var _sections = __webpack_require__(295);
 
 	var _sections2 = _interopRequireDefault(_sections);
 
@@ -61471,21 +61780,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } //noinspection JSUnresolvedVariable
 
 
-	var Introduction = function (_Component) {
-	    _inherits(Introduction, _Component);
+	var IntroductionIntroduction = function (_Component) {
+	    _inherits(IntroductionIntroduction, _Component);
 
-	    function Introduction() {
-	        _classCallCheck(this, Introduction);
+	    function IntroductionIntroduction() {
+	        _classCallCheck(this, IntroductionIntroduction);
 
-	        return _possibleConstructorReturn(this, Object.getPrototypeOf(Introduction).apply(this, arguments));
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(IntroductionIntroduction).apply(this, arguments));
 	    }
 
-	    _createClass(Introduction, [{
+	    _createClass(IntroductionIntroduction, [{
 	        key: 'render',
 	        value: function render() {
 	            return _react2.default.createElement(
 	                _Chapter2.default,
-	                { chapter: true, inline: !!this.props.inline, path: this.props.path, title: Introduction.title(),
+	                { chapter: true, inline: !!this.props.inline, path: this.props.path,
+	                    title: IntroductionIntroduction.title(),
 	                    sections: _sections2.default.inOrder },
 	                _react2.default.createElement(
 	                    'p',
@@ -61501,17 +61811,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'Having a section hierarchy is obviously useful for rendering the documents to human users: it allows us to display a table of contents and to style section titles. But it is also interesting for more advanced text mining applications, such as topic modeling and information extraction. For example, we may want to supply sections with some metadata (such as a summary). It would then be useful to have the section hierarchy available.'
-	                ),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'In this chapter, we provide an introduction to the Rechtspraak.nl data set that we experiment on, with an introduction to the case law XML markup.'
-	                ),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'Near the end of this chapter, we present a Java library that bundles all the work that we have undertaken in this thesis. This library is effectively a pipeline for enriching Dutch case law markup with a section hierarchy.'
+	                    _react2.default.createElement(
+	                        'strike',
+	                        null,
+	                        'Near the end of this chapter, we present a Java library that bundles all the work that we have undertaken in this thesis. This library is effectively a pipeline for enriching Dutch case law markup with a section hierarchy.'
+	                    )
 	                )
 	            );
 	        }
@@ -61530,13 +61834,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 	    }]);
 
-	    return Introduction;
+	    return IntroductionIntroduction;
 	}(_react.Component);
 
-	exports.default = Introduction;
+	exports.default = IntroductionIntroduction;
 
 /***/ },
-/* 332 */
+/* 335 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61676,7 +61980,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = Chapter;
 
 /***/ },
-/* 333 */
+/* 336 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61693,19 +61997,19 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Chapter = __webpack_require__(332);
+	var _Chapter = __webpack_require__(335);
 
 	var _Chapter2 = _interopRequireDefault(_Chapter);
 
-	var _Introduction = __webpack_require__(331);
+	var _Introduction = __webpack_require__(334);
 
 	var _Introduction2 = _interopRequireDefault(_Introduction);
 
-	var _Tagging = __webpack_require__(334);
+	var _Tagging = __webpack_require__(337);
 
 	var _Tagging2 = _interopRequireDefault(_Tagging);
 
-	var _InferringDocumentStructure = __webpack_require__(335);
+	var _InferringDocumentStructure = __webpack_require__(338);
 
 	var _InferringDocumentStructure2 = _interopRequireDefault(_InferringDocumentStructure);
 
@@ -61722,7 +62026,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } //noinspection JSUnresolvedVariable
 
 
-	var title = __webpack_require__(336);
+	var title = __webpack_require__(339);
 
 	var FullThesis = function (_Component) {
 	    _inherits(FullThesis, _Component);
@@ -61829,7 +62133,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = FullThesis;
 
 /***/ },
-/* 334 */
+/* 337 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61844,27 +62148,27 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Chapter = __webpack_require__(332);
+	var _Chapter = __webpack_require__(335);
 
 	var _Chapter2 = _interopRequireDefault(_Chapter);
 
-	var _Methods = __webpack_require__(318);
+	var _Methods = __webpack_require__(321);
 
 	var _Methods2 = _interopRequireDefault(_Methods);
 
-	var _Results = __webpack_require__(317);
+	var _Results = __webpack_require__(320);
 
 	var _Results2 = _interopRequireDefault(_Results);
 
-	var _DeterministicTagger = __webpack_require__(321);
+	var _DeterministicTagger = __webpack_require__(324);
 
 	var _DeterministicTagger2 = _interopRequireDefault(_DeterministicTagger);
 
-	var _CRF = __webpack_require__(322);
+	var _CRF = __webpack_require__(325);
 
 	var _CRF2 = _interopRequireDefault(_CRF);
 
-	var _FeatureSelection = __webpack_require__(323);
+	var _FeatureSelection = __webpack_require__(326);
 
 	var _FeatureSelection2 = _interopRequireDefault(_FeatureSelection);
 
@@ -61872,7 +62176,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
-	var _sections = __webpack_require__(295);
+	var _sections = __webpack_require__(296);
 
 	var _sections2 = _interopRequireDefault(_sections);
 
@@ -61933,7 +62237,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Tagging;
 
 /***/ },
-/* 335 */
+/* 338 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61948,7 +62252,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Chapter = __webpack_require__(332);
+	var _Chapter = __webpack_require__(335);
 
 	var _Chapter2 = _interopRequireDefault(_Chapter);
 
@@ -61956,7 +62260,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
-	var _sections = __webpack_require__(308);
+	var _sections = __webpack_require__(309);
 
 	var _sections2 = _interopRequireDefault(_sections);
 
@@ -62008,7 +62312,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Inferring;
 
 /***/ },
-/* 336 */
+/* 339 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -62016,7 +62320,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = 'Automatically Assigning A Section Hierarchy For Dutch Case Law';
 
 /***/ },
-/* 337 */
+/* 340 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62031,7 +62335,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Chapter = __webpack_require__(332);
+	var _Chapter = __webpack_require__(335);
 
 	var _Chapter2 = _interopRequireDefault(_Chapter);
 
@@ -62039,7 +62343,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
-	var _sections = __webpack_require__(330);
+	var _sections = __webpack_require__(333);
 
 	var _sections2 = _interopRequireDefault(_sections);
 
@@ -62075,7 +62379,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'rechtspraak.cloudant.com/docs/'
 	                ),
 	                '. We also provide the enriched dataset as a collection of HTML pages, indexed for full text search. The web site is available at ',
-	                _react2.default.createElement('a', { href: 'https://rechtspraak.lawreader.nl/' })
+	                _react2.default.createElement('a', { href: 'https://rechtspraak.lawreader.nl/' }),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'The source code for this undertaking in published in two separate Java libraries: one for importing and enriching documents from Rechtspraak.nl (',
+	                    _react2.default.createElement(
+	                        'a',
+	                        { href: 'https://github.com/digitalheir/java-rechtspraak-library' },
+	                        'on GitHub'
+	                    ),
+	                    '), and one for mirroring the Rechtspraak.nl corpus to a CouchDB database (',
+	                    _react2.default.createElement(
+	                        'a',
+	                        { href: 'https://github.com/digitalheir/dutch-case-law-to-couchdb' },
+	                        'on GitHub'
+	                    ),
+	                    ').'
+	                )
 	            );
 	        }
 	    }], [{
@@ -62097,6 +62418,87 @@ return /******/ (function(modules) { // webpackBootstrap
 	}(_react.Component);
 
 	exports.default = Dissemination;
+
+/***/ },
+/* 341 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(4);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Chapter = __webpack_require__(335);
+
+	var _Chapter2 = _interopRequireDefault(_Chapter);
+
+	var _chapters = __webpack_require__(217);
+
+	var _chapters2 = _interopRequireDefault(_chapters);
+
+	var _sections = __webpack_require__(248);
+
+	var _sections2 = _interopRequireDefault(_sections);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } //noinspection JSUnresolvedVariable
+
+
+	var ImportingAndTokenizing = function (_Component) {
+	    _inherits(ImportingAndTokenizing, _Component);
+
+	    function ImportingAndTokenizing() {
+	        _classCallCheck(this, ImportingAndTokenizing);
+
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(ImportingAndTokenizing).apply(this, arguments));
+	    }
+
+	    _createClass(ImportingAndTokenizing, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                _Chapter2.default,
+	                { path: this.props.path,
+	                    title: ImportingAndTokenizing.title(),
+	                    sections: _sections2.default.inOrder },
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'In this chapter, we provide an introduction to the Rechtspraak.nl data set that we experiment on, and make a number of remarks on the necessary pre-processing that we perform in order to create a corpus that we can use for our experiments with labeling and parsing the document elements into a section hierarchy.'
+	                )
+	            );
+	        }
+	    }], [{
+	        key: 'title',
+	        value: function title() {
+	            return _chapters2.default.importing.title;
+	        }
+
+	        //noinspection JSUnusedGlobalSymbols
+
+	    }, {
+	        key: 'getSections',
+	        value: function getSections() {
+	            return _sections2.default;
+	        }
+	    }]);
+
+	    return ImportingAndTokenizing;
+	}(_react.Component);
+
+	exports.default = ImportingAndTokenizing;
 
 /***/ }
 /******/ ])
