@@ -6,7 +6,7 @@ const disseminationSections = {
 };
 
 disseminationSections.inOrder = [
-    disseminationSections.additionalEnrichment,
+    // disseminationSections.additionalEnrichment,
 ];
 
 export default disseminationSections;

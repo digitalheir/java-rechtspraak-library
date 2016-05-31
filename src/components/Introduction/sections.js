@@ -1,22 +1,17 @@
 const introIntroSections = {
-    rechtspraakNl: {
-        id: 'rechtspraak-nl',
-        title: "Rechtspraak.nl"
+   motivation: {
+        id: 'motivation',
+        title: "Motivation"
     },
-    rechtspraakNlMarkup: {
-        id: 'rechtspraak-nl-markup',
-        title: "Rechtspraak.nl markup"
-    },
-    importing: {
-        id: 'importing',
-        title: 'Importing & Tokenizing Data'
+    problemDescription: {
+        id: 'problem-description',
+        title: "Problem Description"
     }
 };
 
 introIntroSections.inOrder = [
-    introIntroSections.rechtspraakNl,
-    introIntroSections.rechtspraakNlMarkup,
-    introIntroSections.importing,
+    introIntroSections.motivation,
+    introIntroSections.problemDescription,
 ];
 
 export default introIntroSections;

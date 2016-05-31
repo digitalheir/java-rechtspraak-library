@@ -29,8 +29,8 @@ crfSections.inOrder = [
     crfSections.graphicalModels,
     crfSections.hmm,
     crfSections.linearChain,
-    crfSections.inference,
     crfSections.parameterEstimation,
+    crfSections.inference,
     // crfSections.crfPerformance,
 ];
 

@@ -20,10 +20,11 @@ export default class FScorez extends Component {
             <p>
                 Given a trained CRF and an observation vector <F l="\mathbf x"/>, we wish
                 to compute the most likely label sequence <F l="\mathbf y"/>, i.e. <F l="\mathbf y"/> such
-                that <F l="\mathbf y*=\text{argmax}_{\mathbf y}p(\mathbf y|\mathbf x)"
-            />, known as the Viterbi sequence.
-                Thanks to the structure of linear-chain CRFs, this can
-                be efficiently computed through a dynamic programming algorithm
+                that <F l="\mathbf y^*=\text{argmax}_{\mathbf y}p(\mathbf y|\mathbf x)"
+            />. This path is known as the Viterbi sequence.
+                Thanks to the structure of linear-chain CRFs, we can
+                be efficiently compute the Viterbi sequence through
+                a dynamic programming algorithm
                 called the Viterbi algorithm, which is very similar to
                 the forward-backward algorithm.
             </p>
@@ -33,10 +34,22 @@ export default class FScorez extends Component {
                 , we get:
             </p>
 
-            <F display="true" l="\mathbf y*=\text{argmax}_{\mathbf y}\frac{1}{Z(\mathbf x)}\exp\left \{\sum_{k=1}^{K} \lambda_k f_k(y_t, y_{t-1},\mathbf x_t)\right \}"/>
+            <F display="true"
+               l="\mathbf y^*=\text{argmax}_{\mathbf y}\frac{1}{Z(\mathbf x)}\exp\left \{\sum_{t=1}^T\sum_{k=1}^{K} \lambda_k f_k(y_t, y_{t-1},\mathbf x_t)\right \}"/>
 
             <p>
+                We can leave out the normalization factor <F l="\frac{1}{Z(\mathbf x)}"/>,
+                because
+                the <F l="\text{argmax}"/> will be the same with or without:
+            </p>
 
+            <F display="true"
+               l="\mathbf y^*=\text{argmax}_{\mathbf y}\exp\left \{\sum_{t=1}^T\sum_{k=1}^{K} \lambda_k f_k(y_t, y_{t-1},\mathbf x_t)\right \}"/>
+
+            -------------------------
+
+            <p>
+                <F l="p(\mathbf x)=\sum_{\mathbf y}\prod"/>
             </p>
         </div>;
     }

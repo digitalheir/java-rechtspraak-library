@@ -5,7 +5,7 @@ import FigImg from './../../../Figures/Image/Image'
 import figs from './../../../Figures/figs'
 import ref from '../../../Bibliography/References/references'
 import chapters from '../../../../../chapters'
-import introSections from '../../../Introduction/sections'
+import introSections from '../../../ImportingAndTokenizing/sections'
 import bib from  '../../../Bibliography/bib';
 import F from  '../../../Math/Math';
 

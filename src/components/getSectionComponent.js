@@ -3,7 +3,8 @@ import React, {Component} from 'react';
 import IntroRechtspraakNl from './RechtspraakNl/IntroRechtspraakNl/IntroRechtspraakNl'
 import RechtspraakNlMarkup from './RechtspraakNl/RechtspraakNlMarkup/RechtspraakNlMarkup'
 import Importing from './RechtspraakNl/Importing/Importing'
-import sectionsIntro from './Introduction/sections'
+import sectionsImporting from './ImportingAndTokenizing/sections'
+import sectionsIntroduction from './Introduction/sections'
 import sectionsTagging from './Tagging/sections'
 
 import sectionsParsingEvaluation from './InferringDocumentStructure/Evaluation/sections'
@@ -19,6 +20,9 @@ import sectionsTaggingMethods from './Tagging/Methods/sections'
 import sectionsInferringDocumentStructure from './InferringDocumentStructure/sections'
 import sectionsInferringDocumentStructureMethods from './InferringDocumentStructure/Methods/sections'
 import sectionsCrf from './Tagging/Methods/CRF/sections'
+
+import IntroProblemDescription from './Introduction/ProblemDescription/ProblemDescription'
+import IntroMotivation from './Introduction/IntroMotivation/IntroMotivation'
 
 import GraphicalModels  from './Tagging/Methods/CRF/GraphicalModels/GraphicalModels';
 import HMMs from './Tagging/Methods/CRF/HMMs/HMMs';
@@ -43,15 +47,22 @@ import AdditionalEnrichment from './Dissemination/AdditionalEnrichment/Additiona
 import CYK from './InferringDocumentStructure/CYK/CYK';
 import Dissemination from './Dissemination/sections';
 
-export default function getHandler(route) {
+function getHandler(route) {
     switch (route) {
         //Introduction
-        case sectionsIntro.rechtspraakNl.id:
+        case sectionsIntroduction.problemDescription.id:
+            return IntroProblemDescription;
+        case sectionsIntroduction.motivation.id:
+            return IntroMotivation;
+
+        //Importing
+        case sectionsImporting.rechtspraakNl.id:
             return IntroRechtspraakNl;
-        case sectionsIntro.rechtspraakNlMarkup.id:
+        case sectionsImporting.rechtspraakNlMarkup.id:
             return RechtspraakNlMarkup;
-        case sectionsIntro.importing.id:
+        case sectionsImporting.importing.id:
             return Importing;
+
 
         // Tagging
         case sectionsTagging.taggingIntroduction.id:
@@ -119,6 +130,7 @@ export default function getHandler(route) {
             throw Error("No handler for route " + route + ". You should edit getSectionComponent.js");
     }
 }
+export default getHandler;
 
 export function getSubSections(props, headerLevel) {
     return function (section) {

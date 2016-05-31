@@ -25,6 +25,17 @@ export default class Dissemination extends Component {
             href="https://rechtspraak.cloudant.com/docs/">rechtspraak.cloudant.com/docs/</a>. We also provide the
             enriched dataset as a collection of HTML pages, indexed for full text search. The web site is available
             at <a href="https://rechtspraak.lawreader.nl/"/>
+
+
+
+            <p>
+                The source code for this undertaking in published in two separate Java libraries:
+                one for importing and enriching documents from Rechtspraak.nl (
+                <a href="https://github.com/digitalheir/java-rechtspraak-library">on GitHub</a>),
+                and one for mirroring the Rechtspraak.nl corpus
+                to a CouchDB database (<a href="https://github.com/digitalheir/dutch-case-law-to-couchdb">on
+                GitHub</a>).
+            </p>
         </Chapter>
     }
 }

@@ -7,6 +7,7 @@ import FullThesis from './components/FullThesis/FullThesis'
 import Tagging from './components/Tagging/Tagging'
 import InferringDocumentStructure from './components/InferringDocumentStructure/InferringDocumentStructure'
 import Dissemination from './components/Dissemination/Dissemination'
+import ImportingAndTokenizing from './components/ImportingAndTokenizing/ImportingAndTokenizing'
 import chapters from '../chapters'
 
 let Route = Router.Route;
@@ -32,6 +33,8 @@ function getHandler(route) {
             return InferringDocumentStructure;
         case chapters.dissemination.route:
             return Dissemination;
+        case chapters.importing.route:
+            return ImportingAndTokenizing;
         default:
             throw Error("No handler for route " + route+". You should edit Routes.jsx.");
     }

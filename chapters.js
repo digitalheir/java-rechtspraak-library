@@ -1,8 +1,13 @@
-var chapters = {
+const chapters = {
     introduction: {
         id: "chapter-introduction",
         title: "Introduction",
         route: '/introduction/'
+    },
+    importing: {
+        id: "chapter-importing-and-tokenizing",
+        title: "Importing & Tokenizing Data",
+        route: '/importing-and-tokenizing/'
     },
     rechtspraakNl: {
         id: "chapter-rechtspraak-nl",
@@ -16,7 +21,7 @@ var chapters = {
     },
     documentStructure: {
         id: "parsing",
-        title: "Inferring a Document Structure",
+        title: "Inferring a Section Hierarchy",
         route: '/document-structure/'
     },
     dissemination: {
@@ -37,7 +42,7 @@ var chapters = {
 
 chapters.inOrder = [
     chapters.introduction,
-    // chapters.rechtspraakNl,
+    chapters.importing,
     chapters.tagging,
     chapters.documentStructure,
     chapters.dissemination
