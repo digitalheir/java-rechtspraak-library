@@ -535,6 +535,24 @@ textarea {
 .chapter {
     page-break-after: always;
 }
+#rechtspraak-nl-data-set .desc-title, #rechtspraak-nl-data-set .desc-section, #rechtspraak-nl-data-set .desc-info {
+    list-style: none;
+}
+#rechtspraak-nl-data-set .desc-title:before, #rechtspraak-nl-data-set .desc-section:before, #rechtspraak-nl-data-set .desc-info:before {
+    font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
+    color: #333;
+    font-size: 12px;
+    font-weight: bold;
+}
+#rechtspraak-nl-data-set .desc-title:before {
+    content: 'title';
+}
+#rechtspraak-nl-data-set .desc-section:before {
+    content: 'section';
+}
+#rechtspraak-nl-data-set .desc-info:before {
+    content: '*.info';
+}
 #title-page {
     page-break-after: always;
     text-align: center;
@@ -564,6 +582,19 @@ figure {
 }
 .inline-table {
     display: inline-table;
+}
+.nopadding {
+    padding: 0;
+}
+#fig-tfidf-sections div {
+    text-align: center;
+}
+#fig-tfidf-sections div table {
+    text-align: left;
+    text-align: start;
+}
+.nomargin {
+    margin: 0;
 }
 .noborder {
     border: none;
@@ -969,8 +1000,8 @@ hr {
     position: relative;
     margin-left: -100px;
     display: inline-block;
-    -webkit-transform-origin: 100% 0%;
-            transform-origin: 100% 0%;
+    -webkit-transform-origin: 100% 0;
+            transform-origin: 100% 0;
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
 }
