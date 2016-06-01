@@ -22970,27 +22970,27 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Index2 = _interopRequireDefault(_Index);
 
-	var _Introduction = __webpack_require__(338);
+	var _Introduction = __webpack_require__(339);
 
 	var _Introduction2 = _interopRequireDefault(_Introduction);
 
-	var _FullThesis = __webpack_require__(340);
+	var _FullThesis = __webpack_require__(341);
 
 	var _FullThesis2 = _interopRequireDefault(_FullThesis);
 
-	var _Tagging = __webpack_require__(341);
+	var _Tagging = __webpack_require__(342);
 
 	var _Tagging2 = _interopRequireDefault(_Tagging);
 
-	var _InferringDocumentStructure = __webpack_require__(342);
+	var _InferringDocumentStructure = __webpack_require__(343);
 
 	var _InferringDocumentStructure2 = _interopRequireDefault(_InferringDocumentStructure);
 
-	var _Dissemination = __webpack_require__(343);
+	var _Dissemination = __webpack_require__(344);
 
 	var _Dissemination2 = _interopRequireDefault(_Dissemination);
 
-	var _ImportingAndTokenizing = __webpack_require__(344);
+	var _ImportingAndTokenizing = __webpack_require__(345);
 
 	var _ImportingAndTokenizing2 = _interopRequireDefault(_ImportingAndTokenizing);
 
@@ -25825,157 +25825,162 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Importing2 = _interopRequireDefault(_Importing);
 
+	var _Tokenizing = __webpack_require__(297);
+
+	var _Tokenizing2 = _interopRequireDefault(_Tokenizing);
+
 	var _sections = __webpack_require__(250);
 
 	var _sections2 = _interopRequireDefault(_sections);
 
-	var _sections3 = __webpack_require__(297);
+	var _sections3 = __webpack_require__(298);
 
 	var _sections4 = _interopRequireDefault(_sections3);
 
-	var _sections5 = __webpack_require__(298);
+	var _sections5 = __webpack_require__(299);
 
 	var _sections6 = _interopRequireDefault(_sections5);
 
-	var _sections7 = __webpack_require__(299);
+	var _sections7 = __webpack_require__(300);
 
 	var _sections8 = _interopRequireDefault(_sections7);
 
-	var _PARSEVAL = __webpack_require__(300);
+	var _PARSEVAL = __webpack_require__(301);
 
 	var _PARSEVAL2 = _interopRequireDefault(_PARSEVAL);
 
-	var _Results = __webpack_require__(305);
+	var _Results = __webpack_require__(306);
 
 	var _Results2 = _interopRequireDefault(_Results);
 
-	var _FutureWork = __webpack_require__(306);
+	var _FutureWork = __webpack_require__(307);
 
 	var _FutureWork2 = _interopRequireDefault(_FutureWork);
 
-	var _sections9 = __webpack_require__(307);
+	var _sections9 = __webpack_require__(308);
 
 	var _sections10 = _interopRequireDefault(_sections9);
 
-	var _FScores = __webpack_require__(308);
+	var _FScores = __webpack_require__(309);
 
 	var _FScores2 = _interopRequireDefault(_FScores);
 
-	var _Resultz = __webpack_require__(309);
+	var _Resultz = __webpack_require__(310);
 
 	var _Resultz2 = _interopRequireDefault(_Resultz);
 
-	var _sections11 = __webpack_require__(310);
+	var _sections11 = __webpack_require__(311);
 
 	var _sections12 = _interopRequireDefault(_sections11);
 
-	var _sections13 = __webpack_require__(311);
+	var _sections13 = __webpack_require__(312);
 
 	var _sections14 = _interopRequireDefault(_sections13);
 
-	var _sections15 = __webpack_require__(312);
+	var _sections15 = __webpack_require__(313);
 
 	var _sections16 = _interopRequireDefault(_sections15);
 
-	var _sections17 = __webpack_require__(313);
+	var _sections17 = __webpack_require__(314);
 
 	var _sections18 = _interopRequireDefault(_sections17);
 
-	var _ProblemDescription = __webpack_require__(314);
+	var _ProblemDescription = __webpack_require__(315);
 
 	var _ProblemDescription2 = _interopRequireDefault(_ProblemDescription);
 
-	var _IntroMotivation = __webpack_require__(315);
+	var _IntroMotivation = __webpack_require__(316);
 
 	var _IntroMotivation2 = _interopRequireDefault(_IntroMotivation);
 
-	var _GraphicalModels = __webpack_require__(316);
+	var _GraphicalModels = __webpack_require__(317);
 
 	var _GraphicalModels2 = _interopRequireDefault(_GraphicalModels);
 
-	var _HMMs = __webpack_require__(317);
+	var _HMMs = __webpack_require__(318);
 
 	var _HMMs2 = _interopRequireDefault(_HMMs);
 
-	var _LinearChainCRF = __webpack_require__(318);
+	var _LinearChainCRF = __webpack_require__(319);
 
 	var _LinearChainCRF2 = _interopRequireDefault(_LinearChainCRF);
 
-	var _Inference = __webpack_require__(319);
+	var _Inference = __webpack_require__(320);
 
 	var _Inference2 = _interopRequireDefault(_Inference);
 
-	var _ParameterEstimation = __webpack_require__(320);
+	var _ParameterEstimation = __webpack_require__(321);
 
 	var _ParameterEstimation2 = _interopRequireDefault(_ParameterEstimation);
 
-	var _Performance = __webpack_require__(321);
+	var _Performance = __webpack_require__(322);
 
 	var _Performance2 = _interopRequireDefault(_Performance);
 
-	var _Results3 = __webpack_require__(322);
+	var _Results3 = __webpack_require__(323);
 
 	var _Results4 = _interopRequireDefault(_Results3);
 
-	var _Discussion = __webpack_require__(323);
+	var _Discussion = __webpack_require__(324);
 
 	var _Discussion2 = _interopRequireDefault(_Discussion);
 
-	var _Discussion3 = __webpack_require__(324);
+	var _Discussion3 = __webpack_require__(325);
 
 	var _Discussion4 = _interopRequireDefault(_Discussion3);
 
-	var _Methods = __webpack_require__(325);
+	var _Methods = __webpack_require__(326);
 
 	var _Methods2 = _interopRequireDefault(_Methods);
 
-	var _Introduction = __webpack_require__(327);
+	var _Introduction = __webpack_require__(328);
 
 	var _Introduction2 = _interopRequireDefault(_Introduction);
 
-	var _DeterministicTagger = __webpack_require__(328);
+	var _DeterministicTagger = __webpack_require__(329);
 
 	var _DeterministicTagger2 = _interopRequireDefault(_DeterministicTagger);
 
-	var _CRF = __webpack_require__(329);
+	var _CRF = __webpack_require__(330);
 
 	var _CRF2 = _interopRequireDefault(_CRF);
 
-	var _FeatureSelection = __webpack_require__(330);
+	var _FeatureSelection = __webpack_require__(331);
 
 	var _FeatureSelection2 = _interopRequireDefault(_FeatureSelection);
 
-	var _Introduction3 = __webpack_require__(331);
+	var _Introduction3 = __webpack_require__(332);
 
 	var _Introduction4 = _interopRequireDefault(_Introduction3);
 
-	var _Methods3 = __webpack_require__(332);
+	var _Methods3 = __webpack_require__(333);
 
 	var _Methods4 = _interopRequireDefault(_Methods3);
 
-	var _Evaluation = __webpack_require__(333);
+	var _Evaluation = __webpack_require__(334);
 
 	var _Evaluation2 = _interopRequireDefault(_Evaluation);
 
-	var _ContextFreeGrammars = __webpack_require__(334);
+	var _ContextFreeGrammars = __webpack_require__(335);
 
 	var _ContextFreeGrammars2 = _interopRequireDefault(_ContextFreeGrammars);
 
-	var _AdditionalEnrichment = __webpack_require__(335);
+	var _AdditionalEnrichment = __webpack_require__(336);
 
 	var _AdditionalEnrichment2 = _interopRequireDefault(_AdditionalEnrichment);
 
-	var _CYK = __webpack_require__(336);
+	var _CYK = __webpack_require__(337);
 
 	var _CYK2 = _interopRequireDefault(_CYK);
 
-	var _sections19 = __webpack_require__(337);
+	var _sections19 = __webpack_require__(338);
 
 	var _sections20 = _interopRequireDefault(_sections19);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	// import ManualTagger from './Tagging/Methods/ManualTagger/ManualTagger';
+	//noinspection JSUnresolvedVariable
 
 
 	function getHandler(route) {
@@ -25993,6 +25998,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	            return _RechtspraakNlMarkup2.default;
 	        case _sections2.default.importing.id:
 	            return _Importing2.default;
+	        case _sections2.default.tokenizing.id:
+	            return _Tokenizing2.default;
 
 	        // Tagging
 	        case _sections6.default.taggingIntroduction.id:
@@ -26061,8 +26068,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        default:
 	            throw Error("No handler for route " + route + ". You should edit getSectionComponent.js");
 	    }
-	} //noinspection JSUnresolvedVariable
-
+	}
 	exports.default = getHandler;
 	function getSubSections(props, headerLevel) {
 	    return function (section) {
@@ -44918,13 +44924,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	    },
 	    importing: {
 	        id: 'importing',
-	        title: 'Importing & Tokenizing Data'
+	        title: 'Importing'
+	    },
+	    tokenizing: {
+	        id: 'tokenizing',
+	        title: 'Tokenizing'
 	    }
 	};
 
 	importingSections.inOrder = [
 	// importingSections.rechtspraakNl,
-	importingSections.rechtspraakNlMarkup, importingSections.importing];
+	importingSections.rechtspraakNlMarkup, importingSections.importing, importingSections.tokenizing];
 
 	exports.default = importingSections;
 
@@ -45071,7 +45081,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        { href: 'http://www.rechtspraak.nl/' },
 	                        'Rechtspraak.nl'
 	                    ),
-	                    '. As notes earlier, recent documents tend to be more richly marked up than older documents. Indeed, most older documents consist exclusively of ',
+	                    '. As noted earlier, recent documents tend to be more richly marked up than older documents. Indeed, most older documents consist exclusively of ',
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -45083,7 +45093,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        null,
 	                        'paragroup'
 	                    ),
-	                    ' tags, denoting paragraphs and groups of paragraphs respectively.'
+	                    ' elements, denoting paragraphs and groups of paragraphs respectively.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -45271,8 +45281,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            ),
 	                            ' attribute.',
 	                            _react2.default.createElement(_Source2.default, {
-	                                href: 'https://rechtspraak.cloudant.com/docs/_design/stats/_view/section_roles?group_level=1' }),
-	                            'These values are either'
+	                                href: 'https://rechtspraak.cloudant.com/docs/_design/stats/_view/section_roles?group_level=1'
+	                            }),
+	                            ' These values are either'
 	                        ),
 	                        _react2.default.createElement(
 	                            'ul',
@@ -45351,7 +45362,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                        null,
 	                                        'title'
 	                                    ),
-	                                    ' elements may occur elsewhere, such as to label figures, but we do not consider these titles in this thesis.'
+	                                    ' elements may occur elsewhere, such above figures as labels, but we only consider section titles in this thesis.'
 	                                ),
 	                                _react2.default.createElement(
 	                                    'p',
@@ -45386,14 +45397,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                    null,
 	                                    'See ',
 	                                    _react2.default.createElement(_FigRef2.default, { fig: _figs2.default.tfidf }),
-	                                    ' & ',
+	                                    ' and ',
 	                                    _react2.default.createElement(_FigRef2.default, { fig: _figs2.default.sectionsTfidf }),
 	                                    ' for charts of terms within section title elements with the highest tf–idf scores.'
 	                                ),
 	                                _react2.default.createElement(
 	                                    'p',
 	                                    null,
-	                                    'tf–idf is short for \'term frequency–inverse document frequency\', which is a number that reflects how important a given word is within a collection of documents. It represents the importance of a given word by taking the number of times that word occurs in the document, and offsetting it against the amount of times that word occurs elsewhere.'
+	                                    'tf–idf is short for \'term frequency–inverse document frequency\', which is a number that reflects how important a given word is in a document with respect to all other documents in the corpus. It represents the importance of a given word by taking the number of times that word occurs in the document, and offsetting it against the amount of times that word occurs elsewhere in the corpus.'
 	                                ),
 	                                _react2.default.createElement(
 	                                    'p',
@@ -55402,24 +55413,81 @@ return /******/ (function(modules) { // webpackBootstrap
 	        key: 'render',
 	        value: function render() {
 	            return _react2.default.createElement(
+	                'p',
+	                null,
+	                'Regarding importing, we have created a separate library for mirroring the Rechtspraak.nl corpus from the web service to a CouchDB database. We mirror the data set in order to facilitate the collection of statistics of case law documents used in this thesis through MapReduce computations. Source code for this project is available ',
+	                _react2.default.createElement(
+	                    'a',
+	                    {
+	                        href: 'https://github.com/digitalheir/dutch-case-law-to-couchdb' },
+	                    'on GitHub'
+	                ),
+	                '.'
+	            );
+	        }
+	    }]);
+
+	    return Importing;
+	}(_react.Component);
+
+	exports.default = Importing;
+
+/***/ },
+/* 297 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(4);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Source = __webpack_require__(222);
+
+	var _Source2 = _interopRequireDefault(_Source);
+
+	var _references = __webpack_require__(223);
+
+	var _references2 = _interopRequireDefault(_references);
+
+	var _bib = __webpack_require__(211);
+
+	var _bib2 = _interopRequireDefault(_bib);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } //noinspection JSUnresolvedVariable
+
+
+	var Importing = function (_Component) {
+	    _inherits(Importing, _Component);
+
+	    function Importing() {
+	        _classCallCheck(this, Importing);
+
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(Importing).apply(this, arguments));
+	    }
+
+	    _createClass(Importing, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
 	                'div',
 	                null,
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'As noted above, we have a separate library for importing mirroring the Rechtspraak.nl corpus as a CouchDB database. The mirroring of data was done in order to facilitate the collection of statistics of case law documents used in this thesis. The Java project includes a module to convert XML to JSON and a number of MapReduce functions to generate the statistics used in this thesis. Source code for this project is available ',
-	                    _react2.default.createElement(
-	                        'a',
-	                        {
-	                            href: 'https://github.com/digitalheir/dutch-case-law-to-couchdb' },
-	                        'on GitHub'
-	                    ),
-	                    '.'
-	                ),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'Regarding tokenization, we need some forward thinking to determine how to split Rechtspraak.nl XML texts. We are going to use four terminal nodes in our section hierarchy:'
+	                    'Regarding tokenization, we need some forward thinking to determine how to split Rechtspraak.nl XML texts. We assume a text to be decomposable into a list of tokens, which correspond to the terminal nodes in a section hierarchy. We use the following four terminal nodes in our section hierarchy (one may of course invent any other combination of token types):'
 	                ),
 	                _react2.default.createElement(
 	                    'ol',
@@ -55468,23 +55536,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'So we should tokenize XML documents into portions that could be labeled any of the above. In this regard, newlines are trivial to detect, and we assume that Rechtspraak.nl has already done a job of splitting text blocks through ',
+	                    'We should then obviously tokenize the source documents into elements that could be labeled with any of the above token types. In this regard, newlines are trivial to detect, and we assume that Rechtspraak.nl has already done a job of splitting text blocks through ',
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
 	                        'para'
 	                    ),
-	                    ' tags, but still there are a number of arbitrary decisions we need to make regarding how granular a token must be.'
+	                    ' tags, but numberings are often not annotated as such, and so are part of a running text. In our parsing algorithm, we assume that numberings occur as the beginning of a text block and represents Arabic or Roman numerals, alphabetic numbering or a list marking (i.e. some symbol such as \'-\' or \'*\'), and we apply some arbitrary rules to determine whether a potential number in actually a numbering or just a number in the text.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'One noteworthy issue is that numberings are often not annotated as such, and so are part of a running text. In our parsing algorithm, we assume that potential numberings occur as the beginning of a text block and represents Arabic or Roman numerals, alphabetic numbering or a list marking (i.e. some symbol such as \'-\' or \'*\').'
-	                ),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'Another complication is that Rechtspraak.nl delivers an XML tree, which is potentially more rich than the linear list of tokens that we are creating. Indeed, it often happens that multiple ',
+	                    'One complication with creating a list of tokens is that Rechtspraak.nl delivers an XML tree, which is potentially more rich than the linear list that we reduce the document to. Indeed, it often happens that multiple ',
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -55496,19 +55559,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        null,
 	                        'paragroup'
 	                    ),
-	                    ', which sometimes represents a coherent set of paragraphs. On the other hand, sometimes the specified paragraph grouping makes no sense. Although it is possible to efficiently tag tree structures instead of a linear list of tokens (',
+	                    ' tag, which sometimes represents a coherent set of paragraphs. On the other hand, sometimes the specified paragraph grouping makes no sense. Although it is possible to efficiently tag tree structures instead of a linear list of tokens (',
 	                    _references2.default.cite(_bib2.default.bradley2010learning),
-	                    '), this requires a somewhat more complicated pipeline, and may also be problematic when creating the document hierarchy.'
+	                    '), this requires a much more complicated pipeline, and may also be problematic when creating the document hierarchy. So we ignore most of those \'higher-level\' tags.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'So the tagging algorithm that we use supposes a linear sequence of tokens. This means that it is possible that we lose some information in the process, because we coerce a tree structure into a linear sequence, and then build a tree structure which may clash with the original tree structure. Merging the two resulting tree structures is possible, but not currently implemented.'
+	                    'To summarize: the tagging algorithm that we use in the following chapter received as a linear sequence of tokens. This means that it is possible that we lose some information in the process.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'In the next chapter, we explore how to tag the tokens that we have created from source XML. That is: given a list of text elements, we would like to assign each element a label.'
+	                    'In the next chapter, we explore how to tag the list of tokens that we have created from source XML. That is: given a list of text elements (tokens), we would like to assign each token a label.'
 	                )
 	            );
 	        }
@@ -55520,7 +55583,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Importing;
 
 /***/ },
-/* 297 */
+/* 298 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -55544,7 +55607,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = introIntroSections;
 
 /***/ },
-/* 298 */
+/* 299 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -55575,7 +55638,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = taggingSections;
 
 /***/ },
-/* 299 */
+/* 300 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -55604,7 +55667,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = disseminationSections;
 
 /***/ },
-/* 300 */
+/* 301 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -55643,11 +55706,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Math2 = _interopRequireDefault(_Math);
 
-	var _FigureResults = __webpack_require__(301);
+	var _FigureResults = __webpack_require__(302);
 
 	var _FigureResults2 = _interopRequireDefault(_FigureResults);
 
-	var _ConfusionMatrix = __webpack_require__(304);
+	var _ConfusionMatrix = __webpack_require__(305);
 
 	var _ConfusionMatrix2 = _interopRequireDefault(_ConfusionMatrix);
 
@@ -55727,7 +55790,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = PARSEVAL;
 
 /***/ },
-/* 301 */
+/* 302 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -55738,7 +55801,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _data = __webpack_require__(302);
+	var _data = __webpack_require__(303);
 
 	var _data2 = _interopRequireDefault(_data);
 
@@ -55754,7 +55817,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _figs2 = _interopRequireDefault(_figs);
 
-	var _GroupedBarChart = __webpack_require__(303);
+	var _GroupedBarChart = __webpack_require__(304);
 
 	var _GroupedBarChart2 = _interopRequireDefault(_GroupedBarChart);
 
@@ -55853,7 +55916,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = FigureResults;
 
 /***/ },
-/* 302 */
+/* 303 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -57427,7 +57490,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 303 */
+/* 304 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -57709,7 +57772,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = GroupedBarChart;
 
 /***/ },
-/* 304 */
+/* 305 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -57720,7 +57783,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _data = __webpack_require__(302);
+	var _data = __webpack_require__(303);
 
 	var _data2 = _interopRequireDefault(_data);
 
@@ -57865,7 +57928,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = ConfusionMatrix;
 
 /***/ },
-/* 305 */
+/* 306 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -57933,7 +57996,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = ParsingEval;
 
 /***/ },
-/* 306 */
+/* 307 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -58015,7 +58078,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = FutureWork;
 
 /***/ },
-/* 307 */
+/* 308 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -58039,7 +58102,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = disseminationSections;
 
 /***/ },
-/* 308 */
+/* 309 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -58184,7 +58247,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = FScorez;
 
 /***/ },
-/* 309 */
+/* 310 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -58223,11 +58286,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Math2 = _interopRequireDefault(_Math);
 
-	var _FigureResults = __webpack_require__(301);
+	var _FigureResults = __webpack_require__(302);
 
 	var _FigureResults2 = _interopRequireDefault(_FigureResults);
 
-	var _ConfusionMatrix = __webpack_require__(304);
+	var _ConfusionMatrix = __webpack_require__(305);
 
 	var _ConfusionMatrix2 = _interopRequireDefault(_ConfusionMatrix);
 
@@ -58286,7 +58349,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Resultz;
 
 /***/ },
-/* 310 */
+/* 311 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -58327,7 +58390,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = taggingSections;
 
 /***/ },
-/* 311 */
+/* 312 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -58358,7 +58421,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = inferringSections;
 
 /***/ },
-/* 312 */
+/* 313 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -58381,7 +58444,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = methodsSections;
 
 /***/ },
-/* 313 */
+/* 314 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -58422,7 +58485,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = crfSections;
 
 /***/ },
-/* 314 */
+/* 315 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -58610,7 +58673,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = ProblemDescription;
 
 /***/ },
-/* 315 */
+/* 316 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -58721,7 +58784,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = IntroMotivation;
 
 /***/ },
-/* 316 */
+/* 317 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59007,7 +59070,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = CRF;
 
 /***/ },
-/* 317 */
+/* 318 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59169,7 +59232,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = CRF;
 
 /***/ },
-/* 318 */
+/* 319 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59388,7 +59451,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = LinearChainCRF;
 
 /***/ },
-/* 319 */
+/* 320 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59510,7 +59573,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = FScorez;
 
 /***/ },
-/* 320 */
+/* 321 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59707,7 +59770,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = ParameterEstimation;
 
 /***/ },
-/* 321 */
+/* 322 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59786,7 +59849,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = CRF;
 
 /***/ },
-/* 322 */
+/* 323 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59825,7 +59888,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Math2 = _interopRequireDefault(_Math);
 
-	var _sections = __webpack_require__(307);
+	var _sections = __webpack_require__(308);
 
 	var _sections2 = _interopRequireDefault(_sections);
 
@@ -59923,7 +59986,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Results;
 
 /***/ },
-/* 323 */
+/* 324 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60015,7 +60078,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Discussion;
 
 /***/ },
-/* 324 */
+/* 325 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60076,7 +60139,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Discussion;
 
 /***/ },
-/* 325 */
+/* 326 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60097,7 +60160,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
-	var _ChapterSectionContent = __webpack_require__(326);
+	var _ChapterSectionContent = __webpack_require__(327);
 
 	var _ChapterSectionContent2 = _interopRequireDefault(_ChapterSectionContent);
 
@@ -60168,7 +60231,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Tagging;
 
 /***/ },
-/* 326 */
+/* 327 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60261,7 +60324,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = Chapter;
 
 /***/ },
-/* 327 */
+/* 328 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60394,7 +60457,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = TaggingIntroduction;
 
 /***/ },
-/* 328 */
+/* 329 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60464,7 +60527,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = DeterministicTagger;
 
 /***/ },
-/* 329 */
+/* 330 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60499,11 +60562,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Math2 = _interopRequireDefault(_Math);
 
-	var _GraphicalModels = __webpack_require__(316);
+	var _GraphicalModels = __webpack_require__(317);
 
 	var _GraphicalModels2 = _interopRequireDefault(_GraphicalModels);
 
-	var _sections = __webpack_require__(313);
+	var _sections = __webpack_require__(314);
 
 	var _sections2 = _interopRequireDefault(_sections);
 
@@ -60668,7 +60731,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = CRF;
 
 /***/ },
-/* 330 */
+/* 331 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60919,7 +60982,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = FeatureSelection;
 
 /***/ },
-/* 331 */
+/* 332 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60978,7 +61041,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = InferringDocumentStructureIntroduction;
 
 /***/ },
-/* 332 */
+/* 333 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60995,7 +61058,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _ChapterSectionContent = __webpack_require__(326);
+	var _ChapterSectionContent = __webpack_require__(327);
 
 	var _ChapterSectionContent2 = _interopRequireDefault(_ChapterSectionContent);
 
@@ -61003,7 +61066,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
-	var _sections = __webpack_require__(312);
+	var _sections = __webpack_require__(313);
 
 	var _sections2 = _interopRequireDefault(_sections);
 
@@ -61051,7 +61114,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Methods;
 
 /***/ },
-/* 333 */
+/* 334 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61074,7 +61137,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _bib2 = _interopRequireDefault(_bib);
 
-	var _sections = __webpack_require__(299);
+	var _sections = __webpack_require__(300);
 
 	var _sections2 = _interopRequireDefault(_sections);
 
@@ -61116,7 +61179,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Evaluation;
 
 /***/ },
-/* 334 */
+/* 335 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61206,7 +61269,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = ContextFreeGrammars;
 
 /***/ },
-/* 335 */
+/* 336 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61284,7 +61347,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = AdditionalEnrichment;
 
 /***/ },
-/* 336 */
+/* 337 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61917,7 +61980,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = CYK;
 
 /***/ },
-/* 337 */
+/* 338 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -61936,7 +61999,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = disseminationSections;
 
 /***/ },
-/* 338 */
+/* 339 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61963,11 +62026,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Importing2 = _interopRequireDefault(_Importing);
 
-	var _Chapter = __webpack_require__(339);
+	var _Chapter = __webpack_require__(340);
 
 	var _Chapter2 = _interopRequireDefault(_Chapter);
 
-	var _sections = __webpack_require__(297);
+	var _sections = __webpack_require__(298);
 
 	var _sections2 = _interopRequireDefault(_sections);
 
@@ -62031,7 +62094,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = IntroductionIntroduction;
 
 /***/ },
-/* 339 */
+/* 340 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62171,7 +62234,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = Chapter;
 
 /***/ },
-/* 340 */
+/* 341 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62194,15 +62257,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Routes = __webpack_require__(204);
 
-	var _Introduction = __webpack_require__(338);
+	var _Introduction = __webpack_require__(339);
 
 	var _Introduction2 = _interopRequireDefault(_Introduction);
 
-	var _Tagging = __webpack_require__(341);
+	var _Tagging = __webpack_require__(342);
 
 	var _Tagging2 = _interopRequireDefault(_Tagging);
 
-	var _InferringDocumentStructure = __webpack_require__(342);
+	var _InferringDocumentStructure = __webpack_require__(343);
 
 	var _InferringDocumentStructure2 = _interopRequireDefault(_InferringDocumentStructure);
 
@@ -62333,7 +62396,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = FullThesis;
 
 /***/ },
-/* 341 */
+/* 342 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62348,27 +62411,27 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Chapter = __webpack_require__(339);
+	var _Chapter = __webpack_require__(340);
 
 	var _Chapter2 = _interopRequireDefault(_Chapter);
 
-	var _Methods = __webpack_require__(325);
+	var _Methods = __webpack_require__(326);
 
 	var _Methods2 = _interopRequireDefault(_Methods);
 
-	var _Results = __webpack_require__(322);
+	var _Results = __webpack_require__(323);
 
 	var _Results2 = _interopRequireDefault(_Results);
 
-	var _DeterministicTagger = __webpack_require__(328);
+	var _DeterministicTagger = __webpack_require__(329);
 
 	var _DeterministicTagger2 = _interopRequireDefault(_DeterministicTagger);
 
-	var _CRF = __webpack_require__(329);
+	var _CRF = __webpack_require__(330);
 
 	var _CRF2 = _interopRequireDefault(_CRF);
 
-	var _FeatureSelection = __webpack_require__(330);
+	var _FeatureSelection = __webpack_require__(331);
 
 	var _FeatureSelection2 = _interopRequireDefault(_FeatureSelection);
 
@@ -62376,7 +62439,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
-	var _sections = __webpack_require__(298);
+	var _sections = __webpack_require__(299);
 
 	var _sections2 = _interopRequireDefault(_sections);
 
@@ -62437,7 +62500,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Tagging;
 
 /***/ },
-/* 342 */
+/* 343 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62452,7 +62515,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Chapter = __webpack_require__(339);
+	var _Chapter = __webpack_require__(340);
 
 	var _Chapter2 = _interopRequireDefault(_Chapter);
 
@@ -62460,7 +62523,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
-	var _sections = __webpack_require__(311);
+	var _sections = __webpack_require__(312);
 
 	var _sections2 = _interopRequireDefault(_sections);
 
@@ -62512,7 +62575,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Inferring;
 
 /***/ },
-/* 343 */
+/* 344 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62527,7 +62590,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Chapter = __webpack_require__(339);
+	var _Chapter = __webpack_require__(340);
 
 	var _Chapter2 = _interopRequireDefault(_Chapter);
 
@@ -62535,7 +62598,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
-	var _sections = __webpack_require__(337);
+	var _sections = __webpack_require__(338);
 
 	var _sections2 = _interopRequireDefault(_sections);
 
@@ -62626,7 +62689,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Dissemination;
 
 /***/ },
-/* 344 */
+/* 345 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62641,7 +62704,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Chapter = __webpack_require__(339);
+	var _Chapter = __webpack_require__(340);
 
 	var _Chapter2 = _interopRequireDefault(_Chapter);
 
@@ -62682,7 +62745,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'In this chapter, we provide an introduction to the Rechtspraak.nl data set that we experiment on. We make a number of remarks on the necessary importing and tokenization that we perform on documents in the corpus in order to create a collection of token instances that we can use for our experiments with labeling the document elements and creating a section hierarchy.'
+	                    'In this chapter, we provide an introduction to the Rechtspraak.nl data set that we experiment on. We then make a number of remarks on the necessary importing and tokenization that we perform on documents in the corpus in order to create a collection of token instances that we can use for our experiments with labeling the document elements and creating a section hierarchy.'
 	                )
 	            );
 	        }
