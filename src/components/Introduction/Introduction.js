@@ -25,17 +25,11 @@ export default class IntroductionIntroduction extends Component {
                         title={IntroductionIntroduction.title()}
                         sections={introIntroSections.inOrder}>
             <p>
-                In this thesis, we explore the problem of automatically assigning a section hierarchy
-                to sparsely marked up documents in the Dutch case law repository
-                of <a href="http://www.rechtspraak.nl/">Rechtspraak.nl</a>.
-            </p>
-
-            <p>
-                <strike>
-                    Near the end of this chapter, we present a Java library
-                    that bundles all the work that we have undertaken in this thesis. This library is effectively
-                    a pipeline for enriching Dutch case law markup with a section hierarchy.
-                </strike>
+                In this chapter, we introduce the problem
+                of automatically assigning a section hierarchy
+                to documents in the Dutch case law repository
+                of <a href="http://www.rechtspraak.nl/">Rechtspraak.nl</a> and why this is
+                useful.
             </p>
         </Chapter>
     }

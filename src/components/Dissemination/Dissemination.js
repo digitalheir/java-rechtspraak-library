@@ -26,15 +26,19 @@ export default class Dissemination extends Component {
             enriched dataset as a collection of HTML pages, indexed for full text search. The web site is available
             at <a href="https://rechtspraak.lawreader.nl/"/>
 
-
-
             <p>
                 The source code for this undertaking in published in two separate Java libraries:
-                one for importing and enriching documents from Rechtspraak.nl (
-                <a href="https://github.com/digitalheir/java-rechtspraak-library">on GitHub</a>),
-                and one for mirroring the Rechtspraak.nl corpus
+                <ul>
+                <li>
+                    One library for importing and enriching documents from Rechtspraak.nl (
+                <a href="https://github.com/digitalheir/java-rechtspraak-library">on GitHub</a>).
+                    This project hosts
+                    a pipeline for enriching Dutch case law markup with a section hierarchy.
+                </li>
+                    <li>and one library for mirroring the Rechtspraak.nl corpus
                 to a CouchDB database (<a href="https://github.com/digitalheir/dutch-case-law-to-couchdb">on
-                GitHub</a>).
+                GitHub</a>)</li>
+                    </ul>
             </p>
         </Chapter>
     }

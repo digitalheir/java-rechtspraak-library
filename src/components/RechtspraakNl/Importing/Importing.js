@@ -38,7 +38,8 @@ export default class Importing extends Component {
                 So we should tokenize XML documents into portions that could be labeled any of the above.
                 In this regard, newlines are trivial to detect, and we assume
                 that Rechtspraak.nl has already done a job of splitting text blocks through <code>para</code> tags,
-                but still there are a number of arbitrary decisions we need to make about how granular a token must be.
+                but still there are a number of arbitrary decisions we need to make regarding how granular
+                a token must be.
             </p>
 
             <p>

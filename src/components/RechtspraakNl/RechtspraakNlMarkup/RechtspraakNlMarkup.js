@@ -64,10 +64,9 @@ export default class Introduction extends Component {
                 We observe that a richly marked up case law document
                 typically consists of the following parts:
             </p>
-            <ol>
-                <li className="noborder" id="info">
+            <ol className="nomargin nopadding">
+                <li className="desc-info" id="info">
                     <p>
-                        <em><code>*.info</code></em>
                         The first element in a document is typically a unique header element with
                         a tagname of either <code>uitspraak.info</code> or <code>conclusie.info</code> for two types
                         of case law (judgments and conclusions, respectively). We refer to
@@ -119,9 +118,8 @@ export default class Introduction extends Component {
                         A <code>*.info</code> element is generally followed by any number of <code>section</code> tags.
                     </p>
                 </li>
-                <li>
+                <li className="desc-section">
                     <p>
-                        <em><code>section</code></em>
                         <code>section</code> tags generally
                         contain a title element, and optionally contain an attribute which denotes the section role.
                         A <code>section</code> is a generic grouping of running text, and can be nested
@@ -153,10 +151,9 @@ export default class Introduction extends Component {
                         is an interesting avenue of research, but we do not explore this in this thesis. Instead,
                         we limit ourselves to demarcating sections and assigning some hierarchical section structure.
                     </p>
-                    <ol>
-                        <li>
+                    <ol className="nomargin nopadding">
+                        <li className="desc-title">
                             <p>
-                                <h3><code>title</code></h3>
                                 <code>title</code> elements typically occur as the
                                 first descendant of
                                 a <code>section</code> element, and contain either a

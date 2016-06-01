@@ -32,7 +32,8 @@ import ParameterEstimation from './Tagging/Methods/CRF/ParameterEstimation/Param
 import Performance from './Tagging/Methods/CRF/Performance/Performance';
 
 import TaggingEvaluation from './Tagging/Results/Results';
-//import TaggingDiscussion from './Tagging/Discussion/Discussion';
+import ParsingDiscussion from './InferringDocumentStructure/Discussion';
+import TaggingDiscussion from './Tagging/Discussion/Discussion';
 import TaggingMethods from './Tagging/Methods/Methods';
 import TaggingIntroduction from './Tagging/Introduction/Introduction';
 // import ManualTagger from './Tagging/Methods/ManualTagger/ManualTagger';
@@ -43,7 +44,7 @@ import StructureIntroduction from './InferringDocumentStructure/Introduction/Int
 import StructureMethods from './InferringDocumentStructure/Methods/Methods';
 import StructureEvaluation from './InferringDocumentStructure/Evaluation/Evaluation';
 import ContextFreeGrammar from './InferringDocumentStructure/ContextFreeGrammars/ContextFreeGrammars';
-import AdditionalEnrichment from './Dissemination/AdditionalEnrichment/AdditionalEnrichment';
+import FutureWork from './Dissemination/AdditionalEnrichment/AdditionalEnrichment';
 import CYK from './InferringDocumentStructure/CYK/CYK';
 import Dissemination from './Dissemination/sections';
 
@@ -77,10 +78,10 @@ function getHandler(route) {
             return DeterministicTagger;
         //case sectionsTaggingMethods.manual.id:
         // return ManualTagger;
-        // case sectionsTagging.taggingDiscussion.id:
-        //     return TaggingDiscussion;
         case sectionsTagging.taggingResults.id:
             return TaggingEvaluation;
+        case sectionsTagging.taggingDiscussion.id:
+            return TaggingDiscussion;
 
         // CRF
         case sectionsCrf.graphicalModels.id:
@@ -103,6 +104,8 @@ function getHandler(route) {
             return TaggingResultz;
 
         // sectionsParsingEvaluation
+        case sectionsInferringDocumentStructure.discussion.id:
+            return ParsingDiscussion;
         case sectionsParsingEvaluation.parseval.id:
             return PARSEVAL;
         case sectionsParsingEvaluation.results.id:
@@ -123,8 +126,8 @@ function getHandler(route) {
             return StructureEvaluation;
 
         //  Dissemination
-        case Dissemination.additionalEnrichment.id:
-            return AdditionalEnrichment;
+        case Dissemination.futureWork.id:
+            return FutureWork;
 
         default:
             throw Error("No handler for route " + route + ". You should edit getSectionComponent.js");

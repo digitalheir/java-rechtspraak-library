@@ -1,12 +1,11 @@
 const disseminationSections = {
-    additionalEnrichment: {
-        id: 'additional-enrichment',
-        title: 'Additional enrichment',
+    futureWork: {
+        id: 'future-work',
+        title: 'Future Work'
     }
 };
 
 disseminationSections.inOrder = [
-    // disseminationSections.additionalEnrichment,
+    disseminationSections.futureWork,
 ];
-
 export default disseminationSections;

@@ -16,6 +16,7 @@ export default class Resultz extends Component {
     }
 
     render() {
+        //noinspection JSUnresolvedVariable
         const relativeToRoot = this.props.path.match(/\//g).slice(1).map(_ => "../").join("");
 
         return <div>
@@ -31,16 +32,6 @@ export default class Resultz extends Component {
 
             <ConfusionMatrix/>
 
-            <p>
-                Neither the deterministic tagger
-                nor the CRFs have been extensively optimized, so these are promising to improve upon.
-                Taking a closer look at faulty labels,
-                we observe that most errors are snippets of text that
-                contain just a noun phrase, and it is easy to imagine how
-                the CRF assigns such a text block as a title or vice versa.
-                Furthermore, due to the sometimes very staccato paragraphs in case law,
-                it can be hard even for humans to distinguish section titles and running text.
-            </p>
         </div>;
     }
 }

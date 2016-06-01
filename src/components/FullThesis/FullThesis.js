@@ -1,6 +1,7 @@
 //noinspection JSUnresolvedVariable
 import React, {Component} from 'react';
-import Chapter from '../Chapter/Chapter'
+import chapters from '../../../chapters'
+import {getHandler} from '../../Routes.jsx'
 import Introduction from '../Introduction/Introduction';
 import Tagging from '../Tagging/Tagging';
 import InferringDocumentStructure from '../InferringDocumentStructure/InferringDocumentStructure';
@@ -34,9 +35,10 @@ export default class FullThesis extends Component {
                 <h2>Table of Contents</h2>
                 <ToC singlePage={true} showHome={false} {...this.props}/>
             </section>
-            <Introduction inline={true} {...this.props}/>
-            <Tagging inline={true} {...this.props}/>
-            <InferringDocumentStructure inline={true} {...this.props}/>
+            {chapters.inOrder.map(chapter => {
+                const ChapterContent = getHandler(chapter.route);
+                return <section id={chapter.id}><ChapterContent inline={true} {...this.props}/></section>;
+            })}
 
         </div>
     }

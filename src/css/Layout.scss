@@ -4,6 +4,29 @@
   page-break-after: always;
 }
 
+#rechtspraak-nl-data-set {
+  .desc-title, .desc-section, .desc-info {
+    list-style: none;
+  }
+  .desc-title:before, .desc-section:before, .desc-info:before {
+    font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
+    color: #333;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .desc-title:before {
+    content: 'title';
+  }
+
+  .desc-section:before {
+    content: 'section';
+  }
+
+  .desc-info:before {
+    content: '*.info';
+  }
+}
+
 #title-page {
   page-break-after: always;
   text-align: center;
@@ -34,8 +57,26 @@ figure {
   margin: 1em 40px;
 }
 
-.inline-table{
+.inline-table {
   display: inline-table;
+}
+
+.nopadding {
+  padding: 0;
+}
+
+#fig-tfidf-sections {
+  div {
+    text-align: center;
+    table {
+      text-align: left;
+      text-align: start;
+    }
+  }
+}
+
+.nomargin {
+  margin: 0;
 }
 
 .noborder {
@@ -448,7 +489,7 @@ hr {
 }
 
 @media print {
-  section{
+  section {
     border: none;
   }
   body {
@@ -485,8 +526,6 @@ hr {
 @media only screen and (max-width: 767px) and (orientation: portrait) {
   /* portrait phones */
 }
-
-
 
 @page {
   margin: 1in;

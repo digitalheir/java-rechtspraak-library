@@ -4,7 +4,7 @@ export default class Header extends React.Component {
 
     constructor(props) {
         super(props);
-        title: props.string
+        //title: props.string
     }
 
     render() {

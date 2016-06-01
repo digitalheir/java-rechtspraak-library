@@ -4,6 +4,7 @@ import Header from './Header'
 import GoogleAnalytics from './GoogleAnalytics/GoogleAnalytics';
 // import config from '../../config';
 import Bibliography from './Bibliography/Bibliography'
+import License from './License/License'
 
 let RouteHandler = Router.RouteHandler;
 
@@ -38,9 +39,10 @@ class Root extends React.Component {
                 <link rel="stylesheet" href={relativeToRoot+"style.css"}/>
             </head>
             <body className='p2'>
-            {this.props.path=='/full/'?'':<Header {...this.props} />}
+            {this.props.path == '/full/' ? '' : <Header {...this.props} />}
             <RouteHandler {...this.props} />
             <Bibliography/>
+            <License/>
             <script
                 id='initial-props'
                 type='application/json'
@@ -48,8 +50,8 @@ class Root extends React.Component {
             </body>
             </html>
         );
-            // <GoogleAnalytics />
-            // <script async src={relativeToRoot+'bundle.js'}></script>
+        // <GoogleAnalytics />
+        // <script async src={relativeToRoot+'bundle.js'}></script>
     }
 }
 // <Footer/> //TODO

@@ -2,9 +2,9 @@ var React = require('react');
 var _ = require('underscore');
 var PureRenderMixin = require('react-addons-pure-render-mixin');
 var StackedBarChart = require('../../../../charts/StackedBarChart.jsx');
-var Source = require('../../../../source')
+var Source = require('../../../../source');
 
-var ref = require('../../../../citation/references')
+var ref = require('../../../../citation/references');
 var refs = ref.ref;
 
 var MarkupComponent = React.createClass({
