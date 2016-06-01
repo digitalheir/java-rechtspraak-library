@@ -62317,7 +62317,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	module.exports = 'Automatically Assigning A Section Hierarchy For Dutch Case Law';
+	module.exports = 'Automatically Assigning A Section Hierarchy To Dutch Case Law';
 
 /***/ },
 /* 340 */
