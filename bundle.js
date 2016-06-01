@@ -58673,7 +58673,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        null,
 	                        'section'
 	                    ),
-	                    ' tag, implying that a large amount of documents are barely marked up. Even older documents produce legal knowledge, so it is desirable to have these documents in good shape.'
+	                    ' tag, implying that a large amount of documents are barely marked up. Older case law documents still produce legal knowledge, so it is desirable to have these documents in good shape.'
 	                ),
 	                _react2.default.createElement(_MarkupStatsFigure2.default, null)
 	            );
@@ -61800,22 +61800,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'In this thesis, we explore the problem of automatically assigning a section hierarchy to sparsely marked up documents in the Dutch case law repository of ',
+	                    'In this chapter, we introduce the problem of automatically assigning a section hierarchy to sparsely marked up documents in the Dutch case law repository of ',
 	                    _react2.default.createElement(
 	                        'a',
 	                        { href: 'http://www.rechtspraak.nl/' },
 	                        'Rechtspraak.nl'
 	                    ),
-	                    '.'
-	                ),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    _react2.default.createElement(
-	                        'strike',
-	                        null,
-	                        'Near the end of this chapter, we present a Java library that bundles all the work that we have undertaken in this thesis. This library is effectively a pipeline for enriching Dutch case law markup with a section hierarchy.'
-	                    )
+	                    ' and why it is useful.'
 	                )
 	            );
 	        }
@@ -62383,19 +62374,33 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'The source code for this undertaking in published in two separate Java libraries: one for importing and enriching documents from Rechtspraak.nl (',
+	                    'The source code for this undertaking in published in two separate Java libraries:',
 	                    _react2.default.createElement(
-	                        'a',
-	                        { href: 'https://github.com/digitalheir/java-rechtspraak-library' },
-	                        'on GitHub'
-	                    ),
-	                    '), and one for mirroring the Rechtspraak.nl corpus to a CouchDB database (',
-	                    _react2.default.createElement(
-	                        'a',
-	                        { href: 'https://github.com/digitalheir/dutch-case-law-to-couchdb' },
-	                        'on GitHub'
-	                    ),
-	                    ').'
+	                        'ul',
+	                        null,
+	                        _react2.default.createElement(
+	                            'li',
+	                            null,
+	                            'One library for importing and enriching documents from Rechtspraak.nl (',
+	                            _react2.default.createElement(
+	                                'a',
+	                                { href: 'https://github.com/digitalheir/java-rechtspraak-library' },
+	                                'on GitHub'
+	                            ),
+	                            '). This project hosts a pipeline for enriching Dutch case law markup with a section hierarchy.'
+	                        ),
+	                        _react2.default.createElement(
+	                            'li',
+	                            null,
+	                            'and one library for mirroring the Rechtspraak.nl corpus to a CouchDB database (',
+	                            _react2.default.createElement(
+	                                'a',
+	                                { href: 'https://github.com/digitalheir/dutch-case-law-to-couchdb' },
+	                                'on GitHub'
+	                            ),
+	                            ')'
+	                        )
+	                    )
 	                )
 	            );
 	        }
