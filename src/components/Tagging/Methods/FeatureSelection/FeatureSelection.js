@@ -40,16 +40,15 @@ export default class FeatureSelection extends Component {
                     (similar titles are consolidated into regular expressions)
                 </li>
             </ul>
-            <srike>
-                The full set of features is can be accessed from the <a href=""><code>Features</code> class</a> in the
+            <p>
+                The full set of features can be accessed from the <code>Features</code> class in the
                 source code.
-            </srike>
+            </p>
 
             <p>
-                We use these features in a probabilistic tagger for which we train a CRF model, and also for a
-                hand-written deterministic tagger. We now introduce these models, with a sizeable introduction
-                on Conditional Random Fields,
-                and conclude with a section that reports their experimental results.
+                We use these features in a probabilistic tagger for which we train a CRF model.
+                We now introduce these models,
+                and conclude the chapter with experimental results and discussion.
             </p>
         </div>;
     }

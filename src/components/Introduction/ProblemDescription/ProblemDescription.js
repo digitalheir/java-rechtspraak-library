@@ -48,20 +48,20 @@ export default class ProblemDescription extends Component {
             <p>
                 Tasks 1 and 2 are theoretically straightforward and mostly a
                 problem of implementation, and the following chapter touches on
-                these subject briefly, prefaced by
+                both of these subject briefly, mostly through
                 a specification of the data set
-                of <a href="http://www.rechspraak.nl">Rechtspraak.nl</a> that we use.
+                of court judgments from <a href="http://www.rechspraak.nl">Rechtspraak.nl</a>.
             </p>
             <p>
                 Tasks 3 and 4 require more complicated machinery than
                 importing and tokenization does,
                 so these topics merit a more comprehensive explication.
                 We describe our treatment of tasks 3 and 4 as two
-                separate chapters that
-                are similarly structured: we introduce the
-                problem to solve, describe the methods used
+                separate chapters, which
+                are similarly structured: first, we introduce the
+                problem to solve, then describe the methods used
                 to solve the problem,
-                and report and discuss experimental results.
+                and finally report and discuss experimental results.
             </p>
         </div>;
     }

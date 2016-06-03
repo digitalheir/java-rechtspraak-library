@@ -37,12 +37,15 @@ export default class Tagging extends Component {
 
     render() {
         return <ChapterSectionContent {...this.props} sections={methodsSections.inOrder}>
-            For the purpose of tagging, we use a class of statistical classifiers called
-            Conditional Random Fields (CRFs). We use this technique because CRFs
-            tend to have state-of-the-art performance
-            in pattern recognition tasks. For our purpose, we circumvent the
-            usual downside of CRFs that it overfits to a single corpus, because
-            we expressly train for one particular corpus.
+            <p>
+                For the purpose of tagging, we use a class of statistical classifiers called
+                Conditional Random Fields (CRFs). We use this technique because CRFs
+                tend to have state-of-the-art performance
+                in pattern recognition tasks. One
+                downside to CRFs is that models commonly overfit to a single corpus.
+                In out case, this is not a problem because
+                we expressly train for only one particular corpus.
+            </p>
         </ChapterSectionContent>;
     }
 }

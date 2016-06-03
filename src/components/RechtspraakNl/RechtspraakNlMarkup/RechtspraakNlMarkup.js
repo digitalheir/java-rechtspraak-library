@@ -164,14 +164,14 @@ export default class Introduction extends Component {
                             </p>
 
                             <p>
-                                In our tagging operation, titles are the elements are the hardest
+                                Titles are the elements are the most difficult elements
                                 to label, so we make
-                                a special effort to describe common patterns.
+                                a special effort to describe common title patterns.
                             </p>
 
                             <p>
                                 In <FigRef fig={figs.figTitleWordCount}/>, we see that if
-                                a <code>title</code> element contains text, it usually only contains
+                                a <code>title</code> element contains text, it usually contains
                                 only a handful of words, with close to 99% of section titles
                                 containing 10 words or less.
                             </p>
@@ -179,12 +179,12 @@ export default class Introduction extends Component {
                             <WordCountFig/>
 
                             <p>
-                                Titles texts have a number of patterns that often recur. See <FigRef
+                                Title texts have a number of patterns that often recur. See <FigRef
                                 fig={figs.figTitleTreemap}/> for a tree map of the distribution of
                                 normalized title texts.
                             </p>
-                            <FigTitlePattern/>
 
+                            <FigTitlePattern/>
 
                             <p>
                                 See <FigRef fig={figs.tfidf}/> and <FigRef fig={figs.sectionsTfidf}/> for
@@ -225,9 +225,12 @@ export default class Introduction extends Component {
                                 </li>
                             </ul>
                             <p>
-                                In our case, we take as a document
-                                text elements (such as a paragraph, or title), because we
-                                want to derive at the most important words within title elements.
+                                Because we
+                                want to derive at the most important words within
+                                title elements specifically, we take as a document
+                                the various text elements
+                                (such as a paragraph, or title), and compute the tf-idf score
+                                for each word in each title.
                             </p>
                             <TitleTfIdfFigure/>
                             <TitleTfIdfFigurePerSection/>
@@ -240,14 +243,15 @@ export default class Introduction extends Component {
                 <p>
                     Sadly, Rechtspraak.nl does not offer an XML schema. This makes it a little more difficult to
                     create
-                    programs that work with the XML data, such as a converter to
-                    HTML. This is because we don't know exactly which elements we can expect in the
+                    programs that work with the XML data,
+                    because we don't know exactly which elements we can expect in the
                     XML documents.
 
                     In the absence of an official schema,
                     we have created a makeshift XML schema
                     that was automatically generated from a random sample of
-                    500 documents, and then manually corrected.
+                    500 documents. The resulting schema was afterwards manually
+                    corrected.
                 </p>
                 <p>
                     Using this schema,

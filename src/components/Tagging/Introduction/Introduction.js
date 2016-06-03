@@ -47,12 +47,17 @@ export default class TaggingIntroduction extends Component {
                 mostly in the application of part-of-speech tagging in natural language.
                 Popular methods include graphical models, which model the probability distributions
                 of labels and observations occurring together. These include Hidden
-                Markov Models (HMMs) and the closely related Conditional Random Fields (CRFs).
+                Markov Models (HMMs) and the closely related Conditional Random Fields (CRFs),
+                which currently .
+            </p>
+            <p>
                 In this chapter, we experiment with CRFs
                 for labeling our tokens, and we compare the results
                 to a hand-written deterministic tagger that utilizes similar features.
                 It turns out that both models score around 1.0 on all labels
-                except section titles. For section titles,
+                except section titles.
+
+                For section titles,
                 CRFs significantly out-perform the hand-written tagger
                 in terms of recall, while trading in some precision. For section titles,
                 the hand-written tagger

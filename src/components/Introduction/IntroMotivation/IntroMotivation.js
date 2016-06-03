@@ -21,16 +21,14 @@ export default class IntroMotivation extends Component {
             <p>
                 Rechtspraak.nl publishes an open data set of Dutch case law
                 in XML and HTML
-                dating back to about 1970. Many of these documents
-                contain little more information than the words in the
-                document and some limited
-                metadata. Most documents have limited semantic markup,
+                dating back to about 1970. Most documents
+                contain little semantic markup,
                 such as element tags detailing the structure
                 of (sub-)sections in a document.
             </p>
             <p>
                 Having a section hierarchy in these documents
-                is obviously useful to have, however.
+                is useful to have, however.
                 It is obviously useful for rendering documents to human users: it
                 allows us to display a table of contents and to style section titles.
                 Because sections usually chunk similar kinds of information together,
@@ -47,7 +45,7 @@ export default class IntroMotivation extends Component {
             </p>
 
             <p>
-                There is a recent trend among the court judgments on Rechtspraak.nl
+                There is a recent trend on Rechtspraak.nl
                 towards more richly marked up documents, as we can see in <FigRef
                 fig={figs.markupStats}/>.
                 However,
@@ -56,9 +54,9 @@ export default class IntroMotivation extends Component {
                 To illustrate: at the time of writing, 78.7% of all judgment texts on Rechtspraak.nl do not
                 contain any <code>section</code> tag, implying that a large amount of
                 documents are barely marked up. Older case law documents still produce
-                legal knowledge, so it is still desirable to have these
+                legal knowledge, so it is desirable to have these
                 older documents in good
-                shape.
+                shape as well.
             </p>
 
             <MarkupStatsFigure/>
