@@ -24,7 +24,8 @@ export default class ImportingAndTokenizing extends Component {
                         sections={dissSections.inOrder}>
             <p>
                 In this chapter, we provide an introduction to the Rechtspraak.nl data set that we
-                experiment on. We make a number of remarks on the necessary importing and
+                experiment on. We then make a number of
+                remarks on the necessary importing and
                 tokenization that we perform on documents in the corpus
                 in order to create a collection of token instances that we
                 can use for our experiments with labeling the document elements

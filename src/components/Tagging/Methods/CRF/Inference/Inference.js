@@ -23,10 +23,11 @@ export default class FScorez extends Component {
                 that <F l="\mathbf y^*=\text{argmax}_{\mathbf y}p(\mathbf y|\mathbf x)"
             />. This path is known as the Viterbi sequence.
                 Thanks to the structure of linear-chain CRFs, we can
-                be efficiently compute the Viterbi sequence through
+                efficiently compute the Viterbi sequence through
                 a dynamic programming algorithm
                 called the Viterbi algorithm, which is very similar to
-                the forward-backward algorithm.
+                the <a href="https://en.wikipedia.org/wiki/Forward%E2%80%93backward_algorithm">forward-backward
+                algorithm</a>.
             </p>
 
             <p>
@@ -35,7 +36,7 @@ export default class FScorez extends Component {
             </p>
 
             <F display="true"
-               l="\mathbf y^*=\text{argmax}_{\mathbf y}\frac{1}{Z(\mathbf x)}\exp\left \{\sum_{t=1}^T\sum_{k=1}^{K} \lambda_k f_k(y_t, y_{t-1},\mathbf x_t)\right \}"/>
+               l="\mathbf y^*=\text{argmax}_{\mathbf y}\frac{1}{Z(\mathbf x)}\prod_{t=1}^T\prod_{k=1}^{K} \Phi_{k,t}"/>
 
             <p>
                 We can leave out the normalization factor <F l="\frac{1}{Z(\mathbf x)}"/>,
@@ -44,13 +45,41 @@ export default class FScorez extends Component {
             </p>
 
             <F display="true"
-               l="\mathbf y^*=\text{argmax}_{\mathbf y}\exp\left \{\sum_{t=1}^T\sum_{k=1}^{K} \lambda_k f_k(y_t, y_{t-1},\mathbf x_t)\right \}"/>
-
-            -------------------------
+               l="\mathbf y^* = \text{argmax}_{\mathbf y}\prod_{t=1}^T\prod_{k=1}^{K} \Phi_{k,t}"/>
 
             <p>
-                <F l="p(\mathbf x)=\sum_{\mathbf y}\prod"/>
+                Note that to find <F l="\mathbf y^*"/>, we need to iterate over each possible
+                assignment to the label vector <F l="\mathbf y"/>,
+                which would implicate that in the general case, we
+                need an algorithm of
+                <F l="O(M^T)"/>, where <F l="M"/> is the number of possible labels,
+                and <F l="T"/> is the length of
+                the instance to label.
+
+                Luckily, Linear-Chain CRFs fulfil the optimal substructure property,
+                which means that we can memoize optimal sub-results and making the same
+                calculation many times. We calculate the optimal path <F l="\delta_t(j)"/> at
+                time <F l="t"/> ending with <F l="j"/> recursively as follows:
             </p>
-        </div>;
+
+            <F display="truuu"
+               l="\delta_t(j) = \max_{i \in \mathbf y}\Phi_t(j,i,\mathbf x_t)\cdot \delta_{t-1}(i)"/>
+
+            <p>
+                where the base case <F l="\delta_0(j) = \max_{i \in \mathbf y}"/>.
+            </p>
+            <p>
+                And store the results in a table. We then find the optimal
+                sequence by maximizing <F l="\delta_t(j)"/> at the end of
+                the sequence, <F l="t = T"/>:
+            </p>
+            <F display={true} l="y^*_T = \text{argmax}_{j\in y}\delta_T(j)"/>
+            <p>
+                Using this trick, we
+                reduce the computational complexity
+                of finding the Viterbi path to <F l="O(M^2\cdot T)"/>.
+            </p>
+        </div>
+    ;
     }
-}
+    }

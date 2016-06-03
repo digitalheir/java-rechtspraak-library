@@ -9,7 +9,11 @@ const importingSections = {
     },
     importing: {
         id: 'importing',
-        title: 'Importing & Tokenizing Data'
+        title: 'Importing'
+    },
+    tokenizing: {
+        id: 'tokenizing',
+        title: 'Tokenizing'
     }
 };
 
@@ -17,6 +21,7 @@ importingSections.inOrder = [
     // importingSections.rechtspraakNl,
     importingSections.rechtspraakNlMarkup,
     importingSections.importing,
+    importingSections.tokenizing,
 ];
 
 export default importingSections;

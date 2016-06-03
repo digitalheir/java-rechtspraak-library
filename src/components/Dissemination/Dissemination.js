@@ -29,17 +29,20 @@ export default class Dissemination extends Component {
             <p>
                 The source code for this undertaking in published in two separate Java libraries:
                 <ul>
-                <li>
-                    One library for importing and enriching documents from Rechtspraak.nl (
-                <a href="https://github.com/digitalheir/java-rechtspraak-library">on GitHub</a>).
-                    This project hosts
-                    a pipeline for enriching Dutch case law markup with a section hierarchy.
-                </li>
+                    <li>
+                        One library for importing and enriching documents from Rechtspraak.nl (
+                        <a href="https://github.com/digitalheir/java-rechtspraak-library">on GitHub</a>).
+                        This project hosts
+                        a pipeline for enriching Dutch case law markup with a section hierarchy.
+                    </li>
                     <li>and one library for mirroring the Rechtspraak.nl corpus
-                to a CouchDB database (<a href="https://github.com/digitalheir/dutch-case-law-to-couchdb">on
-                GitHub</a>)</li>
-                    </ul>
+                        to a CouchDB database (<a href="https://github.com/digitalheir/dutch-case-law-to-couchdb">on
+                            GitHub</a>)
+                    </li>
+                </ul>
             </p>
+
+            - related work
         </Chapter>
     }
 }

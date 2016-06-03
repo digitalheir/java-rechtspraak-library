@@ -54,9 +54,9 @@ export default class Introduction extends Component {
                 We wish to automatically annotate documents in the corpus with some semantic mark
                 up, so it is helpful to see what is already done in this regard
                 by <a href="http://www.rechtspraak.nl/">Rechtspraak.nl</a>.
-                As notes earlier, recent documents tend to be more richly marked up than older
+                As noted earlier, recent documents tend to be more richly marked up than older
                 documents. Indeed, most older documents consist exclusively
-                of <code>para</code> and <code>paragroup</code> tags, denoting paragraphs
+                of <code>para</code> and <code>paragroup</code> elements, denoting paragraphs
                 and groups of paragraphs respectively.
             </p>
 
@@ -129,8 +129,8 @@ export default class Introduction extends Component {
                         In practice we
                         see three values for the <code>role</code> attribute.<Source
                         href=
-                            "https://rechtspraak.cloudant.com/docs/_design/stats/_view/section_roles?group_level=1"/>
-                        These
+                            "https://rechtspraak.cloudant.com/docs/_design/stats/_view/section_roles?group_level=1"
+                    /> These
                         values are either
                     </p>
                     <ul>
@@ -158,8 +158,9 @@ export default class Introduction extends Component {
                                 first descendant of
                                 a <code>section</code> element, and contain either a
                                 numbering or some text, or both. <code>title</code> elements
-                                may occur elsewhere, such as to label figures, but we do not
-                                consider these titles in this thesis.
+                                may occur elsewhere, such above
+                                figures as labels, but we only
+                                consider section titles in this thesis.
                             </p>
 
                             <p>
@@ -186,7 +187,7 @@ export default class Introduction extends Component {
 
 
                             <p>
-                                See <FigRef fig={figs.tfidf}/> & <FigRef fig={figs.sectionsTfidf}/> for
+                                See <FigRef fig={figs.tfidf}/> and <FigRef fig={figs.sectionsTfidf}/> for
                                 charts of terms within section title elements with the
                                 highest tf–idf scores.
 
@@ -194,11 +195,11 @@ export default class Introduction extends Component {
                             <p>
                                 tf–idf is short for 'term frequency–inverse document frequency',
                                 which is a number that reflects how important a given word is
-                                within a collection of documents.
+                                in a document with respect to all other documents in the corpus.
 
                                 It represents the importance of a given word by taking the number of times
                                 that word occurs in the document, and offsetting it against the amount of
-                                times that word occurs elsewhere.
+                                times that word occurs elsewhere in the corpus.
                             </p>
 
                             <p>tf–idf is defined is defined as follows: </p>

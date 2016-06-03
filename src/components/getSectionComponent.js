@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import IntroRechtspraakNl from './RechtspraakNl/IntroRechtspraakNl/IntroRechtspraakNl'
 import RechtspraakNlMarkup from './RechtspraakNl/RechtspraakNlMarkup/RechtspraakNlMarkup'
 import Importing from './RechtspraakNl/Importing/Importing'
+import Tokenizing from './RechtspraakNl/Importing/Tokenizing'
 import sectionsImporting from './ImportingAndTokenizing/sections'
 import sectionsIntroduction from './Introduction/sections'
 import sectionsTagging from './Tagging/sections'
@@ -63,6 +64,8 @@ function getHandler(route) {
             return RechtspraakNlMarkup;
         case sectionsImporting.importing.id:
             return Importing;
+        case sectionsImporting.tokenizing.id:
+            return Tokenizing;
 
 
         // Tagging

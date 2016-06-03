@@ -116,6 +116,16 @@ export default class ParameterEstimation extends Component {
                 and also converges much faster than is naive implementation,
                 because it works on the double derivative of <F l="\ell"/>.
             </p>
+            <p>
+                The algorithmic complexity of this algorithm is <F l="O(TM^2NG)"/>,
+                where <F l="T"/> is the length of the longest training
+                instance, <F l="M"/> is the number of possible
+                labels, <F l="N"/> in the number of trianing instances,
+                and <F l="G"/> is the number of gradient computations.
+                The number of gradient computations can be set to
+                a fixed number, or is otherwise unknown (in which case the algorithm
+                trains to convergence).
+            </p>
         </div>;
     }
 }
