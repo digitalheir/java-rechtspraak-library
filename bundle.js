@@ -55566,12 +55566,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'To summarize: the tagging algorithm that we use in the following chapter received as a linear sequence of tokens. This means that it is possible that we lose some information in the process.'
+	                    'To summarize: our tagging algorithm receives as input a linear sequence of tokens. This means that it is possible that we lose some information in the tokenization process.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'In the next chapter, we explore how to tag the list of tokens that we have created from source XML. That is: given a list of text elements (tokens), we would like to assign each token a label.'
+	                    'In the next chapter, we explore how to tag the list of tokens that we have created using our four target labels. That is: given a list of text elements (tokens), we would like to assign each token a label.'
 	                )
 	            );
 	        }
@@ -59530,7 +59530,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ' such that ',
 	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf y^*=\\text{argmax}_{\\mathbf y}p(\\mathbf y|\\mathbf x)'
 	                    }),
-	                    '. This path is known as the Viterbi sequence. Thanks to the structure of linear-chain CRFs, we can be efficiently compute the Viterbi sequence through a dynamic programming algorithm called the Viterbi algorithm, which is very similar to the forward-backward algorithm.'
+	                    '. This path is known as the Viterbi sequence. Thanks to the structure of linear-chain CRFs, we can efficiently compute the Viterbi sequence through a dynamic programming algorithm called the Viterbi algorithm, which is very similar to the ',
+	                    _react2.default.createElement(
+	                        'a',
+	                        { href: 'https://en.wikipedia.org/wiki/Forward%E2%80%93backward_algorithm' },
+	                        'forward-backward algorithm'
+	                    ),
+	                    '.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -59540,7 +59546,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ', we get:'
 	                ),
 	                _react2.default.createElement(_Math2.default, { display: 'true',
-	                    l: '\\mathbf y^*=\\text{argmax}_{\\mathbf y}\\frac{1}{Z(\\mathbf x)}\\exp\\left \\{\\sum_{t=1}^T\\sum_{k=1}^{K} \\lambda_k f_k(y_t, y_{t-1},\\mathbf x_t)\\right \\}' }),
+	                    l: '\\mathbf y^*=\\text{argmax}_{\\mathbf y}\\frac{1}{Z(\\mathbf x)}\\prod_{t=1}^T\\prod_{k=1}^{K} \\Phi_{k,t}' }),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
@@ -59551,12 +59557,53 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ' will be the same with or without:'
 	                ),
 	                _react2.default.createElement(_Math2.default, { display: 'true',
-	                    l: '\\mathbf y^*=\\text{argmax}_{\\mathbf y}\\exp\\left \\{\\sum_{t=1}^T\\sum_{k=1}^{K} \\lambda_k f_k(y_t, y_{t-1},\\mathbf x_t)\\right \\}' }),
-	                '-------------------------',
+	                    l: '\\mathbf y^* = \\text{argmax}_{\\mathbf y}\\prod_{t=1}^T\\prod_{k=1}^{K} \\Phi_{k,t}' }),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    _react2.default.createElement(_Math2.default, { l: 'p(\\mathbf x)=\\sum_{\\mathbf y}\\prod' })
+	                    'Note that to find ',
+	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf y^*' }),
+	                    ', we need to iterate over each possible assignment to the label vector ',
+	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf y' }),
+	                    ', which would implicate that in the general case, we need an algorithm of',
+	                    _react2.default.createElement(_Math2.default, { l: 'O(M^T)' }),
+	                    ', where ',
+	                    _react2.default.createElement(_Math2.default, { l: 'M' }),
+	                    ' is the number of possible labels, and ',
+	                    _react2.default.createElement(_Math2.default, { l: 'T' }),
+	                    ' is the length of the instance to label. Luckily, Linear-Chain CRFs fulfil the optimal substructure property, which means that we can memoize optimal sub-results and making the same calculation many times. We calculate the optimal path ',
+	                    _react2.default.createElement(_Math2.default, { l: '\\delta_t(j)' }),
+	                    ' at time ',
+	                    _react2.default.createElement(_Math2.default, { l: 't' }),
+	                    ' ending with ',
+	                    _react2.default.createElement(_Math2.default, { l: 'j' }),
+	                    ' recursively as follows:'
+	                ),
+	                _react2.default.createElement(_Math2.default, { display: 'truuu',
+	                    l: '\\delta_t(j) = \\max_{i \\in \\mathbf y}\\Phi_t(j,i,\\mathbf x_t)\\cdot \\delta_{t-1}(i)' }),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'where the base case ',
+	                    _react2.default.createElement(_Math2.default, { l: '\\delta_0(j) = \\max_{i \\in \\mathbf y}' }),
+	                    '.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'And store the results in a table. We then find the optimal sequence by maximizing ',
+	                    _react2.default.createElement(_Math2.default, { l: '\\delta_t(j)' }),
+	                    ' at the end of the sequence, ',
+	                    _react2.default.createElement(_Math2.default, { l: 't = T' }),
+	                    ':'
+	                ),
+	                _react2.default.createElement(_Math2.default, { display: true, l: 'y^*_T = \\text{argmax}_{j\\in y}\\delta_T(j)' }),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Using this trick, we reduce the computational complexity of finding the Viterbi path to ',
+	                    _react2.default.createElement(_Math2.default, { l: 'O(M^2\\cdot T)' }),
+	                    '.'
 	                )
 	            );
 	        }
@@ -59754,6 +59801,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ', which approximates Newton\'s Method. This algorithm is optimized for the memory-contrained conditions in real-world computers, and also converges much faster than is naive implementation, because it works on the double derivative of ',
 	                    _react2.default.createElement(_Math2.default, { l: '\\ell' }),
 	                    '.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'The algorithmic complexity of this algorithm is ',
+	                    _react2.default.createElement(_Math2.default, { l: 'O(TM^2NG)' }),
+	                    ', where ',
+	                    _react2.default.createElement(_Math2.default, { l: 'T' }),
+	                    ' is the length of the longest training instance, ',
+	                    _react2.default.createElement(_Math2.default, { l: 'M' }),
+	                    ' is the number of possible labels, ',
+	                    _react2.default.createElement(_Math2.default, { l: 'N' }),
+	                    ' in the number of trianing instances, and ',
+	                    _react2.default.createElement(_Math2.default, { l: 'G' }),
+	                    ' is the number of gradient computations. The number of gradient computations can be set to a fixed number, or is otherwise unknown (in which case the algorithm trains to convergence).'
 	                )
 	            );
 	        }
@@ -62665,7 +62727,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            ')'
 	                        )
 	                    )
-	                )
+	                ),
+	                '- related work'
 	            );
 	        }
 	    }], [{
