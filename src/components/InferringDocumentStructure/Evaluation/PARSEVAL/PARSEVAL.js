@@ -21,11 +21,11 @@ export default class PARSEVAL extends Component {
         return <div>
             <p>
                 Evaluating performance on a parse tree is not as straightforward as it is for classification.
-                Like in the previous chapter, we evaluate our grammar using an F-score, except notions
-                of precision and recall are harder to define.
-                For evaluating the parser, we use a metric known as
+                Like in the previous chapter, we evaluate our grammar using an F-score, but
+                notions of precision and recall are harder to define for constituency trees.
+                To evaluate the parser, we use a metric known as
                 PARSEVAL (due to {ref.cite(bib.abney1991procedure)}) with labelled precision and labelled
-                recall (as in {ref.cite(bib.collins1997three)}).
+                recall as in {ref.cite(bib.collins1997three)}.
             </p>
             <p>
                 In this metric, precision and recall are defined as follows:
@@ -35,7 +35,7 @@ export default class PARSEVAL extends Component {
                     candidate parse
                 </li>
                 <li>Recall is the fraction of correct constituents out of the total number of constituents in the
-                    gold standard
+                    correct parse
                 </li>
             </ul>
             <p>

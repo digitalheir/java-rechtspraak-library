@@ -7,6 +7,11 @@ const figs = {
         url: markupStatsUrl
     },
 
+    figGrammar: {
+        id: 'fig-grammar',
+        num: 8
+    },
+
     titleTf: {
         id: "fig-title-tf",
         num: 3

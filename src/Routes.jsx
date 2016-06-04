@@ -31,7 +31,7 @@ function getHandler(route) {
             return Tagging;
         case chapters.documentStructure.route:
             return InferringDocumentStructure;
-        case chapters.dissemination.route:
+        case chapters.conclusion.route:
             return Dissemination;
         case chapters.importing.route:
             return ImportingAndTokenizing;

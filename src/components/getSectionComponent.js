@@ -4,6 +4,8 @@ import IntroRechtspraakNl from './RechtspraakNl/IntroRechtspraakNl/IntroRechtspr
 import RechtspraakNlMarkup from './RechtspraakNl/RechtspraakNlMarkup/RechtspraakNlMarkup'
 import Importing from './RechtspraakNl/Importing/Importing'
 import Tokenizing from './RechtspraakNl/Importing/Tokenizing'
+import Dissmination from './Dissemination/Diss/Dissemination'
+import RelatedWork from './Dissemination/RelatedWork/RelatedWork'
 import sectionsImporting from './ImportingAndTokenizing/sections'
 import sectionsIntroduction from './Introduction/sections'
 import sectionsTagging from './Tagging/sections'
@@ -129,6 +131,10 @@ function getHandler(route) {
             return StructureEvaluation;
 
         //  Dissemination
+        case Dissemination.dissemination.id:
+            return Dissmination;
+        case Dissemination.relatedWork.id:
+            return RelatedWork;
         case Dissemination.futureWork.id:
             return FutureWork;
 

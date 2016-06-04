@@ -2,10 +2,18 @@ const disseminationSections = {
     futureWork: {
         id: 'future-work',
         title: 'Future Work'
+    },dissemination: {
+        id: 'dissemination',
+        title: 'Dissemination'
+    },relatedWork: {
+        id: 'relatedWork',
+        title: 'Related Work'
     }
 };
 
 disseminationSections.inOrder = [
-    disseminationSections.futureWork,
+    disseminationSections.dissemination,
+    disseminationSections.relatedWork,
+    // disseminationSections.futureWork,
 ];
 export default disseminationSections;

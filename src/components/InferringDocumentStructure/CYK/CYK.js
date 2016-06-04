@@ -40,49 +40,40 @@ export default class CYK extends Component {
                 cost: the increase in grammar size is <F
                     l="\mathrm O (\left | G \right |^2)"/> for the best
                 algorithm, but the increase is linear if we use a variation
-                of the algorithm that works on grammars in binary normal form (2NF).
-                ({ref.cite(bib.lange2009cnf)}.)
+                of the algorithm that works on grammars in binary normal form (2NF):
+                see {ref.cite(bib.lange2009cnf)}.
             </p>
 
             <p>
-                The algorithm is a bottom-up parsing algorithm. The algorith considers every
-                substring from length <F l="1"/> to <F l="n"/>, and tries
-                to assign a non-terminal label to the substring along with a score.
+                The algorithm is a bottom-up parsing algorithm. The algorithm considers every
+                substring from length <F l="1"/> to <F l="n"/>, and keeps
+                a list of all possible types for that substring, along with its probability.
+            </p>
+            <p>
                 For substrings of length <F l="1"/> (individual words),
                 we use the terminal rules in the grammar. For substrings of length <F l="l>1"/> (word sequences),
                 we apply the production rules to every possible combination of two substrings of
-                length <F l="l-1"/> (remember that CNF mandates that all production rules have 2 non-terminals).
+                length <F l="l-1"/>. This works, because
+                CNF mandates that all production rules have 2 non-terminals.
                 Every time we apply a rule, we multiply the probability attached to the rule and the probabilities
                 of the constituent substrings.
             </p>
             <p>
-                This describes the basic version of CYK. In addition to this, we also allow unary rules in our grammar
-                of the form <code>A → B</code>, where <code>A</code> and <code>B</code> are nonterminals.
-                Extension of the algorith is simple:
-                at the end of every substring assignment, we apply unary rules, and add the result
-                if the rule produces a non-terminal that does not
-                exist with at least that score in the table. We repeat until the cell does not change anymore.
+                In addition to binary production rules, we also allow unary rules in our grammar
+                of the form <code>A → B</code>, where <code>A</code> and <code>B</code> are both
+                non-terminals.
+                Extension of the algorithm is simple:
+                at the end of every substring type assignment, we add those
+                types to the list that result from applicable unary rules,
+                if that rule produces a non-terminal that does yet not
+                exist in the table with at least that probability.
+                We repeat until the cell does not change anymore.
             </p>
             <p>
                 A visual example of the result table can be found in <FigRef fig={parseFig}/>.
             </p>
 
             <figure id={parseFig.id}>
-                <strong>Grammar</strong>
-                    <pre style={{display: 'inline-block'}}>S  → NP VP  (90%)<br/>
-S  → VP     (10%)<br/>
-VP → V NP   (50%)<br/>
-VP → V      (10%)<br/>
-NP → NP NP  (10%)<br/>
-NP → N      (70%)<br/>
-<br/>
-N  → fish   (20%)<br/>
-N  → people (50%)<br/>
-N  → tanks  (20%)<br/>
-V  → people (10%)<br/>
-V  → fish   (60%)<br/>
-V  → tanks  (30%)</pre>
-
                 <div className="table-container">
                     <table>
                         <tbody>
@@ -105,7 +96,24 @@ V  → tanks  (30%)</pre>
                 <figcaption>
                     <span className="figure-number">Fig {parseFig.num}.</span> An example parse chart for the
                     sentence
-                    "fish people fish tanks", with the constituents that make up the resulting parse marked in bold.
+                    "fish people fish tanks", based on the following grammar:
+
+    <pre style={{display: 'block'}}>S  → NP VP  (90%)<br/>
+S  → VP     (10%)<br/>
+VP → V NP   (50%)<br/>
+VP → V      (10%)<br/>
+NP → NP NP  (10%)<br/>
+NP → N      (70%)<br/>
+<br/>
+N  → fish   (20%)<br/>
+N  → people (50%)<br/>
+N  → tanks  (20%)<br/>
+V  → people (10%)<br/>
+V  → fish   (60%)<br/>
+V  → tanks  (30%)</pre>
+
+                    The constituents that make up the resulting parse
+                    to <code>S</code> are marked in bold.
                     The top of the triangle represents the
                     substring <F l="1"/> to <F l="4"/>, i.e.
                     the entire sentence. We can derive <code>S</code> by
@@ -115,14 +123,8 @@ V  → tanks  (30%)</pre>
                     from <F l="3"/> to <F l="4"/> (<code>fish
                     tanks</code>) using the
                     rule <code>S → NP VP</code>.
-                    The nodes that make up a parse tree
-                    to <code>S</code> are marked.
                 </figcaption>
             </figure>
-
-            <p>
-                The implementation of this algorithm can be found on Github.
-            </p>
         </div>;
     }
 

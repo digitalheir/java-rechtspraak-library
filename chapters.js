@@ -24,7 +24,7 @@ const chapters = {
         title: "Inferring a Section Hierarchy",
         route: '/document-structure/'
     },
-    dissemination: {
+    conclusion: {
         id: "conclusion",
         title: "Conclusion",
         route: '/conclusion/'
@@ -45,7 +45,7 @@ chapters.inOrder = [
     chapters.importing,
     chapters.tagging,
     chapters.documentStructure,
-    chapters.dissemination
+    chapters.conclusion
 ];
 
 chapters.inOrder.forEach(ch=> {

@@ -126,7 +126,10 @@ const bib = {
         id: 'huang1971stochastic',
         type: 'article',
         title: 'On stochastic context-free languages',
-        author: 'Huang, Teddy and Fu, King Sun',
+        author: {
+            abbr: "Huang & Fu",
+            full: 'Huang, Teddy and Fu, King Sun'
+        },
         journal: 'Information Sciences',
         volume: '3',
         number: '3',
@@ -209,7 +212,34 @@ const bib = {
             full: "Sutton, Charles and McCallum, Andrew"
         },
         year: '2004',
-        school: 'Citeseer'
+        school: 'Citeseer',
+        href: 'http://homepages.inf.ed.ac.uk/csutton/publications/cscfg.pdf'
+    },
+    furuta1989automatically: {
+        type: 'article',
+        title: 'Automatically transforming regularly structured linear documents into hypertext',
+        author: {
+            abbr: "Furuta et al.",
+            full: "Furuta, Richard and Plaisant, Catherine and Shneiderman, Ben"
+        },
+        journal: 'ELECTRON. PUBL.',
+        volume: '2',
+        number: '4',
+        pages: '211--229',
+        year: '1989',
+        href: 'http://cgis.cs.umd.edu/~ben/papers/Furuta1989Automatically.pdf'
+    },
+    bacci2009automatic: {
+        type: 'inproceedings',
+        title: 'Automatic mark-up of legislative documents and its application to parallel text generation',
+        author: {
+            abbr: "Bacci et al.",
+            full: 'Bacci, Lorenzo and Spinosa, Pierluigi and Marchetti, Carlo and Battistoni, Roberto and Florence, I and Senate, I and Rome, I'
+        },
+        booktitle: 'Proc. of LOAIT Workshop',
+        pages: '45—54',
+        year: '2009',
+        href: 'http://ceur-ws.org/Vol-465/paper6.pdf'
     },
     sutton2006introduction: {
         id: 'sutton2006introduction',

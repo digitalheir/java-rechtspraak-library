@@ -17,6 +17,6 @@ export default class Methods extends Component {
     }
 
     render() {
-        return <ChapterSectionContent {...this.props} sections={sectionz.inOrder}/>;
+        return <div></div>;
     }
 }

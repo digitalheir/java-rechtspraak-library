@@ -9,7 +9,7 @@ const taggingSections = {
     }, 
     taggingResults: {
         id: 'tagging-evaluation',
-        title: 'Evaluation',
+        title: 'Results',
     },
     taggingDiscussion: {
         id: 'tagging-discussion',

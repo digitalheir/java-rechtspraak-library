@@ -5,7 +5,7 @@ const disseminationSections = {
     },
     results: {
         id: 'parsing-results',
-        title: 'Results & Discussion',
+        title: 'Results',
     },
     futureWork: {
         id: 'future-work',
