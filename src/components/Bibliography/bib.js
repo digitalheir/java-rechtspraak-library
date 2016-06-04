@@ -34,6 +34,19 @@ const bib = {
         pages: "1—8",
         year: 2001
     },
+    abolhassani2003information: {
+        type: 'incollection',
+        title: 'Information extraction and automatic markup for XML documents',
+        author: {
+            abbr: "Abolhassani et al.",
+            full: 'Abolhassani, Mohammad and Fuhr, Norbert and Gövert, Norbert'
+        },
+        booktitle: 'Intelligent Search on XML Data',
+        pages: '159—174',
+        year: '2003',
+        publisher: 'Springer',
+        href: 'http://www.is.informatik.uni-duisburg.de/bib/pdf/ir/Abolhassani_etal_03.pdf'
+    },
     collins1997three: {
         id: 'collins1997three', type: 'inproceedings',
         title: "Three generative, lexicalised models for statistical parsing",

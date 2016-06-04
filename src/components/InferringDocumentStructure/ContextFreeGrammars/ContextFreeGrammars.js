@@ -45,9 +45,104 @@ export default class ContextFreeGrammars extends Component {
             </p>
 
             <figure>
-                <pre>
-ll
-</pre>
+                <table>
+                    <tr>
+                        <td>Text → text</td>
+                        <td><F l="1.0"/></td>
+                    </tr>
+                    <tr>
+                        <td>Text → newline</td>
+                        <td><F l="1.0"/></td>
+                    </tr>
+                    <tr>
+                        <td>Numbering → numbering</td>
+                        <td><F l="1.0"/></td>
+                    </tr>
+                    <tr>
+                        <td>TitleText → section-title</td>
+                        <td><F l="1.0"/></td>
+                    </tr>
+
+
+                    <tr>
+                        <td>Document → Header DocumentContent</td>
+                        <td><F l="1.0"/></td>
+                    </tr>
+                    <tr>
+                        <td>Document → DocumentContent</td>
+                        <td><F l="1.0"/></td>
+                    </tr>
+
+                    <tr>
+                        <td>DocumentContent → Sections</td>
+                        <td><F l="1.0"/></td>
+                    </tr>
+                    <tr>
+                        <td>DocumentContent → Text Sections</td>
+                        <td><F l="0.8"/></td>
+                    </tr>
+                    <tr>
+                        <td>DocumentContent → Sections Text</td>
+                        <td><F l="0.8"/></td>
+                    </tr>
+                    <tr>
+                        <td>DocumentContent → Text Sections Text</td>
+                        <td><F l="0.8"/></td>
+                    </tr>
+
+
+                    <tr>
+                        <td>Text → Text Text</td>
+                        <td><F l="1.0"/></td>
+                    </tr>
+
+                    <tr>
+                        <td>Sections → Sections Sections</td>
+                        <td><F l="0.4 + 0.6[\text{section numberings in sequence}]"/></td>
+                    </tr>
+                    <tr>
+                        <td>Sections → Section</td>
+                        <td><F l="1.0"/></td>
+                    </tr>
+                    <tr>
+                        <td>Sections → Section Text</td>
+                        <td><F l="0.9"/></td>
+                    </tr>
+                    <tr>
+                        <td>Sections → Text Section</td>
+                        <td><F l="0.8"/></td>
+                    </tr>
+                    <tr>
+                        <td>Section → SectionTitle SectionContent</td>
+                        <td><F l="1.0"/></td>
+                    </tr>
+
+                    <tr>
+                        <td>SectionTitle → Numbering</td>
+                        <td><F l="1.0"/></td>
+                    </tr>
+                    <tr>
+                        <td>SectionTitle → TitleText</td>
+                        <td><F l="1.0"/></td>
+                    </tr>
+                    <tr>
+                        <td>SectionTitle → Numbering TitleText</td>
+                        <td><F l="1.0"/></td>
+                    </tr>
+                    <tr>
+                        <td>SectionContent → Text</td>
+                        <td><F l="1.0"/></td>
+                    </tr>
+                    <tr>
+                        <td>SectionContent → Sections</td>
+                        <td><F l="1.0"/></td>
+                    </tr>
+                    <tr>
+                        <td>SectionContent → SectionContent SectionContent</td>
+                        <td><F l="1.0"/></td>
+                    </tr>
+
+                </table>
                 <figcaption>
                     <span className={figs.figGrammar.id}>Fig {figs.figGrammar.num}.</span> Simplified
                     grammar for creating section hierarchy.
