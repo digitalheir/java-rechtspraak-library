@@ -566,12 +566,14 @@ textarea {
 }
 #title-page #title-page-author-name {
     font-size: 15pt;
+    color: #222;
     margin-bottom: 2in;
-    color: #222;
 }
-#title-page #title-page-supervisor-name {
-    color: #222;
+#title-page .title-page-supervisor.external {
     margin-bottom: 1.0in;
+}
+#title-page .title-page-supervisor .name {
+    color: #222;
 }
 /**
  * Figure
@@ -927,12 +929,18 @@ hr {
     font-size: small;
 }
 @media print {
+    .data-source {
+        display: none;
+    }
     section {
         border: none;
     }
     body {
         padding: 0.0in;
         font-size: 10pt;
+        color: #444;
+    }
+    a, a:visited {
         color: #444;
     }
 }

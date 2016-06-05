@@ -23104,6 +23104,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                __html: safeStringify(this.props)
 	            };
 
+	            //if (!this.props.path) throw new Error("Define path");
 	            var relativeToRoot = this.props.path.match(/\//g).slice(1).map(function (a) {
 	                return "../";
 	            }).join("");
@@ -23281,7 +23282,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -23308,90 +23309,90 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	var Bibl = function (_Component) {
-	  _inherits(Bibl, _Component);
+	    _inherits(Bibl, _Component);
 
-	  function Bibl() {
-	    _classCallCheck(this, Bibl);
+	    function Bibl() {
+	        _classCallCheck(this, Bibl);
 
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Bibl).apply(this, arguments));
-	  }
-
-	  _createClass(Bibl, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'section',
-	        { id: 'bibliography' },
-	        _react2.default.createElement(
-	          'h2',
-	          null,
-	          'References'
-	        ),
-	        _react2.default.createElement(
-	          'ol',
-	          { id: 'reference-list' },
-	          _underscore2.default.map(_bib2.default, function (citation, i) {
-	            var nameStr = citation.author.full;
-	            if (!citation.author.full) {
-	              nameStr = citation.author.lastName + (citation.author.firstName ? ", " + citation.author.firstName : "");
-	            }
-	            if (nameStr) {
-	              nameStr = _react2.default.createElement(
-	                'span',
-	                { className: 'ref-author' },
-	                nameStr
-	              );
-	            }
-	            var publication = citation.journal ? _react2.default.createElement(
-	              'span',
-	              null,
-	              _react2.default.createElement(
-	                'span',
-	                { className: 'ref-journal' },
-	                citation.journal
-	              ),
-	              '.'
-	            ) : "";
-
-	            return _react2.default.createElement(
-	              'li',
-	              { itemProp: 'citation',
-	                itemScope: true,
-	                itemType: 'http://schema.org/CreativeWork',
-	                key: i,
-	                id: citation.id.toString(),
-	                className: 'ref' },
-	              nameStr,
-	              ' (',
-	              _react2.default.createElement(
-	                'time',
-	                { dateTime: citation.year, className: 'ref-year' },
-	                citation.year
-	              ),
-	              '). ',
-	              _react2.default.createElement(
-	                'cite',
-	                null,
-	                _react2.default.createElement(
-	                  'a',
-	                  { href: citation.href },
-	                  _react2.default.createElement(
-	                    'span',
-	                    { itemProp: 'name' },
-	                    citation.title
-	                  )
-	                )
-	              ),
-	              '. ',
-	              publication
-	            );
-	          })
-	        )
-	      );
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(Bibl).apply(this, arguments));
 	    }
-	  }]);
 
-	  return Bibl;
+	    _createClass(Bibl, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'section',
+	                { id: 'bibliography' },
+	                _react2.default.createElement(
+	                    'h2',
+	                    null,
+	                    'References'
+	                ),
+	                _react2.default.createElement(
+	                    'ol',
+	                    { id: 'reference-list' },
+	                    _underscore2.default.map(_bib2.default, function (citation, i) {
+	                        var nameStr = citation.author.full;
+	                        if (!citation.id) throw new Error("Citation has no id: " + citation.title);
+	                        if (!citation.author.full) {
+	                            nameStr = citation.author.lastName + (citation.author.firstName ? ", " + citation.author.firstName : "");
+	                        }
+	                        if (nameStr) {
+	                            nameStr = _react2.default.createElement(
+	                                'span',
+	                                { className: 'ref-author' },
+	                                nameStr
+	                            );
+	                        }
+	                        var publication = citation.journal ? _react2.default.createElement(
+	                            'span',
+	                            null,
+	                            _react2.default.createElement(
+	                                'span',
+	                                { className: 'ref-journal' },
+	                                citation.journal
+	                            ),
+	                            '.'
+	                        ) : "";
+	                        return _react2.default.createElement(
+	                            'li',
+	                            { itemProp: 'citation',
+	                                itemScope: true,
+	                                itemType: 'http://schema.org/CreativeWork',
+	                                key: i,
+	                                id: citation.id.toString(),
+	                                className: 'ref' },
+	                            nameStr,
+	                            ' (',
+	                            _react2.default.createElement(
+	                                'time',
+	                                { dateTime: citation.year, className: 'ref-year' },
+	                                citation.year
+	                            ),
+	                            '). ',
+	                            _react2.default.createElement(
+	                                'cite',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'a',
+	                                    { href: citation.href },
+	                                    _react2.default.createElement(
+	                                        'span',
+	                                        { itemProp: 'name' },
+	                                        citation.title
+	                                    )
+	                                )
+	                            ),
+	                            '. ',
+	                            publication
+	                        );
+	                    })
+	                )
+	            );
+	        }
+	    }]);
+
+	    return Bibl;
 	}(_react.Component);
 
 	exports.default = Bibl;
@@ -24996,6 +24997,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        year: 2001
 	    },
 	    abolhassani2003information: {
+	        id: 'abolhassani2003information',
 	        type: 'incollection',
 	        title: 'Information extraction and automatic markup for XML documents',
 	        author: {
@@ -25021,8 +25023,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	        year: 1997
 	    },
 	    abney1991procedure: {
-	        type: 'inproceedings',
 	        id: 'abney1991procedure',
+	        type: 'inproceedings',
 	        title: 'Procedure for quantitatively comparing the syntactic coverage of English grammars',
 	        author: {
 	            abbr: "Abney et al.",
@@ -25190,6 +25192,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        href: 'http://homepages.inf.ed.ac.uk/csutton/publications/cscfg.pdf'
 	    },
 	    furuta1989automatically: {
+	        id: 'furuta1989automatically',
 	        type: 'article',
 	        title: 'Automatically transforming regularly structured linear documents into hypertext',
 	        author: {
@@ -25204,6 +25207,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        href: 'http://cgis.cs.umd.edu/~ben/papers/Furuta1989Automatically.pdf'
 	    },
 	    bacci2009automatic: {
+	        id: 'bacci2009automatic',
 	        type: 'inproceedings',
 	        title: 'Automatic mark-up of legislative documents and its application to parallel text generation',
 	        author: {
@@ -45455,16 +45459,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                _react2.default.createElement(
 	                                    'p',
 	                                    null,
-	                                    'See ',
 	                                    _react2.default.createElement(_FigRef2.default, { fig: _figs2.default.tfidf }),
 	                                    ' and ',
 	                                    _react2.default.createElement(_FigRef2.default, { fig: _figs2.default.sectionsTfidf }),
-	                                    ' for charts of terms within section title elements with the highest tf–idf scores.'
+	                                    ' list terms within section title elements by tf–idf score, which is a number that reflects how important a given word is in a document with respect to all other documents in the corpus.'
 	                                ),
 	                                _react2.default.createElement(
 	                                    'p',
 	                                    null,
-	                                    'tf–idf is short for \'term frequency–inverse document frequency\', which is a number that reflects how important a given word is in a document with respect to all other documents in the corpus. It represents the importance of a given word by taking the number of times that word occurs in the document, and offsetting it against the amount of times that word occurs elsewhere in the corpus.'
+	                                    _react2.default.createElement(
+	                                        'strike',
+	                                        null,
+	                                        'tf–idf is short for \'term frequency–inverse document frequency\'. It represents the importance of a given word by taking the number of times that word occurs in the document, and offsetting it against the amount of times that word occurs elsewhere in the corpus.'
+	                                    )
 	                                ),
 	                                _react2.default.createElement(
 	                                    'p',
@@ -45542,7 +45549,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(
 	                        'p',
 	                        null,
-	                        'Sadly, Rechtspraak.nl does not offer an XML schema. This makes it a little more difficult to create programs that work with the XML data, because we don\'t know exactly which elements we can expect in the XML documents. In the absence of an official schema, we have created a makeshift XML schema that was automatically generated from a random sample of 500 documents. The resulting schema was afterwards manually corrected.'
+	                        'Regrettably, Rechtspraak.nl does not offer an XML schema. This makes it more difficult to create programs that work with the XML data, because we don\'t know exactly which elements we can expect in the XML documents. In the absence of an official schema, we have created a makeshift XML schema that was automatically generated from a random sample of 500 documents. The resulting schema was afterwards manually corrected.'
 	                    ),
 	                    _react2.default.createElement(
 	                        'p',
@@ -55601,7 +55608,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'We should obviously tokenize the source documents to tokens that might be labeled any of the above token types. In this regard, newlines are trivial to detect, and we assume that Rechtspraak.nl has already done a job of splitting text blocks through ',
+	                    'We should obviously tokenize the source documents to tokens that might be labeled any of the above token types. In this regard, newlines are trivial to detect, and we assume that Rechtspraak.nl has already done a job of splitting text blocks in ',
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -55624,14 +55631,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        null,
 	                        'paragroup'
 	                    ),
-	                    ' tag, which sometimes represents a coherent set of paragraphs. On the other hand, sometimes the specified paragraph grouping makes no sense. Although it is possible to efficiently tag tree structures instead of a linear list of tokens (',
+	                    ' tag, which sometimes represents a coherent set of paragraphs. On the other hand, sometimes the specified paragraph grouping makes no sense. Classifying a tree structures of tokens instead of a linear list can be done efficiently with CRFs, as in ',
 	                    _references2.default.cite(_bib2.default.bradley2010learning),
-	                    '), this requires a much more complicated pipeline, and may also be problematic when imposing a section hierarchy. So we ignore most of those \'higher-level\' tags.'
+	                    ', but working with tree structures requires a much more complicated pipeline. So we ignore most of those \'higher-level\' tags.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'To summarize: our tokenization algorithm returns a linear sequence of tokens, which serves as input for our tagging operation. It is possible that we lose some information in the tokenization process,'
+	                    'To summarize: our tokenization algorithm returns a linear sequence of tokens, which serves as input for our tagging operation. It is possible that we lose some information in the tokenization process, although this may be avoidable.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -55843,7 +55850,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	};
 
-	introIntroSections.inOrder = [introIntroSections.motivation, introIntroSections.problemDescription];
+	introIntroSections.inOrder = [
+	    // introIntroSections.motivation,
+	    // introIntroSections.problemDescription,
+	];
 
 	exports.default = introIntroSections;
 
@@ -62712,11 +62722,21 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Chapter2 = _interopRequireDefault(_Chapter);
 
+	var _IntroMotivation = __webpack_require__(318);
+
+	var _IntroMotivation2 = _interopRequireDefault(_IntroMotivation);
+
+	var _ProblemDescription = __webpack_require__(317);
+
+	var _ProblemDescription2 = _interopRequireDefault(_ProblemDescription);
+
 	var _sections = __webpack_require__(300);
 
 	var _sections2 = _interopRequireDefault(_sections);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -62736,23 +62756,25 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    _createClass(IntroductionIntroduction, [{
 	        key: 'render',
+
+
+	        // <p>
+	        //     In this chapter, we introduce the problem
+	        //     of automatically assigning a section hierarchy
+	        //     to documents in the Dutch case law repository
+	        //     of <a href="http://www.rechtspraak.nl/">Rechtspraak.nl</a> and why this is
+	        //     useful.
+	        // </p>
 	        value: function render() {
+	            var _React$createElement;
+
 	            return _react2.default.createElement(
 	                _Chapter2.default,
-	                { chapter: true, inline: !!this.props.inline, path: this.props.path,
-	                    title: IntroductionIntroduction.title(),
-	                    sections: _sections2.default.inOrder },
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'In this chapter, we introduce the problem of automatically assigning a section hierarchy to documents in the Dutch case law repository of ',
-	                    _react2.default.createElement(
-	                        'a',
-	                        { href: 'http://www.rechtspraak.nl/' },
-	                        'Rechtspraak.nl'
-	                    ),
-	                    ' and why this is useful.'
-	                )
+	                (_React$createElement = { chapter: true, inline: !!this.props.inline, path: this.props.path,
+	                    id: this.props.id
+	                }, _defineProperty(_React$createElement, 'inline', !!this.props.inline), _defineProperty(_React$createElement, 'title', IntroductionIntroduction.title()), _defineProperty(_React$createElement, 'sections', _sections2.default.inOrder), _React$createElement),
+	                _react2.default.createElement(_IntroMotivation2.default, this.props),
+	                _react2.default.createElement(_ProblemDescription2.default, this.props)
 	            );
 	        }
 	    }], [{
@@ -62841,7 +62863,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	                standaloneChapter ? _react2.default.createElement(_ToC2.default, _extends({ showHome: true }, this.props)) : '',
 	                _react2.default.createElement(
 	                    'section',
-	                    { className: 'chapter' },
+	                    { id: this.props.id ? this.props.id : '',
+	                        className: 'chapter' },
 	                    _react2.default.createElement(
 	                        'h2',
 	                        { className: 'title' },
@@ -62955,6 +62978,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _ToC2 = _interopRequireDefault(_ToC);
 
+	var _AbstractContent = __webpack_require__(217);
+
+	var _AbstractContent2 = _interopRequireDefault(_AbstractContent);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -62982,7 +63009,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	            return _react2.default.createElement(
 	                'div',
-	                null,
+	                { className: 'full-thesis' },
 	                _react2.default.createElement(
 	                    'section',
 	                    { style: {}, id: 'title-page' },
@@ -63022,16 +63049,30 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ),
 	                    _react2.default.createElement(
 	                        'div',
-	                        { style: {}, id: 'title-page-supervisor' },
+	                        { style: {}, className: 'title-page-supervisor' },
 	                        _react2.default.createElement(
 	                            'div',
 	                            { style: {}, id: 'title-page-supervisor-supervisor' },
-	                            'Supervisor:'
+	                            'Supervisor Utrecht University:'
 	                        ),
 	                        _react2.default.createElement(
 	                            'div',
-	                            { style: {}, id: 'title-page-supervisor-name' },
+	                            { style: {}, className: 'name' },
 	                            'Ad Feelders'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { style: {}, className: 'title-page-supervisor external' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { style: {}, id: 'title-page-supervisor-ext-supervisor' },
+	                            'Supervisor Leibniz Center for Law:'
+	                        ),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { style: {}, className: 'name' },
+	                            'Radboud Winkels'
 	                        )
 	                    ),
 	                    _react2.default.createElement(
@@ -63052,7 +63093,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	                ),
 	                _react2.default.createElement(
 	                    'section',
-	                    { id: '#toc' },
+	                    { className: 'chapter' },
+	                    _react2.default.createElement(
+	                        'h2',
+	                        null,
+	                        'Abstract'
+	                    ),
+	                    _react2.default.createElement(_AbstractContent2.default, null)
+	                ),
+	                _react2.default.createElement(
+	                    'section',
+	                    { id: '#toc', className: 'chapter' },
 	                    _react2.default.createElement(
 	                        'h2',
 	                        null,
@@ -63062,11 +63113,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                ),
 	                _chapters2.default.inOrder.map(function (chapter) {
 	                    var ChapterContent = (0, _Routes.getHandler)(chapter.route);
-	                    return _react2.default.createElement(
-	                        'section',
-	                        { id: chapter.id },
-	                        _react2.default.createElement(ChapterContent, _extends({ inline: true }, _this2.props))
-	                    );
+	                    return _react2.default.createElement(ChapterContent, _extends({ id: chapter.id, inline: true }, _this2.props));
 	                })
 	            );
 	        }
@@ -63151,8 +63198,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	            var relativeToRoot = this.props.path.match(/\//g).slice(1).map(function (_) {
 	                return "../";
 	            }).join("");
-	            return _react2.default.createElement(_Chapter2.default, { chapter: true,
-	                inline: !!this.props.inline, path: this.props.path,
+	            return _react2.default.createElement(_Chapter2.default, { id: this.props.id,
+	                chapter: true,
+	                inline: !!this.props.inline,
+	                path: this.props.path,
 	                title: Tagging.title(),
 	                sections: _sections2.default.inOrder });
 	        }
@@ -63230,7 +63279,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    _createClass(Inferring, [{
 	        key: 'render',
 	        value: function render() {
-	            return _react2.default.createElement(_Chapter2.default, { chapter: true,
+	            return _react2.default.createElement(_Chapter2.default, { id: this.props.id,
+	                chapter: true,
 	                path: this.props.path,
 	                inline: !!this.props.inline,
 	                title: Inferring.title(),
@@ -63307,7 +63357,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	        value: function render() {
 	            return _react2.default.createElement(
 	                _Chapter2.default,
-	                { path: this.props.path, title: Conclusion.title(), sections: _sections2.default.inOrder },
+	                { id: this.props.id,
+	                    path: this.props.path, title: Conclusion.title(), sections: _sections2.default.inOrder },
 	                'We have successfully demonstrated a method for assigning a section hierarchy to Dutch case law documents, reporting F',
 	                _react2.default.createElement(
 	                    'sub',
@@ -63390,6 +63441,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _Chapter2.default,
 	                { path: this.props.path,
 	                    title: ImportingAndTokenizing.title(),
+	                    inline: !!this.props.inline,
+	                    id: this.props.id,
 	                    sections: _sections2.default.inOrder },
 	                _react2.default.createElement(
 	                    'p',
