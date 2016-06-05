@@ -17,7 +17,8 @@ export default class Inferring extends Component {
     }
 
     render() {
-        return <Chapter chapter={true}
+        return <Chapter id={this.props.id}
+                        chapter={true}
                         path={this.props.path}
                         inline={!!this.props.inline}
                         title={Inferring.title()}

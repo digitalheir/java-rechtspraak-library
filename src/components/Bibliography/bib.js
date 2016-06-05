@@ -35,6 +35,7 @@ const bib = {
         year: 2001
     },
     abolhassani2003information: {
+        id: 'abolhassani2003information',
         type: 'incollection',
         title: 'Information extraction and automatic markup for XML documents',
         author: {
@@ -60,8 +61,8 @@ const bib = {
         year: 1997
     },
     abney1991procedure: {
-        type: 'inproceedings',
         id: 'abney1991procedure',
+        type: 'inproceedings',
         title: 'Procedure for quantitatively comparing the syntactic coverage of English grammars',
         author: {
             abbr: "Abney et al.",
@@ -229,6 +230,7 @@ const bib = {
         href: 'http://homepages.inf.ed.ac.uk/csutton/publications/cscfg.pdf'
     },
     furuta1989automatically: {
+        id: 'furuta1989automatically',
         type: 'article',
         title: 'Automatically transforming regularly structured linear documents into hypertext',
         author: {
@@ -243,6 +245,7 @@ const bib = {
         href: 'http://cgis.cs.umd.edu/~ben/papers/Furuta1989Automatically.pdf'
     },
     bacci2009automatic: {
+        id: 'bacci2009automatic',
         type: 'inproceedings',
         title: 'Automatic mark-up of legislative documents and its application to parallel text generation',
         author: {

@@ -21,6 +21,8 @@ export default class ImportingAndTokenizing extends Component {
     render() {
         return <Chapter path={this.props.path}
                         title={ImportingAndTokenizing.title()}
+                        inline={!!this.props.inline}
+                        id={this.props.id}
                         sections={dissSections.inOrder}>
             <p>
                 In this chapter, we provide an introduction to the Rechtspraak.nl data set that we

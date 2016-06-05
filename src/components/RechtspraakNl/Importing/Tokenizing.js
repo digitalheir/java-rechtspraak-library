@@ -31,7 +31,7 @@ export default class Importing extends Component {
                 documents to tokens that might be labeled
                 any of the above token types.
                 In this regard, newlines are trivial to detect, and we assume
-                that Rechtspraak.nl has already done a job of splitting text blocks through <code>para</code> tags,
+                that Rechtspraak.nl has already done a job of splitting text blocks in <code>para</code> tags,
                 but numberings are often not annotated as such, and so
                 are part of a running text. In our parsing algorithm, we
                 assume that
@@ -46,21 +46,24 @@ export default class Importing extends Component {
                 rich than the linear list that we reduce the document to.
                 Indeed, it often happens that
                 multiple <code>para</code> tags are wrapped in
-                a <code>paragroup</code> tag, which sometimes represents a coherent set of paragraphs. On the other
-                hand,
-                sometimes the specified paragraph grouping makes no sense. Although it is possible to efficiently tag
-                tree
-                structures instead of a linear list of tokens ({ref.cite(bib.bradley2010learning)}), this requires
-                a much more complicated pipeline, and may also be problematic when imposing
-                a section hierarchy.
+                a <code>paragroup</code> tag, which sometimes represents a coherent set of paragraphs.
+
+                On the other hand,
+                sometimes the specified paragraph grouping makes no sense.
+                Classifying a tree structures of tokens instead of a linear list
+                can be done efficiently with CRFs, as in {ref.cite(bib.bradley2010learning)},
+                but working with tree structures requires
+                a much more complicated pipeline.
                 So we ignore most of those 'higher-level' tags.
+
             </p>
             <p>
                 To summarize: our tokenization algorithm
                 returns
                 a linear sequence of tokens, which serves as input for our tagging operation.
                 It is possible
-                that we lose some information in the tokenization process,
+                that we lose some information in the tokenization process, although this may be
+                avoidable.
             </p>
 
             <p>

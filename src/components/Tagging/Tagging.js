@@ -26,8 +26,10 @@ export default class Tagging extends Component {
 
     render() {
         var relativeToRoot = this.props.path.match(/\//g).slice(1).map(_ => "../").join("");
-        return <Chapter chapter={true}
-                        inline={!!this.props.inline} path={this.props.path}
+        return <Chapter id={this.props.id}
+                        chapter={true}
+                        inline={!!this.props.inline}
+                        path={this.props.path}
                         title={Tagging.title()}
                         sections={taggingSections.inOrder}>
         </Chapter>;

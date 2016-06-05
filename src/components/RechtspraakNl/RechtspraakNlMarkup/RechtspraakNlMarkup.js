@@ -187,21 +187,19 @@ export default class Introduction extends Component {
                             <FigTitlePattern/>
 
                             <p>
-                                See <FigRef fig={figs.tfidf}/> and <FigRef fig={figs.sectionsTfidf}/> for
-                                charts of terms within section title elements with the
-                                highest tf–idf scores.
-
-                            </p>
-                            <p>
-                                tf–idf is short for 'term frequency–inverse document frequency',
+                                <FigRef fig={figs.tfidf}/> and <FigRef fig={figs.sectionsTfidf}/> list terms within
+                                section title elements by tf–idf score,
                                 which is a number that reflects how important a given word is
                                 in a document with respect to all other documents in the corpus.
-
+                            </p>
+                            <p>
+                            <strike>
+                                tf–idf is short for 'term frequency–inverse document frequency'.
                                 It represents the importance of a given word by taking the number of times
                                 that word occurs in the document, and offsetting it against the amount of
                                 times that word occurs elsewhere in the corpus.
-                            </p>
-
+                            </strike>
+</p>
                             <p>tf–idf is defined is defined as follows: </p>
 
                             <F display={true} l="\text{tfidf}(t, d, D) = \text{tf}(t, d)\cdot \text{idf}(t, D)"/>
@@ -241,9 +239,8 @@ export default class Introduction extends Component {
             <section id="xml-schema">
                 <h4>XML Schema</h4>
                 <p>
-                    Sadly, Rechtspraak.nl does not offer an XML schema. This makes it a little more difficult to
-                    create
-                    programs that work with the XML data,
+                    Regrettably, Rechtspraak.nl does not offer an XML schema. This makes it more difficult to
+                    create programs that work with the XML data,
                     because we don't know exactly which elements we can expect in the
                     XML documents.
 

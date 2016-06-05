@@ -23,6 +23,7 @@ class Root extends React.Component {
             __html: safeStringify(this.props)
         };
 
+        //if (!this.props.path) throw new Error("Define path");
         var relativeToRoot = this.props.path.match(/\//g).slice(1).map(a=>"../").join("");
 
         return (

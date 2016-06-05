@@ -10,8 +10,8 @@ const introIntroSections = {
 };
 
 introIntroSections.inOrder = [
-    introIntroSections.motivation,
-    introIntroSections.problemDescription,
+    // introIntroSections.motivation,
+    // introIntroSections.problemDescription,
 ];
 
 export default introIntroSections;

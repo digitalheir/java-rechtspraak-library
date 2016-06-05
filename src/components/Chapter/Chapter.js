@@ -15,7 +15,8 @@ export default class Chapter extends React.Component {
                 {standaloneChapter ? <h2>Table of Contents</h2> : ''}
                 {standaloneChapter ? <ToC showHome={true} {...this.props} /> : ''}
 
-                <section className="chapter">
+                <section id={this.props.id?this.props.id:''}
+                         className="chapter">
                     <h2 className="title"><a className="link-up" href="#"/>{this.props.title}</h2>
                     {this.props.children}
                     {subsections}
