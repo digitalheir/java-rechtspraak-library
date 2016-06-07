@@ -1,8 +1,5 @@
 package org.leibnizcenter.util;
 
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableSet;
-
 import java.util.*;
 import java.util.stream.Stream;
 
@@ -29,16 +26,16 @@ public class Collections3 {
         return returnObj;
     }
 
-    public static <T> List<T> thisOrEmpty(List<T> list) {
-        return (list == null) ? ImmutableList.of() : list;
+    public static <T> List<T> orEmptyDefault(List<T> list) {
+        return (list == null) ? Collections.EMPTY_LIST : list;
     }
 
     public static int size(Collection<?> collection) {
         return collection == null ? 0 : collection.size();
     }
 
-    public static <R> Set<R> thisOrEmpty(Set<R> set) {
-        return set == null ? ImmutableSet.of() : set;
+    public static <R> Set<R> orEmptyDefault(Set<R> set) {
+        return set == null ? Collections.EMPTY_SET : set;
     }
 
     public static <R> R last(List<R> list) {
@@ -49,5 +46,11 @@ public class Collections3 {
         List<T> newList = new ArrayList<>(l.size() - start);
         for (int i = start; i < l.size(); i++) newList.add(l.get(i));
         return newList;
+    }
+
+    public static <T> Set<T> add(Set<T> set, T toAdd) {
+        if (set == null) set = new HashSet<>();
+        set.add(toAdd);
+        return set;
     }
 }

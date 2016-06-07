@@ -65,9 +65,9 @@ public class DocumentGrammar extends Grammar {
             new StandardRule(DOCUMENT, rhs(DOCUMENT_CONTENT), 1.0),
 
             new StandardRule(DOCUMENT_CONTENT, rhs(COMPLETE_SECTION_BLOB), 1.0),
-            new StandardRule(DOCUMENT_CONTENT, rhs(TEXT_BLOB, COMPLETE_SECTION_BLOB), 0.8),
-            new StandardRule(DOCUMENT_CONTENT, rhs(COMPLETE_SECTION_BLOB, TEXT_BLOB), 0.8),
-            new StandardRule(DOCUMENT_CONTENT, rhs(TEXT_BLOB, COMPLETE_SECTION_BLOB_W_TRAILING_TEXT), 0.8),
+            new StandardRule(DOCUMENT_CONTENT, rhs(COMPLETE_SECTION_BLOB, TEXT_BLOB), 0.7),
+            new StandardRule(DOCUMENT_CONTENT, rhs(TEXT_BLOB, COMPLETE_SECTION_BLOB), 0.7),
+            new StandardRule(DOCUMENT_CONTENT, rhs(TEXT_BLOB, COMPLETE_SECTION_BLOB_W_TRAILING_TEXT), 0.7),
 
             new CompletedSectionBlob(COMPLETE_SECTION_BLOB, rhs(SECTION_BLOB)),
             new StandardRule(COMPLETE_SECTION_BLOB_W_TRAILING_TEXT, rhs(COMPLETE_SECTION_BLOB, TEXT_BLOB), 0.9),

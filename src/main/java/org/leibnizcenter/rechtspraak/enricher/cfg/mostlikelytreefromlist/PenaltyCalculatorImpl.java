@@ -77,14 +77,14 @@ public class PenaltyCalculatorImpl implements PenaltyCalculator {
     }
 
     private boolean alreadyContainsNr(ImmutableTree addToNode) {
-        return Collections3.thisOrEmpty(addToNode.getChildren()).stream()
+        return Collections3.orEmptyDefault(addToNode.getChildren()).stream()
                 .filter(PenaltyCalculatorImpl::isNrNode)
                 .limit(1)
                 .collect(Collectors.toSet()).size() > 0;
     }
 
     private boolean alreadyContainsTitle(ImmutableTree addToNode) {
-        return Collections3.thisOrEmpty(addToNode.getChildren()).stream()
+        return Collections3.orEmptyDefault(addToNode.getChildren()).stream()
                 .filter(PenaltyCalculatorImpl::isTitleTextNode)
                 .limit(1)
                 .collect(Collectors.toSet()).size() > 0;
@@ -185,7 +185,7 @@ public class PenaltyCalculatorImpl implements PenaltyCalculator {
     }
 
     private List<NamedImmutableTree> getSectionChildren(ImmutableTree addToNode) {
-        return Collections3.thisOrEmpty(addToNode.getChildren()).stream()
+        return Collections3.orEmptyDefault(addToNode.getChildren()).stream()
                 .filter(PenaltyCalculatorImpl::isSectionNode)
                 .map(e -> (NamedImmutableTree) e)
                 .collect(Collectors.toList());
@@ -319,7 +319,7 @@ public class PenaltyCalculatorImpl implements PenaltyCalculator {
                     .filter(child ->
                             child instanceof LabeledTokenNode
                                     && Label.SECTION_TITLE.equals(((LabeledTokenNode) child).token.getTag()))
-                    .map(child -> Collections3.thisOrEmpty(((LabeledTokenNode) child).token.getToken().getEmphasis()))
+                    .map(child -> Collections3.orEmptyDefault(((LabeledTokenNode) child).token.getToken().getEmphasis()))
                     .reduce(Sets.newHashSet(), Sets::union);
         }
         return ImmutableSet.of();
