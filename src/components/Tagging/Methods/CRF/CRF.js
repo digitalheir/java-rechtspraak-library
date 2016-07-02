@@ -84,9 +84,6 @@ export default class CRF extends Component {
                 supported first by introductory
                 sections on <a href={"#"+GraphicalModels.id()}>graphical
                 models</a> and <a href="#hmm">Hidden Markov Models</a>.
-            </p>
-
-            <p>
                 For a more thorough tutorial into CRFs, including skip-chain CRFs, one may refer
                 to {ref.cite(bib.sutton2006introduction)}.
             </p>

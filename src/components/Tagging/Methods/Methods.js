@@ -43,7 +43,7 @@ export default class Tagging extends Component {
                 tend to have state-of-the-art performance
                 in pattern recognition tasks. One
                 downside to CRFs is that models commonly overfit to a single corpus.
-                In out case, this is not a problem because
+                In our case, this is not a problem because
                 we expressly train for only one particular corpus.
             </p>
         </ChapterSectionContent>;

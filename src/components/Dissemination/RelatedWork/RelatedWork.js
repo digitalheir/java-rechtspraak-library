@@ -26,11 +26,7 @@ export default class Conclusion extends Component {
             <p>
                 Indeed, most applications are domain-specific.
                 Somewhat recently, the problem has been addressed
-                in legal informatics as well.
-            </p>
-
-            <p>
-                {ref.cite(bib.bacci2009automatic)} have a similar set-up
+                in legal informatics as well. {ref.cite(bib.bacci2009automatic)} have a similar set-up
                 to ours, applied to Italian law text.
                 They successfully apply
                 Hidden Markov Models to distinguish header and footers

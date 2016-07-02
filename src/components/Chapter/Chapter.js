@@ -10,6 +10,7 @@ export default class Chapter extends React.Component {
         var subsections = this.props.sections.map(getSubSections(this.props, 3));
 
         const standaloneChapter = !this.props.inline;
+
         return (
             <div>
                 {standaloneChapter ? <h2>Table of Contents</h2> : ''}

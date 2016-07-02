@@ -4,15 +4,19 @@ import ref from '../../Bibliography/References/references'
 import bib from  '../../Bibliography/bib';
 import F from  '../../Math/Math';
 import FigRef from  '../../Figures/FigRef';
+import figs from  '../../Figures/figs';
+import listings from  '../../Figures/listings';
+import ListingRef from  '../../Figures/ListingRef';
 
-const parseFig = {
-    id: 'fig-parsing-triangle',
-    num: 1
-};
 const exampleSentence = 'fish people fish tanks'.split(" ");
 
 export default class CYK extends Component {
     render() {
+        const nlpGrammar = listings.nlpGrammar;
+        const parseFig = figs.parseFig;
+        if (!nlpGrammar) throw new Error("Make listing for nlpGrammar");
+        if (!parseFig) throw new Error("Make fig for parseFig");
+
         return <div>
             <p>
                 The Cocke–Younger–Kasami (CYK) algorithm is an
@@ -60,7 +64,7 @@ export default class CYK extends Component {
             </p>
             <p>
                 In addition to binary production rules, we also allow unary rules in our grammar
-                of the form <code>A → B</code>, where <code>A</code> and <code>B</code> are both
+                of the form <F l="\text A \rightarrow \text B"/>, where <F l="\text A"/> and <F l="\text B"/> are both
                 non-terminals.
                 Extension of the algorithm is simple:
                 at the end of every substring type assignment, we add those
@@ -96,22 +100,7 @@ export default class CYK extends Component {
                 <figcaption>
                     <span className="figure-number">Fig {parseFig.num}.</span> An example parse chart for the
                     sentence
-                    "fish people fish tanks", based on the following grammar:
-
-    <pre style={{display: 'block'}}>S  → NP VP  (90%)<br/>
-S  → VP     (10%)<br/>
-VP → V NP   (50%)<br/>
-VP → V      (10%)<br/>
-NP → NP NP  (10%)<br/>
-NP → N      (70%)<br/>
-<br/>
-N  → fish   (20%)<br/>
-N  → people (50%)<br/>
-N  → tanks  (20%)<br/>
-V  → people (10%)<br/>
-V  → fish   (60%)<br/>
-V  → tanks  (30%)</pre>
-
+                    "fish people fish tanks", based on the grammar in <ListingRef listing={nlpGrammar}/>
                     The constituents that make up the resulting parse
                     to <code>S</code> are marked in bold.
                     The top of the triangle represents the
@@ -123,6 +112,69 @@ V  → tanks  (30%)</pre>
                     from <F l="3"/> to <F l="4"/> (<code>fish
                     tanks</code>) using the
                     rule <code>S → NP VP</code>.
+                </figcaption>
+            </figure>
+            <figure id={nlpGrammar.id}>
+                <table className="grammar">
+                    <tr>
+                        <td><F l="\text{S} \rightarrow \text{NP VP}"/></td>
+                        <td><F l="0.9"/></td>
+                    </tr>
+                    <tr>
+                        <td><F l="\text{S} \rightarrow \text{VP}"/></td>
+                        <td><F l="0.1"/></td>
+                    </tr>
+                    <tr>
+                        <td><F l="\text{VP} \rightarrow \text{V NP}"/></td>
+                        <td><F l="0.5"/></td>
+                    </tr>
+                    <tr>
+                        <td><F l="\text{VP} \rightarrow \text{V}"/></td>
+                        <td><F l="0.1"/></td>
+                    </tr>
+                    <tr>
+                        <td><F l="\text{NP} \rightarrow \text{NP NP}"/></td>
+                        <td><F l="0.1"/></td>
+                    </tr>
+                    <tr>
+                        <td><F l="\text{NP} \rightarrow \text{N}"/></td>
+                        <td><F l="0.7"/></td>
+                    </tr>
+                    <tr/>
+                    <tr>
+                        <td><F l="\text{N} \rightarrow \text{fish}"/></td>
+                        <td><F l="0.2"/></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><F l="\text{N} \rightarrow \text{people}"/></td>
+                        <td><F l="0.5"/></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><F l="\text{N} \rightarrow \text{tanks}"/></td>
+                        <td><F l="0.2"/></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><F l="\text{V} \rightarrow \text{people}"/></td>
+                        <td><F l="0.1"/></td>
+                    </tr>
+                    <tr>
+                        <td><F l="\text{V} \rightarrow \text{fish}"/></td>
+                        <td><F l="0.6"/></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><F l="\text{V} \rightarrow \text{tanks}"/></td>
+                        <td><F l="0.3"/></td>
+                    </tr>
+                </table>
+                <figcaption>
+                    <span className="figure-number">Listing {nlpGrammar.num}.</span> Simple natural language
+                    grammar for putting noun phrases (<F l="\text{NP}"/>) and verb phrases (<F l="\text{VP}"/>) together
+                    to
+                    create a sentence (<F l="\text S"/>).
                 </figcaption>
             </figure>
         </div>;

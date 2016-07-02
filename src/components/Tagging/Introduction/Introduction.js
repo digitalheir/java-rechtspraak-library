@@ -47,8 +47,7 @@ export default class TaggingIntroduction extends Component {
                 mostly in the application of part-of-speech tagging in natural language.
                 Popular methods include graphical models, which model the probability distributions
                 of labels and observations occurring together. These include Hidden
-                Markov Models (HMMs) and the closely related Conditional Random Fields (CRFs),
-                which currently .
+                Markov Models (HMMs) and the closely related Conditional Random Fields (CRFs).
             </p>
             <p>
                 In this chapter, we experiment with CRFs

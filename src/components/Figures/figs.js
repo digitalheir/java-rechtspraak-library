@@ -1,16 +1,16 @@
 import {url as markupStatsUrl} from './MarkupStatsFigure/data';
 
 const figs = {
+    parseFig: {
+        id: 'fig-parsing-triangle',
+        num: 9
+    },
     markupStats: {
         id: 'markup-stats',
         num: 1,
         url: markupStatsUrl
     },
 
-    figGrammar: {
-        id: 'fig-grammar',
-        num: 8
-    },
 
     titleTf: {
         id: "fig-title-tf",
@@ -18,15 +18,15 @@ const figs = {
     },
     taggingResults: {
         id: "fig-results",
-        num: 3
+        num: 7
     },
     confusionMatrix: {
         id: "fig-confusion-matrix",
-        num: 4
+        num: 8
     },
     figTitleWordCount: {
         id: "fig-title-word-count",
-        num: 3
+        num: 2
     },
     titleRelativeWordCount: {
         id: "fig-title-relative-word-count",
@@ -44,11 +44,11 @@ const figs = {
     },
     figTitleTreemap: {
         id: "fig-title-patterns",
-        num: 2
-    }, 
+        num: 3
+    },
     sectionsTfidf: {
         id: "fig-tfidf-sections",
-        num: 4
+        num: 5
     },
 
     hmm: function () {
@@ -69,7 +69,7 @@ const figs = {
         const src = "/img/graphical-models.svg"; // TODO relativeurl
         const alt = "Diagram of the relationship between naive Bayes, logistic regression, HMMs, linear-chain CRFs, " +
             "generative models, and general CRFs";
-        const num = 1;
+        const num = 6;
         return {
             id: id,
             src: src,
@@ -80,7 +80,7 @@ const figs = {
 
     tfidf: function () {
         const id = "tfidf";
-        const num = 3;
+        const num = 4;
 
         return {
             id: id,

@@ -29,6 +29,6 @@ export default class License extends Component {
             'href="https://digitalheir.github.io/java-rechtspraak-library" ' +
             'rel="dct:source">https://digitalheir.github.io/java-rechtspraak-library</a>' +
             '.';
-        return <div dangerouslySetInnerHTML={{__html:innerHtml}}></div>;
+        return <div style={{textAlign: 'center'}} dangerouslySetInnerHTML={{__html:innerHtml}}></div>;
     }
 }

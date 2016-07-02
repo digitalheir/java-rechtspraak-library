@@ -51,8 +51,8 @@ export default class FScorez extends Component {
                 Note that to find <F l="\mathbf y^*"/>, we need to iterate over each possible
                 assignment to the label vector <F l="\mathbf y"/>,
                 which would implicate that in the general case, we
-                need an algorithm of
-                <F l="O(M^T)"/>, where <F l="M"/> is the number of possible labels,
+                need an algorithm of <F l="O(M^T)"/>,
+                where <F l="M"/> is the number of possible labels,
                 and <F l="T"/> is the length of
                 the instance to label.
 
@@ -66,8 +66,9 @@ export default class FScorez extends Component {
                l="\delta_t(j) = \max_{i \in \mathbf y}\Phi_t(j,i,\mathbf x_t)\cdot \delta_{t-1}(i)"/>
 
             <p>
-                where the base case <F l="\delta_0(j) = \max_{i \in \mathbf y}"/>.
+                where the base case
             </p>
+            <F display="truuuu" l="\delta_0(j) = \max_{i \in \mathbf y}\Phi_t(j,i,\mathbf x_t)"/>
             <p>
                 And store the results in a table. We then find the optimal
                 sequence by maximizing <F l="\delta_t(j)"/> at the end of
@@ -77,9 +78,9 @@ export default class FScorez extends Component {
             <p>
                 Using this trick, we
                 reduce the computational complexity
-                of finding the Viterbi path to <F l="O(M^2\cdot T)"/>.
+                of finding the Viterbi path to <F l="O(M^2 T)"/>.
             </p>
         </div>
-    ;
+            ;
     }
-    }
+}

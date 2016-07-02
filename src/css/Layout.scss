@@ -41,10 +41,10 @@
   #title-page-author-name {
     font-size: 15pt;
     color: #222;
-    margin-bottom: 2in;
+    margin-bottom: 2.5in;
   }
   .title-page-supervisor.external {
-    margin-bottom: 1.0in;
+    margin-bottom: 2.0in;
   }
   .title-page-supervisor .name {
     color: #222;
@@ -236,6 +236,14 @@ pre {
 table {
   //width: 100%;
   border-collapse: collapse;
+}
+
+.grammar th {
+  color: #8E8E8E;
+}
+
+.grammar td {
+  border: none;
 }
 
 th, td {
@@ -491,7 +499,10 @@ hr {
 }
 
 @media print {
-  .data-source{
+  strike {
+    display: none; /*TODO remove*/
+  }
+  .data-source {
     display: none;
   }
   section {
@@ -504,6 +515,9 @@ hr {
   }
   a, a:visited {
     color: #444;
+  }
+  h1,h2,h3,h4,h5,h6{
+    ;
   }
 }
 

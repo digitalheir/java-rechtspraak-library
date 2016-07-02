@@ -240,7 +240,7 @@ const bib = {
         journal: 'ELECTRON. PUBL.',
         volume: '2',
         number: '4',
-        pages: '211--229',
+        pages: '211—229',
         year: '1989',
         href: 'http://cgis.cs.umd.edu/~ben/papers/Furuta1989Automatically.pdf'
     },

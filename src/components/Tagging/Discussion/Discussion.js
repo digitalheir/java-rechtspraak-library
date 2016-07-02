@@ -11,7 +11,7 @@ export default class Discussion extends Component {
         return <p>
             Taking a closer look at faulty labels,
             we observe that most errors are snippets of text that
-            contain just a noun phrase, and it is easy to imagine how
+            contain only a noun phrase, and it is easy to imagine how
             the CRF assigns such a text block as a title or vice versa.
             Furthermore, due to the sometimes very staccato paragraphs in case law,
             it can be hard even for humans to distinguish section titles and running text.

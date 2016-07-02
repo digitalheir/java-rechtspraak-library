@@ -31,7 +31,6 @@ export default class Tagging extends Component {
                         inline={!!this.props.inline}
                         path={this.props.path}
                         title={Tagging.title()}
-                        sections={taggingSections.inOrder}>
-        </Chapter>;
+                        sections={taggingSections.inOrder}/>;
     }
 }

@@ -36,16 +36,7 @@ export default class ParsingEval extends Component {
                 on typography.
             </p>
 
-            <p>
-                A note also on runtime complexity: although the algorithm is polynomial,
-                it is slow, even after optimizing the algorithm for resource re-use
-                and parallellizing calculation of the table cells.
-                Parsing the longest document in the corpus, which consists of
-                more than a 1000 elements, took about 10 minutes
-                on an Intel i7 quad-core CPU from 2010 running at 2.67GHz.
-                These are not fundamental problems, however, and we now discuss some
-                likely fruitful avenues for future work.
-            </p>
+          
         </div>;
     }
 }

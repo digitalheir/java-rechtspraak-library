@@ -24,7 +24,7 @@ class Root extends React.Component {
         };
 
         //if (!this.props.path) throw new Error("Define path");
-        var relativeToRoot = this.props.path.match(/\//g).slice(1).map(a=>"../").join("");
+        const relativeToRoot = this.props.path.match(/\//g).slice(1).map(a=>"../").join("");
 
         return (
             <html>
@@ -43,7 +43,7 @@ class Root extends React.Component {
             {this.props.path == '/full/' ? '' : <Header {...this.props} />}
             <RouteHandler {...this.props} />
             <Bibliography/>
-            <License/>
+            {this.props.path == '/full/' ? '' : <License {...this.props} />}
             <script
                 id='initial-props'
                 type='application/json'

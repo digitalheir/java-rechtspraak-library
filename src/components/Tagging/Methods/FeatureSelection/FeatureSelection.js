@@ -20,10 +20,12 @@ import Source from './../../../Source/Source';
 export default class FeatureSelection extends Component {
     render() {
         const relativeToRoot = this.props.path.match(/\//g).slice(1).map(_ => "../").join("");
-        const rsMarkupUrl = relativeToRoot+chapters.introduction.route.replace("/", "")+"#"+introSections.rechtspraakNlMarkup.id;
+        var rechtspraakNlMarkup = introSections.rechtspraakNlMarkup;
+        if(!rechtspraakNlMarkup) throw new Error("rsMarkup")
+        const rsMarkupUrl = relativeToRoot+chapters.introduction.route.replace("/", "")+"#"+rechtspraakNlMarkup.id;
         return <div>
             <p>
-                Based on the metrics and observations from
+                Based on the metrics and observations on the data set from
                 the <a href={rsMarkupUrl}>previous chapter</a>
                 , we define about 250
                 binary features for our automatic tagger.

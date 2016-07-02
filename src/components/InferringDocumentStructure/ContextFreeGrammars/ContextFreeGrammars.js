@@ -5,6 +5,8 @@ import ref from '../../Bibliography/References/references'
 import bib from  '../../Bibliography/bib';
 import FigRef from './../../Figures/FigRef'
 import figs from './../../Figures/figs'
+import listings from  '../../Figures/listings';
+import ListingRef from  '../../Figures/ListingRef';
 
 export default class ContextFreeGrammars extends Component {
     render() {
@@ -40,111 +42,111 @@ export default class ContextFreeGrammars extends Component {
             </p>
 
             <p>
-                <FigRef fig={figs.figGrammar}/> show a simplified version of the grammar
+                <ListingRef listing={listings.figGrammar}/> show a simplified version of the grammar
                 that we use to create the section hierarchy.
             </p>
 
             <figure>
-                <table>
+                <table className="grammar">
+                    
                     <tr>
-                        <td>Text → text</td>
+                        <td><F l="\text{Text} \rightarrow \text{text}"/></td>
                         <td><F l="1.0"/></td>
                     </tr>
                     <tr>
-                        <td>Text → newline</td>
+                        <td><F l="\text{Text} \rightarrow \text{newline}"/></td>
                         <td><F l="1.0"/></td>
                     </tr>
                     <tr>
-                        <td>Numbering → numbering</td>
+                        <td><F l="\text{Numbering} \rightarrow \text{numbering}"/></td>
                         <td><F l="1.0"/></td>
                     </tr>
                     <tr>
-                        <td>TitleText → section-title</td>
+                        <td><F l="\text{TitleText} \rightarrow \text{section-title}"/></td>
                         <td><F l="1.0"/></td>
                     </tr>
-
-
+                    <tr><td colSpan="2"/></tr>
+                    <tr><th colSpan="2">Non-terminal rules</th></tr>
                     <tr>
-                        <td>Document → Header DocumentContent</td>
-                        <td><F l="1.0"/></td>
-                    </tr>
-                    <tr>
-                        <td>Document → DocumentContent</td>
-                        <td><F l="1.0"/></td>
-                    </tr>
-
-                    <tr>
-                        <td>DocumentContent → Sections</td>
+                        <td><F l="\text{Document} \rightarrow \text{Header DocumentContent}"/></td>
                         <td><F l="1.0"/></td>
                     </tr>
                     <tr>
-                        <td>DocumentContent → Text Sections</td>
+                        <td><F l="\text{Document} \rightarrow \text{DocumentContent}"/></td>
+                        <td><F l="1.0"/></td>
+                    </tr>
+                    <tr><td colSpan="2"/></tr>
+                    <tr>
+                        <td><F l="\text{DocumentContent} \rightarrow \text{Sections}"/></td>
+                        <td><F l="1.0"/></td>
+                    </tr>
+                    <tr>
+                        <td><F l="\text{DocumentContent} \rightarrow \text{Text Sections}"/></td>
                         <td><F l="0.8"/></td>
                     </tr>
                     <tr>
-                        <td>DocumentContent → Sections Text</td>
+                        <td><F l="\text{DocumentContent} \rightarrow \text{Sections Text}"/></td>
                         <td><F l="0.8"/></td>
                     </tr>
                     <tr>
-                        <td>DocumentContent → Text Sections Text</td>
+                        <td><F l="\text{DocumentContent} \rightarrow \text{Text Sections Text}"/></td>
                         <td><F l="0.8"/></td>
                     </tr>
-
-
+                    <tr><td colSpan="2"/></tr>
                     <tr>
-                        <td>Text → Text Text</td>
+                        <td><F l="\text{Text} \rightarrow \text{Text Text}"/></td>
                         <td><F l="1.0"/></td>
                     </tr>
-
+                    <tr><td colSpan="2"/></tr>
                     <tr>
-                        <td>Sections → Sections Sections</td>
-                        <td><F l="0.4 + 0.6[\text{section numberings in sequence}]"/></td>
+                        <td><F l="\text{Sections} \rightarrow \text{Sections Sections}"/></td>
+                        <td><F l="0.4 + \begin{cases}0.6&\text{if numberings in sequence}\\0&\text{otherwise}\end{cases}"/></td>
                     </tr>
                     <tr>
-                        <td>Sections → Section</td>
+                        <td><F l="\text{Sections} \rightarrow \text{Section}"/></td>
                         <td><F l="1.0"/></td>
                     </tr>
                     <tr>
-                        <td>Sections → Section Text</td>
+                        <td><F l="\text{Sections} \rightarrow \text{Section Text}"/></td>
                         <td><F l="0.9"/></td>
                     </tr>
                     <tr>
-                        <td>Sections → Text Section</td>
+                        <td><F l="\text{Sections} \rightarrow \text{Text Section}"/></td>
                         <td><F l="0.8"/></td>
                     </tr>
                     <tr>
-                        <td>Section → SectionTitle SectionContent</td>
+                        <td><F l="\text{Section} \rightarrow \text{SectionTitle SectionContent}"/></td>
                         <td><F l="1.0"/></td>
                     </tr>
-
+                    <tr><td colSpan="2"/></tr>
                     <tr>
-                        <td>SectionTitle → Numbering</td>
-                        <td><F l="1.0"/></td>
-                    </tr>
-                    <tr>
-                        <td>SectionTitle → TitleText</td>
+                        <td><F l="\text{SectionTitle} \rightarrow \text{Numbering}"/></td>
                         <td><F l="1.0"/></td>
                     </tr>
                     <tr>
-                        <td>SectionTitle → Numbering TitleText</td>
+                        <td><F l="\text{SectionTitle} \rightarrow \text{TitleText}"/></td>
                         <td><F l="1.0"/></td>
                     </tr>
                     <tr>
-                        <td>SectionContent → Text</td>
+                        <td><F l="\text{SectionTitle} \rightarrow \text{Numbering TitleText}"/></td>
                         <td><F l="1.0"/></td>
                     </tr>
                     <tr>
-                        <td>SectionContent → Sections</td>
+                        <td><F l="\text{SectionContent} \rightarrow \text{Text}"/></td>
                         <td><F l="1.0"/></td>
                     </tr>
                     <tr>
-                        <td>SectionContent → SectionContent SectionContent</td>
+                        <td><F l="\text{SectionContent} \rightarrow \text{Sections}"/></td>
+                        <td><F l="1.0"/></td>
+                    </tr>
+                    <tr>
+                        <td><F l="\text{SectionContent} \rightarrow \text{SectionContent SectionContent}"/></td>
                         <td><F l="1.0"/></td>
                     </tr>
 
                 </table>
                 <figcaption>
-                    <span className={figs.figGrammar.id}>Fig {figs.figGrammar.num}.</span> Simplified
+                    <span className={listings.figGrammar.id}>Listing {listings.figGrammar.num}.</span> Simplified
                     grammar for creating section hierarchy.
                 </figcaption>
             </figure>

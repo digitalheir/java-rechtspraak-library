@@ -11,13 +11,14 @@ export default class extends Component {
       }).isRequired
     };
   }
-  
+
   render() {
     const fig = this.props.fig;
+    if(!fig) throw new Error("Define fig");
     const href = "#" + fig.id;
 
     return (
-      <a href={href}>Figure {fig.num}</a>
+        <a href={href}>Figure {fig.num}</a>
     );
   }
 };
