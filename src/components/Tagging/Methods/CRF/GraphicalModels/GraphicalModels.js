@@ -10,22 +10,8 @@ import F from  '../../../../Math/Math';
 export default class CRF extends Component {
     static id() {
         return "graphical-models";
-    }
-
-    render() {
-        const relativeToRoot = this.props.path.match(/\//g).slice(1).map(_ => "../").join("");
-
-        return <div>
-            <p>
-                Graphical models are statistical models where the probility function can
-                be represented
-                as a <a href="https://en.wikipedia.org/wiki/Factor_graph">factor graph</a>.
-                Graphical models include Bayesian networks, HMMs, CRFs and logistic regression models.
-            </p>
-            <FigImg relativeToRoot={relativeToRoot} fig={figs.graphicalModels}>
-                Diagram of the relationship
-                between naive Bayes,
-                logistic regression, HMMs, linear-chain CRFs,
+    }git status
+    ression, HMMs, linear-chain CRFs,
                 Bayesian
                 models, and general CRFs. Image adapted from {ref.cite(bib.sutton2006introduction)}.
             </FigImg>
