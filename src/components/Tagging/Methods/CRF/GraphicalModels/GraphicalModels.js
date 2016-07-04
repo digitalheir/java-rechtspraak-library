@@ -53,15 +53,17 @@ export default class CRF extends Component {
             <p>
                 Intuitively, <F l="p( \mathbf x, \mathbf y)"/> describes
                 the joint probability of input and output
-                vectors in terms of some set of functions <F
-                l="F = \{  \Phi_A\}"/>, collectively known as the factors.
-                We will see that these factors wrap feature values (for example, <F l="1"/> if a word is capitalized),
-                multiplied together. The
+                vectors in terms of some set of functions <span><F
+                l="F = \{  \Phi_A\}"/></span>, collectively known as the factors.
+                The
                 normalization term <F l="Z"/> ensures that the
                 probability function ranges between <F l="0"/> and <F l="1"/>: it sums every possible value
-                of the the multiplied factors. <F l="\Phi_A \in F"/> can be any function from <F l="A \subset V"/> to
+                of the the multiplied factors. <F l="\Phi_A \in F"/> can be any function
+                from a subset of input and output variables <F l="A \subset V"/> to
                 a positive real number,
-                i.e. <F l="\Phi_A:A\rightarrow\ \mathbb{R}^+"/>. Individually the
+                i.e. <F l="\Phi_A:A\rightarrow\ \mathbb{R}^+"/>,
+                but we will see use these factors to multiple feature values
+                by some weight constant. Individually the
                 functions <F l="\Phi_A \in F"/> are known as local
                 functions or compatibility functions.
             </p>
@@ -77,7 +79,7 @@ export default class CRF extends Component {
 
             <p>
                 <F l="Z"/> is called the partition function, because it normalizes
-                the function <F l="p"/> to ensure that <F l="\sum_A p(\mathbf x_A,\mathbf y_A)"/> sums to <F
+                the function <F l="p"/> to ensure that <F l="\sum_{\mathbf x,\mathbf y} p(\mathbf x,\mathbf y)"/> sums to <F
                 l="1"/>. In general, computing <F l="Z"/> is intractable, because we
                 need to sum over all possible assignments <F l="\mathbf x"/> of input vectors
                 and all possible assignments <F l="\mathbf y"/> of output vectors.
@@ -86,7 +88,7 @@ export default class CRF extends Component {
 
             <p>
                 The factorization of the function for <F
-                l="p( \mathbf x_A,\mathbf y_A)"/> can be represented
+                l="p( \mathbf x,\mathbf y)"/> can be represented
                 as graph, called a <a href="https://en.wikipedia.org/wiki/Factor_graph">
                 factor graph</a>. (Illustrated in <FigRef fig={figs.factorGraph}/>.)
             </p>

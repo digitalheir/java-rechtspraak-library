@@ -74,12 +74,12 @@ export default class CRF extends Component {
                 appears to depend on extensive feature
                 engineering. As a downside, it is more likely that a model overfits
                 to a particular corpus, and so suffers in portability with respect to other copora.
-                (Consider {ref.cite(bib.finkel2004exploiting)}.) In our case, this
+                Consider {ref.cite(bib.finkel2004exploiting)}. In our case, overfitting
                 is likely not a problem because we train explicitly for
                 one corpus, and do not aspire to full language abstraction.
             </p>
             <p>
-                In this section,
+                In the following,
                 we provide a definition of Linear-Chain Conditional Random Fields,
                 supported first by introductory
                 sections on <a href={"#"+GraphicalModels.id()}>graphical
