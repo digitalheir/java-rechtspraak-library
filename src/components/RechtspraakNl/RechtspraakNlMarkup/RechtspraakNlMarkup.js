@@ -71,7 +71,7 @@ export default class Introduction extends Component {
                         a tagname of either <code>uitspraak.info</code> or <code>conclusie.info</code> for two types
                         of case law (judgments and conclusions, respectively). We refer to
                         either of these as <code>*.info</code>. <code>*.info</code> elements contain
-                        interesting metadata such as names an court location. The information is generally
+                        interesting metadata such as names and court location. The information is generally
                         not semantically marked up, but is reasonably easy to parse thanks
                         to style consistencies in authors (e.g., most units of metadata are on a separate line).
                     </p>
@@ -164,7 +164,7 @@ export default class Introduction extends Component {
                             </p>
 
                             <p>
-                                Titles are the elements are the most difficult elements
+                                Titles are the most difficult elements
                                 to label, so we make
                                 a special effort to describe common title patterns.
                             </p>
@@ -200,7 +200,7 @@ export default class Introduction extends Component {
                                 times that word occurs elsewhere in the corpus.
                             </strike>
 </p>
-                            <p>tf–idf is defined is defined as follows: </p>
+                            <p>tf–idf is defined as follows: </p>
 
                             <F display={true} l="\text{tfidf}(t, d, D) = \text{tf}(t, d)\cdot \text{idf}(t, D)"/>
                             <p>where</p>
@@ -224,7 +224,7 @@ export default class Introduction extends Component {
                             </ul>
                             <p>
                                 Because we
-                                want to derive at the most important words within
+                                want to infer the most important words within
                                 title elements specifically, we take as a document
                                 the various text elements
                                 (such as a paragraph, or title), and compute the tf-idf score

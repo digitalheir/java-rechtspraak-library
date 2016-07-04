@@ -91,7 +91,7 @@ const figs = {
         const id = "fig-factor-graph";
         const src = "/img/factor-graph.svg";//// TODO relativeurl
         const alt = "Illustration of a factor graph. The set V represents all variable nodes; the set F represents all function nodes.";
-        const num = 1;
+        const num = 7;
 
         return {
             id: id,

@@ -66,13 +66,13 @@ export default class FeatureSelection extends Component {
 // </thead>
 // <tbody>
 // <tr>
-// <td><code>_NUM</code></td>
+// <td><code>[NUMBER]</code></td>
 // <td><code className="prettify">/\b([0-9]+|i&#123;1,3&#125;|i?vi&#123;0,3&#125;|i?xi&#123;
 // 0,3&#125;)\b/</code></td>
 // <td><p>describes a number (a sequence of digits, or a roman numeral)</p></td>
 // </tr>
 // <tr>
-// <td><code>_ART</code></td>
+// <td><code>[de|het|een]</code></td>
 // <td><code className="prettify">/\b(de|het|een)\b/</code></td>
 // <td><p>describes an article (the/a)</p></td>
 // </tr>

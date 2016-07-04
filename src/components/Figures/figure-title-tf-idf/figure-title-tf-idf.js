@@ -42,7 +42,7 @@ export default class FigureTitleTfIdf extends React.Component {
                 section titles.
                 Stemming is performed using
                 the <a href="http://snowball.tartarus.org/algorithms/dutch/stemmer.html">Snowball algorithm for
-                Dutch</a>. '_NUM' and '_ART' stand for 'number' and 'article' (de/het/een), respectively.
+                Dutch</a>. '[NUMBER]' and '[de|het|een]' stand for 'number' and 'article' (de/het/een), respectively.
             </figcaption>
         </figure>;
     }

@@ -52,7 +52,7 @@ export default class IntroMotivation extends Component {
                 an overwhelmingly large portion of documents remains which contain no or
                 only sparse markup.
                 To illustrate: at the time of writing, 78.7% of all judgment texts on Rechtspraak.nl do not
-                contain any <code>section</code> tag, implying that a large amount of
+                contain any <code>section</code> tag, implying that a large number of
                 documents are barely marked up. Older case law documents still produce
                 legal knowledge, so it is desirable to have these
                 older documents in good

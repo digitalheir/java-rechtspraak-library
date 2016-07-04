@@ -14,8 +14,8 @@ const taggingSections = {
         title: "Conditional Random Fields",
     },
     featureSelection: {
-        id: 'feature-selection',
-        title: 'Feature Selection',
+        id: 'features',
+        title: 'Features',
     },
     deterministic: {
         id: 'deterministic-tagger',

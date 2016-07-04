@@ -44,9 +44,39 @@ const bib = {
         },
         booktitle: 'Intelligent Search on XML Data',
         pages: '159—174',
-        year: '2003',
+        year: 2003,
         publisher: 'Springer',
         href: 'http://www.is.informatik.uni-duisburg.de/bib/pdf/ir/Abolhassani_etal_03.pdf'
+    },
+    lafferty2001conditional: {
+        type: 'inproceedings',
+        id: 'lafferty2001conditional',
+        title: 'Conditional random fields: Probabilistic models for segmenting and labeling sequence data',
+        author: 'Lafferty, John and McCallum, Andrew and Pereira, Fernando',
+        booktitle: 'Proceedings of the eighteenth international conference on machine learning, ICML',
+        volume: '1',
+        pages: '282—289',
+        year: 2001
+    },
+    settles2004biomedical: {
+        type: 'inproceedings',
+        id: 'settles2004biomedical',
+        title: 'Biomedical named entity recognition using conditional random fields and rich feature sets',
+        author: 'Settles, Burr',
+        booktitle: 'Proceedings of the International Joint Workshop on Natural Language Processing in Biomedicine and its Applications',
+        pages: '104—107',
+        year: 2004,
+        organization: 'Association for Computational Linguistics'
+    },
+    sha2003shallow: {
+        type: 'inproceedings',
+        id: 'sha2003shallow',
+        title: 'Shallow parsing with conditional random fields',
+        author: 'Sha, Fei and Pereira, Fernando',
+        booktitle: 'Proceedings of the 2003 Conference of the North American Chapter of the Association for Computational Linguistics on Human Language Technology-Volume 1',
+        pages: '134—141',
+        year: 2003,
+        organization: 'Association for Computational Linguistics'
     },
     collins1997three: {
         id: 'collins1997three', type: 'inproceedings',
@@ -70,7 +100,7 @@ const bib = {
         },
         booktitle: 'Proceedings of the workshop on Speech and Natural Language',
         pages: '306—311',
-        year: '1991',
+        year: 1991,
         organization: 'Association for Computational Linguistics'
     },
     sakakibara1994stochastic: {
@@ -84,7 +114,7 @@ const bib = {
         volume: '22',
         number: '23',
         pages: '5112—5120',
-        year: '1994',
+        year: 1994,
         publisher: 'Oxford Univ Press'
     },
     jordan2002discriminative: {
@@ -122,7 +152,7 @@ const bib = {
             firstName: "Tadao",
             lastName: "Kasami"
         },
-        year: '1965',
+        year: 1965,
         institution: 'DTIC Document'
     },
 
@@ -132,7 +162,7 @@ const bib = {
         title: 'Introduction to the Theory of Computation',
         author: {lastName: 'Sipser', firstName: 'Michael'},
         volume: '2',
-        year: '2006',
+        year: 2006,
         publisher: 'Thomson Course Technology Boston'
     },
 
@@ -148,7 +178,7 @@ const bib = {
         volume: '3',
         number: '3',
         pages: '201—224',
-        year: '1971',
+        year: 1971,
         publisher: 'Elsevier'
     },
     lange2009cnf: {
@@ -162,14 +192,14 @@ const bib = {
         journal: 'Informatica Didactica',
         volume: '8',
         pages: '2008—2010',
-        year: '2009'
+        year: 2009
     },
     cocke1969programming: {
         id: 'cocke1969programming',
         type: 'article',
         title: 'Programming languages and their compilers: Preliminary notes',
         author: {lastName: 'Cocke', firstName: 'John'},
-        year: '1969',
+        year: 1969,
         publisher: 'Courant Institute of Mathematical Sciences, New York University'
     },
 
@@ -225,7 +255,7 @@ const bib = {
             abbr: "McCallum & Sutton",
             full: "Sutton, Charles and McCallum, Andrew"
         },
-        year: '2004',
+        year: 2004,
         school: 'Citeseer',
         href: 'http://homepages.inf.ed.ac.uk/csutton/publications/cscfg.pdf'
     },
@@ -241,7 +271,7 @@ const bib = {
         volume: '2',
         number: '4',
         pages: '211—229',
-        year: '1989',
+        year: 1989,
         href: 'http://cgis.cs.umd.edu/~ben/papers/Furuta1989Automatically.pdf'
     },
     bacci2009automatic: {
@@ -254,8 +284,19 @@ const bib = {
         },
         booktitle: 'Proc. of LOAIT Workshop',
         pages: '45—54',
-        year: '2009',
+        year: 2009,
         href: 'http://ceur-ws.org/Vol-465/paper6.pdf'
+    },
+    lucke1996stochastic: {
+        type: 'article', 
+        title: 'Which stochastic models allow Baum-Welch training?',
+        author: 'Lucke, Helmut',
+        journal: 'IEEE transactions on signal processing',
+        volume: '44',
+        number: '11',
+        pages: '2746—2756',
+        year: '1996',
+        publisher: 'IEEE'
     },
     sutton2006introduction: {
         id: 'sutton2006introduction',

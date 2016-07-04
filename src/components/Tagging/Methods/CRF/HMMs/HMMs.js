@@ -33,14 +33,13 @@ export default class CRF extends Component {
                 </li>
             </ol>
 
-            <p>A HMM is then a graphical model which factorizes as follows:
+            <p>A HMM is then a (generative) graphical model which factorizes as follows:
 
                 <F display="true"
                    l="p\left ( \mathbf x, \mathbf y\right ) = \prod _{t=1}^T p(x_t)p(y_t) = \prod _{t=1}^T p(x_t|y_t)p(y_t|y_{t-1})"/>
             </p>
 
             <p>
-                It can be shown that HMMs are generative models.
                 If we return to the representation of HMMs in <FigRef fig={figs.graphicalModels}/>, we see that
                 the
                 white nodes represent labels
@@ -56,8 +55,7 @@ export default class CRF extends Component {
                 typically use a set of known
                 observation-label sequences with a parameter estimation method such as the <a
                 className="wiki"
-                href="https://en.wikipedia.org/wiki/Baum%E2%80%93Welch_algorithm">Baum-Welch algorithm</a>[TODO
-                ref?].
+                href="https://en.wikipedia.org/wiki/Baum%E2%80%93Welch_algorithm">Baum-Welch algorithm</a> ({ref.cite(bib.lucke1996stochastic)}).
             </p>
         </div>;
     }

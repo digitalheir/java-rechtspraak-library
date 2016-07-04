@@ -44,8 +44,8 @@ export default class CRF extends Component {
             <p>
                 As illustrated in <FigRef fig={figs.graphicalModels}/>,
                 CRFs can be understood as a graphical version of logistic regression, in which we have an arbitrary
-                number of dependant variables that are conditioned on a number of explanatory
-                variables (instead of just one dependant variable).
+                number of dependent variables that are conditioned on a number of explanatory
+                variables (instead of just one dependent variable).
             </p>
 
 

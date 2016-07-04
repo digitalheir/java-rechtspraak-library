@@ -133,7 +133,7 @@ function getHandler(route) {
         //  Dissemination
         case Dissemination.dissemination.id:
             return Dissmination;
-        case Dissemination.relatedWork.id:
+        case sectionsIntroduction.relatedWork.id:
             return RelatedWork;
         case Dissemination.futureWork.id:
             return FutureWork;

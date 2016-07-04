@@ -5,15 +5,12 @@ const disseminationSections = {
     },dissemination: {
         id: 'dissemination',
         title: 'Dissemination'
-    },relatedWork: {
-        id: 'relatedWork',
-        title: 'Related Work'
     }
 };
 
 disseminationSections.inOrder = [
     disseminationSections.dissemination,
-    disseminationSections.relatedWork,
+    // disseminationSections.relatedWork,
     // disseminationSections.futureWork,
 ];
 export default disseminationSections;

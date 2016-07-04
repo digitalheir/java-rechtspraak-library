@@ -28,6 +28,7 @@ export default class Discussion extends Component {
                 all section are bold and capitalized, sub-sections are italic and sub-sub-sections
                 are underlined.
             </p>
+
             <p>
                 Owing to the brittleness of the current grammar,
                 we might benefit from implementing a
@@ -43,18 +44,16 @@ export default class Discussion extends Component {
             </p>
 
             <p>
-                A note also on runtime complexity: although the algorithm is polynomial,
-                it is slow, even after optimizing the algorithm for resource re-use
+                Another possibility is to implement a stochastic version of the Earley parsing
+                algorithm, a more top down parser which easily allows to intervene during
+                parsing when some unexpected input is encountered. Although
+                Earley parsers also have a worst-case complexity of <F l="O(n^3)"/>, it parses
+                left-recursive grammars in <F l="O(n)"/>, and is faster for certain grammars
+                than CYK.
+                In our experiments, CYK starts 
+                to become noticeably slow for documents with more than 500 tokens, 
+                even after optimizing the algorithm for resource re-use
                 and parallellizing calculation of the table cells.
-                Parsing the longest document in the corpus, which consists of
-                more than a 1000 elements, took about 10 minutes
-                on an Intel i7 quad-core CPU from 2010 running at 2.67GHz.
-            </p>
-            <p>
-                We might improve
-                running time by using a less naive parsing algorithm, such as
-                a shift-reduce parser, which runs linearly for any CFG
-                ({ref.cite(bib.zhu2013fast)}).
             </p>
         </div>;
     }

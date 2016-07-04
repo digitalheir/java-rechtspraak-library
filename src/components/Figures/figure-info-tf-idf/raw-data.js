@@ -1,6 +1,6 @@
 module.exports =
-    [{"term": "_NUM", "score": 863541.2613095865}, {"term": "_PUNCT", "score": 849119.0060654248}, {
-        "term": "_ART",
+    [{"term": "[NUMBER]", "score": 863541.2613095865}, {"term": "[PUNCTUATION]", "score": 849119.0060654248}, {
+        "term": "[de|het|een]",
         "score": 624798.3127026781
     }, {"term": ",", "score": 606224.7574059183}, {"term": "[", "score": 462440.5252064248}, {
         "term": "van",

@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import ref from '../../Bibliography/References/references'
 import bib from  '../../Bibliography/bib';
 
-export default class Conclusion extends Component {
+export default class RelatedWork extends Component {
     render() {
         return <div>
             <p>
