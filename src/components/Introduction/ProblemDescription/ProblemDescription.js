@@ -16,7 +16,7 @@ export default class ProblemDescription extends Component {
     }
 
     render() {
-        const relativeToRoot = this.props.path.match(/\//g).slice(1).map(_ => "../").join("");
+        //const relativeToRoot = this.props.path.match(/\//g).slice(1).map(_ => "../").join("");
 
         return <div>
             <div style={{pageBreakInside: 'avoid'}}>
@@ -28,16 +28,16 @@ export default class ProblemDescription extends Component {
                     We divide this problem in the following subtasks:
                 </p>
                 <ol>
-                    <li><a href={"#"+introSections.importing.id}>Importing documents from the Rechtspraak.nl web
+                    <li><a href={chapters.pathTo(this.props.path, chapters.importing)+"#"+introSections.importing.id}>Importing documents from the Rechtspraak.nl web
                         service;</a></li>
-                    <li><a href={"#"+introSections.importing.id}>Tokenizing relevant text elements;</a></li>
+                    <li><a href={chapters.pathTo(this.props.path, chapters.importing)+"#"+introSections.importing.id}>Tokenizing relevant text elements;</a></li>
                     <li><a href={chapters.pathTo(this.props.path, chapters.tagging)}>Labeling these text elements
                         with their respective roles (i.e. <code>section title</code>; <code>numbering</code>; <code>text
                             block</code>; <code>newline</code>);</a>
                     </li>
                     <li><a href={chapters.pathTo(this.props.path, chapters.documentStructure)}>
                         Combining the tokens in such a way that they represent the
-                        most likely section hierarchy;</a>
+                        most likely section hierarchy</a>
                     </li>
                     <li style={{display:'none'}}>
                         Publishing the resulting documents so that search engines

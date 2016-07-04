@@ -297,6 +297,7 @@ const bib = {
         href: 'http://ceur-ws.org/Vol-465/paper6.pdf'
     },
     lucke1996stochastic: {
+        id: 'lucke1996stochastic',
         type: 'article', 
         title: 'Which stochastic models allow Baum-Welch training?',
         author: 'Lucke, Helmut',

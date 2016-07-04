@@ -28,11 +28,11 @@ export default class ImportingAndTokenizing extends Component {
                 In this chapter, we provide an introduction to the Rechtspraak.nl data set that we
                 experiment on. We then make a number of
                 remarks on the necessary steps of importing and
-                tokenization that we perform on documents in the corpus
-                in order to create a collection of token instances that we
-                use in our experiments with labeling the document elements
-                and creating
-                a section hierarchy.
+                tokenization that we perform on documents in the corpus.
+                Importing and tokization are necessary pre-processing steps which
+                result in a collection of token sequences. These token sequences then serve as the input
+                for labeling the tokens as document elements,
+                and are eventually assigned as leaf nodes in a section tree.
             </p>
         </Chapter>
     }

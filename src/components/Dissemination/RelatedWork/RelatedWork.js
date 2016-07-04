@@ -38,8 +38,8 @@ export default class RelatedWork extends Component {
                 minor syntactical errors in the input, but catch common
                 issues. Legislative
                 texts tend to be more deeply nested than court judgments, but
-                also tend to have a much stricter structure, which is probably why
-                they use much less features than in this report.
+                also tend to have a much stricter structure, which explains why
+                they use much less features than we report.
             </p>
         </div>
     }

@@ -2,13 +2,13 @@
 import React, {Component} from 'react';
 import chapters from '../../../../chapters';
 import ChapterSectionContent from '../../Chapter/ChapterSectionContent';
-import ref from '../../../../Bibliography/References/references'
-import bib from  '../../../../Bibliography/bib';
+import ref from '../../Bibliography/References/references'
+import bib from  '../../Bibliography/bib';
 
 const methodsSections = {
     featureSelection: {
-        id: 'feature-selection',
-        title: "Feature Selection"
+        id: 'features',
+        title: "Features"
     },
     crf: {
         id: 'crf',

@@ -158,8 +158,8 @@ export default class Introduction extends Component {
                                 first descendant of
                                 a <code>section</code> element, and contain either a
                                 numbering or some text, or both. <code>title</code> elements
-                                may occur elsewhere, such above
-                                figures as labels, but we only
+                                may occur elsewhere, for example
+                                as labels for figures, but we only
                                 consider section titles in this thesis.
                             </p>
 
@@ -167,9 +167,6 @@ export default class Introduction extends Component {
                                 Titles are the most difficult elements
                                 to label, so we make
                                 a special effort to describe common title patterns.
-                            </p>
-
-                            <p>
                                 In <FigRef fig={figs.figTitleWordCount}/>, we see that if
                                 a <code>title</code> element contains text, it usually contains
                                 only a handful of words, with close to 99% of section titles
@@ -256,8 +253,8 @@ export default class Introduction extends Component {
                     called <a href="https://en.wikipedia.org/wiki/Java_Architecture_for_XML_Binding">
                     JAXB</a> to automatically marshall
                     and demarshall Rechtspraak.nl XML documents to and from Java objects.
-                    (Source code and schema
-                    available <a href="https://github.com/digitalheir/java-rechtspraak-library">on Github.</a>)
+                    Source code and schema
+                    are available <a href="https://github.com/digitalheir/java-rechtspraak-library">on Github.</a>
                 </p>
             </section>
         </div>

@@ -139,8 +139,8 @@ export default class CRF extends Component {
             <p>
                 It turns out that when we model a conditional distribution,
                 we have more parameter freedom for <F l="p(\mathbf y)"/>, because we are not interested
-                in parameter values for <F l="p( \mathbf x)"/>. Modeling <F l="p( \mathbf y|\mathbf x)"
-            /> unburdens us with modeling the potentially very complicated
+                in parameter values for <F l="p( \mathbf x)"/>. Modeling <F
+                l="p( \mathbf y|\mathbf x)"/> unburdens us with modeling the potentially very complicated
                 inter-dependencies of <F l="p(\mathbf x)"/>. In classification tasks,
                 this means that we are better able to use observations,
                 and so discriminative models tend to out-perform generative models in practice.
