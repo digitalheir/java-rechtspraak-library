@@ -31,9 +31,8 @@ export default class TaggingIntroduction extends Component {
                 Consider, for example,
                 a numbered enumeration of facts which might be considered a list or a section sequence.
 
-                For our purposes, we take the radical stance
-                to call a 'section' any semantic grouping of text that is headed by a title or a number,
-                inspired by the HTML5 definition of <code>section</code>:
+                For our purposes, we call a 'section' any semantic grouping of text that is headed by a title or 
+                a number, inspired by the HTML5 definition of <code>section</code>:
             </p>
 
             <blockquote cite="https://www.w3.org/TR/html5/sections.html#the-section-element">

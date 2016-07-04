@@ -52,7 +52,10 @@ const bib = {
         type: 'inproceedings',
         id: 'lafferty2001conditional',
         title: 'Conditional random fields: Probabilistic models for segmenting and labeling sequence data',
-        author: 'Lafferty, John and McCallum, Andrew and Pereira, Fernando',
+        author: {
+            abbr: "Lafferty et al.",
+            full: 'Lafferty, John and McCallum, Andrew and Pereira, Fernando'
+        },
         booktitle: 'Proceedings of the eighteenth international conference on machine learning, ICML',
         volume: '1',
         pages: '282—289',
@@ -62,7 +65,10 @@ const bib = {
         type: 'inproceedings',
         id: 'settles2004biomedical',
         title: 'Biomedical named entity recognition using conditional random fields and rich feature sets',
-        author: 'Settles, Burr',
+        author: {
+            firstName: "Settles",
+            lastName: 'Burr'
+        },
         booktitle: 'Proceedings of the International Joint Workshop on Natural Language Processing in Biomedicine and its Applications',
         pages: '104—107',
         year: 2004,
@@ -72,7 +78,10 @@ const bib = {
         type: 'inproceedings',
         id: 'sha2003shallow',
         title: 'Shallow parsing with conditional random fields',
-        author: 'Sha, Fei and Pereira, Fernando',
+        author: {
+            abbr: "Sha & Pereira",
+            full: 'Sha, Fei and Pereira, Fernando'
+        },
         booktitle: 'Proceedings of the 2003 Conference of the North American Chapter of the Association for Computational Linguistics on Human Language Technology-Volume 1',
         pages: '134—141',
         year: 2003,

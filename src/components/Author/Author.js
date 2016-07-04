@@ -16,7 +16,7 @@ export default class AuthorData extends Component {
         <div id="mail-link" className="author-line"><a href={ghUrl}
                                                        className="icon no-decoration"><i
           className="fa fa-envelope"> </i></a><a
-          href="m.f.a.trompper@uva.nl" itemProp="email" className="author-value">m.f.a.trompper@uva.nl</a>
+          href="maarten.trompper@gmail.com" itemProp="email" className="author-value">maarten.trompper@gmail.com</a>
         </div>
       </div>
     );
