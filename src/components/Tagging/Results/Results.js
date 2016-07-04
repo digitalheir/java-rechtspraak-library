@@ -53,7 +53,7 @@ export default class Results extends Component {
                 Our CRFs only consider one previous label, so the relationship
                 between the numbering and the title might not be represented well.
                 We see in <FigRef fig={figs.taggingResults}/> that
-                including newline tokens performs only slightly better than not
+                including newline tokens performs slightly better than not
                 including newlines.
             </p>
         </div>;

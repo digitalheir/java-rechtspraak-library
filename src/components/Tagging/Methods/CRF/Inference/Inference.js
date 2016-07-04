@@ -57,18 +57,18 @@ export default class FScorez extends Component {
                 the instance to label.
 
                 Luckily, Linear-Chain CRFs fulfil the optimal substructure property,
-                which means that we can memoize optimal sub-results and making the same
+                which means that we can memoize optimal sub-results and avoid making the same
                 calculation many times. We calculate the optimal path <F l="\delta_t(j)"/> at
                 time <F l="t"/> ending with <F l="j"/> recursively as follows:
             </p>
 
             <F display="truuu"
-               l="\delta_t(j) = \max_{i \in \mathbf y}\Phi_t(j,i,\mathbf x_t)\cdot \delta_{t-1}(i)"/>
+               l="\delta_t(j) = \max_{i \in \mathbf y}\Phi_t(j,i,x_t)\cdot \delta_{t-1}(i)"/>
 
             <p>
                 where the base case
             </p>
-            <F display="truuuu" l="\delta_0(j) = \max_{i \in \mathbf y}\Phi_t(j,i,\mathbf x_t)"/>
+            <F display="truuuu" l="\delta_0(j) = \max_{i \in \mathbf y}\Phi_t(j,i,x_t)"/>
             <p>
                 And store the results in a table. We then find the optimal
                 sequence by maximizing <F l="\delta_t(j)"/> at the end of
