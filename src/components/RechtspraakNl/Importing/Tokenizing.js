@@ -23,21 +23,20 @@ export default class Importing extends Component {
                 <li><code>newline</code>, for newlines</li>
             </ol>
             <p>
-                One
-                may of course invent any other combination of token types.
+                One may of course invent any other token type.
             </p>
             <p>
                 We should obviously tokenize the source
-                documents to tokens that might be labeled
+                documents to tokens that might be labeled with
                 any of the above token types.
                 In this regard, newlines are trivial to detect, and we assume
                 that Rechtspraak.nl has already done a job of splitting text blocks in <code>para</code> tags,
                 but numberings are often not annotated as such, and so
-                are part of a running text. In our parsing algorithm, we
+                are often unannotated strings in text nodes. In our parsing algorithm, we
                 assume that
                 numberings occur as the beginning of a text block and represents Arabic or Roman
-                numerals, alphabetic numbering, and
-                so potential numberings are tokenized.
+                numerals, alphabetic numbering. In this manner, we tokenize
+                potential numberings.
             </p>
 
             <p>
@@ -54,21 +53,22 @@ export default class Importing extends Component {
                 can be done efficiently with CRFs, as in {ref.cite(bib.bradley2010learning)},
                 but working with tree structures requires
                 a much more complicated pipeline.
-                So we ignore most of those 'higher-level' tags.
-
+                So for simplicity we ignore most of those 'higher-level' tags, at the cost of potentially
+                losing semantic mark up.
             </p>
+            
             <p>
                 To summarize: our tokenization algorithm
                 returns
                 a linear sequence of tokens, which serves as input for our tagging operation.
                 It is possible
-                that we lose some information in the tokenization process, although this may be
-                avoidable.
+                that we lose some information in the tokenization process, although this is
+                avoidable in theory.
             </p>
 
             <p>
-                In the next chapter, we explore how to tag a list of text elements with our four
-                target labels.
+                In the next chapter, we explore how to tag a list of text elements with the four
+                target labels introduced above.
             </p>
         </div>;
     }
