@@ -567,10 +567,10 @@ textarea {
 #title-page #title-page-author-name {
     font-size: 15pt;
     color: #222;
-    margin-bottom: 2in;
+    margin-bottom: 2.5in;
 }
 #title-page .title-page-supervisor.external {
-    margin-bottom: 1.0in;
+    margin-bottom: 2.0in;
 }
 #title-page .title-page-supervisor .name {
     color: #222;
@@ -723,6 +723,12 @@ pre {
 table {
     //width: 100%;
     border-collapse: collapse;
+}
+.grammar th {
+    color: #8E8E8E;
+}
+.grammar td {
+    border: none;
 }
 th, td {
     text-align: left;
@@ -929,6 +935,10 @@ hr {
     font-size: small;
 }
 @media print {
+    strike {
+        display: none;
+        /*TODO remove*/
+    }
     .data-source {
         display: none;
     }
@@ -943,6 +953,7 @@ hr {
     a, a:visited {
         color: #444;
     }
+    h1, h2, h3, h4, h5, h6 {}
 }
 @media (min-width: 768px) {
     .Layout {
