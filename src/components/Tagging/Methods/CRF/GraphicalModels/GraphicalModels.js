@@ -79,7 +79,8 @@ export default class CRF extends Component {
 
             <p>
                 <F l="Z"/> is called the partition function, because it normalizes
-                the function <F l="p"/> to ensure that <F l="\sum_{\mathbf x,\mathbf y} p(\mathbf x,\mathbf y)"/> sums to <F
+                the function <F l="p"/> to ensure that <F l="\sum_{\mathbf x,\mathbf y} p(\mathbf x,\mathbf y)"/> sums
+                to <F
                 l="1"/>. In general, computing <F l="Z"/> is intractable, because we
                 need to sum over all possible assignments <F l="\mathbf x"/> of input vectors
                 and all possible assignments <F l="\mathbf y"/> of output vectors.
@@ -109,19 +110,21 @@ export default class CRF extends Component {
             <FigImg relativeToRoot={relativeToRoot} width="55%" fig={figs.factorGraph}/>
 
             <p>
+                Hidden Markov Models are generative models, which is a subclass of directed models.
+            </p>
+
+            <p>
                 We define a directed model (or Bayesian Network) as a graphical model that factorizes as:
-                <F l="p( \mathbf x_A, \mathbf y_A)=\prod _{v\in V}p(v|\pi(v))" display="true"/>
-                where <F l="\pi(v)"/> are the parents of <F l="v"/> in <F l="G"/>. We shall see that
-                Hidden Markov Models are
+                <F l="p( \mathbf x, \mathbf y)=\prod _{v\in V}p(v|\pi(v))" display="true"/>
+                where <F l="\pi(v)"/> are the parents of <F l="v"/> in <F l="G"/>.
             </p>
 
             <p>
                 We define generative models as directed models in which all
-                labels <F l="y \in Y"/> are parents of <F l="x\in X"/>. This name is due
+                label variables <F l="y \in Y"/> are parents of the input variables <F l="x\in X"/>. This name is due
                 to the labels "generating" the output: the labels are the contingencies upon which the
                 probability of the output depends.
             </p>
-
 
             <p>
                 When we describe the probability distribution <F l="p( \mathbf y|\mathbf x)"/>,
