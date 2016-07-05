@@ -23126,6 +23126,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement('meta', { name: 'viewport', content: 'width=device-width, initial-scale=1' }),
 	                    _react2.default.createElement('link', { rel: 'apple-touch-icon', href: 'apple-touch-icon.png' }),
 	                    _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Noto+Sans' }),
+	                    _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' }),
 	                    _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css' }),
 	                    _react2.default.createElement('link', { rel: 'stylesheet', href: relativeToRoot + "style.css" })
 	                ),
@@ -23308,6 +23309,71 @@ return /******/ (function(modules) { // webpackBootstrap
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } //noinspection JSUnresolvedVariable
 
 
+	function getNameElement(citation) {
+	    // TODO schema author prop
+	    var nameStr = citation.author.full;
+	    if (!citation.author.full) {
+	        nameStr = citation.author.lastName + (citation.author.firstName ? ", " + citation.author.firstName : "");
+	    }
+	    if (nameStr) {
+	        nameStr = _react2.default.createElement(
+	            'span',
+	            { className: 'ref-author' },
+	            nameStr
+	        );
+	    }
+	    return nameStr;
+	}
+
+	function createCitation(citation, i) {
+	    if (!citation.id) throw new Error("Citation has no id: " + citation.title);
+
+	    var name = getNameElement(citation);
+	    var publication = citation.journal ? _react2.default.createElement(
+	        'span',
+	        null,
+	        _react2.default.createElement(
+	            'cite',
+	            { style: { fontStyle: 'normal' },
+	                className: 'ref-journal' },
+	            citation.journal
+	        ),
+	        '.'
+	    ) : "";
+	    return _react2.default.createElement(
+	        'li',
+	        { itemProp: 'citation',
+	            itemScope: true,
+	            itemType: 'http://schema.org/CreativeWork',
+	            key: i,
+	            id: citation.id.toString(),
+	            className: 'ref' },
+	        name,
+	        ' (',
+	        _react2.default.createElement(
+	            'time',
+	            { dateTime: citation.year, className: 'ref-year' },
+	            citation.year
+	        ),
+	        '). ',
+	        _react2.default.createElement(
+	            'cite',
+	            null,
+	            _react2.default.createElement(
+	                'a',
+	                { href: citation.href },
+	                _react2.default.createElement(
+	                    'span',
+	                    { itemProp: 'name' },
+	                    citation.title
+	                )
+	            )
+	        ),
+	        '. ',
+	        publication
+	    );
+	}
+
 	var Bibl = function (_Component) {
 	    _inherits(Bibl, _Component);
 
@@ -23331,62 +23397,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'ol',
 	                    { id: 'reference-list' },
-	                    _underscore2.default.map(_bib2.default, function (citation, i) {
-	                        var nameStr = citation.author.full;
-	                        if (!citation.id) throw new Error("Citation has no id: " + citation.title);
-	                        if (!citation.author.full) {
-	                            nameStr = citation.author.lastName + (citation.author.firstName ? ", " + citation.author.firstName : "");
-	                        }
-	                        if (nameStr) {
-	                            nameStr = _react2.default.createElement(
-	                                'span',
-	                                { className: 'ref-author' },
-	                                nameStr
-	                            );
-	                        }
-	                        var publication = citation.journal ? _react2.default.createElement(
-	                            'span',
-	                            null,
-	                            _react2.default.createElement(
-	                                'span',
-	                                { className: 'ref-journal' },
-	                                citation.journal
-	                            ),
-	                            '.'
-	                        ) : "";
-	                        return _react2.default.createElement(
-	                            'li',
-	                            { itemProp: 'citation',
-	                                itemScope: true,
-	                                itemType: 'http://schema.org/CreativeWork',
-	                                key: i,
-	                                id: citation.id.toString(),
-	                                className: 'ref' },
-	                            nameStr,
-	                            ' (',
-	                            _react2.default.createElement(
-	                                'time',
-	                                { dateTime: citation.year, className: 'ref-year' },
-	                                citation.year
-	                            ),
-	                            '). ',
-	                            _react2.default.createElement(
-	                                'cite',
-	                                null,
-	                                _react2.default.createElement(
-	                                    'a',
-	                                    { href: citation.href },
-	                                    _react2.default.createElement(
-	                                        'span',
-	                                        { itemProp: 'name' },
-	                                        citation.title
-	                                    )
-	                                )
-	                            ),
-	                            '. ',
-	                            publication
-	                        );
-	                    })
+	                    _underscore2.default.map(_bib2.default, createCitation)
 	                )
 	            );
 	        }
@@ -25014,7 +25025,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	        type: 'inproceedings',
 	        id: 'lafferty2001conditional',
 	        title: 'Conditional random fields: Probabilistic models for segmenting and labeling sequence data',
-	        author: 'Lafferty, John and McCallum, Andrew and Pereira, Fernando',
+	        author: {
+	            abbr: "Lafferty et al.",
+	            full: 'Lafferty, John and McCallum, Andrew and Pereira, Fernando'
+	        },
 	        booktitle: 'Proceedings of the eighteenth international conference on machine learning, ICML',
 	        volume: '1',
 	        pages: '282—289',
@@ -25024,7 +25038,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	        type: 'inproceedings',
 	        id: 'settles2004biomedical',
 	        title: 'Biomedical named entity recognition using conditional random fields and rich feature sets',
-	        author: 'Settles, Burr',
+	        author: {
+	            firstName: "Settles",
+	            lastName: 'Burr'
+	        },
 	        booktitle: 'Proceedings of the International Joint Workshop on Natural Language Processing in Biomedicine and its Applications',
 	        pages: '104—107',
 	        year: 2004,
@@ -25034,7 +25051,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	        type: 'inproceedings',
 	        id: 'sha2003shallow',
 	        title: 'Shallow parsing with conditional random fields',
-	        author: 'Sha, Fei and Pereira, Fernando',
+	        author: {
+	            abbr: "Sha & Pereira",
+	            full: 'Sha, Fei and Pereira, Fernando'
+	        },
 	        booktitle: 'Proceedings of the 2003 Conference of the North American Chapter of the Association for Computational Linguistics on Human Language Technology-Volume 1',
 	        pages: '134—141',
 	        year: 2003,
@@ -25613,8 +25633,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	          _react2.default.createElement(
 	            "a",
 	            {
-	              href: "m.f.a.trompper@uva.nl", itemProp: "email", className: "author-value" },
-	            "m.f.a.trompper@uva.nl"
+	              href: "maarten.trompper@gmail.com", itemProp: "email", className: "author-value" },
+	            "maarten.trompper@gmail.com"
 	          )
 	        )
 	      );
@@ -59199,11 +59219,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'Intuitively, ',
 	                    _react2.default.createElement(_Math2.default, { l: 'p( \\mathbf x, \\mathbf y)' }),
 	                    ' describes the joint probability of input and output vectors in terms of some set of functions ',
-	                    _react2.default.createElement(_Math2.default, {
-	                        l: 'F = \\{  \\Phi_A\\}' }),
-	                    ', collectively known as the factors. We will see that these factors wrap feature values (for example, ',
-	                    _react2.default.createElement(_Math2.default, { l: '1' }),
-	                    ' if a word is capitalized), multiplied together. The normalization term ',
+	                    _react2.default.createElement(
+	                        'span',
+	                        null,
+	                        _react2.default.createElement(_Math2.default, {
+	                            l: 'F = \\{  \\Phi_A\\}' })
+	                    ),
+	                    ', collectively known as the factors. The normalization term ',
 	                    _react2.default.createElement(_Math2.default, { l: 'Z' }),
 	                    ' ensures that the probability function ranges between ',
 	                    _react2.default.createElement(_Math2.default, { l: '0' }),
@@ -59211,12 +59233,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(_Math2.default, { l: '1' }),
 	                    ': it sums every possible value of the the multiplied factors. ',
 	                    _react2.default.createElement(_Math2.default, { l: '\\Phi_A \\in F' }),
-	                    ' can be any function from ',
+	                    ' can be any function from with parameters of input and output variables ',
 	                    _react2.default.createElement(_Math2.default, { l: 'A \\subset V' }),
 	                    ' to a positive real number, i.e. ',
 	                    _react2.default.createElement(_Math2.default, { l: '\\Phi_A:A\\rightarrow\\ \\mathbb{R}^+' }),
-	                    '. Individually the functions ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\Phi_A \\in F' }),
+	                    ', but we will see use these factors to multiple feature values by some weight constant. Individually the functions ',
+	                    _react2.default.createElement(_Math2.default, { l: '\\mathcal{V}^{|\\Phi_A|} \\in F' }),
 	                    ' are known as local functions or compatibility functions.'
 	                ),
 	                _react2.default.createElement(
@@ -59233,7 +59255,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ' is called the partition function, because it normalizes the function ',
 	                    _react2.default.createElement(_Math2.default, { l: 'p' }),
 	                    ' to ensure that ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\sum_A p(\\mathbf x_A,\\mathbf y_A)' }),
+	                    _react2.default.createElement(_Math2.default, { l: '\\sum_{\\mathbf x,\\mathbf y} p(\\mathbf x,\\mathbf y)' }),
 	                    ' sums to ',
 	                    _react2.default.createElement(_Math2.default, {
 	                        l: '1' }),
@@ -59252,7 +59274,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    null,
 	                    'The factorization of the function for ',
 	                    _react2.default.createElement(_Math2.default, {
-	                        l: 'p( \\mathbf x_A,\\mathbf y_A)' }),
+	                        l: 'p( \\mathbf x,\\mathbf y)' }),
 	                    ' can be represented as graph, called a ',
 	                    _react2.default.createElement(
 	                        'a',
@@ -59291,22 +59313,27 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
+	                    'Hidden Markov Models are generative models, which is a subclass of directed models.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
 	                    'We define a directed model (or Bayesian Network) as a graphical model that factorizes as:',
-	                    _react2.default.createElement(_Math2.default, { l: 'p( \\mathbf x_A, \\mathbf y_A)=\\prod _{v\\in V}p(v|\\pi(v))', display: 'true' }),
+	                    _react2.default.createElement(_Math2.default, { l: 'p( \\mathbf x, \\mathbf y)=\\prod _{v\\in V}p(v|\\pi(v))', display: 'true' }),
 	                    'where ',
 	                    _react2.default.createElement(_Math2.default, { l: '\\pi(v)' }),
 	                    ' are the parents of ',
 	                    _react2.default.createElement(_Math2.default, { l: 'v' }),
 	                    ' in ',
 	                    _react2.default.createElement(_Math2.default, { l: 'G' }),
-	                    '. We shall see that Hidden Markov Models are'
+	                    '.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'We define generative models as directed models in which all labels ',
+	                    'We define generative models as directed models in which all label variables ',
 	                    _react2.default.createElement(_Math2.default, { l: 'y \\in Y' }),
-	                    ' are parents of ',
+	                    ' are parents of the input variables ',
 	                    _react2.default.createElement(_Math2.default, { l: 'x\\in X' }),
 	                    '. This name is due to the labels "generating" the output: the labels are the contingencies upon which the probability of the output depends.'
 	                ),
@@ -59428,10 +59455,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'p',
 	                    null,
 	                    'Hidden Markov Models (HMMs) are a subclass of graphical models in which we model a linear sequence of observations ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf x=\\{x_t\\}_{t=1}^T' }),
+	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf x=\\{\\mathbf x_t\\}_{t=1}^T' }),
 	                    ' that are assumed to be generated by a sequence of hidden states ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf y=\\{y_t\\}_{t=1}^T' }),
-	                    '. One example of an application would be spoken word recognition, in which samples of the sound waves can be seen as observations, and the actual phonemes as the hidden states.'
+	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf y=\\{\\mathbf y_t\\}_{t=1}^T' }),
+	                    '. One example of an application would be speech recognition, in which samples of the sound waves can be seen as observations, and the actual phonemes as the hidden states.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -59451,11 +59478,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            'label'
 	                        ),
 	                        ') ',
-	                        _react2.default.createElement(_Math2.default, { l: 'y_t' }),
+	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf y_t' }),
 	                        ' only depends on ',
-	                        _react2.default.createElement(_Math2.default, { l: 'y_{t-1}' }),
+	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf y_{t-1}' }),
 	                        ', where the initial probability ',
-	                        _react2.default.createElement(_Math2.default, { l: 'p(y_{1})' }),
+	                        _react2.default.createElement(_Math2.default, { l: 'p(\\mathbf y_{1})' }),
 	                        ' is given'
 	                    ),
 	                    _react2.default.createElement(
@@ -59468,13 +59495,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            'observation'
 	                        ),
 	                        ') ',
-	                        _react2.default.createElement(_Math2.default, { l: 'x_t' }),
+	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf x_t' }),
 	                        ' only depends on the label ',
-	                        _react2.default.createElement(_Math2.default, { l: 'y_t' }),
+	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf y_t' }),
 	                        '; the observation ',
-	                        _react2.default.createElement(_Math2.default, { l: 'x_t' }),
+	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf x_t' }),
 	                        ' is generated by label ',
-	                        _react2.default.createElement(_Math2.default, { l: 'y_t' }),
+	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf y_t' }),
 	                        '.'
 	                    )
 	                ),
@@ -59500,10 +59527,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'p',
 	                    null,
 	                    'To find plausible values of ',
-	                    _react2.default.createElement(_Math2.default, { l: 'p(x_t|y_t)' }),
+	                    _react2.default.createElement(_Math2.default, { l: 'p(\\mathbf x_t|\\mathbf y_t)' }),
 	                    ' and ',
-	                    _react2.default.createElement(_Math2.default, { l: 'p(y_t|y_{t-1})' }),
-	                    ', we typically use a set of known observation-label sequences with a parameter estimation method such as the ',
+	                    _react2.default.createElement(_Math2.default, { l: 'p(\\mathbf y_t|\\mathbf y_{t-1})' }),
+	                    ', we typically use a set of pre-tagged observation-label sequences and perform a parameter estimation method such as the ',
 	                    _react2.default.createElement(
 	                        'a',
 	                        {
@@ -59620,9 +59647,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(
 	                        'li',
 	                        null,
-	                        _react2.default.createElement(_Math2.default, { l: 'Y,X' }),
-	                        ' be random vectors taking valuations from ',
-	                        _react2.default.createElement(_Math2.default, { l: '\\mathcal{V}' })
+	                        _react2.default.createElement(_Math2.default, { l: 'Y, X' }),
+	                        ' still be random vectors taking valuations from ',
+	                        _react2.default.createElement(_Math2.default, { l: '\\mathcal{V}' }),
+	                        ', and ',
+	                        _react2.default.createElement(_Math2.default, { l: 'V=Y\\cup X' })
 	                    ),
 	                    _react2.default.createElement(
 	                        'li',
@@ -59636,12 +59665,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'Where each local function ',
+	                    'Each local function ',
 	                    _react2.default.createElement(_Math2.default, {
 	                        display: false,
-	                        l: '\\Phi_{k,t}(\\mathbf x,\\mathbf y)=\\lambda_{k} f_{k}(\\mathbf y_{t},\\mathbf y_{t-1},\\mathbf x_t)'
+	                        l: '\\Phi_{k}(\\mathbf x_t,\\mathbf y_t,\\mathbf y_{t-1}) = \\lambda_{k} f_{k}(\\mathbf y_{t},\\mathbf y_{t-1},\\mathbf x_t)'
 	                    }),
-	                    ' for some'
+	                    ' where'
 	                ),
 	                _react2.default.createElement(
 	                    'ul',
@@ -59661,8 +59690,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        ' is the current observation and ',
 	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf y_t' }),
 	                        ' is the current label, and ',
-	                        _react2.default.createElement(_Math2.default, { l: 'y_{t-1}' }),
-	                        ' is the previous label.'
+	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf y_{t-1}' }),
+	                        ' is the previous label, with some null value for ',
+	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf y_0' }),
+	                        '.'
 	                    ),
 	                    _react2.default.createElement(
 	                        'li',
@@ -59680,9 +59711,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
+	                    'For notational ease, we may shorten ',
+	                    _react2.default.createElement(_Math2.default, {
+	                        l: '\\Phi_{k}(\\mathbf x_t,\\mathbf y_t,\\mathbf y_{t-1})' }),
+	                    ' as ',
+	                    _react2.default.createElement(_Math2.default, {
+	                        l: '\\Phi_{k,t}' }),
+	                    '.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
 	                    'We then define the un-normalized CRF distribution as:',
 	                    _react2.default.createElement(_Math2.default, {
-	                        l: '\\hat{p}(\\mathbf x, \\mathbf y)=\\prod_{t=1}^T\\prod_{k=1}^K\\Phi_{k,t}(\\mathbf x, \\mathbf y)',
+	                        l: '\\hat{p}(\\mathbf x, \\mathbf y)=\\prod_{t=1}^T\\prod_{k=1}^K\\Phi_{k,t}(\\mathbf x_t, \\mathbf y_t, \\mathbf y_{t-1})',
 	                        displayMode: true })
 	                ),
 	                _react2.default.createElement(
@@ -59864,7 +59906,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(_Math2.default, { l: 'M' }),
 	                    ' is the number of possible labels, and ',
 	                    _react2.default.createElement(_Math2.default, { l: 'T' }),
-	                    ' is the length of the instance to label. Luckily, Linear-Chain CRFs fulfil the optimal substructure property, which means that we can memoize optimal sub-results and making the same calculation many times. We calculate the optimal path ',
+	                    ' is the length of the instance to label. Luckily, Linear-Chain CRFs fulfil the optimal substructure property, which means that we can memoize optimal sub-results and avoid making the same calculation many times. We calculate the optimal path ',
 	                    _react2.default.createElement(_Math2.default, { l: '\\delta_t(j)' }),
 	                    ' at time ',
 	                    _react2.default.createElement(_Math2.default, { l: 't' }),
@@ -59873,13 +59915,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ' recursively as follows:'
 	                ),
 	                _react2.default.createElement(_Math2.default, { display: 'truuu',
-	                    l: '\\delta_t(j) = \\max_{i \\in \\mathbf y}\\Phi_t(j,i,\\mathbf x_t)\\cdot \\delta_{t-1}(i)' }),
+	                    l: '\\delta_t(j) = \\max_{i \\in \\mathbf y}\\Phi_t(j,i,x_t)\\cdot \\delta_{t-1}(i)' }),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
 	                    'where the base case'
 	                ),
-	                _react2.default.createElement(_Math2.default, { display: 'truuuu', l: '\\delta_0(j) = \\max_{i \\in \\mathbf y}\\Phi_t(j,i,\\mathbf x_t)' }),
+	                _react2.default.createElement(_Math2.default, { display: 'truuuu', l: '\\delta_0(j) = \\max_{i \\in \\mathbf y}\\Phi_t(j,i,x_t)' }),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
@@ -59992,10 +60034,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(_Math2.default, { l: 'i' }),
 	                    ' indexes an example instance: ',
 	                    _react2.default.createElement(_Math2.default, {
-	                        l: '\\mathbf{x}^{i}=\\{x^{i}_1, x^{i}_2, \\cdots, x^{i}_T\\}'
+	                        l: '\\mathbf{x}^{i}=\\{\\mathbf x^{i}_1, \\mathbf x^{i}_2, \\cdots, \\mathbf x^{i}_T\\}'
 	                    }),
 	                    ' is a set of input tokens, and ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf{y}^{i}=\\{y^{i}_1, y^{i}_2, \\cdots, y^{i}_T\\}'
+	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf{y}^{i}=\\{\\mathbf y^{i}_1, \\mathbf y^{i}_2, \\cdots, \\mathbf y^{i}_T\\}'
 	                    }),
 	                    ' is a set of output tags for instance length ',
 	                    _react2.default.createElement(_Math2.default, { l: 'T' }),
@@ -60024,7 +60066,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'Simplifying, we have:'
 	                ),
 	                _react2.default.createElement(_Math2.default, { display: 'true',
-	                    l: '\\ell(\\Lambda) = \\sum_{i=1}^N\\sum_{t=1}^T\\sum_{k=1}^K \\lambda_kf_k(y^i_t,y^i_{t-1},\\mathbf x^i_t)-\\sum_{i=1}^N\\log{Z(\\mathbf x^i})' }),
+	                    l: '\\ell(\\Lambda) = \\sum_{i=1}^N\\sum_{t=1}^T\\sum_{k=1}^K \\lambda_kf_k(\\mathbf y^i_t,\\mathbf y^i_{t-1},\\mathbf x^i_t)-\\sum_{i=1}^N\\log{Z(\\mathbf x^i})' }),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
@@ -60051,7 +60093,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(_Math2.default, { l: '\\Lambda' }),
 	                    ':'
 	                ),
-	                _react2.default.createElement(_Math2.default, { display: 'true', l: '\\frac{\\partial\\ell}{\\partial\\lambda_k} = \\sum_{i=1}^N\\sum_{t=1}^Tf_k(y_t^i,y_{t-1}^i,x_t^i) -\\sum_{i=1}^N\\sum_{t=1}^T\\sum_{y,y\'}f_k(y,y,\\mathbf x_t^i) p(y,y\'|\\mathbf x^i)-\\sum_{k=1}^K\\frac{\\lambda_k}{\\sigma^2} ' }),
+	                _react2.default.createElement(_Math2.default, { display: 'true', l: '\\frac{\\partial\\ell}{\\partial\\lambda_k} = \\sum_{i=1}^N\\sum_{t=1}^Tf_k(\\mathbf y_t^i,\\mathbf y_{t-1}^i,\\mathbf x_t^i) -\\sum_{i=1}^N\\sum_{t=1}^T\\sum_{\\mathbf y,\\mathbf y\'}f_k(y,y,\\mathbf x_t^i) p(y,y\'|\\mathbf x^i)-\\sum_{k=1}^K\\frac{\\lambda_k}{\\sigma^2} ' }),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
@@ -60320,7 +60362,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    null,
 	                    'We include the newline condition, because including newlines could either positively or negatively affect performance. On the one hand, newlines carry semantic information information: the author thought it appropriate to demarcate something with whitespace. But on the other hand they might obscure information about the previous label. Consider a numbering, followed by a newline, followed by a section title. Our CRFs only consider one previous label, so the relationship between the numbering and the title might not be represented well. We see in ',
 	                    _react2.default.createElement(_FigRef2.default, { fig: _figs2.default.taggingResults }),
-	                    ' that including newline tokens performs only slightly better than not including newlines.'
+	                    ' that including newline tokens performs slightly better than not including newlines.'
 	                )
 	            );
 	        }
@@ -60790,7 +60832,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'Even as a human reader, it can be hard to distinguish what should properly be called a section, and so what is a section heading. So there is some subjectivity involved in tagging. Consider, for example, a numbered enumeration of facts which might be considered a list or a section sequence. For our purposes, we take the radical stance to call a \'section\' any semantic grouping of text that is headed by a title or a number, inspired by the HTML5 definition of ',
+	                    'Even as a human reader, it can be hard to distinguish what should properly be called a section, and so what is a section heading. So there is some subjectivity involved in tagging. Consider, for example, a numbered enumeration of facts which might be considered a list or a section sequence. For our purposes, we call a \'section\' any semantic grouping of text that is headed by a title or a number, inspired by the HTML5 definition of ',
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -61050,14 +61092,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'This abundance of features likely explains that CRFs tend to have state-of-the-art performance on NLP tasks such as part-of-speech tagging, since this kind of performance appears to depend on extensive feature engineering. As a downside, it is more likely that a model overfits to a particular corpus, and so suffers in portability with respect to other copora. (Consider ',
+	                    'This abundance of features likely explains that CRFs tend to have state-of-the-art performance on NLP tasks such as part-of-speech tagging, since this kind of performance appears to depend on extensive feature engineering. As a downside, it is more likely that a model overfits to a particular corpus, and so suffers in portability with respect to other copora. Consider ',
 	                    _references2.default.cite(_bib2.default.finkel2004exploiting),
-	                    '.) In our case, this is likely not a problem because we train explicitly for one corpus, and do not aspire to full language abstraction.'
+	                    '. In our case, overfitting is likely not a problem because we train explicitly for one corpus, and do not aspire to full language abstraction.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'In this section, we provide a definition of Linear-Chain Conditional Random Fields, supported first by introductory sections on ',
+	                    'In the following, we provide a definition of Linear-Chain Conditional Random Fields, supported first by introductory sections on ',
 	                    _react2.default.createElement(
 	                        'a',
 	                        { href: "#" + _GraphicalModels2.default.id() },
@@ -61626,7 +61668,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'A Probabilistic Context Free Grammar (PCFG) is then a Context Free Grammar in which each rule has a probability assigned to it, and every application of a rule multiplies its probability with the probabilities of all previously applied rules.'
+	                    'A Probabilistic Context Free Grammar (PCFG) is then a Context Free Grammar in which each rule has a probability assigned to it, which may actually be any semiring (in our case, a real number between ',
+	                    _react2.default.createElement(_Math2.default, { l: '0' }),
+	                    ' and ',
+	                    _react2.default.createElement(_Math2.default, { l: '1' }),
+	                    '). A derivation of a sequence with a PCFG has a score attached to it, which is the product of the probabilities of all applied rule.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -61646,7 +61692,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(_Math2.default, { l: 'C' }),
 	                    ' are non-terminal types, and ',
 	                    _react2.default.createElement(_Math2.default, { l: 't' }),
-	                    ' is a terminal type (meaning it\'s always on the right hand side of a rule).'
+	                    ' is a terminal type.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -62398,7 +62444,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        ),
 	                        ' An example parse chart for the sentence "fish people fish tanks", based on the grammar in ',
 	                        _react2.default.createElement(_ListingRef2.default, { listing: nlpGrammar }),
-	                        'The constituents that make up the resulting parse to ',
+	                        '. The constituents that make up the resulting parse to ',
 	                        _react2.default.createElement(
 	                            'code',
 	                            null,
@@ -63228,7 +63274,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    if (found) {
 	                        return _react2.default.createElement(
 	                            'p',
-	                            { className: 'link-to-next-chapter' },
+	                            { className: 'link-to- next-chapter' },
 	                            'Next chapter: ',
 	                            _react2.default.createElement(
 	                                'a',
@@ -63256,7 +63302,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	                }
 	            }
 
-	            return "";
+	            var relativeToRoot = this.props.path.match(/\//g).slice(1).map(function (_) {
+	                return "../";
+	            }).join("");
+
+	            return _react2.default.createElement(
+	                'p',
+	                { className: 'link-to- home' },
+	                _react2.default.createElement(
+	                    'a',
+	                    { href: relativeToRoot },
+	                    'Back to home'
+	                )
+	            );
 	        }
 	    }]);
 
