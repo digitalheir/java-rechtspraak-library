@@ -59,12 +59,12 @@ export default class CRF extends Component {
                 normalization term <F l="Z"/> ensures that the
                 probability function ranges between <F l="0"/> and <F l="1"/>: it sums every possible value
                 of the the multiplied factors. <F l="\Phi_A \in F"/> can be any function
-                from a subset of input and output variables <F l="A \subset V"/> to
+                from with parameters of input and output variables <F l="A \subset V"/> to
                 a positive real number,
                 i.e. <F l="\Phi_A:A\rightarrow\ \mathbb{R}^+"/>,
                 but we will see use these factors to multiple feature values
                 by some weight constant. Individually the
-                functions <F l="\Phi_A \in F"/> are known as local
+                functions <F l="\mathcal{V}^{|\Phi_A|} \in F"/> are known as local
                 functions or compatibility functions.
             </p>
             <p>

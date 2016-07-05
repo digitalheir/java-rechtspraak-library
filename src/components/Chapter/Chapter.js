@@ -32,7 +32,7 @@ export default class Chapter extends React.Component {
         let found = false;
         for (const chapter of chapters.inOrder) {
             if (found) {
-                return <p className="link-to-next-chapter">
+                return <p className="link-to- next-chapter">
                     Next chapter: <a href={chapters.pathTo(this.props.path,chapter)}>{chapter.title}</a>
                 </p>
             }
@@ -40,7 +40,12 @@ export default class Chapter extends React.Component {
                 found = true;
             }
         }
-        return "";
+
+        const relativeToRoot = this.props.path.match(/\//g).slice(1).map(_ => "../").join("");
+
+        return <p className="link-to- home">
+            <a href={relativeToRoot}>Back to home</a>
+        </p>;
     }
 }
 Chapter.propTypes = {

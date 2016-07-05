@@ -100,7 +100,7 @@ export default class CYK extends Component {
                 <figcaption>
                     <span className="figure-number">Fig {parseFig.num}.</span> An example parse chart for the
                     sentence
-                    "fish people fish tanks", based on the grammar in <ListingRef listing={nlpGrammar}/>
+                    "fish people fish tanks", based on the grammar in <ListingRef listing={nlpGrammar}/>.
                     The constituents that make up the resulting parse
                     to <code>S</code> are marked in bold.
                     The top of the triangle represents the

@@ -19,8 +19,11 @@ export default class ContextFreeGrammars extends Component {
             </p>
             <p>
                 A Probabilistic Context Free Grammar (PCFG) is then a Context Free Grammar in which each rule
-                has a probability assigned to it, and every application of a rule multiplies its probability
-                with the probabilities of all previously applied rules.
+                has a probability assigned to it, which may actually be any semiring (in our case,
+                a real number between <F l="0"/> and <F l="1"/>).
+                A derivation
+                of a sequence with a PCFG has a score attached to it, which is the product of
+                the probabilities of all applied rule.
             </p>
 
             <p>
@@ -31,7 +34,7 @@ export default class ContextFreeGrammars extends Component {
             <F l="A\rightarrow t" display="true"/>
 
             <p>Where <F l="A"/>, <F l="B"/> and <F l="C"/> are non-terminal types, and <F l="t"/> is a
-                terminal type (meaning it's always on the right hand side of a rule).
+                terminal type.
             </p>
 
             <p>

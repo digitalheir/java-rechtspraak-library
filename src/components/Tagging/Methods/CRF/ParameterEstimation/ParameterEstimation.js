@@ -24,9 +24,9 @@ export default class ParameterEstimation extends Component {
                 pairs <F l="\mathcal D=\{\mathbf{x}^{i},\mathbf{y}^{i}\}_{i=1}^N"
             /> where each <F l="i"/> indexes an example
                 instance: <F
-                l="\mathbf{x}^{i}=\{x^{i}_1, x^{i}_2, \cdots, x^{i}_T\}"
+                l="\mathbf{x}^{i}=\{\mathbf x^{i}_1, \mathbf x^{i}_2, \cdots, \mathbf x^{i}_T\}"
             /> is a set of input tokens,
-                and <F l="\mathbf{y}^{i}=\{y^{i}_1, y^{i}_2, \cdots, y^{i}_T\}"
+                and <F l="\mathbf{y}^{i}=\{\mathbf y^{i}_1, \mathbf y^{i}_2, \cdots, \mathbf y^{i}_T\}"
             /> is a set of output tags for instance length <F l="T"/>.
             </p>
             <p>
@@ -49,7 +49,7 @@ export default class ParameterEstimation extends Component {
             <p>Simplifying, we have:</p>
             <F display="true"
                l="\ell(\Lambda) = \sum_{i=1}^N\sum_{t=1}^T\sum_{k=1}^K
-               \lambda_kf_k(y^i_t,y^i_{t-1},\mathbf x^i_t)-\sum_{i=1}^N\log{Z(\mathbf x^i})"/>
+               \lambda_kf_k(\mathbf y^i_t,\mathbf y^i_{t-1},\mathbf x^i_t)-\sum_{i=1}^N\log{Z(\mathbf x^i})"/>
 
 
             <p>
@@ -83,8 +83,8 @@ export default class ParameterEstimation extends Component {
             </p>
 
             <F display="true" l="\frac{\partial\ell}{\partial\lambda_k} =
-            \sum_{i=1}^N\sum_{t=1}^Tf_k(y_t^i,y_{t-1}^i,x_t^i)
-            -\sum_{i=1}^N\sum_{t=1}^T\sum_{y,y'}f_k(y,y,\mathbf x_t^i)
+            \sum_{i=1}^N\sum_{t=1}^Tf_k(\mathbf y_t^i,\mathbf y_{t-1}^i,\mathbf x_t^i)
+            -\sum_{i=1}^N\sum_{t=1}^T\sum_{\mathbf y,\mathbf y'}f_k(y,y,\mathbf x_t^i)
            p(y,y'|\mathbf x^i)-\sum_{k=1}^K\frac{\lambda_k}{\sigma^2}
             "/>
 

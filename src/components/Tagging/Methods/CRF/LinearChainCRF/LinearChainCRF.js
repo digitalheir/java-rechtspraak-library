@@ -34,17 +34,20 @@ export default class LinearChainCRF extends Component {
                 Let
             </p>
             <ul>
-                <li><F l="Y,X"/> be random vectors taking valuations from <F l="\mathcal{V}"/></li>
+                <li>
+                    <F l="Y, X"/> still be random vectors taking valuations from <F l="\mathcal{V}"/>,
+                    and <F l="V=Y\cup X"/>
+                </li>
                 <li><F l="F=\{\Phi_1, \ldots\Phi_k\}"/> be a set of local functions <F
                     l="V^n\rightarrow \mathbb{R}^+"/>
                 </li>
             </ul>
 
             <p>
-                Where each local function <F
+                Each local function <F
                 display={false}
-                l="\Phi_{k,t}(\mathbf x,\mathbf y)=\lambda_{k} f_{k}(\mathbf y_{t},\mathbf y_{t-1},\mathbf x_t)"
-            /> for some
+                l="\Phi_{k}(\mathbf x_t,\mathbf y_t,\mathbf y_{t-1}) = \lambda_{k} f_{k}(\mathbf y_{t},\mathbf y_{t-1},\mathbf x_t)"
+            /> where
             </p>
             <ul>
                 <li>
@@ -52,23 +55,32 @@ export default class LinearChainCRF extends Component {
                     of <F l="\mathbf x"/> and <F l="\mathbf y"/> respectively, i.e., <F l="\mathbf x_t"/> is
                     the current
                     observation and <F l="\mathbf y_t"/> is
-                    the current label, and <F l="y_{t-1}"/> is the previous label.
+                    the current label, and <F l="\mathbf y_{t-1}"/> is the previous label,
+                    with some null value for <F l="\mathbf y_0"/>.
                 </li>
                 <li><F l="\mathcal F=\{f_k(y, y', x)\}"/> be a set of feature functions
                     that give a real-valued score given a current label,
                     the previous label and the current output
-                    token. These functions are defined by the CRF designer.
+                    token.
+                    These functions are defined by the CRF designer.
                 </li>
                 <li><F l="\Lambda=\{\lambda_k\} \in \mathbb{R}^K"/> be a vector of weight parameters that
                     give a measure of how important a given feature function is. These parameters
                     are found by training the CRF.
                 </li>
             </ul>
+            
+            <p>
+                For notational ease, we may shorten <F
+                l="\Phi_{k}(\mathbf x_t,\mathbf y_t,\mathbf y_{t-1})"/> as <F
+                l="\Phi_{k,t}"/>.
+            </p>
+
             <p>
                 We then define the un-normalized CRF distribution as:
 
                 <F
-                    l="\hat{p}(\mathbf x, \mathbf y)=\prod_{t=1}^T\prod_{k=1}^K\Phi_{k,t}(\mathbf x, \mathbf y)"
+                    l="\hat{p}(\mathbf x, \mathbf y)=\prod_{t=1}^T\prod_{k=1}^K\Phi_{k,t}(\mathbf x_t, \mathbf y_t, \mathbf y_{t-1})"
                     displayMode={true}/>
             </p>
 
