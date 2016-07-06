@@ -300,7 +300,7 @@ const bib = {
         id: 'lucke1996stochastic',
         type: 'article', 
         title: 'Which stochastic models allow Baum-Welch training?',
-        author: 'Lucke, Helmut',
+        author: {firstName:'Helmut',lastName:'Lucke'},
         journal: 'IEEE transactions on signal processing',
         volume: '44',
         number: '11',

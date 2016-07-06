@@ -2,6 +2,7 @@
 import React, {Component} from 'react';
 import FigRef from './../../../Figures/FigRef'
 // import FigImg from './../../../Figures/Image/Image'
+import FigImg from './../../../Figures/Image/Image'
 import figs from './../../../Figures/figs'
 import ref from '../../../Bibliography/References/references'
 import bib from  '../../../Bibliography/bib';
@@ -40,6 +41,13 @@ export default class CRF extends Component {
                 in pattern recognition tasks
             </p>
 
+            <FigImg relativeToRoot={relativeToRoot} fig={figs.graphicalModels}>
+                Diagram of the relationship
+                between naive Bayes,
+                logistic regression, HMMs, linear-chain CRFs,
+                Bayesian
+                models, and general CRFs. Image adapted from {ref.cite(bib.sutton2006introduction)}.
+            </FigImg>
 
             <p>
                 As illustrated in <FigRef fig={figs.graphicalModels}/>,
@@ -81,9 +89,8 @@ export default class CRF extends Component {
             <p>
                 In the following,
                 we provide a definition of Linear-Chain Conditional Random Fields,
-                supported first by introductory
-                sections on <a href={"#"+GraphicalModels.id()}>graphical
-                models</a> and <a href="#hmm">Hidden Markov Models</a>.
+                supported first by an introductory
+                section on the conceptually simpler <a href="#hmm">Hidden Markov Models</a>.
                 For a more thorough tutorial into CRFs, including skip-chain CRFs, one may refer
                 to {ref.cite(bib.sutton2006introduction)}.
             </p>

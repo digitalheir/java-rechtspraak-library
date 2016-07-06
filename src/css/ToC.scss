@@ -1,7 +1,9 @@
 .toc {
+
   & > ol > li > ol {
     font-size: 0.8em;
   }
+
   & > ol ol {
     margin-top: 0;
     margin-bottom: 0;
@@ -10,6 +12,33 @@
     text-decoration: none;
   }
 
+  ol.leaders {
+    max-width: 40em;
+    padding: 0;
+    overflow-x: hidden;
+    list-style: none
+  }
+
+  ol.leaders .row:before {
+    float: left;
+    width: 0;
+    white-space: nowrap;
+    font-size: 10px;
+    content: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+  }
+
+  ol.leaders .row span:first-child {
+    padding-right: 0.33em;
+    background: white
+  }
+  .nr{
+    font-size: 11px;
+  }
+  ol.leaders .row span + span {
+    float: right;
+    padding-left: 0.33em;
+    background: white
+  }
   ol {
     /* Creates a new instance of the section counter with each ol
                                             element */

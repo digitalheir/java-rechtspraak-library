@@ -1,7 +1,7 @@
 const crfSections = {
-    graphicalModels: {
-        id: 'graphical-models',
-        title: 'Graphical Models',
+    undirectedGraphicalModels: {
+        id: 'undirected-graphical-models',
+        title: 'Undirected Graphical Models',
     },
     hmm: {
         id: 'hmm',
@@ -26,8 +26,8 @@ const crfSections = {
 };
 
 crfSections.inOrder = [
-    crfSections.graphicalModels,
     crfSections.hmm,
+    crfSections.undirectedGraphicalModels,
     crfSections.linearChain,
     crfSections.parameterEstimation,
     crfSections.inference,

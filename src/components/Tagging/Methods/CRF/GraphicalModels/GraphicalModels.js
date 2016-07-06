@@ -17,39 +17,27 @@ export default class CRF extends Component {
 
         return <div>
             <p>
-                Graphical models are statistical models where the probility function can
-                be represented
-                as a <a href="https://en.wikipedia.org/wiki/Factor_graph">factor graph</a>.
-                Graphical models include Bayesian networks, HMMs, CRFs and logistic regression models.
-            </p>
-            <FigImg relativeToRoot={relativeToRoot} fig={figs.graphicalModels}>
-                Diagram of the relationship
-                between naive Bayes,
-                logistic regression, HMMs, linear-chain CRFs,
-                Bayesian
-                models, and general CRFs. Image adapted from {ref.cite(bib.sutton2006introduction)}.
-            </FigImg>
+                Undirected graphical models are similar to directed
+                graphical models, but factorize slightly different:
 
-            <p>
-                We now formally define graphical models.
-                Assume we have a set <F l="V=X\cup Y"/> of random variables which can
-                take values from a set <F l="\mathcal{V}"/>. Here <F l="X"/>
-                denotes a set of input variables (for example, word features)
-                and <F l="Y"/> denotes a set of
-                output variables (for example, part-of-speech tags).
-                We denote an assignment to <F l="X"/> and <F l="Y"/> with <F
-                l="\mathbf x"/> and <F
-                l="\mathbf y"/>, respectively.
-
-                An undirected graphical model is defined as the set of all probability distributions
-                that can be written as <F
-                l="p( \mathbf x, \mathbf y)=\frac{1}{Z}\prod _A \Phi_A( \mathbf x_A,\mathbf y_A)"
-                displayMode={true}/>
-                where <F l="\Phi_A \in F"/> is a factor defined on some subset of
-                variables <F l="A \subseteq V"/> and <F
+                <F
+                    l="p( \mathbf x, \mathbf y)=\frac{1}{Z}\prod _A \Phi_A( \mathbf x_A,\mathbf y_A)"
+                    displayMode={true}/>
+                where <F
                 l="Z=\sum _{\mathbf x, \mathbf y} ( \prod _A \Phi_A( \mathbf x_A,\mathbf y_A))"
                 displayMode={true}/>
             </p>
+            <p>
+                Where <F
+                l="\mathbf x"/> and <F
+                l="\mathbf y"/> denote an assignment to <F l="X"/> and <F l="Y"/>,
+                respectively, and we consider <F l="V = X\cup Y"/>.
+                Splitting <F l="V"/> in two sets reflects our situation of dealing with
+                a set of input variables <F l="X"/> (for example, word features)
+                and a set of output variables <F l="Y"/> (for example, part-of-speech tags),
+                and will be relevant when we define Linear Chain CRFs.
+            </p>
+            
             <p>
                 Intuitively, <F l="p( \mathbf x, \mathbf y)"/> describes
                 the joint probability of input and output
@@ -71,7 +59,7 @@ export default class CRF extends Component {
                 It is important to note that <F l="F"/> is specific to the
                 modeling application.
                 Our choice of factors is what distinguishes
-                graphical models from each other; they are the
+                models from each other; they are the
                 functions that determine the probability
                 of a given
                 input to have a certain output.
@@ -89,8 +77,8 @@ export default class CRF extends Component {
 
             <p>
                 The factorization of the function for <F
-                l="p( \mathbf x,\mathbf y)"/> can be represented
-                as graph, called a <a href="https://en.wikipedia.org/wiki/Factor_graph">
+                l="p(\mathbf x,\mathbf y)"/> can be represented
+                as a graph, called a <a href="https://en.wikipedia.org/wiki/Factor_graph">
                 factor graph</a>. (Illustrated in <FigRef fig={figs.factorGraph}/>.)
             </p>
 
@@ -110,18 +98,9 @@ export default class CRF extends Component {
             <FigImg relativeToRoot={relativeToRoot} width="55%" fig={figs.factorGraph}/>
 
             <p>
-                Hidden Markov Models are generative models, which is a subclass of directed models.
-            </p>
-
-            <p>
-                We define a directed model (or Bayesian Network) as a graphical model that factorizes as:
-                <F l="p( \mathbf x, \mathbf y)=\prod _{v\in V}p(v|\pi(v))" display="true"/>
-                where <F l="\pi(v)"/> are the parents of <F l="v"/> in <F l="G"/>.
-            </p>
-
-            <p>
                 We define generative models as directed models in which all
-                label variables <F l="y \in Y"/> are parents of the input variables <F l="x\in X"/>. This name is due
+                label variables <F l="y \in Y"/> are parents of the input variables <F l="x\in X"/>.
+                This name is due
                 to the labels "generating" the output: the labels are the contingencies upon which the
                 probability of the output depends.
             </p>
@@ -139,6 +118,7 @@ export default class CRF extends Component {
                 of <F latex="p(\mathbf y|\mathbf x)"/>) results in the same model
                 as training the generative counterpart.
             </p>
+
             <p>
                 It turns out that when we model a conditional distribution,
                 we have more parameter freedom for <F l="p(\mathbf y)"/>, because we are not interested
@@ -153,9 +133,6 @@ export default class CRF extends Component {
 
             <p>
                 One generative-discriminative pair is formed by Hidden Markov Models (HMMs) and Linear Chain CRFs.
-                In the following,
-                we introduce HMMs (generative) to support a definition of
-                Linear-Chain CRFs (discriminative).
             </p>
 
         </div>;
