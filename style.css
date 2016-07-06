@@ -1130,6 +1130,31 @@ hr {
 .toc a {
     text-decoration: none;
 }
+.toc ol.leaders {
+    max-width: 40em;
+    padding: 0;
+    overflow-x: hidden;
+    list-style: none;
+}
+.toc ol.leaders .row:before {
+    float: left;
+    width: 0;
+    white-space: nowrap;
+    font-size: 10px;
+    content: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
+}
+.toc ol.leaders .row span:first-child {
+    padding-right: 0.33em;
+    background: white;
+}
+.toc .nr {
+    font-size: 11px;
+}
+.toc ol.leaders .row span + span {
+    float: right;
+    padding-left: 0.33em;
+    background: white;
+}
 .toc ol {
     /* Creates a new instance of the section counter with each ol
                                             element */

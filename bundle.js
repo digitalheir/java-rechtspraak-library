@@ -25273,7 +25273,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        id: 'lucke1996stochastic',
 	        type: 'article',
 	        title: 'Which stochastic models allow Baum-Welch training?',
-	        author: 'Lucke, Helmut',
+	        author: { firstName: 'Helmut', lastName: 'Lucke' },
 	        journal: 'IEEE transactions on signal processing',
 	        volume: '44',
 	        number: '11',
@@ -25772,6 +25772,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    _createClass(ToC, [{
 	        key: 'render',
 	        value: function render() {
+	            var _this2 = this;
+
 	            var relativeToRoot = this.props.path.match(/\//g).slice(1).map(function (_) {
 	                return "../";
 	            }).join("");
@@ -25784,7 +25786,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                { className: 'chapter toc' },
 	                _react2.default.createElement(
 	                    'ol',
-	                    null,
+	                    { className: this.props.singlePage ? "leaders" : "" },
 	                    this.props.showHome ? _react2.default.createElement(
 	                        'a',
 	                        { href: relativeToRoot },
@@ -25793,22 +25795,35 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _chapters2.default.inOrder.map(function (chapter) {
 	                        var urlSection = void 0;
 
-	                        if (!props.singlePage) urlSection = relativeToRoot + chapter.route.replace('/', '');else urlSection = "#" + chapter.id;
+	                        if (!_this2.props.singlePage) urlSection = relativeToRoot + chapter.route.replace('/', '');else urlSection = "#" + chapter.id;
 
 	                        return _react2.default.createElement(
 	                            'li',
 	                            { key: chapter.route },
-	                            path == chapter.route ? _react2.default.createElement(
-	                                'strong',
-	                                null,
-	                                chapter.title
-	                            ) : _react2.default.createElement(
-	                                'a',
-	                                { href: urlSection,
-	                                    className: 'nav-link' },
-	                                chapter.title
+	                            _react2.default.createElement(
+	                                'span',
+	                                { className: 'row' },
+	                                _react2.default.createElement(
+	                                    'span',
+	                                    null,
+	                                    path == chapter.route ? _react2.default.createElement(
+	                                        'strong',
+	                                        null,
+	                                        chapter.title
+	                                    ) : _react2.default.createElement(
+	                                        'a',
+	                                        { href: urlSection,
+	                                            className: 'nav-link' },
+	                                        chapter.title
+	                                    )
+	                                ),
+	                                _this2.props.singlePage ? _react2.default.createElement(
+	                                    'span',
+	                                    { className: 'nr' },
+	                                    chapter.page
+	                                ) : ''
 	                            ),
-	                            ToC.getSubSections((0, _Routes.getHandler)(chapter.route), props.singlePage ? '' : urlSection, 1)
+	                            ToC.getSubSections((0, _Routes.getHandler)(chapter.route), props.singlePage ? '' : urlSection, 1, _this2.props.singlePage)
 	                        );
 	                    })
 	                )
@@ -25816,7 +25831,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 	    }], [{
 	        key: 'getSubSections',
-	        value: function getSubSections(chapter, urlSection, depth) {
+	        value: function getSubSections(chapter, urlSection, depth, singlePage) {
 	            if (chapter.getSections && chapter.getSections()) {
 	                // console.log(chapter.getSections());
 	                return _react2.default.createElement(
@@ -25827,11 +25842,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            'li',
 	                            null,
 	                            _react2.default.createElement(
-	                                'a',
-	                                { href: urlSection + "#" + section.id },
-	                                section.title
+	                                'span',
+	                                { className: 'row' },
+	                                _react2.default.createElement(
+	                                    'span',
+	                                    null,
+	                                    _react2.default.createElement(
+	                                        'a',
+	                                        { href: urlSection + "#" + section.id },
+	                                        section.title
+	                                    )
+	                                ),
+	                                singlePage ? _react2.default.createElement(
+	                                    'span',
+	                                    { className: 'nr' },
+	                                    section.page
+	                                ) : ''
 	                            ),
-	                            ToC.getSubSections((0, _getSectionComponent2.default)(section.id), urlSection, depth + 1)
+	                            ToC.getSubSections((0, _getSectionComponent2.default)(section.id), urlSection, depth + 1, singlePage)
 	                        );else throw Error("Null section found in " + JSON.stringify(chapter.getSections()));
 	                    })
 	                );
@@ -25858,6 +25886,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var chapters = {
 	    introduction: {
 	        id: "chapter-introduction",
+	        page: 6,
 	        title: "Introduction",
 	        route: '/introduction/'
 	    },
@@ -26137,7 +26166,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            return _Discussion4.default;
 
 	        // CRF
-	        case _sections18.default.graphicalModels.id:
+	        case _sections18.default.undirectedGraphicalModels.id:
 	            return _GraphicalModels2.default;
 	        case _sections18.default.crfPerformance.id:
 	            return _Performance2.default;
@@ -45002,7 +45031,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    key: "render",
 	    value: function render() {
 	      var fig = this.props.fig;
-	      if (!fig) throw new Error("Define fig");
+	      if (!fig) throw new Error("No fig set to refer to...");
 	      var href = "#" + fig.id;
 
 	      return _react2.default.createElement(
@@ -58765,9 +58794,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: true
 	});
 	var crfSections = {
-	    graphicalModels: {
-	        id: 'graphical-models',
-	        title: 'Graphical Models'
+	    undirectedGraphicalModels: {
+	        id: 'undirected-graphical-models',
+	        title: 'Undirected Graphical Models'
 	    },
 	    hmm: {
 	        id: 'hmm',
@@ -58791,7 +58820,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	};
 
-	crfSections.inOrder = [crfSections.graphicalModels, crfSections.hmm, crfSections.linearChain, crfSections.parameterEstimation, crfSections.inference];
+	crfSections.inOrder = [crfSections.hmm, crfSections.undirectedGraphicalModels, crfSections.linearChain, crfSections.parameterEstimation, crfSections.inference];
 
 	// crfSections.crfPerformance,
 	exports.default = crfSections;
@@ -59164,54 +59193,37 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'Graphical models are statistical models where the probility function can be represented as a ',
-	                    _react2.default.createElement(
-	                        'a',
-	                        { href: 'https://en.wikipedia.org/wiki/Factor_graph' },
-	                        'factor graph'
-	                    ),
-	                    '. Graphical models include Bayesian networks, HMMs, CRFs and logistic regression models.'
-	                ),
-	                _react2.default.createElement(
-	                    _Image2.default,
-	                    { relativeToRoot: relativeToRoot, fig: _figs2.default.graphicalModels },
-	                    'Diagram of the relationship between naive Bayes, logistic regression, HMMs, linear-chain CRFs, Bayesian models, and general CRFs. Image adapted from ',
-	                    _references2.default.cite(_bib2.default.sutton2006introduction),
-	                    '.'
+	                    'Undirected graphical models are similar to directed graphical models, but factorize slightly different:',
+	                    _react2.default.createElement(_Math2.default, {
+	                        l: 'p( \\mathbf x, \\mathbf y)=\\frac{1}{Z}\\prod _A \\Phi_A( \\mathbf x_A,\\mathbf y_A)',
+	                        displayMode: true }),
+	                    'where ',
+	                    _react2.default.createElement(_Math2.default, {
+	                        l: 'Z=\\sum _{\\mathbf x, \\mathbf y} ( \\prod _A \\Phi_A( \\mathbf x_A,\\mathbf y_A))',
+	                        displayMode: true })
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'We now formally define graphical models. Assume we have a set ',
-	                    _react2.default.createElement(_Math2.default, { l: 'V=X\\cup Y' }),
-	                    ' of random variables which can take values from a set ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\mathcal{V}' }),
-	                    '. Here ',
-	                    _react2.default.createElement(_Math2.default, { l: 'X' }),
-	                    'denotes a set of input variables (for example, word features) and ',
-	                    _react2.default.createElement(_Math2.default, { l: 'Y' }),
-	                    ' denotes a set of output variables (for example, part-of-speech tags). We denote an assignment to ',
-	                    _react2.default.createElement(_Math2.default, { l: 'X' }),
-	                    ' and ',
-	                    _react2.default.createElement(_Math2.default, { l: 'Y' }),
-	                    ' with ',
+	                    'Where ',
 	                    _react2.default.createElement(_Math2.default, {
 	                        l: '\\mathbf x' }),
 	                    ' and ',
 	                    _react2.default.createElement(_Math2.default, {
 	                        l: '\\mathbf y' }),
-	                    ', respectively. An undirected graphical model is defined as the set of all probability distributions that can be written as ',
-	                    _react2.default.createElement(_Math2.default, {
-	                        l: 'p( \\mathbf x, \\mathbf y)=\\frac{1}{Z}\\prod _A \\Phi_A( \\mathbf x_A,\\mathbf y_A)',
-	                        displayMode: true }),
-	                    'where ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\Phi_A \\in F' }),
-	                    ' is a factor defined on some subset of variables ',
-	                    _react2.default.createElement(_Math2.default, { l: 'A \\subseteq V' }),
+	                    ' denote an assignment to ',
+	                    _react2.default.createElement(_Math2.default, { l: 'X' }),
 	                    ' and ',
-	                    _react2.default.createElement(_Math2.default, {
-	                        l: 'Z=\\sum _{\\mathbf x, \\mathbf y} ( \\prod _A \\Phi_A( \\mathbf x_A,\\mathbf y_A))',
-	                        displayMode: true })
+	                    _react2.default.createElement(_Math2.default, { l: 'Y' }),
+	                    ', respectively, and we consider ',
+	                    _react2.default.createElement(_Math2.default, { l: 'V = X\\cup Y' }),
+	                    '. Splitting ',
+	                    _react2.default.createElement(_Math2.default, { l: 'V' }),
+	                    ' in two sets reflects our situation of dealing with a set of input variables ',
+	                    _react2.default.createElement(_Math2.default, { l: 'X' }),
+	                    ' (for example, word features) and a set of output variables ',
+	                    _react2.default.createElement(_Math2.default, { l: 'Y' }),
+	                    ' (for example, part-of-speech tags), and will be relevant when we define Linear Chain CRFs.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -59246,7 +59258,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    null,
 	                    'It is important to note that ',
 	                    _react2.default.createElement(_Math2.default, { l: 'F' }),
-	                    ' is specific to the modeling application. Our choice of factors is what distinguishes graphical models from each other; they are the functions that determine the probability of a given input to have a certain output.'
+	                    ' is specific to the modeling application. Our choice of factors is what distinguishes models from each other; they are the functions that determine the probability of a given input to have a certain output.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -59274,8 +59286,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    null,
 	                    'The factorization of the function for ',
 	                    _react2.default.createElement(_Math2.default, {
-	                        l: 'p( \\mathbf x,\\mathbf y)' }),
-	                    ' can be represented as graph, called a ',
+	                        l: 'p(\\mathbf x,\\mathbf y)' }),
+	                    ' can be represented as a graph, called a ',
 	                    _react2.default.createElement(
 	                        'a',
 	                        { href: 'https://en.wikipedia.org/wiki/Factor_graph' },
@@ -59310,24 +59322,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    '. The graph thus allows us to graphically represent how input and output variables interact with our local functions to generate a probability distribution.'
 	                ),
 	                _react2.default.createElement(_Image2.default, { relativeToRoot: relativeToRoot, width: '55%', fig: _figs2.default.factorGraph }),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'Hidden Markov Models are generative models, which is a subclass of directed models.'
-	                ),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'We define a directed model (or Bayesian Network) as a graphical model that factorizes as:',
-	                    _react2.default.createElement(_Math2.default, { l: 'p( \\mathbf x, \\mathbf y)=\\prod _{v\\in V}p(v|\\pi(v))', display: 'true' }),
-	                    'where ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\pi(v)' }),
-	                    ' are the parents of ',
-	                    _react2.default.createElement(_Math2.default, { l: 'v' }),
-	                    ' in ',
-	                    _react2.default.createElement(_Math2.default, { l: 'G' }),
-	                    '.'
-	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
@@ -59371,7 +59365,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'One generative-discriminative pair is formed by Hidden Markov Models (HMMs) and Linear Chain CRFs. In the following, we introduce HMMs (generative) to support a definition of Linear-Chain CRFs (discriminative).'
+	                    'One generative-discriminative pair is formed by Hidden Markov Models (HMMs) and Linear Chain CRFs.'
 	                )
 	            );
 	        }
@@ -59454,7 +59448,26 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'Hidden Markov Models (HMMs) are a subclass of graphical models in which we model a linear sequence of observations ',
+	                    'Directed Graphical Models (or Bayesian Networks) are statistical models that model some probability distribution over variables in a set ',
+	                    _react2.default.createElement(_Math2.default, { l: 'V' }),
+	                    ' which take values from a set ',
+	                    _react2.default.createElement(_Math2.default, { l: '\\mathcal{V}' }),
+	                    '. Directed Graphical Models can be represented as a directed graph where nodes represent the variables in ',
+	                    _react2.default.createElement(_Math2.default, { l: 'V' }),
+	                    ', and the edges represent conditional dependencies. Directed graphical models factorize as follows:',
+	                    _react2.default.createElement(_Math2.default, { l: 'p( \\mathbf x, \\mathbf y)=\\prod _{v\\in V}p(v|\\pi(v))', display: 'true' }),
+	                    'where ',
+	                    _react2.default.createElement(_Math2.default, { l: '\\pi(v)' }),
+	                    ' are the parents of ',
+	                    _react2.default.createElement(_Math2.default, { l: 'v' }),
+	                    ' in ',
+	                    _react2.default.createElement(_Math2.default, { l: 'G' }),
+	                    '. Hidden Markov Models are an instance of directed models.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Hidden Markov Models (HMMs) are graphical models in which we model a linear sequence of observations ',
 	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf x=\\{\\mathbf x_t\\}_{t=1}^T' }),
 	                    ' that are assumed to be generated by a sequence of hidden states ',
 	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf y=\\{\\mathbf y_t\\}_{t=1}^T' }),
@@ -59497,7 +59510,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        ') ',
 	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf x_t' }),
 	                        ' only depends on the label ',
-	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf y_t' }),
+	                        _react2.default.createElement(_Math2.default, {
+	                            l: '\\mathbf y_t' }),
 	                        '; the observation ',
 	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf x_t' }),
 	                        ' is generated by label ',
@@ -59529,7 +59543,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'To find plausible values of ',
 	                    _react2.default.createElement(_Math2.default, { l: 'p(\\mathbf x_t|\\mathbf y_t)' }),
 	                    ' and ',
-	                    _react2.default.createElement(_Math2.default, { l: 'p(\\mathbf y_t|\\mathbf y_{t-1})' }),
+	                    _react2.default.createElement(_Math2.default, {
+	                        l: 'p(\\mathbf y_t|\\mathbf y_{t-1})' }),
 	                    ', we typically use a set of pre-tagged observation-label sequences and perform a parameter estimation method such as the ',
 	                    _react2.default.createElement(
 	                        'a',
@@ -60954,6 +60969,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _FigRef2 = _interopRequireDefault(_FigRef);
 
+	var _Image = __webpack_require__(252);
+
+	var _Image2 = _interopRequireDefault(_Image);
+
 	var _figs = __webpack_require__(226);
 
 	var _figs2 = _interopRequireDefault(_figs);
@@ -61042,6 +61061,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ' and still have a tractable model. As such, CRFs can model a complex interdependence of observation variables, and are therefore popular in pattern recognition tasks'
 	                ),
 	                _react2.default.createElement(
+	                    _Image2.default,
+	                    { relativeToRoot: relativeToRoot, fig: _figs2.default.graphicalModels },
+	                    'Diagram of the relationship between naive Bayes, logistic regression, HMMs, linear-chain CRFs, Bayesian models, and general CRFs. Image adapted from ',
+	                    _references2.default.cite(_bib2.default.sutton2006introduction),
+	                    '.'
+	                ),
+	                _react2.default.createElement(
 	                    'p',
 	                    null,
 	                    'As illustrated in ',
@@ -61099,13 +61125,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'In the following, we provide a definition of Linear-Chain Conditional Random Fields, supported first by introductory sections on ',
-	                    _react2.default.createElement(
-	                        'a',
-	                        { href: "#" + _GraphicalModels2.default.id() },
-	                        'graphical models'
-	                    ),
-	                    ' and ',
+	                    'In the following, we provide a definition of Linear-Chain Conditional Random Fields, supported first by an introductory section on the conceptually simpler ',
 	                    _react2.default.createElement(
 	                        'a',
 	                        { href: '#hmm' },
@@ -63057,6 +63077,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	var disseminationSections = {
 	    futureWork: {
+	        page: '?',
 	        id: 'future-work',
 	        title: 'Future Work'
 	    }, dissemination: {
