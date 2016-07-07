@@ -20,7 +20,8 @@ export default class ContextFreeGrammars extends Component {
             <p>
                 A Probabilistic Context Free Grammar (PCFG) is then a Context Free Grammar in which each rule
                 has a probability assigned to it, which may actually be any semiring (in our case,
-                a real number between <F l="0"/> and <F l="1"/>).
+                the real numbers between <F l="0"/> and <F l="1"/>, with common the operations 
+                of multiplication and addition).
                 A derivation
                 of a sequence with a PCFG has a score attached to it, which is the product of
                 the probabilities of all applied rule.

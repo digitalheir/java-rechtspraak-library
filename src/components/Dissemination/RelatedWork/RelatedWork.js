@@ -32,14 +32,14 @@ export default class RelatedWork extends Component {
                 Hidden Markov Models to distinguish header and footers
                 from body. Interestingly, they train a separate HMM
                 per law type. For parsing the section hierarchy
-                in the body, they use a non-deterministic finite state machine,
-                which corresponds to using regular expression.
-                They report some intolerance of their system to
+                in the body, they use non-deterministic finite state machines,
+                which corresponds to the class of (non-deterministic) regular 
+                expressions. {ref.cite(bib.bacci2009automatic)} report some intolerance of their system to
                 minor syntactical errors in the input, but catch common
                 issues. Legislative
                 texts tend to be more deeply nested than court judgments, but
-                also tend to have a much stricter structure, which explains why
-                they use much less features than we report.
+                also tend to have a more strict structure, which explains why
+                their system uses much less features than ours.
             </p>
         </div>
     }
