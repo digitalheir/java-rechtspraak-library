@@ -89,7 +89,7 @@ function getHandler(route) {
             return TaggingDiscussion;
 
         // CRF
-        case sectionsCrf.graphicalModels.id:
+        case sectionsCrf.undirectedGraphicalModels.id:
             return GraphicalModels;
         case sectionsCrf.crfPerformance.id:
             return Performance;

@@ -1,6 +1,7 @@
 const chapters = {
     introduction: {
         id: "chapter-introduction",
+        page: 6,
         title: "Introduction",
         route: '/introduction/'
     },

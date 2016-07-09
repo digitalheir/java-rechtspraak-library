@@ -14,7 +14,7 @@ export default class extends Component {
 
   render() {
     const fig = this.props.fig;
-    if(!fig) throw new Error("Define fig");
+    if(!fig) throw new Error("No fig set to refer to...");
     const href = "#" + fig.id;
 
     return (
