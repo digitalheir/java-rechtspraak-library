@@ -256,6 +256,31 @@ return /******/ (function(modules) { // webpackBootstrap
 	// shim for using process in browser
 
 	var process = module.exports = {};
+
+	// cached from whatever global is present so that test runners that stub it
+	// don't break things.  But we need to wrap it in a try catch in case it is
+	// wrapped in strict mode code which doesn't define any globals.  It's inside a
+	// function because try/catches deoptimize in certain engines.
+
+	var cachedSetTimeout;
+	var cachedClearTimeout;
+
+	(function () {
+	  try {
+	    cachedSetTimeout = setTimeout;
+	  } catch (e) {
+	    cachedSetTimeout = function () {
+	      throw new Error('setTimeout is not defined');
+	    }
+	  }
+	  try {
+	    cachedClearTimeout = clearTimeout;
+	  } catch (e) {
+	    cachedClearTimeout = function () {
+	      throw new Error('clearTimeout is not defined');
+	    }
+	  }
+	} ())
 	var queue = [];
 	var draining = false;
 	var currentQueue;
@@ -280,7 +305,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (draining) {
 	        return;
 	    }
-	    var timeout = setTimeout(cleanUpNextTick);
+	    var timeout = cachedSetTimeout(cleanUpNextTick);
 	    draining = true;
 
 	    var len = queue.length;
@@ -297,7 +322,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	    currentQueue = null;
 	    draining = false;
-	    clearTimeout(timeout);
+	    cachedClearTimeout(timeout);
 	}
 
 	process.nextTick = function (fun) {
@@ -309,7 +334,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	    queue.push(new Item(fun, args));
 	    if (queue.length === 1 && !draining) {
-	        setTimeout(drainQueue, 0);
+	        cachedSetTimeout(drainQueue, 0);
 	    }
 	};
 
@@ -37033,7 +37058,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  this.childNodes = []
 	  this.eventListeners = {}
 	  this.text = ''
+	  var self = this
 	  var props = this.props = {
+	    ref: function (component) {
+	      self.component = component
+	    },
 	    style: {
 	      setProperty: function (name, value) {
 	        props.style[styleCamelCase(name)] = value
@@ -37252,6 +37281,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	}
 
+	Element.prototype.getBoundingClientRect = function () {
+	  if (!this.component) {
+	    return undefined
+	  }
+
+	  return this.component.getBoundingClientRect()
+	}
+
 	Element.prototype.toReact = function (index) {
 	  index = index || 0
 	  var props = assign({}, this.props)
@@ -37370,6 +37407,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	
 
+	/*:: type Attr = { [key: string]: string } */
+
 	/*
 
 	style-attr
@@ -37383,6 +37422,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	Convert a style attribute string to an object.
 
 	*/
+
+	/*:: declare function parse (raw: string): Attr */
 	function parse(raw) {
 	  var trim = function (s) {
 	    return s.trim();
@@ -37409,6 +37450,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	Split a string into chunks matching `<key>: <value>`
 
 	*/
+	/*:: declare function getKeyValueChunks (raw: string): Array<string> */
 	function getKeyValueChunks(raw) {
 	  var chunks = [];
 	  var offset = 0;
@@ -37447,6 +37489,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	Convert an object into an attribute string
 
 	*/
+	/*:: declare function stringify (obj: Attr): string */
 	function stringify(obj) {
 	  return Object.keys(obj).map(function (key) {
 	    return key + ':' + obj[key];
@@ -37461,6 +37504,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	Normalize an attribute string (eg. collapse duplicates)
 
 	*/
+	/*:: declare function normalize (str: string): string */
 	function normalize(str) {
 	  return stringify(parse(str));
 	}
@@ -55900,7 +55944,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    null,
 	                    'Indeed, most applications are domain-specific. Somewhat recently, the problem has been addressed in legal informatics as well. ',
 	                    _references2.default.cite(_bib2.default.bacci2009automatic),
-	                    ' have a similar set-up to ours, applied to Italian law text. They successfully apply Hidden Markov Models to distinguish header and footers from body. Interestingly, they train a separate HMM per law type. For parsing the section hierarchy in the body, they use a non-deterministic finite state machine, which corresponds to using regular expression. They report some intolerance of their system to minor syntactical errors in the input, but catch common issues. Legislative texts tend to be more deeply nested than court judgments, but also tend to have a much stricter structure, which explains why they use much less features than we report.'
+	                    ' have a similar set-up to ours, applied to Italian law text. They successfully apply Hidden Markov Models to distinguish header and footers from body. Interestingly, they train a separate HMM per law type. For parsing the section hierarchy in the body, they use non-deterministic finite state machines, which corresponds to the class of (non-deterministic) regular expressions. ',
+	                    _references2.default.cite(_bib2.default.bacci2009automatic),
+	                    ' report some intolerance of their system to minor syntactical errors in the input, but catch common issues. Legislative texts tend to be more deeply nested than court judgments, but also tend to have a more strict structure, which explains why their system uses much less features than ours.'
 	                )
 	            );
 	        }
@@ -55998,7 +56044,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	disseminationSections.inOrder = [disseminationSections.parseval, disseminationSections.results];
 
-	// disseminationSections.futureWork,
 	exports.default = disseminationSections;
 
 /***/ },
@@ -58800,7 +58845,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    },
 	    hmm: {
 	        id: 'hmm',
-	        title: 'Hidden Markov Models'
+	        title: 'Directed Graphical Models'
 	    },
 	    linearChain: {
 	        id: 'linear-chain-crf',
@@ -58822,7 +58867,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	crfSections.inOrder = [crfSections.hmm, crfSections.undirectedGraphicalModels, crfSections.linearChain, crfSections.parameterEstimation, crfSections.inference];
 
-	// crfSections.crfPerformance,
 	exports.default = crfSections;
 
 /***/ },
@@ -59765,7 +59809,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(_Math2.default, { l: 'Z(\\mathbf x)=\\sum_{\\mathbf{y}}\\hat{p}(\\mathbf x, \\mathbf y)', displayMode: true }),
 	                    'and so',
 	                    _react2.default.createElement(_Math2.default, {
-	                        l: 'p(\\mathbf y|\\mathbf x)= \\frac{1}{Z(\\mathbf x)}\\hat{p}(\\mathbf x, \\mathbf y) = \\frac{1}{Z(\\mathbf x)}\\prod_{t=1}^T\\prod_{k=1}^{K} \\lambda_k f_k(\\mathbf y_t, \\mathbf y_{t-1}, \\mathbf x_t)',
+	                        l: 'p(\\mathbf y|\\mathbf x)=\r \\frac{1}{Z(\\mathbf x)}\\hat{p}(\\mathbf x, \\mathbf y)\r =\r \\frac{1}{Z(\\mathbf x)}\\prod_{t=1}^T\\prod_{k=1}^{K} \\lambda_k f_k(\\mathbf y_t, \\mathbf y_{t-1}, \\mathbf x_t)',
 	                        displayMode: true })
 	                ),
 	                _react2.default.createElement(
@@ -60081,14 +60125,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'Simplifying, we have:'
 	                ),
 	                _react2.default.createElement(_Math2.default, { display: 'true',
-	                    l: '\\ell(\\Lambda) = \\sum_{i=1}^N\\sum_{t=1}^T\\sum_{k=1}^K \\lambda_kf_k(\\mathbf y^i_t,\\mathbf y^i_{t-1},\\mathbf x^i_t)-\\sum_{i=1}^N\\log{Z(\\mathbf x^i})' }),
+	                    l: '\\ell(\\Lambda) = \\sum_{i=1}^N\\sum_{t=1}^T\\sum_{k=1}^K\r \\lambda_kf_k(\\mathbf y^i_t,\\mathbf y^i_{t-1},\\mathbf x^i_t)-\\sum_{i=1}^N\\log{Z(\\mathbf x^i})' }),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
 	                    'We also add a penalty term to the likelihood function to avoid overfitting. This is called regularization, and in this particular instance we use L2 regularization:'
 	                ),
 	                _react2.default.createElement(_Math2.default, { display: 'true',
-	                    l: '\\ell(\\Lambda) = \\sum_{i=1}^N\\sum_{t=1}^T\\sum_{k=1}^K \\lambda_kf_k(y^i_t,y^i_{t-1},\\mathbf x^i_t)-\\sum_{i=1}^N\\log{Z(\\mathbf x^i)} - \\sum_{k=1}^K\\frac{\\lambda_{k}^2}{2\\sigma^2}' }),
+	                    l: '\\ell(\\Lambda) = \\sum_{i=1}^N\\sum_{t=1}^T\\sum_{k=1}^K\r \\lambda_kf_k(y^i_t,y^i_{t-1},\\mathbf x^i_t)-\\sum_{i=1}^N\\log{Z(\\mathbf x^i)}\r - \\sum_{k=1}^K\\frac{\\lambda_{k}^2}{2\\sigma^2}' }),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
@@ -60108,7 +60152,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(_Math2.default, { l: '\\Lambda' }),
 	                    ':'
 	                ),
-	                _react2.default.createElement(_Math2.default, { display: 'true', l: '\\frac{\\partial\\ell}{\\partial\\lambda_k} = \\sum_{i=1}^N\\sum_{t=1}^Tf_k(\\mathbf y_t^i,\\mathbf y_{t-1}^i,\\mathbf x_t^i) -\\sum_{i=1}^N\\sum_{t=1}^T\\sum_{\\mathbf y,\\mathbf y\'}f_k(y,y,\\mathbf x_t^i) p(y,y\'|\\mathbf x^i)-\\sum_{k=1}^K\\frac{\\lambda_k}{\\sigma^2} ' }),
+	                _react2.default.createElement(_Math2.default, { display: 'true', l: '\\frac{\\partial\\ell}{\\partial\\lambda_k} =\r \\sum_{i=1}^N\\sum_{t=1}^Tf_k(\\mathbf y_t^i,\\mathbf y_{t-1}^i,\\mathbf x_t^i)\r -\\sum_{i=1}^N\\sum_{t=1}^T\\sum_{\\mathbf y,\\mathbf y\'}f_k(y,y,\\mathbf x_t^i)\r p(y,y\'|\\mathbf x^i)-\\sum_{k=1}^K\\frac{\\lambda_k}{\\sigma^2}\r ' }),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
@@ -61082,7 +61126,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'To clarify: in our experiments we consider an input document as a string of tokens, where each token should correspond to a label of either ',
+	                    'To clarify: in our experiments we consider an input document as a string of tokens which corresponds to the set of input variables, where each token is linked to one output variable of either ',
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -61688,11 +61732,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'A Probabilistic Context Free Grammar (PCFG) is then a Context Free Grammar in which each rule has a probability assigned to it, which may actually be any semiring (in our case, a real number between ',
+	                    'A Probabilistic Context Free Grammar (PCFG) is then a Context Free Grammar in which each rule has a probability assigned to it, which may actually be any semiring (in our case, the real numbers between ',
 	                    _react2.default.createElement(_Math2.default, { l: '0' }),
 	                    ' and ',
 	                    _react2.default.createElement(_Math2.default, { l: '1' }),
-	                    '). A derivation of a sequence with a PCFG has a score attached to it, which is the product of the probabilities of all applied rule.'
+	                    ', with common the operations of multiplication and addition). A derivation of a sequence with a PCFG has a score attached to it, which is the product of the probabilities of all applied rule.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -63087,9 +63131,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 	disseminationSections.inOrder = [disseminationSections.dissemination];
-
-	// disseminationSections.relatedWork,
-	// disseminationSections.futureWork,
 	exports.default = disseminationSections;
 
 /***/ },
