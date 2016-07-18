@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:tr="http://tuchtrecht.overheid.nl/" xmlns:eu="http://publications.europa.eu/celex/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:HR:1996:AA2016</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2015-06-28T20:43:25</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">AA2016</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Hoge_Raad_der_Nederlanden" scheme="overheid.RechterlijkeMacht">Hoge Raad</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">1996-06-12</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">31175</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#cassatie">Cassatie</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht_belastingrecht">Bestuursrecht; Belastingrecht</dcterms:subject>
+      <dcterms:references rdfs:label="Wetsverwijzing" bwb:resourceIdentifier="1.0:v:BWB:BWBR0002629&amp;artikel=4&amp;g=1996-06-12">Wet op de omzetbelasting 1968 4</dcterms:references>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+          <rdf:li>BNB 1996/346 met annotatie door A.L.C. Simons</rdf:li>
+          <rdf:li>WFR 1996/911</rdf:li>
+          <rdf:li>FED 1996/592 met annotatie door K.M. BRAUN</rdf:li>
+          <rdf:li>V-N 1996/2476, 27 met annotatie door Kluwer</rdf:li>
+          <rdf:li>FED 1996/486</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:HR:1996:AA2016">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:HR:1996:AA2016</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-04T15:38:16</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2001-07-04</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:HR:1996:AA2016 Hoge Raad , 12-06-1996 / 31175</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:HR:1996:AA2016:INH" lang="nl" xml:space="preserve">
+      <para>-</para>
+    </inhoudsindicatie>
+  <uitspraak xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ECLI:NL:HR:1996:AA2016:DOC" lang="nl" xml:space="preserve">
+      <parablock>
+        <para>gewezen op het beroep in cassatie van X te Z tegen de uitspraak van het Gerechtshof te Amsterdam van 13 maart 1995 betreffende na te melden naheffingsaanslag in de omzetbelasting. </para>
+        <para>1. Aanslag, bezwaar en geding voor het Hof Aan belanghebbende is over het tijdvak 1 september 1988 tot en met 31 december 1990 een naheffingsaanslag in de omzetbelasting opgelegd, welke aanslag, na daartegen gemaakt bezwaar, bij uitspraak van de Inspecteur is verminderd tot een aanslag ten bedrage van ƒ 4.101,--, zonder verhoging. Belanghebbende is tegen die uitspraak in beroep gekomen bij het Hof, dat deze uitspraak heeft bevestigd. De uitspraak van het Hof is aan dit arrest gehecht. </para>
+        <para>2. Geding in cassatie Belanghebbende heeft tegen 's Hofs uitspraak beroep in cassatie ingesteld. Het beroepschrift in cassatie is aan dit arrest gehecht en maakt daarvan deel uit. De Staatssecretaris van Financiën heeft bij vertoogschrift het cassatieberoep bestreden. </para>
+        <para>3. Beoordeling van de middelen van cassatie 3.1. In cassatie kan van het volgende worden uitgegaan: Belanghebbende geeft golflessen, verstrekt adviezen aan golfclubs en verzorgt zogenoemde clinics. Te dezer zake is hij als ondernemer in de zin van artikel 7 van de Wet op de omzetbelasting 1968 (hierna: de Wet) aan te merken. In de periode 13 augustus 1989 tot en met 4 juli 1993 heeft hij deelgenomen aan 52 toernooien, waarvan 47 in Nederland. In 48 gevallen heeft de deelname aan het toernooi geleid tot de ontvangst van startgeld en/of prijzengeld. Ter zake van de ontvangst van deze bedragen heeft hij geen omzetbelasting op aangifte voldaan. De Inspecteur heeft, zich op het standpunt stellend dat belanghebbende over deze bedragen , voor zover betrekking hebbende op in Nederland gespeelde toernooien, omzetbelasting is verschuldigd, deswege ƒ 3.075,- aan enkelvoudige belasting in de onderhavige naheffingsaanslag begrepen. </para>
+        <para>3.2. Het Hof heeft geoordeeld dat de in geding zijnde prestaties zijn aan te merken als diensten onder bezwarende titel als bedoeld in artikel 2, aanhef en onder 1, van de Zesde Richtlijn en mitsdien als diensten in de zin van artikel 4, lid 1, van de Wet. Hierbij is het Hof uitgegaan van hetgeen door het Hof van Justitie van de Europese Gemeenschappen in zijn arrest van 3 maart 1994, nr. C-16/93 (Tolsma), BNB 1994/271, is overwogen, te weten dat een dienst enkel onder bezwarende titel in de zin van artikel 2, van de Zesde Richtlijn wordt verricht en dus enkel belastbaar is, wanneer tussen de verrichter en de ontvanger van de dienst een rechtsbetrekking bestaat waarbij over en weer prestaties worden uitgewisseld, en de door de dienstverrichter ontvangen vergoeding de werkelijke tegenwaarde vormt voor de aan de ontvanger verleende dienst. Middel I stelt dat belanghebbendes oogmerk niet was gericht op het behalen van prijzen, en dat het prijzengeld niet de werkelijke tegenwaarde vormt voor zijn prestatie. Deze stellingen kunnen niet tot cassatie leiden, aangezien 's Hofs andersluidend oordeel niet blijk geeft van een onjuiste rechtsopvatting en als verweven met waarderingen van feitelijke aard voor het overige in cassatie niet op zijn juistheid kan worden getoetst. Anders dan het middel betoogt heeft het Hof geen onjuiste maatstaf aangelegd. De stelling dat het prijzengeld niet de werkelijke tegenwaarde vormt voor belanghebbendes prestaties moet worden verworpen, nu, zoals het Hof met juistheid heeft overwogen, de omvang van het prijzengeld vaststaat en de ontvangst van een bepaalde prijs afhankelijk is van de door belanghebbende verrichte prestaties. </para>
+        <para>3.3. Het Hof heeft voorts geoordeeld dat belanghebbende de in geding zijnde prestaties heeft verricht in het kader van de zelfstandige uitoefening van een bedrijf c.q. beroep. Middel II strekt ten betoge dat het Hof met dit oordeel ten onrechte heeft nagelaten te bezien of de deelname aan golftoernooien door belanghebbende wel valt binnen het kader van het door belanghebbende uitgeoefende beroep van golfleraar. Het middel faalt, aangezien het Hof heeft vastgesteld dat belanghebbende geregeld deelnam aan toernooien in Nederland en in het buitenland en ter zake van de deelname vrijwel altijd startgeld en/of prijzengeld ontvangen heeft, en het Hof heeft geoordeeld dat belanghebbende de in geding zijnde prestaties in het economische verkeer en anders dan incidenteel heeft verricht, terwijl het Hof tevens heeft geoordeeld dat belanghebbende zijn prestaties niet in een verhouding van ondergeschiktheid ten opzichte van de organisator van het desbetreffende toernooi en dus zelfstandig heeft verricht. Gelet op deze omstandigheden is het niet van belang of belanghebbende zijn prestaties al dan niet binnen het kader van het door hem uitgeoefende beroep van golfleraar heeft verricht. Evenmin is van belang met welk oogmerk belanghebbende de litigieuze prestaties heeft verricht. </para>
+        <para>4. Proceskosten De Hoge Raad acht geen termen aanwezig voor een veroordeling in de proceskosten als bedoeld in artikel 5a van de Wet administratieve rechtspraak belastingzaken. </para>
+        <para>5. Beslissing De Hoge Raad verwerpt het beroep. </para>
+        <para>Dit arrest is op 12 juni 1996 vastgesteld door de raadsheer Van der Linde  als voorzitter en de raadsheren Bellaart en De Moor, in tegenwoordigheid van de waarnemend griffier Van Hooff, en op die datum in het openbaar uitgesproken.</para>
+      </parablock>
+    </uitspraak>
+</open-rechtspraak>

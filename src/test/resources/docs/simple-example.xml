@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<open-rechtspraak>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ecli="https://e-justice.europa.eu/ecli"
+             xmlns:tr="http://tuchtrecht.overheid.nl/" xmlns:eu="http://publications.europa.eu/celex/"
+             xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bwb="bwb-dl"
+             xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:psi="http://psi.rechtspraak.nl/"
+             xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+        <rdf:Description>
+            <dcterms:identifier>ECLI:NL:RBGEL:2015:6991</dcterms:identifier>
+            <dcterms:format>text/xml</dcterms:format>
+            <dcterms:accessRights>public</dcterms:accessRights>
+            <dcterms:modified>2015-12-11T16:03:12</dcterms:modified>
+            <dcterms:issued rdfs:label="Publicatiedatum">2015-11-11</dcterms:issued>
+            <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+            <dcterms:language>nl</dcterms:language>
+            <dcterms:creator rdfs:label="Instantie"
+                             resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Rechtbank_Gelderland"
+                             scheme="overheid.RechterlijkeMacht">Rechtbank Gelderland
+            </dcterms:creator>
+            <dcterms:date rdfs:label="Uitspraakdatum">2015-11-12</dcterms:date>
+            <psi:zaaknummer rdfs:label="Zaaknr">AWB - 13 _ 7992</psi:zaaknummer>
+            <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak
+            </dcterms:type>
+            <psi:procedure rdf:language="nl" rdfs:label="Procedure"
+                           resourceIdentifier="http://psi.rechtspraak.nl/procedure#eersteAanlegMeervoudig">Eerste aanleg
+                - meervoudig
+            </psi:procedure>
+            <dcterms:coverage>NL</dcterms:coverage>
+            <dcterms:spatial rdfs:label="Zittingsplaats">Arnhem</dcterms:spatial>
+            <dcterms:subject rdfs:label="Rechtsgebied"
+                             resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht_ambtenarenrecht">
+                Bestuursrecht; Ambtenarenrecht
+            </dcterms:subject>
+            <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+                <rdf:list>
+                    <rdf:li>Rechtspraak.nl</rdf:li>
+                </rdf:list>
+            </dcterms:hasVersion>
+        </rdf:Description>
+        <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBGEL:2015:6991">
+            <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBGEL:2015:6991</dcterms:identifier>
+            <dcterms:format>text/html</dcterms:format>
+            <dcterms:accessRights>public</dcterms:accessRights>
+            <dcterms:modified>2015-12-11T16:01:16</dcterms:modified>
+            <dcterms:issued rdfs:label="Publicatiedatum">2015-12-11</dcterms:issued>
+            <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+            <dcterms:language>nl</dcterms:language>
+            <dcterms:title rdf:language="nl">ECLI:NL:RBGEL:2015:6991 Rechtbank Gelderland , 12-11-2015 / AWB - 13 _
+                7992
+            </dcterms:title>
+            <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+        </rdf:Description>
+    </rdf:RDF>
+    <inhoudsindicatie id="ECLI:NL:RBGEL:2015:6991:INH" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <para>HAPII. Voormalig politiekorps Gelderland-Zuid. Met de keuze om het begrip ‘boven de norm’ zo in te vullen dat alleen diegenen met een beoordeling waarbij alle competenties op tenminste niveau 2 zijn gewaardeerd voor bevordering in aanmerking komen, is verweerder binnen de kaders van het loopbaanbeleid en het kaderdocument gebleven. Deze keuze komt er immers op neer dat sprake moet zijn van  beoordeling met een eindscore ‘uitstekend’, waarbij geen van de competenties onder niveau 2 mag zijn, dan wel van een beoordeling met een eindscore tegen uitstekend aan, te weten een eindscore ‘goed’, waarbij alle competenties op tenminste niveau 2 zijn gewaardeerd. Verweerder is hiermee binnen de grenzen van een redelijke beleidsbepaling gebleven.</para>
+    </inhoudsindicatie>
+  <uitspraak id="ECLI:NL:RBGEL:2015:6991:DOC" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <bridgehead role="bold">RECHTBANK GELDERLAND</bridgehead>
+        <para>Zittingsplaats Arnhem</para>
+        <para />
+      <section role="procesverloop">
+        <para>Procesverloop</para>
+        <para />
+        <parablock>
+          <para>De rechtbank heeft op 30 april 2015 een tussenuitspraak gedaan (ECLI:NL:RBGEL:2015:2838).</para>
+        </parablock>
+      </section>
+        <para>Overwegingen</para>
+        <para />
+        <parablock>
+          <para>1.	Section 1.</para>
+        </parablock>
+        <para />
+        <para>2. Section 2</para>
+          <para>uhhh</para>
+        <paragroup>
+          <nr>2.1</nr>
+          <para>Section 2.1</para>
+          <para />
+        </paragroup>
+        <paragroup>
+          <nr>2.2</nr>
+          <para>Section 2.2</para>
+          <para />
+          <parablock>
+            <para>3.	Section 3</para>
+          </parablock>
+          <para />
+        </paragroup>
+        <para />
+        <para />
+    </uitspraak>
+</open-rechtspraak>

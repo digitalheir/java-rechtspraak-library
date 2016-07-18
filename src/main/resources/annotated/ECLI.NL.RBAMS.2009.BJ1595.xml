@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:eu="http://publications.europa.eu/celex/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:tr="http://tuchtrecht.overheid.nl/">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:RBAMS:2009:BJ1595</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2014-07-15T23:46:51</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-05</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">BJ1595</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Rechtbank_Amsterdam" scheme="overheid.RechterlijkeMacht">Rechtbank Amsterdam</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">2009-05-13</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">426480 / KG ZA 09-938 SR/MdB</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#voorlopigeVoorziening">Voorlopige voorziening</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#civielRecht">Civiel recht</dcterms:subject>
+      <dcterms:relation ecli:resourceIdentifier="ECLI:NL:GHAMS:2011:BR3418" psi:aanleg="http://psi.rechtspraak.nl/latereAanleg" psi:gevolg="http://psi.rechtspraak.nl/gevolg#bekrachtiging/bevestiging" psi:type="http://psi.rechtspraak.nl/hogerBeroep" rdfs:label="Formele relatie">Hoger beroep: ECLI:NL:GHAMS:2011:BR3418, Bekrachtiging/bevestiging</dcterms:relation>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+          <rdf:li>NJF 2009, 355</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBAMS:2009:BJ1595">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBAMS:2009:BJ1595</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-05T04:54:41</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2009-07-06</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:RBAMS:2009:BJ1595 Rechtbank Amsterdam , 13-05-2009 / 426480 / KG ZA 09-938 SR/MdB</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie id="ECLI:NL:RBAMS:2009:BJ1595:INH" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <para>Gegeven de specifieke omstandigheden van het geval is de websitehouder (gedaagde) gehouden zijn website zodanig aan te passen dat niet langer via deze website, door middel van de zoekmachine van Google, een zoekresultaat wordt weergegeven waarin de onjuiste indruk wordt gewekt dat eiser failliet is.</para>
+    </inhoudsindicatie>
+  <uitspraak id="ECLI:NL:RBAMS:2009:BJ1595:DOC" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">vonnis</para>
+        <para manualAnnotation="TEXT_BLOCK">RECHTBANK AMSTERDAM</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Sector civiel recht, voorzieningenrechter</para>
+      <para/>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">zaaknummer / rolnummer: 426480 / KG ZA 09-938 SR/MdB</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Vonnis in kort geding van 13 mei 2009</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">in de zaak van</para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">1.	</potentialnr><text manualAnnotation="TEXT_BLOCK">de besloten vennootschap met beperkte aansprakelijkheid</text></para>
+        <para manualAnnotation="TEXT_BLOCK">[eiseres1],</para>
+        <para manualAnnotation="TEXT_BLOCK">gevestigd te [vestigingsplaats],</para>
+        <para><potentialnr manualAnnotation="NR">2.	</potentialnr><text manualAnnotation="TEXT_BLOCK">de besloten vennootschap met beperkte aansprakelijkheid</text></para>
+        <para manualAnnotation="TEXT_BLOCK">[eiseres2],</para>
+        <para manualAnnotation="TEXT_BLOCK">gevestigd te [vestigingsplaats1] en [vestigingsplaats2],</para>
+        <para manualAnnotation="TEXT_BLOCK">eiseressen bij dagvaarding van 2 mei 2009,</para>
+        <para manualAnnotation="TEXT_BLOCK">advocaat mr. J.E.M. Oude Kempers te Arnhem,</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">tegen</para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">1.	</potentialnr><text manualAnnotation="TEXT_BLOCK">[gedaagde1],</text></para>
+        <para manualAnnotation="TEXT_BLOCK">wonende te [woonplaats],</para>
+        <para><potentialnr manualAnnotation="NR">2.	</potentialnr><text manualAnnotation="TEXT_BLOCK">[gedaagde2],</text></para>
+        <para manualAnnotation="TEXT_BLOCK">wonende te [woonplaats],</para>
+        <para manualAnnotation="TEXT_BLOCK">gedaagden,</para>
+        <para manualAnnotation="TEXT_BLOCK">verschenen in persoon.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Eisers zullen hierna gezamenlijk in mannelijk enkelvoud ook [eiser] worden genoemd.</para>
+      <para> </para>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">1.	</potentialnr><text manualAnnotation="SECTION_TITLE">De procedure</text></para>
+        <para manualAnnotation="TEXT_BLOCK">Ter terechtzitting van 8 mei 2009 heeft [eiser] gesteld en gevorderd overeenkomstig de in fotokopie aan dit vonnis gehechte dagvaarding, waarbij de eis is gewijzigd bij de eveneens aan dit vonnis gehechte akte. [gedaagde1] en [gedaagde2] hebben verweer gevoerd met conclusie tot weigering van de gevraagde voorzieningen. [eiser] heeft producties en pleitnota’s in het geding gebracht. [gedaagde1] heeft producties en een pleitnota in het geding gebracht. Na verder debat hebben partijen verzocht vonnis te wijzen. Ter zitting waren aanwezig aan de zijde van [eiser]: [directeur eiseressen], directeur van eiseressen met mr. Oude Kempers en aan de zijde van gedaagden: [gedaagde1] en [gedaagde2]. Ter zitting is medegedeeld dat vanwege de spoedeisendheid van de zaak op 13 mei 2009 verkort vonnis zal worden gewezen en de uitwerking daarvan op 27 mei 2009 zal volgen. Onderstaande is die uitwerking.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">2.	</potentialnr><text manualAnnotation="SECTION_TITLE">De feiten</text></para>
+        <para><potentialnr manualAnnotation="NR">2.1.	</potentialnr><text manualAnnotation="TEXT_BLOCK">[gedaagde1] exploiteert de website www.klup.nl. De website www.miljoenhuizen.nl wordt geëxploiteerd door [Y]. Beide websites worden met gegevens over woningen, bedrijven en andere links gevoed vanuit verschillende databases. Deze gegevens worden automatisch, zonder menselijke tussenkomst, toegevoegd, veranderd of verwijderd. Geregistreerde gebruikers kunnen deze informatie zelf aanpassen of aanvullen. Wel kunnen moderators, bijvoorbeeld [gedaagde1], achteraf deze aanpassingen wijzigen of verwijderen. Op de websites kunnen over woningen of bedrijven ook commentaren worden achtergelaten. Voordat deze commentaren worden geplaatst, worden zij vooraf gecontroleerd door een moderator. De moderator beslist of de aangeleverde tekst op de website kan worden gepubliceerd. De moderator kan de tekst aanpassen of verwijderen. Beide websites zijn zodanig ingericht dat zij bij treffers naar aanleiding van zoektermen, hoog op de zoekresultatenpagina van Google verschijnen.</text></para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.2.	</potentialnr><text manualAnnotation="TEXT_BLOCK">[eiser] drijft een tweetal ondernemingen (autohandel), één te [vestigingsplaats] en één te [vestigingsplaats1]. [eiser] is een officiële distributeur van de merken BMW, MINI en Land Rover. </text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.3.	</potentialnr><text manualAnnotation="TEXT_BLOCK">Op de website www.klup.nl staat onder het kopje bedrijven in de kolom onder meer: “Activiteit: Autodealer Plaats: [vestigingsplaats1] Volledige naam: [volledige naam]”. Op de website staat in een andere kolom onder het kopje “Laatste reacties betreffende ANDERe links”, onder meer: “[X] Dit bedrijf is failliet verklaard, het is overgenomen door het motorhuis Ik heb bij [X] gewerkt”. </text></para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">2.4.	</potentialnr><text manualAnnotation="TEXT_BLOCK">Na intoetsing in de Google zoekmachine van de woorden [[eiser]] en [failliet] laat de Google zoekresultatenpagina de volgende tekst zien op de eerste plaats:</text></para>
+        <para><quote manualAnnotation="TEXT_BLOCK">“</quote><text manualAnnotation="TEXT_BLOCK">[Z] – informatie en meningen over … </text></para>
+        <para manualAnnotation="TEXT_BLOCK">Volledige naam [volledige naam] … Dit bedrijf is failliet verklaard, het is overgenomen door het motorhuis Ik heb bij [X] gewerkt …” </para>
+        <para manualAnnotation="TEXT_BLOCK">en op de tweede plaats: </para>
+        <para><quote manualAnnotation="TEXT_BLOCK">“</quote><text manualAnnotation="TEXT_BLOCK">[Z] – informatie en meningen over … </text></para>
+        <para manualAnnotation="TEXT_BLOCK">Ik wil graag de ervaringen weten van anderen met [eiser] te [vestigingsplaats1]. … Dit bedrijf is failliet verklaard, het is overgenomen door het motorhuis Ik …” </para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">2.5.	</potentialnr><text manualAnnotation="TEXT_BLOCK">[eiser] heeft [gedaagde1] en [gedaagde2] bij brief van 9 maart 2009 gesommeerd om de inrichting van de website www.klup.nl aan te passen en aangepast te houden. In de brief staat verder onder meer: </text></para>
+        <para><quote manualAnnotation="TEXT_BLOCK">“</quote><text manualAnnotation="TEXT_BLOCK">Door uw handelwijze en de wijze waarop u de website hebt ingericht, lijden cliënten aanzienlijke schade. Vanwege het feit dat in deze tijd diverse garagebedrijven kampen met financiële problemen, zijn leveranciers en klanten op hun hoede. De geruchten die zijn ontstaan doordat door uw toedoen de suggestie wordt gewekt dat cliënten failliet zijn, hebben ertoe geleid dat orders uitblijven, bestellingen worden geannuleerd en vooruitbetalingen worden uitgesteld”.</text></para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.6.	</potentialnr><text manualAnnotation="TEXT_BLOCK">[eiser] heeft [gedaagde1] op 26 maart 2009 opnieuw gesommeerd de inrichting van de website aan te passen. </text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.7.	</potentialnr><text manualAnnotation="TEXT_BLOCK">Bij brieven van 15 april 2009 heeft [eiser] [gedaagde1] en [gedaagde2] opnieuw gesommeerd de website aan te passen.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.8.	</potentialnr><text manualAnnotation="TEXT_BLOCK">Door [eiser] zijn verklaringen (e-mails) overgelegd van meerdere medewerkers waarin een groot aantal namen wordt genoemd van klanten en relaties die vragen hebben gesteld over het vermeende faillissement, waaronder een email van 6 mei 2009 van [persoon1] inhoudende onder meer:</text></para>
+      <para/>
+      <parablock>
+        <para><quote manualAnnotation="TEXT_BLOCK">“</quote><text manualAnnotation="TEXT_BLOCK">Hierbij mijn bevestiging dat ik diverse mensen heb gesproken wat betreft dat [eiser] failliet zou gaan. Mensen vertellen dat ze dit op internet gelezen hebben. (…). De geruchten zijn als een lopend vuurtje gegaan, waarop ik ook steeds meer reacties van mensen ben gaan krijgen. Mensen die mij hierover hebben aangesproken of gebeld zijn o.a.:</text></para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK">	de [A] hier mij hierover gebeld</text></para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK">	Dhr. [persoon2] heeft mij hierover speciaal gebeld. Zijn klanten hebben het ook weer aan hem gevraagd. (…)</text></para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK">	Andere bedrijven waar ik wel eens kom, of mensen van spreek (bijv. [persoon3] auto’s) hadden ook van de geruchten vernomen of dealers hier in de omgeving zoals de Fiat (…)”</text></para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">3.	</potentialnr><text manualAnnotation="SECTION_TITLE">Het geschil</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">3.1.	</potentialnr><text manualAnnotation="TEXT_BLOCK">[eiser] vordert   samengevat en na wijziging van eis -, op straffe van een dwangsom, [gedaagde1] en [gedaagde2] te veroordelen om met onmiddellijke ingang na betekening van het vonnis de inrichting van de websites www.klup.nl en www.miljoenhuizen.nl en andere door [gedaagde1] en [gedaagde2] gehouden c.q. geëxploiteerde websites zodanig aan te passen en aangepast te houden, dat door of op deze websites, al dan niet via Google dan wel via andere zoekmachines, niet meer de onjuiste associatie wordt gewekt dat [eiser] failliet is dan wel overgenomen is, met veroordeling van [gedaagde1] en [gedaagde2] in de proceskosten. </text></para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">3.2.	</potentialnr><text manualAnnotation="TEXT_BLOCK">[eiser] stelt daartoe het volgende. Wanneer men via Google zoekt op de zoektermen [[eiser]] en [failliet] geeft Google in de zoekresultaten via de zoekresultatenpagina de teksten van de websites www.klup.nl en www.miljoenhuizen.nl zodanig (gecombineerd) weer dat het voor de gemiddelde lezer lijkt alsof [eiser] failliet is. Pas als wordt doorgeklikt naar de betreffende website en de websites goed en volledig worden gelezen, wordt duidelijk dat de verwijzing naar het failliete bedrijf een ánder bedrijf betreft. Door de wijze waarop de website is ingericht, wordt onjuiste informatie verstrekt, die schadelijk is voor de goede naam en reputatie van [eiser]. Als gevolg van deze verkeerde informatie heeft [eiser] aanzienlijke schade geleden en lijdt dat nog steeds. [eiser] heeft diverse malen naar aanleiding van vragen van (potentiële) klanten moeten uitleggen dat er geen sprake was van een faillissement. Juist in deze tijden van economische crisis hebben autobedrijven grote moeite om het hoofd boven water te houden. Elke suggestie dat van een faillissement sprake zou zijn brengt schade toe aan de reputatie van [eiser] en vergroot de kans dat klanten wegblijven. Ook heeft [eiser] zijn personeelsleden meermalen moeten overtuigen dat zij zich geen zorgen hoefden te maken. Ter zitting heeft de heer </text></para>
+        <para manualAnnotation="TEXT_BLOCK">[directeur eiseressen] nog verklaard dat hij er niet om heeft gevraagd om met zijn bedrijfsgegevens op de betrokken websites vermeld te worden en hij dat ook niet wil. [gedaagde1] en [gedaagde2] zijn aansprakelijk voor de schade die uit de zoekresultaten voortvloeit. Een redelijke belangenafweging brengt met zich dat de belangen van [eiser] bij aanpassing van de website zwaarder dienen te wegen dan de belangen van [gedaagde1] en [gedaagde2] bij ongewijzigde handhaving van de website. Met een betrekkelijk eenvoudige handeling kan [gedaagde1] en/ of [gedaagde2] de website zodanig aanpassen dat de resultaten niet zodanig worden weergegeven dat [eiser] daardoor schade lijdt. </para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">3.3.	</potentialnr><text manualAnnotation="TEXT_BLOCK">[gedaagde1] en [gedaagde2] voeren verweer als volgt. </text></para>
+        <para manualAnnotation="TEXT_BLOCK">De vordering betrekking hebbende op www.miljoenhuizen.nl dient te worden afgewezen nu deze website eigendom is van [Y], welke vennootschap niet is gedagvaard. De vordering tegen [gedaagde2] dient ook te worden afgewezen omdat hij ten onrechte is gedagvaard. [gedaagde2] heeft geen invloed op de inhoud van www.klup.nl die in deze zaak aan de orde is. </para>
+        <para manualAnnotation="TEXT_BLOCK">De informatie die door www.klup.nl wordt weergegeven is publiek beschikbaar en niet onjuist en/of schadelijk voor [eiser]. Er wordt op de website op geen enkele manier de indruk gewekt dat [eiser] failliet zou zijn. Het blok waarin de bedrijfsgegevens van [eiser] zijn weergegeven onderscheidt zich fysiek duidelijk van het blok waarin het commentaar van de bezoeker over het failliete bedrijf [X] staat. Bij intoetsing van de twee zoektermen [[eiser]] en [failliet] op de Google zoekmachine, linkt Google twee stukken tekst die afkomstig zijn uit de twee verschillende blokken en die betrekking hebben op twee bedrijven op de voor [eiser] ongelukkige manier, met slechts drie puntjes daartussen. De geoefende internetgebruiker weet dat de twee door Google gelinkte teksten niet noodzakelijkerwijs betrekking hebben op hetzelfde onderwerp. Om dat te checken dient men de door Google voorgestelde link aan te klikken en de website goed te lezen. Gekomen op de website www.klup.nl blijkt al gauw dat de zin “dit bedrijf is failliet verklaard” geen betrekking heeft op [eiser]. Het ligt niet op de weg van gedaagden om de website www.klup.nl aan te passen, omdat het probleem wordt veroorzaakt door de willekeurige en door gedaagden niet te beïnvloeden wijze waarop Google ingevulde zoektermen weergeeft op de resultatenpagina. De Google zoekmachine biedt geen mogelijkheden een zoekresultaat bij combinaties zoals [[eiser]] en [failliet] bij voorbaat uit te sluiten. Het is wel mogelijk een gehele pagina niet te laten indexeren door Google, maar dat betekent dat die gehele pagina niet gevonden kan worden door Google en dat deze pagina aanzienlijk minder bezoek zal krijgen. Zelfs al zou [gedaagde1] de tekst op de website aanpassen, is het maar zeer de vraag of er vervolgens niet een andere ongelukkige combinatie wordt gevormd na het intoetsen van zoektermen. Ook vele andere websites zullen dan dezelfde stap moeten ondernemen. Hierdoor wordt het functioneren van internet en van zoekmachines ernstig beperkt. [gedaagde1] en [gedaagde2] kunnen op geen enkele wijze aansprakelijk worden gesteld voor onrechtmatige handelingen die niet (door hen) zijn gepleegd. Toewijzing van de vordering zou een ernstige beperking met zich meebrengen voor de vrijheid van meningsuiting omdat dit met zich zou brengen dat een niet lasterlijke mededeling verboden zou kunnen worden omdat deze door tussenkomst van een ander zó wordt weergegeven dat anderen deze weergave opvatten in negatieve zin. Het spoedeisende belang wordt betwist nu is gebleken dat er nog vele zoekresultaten zullen overblijven bij verwijdering van de klup.nl en/of miljoenhuizen.nl resultaten. </para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">4.	</potentialnr><text manualAnnotation="SECTION_TITLE">De beoordeling</text></para>
+        <para><potentialnr manualAnnotation="NR">4.1.	</potentialnr><text manualAnnotation="TEXT_BLOCK">Nu de eigenaar van de website www.miljoenhuizen.nl niet is gedagvaard, kunnen de vorderingen betrekking hebbende op de inrichting van www.miljoenhuizen.nl niet worden toegewezen.</text></para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.2.	</potentialnr><text manualAnnotation="TEXT_BLOCK">Door [eiser] is niet betwist de gemotiveerde stelling van [gedaagde1] en [gedaagde2] dat [gedaagde2] als vrijwilliger bij www.klup.nl werkzaam is en dat hij de inrichting van de website www.klup.nl niet kan aanpassen waar het om de gewraakte teksten gaat, zodat de vorderingen jegens [gedaagde2] niet kunnen worden toegewezen.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.3.	</potentialnr><text manualAnnotation="TEXT_BLOCK">[eiser] heeft aangegeven niet te willen dat zijn gegevens op www.klup.nl worden vermeld. Het recht op vrijheid van meningsuiting staat [gedaagde1] echter in beginsel toe om gegevens van [eiser] zoals vermeld op www.klup.nl op internet te publiceren en om gebruikers in de gelegenheid te stellen berichten over bedrijven te plaatsen op www.klup.nl. Het recht op vrijheid van meningsuiting wordt evenwel onder meer beperkt door het recht van betrokkenen om niet onrechtmatig te worden geschaad in hun reputatie. Zo mogen geen evident onjuiste of onnodig grievende uitlatingen worden gepubliceerd tegen de zin van betrokkenen. De weergave van beide teksten op www.klup.nl (de bedrijfsgegevens van [eiser] en het commentaar over [X]), is op zichzelf niet onrechtmatig. De teksten geven geen onwaarheden weer, betreffen geen vertrouwelijke gegevens en schaden op zichzelf ook niet de reputatie van [eiser]. Aannemelijk is echter dat de ongelukkige samenvoeging door Google van deze twee op zichzelf staande teksten, bij een groot aantal mensen de indruk kan wekken dat [eiser] failliet zou zijn verklaard. De samenvoeging staat bovenaan de zoekresultatenpagina van Google. </text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.4.	</potentialnr><text manualAnnotation="TEXT_BLOCK">[gedaagde1] heeft aangevoerd dat [eiser] Google dient te dagvaarden, omdat het probleem is ontstaan door de zoekbewerking die Google uitvoert. [gedaagde1] kan daarop geen invloed uitoefenen. Hoewel het zeker zo is dat er vragen bestaan over de wijze waarop zoekresultaten door Google worden gegenereerd en vervolgens weergegeven zonder dat daarop enige invloed kan worden uitgeoefend door de eigenaren van de websites, geldt dat deze vragen binnen een bredere discussie aan de orde dienen te worden gesteld. Nu [gedaagde1] gebruik maakt van de diensten van Google, hij daarvan ook voordeel heeft, althans kan hebben, en hij zijn website zo heeft ingericht dat deze “hoog” scoort bij Google, heeft [gedaagde1] in deze ook een eigen verantwoordelijkheid. </text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.5.	</potentialnr><text manualAnnotation="TEXT_BLOCK">De vraag die in verband met die verantwoordelijkheid aan de orde is, is of [gedaagde1] handelt in strijd met de zorgvuldigheid die in het maatschappelijk verkeer, en derhalve ook op internet, betaamt, door na te laten hetgeen [eiser] hem meermalen dringend en uitdrukkelijk heeft gevraagd, namelijk het modereren van de op www.klup.nl geplaatste teksten, zodanig dat niet langer na het intoetsen van de woorden [[eiser]] en [failliet] op de zoekresultatenpagina van Google een tekst verschijnt die de onjuiste indruk kan geven dat [eiser] failliet is verklaard. </text></para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">4.6.	</potentialnr><text manualAnnotation="TEXT_BLOCK">[eiser] heeft meerdere verklaringen overgelegd van medewerkers die</text></para>
+        <para manualAnnotation="TEXT_BLOCK">de namen noemen van diverse klanten en relaties die kritische vragen stellen over de financiële situatie van [eiser]. Een aantal heeft “uit internet” begrepen dat [eiser] failliet is. Anders dan [gedaagde1] heeft aangevoerd, is voldoende aannemelijk dat [eiser] schade lijdt door de eerder genoemde weergave op de Google zoekresultatenpagina. </para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">4.7.	</potentialnr><text manualAnnotation="TEXT_BLOCK">Ter zitting heeft [gedaagde1] aangegeven, dat het in dit concrete geval mogelijk is door een kleine ingreep de teksten zodanig aan te passen of (delen daarvan) te verwijderen, dat de zoekbewerking via Google niet langer het aangevochten resultaat oplevert. [gedaagde1] heeft echter verklaard daartoe niet bereid te zijn omdat zijn vrijheid van meningsuiting daardoor wordt beperkt. </text></para>
+        <para manualAnnotation="TEXT_BLOCK">Nu voldoende aannemelijk is geworden dat het voor [eiser] aanmerkelijke schade oplevert als [gedaagde1] de aanpassingen niet verricht, is de voorzieningenrechter van oordeel dat in dit concrete geval, nadat [eiser] [gedaagde1] daartoe meermalen heeft gesommeerd, [gedaagde1] onrechtmatig jegens [eiser] handelt na te laten de kleine aanpassing te verrichten. Het belang van [eiser] weegt in deze zwaarder dan dat van [gedaagde1]. </para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.8.	</potentialnr><text manualAnnotation="TEXT_BLOCK">Het voorgaande betekent niet dat een websitehouder als [gedaagde1] bij de inrichting van een website zoals www.klup.nl voortdurend moet controleren of er mogelijk schadelijke zoekresultaten ontstaan. Het betekent slechts dat, wanneer door de inrichting van de website bij zoekresultaten voor degene die op die website wordt genoemd schade ontstaat en de benadeelde de websitehouder verzoekt die schade op te heffen, zal moeten worden bezien wat het zwaarste weegt, de vrijheid van meningsuiting van de websitehouder of de schade van de benadeelde. Deze toets behoeft niet altijd in het voordeel van de benadeelde uit te vallen. Alle omstandigheden van het concrete geval dienen in aanmerking te worden genomen. In de onderhavige zaak valt de belangenafweging ten gunste van [eiser] uit. Daarbij spelen een rol de schade die [eiser] lijdt, de geringe omvang van de ingreep die [gedaagde1] moet toepassen om de schade op te heffen, het feit dat [gedaagde1] uit zijn website inkomsten genereert, althans wil genereren, en [gedaagde1] zijn eigen website zo heeft ingericht dat deze hoog scoort bij de weergave van zoekresultaten van Google. </text></para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">4.9.	</potentialnr><text manualAnnotation="TEXT_BLOCK">Op grond van het voorgaande zal de vordering worden toegewezen als volgt. [gedaagde1] zal als de grotendeels in het ongelijk gestelde partij in de proceskosten worden veroordeeld. De kosten aan de zijde van [eiser] worden begroot op: EUR 77,25 aan explootkosten, EUR 262,00 aan vast recht en </text></para>
+        <para manualAnnotation="TEXT_BLOCK">EUR 816,00 aan salaris advocaat.</para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.10.	</potentialnr><text manualAnnotation="TEXT_BLOCK">[eiser] zal als de jegens [gedaagde2] grotendeels in het ongelijk gestelde partij in de proceskosten van [gedaagde2] worden veroordeeld. De kosten aan de zijde van [gedaagde2] worden begroot op:  EUR 262,00.</text></para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">5.	</potentialnr><text manualAnnotation="SECTION_TITLE">De beslissing</text></para>
+        <para manualAnnotation="TEXT_BLOCK">De voorzieningenrechter</para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">5.1.	</potentialnr><text manualAnnotation="TEXT_BLOCK">weigert de gevraagde voorzieningen voorzover deze zijn gericht tegen [gedaagde2],</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">5.2.	</potentialnr><text manualAnnotation="TEXT_BLOCK">veroordeelt [gedaagde1] om binnen twee dagen na betekening van dit vonnis de inrichting van de website www.klup.nl zodanig aan te passen en aangepast te houden, dat niet langer via deze website, door middel van de zoekmachine van Google, een zoekresultaat wordt weergegeven waarin de onjuiste indruk wordt gewekt dat [eiser] failliet is,</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">5.3.	</potentialnr><text manualAnnotation="TEXT_BLOCK">bepaalt dat [gedaagde1] voor iedere dag dat hij in strijd handelt met het onder 5.3 bepaalde, aan [eiser] een dwangsom verbeurt van EUR 500,--, tot een maximum van EUR 50.000,--,</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">5.4.	</potentialnr><text manualAnnotation="TEXT_BLOCK">veroordeelt [gedaagde1] in de proceskosten, aan de zijde van [eiser] tot op heden begroot op EUR 1.155,25,</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">5.5.	</potentialnr><text manualAnnotation="TEXT_BLOCK">veroordeelt [eiser] in de proceskosten van [gedaagde2], aan de zijde van [gedaagde2] tot op heden begroot op EUR 262,--,</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">5.6.	</potentialnr><text manualAnnotation="TEXT_BLOCK">verklaart dit vonnis tot zover uitvoerbaar bij voorraad,</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">5.7.	</potentialnr><text manualAnnotation="TEXT_BLOCK">wijst het meer of anders gevorderde af.</text></para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Dit vonnis is gewezen door mr. Sj.A. Rullmann, voorzieningenrechter, bijgestaan door mr. M. van den Berg, griffier, en in het openbaar uitgesproken op 13 mei 2009.?</para>
+    </uitspraak>
+</open-rechtspraak>

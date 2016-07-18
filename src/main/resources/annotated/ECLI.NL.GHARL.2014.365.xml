@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:eu="http://publications.europa.eu/celex/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:tr="http://tuchtrecht.overheid.nl/">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:GHARL:2014:365</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2014-01-22T10:12:09</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2014-01-21</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Gerechtshof_Arnhem-Leeuwarden" scheme="overheid.RechterlijkeMacht">Gerechtshof Arnhem-Leeuwarden</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">2014-01-21</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">200.105.072-01</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#hogerBeroep">Hoger beroep</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:spatial rdfs:label="Zittingsplaats">Leeuwarden</dcterms:spatial>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#civielRecht">Civiel recht</dcterms:subject>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:GHARL:2014:365">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:GHARL:2014:365</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2014-01-22T10:11:49</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2014-01-22</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:GHARL:2014:365 Gerechtshof Arnhem-Leeuwarden , 21-01-2014 / 200.105.072-01</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie id="ECLI:NL:GHARL:2014:365:INH" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <para>Onrechtmatig handelen door het in het verkeer brengen van gebrekkige douchepijpen kan aan de producent worden toegerekend. Van de 21 aan de producent aangeboden douchepijpen staat vast dat deze gebrekkig waren doordat zij lekten door corrosie. Van de latere gevallen van lekkage is dit voorshands voldoende aannemelijk en staat het de producent vrij hiervan tegenbewijs te leveren.</para>
+    </inhoudsindicatie>
+  <uitspraak id="ECLI:NL:GHARL:2014:365:DOC" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <uitspraak.info>
+        <para/>
+        <parablock>
+          <para>
+            <emphasis manualAnnotation="TEXT_BLOCK" role="bold">GERECHTSHOF ARNHEM-LEEUWARDEN </emphasis>
+          </para>
+        </parablock>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">locatie Leeuwarden</para>
+        </parablock>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">afdeling civiel recht</para>
+        </parablock>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">zaaknummer gerechtshof 200.105.072/01</para>
+          <para manualAnnotation="TEXT_BLOCK">(zaaknummer rechtbank Assen 84272/HA ZA 11-26)</para>
+        </parablock>
+        <para/>
+        <para/>
+        <parablock>
+          <para>
+            <emphasis manualAnnotation="TEXT_BLOCK" role="bold">arrest van de tweede kamer van 21 januari 2014 </emphasis>
+          </para>
+        </parablock>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">in de zaak van</para>
+        </parablock>
+        <para/>
+        <parablock>
+          <para>
+            <emphasis manualAnnotation="TEXT_BLOCK" role="bold">UBA Bouw B.V.,</emphasis>
+          </para>
+          <para manualAnnotation="TEXT_BLOCK">gevestigd te Uithoorn,</para>
+          <para manualAnnotation="TEXT_BLOCK">appellante,</para>
+          <para manualAnnotation="TEXT_BLOCK">in eerste aanleg: eiseres,</para>
+          <para><text manualAnnotation="TEXT_BLOCK">hierna: </text><emphasis manualAnnotation="TEXT_BLOCK" role="bold">UBA</emphasis><text manualAnnotation="TEXT_BLOCK">,</text></para>
+          <para manualAnnotation="TEXT_BLOCK">advocaat: mr. J.V. van Ophem, kantoorhoudend te Leeuwarden, voor wie heeft gepleit mr. C.P. ten Bruggencate, kantoorhoudend te Amsterdam,</para>
+        </parablock>
+        <para/>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">tegen</para>
+        </parablock>
+        <para/>
+        <para/>
+      </uitspraak.info>
+      <section>
+        <title>
+          <nr manualAnnotation="NR">1</nr><text manualAnnotation="TEXT_BLOCK">[geïntimeerde 1],</text></title>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">gevestigd te [woonplaats],</para>
+          <para><text manualAnnotation="TEXT_BLOCK">hierna: </text><emphasis manualAnnotation="TEXT_BLOCK" role="bold">[geïntimeerde 1]</emphasis><text manualAnnotation="TEXT_BLOCK">,</text></para>
+          <para>
+            <emphasis role="bold"><potentialnr manualAnnotation="NR">2. </potentialnr><text manualAnnotation="TEXT_BLOCK">[geïntimeerde 2],</text></emphasis>
+          </para>
+          <para manualAnnotation="TEXT_BLOCK">gevestigd te [woonplaats],</para>
+          <para><text manualAnnotation="TEXT_BLOCK">hierna: </text><emphasis manualAnnotation="TEXT_BLOCK" role="bold">[geïntimeerde 2]</emphasis><text manualAnnotation="TEXT_BLOCK">,</text></para>
+          <para manualAnnotation="TEXT_BLOCK">geïntimeerden,</para>
+          <para manualAnnotation="TEXT_BLOCK">in eerste aanleg: gedaagden,</para>
+          <para><text manualAnnotation="TEXT_BLOCK">hierna gezamenlijk te noemen: </text><emphasis manualAnnotation="TEXT_BLOCK" role="bold">[geïntimeerden]</emphasis><text manualAnnotation="TEXT_BLOCK">, </text></para>
+          <para manualAnnotation="TEXT_BLOCK">advocaat: mr. J.A. Venema, kantoorhoudend te Emmen, die ook heeft gepleit.</para>
+        </parablock>
+        <para/>
+        <para/>
+      </section>
+      <section>
+        <title>
+          <nr manualAnnotation="NR">1</nr><text manualAnnotation="SECTION_TITLE">Het geding in eerste aanleg </text></title>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">In eerste aanleg is geprocedeerd en beslist zoals weergegeven in de vonnissen van 6 april 2011, 1 juni 2011 en 8 februari 2012 van de rechtbank Assen, sector civiel recht.</para>
+        </parablock>
+        <para/>
+      </section>
+      <section>
+        <title>
+          <nr manualAnnotation="NR">2</nr><text manualAnnotation="SECTION_TITLE">Het geding in hoger beroep </text></title>
+        <para/>
+        <paragroup>
+          <nr manualAnnotation="NR">2.1</nr>
+          <para manualAnnotation="TEXT_BLOCK">Het verloop van de procedure is als volgt:</para>
+          <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> de dagvaarding in hoger beroep d.d. 5 april 2012,</text></para>
+          <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> de memorie van grieven, met producties,</text></para>
+          <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> de memorie van antwoord, met producties,</text></para>
+          <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> een akte overlegging producties en wijziging, althans concretisering van eis, van 12 september 2013;</text></para>
+          <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> het gehouden pleidooi waarbij pleitnotities zijn overgelegd.</text></para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">2.2</nr>
+          <para manualAnnotation="TEXT_BLOCK">Na afloop van het pleidooi heeft het hof arrest bepaald.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">2.3</nr>
+          <parablock>
+            <para manualAnnotation="TEXT_BLOCK">De in de memorie van grieven opgenomen vordering van UBA luidt:</para>
+            <para> <quote manualAnnotation="TEXT_BLOCK">"</quote><emphasis manualAnnotation="TEXT_BLOCK" role="italic">bij arrest, uitvoerbaar bij voorraad, het vonnis van de rechtbank Assen van 8 februari 2012 met zaak/rolnummer 84272/HA ZA 11-26 te vernietigen en opnieuw rechtdoende:</emphasis></para>
+            <para>
+              <emphasis role="italic"><potentialnr manualAnnotation="NR">I. </potentialnr><text manualAnnotation="TEXT_BLOCK">	te verklaren voor recht dat geïntimeerden hoofdelijk, althans geïntimeerde sub 1, althans</text></emphasis>
+            </para>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">geïntimeerde sub 2, aansprakelijk is/zijn voor alle schade die voor UBA het gevolg is van</emphasis>
+            </para>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">lekkages van Douchepijpen die zich reeds hebben voorgedaan of die zich in de toekomst</emphasis>
+            </para>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">zullen voordoen in woningen in Bovenkerk Zuid, Legmeer West, Tuindorp Zuid of elders, althans dat zij aansprakelijk is/zijn voor dat deel van de schade dat uw Hof in goede justitie redelijk acht; en</emphasis>
+            </para>
+            <para>
+              <emphasis role="italic"><potentialnr manualAnnotation="NR">II.	</potentialnr><text manualAnnotation="TEXT_BLOCK">geïntimeerden hoofdelijk, althans geïntimeerde sub 1, althans geïntimeerde sub 2, te</text></emphasis>
+            </para>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">veroordelen om aan UBA te vergoeden</emphasis>
+            </para>
+            <para>
+              <emphasis role="italic"><potentialnr manualAnnotation="NR">a.	</potentialnr><text manualAnnotation="TEXT_BLOCK">€ 88.705,56 vermeerderd met wettelijke rente vanaf 1 juli 2010 althans vanaf 5 april 2012 tot aan de dag der algehele voldoening, en</text></emphasis>
+            </para>
+            <para>
+              <emphasis role="italic"><potentialnr manualAnnotation="NR">b.	</potentialnr><text manualAnnotation="TEXT_BLOCK">€ 17.809,47 vermeerderd met wettelijke rente vanaf 1 juli 2010 althans vanaf 5 april 2012 tot aan de dag der algehele voldoening;</text></emphasis>
+            </para>
+            <para>
+              <emphasis role="italic"><potentialnr manualAnnotation="NR">III.	</potentialnr><text manualAnnotation="TEXT_BLOCK">geïntimeerden hoofdelijk, althans geïntimeerde sub 1, althans geïntimeerde sub 2, te veroordelen om aan UBA te vergoeden de schade die zij nog zal lijden als gevolg van de lekkages die zich reeds hebben voorgedaan en door lekkages die zich in de toekomst zullen voordoen, nader op te maken bij staat; en</text></emphasis>
+            </para>
+            <para>
+              <emphasis role="italic"><potentialnr manualAnnotation="NR">IV. </potentialnr><text manualAnnotation="TEXT_BLOCK">	geïntimeerden hoofdelijk, althans geïntimeerde sub 1, althans geïntimeerde sub 2, te veroordelen in de kosten van het geding in beide instanties en de nakosten ad € 131,-."</text></emphasis>
+            </para>
+          </parablock>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">2.4</nr>
+          <para manualAnnotation="TEXT_BLOCK">Bij akte van 12 september 2013 heeft UBA onderdeel II.a. van haar vordering gewijzigd in die zin dat zij in plaats van € 88.705,56 thans € 106.742,92 vordert.</para>
+          <para/>
+        </paragroup>
+      </section>
+      <section>
+        <title>
+          <nr manualAnnotation="NR">3</nr><text manualAnnotation="SECTION_TITLE">De vaststaande feiten</text></title>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">Tussen partijen staan de volgende feiten vast als enerzijds gesteld en anderzijds onvoldoende weersproken.</para>
+        </parablock>
+        <para/>
+        <paragroup>
+          <nr manualAnnotation="NR">3.1</nr>
+          <para manualAnnotation="TEXT_BLOCK">UBA heeft in opdracht van Woongroep Holland Projecten B.V. woningen gerealiseerd in het project "Bovenkerk Zuid" te Amstelveen. In het bestek werd voor 172 (van de 373) woningen een zogenaamde douche warmtewisselaar voorgeschreven (hierna: de douchepijp): een pijp waarmee de warmte uit het douchewater gedeeltelijk wordt teruggewonnen.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">3.2</nr>
+          <para manualAnnotation="TEXT_BLOCK">[A] heeft eind 2007 en begin 2008 in opdracht van UBA in 99 woningen (in de kwadranten 1 en 2 van het project "Bovenkerk Zuid") douchepijpen geplaatst en in de zomer van 2008 de overige 73 (in de kwadranten 3 en 4 van dat project). De douchepijpen zijn daarbij ingebouwd in GIBO kokers achter het toilet op de begane grond.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">3.3</nr>
+          <para manualAnnotation="TEXT_BLOCK">Er zijn tevens douchepijpen geplaatst in andere projecten van UBA, namelijk in 2007 en begin 2008 in 28 hoekwoningen in het project "Legmeer West fase 2" te Uithoorn en in 2009 en 2010 in 72 woningen in het project "Tuindorp Zuid" in Ouderkerk aan de Amstel. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">3.4</nr>
+          <para manualAnnotation="TEXT_BLOCK">[A] heeft de douchepijpen gekocht van Technea Nederland B.V.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">3.5</nr>
+          <para manualAnnotation="TEXT_BLOCK">De douchepijpen zijn in eerste instantie geproduceerd door (thans) [geïntimeerde 2]</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">3.6</nr>
+          <para manualAnnotation="TEXT_BLOCK">[geïntimeerde 2] is op 5 juli 1988 opgericht. Op 11 november 2009 zijn haar statuten gewijzigd en heeft zij [geïntimeerde 1] opgericht, waarvan thans zij directeur-enig aandeelhouder is. [X] is directeur/enig aandeelhouder van [geïntimeerde 2]. Sinds de oprichting van [geïntimeerde 1] worden de douchepijpen door [geïntimeerde 1] geproduceerd.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">3.7</nr>
+          <parablock>
+            <para manualAnnotation="TEXT_BLOCK">Technea heeft per mailbericht van 14 november 2006 de installatiehandleiding 2006 aan [A] gemaild. In die handleiding is onder meer vermeld:</para>
+            <para>
+              <emphasis role="italic"><quote manualAnnotation="TEXT_BLOCK">"</quote></emphasis><text manualAnnotation="TEXT_BLOCK">
+              </text><emphasis role="bold italic"><potentialnr manualAnnotation="NR">2.2. </potentialnr><text manualAnnotation="TEXT_BLOCK">De plaats van douchepijp.</text></emphasis>
+            </para>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">De ruimte waarin de douchepijp wordt opgesteld moet voldoende groot zijn zodat onderhoudswerkzaamheden en inspectie goed zijn uit te voeren. De toegang moet zonder veel ingrepen gerealiseerd kunnen worden. </emphasis>
+            </para>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">Het plaatsen van de douchepijp in de meterkast is toegestaan mits er rekening wordt gehouden met compartimentering (indeling) van de meterkast volgens NEN2768, "Meterkasten en bijbehorende bouwkundige voorzieningen voor leidingaanleg in woningen". (…)"</emphasis>
+            </para>
+          </parablock>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">3.8</nr>
+          <parablock>
+            <para manualAnnotation="TEXT_BLOCK">In de daaropvolgende versie van de installatiehandleiding uit 2007 is opgenomen:</para>
+            <para>
+              <emphasis role="italic"><quote manualAnnotation="TEXT_BLOCK">"</quote><text manualAnnotation="SECTION_TITLE">Aandachtspunten</text></emphasis>
+            </para>
+            <para>
+              <emphasis role="italic"><listmarking manualAnnotation="TEXT_BLOCK">*</listmarking><text manualAnnotation="TEXT_BLOCK">	Let op dat de warmtewisselaar goed toegankelijk is zodat deze eenvoudig gemonteerd en gedemonteerd kan worden.</text></emphasis>
+            </para>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">(…)</emphasis>
+            </para>
+          </parablock>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">2.2.</nr>
+          <parablock>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="bold italic">De plaats van douchepijp.</emphasis>
+            </para>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">De douchepijp wordt beschouwd als een apparaat. De ruimte waarin de douchepijp wordt opgesteld moet voldoende groot zijn zodat onderhoudswerkzaamheden en inspectie goed zijn uit te voeren. De toegang moet zonder veel ingrepen gerealiseerd kunnen worden. </emphasis>
+            </para>
+          </parablock>
+          <para/>
+          <parablock>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">Het plaatsen van de douchepijp in de meterkast is toegestaan mits er rekening wordt gehouden met compartimentering (indeling) van de meterkast volgens NEN2768, "Meterkasten en bijbehorende bouwkundige voorzieningen voor leidingaanleg in woningen. </emphasis><text manualAnnotation="TEXT_BLOCK">(…)" </text></para>
+          </parablock>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">3.9</nr>
+          <para manualAnnotation="TEXT_BLOCK">Technea heeft de douchepijpen aan [A] in kokers afgeleverd, met in elke koker afzonderlijk een installatiehandleiding.  </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">3.10</nr>
+          <para manualAnnotation="TEXT_BLOCK">Het productieproces van de douchepijp is in september 2007 gewijzigd, in die zin dat de douchepijpen voortaan werden geleverd met drie luchtnokken in plaats van één luchtnok. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">3.11</nr>
+          <para manualAnnotation="TEXT_BLOCK">In maart 2008 en in juli 2010 is de spoelmethode van de douchepijpen na solderen gewijzigd.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">3.12</nr>
+          <para manualAnnotation="TEXT_BLOCK">[A] is inmiddels failliet verklaard.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">3.13</nr>
+          <para manualAnnotation="TEXT_BLOCK">In het voorjaar van 2010 zijn 20 van de 99 douchepijpen in de kwadranten 1 en 2 van het project "Bovenkerk Zuid" gaan lekken. Op 14 december 2010 is lekkage bij een douchepijp in kwadrant 3 van dat project geconstateerd. </para>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">3.14</nr>
+          <para manualAnnotation="TEXT_BLOCK">Bij brief van 30 juni 2010 heeft UBA [geïntimeerde 1] aansprakelijk gesteld voor alle schade en gevolgschade inzake het door haar gestelde geleverde product met de productiefout.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">3.15</nr>
+          <para manualAnnotation="TEXT_BLOCK">Technea heeft daarop 21 nieuwe douchepijpen geleverd, die UBA heeft doen installeren. UBA heeft hiervoor een factuur van [B] d.d. 14 juli 2010 ontvangen voor een bedrag van €  5.173,50. Daarnaast heeft UBA herstelkosten gemaakt, in die zin dat de kokers waarin de douchepijpen waren geplaatst, weer moesten worden dichtgemaakt.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">3.16</nr>
+          <parablock>
+            <para manualAnnotation="TEXT_BLOCK">[C] heeft in 2010 in opdracht van [geïntimeerde 1] spoelwater doen onderzoeken op corrosieve bestanddelen en heeft in een notitie verslag gedaan van haar bevindingen:  </para>
+            <para><quote manualAnnotation="TEXT_BLOCK">"</quote><text manualAnnotation="TEXT_BLOCK">(…) </text></para>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">De douchewarmtewisselaars worden bij [geïntimeerde 1] in [woonplaats] geproduceerd uit koperen buizen. De koperen buizen dienen hiervoor gesoldeerd te worden. De koperen buizen worden na het solderen voor een bepaalde periode opgeslagen. Tijdens de opslag van de gesoldeerde koperen buizen treedt er putcorrosie van het koper op waardoor de buizen aangetast worden. Voordat de gesoldeerde koperen buizen verder worden verwerkt worden deze gespoeld. [geïntimeerde 1] heeft [C] verzocht dit spoelwater nader te onderzoeken op corrosieve bestanddelen en te vergelijken met de drinkwaterkwaliteit in Emmen. Hiervoor heeft Hel-Tech twee spoelwatermonsters aan [C] verstrekt:</emphasis>
+            </para>
+          </parablock>
+          <para>
+            <emphasis role="italic"><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> Spoelwater begin spoelbeurt</text></emphasis>
+          </para>
+          <para>
+            <emphasis role="italic"><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> Spoelwater eind spoelbeurt</text></emphasis>
+          </para>
+          <parablock>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">(…)</emphasis>
+            </para>
+            <para>
+              <emphasis manualAnnotation="SECTION_TITLE" role="underline italic">Conclusie</emphasis>
+            </para>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">Uit de meetresultaten blijkt een verhoogde geleidbaarheid en verhoogde chloride concentratie in de spoelwatermonsters. Putcorrosie van koper is het gevolg van chloride ionen die het oppervlak van het koper wegvreten. Deze chloride ionen kunnen het gevolg zijn van de bij het solderen toegepaste soldeervloeistof (bijvoorbeeld vloeimiddel S-39). Veel van deze middelen bevatten zoutzuur. Het is daarom van belang om het gesoldeerde koper direct na het solderen te spoelen zodat er geen chloride ionen op het oppervlak van het koper achterblijven. Uit een toetsing van de spoelmonsters aan de drinkwaterkwaliteit blijkt dat de spoelbeurt voldoende lang is om de chloride ionen van het koper te verwijderen. Ook de geleidbaarheid van het spoelwater is aan het einde van de spoelbeurt lager dan die van het drinkwater. De pH is aan het einde van de spoelbeurt slechts een fractie lager dan die van drinkwater."</emphasis>
+            </para>
+          </parablock>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">3.17</nr>
+          <para manualAnnotation="TEXT_BLOCK">TNO Bouw en Ondergrond heeft de totale koolstof in de douchepijpen bepaald en hiervan op 8 juli 2010 rapport aan [geïntimeerde 1] uitgebracht. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">3.18</nr>
+          <parablock>
+            <para manualAnnotation="TEXT_BLOCK">Bij brief van 9 september 2010 heeft [X] aan Technea bericht:</para>
+            <para><quote manualAnnotation="TEXT_BLOCK">"</quote><text manualAnnotation="TEXT_BLOCK">(…)</text></para>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">Uit de statistieken van [geïntimeerde 1] blijkt dat er relatief weinig lekke douchepijpen zijn, namelijk slecht 0,49%. Wij hebben geconstateerd dat er kleine gaatjes in de tussenbuis kunnen ontstaan als gevolg van corrosie. Het gevolg hiervan is lekkage.</emphasis>
+            </para>
+          </parablock>
+          <para/>
+          <parablock>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">In 2009 is een onderzoek gestart naar de mogelijke oorzaken. Er zijn deskundigen, instituten en laboratoria geraadpleegd en er zijn diverse mogelijke oorzaken onderzocht.</emphasis>
+            </para>
+          </parablock>
+          <para/>
+          <parablock>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">Het materiaal van de warmtewisselaars is koper, CU-DHP, en is uitermate geschikt voor toepassingen in combinatie met leidingwater, zodat normaal gesproken dergelijke schades niet zouden kunnen optreden. Ook is, samen met het KWR (Watercycle Research Institute) te Nieuwegein, nagegaan of er een relatie bestaat tussen de waterkwaliteit in de diverse gebieden van Nederland en de daar voorkomende schadegevallen. Hieruit is geconcludeerd dat er geen relatie is tussen waterkwaliteit en schade aan de warmtewisselaar.</emphasis>
+            </para>
+          </parablock>
+          <para/>
+          <parablock>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">Een onzekere factor bij het vinden van de oorzaak is dat we niet weten wat er in de tijd tussen de installatie en de oplevering met de warmtewisselaar is gebeurd. Er zijn twee mogelijke oorzaken waar [geïntimeerde 1] invloed op heeft, namelijk koolstof deeltjes op het oppervlak van de buis en restanten van de soldeervloeistof.</emphasis>
+            </para>
+          </parablock>
+          <para/>
+          <parablock>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">Bij de fabricage van de buizen wordt vet gebruikt. Als een buis na fabricage niet goed</emphasis>
+            </para>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">gereinigd wordt en er een warmtebehandeling volgt, kan er koolstof op de buis achterblijven.</emphasis>
+            </para>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">Het is bekend dat koolstof een oorzaak van corrosie kan zijn. Wij hebben het koolstofgehalte</emphasis>
+            </para>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">laten onderzoeken door TNO te Utrecht. Gebleken is dat de buizen voldoen aan de eis die</emphasis>
+            </para>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">hieraan in KIWA richtlijn BRL K656/02 wordt gesteld. Het probleem bij het vaststellen van</emphasis>
+            </para>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">koolstofdeeltjes is dat het koolstofgehalte niet meer vast te stellen is nadat de</emphasis>
+            </para>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">warmtewisselaar in gebruik is geweest. Onze toeleveranciers hebben verklaard dat in het</emphasis>
+            </para>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">verleden de koolstofgehaltes in de buis voldeden aan de richtlijnen van KIWA. Om zeker te</emphasis>
+            </para>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">zijn zal in de toekomst regelmatig het koolstofgehalte gemeten worden.</emphasis>
+            </para>
+          </parablock>
+          <para/>
+          <parablock>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">Een tweede mogelijke oorzaak kan gevonden worden in de soldeervloeistof. In</emphasis>
+            </para>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">soldeervloeistof zitten chloorverbindingen. Restanten van deze soldeervloeistof die</emphasis>
+            </para>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">achterblijven nadat er gesoldeerd is kunnen een oorzaak van corrosie zijn. Na de fabricage</emphasis>
+            </para>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">worden de warmtewisselaars schoongespoeld. Het achterblijven van restanten van de</emphasis>
+            </para>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">soldeervloeistof kan mogelijk een verklaring zijn waarom corrosie bij bepaalde projecten</emphasis>
+            </para>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">optreedt en bij andere projecten niet. De reden kan zijn dat bij sommige projecten het langer</emphasis>
+            </para>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">duurt voordat de warmtewisselaar in gebruik wordt genomen en het residu langer in de</emphasis>
+            </para>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">warmtewisselaar blijft. In deze periode is een slecht gespoelde warmtewisselaar gevoelig voor corrosie. </emphasis>
+            </para>
+          </parablock>
+          <para/>
+          <parablock>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">De spoelmethodes zijn in de loop der jaren sterk verbeterd. Er wordt nu langer en met vers water dat verwarmd is tot 40°C gespoeld. Het restwater dat in de warmtewisselaar achterblijft voldoet aan de normen voor leidingwaterkwaliteit.</emphasis>
+            </para>
+          </parablock>
+          <para/>
+          <parablock>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">Wij zijn ervan overtuigd dat één van de twee of beide de oorzaak van de corrosie zijn en dat</emphasis>
+            </para>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">met de bovenstaande maatregelen de genoemde problemen niet meer zullen voorkomen.</emphasis>
+            </para>
+          </parablock>
+          <para/>
+          <parablock>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">Uit de statistieken blijkt dat de meeste schadegevallen de eerste 3,5 jaar optreden en dat</emphasis>
+            </para>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">daarna de kans op lekkage duidelijk afneemt. Verder is het zo dat het aantal lekkages van in</emphasis>
+            </para>
+            <para>
+              <emphasis role="italic"><potentialnr manualAnnotation="TEXT_BLOCK">2008 </potentialnr><text manualAnnotation="TEXT_BLOCK">geproduceerde warmtewisselaars beduidend minder is dan de in de daaraan</text></emphasis>
+            </para>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">voorafgaande 2 jaren. De reden hiervoor lijkt te zijn dat er vanaf 2008 veel minder</emphasis>
+            </para>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">soldeervloeistof is gebruikt bij de fabricage van de warmtewisselaars. Van de in 2009</emphasis>
+            </para>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">geproduceerde douchepijpen zijn tot op heden nog geen lekkages geconstateerd</emphasis><text manualAnnotation="TEXT_BLOCK">."</text></para>
+          </parablock>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">3.19</nr>
+          <para manualAnnotation="TEXT_BLOCK">Nadat UBA 32 lekkende douchepijpen heeft vervangen, heeft zij de bij de daarna opgetreden lekkages een bypass om de douchepijp aangebracht, waarbij de douchepijp is blijven zitten. </para>
+          <para/>
+          <para/>
+          <para/>
+        </paragroup>
+      </section>
+      <section role="beslissing">
+        <title>
+          <nr manualAnnotation="NR">4</nr><text manualAnnotation="SECTION_TITLE">De vordering van UBA en de beslissing in eerste aanleg</text></title>
+        <para/>
+        <paragroup>
+          <nr manualAnnotation="NR">4.1</nr>
+          <parablock>
+            <para manualAnnotation="TEXT_BLOCK">UBA heeft [geïntimeerde 1], [geïntimeerde 2] en Technea Nederland B.V. voor de rechtbank gedagvaard en heeft - samengevat weergegeven - gevorderd:</para>
+            <para><potentialnr manualAnnotation="NR">I.	</potentialnr><text manualAnnotation="TEXT_BLOCK">voor recht te verklaren dat gedaagden hoofdelijk, althans ieder afzonderlijk, aansprakelijk zijn voor alle schade die voor UBA het gevolg is van lekkage van douchepijpen die zich reeds hebben voorgedaan of zich in de toekomst zullen voordoen, zowel in het project Bovenkerk Zuid als in andere woningen waarin UBA de douchepijpen heeft laten plaatsen;</text></para>
+            <para><potentialnr manualAnnotation="NR">II.	</potentialnr><text manualAnnotation="TEXT_BLOCK">gedaagden, hoofdelijk of ieder afzonderlijk, te veroordelen om aan UBA te vergoeden (a) € 30.339,90 en (b) € 1.457,08 (b), beide bedragen vermeerderd met wettelijke rente en (c) € 17.809,47.</text></para>
+            <para><potentialnr manualAnnotation="NR">III. </potentialnr><text manualAnnotation="TEXT_BLOCK">	gedaagden hoofdelijk, althans ieder afzonderlijk, te veroordelen om aan UBA te vergoeden de schade die zij nog zal lijden als gevolg van lekkages die zich reeds hebben voorgedaan of zich in de toekomst nog zullen voordoen, nader op te maken bij staat. </text></para>
+            <para><potentialnr manualAnnotation="NR">IV	</potentialnr><text manualAnnotation="TEXT_BLOCK">gedaagden, hoofdelijk, althans ieder afzonderlijk, te veroordelen in de kosten van het geding en in de nakosten. </text></para>
+          </parablock>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">4.2</nr>
+          <para manualAnnotation="TEXT_BLOCK">Bij vonnis in incident van de rechtbank van 6 april 2011 heeft de rechtbank                   [geïntimeerde 1] c.s. toegestaan Reaal Schadeverzekeringen N.V. in vrijwaring op te roepen en Technea Nederland B.V. toegestaan om [geïntimeerde 1] in vrijwaring op te roepen.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">4.3</nr>
+          <para manualAnnotation="TEXT_BLOCK">Bij akte van 5 oktober 2011 heeft UBA onderdeel II van haar eis gewijzigd in die zin dat heeft gevorderd UBA te veroordelen om aan haar te vergoeden (a) € 58.283,20 vermeerderd met wettelijke rente, en (b) € 17.809,47.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">4.4</nr>
+          <para manualAnnotation="TEXT_BLOCK">UBA heeft bij akte van 10 januari 2012 onderdeel II  van haar vordering nogmaals gewijzigd en heeft in plaats van (a) € 58.283,20 en een bedrag van € 61.197,36 gevorderd. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">4.5</nr>
+          <para manualAnnotation="TEXT_BLOCK">De rechtbank heeft bij vonnis van 8 februari 2012 de vorderingen afgewezen, met veroordeling van UBA in de kosten in de hoofdzaak en in het incident aan de zijde van [geïntimeerde 1] en Technea Nederland B.V.</para>
+          <para/>
+        </paragroup>
+      </section>
+      <section>
+        <title>
+          <nr manualAnnotation="NR">5</nr><text manualAnnotation="SECTION_TITLE">De grieven</text></title>
+        <para/>
+        <paragroup>
+          <nr manualAnnotation="NR">5.1</nr>
+          <para manualAnnotation="TEXT_BLOCK">UBA heeft negen genummerde grieven opgeworpen.</para>
+          <para/>
+        </paragroup>
+      </section>
+      <section role="overwegingen">
+        <title>
+          <nr manualAnnotation="NR">6</nr><text manualAnnotation="SECTION_TITLE">De beoordeling</text></title>
+        <para/>
+        <parablock>
+          <para>
+            <emphasis manualAnnotation="SECTION_TITLE" role="underline">Procespartijen</emphasis>
+          </para>
+        </parablock>
+        <paragroup>
+          <nr manualAnnotation="NR">6.1</nr>
+          <para manualAnnotation="TEXT_BLOCK">Het hof constateert dat UBA niet in hoger beroep is gekomen van het vonnis van 8 februari 2012, voor zover dat is gewezen tegen Technea Nederland B.V., zodat nog slechts UBA, [geïntimeerde 1] en [geïntimeerde 2] partij zijn in dit hoger beroep.</para>
+          <para/>
+          <parablock>
+            <para>
+              <emphasis manualAnnotation="SECTION_TITLE" role="underline">Wijziging van eis</emphasis>
+            </para>
+          </parablock>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.2</nr>
+          <para manualAnnotation="TEXT_BLOCK">UBA heeft onderdeel IIa van haar vorderingen gewijzigd in haar memorie van grieven en vervolgens bij akte van 12 september 2013. UBA heeft haar vordering in hoger beroep voorts op een tweede grondslag (naast die uit onrechtmatige daad) gebaseerd, namelijk op de bijdrageplicht van hoofdelijk schuldenaren en subrogatie (memorie van grieven onder 13 en onderdeel 3.1 van haar pleitaantekeningen).</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.3</nr>
+          <para manualAnnotation="TEXT_BLOCK">[geïntimeerden] hebben geen bezwaar gemaakt tegen de eiswijzigingen van UBA. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.4</nr>
+          <para manualAnnotation="TEXT_BLOCK">Het hof overweegt als volgt.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.5</nr>
+          <para manualAnnotation="TEXT_BLOCK">De in artikel 347 lid 1 Rv besloten twee-conclusie-regel beperkt de aan oorspronkelijk eiser toekomende bevoegdheid tot verandering of vermeerdering van eis in hoger beroep in die zin dat hij in beginsel zijn eis niet later dan in zijn memorie van grieven of antwoord mag veranderen of vermeerderen. Dit geldt ook als de verandering of vermeerdering van eis slechts betrekking heeft op de grondslag van hetgeen ter toelichting van de vordering door de oorspronkelijke eiser is gesteld. Op deze in beginsel strakke regel kunnen onder omstandigheden uitzonderingen worden aanvaard, met name indien de wederpartij ondubbelzinnig erin heeft toegestemd dat de eisverandering of -vermeerdering plaatsvindt, of indien de aard van het geschil meebrengt dat in een later stadium nog een zodanige verandering of vermeerdering van eis kan plaatsvinden. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.6</nr>
+          <para manualAnnotation="TEXT_BLOCK">De eiswijzigingen bij memorie van grieven zijn tijdig gedaan.  </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.7</nr>
+          <para manualAnnotation="TEXT_BLOCK">Voor wat betreft de bij akte van 12 september 2013 gedane eiswijziging is het hof van oordeel dat hier een uitzondering op voormelde in beginsel strakke regel geldt. De in de akte gewijzigde eis is ingegeven door een aantal recente lekkages en geeft bovendien invulling aan de onder III van het petitum gevorderde veroordeling tot vergoeding van schade als gevolg van lekkages die zich reeds hebben voorgedaan of nog zullen voordoen. Dit is UBA toegestaan.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.8</nr>
+          <para manualAnnotation="TEXT_BLOCK">Het hof ziet geen aanleiding de eiswijzigingen ambtshalve buiten beschouwing te laten wegens strijd met de goede procesorde. Ter zake van de vorderingen van UBA zal derhalve recht worden gedaan op de gewijzigde eis.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.9</nr>
+          <para>
+            <emphasis manualAnnotation="TEXT_BLOCK" role="underline">De grieven 1 en 2</emphasis><text manualAnnotation="TEXT_BLOCK"> hebben betrekking op de vaststelling van de feiten door de rechtbank. Nu het hof de feiten in het voorgaande zelfstandig heeft vastgesteld, waarbij zij acht heeft geslagen op deze grieven, heeft UBA bij de beoordeling van deze grieven als zodanig geen belang meer. </text></para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.10</nr>
+          <para manualAnnotation="TEXT_BLOCK">Voor zover grief 2 opkomt tegen de onder 2.d van de vaststaande feiten opgenomen overweging van de rechtbank dat schade is ontstaan doordat de douchepijpen waren geplaatst in een afgesloten niet-toegankelijke ruimte en dat door die wijze van afwerking niet snel op een optredende lekkage kon worden gereageerd, zodat het lekwater langer aanwezig was, zal hierop, voor zover relevant, nog nader worden ingegaan in het kader van de gestelde schade. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.11</nr>
+          <para>
+            <emphasis manualAnnotation="TEXT_BLOCK" role="underline">Grief 3</emphasis><text manualAnnotation="TEXT_BLOCK"> richt zich tegen het oordeel van de rechtbank dat [geïntimeerde 2] buiten het geschil staat. Volgens UBA moeten zonder nadere toelichting van [geïntimeerde 1] de vorderingen tegen [geïntimeerde 1] en [geïntimeerde 2] worden toegewezen. De douchepijpen waar het hier om gaat zijn geproduceerd in 2006 en mogelijk in 2007. [geïntimeerde 2] is opgericht in 1988 en handelde onder de naam "[geïntimeerde 1]". [geïntimeerde 1] is pas in 2009 opgericht en kan dus niet de producent van deze douchepijpen zijn. Volgens UBA moet het er daarom voor gehouden worden dat (in elk geval ook) [geïntimeerde 2] producent was van de douchepijpen. </text></para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.12</nr>
+          <para manualAnnotation="TEXT_BLOCK">Tijdens het pleidooi is van de zijde van [geïntimeerden] erkend dat het [geïntimeerde 2] is geweest die de in het geding aan de orde zijnde douchepijpen heeft geproduceerd. Dit blijkt naar het oordeel van het hof ook afdoende uit de door UBA overgelegde uittreksels uit het handelsregister van Heideman Holding en [geïntimeerde 1]. Dit betekent dat in hoger beroep alsnog de toewijsbaarheid van de vordering jegens [geïntimeerde 2] als producent van de genoemde douchepijpen zal worden beoordeeld. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.13</nr>
+          <para manualAnnotation="TEXT_BLOCK">De grief slaagt.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.14</nr>
+          <para manualAnnotation="TEXT_BLOCK">Nu aan de vordering van UBA jegens [geïntimeerde 2] dezelfde feiten en omstandigheden ten grondslag liggen als aan de vordering jegens [geïntimeerde 1] zal het hof allereerst de overige grieven bespreken. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.15</nr>
+          <para>
+            <emphasis manualAnnotation="TEXT_BLOCK" role="underline">De grieven 4 tot en met 8</emphasis><text manualAnnotation="TEXT_BLOCK"> hebben betrekking op de afwijzing door de rechtbank van de vordering van UBA uit hoofde van onrechtmatige daad (artikel 6:162 BW) jegens [geïntimeerde 1]. </text></para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.16</nr>
+          <para manualAnnotation="TEXT_BLOCK">Het hof overweegt dat nu [geïntimeerde 1] op 11 november 2009 is opgericht, zij uitsluitend aansprakelijk kan zijn voor de pijpen die nadien zijn geplaatst in het project "Tuindorp Zuid".  Het hof zal de vorderingen van UBA jegens [geïntimeerde 1] en [geïntimeerde 2] in het onderstaande gezamenlijk bespreken, met dien verstande dat [geïntimeerde 2] aansprakelijk is voor de tot 11 november 2009 geproduceerde, eventueel gebrekkige, douchepijpen en [geïntimeerde 1] voor die daarna. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.17</nr>
+          <para>
+            <emphasis manualAnnotation="TEXT_BLOCK" role="underline">Grief 4</emphasis><text manualAnnotation="TEXT_BLOCK"> klaagt erover dat de rechtbank een verkeerde maatstaf heeft gehanteerd voor aansprakelijkheid van [geïntimeerde 1]. Het op de markt brengen van een product dat bij normaal gebruik voor het doel waarvoor het bestemd is, schade veroorzaakt, is onrechtmatig. Toerekenbaarheid voor de schade is gegeven met het feit dat het geleverde ondeugdelijk was. Gezien de jurisprudentie zijn [geïntimeerden] aansprakelijk voor de gestelde schade indien vast komt te staan dat a. zij gebrekkige producten op de markt hebben gebracht, b. UBA schade heeft geleden en c. er een causaal verband bestaat tussen de gebrekkige producten en de schade. Dat is volgens UBA het geval. Ten onrechte heeft de rechtbank extra eisen gesteld aan de aansprakelijkheid van [geïntimeerden], namelijk de wetenschap van [geïntimeerden] dat hun producten gebrekkig zijn, aldus UBA. </text></para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.18</nr>
+          <para manualAnnotation="TEXT_BLOCK">Het hof overweegt als volgt.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.19</nr>
+          <para manualAnnotation="TEXT_BLOCK">Degene die door een gebrekkig product schade lijdt kan de producent aanspreken uit onrechtmatige daad (artikel 6:162 BW), mits aan de in dat artikel gestelde vereisten wordt voldaan. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.20</nr>
+          <para><text manualAnnotation="TEXT_BLOCK">Het in het verkeer brengen van een product dat schade veroorzaakt bij normaal gebruik voor het doel waarvoor het bestemd was, is onrechtmatig jegens de gebruikers van het product. Dit onrechtmatig handelen dient aan de producent te kunnen worden toegerekend. Daarvan is sprake indien het onrechtmatig handelen te wijten is aan de schuld van de producent of aan een oorzaak die krachtens de wet of in het verkeer geldende opvattingen voor zijn rekening komt. Een fabrikant zal in het algemeen die maatregelen moeten treffen die van een zorgvuldig fabrikant kunnen worden gevergd teneinde te voorkomen dat het door hem in het verkeer gebrachte product schade veroorzaakt. Daarbij dient hij zich ervan te vergewissen welk effect een nieuw of vernieuwd product zal hebben in de voor de hand liggende toepassingen daarvan (vergelijk Hoge Raad, 22 oktober 1999, </text><emphasis manualAnnotation="TEXT_BLOCK" role="italic">ECLI</emphasis><text manualAnnotation="TEXT_BLOCK">:NL:HR:1999:ZC2994). </text></para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.21</nr>
+          <para manualAnnotation="TEXT_BLOCK">[geïntimeerden] hebben niet betwist dat de eerste 21 lekkende douchepijpen lekten als gevolg van corrosie. De douchepijpen hadden naar het oordeel van het hof aldus een (latent) gebrek op het moment dat zij door hen in het verkeer werden gebracht. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.22</nr>
+          <para manualAnnotation="TEXT_BLOCK"> [geïntimeerden] hebben aangevoerd dat de meest voor de hand liggende oorzaak van de corrosie van de douchepijpen die tot lekkage heeft geleid, is gelegen in de wijze van naspoelen van haar product waarna zij het productieproces heeft aangepast. Deze wetenschap kreeg zij medio 2010. Volgens [geïntimeerden] konden ook de door [geïntimeerde 1] ingeschakelde deskundigen niet direct een oorzaak vinden voor de problemen die ontstonden. Wel is constant gezocht naar mogelijke oorzaken. Volgens [geïntimeerden] is het aan UBA te bewijzen dat [geïntimeerden] kennis hadden van de oorzaak van de lekkages maar desondanks gewoon bleven produceren en het productieproces niet aanpasten. Nadat [geïntimeerden] bekend werden met de meeste waarschijnlijke oorzaak voor de corrosie hebben zij hun productieprocedé aangepast (onderdeel 65, memorie van antwoord). </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.23</nr>
+          <para manualAnnotation="TEXT_BLOCK">Het hof overweegt dat [geïntimeerden] aldus niet hebben aangevoerd dat [geïntimeerden], voordat zij de douchepijpen op de markt hebben gebracht, maatregelen hebben getroffen om zich er voldoende van te vergewissen dat de douchepijpen niet zouden corroderen en (daardoor) lekken en aldus schade voor de gebruiker zouden veroorzaken, zoals thans bij in elk geval 21 van de door haar geproduceerde douchepijpen het geval is geweest. De door [geïntimeerden] gestelde onderzoeken en maatregelen zien immers op de periode nadat de in het geding zijnde douchepijpen reeds in het verkeer waren gebracht. Aldus hebben [geïntimeerde 1] c.s. onvoldoende bestreden dat [geïntimeerden] het in het verkeer brengen van de gebrekkige douchepijpen kan worden verweten. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.24</nr>
+          <para manualAnnotation="TEXT_BLOCK">Het hof oordeelt dat het onrechtmatig handelen door het in het verkeer brengen van de gebrekkige douchepijpen dan ook aan [geïntimeerde 1] kan worden toegerekend.  Het hof overweegt dat, nu vaststaat dat [geïntimeerde 2] als producent van de gebrekkige douchepijpen is opgetreden, zij op dezelfde voet aansprakelijk is uit onrechtmatige daad. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.25</nr>
+          <para manualAnnotation="TEXT_BLOCK">De grief slaagt.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.26</nr>
+          <para manualAnnotation="TEXT_BLOCK">Door het slagen van deze grief van UBA brengt de devolutieve werking van het hoger beroep met zich dat de niet behandelde of verworpen weren en de niet prijsgegeven stellingen van [geïntimeerden] in eerste aanleg, voor zover niet al besproken, thans nog beoordeeld moeten worden voor wat betreft de vordering jegens [geïntimeerde 1].  </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.27</nr>
+          <para manualAnnotation="TEXT_BLOCK">Zoals overwogen hebben [geïntimeerden] niet betwist dat de 21 douchepijpen waarop de oorspronkelijke vordering in eerste aanleg zag, lekten als gevolg van corrosie. Van de daarna volgens UBA opgetreden lekkages hebben [geïntimeerden] betwist dat de oorzaak lag in gebrekkigheid van die douchepijpen. Daarnaast hebben [geïntimeerden] de gestelde aantallen lekkages betwist. [geïntimeerden] hebben gesteld dat die douchepijpen niet aan hen zijn aangeboden en dat zij dus niet hebben kunnen controleren of die douchepijpen gebrekkig waren of dat de lekkage van die douchepijpen een andere oorzaak heeft gehad.  </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.28</nr>
+          <para manualAnnotation="TEXT_BLOCK">Het hof overweegt dat [geïntimeerden] weliswaar de aantallen lekkages hebben betwist, maar dat zij dit niet voldoende gemotiveerd hebben gedaan. [geïntimeerden] hebben gesteld dat zij ten aanzien van 21 geretourneerde douchepijpen de gebreken hebben kunnen constateren en bij de andere niet. Nu UBA zeer gespecificeerd heeft aangegeven bij welke woningen zich lekkages hebben voorgedaan, kunnen [geïntimeerden] niet met een dergelijke blote ontkenning volstaan. [geïntimeerden] hebben ook niet betwist dat UBA overal douchepijpen heeft moeten vervangen. Het hof gaat dan ook aan het verweer ten aanzien van de aantallen lekkages voorbij.  </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.29</nr>
+          <para manualAnnotation="TEXT_BLOCK">Het hof acht, gelet op de omstandigheid dat de 21 aangeboden douchepijpen alle lekten door corrosie, voorshands voldoende aannemelijk dat ook de latere gevallen van lekkage zijn veroorzaakt doordat die douchepijpen corrodeerden, en dus gebrekkig waren. Het staat [geïntimeerden] vrij hiervan tegenbewijs leveren.  Het hof zal [geïntimeerden] tot dit tegenbewijs toelaten. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.30</nr>
+          <para manualAnnotation="TEXT_BLOCK">Slagen [geïntimeerden] in het tegenbewijs, dan blijft ingevolge artikel 150 Rv op UBA de bewijslast rusten van haar stelling dat de latere lekkages zijn veroorzaakt door gebrekkigheid van de douchepijpen, aangezien zij zich voor haar vordering beroept op de rechtsgevolgen. UBA dient er dan ook op voorhand rekening mee te houden dat zij de gelegenheid heeft om aan haar bewijslast te voldoen door in tegengetuigenverhoor getuigen te doen horen dan wel bewijs aan te dragen door overlegging van bewijsstukken of door een ander bewijsmiddel.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.31</nr>
+          <para manualAnnotation="TEXT_BLOCK">UBA heeft per lekkage vergoeding gevorderd van de kosten van de installatie van een nieuwe douchepijp door [B] van gemiddeld € 258,68 en de door haar zelf gemaakte kosten van verwijdering en herstel van de GIBO-koker en het afwerken van het toilet van € 1.198,40, ofwel in totaal € 1.463,57 per vervangen douchepijp. In de gevallen waarin een bypass is aangebracht heeft UBA een bedrag van € 1.155,46 per lekkage gevorderd. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.32</nr>
+          <para manualAnnotation="TEXT_BLOCK">[geïntimeerden] hebben aangevoerd dat de douchepijpen niet conform de instructies zijn geïnstalleerd, waardoor de omvang van de schade door de lekkages aanzienlijk groter is dan wanneer dat op de voorgeschreven wijze zou zijn gebeurd. Zij heeft zich daarbij beroepen op de handleiding voor installatie van de douchepijpen, waarbij zij in hoger beroep heeft aangevoerd dat niet de handleiding uit 2006, maar die uit 2007 in de koker met de douchepijp was gevoegd. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.33</nr>
+          <para manualAnnotation="TEXT_BLOCK">Vast staat dat [A] de douchepijpen heeft geïnstalleerd op de in het bestek voorgeschreven plaats. Vast staat dat de douchepijpen in het project "Bovenkerk-Zuid" werden geplaatst in een GIBO-koker achter het toilet op de begane grond.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.34</nr>
+          <para><text manualAnnotation="TEXT_BLOCK">Het hof overweegt dat de - naderhand nog aangescherpte - handleiding uit 2006 reeds de instructie gaf "</text><emphasis manualAnnotation="TEXT_BLOCK" role="italic">De toegang moet zonder veel ingrepen gerealiseerd kunnen worden</emphasis><quote manualAnnotation="TEXT_BLOCK">"</quote><emphasis manualAnnotation="TEXT_BLOCK" role="italic">. </emphasis><text manualAnnotation="TEXT_BLOCK">Vast staat dat om de douchepijpen in het project "Bovenkerk-Zuid" te kunnen bereiken de GIBO-koker achter het toilet op de begane grond opengebroken moest worden en daarna opnieuw opgebouwd waarna het tegel- of stucwerk moest worden hersteld. Dit blijkt ook uit de door UBA overgelegde kostenspecificaties. Dit is naar het oordeel van het hof niet een toegang die zonder veel ingrepen kan worden gerealiseerd. Dit in tegenstelling tot de in de handleiding opgenomen plaatsing van de douchepijp in een meterkast, welke over het algemeen goed toegankelijk is. Dit betekent dat de douchepijpen niet op de daarvoor aangegeven plaats zijn geïnstalleerd, wat aan UBA als hoofdaannemer van het project "Bovenkerk-Zuid" dient te worden toegerekend. Voor zover de door UBA gemaakte kosten door de wijze van plaatsen zijn ontstaan, kan de schade niet worden toegerekend aan de lekkende douchepijpen. </text></para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.35</nr>
+          <para manualAnnotation="TEXT_BLOCK">Dit betekent dat UBA haar kosten vergoed zal krijgen die het gevolg zijn van het lekken van de douchepijpen en niet door het op deze plaats installeren daarvan, een en ander behoudens voormelde tegenbewijslevering door [geïntimeerden] </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.36</nr>
+          <para manualAnnotation="TEXT_BLOCK">UBA zal in een later stadium in dit geding de gelegenheid worden geboden haar kosten in bovengenoemde zin voor het project "Bovenkerk-Zuid" bij akte uit te splitsen.  </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.37</nr>
+          <para manualAnnotation="TEXT_BLOCK">UBA zal zich alsdan in die akte tevens moeten uitlaten over de locatie van de douchepijpen die in de woningen in de projecten "Legmeer West Fase 2" en "Tuindorp Zuid zijn geplaatst, nu dit nog onvoldoende is gesteld of gebleken, en eveneens voor die kosten de hiervoor genoemde splitsing moeten maken. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.38</nr>
+          <para>
+            <emphasis manualAnnotation="TEXT_BLOCK" role="underline">Grief 5</emphasis><text manualAnnotation="TEXT_BLOCK"> ziet op de wetenschap van [geïntimeerden] dat de geproduceerde douchepijpen lekkage vertoonden en kan gezien het vorenstaande onbesproken blijven. </text></para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.39</nr>
+          <para>
+            <emphasis manualAnnotation="TEXT_BLOCK" role="underline">Grief 6</emphasis><text manualAnnotation="TEXT_BLOCK"> klaagt erover dat de rechtbank heeft aangenomen dat voor aansprakelijkheid van [geïntimeerde 1] als producent van belang is of de gehele productielijn gebrekkig is. Het hof zal de bespreking van deze grief in afwachting van de tegenbewijslevering aanhouden. </text></para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.40</nr>
+          <para><text manualAnnotation="TEXT_BLOCK">Hetzelfde geldt voor </text><emphasis manualAnnotation="TEXT_BLOCK" role="underline">grief 7</emphasis><text manualAnnotation="TEXT_BLOCK"> die ageert tegen het - door UBA als zodanig opgevatte -oordeel van de rechtbank dat voor aansprakelijkheid van [geïntimeerde 1] van belang is of zij bekend was met de oorzaak van de gebreken in haar producten, en dat UBA dit dient te stellen en te bewijzen. </text></para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.41</nr>
+          <para><text manualAnnotation="TEXT_BLOCK">Een bespreking van </text><emphasis manualAnnotation="TEXT_BLOCK" role="underline">grief 8</emphasis><text manualAnnotation="TEXT_BLOCK"> die betrekking heeft op rechtsoverweging 5.15 en 5.16 van het bestreden vonnis, waarin de rechtbank vordering van UBA niet toewijsbaar achtte vanwege het niet volgen van de handleiding, kan achterwege blijven, omdat dit in het voorgaande reeds aan de orde is geweest. </text></para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.42</nr>
+          <para>
+            <emphasis manualAnnotation="TEXT_BLOCK" role="underline">Grief 9</emphasis><text manualAnnotation="TEXT_BLOCK"> klaagt over de overweging van de rechtbank dat de kosten van expertise van Vanderwal &amp; Joosten niet door UBA zijn gemaakt, maar door een verzekeraar teneinde advies te krijgen over haar verplichtingen, en de volgens UBA aldus impliciete beslissing dat zij die kosten niet kan vorderen. </text></para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.43</nr>
+          <para manualAnnotation="TEXT_BLOCK">UBA heeft aangevoerd dat dit kosten zijn die haar verzekeraar Avéro Achmea heeft voldaan en dat zij last heeft gekregen om die kosten in deze procedure op eigen naam op [geïntimeerde 1] te verhalen. Ten bewijze daarvan heeft zij als productie 21 bij memorie van grieven een stuk overgelegd, waaruit blijkt dat Avéro Achmea die last aan UBA heeft gegeven. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.44</nr>
+          <para><text manualAnnotation="TEXT_BLOCK">Een lasthebber kan op eigen naam in rechte optreden ten behoeve van een ander (de lastgever) en is niet gehouden in de dagvaarding of anderszins te vermelden dat hij ter behartiging van de belangen van een ander optreedt. Pas indien het verweer van de wederpartij daartoe aanleiding geeft, zal de lasthebber moeten stellen en zonodig bewijzen dat hij uit hoofde van lastgeving bevoegd is op eigen naam ten behoeve van de rechthebbende op te treden (vergelijk Hoge Raad 26 februari 2010, </text><emphasis manualAnnotation="TEXT_BLOCK" role="italic">ECLI</emphasis><text manualAnnotation="TEXT_BLOCK">:NL:GHSHE:2008:BD9790). Dit heeft UBA in hoger beroep genoegzaam gedaan.</text></para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.45</nr>
+          <para manualAnnotation="TEXT_BLOCK">De grief is terecht opgeworpen. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.46</nr>
+          <para manualAnnotation="TEXT_BLOCK">Het hof houdt iedere verdere bespreking van de grieven aan in afwachting van de levering van het (tegen)bewijs. </para>
+          <para/>
+        </paragroup>
+      </section>
+      <section role="beslissing">
+        <title>
+          <nr manualAnnotation="NR">7</nr><text manualAnnotation="SECTION_TITLE">De beslissing</text></title>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">Het hof:</para>
+        </parablock>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">laat [geïntimeerden] toe tot het tegenbewijs van het voorshands bewezen geachte feit dat alle lekkages die zich in de douchepijpen in de projecten "Bovenkerk Zuid", "Legmeer West fase 2" en "Tuindorp Zuid" hebben voorgedaan, het gevolg zijn van corrosie;</para>
+        </parablock>
+        <para/>
+        <parablock>
+          <para><text manualAnnotation="TEXT_BLOCK">bepaalt dat, indien [geïntimeerden] dat tegenbewijs (ook) door middel van getuigen wensen te leveren, het verhoor van deze getuigen zal geschieden ten overstaan van het hierbij tot raadsheer-commissaris benoemde lid van het hof </text><emphasis manualAnnotation="TEXT_BLOCK" role="underline">mr. M.M.A.Wind</emphasis><text manualAnnotation="TEXT_BLOCK">, die daartoe zitting zal houden in het paleis van justitie aan het Wilhelminaplein 1 te Leeuwarden en wel op een nader door deze vast te stellen dag en tijdstip; </text></para>
+        </parablock>
+        <para/>
+        <parablock>
+          <para><text manualAnnotation="TEXT_BLOCK">bepaalt dat [geïntimeerden] het aantal voor te brengen getuigen alsmede de verhinderdagen van </text><emphasis manualAnnotation="TEXT_BLOCK" role="underline">beide</emphasis><text manualAnnotation="TEXT_BLOCK"> partijen, van hun advocaten en van de getuigen zullen opgeven op </text><emphasis manualAnnotation="TEXT_BLOCK" role="bold">dinsdag 4 februari 2014</emphasis><text manualAnnotation="TEXT_BLOCK">, waarna de raadsheer-commissaris dag en uur van het verhoor (ook indien voormelde opgave van een of meer van partijen ontbreekt) vaststelt;</text></para>
+        </parablock>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">bepaalt dat [geïntimeerden] overeenkomstig artikel 170 Rv de namen en woonplaatsen van de getuigen tenminste een week voor het verhoor aan de wederpartij en de griffier van het hof dienen op te geven;</para>
+        </parablock>
+        <para/>
+        <parablock>
+          <para><text manualAnnotation="TEXT_BLOCK">verstaat dat de advocaat van [geïntimeerden] uiterlijk </text><emphasis manualAnnotation="TEXT_BLOCK" role="underline">twee weken</emphasis><text manualAnnotation="TEXT_BLOCK"> voor het getuigenverhoor zal plaatsvinden een kopie van het volledige procesdossier ter griffie van het hof doet bezorgen, bij gebreke waarvan de advocaat van UBA alsnog de gelegenheid heeft uiterlijk </text><emphasis manualAnnotation="TEXT_BLOCK" role="underline">één week</emphasis><text manualAnnotation="TEXT_BLOCK"> voor de vastgestelde datum een kopie van de processtukken over te leggen;</text></para>
+        </parablock>
+        <para/>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">Dit arrest is gewezen door mrs. M.M.A. Wind, I. Tubben en P. Roorda en is door de rolraadsheer in tegenwoordigheid van de griffier in het openbaar uitgesproken op dinsdag</para>
+          <para manualAnnotation="TEXT_BLOCK">21 januari 2014.</para>
+        </parablock>
+        <para/>
+      </section>
+    </uitspraak>
+</open-rechtspraak>

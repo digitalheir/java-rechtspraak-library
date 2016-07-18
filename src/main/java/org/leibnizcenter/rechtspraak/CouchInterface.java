@@ -1,8 +1,8 @@
 package org.leibnizcenter.rechtspraak;
 
 import com.google.gson.GsonBuilder;
-import com.squareup.okhttp.HttpUrl;
-import com.squareup.okhttp.Response;
+import okhttp3.HttpUrl;
+import okhttp3.Response;
 
 import javax.xml.bind.JAXBException;
 import javax.xml.xpath.XPathExpressionException;

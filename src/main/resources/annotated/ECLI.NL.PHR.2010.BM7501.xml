@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:eu="http://publications.europa.eu/celex/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:tr="http://tuchtrecht.overheid.nl/">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:PHR:2010:BM7501</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2015-06-28T08:32:32</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-05</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">BM7501</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Parket_bij_de_Hoge_Raad" scheme="overheid.RechterlijkeMacht">Parket bij de Hoge Raad</dcterms:creator>
+      <dcterms:date rdfs:label="Datum genomen">2010-09-14</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">08/05045</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/conclusie">Conclusie</dcterms:type>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#strafrecht">Strafrecht</dcterms:subject>
+      <dcterms:relation ecli:resourceIdentifier="ECLI:NL:HR:2010:BM7501" psi:aanleg="http://psi.rechtspraak.nl/latereAanleg" psi:type="http://psi.rechtspraak.nl/conclusie" rdfs:label="Formele relatie">Arrest Hoge Raad: ECLI:NL:HR:2010:BM7501</dcterms:relation>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+          <rdf:li>RvdW 2010/1078</rdf:li>
+          <rdf:li>NJB 2010, 1826</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:PHR:2010:BM7501">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:PHR:2010:BM7501</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-05T06:32:02</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2010-09-15</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:PHR:2010:BM7501 Parket bij de Hoge Raad , 14-09-2010 / 08/05045</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie id="ECLI:NL:PHR:2010:BM7501:INH" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <para>1. N-o in cassatie m.b.t. veroordeling tot een Gb van € 95 wegens een overtreding. 2. Conclusie AG over binnentreden zonder machtiging ter hulpverlening i.v.m. wateroverlast o.g.v. art. 8 Pw jo. art. 2.3 Awbi. HR: 81 RO.</para>
+    </inhoudsindicatie>
+  <conclusie id="ECLI:NL:PHR:2010:BM7501:DOC" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">Nr. 08/05045</para>
+        <para manualAnnotation="TEXT_BLOCK">Mr. Machielse</para>
+        <para manualAnnotation="TEXT_BLOCK">Zitting 8 juni 2010 </para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Conclusie inzake: </para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">[Verdachte] </para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">1. </potentialnr><text manualAnnotation="TEXT_BLOCK">Het Gerechtshof te 's-Gravenhage heeft op 4 november 2008 een vonnis van de Rechtbank te 's-Gravenhage bevestigd, waarbij verdachte wegens "opzettelijk handelen in strijd met een in artikel 3, onder c, van de Opiumwet gegeven verbod, meermalen gepleegd", "opzettelijk handelen in strijd met een in artikel 3, onder B, van de Opiumwet gegeven verbod, meermalen gepleegd" en "door het bevoegde gezag naar zijn identiteitsgegevens gevraagd een valse naam opgeven" is veroordeeld tot een werkstraf voor de duur van 200 uren, een voorwaardelijke gevangenisstraf voor de duur van twee maanden, met een proeftijd van twee jaren en een geldboete van EUR 95,00.(1)</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2. </potentialnr><text manualAnnotation="TEXT_BLOCK">Mr. R.M.L. Theelen, advocaat te 's-Gravenhage heeft beroep in cassatie ingesteld. Mr. J.M. Lintz, advocaat te Rottterdam, heeft een schriftuur ingediend, houdende een middel van cassatie. </text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">3.1 </potentialnr><text manualAnnotation="TEXT_BLOCK">Het middel klaagt over de verwerping van het beroep op art. 359a Sv.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">3.2 </potentialnr><text manualAnnotation="TEXT_BLOCK">Blijkens het proces-verbaal van de terechtzitting van 21 oktober 2008 is door de verdediging overeenkomstig de aan het proces-verbaal gehechte pleitaantekeningen het woord gevoerd. Deze aantekeningen houden op dit punt in:</text></para>
+      <para/>
+      <para><quote manualAnnotation="TEXT_BLOCK">"</quote><text manualAnnotation="SECTION_TITLE">ONTVANKELIJKHEID OM</text></para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Het openbaar ministerie dient voor wat betreft de zaak [a-straat] niet ontvankelijk te worden verklaard in de vervolging. Ik licht dat toe.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">De politie krijgt blijkens het dossier op 27 september 2005 een melding van wateroverlast bij een supermarkt. Ze gaan naar de woning boven de supermarkt om te kijken waar het water vandaan komt, vervolgens treffen zij in die woning een hennepplantage aan.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Het verslag binnentreden woning meldt dan dat er is binnengetreden krachtens een machtiging die is afgegeven op grond van art. 2 Politiewet (zie bijlage 1). Ze moesten immers naar binnen in verband met de wateroverlast, dus in het kader van hulpverlening.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Nu is het vreemde dat de machtiging op grond waarvan ze zijn binnengetreden vermeldt dat ze binnentreden "ter doorzoeking en inbeslagneming van een in werking zijnde hennepkwekerij" (bijlage 2). Een machtiging tot binnentreden dient uiteraard nog voorafgaand aan het binnentreden te worden afgegeven.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Maar dan klopt er dus iets niet. Ofwel ze ontdekken de hennepkwekerij per toeval nadat ze naar binnen zijn gegaan in verband met de wateroverlast (zie bijlage 1), ofwel ze gaan naar binnen omdat ze tevoren weten dat er een hennepkwekerij is. Beide kan niet (bijlage 2).</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Nu beide niet kan, is het proces-verbaal niet conform de waarheid opgemaakt. Door een dergelijke leugen wordt aan het recht van cliënt op een eerlijke behandeling van zijn zaak doelbewust of met grove veronachtzaming van zijn belangen tekortgedaan, hetgeen dient te leiden tot niet-ontvankelijkheid van het OM.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Mocht u echter van mening zijn dat niet-ontvankelijkheid van het openbaar ministerie niet het gevolg dient te zijn van dit vormverzuim, dan dient bewijsuitsluiting te volgen. Door het vormverzuim is immers de hennepkwekerij aangetroffen in de woning. Het bewijs (namelijk de hennepkwekerij) is dus een rechtstreeks gevolg van het vormverzuim. Tevens is een belangrijk strafvorderlijk voorschrift in aanzienlijke mate geschonden."</para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">3.3 </potentialnr><text manualAnnotation="TEXT_BLOCK">De in de pleitnota genoemde bijlage 1 betreft het verslag binnentreden woning. Volgens dit verslag zijn de opsporingsambtenaren krachtens een machtiging van de hulpofficier van justitie, die op grond van art. 2 Politiewet is gegeven, binnengetreden in de woning, bij afwezigheid van een bewoner en derhalve zonder toestemming, ter hulpverlening in verband met wateroverlast. </text></para>
+        <para manualAnnotation="TEXT_BLOCK">Bijlage 2 is een machtiging tot binnentreden in een woning. Deze machtiging is door de hulpofficier van justitie afgegeven op grond van art. 9 Opiumwet. </para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">3.4 </potentialnr><text manualAnnotation="TEXT_BLOCK">Het Hof verwerpt het verweer en motiveert dit als volgt:</text></para>
+      <para/>
+      <para><quote manualAnnotation="TEXT_BLOCK">"</quote><potentialnr manualAnnotation="NR">1. </potentialnr><text manualAnnotation="SECTION_TITLE">Openbaar ministerie niet-ontvankelijk</text></para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Door de verdediging is primair aangevoerd dat het openbaar ministerie met betrekking tot de feiten 1 en 2 niet-ontvankelijk dient te worden verklaard in de vervolging, omdat doelbewust of met grove veronachtzaming van de belangen van de verdachte aan zijn recht van een eerlijke behandeling van zijn zaak is tekortgedaan. Daartoe is aangevoerd dat het verslag van binnentreden niet conform de waarheid is opgemaakt: de machtiging tot binnentreden in de woning is verstrekt voor doorzoeking en inbeslagneming van alle goederen behorende tot de hennepkwekerij, terwijl het verslag binnentreden woning vermeldt dat een machtiging is afgegeven op grond van artikel 2 van de Politiewet.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">De advocaat-generaal heeft de stelling van de verdediging betwist en gesteld dat één en ander op de juiste wijze is vastgelegd in het verslag en de machtiging.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Het hof gaat uit van de volgende gang van zaken. Op 27 september 2005 werd wateroverlast geconstateerd vanuit de woning aan de [a-straat 1]. Daarop is de politie in eerste instantie zonder een machtiging in de woning binnengetreden op grond van artikel 2 van de Politiewet rond 19.46 uur om hun taak - conform voornoemd artikel handhaving van de rechtsorde en het verlenen van hulp aan hen die deze behoeven - uit te voeren (zie het procesverbaal van bevindingen, opgenomen in het dossier op pagina 19). Eenmaal binnen werd een hennepgeur geroken en een ruimte ingericht als kwekerij aangetroffen. Vervolgens is de kraan (beneden in de meterkast) dichtgedraaid. Om de hennepkwekerij te kunnen onderzoeken en goederen die daarmee verband hielden in beslag te kunnen nemen, is vervolgens een machtiging tot binnentreden door de hulpofficier verstrekt op grond van de Opiumwet (zie de machtiging tot binnentreden opgenomen op pagina 11 van het dossier). Vervolgens is op grond van die machtiging de voordeur geforceerd om toegang te verlenen aan overige hulpdiensten, zoals is vastgelegd in het 'verslag binnentreden woning', opgenomen in het dossier op pagina 12 en 13. In dit verslag staat ten onrechte dat de machtiging is verleend op grond van artikel 2 van de Politiewet. Deze omissie heeft naar het oordeel van het hof geen gevolgen voor de ontvankelijkheid van het openbaar ministerie. Immers, er was aanvankelijk op grond van artikel 2 van de Politiewet een bevoegdheid om de woning in te gaan en vervolgens is op grond van de Opiumwet een machtiging verleend. De politie was dus bevoegd de woning binnen te treden. Naar het oordeel van het hof is er derhalve geen sprake van dat de belangen van de verdachte doelbewust of met grove veronachtzaming zijn te kort gedaan, zodat het verweer wordt verworpen.</para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2. </potentialnr><text manualAnnotation="SECTION_TITLE">Uitsluiting bewijs</text></para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Op dezelfde gronden als waarop de niet-ontvankelijkheid van het openbaar ministerie is betoogd, is subsidiair aangevoerd dat het bewijs dat na het binnentreden is vergaard dient te worden uitgesloten van bewijs, nu dit bewijs een rechtstreeks gevolg is van een vormverzuim. Gelet op de gang van zaken zoals hierboven reeds uiteengezet is er naar het oordeel van het hof geen sprake van enig vormverzuim. Het hof verwerpt derhalve eveneens het beroep op bewijsuitsluiting." </para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">3.5 </potentialnr><text manualAnnotation="TEXT_BLOCK">In de toelichting op het middel worden vier klachten tegen 's Hofs afwijzing opgeworpen. Ten eerste dat niet duidelijk is hoe het Hof zijn conclusie bereikt dat de machtiging tot binnentreden eerst na de ontdekking van de hennepkwekerij is afgegeven. Ten tweede dat het Hof aan zijn oordeel ten grondslag heeft gelegd dat de politie bij hulpverlening zonder meer bevoegd is zonder machtiging een woning te betreden, terwijl het Hof niet heeft vastgesteld dat er sprake was van ernstig gevaar voor de veiligheid van personen of goederen. Daarnaast wordt erover geklaagd dat het Hof heeft miskend dat binnentreden zonder machtiging en zonder toestemming ter hulpverlening niet mag plaatsvinden voordat is vastgesteld dat de bewoner niet thuis is. Tot slot wordt gesteld dat 's Hofs motivering tegenstrijdig is, nu het Hof eerst vaststelt dat er sprake is van een omissie en vervolgens dat er geen sprake is van een vormverzuim.</text></para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">3.6 </potentialnr><text manualAnnotation="TEXT_BLOCK">Anders dan de steller van het middel, meen ik dat het Hof niet was gehouden om feitelijke vaststellingen in het kader van de verwerping van het verweer te verantwoorden. </text></para>
+        <para manualAnnotation="TEXT_BLOCK">De feitelijke vaststelling dat de machtiging eerst is afgegeven na de ontdekking van de hennepplantage is bovendien niet onbegrijpelijk nu dit uit de processtukken blijkt. In een (loop)proces-verbaal(2) staat dat nadat de verbalisanten in de woning een hennepplantage aantroffen, zij de zaak hebben bevroren en de machtiging van de hulpofficier hebben afgewacht. Daarnaast blijkt uit het proces-verbaal van de terechtzitting van 21 oktober 2008 dat de advocaat-generaal deze volgorde, eerst de ontdekking hennepkwekerij en hierna de afgifte van de machtiging, noemt. </para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">3.7 </potentialnr><text manualAnnotation="TEXT_BLOCK">Vooropgesteld moet worden dat lekkages gevaar voor personen en goederen kunnen veroorzaken, bijvoorbeeld kortsluiting. Het Hof heeft vastgesteld dat wateroverlast werd geconstateerd vanuit de woning van verdachte. Uit het proces-verbaal van binnentreden volgt dat in de kantine van supermarkt Hoogvliet een grote hoeveelheid water uit het plafond stroomde en dat de vloer van de kantine blank stond. </text></para>
+        <para manualAnnotation="TEXT_BLOCK">Ik meen dat in 's Hofs overwegingen als zijn niet onbegrijpelijke oordeel ligt besloten dat de verbalisanten de woning van verdachte zijn binnengetreden ter voorkoming of bestrijding van ernstig en onmiddellijk gevaar voor de veiligheid van personen en goederen, als bedoeld in art. 2 Algemene wet op het binnentreden,(3) en dat waar het Hof spreekt over art. 2 Politiewet, het Hof het oog heeft gehad op de in art. 8, tweede lid, Politiewet aan de politieambtenaar toegekende bevoegdheid tot binnentreden(4). </para>
+        <para manualAnnotation="TEXT_BLOCK">Ook de tweede klacht faalt.</para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">3.8 </potentialnr><text manualAnnotation="TEXT_BLOCK">De derde klacht heeft betrekking op het moment waarop de verbalisanten zijn nagegaan of de bewoner van het appartement aanwezig was. De steller van het middel voert aan dat uit het proces-verbaal van bevindingen blijkt dat de verbalisanten eerst zijn binnengetreden en pas daarna hebben vastgesteld dat niemand thuis was. Hierop heeft de verdediging in hoger beroep niet gewezen. Dergelijke stellingen kunnen niet succesvol voor het eerst in cassatie worden aangevoerd. </text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">3.9 </potentialnr><text manualAnnotation="TEXT_BLOCK">Tot slot kan ook de vierde klacht niet slagen. Uit 's Hofs overweging kan worden opgemaakt dat de enige fout die de verbalisanten volgens het Hof hebben gemaakt is het in het 'verslag binnentreden woning' noemen van art. 2 Pw als grondslag voor de afgegeven machtiging in plaats van art. 9 Opiumwet. Op de overweging dat de omissie in het 'verslag binnentreden woning' geen vormverzuim oplevert is wel wat af te dingen onder meer gelet op artikel 6 lid 1 onder c Awbi, maar nu niet is aangevoerd in hoeverre de verdachte door het verzuim daadwerkelijk in zijn verdediging is geschaad en nu het Hof de gang van zaken op aannemelijke wijze heeft gereconstrueerd mist ook dit onderdeel doel.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">3.10 </potentialnr><text manualAnnotation="TEXT_BLOCK">Het middel faalt. </text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4. </potentialnr><text manualAnnotation="TEXT_BLOCK">Gronden waarop de Hoge Raad gebruik zou moeten maken van zijn bevoegdheid de bestreden uitspraak ambtshalve te vernietigen heb ik niet aangetroffen. </text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">5. </potentialnr><text manualAnnotation="TEXT_BLOCK">Deze conclusie strekt tot verwerping van het beroep. </text></para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">De Procureur-Generaal</para>
+        <para manualAnnotation="TEXT_BLOCK">bij de Hoge Raad der Nederlanden</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">1 </potentialnr><text manualAnnotation="TEXT_BLOCK">Het beroep is niet ontvankelijk voor zover het zich richt tegen de bevestiging van de veroordeling voor de overtreding. Zie HR 27 mei 2008, LJN BD2433 en de daarin aangehaalde wetsgeschiedenis. Gelet op de omstandigheid dat het middel enkel klachten bevat die in verband staan met de tenlastegelegde misdrijven kan de Hoge Raad verstaan dat het beroep zich daartoe beperkt.</text></para>
+        <para><potentialnr manualAnnotation="NR">2 </potentialnr><text manualAnnotation="TEXT_BLOCK">Politiedossier p. 4.</text></para>
+        <para><potentialnr manualAnnotation="NR">3 </potentialnr><text manualAnnotation="TEXT_BLOCK">HR 22 januari 2008, LJN BC0811.</text></para>
+        <para><potentialnr manualAnnotation="NR">4 </potentialnr><text manualAnnotation="TEXT_BLOCK">HR 10 maart 2009, LJN BH0173.</text></para>
+      </parablock>
+    </conclusie>
+</open-rechtspraak>

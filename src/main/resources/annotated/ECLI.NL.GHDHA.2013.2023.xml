@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:eu="http://publications.europa.eu/celex/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:tr="http://tuchtrecht.overheid.nl/">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:GHDHA:2013:2023</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-07-17T11:08:30</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-06-27</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Gerechtshof_Den_Haag" scheme="overheid.RechterlijkeMacht">Gerechtshof Den Haag</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">2013-07-02</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">200.010.388-01</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#hogerBeroep">Hoger beroep</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:spatial rdfs:label="Zittingsplaats">'s-Gravenhage</dcterms:spatial>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#civielRecht">Civiel recht</dcterms:subject>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:GHDHA:2013:2023">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:GHDHA:2013:2023</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-07-17T11:10:14</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-07-17</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:GHDHA:2013:2023 Gerechtshof Den Haag , 02-07-2013 / 200.010.388-01</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie id="ECLI:NL:GHDHA:2013:2023:INH" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <para>div. vorderingen i.v.m. autoverkopen aan Engelse afnemer; toepasselijkheid AV; ovk'n tot stand gekomen?; ovk.'n conform AV geannuleerd? vertragingsschade</para>
+    </inhoudsindicatie>
+  <uitspraak id="ECLI:NL:GHDHA:2013:2023:DOC" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <section>
+        <title><text manualAnnotation="TEXT_BLOCK">GERECHTSHOF DEN HAAG  </text></title>
+        <para manualAnnotation="TEXT_BLOCK">Sector civiel recht</para>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">Rolnummer (oud): C06/868</para>
+          <para manualAnnotation="TEXT_BLOCK">Zaaknummer       : 105.005.080/02</para>
+        </parablock>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">Rolnummer rechtbank	: 261/2004</para>
+        </parablock>
+        <para/>
+      </section>
+      <section>
+        <title><text manualAnnotation="TEXT_BLOCK">arrest d.d. 2 juli 2013</text></title>
+        <para/>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">inzake</para>
+        </parablock>
+        <para/>
+      </section>
+      <section>
+        <title><text manualAnnotation="TEXT_BLOCK">Zwartepoorte Goes B.V.,</text></title>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">gevestigd te Goes,</para>
+          <para manualAnnotation="TEXT_BLOCK">appellante,</para>
+          <para manualAnnotation="TEXT_BLOCK">hierna te noemen: Zwartepoorte,</para>
+          <para manualAnnotation="TEXT_BLOCK">advocaat: mr. R.J. Sark te Arnhem,</para>
+        </parablock>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">tegen</para>
+        </parablock>
+        <para/>
+      </section>
+      <section>
+        <title><text manualAnnotation="TEXT_BLOCK">Capital Renting &amp;amp; Leasing ltd,</text></title>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">gevestigd te Grimsargh, Verenigd Koninkrijk,</para>
+          <para manualAnnotation="TEXT_BLOCK">geïntimeerde,</para>
+          <para manualAnnotation="TEXT_BLOCK">hierna te noemen: Capital,</para>
+          <para manualAnnotation="TEXT_BLOCK">mr. J.W. de Groot te Amsterdam.</para>
+        </parablock>
+        <para/>
+        <para/>
+      </section>
+      <section>
+        <title><text manualAnnotation="SECTION_TITLE">Het verdere verloop van het geding</text></title>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">Voor het verloop van de procedure tot het tussenarrest van 11 oktober 2011 verwijst het hof naar dat arrest. Bij exploot van 28 oktober 2011 heeft Zwartepoorte de appeldagvaarding van 24 april 2006 en de akte vermeerdering van eis van 10 maart 2009 doen betekenen aan het kantooradres van mr. B. van Leeuwen te Goes, de advocaat van Capital in eerste aanleg. Op 8 november 2011 heeft mr. De Groot zich gesteld voor Capital. Bij memorie van antwoord van 17 juli 2012 heeft Capital de grieven van Zwartepoorte bestreden. Vervolgens heeft Zwartepoorte een akte houdende uitlating, tevens akte houdende overlegging producties, tevens akte houdende bewijsaanbiedingen, en Capital een antwoordakte genomen.</para>
+        </parablock>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">Op 30 mei 2013 hebben partijen hun zaak doen bepleiten. Van de pleitzitting is proces-verbaal opgemaakt. Ten slotte hebben partijen opnieuw arrest gevraagd.  </para>
+        </parablock>
+        <para/>
+      </section>
+      <section role="overwegingen">
+        <title><text manualAnnotation="SECTION_TITLE">De verdere beoordeling van het geding. </text></title>
+        <para/>
+        <paragroup>
+          <nr manualAnnotation="NR">1.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Het hof blijft bij hetgeen het heeft overwogen en beslist in zijn arrest van 11 oktober 2010. In dat arrest heeft het hof geoordeeld dat zowel het exploot van de appeldagvaarding van 2 augustus 2006, als het exploot van eisvermeerdering nietig zijn, maar dat deze  nietigheden gelet op het bepaalde in artikel 121, lid 2 en artikel 66 Rv kunnen worden hersteld.  Het hof heeft Zwartepoorte in de gelegenheid gesteld de geconstateerde gebreken te herstellen door, onder meer, een kantoorbetekening ex artikel 63 Rv. Zwartepoorte heeft van deze gelegenheid gebruik gemaakt, waarna Capital in het geding is verschenen en heeft geantwoord op de eis. Nu aldus de eerder door het hof geconstateerde gebreken zijn hersteld, wordt het beroep van Capital op de nietigheid van de appeldagvaarding verworpen. Capital moet in staat worden geacht genoegzaam verweer te voeren. Daartoe is niet nodig dat alle gedingstukken aan haar worden betekend.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">2.</nr>
+          <para manualAnnotation="TEXT_BLOCK">De grieven strekken ertoe het geschil in volle omvang aan het hof voor te leggen. Aldus komt het hof toe aan de inhoudelijke beoordeling van de vorderingen van Zwartepoorte, voor zover deze zijn gericht tegen Capital. Het hof zal de diverse onderdelen van de vorderingen, zoals gewijzigd in hoger beroep en de stellingen die Zwartepoorte daaraan ten grondslag heeft gelegd hierna afzonderlijk bespreken en beoordelen in het licht van de aangevoerde grieven en het daartegen gevoerde verweer.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">3.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Het betreft in deze zaak de rechtsverhouding tussen een in Nederland en een in het Verenigd Koninkrijk gevestigde partij. Nu beide partijen uitgaan van toepasselijkheid van het Nederlandse recht, neemt het hof aan dat sprake is van een impliciete rechtskeuze voor dit recht.   </para>
+          <para/>
+          <parablock>
+            <para>
+              <emphasis manualAnnotation="SECTION_TITLE" role="italic">Toepasselijkheid algemene voorwaarden </emphasis>
+            </para>
+          </parablock>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">4.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Voor de beoordeling van het geschil tussen partijen is allereerst van belang of op de tussen partijen gesloten overeenkomsten de algemene voorwaarden BOVAG (verder: de Algemene Voorwaarden) van toepassing zijn. Capital heeft in eerste aanleg gesteld dat dit niet het geval is en dat zij niet met de Algemene Voorwaarden bekend is. Hoewel Capital zich in hoger beroep op diverse bepalingen van de Algemene Voorwaarden heeft beroepen, heeft zij haar primaire verweer dat de Algemene Voorwaarden niet van toepassing zijn niet expliciet prijsgegeven. Het hof dient zich derhalve over de toepasselijkheid uit te spreken. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">5.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Naar het oordeel van het hof is de toepasselijkheid van de Algemene Voorwaarden overeengekomen, nu op alle door Capital getekende offertes/"orderbevestigingen" is vermeld dat deze van toepassing zijn. Voor zover het verweer van Capital moet worden begrepen als een beroep op vernietigbaarheid wegens het niet ter hand stellen van de voorwaarden, wordt het verworpen. Het hof verwijst naar hetgeen de rechtbank in reeds over de toepasselijkheid van de Algemene Voorwaarden en de bekendheid ervan bij Capital heeft overwogen (rechtsoverweging 4.1.2 van het vonnis van 25 januari 2006) en maakt dat oordeel tot het zijne.</para>
+          <para/>
+          <parablock>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">Schade als gevolg van de te late betalingen van de facturen</emphasis>
+            </para>
+          </parablock>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Zwartepoorte heeft betaling gevorderd van € 70.287,92, wegens door haar gestelde renteverliezen, berekend tot en met augustus 2003. Zij legt daaraan allereerst ten grondslag dat tussen haar en Capital door tussenkomst van Adcar een afspraak is gemaakt, die inhield dat bij de eindafrekening deze verliezen op de waarborgsom in mindering zouden moeten worden gebracht. Het hof heeft in zijn het tussenarrest van 6 juli 2013 ten aanzien van Adcar reeds geoordeeld dat Adcar niet (als onbevoegd vertegenwoordiger) op grond van artikel 3:70 BW jegens Zwartepoorte aansprakelijk is, nu Adcar zich niet als vertegenwoordiger (gevolmachtigde) van Capital heeft voorgedaan. Hieruit volgt dat Adcar Capital niet heeft kunnen binden. Zwartepoorte heeft niets gesteld op grond waarvan daarover in de onderhavige procedure tegen Capital anders moet worden geoordeeld. Zwartepoorte heeft ook niet gesteld dat zij met Capital zelf heeft afgesproken dat Capital de door Zwartepoorte geleden renteverliezen zal compenseren. Van een afspraak op grond waarvan Capital verplicht was de renteverliezen te vergoeden is dus geen sprake.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">7.</nr>
+          <para><text manualAnnotation="TEXT_BLOCK">Zwartepoorte heeft subsidiair, voor het geval dat het hof zou oordelen dat de door haar gestelde afspraak niet tot stand is gekomen, aan haar vordering ten grondslag gelegd dat Capital door het niet tijdig betalen van de facturen in de nakoming van haar contractuele verplichtingen tekort is geschoten. Nu uit mededelingen van Capital bleek dat zij niet tijdig zou nakomen, was het gelet op het bepaalde in artikel 6:83 sub c niet nodig om Capital in gebreke te stellen. Zwartepoorte heeft haar bij brief van 1 april 2003 aansprakelijk gesteld. Capital verkeerde aldus in verzuim en is op grond van artikel 6:74 BW gehouden de schade die Zwartepoorte als gevolg van de tekortkoming heeft geleden, bestaande uit de renteverliezen,  te vergoeden. Dit komt neer op een geleden renteverlies van </text><?linebreak ?><text manualAnnotation="TEXT_BLOCK">€ 70.287,92, berekend tot en met 11 augustus 2003, te vermeerderen met de contractuele rente. Ingevolge artikel 17 lid 3 van de Algemene Voorwaarden bedraagt deze de wettelijke rente, vermeerderd met 2%.</text></para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">8.</nr>
+          <para manualAnnotation="TEXT_BLOCK"> Capital heeft daartegen aangevoerd dat zij nimmer in gebreke is gesteld en dat zij (dus) niet in verzuim is geraakt. Zij verwijst voorts naar de Algemene Voorwaarden, die een exacte regeling geven voor aansprakelijkheid van een debiteur als gevolg van enige tekortkoming.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">9.</nr>
+          <parablock>
+            <para manualAnnotation="TEXT_BLOCK">Het hof overweegt als volgt.</para>
+            <para manualAnnotation="TEXT_BLOCK">Artikel 6:119 BW fixeert de schadevergoeding, verschuldigd wegens vertraging in de voldoening van een geldsom, op de wettelijke rente (lid 1), dan wel de bedongen rente (lid 3). De grootte van de werkelijke schade is daarom niet relevant. De gestelde renteverliezen komen dus niet als schade voor vergoeding in aanmerking. Naar het hof begrijpt, vordert Capital de contractuele rente slechts over de renteverliezen en niet (subsidiair) over de betalingsachterstand. Zij heeft ook geen bedragen ter zake genoemd. Reeds om die reden is de contractuele rente over de betalingsachterstand niet toewijsbaar. In het midden kan blijven of Capital in verzuim is geraakt.  </para>
+          </parablock>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">10.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Zwartepoorte heeft meer subsidiair, voor het geval Capital niet in verzuim is geraakt, aanspraak gemaakt op betaling van wettelijke handelsrente ex artikel 6:119a BW, althans de wettelijke rente, over de te late betalingen. Zwartepoorte wijst erop, dat voor toewijzing van wettelijke handelsrente geen ingebrekestelling nodig is. De wettelijke handelsrente over de te late betalingen bedraagt, berekend vanaf 30 dagen na de factuurdatum tot de dag der algehele voldoening, volgens Zwartepoorte € 159.222,05. Zwartepoorte heeft een renteberekening overgelegd.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">11.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Deze vordering komt reeds niet voor toewijzing in aanmerking, omdat partijen in hun Algemene Voorwaarden, op de toepasselijkheid waarvan Zwartepoorte zelf een beroep doet, een (onder meer op het punt van verzuim) daarvan afwijkende afspraak hebben gemaakt. Daarbij komt dat met betrekking tot betalingen voortkomend uit overeenkomsten gesloten vóór 8 augustus 2002 geen sprake kan zijn van verschuldigdheid van wettelijke handelsrente. De berekening van prod. 10 bij memorie van grieven houdt hiermee geen rekening en kan ook om die reden niet worden gevolgd. Voor een nadere aanpassing van de vordering is in deze fase van het geding geen plaats meer. Ook deze vordering is niet toewijsbaar.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">12.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Dit een en ander betekent dat de rechtbank gevorderde renteverliezen terecht heeft afgewezen.</para>
+          <para/>
+          <parablock>
+            <para>
+              <emphasis manualAnnotation="SECTION_TITLE" role="italic">Accessoires en deels onbetaalde facturen</emphasis>
+            </para>
+          </parablock>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">13.</nr>
+          <para manualAnnotation="TEXT_BLOCK">In eerste aanleg heeft Zwartepoorte ter zake van door haar aan Capital geleverde en door deze onbetaald gelaten "extra accessoires" (velgen en CD-roms voor navigatiesystemen) een bedrag gevorderd van € 12.549,26. De rechtbank heeft deze vordering afgewezen, kort gezegd, omdat Zwartepoorte de stelling van Capital dat partijen hadden afgesproken dat deze accessoires gratis zouden zijn niet voldoende heeft weersproken en evenmin facturen heeft overgelegd. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">14.</nr>
+          <para manualAnnotation="TEXT_BLOCK">In hoger beroep heeft Zwartepoorte haar eis vermeerderd en tevens gevorderd een bedrag van € 3.379,88 ter zake van gedeeltelijk onbetaald gelaten facturen en een onbetaald gebleven factuur ter zake geleden margederving. Vervolgens heeft zij in haar pleitnota haar eis weer verminderd tot een bedrag van € 12.549,26 stellende dat zij er in hoger beroep er ten onrechte van was uitgegaan dat de factuur ter zake van margederving niet was meegenomen in het in eerste aanleg gevorderde bedrag van € 12.549,26. Een factuur ter zake van margederving van (€ 14.671,91 minus € 12.549,26 is) € 2.121,74 is echter niet terug te vinden in de opstelling in de memorie van grieven onder 66, noch in productie 11 bij memorie van grieven. Gelet op de voor de eisvermeerdering gegeven uitleg, houdt het hof het ervoor dat Capital met haar eisvermindering afstand heeft gedaan van haar vordering ter zake van gedeeltelijk onbetaald gelaten facturen en de onbetaalde gelaten factuur ter zake van geleden margederving. Resteert dus een vordering ter zake van geleverde accessoires, te weten voor velgen (voor een bedrag van € 2.295,--) en CD-rom's UK voor het navigatiesysteem (voor een totaalbedrag van € 6.191,06). </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">15.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Capital betwist niet alleen de ontvangst van de betreffende facturen, maar stelt ook dat – voor zover deze facturen al accessoires betreffen van auto's die aan Capital zijn geleverd – geen sprake was van extra's, maar van zaken die nodig waren om de auto's te laten voldoen aan de specificaties voor de Britse markt. De auto's waren immers aan Zwartepoorte geleverd met navigatiesysteem en CD-roms met kaarten van het Europees continent en niet van Groot-Brittannië. De auto's voldeden daarom – zonder de in geding zijnde CD-roms – niet aan de daaraan te stellen (conformiteits)eisen. Een aanvullende betaling voor die CD-roms is dan ook nimmer met Capital overeengekomen.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">16.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Zwartepoorte heeft – ook in hoger beroep – dit verweer van Capital niet afdoende weersproken, hetgeen wel van haar had mogen worden verwacht. Het enkel versturen van facturen en de stelling dat de accessoires niet gratis waren, is gelet op het gemotiveerde verweer van Capital ten aanzien van de CD-roms onvoldoende. Dit betekent dat ook in hoger beroep de verschuldigdheid van de betaling van de CD-roms niet is komen vast te staan, zodat ook deze vordering terecht is afgewezen. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">17.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Met betrekking tot de velgen is het daarentegen Capital die haar verweer niet nader heeft onderbouwd, zodat het hof het ervoor houdt dat betaling voor deze facturen is overeengekomen. Het bedrag van € 2.295,-- is daarom toewijsbaar. Daar niet duidelijk is of de overeenkomst waarop deze betaling betrekking heeft is gesloten vóór 8 augustus 2002, is de gevorderde handelsrente niet toewijsbaar. Wel toewijsbaar is de wettelijke rente over dit bedrag vanaf de dag van de inleidende dagvaarding. </para>
+          <para/>
+          <parablock>
+            <para>
+              <emphasis manualAnnotation="SECTION_TITLE" role="italic">Koopovereenkomsten 124 BMW’s tot stand gekomen?</emphasis>
+            </para>
+          </parablock>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">18.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Volgens Zwartepoorte hebben partijen in november 2002 koopovereenkomsten gesloten met betrekking tot 124 auto's van het merk BMW type X5, waarmee een totale koopsom is gemoeid van € 6.851.124. Zwartepoorte heeft in dit verband kopieën van bescheiden overlegd, die betrekking hebben op de bestelling van de betreffende auto’s, waarop staat vermeld "orderbevestiging". Deze zijn voorzien van het stempel van Capital en een handtekening onder de tekst "handtekening koper". Volgens Zwartepoorte is tussen haar en Adcar afgesproken dat de auto's pas besteld zouden worden (naar het hof begrijpt: bij de importeur) op het moment dat alle reeds in bestelling staande auto’s door Capital waren afgenomen omdat in de aflevering van die auto's vertraging was opgelopen. Bij brief van 30 september 2003 heeft Zwartepoorte aan Adcar meegedeeld dat de order voor de 124 BMW’s in bestelling kan worden gezet en is verzocht om een aanbetaling van 25%. Omdat betaling uitbleef heeft Zwartepoorte Capital op 8 december 2003 en 17 maart 2003 zelf aangeschreven (deze brieven zijn voor zover relevant geciteerd in de rechtsoverwegingen 1.14 en 1.15 van het tussenarrest van 6 juli 2010). Omdat zij geen enkele reactie van Capital ontving, heeft Zwartepoorte de auto's niet meer voor Capital in bestelling gezet. De rechtbank heeft volgens Zwartepoorte ten onrechte overwogen dat de "orderbevestigingen" in feite inhoudelijk offertes zijn, omdat daarop wordt verwezen naar Algemene Voorwaarden onder mededeling: "De verkoop komt pas tot stand door ondertekening van de na aanvaarding van deze offerte op te maken orderbevestiging door koper en verkoper." Zwartepoorte heeft in dit verband aangevoerd dat partijen al lange tijd op deze wijze met elkaar zaken deden. Kort gezegd stelt zij dat gebruikelijk was dat de order door middel van het betreffende formulier bij Zwartepoorte werd geplaatst door Adcar of Capital zonder dat nadien nog een aparte orderbevestiging werd verstuurd. Na ondertekening door Capital werd de bestelling bij de importeur geplaatst. Beide partijen beschouwden deze getekende offerte/orderbevestiging dus als een orderbevestiging c.q. een overeenkomst. Per abuis is de verwijzing naar de Algemene Voorwaarden op het formulier gehandhaafd. Ter illustratie van zijn stelling dat partijen aldus zaken deden heeft Zwartepoorte diverse schriftelijke opdrachtbevestigingen van eerdere data overgelegd, waarop eveneens de verwijzing naar de Algemene Voorwaarden staat vermeld, terwijl daarna geen aparte opdrachtbevestiging is gevolgd. Niet in geschil is dat aldus steeds een koopovereenkomst met betrekking tot de betreffende auto tot stand is gekomen, aldus nog steeds Zwartepoorte.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">19.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Capital betwist dat partijen koopovereenkomsten zijn aangegaan. Nimmer is sprake geweest van een besteling van 124 voertuigen ineens en nimmer zou Zwartepoorte bij machte zijn geweest zo veel voertuigen te leveren. Zwartepoorte heeft op zeker moment aangeboden 124 X5 auto's te willen leveren en bestelformulieren zijn naar Capital gezonden. Capital heeft aangegeven de auto's wel te willen afnemen, maar Zwartepoorte gaf vervolgens aan de auto's pas te willen bestellen nadat de lopende verhouding tussen partijen was afgewikkeld. Zwartepoorte heeft vervolgens een jaar lang niets van zich laten horen.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">20.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Het hof acht deze betwisting door Capital, in het licht van hetgeen door Zwartepoorte is aangevoerd, een onvoldoende feitelijke onderbouwing van haar verweer dat tussen partijen geen overeenkomst tot stand is gekomen. Capital heeft niet, dan wel onvoldoende gemotiveerd betwist dat zij de orderbevestigingen (die ze ook zelf opdrachtbevestigingen noemt) heeft getekend en van een firmastempel heeft voorzien en dat dit de tussen partijen gebruikelijke wijze was waarop zij overeenkomsten sloten. Zo stelt zij niet, en is ook niet gebleken, dat separate offertes en vervolgens (door partijen te ondertekenen) orderbevestigingen werden opgemaakt. Capital heeft zich nog beroepen op  artikel 3 van de Algemene Voorwaarden, dat bepaalt dat een koopovereenkomst altijd de vermoedelijke of uitdrukkelijke vaste leveringsdatum bevat, en dat deze op de 124 orderbevestigingen niet is ingevuld, maar tevergeefs. Dat het nimmer de bedoeling is geweest dat de 124 auto's ineens zouden worden geleverd, en dat over het moment van levering van de auto’s nog nadere afspraken moesten worden gemaakt, staat er niet aan in de weg dat overeenkomsten tot stand zijn gekomen. Over de essentialia – het type auto met specificaties en de prijs – bestond immers overeenstemming. Zwartepoorte wijst erop dat ook op eerdere orderbevestigingen de vermoedelijke leveringstermijn niet was ingevuld. De vraag of Zwartepoorte wel aan haar leveringsverplichting zou kunnen voldoen is in dit kader niet relevant.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">21.</nr>
+          <para manualAnnotation="TEXT_BLOCK">De door Capital eerst bij antwoordakte van 20 november 2012 – bij gebrek aan wetenschap – ingeroepen onduidelijkheid over de vraag door wie de handtekeningen op de 124 koopovereenkomsten zijn geplaatst en of deze persoon wel daartoe bevoegd is, acht het hof – mede gezien de wijze waarop partijen voordien zaken met elkaar hebben gedaan – chicaneus. Het hof gaat hieraan dan ook voorbij. Het hof gaat er dus, anders dan de rechtbank, van uit dat partijen de litigieuze koopovereenkomsten zijn aangegaan. De gevorderde verklaring voor recht is in zoverre toewijsbaar. </para>
+          <para/>
+          <parablock>
+            <para>
+              <emphasis manualAnnotation="SECTION_TITLE" role="italic">Annulering van de koopovereenkomsten door Capital?</emphasis>
+            </para>
+          </parablock>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">22.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Zwartepoorte stelt dat, nu Capital niet meer heeft gereageerd op haar brief van 17 maart 2004, zij ervan uit mocht gaan dat Capital de koopovereenkomst (het hof neemt aan dat zij hiermee bedoelt: alle 124 koopovereenkomsten) heeft willen annuleren c.q. ontbinden.  Capital is als gevolg hiervan gehouden de gefixeerde schade als bedoeld in artikel 7 van de Algemene Voorwaarden aan haar te vergoeden. Capital is derhalve een schadevergoeding van 15% van de koopsom, te weten € 1.027.668,60, verschuldigd zo stelt Zwartepoorte. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">23.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Capital betwist dat een annulering als bedoeld in artikel 7 van de Algemene Voorwaarden heeft plaatsgevonden; reeds daarom kan naar haar mening geen sprake zijn van verschuldigdheid van het door Zwartepoorte gevorderde bedrag van € 1.027.668,60.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">24.</nr>
+          <parablock>
+            <para manualAnnotation="TEXT_BLOCK">Het hof overweegt als volgt. </para>
+            <para manualAnnotation="TEXT_BLOCK">Artikel 7 lid 1 van de Algemene Voorwaarden luidt:</para>
+          </parablock>
+          <para/>
+          <parablock>
+            <para>
+              <emphasis role="italic"><quote manualAnnotation="TEXT_BLOCK">"</quote><text manualAnnotation="TEXT_BLOCK">De koper heeft de bevoegdheid de koopovereenkomst te annuleren. Deze annulering kan alleen schriftelijk plaatsvinden.</text></emphasis>
+            </para>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">De koper is gehouden om binnen één week na deze annulering de verkoper alle schade die hij ten gevolge van de annulering lijdt, te vergoeden. Deze schade is vastgesteld op 15% van de koopprijs van de geannuleerde auto. (…)”</emphasis>
+            </para>
+          </parablock>
+          <para/>
+          <parablock>
+            <para manualAnnotation="TEXT_BLOCK">Bij brief van 8 december 2003 heeft Zwartepoorte Capital als volgt bericht:</para>
+          </parablock>
+          <para/>
+          <parablock>
+            <para>
+              <emphasis role="italic"><quote manualAnnotation="TEXT_BLOCK">“</quote><text manualAnnotation="TEXT_BLOCK">In September I informed your associate Adcar Holland of the fact that we were ready to order the BMW X5 cars, and asked for[] the payment of EURO 1.712.781,-- (…)</text></emphasis>
+            </para>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">	Until today we did not receive any payment from you.</emphasis>
+            </para>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">	What do you want us to do with your order for 124 BMW X5?</emphasis>
+            </para>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">	Please let me know as soon as possible.”</emphasis>
+            </para>
+          </parablock>
+          <para/>
+          <parablock>
+            <para manualAnnotation="TEXT_BLOCK">Bij brief van 17 maart 2004 heeft Zwartepoorte Capital geschreven:</para>
+          </parablock>
+          <para/>
+          <parablock>
+            <para>
+              <emphasis role="italic"><quote manualAnnotation="TEXT_BLOCK">“</quote><text manualAnnotation="TEXT_BLOCK">You did not give any reaction on my letter to you from 8 December 2003 where I asked  you what to do with you[r] order for 124 new X5 BMW.</text></emphasis>
+            </para>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">Please let me know within 8 days if you want the cars to be delivered or do you want to cancel the order for these 124 X5.</emphasis>
+            </para>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">If I don’t he[ar] from you before 25 march 2004, I will take that as an official cancellation of the 124 orders.”</emphasis>
+            </para>
+          </parablock>
+          <para/>
+          <parablock>
+            <para manualAnnotation="TEXT_BLOCK">Capital heeft niet gereageerd.</para>
+          </parablock>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">25.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Het hof is van oordeel dat Zwartepoorte uit het niet reageren op haar brieven van 8 december 2003 en 17 maart 2004 niet redelijkerwijze heeft kunnen afleiden dat Capital de door haar gesloten 124 overeenkomsten heeft wensen te annuleren op grond van artikel 7 van de Algemene Voorwaarden. Dit klemt te meer nu Zwartepoorte in die brieven helemaal niet heeft verwezen naar artikel 7 van de Algemene Voorwaarden en de daaruit voortvloeiende consequenties (verschuldigdheid van een gefixeerde schadevergoeding van 15%), maar daarentegen melding maakt van het feit dat zij een aanbetaling wenst van € 1.712.781,-- (25% van de koopsom; zie de brief van Zwartepoorte aan Adcar van 30 september 2003) alvorens tot bestelling van de auto's over te gaan, terwijl dit – zoals Zwartepoorte heeft erkend – tussen partijen niet was overeengekomen. De voor toepasselijkheid van artikel 7 Algemene Voorwaarden vereiste duidelijke wilsverklaring van Capital tot annulering is hierdoor niet komen vast te staan. Juist om discussie als de onderhavige te voorkomen, is in artikel 7 een schriftelijkheidseis opgenomen. Dit betekent dat de gefixeerde schadevergoeding  ad € 1.027.668,60 terecht is afgewezen. </para>
+          <para/>
+          <parablock>
+            <para>
+              <emphasis manualAnnotation="TEXT_BLOCK" role="italic">Ontbinding wegens toerekenbare tekortkomingen aan de zijde van Capital</emphasis>
+            </para>
+          </parablock>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">26.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Subsidiair stelt Zwartepoorte zich op het standpunt dat Capital tekort is geschoten in de nakoming van de overeenkomsten door de door haar gekochte auto’s niet af te nemen en de koopprijs niet te voldoen. Uit de gedragingen van Capital – zij reageerde niet op de brieven en deed geen aanbetaling – heeft Zwartepoorte afgeleid, en mocht zij ook afleiden, dat Capital niet aan haar verplichtingen zou voldoen, waardoor zij in verzuim is geraakt. De facto heeft Capital de overeenkomst dan ook (buitengerechtelijk) ontbonden en Zwartepoorte heeft hier stilzwijgend mee ingestemd. Voor zover de overeenkomsten niet zijn ontbonden wenst Zwartepoorte alsnog ontbinding daarvan door de rechter nu Capital te kort is geschoten in de nakoming daarvan. Voorts vordert Zwartepoorte schadevergoeding naast ontbinding op grond van artikel 7:277 BW, welke schade volgens haar op grond van artikel 7 van de Algemene Voorwaarden is vastgesteld op 15% van de koopsom, ofwel € 1.027.668,60. Zwartepoorte maakt aanspraak op dit bedrag, althans een door het hof te bepalen bedrag, althans een bedrag nader op te maken bij staat.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">27.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Capital meent dat van een tekortkoming aan haar zijde geen sprake was. Integendeel: volgens Capital kwam Zwartepoorte een jaar na dato van de offerte, eenzijdig, met een voor haar zeer belastende en niet acceptabele voorwaarde voor levering: Capital zou in een keer een aanbetaling moeten doen van 25% van de koopsom van de 124 auto's, nog voor deze door Zwartepoorte in bestelling zouden worden gezet. Aldus is volgens Capital sprake van een tekortkoming aan de zijde van Zwartepoorte.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">28.</nr>
+          <parablock>
+            <para manualAnnotation="TEXT_BLOCK">Het hof overweegt als volgt.</para>
+            <para manualAnnotation="TEXT_BLOCK">Daargelaten of sprake is van een tekortkoming aan de zijde van Capital, zoals door Zwartepoorte is gesteld, is onvoldoende gesteld om aan te nemen dat sprake was van verzuim aan de zijde van Capital, hetgeen nodig is om tot ontbinding (door Zwartepoorte) over te gaan. De brieven van 8 december 2003 en 17 maart 2004 kunnen niet worden aangemerkt als deugdelijke ingebrekestellingen. Capital wordt in deze brieven immers niet uitgenodigd om binnen een redelijke termijn tot afroeping (zodat kan worden besteld) van de 124 auto's over te gaan; haar wordt slechts gevraagd (binnen acht dagen) te laten weten wat zij wil met de bestelling: levering of annulering. Daar komt bij dat Zwartepoorte in deze brieven heeft aangegeven dat zij van haar kant alleen bereid was de auto's te bestellen als aan een – niet met Capital overeengekomen – voorwaarde, te weten het doen van een aanbetaling van  € 1.027.668,60, was voldaan.</para>
+          </parablock>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">29.</nr>
+          <para><text manualAnnotation="TEXT_BLOCK">Voor zover Zwartepoorte meent dat zich een situatie voordeed waarin verzuim zonder ingebrekestelling is ingetreden, overweegt het hof dat uit artikel 6:83 sub c BW volgt, dat alleen dan geen ingebrekestelling nodig is, wanneer de schuldeiser </text><emphasis manualAnnotation="TEXT_BLOCK" role="italic">uit een mededeling van de schuldenaar</emphasis><text manualAnnotation="TEXT_BLOCK"> heeft moeten afleiden dat deze in de nakoming van de verbintenis zal tekortschieten. Gesteld noch gebleken is dat Capital een dergelijke mededeling aan Zwartepoorte heeft gedaan. Indien Zwartepoorte uit de gedragingen van Capital (bijvoorbeeld het niet reageren op meergenoemde brieven van 8 december 2003 en 17 maart 2004, of eerdere tekortkomingen van Capital met betrekking tot de betaling) heeft gemeend te kunnen afleiden dat aanmaning nutteloos zou zijn, dan kan de ingebrekestelling plaatsvinden door een schriftelijke aansprakelijkstelling als bedoeld in artikel 6:82, lid 2 BW. Dat Zwartepoorte een dergelijke aansprakelijkstelling heeft verstuurd is echter gesteld noch gebleken. In de brieven van 8 december 2003 en 17 maart 2004 is een dergelijke aansprakelijkstelling niet opgenomen. Dit betekent dat van ontbinding op grond van tekortkomingen aan de zijde van Capital en van verschuldigdheid van schadevergoeding geen sprake kan zijn.</text></para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">30.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Overigens houdt het hof het er voor dat de 124 koopovereenkomsten in 2004 met wederzijds goedvinden zijn ontbonden, omdat beide partijen er blijk van hebben gegeven geen behoefte te hebben aan ongewijzigde nakoming daarvan.</para>
+          <para/>
+          <parablock>
+            <para>
+              <emphasis manualAnnotation="SECTION_TITLE" role="italic">Buitengerechtelijke kosten</emphasis>
+            </para>
+          </parablock>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">31.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Uit de toelichting onder de nrs. 61 en 62 van de memorie van grieven begrijpt het hof dat Zwartepoorte het bedrag van de door haar gevorderde buitengerechtelijke incassokosten baseert op het door haar gevorderde bedrag van € 70.287,92 ter zake van renteverliezen. De gestelde werkzaamheden – het voeren van correspondentie en telefoongesprekken – hebben ook betrekking op het innen van laatstgenoemde vordering. Nu die vordering wordt afgewezen, dient hetzelfde te gelden voor de buitengerechtelijke incassokosten. Ook deze vordering zal dus worden afgewezen. </para>
+          <para/>
+          <parablock>
+            <para>
+              <emphasis manualAnnotation="SECTION_TITLE" role="italic">Slotsom</emphasis>
+            </para>
+          </parablock>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">32.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Bij gebreke van stellingen die – indien bewezen – tot een andere uitkomst zouden leiden, wordt aan bewijslevering niet toegekomen.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">33.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Het voorgaande betekent dat de grieven III en IV deels gegrond zijn en dat de overige grieven falen. Het vonnis waarvan beroep, voor zover gewezen tussen Zwartepoorte en Capital, zal worden bekrachtigd, behoudens voor zover de rechtbank daarin heeft geoordeeld dat geen overeenkomsten ter zake van 124 auto's tot stand zijn gekomen en betaling ter zake van de velgen is afgewezen. Opnieuw rechtdoende zal de in hoger beroep gevorderde verklaring voor recht dat tussen partijen 124 koopovereenkomsten tot stand zijn gekomen alsnog worden toegewezen, evenals betaling van een bedrag van € 2.295,--, vermeerderd met rente. De in hoger beroep gewijzigde eisen zullen worden afgewezen. Bij deze uitkomst past dat de proceskosten in hoger beroep zullen worden gecompenseerd. </para>
+          <para/>
+          <para/>
+        </paragroup>
+      </section>
+      <section role="beslissing">
+        <title><text manualAnnotation="SECTION_TITLE">Beslissing</text></title>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">Het hof:</para>
+        </parablock>
+        <para/>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> vernietigt het tussen partijen gewezen vonnis van de rechtbank Middelburg van 25 januari 2006, doch uitsluitend voor zover de rechtbank daarin oordeelt dat tussen partijen geen koopovereenkomsten ter zake van 124 auto's tot stand is gekomen en daarin betaling van € 2.295,-- ter zake van velgen is afgewezen;</text></para>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">in zoverre opnieuw rechtdoende</para>
+        </parablock>
+        <para/>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> verklaart voor recht dat tussen partijen 124 koopovereenkomsten ter zake van 124 personenauto’s van het merk BMW model X5 tot stand zijn gekomen;</text></para>
+        <para/>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> veroordeelt Capital om aan Zwartepoorte tegen behoorlijk bewijs van kwijting te betalen een bedrag van € 2.295,--, vermeerderd met de wettelijke rente ex artikel 6:119 BW over dit bedrag vanaf 8 april 2004 tot aan het moment van voldoening;</text></para>
+        <para/>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> bekrachtigt het vonnis voor het overige;</text></para>
+        <para/>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> wijst af het meer of anders gevorderde; </text></para>
+        <para/>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> compenseert de proceskosten van partijen in hoger beroep aldus, dat elke partij de eigen kosten draagt;</text></para>
+        <para/>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> verklaart bovenstaande veroordeling uitvoerbaar bij voorraad.</text></para>
+        <para/>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">Dit arrest is gewezen door mrs. C.J. Verduyn, M.J. van der Ven en R.C. Schlingemann en is uitgesproken ter openbare terechtzitting van 2 juli 2013 in aanwezigheid van de griffier.</para>
+        </parablock>
+        <para/>
+      </section>
+    </uitspraak>
+</open-rechtspraak>

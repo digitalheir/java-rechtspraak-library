@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:eu="http://publications.europa.eu/celex/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:tr="http://tuchtrecht.overheid.nl/">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:RBBRE:2010:BM2172</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2014-11-20T19:04:09</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-05</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">BM2172</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Rechtbank_Breda" scheme="overheid.RechterlijkeMacht">Rechtbank Breda</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">2010-04-14</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">08/4720</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#eersteAanlegMeervoudig">Eerste aanleg - meervoudig</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#bestuursrecht_belastingrecht">Bestuursrecht; Belastingrecht</dcterms:subject>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+          <rdf:li>NTFR 2010/1255 met annotatie door vanArnhem</rdf:li>
+          <rdf:li>FutD 2010-1069</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBBRE:2010:BM2172">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBBRE:2010:BM2172</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-05T06:18:03</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2010-04-23</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:RBBRE:2010:BM2172 Rechtbank Breda , 14-04-2010 / 08/4720</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie id="ECLI:NL:RBBRE:2010:BM2172:INH" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <para>Inkomstenbelasting en premie volksverzekeringen.</para>
+      <para/>
+      <para>Belanghebbende heeft in één aangiftebiljet aangifte gedaan van zijn inkomen in 1996 en daarbij aangegeven dat er een splitsing moest worden gemaakt tussen binnen- en buitenlandse belastingplicht. De inspecteur heeft vervolgens twee primitieve aanslagen inkomstenbelasting en premie volksverzekeringen opgelegd, één over de periode tot 6 mei 1996 en één over de periode 6 mei tot en met 31 december 1996. Nu er naar het standpunt van de inspecteur sprake is van binnenlandse belastingplicht en van premieplicht gedurende het gehele jaar 1996, heeft hij ten onrechte over dit jaar twee afzonderlijke primitieve aanslagen opgelegd. Correctie daarvan is alleen mogelijk door het opleggen van een navorderingsaanslag (beroep gegrond).</para>
+    </inhoudsindicatie>
+  <uitspraak id="ECLI:NL:RBBRE:2010:BM2172:DOC" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">RECHTBANK BREDA</para>
+        <para manualAnnotation="TEXT_BLOCK">Sector bestuursrecht, meervoudige belastingkamer</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Procedurenummer: AWB 08/4720</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Uitspraakdatum: 2 april 2010</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Proces-verbaal van de mondelinge uitspraak als bedoeld in afdeling 8.2.6 van de Algemene wet bestuursrecht (Awb) juncto artikel 27d van de Algemene wet inzake rijksbelastingen (AWR) in het geding tussen</para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">[eiser], domicilie kiezend te Tilburg,</para>
+        <para manualAnnotation="TEXT_BLOCK">eiser,</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">en</para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">de inspecteur van de Belastingdienst/Oost-Brabant, kantoor Tilburg,</para>
+        <para manualAnnotation="TEXT_BLOCK">verweerder.</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Eiser wordt hierna belanghebbende genoemd en verweerder inspecteur.</para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="SECTION_TITLE">De bestreden uitspraak op bezwaar </para>
+        <para manualAnnotation="TEXT_BLOCK">De uitspraak van de inspecteur van 2 september 2008 op het bezwaar van belanghebbende tegen de aan hem voor het jaar 1996 opgelegde aanslag inkomstenbelasting en premie volksverzekeringen naar een belastbaar inkomen van f 17.537 (aanslagnummer [aanslagnummer]P.66).</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">Zitting </para>
+        <para manualAnnotation="TEXT_BLOCK">Het onderzoek ter zitting heeft plaatsgevonden op 23 maart 2010 te Breda. Aldaar zijn verschenen en gehoord, belanghebbende, alsmede namens de inspecteur, mr. [gemachtigde]. Als getuige is gehoord [getuige]. Van dit onderzoek is een proces-verbaal opgemaakt, waarvan een afschrift aan deze uitspraak is gehecht. De getuigenverklaring van [getuige] is in het proces-verbaal van de zitting opgenomen. </para>
+      </parablock>
+      <para> </para>
+      <para><potentialnr manualAnnotation="NR">1.</potentialnr><text manualAnnotation="SECTION_TITLE">Beslissing</text></para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">De rechtbank:</para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> verklaart het beroep gegrond;</text></para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> vernietigt de uitspraak op bezwaar;</text></para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> vernietigt de aanslag;</text></para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> gelast dat de inspecteur het door belanghebbende betaalde griffierecht van € 39 aan hem vergoedt.</text></para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.</potentialnr><text manualAnnotation="SECTION_TITLE">Gronden</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.1.</potentialnr><text manualAnnotation="TEXT_BLOCK">Met dagtekening 29 december 1999 is aan belanghebbende een aanslag inkomstenbelasting en premie volksverzekeringen (hierna: aanslag P.66) voor het jaar 1996 opgelegd, berekend naar een belastbaar inkomen van f 17.537. Na daartegen gemaakt bezwaar heeft de inspecteur bij uitspraak op bezwaar de aanslag gehandhaafd. Belanghebbende is tegen deze uitspraak in beroep gekomen. </text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.2.</potentialnr><text manualAnnotation="TEXT_BLOCK">Blijkens het bevolkingsregister is belanghebbende op 6 mei 1996 verhuisd naar [adres] in Kroatië. </text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.3.</potentialnr><text manualAnnotation="TEXT_BLOCK">Belanghebbende heeft in één aangiftebiljet aangifte gedaan van zijn inkomen in 1996 en daarbij aangegeven dat er een splitsing moest worden gemaakt tussen binnen- en buitenlandse belastingplicht. De inspecteur heeft vervolgens twee primitieve aanslagen inkomstenbelasting en premie volksverzekeringen opgelegd, één over de periode tot 6 mei 1996 (hierna: aanslag H.66) en één over de periode 6 mei tot en met 31 december 1996 (de onderhavige aanslag P.66). </text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.4.</potentialnr><text manualAnnotation="TEXT_BLOCK">Ter zitting is komen vast te staan dat de aanslag P.66 als geheel in geschil is. </text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.5.</potentialnr><text manualAnnotation="TEXT_BLOCK">De inspecteur stelt dat belanghebbende het gehele jaar 1996 woonachtig was in Nederland en dat hij derhalve over het hele jaar belasting- en premieplichtig is als binnenlands belasting- en als premieplichtige. Belanghebbende heeft ter zitting gesteld dat hij al vanaf 1995 in Kroatië woonde. De rechtbank begrijpt dat belanghebbende daarmee bedoeld heeft te stellen dat hij in 1996 het hele jaar buitenlands belastingplichtig was en niet premieplichtig.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.6.</potentialnr><text manualAnnotation="TEXT_BLOCK">Ter zitting heeft de inspecteur bevestigd dat de aanslag P.66 niet kan worden beschouwd als navorderingsaanslag over het jaar 1996. </text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.7.</potentialnr><text manualAnnotation="TEXT_BLOCK">Ingevolge artikel 62, eerste lid, tweede volzin, van de Wet op de inkomstenbelasting 1964 (tekst 1 januari 1990 tot en met 31 december 1998) kan ingeval de belastingplichtige in een kalenderjaar zowel binnenlandse als buitenlandse belastingplichtig is, de belasting naar het belastbare inkomen en het belastbare binnenlandse inkomen afzonderlijk worden geheven. De wet gaat er voor die situatie dus vanuit dat er twee afzonderlijke aanslagen over hetzelfde kalenderjaar worden opgelegd. Dat geldt niet indien het gehele jaar sprake is geweest van binnenlandse of buitenlandse belastingplicht. Dan kan maar één aanslag worden opgelegd. De premieheffing volgt daarbij de inkomstenbelasting.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.8.</potentialnr><text manualAnnotation="TEXT_BLOCK">Nu er naar het standpunt van de inspecteur sprake is van binnenlandse belastingplicht en van premieplicht gedurende het gehele jaar 1996, heeft hij ten onrechte over dit jaar twee afzonderlijke primitieve aanslagen opgelegd. Correctie daarvan is alleen mogelijk door het opleggen van een navorderingsaanslag (Hoge Raad 25 oktober 1978, nr. 18 790, BNB 1979/6). De onderhavige aanslag moet dan ook worden vernietigd. </text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.9.</potentialnr><text manualAnnotation="TEXT_BLOCK">Gelet op al het vorenoverwogene is beslist als voormeld.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">3.</potentialnr><text manualAnnotation="SECTION_TITLE">Proceskosten</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">3.1.</potentialnr><text manualAnnotation="TEXT_BLOCK">De rechtbank ziet geen aanleiding voor een proceskostenveroordeling, omdat niet is gebleken dat belanghebbende kosten heeft gemaakt die op grond van het Besluit proceskosten bestuursrecht voor vergoeding in aanmerking komen.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">3.2.</potentialnr><text manualAnnotation="TEXT_BLOCK">Nu het beroep gegrond is verklaard, dient op grond van artikel 8:74, eerste lid, van de Awb, aan belanghebbende het door hem betaalde griffierecht van € 39 te worden vergoed.</text></para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">Aldus gedaan door mr. W. Brouwer, voorzitter, mr. A.F.M.Q. Beukers-van Dooren en </para>
+        <para manualAnnotation="TEXT_BLOCK">mr. M.L. Weerkamp, rechters, en door de voorzitter en mr. W.Y. Ip, griffier, ondertekend.</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">De griffier,	De voorzitter,</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Uitgesproken in het openbaar op 2 april 2010.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Afschrift aangetekend verzonden aan partijen op: 14 april 2010</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Aan deze uitspraak hoeft eerst uitvoering te worden gegeven als de uitspraak onherroepelijk is geworden. De uitspraak is onherroepelijk als niet binnen zes weken na verzending van de uitspraak een rechtsmiddel is aangewend of onherroepelijk op het aangewende rechtsmiddel is beslist (artikel 27h, vijfde lid en artikel 28, zevende lid, van de AWR).</para>
+      <para/>
+      <para manualAnnotation="SECTION_TITLE">Rechtsmiddel</para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">Tegen deze uitspraak kunnen partijen binnen zes weken na de verzenddatum hoger beroep instellen bij het gerechtshof te ‘s-Hertogenbosch (belastingkamer), Postbus 70583, </para>
+        <para><potentialnr manualAnnotation="TEXT_BLOCK">5201 </potentialnr><text manualAnnotation="TEXT_BLOCK">CZ ’s-Hertogenbosch.</text></para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">Bij het instellen van hoger beroep dient het volgende in acht te worden genomen:</para>
+        <para><potentialnr manualAnnotation="NR">1 - </potentialnr><text manualAnnotation="TEXT_BLOCK">bij het beroepschrift wordt een afschrift van deze uitspraak overgelegd.</text></para>
+        <para><potentialnr manualAnnotation="NR">2 - </potentialnr><text manualAnnotation="TEXT_BLOCK">het beroepschrift moet ondertekend zijn en ten minste het volgende vermelden:</text></para>
+        <para><potentialnr manualAnnotation="NR">a. </potentialnr><text manualAnnotation="TEXT_BLOCK">de naam en het adres van de indiener;</text></para>
+        <para><potentialnr manualAnnotation="NR">b. </potentialnr><text manualAnnotation="TEXT_BLOCK">een dagtekening;</text></para>
+        <para><potentialnr manualAnnotation="NR">c. </potentialnr><text manualAnnotation="TEXT_BLOCK">een omschrijving van de uitspraak waartegen het hoger beroep is ingesteld;</text></para>
+        <para><potentialnr manualAnnotation="NR">d. </potentialnr><text manualAnnotation="TEXT_BLOCK">de gronden van het hoger beroep.</text></para>
+      </parablock>
+    </uitspraak>
+</open-rechtspraak>

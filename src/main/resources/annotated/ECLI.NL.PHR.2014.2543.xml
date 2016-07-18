@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:eu="http://publications.europa.eu/celex/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:tr="http://tuchtrecht.overheid.nl/">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:PHR:2014:2543</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2015-01-14T08:04:25</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2015-01-13</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Parket_bij_de_Hoge_Raad" scheme="overheid.RechterlijkeMacht">Parket bij de Hoge Raad</dcterms:creator>
+      <dcterms:date rdfs:label="Datum genomen">2014-12-02</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">13/02146</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/conclusie">Conclusie</dcterms:type>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#strafrecht">Strafrecht</dcterms:subject>
+      <dcterms:relation ecli:resourceIdentifier="ECLI:NL:HR:2015:53" psi:aanleg="http://psi.rechtspraak.nl/latereAanleg" psi:gevolg="http://psi.rechtspraak.nl/gevolg#gevolgd" psi:type="http://psi.rechtspraak.nl/conclusie" rdfs:label="Formele relatie">Arrest Hoge Raad: ECLI:NL:HR:2015:53, Gevolgd</dcterms:relation>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:PHR:2014:2543">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:PHR:2014:2543</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2015-01-13T11:04:39</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2015-01-14</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:PHR:2014:2543 Parket bij de Hoge Raad , 02-12-2014 / 13/02146</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie id="ECLI:NL:PHR:2014:2543:INH" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <para>Afstand aanwezigheidsrecht. HR doet het middel af onder verwijzing naar de CAG. Het in de bestreden uitspraak besloten liggende oordeel dat vd kennelijk vrijwillig afstand heeft gedaan van zijn recht om in zijn tegenwoordigheid te worden berecht en dat geen aanleiding bestaat het onderzoek t.tz. (nogmaals) te schorsen is niet onbegrijpelijk. Door de niet-gemachtigde rm van vd is geen aanhoudingsverzoek gedaan, terwijl het Hof uit de ontvangen informatie dat vd zich niet in “prison custody” bevond redelijkerwijs kon afleiden dat een mogelijk verblijf van vd in een psychiatrische instelling niet een strafrechtelijk relevante detentie u.a.h. onder verantwoordelijkheid van de Britse penitentiaire autoriteiten betrof, en ook kort voorafgaand aan of op de tz. in h.b. niet is gebleken van een detentie u.a.h..</para>
+    </inhoudsindicatie>
+  <conclusie id="ECLI:NL:PHR:2014:2543:DOC" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <para manualAnnotation="TEXT_BLOCK">Nr. 13/02146</para>
+      <para>										<emphasis manualAnnotation="TEXT_BLOCK" role="underline">Mr. Machielse</emphasis></para>
+      <para manualAnnotation="TEXT_BLOCK">Zitting 2 december 2014</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">									Conclusie inzake:</para>
+      <para/>
+      <para>									 		<emphasis manualAnnotation="TEXT_BLOCK" role="underline">[verdachte]</emphasis><footnote-ref linkend="_4ebd6526-425f-449d-ab63-6b64b36d95e8"/></para>
+      <para/>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">1. </potentialnr><text manualAnnotation="TEXT_BLOCK">Het gerechtshof ’s-Gravenhage heeft op 3 maart 2009 bij verstek bevestigd het vonnis van de politierechter in de rechtbank ’s-Gravenhage van 2 juli 2007, waarbij verdachte wegens “bedreiging met enig misdrijf tegen het leven gericht” is veroordeeld tot een gevangenisstraf voor de duur van vijf maanden, waarvan twee maanden voorwaardelijk met daaraan verbonden een proeftijd van twee jaren, en de tenuitvoerlegging van een eerder voorwaardelijk opgelegde hechtenisstraf is bevolen. Daarnaast heeft het hof beslissingen gegeven ten aanzien van een aantal in beslag genomen voorwerpen.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2. </potentialnr><text manualAnnotation="TEXT_BLOCK">Mr. M.R. Mantz, advocaat te ’s-Gravenhage, heeft namens verdachte beroep in cassatie ingesteld en een schriftuur ingezonden houdende één middel van cassatie.</text></para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">3.1 </potentialnr><text manualAnnotation="TEXT_BLOCK">Het middel bedoelt kennelijk te klagen dat het hof de onderhavige strafzaak ten onrechte heeft berecht buiten aanwezigheid van verdachte, omdat ten tijde van de inhoudelijke behandeling van zijn zaak sterke aanwijzingen bestonden dat verdachte gedwongen verbleef in een psychiatrische kliniek in Engeland en niet vrijwillig afstand had gedaan van zijn aanwezigheidsrecht.</text></para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">3.2 </potentialnr><text manualAnnotation="TEXT_BLOCK">De stukken van het geding houden, voor zover hier van belang, het volgende in:</text></para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">( i) </potentialnr><text manualAnnotation="TEXT_BLOCK">een dagvaarding van verdachte in hoger beroep om op 21 maart 2008 ter terechtzitting van het hof te verschijnen.</text></para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">Uit een akte van uitreiking behorend bij deze dagvaarding blijkt dat:</para>
+      </parablock>
+      <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> de dagvaarding op 28 december 2007 is uitgereikt aan een persoon die zich bevond op het GBA-adres van verdachte, te weten [a-straat] te [woonplaats], en die zich bereid verklaarde de brief in ontvangst te nemen en onverwijld aan verdachte te doen toekomen;</text></para>
+      <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> de dagvaarding op 3 januari 2008 is uitgereikt aan de griffier van de rechtbank te Den Haag onder toezending van een afschrift van de dagvaarding naar voornoemd adres;</text></para>
+      <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> een afschrift van de dagvaarding op 11 januari 2008 is verzonden naar het door verdachte bij het instellen van het hoger beroep opgegeven adres, te weten [b-straat] te [woonplaats].</text></para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">Uit een tweede akte van uitreiking behorend bij deze dagvaarding blijkt dat:</para>
+      </parablock>
+      <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> de dagvaarding op 28 december 2007 tevergeefs is aangeboden op het adres [b-straat] te [woonplaats] omdat aldaar niemand werd aangetroffen en dat ter plaatse een bericht van aankomst is achtergelaten waarin is vermeld dat de dagvaarding kon worden afgehaald op het in dat bericht genoemde postkantoor;</text></para>
+      <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> de dagvaarding op 11 januari 2008 is uitgereikt aan de griffier van de rechtbank te Den Haag onder toezending van een afschrift van de dagvaarding naar voornoemd adres.</text></para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">(ii) </potentialnr><text manualAnnotation="TEXT_BLOCK">een GBA-overzicht van 11 januari 2008 inhoudende dat verdachte vanaf 5 maart 2007 in de GBA stond ingeschreven op het adres [a-straat] te [woonplaats] en niet was gedetineerd.</text></para>
+        <para><potentialnr manualAnnotation="NR">(iii) </potentialnr><text manualAnnotation="TEXT_BLOCK">een proces-verbaal van de terechtzitting in hoger beroep van 21 maart 2008 inhoudende, voor zover relevant:</text></para>
+        <para><quote manualAnnotation="TEXT_BLOCK">“</quote><text manualAnnotation="TEXT_BLOCK">De verdachte, gedagvaard als:</text></para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">[verdachte],</para>
+        <para manualAnnotation="TEXT_BLOCK">(…)</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">is niet ter terechtzitting verschenen.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">De voorzitter doet mededeling van een brief van de raadsman van de verdachte, d.d. 8 maart 2008, inhoudende de mededeling dat hij, noch een vervanger, op de onderhavige terechtzitting zullen verschijnen nu de raadsman betwijfelt of de verdachte ter terechtzitting zal kunnen verschijnen omdat hij mogelijk in Engeland is gedetineerd. (…)</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">Daartoe door de voorzitter in de gelegenheid gesteld deelt de advocaat-generaal mede dat na telefonisch onderzoek thans is gebleken dat de verdachte in de week van 21 december 2007 in Engeland is aangehouden. Vervolgens is hij daar opgenomen in een psychiatrische inrichting. Het is de advocaat-generaal niet bekend geworden of de verdachte thans nog in Engeland is gedetineerd (…).</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">De voorzitter deelt mede dat het hof het naar aanleiding van het bovenstaande wenselijk acht de behandeling van de zaak aan te houden teneinde het openbaar ministerie in de gelegenheid te stellen te onderzoeken of de verdachte in Engeland gedetineerd is of anderszins verblijft, gelet op het aanwezigheidsrecht van de verdachte bij de behandeling van zijn strafzaak in hoger beroep.”</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">(iv) </potentialnr><text manualAnnotation="TEXT_BLOCK">een brief van [betrokkene 1], werkzaam bij het ressortsparket ’s-Gravenhage, van 14 mei 2008 aan de ‘Prisoner Location Service’ te Birmingham, Engeland, inhoudende:</text></para>
+        <para><quote manualAnnotation="TEXT_BLOCK">“</quote><text manualAnnotation="TEXT_BLOCK">The advocate-general in The Hague would like to summon [verdachte], date of birth [geboortedatum] 1967, in an appeal case. Information has reached the advocate-general that [verdachte] has been arrested in December 2007 in the U.K. and is being held in custody.</text></para>
+        <para manualAnnotation="TEXT_BLOCK">Is it possible for you to provide the advocate-general with the present whereabouts of [verdachte]?”</para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">( v) </potentialnr><text manualAnnotation="TEXT_BLOCK">een e-mailbericht van [betrokkene 2], werkzaam bij de ‘Prisoner Location Service’, van 16 mei 2008 aan [betrokkene 1], inhoudende:</text></para>
+      <parablock>
+        <para/>
+        <para><quote manualAnnotation="TEXT_BLOCK">“</quote><text manualAnnotation="TEXT_BLOCK">Re: [verdachte]</text></para>
+        <para manualAnnotation="TEXT_BLOCK">Thank you for your enquiry about the above named.</para>
+        <para><potentialnr manualAnnotation="TEXT_BLOCK">I </potentialnr><text manualAnnotation="TEXT_BLOCK">regret that we are unable to assist you as our records do not disclose this person to be held in prison custody.”</text></para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">(vi) </potentialnr><text manualAnnotation="TEXT_BLOCK">een oproeping van verdachte in hoger beroep om op 17 februari 2009 ter terechtzitting van het hof te verschijnen.</text></para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><text manualAnnotation="TEXT_BLOCK">Uit een akte van uitreiking behorend bij deze oproeping blijkt dat de oproeping op 11 december 200[8]</text><footnote-ref linkend="_5332b03b-5062-4d86-abbc-7875a6319efc"/><text manualAnnotation="TEXT_BLOCK"> is uitgereikt aan de griffier van de rechtbank te Den Haag omdat van verdachte geen woon- of verblijfplaats in Nederland bekend was.</text></para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">Uit een tweede akte van uitreiking behorend bij deze oproeping blijkt dat:</para>
+      </parablock>
+      <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> de oproeping op 12 december 2008 tevergeefs is aangeboden op het adres [b-straat] te [woonplaats], omdat verdachte volgens mededeling van degene die zich op dat adres bevond daar niet woonde noch verbleef;</text></para>
+      <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> de oproeping op 18 december 2008 is uitgereikt aan de griffier van de rechtbank te Den Haag onder toezending van een afschrift van de oproeping naar voornoemd adres.</text></para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">(vii) </potentialnr><text manualAnnotation="TEXT_BLOCK">een GBA-overzicht van 18 december 2008 inhoudende dat verdachte van 5 maart 2007 tot 6 december 2007 in de GBA stond ingeschreven op het adres [a-straat] te [woonplaats], dat hij sinds laatstgenoemde datum zonder vaste woon- of verblijfplaats is en dat hij niet was gedetineerd.</text></para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">(viii) </potentialnr><text manualAnnotation="TEXT_BLOCK">een proces-verbaal van de terechtzitting in hoger beroep van 17 februari 2009 inhoudende, voor zover relevant:</text></para>
+        <para><quote manualAnnotation="TEXT_BLOCK">“</quote><text manualAnnotation="TEXT_BLOCK">De verdachte, opgeroepen als:</text></para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">[verdachte],</para>
+        <para manualAnnotation="TEXT_BLOCK">(…)</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">is niet ter terechtzitting verschenen.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">De raadsman van de verdachte, mr. M.R. Mantz, advocaat te ’s-Gravenhage, is evenmin ter terechtzitting verschenen.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">(…)</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">Het gerechtshof verleent verstek tegen de niet-verschenen verdachte.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">(…)</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">De voorzitter verklaart het onderzoek gesloten”.</para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">3.3 </potentialnr><text manualAnnotation="TEXT_BLOCK">De steller van het middel doet een beroep op een kennelijk in zijn bezit zijnde kopie van een proces-verbaal, maar legt dat stuk in cassatie niet over, zodat op de inhoud van dat stuk geen acht kan worden geslagen.</text></para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">3.4 </potentialnr><text manualAnnotation="TEXT_BLOCK">Ingevolge art. 588, eerste lid aanhef en onder b sub 3°, Sv wordt een oproeping uitgereikt aan de griffier indien de geadresseerde niet als ingezetene is ingeschreven in de basisadministratie persoonsgegevens noch een feitelijke woon- of verblijfplaats in Nederland of een adres in het buitenland bekend is. Onbekendheid van een feitelijke woon- of verblijfplaats kan niet worden aangenomen, indien niet is onderzocht of de verdachte in Nederland is gedetineerd of niet is getracht de uitreiking van de dagvaarding te doen plaatsvinden op een uit de stukken van het geding blijkend - voor de hand liggend en niet door een latere opgave achterhaald - adres dat redelijkerwijs als feitelijke woon- of verblijfplaats van de verdachte zou kunnen gelden, zoals een adres dat de verdachte bij zijn verhoor door de politie of ten tijde van het instellen van het hoger beroep heeft opgegeven.</text><footnote-ref linkend="_dfaeb587-4017-4346-b316-da1960d3c9c2"/></para>
+      </parablock>
+      <para/>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">3.5 </potentialnr><text manualAnnotation="TEXT_BLOCK">De oproeping om te verschijnen op de terechtzitting in hoger beroep van 17 februari 2009 is uitgereikt aan de griffier omdat van verdachte geen woon- of verblijfplaats bekend was en is tevens tevergeefs aangeboden op het door verdachte ten tijde van het instellen van het hoger beroep opgegeven adres. Uit de hierboven onder (vii) vermelde GBA-uitdraai blijkt dat verdachte op dat moment niet in Nederland was gedetineerd. Het in de bestreden uitspraak besloten liggende oordeel dat de oproeping voor de terechtzitting van 17 februari 2009 op de juiste wijze is betekend zodat rechtsgeldig verstek kon worden verleend tegen verdachte geeft daarom niet blijk van een onjuiste rechtsopvatting.</text></para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">3.6 </potentialnr><text manualAnnotation="TEXT_BLOCK">Wanneer echter aan de stukken of het verhandelde ter terechtzitting duidelijke aanwijzingen kunnen worden ontleend dat de verdachte niet vrijwillig afstand heeft gedaan van zijn recht om in zijn tegenwoordigheid te worden berecht, behoort het rechtsgeldig aangevangen onderzoek ter terechtzitting te worden geschorst teneinde de verdachte in de gelegenheid te stellen alsnog bij het onderzoek aanwezig te zijn. Die schorsing behoort in de regel plaats te hebben, onder meer in het geval dat op de terechtzitting blijkt dat de verdachte op dat moment uit anderen hoofde is gedetineerd. In dat geval dient het onderzoek ter terechtzitting te worden geschorst opdat de gedetineerde verdachte alsnog in de gelegenheid wordt gesteld op een nadere terechtzitting aanwezig te zijn.</text><footnote-ref linkend="_c83da809-f6d6-4489-bf68-df6e95dc2912"/></para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">3.7 </potentialnr><text manualAnnotation="TEXT_BLOCK">Maar van degene die hoger beroep instelt en - achteraf bezien kennelijk - prijs stelt op berechting op tegenspraak, mag wel worden verwacht dat hij de in het maatschappelijk verkeer gebruikelijke maatregelen neemt om te voorkomen dat de appeldagvaarding hem niet bereikt of de inhoud daarvan niet te zijner kennis komt.</text><footnote-ref linkend="_9c5ab559-0083-42e4-99ad-c3722ba9338d"/><text manualAnnotation="TEXT_BLOCK"> Tot een zodanige maatregel kan worden gerekend dat de verdachte zich voor zijn raadsman - die uit eigen hoofde afschriften van oproepingen ontvangt - bereikbaar houdt, opdat de verdachte in voorkomende gevallen (ook) langs die weg van het tijdstip van de behandeling op de hoogte geraakt.</text><footnote-ref linkend="_55ca8db9-c369-45e6-9219-21179005968e"/><text manualAnnotation="TEXT_BLOCK"> Verdachte heeft dit in casu nagelaten en heeft er kennelijk tevens voor gekozen geen contact op te nemen met zijn vaste raadsman teneinde namens hem een aanhoudingsverzoek te doen. Ook de advocaat van een verdachte die geen contact meer heeft met zijn cliënt en door deze niet is gemachtigd tot het voeren van de verdediging kan de rechter verzoeken om aanhouding van de behandeling van de zaak met het oog op de effectuering van het aanwezigheidsrecht van de verdachte.</text><footnote-ref linkend="_05f796f9-e861-4e11-b574-77fe5b1fffc2"/><text manualAnnotation="TEXT_BLOCK"> Zo een aanhoudingsverzoek is in de onderhavige zaak niet gedaan.</text></para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">3.8 </potentialnr><text manualAnnotation="TEXT_BLOCK">Was het hof dan desalniettemin op 17 februari 2009 gehouden om op eigen initiatief de behandeling van de zaak nogmaals aan te houden? Het hof heeft op 21 maart 2008 in reactie op de mededeling van de advocaat-generaal dat verdachte in de week van 21 december 2007 in Engeland was aangehouden en aldaar was opgenomen in een psychiatrische inrichting, het rechtsgeldig aangevangen onderzoek geschorst en een onderzoek gelast naar de vraag of verdachte nog steeds in Engeland was gedetineerd of anderszins aldaar verbleef. Toen uit de bevraging van de ‘Prisoner Location Service’ omtrent de “present whereabouts” van verdachte in mei 2008 de informatie werd ontvangen dat verdachte zich niet in “prison custody” bevond, kon het hof daaruit redelijkerwijs afleiden dat een mogelijk verblijf van verdachte in een psychiatrische inrichting niet een strafrechtelijk relevante detentie uit anderen hoofde onder verantwoordelijkheid van de Britse penitentiaire autoriteiten betrof. Ook kort voorafgaand aan of op de terechtzitting van 17 februari 2009 is kennelijk niet gebleken van een detentie uit anderen hoofde. De in het middel besloten liggende stelling dat het hof de behandeling van de zaak – ook zonder daartoe strekkend verzoek – nogmaals had moeten aanhouden teneinde verdachte in de gelegenheid te stellen alsnog op een nadere terechtzitting aanwezig te zijn, kan ik daarom niet onderschrijven. Welke andere mogelijkheden voor het hof nog openstonden om meer te weten te komen over een mogelijk verblijf van verdachte in Engeland wordt in het middel niet aangegeven, zodat een hernieuwde aanhouding kennelijk ook volgens de steller van het middel de kans dat de verdachte de volgende keer wel aanwezig zou zijn niet in relevante mate kon vergroten en neer zou komen op het parkeren van het proces in de wachtstand.</text><footnote-ref linkend="_66cb264a-f99e-4a5f-9483-e9f689b3a024"/><text manualAnnotation="TEXT_BLOCK"> Ik benadruk in dit verband nogmaals dat de advocaat van verdachte, hoewel niet bepaaldelijk gemachtigd om de verdediging te voeren, geen verzoek om aanhouding heeft gedaan.</text><footnote-ref linkend="_a0453ec0-34d4-4799-ac47-7e7dd42ef178"/></para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">3.9 </potentialnr><text manualAnnotation="TEXT_BLOCK">Het in de bestreden beslissing besloten liggende oordeel van het hof dat verdachte kennelijk vrijwillig afstand heeft gedaan van zijn recht om in zijn tegenwoordigheid te worden berecht en dat geen aanleiding bestond het onderzoek ter terechtzitting (nogmaals) te schorsen, acht ik niet onbegrijpelijk. Het middel faalt.</text></para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4. </potentialnr><text manualAnnotation="TEXT_BLOCK">Ambtshalve heb ik geen grond aangetroffen die tot vernietiging van de bestreden uitspraak aanleiding behoort te geven.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">5. </potentialnr><text manualAnnotation="TEXT_BLOCK">Deze conclusie strekt tot verwerping van het beroep.</text></para>
+      <para/>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">						De Procureur-Generaal</para>
+        <para manualAnnotation="TEXT_BLOCK">					bij de Hoge Raad der Nederlanden</para>
+      </parablock>
+      <footnote id="_4ebd6526-425f-449d-ab63-6b64b36d95e8" label="1" manualAnnotation="TEXT_BLOCK">
+        <para> Deze zaak hangt samen met de zaak 13/02145, [verdachte] waarin ik vandaag ook concludeer.</para>
+      </footnote>
+      <footnote id="_5332b03b-5062-4d86-abbc-7875a6319efc" label="2" manualAnnotation="TEXT_BLOCK">
+        <para> De akte van uitreiking vermeldt het jaartal 2009, maar redelijkerwijs kan worden aangenomen dat dit een kennelijke verschrijving betreft.</para>
+      </footnote>
+      <footnote id="_dfaeb587-4017-4346-b316-da1960d3c9c2" label="3" manualAnnotation="TEXT_BLOCK">
+        <para> Vgl. HR 12 maart 2002, NJ 2002, 317 m.nt. Schalken, rov. 3.23-3.24.</para>
+      </footnote>
+      <footnote id="_c83da809-f6d6-4489-bf68-df6e95dc2912" label="4" manualAnnotation="TEXT_BLOCK">
+        <para> HR 25 maart 2014, ECLI:NL:HR:2014:707, rov. 2.3.</para>
+      </footnote>
+      <footnote id="_9c5ab559-0083-42e4-99ad-c3722ba9338d" label="5" manualAnnotation="TEXT_BLOCK">
+        <para> HR 9 mei 2006, ECLI:NL:HR:2006:AV6209, NJ 2006, 298 rov. 4.3.</para>
+      </footnote>
+      <footnote id="_55ca8db9-c369-45e6-9219-21179005968e" label="6" manualAnnotation="TEXT_BLOCK">
+        <para> HR 25 september 2001, NJ 2002, 83.</para>
+      </footnote>
+      <footnote id="_05f796f9-e861-4e11-b574-77fe5b1fffc2" label="7" manualAnnotation="TEXT_BLOCK">
+        <para> HR 23 oktober 2001, NJ 2002, 77 m.nt. Reijntjes.</para>
+      </footnote>
+      <footnote id="_66cb264a-f99e-4a5f-9483-e9f689b3a024" label="8" manualAnnotation="TEXT_BLOCK">
+        <para> Onder de gedingstukken trof ik overigens nog aan een brief van de raadsman mr. Mantz van 29 januari 2009, gericht aan de afdeling Consulaire zaken van het Ministerie van Buitenlandse Zaken, met het verzoek hem te berichten “of wellicht bekend is of verdachte in het buitenland is gedetineerd”. Hierop is op dezelfde datum een handgeschreven aantekening geplaatst, voorzien van een stempel van het ministerie, luidende: “Betrokkene is alhier onbekend!”.</para>
+      </footnote>
+      <footnote id="_a0453ec0-34d4-4799-ac47-7e7dd42ef178" label="9" manualAnnotation="TEXT_BLOCK">
+        <para> Zie HR 2 september 2003, ECLI:NL:HR:2003:AF0559 waarin een wel gemachtigd advocaat ter terechtzitting had verklaard dat haar cliënt in Marokko gedetineerd was, maar geen verzoek om aanhouding had gedaan. Onder die omstandigheden was het hof niet gehouden te doen blijken van een onderzoek of de aanwezigheid van verdachte ter terechtzitting desalniettemin wenselijk was. Doet de wel gemachtigd advocaat in een dergelijk geval wel een verzoek tot aanhouding, dan ligt het geheel anders. Zie HR 8 februari 2005, ECLI:NL:HR:2005:AR8428; HR 11 oktober 2005, ECLI:NL:HR:2005:AU1988.</para>
+      </footnote>
+    </conclusie>
+</open-rechtspraak>

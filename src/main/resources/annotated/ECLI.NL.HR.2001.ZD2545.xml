@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:eu="http://publications.europa.eu/celex/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:tr="http://tuchtrecht.overheid.nl/">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:HR:2001:ZD2545</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2014-07-16T02:58:10</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-08</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">ZD2545</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Hoge_Raad_der_Nederlanden" scheme="overheid.RechterlijkeMacht">Hoge Raad</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">2001-02-13</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">00384/00</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#cassatie">Cassatie</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#strafrecht">Strafrecht</dcterms:subject>
+      <dcterms:references bwb:resourceIdentifier="1.0:v:BWB:BWBR0001903&amp;artikel=207&amp;g=2001-02-13" rdfs:label="Wetsverwijzing">Wetboek van Strafvordering 207</dcterms:references>
+      <dcterms:references bwb:resourceIdentifier="1.0:v:BWB:BWBR0001903&amp;artikel=359a&amp;g=2001-02-13" rdfs:label="Wetsverwijzing">Wetboek van Strafvordering 359a</dcterms:references>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+          <rdf:li>NJ 2001, 322</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:HR:2001:ZD2545">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:HR:2001:ZD2545</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-08T14:46:47</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2001-11-29</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:HR:2001:ZD2545 Hoge Raad , 13-02-2001 / 00384/00</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie id="ECLI:NL:HR:2001:ZD2545:INH" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <para>-</para>
+    </inhoudsindicatie>
+  <uitspraak id="ECLI:NL:HR:2001:ZD2545:DOC" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">13 februari 2001</para>
+        <para manualAnnotation="TEXT_BLOCK">Strafkamer</para>
+        <para manualAnnotation="TEXT_BLOCK">nr. 00384/00</para>
+        <para manualAnnotation="TEXT_BLOCK">LR/SF</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Hoge Raad der Nederlanden</para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">Arrest</para>
+        <para manualAnnotation="TEXT_BLOCK">op het beroep in cassatie</para>
+        <para manualAnnotation="TEXT_BLOCK">tegen een arrest van het </para>
+        <para manualAnnotation="TEXT_BLOCK">Gerechtshof te 's-Gravenhage van 4 oktober 1999, parketnummer 22/000041-99, alsmede tegen alle op de terechtzitting van dit Hof gegeven beslissingen in de strafzaak tegen:</para>
+        <para manualAnnotation="TEXT_BLOCK">[verdachte], geboren te [geboorteplaats] (voormalige Sovjet-Unie) op [geboortedatum] 1974, ten tijde van de bestreden uitspraak gedetineerd in de Penitentiaire Inrichting "De Schie" te Rotterdam.</para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">1.</potentialnr><text manualAnnotation="SECTION_TITLE">De bestreden einduitspraak</text></para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Het Hof heeft in hoger beroep - met vernietiging van een vonnis van de Arrondissementsrechtbank te Rotterdam van 31 december 1998 - de verdachte ter zake van "moord" veroordeeld tot twaalf jaren gevangenisstraf.</para>
+      <para/>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.</potentialnr><text manualAnnotation="SECTION_TITLE">Geding in cassatie</text></para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">Het beroep is ingesteld door de verdachte. Namens deze heeft mr. S.T. van Berge Henegouwen, advocaat te</para>
+        <para manualAnnotation="TEXT_BLOCK">Maastricht, bij schriftuur middelen van cassatie voorgesteld. De schriftuur is aan dit arrest gehecht en maakt daarvan deel uit.</para>
+        <para manualAnnotation="TEXT_BLOCK">De waarnemend Advocaat-Generaal Keijzer heeft geconcludeerd dat de Hoge Raad het beroep zal verwerpen.</para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">3.</potentialnr><text manualAnnotation="SECTION_TITLE">Beoordeling van het eerste middel</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">3.1</potentialnr><text manualAnnotation="TEXT_BLOCK">In het middel wordt met een rechts- en motiveringsklacht opgekomen tegen de verwerping door het Hof van het verweer dat bij verhoren van de verdachte in Polen door Nederlandse opsporingsambtenaren ten onrechte aan hem niet is medegedeeld dat in Nederland een gerechtelijk vooronderzoek tegen hem was ingesteld. Het middel bevat voorts de klacht dat het Hof bij de verwerping van dat verweer de strekking van art. 207 Sv heeft miskend.</text></para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">3.2 </potentialnr><text manualAnnotation="TEXT_BLOCK">Het Hof heeft dat verweer in de bestreden uitspraak</text></para>
+        <para manualAnnotation="TEXT_BLOCK">als volgt samengevat:</para>
+        <para> <quote manualAnnotation="TEXT_BLOCK">"</quote><potentialnr manualAnnotation="NR">d. </potentialnr><text manualAnnotation="TEXT_BLOCK">Verdachte is ernstig in zijn belangen, te weten de mogelijkheid van rechtsbijstand in Nederland, geschaad doordat verzuimd is bij de verhoren van verdachte in Polen hem mede te delen dat in Nederland een gerechtelijk vooronderzoek tegen hem was ingesteld en aldus is sprake van een ernstige schending van de beginselen van een goede procesorde als bedoeld in artikel 359a van het Wetboek van Strafvordering op grond waarvan bewijs uitsluiting van het gedurende anderhalf jaar verzamelde bewijsmateriaal, dan wel strafvermindering dient te volgen".</text></para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">en als volgt verworpen:</para>
+        <para> <quote manualAnnotation="TEXT_BLOCK">"</quote><potentialnr manualAnnotation="NR">d. </potentialnr><text manualAnnotation="TEXT_BLOCK">het verhoor van verdachte in Polen door de rechter-commissaris op 2 april 1997 (de Hoge Raad leest: 1996) vond niet plaats in het kader van zijn strafzaak, zodat er geen verplichting bestond hem mede te delen dat er een gerechtelijk vooronderzoek tegen hem liep. Ook voor de bij de verhoren van de verdachte op 21 en 23 mei 1996 in Polen betrokken opsporingsambtenaren gold een dergelijke verplichting niet. De verdachte is in het kader van een rechtshulpverzoek van de officier van justitie ten tijde van het tegen verdachte geopende gerechtelijk vooronderzoek in bijzijn van Nederlandse opsporingsambtenaren onder verantwoordelijkheid van Poolse autoriteiten gehoord terwijl hij in Polen uit andere hoofde was gedetineerd. De in artikel 207, eerste lid, van het Wetboek van Strafvordering geformuleerde verplichting voor de rechter-commissaris brengt niet mee dat bedoelde opsporingsambtenaar onder voormelde omstandigheden gehouden waren bedoelde mededeling te doen. Overigens is bij het eerste verhoor in Polen aan de verdachte medegedeeld dat het openbaar ministerie hem verdacht van het feit waarvoor hij thans terecht staat, zodat aan de kennelijke strekking van artikel 207 van het Wetboek van Strafvordering is voldaan".</text></para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">3.3.</potentialnr><text manualAnnotation="TEXT_BLOCK">De eerste klacht van het middel faalt, omdat art. 207 Sv een verplichting aan de rechter-commissaris en niet aan opsporingsambtenaren oplegt. De tweede klacht moet hetzelfde lot delen, omdat deze uitsluitend is gericht tegen een ten overvloede gegeven overweging.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4. </potentialnr><text manualAnnotation="SECTION_TITLE">Beoordeling van het tweede middel</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.1.</potentialnr><text manualAnnotation="TEXT_BLOCK">In het middel wordt met een rechts- en motiveringsklacht opgekomen tegen de verwerping door het Hof van het verweer dat strafvermindering moet worden toegepast als gevolg van een vormverzuim in het voorbereidend onderzoek. In het middel wordt betoogd dat het oordeel van het Hof onbegrijpelijk is althans op onjuiste grond berust, nu daarin de mogelijkheid wordt opengelaten dat bewust de aanmerkelijke kans is aanvaard dat voor de verdachte ontlastende informatie de rechter niet zou bereiken.</text></para>
+      <para/>
+      <parablock>
+        <para><potentialnr manualAnnotation="NR">4.2.</potentialnr><text manualAnnotation="TEXT_BLOCK">Blijkens de aan het proces-verbaal van het onderzoek ter terechtzitting van 20 september 1999 gehechte pleitnota is door de raadsman ter toelichting van het in het middel bedoelde verweer onder meer aangevoerd:</text></para>
+        <para> <quote manualAnnotation="TEXT_BLOCK">"</quote><text manualAnnotation="TEXT_BLOCK">Die ellende heeft het Openbaar Ministerie zich bespaard door op 30 september 1997 tegenover de raadkamer te verzwijgen dat er wel degelijk - voor de verdachte ontlastende - verklaringen waren. (...) Ik gebruik bewust de term verzwegen, aangezien de waarnemer in raadkamer altijd had kunnen zeggen niet over actuele kennis van het opsporingsonderzoek te beschikken (...). Ook dat is echter niet gebeurd".</text></para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">Het Hof heeft het in het middel bedoelde verweer als volgt samengevat:</para>
+        <para> <quote manualAnnotation="TEXT_BLOCK">"</quote><potentialnr manualAnnotation="NR">e. </potentialnr><text manualAnnotation="TEXT_BLOCK">op de pro forma zitting van de rechtbank van 19 september 1997 heeft de verdediging een verzoek tot opheffing van de voorlopige hechtenis gedaan, dat werd afgewezen. In de daarop volgende raadkamerzitting van 30 september 1997 is het hernieuwde verzoek tot opheffing behandeld. Het openbaar ministerie heeft op die zitting verzwegen dat er nieuwe - voor de verdachte ontlastende - ontwikkelingen waren. Deze verzwijging van een voor de verdachte ontlastende verklaring is in strijd met de beginselen van een goede procesorde. Als gevolg van deze gang van zaken dient op grond van artikel 359a van het Wetboek van Strafvordering een aanzienlijke strafvermindering te worden toegepast".</text></para>
+      </parablock>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">en als volgt verworpen:</para>
+        <para><quote manualAnnotation="TEXT_BLOCK">"</quote><potentialnr manualAnnotation="TEXT_BLOCK">e. </potentialnr><text manualAnnotation="TEXT_BLOCK">het hof acht niet aannemelijk geworden dat de fungerend officier van justitie bij gelegenheid van het verhoor in raadkamer van 30 september 1997 de door de raadsman in zijn verweer genoemde ontlastende getuigenverklaring opzettelijk, ter misleiding van de rechtbank, heeft verzwegen".</text></para>
+      </parablock>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.3.</potentialnr><text manualAnnotation="TEXT_BLOCK">Het Hof heeft het verweer kennelijk en niet onbegrijpelijk aldus opgevat dat aan het Openbaar Ministerie wordt verweten opzettelijk, ter misleiding van de Rechtbank, informatie te hebben verzwegen. Gelet daarop is de verwerping van het verweer niet onbegrijpelijk. Reeds daarom faalt het middel</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">5. </potentialnr><text manualAnnotation="SECTION_TITLE">Beoordeling van het derde middel</text></para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Het middel kan niet tot cassatie leiden. Dit behoeft, gezien art. 101a RO, geen nadere motivering nu het middel niet noopt tot beantwoording van rechtsvragen in het belang van de rechtseenheid of de rechtsontwikkeling.</para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">6.</potentialnr><text manualAnnotation="SECTION_TITLE">Slotsom</text></para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Nu geen van de middelen tot cassatie kan leiden, terwijl de Hoge Raad ook geen grond aanwezig oordeelt waarop de bestreden uitspraak ambtshalve zou behoren te worden vernietigd, moet het beroep worden verworpen.</para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">7.</potentialnr><text manualAnnotation="SECTION_TITLE">Beslissing</text></para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">De Hoge Raad verwerpt het beroep.</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Dit arrest is gewezen door de vice-president W.J.M. Davids als voorzitter, en de raadsheren G.J.M. Corstens, en A.M.M. Orie, A.M.J. van Buchem-Spapens en E.J. Numann in bijzijn van de griffier S.P. Bakker, en uitgesproken op 13 februari 2001.</para>
+    </uitspraak>
+</open-rechtspraak>

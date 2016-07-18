@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:eu="http://publications.europa.eu/celex/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:tr="http://tuchtrecht.overheid.nl/">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:RBSGR:2012:BX7912</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-05T10:50:15</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2013-04-05</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:replaces rdfs:label="Vervangt">BX7912</dcterms:replaces>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Rechtbank_s-Gravenhage" scheme="overheid.RechterlijkeMacht">Rechtbank 's-Gravenhage</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">2012-09-10</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">422419 / HA RK 12-365     Wrakingnummer 2012/42</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#wraking">Wraking</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#civielRecht">Civiel recht</dcterms:subject>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBSGR:2012:BX7912">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBSGR:2012:BX7912</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2013-04-05T10:50:15</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2012-09-20</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:RBSGR:2012:BX7912 Rechtbank 's-Gravenhage , 10-09-2012 / 422419 / HA RK 12-365     Wrakingnummer 2012/42</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie id="ECLI:NL:RBSGR:2012:BX7912:INH" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <para>Verzoek tot wraking kantonrechter. De wrakingskamer is van oordeel dat de door verzoekster aangevoerde grond, die ziet op het terugkomen op een rolbeslissing, niet kan leiden tot het toewijzen van het wrakingsverzoek. De door verzoekster aangevoerde wrakingsgrond dat de kantonrechter tijdens de comparitie van partijen uitlatingen heeft gedaan die de schijn van vooringenomenheid en partijdigheid hebben gewekt, leidt wel tot toewijzing van het wrakingsverzoek. Dergelijke uitspraken leveren een zwaarwegende aanwijzing op voor het oordeel dat de kantonrechter jegens verzoekster een vooringenomenheid koestert, althans dat de bij verzoekster dienaangaande bestaande vrees objectief gerechtvaardigd is. Aan het feit dat het proces-verbaal van de comparitie van partijen geen melding maakt van dergelijke uitspraken gaat de wrakingskamer, gelet op de uitvoerige uiteenzetting van verzoekster van wat er tijdens de comparitie van partijen is voorgevallen en de verklaring van mevrouw [X], voorbij, nu er bij de wrakingskamer twijfel is ontstaan over in ieder geval de volledigheid van dit proces-verbaal, te meer nu de grond of gronden voor wraking niet in het proces-verbaal zijn opgenomen. Verzoek toegewezen.</para>
+    </inhoudsindicatie>
+  <uitspraak id="ECLI:NL:RBSGR:2012:BX7912:DOC" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <parablock>
+        <para manualAnnotation="SECTION_TITLE">beslissing</para>
+        <para manualAnnotation="TEXT_BLOCK">WRAKINGSKAMER VAN DE RECHTBANK 'S-GRAVENHAGE </para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Meervoudige wrakingskamer</para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">Wrakingnummer 2012/42</para>
+        <para manualAnnotation="TEXT_BLOCK">rekestnummer: 422419 / HA RK 12-365</para>
+        <para manualAnnotation="TEXT_BLOCK">rolnummer: 1121461 RL EXPL 11-34260 	</para>
+        <para manualAnnotation="TEXT_BLOCK">datum beslissing: 10 september 2012</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para manualAnnotation="SECTION_TITLE">BESLISSING</para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">op het mondelinge en schriftelijke verzoek tot wraking ingevolge artikel 37 van het Wetboek van Burgerlijke Rechtsvordering, in de zaak van:</para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">[verzoekster],</para>
+        <para manualAnnotation="TEXT_BLOCK">wonende te [woonplaats],</para>
+        <para manualAnnotation="TEXT_BLOCK">verzoekster, </para>
+        <para manualAnnotation="TEXT_BLOCK">gemachtigde: mr. F. van de Nadort;</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">tegen</para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">[belanghebbende],</para>
+        <para manualAnnotation="TEXT_BLOCK">wonende te [woonplaats],</para>
+        <para manualAnnotation="TEXT_BLOCK">belanghebbende,</para>
+        <para manualAnnotation="TEXT_BLOCK">gemachtigde: mr. T.K. Dik;</para>
+      </parablock>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">strekkende tot wraking van:</para>
+      <para/>
+      <parablock>
+        <para manualAnnotation="TEXT_BLOCK">mr. R.J. ter Kuile,</para>
+        <para manualAnnotation="TEXT_BLOCK">kantonrechter in de rechtbank te 's-Gravenhage,</para>
+        <para manualAnnotation="TEXT_BLOCK">hierna te noemen: de kantonrechter.</para>
+      </parablock>
+      <para/>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">1.	</potentialnr><text manualAnnotation="SECTION_TITLE">De voorgeschiedenis en het procesverloop.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">1.1. </potentialnr><text manualAnnotation="TEXT_BLOCK">Belanghebbende heeft verzoekster gedagvaard om voor de kantonrechter te verschijnen. Daarop heeft verzoekster een conclusie van antwoord tevens eis in reconventie ingediend. Vervolgens heeft belanghebbende een conclusie van antwoord in reconventie ingediend.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">1.2. </potentialnr><text manualAnnotation="TEXT_BLOCK">Uiteindelijk heeft op 19 juni 2012 een comparitie van partijen plaatsgevonden, bij welke gelegenheid verzoekster de kantonrechter heeft gewraakt. Van het verhandelde ter comparitie is proces-verbaal opgemaakt.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">1.3. </potentialnr><text manualAnnotation="TEXT_BLOCK">Per e-mail van 6 juli 2012 heeft de kantonrechter gereageerd op het mondelinge wrakingsverzoek. </text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">1.4. </potentialnr><text manualAnnotation="TEXT_BLOCK"> Bij fax van 11 juli 2012 heeft verzoekster de schriftelijke weergave van het verzoek tot wraking gedaan, daar de wrakingsgronden niet in het proces-verbaal zijn opgenomen. Hierin zijn ook enige nieuwe wrakingsgronden opgenomen. Deze fax is bij brief van 12 juli 2012 door de rechtbank aan de kantonrechter gezonden. De kantonrechter heeft niet op deze schriftelijke weergave gereageerd.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2. </potentialnr><text manualAnnotation="SECTION_TITLE">	De mondelinge behandeling van het wrakingsverzoek. </text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">2.1. </potentialnr><text manualAnnotation="TEXT_BLOCK">Op 27 augustus 2012 is het wrakingsverzoek ter zitting van deze wrakingskamer behandeld. Verzoekster [verzoekster], bijgestaan door haar gemachtigde mr. F. van de Nadort, is verschenen. Eveneens verschenen is de gemachtigde van belanghebbende, mr. T.K. Dik. De kantonrechter heeft laten weten niet bij de behandeling van het wrakingsverzoek aanwezig te zullen zijn. Het wrakingsverzoek is door de gemachtigde van verzoekster toegelicht. Mr. Dik heeft vervolgens haar standpunt over het wrakingsverzoek kenbaar gemaakt.</text></para>
+      <para>	</para>
+      <para><potentialnr manualAnnotation="NR">3. </potentialnr><text manualAnnotation="SECTION_TITLE">	Het standpunt van verzoeker.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">3.1. </potentialnr><text manualAnnotation="TEXT_BLOCK">Aan het wrakingsverzoek is - verkort en zakelijk weergegeven - het volgende ten grondslag gelegd. De kantonrechter is ten onrechte teruggekomen op een rolbeslissing, waardoor de belangen van verzoekster zijn geschaad. De kantonrechter heeft de bezwaren van verzoekster naast zich neergelegd en de comparitie van partijen voortgezet. Daarmee heeft de kantonrechter getoond partijdig te zijn, althans de schijn daarvan gewekt. Bovendien heeft de kantonrechter zich tijdens de comparitie van partijen dusdanig gedragen, dat daadwerkelijk is gebleken dat hij partijdig was. Zo heeft de kantonrechter onder meer gezegd: 'U kunt nog concluderen wat u wilt, maar mijn oordeel staat vast'. Ook heeft de kantonrechter verzoekster op sarcastische en honende wijze aangesproken. Nadat verzoekster ter comparitie te kennen heeft gegeven dat zij de kantonrechter zou wraken, heeft de kantonrechter aangegeven dat de wraking geen zin had omdat 'een andere rechter toch niets meer aan de zaak kon veranderen en hetzelfde oordeel zou hebben'. Tot slot merkt verzoekster op dat het proces-verbaal van de comparitie van partijen niet waarheidsgetrouw is opgemaakt. Het proces-verbaal bevat onjuistheden en is onvolledig doordat het - onder meer - niet de directe aanleiding voor de wraking en de wrakingsgronden weergeeft.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.	</potentialnr><text manualAnnotation="SECTION_TITLE">Het standpunt van mr. R.J. ter Kuile.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">4.1. </potentialnr><text manualAnnotation="TEXT_BLOCK">De kantonrechter acht het wrakingsverzoek ongegrond en voert daartoe aan dat hij zijn voorlopige indruk van de vordering en van het verweer heeft gegeven. De kantonrechter stelt dat hij tijdens de comparitie van partijen heeft aangegeven dat hij het verweer van verzoekster niet erg sterk vond, waarop de gemachtigde van verzoekster boos werd en de kantonrechter heeft gewraakt.</text></para>
+      <para> 	</para>
+      <para><potentialnr manualAnnotation="NR">5.	</potentialnr><text manualAnnotation="SECTION_TITLE">Het standpunt van betrokkene</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">5.1. </potentialnr><text manualAnnotation="TEXT_BLOCK">Mr. Dik heeft tijdens de behandeling van het wrakingsverzoek gesteld dat zij zich niet kan vinden in het wrakingsverzoek. Naar haar mening heeft de kantonrechter slechts kritische vragen gesteld en zijn er geen vreemde dingen gebeurd tijdens de comparitie van partijen.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">6. </potentialnr><text manualAnnotation="SECTION_TITLE">	De beoordeling.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">6.1. </potentialnr><text manualAnnotation="TEXT_BLOCK">Bij de beoordeling van een beroep op het ontbreken van onpartijdigheid van de rechter in de zin van art. 6, eerste lid, van het EVRM, dient uitgangspunt te zijn dat een rechter uit hoofde van zijn aanstelling moet worden vermoed onpartijdig te zijn, tenzij zich een uitzonderlijke omstandigheid voordoet die een zwaarwegende aanwijzing oplevert voor het oordeel dat een rechter jegens een rechtzoekende een vooringenomenheid koestert, althans dat de bij een rechtzoekende dienaangaande bestaande vrees objectief gerechtvaardigd is.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">6.2. </potentialnr><text manualAnnotation="TEXT_BLOCK">Van een gebrek aan onpartijdigheid kan, geheel afgezien van de persoonlijke instelling van de betrokken rechter, ook sprake zijn indien bepaalde feiten of omstandigheden grond geven te vrezen dat het een rechter in die omstandigheden aan onpartijdigheid ontbreekt. Alsdan dient de rechter zich van een beslissing in de hoofdzaak te onthouden, want rechtzoekenden moeten in het rechterlijk apparaat vertrouwen kunnen stellen. Daarom valt onder omstandigheden ook rekening te houden met de uiterlijke schijn.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">6.3. </potentialnr><text manualAnnotation="TEXT_BLOCK">De wrakingskamer is van oordeel dat de door verzoekster aangevoerde grond, die ziet op het terugkomen op een rolbeslissing, niet kan leiden tot het toewijzen van het wrakingsverzoek, nu - zo blijkt uit het proces-verbaal van de comparitie van partijen - de kantonrechter verzoekster, indien zij zulks wenste, alsnog de gelegenheid zou bieden om te concluderen. Daarmee heeft de kantonrechter de belangen van verzoekster onderkend en zijn deze niet geschaad door het voortzetten van de comparitie van partijen. Een vorm van partijdigheid valt hier niet in te onderkennen.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">6.4. </potentialnr><text manualAnnotation="TEXT_BLOCK">De door verzoekster aangevoerde wrakingsgrond dat de kantonrechter tijdens de comparitie van partijen uitlatingen heeft gedaan die de schijn van vooringenomenheid en partijdigheid hebben gewekt, leidt wel tot toewijzing van het wrakingsverzoek. De wrakingskamer is van oordeel dat, hoewel dat uit het proces-verbaal van de comparitie van partijen niet valt af te leiden, de kantonrechter tijdens de zitting de schijn van vooringenomenheid en partijdigheid heeft gewekt. De aangehaalde uitspraken van verzoekster, zoals 'U kunt nog concluderen wat u wilt, maar mijn oordeel staat vast' en de opmerking 'dat de wraking geen zin had omdat een andere rechter toch niets meer aan de zaak kon veranderen en hetzelfde oordeel zou hebben', zijn door de kantonrechter, nadat hij de schriftelijke weergave van het verzoek heeft ontvangen, niet weersproken. Bovendien worden deze uitspraken bevestigd door mevrouw [X], die aanwezig was tijdens de zitting. Dergelijke uitspraken leveren een zwaarwegende aanwijzing op voor het oordeel dat de kantonrechter jegens verzoekster een vooringenomenheid koestert, althans dat de bij verzoekster dienaangaande bestaande vrees objectief gerechtvaardigd is. Aan het feit dat het proces-verbaal van de comparitie van partijen geen melding maakt van dergelijke uitspraken gaat de wrakingskamer, gelet op de uitvoerige uiteenzetting van verzoekster van wat er tijdens de comparitie van partijen is voorgevallen en de verklaring van mevrouw [X], voorbij, nu er bij de wrakingskamer twijfel is ontstaan over in ieder geval de volledigheid van dit proces-verbaal, te meer nu de grond of gronden voor wraking niet in het proces-verbaal zijn opgenomen.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">6.5. </potentialnr><text manualAnnotation="TEXT_BLOCK">Het voorgaande brengt mee dat het verzoek tot wraking zal worden toegewezen.</text></para>
+      <para/>
+      <para><potentialnr manualAnnotation="NR">7.	</potentialnr><text manualAnnotation="SECTION_TITLE">De beslissing.</text></para>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">De wrakingskamer:</para>
+      <para/>
+      <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> wijst toe het verzoek tot wraking van mr. R.J. ter Kuile;</text></para>
+      <para/>
+      <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> bepaalt dat het geschorste onderzoek ter zitting in de hoofdzaak met ingang van heden opnieuw een aanvang neemt en schorst dit onderzoek totdat het onderzoek door een andere kantonrechter in deze rechtbank, belast met de behandeling van civiele zaken, zal zijn hervat;</text></para>
+      <para/>
+      <parablock>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> beveelt dat (een afschrift van) deze beslissing met inachtneming van het bepaalde bij artikel 39, derde lid, van het Wetboek van Burgerlijke Rechtsvordering wordt toegezonden aan: </text></para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">•</listmarking><text manualAnnotation="TEXT_BLOCK">	de verzoekster p/a haar gemachtigde mr. F. van de Nadort;</text></para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">•</listmarking><text manualAnnotation="TEXT_BLOCK">	verweerder in de hoofdzaak p/a haar gemachtigde mr. T.K. Dik;</text></para>
+        <para><listmarking manualAnnotation="TEXT_BLOCK">•</listmarking><text manualAnnotation="TEXT_BLOCK">	de kantonrechter mr. R.J. ter Kuile;</text></para>
+      </parablock>
+      <para/>
+      <para/>
+      <para/>
+      <para manualAnnotation="TEXT_BLOCK">Deze beslissing is gegeven door mrs. E. Rabbie, H.M.D. de Jong en G.P. Verbeek, rechters, in tegenwoordigheid van mr. Y.F. Ritmeijer als griffier en in het openbaar uitgesproken op 10 september 2012.</para>
+    </uitspraak>
+</open-rechtspraak>

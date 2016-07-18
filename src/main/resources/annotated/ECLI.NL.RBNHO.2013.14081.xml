@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<open-rechtspraak>
+  <rdf:RDF xmlns:bwb="bwb-dl" xmlns:cvdr="http://decentrale.regelgeving.overheid.nl/cvdr/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:ecli="https://e-justice.europa.eu/ecli" xmlns:eu="http://publications.europa.eu/celex/" xmlns:psi="http://psi.rechtspraak.nl/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:tr="http://tuchtrecht.overheid.nl/">
+    <rdf:Description>
+      <dcterms:identifier>ECLI:NL:RBNHO:2013:14081</dcterms:identifier>
+      <dcterms:format>text/xml</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2014-08-18T11:39:04</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2014-08-18</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:creator rdfs:label="Instantie" resourceIdentifier="http://standaarden.overheid.nl/owms/terms/Rechtbank_Noord-Holland" scheme="overheid.RechterlijkeMacht">Rechtbank Noord-Holland</dcterms:creator>
+      <dcterms:date rdfs:label="Uitspraakdatum">2013-12-13</dcterms:date>
+      <psi:zaaknummer rdfs:label="Zaaknr">2530127 VV EXPL 13-269</psi:zaaknummer>
+      <dcterms:type rdf:language="nl" resourceIdentifier="http://psi.rechtspraak.nl/uitspraak">Uitspraak</dcterms:type>
+      <psi:procedure rdf:language="nl" rdfs:label="Procedure" resourceIdentifier="http://psi.rechtspraak.nl/procedure#kortGeding">Kort geding</psi:procedure>
+      <dcterms:coverage>NL</dcterms:coverage>
+      <dcterms:spatial rdfs:label="Zittingsplaats">Haarlem</dcterms:spatial>
+      <dcterms:subject rdfs:label="Rechtsgebied" resourceIdentifier="http://psi.rechtspraak.nl/rechtsgebied#civielRecht">Civiel recht</dcterms:subject>
+      <dcterms:hasVersion rdfs:label="Vindplaatsen" resourceIdentifier="http://psi.rechtspraak.nl/vindplaats">
+        <rdf:list>
+          <rdf:li>Rechtspraak.nl</rdf:li>
+        </rdf:list>
+      </dcterms:hasVersion>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBNHO:2013:14081">
+      <dcterms:identifier>http://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBNHO:2013:14081</dcterms:identifier>
+      <dcterms:format>text/html</dcterms:format>
+      <dcterms:accessRights>public</dcterms:accessRights>
+      <dcterms:modified>2014-08-18T10:41:30</dcterms:modified>
+      <dcterms:issued rdfs:label="Publicatiedatum">2014-08-18</dcterms:issued>
+      <dcterms:publisher resourceIdentifier="http://rechtspraak.nl/">Raad voor de Rechtspraak</dcterms:publisher>
+      <dcterms:language>nl</dcterms:language>
+      <dcterms:title rdf:language="nl">ECLI:NL:RBNHO:2013:14081 Rechtbank Noord-Holland , 13-12-2013 / 2530127 VV EXPL 13-269</dcterms:title>
+      <dcterms:abstract resourceIdentifier="../../rs:inhoudsindicatie"/>
+    </rdf:Description>
+  </rdf:RDF>
+  <inhoudsindicatie id="ECLI:NL:RBNHO:2013:14081:INH" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <para>Werknemer aanvaardt, nadat hij ten gevolge van reorganisatie boventallig is geworden, nieuwe functie. Verschil tussen oude en nieuwe salaris wordt conform Sociaal Plan aangevuld met een persoonlijke toeslag op het nieuwe basissalaris. Werknemer vordert in kort geding toevoeging van voorheen door hem ontvangen toeslag aan nieuwe salaris. De kantonrechter wijst de vordering af, aangezien voorheen door werknemer ontvangen toeslag geen onderdeel is gaan uitmaken van basissalaris.</para>
+    </inhoudsindicatie>
+  <uitspraak id="ECLI:NL:RBNHO:2013:14081:DOC" lang="nl" xml:space="preserve" xmlns="http://www.rechtspraak.nl/schema/rechtspraak-1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <section>
+        <title><text manualAnnotation="TEXT_BLOCK">RECHTBANK NOORD-HOLLAND</text></title>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">Afdeling Privaatrecht</para>
+          <para manualAnnotation="TEXT_BLOCK">Sectie Kanton – locatie Haarlem</para>
+        </parablock>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">zaak/rolnr.: 2530127 VV EXPL 13-269</para>
+          <para manualAnnotation="TEXT_BLOCK">datum uitspraak: 13 december 2013</para>
+        </parablock>
+        <para/>
+      </section>
+      <section>
+        <title><text manualAnnotation="TEXT_BLOCK">VONNIS VAN DE KANTONRECHTER IN KORT GEDING </text></title>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">inzake</para>
+        </parablock>
+        <para/>
+      </section>
+      <section>
+        <title><text manualAnnotation="TEXT_BLOCK">[eiser]</text></title>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">te [woonplaats]</para>
+          <para manualAnnotation="TEXT_BLOCK">eiser</para>
+          <para manualAnnotation="TEXT_BLOCK">hierna te noemen [eiser]</para>
+          <para manualAnnotation="TEXT_BLOCK">gemachtigde mr. M.J.C. van der Heijden</para>
+        </parablock>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">tegen</para>
+        </parablock>
+        <para/>
+      </section>
+      <section>
+        <title><text manualAnnotation="TEXT_BLOCK">G4S AVIATION SECURITY B.V.</text></title>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">te Schiphol, gemeente Haarlemmermeer</para>
+          <para manualAnnotation="TEXT_BLOCK">gedaagde</para>
+          <para manualAnnotation="TEXT_BLOCK">hierna te noemen G4S</para>
+          <para manualAnnotation="TEXT_BLOCK">gemachtigde mr. H.J. Ulehake-Mink</para>
+        </parablock>
+        <para/>
+      </section>
+      <section>
+        <title><text manualAnnotation="SECTION_TITLE">De procedure</text></title>
+        <para manualAnnotation="TEXT_BLOCK">De Vre heeft G4S gedagvaard op 15 november 2013. De mondelinge behandeling heeft plaatsgevonden op 29 november 2013. De gemachtigden van partijen hebben pleitnotities overgelegd. De griffier heeft aantekeningen gemaakt van wat partijen verder naar voren hebben gebracht. </para>
+        <para/>
+      </section>
+      <section>
+        <title><text manualAnnotation="SECTION_TITLE">De feiten</text></title>
+        <paragroup>
+          <nr manualAnnotation="NR">1.</nr>
+          <para><text manualAnnotation="TEXT_BLOCK">[eiser] is sinds 1 juni 1990 in dienst van (de rechtsvoorgangster van) G4S en vanaf </text><?linebreak ?><text manualAnnotation="TEXT_BLOCK">1 oktober 2008 als supervisor.</text></para>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">2.</nr>
+          <para><text manualAnnotation="TEXT_BLOCK">Het laatstelijk door [eiser] in die functie verdiende salaris bedroeg € 2.740,35 bruto per maand (conform de bij de functie van supervisor behorende salarisschaal 5S) vermeerderd met een vaste toeslag van € 145,- bruto per maand. Op de salarisstroken van [eiser] is laatstgenoemde toeslag aangeduid als </text><emphasis role="italic"><quote manualAnnotation="TEXT_BLOCK">“</quote><text manualAnnotation="TEXT_BLOCK">functietoeslag”.</text></emphasis></para>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">3.</nr>
+          <para manualAnnotation="TEXT_BLOCK">G4S heeft in 2013 een reorganisatie doorgevoerd waardoor de functies van dutymanager, shiftleader en supervisor zijn komen te vervallen.</para>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">4.</nr>
+          <para manualAnnotation="TEXT_BLOCK">In verband met deze reorganisatie is met instemming van de ondernemingsraad en de sociale partners (FNV en De Unie) een Sociaal Plan opgesteld. </para>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">5.</nr>
+          <para><text manualAnnotation="TEXT_BLOCK">In het Sociaal Plan is, voor zover relevant, bepaald: </text><?linebreak ?><?linebreak ?><emphasis role="italic"><quote manualAnnotation="TEXT_BLOCK">“</quote><potentialnr manualAnnotation="NR">1. </potentialnr><text manualAnnotation="TEXT_BLOCK">Definities (…)</text></emphasis><?linebreak ?><emphasis role="italic"><potentialnr manualAnnotation="NR">1.6 </potentialnr><text manualAnnotation="SECTION_TITLE">Boventallige werknemer</text></emphasis><?linebreak ?><emphasis manualAnnotation="TEXT_BLOCK" role="italic">De werknemer aan wie zowel mondeling als schriftelijk is medegedeeld dat zijn arbeidsplaats komt te vervallen als gevolg van het project OOV/OOH. (…)</emphasis><?linebreak ?><?linebreak ?><emphasis role="italic"><potentialnr manualAnnotation="NR">1.8 </potentialnr><text manualAnnotation="SECTION_TITLE">Passende functie</text></emphasis><?linebreak ?><emphasis manualAnnotation="TEXT_BLOCK" role="italic">Een functie, die wat betreft omvang, inhoud, opleiding, benodigde kennis, vaardigheden, vooruitzichten en plaats in de organisatie, rekening houdend met bezwarende omstandigheden in de persoonlijke levenssfeer, voldoende verwant is aan de functie die de werknemer vervulde voor de optimalisatie en op grond daarvan redelijkerwijs kan worden aangeboden. (…) Een passende functie kan maximaal één functiegroep lager liggen. (…) </emphasis><?linebreak ?><emphasis role="italic"><potentialnr manualAnnotation="NR">3.3. </potentialnr><text manualAnnotation="TEXT_BLOCK">Plaatsingsprocedure (…)</text></emphasis><?linebreak ?><emphasis role="italic"><potentialnr manualAnnotation="NR">2. </potentialnr><text manualAnnotation="TEXT_BLOCK">Alle werknemers van wie de huidige functie vervalt, worden boventallig. (…)</text></emphasis><?linebreak ?><emphasis role="italic"><potentialnr manualAnnotation="NR">8. </potentialnr><text manualAnnotation="TEXT_BLOCK">Indien de boventallige kandidaat niet wordt geplaatst in de nieuwe functie, wordt ernaar gestreefd een passende functie aan te bieden.</text></emphasis><?linebreak ?><emphasis role="italic"><potentialnr manualAnnotation="NR">3.5 </potentialnr><text manualAnnotation="TEXT_BLOCK">Arbeidsvoorwaarden bij aanvaarding van een van de nieuwe functies of passende functie. </text></emphasis><?linebreak ?><emphasis manualAnnotation="TEXT_BLOCK" role="italic">Inschaling in de nieuwe functie geschiedt met inachtneming van de bij deze functie behorende beloning. Het bruto salaris zal in een voorkomend geval niet in negatieve zin worden bijgesteld. Concreet betekent dit dat: </emphasis><?linebreak ?><emphasis role="italic"><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> Indien het huidige basissalaris inpasbaar is in de nieuwe salarisschaal, wordt de dichtstbijzijnde periodiek toegepast + een persoonlijke toeslag;</text></emphasis><?linebreak ?><emphasis role="italic"><listmarking manualAnnotation="TEXT_BLOCK">-</listmarking><text manualAnnotation="TEXT_BLOCK"> Indien het huidige basissalaris niet inpasbaar is in de nieuwe salarisschaal, zal het salaris bestaan uit een basissalaris (maximale bedrag van de nieuwe schaal) + een persoonlijke toeslag. </text></emphasis><?linebreak ?><emphasis manualAnnotation="TEXT_BLOCK" role="italic">De groei en de indexatie van het salaris zal plaatsvinden over het basissalaris. Reeds bestaande persoonlijke toeslagen zullen, conform in het verleden gemaakte afspraken, behouden blijven. (...)”</emphasis></para>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.</nr>
+          <para manualAnnotation="TEXT_BLOCK">[eiser] die door het vervallen van zijn functie van supervisor boventallig was verklaard, heeft gesolliciteerd op nieuwe functies, maar is daarop niet geplaatst. [eiser] heeft uiteindelijk ingestemd met de passende functie van leadagent. </para>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">7.</nr>
+          <para><text manualAnnotation="TEXT_BLOCK">Bij brief van 16 mei 2013 heeft G4S aan [eiser] geschreven: </text><?linebreak ?><?linebreak ?><emphasis role="italic"><quote manualAnnotation="TEXT_BLOCK">“</quote><text manualAnnotation="TEXT_BLOCK">(…) Hierna hebben wij jou de functie van Leadagent aangeboden als passende functie. Hierbij bevestigen wij jou dat je deze functie hebt aanvaard. Je nieuwe arbeidsovereenkomst gaat in per 1 juni 2013. Hieronder tref je een overzicht aan van je oude- en nieuwe functie en bijbehorend salaris. </text></emphasis><?linebreak ?><?linebreak ?><emphasis manualAnnotation="TEXT_BLOCK" role="underline italic">Huidig Nieuw</emphasis><?linebreak ?><emphasis manualAnnotation="TEXT_BLOCK" role="italic">Functie		: Supervisor		Functie			: Leadagent</emphasis><?linebreak ?><emphasis manualAnnotation="TEXT_BLOCK" role="italic">Inschaling		: 5S15			Inschaling		: 4S14</emphasis><?linebreak ?><emphasis manualAnnotation="TEXT_BLOCK" role="italic">Salaris: 		: € 2.740,35 (…)	Salaris			: € 2577,98 bruto</emphasis><?linebreak ?><emphasis manualAnnotation="TEXT_BLOCK" role="italic">Functietoeslag: 	:      145,-   (…)		Persoonlijke toeslag	: €   162,37 bruto</emphasis></para>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">8.</nr>
+          <para><text manualAnnotation="TEXT_BLOCK">G4S heeft bij voormelde brief aan [eiser] een aangepaste arbeidsovereenkomst aangeboden, waarin is vermeld: </text><?linebreak ?><?linebreak ?><emphasis role="italic"><quote manualAnnotation="TEXT_BLOCK">“</quote><text manualAnnotation="SECTION_TITLE">Artikel 2 Functie</text></emphasis><?linebreak ?><emphasis role="italic"><potentialnr manualAnnotation="NR">1. </potentialnr><text manualAnnotation="TEXT_BLOCK">De functie is ingedeeld in salarisschaal 4S, periodieknummer 14. (…)</text></emphasis><?linebreak ?><emphasis manualAnnotation="SECTION_TITLE" role="italic">Artikel 5 Salaris</emphasis><?linebreak ?><emphasis role="italic"><potentialnr manualAnnotation="NR">1. </potentialnr><text manualAnnotation="TEXT_BLOCK">Het fulltime bruto basissalaris bedraagt voor werknemer € 2.577,98 per maand (…). </text></emphasis><?linebreak ?><emphasis role="italic"><potentialnr manualAnnotation="NR">3. </potentialnr><text manualAnnotation="TEXT_BLOCK">Werknemer ontvangt een Persoonlijke toeslag van € 162,37 bruto per maand. </text></emphasis><?linebreak ?><emphasis role="italic"><potentialnr manualAnnotation="NR">4. </potentialnr><text manualAnnotation="TEXT_BLOCK">Werknemer ontvangt een afbouwregeling van de Functietoeslag: </text></emphasis><?linebreak ?><emphasis manualAnnotation="TEXT_BLOCK" role="italic">juni 2013		: € 100,00 bruto</emphasis><?linebreak ?><emphasis manualAnnotation="TEXT_BLOCK" role="italic">(…)</emphasis><?linebreak ?><emphasis manualAnnotation="TEXT_BLOCK" role="italic">december 2013	: €  14,30 bruto</emphasis><?linebreak ?><emphasis manualAnnotation="TEXT_BLOCK" role="italic">Per januari 2014 is de Functietoeslag volledig afgebouwd. (…)”</emphasis><?linebreak ?><?linebreak ?></para>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">9.</nr>
+          <para><text manualAnnotation="TEXT_BLOCK">De gemachtigde van [eiser] heeft vervolgens aan G4S laten weten dat hij niet kon instemmen met het nieuwe salaris, omdat de door hem voorheen ontvangen toeslag van </text><?linebreak ?><text manualAnnotation="TEXT_BLOCK">€ 145,- bruto per maand niet betrokken was.</text><?linebreak ?><?linebreak ?></para>
+          <para/>
+        </paragroup>
+      </section>
+      <section>
+        <title><text manualAnnotation="SECTION_TITLE">De vordering</text></title>
+        <parablock>
+          <para><text manualAnnotation="TEXT_BLOCK">[eiser] vordert bij wijze van voorlopige voorziening (samengevat) veroordeling van G4S </text><?linebreak ?><text manualAnnotation="TEXT_BLOCK">tot aanpassing van het salaris met dien verstande dat de maandelijkse toeslag op het bruto maandsalaris van € 2.577,98 € 307,37 is vanaf 1 juni 2013, tot dienovereenkomstige aanpassing van de arbeidsovereenkomst op straffe van een dwangsom en tot betaling van – kort gezegd – het gelet op het voorgaande vanaf 1 juni 2013 te weinig betaalde salaris, de vakantietoeslag en de wettelijke verhoging ex artikel 7:625 BW daarover, vermeerderd met wettelijke rente en proceskosten.</text></para>
+          <para manualAnnotation="TEXT_BLOCK">[eiser] legt aan zijn vordering ten grondslag dat G4S ten onrechte de toeslag van € 145,- bruto per maand die [eiser] al ruim tien jaar ontvangt en onderdeel is gaan uitmaken van zijn salaris, bij de bepaling van zijn nieuwe salaris niet heeft meegenomen. Derhalve is sprake van een onredelijk voorstel van G4S tot wijziging van arbeidsvoorwaarden en is [eiser] niet gehouden dit voorstel te aanvaarden. </para>
+        </parablock>
+        <para/>
+      </section>
+      <section>
+        <title><text manualAnnotation="SECTION_TITLE">Het verweer</text></title>
+        <para manualAnnotation="TEXT_BLOCK">G4S betwist de vordering. Primair stelt zij zich op het standpunt dat het vereiste spoedeisend belang ontbreekt. Subsidiair voert G4S aan dat de maandelijkse toeslag van € 145,- per maand een functietoeslag was, die met het komen te vervallen van de functie van supervisor eveneens is komen te vervallen. De toeslag is geen onderdeel van het basissalaris en conform het bepaalde in het Sociaal Plan is dan ook terecht geen rekening gehouden met deze toeslag bij het bepalen van de hoogte van het nieuwe salaris. </para>
+        <para/>
+      </section>
+      <section role="overwegingen">
+        <title><text manualAnnotation="SECTION_TITLE">De beoordeling</text></title>
+        <paragroup>
+          <nr manualAnnotation="NR">1.</nr>
+          <para><text manualAnnotation="TEXT_BLOCK">De kantonrechter gaat aan het primaire verweer dat de vordering niet spoedeisend is, voorbij gelet op het volgende. </text><?linebreak ?><?linebreak ?></para>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">2.</nr>
+          <para manualAnnotation="TEXT_BLOCK">De gevorderde voorlopige voorzieningen zijn slechts toewijsbaar als aan de hand van de feiten en omstandigheden in dit geding de verwachting gewettigd is dat in een tussen partijen nog te voeren bodemprocedure soortgelijke vorderingen zullen worden toegewezen. De kantonrechter is voorshands van oordeel dat dit niet het geval is.</para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">3.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Bij de beoordeling van het geschil moet uitgegaan worden van het Sociaal Plan dat op de reorganisatie van toepassing is. Daaruit volgt dat de voorheen door [eiser] uitgevoerde functie van supervisor is komen te vervallen en dat hij boventallig is verklaard. [eiser] heeft daarna conform het Sociaal Plan gesolliciteerd op de nieuwe functies, maar is daarvoor niet aangenomen. Vervolgens heeft G4S, eveneens conform het Sociaal Plan, een passende functie aangeboden die [eiser], zij het node, heeft geaccepteerd. De bij de functie van leadagent behorende salarisschaal ligt één schaal lager dan de schaal die hoorde bij de functie van supervisor. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">4.</nr>
+          <para><text manualAnnotation="TEXT_BLOCK">Uit het Sociaal Plan volgt dat wanneer een werknemer een passende functie met een lagere salarisschaal accepteert, zijn salaris niet in negatieve zin zal worden bijgesteld. Het verschil tussen het oude en het nieuwe salaris zal in de vorm van een persoonlijke toeslag aan het nieuwe basissalaris (conform de bij de functie van leadagent behorende maximale salarisschaal) worden toegevoegd. </text><?linebreak ?><text manualAnnotation="TEXT_BLOCK">Het komt dan ook aan op beantwoording van de vraag of de toeslag van € 145,- die [eiser] voorheen ontving, al dan niet onderdeel is gaan uitmaken van zijn basissalaris. </text></para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">5.</nr>
+          <para><text manualAnnotation="TEXT_BLOCK">De kantonrechter is van oordeel dat dit niet het geval is en daartoe is het volgende redengevend. De toeslag is op de salarisstroken steeds omschreven als “functietoeslag”. De toeslag diende, anders dan het vaste salaris en eventuele persoonlijke toeslagen, niet als grondslag voor pensioenopbouw, onregelmatigheidstoeslag en vakantiegeld. Toen de toeslag in april 2004 aan [eiser] is toegekend is in de bijbehorende brief van 22 april 2004 vermeld: </text><emphasis role="italic"><quote manualAnnotation="TEXT_BLOCK">“</quote><text manualAnnotation="TEXT_BLOCK">Wij willen benadrukken dat deze toeslag tijdelijk is tot het moment dat er nieuwe afspraken met de vakorganisaties zijn gemaakt. Er kunnen dan ook geen verdere rechten voor de toekomst aan ontleend worden.”</text></emphasis><text manualAnnotation="TEXT_BLOCK"> Nadien hebben nog onderhandelingen plaatsgevonden met de vakbonden over het functiewaarderingstraject, maar daarover is geen overeenstemming bereikt, althans de toeslag is in dat kader niet in het basissalaris opgenomen. De omstandigheid dat [eiser] de toeslag al bijna tien jaar heeft ontvangen en dat hij ook in een eerdere functie van shiftleader de toeslag (van toen nog € 100,- per maand) ontving, maakt de toeslag nog niet tot een vast salaris onderdeel omdat beide functies een functietoeslag kenden. Nu [eiser] die functies niet meer vervult, zijn de daarbij behorende toeslagen komen te vervallen. Indien het standpunt van [eiser] dat de toeslag onderdeel was van zijn salaris, zou worden gevolgd, zou de door hem geaccepteerde functie van leadagent niet meer als passend kunnen worden beschouwd. Immers volgens het Sociaal Plan ligt de salarisschaal van een passende functie maximaal één schaal onder die van de voorheen uitgeoefende functie. Met de toeslag erbij zou het salaris van [eiser] als supervisor uitkomen in 6S, twee schalen hoger dan dat van leadagent (4S). </text></para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">6.</nr>
+          <para manualAnnotation="TEXT_BLOCK">De vraag of, op basis van HR Stoof/Mammoet sprake is van een eenzijdige functiewijziging en of deze redelijk is, is hier niet aan de orde. Vast staat immers dat de functie van [eiser] is komen te vervallen en dat hij boventallig is verklaard. Dat gegeven zou, indien bij G4S geen andere passende functie voor [eiser] gevonden zou kunnen worden, in beginsel leiden tot beëindiging van het dienstverband. [eiser] heeft geaccepteerd dat zijn functie van supervisor is komen te vervallen en hij heeft een lager ingeschaalde functie aanvaard en moet daarmee geacht worden ook het bijbehorende salaris te aanvaarden, waarbij conform het Sociaal Plan nog een toeslag komt om het verschil tussen het oude en het nieuwe basissalaris te compenseren. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">7.</nr>
+          <para manualAnnotation="TEXT_BLOCK">Overigens is de kantonrechter van oordeel dat G4S, uitgaande van de onderhavige reorganisatie waardoor de functie van supervisor is komen te vervallen, jegens [eiser] niet onredelijk heeft gehandeld. Het verschil tussen het oude en het nieuwe salaris wordt immers door middel van een persoonlijke en dus blijvende toeslag gecompenseerd en bovendien is de functietoeslag in zeven maanden afgebouwd. </para>
+          <para/>
+        </paragroup>
+        <paragroup>
+          <nr manualAnnotation="NR">8.</nr>
+          <para manualAnnotation="TEXT_BLOCK">De conclusie is dan ook dat de vorderingen niet toewijsbaar zijn. Deze zullen dan ook worden afgewezen. De kantonrechter ziet echter in de relatie tussen partijen aanleiding om de proceskosten te compenseren in die zin dat iedere partij de eigen kosten draagt. </para>
+          <para/>
+          <para/>
+          <para/>
+          <para/>
+        </paragroup>
+      </section>
+      <section role="beslissing">
+        <title><text manualAnnotation="SECTION_TITLE">De beslissing</text></title>
+        <para manualAnnotation="TEXT_BLOCK">De kantonrechter:</para>
+        <para/>
+        <itemizedlist manualAnnotation="TEXT_BLOCK" mark="-">
+          <listitem>
+            <para>wijst de vordering af;<?linebreak ?><?linebreak ?></para>
+          </listitem>
+          <listitem>
+            <para>compenseert de proceskosten aldus dat iedere partij de eigen kosten draagt. </para>
+          </listitem>
+        </itemizedlist>
+        <para/>
+        <para/>
+        <parablock>
+          <para manualAnnotation="TEXT_BLOCK">Dit vonnis is gewezen door mr. J.J. Dijk, kantonrechter, en is uitgesproken op de openbare terechtzitting van bovengenoemde datum in aanwezigheid van de griffier. </para>
+        </parablock>
+        <para/>
+        <parablock>
+          <para>
+            <emphasis manualAnnotation="TEXT_BLOCK" role="italic">Coll.</emphasis>
+          </para>
+        </parablock>
+        <para/>
+      </section>
+    </uitspraak>
+</open-rechtspraak>
