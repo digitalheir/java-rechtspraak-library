@@ -4,7 +4,10 @@
 
 A Java interface to the judgment database of [rechtspraak.nl](http://www.rechtspraak.nl/).
 
-## JavaDoc
+## Documentation
+This project is part of my master's thesis in Artificial Intelligence. A HTML copy of my thesis is available 
+at [here](https://digitalheir.github.io/java-rechtspraak-library/).
+
 JavaDoc is available at http://phil.uu.nl/~trompper/rechtspraak-2.0.0-javadoc/
 
 ## Usage
@@ -30,4 +33,4 @@ compile 'org.leibnizcenter:rechtspraak:2.0.2'
 * Versions 2.X.X require Java 8
 
 ## More
-Inquiries go to m.f.a.trompper@uva.nl.
+Inquiries go to maarten.trompper@gmail.com.
