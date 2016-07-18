@@ -488,9 +488,9 @@ textarea {
     /*a[href]:after {*/
     /*content: " (" attr(href) ")";*/
     /*}*/
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
+    /*abbr[title]:after {*/
+    /*content: " (" attr(title) ")";*/
+    /*}*/
     /*
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
@@ -534,6 +534,32 @@ textarea {
  * -------------------------------------------------------------------------- */
 .chapter {
     page-break-after: always;
+}
+div.full-thesis {
+    counter-reset: subsect;
+}
+div.full-thesis .reset-counter {
+    /* Creates a new instance of the section counter with each section element */
+    //list-style-type: none;
+    //margin: 0 0 1em;
+    //padding: 0 0 0 1em;
+}
+div.full-thesis .chapter section.numbered-section:first-of-type {
+    counter-reset: subsect;
+}
+div.full-thesis .numbered-section {
+    /* Increments only this instance of the section counter */
+    counter-increment: subsect;
+}
+div.full-thesis .chapter.numbered-section .title::before {
+    /* Adds the value of all instances of the section counter separated by a ".". */
+    content: counters(subsect, ".") ". ";
+}
+div.full-thesis .numbered-section .title::before {
+    /* Adds the value of all instances of the section counter separated by a ".". */
+    content: counters(subsect, ".") " ";
+    font-size: 0.8em;
+    //line-height: 1em;
 }
 #rechtspraak-nl-data-set .desc-title, #rechtspraak-nl-data-set .desc-section, #rechtspraak-nl-data-set .desc-info {
     list-style: none;
@@ -885,8 +911,7 @@ hr {
         left: -15px;
     }
 }
-// Tables
-
+/* Tables*/
 .inline-table {
     display: inline-table;
     max-width: 400px;
@@ -901,7 +926,13 @@ hr {
 .table caption {
     font-weight: bold;
 }
-/* tablets and desktop
+abbr[title] {
+    /*border-bottom: 1px dotted #c1c1c1; */
+    border-bottom: none;
+}
+/* etc*/
+@media only screen and (max-width: 768px) {
+    /* tablets and desktop
   figure {
     margin: 1em 0;
   }
@@ -909,10 +940,9 @@ hr {
 
 @media only screen and (max-width: 410px) {
   /* tablets and desktop */
-// etc
-
-@media only screen and (max-width: 768px) figure {
-    margin: 1em 0;
+    figure {
+        margin: 1em 0;
+    }
 }
 .perc-bar {
     fill: #3182BD;
@@ -935,6 +965,9 @@ hr {
     font-size: small;
 }
 @media print {
+    nav.toc {
+        font-size: 11pt;
+    }
     strike {
         display: none;
         /*TODO remove*/
