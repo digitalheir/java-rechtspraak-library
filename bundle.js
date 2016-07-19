@@ -23151,14 +23151,30 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement('meta', { name: 'viewport', content: 'width=device-width, initial-scale=1' }),
 	                    _react2.default.createElement('link', { rel: 'apple-touch-icon', href: 'apple-touch-icon.png' }),
 	                    _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Noto+Sans' }),
-	                    _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' }),
+	                    _react2.default.createElement('link', { rel: 'stylesheet',
+	                        href: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' }),
 	                    _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css' }),
 	                    _react2.default.createElement('link', { rel: 'stylesheet', href: relativeToRoot + "style.css" })
 	                ),
 	                _react2.default.createElement(
 	                    'body',
-	                    { className: 'p2' },
+	                    { itemProp: 'mainEntity',
+	                        itemScope: true,
+	                        itemType: 'https://schema.org/Thesis',
+	                        className: 'p2' },
 	                    this.props.path == '/full/' ? '' : _react2.default.createElement(_Header2.default, this.props),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { itemProp: 'audience', itemScope: true, itemType: 'http://schema.org/EducationalAudience' },
+	                        _react2.default.createElement('meta', { content: 'student', itemProp: 'audienceType' }),
+	                        _react2.default.createElement('meta', { content: 'researcher', itemProp: 'audienceType' }),
+	                        _react2.default.createElement('meta', { content: 'computer scientist', itemProp: 'audienceType' }),
+	                        _react2.default.createElement('meta', { content: 'legal researcher', itemProp: 'audienceType' })
+	                    ),
+	                    _react2.default.createElement('meta', { content: 'en', itemProp: 'inLanguage' }),
+	                    _react2.default.createElement('meta', { content: 'true', itemProp: 'isFamilyFriendly' }),
+	                    _react2.default.createElement('meta', { content: '2016', itemProp: 'copyrightYear' }),
+	                    _react2.default.createElement('meta', { content: 'expositive', itemProp: 'interactivityType' }),
 	                    _react2.default.createElement(RouteHandler, this.props),
 	                    _react2.default.createElement(_Bibliography2.default, null),
 	                    this.props.path == '/full/' ? '' : _react2.default.createElement(_License2.default, this.props),
@@ -23251,10 +23267,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	            return _react2.default.createElement(
 	                'header',
-	                { className: 'py2' },
+	                {
+	                    className: 'py2' },
 	                _react2.default.createElement(
 	                    'h1',
-	                    { className: 'mt0' },
+	                    { itemProp: 'name', className: 'mt0' },
 	                    this.props.title
 	                )
 	            );
@@ -23471,7 +23488,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (nameStr) {
 	        nameStr = _react2.default.createElement(
 	            'span',
-	            { itemScope: '', itemType: 'https://schema.org/author', className: 'ref-author' },
+	            { itemScope: true, itemType: 'https://schema.org/author', className: 'ref-author' },
 	            nameStr
 	        );
 	    }
@@ -25634,10 +25651,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            // <h1 itemProp="name">{this.props.title}</h1>
 	            return _react2.default.createElement(
 	                'div',
-	                {
-	                    itemProp: 'mainEntity',
-	                    itemScope: true,
-	                    itemType: 'https://schema.org/Thesis' },
+	                null,
 	                _react2.default.createElement(_BrowserCheck2.default, null),
 	                _react2.default.createElement(
 	                    'header',
@@ -25645,24 +25659,28 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(_Author2.default, null)
 	                ),
 	                _react2.default.createElement(
-	                    'section',
+	                    'main',
 	                    null,
 	                    _react2.default.createElement(
-	                        'h2',
+	                        'section',
 	                        null,
-	                        'Abstract'
+	                        _react2.default.createElement(
+	                            'h2',
+	                            null,
+	                            'Abstract'
+	                        ),
+	                        _react2.default.createElement(_AbstractContent2.default, null)
 	                    ),
-	                    _react2.default.createElement(_AbstractContent2.default, null)
-	                ),
-	                _react2.default.createElement(
-	                    'section',
-	                    null,
 	                    _react2.default.createElement(
-	                        'h2',
+	                        'section',
 	                        null,
-	                        'Table of Contents'
-	                    ),
-	                    _react2.default.createElement(_ToC2.default, this.props)
+	                        _react2.default.createElement(
+	                            'h2',
+	                            null,
+	                            'Table of Contents'
+	                        ),
+	                        _react2.default.createElement(_ToC2.default, this.props)
+	                    )
 	                )
 	            );
 	        }
@@ -25874,7 +25892,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            //var relativeToRoot = this.props.path.match(/\//g).slice(1).map(a=>"../").join("");
 	            return _react2.default.createElement(
 	                'div',
-	                null,
+	                { itemProp: 'description' },
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
@@ -25990,7 +26008,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	                        return _react2.default.createElement(
 	                            'li',
-	                            { key: chapter.route },
+	                            { itemProp: 'hasPart',
+	                                itemScope: true,
+	                                itemType: 'https://schema.org/Chapter',
+	                                key: chapter.route },
 	                            _react2.default.createElement(
 	                                'span',
 	                                { className: 'row' },
@@ -25999,18 +26020,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                    null,
 	                                    path == chapter.route ? _react2.default.createElement(
 	                                        'strong',
-	                                        null,
+	                                        { itemProp: 'name' },
 	                                        chapter.title
 	                                    ) : _react2.default.createElement(
 	                                        'a',
-	                                        { href: urlSection,
+	                                        { itemProp: 'mainEntityOfPage url', href: urlSection,
 	                                            className: 'nav-link' },
-	                                        chapter.title
+	                                        _react2.default.createElement(
+	                                            'span',
+	                                            { itemProp: 'name' },
+	                                            chapter.title
+	                                        )
 	                                    )
 	                                ),
 	                                _this2.props.singlePage ? _react2.default.createElement(
 	                                    'span',
-	                                    { className: 'nr' },
+	                                    { itemProp: 'pageStart', className: 'nr' },
 	                                    chapter.page
 	                                ) : ''
 	                            ),
@@ -26032,22 +26057,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        //console.log(JSON.stringify(section));
 	                        if (!!section) return _react2.default.createElement(
 	                            'li',
-	                            null,
+	                            {
+	                                itemScope: true,
+	                                itemProp: 'hasPart',
+	                                itemType: 'https://schema.org/CreativeWork' },
 	                            _react2.default.createElement(
 	                                'span',
 	                                { className: 'row' },
 	                                _react2.default.createElement(
-	                                    'span',
-	                                    null,
+	                                    'a',
+	                                    { itemProp: 'url', href: urlSection + "#" + section.id },
 	                                    _react2.default.createElement(
-	                                        'a',
-	                                        { href: urlSection + "#" + section.id },
+	                                        'span',
+	                                        { itemProp: 'name' },
 	                                        section.title
 	                                    )
 	                                ),
 	                                singlePage ? _react2.default.createElement(
 	                                    'span',
-	                                    { className: 'nr' },
+	                                    { itemProp: 'pageStart', className: 'nr' },
 	                                    section.page
 	                                ) : ''
 	                            ),
@@ -26444,6 +26472,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	        return _react2.default.createElement(
 	            'section',
 	            { className: 'numbered-section',
+	                itemScope: true,
+	                itemProp: 'hasPart',
+	                itemType: 'https://schema.org/CreativeWork',
 	                key: section.id,
 	                id: section.id },
 	            header,
@@ -56044,7 +56075,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            href: 'https://rechtspraak.cloudant.com/docs/' },
 	                        'http://rechtspraak.cloudant.com/docs/'
 	                    ),
-	                    '. We also provide the enriched data set as a collection of HTML pages, indexed for full text search.'
+	                    '. We also provide the enriched data set as a collection of ',
+	                    _abbreviations2.default.html,
+	                    ' pages, indexed for full text search.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -59540,7 +59573,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    null,
 	                    'Rechtspraak.nl publishes an open data set of Dutch case law in ',
 	                    _abbreviations2.default.xml,
-	                    ' and HTML dating back to about ',
+	                    ' and ',
+	                    _abbreviations2.default.html,
+	                    ' dating back to about ',
 	                    _react2.default.createElement(
 	                        'span',
 	                        { dateTime: '1970' },
@@ -64097,7 +64132,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	            var subsections = this.props.sections.map((0, _getSectionComponent.getSubSections)(this.props, 3));
 
 	            var standaloneChapter = !this.props.inline;
-
+	            var main = _react2.default.createElement(
+	                'section',
+	                { id: this.props.id ? this.props.id : '',
+	                    itemProp: 'hasPart',
+	                    itemScope: true,
+	                    itemType: 'https://schema.org/Chapter',
+	                    className: 'chapter numbered-section reset-counter' },
+	                _react2.default.createElement(
+	                    'h2',
+	                    { itemProp: 'name', className: 'title' },
+	                    _react2.default.createElement('a', { className: 'link-up', href: '#' }),
+	                    this.props.title
+	                ),
+	                this.props.children,
+	                subsections
+	            );
 	            return _react2.default.createElement(
 	                'div',
 	                null,
@@ -64107,19 +64157,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'Table of Contents'
 	                ) : '',
 	                standaloneChapter ? _react2.default.createElement(_ToC2.default, _extends({ showHome: true }, this.props)) : '',
-	                _react2.default.createElement(
-	                    'section',
-	                    { id: this.props.id ? this.props.id : '',
-	                        className: 'chapter numbered-section reset-counter' },
-	                    _react2.default.createElement(
-	                        'h2',
-	                        { className: 'title' },
-	                        _react2.default.createElement('a', { className: 'link-up', href: '#' }),
-	                        this.props.title
-	                    ),
-	                    this.props.children,
-	                    subsections
-	                ),
+	                standaloneChapter ? _react2.default.createElement(
+	                    'main',
+	                    null,
+	                    main
+	                ) : main,
 	                standaloneChapter ? this.linkToNextChapter(this.props.title) : ''
 	            );
 	        }
