@@ -23471,7 +23471,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (nameStr) {
 	        nameStr = _react2.default.createElement(
 	            'span',
-	            { className: 'ref-author' },
+	            { itemScope: '', itemType: 'https://schema.org/author', className: 'ref-author' },
 	            nameStr
 	        );
 	    }
@@ -23497,7 +23497,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        'li',
 	        { itemProp: 'citation',
 	            itemScope: true,
-	            itemType: 'http://schema.org/CreativeWork',
+	            itemType: 'https://schema.org/CreativeWork',
 	            key: i,
 	            id: citation.id.toString(),
 	            className: 'ref' },
@@ -25332,7 +25332,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    lange2009cnf: {
 	        id: 'lange2009cnf',
 	        type: 'article',
-	        title: 'To CNF or not to CNF? An efficient yet presentable version of the {abbrs.cyk} algorithm',
+	        title: 'To CNF or not to CNF? An efficient yet presentable version of the CYK algorithm',
 	        author: {
 	            abbr: "Lange and Leiß",
 	            full: "Lange, Martin and Leiß, Hans"
@@ -25637,7 +25637,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                {
 	                    itemProp: 'mainEntity',
 	                    itemScope: true,
-	                    itemType: 'http://schema.org/Thesis' },
+	                    itemType: 'https://schema.org/Thesis' },
 	                _react2.default.createElement(_BrowserCheck2.default, null),
 	                _react2.default.createElement(
 	                    'header',
@@ -25726,7 +25726,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -25746,70 +25746,87 @@ return /******/ (function(modules) { // webpackBootstrap
 	var ghUrl = "https://github.com/digitalheir";
 
 	var AuthorData = function (_Component) {
-	  _inherits(AuthorData, _Component);
+	    _inherits(AuthorData, _Component);
 
-	  function AuthorData() {
-	    _classCallCheck(this, AuthorData);
+	    function AuthorData() {
+	        _classCallCheck(this, AuthorData);
 
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(AuthorData).apply(this, arguments));
-	  }
-
-	  _createClass(AuthorData, [{
-	    key: "render",
-	    value: function render() {
-	      var ghUrl = "https://github.com/digitalheir";
-	      return _react2.default.createElement(
-	        "div",
-	        { itemProp: "author copyrightHolder", itemScope: true,
-	          itemType: "http://schema.org/Person", className: "author-data" },
-	        _react2.default.createElement("meta", { itemProp: "url", content: ghUrl }),
-	        _react2.default.createElement(
-	          "div",
-	          { id: "github-link", className: "author-line" },
-	          _react2.default.createElement(
-	            "a",
-	            { href: ghUrl,
-	              className: "icon no-decoration" },
-	            _react2.default.createElement(
-	              "i",
-	              {
-	                className: "fa fa-github" },
-	              " "
-	            )
-	          ),
-	          _react2.default.createElement(
-	            "a",
-	            {
-	              href: ghUrl, className: "author-value" },
-	            "digitalheir"
-	          )
-	        ),
-	        _react2.default.createElement(
-	          "div",
-	          { id: "mail-link", className: "author-line" },
-	          _react2.default.createElement(
-	            "a",
-	            { href: ghUrl,
-	              className: "icon no-decoration" },
-	            _react2.default.createElement(
-	              "i",
-	              {
-	                className: "fa fa-envelope" },
-	              " "
-	            )
-	          ),
-	          _react2.default.createElement(
-	            "a",
-	            {
-	              href: "maarten.trompper@gmail.com", itemProp: "email", className: "author-value" },
-	            "maarten.trompper@gmail.com"
-	          )
-	        )
-	      );
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(AuthorData).apply(this, arguments));
 	    }
-	  }]);
 
-	  return AuthorData;
+	    _createClass(AuthorData, [{
+	        key: "render",
+	        value: function render() {
+	            var ghUrl = "https://github.com/digitalheir";
+	            //<meta content={ghUrl}/>
+	            return _react2.default.createElement(
+	                "div",
+	                { itemProp: "author copyrightHolder", itemScope: true,
+	                    itemType: "https://schema.org/Person", className: "author-data" },
+	                _react2.default.createElement(
+	                    "div",
+	                    { id: "muh-name", itemProp: "name", className: "author-line" },
+	                    _react2.default.createElement(
+	                        "span",
+	                        { itemProp: "givenName" },
+	                        "Maarten"
+	                    ),
+	                    " ",
+	                    _react2.default.createElement(
+	                        "span",
+	                        { itemProp: "familyName" },
+	                        "Trompper"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { id: "github-link", className: "author-line" },
+	                    _react2.default.createElement(
+	                        "a",
+	                        { href: ghUrl,
+	                            className: "icon no-decoration" },
+	                        _react2.default.createElement(
+	                            "i",
+	                            {
+	                                className: "fa fa-github" },
+	                            " "
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "a",
+	                        {
+	                            itemProp: "url",
+	                            href: ghUrl,
+	                            className: "author-value" },
+	                        "digitalheir"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { id: "mail-link", className: "author-line" },
+	                    _react2.default.createElement(
+	                        "a",
+	                        { href: ghUrl,
+	                            className: "icon no-decoration" },
+	                        _react2.default.createElement(
+	                            "i",
+	                            {
+	                                className: "fa fa-envelope" },
+	                            " "
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "a",
+	                        {
+	                            href: "mailto:maarten.trompper@gmail.com", itemProp: "email", className: "author-value" },
+	                        "maarten.trompper@gmail.com"
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+
+	    return AuthorData;
 	}(_react.Component);
 
 	exports.default = AuthorData;
@@ -56027,7 +56044,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            href: 'https://rechtspraak.cloudant.com/docs/' },
 	                        'http://rechtspraak.cloudant.com/docs/'
 	                    ),
-	                    '. We also provide the enriched dataset as a collection of HTML pages, indexed for full text search.'
+	                    '. We also provide the enriched data set as a collection of HTML pages, indexed for full text search.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -56040,25 +56057,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(
 	                        'li',
 	                        null,
-	                        'One library for importing and enriching documents from Rechtspraak.nl (',
+	                        'One library for importing and enriching documents from Rechtspraak.nl, ',
 	                        _react2.default.createElement(
 	                            'a',
-	                            { className: 'print-url', href: 'https://github.com/digitalheir/java-rechtspraak-library' },
+	                            {
+	                                className: 'print-url', href: 'https://github.com/digitalheir/java-rechtspraak-library' },
 	                            'on GitHub'
-	                        ),
-	                        ')'
+	                        )
 	                    ),
 	                    _react2.default.createElement(
 	                        'li',
 	                        null,
-	                        'One library for mirroring the Rechtspraak.nl corpus to a CouchDB database (',
+	                        'One library for mirroring the Rechtspraak.nl corpus to a CouchDB database, ',
 	                        _react2.default.createElement(
 	                            'a',
 	                            { className: 'print-url',
 	                                href: 'https://github.com/digitalheir/dutch-case-law-to-couchdb' },
 	                            'on GitHub'
-	                        ),
-	                        ')'
+	                        )
 	                    )
 	                )
 	            );
@@ -56355,7 +56371,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        title: 'Methods'
 	    },
 	    taggingResults: {
-	        page: 19,
+	        page: 20,
 	        id: 'tagging-evaluation',
 	        title: 'Results'
 	    },
@@ -59524,7 +59540,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    null,
 	                    'Rechtspraak.nl publishes an open data set of Dutch case law in ',
 	                    _abbreviations2.default.xml,
-	                    ' and HTML dating back to about 1970. Most documents contain little semantic markup, such as element tags detailing the structure of (sub-)sections in a document.'
+	                    ' and HTML dating back to about ',
+	                    _react2.default.createElement(
+	                        'span',
+	                        { dateTime: '1970' },
+	                        '1970'
+	                    ),
+	                    '. Most documents contain little semantic markup, such as element tags detailing the structure of (sub-)sections in a document.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -59543,7 +59565,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        null,
 	                        'section'
 	                    ),
-	                    ' tag, implying that a large number of documents are barely marked up. These documents are mostly made up of documents from before 2013. Older case law documents still produce legal knowledge, so it is desirable to have these older documents in good shape as well.'
+	                    ' tag, implying that a large number of documents are barely marked up. These documents are mostly made up of documents from before ',
+	                    _react2.default.createElement(
+	                        'span',
+	                        { dateTime: '2013' },
+	                        '2013'
+	                    ),
+	                    '. Older case law documents still produce legal knowledge, so it is desirable to have these older documents in good shape as well.'
 	                ),
 	                _react2.default.createElement(_MarkupStatsFigure2.default, null)
 	            );
@@ -60468,7 +60496,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'Using this trick, we reduce the computational complexity of finding the Viterbi path to ',
 	                    _react2.default.createElement(_Math2.default, { l: 'O(M^2 T)' }),
 	                    '.'
-	                )
+	                ),
+	                _react2.default.createElement('div', { className: 'print-spacer' })
 	            );
 	        }
 	    }], [{
@@ -64160,9 +64189,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	Chapter.propTypes = {
 	    title: _react2.default.PropTypes.string.isRequired,
-	    sections: _react2.default.PropTypes.arrayOf(_react2.default.PropTypes.shape({
-	        component: _react2.default.PropTypes.func.isRequired
-	    })).isRequired
+	    sections: _react2.default.PropTypes.arrayOf(_react2.default.PropTypes.shape({})).isRequired
 	};
 
 	module.exports = Chapter;

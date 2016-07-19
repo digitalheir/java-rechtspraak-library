@@ -860,6 +860,16 @@ hr {
     height: 1px;
     margin: 0 0 20px;
 }
+.print-spacer {
+    display: none;
+}
+@media print {
+    .print-spacer {
+        display: block;
+        height: 5em;
+        width: 100%;
+    }
+}
 @media print, screen and (max-width: 960px) {
     div.wrapper {
         width: auto;
@@ -975,7 +985,7 @@ abbr[title] {
 }
 @media print {
     nav.toc {
-        font-size: 11pt;
+        font-size: 12pt;
     }
     strike {
         display: none;
