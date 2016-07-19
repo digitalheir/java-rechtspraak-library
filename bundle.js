@@ -22995,27 +22995,27 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Index2 = _interopRequireDefault(_Index);
 
-	var _Introduction = __webpack_require__(346);
+	var _Introduction = __webpack_require__(347);
 
 	var _Introduction2 = _interopRequireDefault(_Introduction);
 
-	var _FullThesis = __webpack_require__(348);
+	var _FullThesis = __webpack_require__(349);
 
 	var _FullThesis2 = _interopRequireDefault(_FullThesis);
 
-	var _Tagging = __webpack_require__(349);
+	var _Tagging = __webpack_require__(350);
 
 	var _Tagging2 = _interopRequireDefault(_Tagging);
 
-	var _InferringDocumentStructure = __webpack_require__(350);
+	var _InferringDocumentStructure = __webpack_require__(351);
 
 	var _InferringDocumentStructure2 = _interopRequireDefault(_InferringDocumentStructure);
 
-	var _Dissemination = __webpack_require__(351);
+	var _Dissemination = __webpack_require__(352);
 
 	var _Dissemination2 = _interopRequireDefault(_Dissemination);
 
-	var _ImportingAndTokenizing = __webpack_require__(352);
+	var _ImportingAndTokenizing = __webpack_require__(353);
 
 	var _ImportingAndTokenizing2 = _interopRequireDefault(_ImportingAndTokenizing);
 
@@ -23273,7 +23273,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
 
 	var _react = __webpack_require__(4);
@@ -23283,71 +23283,111 @@ return /******/ (function(modules) { // webpackBootstrap
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = {
-	  crfs: _react2.default.createElement(
-	    "abbr",
-	    { title: "Conditional Random Fields" },
-	    "CRFs"
-	  ),
-	  crf: _react2.default.createElement(
-	    "abbr",
-	    { title: "Conditional Random Field" },
-	    "CRF"
-	  ),
-	  lccrfs: _react2.default.createElement(
-	    "abbr",
-	    { title: "Linear-Chain Conditional Random Fields" },
-	    "LC-CRFs"
-	  ),
-	  lccrf: _react2.default.createElement(
-	    "abbr",
-	    { title: "Linear-Chain Conditional Random Field" },
-	    "LC-CRF"
-	  ),
-	  hmm: _react2.default.createElement(
-	    "abbr",
-	    { title: "Hidden Markov Model" },
-	    "HMM"
-	  ),
-	  hmms: _react2.default.createElement(
-	    "abbr",
-	    { title: "Hidden Markov Models" },
-	    "HMMs"
-	  ),
-	  dna: _react2.default.createElement(
-	    "abbr",
-	    { title: "Deoxyribonucleic acid" },
-	    "DNA"
-	  ),
-	  rna: _react2.default.createElement(
-	    "abbr",
-	    { title: "Ribonucleic acid" },
-	    "RNA"
-	  ),
-	  html: _react2.default.createElement(
-	    "abbr",
-	    { title: "Hypertext Markup Language" },
-	    "HTML"
-	  ),
-	  xml: _react2.default.createElement(
-	    "abbr",
-	    { title: "Extensible Markup Language" },
-	    "XML"
-	  ),
-	  json: _react2.default.createElement(
-	    "abbr",
-	    { title: "JavaScript Object Notation" },
-	    "JSON"
-	  ),
-	  jsonld: _react2.default.createElement(
-	    "abbr",
-	    { title: "JavaScript Object Notation for Linked Data" },
-	    "JSON-LD"
-	  ),
-	  nlp: _react2.default.createElement(
-	    "abbr",
-	    { title: "Natural Language Processing" },
-	    "NLP"
-	  )
+	    crfs: _react2.default.createElement(
+	        "abbr",
+	        { title: "Conditional Random Fields" },
+	        "CRFs"
+	    ),
+	    crf: _react2.default.createElement(
+	        "abbr",
+	        { title: "Conditional Random Field" },
+	        "CRF"
+	    ),
+	    lccrfs: _react2.default.createElement(
+	        "abbr",
+	        { title: "Linear-Chain Conditional Random Fields" },
+	        "LC-CRFs"
+	    ),
+	    lccrf: _react2.default.createElement(
+	        "abbr",
+	        { title: "Linear-Chain Conditional Random Field" },
+	        "LC-CRF"
+	    ),
+	    hmm: _react2.default.createElement(
+	        "abbr",
+	        { title: "Hidden Markov Model" },
+	        "HMM"
+	    ),
+	    hmms: _react2.default.createElement(
+	        "abbr",
+	        { title: "Hidden Markov Models" },
+	        "HMMs"
+	    ),
+	    dna: _react2.default.createElement(
+	        "abbr",
+	        { title: "Deoxyribonucleic acid" },
+	        "DNA"
+	    ),
+	    rna: _react2.default.createElement(
+	        "abbr",
+	        { title: "Ribonucleic acid" },
+	        "RNA"
+	    ),
+	    html: _react2.default.createElement(
+	        "abbr",
+	        { title: "Hypertext Markup Language" },
+	        "HTML"
+	    ),
+	    xml: _react2.default.createElement(
+	        "abbr",
+	        { title: "Extensible Markup Language" },
+	        "XML"
+	    ),
+	    json: _react2.default.createElement(
+	        "abbr",
+	        { title: "JavaScript Object Notation" },
+	        "JSON"
+	    ),
+	    jsonld: _react2.default.createElement(
+	        "abbr",
+	        { title: "JavaScript Object Notation for Linked Data" },
+	        "JSON-LD"
+	    ),
+	    nlp: _react2.default.createElement(
+	        "abbr",
+	        { title: "Natural Language Processing" },
+	        "NLP"
+	    ),
+	    lmbfgs: _react2.default.createElement(
+	        "abbr",
+	        { title: "Limited-memory Broyden–Fletcher–Goldfarb–Shannon" },
+	        "LM-BFGS"
+	    ),
+	    cfgs: _react2.default.createElement(
+	        "abbr",
+	        { title: "Context Free Grammars" },
+	        "CFGs"
+	    ),
+	    cfg: _react2.default.createElement(
+	        "abbr",
+	        { title: "Context Free Grammar" },
+	        "CFG"
+	    ),
+	    pcfg: _react2.default.createElement(
+	        "abbr",
+	        { title: "Probabilistic Context Free Grammar" },
+	        "PCFG"
+	    ),
+	    pcfgs: _react2.default.createElement(
+	        "abbr",
+	        { title: "Probabilistic Context Free Grammars" },
+	        "PCFGs"
+	    ),
+	    cyk: _react2.default.createElement(
+	        "abbr",
+	        { title: "Cocke–Younger–Kasami" },
+	        "CYK"
+	    ),
+	    cnf: _react2.default.createElement(
+	        "abbr",
+	        { title: "Chomsky Normal Form" },
+	        "CNF"
+	    ),
+	    twonf: _react2.default.createElement(
+	        "abbr",
+	        { title: "Binary Normal Form" },
+	        "2NF"
+	    )
 	}; //noinspection JSUnresolvedVariable
 
 /***/ },
@@ -25292,7 +25332,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    lange2009cnf: {
 	        id: 'lange2009cnf',
 	        type: 'article',
-	        title: 'To CNF or not to CNF? An efficient yet presentable version of the CYK algorithm',
+	        title: 'To CNF or not to CNF? An efficient yet presentable version of the {abbrs.cyk} algorithm',
 	        author: {
 	            abbr: "Lange and Leiß",
 	            full: "Lange, Martin and Leiß, Hans"
@@ -25834,7 +25874,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    null,
 	                    'In this thesis, we explore the problem of automatically assigning a section structure to the texts of Dutch court judgments. To this end, we develop a database that mirrors the ',
 	                    _abbreviations2.default.xml,
-	                    ' data offering of Rechtspraak.nl. We experiment with Linear-Chain Conditional Random Fields to label text elements with their role in the document (text, title or numbering). Given a list of labels, we experiment with stochastic context free grammars to generate a parse tree to represent the section hierarchy of a document.'
+	                    ' data offering of Rechtspraak.nl. We experiment with Linear-Chain Conditional Random Fields to label text elements with their role in the document (text, title or numbering). Given a list of labels, we experiment with probabilistic context free grammars to generate a parse tree to represent the section hierarchy of a document.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -26020,13 +26060,14 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var chapters = {
 	    introduction: {
-	        page: 'X',
+	        page: '4',
 	        id: "chapter-introduction",
 	        title: "Introduction",
 	        route: '/introduction/'
 	    },
+
 	    importing: {
-	        page: 'X',
+	        page: '6',
 	        id: "chapter-importing-and-tokenizing",
 	        title: "Importing & Tokenizing Data",
 	        route: '/importing-and-tokenizing/'
@@ -26038,19 +26079,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	        route: '/rechtspraak-nl/'
 	    },
 	    tagging: {
-	        page: 'X',
+	        page: '13',
 	        id: "tagging",
 	        title: "Tagging Elements",
 	        route: '/tagging/'
 	    },
 	    documentStructure: {
-	        page: 'X',
+	        page: 22,
 	        id: "parsing",
 	        title: "Inferring a Section Hierarchy",
 	        route: '/document-structure/'
 	    },
 	    conclusion: {
-	        page: 'X',
+	        page: 27,
 	        id: "conclusion",
 	        title: "Conclusion",
 	        route: '/conclusion/'
@@ -26267,7 +26308,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _CYK2 = _interopRequireDefault(_CYK);
 
-	var _sections21 = __webpack_require__(345);
+	var _sections21 = __webpack_require__(346);
 
 	var _sections22 = _interopRequireDefault(_sections21);
 
@@ -26701,7 +26742,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                ' (',
 	                _react2.default.createElement(
 	                    'time',
-	                    { datetime: reference.year.toString(), 'class': 'ref-year' },
+	                    { dateTime: reference.year.toString(), className: 'ref-year' },
 	                    reference.year.toString()
 	                ),
 	                strPage.toString(),
@@ -26820,75 +26861,46 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: true
 	});
 
-	var _figs;
-
 	var _data = __webpack_require__(228);
 
-	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+	var figs = {
 
-	var figs = (_figs = {
-	    parseFig: {
-	        id: 'fig-parsing-triangle',
-	        num: 9
-	    },
 	    markupStats: {
 	        id: 'markup-stats',
 	        num: 1,
 	        url: _data.url
 	    },
 
-	    titleTf: {
-	        id: "fig-title-tf",
-	        num: 3
-	    },
-	    taggingResults: {
-	        id: "fig-results",
-	        num: 7
-	    },
-	    confusionMatrix: {
-	        id: "fig-confusion-matrix",
-	        num: 8
-	    },
 	    figTitleWordCount: {
 	        id: "fig-title-word-count",
 	        num: 2
+	    },
+	    figTitleNumbering: {
+	        id: "fig-title-numbering",
+	        num: 2
+	    },
+	    titleTf: {
+	        id: "fig-title-tf",
+	        num: 3
 	    },
 	    titleRelativeWordCount: {
 	        id: "fig-title-relative-word-count",
 	        num: 3
 	    },
 
+	    figTitleTreemap: {
+	        id: "fig-title-patterns",
+	        num: 3
+	    },
 	    tfidf: {
 	        id: "fig-title-tf-idf",
 	        num: 4
 	    },
 
-	    figTitleNumbering: {
-	        id: "fig-title-numbering",
-	        num: 2
-	    },
-	    figTitleTreemap: {
-	        id: "fig-title-patterns",
-	        num: 3
-	    },
 	    sectionsTfidf: {
 	        id: "fig-tfidf-sections",
 	        num: 5
 	    },
-
-	    hmm: function () {
-	        var id = "fig-hmm";
-	        var src = "/img/hmm.svg"; // TODO relativeurl
-	        var alt = "Graphical representation of a Hidden Markov Model";
-	        var num = 1;
-	        return {
-	            id: id,
-	            src: src,
-	            alt: alt,
-	            num: num
-	        };
-	    }(),
-
 	    graphicalModels: function () {
 	        var id = "fig-models-relationships";
 	        var src = "/img/graphical-models.svg"; // TODO relativeurl
@@ -26900,29 +26912,48 @@ return /******/ (function(modules) { // webpackBootstrap
 	            alt: alt,
 	            num: num
 	        };
+	    }(),
+
+	    factorGraph: function () {
+	        var id = "fig-factor-graph";
+	        var src = "/img/factor-graph.svg"; //// TODO relativeurl
+	        var alt = "Illustration of a factor graph. The set V represents all variable nodes; the set F represents all function nodes.";
+	        var num = 7;
+
+	        return {
+	            id: id,
+	            src: src,
+	            alt: alt,
+	            num: num
+	        };
+	    }(),
+
+	    taggingResults: {
+	        id: "fig-results",
+	        num: 8
+	    },
+	    confusionMatrix: {
+	        id: "fig-confusion-matrix",
+	        num: 9
+	    },
+	    parseFig: {
+	        id: 'fig-parsing-triangle',
+	        num: 10
+	    },
+	    hmm: function () {
+	        var id = "fig-hmm";
+	        var src = "/img/hmm.svg"; // TODO relativeurl
+	        var alt = "Graphical representation of a Hidden Markov Model";
+	        var num = 1;
+	        return {
+	            id: id,
+	            src: src,
+	            alt: alt,
+	            num: num
+	        };
 	    }()
 
-	}, _defineProperty(_figs, 'tfidf', function () {
-	    var id = "tfidf";
-	    var num = 4;
-
-	    return {
-	        id: id,
-	        num: num
-	    };
-	}()), _defineProperty(_figs, 'factorGraph', function () {
-	    var id = "fig-factor-graph";
-	    var src = "/img/factor-graph.svg"; //// TODO relativeurl
-	    var alt = "Illustration of a factor graph. The set V represents all variable nodes; the set F represents all function nodes.";
-	    var num = 7;
-
-	    return {
-	        id: id,
-	        src: src,
-	        alt: alt,
-	        num: num
-	    };
-	}()), _figs);
+	};
 
 	exports.default = figs;
 
@@ -45245,22 +45276,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	var importingSections = {
 	    rechtspraakNl: {
-	        page: 'x',
+	        page: '6',
 	        id: 'rechtspraak-nl',
 	        title: "Rechtspraak.nl"
 	    },
 	    rechtspraakNlMarkup: {
-	        page: 'x',
+	        page: '6',
 	        id: 'rechtspraak-nl-data-set',
 	        title: "Rechtspraak.nl Data Set"
 	    },
 	    importing: {
-	        page: 'x',
+	        page: '11',
 	        id: 'importing',
 	        title: 'Importing'
 	    },
 	    tokenizing: {
-	        page: 'x',
+	        page: '11',
 	        id: 'tokenizing',
 	        title: 'Tokenizing'
 	    }
@@ -45479,7 +45510,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            ' elements contain interesting metadata such as names and court location. The information is generally not semantically marked up, but is reasonably easy to parse thanks to style consistencies (e.g., most units of metadata are on a separate line).'
 	                        ),
 	                        _react2.default.createElement(
-	                            'strike',
+	                            'div',
 	                            { style: { display: 'none' } },
 	                            _react2.default.createElement(
 	                                'p',
@@ -55693,7 +55724,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	var rsSections = {
 	    xmlSchema: {
-	        page: 'x',
+	        page: '11',
 	        id: 'xml-schema',
 	        title: "XML Schema"
 	    }
@@ -55758,7 +55789,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                'Regarding importing, we have created a separate library for mirroring the Rechtspraak.nl corpus from the web service to a CouchDB database. We mirror the data set in order to facilitate the collection of statistics of case law documents used in this thesis through MapReduce computations. Source code for this project is available ',
 	                _react2.default.createElement(
 	                    'a',
-	                    {
+	                    { className: 'print-url',
 	                        href: 'https://github.com/digitalheir/dutch-case-law-to-couchdb' },
 	                    'on GitHub'
 	                ),
@@ -56001,32 +56032,33 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'The source code for this project is published in two separate Java libraries:',
+	                    'The source code for this project is published in two separate Java libraries:'
+	                ),
+	                _react2.default.createElement(
+	                    'ul',
+	                    null,
 	                    _react2.default.createElement(
-	                        'ul',
+	                        'li',
 	                        null,
+	                        'One library for importing and enriching documents from Rechtspraak.nl (',
 	                        _react2.default.createElement(
-	                            'li',
-	                            null,
-	                            'One library for importing and enriching documents from Rechtspraak.nl (',
-	                            _react2.default.createElement(
-	                                'a',
-	                                { href: 'https://github.com/digitalheir/java-rechtspraak-library' },
-	                                'on GitHub'
-	                            ),
-	                            ')'
+	                            'a',
+	                            { className: 'print-url', href: 'https://github.com/digitalheir/java-rechtspraak-library' },
+	                            'on GitHub'
 	                        ),
+	                        ')'
+	                    ),
+	                    _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        'One library for mirroring the Rechtspraak.nl corpus to a CouchDB database (',
 	                        _react2.default.createElement(
-	                            'li',
-	                            null,
-	                            'One library for mirroring the Rechtspraak.nl corpus to a CouchDB database (',
-	                            _react2.default.createElement(
-	                                'a',
-	                                { href: 'https://github.com/digitalheir/dutch-case-law-to-couchdb' },
-	                                'on GitHub'
-	                            ),
-	                            ')'
-	                        )
+	                            'a',
+	                            { className: 'print-url',
+	                                href: 'https://github.com/digitalheir/dutch-case-law-to-couchdb' },
+	                            'on GitHub'
+	                        ),
+	                        ')'
 	                    )
 	                )
 	            );
@@ -56256,7 +56288,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ' documents to and from Java objects. Source code and schema are available ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { href: 'https://github.com/digitalheir/java-rechtspraak-library' },
+	                        { className: 'print-url', href: 'https://github.com/digitalheir/java-rechtspraak-library' },
 	                        'on Github.'
 	                    )
 	                )
@@ -56280,16 +56312,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	var introIntroSections = {
 	    motivation: {
-	        page: 'x',
+	        page: '4',
 	        id: 'motivation',
 	        title: "Motivation"
 	    },
 	    problemDescription: {
-	        page: 'x',
+	        page: '4',
 	        id: 'problem-description',
 	        title: "Problem Description"
 	    }, relatedWork: {
-	        page: 'x',
+	        page: '5',
 	        id: 'related-work',
 	        title: 'Related Work'
 	    }
@@ -56313,18 +56345,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	var taggingSections = {
 	    taggingIntroduction: {
+	        page: 13,
 	        id: 'tagging-introduction',
 	        title: 'Introduction'
 	    },
 	    taggingMethods: {
+	        page: 13,
 	        id: 'tagging-methods',
 	        title: 'Methods'
 	    },
 	    taggingResults: {
+	        page: 19,
 	        id: 'tagging-evaluation',
 	        title: 'Results'
 	    },
 	    taggingDiscussion: {
+	        page: 21,
 	        id: 'tagging-discussion',
 	        title: 'Discussion'
 	    }
@@ -56344,14 +56380,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	var disseminationSections = {
 	    parseval: {
+	        page: 25,
 	        id: 'parseval',
 	        title: 'PARSEVAL'
 	    },
 	    results: {
+	        page: 25,
 	        id: 'parsing-results',
 	        title: 'Results'
 	    },
 	    futureWork: {
+	        page: 25,
 	        id: 'future-work',
 	        title: 'Future Work'
 	    }
@@ -58789,10 +58828,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	var disseminationSections = {
 	    fScores: {
+	        page: 20,
 	        id: 'f-scores',
 	        title: 'F-scores'
 	    },
 	    results: {
+	        page: 20,
 	        id: 'tagging-results',
 	        title: 'Results'
 	    }
@@ -58993,6 +59034,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Math2 = _interopRequireDefault(_Math);
 
+	var _abbreviations = __webpack_require__(207);
+
+	var _abbreviations2 = _interopRequireDefault(_abbreviations);
+
 	var _FigureResults = __webpack_require__(307);
 
 	var _FigureResults2 = _interopRequireDefault(_FigureResults);
@@ -59033,28 +59078,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'For all tokens except for section titles, all models yield F-scores between 0.98 and 1.0. (See confusion matrix in ',
+	                    'For all tokens except for section titles, all models yield F-scores between 0.98 and 1.0. (See the confusion matrix in ',
 	                    _react2.default.createElement(_FigRef2.default, { fig: _figs2.default.confusionMatrix }),
 	                    '. Section titles are harder to label, so in ',
 	                    _react2.default.createElement(_FigRef2.default, { fig: _figs2.default.taggingResults }),
 	                    ', we consider the F-score for these. We can see that the ',
-	                    _react2.default.createElement(
-	                        'abbr',
-	                        { title: 'Conditional Random Fields' },
-	                        'CRFs'
-	                    ),
+	                    _abbreviations2.default.crfs,
 	                    ' out-perform the baseline task mostly by increasing the recall, although the ',
-	                    _react2.default.createElement(
-	                        'abbr',
-	                        { title: 'Conditional Random Fields' },
-	                        'CRFs'
-	                    ),
+	                    _abbreviations2.default.crfs,
 	                    ' have slightly worse precision (0.91 for ',
-	                    _react2.default.createElement(
-	                        'abbr',
-	                        { title: 'Conditional Random Fields' },
-	                        'CRFs'
-	                    ),
+	                    _abbreviations2.default.crfs,
 	                    ' contra 0.96 for hand-written).'
 	                ),
 	                _react2.default.createElement(_FigureResults2.default, { url: relativeToRoot + "js/tagger-results.json" }),
@@ -59094,12 +59127,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	    //     component: Methods
 	    // },
 	    crf: {
-	        page: 'x',
+	        page: '14',
 	        id: 'crf',
 	        title: "Conditional Random Fields"
 	    },
 	    featureSelection: {
-	        page: 'x',
+	        page: '13',
 	        id: 'features',
 	        title: 'Features'
 	    },
@@ -59115,7 +59148,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	};
 
-	taggingSections.inOrder = [taggingSections.featureSelection, taggingSections.crf, taggingSections.deterministic, taggingSections.manual];
+	taggingSections.inOrder = [taggingSections.featureSelection, taggingSections.crf];
 	exports.default = taggingSections;
 
 /***/ },
@@ -59129,18 +59162,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	var inferringSections = {
 	    intro: {
+	        page: 22,
 	        id: 'parse-tree-introduction',
 	        title: "Introduction"
 	    },
 	    methods: {
+	        page: 22,
 	        id: 'parse-tree-methods',
 	        title: "Methods"
 	    },
 	    evaluation: {
+	        page: 25,
 	        id: 'parse-tree-evaluation',
 	        title: 'Results'
 	    },
 	    discussion: {
+	        page: 26,
 	        id: 'parse-discussion',
 	        title: 'Discussion'
 	    }
@@ -59160,10 +59197,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	var methodsSections = {
 	    scfg: {
-	        id: 'scfg',
-	        title: 'Stochastic Context Free Grammars'
+	        page: 22,
+	        id: 'pcfg',
+	        title: 'Probabilistic Context Free Grammars'
 	    },
 	    cyk: {
+	        page: 23,
 	        id: 'cyk',
 	        title: 'CYK Algorithm'
 	    }
@@ -59183,17 +59222,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	var crfSections = {
 	    undirectedGraphicalModels: {
-	        page: 'x',
+	        page: '15',
 	        id: 'undirected-graphical-models',
 	        title: 'Undirected Graphical Models'
 	    },
 	    hmm: {
-	        page: 'x',
+	        page: 15,
 	        id: 'hmm',
 	        title: 'Directed Graphical Models'
 	    },
 	    linearChain: {
-	        page: 'x',
+	        page: 17,
 	        id: 'linear-chain-crf',
 	        title: 'Linear Chain Conditional Random Fields'
 	    },
@@ -59203,12 +59242,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	        title: 'Performance'
 	    },
 	    inference: {
-	        page: 'x',
+	        page: 19,
 	        id: 'crf-inference',
 	        title: 'Inference'
 	    },
 	    parameterEstimation: {
-	        page: 'x',
+	        page: 18,
 	        id: 'crf-parameter-estimation',
 	        title: 'Parameter Estimation'
 	    }
@@ -59597,7 +59636,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'Undirected Graphical Models are similar to directed graphical models, except we imagine the underlying to be an undirected graph. This means that Undirected Graphical Models factorize differently:',
+	                    'Undirected Graphical Models are similar to directed graphical models, except we imagine the underlying graph to be an undirected graph. This means that Undirected Graphical Models factorize slightly different:',
 	                    _react2.default.createElement(_Math2.default, {
 	                        l: 'p( \\mathbf x, \\mathbf y)=\\frac{1}{Z}\\prod _A \\Phi_A( \\mathbf x_A,\\mathbf y_A)',
 	                        displayMode: true }),
@@ -59609,23 +59648,42 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'Where ',
-	                    _react2.default.createElement(_Math2.default, {
-	                        l: '\\mathbf x' }),
-	                    ' and ',
-	                    _react2.default.createElement(_Math2.default, {
-	                        l: '\\mathbf y' }),
-	                    ' denote an assignment to ',
-	                    _react2.default.createElement(_Math2.default, { l: 'X' }),
-	                    ' and ',
-	                    _react2.default.createElement(_Math2.default, { l: 'Y' }),
-	                    ', respectively, and we consider ',
-	                    _react2.default.createElement(_Math2.default, { l: 'V = X\\cup Y' }),
-	                    ' of a set of input variables ',
-	                    _react2.default.createElement(_Math2.default, { l: 'X' }),
-	                    ' (for example, word features) and a set of output variables ',
-	                    _react2.default.createElement(_Math2.default, { l: 'Y' }),
-	                    ' (for example, part-of-speech tags).'
+	                    'and'
+	                ),
+	                _react2.default.createElement(
+	                    'ul',
+	                    null,
+	                    _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(_Math2.default, {
+	                            l: 'A' }),
+	                        ' is the set of all cliques in the underlying graph'
+	                    ),
+	                    _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf x' }),
+	                        ' and ',
+	                        _react2.default.createElement(_Math2.default, {
+	                            l: '\\mathbf y' }),
+	                        ' denote an assignment to ',
+	                        _react2.default.createElement(_Math2.default, { l: 'X' }),
+	                        ' and ',
+	                        _react2.default.createElement(_Math2.default, { l: 'Y' }),
+	                        ', respectively'
+	                    ),
+	                    _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        'and we consider ',
+	                        _react2.default.createElement(_Math2.default, { l: 'V = X\\cup Y' }),
+	                        ' of a set of input variables ',
+	                        _react2.default.createElement(_Math2.default, { l: 'X' }),
+	                        ' (for example, word features) and a set of output variables ',
+	                        _react2.default.createElement(_Math2.default, { l: 'Y' }),
+	                        ' (for example, part-of-speech tags).'
+	                    )
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -59760,9 +59818,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        l: 'p( \\mathbf y|\\mathbf x)' }),
 	                    ' unburdens us of having to model the potentially very complicated inter-dependencies of ',
 	                    _react2.default.createElement(_Math2.default, { l: 'p(\\mathbf x)' }),
-	                    '. In classification tasks, this means that we are better able to use observations, and so discriminative models tend to out-perform generative models in practice. For a thorough explanation of the principle of generative-discriminative pairs, see ',
-	                    _references2.default.cite(_bib2.default.jordan2002discriminative),
-	                    '.'
+	                    '. In classification tasks, this means that we are better able to use observations, and so discriminative models tend to out-perform generative models in practice.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -59771,6 +59827,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _abbreviations2.default.hmms,
 	                    ') and Linear Chain ',
 	                    _abbreviations2.default.crfs,
+	                    ', and the latter is introduced in the next section. For a thorough explanation of the principle of generative-discriminative pairs, see ',
+	                    _references2.default.cite(_bib2.default.jordan2002discriminative),
 	                    '.'
 	                )
 	            );
@@ -60058,12 +60116,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _abbreviations2.default.crfs,
 	                    ' (',
 	                    _abbreviations2.default.lccrfs,
-	                    ') look much like Hidden Markov Models: as we see in ',
-	                    _react2.default.createElement(_FigRef2.default, {
-	                        fig: _figs2.default.graphicalModels }),
-	                    ', ',
+	                    ') look much like Hidden Markov Models: ',
 	                    _abbreviations2.default.lccrfs,
-	                    ' also model a sequence of observations along a sequence of labels. The difference between ',
+	                    ' also model a sequence of observations along a sequence of labels. As explained earlier, the difference between ',
 	                    _abbreviations2.default.hmms,
 	                    ' and Linear Chain ',
 	                    _abbreviations2.default.crfs,
@@ -60154,7 +60209,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        'li',
 	                        null,
 	                        _react2.default.createElement(_Math2.default, { l: '\\Lambda=\\{\\lambda_k\\} \\in \\mathbb{R}^K' }),
-	                        ' be a vector of weight parameters that give a measure of how important a given feature function is. These parameters are found by training the ',
+	                        ' be a vector of weight parameters that give a measure of how important a given feature function is. The values of these parameters are found by training the ',
 	                        _abbreviations2.default.crf,
 	                        '.'
 	                    )
@@ -60282,6 +60337,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Math2 = _interopRequireDefault(_Math);
 
+	var _abbreviations = __webpack_require__(207);
+
+	var _abbreviations2 = _interopRequireDefault(_abbreviations);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -60314,21 +60373,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'p',
 	                    null,
 	                    'Given a trained ',
-	                    _react2.default.createElement(
-	                        'abbr',
-	                        { title: 'Conditional Random Field' },
-	                        'CRF'
-	                    ),
+	                    _abbreviations2.default.crf,
 	                    ' and an observation vector ',
 	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf x' }),
 	                    ', we wish to compute the most likely label sequence ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf y' }),
+	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf y^*' }),
 	                    ', i.e. ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf y' }),
-	                    ' such that ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf y^*=\\text{argmax}_{\\mathbf y}p(\\mathbf y|\\mathbf x)'
+	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf y^* = \\text{argmax}_{\\mathbf y}p(\\mathbf y|\\mathbf x)'
 	                    }),
-	                    '. This path is known as the Viterbi sequence. Thanks to the structure of linear-chain ',
+	                    '. This label sequence is known as the Viterbi sequence. Thanks to the structure of linear-chain ',
 	                    _react2.default.createElement(
 	                        'abbr',
 	                        { title: 'Conditional Random Fields' },
@@ -60346,11 +60399,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'p',
 	                    null,
 	                    'Substituting the canonical ',
-	                    _react2.default.createElement(
-	                        'abbr',
-	                        { title: 'Conditional Random Field' },
-	                        'CRF'
-	                    ),
+	                    _abbreviations2.default.crf,
 	                    ' representation of ',
 	                    _react2.default.createElement(_Math2.default, { l: 'p(\\mathbf y|\\mathbf x)' }),
 	                    ', we get:'
@@ -60474,6 +60523,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Math2 = _interopRequireDefault(_Math);
 
+	var _abbreviations = __webpack_require__(207);
+
+	var _abbreviations2 = _interopRequireDefault(_abbreviations);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -60509,11 +60562,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'As we saw in the previous section, we obtain parameters ',
 	                    _react2.default.createElement(_Math2.default, { l: '\\Lambda' }),
 	                    ' by training our ',
-	                    _react2.default.createElement(
-	                        'abbr',
-	                        { title: 'Conditional Random Field' },
-	                        'CRF'
-	                    ),
+	                    _abbreviations2.default.crf,
 	                    ' on a pre-labeled training set of pairs ',
 	                    _react2.default.createElement(_Math2.default, { l: '\\mathcal D=\\{\\mathbf{x}^{i},\\mathbf{y}^{i}\\}_{i=1}^N'
 	                    }),
@@ -60544,11 +60593,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'Where ',
 	                    _react2.default.createElement(_Math2.default, { l: 'p' }),
 	                    ' is the ',
-	                    _react2.default.createElement(
-	                        'abbr',
-	                        { title: 'Conditional Random Field' },
-	                        'CRF'
-	                    ),
+	                    _abbreviations2.default.crf,
 	                    ' distribution as we saw in the previous section:'
 	                ),
 	                _react2.default.createElement(_Math2.default, { display: 'true',
@@ -60583,8 +60628,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ' by iteratively moving along the gradient toward the global maximum. We find the direction to move in by taking the derivative of ',
 	                    _react2.default.createElement(_Math2.default, { l: '\\ell' }),
 	                    ' with respect to ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\Lambda' }),
-	                    ':'
+	                    _react2.default.createElement(
+	                        'span',
+	                        { style: { display: 'inline-block' } },
+	                        _react2.default.createElement(_Math2.default, { l: '\\Lambda' }),
+	                        ':'
+	                    )
 	                ),
 	                _react2.default.createElement(_Math2.default, { display: 'true', l: '\\frac{\\partial\\ell}{\\partial\\lambda_k} =\r \\sum_{i=1}^N\\sum_{t=1}^Tf_k(\\mathbf y_t^i,\\mathbf y_{t-1}^i,\\mathbf x_t^i)\r -\\sum_{i=1}^N\\sum_{t=1}^T\\sum_{\\mathbf y,\\mathbf y\'}f_k(y,y,\\mathbf x_t^i)\r p(y,y\'|\\mathbf x^i)-\\sum_{k=1}^K\\frac{\\lambda_k}{\\sigma^2}\r ' }),
 	                _react2.default.createElement(
@@ -60613,7 +60662,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(_Math2.default, { l: 'p(\\mathbf{y}^{i}|\\mathbf{x}^{i})' }),
 	                    ' is concave, the function ',
 	                    _react2.default.createElement(_Math2.default, { l: '\\ell(\\Lambda)' }),
-	                    ' is also concave. This ensures that any local optimum will be a global optimum. The regularization term also ensures any global optimum is a unique optimum, in addition to avoid overfitting.'
+	                    ' is also concave. This ensures that any local optimum will be a global optimum. The regularization term ensures that any global optimum is a unique optimum, in addition to avoiding overfitting.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -60623,9 +60672,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        'a',
 	                        {
 	                            href: 'https://en.wikipedia.org/wiki/Limited-memory_BFGS' },
-	                        'Limited-memory Broyden–Fletcher–Goldfarb–Shanno algorithm (LM-BVFGS)'
+	                        'Limited-memory Broyden–Fletcher–Goldfarb–Shanno algorithm (',
+	                        _abbreviations2.default.lmbvfgs,
+	                        ')'
 	                    ),
-	                    ', which approximates Newton\'s Method. This algorithm is optimized for the memory-contrained conditions in real-world computers, and also converges much faster than is naive implementation, because it works on the double derivative of ',
+	                    ', which approximates Newton\'s Method. This algorithm is optimized for the memory-contrained conditions in real-world computers, and also converges much faster than a naive implementation because it works on the double derivative of ',
 	                    _react2.default.createElement(_Math2.default, { l: '\\ell' }),
 	                    '.'
 	                ),
@@ -60642,7 +60693,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(_Math2.default, { l: 'N' }),
 	                    ' in the number of trianing instances, and ',
 	                    _react2.default.createElement(_Math2.default, { l: 'G' }),
-	                    ' is the number of gradient computations. The number of gradient computations can be set to a fixed number, or is otherwise unknown (in which case the algorithm trains to convergence).'
+	                    ' is the number of gradient computations. The number of gradient computations can be set to a fixed number, or is otherwise unknown (in which case the algorithm trains to convergence, which is guaranteed because of the concavity of ',
+	                    _react2.default.createElement(_Math2.default, { l: '\\ell' }),
+	                    ').'
 	                )
 	            );
 	        }
@@ -60818,25 +60871,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        { title: 'Conditional Random Fields' },
 	                        'CRFs'
 	                    ),
-	                    ', we also define a deterministic algorithm which serves as a baseline performance. The tagger uses many of the same features that the ',
+	                    ', we also define a deterministic classifier which serves as a baseline performance. The tagger uses many of the same features that we use for training the ',
 	                    _react2.default.createElement(
 	                        'abbr',
 	                        { title: 'Conditional Random Fields' },
 	                        'CRFs'
 	                    ),
-	                    ' use to determine the labels for given tokens. (e.g. \'if it looks like a known title, assign it to ',
+	                    '. These features are used in rules such as \'if it looks like a known title, assign it to ',
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
 	                        'title'
 	                    ),
-	                    '\'; \'if it looks like a number and is congruent with previous numbers, assign it to ',
+	                    '\' and \'if it looks like a number and is congruent with previous numbers, assign it to ',
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
 	                        'nr'
 	                    ),
-	                    '\'.)'
+	                    '\'.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -60932,6 +60985,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Math2 = _interopRequireDefault(_Math);
 
+	var _abbreviations = __webpack_require__(207);
+
+	var _abbreviations2 = _interopRequireDefault(_abbreviations);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -60977,15 +61034,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'Owing to the brittleness of the current grammar, we might benefit from implementing a Conditional Probabilistic Context Free Grammar (Conditional CFG), as introduced in ',
+	                    'Owing to the brittleness of the current grammar, we might benefit from implementing a Conditional Probabilistic Context Free Grammar (Conditional ',
+	                    _abbreviations2.default.pcfg,
+	                    '), as introduced in ',
 	                    _references2.default.cite(_bib2.default.sutton2004conditional),
-	                    '. Conditional CFGs are similar to Conditional ',
-	                    _react2.default.createElement(
-	                        'abbr',
-	                        { title: 'Conditional Random Field' },
-	                        'CRF'
-	                    ),
-	                    ' in that we describe a conditional model instead of a generative one (so the probability distribution ',
+	                    '. Conditional ',
+	                    _abbreviations2.default.pcfgs,
+	                    ' are similar to Conditional Random Fields in that we describe a conditional model instead of a generative one (so the probability distribution ',
 	                    _react2.default.createElement(_Math2.default, { l: 'P(\\mathbf y|\\mathbf x)' }),
 	                    ' instead of ',
 	                    _react2.default.createElement(_Math2.default, { l: 'P(\\mathbf x,\\mathbf y)' }),
@@ -60994,11 +61049,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'Another possibility is to implement a stochastic version of the Earley parsing algorithm, a more top down parser which easily allows to intervene during parsing when some unexpected input is encountered. Although Earley parsers also have a worst-case complexity of ',
+	                    'Another possibility is to implement a probabilistic version of the Earley parsing algorithm, a more top down parser which easily allows to intervene during parsing when some unexpected input is encountered. Although Earley parsers also have a worst-case complexity of ',
 	                    _react2.default.createElement(_Math2.default, { l: 'O(n^3)' }),
 	                    ', it parses left-recursive grammars in ',
 	                    _react2.default.createElement(_Math2.default, { l: 'O(n)' }),
-	                    ', and is faster for certain grammars than CYK. In our experiments, CYK starts to become noticeably slow for documents with more than 500 tokens, even after optimizing the algorithm for resource re-use and parallellizing calculation of the table cells.'
+	                    ', and is faster for certain grammars than ',
+	                    _abbreviations2.default.cyk,
+	                    '. In our experiments, ',
+	                    _abbreviations2.default.cyk,
+	                    ' starts to become noticeably slow for documents with more than 500 tokens, even after optimizing the algorithm for resource re-use and parallellizing calculation of the table cells.'
 	                )
 	            );
 	        }
@@ -61072,7 +61131,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    { title: 'Conditional Random Field' },
 	                    'CRF'
 	                ),
-	                ' is not currently tuned to target problematic cases. This is likely a fruitful venue to improve classifier performance.'
+	                ' is not currently tuned to target problematic cases, and doing so is likely a fruitful way to improve classifier performance.'
 	            );
 	        }
 	    }]);
@@ -61120,6 +61179,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _abbreviations2 = _interopRequireDefault(_abbreviations);
 
+	var _sections = __webpack_require__(316);
+
+	var _sections2 = _interopRequireDefault(_sections);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -61128,25 +61191,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } //noinspection JSUnresolvedVariable
 
-
-	var methodsSections = {
-	    featureSelection: {
-	        id: 'features',
-	        title: "Features"
-	    },
-	    crf: {
-	        id: 'crf',
-	        title: "Conditional Random Fields"
-	    },
-	    deterministic: {
-	        id: 'deterministic-tagger',
-	        title: "Deterministic tagger"
-	    }
-	};
-
-	methodsSections.inOrder = [methodsSections.featureSelection, methodsSections.crf
-	// methodsSections.deterministic
-	];
 
 	var Tagging = function (_Component) {
 	    _inherits(Tagging, _Component);
@@ -61162,7 +61206,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        value: function render() {
 	            return _react2.default.createElement(
 	                _ChapterSectionContent2.default,
-	                _extends({}, this.props, { sections: methodsSections.inOrder }),
+	                _extends({}, this.props, { sections: _sections2.default.inOrder }),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
@@ -61197,7 +61241,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }, {
 	        key: 'getSections',
 	        value: function getSections() {
-	            return methodsSections;
+	            return _sections2.default;
 	        }
 	    }]);
 
@@ -62027,6 +62071,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _abbreviations = __webpack_require__(207);
+
+	var _abbreviations2 = _interopRequireDefault(_abbreviations);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -62054,12 +62102,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'After we have labeled a sequence of text elements, we wish to infer the section hierarchy. That is: we need to invent some procedure of creating a tree structure in which these text elements are leaf nodes, and can be children of \'section\' nodes. This is very much akin to constituency parsing for natural languages, and this is why we approach the problem as parsing a terminal sequence with a Stochastic Context Free Grammar (SCFG).'
+	                    'After we have labeled a sequence of text elements, we wish to infer the section hierarchy. That is: we need to invent some procedure of creating a tree structure in which these tagged text elements are the leaf nodes, and may be children of \'section\' nodes. This problem is very much akin to constituency parsing for natural languages, and that is why we approach the problem as parsing a terminal sequence with a Probabilistic Context Free Grammar (',
+	                    _abbreviations2.default.pcfg,
+	                    ').'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'In this chapter, we introduce SCFGs and the Cocke–Younger–Kasami algorithm (CYK), a deterministic algorithm for finding the best parse tree in quadratic space and time. We conclude with an evaluation of the results.'
+	                    'In this chapter, we introduce ',
+	                    _abbreviations2.default.pcfgs,
+	                    ' and the Cocke–Younger–Kasami algorithm (',
+	                    _abbreviations2.default.cyk,
+	                    '), a deterministic algorithm for finding the best parse tree in quadratic space and time. We conclude with an evaluation of the results.'
 	                )
 	            );
 	        }
@@ -62254,6 +62308,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _ListingRef2 = _interopRequireDefault(_ListingRef);
 
+	var _abbreviations = __webpack_require__(207);
+
+	var _abbreviations2 = _interopRequireDefault(_abbreviations);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -62281,7 +62339,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'Context Free Grammars (CFGs) are grammars where each rule is of the form'
+	                    'Context Free Grammars (',
+	                    _abbreviations2.default.cfgs,
+	                    ') are grammars where each rule is of the form'
 	                ),
 	                _react2.default.createElement(_Math2.default, { l: 'A \\rightarrow \\alpha', display: 'true' }),
 	                _react2.default.createElement(
@@ -62298,16 +62358,40 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'A Probabilistic Context Free Grammar (PCFG) is then a Context Free Grammar in which each rule has a probability assigned to it, which may actually be any semiring (in our case, the real numbers between ',
-	                    _react2.default.createElement(_Math2.default, { l: '0' }),
-	                    ' and ',
-	                    _react2.default.createElement(_Math2.default, { l: '1' }),
-	                    ', with common the operations of multiplication and addition). A derivation of a sequence with a PCFG has a score attached to it, which is the product of the probabilities of all applied rule.'
+	                    'A Probabilistic Context Free Grammar (',
+	                    _abbreviations2.default.pcfg,
+	                    ') is then a Context Free Grammar in which each rule has a probability assigned to it. In general, the probability can take the form of any semiring (i.e., a set of elements with notions of addition and multiplication). A derivation of a sequence with a ',
+	                    _abbreviations2.default.pcfg,
+	                    ' has a probility score attached to it, which is the product of the probabilities of all of the applied rules.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'CFGs are said to be in Chomsky Normal Form (CNF) if all rules are of the following form:'
+	                    'In our discussions, we assume probability scores to be the real numbers between ',
+	                    _react2.default.createElement(_Math2.default, { l: '0' }),
+	                    ' and ',
+	                    _react2.default.createElement(_Math2.default, { l: '1' }),
+	                    ', with the common operations of multiplication and addition, but in implementation we use the ',
+	                    _react2.default.createElement(
+	                        'a',
+	                        { href: 'http://www.johndcook.com/blog/2014/02/26/log-semiring/' },
+	                        'Log semiring'
+	                    ),
+	                    ' to avoid ',
+	                    _react2.default.createElement(
+	                        'a',
+	                        { href: 'https://en.wikipedia.org/wiki/Arithmetic_underflow' },
+	                        'arithmetic underflow'
+	                    ),
+	                    '.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    _abbreviations2.default.cfgs,
+	                    ' are said to be in Chomsky Normal Form (',
+	                    _abbreviations2.default.cnf,
+	                    ') if all rules are of the following form:'
 	                ),
 	                _react2.default.createElement(_Math2.default, { l: 'A\\rightarrow B C', display: 'true' }),
 	                _react2.default.createElement(_Math2.default, { l: 'A\\rightarrow t', display: 'true' }),
@@ -62327,7 +62411,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'A lot of work has been done in parsing (P)CFGs in applications of natural language processing and parsing programming languages. More recently, PCFGs have been used for other applications such as modeling RNA structures as in ',
+	                    'A lot of work has been done in parsing (P)',
+	                    _abbreviations2.default.cfgs,
+	                    ' in applications of natural language processing and parsing programming languages. More recently, ',
+	                    _abbreviations2.default.pcfgs,
+	                    ' have been used for other applications such as modeling RNA structures, as in ',
 	                    _references2.default.cite(_bib2.default.sakakibara1994stochastic),
 	                    '.'
 	                ),
@@ -62339,350 +62427,364 @@ return /******/ (function(modules) { // webpackBootstrap
 	                ),
 	                _react2.default.createElement(
 	                    'figure',
-	                    null,
+	                    { id: _listings2.default.figGrammar.id },
 	                    _react2.default.createElement(
 	                        'table',
 	                        { className: 'grammar' },
 	                        _react2.default.createElement(
-	                            'tr',
+	                            'tbody',
 	                            null,
 	                            _react2.default.createElement(
-	                                'td',
+	                                'tr',
 	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '\\text{Text} \\rightarrow \\text{text}' })
+	                                _react2.default.createElement(
+	                                    'th',
+	                                    { colSpan: '2' },
+	                                    'Terminal rules'
+	                                )
 	                            ),
 	                            _react2.default.createElement(
-	                                'td',
+	                                'tr',
 	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '1.0' })
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '\\text{Text} \\rightarrow \\text{newline}' })
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '\\text{Text} \\rightarrow \\text{text}' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '1.0' })
+	                                )
 	                            ),
 	                            _react2.default.createElement(
-	                                'td',
+	                                'tr',
 	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '1.0' })
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '\\text{Numbering} \\rightarrow \\text{numbering}' })
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '\\text{Text} \\rightarrow \\text{newline}' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '1.0' })
+	                                )
 	                            ),
 	                            _react2.default.createElement(
-	                                'td',
+	                                'tr',
 	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '1.0' })
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '\\text{TitleText} \\rightarrow \\text{section-title}' })
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '\\text{Numbering} \\rightarrow \\text{numbering}' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '1.0' })
+	                                )
 	                            ),
 	                            _react2.default.createElement(
-	                                'td',
+	                                'tr',
 	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '1.0' })
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement('td', { colSpan: '2' })
-	                        ),
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement(
-	                                'th',
-	                                { colSpan: '2' },
-	                                'Non-terminal rules'
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '\\text{Document} \\rightarrow \\text{Header DocumentContent}' })
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '\\text{TitleText} \\rightarrow \\text{section-title}' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '1.0' })
+	                                )
 	                            ),
 	                            _react2.default.createElement(
-	                                'td',
+	                                'tr',
 	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '1.0' })
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '\\text{Document} \\rightarrow \\text{DocumentContent}' })
+	                                _react2.default.createElement('td', { colSpan: '2' })
 	                            ),
 	                            _react2.default.createElement(
-	                                'td',
+	                                'tr',
 	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '1.0' })
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement('td', { colSpan: '2' })
-	                        ),
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '\\text{DocumentContent} \\rightarrow \\text{Sections}' })
+	                                _react2.default.createElement(
+	                                    'th',
+	                                    { colSpan: '2' },
+	                                    'Non-terminal rules'
+	                                )
 	                            ),
 	                            _react2.default.createElement(
-	                                'td',
+	                                'tr',
 	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '1.0' })
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '\\text{DocumentContent} \\rightarrow \\text{Text Sections}' })
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '\\text{Document} \\rightarrow \\text{Header DocumentContent}' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '1.0' })
+	                                )
 	                            ),
 	                            _react2.default.createElement(
-	                                'td',
+	                                'tr',
 	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '0.8' })
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '\\text{DocumentContent} \\rightarrow \\text{Sections Text}' })
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '\\text{Document} \\rightarrow \\text{DocumentContent}' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '1.0' })
+	                                )
 	                            ),
 	                            _react2.default.createElement(
-	                                'td',
+	                                'tr',
 	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '0.8' })
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '\\text{DocumentContent} \\rightarrow \\text{Text Sections Text}' })
+	                                _react2.default.createElement('td', { colSpan: '2' })
 	                            ),
 	                            _react2.default.createElement(
-	                                'td',
+	                                'tr',
 	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '0.8' })
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement('td', { colSpan: '2' })
-	                        ),
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '\\text{Text} \\rightarrow \\text{Text Text}' })
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '\\text{DocumentContent} \\rightarrow \\text{Sections}' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '1.0' })
+	                                )
 	                            ),
 	                            _react2.default.createElement(
-	                                'td',
+	                                'tr',
 	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '1.0' })
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement('td', { colSpan: '2' })
-	                        ),
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '\\text{Sections} \\rightarrow \\text{Sections Sections}' })
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '\\text{DocumentContent} \\rightarrow \\text{Text Sections}' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '0.8' })
+	                                )
 	                            ),
 	                            _react2.default.createElement(
-	                                'td',
+	                                'tr',
 	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '0.4 + \\begin{cases}0.6&\\text{if numberings in sequence}\\\\0&\\text{otherwise}\\end{cases}' })
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '\\text{Sections} \\rightarrow \\text{Section}' })
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '\\text{DocumentContent} \\rightarrow \\text{Sections Text}' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '0.8' })
+	                                )
 	                            ),
 	                            _react2.default.createElement(
-	                                'td',
+	                                'tr',
 	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '1.0' })
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '\\text{Sections} \\rightarrow \\text{Section Text}' })
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '\\text{DocumentContent} \\rightarrow \\text{Text Sections Text}' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '0.8' })
+	                                )
 	                            ),
 	                            _react2.default.createElement(
-	                                'td',
+	                                'tr',
 	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '0.9' })
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '\\text{Sections} \\rightarrow \\text{Text Section}' })
+	                                _react2.default.createElement('td', { colSpan: '2' })
 	                            ),
 	                            _react2.default.createElement(
-	                                'td',
+	                                'tr',
 	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '0.8' })
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '\\text{Section} \\rightarrow \\text{SectionTitle SectionContent}' })
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '\\text{Text} \\rightarrow \\text{Text Text}' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '1.0' })
+	                                )
 	                            ),
 	                            _react2.default.createElement(
-	                                'td',
+	                                'tr',
 	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '1.0' })
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement('td', { colSpan: '2' })
-	                        ),
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '\\text{SectionTitle} \\rightarrow \\text{Numbering}' })
+	                                _react2.default.createElement('td', { colSpan: '2' })
 	                            ),
 	                            _react2.default.createElement(
-	                                'td',
+	                                'tr',
 	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '1.0' })
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '\\text{SectionTitle} \\rightarrow \\text{TitleText}' })
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '\\text{Sections} \\rightarrow \\text{Sections Sections}' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, {
+	                                        l: '0.4 + \\begin{cases}0.6&\\text{if numberings in sequence}\\\\0&\\text{otherwise}\\end{cases}' })
+	                                )
 	                            ),
 	                            _react2.default.createElement(
-	                                'td',
+	                                'tr',
 	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '1.0' })
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '\\text{SectionTitle} \\rightarrow \\text{Numbering TitleText}' })
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '\\text{Sections} \\rightarrow \\text{Section}' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '1.0' })
+	                                )
 	                            ),
 	                            _react2.default.createElement(
-	                                'td',
+	                                'tr',
 	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '1.0' })
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '\\text{SectionContent} \\rightarrow \\text{Text}' })
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '\\text{Sections} \\rightarrow \\text{Section Text}' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '0.9' })
+	                                )
 	                            ),
 	                            _react2.default.createElement(
-	                                'td',
+	                                'tr',
 	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '1.0' })
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '\\text{SectionContent} \\rightarrow \\text{Sections}' })
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '\\text{Sections} \\rightarrow \\text{Text Section}' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '0.8' })
+	                                )
 	                            ),
 	                            _react2.default.createElement(
-	                                'td',
+	                                'tr',
 	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '1.0' })
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '\\text{SectionContent} \\rightarrow \\text{SectionContent SectionContent}' })
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '\\text{Section} \\rightarrow \\text{SectionTitle SectionContent}' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '1.0' })
+	                                )
 	                            ),
 	                            _react2.default.createElement(
-	                                'td',
+	                                'tr',
 	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '1.0' })
+	                                _react2.default.createElement('td', { colSpan: '2' })
+	                            ),
+	                            _react2.default.createElement(
+	                                'tr',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '\\text{SectionTitle} \\rightarrow \\text{Numbering}' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '1.0' })
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'tr',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '\\text{SectionTitle} \\rightarrow \\text{TitleText}' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '1.0' })
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'tr',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '\\text{SectionTitle} \\rightarrow \\text{Numbering TitleText}' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '1.0' })
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'tr',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '\\text{SectionContent} \\rightarrow \\text{Text}' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '1.0' })
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'tr',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '\\text{SectionContent} \\rightarrow \\text{Sections}' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '1.0' })
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'tr',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '\\text{SectionContent} \\rightarrow \\text{SectionContent SectionContent}' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '1.0' })
+	                                )
 	                            )
 	                        )
 	                    ),
@@ -62696,7 +62798,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            _listings2.default.figGrammar.num,
 	                            '.'
 	                        ),
-	                        ' Simplified grammar for creating section hierarchy.'
+	                        ' Simplified grammar for creating section hierarchy in ',
+	                        _abbreviations2.default.cnf,
+	                        ' with unary rules.'
 	                    )
 	                )
 	            );
@@ -62906,6 +63010,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Math2 = _interopRequireDefault(_Math);
 
+	var _InlineBlockSpan = __webpack_require__(345);
+
+	var _InlineBlockSpan2 = _interopRequireDefault(_InlineBlockSpan);
+
 	var _FigRef = __webpack_require__(250);
 
 	var _FigRef2 = _interopRequireDefault(_FigRef);
@@ -62921,6 +63029,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _ListingRef = __webpack_require__(342);
 
 	var _ListingRef2 = _interopRequireDefault(_ListingRef);
+
+	var _abbreviations = __webpack_require__(207);
+
+	var _abbreviations2 = _interopRequireDefault(_abbreviations);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -62956,7 +63068,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'The Cocke–Younger–Kasami (CYK) algorithm is an algorithm for parsing Context Free Grammars that was separately discovered by ',
+	                    'The Cocke–Younger–Kasami (',
+	                    _abbreviations2.default.cyk,
+	                    ') algorithm is an algorithm for parsing Context Free Grammars that was separately discovered by ',
 	                    _references2.default.cite(_bib2.default.kasami1965efficient),
 	                    ', ',
 	                    _references2.default.cite(_bib2.default.younger1967recognition),
@@ -62974,12 +63088,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'The standard version of the CYK algorithm is defined for ordinary context free grammars that are given in Chomsky normal form (CNF), but is is easy to extend the algorithm to include support for unary rules as well, as we do in this section. Note that any CFG may be transformed into an equivalent grammar in Chomsky normal form, and this also holds for stochastic CFGs (',
+	                    'The standard version of the ',
+	                    _abbreviations2.default.cyk,
+	                    ' algorithm is defined for ordinary context free grammars that are given in Chomsky normal form (',
+	                    _abbreviations2.default.cnf,
+	                    '), but is is easy to extend the algorithm to include support for probabilistic and unary rules as well, as we do in this section. Note that any ',
+	                    _abbreviations2.default.cfg,
+	                    ' may be transformed into an equivalent grammar in Chomsky normal form, and this also holds for probabilistic ',
+	                    _abbreviations2.default.cfgs,
+	                    ' (',
 	                    _references2.default.cite(_bib2.default.huang1971stochastic),
-	                    '). Also note that converting a grammar to CNF is not without cost: the increase in grammar size is ',
+	                    '). Also note that converting a grammar to ',
+	                    _abbreviations2.default.cnf,
+	                    ' is not without cost: the increase in grammar size is ',
 	                    _react2.default.createElement(_Math2.default, {
 	                        l: '\\mathrm O (\\left | G \\right |^2)' }),
-	                    ' for the best algorithm, but the increase is linear if we use a variation of the algorithm that works on grammars in binary normal form (2NF): see ',
+	                    ' for the best algorithm, but the increase is linear if we use a variation of the algorithm that works on grammars in binary normal form (',
+	                    _abbreviations2.default.twonf,
+	                    '): see ',
 	                    _references2.default.cite(_bib2.default.lange2009cnf),
 	                    '.'
 	                ),
@@ -63001,7 +63127,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(_Math2.default, { l: 'l>1' }),
 	                    ' (word sequences), we apply the production rules to every possible combination of two substrings of length ',
 	                    _react2.default.createElement(_Math2.default, { l: 'l-1' }),
-	                    '. This works, because CNF mandates that all production rules have 2 non-terminals. Every time we apply a rule, we multiply the probability attached to the rule and the probabilities of the constituent substrings.'
+	                    '. This works, because ',
+	                    _abbreviations2.default.cnf,
+	                    ' mandates that all production rules have 2 non-terminals. Every time we apply a rule, we multiply the probability attached to the rule and the probabilities of the constituent substrings.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -63126,172 +63254,176 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        'table',
 	                        { className: 'grammar' },
 	                        _react2.default.createElement(
-	                            'tr',
+	                            'tbody',
 	                            null,
 	                            _react2.default.createElement(
-	                                'td',
+	                                'tr',
 	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '\\text{S} \\rightarrow \\text{NP VP}' })
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '\\text{S} \\rightarrow \\text{NP VP}' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '0.9' })
+	                                )
 	                            ),
 	                            _react2.default.createElement(
-	                                'td',
+	                                'tr',
 	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '0.9' })
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '\\text{S} \\rightarrow \\text{VP}' })
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '\\text{S} \\rightarrow \\text{VP}' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '0.1' })
+	                                )
 	                            ),
 	                            _react2.default.createElement(
-	                                'td',
+	                                'tr',
 	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '0.1' })
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '\\text{VP} \\rightarrow \\text{V NP}' })
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '\\text{VP} \\rightarrow \\text{V NP}' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '0.5' })
+	                                )
 	                            ),
 	                            _react2.default.createElement(
-	                                'td',
+	                                'tr',
 	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '0.5' })
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '\\text{VP} \\rightarrow \\text{V}' })
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '\\text{VP} \\rightarrow \\text{V}' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '0.1' })
+	                                )
 	                            ),
 	                            _react2.default.createElement(
-	                                'td',
+	                                'tr',
 	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '0.1' })
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '\\text{NP} \\rightarrow \\text{NP NP}' })
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '\\text{NP} \\rightarrow \\text{NP NP}' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '0.1' })
+	                                )
 	                            ),
 	                            _react2.default.createElement(
-	                                'td',
+	                                'tr',
 	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '0.1' })
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '\\text{NP} \\rightarrow \\text{N}' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '0.7' })
+	                                )
+	                            ),
+	                            _react2.default.createElement('tr', null),
 	                            _react2.default.createElement(
-	                                'td',
+	                                'tr',
 	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '\\text{NP} \\rightarrow \\text{N}' })
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '\\text{N} \\rightarrow \\text{fish}' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '0.2' })
+	                                )
 	                            ),
 	                            _react2.default.createElement(
-	                                'td',
+	                                'tr',
 	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '0.7' })
-	                            )
-	                        ),
-	                        _react2.default.createElement('tr', null),
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '\\text{N} \\rightarrow \\text{fish}' })
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '\\text{N} \\rightarrow \\text{people}' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '0.5' })
+	                                )
 	                            ),
 	                            _react2.default.createElement(
-	                                'td',
+	                                'tr',
 	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '0.2' })
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '\\text{N} \\rightarrow \\text{people}' })
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '\\text{N} \\rightarrow \\text{tanks}' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '0.2' })
+	                                )
 	                            ),
 	                            _react2.default.createElement(
-	                                'td',
+	                                'tr',
 	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '0.5' })
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '\\text{N} \\rightarrow \\text{tanks}' })
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '\\text{V} \\rightarrow \\text{people}' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '0.1' })
+	                                )
 	                            ),
 	                            _react2.default.createElement(
-	                                'td',
+	                                'tr',
 	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '0.2' })
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '\\text{V} \\rightarrow \\text{people}' })
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '\\text{V} \\rightarrow \\text{fish}' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '0.6' })
+	                                )
 	                            ),
 	                            _react2.default.createElement(
-	                                'td',
+	                                'tr',
 	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '0.1' })
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '\\text{V} \\rightarrow \\text{fish}' })
-	                            ),
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '0.6' })
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '\\text{V} \\rightarrow \\text{tanks}' })
-	                            ),
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_Math2.default, { l: '0.3' })
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '\\text{V} \\rightarrow \\text{tanks}' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, { l: '0.3' })
+	                                )
 	                            )
 	                        )
 	                    ),
@@ -63305,13 +63437,31 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            nlpGrammar.num,
 	                            '.'
 	                        ),
-	                        ' Simple natural language grammar for putting noun phrases (',
-	                        _react2.default.createElement(_Math2.default, { l: '\\text{NP}' }),
-	                        ') and verb phrases (',
-	                        _react2.default.createElement(_Math2.default, { l: '\\text{VP}' }),
-	                        ') together to create a sentence (',
-	                        _react2.default.createElement(_Math2.default, { l: '\\text S' }),
-	                        ').'
+	                        ' Simple natural language grammar for putting noun phrases ',
+	                        _react2.default.createElement(
+	                            _InlineBlockSpan2.default,
+	                            null,
+	                            '(',
+	                            _react2.default.createElement(_Math2.default, { l: '\\text{NP}' }),
+	                            ')'
+	                        ),
+	                        ' and verb phrases ',
+	                        _react2.default.createElement(
+	                            _InlineBlockSpan2.default,
+	                            null,
+	                            '(',
+	                            _react2.default.createElement(_Math2.default, { l: '\\text{VP}' }),
+	                            ')'
+	                        ),
+	                        ' together to create a sentence ',
+	                        _react2.default.createElement(
+	                            _InlineBlockSpan2.default,
+	                            null,
+	                            '(',
+	                            _react2.default.createElement(_Math2.default, { l: '\\text S' }),
+	                            ')'
+	                        ),
+	                        '.'
 	                    )
 	                )
 	            );
@@ -63678,6 +63828,58 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 345 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(4);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } //noinspection JSUnresolvedVariable
+
+
+	var InlineBlockSpan = function (_Component) {
+	    _inherits(InlineBlockSpan, _Component);
+
+	    function InlineBlockSpan() {
+	        _classCallCheck(this, InlineBlockSpan);
+
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(InlineBlockSpan).apply(this, arguments));
+	    }
+
+	    _createClass(InlineBlockSpan, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'span',
+	                { style: {
+	                        display: 'inline-block'
+	                    } },
+	                this.props.children
+	            );
+	        }
+	    }]);
+
+	    return InlineBlockSpan;
+	}(_react.Component);
+
+	exports.default = InlineBlockSpan;
+
+/***/ },
+/* 346 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -63687,11 +63889,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	var disseminationSections = {
 	    futureWork: {
-	        page: 'x',
+	        page: 27,
 	        id: 'future-work',
 	        title: 'Future Work'
 	    }, dissemination: {
-	        page: 'x',
+	        page: 27,
 	        id: 'dissemination',
 	        title: 'Dissemination'
 	    }
@@ -63701,7 +63903,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = disseminationSections;
 
 /***/ },
-/* 346 */
+/* 347 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -63728,7 +63930,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Importing2 = _interopRequireDefault(_Importing);
 
-	var _Chapter = __webpack_require__(347);
+	var _Chapter = __webpack_require__(348);
 
 	var _Chapter2 = _interopRequireDefault(_Chapter);
 
@@ -63808,7 +64010,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = IntroductionIntroduction;
 
 /***/ },
-/* 347 */
+/* 348 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -63966,7 +64168,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = Chapter;
 
 /***/ },
-/* 348 */
+/* 349 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -63989,15 +64191,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Routes = __webpack_require__(204);
 
-	var _Introduction = __webpack_require__(346);
+	var _Introduction = __webpack_require__(347);
 
 	var _Introduction2 = _interopRequireDefault(_Introduction);
 
-	var _Tagging = __webpack_require__(349);
+	var _Tagging = __webpack_require__(350);
 
 	var _Tagging2 = _interopRequireDefault(_Tagging);
 
-	var _InferringDocumentStructure = __webpack_require__(350);
+	var _InferringDocumentStructure = __webpack_require__(351);
 
 	var _InferringDocumentStructure2 = _interopRequireDefault(_InferringDocumentStructure);
 
@@ -64031,6 +64233,18 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    _createClass(FullThesis, [{
 	        key: 'render',
+
+	        //<p>
+	        //    The source code referred to in this thesis can be found in two repositories on GitHub:
+	        //</p>
+	        //<ul>
+	        //    <li><a href="https://github.com/digitalheir/java-rechtspraak-library"
+	        //    >https://github.com/digitalheir/java-rechtspraak-library</a>
+	        //    </li>
+	        //    <li><a href="https://github.com/digitalheir/dutch-case-law-to-couchdb"
+	        //    >https://github.com/digitalheir/dutch-case-law-to-couchdb</a>
+	        //    </li>
+	        //</ul>
 	        value: function render() {
 	            var _this2 = this;
 
@@ -64127,10 +64341,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        'Abstract'
 	                    ),
 	                    _react2.default.createElement(_AbstractContent2.default, null),
+	                    _react2.default.createElement('hr', { style: { marginTop: '60em' } }),
 	                    _react2.default.createElement(
 	                        'p',
 	                        null,
-	                        'This print version was originally meant as a web site. Visit ',
+	                        'This is a print version of a web site. Visit ',
 	                        _react2.default.createElement(
 	                            'a',
 	                            {
@@ -64138,36 +64353,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            },
 	                            'https://digitalheir.github.io/java-rechtspraak-library/'
 	                        ),
-	                        ' for for a hyperlinked version of this with some interactive elements.'
-	                    ),
-	                    _react2.default.createElement(
-	                        'p',
-	                        null,
-	                        'The source code referred to in this thesis can be found in two repositories on GitHub:'
-	                    ),
-	                    _react2.default.createElement(
-	                        'ul',
-	                        null,
-	                        _react2.default.createElement(
-	                            'li',
-	                            null,
-	                            _react2.default.createElement(
-	                                'a',
-	                                { href: 'https://github.com/digitalheir/java-rechtspraak-library'
-	                                },
-	                                'https://github.com/digitalheir/java-rechtspraak-library'
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'li',
-	                            null,
-	                            _react2.default.createElement(
-	                                'a',
-	                                { href: 'https://github.com/digitalheir/dutch-case-law-to-couchdb'
-	                                },
-	                                'https://github.com/digitalheir/dutch-case-law-to-couchdb'
-	                            )
-	                        )
+	                        ' for for a version of this thesis with hyperlinks and some interactive elements.'
 	                    )
 	                ),
 	                _react2.default.createElement(
@@ -64194,7 +64380,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = FullThesis;
 
 /***/ },
-/* 349 */
+/* 350 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -64209,7 +64395,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Chapter = __webpack_require__(347);
+	var _Chapter = __webpack_require__(348);
 
 	var _Chapter2 = _interopRequireDefault(_Chapter);
 
@@ -64300,7 +64486,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Tagging;
 
 /***/ },
-/* 350 */
+/* 351 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -64315,7 +64501,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Chapter = __webpack_require__(347);
+	var _Chapter = __webpack_require__(348);
 
 	var _Chapter2 = _interopRequireDefault(_Chapter);
 
@@ -64376,7 +64562,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Inferring;
 
 /***/ },
-/* 351 */
+/* 352 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -64391,7 +64577,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Chapter = __webpack_require__(347);
+	var _Chapter = __webpack_require__(348);
 
 	var _Chapter2 = _interopRequireDefault(_Chapter);
 
@@ -64399,7 +64585,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
-	var _sections = __webpack_require__(345);
+	var _sections = __webpack_require__(346);
 
 	var _sections2 = _interopRequireDefault(_sections);
 
@@ -64461,7 +64647,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Conclusion;
 
 /***/ },
-/* 352 */
+/* 353 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -64476,7 +64662,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Chapter = __webpack_require__(347);
+	var _Chapter = __webpack_require__(348);
 
 	var _Chapter2 = _interopRequireDefault(_Chapter);
 

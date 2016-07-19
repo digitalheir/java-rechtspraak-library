@@ -485,9 +485,9 @@ textarea {
     a, a:visited {
         text-decoration: none;
     }
-    /*a[href]:after {*/
-    /*content: " (" attr(href) ")";*/
-    /*}*/
+    a[href].print-url:after {
+        content: " (" attr(href) ")";
+    }
     /*abbr[title]:after {*/
     /*content: " (" attr(title) ")";*/
     /*}*/
@@ -537,6 +537,15 @@ textarea {
 }
 div.full-thesis {
     counter-reset: subsect;
+}
+div.full-thesis .leaders li .row {
+    background: white;
+}
+div.full-thesis .leaders li .nr {
+    background: white;
+}
+div.full-thesis .leaders li:before {
+    background: white;
 }
 div.full-thesis .reset-counter {
     /* Creates a new instance of the section counter with each section element */
