@@ -47,6 +47,9 @@ export default class IntroMotivation extends Component {
                 There is a recent trend on Rechtspraak.nl
                 towards publishing more richly marked up documents, as we can see in <FigRef
                 fig={figs.markupStats}/>.
+                Still,
+                an overwhelmingly large portion of documents which contain no or
+                only sparse markup remains.
                 Still, an overwhelmingly large portion remains of documents which contain no or
                 only sparse markup.
                 To illustrate: at the time of writing, 78.7% of all judgment texts on Rechtspraak.nl do not

@@ -1,1 +1,1 @@
-module.exports = 'Automatically Assigning A Section Hierarchy To Dutch Case Law';
+module.exports = 'Automatic Assignment of Section Structure to Texts of Dutch Court Judgments';

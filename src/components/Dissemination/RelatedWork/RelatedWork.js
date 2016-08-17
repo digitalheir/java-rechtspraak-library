@@ -11,7 +11,7 @@ export default class RelatedWork extends Component {
                 markup to plain-text documents has existed since
                 the rise of hypertext in the late 1980s:
                 see {ref.cite(bib.furuta1989automatically)} for
-                one historic example that pre-dates {abbrs.xml}.
+                one historic example that predates {abbrs.xml}.
             </p>
 
             <p>

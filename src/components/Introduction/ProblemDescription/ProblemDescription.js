@@ -52,6 +52,25 @@ export default class ProblemDescription extends Component {
                 a specification of the data set
                 of court judgments from <a href="http://www.rechspraak.nl">Rechtspraak.nl</a>.
             </p>
+
+            <p>
+                Task 3, labeling the text elements with their role in the text,
+                is achieved by training a Conditional Random Field model on
+                a set of manually labeled documents. The trained model
+                is then able to correctly label most elements:
+                we report an F<sub>1</sub> score of 0.91
+                in our experiment.
+            </p>
+
+            <p>
+                Task 4, organizing the tagged elements into a section hierarchy,
+                is approached as a probabilistic parsing problem. We create a
+                Context Free Grammar which accepts text elements as tokens,
+                and creates a parse tree which represents the section hierarchy.
+                This approach returns a desirable section hierarchy in most cases:
+                in our experiment we report an F<sub>1</sub> score of 0.92.
+            </p>
+
             <p>
                 Tasks 3 and 4 require more complicated machinery than
                 importing and tokenization do,

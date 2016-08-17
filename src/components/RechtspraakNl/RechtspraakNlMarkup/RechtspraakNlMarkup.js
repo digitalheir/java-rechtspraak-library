@@ -230,10 +230,12 @@ export default class Introduction extends Component {
                             <p>
                                 Because we
                                 want to infer the most important words within
-                                title elements specifically, we take as a document
-                                the various text elements
-                                (such as a paragraph or title), and compute the tf-idf score
-                                for each word in each title.
+                                title elements specifically, we take as <D l="D"/> the collection
+                                of all element types (paragraphs, titles),
+                                and compute the tf-idf score
+                                for each word in each title. Some classes of words, such as articles
+                                and numbers,
+                                are treated as a single word.
                             </p>
                             <TitleTfIdfFigure/>
                             <TitleTfIdfFigurePerSection/>

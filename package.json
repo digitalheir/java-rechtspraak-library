@@ -12,6 +12,7 @@
   "author": "Maarten",
   "license": "MIT",
   "devDependencies": {
+    "bibliography": "0.1.0",
     "autoprefixer": "latest",
     "babel-cli": "^6.7.7",
     "babel-core": "^6.7.7",

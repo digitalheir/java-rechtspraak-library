@@ -59,6 +59,7 @@ div.full-thesis {
   }
 
   .desc-section:before {
+    page-break-after: avoid;
     content: 'section';
   }
 
@@ -576,7 +577,7 @@ abbr[title] {
   a, a:visited {
     color: #444;
   }
-  h1, h2, h3, h4, h5, h6 {;
+  h1, h2, h3, h4, h5, h6 {
   }
 }
 
