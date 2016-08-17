@@ -23001,27 +23001,27 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Index2 = _interopRequireDefault(_Index);
 
-	var _Introduction = __webpack_require__(347);
+	var _Introduction = __webpack_require__(348);
 
 	var _Introduction2 = _interopRequireDefault(_Introduction);
 
-	var _FullThesis = __webpack_require__(349);
+	var _FullThesis = __webpack_require__(350);
 
 	var _FullThesis2 = _interopRequireDefault(_FullThesis);
 
-	var _Tagging = __webpack_require__(350);
+	var _Tagging = __webpack_require__(351);
 
 	var _Tagging2 = _interopRequireDefault(_Tagging);
 
-	var _InferringDocumentStructure = __webpack_require__(351);
+	var _InferringDocumentStructure = __webpack_require__(352);
 
 	var _InferringDocumentStructure2 = _interopRequireDefault(_InferringDocumentStructure);
 
-	var _Dissemination = __webpack_require__(352);
+	var _Dissemination = __webpack_require__(353);
 
 	var _Dissemination2 = _interopRequireDefault(_Dissemination);
 
-	var _ImportingAndTokenizing = __webpack_require__(353);
+	var _ImportingAndTokenizing = __webpack_require__(354);
 
 	var _ImportingAndTokenizing2 = _interopRequireDefault(_ImportingAndTokenizing);
 
@@ -25241,6 +25241,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	        href: 'http://www-bcf.usc.edu/~feisha/pubs/shallow03.pdf',
 	        organization: 'Association for Computational Linguistics'
 	    },
+	    nocedal1980updating: {
+	        type: 'article', id: 'nocedal1980updating',
+	        title: 'Updating quasi-Newton matrices with limited storage',
+	        author: {
+	            firstName: 'Jorge',
+	            lastName: 'Nocedal'
+	        },
+	        journal: 'Mathematics of computation',
+	        volume: '35',
+	        number: '151',
+	        pages: '773—782',
+	        year: '1980'
+	    },
 	    collins1997three: {
 	        id: 'collins1997three', type: 'inproceedings',
 	        title: "Three generative, lexicalised models for statistical parsing",
@@ -26282,90 +26295,93 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _GraphicalModels2 = _interopRequireDefault(_GraphicalModels);
 
-	var _HMMs = __webpack_require__(323);
+	var _GenerativeDiscriminative = __webpack_require__(323);
+
+	var _GenerativeDiscriminative2 = _interopRequireDefault(_GenerativeDiscriminative);
+
+	var _HMMs = __webpack_require__(324);
 
 	var _HMMs2 = _interopRequireDefault(_HMMs);
 
-	var _LinearChainCRF = __webpack_require__(324);
+	var _LinearChainCRF = __webpack_require__(325);
 
 	var _LinearChainCRF2 = _interopRequireDefault(_LinearChainCRF);
 
-	var _Inference = __webpack_require__(325);
+	var _Inference = __webpack_require__(326);
 
 	var _Inference2 = _interopRequireDefault(_Inference);
 
-	var _ParameterEstimation = __webpack_require__(326);
+	var _ParameterEstimation = __webpack_require__(327);
 
 	var _ParameterEstimation2 = _interopRequireDefault(_ParameterEstimation);
 
-	var _Performance = __webpack_require__(327);
+	var _Performance = __webpack_require__(328);
 
 	var _Performance2 = _interopRequireDefault(_Performance);
 
-	var _Results3 = __webpack_require__(328);
+	var _Results3 = __webpack_require__(329);
 
 	var _Results4 = _interopRequireDefault(_Results3);
 
-	var _Discussion = __webpack_require__(329);
+	var _Discussion = __webpack_require__(330);
 
 	var _Discussion2 = _interopRequireDefault(_Discussion);
 
-	var _Discussion3 = __webpack_require__(330);
+	var _Discussion3 = __webpack_require__(331);
 
 	var _Discussion4 = _interopRequireDefault(_Discussion3);
 
-	var _Methods = __webpack_require__(331);
+	var _Methods = __webpack_require__(332);
 
 	var _Methods2 = _interopRequireDefault(_Methods);
 
-	var _Introduction = __webpack_require__(333);
+	var _Introduction = __webpack_require__(334);
 
 	var _Introduction2 = _interopRequireDefault(_Introduction);
 
-	var _DeterministicTagger = __webpack_require__(334);
+	var _DeterministicTagger = __webpack_require__(335);
 
 	var _DeterministicTagger2 = _interopRequireDefault(_DeterministicTagger);
 
-	var _CRF = __webpack_require__(335);
+	var _CRF = __webpack_require__(336);
 
 	var _CRF2 = _interopRequireDefault(_CRF);
 
-	var _FeatureSelection = __webpack_require__(336);
+	var _FeatureSelection = __webpack_require__(337);
 
 	var _FeatureSelection2 = _interopRequireDefault(_FeatureSelection);
 
-	var _Introduction3 = __webpack_require__(337);
+	var _Introduction3 = __webpack_require__(338);
 
 	var _Introduction4 = _interopRequireDefault(_Introduction3);
 
-	var _Methods3 = __webpack_require__(338);
+	var _Methods3 = __webpack_require__(339);
 
 	var _Methods4 = _interopRequireDefault(_Methods3);
 
-	var _Evaluation = __webpack_require__(339);
+	var _Evaluation = __webpack_require__(340);
 
 	var _Evaluation2 = _interopRequireDefault(_Evaluation);
 
-	var _ContextFreeGrammars = __webpack_require__(340);
+	var _ContextFreeGrammars = __webpack_require__(341);
 
 	var _ContextFreeGrammars2 = _interopRequireDefault(_ContextFreeGrammars);
 
-	var _AdditionalEnrichment = __webpack_require__(343);
+	var _AdditionalEnrichment = __webpack_require__(344);
 
 	var _AdditionalEnrichment2 = _interopRequireDefault(_AdditionalEnrichment);
 
-	var _CYK = __webpack_require__(344);
+	var _CYK = __webpack_require__(345);
 
 	var _CYK2 = _interopRequireDefault(_CYK);
 
-	var _sections21 = __webpack_require__(346);
+	var _sections21 = __webpack_require__(347);
 
 	var _sections22 = _interopRequireDefault(_sections21);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	// import ManualTagger from './Tagging/Methods/ManualTagger/ManualTagger';
-	//noinspection JSUnresolvedVariable
 	function getHandler(route) {
 	    switch (route) {
 	        //Introduction
@@ -26406,6 +26422,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	            return _Discussion4.default;
 
 	        // CRF
+	        case _sections20.default.generativeDiscriminative.id:
+	            return _GenerativeDiscriminative2.default;
 	        case _sections20.default.undirectedGraphicalModels.id:
 	            return _GraphicalModels2.default;
 	        case _sections20.default.crfPerformance.id:
@@ -26458,7 +26476,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        default:
 	            throw Error("No handler for route " + route + ". You should edit getSectionComponent.js");
 	    }
-	}
+	} //noinspection JSUnresolvedVariable
 	exports.default = getHandler;
 	function getSubSections(props, headerLevel) {
 	    return function (section) {
@@ -56085,7 +56103,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'We present an enriched set of',
+	                    'We present an enriched set of ',
 	                    _abbreviations2.default.xml,
 	                    ' documents in a CouchDB database, available at ',
 	                    _react2.default.createElement(
@@ -58613,80 +58631,196 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var labels = _underscore2.default.map(d.confusionMatrix, function (val, k) {
 	        return k;
 	    });
-
+	    var labelsNum = labels.length;
 	    return _react2.default.createElement(
-	        'table',
-	        { style: { margin: '0 0 ' + (false ? '2' : '8') + '0px 0' }, key: key },
+	        'div',
+	        { id: 'tbl-confusion-matrix', style: { border: "1px solid #eee", margin: '0 auto 20px auto' } },
 	        _react2.default.createElement(
-	            'caption',
-	            null,
-	            key
-	        ),
-	        _react2.default.createElement(
-	            'thead',
-	            null,
+	            'table',
+	            { style: { border: 'none', margin: '0 auto 20px auto' }, key: key },
+	            _react2.default.createElement(
+	                'caption',
+	                { style: { fontWeight: 'bold' } },
+	                key
+	            ),
 	            _react2.default.createElement(
 	                'tr',
 	                null,
-	                _react2.default.createElement('td', null),
-	                _react2.default.createElement('td', null),
 	                _react2.default.createElement(
-	                    'th',
-	                    { style: { textAlign: 'center', fontWeight: 'normal' }, colSpan: labels.length },
-	                    'Predicted'
+	                    'td',
+	                    { style: { border: 'none' } },
+	                    _react2.default.createElement(
+	                        'table',
+	                        null,
+	                        _react2.default.createElement(
+	                            'caption',
+	                            { style: { fontWeight: 'bold' } },
+	                            'Confusion Matrix'
+	                        ),
+	                        _react2.default.createElement(
+	                            'thead',
+	                            null,
+	                            _react2.default.createElement(
+	                                'tr',
+	                                null,
+	                                _react2.default.createElement('td', { style: {} }),
+	                                _react2.default.createElement('td', { style: {} }),
+	                                _react2.default.createElement(
+	                                    'th',
+	                                    { style: { borderBottom: '1px solid #eee', textAlign: 'center', fontWeight: 'normal' },
+	                                        colSpan: labels.length },
+	                                    'Predicted'
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'tr',
+	                                null,
+	                                _react2.default.createElement('td', { style: {} }),
+	                                _react2.default.createElement('td', { style: {} }),
+	                                labels.map(function (l) {
+	                                    return _react2.default.createElement(
+	                                        'th',
+	                                        null,
+	                                        l
+	                                    );
+	                                })
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            'tbody',
+	                            null,
+	                            labels.map(function (l, i) {
+	                                var children = [_react2.default.createElement(
+	                                    'th',
+	                                    { key: i + '-' + l },
+	                                    l
+	                                )];
+	                                if (i == 0) {
+	                                    children.push(_react2.default.createElement(
+	                                        'th',
+	                                        { style: { fontWeight: 'normal' },
+	                                            key: "head-90",
+	                                            rowSpan: labels.length },
+	                                        _react2.default.createElement(
+	                                            'div',
+	                                            {
+	                                                className: 'minus90' },
+	                                            'Actual'
+	                                        )
+	                                    ));
+	                                }
+	                                children = children.concat(labels.map(function (l2) {
+	                                    return _react2.default.createElement(
+	                                        'td',
+	                                        {
+	                                            style: { border: 'none' },
+	                                            key: i + '-' + l + '-' + l2 },
+	                                        d.confusionMatrix[l].m[l2] ? d.confusionMatrix[l].m[l2] : 0
+	                                    );
+	                                }));
+	                                return _react2.default.createElement(
+	                                    'tr',
+	                                    { key: 'row' + i + '-' + l },
+	                                    children
+	                                );
+	                            })
+	                        )
+	                    )
 	                )
 	            ),
 	            _react2.default.createElement(
 	                'tr',
 	                null,
-	                _react2.default.createElement('td', null),
-	                _react2.default.createElement('td', null),
-	                labels.map(function (l) {
-	                    return _react2.default.createElement(
-	                        'th',
-	                        null,
-	                        l
-	                    );
-	                })
-	            )
-	        ),
-	        _react2.default.createElement(
-	            'tbody',
-	            null,
-	            labels.map(function (l, i) {
-	                var children = [_react2.default.createElement(
-	                    'th',
-	                    { key: i + '-' + l },
-	                    l
-	                )];
-	                if (i == 0) {
-	                    children.push(_react2.default.createElement(
-	                        'th',
-	                        { style: { fontWeight: 'normal' },
-	                            key: "head-90",
-	                            rowSpan: labels.length },
+	                _react2.default.createElement(
+	                    'td',
+	                    { style: {} },
+	                    _react2.default.createElement(
+	                        'table',
+	                        { style: { margin: '0 auto ' + (false ? '2' : '2') + '0px auto' } },
 	                        _react2.default.createElement(
-	                            'div',
-	                            {
-	                                className: 'minus90' },
-	                            'Actual'
+	                            'caption',
+	                            { style: { fontWeight: 'bold' } },
+	                            'F-scores'
+	                        ),
+	                        _react2.default.createElement(
+	                            'thead',
+	                            null,
+	                            _react2.default.createElement(
+	                                'th',
+	                                null,
+	                                'Type'
+	                            ),
+	                            _react2.default.createElement(
+	                                'th',
+	                                null,
+	                                'Precision'
+	                            ),
+	                            _react2.default.createElement(
+	                                'th',
+	                                null,
+	                                'Recall'
+	                            ),
+	                            _react2.default.createElement(
+	                                'th',
+	                                null,
+	                                'F',
+	                                _react2.default.createElement(
+	                                    'sub',
+	                                    null,
+	                                    '1'
+	                                ),
+	                                '-score'
+	                            ),
+	                            _react2.default.createElement(
+	                                'th',
+	                                null,
+	                                'F',
+	                                _react2.default.createElement(
+	                                    'sub',
+	                                    null,
+	                                    '0.5'
+	                                ),
+	                                '-score'
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            'tbody',
+	                            null,
+	                            labels.map(function (label, i) {
+	                                return _react2.default.createElement(
+	                                    'tr',
+	                                    { key: "f1-" + i },
+	                                    _react2.default.createElement(
+	                                        'td',
+	                                        null,
+	                                        label
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'td',
+	                                        null,
+	                                        d.scores[label].precision.toFixed(2)
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'td',
+	                                        null,
+	                                        d.scores[label].recall.toFixed(2)
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'td',
+	                                        null,
+	                                        d.scores[label].f1.toFixed(2)
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'td',
+	                                        null,
+	                                        d.scores[label].f0_5.toFixed(2)
+	                                    )
+	                                );
+	                            })
 	                        )
-	                    ));
-	                }
-	                children = children.concat(labels.map(function (l2) {
-	                    return _react2.default.createElement(
-	                        'td',
-	                        {
-	                            key: i + '-' + l + '-' + l2 },
-	                        d.confusionMatrix[l].m[l2] ? d.confusionMatrix[l].m[l2] : 0
-	                    );
-	                }));
-	                return _react2.default.createElement(
-	                    'tr',
-	                    { key: 'row' + i + '-' + l },
-	                    children
-	                );
-	            })
+	                    )
+	                )
+	            )
 	        )
 	    );
 	}
@@ -58813,7 +58947,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'Another issue is that the grammar has difficulty in deciding whether non-numbered sections should be subsections or not. Indeed, this can be difficult to determine purely on typography.'
+	                    'Another issue is that the grammar has difficulty in deciding whether non-numbered sections should be subsections or not. Indeed, this can be difficult to determine based purely on typography.'
 	                )
 	            );
 	        }
@@ -59046,7 +59180,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(_Math2.default, { l: 'F_1 = 2\\cdot\\frac{\\text{precision}\\cdot\\text{recall}}{\\text{precision}+\\text{recall}}' }),
 	                    '). For ',
 	                    _react2.default.createElement(_Math2.default, { l: '\\beta = 0.5' }),
-	                    ', precision is twice as important as recall.'
+	                    ', precision is twice as important as recall. We argue that in our application, precision ',
+	                    _react2.default.createElement(
+	                        'em',
+	                        null,
+	                        'is'
+	                    ),
+	                    ' more important than recall. The reasoning is that in case of a false negative, we do not lose any information, which is acceptable. However, in the case of a false positive we create false information, which is very undesirable. Precisely how much more important we deem precision to recall is rather arbitrary, however.'
 	                )
 	            );
 	        }
@@ -59148,9 +59288,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    null,
 	                    'For all tokens except for section titles, all models yield F-scores between 0.98 and 1.0. (See the confusion matrix in ',
 	                    _react2.default.createElement(_FigRef2.default, { fig: _figs2.default.confusionMatrix }),
-	                    '. Section titles are harder to label, so in ',
+	                    '.) Section titles are harder to label, so in ',
 	                    _react2.default.createElement(_FigRef2.default, { fig: _figs2.default.taggingResults }),
-	                    ', we consider the F-score for these. We can see that the ',
+	                    ', we consider the F-score for these.'
+	                ),
+	                _react2.default.createElement(_FigureResults2.default, { url: relativeToRoot + "js/tagger-results.json" }),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'We see that the ',
 	                    _abbreviations2.default.crfs,
 	                    ' out-perform the baseline task mostly by increasing the recall, although the ',
 	                    _abbreviations2.default.crfs,
@@ -59158,7 +59304,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _abbreviations2.default.crfs,
 	                    ' contra 0.96 for hand-written).'
 	                ),
-	                _react2.default.createElement(_FigureResults2.default, { url: relativeToRoot + "js/tagger-results.json" }),
 	                _react2.default.createElement(_ConfusionMatrix2.default, null)
 	            );
 	        }
@@ -59298,6 +59443,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	        page: 15,
 	        id: 'hmm',
 	        title: 'Directed Graphical Models'
+	    }, generativeDiscriminative: {
+	        page: 16,
+	        id: 'generative-discriminative',
+	        title: 'Generative-Discriminative Pairs'
 	    },
 	    linearChain: {
 	        page: 17,
@@ -59321,7 +59470,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	};
 
-	crfSections.inOrder = [crfSections.hmm, crfSections.undirectedGraphicalModels, crfSections.linearChain, crfSections.parameterEstimation, crfSections.inference];
+	crfSections.inOrder = [crfSections.hmm, crfSections.undirectedGraphicalModels, crfSections.generativeDiscriminative, crfSections.linearChain, crfSections.parameterEstimation, crfSections.inference];
 
 	exports.default = crfSections;
 
@@ -59740,7 +59889,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'Undirected Graphical Models are similar to directed graphical models, except we imagine the underlying graph to be an undirected graph. This means that Undirected Graphical Models factorize slightly different:',
+	                    'Undirected Graphical Models are similar to directed graphical models, except we the underlying graph is an undirected graph. This means that Undirected Graphical Models factorize in a slightly different manner:',
 	                    _react2.default.createElement(_Math2.default, {
 	                        l: 'p( \\mathbf x, \\mathbf y)=\\frac{1}{Z}\\prod _A \\Phi_A( \\mathbf x_A,\\mathbf y_A)',
 	                        displayMode: true }),
@@ -59782,9 +59931,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        null,
 	                        'and we consider ',
 	                        _react2.default.createElement(_Math2.default, { l: 'V = X\\cup Y' }),
-	                        ' of a set of input variables ',
+	                        ' of a set of observation variables ',
 	                        _react2.default.createElement(_Math2.default, { l: 'X' }),
-	                        ' (for example, word features) and a set of output variables ',
+	                        ' (for example, word features) and a set of label variables ',
 	                        _react2.default.createElement(_Math2.default, { l: 'Y' }),
 	                        ' (for example, part-of-speech tags).'
 	                    )
@@ -59794,7 +59943,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    null,
 	                    'Intuitively, ',
 	                    _react2.default.createElement(_Math2.default, { l: 'p( \\mathbf x, \\mathbf y)' }),
-	                    ' describes the joint probability of input and output vectors in terms of some set of functions ',
+	                    ' describes the joint probability of observation and label vectors in terms of some set of functions ',
 	                    _react2.default.createElement(
 	                        'span',
 	                        null,
@@ -59807,9 +59956,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(_Math2.default, { l: '0' }),
 	                    ' and ',
 	                    _react2.default.createElement(_Math2.default, { l: '1' }),
-	                    ': it sums every possible value of the the multiplied factors. In general, ',
+	                    ': it sums every possible value of the multiplied factors. In general, ',
 	                    _react2.default.createElement(_Math2.default, { l: '\\Phi_A \\in F' }),
-	                    ' can be any function with parameters taken from the set of input and output variables ',
+	                    ' can be any function with parameters taken from the set of observation and label variables ',
 	                    _react2.default.createElement(_Math2.default, { l: 'A \\subset V' }),
 	                    ' to a positive real number, i.e. ',
 	                    _react2.default.createElement(_Math2.default, { l: '\\Phi_A:A\\rightarrow\\ \\mathbb{R}^+' }),
@@ -59839,9 +59988,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(_Math2.default, { l: 'Z' }),
 	                    ' is intractable, because we need to sum over all possible assignments ',
 	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf x' }),
-	                    ' of input vectors and all possible assignments ',
+	                    ' of observation vectors and all possible assignments ',
 	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf y' }),
-	                    ' of output vectors. However, efficient methods to estimate ',
+	                    ' of label vectors. However, efficient methods to estimate ',
 	                    _react2.default.createElement(_Math2.default, { l: 'Z' }),
 	                    ' exist.'
 	                ),
@@ -59883,58 +60032,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    }),
 	                    ' iff ',
 	                    _react2.default.createElement(_Math2.default, { l: 'v_s\\in \\mathbf{arg} ( \\Phi_A )' }),
-	                    '. The graph thus allows us to graphically represent how input and output variables interact with our local functions to generate a probability distribution.'
+	                    '. The graph thus allows us to graphically represent how the variables interact with local functions to generate a probability distribution.'
 	                ),
-	                _react2.default.createElement(_Image2.default, { relativeToRoot: relativeToRoot, width: '55%', fig: _figs2.default.factorGraph }),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'We define generative models as directed models in which all label variables ',
-	                    _react2.default.createElement(_Math2.default, { l: 'y \\in Y' }),
-	                    ' are parents of the input variables ',
-	                    _react2.default.createElement(_Math2.default, { l: 'x\\in X' }),
-	                    '. This name is due to the labels "generating" the output: the labels are the contingencies upon which the probability of the output depends.'
-	                ),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'When we describe the probability distribution ',
-	                    _react2.default.createElement(_Math2.default, { l: 'p( \\mathbf y|\\mathbf x)' }),
-	                    ', we speak of a discriminative model. Every generative model has a discriminative counterpart. In the words of ',
-	                    _references2.default.cite(_bib2.default.jordan2002discriminative),
-	                    ', we call these generative-discriminative pairs. Training a generative model to maximize ',
-	                    _react2.default.createElement(_Math2.default, { latex: 'p(\\mathbf y|\\mathbf x)' }),
-	                    ' yields the same model as training its discriminative counterpart. Conversely, training a discriminative model to maximize the joint probability ',
-	                    _react2.default.createElement(_Math2.default, { l: 'p(\\mathbf x,\\mathbf y)' }),
-	                    ' (instead of ',
-	                    _react2.default.createElement(_Math2.default, { latex: 'p(\\mathbf y|\\mathbf x)' }),
-	                    ') results in the same model as training the generative counterpart.'
-	                ),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'It turns out that when we model a conditional distribution, we have more parameter freedom for ',
-	                    _react2.default.createElement(_Math2.default, { l: 'p(\\mathbf y)' }),
-	                    ', because we are not interested in parameter values for ',
-	                    _react2.default.createElement(_Math2.default, { l: 'p( \\mathbf x)' }),
-	                    '. Modeling ',
-	                    _react2.default.createElement(_Math2.default, {
-	                        l: 'p( \\mathbf y|\\mathbf x)' }),
-	                    ' unburdens us of having to model the potentially very complicated inter-dependencies of ',
-	                    _react2.default.createElement(_Math2.default, { l: 'p(\\mathbf x)' }),
-	                    '. In classification tasks, this means that we are better able to use observations, and so discriminative models tend to out-perform generative models in practice.'
-	                ),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'One generative-discriminative pair is formed by Hidden Markov Models (',
-	                    _abbreviations2.default.hmms,
-	                    ') and Linear Chain ',
-	                    _abbreviations2.default.crfs,
-	                    ', and the latter is introduced in the next section. For a thorough explanation of the principle of generative-discriminative pairs, see ',
-	                    _references2.default.cite(_bib2.default.jordan2002discriminative),
-	                    '.'
-	                )
+	                _react2.default.createElement(_Image2.default, { relativeToRoot: relativeToRoot, width: '55%', fig: _figs2.default.factorGraph })
 	            );
 	        }
 	    }], [{
@@ -60014,22 +60114,158 @@ return /******/ (function(modules) { // webpackBootstrap
 	    _createClass(CRF, [{
 	        key: 'render',
 	        value: function render() {
+	            var relativeToRoot = this.props.path.match(/\//g).slice(1).map(function (_) {
+	                return "../";
+	            }).join("");
+
+	            //and will be relevant when we define Linear Chain <abbr title="Conditional Random Fields">CRFs</abbr>.
 	            return _react2.default.createElement(
 	                'div',
 	                null,
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'Directed Graphical Models (or Bayesian Networks) are statistical models that model some probability distribution over variables in a set ',
+	                    'We define generative models as directed models in which all label variables ',
+	                    _react2.default.createElement(_Math2.default, { l: 'y \\in Y' }),
+	                    ' are parents of the observation variables ',
+	                    _react2.default.createElement(_Math2.default, { l: 'x\\in X' }),
+	                    '. This name is due to the labels "generating" the observations: the labels are the contingencies upon which the probability of the output depends.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'When we describe the probability distribution ',
+	                    _react2.default.createElement(_Math2.default, { l: 'p( \\mathbf y|\\mathbf x)' }),
+	                    ', we speak of a discriminative model. Every generative model has a discriminative counterpart. In the words of ',
+	                    _references2.default.cite(_bib2.default.jordan2002discriminative),
+	                    ', we call these generative-discriminative pairs. Training a generative model to maximize ',
+	                    _react2.default.createElement(_Math2.default, { latex: 'p(\\mathbf y|\\mathbf x)' }),
+	                    ' yields the same model as training its discriminative counterpart. Conversely, training a discriminative model to maximize the joint probability ',
+	                    _react2.default.createElement(_Math2.default, { l: 'p(\\mathbf x,\\mathbf y)' }),
+	                    ' (instead of ',
+	                    _react2.default.createElement(_Math2.default, { latex: 'p(\\mathbf y|\\mathbf x)' }),
+	                    ') results in the same model as training the generative counterpart.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'It turns out that when we model a conditional distribution, we have more parameter freedom for ',
+	                    _react2.default.createElement(_Math2.default, { l: 'p(\\mathbf y)' }),
+	                    ', because we are not interested in parameter values for ',
+	                    _react2.default.createElement(_Math2.default, { l: 'p( \\mathbf x)' }),
+	                    '. Modeling ',
+	                    _react2.default.createElement(_Math2.default, {
+	                        l: 'p( \\mathbf y|\\mathbf x)' }),
+	                    ' unburdens us of having to model the potentially very complicated inter-dependencies of ',
+	                    _react2.default.createElement(_Math2.default, { l: 'p(\\mathbf x)' }),
+	                    '. In classification tasks, this means that we are better able to use observations, and so discriminative models tend to out-perform generative models in practice.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'One generative-discriminative pair is formed by Hidden Markov Models (',
+	                    _abbreviations2.default.hmms,
+	                    ') and Linear Chain ',
+	                    _abbreviations2.default.crfs,
+	                    ', and the latter is introduced in the next section. For a thorough explanation of the principle of generative-discriminative pairs, see ',
+	                    _references2.default.cite(_bib2.default.jordan2002discriminative),
+	                    '.'
+	                )
+	            );
+	        }
+	    }], [{
+	        key: 'id',
+	        value: function id() {
+	            return "graphical-models";
+	        }
+	    }]);
+
+	    return CRF;
+	}(_react.Component);
+
+	exports.default = CRF;
+
+/***/ },
+/* 324 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(4);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _FigRef = __webpack_require__(250);
+
+	var _FigRef2 = _interopRequireDefault(_FigRef);
+
+	var _Image = __webpack_require__(253);
+
+	var _Image2 = _interopRequireDefault(_Image);
+
+	var _figs = __webpack_require__(227);
+
+	var _figs2 = _interopRequireDefault(_figs);
+
+	var _references = __webpack_require__(224);
+
+	var _references2 = _interopRequireDefault(_references);
+
+	var _bib = __webpack_require__(212);
+
+	var _bib2 = _interopRequireDefault(_bib);
+
+	var _Math = __webpack_require__(254);
+
+	var _Math2 = _interopRequireDefault(_Math);
+
+	var _abbreviations = __webpack_require__(207);
+
+	var _abbreviations2 = _interopRequireDefault(_abbreviations);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } //noinspection JSUnresolvedVariable
+
+
+	var CRF = function (_Component) {
+	    _inherits(CRF, _Component);
+
+	    function CRF() {
+	        _classCallCheck(this, CRF);
+
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(CRF).apply(this, arguments));
+	    }
+
+	    _createClass(CRF, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Directed Graphical Models (or Bayesian Networks) are statistical models that model some probability distribution over variables ',
+	                    _react2.default.createElement(_Math2.default, { l: 'v' }),
+	                    ' in a set ',
 	                    _react2.default.createElement(_Math2.default, { l: 'V' }),
 	                    ' which take values from a set ',
 	                    _react2.default.createElement(_Math2.default, { l: '\\mathcal{V}' }),
 	                    '. Loosely speaking, Directed Graphical Models can be represented as a directed graph where nodes represent the variables ',
-	                    _react2.default.createElement(_Math2.default, { l: 'v' }),
-	                    ' in ',
-	                    _react2.default.createElement(_Math2.default, { l: 'V' }),
+	                    _react2.default.createElement(_Math2.default, { l: 'v \\in V' }),
 	                    ', and the edges represent dependencies. Directed graphical models factorize as follows:',
-	                    _react2.default.createElement(_Math2.default, { l: 'p( \\mathbf x, \\mathbf y)=\\prod _{v\\in V}p(v|\\pi(v))', display: 'true' }),
+	                    _react2.default.createElement(_Math2.default, { l: 'p(v)=\\prod _{v\\in V}p(v|\\pi(v))', display: 'true' }),
 	                    'where ',
 	                    _react2.default.createElement(_Math2.default, { l: '\\pi(v)' }),
 	                    ' are the parents of node ',
@@ -60043,11 +60279,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    null,
 	                    'Hidden Markov Models (',
 	                    _abbreviations2.default.hmms,
-	                    ') are one instance of directed models in which we have a linear sequence of observations ',
+	                    ') are one instance of directed models which have a linear sequences of observations ',
 	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf x=\\{x_t\\}_{t=1}^T' }),
-	                    ' that is assumed to be generated by a sequence of labels (in HMM parlance, \'hidden states\') ',
+	                    ' and a linear sequence of labels (in HMM parlance, \'hidden states\') ',
 	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf y=\\{y_t\\}_{t=1}^T' }),
-	                    '. One example of an application would be speech recognition, in which samples of the sound waves can be seen as observations, and the actual phonemes as the labels.'
+	                    ', which are valuations of some random vectors ',
+	                    _react2.default.createElement(_Math2.default, { l: 'X' }),
+	                    ' and ',
+	                    _react2.default.createElement(_Math2.default, { l: 'Y' }),
+	                    ' respectively, and ',
+	                    _react2.default.createElement(_Math2.default, {
+	                        l: 'V = X\\cup Y' }),
+	                    '. In HMMs, the observations ',
+	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf x=\\{x_t\\}_{t=1}^T' }),
+	                    ' are assumed to be generated by the labels. One example of an application would be speech recognition, in which samples of the sound waves can be seen as observations, and the actual phonemes as the labels.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -60062,13 +60307,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(
 	                        'li',
 	                        null,
-	                        'any output variable (or ',
-	                        _react2.default.createElement(
-	                            'em',
-	                            null,
-	                            'label'
-	                        ),
-	                        ') ',
+	                        'any label ',
 	                        _react2.default.createElement(_Math2.default, { l: 'y_t' }),
 	                        ' only depends on ',
 	                        _react2.default.createElement(_Math2.default, { l: 'y_{t-1}' }),
@@ -60079,13 +60318,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(
 	                        'li',
 	                        null,
-	                        'any input variable (or ',
-	                        _react2.default.createElement(
-	                            'em',
-	                            null,
-	                            'observation'
-	                        ),
-	                        ') ',
+	                        'any observation ',
 	                        _react2.default.createElement(_Math2.default, { l: 'x_t' }),
 	                        ' only depends on the label ',
 	                        _react2.default.createElement(_Math2.default, {
@@ -60104,7 +60337,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _abbreviations2.default.hmm,
 	                    ' then factorizes as follows:',
 	                    _react2.default.createElement(_Math2.default, { display: 'true',
-	                        l: 'p\\left (v \\right )= \\prod _{t=1}^T p(x_t)p(y_t) = \\prod _{t=1}^T p(x_t|y_t)p(y_t|y_{t-1})' })
+	                        l: 'p\\left (\\mathbf x,\\mathbf y \\right )= \\prod _{t=1}^T p(x_t)p(y_t) = \\prod _{t=1}^T p(x_t|y_t)p(y_t|y_{t-1})' })
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -60149,7 +60382,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = CRF;
 
 /***/ },
-/* 324 */
+/* 325 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60267,7 +60500,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        _react2.default.createElement(_Math2.default, { l: 'F=\\{\\Phi_1, \\ldots\\Phi_k\\}' }),
 	                        ' be a set of local functions ',
 	                        _react2.default.createElement(_Math2.default, {
-	                            l: 'V^n\\rightarrow \\mathbb{R}^+' })
+	                            l: 'V^n\\rightarrow \\mathbb{R}^+' }),
+	                        ', where ',
+	                        _react2.default.createElement(_Math2.default, {
+	                            l: 'V^n' }),
+	                        ' represent the ',
+	                        _react2.default.createElement(_Math2.default, { l: 'n' }),
+	                        ' function parameters for a given local function. In the case of linear-chain ',
+	                        _abbreviations2.default.crfs,
+	                        ', ',
+	                        _react2.default.createElement(_Math2.default, { l: 'V^n = X\\times Y\\times Y' }),
+	                        ', since the functions deal with the current observation, current label and previous label.'
 	                    )
 	                ),
 	                _react2.default.createElement(
@@ -60307,7 +60550,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        'li',
 	                        null,
 	                        _react2.default.createElement(_Math2.default, { l: '\\mathcal F=\\{f_k(y, y\', x)\\}' }),
-	                        ' be a set of feature functions that give a real-valued score given a current label, the previous label and the current output token. These functions are defined by the ',
+	                        ' be a set of feature functions that give a real-valued score given a current label, the previous label and the current observation. These functions are defined by the ',
 	                        _abbreviations2.default.crf,
 	                        ' designer.'
 	                    ),
@@ -60404,7 +60647,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = LinearChainCRF;
 
 /***/ },
-/* 325 */
+/* 326 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60548,7 +60791,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(_Math2.default, { l: 't' }),
 	                    ' ending with ',
 	                    _react2.default.createElement(_Math2.default, { l: 'j' }),
-	                    ' recursively as follows:'
+	                    ' recursively as follows, for ',
+	                    _react2.default.createElement(_Math2.default, { l: '\\Phi_t = \\prod_{k=1}^{K} \\Phi_{k,t}' }),
+	                    ':'
 	                ),
 	                _react2.default.createElement(_Math2.default, { display: 'truuu',
 	                    l: '\\delta_t(j) = \\max_{i \\in \\mathbf y}\\Phi_t(j,i,x_t)\\cdot \\delta_{t-1}(i)' }),
@@ -60557,23 +60802,33 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    null,
 	                    'where the base case'
 	                ),
-	                _react2.default.createElement(_Math2.default, { display: 'truuuu', l: '\\delta_0(j) = \\max_{i \\in \\mathbf y}\\Phi_t(j,i,x_t)' }),
+	                _react2.default.createElement(_Math2.default, { display: 'truuuu', l: '\\delta_0(j) = \\max_{i \\in \\mathbf y}\\Phi_0(j,i,x_0)' }),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'And store the results in a table. We then find the optimal sequence by maximizing ',
+	                    'We store the results in a table. We then find the optimal sequence by maximizing ',
 	                    _react2.default.createElement(_Math2.default, { l: '\\delta_t(j)' }),
 	                    ' at the end of the sequence, ',
-	                    _react2.default.createElement(_Math2.default, { l: 't = T' }),
-	                    ':'
+	                    _react2.default.createElement(
+	                        'span',
+	                        {
+	                            style: { display: 'inline-block' } },
+	                        _react2.default.createElement(_Math2.default, { l: 't = T' }),
+	                        ':'
+	                    )
 	                ),
-	                _react2.default.createElement(_Math2.default, { display: true, l: 'y^*_T = \\text{argmax}_{j\\in y}\\delta_T(j)' }),
+	                _react2.default.createElement(_Math2.default, { display: true, l: '\\mathbf y^*_T = \\text{argmax}_{j\\in y}\\delta_T(j)' }),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
 	                    'Using this trick, we reduce the computational complexity of finding the Viterbi path to ',
-	                    _react2.default.createElement(_Math2.default, { l: 'O(M^2 T)' }),
-	                    '.'
+	                    _react2.default.createElement(
+	                        'span',
+	                        {
+	                            style: { display: 'inline-block' } },
+	                        _react2.default.createElement(_Math2.default, { l: 'O(M^2 T)' }),
+	                        '.'
+	                    )
 	                ),
 	                _react2.default.createElement('div', { className: 'print-spacer' })
 	            );
@@ -60591,7 +60846,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = FScorez;
 
 /***/ },
-/* 326 */
+/* 327 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60679,17 +60934,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(_Math2.default, {
 	                        l: '\\mathbf{x}^{i}=\\{\\mathbf x^{i}_1, \\mathbf x^{i}_2, \\cdots, \\mathbf x^{i}_T\\}'
 	                    }),
-	                    ' is a set of input tokens, and ',
+	                    ' is a set of observation vectors, and ',
 	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf{y}^{i}=\\{\\mathbf y^{i}_1, \\mathbf y^{i}_2, \\cdots, \\mathbf y^{i}_T\\}'
 	                    }),
-	                    ' is a set of output tags for instance length ',
+	                    ' is a set of labels for instance length ',
 	                    _react2.default.createElement(_Math2.default, { l: 'T' }),
 	                    '.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'The training process will maximize some likelihood function ',
+	                    'The training process will maximize some log likelihood function ',
 	                    _react2.default.createElement(_Math2.default, { l: '\\ell(\\Lambda)' }),
 	                    '. We are modeling a conditional distribution, so it makes sense to use the conditional log likelihood function:'
 	                ),
@@ -60715,7 +60970,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'We also add a penalty term to the likelihood function to avoid overfitting. This is called regularization, and in this particular instance we use L2 regularization:'
+	                    'We also add a penalty term to the log likelihood function to avoid overfitting. This is called regularization, and in this particular instance we use L2 regularization:'
 	                ),
 	                _react2.default.createElement(_Math2.default, { display: 'true',
 	                    l: '\\ell(\\Lambda) = \\sum_{i=1}^N\\sum_{t=1}^T\\sum_{k=1}^K\r \\lambda_kf_k(y^i_t,y^i_{t-1},\\mathbf x^i_t)-\\sum_{i=1}^N\\log{Z(\\mathbf x^i)}\r - \\sum_{k=1}^K\\frac{\\lambda_{k}^2}{2\\sigma^2}' }),
@@ -60727,7 +60982,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        l: '\\Lambda' }),
 	                    ' that maximize the likelihood function ',
 	                    _react2.default.createElement(_Math2.default, { l: '\\ell' }),
-	                    ', we use a hill-climbing algorithm. The general idea of hill-climbing algorithms is that we start out with some random assignment to the parameters ',
+	                    ', we use a hill-climbing algorithm. The general idea of hill-climbing algorithms is to start out with some random assignment to the parameters ',
 	                    _react2.default.createElement(_Math2.default, {
 	                        l: '\\Lambda' }),
 	                    ', and estimate the parameters that maximize ',
@@ -60750,7 +61005,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(_Math2.default, { l: '\\lambda_i' }),
 	                    ' along this gradient:'
 	                ),
-	                _react2.default.createElement(_Math2.default, { display: 'true', l: '\\lambda_i := \\lambda_i + \\alpha \\frac{\\partial\\ell}{\\partial\\lambda_k}' }),
+	                _react2.default.createElement(_Math2.default, { display: 'true', l: '\\lambda_i := \\lambda_i + \\alpha \\frac{\\partial\\ell}{\\partial\\lambda_i}' }),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
@@ -60779,18 +61034,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        'a',
 	                        {
 	                            href: 'https://en.wikipedia.org/wiki/Limited-memory_BFGS' },
-	                        'Limited-memory Broyden–Fletcher–Goldfarb–Shanno algorithm (',
-	                        _abbreviations2.default.lmbvfgs,
+	                        'Limited-memory Broyden–Fletcher–Goldfarb–Shannon algorithm (',
+	                        _abbreviations2.default.lmbfgs,
 	                        ')'
 	                    ),
-	                    ', which approximates Newton\'s Method. This algorithm is optimized for the memory-contrained conditions in real-world computers, and also converges much faster than a naive implementation because it works on the double derivative of ',
+	                    ', which approximates Newton\'s Method (see eg. ',
+	                    _references2.default.cite(_bib2.default.nocedal1980updating),
+	                    '). This algorithm is optimized for the memory-contrained conditions in real-world computers, and also converges much faster than a naive implementation because it works on the second derivative of ',
 	                    _react2.default.createElement(_Math2.default, { l: '\\ell' }),
 	                    '.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'The algorithmic complexity of this algorithm is ',
+	                    'The algorithmic complexity of the ',
+	                    _abbreviations2.default.lmbfgs,
+	                    ' algorithm is ',
 	                    _react2.default.createElement(_Math2.default, { l: 'O(TM^2NG)' }),
 	                    ', where ',
 	                    _react2.default.createElement(_Math2.default, { l: 'T' }),
@@ -60798,7 +61057,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(_Math2.default, { l: 'M' }),
 	                    ' is the number of possible labels, ',
 	                    _react2.default.createElement(_Math2.default, { l: 'N' }),
-	                    ' in the number of trianing instances, and ',
+	                    ' in the number of training instances, and ',
 	                    _react2.default.createElement(_Math2.default, { l: 'G' }),
 	                    ' is the number of gradient computations. The number of gradient computations can be set to a fixed number, or is otherwise unknown (in which case the algorithm trains to convergence, which is guaranteed because of the concavity of ',
 	                    _react2.default.createElement(_Math2.default, { l: '\\ell' }),
@@ -60819,7 +61078,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = ParameterEstimation;
 
 /***/ },
-/* 327 */
+/* 328 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60898,7 +61157,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = CRF;
 
 /***/ },
-/* 328 */
+/* 329 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61065,7 +61324,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Results;
 
 /***/ },
-/* 329 */
+/* 330 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61157,7 +61416,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'Another possibility is to implement a probabilistic version of the Earley parsing algorithm, a more top down parser which easily allows to intervene during parsing when some unexpected input is encountered. Although Earley parsers also have a worst-case complexity of ',
+	                    'Another possibility is to implement a probabilistic version of the Earley parsing algorithm, a more top down parser which easily allows to intervene during parsing when some unexpected input is encountered. Although the Earley parser has a worst-case complexity of ',
 	                    _react2.default.createElement(_Math2.default, { l: 'O(n^3)' }),
 	                    ', it parses left-recursive grammars in ',
 	                    _react2.default.createElement(_Math2.default, { l: 'O(n)' }),
@@ -61177,7 +61436,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Discussion;
 
 /***/ },
-/* 330 */
+/* 331 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61228,19 +61487,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	            return _react2.default.createElement(
 	                'p',
 	                null,
-	                'Taking a closer look at faulty labels, we observe that most errors are snippets of text that contain only a noun phrase, and it is easy to imagine how the ',
+	                'Taking a closer look at faulty labels, we observe that most errors are snippets of text that contain only a noun phrase. Because of the sometimes very staccato paragraphs in case law, it is easy to imagine how the ',
 	                _react2.default.createElement(
 	                    'abbr',
 	                    { title: 'Conditional Random Field' },
 	                    'CRF'
 	                ),
-	                ' assigns such a text block as a title or vice versa. Furthermore, due to the sometimes very staccato paragraphs in case law, it can be hard even for humans to distinguish section titles and running text. Still, the ',
+	                ' might confuse text blocks and titles. it can be hard even for humans to distinguish section titles and running text. Still, the ',
 	                _react2.default.createElement(
 	                    'abbr',
 	                    { title: 'Conditional Random Field' },
 	                    'CRF'
 	                ),
-	                ' is not currently tuned to target problematic cases, and doing so is likely a fruitful way to improve classifier performance.'
+	                ' is not currently tuned to target problematic cases, and doing so is likely to be a fruitful way to improve classifier performance.'
 	            );
 	        }
 	    }]);
@@ -61251,7 +61510,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Discussion;
 
 /***/ },
-/* 331 */
+/* 332 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61272,7 +61531,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
-	var _ChapterSectionContent = __webpack_require__(332);
+	var _ChapterSectionContent = __webpack_require__(333);
 
 	var _ChapterSectionContent2 = _interopRequireDefault(_ChapterSectionContent);
 
@@ -61360,7 +61619,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Tagging;
 
 /***/ },
-/* 332 */
+/* 333 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61434,7 +61693,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = Chapter;
 
 /***/ },
-/* 333 */
+/* 334 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61590,7 +61849,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = TaggingIntroduction;
 
 /***/ },
-/* 334 */
+/* 335 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61660,7 +61919,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = DeterministicTagger;
 
 /***/ },
-/* 335 */
+/* 336 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61816,12 +62075,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _abbreviations2.default.crfs,
 	                    '), which is topologically very similar to ',
 	                    _abbreviations2.default.hmms,
-	                    ': both model a probability distribution along a chain of input variables, where each input variable is also connected to a single output variable.'
+	                    ': both model a probability distribution along a chain of labels, where each label is also connected to a single observation.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'To clarify: in our experiments we consider an input document as a string of tokens which corresponds to the set of input variables, where each token is linked to one output variable which represents the label of the token: either ',
+	                    'To clarify: in our experiments we consider an input document as a string of tokens which corresponds to a string of observations vectors, where each token is linked to one output variable which represents the label of the token: either ',
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -61852,7 +62111,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    null,
 	                    'Because of the freedom that ',
 	                    _abbreviations2.default.crfs,
-	                    ' permit for the input vector, ',
+	                    ' permit for the observation vectors, ',
 	                    _abbreviations2.default.crfs,
 	                    ' tend to have many features: ',
 	                    _references2.default.cite(_bib2.default.klinger2009feature),
@@ -61905,7 +62164,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = CRF;
 
 /***/ },
-/* 336 */
+/* 337 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62166,7 +62425,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = FeatureSelection;
 
 /***/ },
-/* 337 */
+/* 338 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62235,7 +62494,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = InferringDocumentStructureIntroduction;
 
 /***/ },
-/* 338 */
+/* 339 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62250,7 +62509,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _ChapterSectionContent = __webpack_require__(332);
+	var _ChapterSectionContent = __webpack_require__(333);
 
 	var _ChapterSectionContent2 = _interopRequireDefault(_ChapterSectionContent);
 
@@ -62306,7 +62565,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Methods;
 
 /***/ },
-/* 339 */
+/* 340 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62375,7 +62634,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Evaluation;
 
 /***/ },
-/* 340 */
+/* 341 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62410,11 +62669,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _figs2 = _interopRequireDefault(_figs);
 
-	var _listings = __webpack_require__(341);
+	var _listings = __webpack_require__(342);
 
 	var _listings2 = _interopRequireDefault(_listings);
 
-	var _ListingRef = __webpack_require__(342);
+	var _ListingRef = __webpack_require__(343);
 
 	var _ListingRef2 = _interopRequireDefault(_ListingRef);
 
@@ -62470,14 +62729,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    null,
 	                    'A Probabilistic Context Free Grammar (',
 	                    _abbreviations2.default.pcfg,
-	                    ') is then a Context Free Grammar in which each rule has a probability assigned to it. In general, the probability can take the form of any semiring (i.e., a set of elements with notions of addition and multiplication). A derivation of a sequence with a ',
+	                    ') is then a Context Free Grammar in which each rule has a probability assigned to it. A derivation of a sequence with a ',
 	                    _abbreviations2.default.pcfg,
 	                    ' has a probility score attached to it, which is the product of the probabilities of all of the applied rules.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'In our discussions, we assume probability scores to be the real numbers between ',
+	                    'In our discussions, we assume probability scores to be real numbers between ',
 	                    _react2.default.createElement(_Math2.default, { l: '0' }),
 	                    ' and ',
 	                    _react2.default.createElement(_Math2.default, { l: '1' }),
@@ -62923,7 +63182,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = ContextFreeGrammars;
 
 /***/ },
-/* 341 */
+/* 342 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62949,7 +63208,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = listings;
 
 /***/ },
-/* 342 */
+/* 343 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -63015,7 +63274,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	;
 
 /***/ },
-/* 343 */
+/* 344 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -63093,7 +63352,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = AdditionalEnrichment;
 
 /***/ },
-/* 344 */
+/* 345 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -63120,7 +63379,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Math2 = _interopRequireDefault(_Math);
 
-	var _InlineBlockSpan = __webpack_require__(345);
+	var _InlineBlockSpan = __webpack_require__(346);
 
 	var _InlineBlockSpan2 = _interopRequireDefault(_InlineBlockSpan);
 
@@ -63132,11 +63391,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _figs2 = _interopRequireDefault(_figs);
 
-	var _listings = __webpack_require__(341);
+	var _listings = __webpack_require__(342);
 
 	var _listings2 = _interopRequireDefault(_listings);
 
-	var _ListingRef = __webpack_require__(342);
+	var _ListingRef = __webpack_require__(343);
 
 	var _ListingRef2 = _interopRequireDefault(_ListingRef);
 
@@ -63250,7 +63509,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(_Math2.default, { l: '\\text A' }),
 	                    ' and ',
 	                    _react2.default.createElement(_Math2.default, { l: '\\text B' }),
-	                    ' are both non-terminals. Extension of the algorithm is simple: at the end of every substring type assignment, we add those types to the list that result from applicable unary rules, if that rule produces a non-terminal that does yet not exist in the table with at least that probability. We repeat until the cell does not change anymore.'
+	                    ' are both non-terminals. Extension of the algorithm is simple: at the end of every substring type assignment, we add those types to the list that result from applicable unary rules, if that rule produces a non-terminal that does not yet exist in the table with at least that probability. We repeat until the cell does not change anymore.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -63937,7 +64196,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = CYK;
 
 /***/ },
-/* 345 */
+/* 346 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -63989,7 +64248,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = InlineBlockSpan;
 
 /***/ },
-/* 346 */
+/* 347 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -64013,7 +64272,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = disseminationSections;
 
 /***/ },
-/* 347 */
+/* 348 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -64040,7 +64299,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Importing2 = _interopRequireDefault(_Importing);
 
-	var _Chapter = __webpack_require__(348);
+	var _Chapter = __webpack_require__(349);
 
 	var _Chapter2 = _interopRequireDefault(_Chapter);
 
@@ -64120,7 +64379,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = IntroductionIntroduction;
 
 /***/ },
-/* 348 */
+/* 349 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -64282,7 +64541,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = Chapter;
 
 /***/ },
-/* 349 */
+/* 350 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -64305,15 +64564,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Routes = __webpack_require__(204);
 
-	var _Introduction = __webpack_require__(347);
+	var _Introduction = __webpack_require__(348);
 
 	var _Introduction2 = _interopRequireDefault(_Introduction);
 
-	var _Tagging = __webpack_require__(350);
+	var _Tagging = __webpack_require__(351);
 
 	var _Tagging2 = _interopRequireDefault(_Tagging);
 
-	var _InferringDocumentStructure = __webpack_require__(351);
+	var _InferringDocumentStructure = __webpack_require__(352);
 
 	var _InferringDocumentStructure2 = _interopRequireDefault(_InferringDocumentStructure);
 
@@ -64494,7 +64753,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = FullThesis;
 
 /***/ },
-/* 350 */
+/* 351 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -64509,27 +64768,27 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Chapter = __webpack_require__(348);
+	var _Chapter = __webpack_require__(349);
 
 	var _Chapter2 = _interopRequireDefault(_Chapter);
 
-	var _Methods = __webpack_require__(331);
+	var _Methods = __webpack_require__(332);
 
 	var _Methods2 = _interopRequireDefault(_Methods);
 
-	var _Results = __webpack_require__(328);
+	var _Results = __webpack_require__(329);
 
 	var _Results2 = _interopRequireDefault(_Results);
 
-	var _DeterministicTagger = __webpack_require__(334);
+	var _DeterministicTagger = __webpack_require__(335);
 
 	var _DeterministicTagger2 = _interopRequireDefault(_DeterministicTagger);
 
-	var _CRF = __webpack_require__(335);
+	var _CRF = __webpack_require__(336);
 
 	var _CRF2 = _interopRequireDefault(_CRF);
 
-	var _FeatureSelection = __webpack_require__(336);
+	var _FeatureSelection = __webpack_require__(337);
 
 	var _FeatureSelection2 = _interopRequireDefault(_FeatureSelection);
 
@@ -64600,7 +64859,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Tagging;
 
 /***/ },
-/* 351 */
+/* 352 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -64615,7 +64874,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Chapter = __webpack_require__(348);
+	var _Chapter = __webpack_require__(349);
 
 	var _Chapter2 = _interopRequireDefault(_Chapter);
 
@@ -64676,7 +64935,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Inferring;
 
 /***/ },
-/* 352 */
+/* 353 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -64691,7 +64950,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Chapter = __webpack_require__(348);
+	var _Chapter = __webpack_require__(349);
 
 	var _Chapter2 = _interopRequireDefault(_Chapter);
 
@@ -64699,7 +64958,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
-	var _sections = __webpack_require__(346);
+	var _sections = __webpack_require__(347);
 
 	var _sections2 = _interopRequireDefault(_sections);
 
@@ -64761,7 +65020,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Conclusion;
 
 /***/ },
-/* 353 */
+/* 354 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -64776,7 +65035,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Chapter = __webpack_require__(348);
+	var _Chapter = __webpack_require__(349);
 
 	var _Chapter2 = _interopRequireDefault(_Chapter);
 

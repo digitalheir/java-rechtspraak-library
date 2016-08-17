@@ -624,6 +624,9 @@ figure {
 .nopadding {
     padding: 0;
 }
+#tbl-confusion-matrix th, #tbl-confusion-matrix td {
+    border: none;
+}
 #fig-tfidf-sections .perc-text {
     min-width: 30px;
 }
