@@ -1,10 +1,7 @@
 import {url as markupStatsUrl} from './MarkupStatsFigure/data';
 
 const figs = {
-    parseFig: {
-        id: 'fig-parsing-triangle',
-        num: 9
-    },
+
     markupStats: {
         id: 'markup-stats',
         num: 1,
@@ -12,58 +9,36 @@ const figs = {
     },
 
 
-    titleTf: {
-        id: "fig-title-tf",
-        num: 3
-    },
-    taggingResults: {
-        id: "fig-results",
-        num: 7
-    },
-    confusionMatrix: {
-        id: "fig-confusion-matrix",
-        num: 8
-    },
     figTitleWordCount: {
         id: "fig-title-word-count",
         num: 2
+    },
+    figTitleNumbering: {
+        id: "fig-title-numbering",
+        num: 2
+    },
+    titleTf: {
+        id: "fig-title-tf",
+        num: 3
     },
     titleRelativeWordCount: {
         id: "fig-title-relative-word-count",
         num: 3
     },
 
+    figTitleTreemap: {
+        id: "fig-title-patterns",
+        num: 3
+    },
     tfidf: {
         id: "fig-title-tf-idf",
         num: 4
     },
 
-    figTitleNumbering: {
-        id: "fig-title-numbering",
-        num: 2
-    },
-    figTitleTreemap: {
-        id: "fig-title-patterns",
-        num: 3
-    },
     sectionsTfidf: {
         id: "fig-tfidf-sections",
         num: 5
     },
-
-    hmm: function () {
-        const id = "fig-hmm";
-        const src = "/img/hmm.svg";// TODO relativeurl
-        const alt = "Graphical representation of a Hidden Markov Model";
-        const num = 1;
-        return {
-            id: id,
-            src: src,
-            alt: alt,
-            num: num
-        }
-    }(),
-
     graphicalModels: function () {
         const id = "fig-models-relationships";
         const src = "/img/graphical-models.svg"; // TODO relativeurl
@@ -78,15 +53,6 @@ const figs = {
         }
     }(),
 
-    tfidf: function () {
-        const id = "tfidf";
-        const num = 4;
-
-        return {
-            id: id,
-            num: num
-        };
-    }(),
     factorGraph: function () {
         const id = "fig-factor-graph";
         const src = "/img/factor-graph.svg";//// TODO relativeurl
@@ -99,7 +65,33 @@ const figs = {
             alt: alt,
             num: num
         };
-    }()
+    }(),
+
+    taggingResults: {
+        id: "fig-results",
+        num: 8
+    },
+    confusionMatrix: {
+        id: "fig-confusion-matrix",
+        num: 9
+    },
+    parseFig: {
+        id: 'fig-parsing-triangle',
+        num: 10
+    },
+    hmm: function () {
+        const id = "fig-hmm";
+        const src = "/img/hmm.svg";// TODO relativeurl
+        const alt = "Graphical representation of a Hidden Markov Model";
+        const num = 1;
+        return {
+            id: id,
+            src: src,
+            alt: alt,
+            num: num
+        }
+    }(),
+
 };
 
 export default figs;

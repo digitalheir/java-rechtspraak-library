@@ -21,22 +21,26 @@ export default class Results extends Component {
 
         return <div>
             <p>
-                To compare the performance of CRFs, we also define a deterministic algorithm which serves
+                To compare the performance of <abbr title="Conditional Random Fields">CRFs</abbr>, we also
+                define a deterministic classifier which serves
                 as a baseline performance.
-                The tagger uses many of the same features that the CRFs use
-                to determine the labels for given tokens. (e.g. 'if it looks like a
-                known title, assign it to <code>title</code>'; 'if it looks like a number and is congruent with
-                previous numbers, assign it to <code>nr</code>'.)
+                The tagger uses many of the same features that we use for
+                training the <abbr title="Conditional Random Fields">CRFs</abbr>. These features are used in
+                rules such as 'if it looks like a
+                known title, assign it to <code>title</code>' and 'if it looks like a number and is congruent with
+                previous numbers, assign it to <code>nr</code>'.
             </p>
+
             <p>
-                For assessing the performance of our trained CRFs,
+                For assessing the performance of our trained <abbr title="Conditional Random Fields">CRFs</abbr>,
                 we compare three conditions:
             </p>
 
             <ol>
                 <li>The deterministic tagger as a baseline</li>
                 <li>One CRF trained on 100 documents that are randomly selected and manually annotated</li>
-                <li>One CRF trained on 100 documents that are randomly selected and manually annotated, but with all
+                <li>One <abbr title="Conditional Random Field">CRF</abbr> trained on 100 documents that are randomly
+                    selected and manually annotated, but with all
                     newline tokens omitted
                 </li>
             </ol>
@@ -50,7 +54,8 @@ export default class Results extends Component {
                 demarcate something with whitespace. But on the other hand they
                 might obscure information about the previous label. Consider a
                 numbering, followed by a newline, followed by a section title.
-                Our CRFs only consider one previous label, so the relationship
+                Our <abbr title="Conditional Random Fields">CRFs</abbr> only consider one previous label, so the
+                relationship
                 between the numbering and the title might not be represented well.
                 We see in <FigRef fig={figs.taggingResults}/> that
                 including newline tokens performs slightly better than not

@@ -2,6 +2,7 @@ import React from 'react';
 import {getSubSections} from '../getSectionComponent';
 import chapters from '../../../chapters';
 import ToC from '../ToC/ToC'
+import abbrs  from '../abbreviations'
 /**
  * A component for a chapter page on our website.
  */
@@ -10,19 +11,20 @@ export default class Chapter extends React.Component {
         var subsections = this.props.sections.map(getSubSections(this.props, 3));
 
         const standaloneChapter = !this.props.inline;
-
+        const main = <section id={this.props.id?this.props.id:''}
+                              itemProp="hasPart"
+                              itemScope={true}
+                              itemType="https://schema.org/Chapter"
+                              className="chapter numbered-section reset-counter">
+            <h2 itemProp="name" className="title"><a className="link-up" href="#"/>{this.props.title}</h2>
+            {this.props.children}
+            {subsections}
+        </section>;
         return (
             <div>
                 {standaloneChapter ? <h2>Table of Contents</h2> : ''}
                 {standaloneChapter ? <ToC showHome={true} {...this.props} /> : ''}
-
-                <section id={this.props.id?this.props.id:''}
-                         className="chapter">
-                    <h2 className="title"><a className="link-up" href="#"/>{this.props.title}</h2>
-                    {this.props.children}
-                    {subsections}
-                </section>
-
+                {standaloneChapter ? <main>{main}</main> : main}
                 {standaloneChapter ? this.linkToNextChapter(this.props.title) : ''}
             </div>
         );
@@ -50,9 +52,7 @@ export default class Chapter extends React.Component {
 }
 Chapter.propTypes = {
     title: React.PropTypes.string.isRequired,
-    sections: React.PropTypes.arrayOf(React.PropTypes.shape({
-        component: React.PropTypes.func.isRequired
-    })).isRequired
+    sections: React.PropTypes.arrayOf(React.PropTypes.shape({})).isRequired
 };
 
 module.exports = Chapter;

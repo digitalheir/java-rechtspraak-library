@@ -6,6 +6,7 @@ import figs from './../../../../Figures/figs'
 import ref from '../../../../Bibliography/References/references'
 import bib from  '../../../../Bibliography/bib';
 import F from  '../../../../Math/Math';
+import abbrs from  '../../../../abbreviations';
 
 export default class CRF extends Component {
     static id() {
@@ -15,10 +16,13 @@ export default class CRF extends Component {
     render() {
         const relativeToRoot = this.props.path.match(/\//g).slice(1).map(_ => "../").join("");
 
+        //and will be relevant when we define Linear Chain <abbr title="Conditional Random Fields">CRFs</abbr>.
         return <div>
             <p>
-                Undirected graphical models are similar to directed
-                graphical models, but factorize slightly different:
+                Undirected Graphical Models are similar to directed
+                graphical models, except we imagine the underlying graph
+                to be an undirected graph. This means that Undirected Graphical Models factorize slightly
+                different:
 
                 <F
                     l="p( \mathbf x, \mathbf y)=\frac{1}{Z}\prod _A \Phi_A( \mathbf x_A,\mathbf y_A)"
@@ -28,31 +32,38 @@ export default class CRF extends Component {
                 displayMode={true}/>
             </p>
             <p>
-                Where <F
-                l="\mathbf x"/> and <F
-                l="\mathbf y"/> denote an assignment to <F l="X"/> and <F l="Y"/>,
-                respectively, and we consider <F l="V = X\cup Y"/>.
-                Splitting <F l="V"/> in two sets reflects our situation of dealing with
-                a set of input variables <F l="X"/> (for example, word features)
-                and a set of output variables <F l="Y"/> (for example, part-of-speech tags),
-                and will be relevant when we define Linear Chain CRFs.
+                and
             </p>
-            
+            <ul>
+                <li><F
+                    l="A"/> is the set of all cliques in the underlying graph
+                </li>
+                <li>
+                    <F l="\mathbf x"/> and <F
+                    l="\mathbf y"/> denote an assignment to <F l="X"/> and <F l="Y"/>,
+                    respectively
+                </li>
+                <li>
+                    and we consider <F l="V = X\cup Y"/> of
+                    a set of input variables <F l="X"/> (for example, word features)
+                    and a set of output variables <F l="Y"/> (for example, part-of-speech tags).
+                </li>
+            </ul>
+
+
             <p>
-                Intuitively, <F l="p( \mathbf x, \mathbf y)"/> describes
-                the joint probability of input and output
+                Intuitively, <F l="p( \mathbf x, \mathbf y)"/> describes the joint probability of input and output
                 vectors in terms of some set of functions <span><F
                 l="F = \{  \Phi_A\}"/></span>, collectively known as the factors.
-                The
-                normalization term <F l="Z"/> ensures that the
+                The normalization term <F l="Z"/> ensures that the
                 probability function ranges between <F l="0"/> and <F l="1"/>: it sums every possible value
-                of the the multiplied factors. <F l="\Phi_A \in F"/> can be any function
-                from with parameters of input and output variables <F l="A \subset V"/> to
+                of the the multiplied factors. In general, <F l="\Phi_A \in F"/> can be any function
+                with parameters taken from the set of input and output variables <F l="A \subset V"/> to
                 a positive real number,
                 i.e. <F l="\Phi_A:A\rightarrow\ \mathbb{R}^+"/>,
-                but we will see use these factors to multiple feature values
+                but we will use these factors simply to multiply feature values
                 by some weight constant. Individually the
-                functions <F l="\mathcal{V}^{|\Phi_A|} \in F"/> are known as local
+                functions <F l="\Phi_A \in F"/> are known as local
                 functions or compatibility functions.
             </p>
             <p>
@@ -79,7 +90,7 @@ export default class CRF extends Component {
                 The factorization of the function for <F
                 l="p(\mathbf x,\mathbf y)"/> can be represented
                 as a graph, called a <a href="https://en.wikipedia.org/wiki/Factor_graph">
-                factor graph</a>. (Illustrated in <FigRef fig={figs.factorGraph}/>.)
+                factor graph</a>, which is illustrated in <FigRef fig={figs.factorGraph}/>.
             </p>
 
 
@@ -123,16 +134,18 @@ export default class CRF extends Component {
                 It turns out that when we model a conditional distribution,
                 we have more parameter freedom for <F l="p(\mathbf y)"/>, because we are not interested
                 in parameter values for <F l="p( \mathbf x)"/>. Modeling <F
-                l="p( \mathbf y|\mathbf x)"/> unburdens us with modeling the potentially very complicated
+                l="p( \mathbf y|\mathbf x)"/> unburdens us of having to model the potentially very complicated
                 inter-dependencies of <F l="p(\mathbf x)"/>. In classification tasks,
                 this means that we are better able to use observations,
                 and so discriminative models tend to out-perform generative models in practice.
-                For a thorough explanation of the principle of generative-discriminative pairs,
-                see {ref.cite(bib.jordan2002discriminative)}.
             </p>
 
             <p>
-                One generative-discriminative pair is formed by Hidden Markov Models (HMMs) and Linear Chain CRFs.
+                One generative-discriminative pair is formed by Hidden Markov
+                Models ({abbrs.hmms}) and
+                Linear Chain {abbrs.crfs}, and the latter is introduced in the next section.
+                For a thorough explanation of the principle of generative-discriminative pairs,
+                see {ref.cite(bib.jordan2002discriminative)}.
             </p>
 
         </div>;

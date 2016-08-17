@@ -2,7 +2,7 @@
 import React, {Component} from 'react';
 import ref from '../../Bibliography/References/references'
 import bib from  '../../Bibliography/bib';
-
+import abbrs  from '../../abbreviations'
 export default class RelatedWork extends Component {
     render() {
         return <div>
@@ -11,35 +11,38 @@ export default class RelatedWork extends Component {
                 markup to plain-text documents has existed since
                 the rise of hypertext in the late 1980s:
                 see {ref.cite(bib.furuta1989automatically)} for
-                one historic example that pre-dates XML.
+                one historic example that pre-dates {abbrs.xml}.
             </p>
 
             <p>
                 {ref.cite(bib.abolhassani2003information)} discuss
                 the general problem of automatic markup from digitally scanned
-                documents, and define parsing a section structure as a part of macro-level markup.
+                documents, and define parsing a section structure as a task in macro-level markup.
                 This is in contrast to micro-level markup, such as named entity recognition.
                 They review some general solutions,
-                but argue that general automatic markup "will remain a problem for a long time".
+                but argue that general automatic markup <q cite={bib.abolhassani2003information.url}>will remain
+                a problem for a long time</q>.
             </p>
 
             <p>
-                Indeed, most applications are domain-specific.
+                Indeed, most approaches to automatic mark-up are domain-specific.
                 Somewhat recently, the problem has been addressed
                 in legal informatics as well. {ref.cite(bib.bacci2009automatic)} have a similar set-up
-                to ours, applied to Italian law text.
+                to ours, applied to Italian law texts.
                 They successfully apply
                 Hidden Markov Models to distinguish header and footers
-                from body. Interestingly, they train a separate HMM
-                per law type. For parsing the section hierarchy
+                from body. Interestingly, they train a
+                separate <abbr title="Hidden Markov Model">HMM</abbr> for
+                every law type. For parsing the section hierarchy
                 in the body, they use non-deterministic finite state machines,
-                which corresponds to the class of (non-deterministic) regular 
-                expressions. {ref.cite(bib.bacci2009automatic)} report some intolerance of their system to
-                minor syntactical errors in the input, but catch common
-                issues. Legislative
-                texts tend to be more deeply nested than court judgments, but
-                also tend to have a more strict structure, which explains why
-                their system uses much less features than ours.
+                which corresponds to the class of (non-deterministic) regular
+                expressions. The system shows some intolerance to
+                syntactical errors in the input, but can handle common
+                issues. It uses much less features than ours,
+                which may be explained by the fact
+                that legislative
+                texts tend to have a more strict structure than case law, even
+                though it also tends to be more deeply nested.
             </p>
         </div>
     }

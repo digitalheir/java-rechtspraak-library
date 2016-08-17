@@ -36,12 +36,26 @@ class Root extends React.Component {
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans"/>
-                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+                <link rel="stylesheet"
+                      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css"/>
                 <link rel="stylesheet" href={relativeToRoot+"style.css"}/>
             </head>
-            <body className='p2'>
+            <body itemProp="mainEntity"
+                  itemScope={true}
+                  itemType="https://schema.org/Thesis"
+                  className='p2'>
             {this.props.path == '/full/' ? '' : <Header {...this.props} />}
+            <div itemProp="audience" itemScope={true} itemType="http://schema.org/EducationalAudience">
+                <meta content="student" itemProp="audienceType"/>
+                <meta content="researcher" itemProp="audienceType"/>
+                <meta content="computer scientist" itemProp="audienceType"/>
+                <meta content="legal researcher" itemProp="audienceType"/>
+            </div>
+            <meta content="en" itemProp="inLanguage"/>
+            <meta content="true" itemProp="isFamilyFriendly"/>
+            <meta content="2016" itemProp="copyrightYear"/>
+            <meta content="expositive" itemProp="interactivityType"/>
             <RouteHandler {...this.props} />
             <Bibliography/>
             {this.props.path == '/full/' ? '' : <License {...this.props} />}

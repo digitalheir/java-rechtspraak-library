@@ -43,7 +43,7 @@ export default class FigureTitleTfIdf extends React.Component {
                 Stemming is performed using
                 the <a href="http://snowball.tartarus.org/algorithms/dutch/stemmer.html">Snowball algorithm for
                 Dutch</a>. '[NUMBER]' and '[de|het|een]' are special classes for numbers and grammatical articles
-                (the Dutch equivalent of the articles 'the' and 'a').
+                (i.e. the Dutch equivalent of the articles 'the' and 'a').
             </figcaption>
         </figure>;
     }

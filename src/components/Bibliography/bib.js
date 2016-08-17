@@ -8,19 +8,21 @@ const bib = {
         },
         booktitle: "Proceedings of the 27th International Conference on Machine Learning (ICML-10)",
         pages: "127—134",
-        year: 2010
+        year: 2010,
+        href: 'http://select.cs.cmu.edu/publications/paperdir/icml2010-bradley-guestrin.pdf'
     },
     zhu2013fast: {
         type: 'inproceedings',
         id: 'zhu2013fast',
-        title: 'Fast and Accurate Shift-Reduce Constituent Parsing.',
+        title: 'Fast and Accurate Shift-Reduce Constituent Parsing',
         author: {
             abbr: "Zhu et al.",
             full: 'Zhu, Muhua and Zhang, Yue and Chen, Wenliang and Zhang, Min and Zhu, Jingbo'
         },
         booktitle: 'ACL (1)',
         pages: '434—443',
-        year: 2013
+        year: 2013,
+        href: 'http://www.aclweb.org/anthology/P13-1043.pdf'
     },
     hale2001probabilistic: {
         id: 'hale2001probabilistic', type: 'inproceedings',
@@ -32,6 +34,7 @@ const bib = {
         booktitle: "Proceedings of the second meeting of the North American Chapter of the Association for Computational Linguistics on Language technologies",
         organization: 'Association for Computational Linguistics',
         pages: "1—8",
+        href: 'https://www.hlp.rochester.edu/resources/workshop_materials/EVELIN12/Hale01_NAACL_probabilistic%20early%20parser_N01-1021.pdf',
         year: 2001
     },
     abolhassani2003information: {
@@ -46,7 +49,7 @@ const bib = {
         pages: '159—174',
         year: 2003,
         publisher: 'Springer',
-        href: 'http://www.is.informatik.uni-duisburg.de/bib/pdf/ir/Abolhassani_etal_03.pdf'
+        href: 'http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.83.465&rep=rep1&type=pdf'
     },
     lafferty2001conditional: {
         type: 'inproceedings',
@@ -59,7 +62,8 @@ const bib = {
         booktitle: 'Proceedings of the eighteenth international conference on machine learning, ICML',
         volume: '1',
         pages: '282—289',
-        year: 2001
+        year: 2001,
+        href: 'http://nlp.cs.nyu.edu/nycnlp/lafferty01conditional.pdf'
     },
     settles2004biomedical: {
         type: 'inproceedings',
@@ -72,6 +76,7 @@ const bib = {
         booktitle: 'Proceedings of the International Joint Workshop on Natural Language Processing in Biomedicine and its Applications',
         pages: '104—107',
         year: 2004,
+        href: 'http://burrsettles.com/pub/settles.nlpba04.pdf',
         organization: 'Association for Computational Linguistics'
     },
     sha2003shallow: {
@@ -85,6 +90,7 @@ const bib = {
         booktitle: 'Proceedings of the 2003 Conference of the North American Chapter of the Association for Computational Linguistics on Human Language Technology-Volume 1',
         pages: '134—141',
         year: 2003,
+        href: 'http://www-bcf.usc.edu/~feisha/pubs/shallow03.pdf',
         organization: 'Association for Computational Linguistics'
     },
     collins1997three: {
@@ -97,7 +103,7 @@ const bib = {
         booktitle: "Proceedings of the 35th Annual Meeting of the Association for Computational Linguistics and Eighth Conference of the European Chapter of the Association for Computational Linguistics",
         pages: "16—23",
         organization: 'Association for Computational Linguistics',
-        year: 1997
+        year: 1997, href: 'http://www.aclweb.org/anthology/P/P97/P97-1003.pdf'
     },
     abney1991procedure: {
         id: 'abney1991procedure',
@@ -110,7 +116,8 @@ const bib = {
         booktitle: 'Proceedings of the workshop on Speech and Natural Language',
         pages: '306—311',
         year: 1991,
-        organization: 'Association for Computational Linguistics'
+        organization: 'Association for Computational Linguistics',
+        href: 'http://www.aclweb.org/anthology/H/H91/H91-1060.pdf'
     },
     sakakibara1994stochastic: {
         type: 'article', id: 'sakakibara1994stochastic',
@@ -124,7 +131,8 @@ const bib = {
         number: '23',
         pages: '5112—5120',
         year: 1994,
-        publisher: 'Oxford Univ Press'
+        publisher: 'Oxford University Press',
+        href: 'http://nar.oxfordjournals.org/content/22/23/5112.full.pdf?related-urls=yes&legid=nar;22/23/5112'
     },
     jordan2002discriminative: {
         id: 'jordan2002discriminative',
@@ -136,6 +144,7 @@ const bib = {
         journal: "Advances in neural information processing systems",
         volume: "14",
         pages: "841",
+        href: 'http://papers.nips.cc/paper/2020-on-discriminative-vs-generative-classifiers-a-comparison-of-logistic-regression-and-naive-bayes.pdf',
         year: 2002
     },
     younger1967recognition: {
@@ -151,18 +160,20 @@ const bib = {
         pages: '189—208',
         year: 1967,
         publisher: 'Elsevier',
+        href: 'http://www.sciencedirect.com/science/article/pii/S001999586780007X',
         type: 'article'
     },
 
     kasami1965efficient: {
         type: 'techreport', id: 'kasami1965efficient',
-        title: 'AN EFFICIENT RECOGNITION AND SYNTAX ANALYSIS ALGORITHM FOR CONTEXT-FREE LANGUAGES',
+        title: 'An Efficient Recognition And Syntax Analysis Algorithm For Context-Free Languages',
         author: {
             firstName: "Tadao",
             lastName: "Kasami"
         },
         year: 1965,
-        institution: 'DTIC Document'
+        institution: 'DTIC Document',
+        href: 'http://hdl.handle.net/2142/74304'
     },
 
     sipser2006introduction: {
@@ -171,6 +182,7 @@ const bib = {
         title: 'Introduction to the Theory of Computation',
         author: {lastName: 'Sipser', firstName: 'Michael'},
         volume: '2',
+        href: 'http://dl.acm.org/citation.cfm?id=524279',
         year: 2006,
         publisher: 'Thomson Course Technology Boston'
     },
@@ -188,7 +200,8 @@ const bib = {
         number: '3',
         pages: '201—224',
         year: 1971,
-        publisher: 'Elsevier'
+        publisher: 'Elsevier',
+        href: 'http://dx.doi.org/10.1016/S0020-0255(71)80007-5'
     },
     lange2009cnf: {
         id: 'lange2009cnf',
@@ -201,7 +214,7 @@ const bib = {
         journal: 'Informatica Didactica',
         volume: '8',
         pages: '2008—2010',
-        year: 2009
+        year: 2009, href: 'http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.378.2875&rep=rep1&type=pdf'
     },
     cocke1969programming: {
         id: 'cocke1969programming',
@@ -209,7 +222,8 @@ const bib = {
         title: 'Programming languages and their compilers: Preliminary notes',
         author: {lastName: 'Cocke', firstName: 'John'},
         year: 1969,
-        publisher: 'Courant Institute of Mathematical Sciences, New York University'
+        publisher: 'Courant Institute of Mathematical Sciences, New York University',
+        href: 'http://www.softwarepreservation.org/projects/FORTRAN/CockeSchwartz_ProgLangCompilers.pdf'
     },
 
     vanopijnen2014: {
@@ -298,14 +312,15 @@ const bib = {
     },
     lucke1996stochastic: {
         id: 'lucke1996stochastic',
-        type: 'article', 
+        type: 'article',
         title: 'Which stochastic models allow Baum-Welch training?',
-        author: {firstName:'Helmut',lastName:'Lucke'},
+        author: {firstName: 'Helmut', lastName: 'Lucke'},
         journal: 'IEEE transactions on signal processing',
         volume: '44',
         number: '11',
         pages: '2746—2756',
         year: '1996',
+        href: 'http://dx.doi.org/10.1109/78.542181',
         publisher: 'IEEE'
     },
     sutton2006introduction: {
@@ -318,7 +333,7 @@ const bib = {
         },
         journal: "Introduction to statistical relational learning",
         pages: "93—128",
-        year: 2006,
+        year: 2006, href: 'https://people.cs.umass.edu/~mccallum/papers/crf-tutorial.pdf',
         publisher: "MIT press"
     },
     finkel2004exploiting: {
@@ -331,7 +346,7 @@ const bib = {
         },
         journal: "Proceedings of the International Joint Workshop on Natural Language Processing in Biomedicine and its Applications",
         pages: "88—91",
-        year: 2004,
+        year: 2004, href: 'http://nlp.stanford.edu/~manning/papers/bionlp-camera.pdf',
         publisher: "Association for Computational Linguistics"
     },
     klinger2009feature: {
@@ -342,7 +357,7 @@ const bib = {
             full: "Klinger, Roman and Friedrich, Christoph",
             abbr: "Klinger et al."
         },
-        journal: "RANLP",
+        journal: "RANLP", href: 'http://www.aclweb.org/anthology/R/R09/R09-1035.pdf',
         pages: "185—191",
         year: 2009
     },
@@ -356,7 +371,7 @@ const bib = {
         },
         journal: "Proceedings of the 21st International Conference on Computational Linguistics and the 44th annual meeting of the Association for Computational Linguistics",
         pages: "1121-1128",
-        year: 2006,
+        year: 2006, href: 'http://i.stanford.edu/~kvijay/krishnan-manning-colacl06sub.pdf',
         publisher: "Association for Computational Linguistics"
     }
 

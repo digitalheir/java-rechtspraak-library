@@ -14,8 +14,15 @@ import TitleTfIdfFigure from '../../Figures/figure-title-tf-idf/figure-title-tf-
 import TitleTfIdfFigurePerSection from '../../Figures/figure-section-title-tf-idf/figure-section-tf-idf';
 import WordCountFig from '../../Figures/figure-word-count-title/figure-title-word-count';
 import Source from './../../Source/Source';
+import sections from './sections';
 
+import abbrs  from '../../abbreviations'
 export default class Introduction extends Component {
+    //noinspection JSUnusedGlobalSymbols
+    static getSections() {
+        return sections;
+    }
+
     render() {
         const nonValidatingXml = "https://validator.w3.org/nu/?useragent=Validator.nu%2FLV+http%3A%2F%2Fvalidator.w3.org%2Fservices&amp;doc=http%3A%2F%2Fuitspraken.rechtspraak.nl%2Finziendocument%3Fid%3DECLI%3ANL%3ACBB%3A2010%3ABN1294";
 
@@ -31,7 +38,7 @@ export default class Introduction extends Component {
             <p><a href="http://www.rechtspraak.nl/">Rechtspraak.nl</a> is the official website of the Dutch
                 judiciary. The website hosts an open data portal for Dutch case law, containing metadata for
                 about 2 million court judgments<Source href="http://data.rechtspraak.nl/uitspraken/zoeken?"/> and
-                judgments texts for about 350.000 judgments in XML<Source
+                judgments texts for about 350.000 judgments in {abbrs.xml}<Source
                     href="http://data.rechtspraak.nl/uitspraken/zoeken?return=doc"/>.
                 In this thesis, we only consider those documents that
                 contain text.
@@ -40,7 +47,7 @@ export default class Introduction extends Component {
                 judgments contains
                 only a fraction of all court judgments that exist
                 in the Netherlands, but the collection is curated so that it is representative of
-                case law in the Netherlands.
+                all case law in the Netherlands.
             </p>
 
 
@@ -73,10 +80,10 @@ export default class Introduction extends Component {
                         either of these as <code>*.info</code>. <code>*.info</code> elements contain
                         interesting metadata such as names and court location. The information is generally
                         not semantically marked up, but is reasonably easy to parse thanks
-                        to style consistencies in authors (e.g., most units of metadata are on a separate line).
+                        to style consistencies (e.g., most units of metadata are on a separate line).
                     </p>
 
-                    <strike style={{display: 'gone'}}>
+                    <div style={{display: 'none'}}>
                         <p>The <code>*.info</code> element typically
                             contains metadata about the legal case, such as:
                         </p>
@@ -107,7 +114,7 @@ export default class Introduction extends Component {
                         <p>See, e.g., <cite><a
                             href="https://rechtspraak.lawreader.nl/ecli/ECLI:NL:GHARL:2014:9139">ECLI:NL:GHARL:2014:9139</a>
                         </cite> for an example.</p>
-                    </strike>
+                    </div>
 
                     <p>
                         Automatically marking up text portions with <code>*.info</code> tags is outside of the scope of
@@ -190,26 +197,27 @@ export default class Introduction extends Component {
                                 in a document with respect to all other documents in the corpus.
                             </p>
                             <p>
-                            <strike>
-                                tf–idf is short for 'term frequency–inverse document frequency'.
-                                It represents the importance of a given word by taking the number of times
-                                that word occurs in the document, and offsetting it against the amount of
-                                times that word occurs elsewhere in the corpus.
-                            </strike>
-</p>
+                                <strike>
+                                    tf–idf is short for 'term frequency–inverse document frequency'.
+                                    It represents the importance of a given word by taking the number of times
+                                    that word occurs in the document, and offsetting it against the amount of
+                                    times that word occurs elsewhere in the corpus.
+                                </strike>
+                            </p>
                             <p>tf–idf is defined as follows: </p>
 
                             <F display={true} l="\text{tfidf}(t, d, D) = \text{tf}(t, d)\cdot \text{idf}(t, D)"/>
                             <p>where</p>
                             <ul>
-                                <li><F l="tf(t,d)"/> is a measure of the importance of a
+                                <li><F l="tf(t,d)"/> is some measure of the importance of a
                                     term <F l="t"/> in a
                                     given document <F l="d"/>. Let the raw frequency <F l="f_{t,d}"/> be
                                     the plain number of times the term <F l="t"/> in occurs in a
-                                    given document <F l="d"/>. We use the logarithmically scaled term
+                                    given document <F l="d"/>. We use for <F l="tf(t,d)"/> the logarithmically
+                                    scaled term
                                     count: <F l="tf(t,d) = 1 + \log{f_{t,d}}"/>, or <F l="0"/> if <F l="f_{t,d} = 0"/>.
                                 </li>
-                                <li><F l="idf(t, D)"/> is a measure of how rare it is to find a
+                                <li><F l="idf(t, D)"/> is some measure of how rare it is to find a
                                     term <F l="t"/> in a
                                     given document corpus <F l="D"/>. We obtain this measure
                                     by calculating the logarithmically scaled inverse
@@ -224,7 +232,7 @@ export default class Introduction extends Component {
                                 want to infer the most important words within
                                 title elements specifically, we take as a document
                                 the various text elements
-                                (such as a paragraph, or title), and compute the tf-idf score
+                                (such as a paragraph or title), and compute the tf-idf score
                                 for each word in each title.
                             </p>
                             <TitleTfIdfFigure/>
@@ -233,30 +241,6 @@ export default class Introduction extends Component {
                     </ol>
                 </li>
             </ol>
-            <section id="xml-schema">
-                <h4>XML Schema</h4>
-                <p>
-                    Regrettably, Rechtspraak.nl does not offer an XML schema. This makes it more difficult to
-                    create programs that work with the XML data,
-                    because we don't know exactly which elements we can expect in the
-                    XML documents.
-
-                    In the absence of an official schema,
-                    we have created a makeshift XML schema
-                    that was automatically generated from a random sample of
-                    500 documents. The resulting schema was afterwards manually
-                    corrected.
-                </p>
-                <p>
-                    Using this schema,
-                    we can utilize a technology
-                    called <a href="https://en.wikipedia.org/wiki/Java_Architecture_for_XML_Binding">
-                    JAXB</a> to automatically marshall
-                    and demarshall Rechtspraak.nl XML documents to and from Java objects.
-                    Source code and schema
-                    are available <a href="https://github.com/digitalheir/java-rechtspraak-library">on Github.</a>
-                </p>
-            </section>
         </div>
             ;
     }

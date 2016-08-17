@@ -6,6 +6,7 @@ import figs from './../../../../Figures/figs'
 import ref from '../../../../Bibliography/References/references'
 import bib from  '../../../../Bibliography/bib';
 import F from  '../../../../Math/Math';
+import abbrs from  '../../../../abbreviations';
 
 export default class ParameterEstimation extends Component {
     static id() {
@@ -19,7 +20,7 @@ export default class ParameterEstimation extends Component {
         return <div>
             <p>
                 As we saw in the previous section, we obtain
-                parameters <F l="\Lambda"/> by training our CRF on
+                parameters <F l="\Lambda"/> by training our {abbrs.crf} on
                 a pre-labeled training set of
                 pairs <F l="\mathcal D=\{\mathbf{x}^{i},\mathbf{y}^{i}\}_{i=1}^N"
             /> where each <F l="i"/> indexes an example
@@ -39,7 +40,7 @@ export default class ParameterEstimation extends Component {
             <F display="true" l="\ell(\Lambda)=\sum_{i=1}^N \log{p(\mathbf y^{i}|\mathbf x^{i}})"/>
 
             <p>
-                Where <F l="p"/> is the CRF distribution as
+                Where <F l="p"/> is the {abbrs.crf} distribution as
                 we saw in the previous section:
             </p>
 
@@ -78,7 +79,7 @@ export default class ParameterEstimation extends Component {
                 iteratively moving along the gradient toward the global
                 maximum. We find the direction to move in by taking
                 the derivative of <F l="\ell"/> with respect
-                to <F l="\Lambda"/>:
+                to <span style={{display: 'inline-block'}}><F l="\Lambda"/>:</span>
 
             </p>
 
@@ -103,17 +104,17 @@ export default class ParameterEstimation extends Component {
                 the function <F l="\ell(\Lambda)"/> is also concave.
                 This ensures that any local optimum will be a global
                 optimum.
-                The regularization term also
-                ensures any global optimum is a unique optimum,
-                in addition to avoid overfitting.
+                The regularization term
+                ensures that any global optimum is a unique optimum,
+                in addition to avoiding overfitting.
             </p>
             <p>
                 In our experiment, we use the <a
                 href="https://en.wikipedia.org/wiki/Limited-memory_BFGS">Limited-memory Broyden–Fletcher–Goldfarb–Shanno
-                algorithm (LM-BVFGS)</a>,
+                algorithm ({abbrs.lmbvfgs})</a>,
                 which approximates Newton's Method. This algorithm is optimized
                 for the memory-contrained conditions in real-world computers,
-                and also converges much faster than is naive implementation,
+                and also converges much faster than a naive implementation
                 because it works on the double derivative of <F l="\ell"/>.
             </p>
             <p>
@@ -124,7 +125,7 @@ export default class ParameterEstimation extends Component {
                 and <F l="G"/> is the number of gradient computations.
                 The number of gradient computations can be set to
                 a fixed number, or is otherwise unknown (in which case the algorithm
-                trains to convergence).
+                trains to convergence, which is guaranteed because of the concavity of <F l="\ell"/>).
             </p>
         </div>;
     }

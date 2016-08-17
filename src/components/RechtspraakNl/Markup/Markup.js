@@ -4,13 +4,15 @@ import MarkupStatsFigure from '../../Figures/MarkupStatsFigure/MarkupStatsFigure
 import FigRef from './../../Figures/FigRef'
 import figs from './../../Figures/figs'
 
+import abbrs  from '../../abbreviations'
 export default class extends Component {
   render() {
 
     return (<div>
         <p>
-          Rechtspraak.nl supplies case law documents in both XML and HTML. In this chapter, we only consider
-          XML.
+            Rechtspraak.nl supplies case law documents in both {abbrs.xml} and {abbrs.html}. In this chapter, we only
+            consider
+            {abbrs.xml}.
         </p>
 
 

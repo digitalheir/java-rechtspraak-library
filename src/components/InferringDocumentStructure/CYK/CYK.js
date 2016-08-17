@@ -3,10 +3,12 @@ import React, {Component} from 'react';
 import ref from '../../Bibliography/References/references'
 import bib from  '../../Bibliography/bib';
 import F from  '../../Math/Math';
+import InlBlock from  '../../InlineBlockSpan/InlineBlockSpan';
 import FigRef from  '../../Figures/FigRef';
 import figs from  '../../Figures/figs';
 import listings from  '../../Figures/listings';
 import ListingRef from  '../../Figures/ListingRef';
+import abbrs from  '../../abbreviations';
 
 const exampleSentence = 'fish people fish tanks'.split(" ");
 
@@ -19,7 +21,7 @@ export default class CYK extends Component {
 
         return <div>
             <p>
-                The Cocke–Younger–Kasami (CYK) algorithm is an
+                The Cocke–Younger–Kasami ({abbrs.cyk}) algorithm is an
                 algorithm for parsing
                 Context Free Grammars that was separately discovered
                 by {ref.cite(
@@ -31,20 +33,20 @@ export default class CYK extends Component {
                 and <F l="\left | G \right |"/> is the size of the grammar.
             </p>
 
-            <p>The standard version of the CYK algorithm is defined for
+            <p>The standard version of the {abbrs.cyk} algorithm is defined for
                 ordinary context
-                free grammars that are given in Chomsky normal form (CNF),
+                free grammars that are given in Chomsky normal form ({abbrs.cnf}),
                 but is is easy to extend the algorithm to include support
-                for unary rules as well, as we do in this
+                for probabilistic and unary rules as well, as we do in this
                 section.
-                Note that any CFG may be transformed into an equivalent
+                Note that any {abbrs.cfg} may be transformed into an equivalent
                 grammar in Chomsky normal form, and this also holds for
-                stochastic CFGs ({ref.cite(bib.huang1971stochastic)}).
-                Also note that converting a grammar to CNF is not without
+                probabilistic {abbrs.cfgs} ({ref.cite(bib.huang1971stochastic)}).
+                Also note that converting a grammar to {abbrs.cnf} is not without
                 cost: the increase in grammar size is <F
                     l="\mathrm O (\left | G \right |^2)"/> for the best
                 algorithm, but the increase is linear if we use a variation
-                of the algorithm that works on grammars in binary normal form (2NF):
+                of the algorithm that works on grammars in binary normal form ({abbrs.twonf}):
                 see {ref.cite(bib.lange2009cnf)}.
             </p>
 
@@ -57,8 +59,8 @@ export default class CYK extends Component {
                 For substrings of length <F l="1"/> (individual words),
                 we use the terminal rules in the grammar. For substrings of length <F l="l>1"/> (word sequences),
                 we apply the production rules to every possible combination of two substrings of
-                length <F l="l-1"/>. This works, because
-                CNF mandates that all production rules have 2 non-terminals.
+                length <F l="l-1"/>. This works, because {abbrs.cnf} mandates
+                that all production rules have 2 non-terminals.
                 Every time we apply a rule, we multiply the probability attached to the rule and the probabilities
                 of the constituent substrings.
             </p>
@@ -116,6 +118,7 @@ export default class CYK extends Component {
             </figure>
             <figure id={nlpGrammar.id}>
                 <table className="grammar">
+                    <tbody>
                     <tr>
                         <td><F l="\text{S} \rightarrow \text{NP VP}"/></td>
                         <td><F l="0.9"/></td>
@@ -169,12 +172,14 @@ export default class CYK extends Component {
                         <td><F l="\text{V} \rightarrow \text{tanks}"/></td>
                         <td><F l="0.3"/></td>
                     </tr>
+                    </tbody>
                 </table>
                 <figcaption>
                     <span className="figure-number">Listing {nlpGrammar.num}.</span> Simple natural language
-                    grammar for putting noun phrases (<F l="\text{NP}"/>) and verb phrases (<F l="\text{VP}"/>) together
+                    grammar for putting noun phrases <InlBlock>(<F l="\text{NP}"/>)</InlBlock> and verb
+                    phrases <InlBlock>(<F l="\text{VP}"/>)</InlBlock> together
                     to
-                    create a sentence (<F l="\text S"/>).
+                    create a sentence <InlBlock>(<F l="\text S"/>)</InlBlock>.
                 </figcaption>
             </figure>
         </div>;

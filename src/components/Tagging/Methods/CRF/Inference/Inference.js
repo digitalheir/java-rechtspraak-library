@@ -7,6 +7,7 @@ import figs from './../../../../Figures/figs'
 import ref from '../../../../Bibliography/References/references'
 import bib from  '../../../../Bibliography/bib';
 import F from  '../../../../Math/Math';
+import abbrs from  '../../../../abbreviations';
 
 export default class FScorez extends Component {
     static id() {
@@ -18,11 +19,11 @@ export default class FScorez extends Component {
 
         return <div>
             <p>
-                Given a trained CRF and an observation vector <F l="\mathbf x"/>, we wish
-                to compute the most likely label sequence <F l="\mathbf y"/>, i.e. <F l="\mathbf y"/> such
-                that <F l="\mathbf y^*=\text{argmax}_{\mathbf y}p(\mathbf y|\mathbf x)"
-            />. This path is known as the Viterbi sequence.
-                Thanks to the structure of linear-chain CRFs, we can
+                Given a trained {abbrs.crf} and an observation vector <F l="\mathbf x"/>, we wish
+                to compute the most likely label sequence <F l="\mathbf y^*"/>,
+                i.e. <F l="\mathbf y^* = \text{argmax}_{\mathbf y}p(\mathbf y|\mathbf x)"
+            />. This label sequence is known as the Viterbi sequence.
+                Thanks to the structure of linear-chain <abbr title="Conditional Random Fields">CRFs</abbr>, we can
                 efficiently compute the Viterbi sequence through
                 a dynamic programming algorithm
                 called the Viterbi algorithm, which is very similar to
@@ -31,7 +32,7 @@ export default class FScorez extends Component {
             </p>
 
             <p>
-                Substituting the canonical CRF representation of <F l="p(\mathbf y|\mathbf x)"/>
+                Substituting the canonical {abbrs.crf} representation of <F l="p(\mathbf y|\mathbf x)"/>
                 , we get:
             </p>
 
@@ -56,7 +57,8 @@ export default class FScorez extends Component {
                 and <F l="T"/> is the length of
                 the instance to label.
 
-                Luckily, Linear-Chain CRFs fulfil the optimal substructure property,
+                Luckily, Linear-Chain <abbr title="Conditional Random Fields">CRFs</abbr> fulfil the optimal
+                substructure property,
                 which means that we can memoize optimal sub-results and avoid making the same
                 calculation many times. We calculate the optimal path <F l="\delta_t(j)"/> at
                 time <F l="t"/> ending with <F l="j"/> recursively as follows:
@@ -80,6 +82,7 @@ export default class FScorez extends Component {
                 reduce the computational complexity
                 of finding the Viterbi path to <F l="O(M^2 T)"/>.
             </p>
+            <div className="print-spacer"></div>
         </div>
             ;
     }

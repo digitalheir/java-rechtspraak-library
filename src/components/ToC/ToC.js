@@ -11,10 +11,16 @@ class ToC extends React.Component {
             // console.log(chapter.getSections());
             return <ol>
                 {chapter.getSections().inOrder.map(section => {
-                    if (!!section) return <li>
+                    //console.log(JSON.stringify(section));
+                    if (!!section) return <li
+                        itemScope={true}
+                        itemProp="hasPart"
+                        itemType="https://schema.org/CreativeWork">
                                 <span className="row">
-                        <span><a href={urlSection+"#"+section.id}>{section.title}</a></span>
-                                    {singlePage ? <span className="nr">{section.page}</span> : ''}
+                                    <a itemProp="url" href={urlSection+"#"+section.id}>
+                                        <span itemProp="name">{section.title}</span>
+                                    </a>
+                                    {singlePage ? <span itemProp="pageStart" className="nr">{section.page}</span> : ''}
                                     </span>
                         {ToC.getSubSections(getSectionComponent(section.id), urlSection, depth + 1, singlePage)}
                     </li>;
@@ -44,15 +50,19 @@ class ToC extends React.Component {
                             if (!this.props.singlePage)  urlSection = relativeToRoot + chapter.route.replace('/', '');
                             else  urlSection = "#" + chapter.id;
 
-                            return <li key={chapter.route}>
+                        return <li itemProp="hasPart"
+                                   itemScope={true}
+                                   itemType="https://schema.org/Chapter"
+                                   key={chapter.route}>
                                 <span className="row">
-                                <span>
+                                <span >
                                 {path == chapter.route
-                                    ? <strong>{chapter.title}</strong>
-                                    : <a href={urlSection}
-                                         className='nav-link'>{chapter.title}</a>}
+                                    ? <strong itemProp="name">{chapter.title}</strong>
+                                    : <a itemProp="mainEntityOfPage url" href={urlSection}
+                                         className='nav-link'><span itemProp="name">{chapter.title}</span></a>}
                                     </span>
-                                    {this.props.singlePage ? <span className="nr">{chapter.page}</span> : ''}
+                                    {this.props.singlePage ?
+                                        <span itemProp="pageStart" className="nr">{chapter.page}</span> : ''}
                                     </span>
                                 {ToC.getSubSections(getHandler(chapter.route), props.singlePage ? '' : urlSection, 1, this.props.singlePage)}
                             </li>

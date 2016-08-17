@@ -54,7 +54,7 @@ export default class ProblemDescription extends Component {
             </p>
             <p>
                 Tasks 3 and 4 require more complicated machinery than
-                importing and tokenization does,
+                importing and tokenization do,
                 so these topics merit a more comprehensive explication.
                 We describe our treatment of tasks 3 and 4 as two
                 separate chapters, which

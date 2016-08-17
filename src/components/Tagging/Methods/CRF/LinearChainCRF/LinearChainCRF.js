@@ -6,15 +6,17 @@ import figs from './../../../../Figures/figs'
 import ref from '../../../../Bibliography/References/references'
 import bib from  '../../../../Bibliography/bib';
 import F from  '../../../../Math/Math';
+import abbrs from  '../../../../abbreviations';
 
 export default class LinearChainCRF extends Component {
     render() {
         const canonicalCrfFormula = "\\frac{\\exp\\left \\{\\sum_{t=1}^T\\sum_{k=1}^{K} \\lambda_k f_k(\\mathbf y_t, \\mathbf y_{t-1}, \\mathbf x_t)\\right \\}}{\\sum_{\\mathbf y'}\\exp\\left \\{\\sum_{t=1}^T\\sum_{k=1}^{K} \\lambda_k f_k(\\mathbf y_{t}', y'_{t-1}, \\mathbf x_t)\\right \\}}";
         return <div>
             <p>
-                On the surface, linear-chain CRFs (LC-CRFs) look much like Hidden Markov Models: as we see in <FigRef
-                fig={figs.graphicalModels}/>, LC-CRFs also model a sequence of observations along a
-                sequence of labels. The difference between HMMs and Linear Chain CRFs is that instead
+                On the surface, linear-chain {abbrs.crfs} ({abbrs.lccrfs}) look much like Hidden Markov
+                Models: {abbrs.lccrfs} also model a sequence of observations along a
+                sequence of labels. As
+                explained earlier, the difference between {abbrs.hmms} and Linear Chain {abbrs.crfs} is that instead
                 of modeling the joint probability <F latex="p(\mathbf x,\mathbf y)"/>, we model the conditional
                 probability <F latex="p(\mathbf y|\mathbf x)"/>.
             </p>
@@ -62,11 +64,11 @@ export default class LinearChainCRF extends Component {
                     that give a real-valued score given a current label,
                     the previous label and the current output
                     token.
-                    These functions are defined by the CRF designer.
+                    These functions are defined by the {abbrs.crf} designer.
                 </li>
                 <li><F l="\Lambda=\{\lambda_k\} \in \mathbb{R}^K"/> be a vector of weight parameters that
-                    give a measure of how important a given feature function is. These parameters
-                    are found by training the CRF.
+                    give a measure of how important a given feature function is. The values of these parameters
+                    are found by training the {abbrs.crf}.
                 </li>
             </ul>
             
@@ -77,7 +79,7 @@ export default class LinearChainCRF extends Component {
             </p>
 
             <p>
-                We then define the un-normalized CRF distribution as:
+                We then define the un-normalized {abbrs.crf} distribution as:
 
                 <F
                     l="\hat{p}(\mathbf x, \mathbf y)=\prod_{t=1}^T\prod_{k=1}^K\Phi_{k,t}(\mathbf x_t, \mathbf y_t, \mathbf y_{t-1})"
@@ -118,10 +120,10 @@ export default class LinearChainCRF extends Component {
             </p>
 
             <p>
-                {ref.cite(bib.sutton2006introduction)} show that a logistic regression model is a simple CRF,
+                {ref.cite(bib.sutton2006introduction)} show that a logistic regression model is a simple {abbrs.crf},
                 and also
                 that rewriting
-                the probability distribution <F latex="p(\mathbf x,\mathbf y)"/> of a HMM yields a Conditional
+                the probability distribution <F latex="p(\mathbf x,\mathbf y)"/> of a {abbrs.hmm} yields a Conditional
                 Random Field with a particular choice of feature functions.
             </p>
         </div>

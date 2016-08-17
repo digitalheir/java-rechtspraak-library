@@ -4,6 +4,46 @@
   page-break-after: always;
 }
 
+div.full-thesis {
+  counter-reset: subsect;
+  .leaders {
+    li {
+      .row {
+        background: white;
+      }
+      &:before {
+        background: white;
+      }
+      .nr {
+        background: white;
+      }
+    }
+  }
+  .reset-counter {
+    /* Creates a new instance of the section counter with each section element */
+    //list-style-type: none;
+    //margin: 0 0 1em;
+    //padding: 0 0 0 1em;
+  }
+  .chapter section.numbered-section:first-of-type {
+    counter-reset: subsect;
+  }
+  .numbered-section {
+    /* Increments only this instance of the section counter */
+    counter-increment: subsect;
+  }
+  .chapter.numbered-section .title::before {
+    /* Adds the value of all instances of the section counter separated by a ".". */
+    content: counters(subsect, ".") ". ";
+  }
+  .numbered-section .title::before {
+    /* Adds the value of all instances of the section counter separated by a ".". */
+    content: counters(subsect, ".") " ";
+    font-size: 0.8em;
+    //line-height: 1em;
+  }
+}
+
 #rechtspraak-nl-data-set {
   .desc-title, .desc-section, .desc-info {
     list-style: none;
@@ -363,6 +403,18 @@ hr {
   margin: 0 0 20px;
 }
 
+.print-spacer {
+  display: none;
+}
+
+@media print {
+  .print-spacer {
+    display: block;
+    height: 5em;
+    width: 100%;
+  }
+}
+
 @media print, screen and (max-width: 960px) {
 
   div.wrapper {
@@ -436,7 +488,7 @@ hr {
   }
 }
 
-// Tables
+/* Tables*/
 
 .inline-table {
   display: inline-table;
@@ -455,7 +507,12 @@ hr {
   font-weight: bold;
 }
 
-// etc
+abbr[title] {
+  /*border-bottom: 1px dotted #c1c1c1; */
+  border-bottom: none;
+}
+
+/* etc*/
 
 @media only screen and (max-width: 768px) {
   /* tablets and desktop
@@ -499,6 +556,9 @@ hr {
 }
 
 @media print {
+  nav.toc {
+    font-size: 12pt;
+  }
   strike {
     display: none; /*TODO remove*/
   }
@@ -516,8 +576,7 @@ hr {
   a, a:visited {
     color: #444;
   }
-  h1,h2,h3,h4,h5,h6{
-    ;
+  h1, h2, h3, h4, h5, h6 {;
   }
 }
 

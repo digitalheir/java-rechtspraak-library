@@ -4,13 +4,14 @@ import Source from '../../Source/Source'
 import ref from '../../Bibliography/References/references'
 import bib from  '../../Bibliography/bib';
 
+import abbrs  from '../../abbreviations'
 export default class Importing extends Component {
     render() {
         return <div>
             <p>
                 Regarding tokenization, we need to do some forward thinking
                 in order to determine
-                how to split XML texts from Rechtspraak.nl.
+                how to split {abbrs.xml} texts from Rechtspraak.nl.
                 We assume a text to be decomposable into a list
                 of tokens, which correspond to the terminal nodes in a section hierarchy.
                 We use the following four terminal nodes in our section hierarchy:
@@ -30,18 +31,19 @@ export default class Importing extends Component {
                 documents to tokens that might be labeled with
                 any of the above token types.
                 In this regard, newlines are trivial to detect, and we assume
-                that Rechtspraak.nl has already done a job of splitting text blocks in <code>para</code> tags,
-                but numberings are often not annotated as such, and so
-                are often unannotated strings in text nodes. In our parsing algorithm, we
-                assume that
-                numberings occur as the beginning of a text block and represents Arabic or Roman
-                numerals, alphabetic numbering. In this manner, we tokenize
-                potential numberings.
+                that Rechtspraak.nl has already done a job of splitting text blocks
+                in <code>para</code> tags, which roughly demarcate
+                titles and text blocks,
+                but numberings often appear within these text nodes
+                unannotated. So in our parsing algorithm, we
+                assume that numberings occur as the beginning of a text block and
+                represent Arabic or Roman
+                numerals or an alphabetic numbering. In this manner, we tokenize potential numberings.
             </p>
 
             <p>
                 One complication with creating a list of tokens
-                is that Rechtspraak.nl delivers an XML tree, which is potentially more
+                is that Rechtspraak.nl delivers an {abbrs.xml} tree, which is potentially more
                 rich than the linear list that we reduce the document to.
                 Indeed, it often happens that
                 multiple <code>para</code> tags are wrapped in
@@ -50,7 +52,7 @@ export default class Importing extends Component {
                 On the other hand,
                 sometimes the specified paragraph grouping makes no sense.
                 Classifying a tree structures of tokens instead of a linear list
-                can be done efficiently with CRFs, as in {ref.cite(bib.bradley2010learning)},
+                can be done efficiently with {abbrs.crfs}, as in {ref.cite(bib.bradley2010learning)},
                 but working with tree structures requires
                 a much more complicated pipeline.
                 So for simplicity we ignore most of those 'higher-level' tags, at the cost of potentially

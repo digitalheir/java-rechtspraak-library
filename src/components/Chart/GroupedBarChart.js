@@ -141,7 +141,7 @@ class GroupedBarChart extends Component {
         var data = this.props.data;
 
         var titles = new Set();
-        console.log(JSON.stringify(data));
+        //console.log(JSON.stringify(data));
         data.forEach(d => d.data.forEach(data => titles.add(data.x)));
 
         var color = d3.scale.ordinal()

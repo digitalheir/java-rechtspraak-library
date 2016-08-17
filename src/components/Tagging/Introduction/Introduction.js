@@ -1,6 +1,7 @@
 //noinspection JSUnresolvedVariable
 import React, {Component} from 'react';
 import chapter from '../../../../chapters';
+import abbrs from '../../abbreviations';
 
 export default class TaggingIntroduction extends Component {
 
@@ -12,7 +13,7 @@ export default class TaggingIntroduction extends Component {
             <p>
                 In the <a href={urlToIntrochapter}>previous chapter</a> we developed
                 a way to import
-                Rechtspraak.nl XML documents and distill them into
+                Rechtspraak.nl {abbrs.xml} documents and distill them into
                 a list of text elements, or tokens. In this chapter,
                 we consider how to label these tokens with any of four
                 labels:
@@ -27,12 +28,13 @@ export default class TaggingIntroduction extends Component {
             <p>
                 Even as a human reader, it can be hard to distinguish what
                 should properly be called a section, and so what is a section heading.
-                So there is some subjectivity involved in tagging.
+                This means that there is some subjectivity involved in tagging.
                 Consider, for example,
-                a numbered enumeration of facts which might be considered a list or a section sequence.
+                a numbered enumeration of facts which might either be
+                considered a list or a section sequence.
 
-                For our purposes, we call a 'section' any semantic grouping of text that is headed by a title or 
-                a number, inspired by the HTML5 definition of <code>section</code>:
+                For our purposes, we call a 'section' any semantic grouping of text that is headed by a title or
+                a number, inspired by the {abbrs.html}5 definition of <code>section</code>:
             </p>
 
             <blockquote cite="https://www.w3.org/TR/html5/sections.html#the-section-element">
@@ -46,21 +48,21 @@ export default class TaggingIntroduction extends Component {
                 mostly in the application of part-of-speech tagging in natural language.
                 Popular methods include graphical models, which model the probability distributions
                 of labels and observations occurring together. These include Hidden
-                Markov Models (HMMs) and the closely related Conditional Random Fields (CRFs).
+                Markov Models ({abbrs.hmms}) and the closely related Conditional Random Fields ({abbrs.crfs}).
             </p>
             <p>
-                In this chapter, we experiment with CRFs
-                for labeling our tokens, and we compare the results
+                In this chapter, we experiment
+                with {abbrs.crfs} for
+                labeling our tokens, and we compare the results
                 to a hand-written deterministic tagger that utilizes similar features.
                 It turns out that both models score around 1.0 on all labels
                 except section titles.
 
-                For section titles,
-                CRFs significantly out-perform the hand-written tagger
+                For section titles, {abbrs.crfs} significantly
+                out-perform the hand-written tagger
                 in terms of recall, while trading in some precision. For section titles,
                 the hand-written tagger
-                has a precision of 0.96 and recall of 0.74; the trained CRF
-                of 0.91 and 0.91, respectively.
+                has a precision of 0.96 and recall of 0.74; the trained {abbrs.crfs} of 0.91 and 0.91, respectively.
             </p>
         </div>;
     }

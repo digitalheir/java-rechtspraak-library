@@ -33,9 +33,9 @@ var MarkupComponent = React.createClass({
                 <tbody>
                 <tr>
                     <td><a href="https://github.com/digitalheir/java-xml-to-json/">
-                        XML to JSON java library
+                        {abbrs.xml} to {abbrs.json} java library
                     </a></td>
-                    <td>Library for non-destructively converting XML to JSON and back.</td>
+                    <td>Library for non-destructively converting {abbrs.xml} to {abbrs.json} and back.</td>
                 </tr>
                 <tr>
                     <td></td>

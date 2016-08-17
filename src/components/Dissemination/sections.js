@@ -1,9 +1,10 @@
 const disseminationSections = {
     futureWork: {
-        page: '?',
+        page: 27,
         id: 'future-work',
         title: 'Future Work'
     },dissemination: {
+        page: 27,
         id: 'dissemination',
         title: 'Dissemination'
     }

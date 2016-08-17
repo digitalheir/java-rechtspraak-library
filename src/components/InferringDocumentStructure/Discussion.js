@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import ref from '../Bibliography/References/references'
 import bib from  '../Bibliography/bib';
 import F from  '../Math/Math';
+import abbrs from  '../abbreviations';
 
 export default class Discussion extends Component {
     //noinspection JSUnusedGlobalSymbols
@@ -32,10 +33,10 @@ export default class Discussion extends Component {
             <p>
                 Owing to the brittleness of the current grammar,
                 we might benefit from implementing a
-                Conditional Probabilistic Context Free Grammar (Conditional CFG),
+                Conditional Probabilistic Context Free Grammar (Conditional {abbrs.pcfg}),
                 as introduced in {ref.cite(bib.sutton2004conditional)}.
-                Conditional CFGs are similar to
-                Conditional CRFs in
+                Conditional {abbrs.pcfgs} are similar to
+                Conditional Random Fields in
                 that we describe a conditional
                 model instead of a generative one
                 (so the probability distribution <F l="P(\mathbf y|\mathbf x)"/> instead
@@ -44,13 +45,13 @@ export default class Discussion extends Component {
             </p>
 
             <p>
-                Another possibility is to implement a stochastic version of the Earley parsing
+                Another possibility is to implement a probabilistic version of the Earley parsing
                 algorithm, a more top down parser which easily allows to intervene during
                 parsing when some unexpected input is encountered. Although
                 Earley parsers also have a worst-case complexity of <F l="O(n^3)"/>, it parses
                 left-recursive grammars in <F l="O(n)"/>, and is faster for certain grammars
-                than CYK.
-                In our experiments, CYK starts 
+                than {abbrs.cyk}.
+                In our experiments, {abbrs.cyk} starts
                 to become noticeably slow for documents with more than 500 tokens, 
                 even after optimizing the algorithm for resource re-use
                 and parallellizing calculation of the table cells.

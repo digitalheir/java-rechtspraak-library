@@ -224,13 +224,13 @@ textarea {
         text-decoration: none;
     }
 
-    /*a[href]:after {*/
-        /*content: " (" attr(href) ")";*/
-    /*}*/
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
+    a[href].print-url:after {
+        content: " (" attr(href) ")";
     }
+
+    /*abbr[title]:after {*/
+    /*content: " (" attr(title) ")";*/
+    /*}*/
 
     /*
      * Don't show links that are fragment identifiers,

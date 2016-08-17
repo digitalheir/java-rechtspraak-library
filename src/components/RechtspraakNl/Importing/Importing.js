@@ -13,8 +13,8 @@ export default class Importing extends Component {
                 to a CouchDB database. We mirror the data set in order to facilitate the collection
                 of statistics of case law documents used in this thesis
                 through MapReduce computations.
-                Source code for this project is available <a
-                href="https://github.com/digitalheir/dutch-case-law-to-couchdb">on GitHub</a>.
+            Source code for this project is available <a className='print-url'
+                                                         href="https://github.com/digitalheir/dutch-case-law-to-couchdb">on GitHub</a>.
             </p>;
     }
 }

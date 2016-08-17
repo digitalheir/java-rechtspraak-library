@@ -10,18 +10,22 @@ const taggingSections = {
     //     component: Methods
     // },
     crf: {
+        page: '14',
         id: 'crf',
         title: "Conditional Random Fields",
     },
     featureSelection: {
+        page: '13',
         id: 'features',
         title: 'Features',
     },
     deterministic: {
+        page: 'x',
         id: 'deterministic-tagger',
         title: 'Deterministic Tagger',
-    }, 
+    },
     manual: {
+        page: 'x',
         id: 'manual-tagger',
         title: 'Manual Tagger',
     }
@@ -30,7 +34,7 @@ const taggingSections = {
 taggingSections.inOrder = [
     taggingSections.featureSelection,
     taggingSections.crf,
-    taggingSections.deterministic,
-    taggingSections.manual
+    //taggingSections.deterministic,
+    //taggingSections.manual
 ];
 export default taggingSections;

@@ -11,8 +11,19 @@ import AbstractContent from '../Abstract/AbstractContent'
 const title = require('../../../title');
 
 export default class FullThesis extends Component {
+    //<p>
+    //    The source code referred to in this thesis can be found in two repositories on GitHub:
+    //</p>
+    //<ul>
+    //    <li><a href="https://github.com/digitalheir/java-rechtspraak-library"
+    //    >https://github.com/digitalheir/java-rechtspraak-library</a>
+    //    </li>
+    //    <li><a href="https://github.com/digitalheir/dutch-case-law-to-couchdb"
+    //    >https://github.com/digitalheir/dutch-case-law-to-couchdb</a>
+    //    </li>
+    //</ul>
     render() {
-        return <div className="full-thesis">
+        return <div className="full-thesis reset-counter numbered-section">
             <section style={{}} id="title-page">
                 <div style={{}} id="title-page-university-name">Utrecht University</div>
                 <div style={{}} id="title-page-faculty-name">Faculty of Humanities</div>
@@ -40,6 +51,17 @@ export default class FullThesis extends Component {
             <section className="chapter">
                 <h2>Abstract</h2>
                 <AbstractContent/>
+
+                <hr style={{marginTop: '60em'}}/>
+                <p>
+                    This is a print version
+                    of a web site.
+                    Visit <a
+                    href="https://digitalheir.github.io/java-rechtspraak-library/"
+                >https://digitalheir.github.io/java-rechtspraak-library/</a> for
+                    for a version of this thesis with hyperlinks and some interactive elements.
+                </p>
+
             </section>
 
             <section id="#toc" className="chapter">

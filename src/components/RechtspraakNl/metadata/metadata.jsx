@@ -2,6 +2,7 @@ var TableEntry = require('./metadata-table-entry');
 //noinspection JSUnresolvedVariable
 import React, {Component} from 'react';
 
+import abbrs  from '../../abbreviations'
 export default class extends Component {
     static defaultProps() {
         return {}
@@ -15,13 +16,14 @@ export default class extends Component {
                 <p>
                     An attempt to correct these issues is undertaken in the database cloner. Document metadata is
                     described in
-                    JSON format,
-                    respecting RDF triples through JSON-LD.
+                    {abbrs.json} format,
+                    respecting RDF triples through {abbrs.jsonld}.
                 </p>
 
                 <p>
                     In the following table, all metadata fields are presented, and some guarantees are made about their
-                    JSON structure. We make some assumptions about the RDF triples that Rechtspraak.nl provides that are
+                    {abbrs.json} structure. We make some assumptions about the RDF triples that Rechtspraak.nl provides
+                    that are
                     not strictly necessary, but makes the data easier to work with. Also,
                     some values merit some extra processing in order to keep our RDF consistent.
                 </p>
@@ -45,8 +47,8 @@ export default class extends Component {
                 <table className="bordered-table">
                     <thead>
                     <tr>
-                        <th>Tag name / JSON field</th>
-                        <th>JSON value</th>
+                        <th>Tag name / {abbrs.json} field</th>
+                        <th>{abbrs.json} value</th>
                         <th>Description</th>
                     </tr>
                     </thead>
@@ -141,9 +143,9 @@ export default class extends Component {
                 <table className="bordered-table">
                     <thead>
                     <tr>
-                        <th>XML tag name</th>
-                        <th>JSON field name</th>
-                        <th>JSON value</th>
+                        <th>{abbrs.xml} tag name</th>
+                        <th>{abbrs.json} field name</th>
+                        <th>{abbrs.json} value</th>
                         <th>Description</th>
                     </tr>
                     </thead>
@@ -160,9 +162,9 @@ export default class extends Component {
                 <table className="bordered-table">
                     <thead>
                     <tr>
-                        <th>XML tag name</th>
-                        <th>JSON field name</th>
-                        <th>JSON value</th>
+                        <th>{abbrs.xml} tag name</th>
+                        <th>{abbrs.json} field name</th>
+                        <th>{abbrs.json} value</th>
                         <th>Description</th>
                     </tr>
                     </thead>
@@ -179,8 +181,8 @@ export default class extends Component {
                 <table className="bordered-table">
                     <thead>
                     <tr>
-                        <th>JSON field name</th>
-                        <th>JSON value</th>
+                        <th>{abbrs.json} field name</th>
+                        <th>{abbrs.json} value</th>
                         <th>Description</th>
                     </tr>
                     </thead>

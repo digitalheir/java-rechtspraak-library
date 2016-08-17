@@ -10,7 +10,7 @@ function getNameElement(citation) {
         nameStr = citation.author.lastName + (citation.author.firstName ? ", " + citation.author.firstName : "");
     }
     if (nameStr) {
-        nameStr = <span className="ref-author">{nameStr}</span>
+        nameStr = <span itemScope={true} itemType="https://schema.org/author" className="ref-author">{nameStr}</span>
     }
     return nameStr;
 }
@@ -26,7 +26,7 @@ function createCitation(citation, i) {
         : "";
     return <li itemProp="citation"
                itemScope={true}
-               itemType="http://schema.org/CreativeWork"
+               itemType="https://schema.org/CreativeWork"
                key={i}
                id={citation.id.toString()}
                className="ref">

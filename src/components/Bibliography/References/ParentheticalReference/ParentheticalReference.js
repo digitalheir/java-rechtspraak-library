@@ -30,7 +30,8 @@ export default class extends Component {
         //Create element
         return (<a className="inline-citation"
                    href={"#"+reference.id.toString()}
-            >{name} ({reference.year.toString()}
+        >{name} (
+            <time dateTime={reference.year.toString()} className="ref-year">{reference.year.toString()}</time>
             {strPage.toString()})</a>);
     }
 }

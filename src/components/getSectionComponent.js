@@ -7,6 +7,8 @@ import Tokenizing from './RechtspraakNl/Importing/Tokenizing'
 import Dissmination from './Dissemination/Diss/Dissemination'
 import RelatedWork from './Dissemination/RelatedWork/RelatedWork'
 import sectionsImporting from './ImportingAndTokenizing/sections'
+import sectionsRsMarkup from './RechtspraakNl/RechtspraakNlMarkup/sections'
+import XmlSchema from './RechtspraakNl/RechtspraakNlMarkup/XmlSchema'
 import sectionsIntroduction from './Introduction/sections'
 import sectionsTagging from './Tagging/sections'
 
@@ -69,6 +71,8 @@ function getHandler(route) {
         case sectionsImporting.tokenizing.id:
             return Tokenizing;
 
+        case sectionsRsMarkup.xmlSchema.id:
+            return XmlSchema;
 
         // Tagging
         case sectionsTagging.taggingIntroduction.id:
@@ -161,7 +165,11 @@ export function getSubSections(props, headerLevel) {
             subsubsections = SectionContent.getSections().inOrder.map(getSubSubsections);
             //console.log(subsubsections);
         }
-        return <section key={section.id}
+        return <section className="numbered-section"
+                        itemScope={true}
+                        itemProp="hasPart"
+                        itemType="https://schema.org/CreativeWork"
+                        key={section.id}
                         id={section.id}>
             {header}
             <SectionContent {...props}/>

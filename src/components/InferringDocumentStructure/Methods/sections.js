@@ -1,9 +1,11 @@
 const methodsSections = {
     scfg: {
-        id: 'scfg',
-        title: 'Stochastic Context Free Grammars',
+        page: 22,
+        id: 'pcfg',
+        title: 'Probabilistic Context Free Grammars',
     },
     cyk: {
+        page: 23,
         id: 'cyk',
         title: 'CYK Algorithm',
     }

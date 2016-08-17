@@ -17,8 +17,9 @@ export default class FScorez extends Component {
 
         return <div>
             <p>
-                We measure classifier performance in the oft-used F<sub>1</sub> and F<sub>0.5</sub> scores.
-                These are a composite metric that consist of the precision and recall of a classifier, where
+                We measure classifier performance with the oft-used F<sub>1</sub> and F<sub>0.5</sub> scores.
+                F<sub>β</sub>-scores are composite metrics that combine the precision and recall of a
+                classifier, where
             </p>
             <ul>
                 <li>

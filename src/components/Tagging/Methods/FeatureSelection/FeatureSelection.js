@@ -48,9 +48,10 @@ export default class FeatureSelection extends Component {
             </p>
 
             <p>
-                We use these features in a probabilistic tagger for which we train a CRF model.
-                We now introduce these models,
-                and conclude the chapter with experimental results and discussion.
+                We use these features in a probabilistic tagger for which we train a <abbr
+                title="Conditional Random Field">CRF</abbr> model.
+                We now introduce the class of <abbr title="Conditional Random Field">CRF</abbr> models,
+                and conclude the chapter with experimental results and a short discussion.
             </p>
         </div>;
     }
