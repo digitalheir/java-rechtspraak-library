@@ -71,7 +71,7 @@ export default class CYK extends Component {
                 Extension of the algorithm is simple:
                 at the end of every substring type assignment, we add those
                 types to the list that result from applicable unary rules,
-                if that rule produces a non-terminal that does yet not
+                if that rule produces a non-terminal that does not yet
                 exist in the table with at least that probability.
                 We repeat until the cell does not change anymore.
             </p>

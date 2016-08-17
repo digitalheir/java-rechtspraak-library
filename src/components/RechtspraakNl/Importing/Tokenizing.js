@@ -24,7 +24,9 @@ export default class Importing extends Component {
                 <li><code>newline</code>, for newlines</li>
             </ol>
             <p>
-                One may of course invent any other token type.
+                The selection of token types is rather arbitrary. These types were inspired
+                by the existing XML tags of Rechtspraak.nl, and what is useful for creating a section
+                structure. One may of course invent any other token type to suits one's needs.
             </p>
             <p>
                 We should obviously tokenize the source
@@ -58,7 +60,7 @@ export default class Importing extends Component {
                 So for simplicity we ignore most of those 'higher-level' tags, at the cost of potentially
                 losing semantic mark up.
             </p>
-            
+
             <p>
                 To summarize: our tokenization algorithm
                 returns

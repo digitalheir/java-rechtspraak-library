@@ -108,7 +108,16 @@ figure {
   padding: 0;
 }
 
+#tbl-confusion-matrix {
+  th, td {
+    border: none;
+  }
+}
+
 #fig-tfidf-sections {
+  .perc-text {
+    min-width: 30px;
+  }
   div {
     text-align: center;
     table {

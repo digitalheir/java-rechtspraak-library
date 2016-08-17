@@ -230,7 +230,7 @@ export default class Introduction extends Component {
                             <p>
                                 Because we
                                 want to infer the most important words within
-                                title elements specifically, we take as <D l="D"/> the collection
+                                title elements specifically, we take as <F l="D"/> the collection
                                 of all element types (paragraphs, titles),
                                 and compute the tf-idf score
                                 for each word in each title. Some classes of words, such as articles
@@ -239,6 +239,12 @@ export default class Introduction extends Component {
                             </p>
                             <TitleTfIdfFigure/>
                             <TitleTfIdfFigurePerSection/>
+                            <p>
+                               We observe, not very surprisingly,
+                                that numbers and articles are top terms
+                                for section titles.
+                                Furthermore, we notice that 
+                            </p>
                         </li>
                     </ol>
                 </li>

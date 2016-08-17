@@ -32,7 +32,7 @@ export default class ParsingEval extends Component {
 
             <p>
                 Another issue is that the grammar has difficulty in deciding whether non-numbered sections
-                should be subsections or not. Indeed, this can be difficult to determine purely
+                should be subsections or not. Indeed, this can be difficult to determine based purely
                 on typography.
             </p>
 

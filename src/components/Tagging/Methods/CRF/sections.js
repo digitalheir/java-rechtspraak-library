@@ -8,6 +8,10 @@ const crfSections = {
         page: 15,
         id: 'hmm',
         title: 'Directed Graphical Models',
+    },   generativeDiscriminative: {
+        page: 16,
+        id: 'generative-discriminative',
+        title: 'Generative-Discriminative Pairs',
     },
     linearChain: {
         page: 17,
@@ -34,6 +38,7 @@ const crfSections = {
 crfSections.inOrder = [
     crfSections.hmm,
     crfSections.undirectedGraphicalModels,
+    crfSections.generativeDiscriminative,
     crfSections.linearChain,
     crfSections.parameterEstimation,
     crfSections.inference,

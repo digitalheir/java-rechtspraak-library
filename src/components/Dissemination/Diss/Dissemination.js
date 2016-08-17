@@ -7,8 +7,8 @@ export default class Chapter extends React.Component {
     render() {
         return <div>
             <p>
-                We present an enriched set of
-                {abbrs.xml} documents in a CouchDB database, available at <a
+                We present an enriched set of {abbrs.xml} documents
+                in a CouchDB database, available at <a
                 href="https://rechtspraak.cloudant.com/docs/">http://rechtspraak.cloudant.com/docs/</a>. We also provide
                 the
                 enriched data set as a collection of {abbrs.html} pages, indexed for full text search.

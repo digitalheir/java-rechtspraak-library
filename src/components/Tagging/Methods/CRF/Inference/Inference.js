@@ -58,10 +58,12 @@ export default class FScorez extends Component {
                 the instance to label.
 
                 Luckily, Linear-Chain <abbr title="Conditional Random Fields">CRFs</abbr> fulfil the optimal
-                substructure property,
+                substructure property
                 which means that we can memoize optimal sub-results and avoid making the same
-                calculation many times. We calculate the optimal path <F l="\delta_t(j)"/> at
-                time <F l="t"/> ending with <F l="j"/> recursively as follows:
+                calculation many times. This sort of memoization
+                is what makes the algorithm an example of dynamic programming.
+                We calculate the optimal path <F l="\delta_t(j)"/> at
+                time <F l="t"/> ending with <F l="j"/> recursively as follows, for <F l="\Phi_t = \prod_{k=1}^{K} \Phi_{k,t}"/>:
             </p>
 
             <F display="truuu"
@@ -70,17 +72,22 @@ export default class FScorez extends Component {
             <p>
                 where the base case
             </p>
-            <F display="truuuu" l="\delta_0(j) = \max_{i \in \mathbf y}\Phi_t(j,i,x_t)"/>
+            <F display="truuuu" l="\delta_0(j) = \max_{i \in \mathbf y}\Phi_0(j,i,x_0)"/>
             <p>
-                And store the results in a table. We then find the optimal
+                We store the results in a table. We then find the optimal
                 sequence by maximizing <F l="\delta_t(j)"/> at the end of
-                the sequence, <F l="t = T"/>:
+                the sequence, <span
+                style={{display:'inline-block'}}><F l="t = T"/>:
+                </span>
             </p>
-            <F display={true} l="y^*_T = \text{argmax}_{j\in y}\delta_T(j)"/>
+            <F display={true} l="\mathbf y^*_T = \text{argmax}_{j\in y}\delta_T(j)"/>
             <p>
                 Using this trick, we
                 reduce the computational complexity
-                of finding the Viterbi path to <F l="O(M^2 T)"/>.
+                of finding the Viterbi path
+                to <span
+                style={{display:'inline-block'}}><F l="O(M^2 T)"/>.
+                </span>
             </p>
             <div className="print-spacer"></div>
         </div>

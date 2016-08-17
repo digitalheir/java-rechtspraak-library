@@ -30,6 +30,7 @@ import IntroProblemDescription from './Introduction/ProblemDescription/ProblemDe
 import IntroMotivation from './Introduction/IntroMotivation/IntroMotivation'
 
 import GraphicalModels  from './Tagging/Methods/CRF/GraphicalModels/GraphicalModels';
+import GenerativeDiscriminative from './Tagging/Methods/CRF/GenerativeDiscriminative/GenerativeDiscriminative';
 import HMMs from './Tagging/Methods/CRF/HMMs/HMMs';
 import LinearChainCRF from './Tagging/Methods/CRF/LinearChainCRF/LinearChainCRF';
 import Inference from './Tagging/Methods/CRF/Inference/Inference';
@@ -93,6 +94,8 @@ function getHandler(route) {
             return TaggingDiscussion;
 
         // CRF
+        case sectionsCrf.generativeDiscriminative.id:
+            return GenerativeDiscriminative;
         case sectionsCrf.undirectedGraphicalModels.id:
             return GraphicalModels;
         case sectionsCrf.crfPerformance.id:

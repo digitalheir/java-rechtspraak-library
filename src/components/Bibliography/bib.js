@@ -93,6 +93,19 @@ const bib = {
         href: 'http://www-bcf.usc.edu/~feisha/pubs/shallow03.pdf',
         organization: 'Association for Computational Linguistics'
     },
+    nocedal1980updating: {
+        type: 'article', id: 'nocedal1980updating',
+        title: 'Updating quasi-Newton matrices with limited storage',
+        author: {
+            firstName: 'Jorge',
+            lastName: 'Nocedal'
+        },
+        journal: 'Mathematics of computation',
+        volume: '35',
+        number: '151',
+        pages: '773—782',
+        year: '1980'
+    },
     collins1997three: {
         id: 'collins1997three', type: 'inproceedings',
         title: "Three generative, lexicalised models for statistical parsing",

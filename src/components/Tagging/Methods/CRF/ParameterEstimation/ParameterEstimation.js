@@ -26,13 +26,13 @@ export default class ParameterEstimation extends Component {
             /> where each <F l="i"/> indexes an example
                 instance: <F
                 l="\mathbf{x}^{i}=\{\mathbf x^{i}_1, \mathbf x^{i}_2, \cdots, \mathbf x^{i}_T\}"
-            /> is a set of input tokens,
+            /> is a set of observation vectors,
                 and <F l="\mathbf{y}^{i}=\{\mathbf y^{i}_1, \mathbf y^{i}_2, \cdots, \mathbf y^{i}_T\}"
-            /> is a set of output tags for instance length <F l="T"/>.
+            /> is a set of labels for instance length <F l="T"/>.
             </p>
             <p>
                 The training process will maximize some
-                likelihood function <F l="\ell(\Lambda)"/>.
+                log likelihood function <F l="\ell(\Lambda)"/>.
                 We are modeling a conditional distribution, so it makes sense
                 to use the conditional log likelihood function:
             </p>
@@ -55,7 +55,7 @@ export default class ParameterEstimation extends Component {
 
             <p>
                 We also add a penalty term to the
-                likelihood function to avoid overfitting.
+                log likelihood function to avoid overfitting.
                 This is called regularization, and in this
                 particular instance we use L2 regularization:
             </p>
@@ -72,8 +72,8 @@ export default class ParameterEstimation extends Component {
                 l="\Lambda"/> that maximize the likelihood function <F l="\ell"/>,
                 we use a
                 hill-climbing algorithm.
-                The general idea of hill-climbing algorithms is that
-                we start out with some random assignment to the parameters <F
+                The general idea of hill-climbing algorithms is to
+                start out with some random assignment to the parameters <F
                 l="\Lambda"/>, and estimate the
                 parameters that maximize <F l="\ell"/> by
                 iteratively moving along the gradient toward the global
@@ -84,8 +84,8 @@ export default class ParameterEstimation extends Component {
             </p>
 
             <F display="true" l="\frac{\partial\ell}{\partial\lambda_k} =
-            \sum_{i=1}^N\sum_{t=1}^Tf_k(\mathbf y_t^i,\mathbf y_{t-1}^i,\mathbf x_t^i)
-            -\sum_{i=1}^N\sum_{t=1}^T\sum_{\mathbf y,\mathbf y'}f_k(y,y,\mathbf x_t^i)
+            \sum_{i=1}^N\sum_{t=1}^Tf_k(y_t^i,y_{t-1}^i,x_t^i)
+            -\sum_{i=1}^N\sum_{t=1}^T\sum_{\mathbf y,\mathbf y'}f_k(y,y,x_t^i)
            p(y,y'|\mathbf x^i)-\sum_{k=1}^K\frac{\lambda_k}{\sigma^2}
             "/>
 
@@ -93,7 +93,7 @@ export default class ParameterEstimation extends Component {
                 And then update parameter <F l="\lambda_i"/> along this
                 gradient:
             </p>
-            <F display="true" l="\lambda_i := \lambda_i + \alpha \frac{\partial\ell}{\partial\lambda_k}"/>
+            <F display="true" l="\lambda_i := \lambda_i + \alpha \frac{\partial\ell}{\partial\lambda_i}"/>
             <p>
                 Where <F l="\alpha"/> is some learning rate between <F l="0"/> and <F l="1"/>.
             </p>
@@ -110,18 +110,20 @@ export default class ParameterEstimation extends Component {
             </p>
             <p>
                 In our experiment, we use the <a
-                href="https://en.wikipedia.org/wiki/Limited-memory_BFGS">Limited-memory Broyden–Fletcher–Goldfarb–Shanno
-                algorithm ({abbrs.lmbvfgs})</a>,
-                which approximates Newton's Method. This algorithm is optimized
+                href="https://en.wikipedia.org/wiki/Limited-memory_BFGS">
+                Limited-memory Broyden–Fletcher–Goldfarb–Shannon
+                algorithm ({abbrs.lmbfgs})</a>,
+                which approximates Newton's Method (see eg. {ref.cite(bib.nocedal1980updating)}). This
+                algorithm is optimized
                 for the memory-contrained conditions in real-world computers,
                 and also converges much faster than a naive implementation
-                because it works on the double derivative of <F l="\ell"/>.
+                because it works on the second derivative of <F l="\ell"/>.
             </p>
             <p>
-                The algorithmic complexity of this algorithm is <F l="O(TM^2NG)"/>,
+                The algorithmic complexity of the {abbrs.lmbfgs} algorithm is <F l="O(TM^2NG)"/>,
                 where <F l="T"/> is the length of the longest training
                 instance, <F l="M"/> is the number of possible
-                labels, <F l="N"/> in the number of trianing instances,
+                labels, <F l="N"/> in the number of training instances,
                 and <F l="G"/> is the number of gradient computations.
                 The number of gradient computations can be set to
                 a fixed number, or is otherwise unknown (in which case the algorithm

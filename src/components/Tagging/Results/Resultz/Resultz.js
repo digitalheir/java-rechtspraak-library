@@ -23,15 +23,17 @@ export default class Resultz extends Component {
         return <div>
             <p>
                 For all tokens except for section titles, all models yield F-scores between 0.98 and 1.0.
-                (See the confusion matrix in <FigRef fig={figs.confusionMatrix}/>. Section titles are harder to label,
+                (See the confusion matrix in <FigRef fig={figs.confusionMatrix}/>.) Section titles are harder to label,
                 so in <FigRef fig={figs.taggingResults}/>, we consider the F-score for these.
-                We can see that the {abbrs.crfs} out-perform the baseline task mostly by increasing the recall,
-                although the {abbrs.crfs} have
-                slightly worse precision (0.91 for {abbrs.crfs} contra 0.96 for hand-written).
+
             </p>
 
             <FigureResults url={relativeToRoot+"js/tagger-results.json"}/>
-
+            <p>
+                We see that the {abbrs.crfs} out-perform the baseline task mostly by increasing the recall,
+                although the {abbrs.crfs} have
+                slightly worse precision (0.91 for {abbrs.crfs} contra 0.96 for hand-written).
+            </p>
             <ConfusionMatrix/>
 
         </div>;

@@ -48,7 +48,7 @@ export default class Discussion extends Component {
                 Another possibility is to implement a probabilistic version of the Earley parsing
                 algorithm, a more top down parser which easily allows to intervene during
                 parsing when some unexpected input is encountered. Although
-                Earley parsers also have a worst-case complexity of <F l="O(n^3)"/>, it parses
+                the Earley parser has a worst-case complexity of <F l="O(n^3)"/>, it parses
                 left-recursive grammars in <F l="O(n)"/>, and is faster for certain grammars
                 than {abbrs.cyk}.
                 In our experiments, {abbrs.cyk} starts

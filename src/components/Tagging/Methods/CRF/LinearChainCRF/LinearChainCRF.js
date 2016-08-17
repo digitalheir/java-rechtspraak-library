@@ -10,7 +10,7 @@ import abbrs from  '../../../../abbreviations';
 
 export default class LinearChainCRF extends Component {
     render() {
-        const canonicalCrfFormula = "\\frac{\\exp\\left \\{\\sum_{t=1}^T\\sum_{k=1}^{K} \\lambda_k f_k(\\mathbf y_t, \\mathbf y_{t-1}, \\mathbf x_t)\\right \\}}{\\sum_{\\mathbf y'}\\exp\\left \\{\\sum_{t=1}^T\\sum_{k=1}^{K} \\lambda_k f_k(\\mathbf y_{t}', y'_{t-1}, \\mathbf x_t)\\right \\}}";
+        const canonicalCrfFormula = "\\frac{\\exp\\left \\{\\sum_{t=1}^T\\sum_{k=1}^{K} \\lambda_k f_k(y_t, y_{t-1}, x_t)\\right \\}}{\\sum_{\\mathbf y'}\\exp\\left \\{\\sum_{t=1}^T\\sum_{k=1}^{K} \\lambda_k f_k(y_{t}', y'_{t-1}, x_t)\\right \\}}";
         return <div>
             <p>
                 On the surface, linear-chain {abbrs.crfs} ({abbrs.lccrfs}) look much like Hidden Markov
@@ -41,29 +41,33 @@ export default class LinearChainCRF extends Component {
                     and <F l="V=Y\cup X"/>
                 </li>
                 <li><F l="F=\{\Phi_1, \ldots\Phi_k\}"/> be a set of local functions <F
-                    l="V^n\rightarrow \mathbb{R}^+"/>
+                    l="V^n\rightarrow \mathbb{R}^+"/>, where <F
+                    l="V^n"/> represent the <F l="n"/> function
+                    parameters for a given local function.
+                    In the case of linear-chain {abbrs.crfs}, <F l="V^n = X\times Y\times Y"/>,
+                    since the functions deal with the current observation, current label and
+                    previous label.
                 </li>
             </ul>
 
             <p>
                 Each local function <F
                 display={false}
-                l="\Phi_{k}(\mathbf x_t,\mathbf y_t,\mathbf y_{t-1}) = \lambda_{k} f_{k}(\mathbf y_{t},\mathbf y_{t-1},\mathbf x_t)"
+                l="\Phi_{k}(x_t,y_t,y_{t-1}) = \lambda_{k} f_{k}(y_{t},y_{t-1},x_t)"
             /> where
             </p>
             <ul>
                 <li>
-                    <F l="\mathbf x_t"/> and <F l="\mathbf y_t"/> be elements
-                    of <F l="\mathbf x"/> and <F l="\mathbf y"/> respectively, i.e., <F l="\mathbf x_t"/> is
+                    <F l="x_t"/> and <F l="y_t"/> be elements
+                    of <F l="\mathbf x"/> and <F l="\mathbf y"/> respectively, i.e., <F l="x_t"/> is
                     the current
-                    observation and <F l="\mathbf y_t"/> is
-                    the current label, and <F l="\mathbf y_{t-1}"/> is the previous label,
+                    observation and <F l="y_t"/> is
+                    the current label, and <F l="y_{t-1}"/> is the previous label,
                     with some null value for <F l="\mathbf y_0"/>.
                 </li>
                 <li><F l="\mathcal F=\{f_k(y, y', x)\}"/> be a set of feature functions
                     that give a real-valued score given a current label,
-                    the previous label and the current output
-                    token.
+                    the previous label and the current observation.
                     These functions are defined by the {abbrs.crf} designer.
                 </li>
                 <li><F l="\Lambda=\{\lambda_k\} \in \mathbb{R}^K"/> be a vector of weight parameters that
@@ -71,10 +75,10 @@ export default class LinearChainCRF extends Component {
                     are found by training the {abbrs.crf}.
                 </li>
             </ul>
-            
+
             <p>
                 For notational ease, we may shorten <F
-                l="\Phi_{k}(\mathbf x_t,\mathbf y_t,\mathbf y_{t-1})"/> as <F
+                l="\Phi_{k}(x_t,y_t,y_{t-1})"/> as <F
                 l="\Phi_{k,t}"/>.
             </p>
 
@@ -82,7 +86,7 @@ export default class LinearChainCRF extends Component {
                 We then define the un-normalized {abbrs.crf} distribution as:
 
                 <F
-                    l="\hat{p}(\mathbf x, \mathbf y)=\prod_{t=1}^T\prod_{k=1}^K\Phi_{k,t}(\mathbf x_t, \mathbf y_t, \mathbf y_{t-1})"
+                    l="\hat{p}(\mathbf x, \mathbf y)=\prod_{t=1}^T\prod_{k=1}^K\Phi_{k,t}(x_t, y_t, y_{t-1})"
                     displayMode={true}/>
             </p>
 
@@ -102,7 +106,7 @@ export default class LinearChainCRF extends Component {
                     l="p(\mathbf y|\mathbf x)=
                     \frac{1}{Z(\mathbf x)}\hat{p}(\mathbf x, \mathbf y)
                     =
-            \frac{1}{Z(\mathbf x)}\prod_{t=1}^T\prod_{k=1}^{K} \lambda_k f_k(\mathbf y_t, \mathbf y_{t-1}, \mathbf x_t)"
+            \frac{1}{Z(\mathbf x)}\prod_{t=1}^T\prod_{k=1}^{K} \lambda_k f_k(y_t, y_{t-1}, x_t)"
                     displayMode={true}/>
             </p>
 

@@ -43,6 +43,13 @@ export default class FScorez extends Component {
                 as recall, and so <F l="F_1"/> describes the harmonic mean of precision and
                 recall (<F l="F_1 = 2\cdot\frac{\text{precision}\cdot\text{recall}}{\text{precision}+\text{recall}}"/>).
                 For <F l="\beta = 0.5"/>, precision is twice as important as recall.
+                We argue that in our application,
+                precision <em>is</em> more important than recall.
+                The reasoning is that in case of a
+                false negative, we do not lose any information, which is acceptable. However,
+                in the case of a false positive we create
+                false information, which is very undesirable.
+                Precisely how much more important we deem precision to recall is rather arbitrary, however.
             </p>
         </div>;
     }

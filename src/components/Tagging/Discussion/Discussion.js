@@ -11,12 +11,12 @@ export default class Discussion extends Component {
         return <p>
             Taking a closer look at faulty labels,
             we observe that most errors are snippets of text that
-            contain only a noun phrase, and it is easy to imagine how
-            the <abbr title="Conditional Random Field">CRF</abbr> assigns such a text block as a title or vice versa.
-            Furthermore, due to the sometimes very staccato paragraphs in case law,
+            contain only a noun phrase.
+            Because of the sometimes very staccato paragraphs in case law, it is easy to imagine how
+            the <abbr title="Conditional Random Field">CRF</abbr> might confuse text blocks and titles.
             it can be hard even for humans to distinguish section titles and running text.
             Still, the <abbr title="Conditional Random Field">CRF</abbr> is not currently tuned to target
-            problematic cases, and doing so is likely a fruitful way to improve classifier performance.
+            problematic cases, and doing so is likely to be a fruitful way to improve classifier performance.
         </p>;
     }
 }

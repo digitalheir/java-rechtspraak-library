@@ -20,15 +20,14 @@ export default class ContextFreeGrammars extends Component {
             </p>
             <p>
                 A Probabilistic Context Free Grammar ({abbrs.pcfg}) is then a Context Free Grammar in which each rule
-                has a probability assigned to it. In general, the probability can take the form of any
-                semiring (i.e., a set of elements with notions of addition and multiplication).
+                has a probability assigned to it.
                 A derivation
                 of a sequence with a {abbrs.pcfg} has a probility score attached to it, which is the product of
                 the probabilities of all of the applied rules.
             </p>
             <p>
                 In our discussions, we assume probability scores to be
-                the real numbers between <F l="0"/> and <F l="1"/>, with the common operations
+                real numbers between <F l="0"/> and <F l="1"/>, with the common operations
                 of multiplication and addition, but in implementation we use
                 the <a href="http://www.johndcook.com/blog/2014/02/26/log-semiring/">Log
                 semiring</a> to avoid <a href="https://en.wikipedia.org/wiki/Arithmetic_underflow">arithmetic
