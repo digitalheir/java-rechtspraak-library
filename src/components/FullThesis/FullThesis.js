@@ -72,7 +72,7 @@ export default class FullThesis extends Component {
             {
                 chapters.inOrder.map(chapter => {
                     const ChapterContent = getHandler(chapter.route);
-                    return <ChapterContent id={chapter.id} inline={true} {...this.props}/>;
+                    return <ChapterContent key={chapter.route} id={chapter.id} inline={true} {...this.props}/>;
                 })
             }
 

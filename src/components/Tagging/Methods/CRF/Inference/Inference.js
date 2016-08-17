@@ -89,8 +89,8 @@ export default class FScorez extends Component {
                 style={{display:'inline-block'}}><F l="O(M^2 T)"/>.
                 </span>
             </p>
-            <div className="print-spacer"></div>
         </div>
             ;
+            // <div className="print-spacer"></div>
     }
 }

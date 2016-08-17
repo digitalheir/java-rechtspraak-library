@@ -188,140 +188,140 @@ export default class CYK extends Component {
     static getItems(rowNum, colNum) {
         if (rowNum == 0) {
             if (colNum == 0) return [
-                <li>
+                <li key="getItems-0">
                     <code>N&nbsp;(20%)</code>
                 </li>,
-                <li>
+                <li key="getItems-1">
                     <code>V&nbsp;(60%)</code>
                 </li>,
-                <li>
+                <li key="getItems-2">
                     <code><strong>NP&nbsp;(14%)</strong></code>
                 </li>,
-                <li>
+                <li key="getItems-3">
                     <code>VP&nbsp;(6%)</code>
                 </li>,
-                <li>
+                <li key="getItems-4">
                     <code>S&nbsp;(0.6%)</code>
                 </li>
             ];
             if (colNum == 1) return [
-                <li>
+                <li key="getItems1-0">
                     <code><strong>NP&nbsp;(0.49%)</strong></code>
                 </li>,
-                <li>
+                <li key="getItems1-1">
                     <code>VP&nbsp;(10.5%)</code>
                 </li>,
-                <li>
+                <li key="getItems1-2">
                     <code>S&nbsp;(1.05%)</code>
                 </li>
             ];
             if (colNum == 2) return [
-                <li>
+                <li key="getItems2-0">
                     <code>NP&nbsp;(0.0069%)</code>
                 </li>,
-                <li>
+                <li key="getItems2-1">
                     <code>VP&nbsp;(0.147%)</code>
                 </li>,
-                <li>
+                <li key="getItems2-2">
                     <code>S&nbsp;(0.09%)</code>
                 </li>
             ];
             if (colNum == 3) return [
-                <li>
+                <li key="getItems3-0">
                     <code>VP&nbsp;(0.002%)</code>
                 </li>,
-                <li>
+                <li key="getItems3-1">
                     <code>NP&nbsp;(0.00001%)</code>
                 </li>,
-                <li>
+                <li key="getItems3-2">
                     <code><strong>S&nbsp;(0.019%)</strong></code>
                 </li>
             ];
         } else if (rowNum == 1) {
             if (colNum == 1) return [
-                <li>
+                <li key="getItems-110">
                     <code>N&nbsp;(50%)</code>
                 </li>,
-                <li>
+                <li key="getItems-111">
                     <code>V&nbsp;(10%)</code>
                 </li>,
-                <li>
+                <li key="getItems-112">
                     <code><strong>NP&nbsp;(35%)</strong></code>
                 </li>,
-                <li>
+                <li key="getItems-113">
                     <code>VP&nbsp;(1%)</code>
                 </li>,
-                <li>
+                <li key="getItems-114">
                     <code>S&nbsp;(0.1%)</code>
                 </li>
             ];
             if (colNum == 2) return [
-                <li>
+                <li key="getItems-120">
                     <code>NP&nbsp;(0.49%)</code>
                 </li>,
-                <li>
+                <li key="getItems-121">
                     <code>VP&nbsp;(0.7%)</code>
                 </li>,
-                <li>
+                <li key="getItems-122">
                     <code>S&nbsp;(1.89%)</code>
                 </li>
             ];
             if (colNum == 3) return [
-                <li>
+                <li key="getItems-130">
                     <code>NP&nbsp;(0.007%)</code>
                 </li>,
-                <li>
+                <li key="getItems-131">
                     <code>VP&nbsp;(0.010%)</code>
                 </li>,
-                <li>
+                <li key="getItems-132">
                     <code>S&nbsp;(1.323%)</code>
                 </li>
             ];
         } else if (rowNum == 2 && colNum == 2) {
             return [
-                <li>
+                <li key="getItems-220">
                     <code>N&nbsp;(20%)</code>
                 </li>,
-                <li>
+                <li key="getItems-221">
                     <code><strong>V&nbsp;(60%)</strong></code>
                 </li>,
-                <li>
+                <li key="getItems-222">
                     <code>NP&nbsp;(14%)</code>
                 </li>,
-                <li>
+                <li key="getItems-223">
                     <code>VP&nbsp;(6%)</code>
                 </li>,
-                <li>
+                <li key="getItems-224">
                     <code>S&nbsp;(0.6%)</code>
                 </li>
             ];
         } else if (rowNum == 2 && colNum == 3) {
             return [
-                <li>
+                <li key="getItems-230">
                     <code>NP&nbsp;(0.196%)</code>
                 </li>,
-                <li>
+                <li key="getItems-231">
                     <code><strong>VP&nbsp;(4.2%)</strong></code>
                 </li>,
-                <li>
+                <li key="getItems-232">
                     <code>S&nbsp;(0.42%)</code>
                 </li>
             ];
         } else if (rowNum == 3 && colNum == 3) {
             return [
-                <li>
+                <li key="getItems-330">
                     <code>N&nbsp;(20%)</code>
                 </li>,
-                <li>
+                <li key="getItems-331">
                     <code>V&nbsp;(30%)</code>
                 </li>,
-                <li>
+                <li key="getItems-332">
                     <code><strong>NP&nbsp;(14%)</strong></code>
                 </li>,
-                <li>
+                <li key="getItems-333">
                     <code>VP&nbsp;(3%)</code>
                 </li>,
-                <li>
+                <li key="getItems-334">
                     <code>S&nbsp;(0.3%)</code>
                 </li>
             ]

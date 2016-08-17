@@ -4,8 +4,13 @@
   page-break-after: always;
 }
 
+#generative-discriminative {
+  page-break-inside: avoid;
+}
+
 div.full-thesis {
   counter-reset: subsect;
+  page-break-after: always;
   .leaders {
     li {
       .row {
@@ -43,27 +48,43 @@ div.full-thesis {
     //line-height: 1em;
   }
 }
+.avoid-page-break{
+  page-break-inside: avoid;
+}
+.section-content {
+  page-break-before: avoid;
+}
+
+caption {
+  page-break-after: avoid;
+}
 
 #rechtspraak-nl-data-set {
-  .desc-title, .desc-section, .desc-info {
+  .desc {
     list-style: none;
+    p:first-child {
+      page-break-before: avoid;
+    }
   }
-  .desc-title:before, .desc-section:before, .desc-info:before {
+  .desc:before {
+    page-break-after: avoid;
+  }
+  .desc.title:before, .desc.section:before, .desc.info:before {
     font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
     color: #333;
     font-size: 12px;
     font-weight: bold;
   }
-  .desc-title:before {
+  .desc.title:before {
     content: 'title';
   }
 
-  .desc-section:before {
+  .desc.section:before {
     page-break-after: avoid;
     content: 'section';
   }
 
-  .desc-info:before {
+  .desc.info:before {
     content: '*.info';
   }
 }

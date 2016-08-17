@@ -6,9 +6,10 @@ import figs from '../figs';
 function getTable(d, key) {
     var labels = _.map(d.confusionMatrix, ((val, k) => k));
     const labelsNum = labels.length;
-    return <div id="tbl-confusion-matrix" style={{    border: "1px solid #eee", margin: '0 auto 20px auto'}}>
+    return <div key={key} id="tbl-confusion-matrix" style={{    border: "1px solid #eee", margin: '0 auto 20px auto'}}>
         <table style={{border: 'none', margin: '0 auto 20px auto'}} key={key}>
             <caption style={{fontWeight: 'bold'}}>{key}</caption>
+            <tbody>
             <tr>
                 <td style={{border: 'none'}}>
                     <table>
@@ -80,6 +81,7 @@ function getTable(d, key) {
                     </table>
                 </td>
             </tr>
+            </tbody>
         </table>
     </div>
 }

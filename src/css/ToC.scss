@@ -32,12 +32,13 @@
     background: white
   }
   .nr{
+    float: right;
+    background: white;
     font-size: 11px;
   }
   ol.leaders .row span + span {
-    float: right;
     padding-left: 0.33em;
-    background: white
+
   }
   ol {
     /* Creates a new instance of the section counter with each ol
