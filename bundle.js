@@ -60028,9 +60028,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        ') ',
 	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf y_t' }),
 	                        ' only depends on ',
-	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf y_{t-1}' }),
+	                        _react2.default.createElement(_Math2.default, { l: '\y_{t-1}' }),
 	                        ', where the initial probability ',
-	                        _react2.default.createElement(_Math2.default, { l: 'p(\\mathbf y_{1})' }),
+	                        _react2.default.createElement(_Math2.default, { l: 'p(\y_{1})' }),
 	                        ' is given'
 	                    ),
 	                    _react2.default.createElement(
@@ -60083,7 +60083,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(_Math2.default, { l: 'p(\\mathbf x_t|\\mathbf y_t)' }),
 	                    ' and ',
 	                    _react2.default.createElement(_Math2.default, {
-	                        l: 'p(\\mathbf y_t|\\mathbf y_{t-1})' }),
+	                        l: 'p(\\mathbf y_t|\y_{t-1})' }),
 	                    ', we typically use a set of pre-tagged observation-label sequences and perform a parameter estimation method such as the ',
 	                    _react2.default.createElement(
 	                        'a',
@@ -60168,7 +60168,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    _createClass(LinearChainCRF, [{
 	        key: 'render',
 	        value: function render() {
-	            var canonicalCrfFormula = "\\frac{\\exp\\left \\{\\sum_{t=1}^T\\sum_{k=1}^{K} \\lambda_k f_k(\\mathbf y_t, \\mathbf y_{t-1}, \\mathbf x_t)\\right \\}}{\\sum_{\\mathbf y'}\\exp\\left \\{\\sum_{t=1}^T\\sum_{k=1}^{K} \\lambda_k f_k(\\mathbf y_{t}', y'_{t-1}, \\mathbf x_t)\\right \\}}";
+	            var canonicalCrfFormula = "\\frac{\\exp\\left \\{\\sum_{t=1}^T\\sum_{k=1}^{K} \\lambda_k f_k(\\mathbf y_t, \y_{t-1}, \\mathbf x_t)\\right \\}}{\\sum_{\\mathbf y'}\\exp\\left \\{\\sum_{t=1}^T\\sum_{k=1}^{K} \\lambda_k f_k(\y_{t}', y'_{t-1}, \\mathbf x_t)\\right \\}}";
 	            return _react2.default.createElement(
 	                'div',
 	                null,
@@ -60233,7 +60233,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'Each local function ',
 	                    _react2.default.createElement(_Math2.default, {
 	                        display: false,
-	                        l: '\\Phi_{k}(\\mathbf x_t,\\mathbf y_t,\\mathbf y_{t-1}) = \\lambda_{k} f_{k}(\\mathbf y_{t},\\mathbf y_{t-1},\\mathbf x_t)'
+	                        l: '\\Phi_{k}(\\mathbf x_t,\\mathbf y_t,\y_{t-1}) = \\lambda_{k} f_{k}(\y_{t},\y_{t-1},\\mathbf x_t)'
 	                    }),
 	                    ' where'
 	                ),
@@ -60255,7 +60255,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        ' is the current observation and ',
 	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf y_t' }),
 	                        ' is the current label, and ',
-	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf y_{t-1}' }),
+	                        _react2.default.createElement(_Math2.default, { l: '\y_{t-1}' }),
 	                        ' is the previous label, with some null value for ',
 	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf y_0' }),
 	                        '.'
@@ -60282,7 +60282,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    null,
 	                    'For notational ease, we may shorten ',
 	                    _react2.default.createElement(_Math2.default, {
-	                        l: '\\Phi_{k}(\\mathbf x_t,\\mathbf y_t,\\mathbf y_{t-1})' }),
+	                        l: '\\Phi_{k}(\\mathbf x_t,\\mathbf y_t,\y_{t-1})' }),
 	                    ' as ',
 	                    _react2.default.createElement(_Math2.default, {
 	                        l: '\\Phi_{k,t}' }),
@@ -60295,7 +60295,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _abbreviations2.default.crf,
 	                    ' distribution as:',
 	                    _react2.default.createElement(_Math2.default, {
-	                        l: '\\hat{p}(\\mathbf x, \\mathbf y)=\\prod_{t=1}^T\\prod_{k=1}^K\\Phi_{k,t}(\\mathbf x_t, \\mathbf y_t, \\mathbf y_{t-1})',
+	                        l: '\\hat{p}(\\mathbf x, \\mathbf y)=\\prod_{t=1}^T\\prod_{k=1}^K\\Phi_{k,t}(\\mathbf x_t, \\mathbf y_t, \y_{t-1})',
 	                        displayMode: true })
 	                ),
 	                _react2.default.createElement(
@@ -60321,7 +60321,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(_Math2.default, { l: 'Z(\\mathbf x)=\\sum_{\\mathbf{y}}\\hat{p}(\\mathbf x, \\mathbf y)', displayMode: true }),
 	                    'and so',
 	                    _react2.default.createElement(_Math2.default, {
-	                        l: 'p(\\mathbf y|\\mathbf x)=\r \\frac{1}{Z(\\mathbf x)}\\hat{p}(\\mathbf x, \\mathbf y)\r =\r \\frac{1}{Z(\\mathbf x)}\\prod_{t=1}^T\\prod_{k=1}^{K} \\lambda_k f_k(\\mathbf y_t, \\mathbf y_{t-1}, \\mathbf x_t)',
+	                        l: 'p(\\mathbf y|\\mathbf x)=\r \\frac{1}{Z(\\mathbf x)}\\hat{p}(\\mathbf x, \\mathbf y)\r =\r \\frac{1}{Z(\\mathbf x)}\\prod_{t=1}^T\\prod_{k=1}^{K} \\lambda_k f_k(\\mathbf y_t, \y_{t-1}, \\mathbf x_t)',
 	                        displayMode: true })
 	                ),
 	                _react2.default.createElement(
@@ -60699,7 +60699,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        ':'
 	                    )
 	                ),
-	                _react2.default.createElement(_Math2.default, { display: 'true', l: '\\frac{\\partial\\ell}{\\partial\\lambda_k} =\r \\sum_{i=1}^N\\sum_{t=1}^Tf_k(\\mathbf y_t^i,\\mathbf y_{t-1}^i,\\mathbf x_t^i)\r -\\sum_{i=1}^N\\sum_{t=1}^T\\sum_{\\mathbf y,\\mathbf y\'}f_k(y,y,\\mathbf x_t^i)\r p(y,y\'|\\mathbf x^i)-\\sum_{k=1}^K\\frac{\\lambda_k}{\\sigma^2}\r ' }),
+	                _react2.default.createElement(_Math2.default, { display: 'true', l: '\\frac{\\partial\\ell}{\\partial\\lambda_k} =\r \\sum_{i=1}^N\\sum_{t=1}^Tf_k(\\mathbf y_t^i,\y_{t-1}^i,\\mathbf x_t^i)\r -\\sum_{i=1}^N\\sum_{t=1}^T\\sum_{\\mathbf y,\\mathbf y\'}f_k(y,y,\\mathbf x_t^i)\r p(y,y\'|\\mathbf x^i)-\\sum_{k=1}^K\\frac{\\lambda_k}{\\sigma^2}\r ' }),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
