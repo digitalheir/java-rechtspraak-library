@@ -305,7 +305,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (draining) {
 	        return;
 	    }
-	    var timeout = cachedSetTimeout(cleanUpNextTick);
+	    var timeout = cachedSetTimeout.call(null, cleanUpNextTick);
 	    draining = true;
 
 	    var len = queue.length;
@@ -322,7 +322,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	    currentQueue = null;
 	    draining = false;
-	    cachedClearTimeout(timeout);
+	    cachedClearTimeout.call(null, timeout);
 	}
 
 	process.nextTick = function (fun) {
@@ -334,7 +334,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	    queue.push(new Item(fun, args));
 	    if (queue.length === 1 && !draining) {
-	        cachedSetTimeout(drainQueue, 0);
+	        cachedSetTimeout.call(null, drainQueue, 0);
 	    }
 	};
 
@@ -19757,10 +19757,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.Navigation = __webpack_require__(191);
 	exports.State = __webpack_require__(192);
 
-	exports.createRoute = __webpack_require__(165).createRoute;
-	exports.createDefaultRoute = __webpack_require__(165).createDefaultRoute;
-	exports.createNotFoundRoute = __webpack_require__(165).createNotFoundRoute;
-	exports.createRedirect = __webpack_require__(165).createRedirect;
+	exports.createRoute = __webpack_require__(166).createRoute;
+	exports.createDefaultRoute = __webpack_require__(166).createDefaultRoute;
+	exports.createNotFoundRoute = __webpack_require__(166).createNotFoundRoute;
+	exports.createRedirect = __webpack_require__(166).createRedirect;
 	exports.createRoutesFromReactChildren = __webpack_require__(193);
 
 	exports.create = __webpack_require__(194);
@@ -19824,9 +19824,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var assign = __webpack_require__(42);
+	var assign = __webpack_require__(165);
 	var ReactPropTypes = __webpack_require__(4).PropTypes;
-	var Route = __webpack_require__(165);
+	var Route = __webpack_require__(166);
 
 	var PropTypes = assign({}, ReactPropTypes, {
 
@@ -19854,6 +19854,38 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 165 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	function ToObject(val) {
+		if (val == null) {
+			throw new TypeError('Object.assign cannot be called with null or undefined');
+		}
+
+		return Object(val);
+	}
+
+	module.exports = Object.assign || function (target, source) {
+		var from;
+		var keys;
+		var to = ToObject(target);
+
+		for (var s = 1; s < arguments.length; s++) {
+			from = arguments[s];
+			keys = Object.keys(Object(from));
+
+			for (var i = 0; i < keys.length; i++) {
+				to[keys[i]] = from[keys[i]];
+			}
+		}
+
+		return to;
+	};
+
+
+/***/ },
+/* 166 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19862,10 +19894,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
-	var assign = __webpack_require__(42);
-	var invariant = __webpack_require__(166);
-	var warning = __webpack_require__(167);
-	var PathUtils = __webpack_require__(168);
+	var assign = __webpack_require__(165);
+	var invariant = __webpack_require__(167);
+	var warning = __webpack_require__(168);
+	var PathUtils = __webpack_require__(169);
 
 	var _currentRoute;
 
@@ -20060,7 +20092,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = Route;
 
 /***/ },
-/* 166 */
+/* 167 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -20118,7 +20150,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
 
 /***/ },
-/* 167 */
+/* 168 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -20183,13 +20215,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
 
 /***/ },
-/* 168 */
+/* 169 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var invariant = __webpack_require__(166);
-	var assign = __webpack_require__(169);
+	var invariant = __webpack_require__(167);
+	var assign = __webpack_require__(165);
 	var qs = __webpack_require__(170);
 
 	var paramCompileMatcher = /:([a-zA-Z_$][a-zA-Z0-9_$]*)|[*.()\[\]\\+|{}^$]/g;
@@ -20339,38 +20371,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 	module.exports = PathUtils;
-
-/***/ },
-/* 169 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	function ToObject(val) {
-		if (val == null) {
-			throw new TypeError('Object.assign cannot be called with null or undefined');
-		}
-
-		return Object(val);
-	}
-
-	module.exports = Object.assign || function (target, source) {
-		var from;
-		var keys;
-		var to = ToObject(target);
-
-		for (var s = 1; s < arguments.length; s++) {
-			from = arguments[s];
-			keys = Object.keys(Object(from));
-
-			for (var i = 0; i < keys.length; i++) {
-				to[keys[i]] = from[keys[i]];
-			}
-		}
-
-		return to;
-	};
-
 
 /***/ },
 /* 170 */
@@ -20824,7 +20824,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var React = __webpack_require__(4);
 	var ContextWrapper = __webpack_require__(176);
-	var assign = __webpack_require__(42);
+	var assign = __webpack_require__(165);
 	var PropTypes = __webpack_require__(164);
 
 	var REF_NAME = '__routeHandler__';
@@ -20979,7 +20979,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var React = __webpack_require__(4);
-	var invariant = __webpack_require__(166);
+	var invariant = __webpack_require__(167);
 	var PropTypes = __webpack_require__(164);
 	var RouteHandler = __webpack_require__(175);
 
@@ -21075,7 +21075,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var React = __webpack_require__(4);
-	var assign = __webpack_require__(42);
+	var assign = __webpack_require__(165);
 	var PropTypes = __webpack_require__(164);
 
 	function isLeftClickEvent(event) {
@@ -21172,6 +21172,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	      });
 
 	      if (props.activeStyle && this.getActiveState()) props.style = props.activeStyle;
+
+	      delete props.to;
+	      delete props.params;
+	      delete props.query;
+	      delete props.activeClassName;
+	      delete props.activeStyle;
 
 	      return React.DOM.a(props, this.props.children);
 	    }
@@ -21453,7 +21459,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var invariant = __webpack_require__(166);
+	var invariant = __webpack_require__(167);
 	var canUseDOM = __webpack_require__(184);
 
 	var History = {
@@ -21629,7 +21635,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
-	var invariant = __webpack_require__(166);
+	var invariant = __webpack_require__(167);
 
 	function throwCannotModify() {
 	  invariant(false, 'You cannot modify a static location');
@@ -21683,7 +21689,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
-	var invariant = __webpack_require__(166);
+	var invariant = __webpack_require__(167);
 	var LocationActions = __webpack_require__(182);
 	var History = __webpack_require__(183);
 
@@ -21984,12 +21990,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 
 	var React = __webpack_require__(4);
-	var assign = __webpack_require__(42);
-	var warning = __webpack_require__(167);
+	var assign = __webpack_require__(165);
+	var warning = __webpack_require__(168);
 	var DefaultRoute = __webpack_require__(163);
 	var NotFoundRoute = __webpack_require__(179);
 	var Redirect = __webpack_require__(180);
-	var Route = __webpack_require__(165);
+	var Route = __webpack_require__(166);
 
 	function checkPropTypes(componentName, propTypes, props) {
 	  componentName = componentName || 'UnknownComponent';
@@ -22070,8 +22076,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 
 	var React = __webpack_require__(4);
-	var warning = __webpack_require__(167);
-	var invariant = __webpack_require__(166);
+	var warning = __webpack_require__(168);
+	var invariant = __webpack_require__(167);
 	var canUseDOM = __webpack_require__(184);
 	var LocationActions = __webpack_require__(182);
 	var ImitateBrowserBehavior = __webpack_require__(189);
@@ -22088,9 +22094,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	var History = __webpack_require__(183);
 	var Cancellation = __webpack_require__(199);
 	var Match = __webpack_require__(201);
-	var Route = __webpack_require__(165);
+	var Route = __webpack_require__(166);
 	var supportsHistory = __webpack_require__(202);
-	var PathUtils = __webpack_require__(168);
+	var PathUtils = __webpack_require__(169);
 
 	/**
 	 * The default location for new routers.
@@ -22586,7 +22592,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var invariant = __webpack_require__(166);
+	var invariant = __webpack_require__(167);
 	var canUseDOM = __webpack_require__(184);
 	var getWindowScrollPosition = __webpack_require__(196);
 
@@ -22666,7 +22672,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var invariant = __webpack_require__(166);
+	var invariant = __webpack_require__(167);
 	var canUseDOM = __webpack_require__(184);
 
 	/**
@@ -22823,7 +22829,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
-	var PathUtils = __webpack_require__(168);
+	var PathUtils = __webpack_require__(169);
 
 	function deepSearch(route, pathname, query) {
 	  // Check the subtree first to find the most deeply-nested match.
@@ -23114,7 +23120,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _classCallCheck(this, Root);
 
 	        //noinspection UnnecessaryLabelJS
-
 	        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Root).call(this, props));
 
 	        title: //noinspection BadExpressionStatementJS
@@ -25593,7 +25598,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	module.exports = 'Automatically Assigning A Section Hierarchy To Dutch Case Law';
+	module.exports = 'Automatic Assignment of Section Structure to Texts of Dutch Court Judgments';
 
 /***/ },
 /* 215 */
@@ -25907,7 +25912,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'In this thesis, we explore the problem of automatically assigning a section structure to the texts of Dutch court judgments. To this end, we develop a database that mirrors the ',
+	                    'In this thesis, we explore the problem of automatic assignment of a section structure to the texts of Dutch court judgments. To this end, we develop a database that mirrors the ',
 	                    _abbreviations2.default.xml,
 	                    ' data offering of Rechtspraak.nl. We experiment with Linear-Chain Conditional Random Fields to label text elements with their role in the document (text, title or numbering). Given a list of labels, we experiment with probabilistic context free grammars to generate a parse tree to represent the section hierarchy of a document.'
 	                ),
@@ -26361,8 +26366,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	// import ManualTagger from './Tagging/Methods/ManualTagger/ManualTagger';
 	//noinspection JSUnresolvedVariable
-
-
 	function getHandler(route) {
 	    switch (route) {
 	        //Introduction
@@ -27427,6 +27430,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      });
 	      //.ticks(d3.time.year, 10)
 	      //.tickFormat("%Y")
+
 
 	      var xAxisEl = _reactFauxDom2.default.createElement("g");
 
@@ -37148,7 +37152,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	/**
 	 * A component for each individual Bar to render an SVG rect element.
 	 */
-
 	var _class = function (_Component) {
 	  _inherits(_class, _Component);
 
@@ -40211,6 +40214,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  // in one set, that year exists in the other set), and also that they are in order.
 	  //
 	  //
+
 
 	  /**
 	   * an ordered array from objects to titles and years to counts
@@ -45885,10 +45889,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                _react2.default.createElement(
 	                                    'p',
 	                                    null,
-	                                    'Because we want to infer the most important words within title elements specifically, we take as a document the various text elements (such as a paragraph or title), and compute the tf-idf score for each word in each title.'
+	                                    'Because we want to infer the most important words within title elements specifically, we take as ',
+	                                    _react2.default.createElement(_Math2.default, { l: 'D' }),
+	                                    ' the collection of all element types (paragraphs, titles), and compute the tf-idf score for each word in each title. Some classes of words, such as articles and numbers, are treated as a single word.'
 	                                ),
 	                                _react2.default.createElement(_figureTitleTfIdf2.default, null),
-	                                _react2.default.createElement(_figureSectionTfIdf2.default, null)
+	                                _react2.default.createElement(_figureSectionTfIdf2.default, null),
+	                                _react2.default.createElement(
+	                                    'p',
+	                                    null,
+	                                    'We observe, not very surprisingly, that numbers and articles are top terms for section titles. Furthermore, we notice that'
+	                                )
 	                            )
 	                        )
 	                    )
@@ -54665,7 +54676,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            var txt = this.props.text ? this.props.text : this.props.percentage;
 	            return _react2.default.createElement(
 	                "svg",
-	                { width: "80", height: "10" },
+	                { width: "60", height: "10" },
 	                _react2.default.createElement(
 	                    "rect",
 	                    { className: "perc-bar bg", width: "100%", height: "100%" },
@@ -55191,6 +55202,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _figs2 = _interopRequireDefault(_figs);
 
+	var _Math = __webpack_require__(254);
+
+	var _Math2 = _interopRequireDefault(_Math);
+
 	var _PercentageBar = __webpack_require__(281);
 
 	var _PercentageBar2 = _interopRequireDefault(_PercentageBar);
@@ -55251,7 +55266,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        'tbody',
 	                        null,
 	                        _underscore2.default.map(tfIdfScores, function (term, o) {
-	                            var tfIdfScoreStr = term[1].toFixed(2);return _react2.default.createElement(
+	                            var tfIdfScoreStr = term[1].toFixed(2);
+	                            return _react2.default.createElement(
 	                                'tr',
 	                                { key: term[0] },
 	                                _react2.default.createElement(
@@ -55290,7 +55306,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ),
 	                    ' Top ',
 	                    nTerms,
-	                    ' tf-idf scores for stemmed words in section titles. Stemming is performed using the ',
+	                    ' tf-idf scores for stemmed words in section titles (',
+	                    _react2.default.createElement(_Math2.default, { l: 'D' }),
+	                    ' is the collection element types ',
+	                    _react2.default.createElement(_Math2.default, { l: 'd' }),
+	                    ' is \'section titles\'). Stemming is performed using the ',
 	                    _react2.default.createElement(
 	                        'a',
 	                        { href: 'http://snowball.tartarus.org/algorithms/dutch/stemmer.html' },
@@ -55961,7 +55981,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'One may of course invent any other token type.'
+	                    'The selection of token types is rather arbitrary. These types were inspired by the existing XML tags of Rechtspraak.nl, and what is useful for creating a section structure. One may of course invent any other token type to suits one\'s needs.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -56047,7 +56067,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	/**
 	 * A component for a chapter page on our website.
 	 */
-
 	var Chapter = function (_React$Component) {
 	    _inherits(Chapter, _React$Component);
 
@@ -56176,7 +56195,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    null,
 	                    'The problem of automatically assigning semantic markup to plain-text documents has existed since the rise of hypertext in the late 1980s: see ',
 	                    _references2.default.cite(_bib2.default.furuta1989automatically),
-	                    ' for one historic example that pre-dates ',
+	                    ' for one historic example that predates ',
 	                    _abbreviations2.default.xml,
 	                    '.'
 	                ),
@@ -59476,6 +59495,28 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
+	                    'Task 3, labeling the text elements with their role in the text, is achieved by training a Conditional Random Field model on a set of manually labeled documents. The trained model is then able to correctly label most elements: we report an F',
+	                    _react2.default.createElement(
+	                        'sub',
+	                        null,
+	                        '1'
+	                    ),
+	                    ' score of 0.91 in our experiment.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Task 4, organizing the tagged elements into a section hierarchy, is approached as a probabilistic parsing problem. We create a Context Free Grammar which accepts text elements as tokens, and creates a parse tree which represents the section hierarchy. This approach returns a desirable section hierarchy in most cases: in our experiment we report an F',
+	                    _react2.default.createElement(
+	                        'sub',
+	                        null,
+	                        '1'
+	                    ),
+	                    ' score of 0.92.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
 	                    'Tasks 3 and 4 require more complicated machinery than importing and tokenization do, so these topics merit a more comprehensive explication. We describe our treatment of tasks 3 and 4 as two separate chapters, which are similarly structured: first, we introduce the problem to solve, then describe the methods used to solve the problem, and finally report and discuss experimental results.'
 	                )
 	            );
@@ -59594,7 +59635,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'There is a recent trend on Rechtspraak.nl towards publishing more richly marked up documents, as we can see in ',
 	                    _react2.default.createElement(_FigRef2.default, {
 	                        fig: _figs2.default.markupStats }),
-	                    '. Still, an overwhelmingly large portion remains of documents which contain no or only sparse markup. To illustrate: at the time of writing, 78.7% of all judgment texts on Rechtspraak.nl do not contain any ',
+	                    '. Still, an overwhelmingly large portion of documents which contain no or only sparse markup remains. Still, an overwhelmingly large portion remains of documents which contain no or only sparse markup. To illustrate: at the time of writing, 78.7% of all judgment texts on Rechtspraak.nl do not contain any ',
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -59983,15 +60024,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(_Math2.default, { l: 'V' }),
 	                    ' which take values from a set ',
 	                    _react2.default.createElement(_Math2.default, { l: '\\mathcal{V}' }),
-	                    '. Directed Graphical Models can be represented as a directed graph where nodes represent the variables in ',
+	                    '. Loosely speaking, Directed Graphical Models can be represented as a directed graph where nodes represent the variables ',
+	                    _react2.default.createElement(_Math2.default, { l: 'v' }),
+	                    ' in ',
 	                    _react2.default.createElement(_Math2.default, { l: 'V' }),
-	                    ', and the edges represent conditional dependencies. Directed graphical models factorize as follows:',
+	                    ', and the edges represent dependencies. Directed graphical models factorize as follows:',
 	                    _react2.default.createElement(_Math2.default, { l: 'p( \\mathbf x, \\mathbf y)=\\prod _{v\\in V}p(v|\\pi(v))', display: 'true' }),
 	                    'where ',
 	                    _react2.default.createElement(_Math2.default, { l: '\\pi(v)' }),
-	                    ' are the parents of ',
+	                    ' are the parents of node ',
 	                    _react2.default.createElement(_Math2.default, { l: 'v' }),
-	                    ' in ',
+	                    ' in graph ',
 	                    _react2.default.createElement(_Math2.default, { l: 'G' }),
 	                    '.'
 	                ),
@@ -60001,10 +60044,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'Hidden Markov Models (',
 	                    _abbreviations2.default.hmms,
 	                    ') are one instance of directed models in which we have a linear sequence of observations ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf x=\\{\\mathbf x_t\\}_{t=1}^T' }),
-	                    ' that is assumed to be generated by a sequence of hidden states ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf y=\\{\\mathbf y_t\\}_{t=1}^T' }),
-	                    '. One example of an application would be speech recognition, in which samples of the sound waves can be seen as observations, and the actual phonemes as the hidden states.'
+	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf x=\\{x_t\\}_{t=1}^T' }),
+	                    ' that is assumed to be generated by a sequence of labels (in HMM parlance, \'hidden states\') ',
+	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf y=\\{y_t\\}_{t=1}^T' }),
+	                    '. One example of an application would be speech recognition, in which samples of the sound waves can be seen as observations, and the actual phonemes as the labels.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -60026,11 +60069,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            'label'
 	                        ),
 	                        ') ',
-	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf y_t' }),
+	                        _react2.default.createElement(_Math2.default, { l: 'y_t' }),
 	                        ' only depends on ',
-	                        _react2.default.createElement(_Math2.default, { l: '\y_{t-1}' }),
+	                        _react2.default.createElement(_Math2.default, { l: 'y_{t-1}' }),
 	                        ', where the initial probability ',
-	                        _react2.default.createElement(_Math2.default, { l: 'p(\y_{1})' }),
+	                        _react2.default.createElement(_Math2.default, { l: 'p(y_{1})' }),
 	                        ' is given'
 	                    ),
 	                    _react2.default.createElement(
@@ -60043,14 +60086,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            'observation'
 	                        ),
 	                        ') ',
-	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf x_t' }),
+	                        _react2.default.createElement(_Math2.default, { l: 'x_t' }),
 	                        ' only depends on the label ',
 	                        _react2.default.createElement(_Math2.default, {
-	                            l: '\\mathbf y_t' }),
+	                            l: 'y_t' }),
 	                        '; the observation ',
-	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf x_t' }),
+	                        _react2.default.createElement(_Math2.default, { l: 'x_t' }),
 	                        ' is generated by label ',
-	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf y_t' }),
+	                        _react2.default.createElement(_Math2.default, { l: 'y_t' }),
 	                        '.'
 	                    )
 	                ),
@@ -60061,7 +60104,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _abbreviations2.default.hmm,
 	                    ' then factorizes as follows:',
 	                    _react2.default.createElement(_Math2.default, { display: 'true',
-	                        l: 'p\\left ( \\mathbf x, \\mathbf y\\right ) = \\prod _{t=1}^T p(x_t)p(y_t) = \\prod _{t=1}^T p(x_t|y_t)p(y_t|y_{t-1})' })
+	                        l: 'p\\left (v \\right )= \\prod _{t=1}^T p(x_t)p(y_t) = \\prod _{t=1}^T p(x_t|y_t)p(y_t|y_{t-1})' })
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -60070,7 +60113,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _abbreviations2.default.hmms,
 	                    ' in ',
 	                    _react2.default.createElement(_FigRef2.default, { fig: _figs2.default.graphicalModels }),
-	                    ', we see that the white nodes represent labels and the grey nodes the observations. Typically, observations are given, but the labels need to be guessed. This is done by looping over all ',
+	                    ', we see that the white nodes represent labels and the grey nodes the observations. Typically, observations are given, but the labels need to be inferred. This is done from a given HMM model by looping over all ',
 	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf y\\in Y' }),
 	                    ' and selecting ',
 	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf y^*\\in Y' }),
@@ -60079,11 +60122,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'To find plausible values of ',
-	                    _react2.default.createElement(_Math2.default, { l: 'p(\\mathbf x_t|\\mathbf y_t)' }),
+	                    'To find a model with plausible values of ',
+	                    _react2.default.createElement(_Math2.default, { l: 'p(x_t|y_t)' }),
 	                    ' and ',
 	                    _react2.default.createElement(_Math2.default, {
-	                        l: 'p(\\mathbf y_t|\y_{t-1})' }),
+	                        l: 'p(y_t|y_{t-1})' }),
 	                    ', we typically use a set of pre-tagged observation-label sequences and perform a parameter estimation method such as the ',
 	                    _react2.default.createElement(
 	                        'a',
@@ -60168,14 +60211,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	    _createClass(LinearChainCRF, [{
 	        key: 'render',
 	        value: function render() {
-	            var canonicalCrfFormula = "\\frac{\\exp\\left \\{\\sum_{t=1}^T\\sum_{k=1}^{K} \\lambda_k f_k(\\mathbf y_t, \y_{t-1}, \\mathbf x_t)\\right \\}}{\\sum_{\\mathbf y'}\\exp\\left \\{\\sum_{t=1}^T\\sum_{k=1}^{K} \\lambda_k f_k(\y_{t}', y'_{t-1}, \\mathbf x_t)\\right \\}}";
+	            var canonicalCrfFormula = "\\frac{\\exp\\left \\{\\sum_{t=1}^T\\sum_{k=1}^{K} \\lambda_k f_k(y_t, y_{t-1}, x_t)\\right \\}}{\\sum_{\\mathbf y'}\\exp\\left \\{\\sum_{t=1}^T\\sum_{k=1}^{K} \\lambda_k f_k(y_{t}', y'_{t-1}, x_t)\\right \\}}";
 	            return _react2.default.createElement(
 	                'div',
 	                null,
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'On the surface, linear-chain  ',
+	                    'On the surface, linear-chain ',
 	                    _abbreviations2.default.crfs,
 	                    ' (',
 	                    _abbreviations2.default.lccrfs,
@@ -60233,7 +60276,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'Each local function ',
 	                    _react2.default.createElement(_Math2.default, {
 	                        display: false,
-	                        l: '\\Phi_{k}(\\mathbf x_t,\\mathbf y_t,\y_{t-1}) = \\lambda_{k} f_{k}(\y_{t},\y_{t-1},\\mathbf x_t)'
+	                        l: '\\Phi_{k}(x_t,y_t,y_{t-1}) = \\lambda_{k} f_{k}(y_{t},y_{t-1},x_t)'
 	                    }),
 	                    ' where'
 	                ),
@@ -60243,19 +60286,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(
 	                        'li',
 	                        null,
-	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf x_t' }),
+	                        _react2.default.createElement(_Math2.default, { l: 'x_t' }),
 	                        ' and ',
-	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf y_t' }),
+	                        _react2.default.createElement(_Math2.default, { l: 'y_t' }),
 	                        ' be elements of ',
 	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf x' }),
 	                        ' and ',
 	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf y' }),
 	                        ' respectively, i.e., ',
-	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf x_t' }),
+	                        _react2.default.createElement(_Math2.default, { l: 'x_t' }),
 	                        ' is the current observation and ',
-	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf y_t' }),
+	                        _react2.default.createElement(_Math2.default, { l: 'y_t' }),
 	                        ' is the current label, and ',
-	                        _react2.default.createElement(_Math2.default, { l: '\y_{t-1}' }),
+	                        _react2.default.createElement(_Math2.default, { l: 'y_{t-1}' }),
 	                        ' is the previous label, with some null value for ',
 	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf y_0' }),
 	                        '.'
@@ -60282,7 +60325,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    null,
 	                    'For notational ease, we may shorten ',
 	                    _react2.default.createElement(_Math2.default, {
-	                        l: '\\Phi_{k}(\\mathbf x_t,\\mathbf y_t,\y_{t-1})' }),
+	                        l: '\\Phi_{k}(x_t,y_t,y_{t-1})' }),
 	                    ' as ',
 	                    _react2.default.createElement(_Math2.default, {
 	                        l: '\\Phi_{k,t}' }),
@@ -60295,7 +60338,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _abbreviations2.default.crf,
 	                    ' distribution as:',
 	                    _react2.default.createElement(_Math2.default, {
-	                        l: '\\hat{p}(\\mathbf x, \\mathbf y)=\\prod_{t=1}^T\\prod_{k=1}^K\\Phi_{k,t}(\\mathbf x_t, \\mathbf y_t, \y_{t-1})',
+	                        l: '\\hat{p}(\\mathbf x, \\mathbf y)=\\prod_{t=1}^T\\prod_{k=1}^K\\Phi_{k,t}(x_t, y_t, y_{t-1})',
 	                        displayMode: true })
 	                ),
 	                _react2.default.createElement(
@@ -60321,7 +60364,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(_Math2.default, { l: 'Z(\\mathbf x)=\\sum_{\\mathbf{y}}\\hat{p}(\\mathbf x, \\mathbf y)', displayMode: true }),
 	                    'and so',
 	                    _react2.default.createElement(_Math2.default, {
-	                        l: 'p(\\mathbf y|\\mathbf x)=\r \\frac{1}{Z(\\mathbf x)}\\hat{p}(\\mathbf x, \\mathbf y)\r =\r \\frac{1}{Z(\\mathbf x)}\\prod_{t=1}^T\\prod_{k=1}^{K} \\lambda_k f_k(\\mathbf y_t, \y_{t-1}, \\mathbf x_t)',
+	                        l: 'p(\\mathbf y|\\mathbf x)=\r \\frac{1}{Z(\\mathbf x)}\\hat{p}(\\mathbf x, \\mathbf y)\r =\r \\frac{1}{Z(\\mathbf x)}\\prod_{t=1}^T\\prod_{k=1}^{K} \\lambda_k f_k(y_t, y_{t-1}, x_t)',
 	                        displayMode: true })
 	                ),
 	                _react2.default.createElement(
@@ -60499,7 +60542,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        { title: 'Conditional Random Fields' },
 	                        'CRFs'
 	                    ),
-	                    ' fulfil the optimal substructure property, which means that we can memoize optimal sub-results and avoid making the same calculation many times. We calculate the optimal path ',
+	                    ' fulfil the optimal substructure property which means that we can memoize optimal sub-results and avoid making the same calculation many times. This sort of memoization is what makes the algorithm an example of dynamic programming. We calculate the optimal path ',
 	                    _react2.default.createElement(_Math2.default, { l: '\\delta_t(j)' }),
 	                    ' at time ',
 	                    _react2.default.createElement(_Math2.default, { l: 't' }),
@@ -60699,7 +60742,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        ':'
 	                    )
 	                ),
-	                _react2.default.createElement(_Math2.default, { display: 'true', l: '\\frac{\\partial\\ell}{\\partial\\lambda_k} =\r \\sum_{i=1}^N\\sum_{t=1}^Tf_k(\\mathbf y_t^i,\y_{t-1}^i,\\mathbf x_t^i)\r -\\sum_{i=1}^N\\sum_{t=1}^T\\sum_{\\mathbf y,\\mathbf y\'}f_k(y,y,\\mathbf x_t^i)\r p(y,y\'|\\mathbf x^i)-\\sum_{k=1}^K\\frac{\\lambda_k}{\\sigma^2}\r ' }),
+	                _react2.default.createElement(_Math2.default, { display: 'true', l: '\\frac{\\partial\\ell}{\\partial\\lambda_k} =\r \\sum_{i=1}^N\\sum_{t=1}^Tf_k(y_t^i,y_{t-1}^i,x_t^i)\r -\\sum_{i=1}^N\\sum_{t=1}^T\\sum_{\\mathbf y,\\mathbf y\'}f_k(y,y,x_t^i)\r p(y,y\'|\\mathbf x^i)-\\sum_{k=1}^K\\frac{\\lambda_k}{\\sigma^2}\r ' }),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
@@ -61076,6 +61119,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	        //noinspection JSUnusedGlobalSymbols
 
+
 	        value: function render() {
 	            return _react2.default.createElement(
 	                'div',
@@ -61178,6 +61222,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        key: 'render',
 
 	        //noinspection JSUnusedGlobalSymbols
+
 
 	        value: function render() {
 	            return _react2.default.createElement(
@@ -61353,7 +61398,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	/**
 	 * A component for a chapter page on our website.
 	 */
-
 	var Chapter = function (_React$Component) {
 	    _inherits(Chapter, _React$Component);
 
@@ -61655,10 +61699,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Math2 = _interopRequireDefault(_Math);
 
-	var _GraphicalModels = __webpack_require__(322);
-
-	var _GraphicalModels2 = _interopRequireDefault(_GraphicalModels);
-
 	var _sections = __webpack_require__(319);
 
 	var _sections2 = _interopRequireDefault(_sections);
@@ -61749,7 +61789,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _abbreviations2.default.crfs,
 	                    '. Image adapted from ',
 	                    _references2.default.cite(_bib2.default.sutton2006introduction),
-	                    '.'
+	                    '. The white nodes are conditioned on the grey nodes. Depending on the application, white nodes are called dependent variables (in logistic regression), hidden variables (in HMMs), output variables or labels (in HMMs and CRFs). Likewise, the grey nodes are called explanatory variables (in logistic regression), observed variables, input variables or observations (in HMMs and CRFs). We will stick to the terminology of \'labels\', and \'observations\', since those terms seem closest to our application.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -61758,7 +61798,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(_FigRef2.default, { fig: _figs2.default.graphicalModels }),
 	                    ', ',
 	                    _abbreviations2.default.crfs,
-	                    ' can be understood as a graphical version of logistic regression, in which we have an arbitrary number of dependent variables that are conditioned on a number of explanatory variables (instead of just one dependent variable).'
+	                    ' can be understood as a graphical version of logistic regression, in which we have an arbitrary number of labels ',
+	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf y' }),
+	                    ' that are conditioned on a number observations ',
+	                    _react2.default.createElement(_Math2.default, {
+	                        l: '\\mathbf x' }),
+	                    ' (instead of just one dependent variable).'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -61776,7 +61821,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'To clarify: in our experiments we consider an input document as a string of tokens which corresponds to the set of input variables, where each token is linked to one output variable of either ',
+	                    'To clarify: in our experiments we consider an input document as a string of tokens which corresponds to the set of input variables, where each token is linked to one output variable which represents the label of the token: either ',
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -62017,7 +62062,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'We use these features in a probabilistic tagger for which we train a ',
 	                    _react2.default.createElement(
 	                        'abbr',
-	                        { title: 'Conditional Random Field' },
+	                        {
+	                            title: 'Conditional Random Field' },
 	                        'CRF'
 	                    ),
 	                    ' model. We now introduce the class of ',
@@ -64116,7 +64162,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	/**
 	 * A component for a chapter page on our website.
 	 */
-
 	var Chapter = function (_React$Component) {
 	    _inherits(Chapter, _React$Component);
 
@@ -64774,7 +64819,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'In this chapter, we provide an introduction to the Rechtspraak.nl data set that we experiment on. We then make a number of remarks on the necessary steps of importing and tokenization that we perform on documents in the corpus. Importing and tokenization are necessary pre-processing steps which result in a collection of token sequences. These token sequences then serve as input for the labeling task, and eventually the tokens are assigned as leaf nodes in a section tree.'
+	                    'In this chapter, we provide an introduction to the Rechtspraak.nl data set that we use in our experiments. We then make a number of remarks on the necessary steps of importing and tokenization that we perform on documents in the corpus. Importing and tokenization are necessary pre-processing steps which result in a collection of token sequences. These token sequences then serve as input for the labeling task, and eventually the tokens are assigned as leaf nodes in a section tree.'
 	                )
 	            );
 	        }

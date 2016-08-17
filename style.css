@@ -583,6 +583,7 @@ div.full-thesis .numbered-section .title::before {
     content: 'title';
 }
 #rechtspraak-nl-data-set .desc-section:before {
+    page-break-after: avoid;
     content: 'section';
 }
 #rechtspraak-nl-data-set .desc-info:before {
@@ -622,6 +623,9 @@ figure {
 }
 .nopadding {
     padding: 0;
+}
+#fig-tfidf-sections .perc-text {
+    min-width: 30px;
 }
 #fig-tfidf-sections div {
     text-align: center;
