@@ -54,7 +54,7 @@ export default class ProblemDescription extends Component {
             </p>
 
             <p>
-                Task 3, labeling the text elements with their role in the text,
+                Task 3, labeling the text elements with their roles in the text,
                 is achieved by training a Conditional Random Field model on
                 a set of manually labeled documents. The trained model
                 is then able to correctly label most elements:

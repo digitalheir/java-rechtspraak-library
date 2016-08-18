@@ -39,9 +39,8 @@ export default class PARSEVAL extends Component {
                 </li>
             </ul>
             <p>
-                Where 'correct constituent' means that each non-terminal node has the same label and the same yield
-                (where
-                'yield' means: the ordered list of leaf nodes).
+                Where 'correct constituent' means that each non-terminal node has the same label and the same yield,
+                and 'yield' means the ordered list of leaf nodes.
             </p>
         </div>;
     }

@@ -25,9 +25,9 @@ export default class Discussion extends Component {
             <p>
                 Another possibility to improve the grammar is for the grammar
                 to recognize different 'modes': section siblings often share a typography
-                that is internally consistent, but not the same between documents. For example:
-                all sections are bold and capitalized, sub-sections are italic and sub-sub-sections
-                are underlined.
+                that is internally consistent within a document, but not among documents. For example:
+                in one document all sections are bold and capitalized, sub-sections are italic and sub-sub-sections
+                are underlined, and another document might have no formatting at all.
             </p>
 
             <p>

@@ -28,6 +28,14 @@ export default class Chapter extends React.Component {
                         GitHub</a>
                 </li>
             </ul>
+
+            <p>
+                We have also produced a number of general purpose libraries:
+            </p>
+            <ul>
+                <li>XML to JSON</li>
+                <li>Probabilistic Earley Parser</li>
+            </ul>
         </div>;
     }
 }

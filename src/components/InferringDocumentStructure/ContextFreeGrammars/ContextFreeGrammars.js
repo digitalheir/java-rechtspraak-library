@@ -45,6 +45,11 @@ export default class ContextFreeGrammars extends Component {
             </p>
 
             <p>
+                In the following, we use an extension of CNF with unary rules. In this extension, <F l="t"/> is either
+                a terminal or non-terminal type.
+            </p>
+
+            <p>
                 A lot of work has been done in parsing (P){abbrs.cfgs} in applications
                 of natural language processing and parsing programming languages. More recently, {abbrs.pcfgs} have
                 been used for other applications such as
@@ -52,7 +57,7 @@ export default class ContextFreeGrammars extends Component {
             </p>
 
             <p>
-                <ListingRef listing={listings.figGrammar}/> show a simplified version of the grammar
+                <ListingRef listing={listings.figGrammar}/> shows a simplified version of the grammar
                 that we use to create the section hierarchy.
             </p>
 

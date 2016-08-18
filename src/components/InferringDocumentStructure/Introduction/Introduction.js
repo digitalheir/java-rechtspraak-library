@@ -13,7 +13,7 @@ export default class InferringDocumentStructureIntroduction extends Component {
                 these tagged text elements are the leaf nodes, and may be children
                 of 'section' nodes.
                 This problem is very much akin to constituency parsing for natural languages,
-                and that is why we approach the problem as parsing a terminal sequence
+                and that is why we approach the problem as parsing a token sequence
                 with a Probabilistic Context Free Grammar ({abbrs.pcfg}).
             </p>
             <p>

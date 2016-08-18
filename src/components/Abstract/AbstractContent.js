@@ -17,10 +17,10 @@ export default class AbstractContent extends React.Component {
                     structure to the texts of Dutch court judgments. To this end, we develop a database that
                     mirrors the {abbrs.xml} data offering of Rechtspraak.nl. We
                     experiment with Linear-Chain
-                    Conditional Random Fields to label text elements with their role in the document (text,
+                    Conditional Random Fields to label text elements with their roles in the document (text,
                     title or numbering). Given a list of labels, we experiment with
                     probabilistic context free grammars
-                    to generate a parse tree to represent the section hierarchy of a document.
+                    to generate a parse tree which represents the section hierarchy of a document.
                 </p>
 
                 <p>

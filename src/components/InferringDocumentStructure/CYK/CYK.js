@@ -46,14 +46,14 @@ export default class CYK extends Component {
                 cost: the increase in grammar size is <F
                     l="\mathrm O (\left | G \right |^2)"/> for the best
                 algorithm, but the increase is linear if we use a variation
-                of the algorithm that works on grammars in binary normal form ({abbrs.twonf}):
+                of the CYK algorithm that works on grammars in binary normal form ({abbrs.twonf}):
                 see {ref.cite(bib.lange2009cnf)}.
             </p>
 
             <p>
-                The algorithm is a bottom-up parsing algorithm. The algorithm considers every
+                The {abbrs.cyk} algorithm is a bottom-up parsing algorithm. The algorithm considers every
                 substring from length <F l="1"/> to <F l="n"/>, and keeps
-                a list of all possible types for that substring, along with its probability.
+                a list of all possible types for those substrings, along with their probabilities.
             </p>
             <p>
                 For substrings of length <F l="1"/> (individual words),
@@ -61,7 +61,7 @@ export default class CYK extends Component {
                 we apply the production rules to every possible combination of two substrings of
                 length <F l="l-1"/>. This works, because {abbrs.cnf} mandates
                 that all production rules have 2 non-terminals.
-                Every time we apply a rule, we multiply the probability attached to the rule and the probabilities
+                Every time we apply a rule, we multiply the probability attached to that rule and the probabilities
                 of the constituent substrings.
             </p>
             <p>
@@ -69,12 +69,13 @@ export default class CYK extends Component {
                 of the form <F l="\text A \rightarrow \text B"/>, where <F l="\text A"/> and <F l="\text B"/> are both
                 non-terminals.
                 Extension of the algorithm is simple:
-                at the end of every substring type assignment, we add those
+                after ordinary type assignment for substrings, we add those
                 types to the list that result from applicable unary rules,
-                if that rule produces a non-terminal that does not yet
-                exist in the table with at least that probability.
+                if they produce a non-terminal that does not yet
+                exist in the table with at least as much probability.
                 We repeat until the cell does not change anymore.
             </p>
+
             <p>
                 A visual example of the result table can be found in <FigRef fig={parseFig}/>.
             </p>
