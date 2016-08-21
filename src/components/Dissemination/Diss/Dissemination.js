@@ -14,7 +14,7 @@ export default class Chapter extends React.Component {
                 enriched data set as a collection of {abbrs.html} pages, indexed for full text search.
             </p>
             <p>
-                The source code for this project is published in two separate Java libraries:
+                The main source code for this project is published as two separate Java libraries:
             </p>
             <ul>
                 <li>
@@ -30,11 +30,16 @@ export default class Chapter extends React.Component {
             </ul>
 
             <p>
-                We have also produced a number of general purpose libraries:
+                The above Java projects make use of a number of general purpose libraries
+                that have been created during the course of writing this thesis:
             </p>
             <ul>
-                <li>XML to JSON</li>
-                <li>Probabilistic Earley Parser</li>
+                <li>A Java library for converting XML to JSON, <a className='print-url'
+                                                                  href="https://github.com/digitalheir/java-xml-to-json">
+                    on GitHub</a></li>
+                <li>A Probabilistic Earley Parser for Java, <a className='print-url'
+                                                               href="https://github.com/digitalheir/java-probabilistic-earley-parser">
+                    on GitHub</a></li>
             </ul>
         </div>;
     }

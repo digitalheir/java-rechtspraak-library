@@ -11,6 +11,7 @@ import sectionsRsMarkup from './RechtspraakNl/RechtspraakNlMarkup/sections'
 import XmlSchema from './RechtspraakNl/RechtspraakNlMarkup/XmlSchema'
 import sectionsIntroduction from './Introduction/sections'
 import sectionsTagging from './Tagging/sections'
+import sectionsParamEst from './Tagging/Methods/CRF/ParameterEstimation/sections'
 
 import sectionsParsingEvaluation from './InferringDocumentStructure/Evaluation/sections'
 import PARSEVAL from './InferringDocumentStructure/Evaluation/PARSEVAL/PARSEVAL'
@@ -35,6 +36,7 @@ import HMMs from './Tagging/Methods/CRF/HMMs/HMMs';
 import LinearChainCRF from './Tagging/Methods/CRF/LinearChainCRF/LinearChainCRF';
 import Inference from './Tagging/Methods/CRF/Inference/Inference';
 import ParameterEstimation from './Tagging/Methods/CRF/ParameterEstimation/ParameterEstimation';
+import Regularization from './Tagging/Methods/CRF/ParameterEstimation/Regularization';
 import Performance from './Tagging/Methods/CRF/Performance/Performance';
 
 import TaggingEvaluation from './Tagging/Results/Results';
@@ -144,6 +146,10 @@ function getHandler(route) {
             return RelatedWork;
         case Dissemination.futureWork.id:
             return FutureWork;
+
+
+      case sectionsParamEst.regularization.id:
+            return Regularization;
 
         default:
             throw Error("No handler for route " + route + ". You should edit getSectionComponent.js");

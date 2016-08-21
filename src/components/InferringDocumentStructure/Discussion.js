@@ -39,8 +39,8 @@ export default class Discussion extends Component {
                 Conditional Random Fields in
                 that we describe a conditional
                 model instead of a generative one
-                (so the probability distribution <F l="P(\mathbf y|\mathbf x)"/> instead
-                of <F l="P(\mathbf x,\mathbf y)"/>), and this allows us to use a large
+                (so the probability distribution <F {...this.props} l="P(\mathbf y|\mathbf x)"/> instead
+                of <F {...this.props} l="P(\mathbf x,\mathbf y)"/>), and this allows us to use a large
                 feature set.
             </p>
 
@@ -48,8 +48,8 @@ export default class Discussion extends Component {
                 Another possibility is to implement a probabilistic version of the Earley parsing
                 algorithm, a more top down parser which easily allows to intervene during
                 parsing when some unexpected input is encountered. Although
-                the Earley parser has a worst-case complexity of <F l="O(n^3)"/>, it parses
-                left-recursive grammars in <F l="O(n)"/>, and is faster for certain grammars
+                the Earley parser has a worst-case complexity of <F {...this.props} l="O(n^3)"/>, it parses
+                left-recursive grammars in <F {...this.props} l="O(n)"/>, and is faster for certain grammars
                 than {abbrs.cyk}.
                 In our experiments, {abbrs.cyk} starts
                 to become noticeably slow for documents with more than 500 tokens, 

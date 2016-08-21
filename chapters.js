@@ -5,7 +5,6 @@ const chapters = {
         title: "Introduction",
         route: '/introduction/'
     },
-
     importing: {
         page: '6',
         id: "chapter-importing-and-tokenizing",
@@ -40,10 +39,10 @@ const chapters = {
     //     title: "Dissemination",
     //     route: '/dissemination/'
     // }
-    
-    pathTo: function(fromPath,toChapter){
+
+    pathTo: function (fromPath, toChapter) {
         const relativeToRoot = fromPath.match(/\//g).slice(1).map(_ => "../").join("");
-        return relativeToRoot+toChapter.route.replace('/','');
+        return relativeToRoot + toChapter.route.replace('/', '');
     }
 };
 
@@ -58,5 +57,8 @@ chapters.inOrder = [
 chapters.inOrder.forEach(ch=> {
     if (!ch) throw new Error("Chapters object contains null or undefined item.");
 });
+chapters.inOrder.forEach((ch, i)=>ch.number = i+1);
+
+//console.log(chapters)
 
 module.exports = chapters;

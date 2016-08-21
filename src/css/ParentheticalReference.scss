@@ -2,4 +2,7 @@
 
 .inline-citation {
   color: $darker-than-body;
+  .pages {
+    page-break-inside: avoid;
+  }
 }

@@ -48,21 +48,21 @@ export default class CRF extends Component {
                 logistic regression, {abbrs.hmms}, linear-chain {abbrs.crfs},
                 Bayesian
                 models, and general {abbrs.crfs}. Image adapted from {ref.cite(bib.sutton2006introduction)}.
-                The white nodes are conditioned on the grey nodes.
+                For the conditional models, the white nodes are conditioned on the grey nodes.
                 Depending on the application,
                 white nodes are called dependent variables (in logistic regression), hidden variables (in HMMs),
                 output variables or labels (in HMMs and CRFs).
                 Likewise, the grey nodes are called explanatory variables
                 (in logistic regression), observed variables, input variables or observations (in HMMs and CRFs).
-                We will stick to the terminology of 'labels', and 'observations', since those terms seem
+                We stick to the terminology of 'labels', and 'observations', since those terms seem
                 closest to our application.
             </FigImg>
 
             <p>
                 As illustrated in <FigRef fig={figs.graphicalModels}/>, {abbrs.crfs} can
                 be understood as a graphical version of logistic regression, in which we have an arbitrary
-                number of labels <F l="\mathbf y"/> that are conditioned on a number observations <F
-                l="\mathbf x"/> (instead of just one dependent variable).
+                number of labels <F {...this.props} l="\mathbf y"/> that are conditioned on a number observations <F
+                l="\mathbf x"/> (instead of just one label).
             </p>
 
             <p>
@@ -75,9 +75,8 @@ export default class CRF extends Component {
             <p>
                 To clarify: in our experiments we
                 consider an input document as a string of tokens which corresponds to a string of observations
-                vectors,
-                where each token is linked to one output variable which represents the label of the token:
-                either <code>title</code>, <code>nr</code>, <
+                vectors, and each token is linked to a label with a value
+                of either <code>title</code>, <code>nr</code>, <
                 code>text</code> or <code>newline</code>.
             </p>
             <p>

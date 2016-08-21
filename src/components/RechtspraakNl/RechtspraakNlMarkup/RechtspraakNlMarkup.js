@@ -174,78 +174,86 @@ export default class Introduction extends Component {
                         Titles are the most difficult elements
                         to label, so we make
                         a special effort to describe common title patterns.
-                        In <FigRef fig={figs.figTitleWordCount}/>, we see that if
+                        In <FigRef fig={figs.figTitleWordCount}/> we see that if
                         a <code>title</code> element contains text, it usually contains
-                        only a handful of words, with close to 99% of section titles
-                        containing 10 words or less.
+                        only a handful of words. Close to 99% of section titles
+                        contain 10 words or less.
                     </p>
+                </li>
+
+                <WordCountFig/>
+
+                <p>
+                    Title texts have a number of patterns that often recur. See <FigRef
+                    fig={figs.figTitleTreemap}/> for a tree map of the distribution of
+                    normalized title texts.
+                </p>
+
+                <FigTitlePattern/>
+
+                <p>
+                    From this figure we learn that most the section roles in use have some titles strings that
+                    are used very often, but there is also a greatly diverse set of title variation that occur
+                    less often. This figure encourages our use of CRFs: we notice clearly quantifiable patterns,
+                    such as the number of words and words used in titles.
+                </p>
+
+                <p>
+                    <FigRef fig={figs.tfidf}/> and <FigRef fig={figs.sectionsTfidf}/> list terms within
+                    section title elements by tf–idf score,
+                    which is a number that reflects how important a given word is
+                    in a document with respect to all other documents in the corpus.
+                </p>
+                <p>
+                    <strike>
+                        tf–idf is short for 'term frequency–inverse document frequency'.
+                        It represents the importance of a given word by taking the number of times
+                        that word occurs in the document, and offsetting it against the amount of
+                        times that word occurs elsewhere in the corpus.
+                    </strike>
+                </p>
+                <p>tf–idf is defined as follows: </p>
+
+                <F {...this.props} display={true} l="\text{tfidf}(t, d, D) = \text{tf}(t, d)\cdot \text{idf}(t, D)"/>
+                <p>where</p>
+                <ul>
+                    <li><F {...this.props} l="tf(t,d)"/> is some measure of the importance of a
+                        term <F {...this.props} l="t"/> in a
+                        given document <F {...this.props} l="d"/>. Let the raw frequency <F {...this.props} l="f_{t,d}"/> be
+                        the plain number of times the term <F {...this.props} l="t"/> in occurs in a
+                        given document <F {...this.props} l="d"/>. We use for <F {...this.props} l="tf(t,d)"/> the logarithmically
+                        scaled term
+                        count: <F {...this.props} l="tf(t,d) = 1 + \log{f_{t,d}}"/>, or <F {...this.props} l="0"/> if <F {...this.props} l="f_{t,d} = 0"/>.
                     </li>
-
-                    <WordCountFig/>
-
-                    <p>
-                        Title texts have a number of patterns that often recur. See <FigRef
-                        fig={figs.figTitleTreemap}/> for a tree map of the distribution of
-                        normalized title texts.
-                    </p>
-
-                    <FigTitlePattern/>
-
-                    <p>
-                        <FigRef fig={figs.tfidf}/> and <FigRef fig={figs.sectionsTfidf}/> list terms within
-                        section title elements by tf–idf score,
-                        which is a number that reflects how important a given word is
-                        in a document with respect to all other documents in the corpus.
-                    </p>
-                    <p>
-                        <strike>
-                            tf–idf is short for 'term frequency–inverse document frequency'.
-                            It represents the importance of a given word by taking the number of times
-                            that word occurs in the document, and offsetting it against the amount of
-                            times that word occurs elsewhere in the corpus.
-                        </strike>
-                    </p>
-                    <p>tf–idf is defined as follows: </p>
-
-                    <F display={true} l="\text{tfidf}(t, d, D) = \text{tf}(t, d)\cdot \text{idf}(t, D)"/>
-                    <p>where</p>
-                    <ul>
-                        <li><F l="tf(t,d)"/> is some measure of the importance of a
-                            term <F l="t"/> in a
-                            given document <F l="d"/>. Let the raw frequency <F l="f_{t,d}"/> be
-                            the plain number of times the term <F l="t"/> in occurs in a
-                            given document <F l="d"/>. We use for <F l="tf(t,d)"/> the logarithmically
-                            scaled term
-                            count: <F l="tf(t,d) = 1 + \log{f_{t,d}}"/>, or <F l="0"/> if <F l="f_{t,d} = 0"/>.
-                        </li>
-                        <li><F l="idf(t, D)"/> is some measure of how rare it is to find a
-                            term <F l="t"/> in a
-                            given document corpus <F l="D"/>. We obtain this measure
-                            by calculating the logarithmically scaled inverse
-                            fraction of documents in <F l="D"/> that contain the term <F l="t"/>.
-                            Let <F l="D"/> be the collection of documents, we then define
-                            the standard idf measure as:
-                            <F display="true" l="idf(t, D) = \log{\frac{|D|}{|\{d \in D:t \in d\}|}}"/>
-                        </li>
-                    </ul>
-                    <p>
-                        Because we
-                        want to infer the most important words within
-                        title elements specifically, we take as <F l="D"/> the collection
-                        of all element types (paragraphs, titles),
-                        and compute the tf-idf score
-                        for each word in each title. Some classes of words, such as articles
-                        and numbers,
-                        are treated as a single word.
-                    </p>
-                    <TitleTfIdfFigure/>
-                    <TitleTfIdfFigurePerSection/>
-                    <p>
-                        We observe, not very surprisingly,
-                        that numbers and articles are top terms
-                        for section titles.
-                        Furthermore, we notice that
-                    </p>
+                    <li><F {...this.props} l="idf(t, D)"/> is some measure of how rare it is to find a
+                        term <F {...this.props} l="t"/> in a
+                        given document corpus <F {...this.props} l="D"/>. We obtain this measure
+                        by calculating the logarithmically scaled inverse
+                        fraction of documents in <F {...this.props} l="D"/> that contain the term <F {...this.props} l="t"/>.
+                        Let <F {...this.props} l="D"/> be the collection of documents, we then define
+                        the standard idf measure as:
+                        <F {...this.props} display="true" l="idf(t, D) = \log{\frac{|D|}{|\{d \in D:t \in d\}|}}"/>
+                    </li>
+                </ul>
+                <p>
+                    Because we
+                    want to infer the most important words within
+                    title elements specifically, we take as <F {...this.props} l="D"/> the collection
+                    of all element types (paragraphs, titles),
+                    and compute the tf-idf score
+                    for each term in each title. Some classes of words, such as articles
+                    and numbers,
+                    are treated as a single term.
+                </p>
+                <TitleTfIdfFigure/>
+                <TitleTfIdfFigurePerSection/>
+                <p>
+                    We observe, not very surprisingly,
+                    that numbers and articles are top terms
+                    for section titles.
+                    Furthermore, again not surprisingly, we notice that a most terms in a section
+                    title are semantically related to the section role.
+                </p>
             </ol>
         </div>
             ;

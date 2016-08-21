@@ -106,6 +106,7 @@ class GroupedBarChart extends Component {
         //     fill="#FFFFFF"
         // />
         return <g
+            key="legend"
             width={innerWidth-18}
             className="legend">
             {legendItems}
@@ -169,6 +170,7 @@ class GroupedBarChart extends Component {
                         //console.log(data);
                         data.title = d.x;
                         return <Bar xScale={x1}
+                                    key={'x-'+data.x+'-y'+data.y}
                                     yScale={yScale}
                                     fill={color(data.x)}
                                     height={innerHeight - yScale(data.y)}

@@ -7,101 +7,92 @@ import ref from '../../../../Bibliography/References/references'
 import bib from  '../../../../Bibliography/bib';
 import F from  '../../../../Math/Math';
 import abbrs from  '../../../../abbreviations';
+import sections from './sections'
 
 export default class ParameterEstimation extends Component {
     static id() {
         return "f-scores";
     }
 
+    static getSections() {
+        return sections;
+    }
+
+
     render() {
         const relativeToRoot = this.props.path.match(/\//g).slice(1).map(_ => "../").join("");
-        const canonicalUnnormalizedCrf = "\\exp\\left \\{\\sum_{t=1}^T\\sum_{k=1}^{K} \\lambda_k f_k(\\mathbf y^i_t, \\mathbf y^i_{t-1}, \\mathbf x^i_t)\\right \\}";
-        const canonicalZ = "\\sum_{\\mathbf y'}\\exp\\left \\{\\sum_{t=1}^T\\sum_{k=1}^{K} \\lambda_k f_k(\\mathbf y^i_{t}', y'_{t-1}, \\mathbf x^i_t)\\right \\}";
         return <div>
             <p>
-                As we saw in the previous section, we obtain
-                parameters <F l="\Lambda"/> by training our {abbrs.crf} on
+                As discussed in the previous section, we obtain
+                parameters <F {...this.props} l="\Lambda"/> by training our {abbrs.crf} on
                 a pre-labeled training set of
-                pairs <F l="\mathcal D=\{\mathbf{x}^{i},\mathbf{y}^{i}\}_{i=1}^N"
-            /> where each <F l="i"/> indexes an example
+                pairs <F {...this.props} l="\mathcal D=\{\mathbf{x}^{i},\mathbf{y}^{i}\}_{i=1}^N"
+            /> where each <F {...this.props} l="i"/> indexes an example
                 instance: <F
-                l="\mathbf{x}^{i}=\{\mathbf x^{i}_1, \mathbf x^{i}_2, \cdots, \mathbf x^{i}_T\}"
+                l="\mathbf{x}^{i}=\{x^{i}_1, x^{i}_2, \cdots, x^{i}_T\}"
             /> is a set of observation vectors,
-                and <F l="\mathbf{y}^{i}=\{\mathbf y^{i}_1, \mathbf y^{i}_2, \cdots, \mathbf y^{i}_T\}"
-            /> is a set of labels for instance length <F l="T"/>.
+                and <F {...this.props} l="\mathbf{y}^{i}=\{y^{i}_1, y^{i}_2, \cdots, y^{i}_T\}"
+            /> is a set of labels for instance length <F {...this.props} l="T"/>.
             </p>
             <p>
                 The training process will maximize some
-                log likelihood function <F l="\ell(\Lambda)"/>.
+                log likelihood function <F {...this.props} l="\ell(\Lambda)"/>.
                 We are modeling a conditional distribution, so it makes sense
                 to use the conditional log likelihood function:
             </p>
 
-            <F display="true" l="\ell(\Lambda)=\sum_{i=1}^N \log{p(\mathbf y^{i}|\mathbf x^{i}})"/>
+            <F {...this.props} display="true" l="\ell(\Lambda)=\sum_{i=1}^N \log{p(\mathbf y^{i}|\mathbf x^{i}})"/>
 
             <p>
-                Where <F l="p"/> is the {abbrs.crf} distribution as
-                we saw in the previous section:
+                Where <F {...this.props} l="p"/> is the {abbrs.crf} distribution as
+                in equation 3.8:
             </p>
 
-            <F display="true"
-               l={"\\ell(\\Lambda) = \\sum_{i=1}^N\\log{\\frac{"+canonicalUnnormalizedCrf+"}{"+canonicalZ+"}"+"}"}/>
+            <F {...this.props} display="true"
+                               l={"\\ell(\\Lambda) = \\sum_{i=1}^N\\log{\\frac{"+canonicalUnnormalizedCrf+"}{"+canonicalZ+"}"+"}"}/>
 
             <p>Simplifying, we have:</p>
-            <F display="true"
-               l="\ell(\Lambda) = \sum_{i=1}^N\sum_{t=1}^T\sum_{k=1}^K
-               \lambda_kf_k(\mathbf y^i_t,\mathbf y^i_{t-1},\mathbf x^i_t)-\sum_{i=1}^N\log{Z(\mathbf x^i})"/>
-
-
-            <p>
-                We also add a penalty term to the
-                log likelihood function to avoid overfitting.
-                This is called regularization, and in this
-                particular instance we use L2 regularization:
-            </p>
-
-            <F display="true"
-               l="\ell(\Lambda) = \sum_{i=1}^N\sum_{t=1}^T\sum_{k=1}^K
-               \lambda_kf_k(y^i_t,y^i_{t-1},\mathbf x^i_t)-\sum_{i=1}^N\log{Z(\mathbf x^i)}
-               - \sum_{k=1}^K\frac{\lambda_{k}^2}{2\sigma^2}"/>
-
+            <F {...this.props} display="true"
+                               l="\ell(\Lambda) = \sum_{i=1}^N\sum_{t=1}^T\sum_{k=1}^K
+               \lambda_kf_k(y^i_t,y^i_{t-1},x^i_t)-\sum_{i=1}^N\log{Z(\mathbf x^i})"/>
 
             <p>
                 Because it is generally
                 intractable to find the exact parameters <F
-                l="\Lambda"/> that maximize the likelihood function <F l="\ell"/>,
+                l="\Lambda"/> that maximize the likelihood function <F {...this.props} l="\ell"/>,
                 we use a
                 hill-climbing algorithm.
                 The general idea of hill-climbing algorithms is to
                 start out with some random assignment to the parameters <F
                 l="\Lambda"/>, and estimate the
-                parameters that maximize <F l="\ell"/> by
+                parameters that maximize <F {...this.props} l="\ell"/> by
                 iteratively moving along the gradient toward the global
                 maximum. We find the direction to move in by taking
-                the derivative of <F l="\ell"/> with respect
-                to <span style={{display: 'inline-block'}}><F l="\Lambda"/>:</span>
+                the derivative of <F {...this.props} l="\ell"/> with respect
+                to <span style={{display: 'inline-block'}}><F {...this.props} l="\Lambda"/>:</span>
 
             </p>
 
-            <F display="true" l="\frac{\partial\ell}{\partial\lambda_k} =
+            <F {...this.props} display="true" l="\frac{\partial\ell}{\partial\lambda_k} =
             \sum_{i=1}^N\sum_{t=1}^Tf_k(y_t^i,y_{t-1}^i,x_t^i)
             -\sum_{i=1}^N\sum_{t=1}^T\sum_{\mathbf y,\mathbf y'}f_k(y,y,x_t^i)
-           p(y,y'|\mathbf x^i)-\sum_{k=1}^K\frac{\lambda_k}{\sigma^2}
-            "/>
+           p(y,y'|\mathbf x^i)"/>
 
             <p>
-                And then update parameter <F l="\lambda_i"/> along this
+                And then update parameter <F {...this.props} l="\lambda_i"/> along this
                 gradient:
             </p>
-            <F display="true" l="\lambda_i := \lambda_i + \alpha \frac{\partial\ell}{\partial\lambda_i}"/>
+            <F {...this.props} display="true"
+                               l="\lambda_i := \lambda_i + \alpha \frac{\partial\ell}{\partial\lambda_i}"/>
             <p>
-                Where <F l="\alpha"/> is some learning rate between <F l="0"/> and <F l="1"/>.
+                Where <F {...this.props} l="\alpha"/> is some learning rate between <F {...this.props} l="0"/> and
+                <F {...this.props} l="1"/>.
             </p>
             <p>
                 Thanks to the fact that the
-                distribution <F l="p(\mathbf{y}^{i}|\mathbf{x}^{i})"/> is
+                distribution <F {...this.props} l="p(\mathbf{y}^{i}|\mathbf{x}^{i})"/> is
                 concave,
-                the function <F l="\ell(\Lambda)"/> is also concave.
+                the function <F {...this.props} l="\ell(\Lambda)"/> is also concave.
                 This ensures that any local optimum will be a global
                 optimum.
                 The regularization term
@@ -117,18 +108,20 @@ export default class ParameterEstimation extends Component {
                 algorithm is optimized
                 for the memory-contrained conditions in real-world computers,
                 and also converges much faster than a naive implementation
-                because it works on the second derivative of <F l="\ell"/>.
+                because it works on the second derivative of <F {...this.props} l="\ell"/>.
             </p>
             <p>
-                The algorithmic complexity of the {abbrs.lmbfgs} algorithm is <F l="O(TM^2NG)"/>,
-                where <F l="T"/> is the length of the longest training
-                instance, <F l="M"/> is the number of possible
-                labels, <F l="N"/> in the number of training instances,
-                and <F l="G"/> is the number of gradient computations.
+                The algorithmic complexity of the {abbrs.lmbfgs} algorithm is <F {...this.props} l="O(TM^2NG)"/>,
+                where <F {...this.props} l="T"/> is the length of the longest training
+                instance, <F {...this.props} l="M"/> is the number of possible
+                labels, <F {...this.props} l="N"/> in the number of training instances,
+                and <F {...this.props} l="G"/> is the number of gradient computations.
                 The number of gradient computations can be set to
-                a fixed number, or is otherwise unknown (in which case the algorithm
-                trains to convergence, which is guaranteed because of the concavity of <F l="\ell"/>).
+                a fixed number, or is otherwise unknown but guaranteed to be
+                converge in finite time (this is guaranteed because of the concavity of <F {...this.props} l="\ell"/>).
             </p>
         </div>;
+        const canonicalUnnormalizedCrf = "\\exp\\left \\{\\sum_{t=1}^T\\sum_{k=1}^{K} \\lambda_k f_k(y^i_t, y^i_{t-1}, x^i_t)\\right \\}";
+        const canonicalZ = "\\sum_{\\mathbf y'}\\exp\\left \\{\\sum_{t=1}^T\\sum_{k=1}^{K} \\lambda_k f_k(y^i_{t}', y'_{t-1}, x^i_t)\\right \\}";
     }
 }

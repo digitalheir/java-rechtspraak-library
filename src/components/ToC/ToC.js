@@ -13,6 +13,7 @@ class ToC extends React.Component {
                 {chapter.getSections().inOrder.map(section => {
                     //console.log(JSON.stringify(section));
                     if (!!section) return <li
+                        key={section.id}
                         itemScope={true}
                         itemProp="hasPart"
                         itemType="https://schema.org/CreativeWork">

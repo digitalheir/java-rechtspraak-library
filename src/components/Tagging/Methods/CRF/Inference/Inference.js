@@ -19,9 +19,9 @@ export default class FScorez extends Component {
 
         return <div>
             <p>
-                Given a trained {abbrs.crf} and an observation vector <F l="\mathbf x"/>, we wish
-                to compute the most likely label sequence <F l="\mathbf y^*"/>,
-                i.e. <F l="\mathbf y^* = \text{argmax}_{\mathbf y}p(\mathbf y|\mathbf x)"
+                Given a trained {abbrs.crf} and an observation vector <F {...this.props} l="\mathbf x"/>, we wish
+                to compute the most likely label sequence <F {...this.props} l="\mathbf y^*"/>,
+                i.e. <F {...this.props} l="\mathbf y^* = \text{argmax}_{\mathbf y}p(\mathbf y|\mathbf x)"
             />. This label sequence is known as the Viterbi sequence.
                 Thanks to the structure of linear-chain <abbr title="Conditional Random Fields">CRFs</abbr>, we can
                 efficiently compute the Viterbi sequence through
@@ -32,65 +32,67 @@ export default class FScorez extends Component {
             </p>
 
             <p>
-                Substituting the canonical {abbrs.crf} representation of <F l="p(\mathbf y|\mathbf x)"/>
+                Substituting the canonical {abbrs.crf} representation of <F {...this.props} l="p(\mathbf y|\mathbf x)"/>
                 , we get:
             </p>
 
-            <F display="true"
+            <F {...this.props} display="true"
                l="\mathbf y^*=\text{argmax}_{\mathbf y}\frac{1}{Z(\mathbf x)}\prod_{t=1}^T\prod_{k=1}^{K} \Phi_{k,t}"/>
 
             <p>
-                We can leave out the normalization factor <F l="\frac{1}{Z(\mathbf x)}"/>,
+                We can leave out the normalization factor <F {...this.props} l="\frac{1}{Z(\mathbf x)}"/>,
                 because
-                the <F l="\text{argmax}"/> will be the same with or without:
+                the <F {...this.props} l="\text{argmax}"/> will be the same with or without:
             </p>
 
-            <F display="true"
+            <F {...this.props} display="true"
                l="\mathbf y^* = \text{argmax}_{\mathbf y}\prod_{t=1}^T\prod_{k=1}^{K} \Phi_{k,t}"/>
 
             <p>
-                Note that to find <F l="\mathbf y^*"/>, we need to iterate over each possible
-                assignment to the label vector <F l="\mathbf y"/>,
+                Note that to find <F {...this.props} l="\mathbf y^*"/>, we need to iterate over each possible
+                assignment to the label vector <F {...this.props} l="\mathbf y"/>,
                 which would implicate that in the general case, we
-                need an algorithm of <F l="O(M^T)"/>,
-                where <F l="M"/> is the number of possible labels,
-                and <F l="T"/> is the length of
+                need an algorithm of <F {...this.props} l="O(M^T)"/>,
+                where <F {...this.props} l="M"/> is the number of possible labels,
+                and <F {...this.props} l="T"/> is the length of
                 the instance to label.
 
                 Luckily, Linear-Chain <abbr title="Conditional Random Fields">CRFs</abbr> fulfil the optimal
                 substructure property
                 which means that we can memoize optimal sub-results and avoid making the same
-                calculation many times. This sort of memoization
-                is what makes the algorithm an example of dynamic programming.
-                We calculate the optimal path <F l="\delta_t(j)"/> at
-                time <F l="t"/> ending with <F l="j"/> recursively as follows, for <F l="\Phi_t = \prod_{k=1}^{K} \Phi_{k,t}"/>:
+                calculation many times.
+                We calculate the optimal path score <F {...this.props} l="\alpha_t(y_t)"/> at
+                time <F {...this.props} l="t"/> ending with <F {...this.props} l="y_t"/> recursively as follows,
+                for <F {...this.props} l="\Phi_t = \prod_{k=1}^{K} \Phi_{k,t}"/> and each <F {...this.props} l="y_t \in \mathbf y"/>:
             </p>
 
-            <F display="truuu"
-               l="\delta_t(j) = \max_{i \in \mathbf y}\Phi_t(j,i,x_t)\cdot \delta_{t-1}(i)"/>
+            <F {...this.props} display="true"
+               l="\alpha_t(y_t) = \max_{y_{t-1}}\Phi_t(x_t, y_t, y_{t-1})\cdot \alpha_{t-1}(y_{t-1})"/>
 
             <p>
                 where the base case
             </p>
-            <F display="truuuu" l="\delta_0(j) = \max_{i \in \mathbf y}\Phi_0(j,i,x_0)"/>
+            <F {...this.props} display="truuuu" l="\alpha_1(y_1) = \Phi_1(x_1, y_1, y_0)"/>
             <p>
-                We store the results in a table. We then find the optimal
-                sequence by maximizing <F l="\delta_t(j)"/> at the end of
+                We store the results in a table. (This sort of memoization
+                is what makes the Viterbi algorithm an example of dynamic programming.)
+                We find the optimal
+                sequence <F {...this.props} l="\mathbf y^*"/> by maximizing <F {...this.props} l="\alpha_t(y_t)"/> at the end of
                 the sequence, <span
-                style={{display:'inline-block'}}><F l="t = T"/>:
+                className="avoid-page-break"><F {...this.props} l="t = T"/>:
                 </span>
             </p>
-            <F display={true} l="\mathbf y^*_T = \text{argmax}_{j\in y}\delta_T(j)"/>
+            <F {...this.props} display={true} l="\mathbf y^* = \text{argmax}_{\mathbf y}\alpha_T(y_T)"/>
             <p>
                 Using this trick, we
                 reduce the computational complexity
                 of finding the Viterbi path
                 to <span
-                style={{display:'inline-block'}}><F l="O(M^2 T)"/>.
+                style={{display:'inline-block'}}><F {...this.props} l="O(M^2 T)"/>.
                 </span>
             </p>
         </div>
             ;
-            // <div className="print-spacer"></div>
+        // <div className="print-spacer"></div>
     }
 }

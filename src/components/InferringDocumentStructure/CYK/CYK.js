@@ -29,8 +29,8 @@ export default class CYK extends Component {
                 ref.cite(bib.younger1967recognition)} and {ref.cite(bib.cocke1969programming)}.
                 The algorithm has worst case complexity of <F
                 l="\Theta (n^3\cdot \left | G \right |)"/>
-                , where <F l="n"/> is the length of the input string
-                and <F l="\left | G \right |"/> is the size of the grammar.
+                , where <F {...this.props} l="n"/> is the length of the input string
+                and <F {...this.props} l="\left | G \right |"/> is the size of the grammar.
             </p>
 
             <p>The standard version of the {abbrs.cyk} algorithm is defined for
@@ -52,21 +52,23 @@ export default class CYK extends Component {
 
             <p>
                 The {abbrs.cyk} algorithm is a bottom-up parsing algorithm. The algorithm considers every
-                substring from length <F l="1"/> to <F l="n"/>, and keeps
+                substring from length <F {...this.props} l="1"/> to <F {...this.props} l="n"/>, and keeps
                 a list of all possible types for those substrings, along with their probabilities.
             </p>
             <p>
-                For substrings of length <F l="1"/> (individual words),
-                we use the terminal rules in the grammar. For substrings of length <F l="l>1"/> (word sequences),
+                For substrings of length <F {...this.props} l="1"/> (individual words),
+                we use the terminal rules in the grammar. For substrings of length <F {...this.props} l="l>1"/> (word
+                sequences),
                 we apply the production rules to every possible combination of two substrings of
-                length <F l="l-1"/>. This works, because {abbrs.cnf} mandates
+                length <F {...this.props} l="l-1"/>. This works, because {abbrs.cnf} mandates
                 that all production rules have 2 non-terminals.
                 Every time we apply a rule, we multiply the probability attached to that rule and the probabilities
                 of the constituent substrings.
             </p>
             <p>
                 In addition to binary production rules, we also allow unary rules in our grammar
-                of the form <F l="\text A \rightarrow \text B"/>, where <F l="\text A"/> and <F l="\text B"/> are both
+                of the form <F {...this.props} l="\text A \rightarrow \text B"/>, where <F {...this.props} l="\text A"/>
+                and <F {...this.props} l="\text B"/> are both
                 non-terminals.
                 Extension of the algorithm is simple:
                 after ordinary type assignment for substrings, we add those
@@ -107,12 +109,12 @@ export default class CYK extends Component {
                     The constituents that make up the resulting parse
                     to <code>S</code> are marked in bold.
                     The top of the triangle represents the
-                    substring <F l="1"/> to <F l="4"/>, i.e.
+                    substring <F {...this.props} l="1"/> to <F {...this.props} l="4"/>, i.e.
                     the entire sentence. We can derive <code>S</code> by
                     combining the substring
-                    from <F l="1"/> to <F l="2"/> (<code>fish
+                    from <F {...this.props} l="1"/> to <F {...this.props} l="2"/> (<code>fish
                     people</code>) and the substring
-                    from <F l="3"/> to <F l="4"/> (<code>fish
+                    from <F {...this.props} l="3"/> to <F {...this.props} l="4"/> (<code>fish
                     tanks</code>) using the
                     rule <code>S → NP VP</code>.
                 </figcaption>
@@ -121,64 +123,64 @@ export default class CYK extends Component {
                 <table className="grammar">
                     <tbody>
                     <tr>
-                        <td><F l="\text{S} \rightarrow \text{NP VP}"/></td>
-                        <td><F l="0.9"/></td>
+                        <td><F {...this.props} l="\text{S} \rightarrow \text{NP VP}"/></td>
+                        <td><F {...this.props} l="0.9"/></td>
                     </tr>
                     <tr>
-                        <td><F l="\text{S} \rightarrow \text{VP}"/></td>
-                        <td><F l="0.1"/></td>
+                        <td><F {...this.props} l="\text{S} \rightarrow \text{VP}"/></td>
+                        <td><F {...this.props} l="0.1"/></td>
                     </tr>
                     <tr>
-                        <td><F l="\text{VP} \rightarrow \text{V NP}"/></td>
-                        <td><F l="0.5"/></td>
+                        <td><F {...this.props} l="\text{VP} \rightarrow \text{V NP}"/></td>
+                        <td><F {...this.props} l="0.5"/></td>
                     </tr>
                     <tr>
-                        <td><F l="\text{VP} \rightarrow \text{V}"/></td>
-                        <td><F l="0.1"/></td>
+                        <td><F {...this.props} l="\text{VP} \rightarrow \text{V}"/></td>
+                        <td><F {...this.props} l="0.1"/></td>
                     </tr>
                     <tr>
-                        <td><F l="\text{NP} \rightarrow \text{NP NP}"/></td>
-                        <td><F l="0.1"/></td>
+                        <td><F {...this.props} l="\text{NP} \rightarrow \text{NP NP}"/></td>
+                        <td><F {...this.props} l="0.1"/></td>
                     </tr>
                     <tr>
-                        <td><F l="\text{NP} \rightarrow \text{N}"/></td>
-                        <td><F l="0.7"/></td>
+                        <td><F {...this.props} l="\text{NP} \rightarrow \text{N}"/></td>
+                        <td><F {...this.props} l="0.7"/></td>
                     </tr>
                     <tr/>
                     <tr>
-                        <td><F l="\text{N} \rightarrow \text{fish}"/></td>
-                        <td><F l="0.2"/></td>
+                        <td><F {...this.props} l="\text{N} \rightarrow \text{fish}"/></td>
+                        <td><F {...this.props} l="0.2"/></td>
                     </tr>
-                    
+
                     <tr>
-                        <td><F l="\text{N} \rightarrow \text{people}"/></td>
-                        <td><F l="0.5"/></td>
+                        <td><F {...this.props} l="\text{N} \rightarrow \text{people}"/></td>
+                        <td><F {...this.props} l="0.5"/></td>
                     </tr>
-                    
+
                     <tr>
-                        <td><F l="\text{N} \rightarrow \text{tanks}"/></td>
-                        <td><F l="0.2"/></td>
+                        <td><F {...this.props} l="\text{N} \rightarrow \text{tanks}"/></td>
+                        <td><F {...this.props} l="0.2"/></td>
                     </tr>
-                    
+
                     <tr>
-                        <td><F l="\text{V} \rightarrow \text{people}"/></td>
-                        <td><F l="0.1"/></td>
+                        <td><F {...this.props} l="\text{V} \rightarrow \text{people}"/></td>
+                        <td><F {...this.props} l="0.1"/></td>
                     </tr>
                     <tr>
-                        <td><F l="\text{V} \rightarrow \text{fish}"/></td>
-                        <td><F l="0.6"/></td>
+                        <td><F {...this.props} l="\text{V} \rightarrow \text{fish}"/></td>
+                        <td><F {...this.props} l="0.6"/></td>
                     </tr>
-                    
+
                     <tr>
-                        <td><F l="\text{V} \rightarrow \text{tanks}"/></td>
-                        <td><F l="0.3"/></td>
+                        <td><F {...this.props} l="\text{V} \rightarrow \text{tanks}"/></td>
+                        <td><F {...this.props} l="0.3"/></td>
                     </tr>
                     </tbody>
                 </table>
                 <figcaption>
                     <span className="figure-number">Listing {nlpGrammar.num}.</span> Simple natural language
-                    grammar for putting noun phrases <InlBlock>(<F l="\text{NP}"/>)</InlBlock> and verb
-                    phrases <InlBlock>(<F l="\text{VP}"/>)</InlBlock> together
+                    grammar for putting noun phrases <InlBlock>(<F {...this.props} l="\text{NP}"/>)</InlBlock> and verb
+                    phrases <InlBlock>(<F {...this.props} l="\text{VP}"/>)</InlBlock> together
                     to
                     create a sentence <InlBlock>(<F l="\text S"/>)</InlBlock>.
                 </figcaption>
@@ -196,7 +198,7 @@ export default class CYK extends Component {
                     <code>V&nbsp;(60%)</code>
                 </li>,
                 <li key="getItems-2">
-                    <code><strong>NP&nbsp;(14%)</strong></code>
+                    <code className="bold">NP&nbsp;(14%)</code>
                 </li>,
                 <li key="getItems-3">
                     <code>VP&nbsp;(6%)</code>
@@ -207,7 +209,7 @@ export default class CYK extends Component {
             ];
             if (colNum == 1) return [
                 <li key="getItems1-0">
-                    <code><strong>NP&nbsp;(0.49%)</strong></code>
+                    <code className="bold">NP&nbsp;(0.49%)</code>
                 </li>,
                 <li key="getItems1-1">
                     <code>VP&nbsp;(10.5%)</code>
@@ -235,7 +237,7 @@ export default class CYK extends Component {
                     <code>NP&nbsp;(0.00001%)</code>
                 </li>,
                 <li key="getItems3-2">
-                    <code><strong>S&nbsp;(0.019%)</strong></code>
+                    <code className="bold">S&nbsp;(0.019%)</code>
                 </li>
             ];
         } else if (rowNum == 1) {
@@ -247,7 +249,7 @@ export default class CYK extends Component {
                     <code>V&nbsp;(10%)</code>
                 </li>,
                 <li key="getItems-112">
-                    <code><strong>NP&nbsp;(35%)</strong></code>
+                    <code className="bold">NP&nbsp;(35%)</code>
                 </li>,
                 <li key="getItems-113">
                     <code>VP&nbsp;(1%)</code>
@@ -284,7 +286,7 @@ export default class CYK extends Component {
                     <code>N&nbsp;(20%)</code>
                 </li>,
                 <li key="getItems-221">
-                    <code><strong>V&nbsp;(60%)</strong></code>
+                    <code className="bold">V&nbsp;(60%)</code>
                 </li>,
                 <li key="getItems-222">
                     <code>NP&nbsp;(14%)</code>
@@ -302,7 +304,7 @@ export default class CYK extends Component {
                     <code>NP&nbsp;(0.196%)</code>
                 </li>,
                 <li key="getItems-231">
-                    <code><strong>VP&nbsp;(4.2%)</strong></code>
+                    <code className="bold">VP&nbsp;(4.2%)</code>
                 </li>,
                 <li key="getItems-232">
                     <code>S&nbsp;(0.42%)</code>
@@ -317,7 +319,7 @@ export default class CYK extends Component {
                     <code>V&nbsp;(30%)</code>
                 </li>,
                 <li key="getItems-332">
-                    <code><strong>NP&nbsp;(14%)</strong></code>
+                    <code className="bold">NP&nbsp;(14%)</code>
                 </li>,
                 <li key="getItems-333">
                     <code>VP&nbsp;(3%)</code>

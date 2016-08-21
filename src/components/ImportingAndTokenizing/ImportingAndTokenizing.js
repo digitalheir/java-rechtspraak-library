@@ -19,8 +19,11 @@ export default class ImportingAndTokenizing extends Component {
     }
 
     render() {
+        var chapterObject = chapters.importing;
         return <Chapter path={this.props.path}
-                        title={ImportingAndTokenizing.title()}
+                        title={chapterObject.title}
+                        chapter={true}
+                        chapterObject={chapterObject}
                         inline={!!this.props.inline}
                         id={this.props.id}
                         sections={dissSections.inOrder}>

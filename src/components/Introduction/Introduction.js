@@ -5,6 +5,7 @@ import RechtspraakNlMarkup from '../RechtspraakNl/RechtspraakNlMarkup/Rechtspraa
 import Importing from '../RechtspraakNl/Importing/Importing'
 import Chapter from '../Chapter/Chapter'
 import Motivation from './IntroMotivation/IntroMotivation'
+import chapters from '../../../chapters'
 import ProblemDescription from './ProblemDescription/ProblemDescription'
 
 
@@ -30,7 +31,10 @@ export default class IntroductionIntroduction extends Component {
             //     useful.
             // </p>
     render() {
-        return <Chapter chapter={true} inline={!!this.props.inline} path={this.props.path}
+        return <Chapter chapter={true}
+                        chapterObject={chapters.introduction}
+                        inline={!!this.props.inline}
+                        path={this.props.path}
                         id={this.props.id}
                         inline={!!this.props.inline}
                         title={IntroductionIntroduction.title()}

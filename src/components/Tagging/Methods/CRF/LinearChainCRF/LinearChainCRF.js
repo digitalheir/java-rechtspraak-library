@@ -17,8 +17,9 @@ export default class LinearChainCRF extends Component {
                 Models: {abbrs.lccrfs} also model a sequence of observations along a
                 sequence of labels. As
                 explained earlier, the difference between {abbrs.hmms} and Linear Chain {abbrs.crfs} is that instead
-                of modeling the joint probability <F latex="p(\mathbf x,\mathbf y)"/>, we model the conditional
-                probability <F latex="p(\mathbf y|\mathbf x)"/>.
+                of modeling the joint probability <F {...this.props} latex="p(\mathbf x,\mathbf y)"/>, we model the
+                conditional
+                probability <F {...this.props} latex="p(\mathbf y|\mathbf x)"/>.
             </p>
 
             <p>
@@ -37,16 +38,14 @@ export default class LinearChainCRF extends Component {
             </p>
             <ul>
                 <li>
-                    <F l="Y, X"/> still be random vectors taking valuations from <F l="\mathcal{V}"/>,
-                    and <F l="V=Y\cup X"/>
+                    <F {...this.props} l="X, Y"/> be random vectors taking values from <F {...this.props}
+                    l="\mathcal{V}"/>,
+                    and <F {...this.props} l="V = X\cup Y"/>
                 </li>
-                <li><F l="F=\{\Phi_1, \ldots\Phi_k\}"/> be a set of local functions <F
-                    l="V^n\rightarrow \mathbb{R}^+"/>, where <F
-                    l="V^n"/> represent the <F l="n"/> function
-                    parameters for a given local function.
-                    In the case of linear-chain {abbrs.crfs}, <F l="V^n = X\times Y\times Y"/>,
-                    since the functions deal with the current observation, current label and
-                    previous label.
+                <li><F {...this.props} l="F=\{\Phi_1, \ldots\Phi_k\}"/> be a set of local functions from
+                    a subset of variables (observation and labels) to <F
+                        l="\mathbb{R}^+"/>. In the case of linear-chain CRFs, these variables are
+                    the current observation, the current label and the previous label.
                 </li>
             </ul>
 
@@ -58,19 +57,21 @@ export default class LinearChainCRF extends Component {
             </p>
             <ul>
                 <li>
-                    <F l="x_t"/> and <F l="y_t"/> be elements
-                    of <F l="\mathbf x"/> and <F l="\mathbf y"/> respectively, i.e., <F l="x_t"/> is
+                    <F {...this.props} l="x_t"/> and <F {...this.props} l="y_t"/> be elements
+                    of <F {...this.props} l="\mathbf x"/> and <F {...this.props} l="\mathbf y"/> respectively, i.e.,
+                    <F {...this.props} l="x_t"/> is
                     the current
-                    observation and <F l="y_t"/> is
-                    the current label, and <F l="y_{t-1}"/> is the previous label,
-                    with some null value for <F l="\mathbf y_0"/>.
+                    observation and <F {...this.props} l="y_t"/> is
+                    the current label, and <F {...this.props} l="y_{t-1}"/> is the previous label,
+                    with some null value for <F {...this.props} l="y_0"/>.
                 </li>
-                <li><F l="\mathcal F=\{f_k(y, y', x)\}"/> be a set of feature functions
+                <li><F {...this.props} l="\mathcal F=\{f_k(y, y', x)\}"/> be a set of feature functions
                     that give a real-valued score given a current label,
                     the previous label and the current observation.
                     These functions are defined by the {abbrs.crf} designer.
                 </li>
-                <li><F l="\Lambda=\{\lambda_k\} \in \mathbb{R}^K"/> be a vector of weight parameters that
+                <li><F {...this.props} l="\Lambda=\{\lambda_k\} \in \mathbb{R}^K"/> be a vector of weight parameters
+                    that
                     give a measure of how important a given feature function is. The values of these parameters
                     are found by training the {abbrs.crf}.
                 </li>
@@ -85,7 +86,7 @@ export default class LinearChainCRF extends Component {
             <p>
                 We then define the un-normalized {abbrs.crf} distribution as:
 
-                <F
+                <F {...this.props}
                     l="\hat{p}(\mathbf x, \mathbf y)=\prod_{t=1}^T\prod_{k=1}^K\Phi_{k,t}(x_t, y_t, y_{t-1})"
                     displayMode={true}/>
             </p>
@@ -93,16 +94,18 @@ export default class LinearChainCRF extends Component {
             <p>
                 Recall from <a
                 href={"#graphical-models"}>our introduction on graphical models</a> that we
-                need a normalizing constant to ensure that our probability distribution adds up to <F l="1"/>.
+                need a normalizing constant to ensure that our probability distribution adds up to <F {...this.props}
+                l="1"/>.
                 We are interested in representing <F
-                l="p(\mathbf y|\mathbf x)"/>, so we use a normalization function that assumes <F l="\mathbf x"/> is
-                given and sums over every possible string of labels <F l="\mathbf{y}"/>, i.e.:
+                l="p(\mathbf y|\mathbf x)"/>, so we use a normalization function that assumes <F {...this.props}
+                l="\mathbf x"/> is
+                given and sums over every possible string of labels <F {...this.props} l="\mathbf{y}"/>, i.e.:
 
-                <F l="Z(\mathbf x)=\sum_{\mathbf{y}}\hat{p}(\mathbf x, \mathbf y)" displayMode={true}/>
+                <F {...this.props} l="Z(\mathbf x)=\sum_{\mathbf{y}}\hat{p}(\mathbf x, \mathbf y)" displayMode={true}/>
 
                 and so
 
-                <F
+                <F {...this.props}
                     l="p(\mathbf y|\mathbf x)=
                     \frac{1}{Z(\mathbf x)}\hat{p}(\mathbf x, \mathbf y)
                     =
@@ -116,8 +119,8 @@ export default class LinearChainCRF extends Component {
                 l="p(\mathbf y|\mathbf x)"/> as
             </p>
 
-            <F display="true"
-               l={"p(\\mathbf y|\\mathbf x) = "+canonicalCrfFormula}/>
+            <F {...this.props} display="true"
+                               l={"p(\\mathbf y|\\mathbf x) = "+canonicalCrfFormula}/>
 
             <p>
                 This is the canonical form of Conditional Random Fields.
@@ -127,7 +130,8 @@ export default class LinearChainCRF extends Component {
                 {ref.cite(bib.sutton2006introduction)} show that a logistic regression model is a simple {abbrs.crf},
                 and also
                 that rewriting
-                the probability distribution <F latex="p(\mathbf x,\mathbf y)"/> of a {abbrs.hmm} yields a Conditional
+                the probability distribution <F {...this.props} latex="p(\mathbf x,\mathbf y)"/> of a {abbrs.hmm} yields
+                a Conditional
                 Random Field with a particular choice of feature functions.
             </p>
         </div>

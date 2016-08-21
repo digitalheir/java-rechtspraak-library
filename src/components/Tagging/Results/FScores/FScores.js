@@ -34,15 +34,15 @@ export default class FScorez extends Component {
                 </li>
             </ul>
             <p>We define the general F<sub>β</sub>-measure as:</p>
-            <F l="F_\beta = (1+\beta^2)\cdot\frac{\text{precision}\cdot\text{recall}}{(\beta^2\cdot\text{precision})+\text{recall}}"
+            <F {...this.props} l="F_\beta = (1+\beta^2)\cdot\frac{\text{precision}\cdot\text{recall}}{(\beta^2\cdot\text{precision})+\text{recall}}"
                display="true"/>
             <p>
-                Where <F l="\beta\in\mathbb{R}"/> is a number that represents the
+                Where <F {...this.props} l="\beta\in\mathbb{R}"/> is a number that represents the
                 number of times we place the importance of the recall metric above that of
-                precision. For <F l="\beta = 1"/>, precision is equally as important
-                as recall, and so <F l="F_1"/> describes the harmonic mean of precision and
-                recall (<F l="F_1 = 2\cdot\frac{\text{precision}\cdot\text{recall}}{\text{precision}+\text{recall}}"/>).
-                For <F l="\beta = 0.5"/>, precision is twice as important as recall.
+                precision. For <F {...this.props} l="\beta = 1"/>, precision is equally as important
+                as recall, and so <F {...this.props} l="F_1"/> describes the harmonic mean of precision and
+                recall (<F {...this.props} l="F_1 = 2\cdot\frac{\text{precision}\cdot\text{recall}}{\text{precision}+\text{recall}}"/>).
+                For <F {...this.props} l="\beta = 0.5"/>, precision is twice as important as recall.
                 We argue that in our application,
                 precision <em>is</em> more important than recall.
                 The reasoning is that in case of a

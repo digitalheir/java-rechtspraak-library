@@ -52,7 +52,7 @@ export default class Chapter extends React.Component {
 }
 Chapter.propTypes = {
     title: React.PropTypes.string.isRequired,
-    sections: React.PropTypes.arrayOf(React.PropTypes.shape({})).isRequired
+    sections: React.PropTypes.array.isRequired
 };
 
 module.exports = Chapter;

@@ -93,6 +93,19 @@ const bib = {
         href: 'http://www-bcf.usc.edu/~feisha/pubs/shallow03.pdf',
         organization: 'Association for Computational Linguistics'
     },
+    van2012lost: {
+        type: 'article',
+        id: 'van2012lost',
+        title: 'The lost honour of L2-based regularization',
+        author: {
+            abbr: "van den Doel et al.",
+            full: 'van den Doel, Kees and Ascher, Uri and Haber, Eldad'
+        },
+        journal: 'Large Scale Inverse Problems, Radon Ser. Comput. Appl. Math',
+        volume: '13',
+        pages: '181—203',
+        year: '2012'
+    },
     nocedal1980updating: {
         type: 'article', id: 'nocedal1980updating',
         title: 'Updating quasi-Newton matrices with limited storage',

@@ -27,10 +27,7 @@ export default class Tagging extends Component {
                 in sequenced pattern recognition tasks, such
                 as {abbrs.dna}/{abbrs.rna} sequencing ({ref.cite(bib.lafferty2001conditional)}), shallow
                 parsing ({ref.cite(bib.sha2003shallow)}) and
-                named entity recognition ({ref.cite(bib.settles2004biomedical)}). One
-                downside to {abbrs.crfs} is that models commonly overfit to a single corpus.
-                In our case, this is not a problem because
-                we expressly train for only one particular corpus.
+                named entity recognition ({ref.cite(bib.settles2004biomedical)}).
             </p>
         </ChapterSectionContent>;
     }

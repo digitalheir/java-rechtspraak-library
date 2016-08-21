@@ -1,6 +1,39 @@
 @import 'variables.scss';
 
 .chapter {
+  counter-reset: maths;
+}
+
+.math.block {
+  position: relative;
+  display: block;
+  .math-numbering {
+    font-size: x-small;
+    position: absolute;
+    display: block;
+    left: 100%;
+    bottom: 0;
+    top: 0;
+    &::before {
+      content: '\200B';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+    .math-numbering-content {
+      vertical-align: middle;
+      &::after {
+        counter-increment: maths;
+        display: inline;
+        height: 100%;
+        line-height: 100%;
+        content: counter(maths) "";
+      }
+    }
+  }
+}
+
+.chapter {
   page-break-after: always;
 }
 
@@ -48,9 +81,11 @@ div.full-thesis {
     //line-height: 1em;
   }
 }
-.avoid-page-break{
+
+.avoid-page-break {
   page-break-inside: avoid;
 }
+
 .section-content {
   page-break-before: avoid;
 }
@@ -129,7 +164,8 @@ figure {
   padding: 0;
 }
 
-#tbl-confusion-matrix {
+.tbl-confusion-matrix {
+  page-break-inside: avoid ;
   th, td {
     border: none;
   }
@@ -443,6 +479,12 @@ hr {
     display: block;
     height: 5em;
     width: 100%;
+  }
+  .math.block {
+    .math-numbering {
+      left: auto;
+      right: 0;
+    }
   }
 }
 

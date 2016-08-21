@@ -13,10 +13,10 @@ export default class ContextFreeGrammars extends Component {
     render() {
         return <div>
             <p>Context Free Grammars ({abbrs.cfgs}) are grammars where each rule is of the form</p>
-            <F l="A \rightarrow \alpha" display="true"/>
+            <F {...this.props} l="A \rightarrow \alpha" display="true"/>
             <p>
-                where <F l="A"/> is a single non-terminal symbol and <F l="\alpha"/> is any string
-                of terminals and non-terminals, including the empty string <F l="\epsilon"/>.
+                where <F {...this.props} l="A"/> is a single non-terminal symbol and <F {...this.props} l="\alpha"/> is any string
+                of terminals and non-terminals, including the empty string <F {...this.props} l="\epsilon"/>.
             </p>
             <p>
                 A Probabilistic Context Free Grammar ({abbrs.pcfg}) is then a Context Free Grammar in which each rule
@@ -27,7 +27,7 @@ export default class ContextFreeGrammars extends Component {
             </p>
             <p>
                 In our discussions, we assume probability scores to be
-                real numbers between <F l="0"/> and <F l="1"/>, with the common operations
+                real numbers between <F {...this.props} l="0"/> and <F {...this.props} l="1"/>, with the common operations
                 of multiplication and addition, but in implementation we use
                 the <a href="http://www.johndcook.com/blog/2014/02/26/log-semiring/">Log
                 semiring</a> to avoid <a href="https://en.wikipedia.org/wiki/Arithmetic_underflow">arithmetic
@@ -37,15 +37,15 @@ export default class ContextFreeGrammars extends Component {
                 {abbrs.cfgs} are said to be in Chomsky Normal Form ({abbrs.cnf}) if all rules are of the following form:
             </p>
 
-            <F l="A\rightarrow B C" display="true"/>
-            <F l="A\rightarrow t" display="true"/>
+            <F {...this.props} l="A\rightarrow B C" display="true"/>
+            <F {...this.props} l="A\rightarrow t" display="true"/>
 
-            <p>Where <F l="A"/>, <F l="B"/> and <F l="C"/> are non-terminal types, and <F l="t"/> is a
+            <p>Where <F {...this.props} l="A"/>, <F {...this.props} l="B"/> and <F {...this.props} l="C"/> are non-terminal types, and <F {...this.props} l="t"/> is a
                 terminal type.
             </p>
 
             <p>
-                In the following, we use an extension of CNF with unary rules. In this extension, <F l="t"/> is either
+                In the following, we use an extension of CNF with unary rules. In this extension, <F {...this.props} l="t"/> is either
                 a terminal or non-terminal type.
             </p>
 
@@ -68,20 +68,20 @@ export default class ContextFreeGrammars extends Component {
                         <th colSpan="2">Terminal rules</th>
                     </tr>
                     <tr>
-                        <td><F l="\text{Text} \rightarrow \text{text}"/></td>
-                        <td><F l="1.0"/></td>
+                        <td><F {...this.props} l="\text{Text} \rightarrow \text{text}"/></td>
+                        <td><F {...this.props} l="1.0"/></td>
                     </tr>
                     <tr>
-                        <td><F l="\text{Text} \rightarrow \text{newline}"/></td>
-                        <td><F l="1.0"/></td>
+                        <td><F {...this.props} l="\text{Text} \rightarrow \text{newline}"/></td>
+                        <td><F {...this.props} l="1.0"/></td>
                     </tr>
                     <tr>
-                        <td><F l="\text{Numbering} \rightarrow \text{numbering}"/></td>
-                        <td><F l="1.0"/></td>
+                        <td><F {...this.props} l="\text{Numbering} \rightarrow \text{numbering}"/></td>
+                        <td><F {...this.props} l="1.0"/></td>
                     </tr>
                     <tr>
-                        <td><F l="\text{TitleText} \rightarrow \text{section-title}"/></td>
-                        <td><F l="1.0"/></td>
+                        <td><F {...this.props} l="\text{TitleText} \rightarrow \text{section-title}"/></td>
+                        <td><F {...this.props} l="1.0"/></td>
                     </tr>
                     <tr>
                         <td colSpan="2"/>
@@ -90,90 +90,90 @@ export default class ContextFreeGrammars extends Component {
                         <th colSpan="2">Non-terminal rules</th>
                     </tr>
                     <tr>
-                        <td><F l="\text{Document} \rightarrow \text{Header DocumentContent}"/></td>
-                        <td><F l="1.0"/></td>
+                        <td><F {...this.props} l="\text{Document} \rightarrow \text{Header DocumentContent}"/></td>
+                        <td><F {...this.props} l="1.0"/></td>
                     </tr>
                     <tr>
-                        <td><F l="\text{Document} \rightarrow \text{DocumentContent}"/></td>
-                        <td><F l="1.0"/></td>
-                    </tr>
-                    <tr>
-                        <td colSpan="2"/>
-                    </tr>
-                    <tr>
-                        <td><F l="\text{DocumentContent} \rightarrow \text{Sections}"/></td>
-                        <td><F l="1.0"/></td>
-                    </tr>
-                    <tr>
-                        <td><F l="\text{DocumentContent} \rightarrow \text{Text Sections}"/></td>
-                        <td><F l="0.8"/></td>
-                    </tr>
-                    <tr>
-                        <td><F l="\text{DocumentContent} \rightarrow \text{Sections Text}"/></td>
-                        <td><F l="0.8"/></td>
-                    </tr>
-                    <tr>
-                        <td><F l="\text{DocumentContent} \rightarrow \text{Text Sections Text}"/></td>
-                        <td><F l="0.8"/></td>
+                        <td><F {...this.props} l="\text{Document} \rightarrow \text{DocumentContent}"/></td>
+                        <td><F {...this.props} l="1.0"/></td>
                     </tr>
                     <tr>
                         <td colSpan="2"/>
                     </tr>
                     <tr>
-                        <td><F l="\text{Text} \rightarrow \text{Text Text}"/></td>
-                        <td><F l="1.0"/></td>
+                        <td><F {...this.props} l="\text{DocumentContent} \rightarrow \text{Sections}"/></td>
+                        <td><F {...this.props} l="1.0"/></td>
+                    </tr>
+                    <tr>
+                        <td><F {...this.props} l="\text{DocumentContent} \rightarrow \text{Text Sections}"/></td>
+                        <td><F {...this.props} l="0.8"/></td>
+                    </tr>
+                    <tr>
+                        <td><F {...this.props} l="\text{DocumentContent} \rightarrow \text{Sections Text}"/></td>
+                        <td><F {...this.props} l="0.8"/></td>
+                    </tr>
+                    <tr>
+                        <td><F {...this.props} l="\text{DocumentContent} \rightarrow \text{Text Sections Text}"/></td>
+                        <td><F {...this.props} l="0.8"/></td>
                     </tr>
                     <tr>
                         <td colSpan="2"/>
                     </tr>
                     <tr>
-                        <td><F l="\text{Sections} \rightarrow \text{Sections Sections}"/></td>
+                        <td><F {...this.props} l="\text{Text} \rightarrow \text{Text Text}"/></td>
+                        <td><F {...this.props} l="1.0"/></td>
+                    </tr>
+                    <tr>
+                        <td colSpan="2"/>
+                    </tr>
+                    <tr>
+                        <td><F {...this.props} l="\text{Sections} \rightarrow \text{Sections Sections}"/></td>
                         <td><F
                             l="0.4 + \begin{cases}0.6&\text{if numberings in sequence}\\0&\text{otherwise}\end{cases}"/>
                         </td>
                     </tr>
                     <tr>
-                        <td><F l="\text{Sections} \rightarrow \text{Section}"/></td>
-                        <td><F l="1.0"/></td>
+                        <td><F {...this.props} l="\text{Sections} \rightarrow \text{Section}"/></td>
+                        <td><F {...this.props} l="1.0"/></td>
                     </tr>
                     <tr>
-                        <td><F l="\text{Sections} \rightarrow \text{Section Text}"/></td>
-                        <td><F l="0.9"/></td>
+                        <td><F {...this.props} l="\text{Sections} \rightarrow \text{Section Text}"/></td>
+                        <td><F {...this.props} l="0.9"/></td>
                     </tr>
                     <tr>
-                        <td><F l="\text{Sections} \rightarrow \text{Text Section}"/></td>
-                        <td><F l="0.8"/></td>
+                        <td><F {...this.props} l="\text{Sections} \rightarrow \text{Text Section}"/></td>
+                        <td><F {...this.props} l="0.8"/></td>
                     </tr>
                     <tr>
-                        <td><F l="\text{Section} \rightarrow \text{SectionTitle SectionContent}"/></td>
-                        <td><F l="1.0"/></td>
+                        <td><F {...this.props} l="\text{Section} \rightarrow \text{SectionTitle SectionContent}"/></td>
+                        <td><F {...this.props} l="1.0"/></td>
                     </tr>
                     <tr>
                         <td colSpan="2"/>
                     </tr>
                     <tr>
-                        <td><F l="\text{SectionTitle} \rightarrow \text{Numbering}"/></td>
-                        <td><F l="1.0"/></td>
+                        <td><F {...this.props} l="\text{SectionTitle} \rightarrow \text{Numbering}"/></td>
+                        <td><F {...this.props} l="1.0"/></td>
                     </tr>
                     <tr>
-                        <td><F l="\text{SectionTitle} \rightarrow \text{TitleText}"/></td>
-                        <td><F l="1.0"/></td>
+                        <td><F {...this.props} l="\text{SectionTitle} \rightarrow \text{TitleText}"/></td>
+                        <td><F {...this.props} l="1.0"/></td>
                     </tr>
                     <tr>
-                        <td><F l="\text{SectionTitle} \rightarrow \text{Numbering TitleText}"/></td>
-                        <td><F l="1.0"/></td>
+                        <td><F {...this.props} l="\text{SectionTitle} \rightarrow \text{Numbering TitleText}"/></td>
+                        <td><F {...this.props} l="1.0"/></td>
                     </tr>
                     <tr>
-                        <td><F l="\text{SectionContent} \rightarrow \text{Text}"/></td>
-                        <td><F l="1.0"/></td>
+                        <td><F {...this.props} l="\text{SectionContent} \rightarrow \text{Text}"/></td>
+                        <td><F {...this.props} l="1.0"/></td>
                     </tr>
                     <tr>
-                        <td><F l="\text{SectionContent} \rightarrow \text{Sections}"/></td>
-                        <td><F l="1.0"/></td>
+                        <td><F {...this.props} l="\text{SectionContent} \rightarrow \text{Sections}"/></td>
+                        <td><F {...this.props} l="1.0"/></td>
                     </tr>
                     <tr>
-                        <td><F l="\text{SectionContent} \rightarrow \text{SectionContent SectionContent}"/></td>
-                        <td><F l="1.0"/></td>
+                        <td><F {...this.props} l="\text{SectionContent} \rightarrow \text{SectionContent SectionContent}"/></td>
+                        <td><F {...this.props} l="1.0"/></td>
                     </tr>
                     </tbody>
                 </table>

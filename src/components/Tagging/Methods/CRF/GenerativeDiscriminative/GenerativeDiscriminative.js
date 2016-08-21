@@ -20,32 +20,32 @@ export default class CRF extends Component {
         return <div>
             <p>
                 We define generative models as directed models in which all
-                label variables <F l="y \in Y"/> are parents of the observation variables <F l="x\in X"/>.
+                label variables <F {...this.props} l="y \in Y"/> are parents of the observation variables <F {...this.props} l="x\in X"/>.
                 This name is due
                 to the labels "generating" the observations: the labels are the contingencies upon which the
                 probability of the output depends.
             </p>
 
             <p>
-                When we describe the probability distribution <F l="p( \mathbf y|\mathbf x)"/>,
+                When we describe the probability distribution <F {...this.props} l="p( \mathbf y|\mathbf x)"/>,
                 we speak of a discriminative model. Every generative model has a discriminative counterpart.
                 In the words of {ref.cite(bib.jordan2002discriminative)},
                 we call these generative-discriminative pairs.
                 Training a
-                generative model to maximize <F latex="p(\mathbf y|\mathbf x)"/> yields the same model as
+                generative model to maximize <F {...this.props} latex="p(\mathbf y|\mathbf x)"/> yields the same model as
                 training its discriminative counterpart.
                 Conversely, training a discriminative model to maximize
-                the joint probability <F l="p(\mathbf x,\mathbf y)"/> (instead
-                of <F latex="p(\mathbf y|\mathbf x)"/>) results in the same model
+                the joint probability <F {...this.props} l="p(\mathbf x,\mathbf y)"/> (instead
+                of <F {...this.props} latex="p(\mathbf y|\mathbf x)"/>) results in the same model
                 as training the generative counterpart.
             </p>
 
             <p>
                 It turns out that when we model a conditional distribution,
-                we have more parameter freedom for <F l="p(\mathbf y)"/>, because we are not interested
-                in parameter values for <F l="p( \mathbf x)"/>. Modeling <F
+                we have more parameter freedom for <F {...this.props} l="p(\mathbf y)"/>, because we are not interested
+                in parameter values for <F {...this.props} l="p( \mathbf x)"/>. Modeling <F
                 l="p( \mathbf y|\mathbf x)"/> unburdens us of having to model the potentially very complicated
-                inter-dependencies of <F l="p(\mathbf x)"/>. In classification tasks,
+                inter-dependencies of <F {...this.props} l="p(\mathbf x)"/>. In classification tasks,
                 this means that we are better able to use observations,
                 and so discriminative models tend to out-perform generative models in practice.
             </p>

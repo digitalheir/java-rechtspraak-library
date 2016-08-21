@@ -6,7 +6,7 @@ export default class extends Component {
     render() {
         const refId = this.props.refId;
         var page = this.props.page;
-        
+
         var reference = refId;
         if (typeof refId == 'string') {
             reference = bibliography[refId];
@@ -20,9 +20,8 @@ export default class extends Component {
         // Create string for page
         var strPage = reference.pages ? ", pp. " + reference.pages : "";
         page = page ? page : reference.page;
-        if (page) {
-            strPage = ", p. " + page;
-        }
+        if (page)  strPage = ", p. " + page;
+        var pages = strPage.length <= 0 ? '' : <span className="pages">{strPage}</span>;
 
         //Create string for name
         var name = reference.author.lastName ? reference.author.lastName.toString() : reference.author.abbr;
@@ -32,6 +31,6 @@ export default class extends Component {
                    href={"#"+reference.id.toString()}
         >{name} (
             <time dateTime={reference.year.toString()} className="ref-year">{reference.year.toString()}</time>
-            {strPage.toString()})</a>);
+            {pages})</a>);
     }
 }
