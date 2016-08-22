@@ -23545,7 +23545,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        'li',
 	        { itemProp: 'citation',
 	            itemScope: true,
-	            itemType: 'https://schema.org/CreativeWork',
+	            itemType: 'https://schema.org/ScholarlyArticle',
 	            key: i,
 	            id: citation.id.toString(),
 	            className: 'ref' },
@@ -63089,7 +63089,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            { itemScope: true,
 	                                itemType: 'https://schema.org/Intangible',
 	                                itemProp: 'about' },
-	                            'Log semiring'
+	                            _react2.default.createElement(
+	                                'span',
+	                                { itemProp: 'name' },
+	                                'Log semiring'
+	                            )
 	                        )
 	                    ),
 	                    ' to avoid ',
@@ -63100,7 +63104,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            'span',
 	                            { itemScope: true,
 	                                itemType: 'https://schema.org/Intangible' },
-	                            'arithmetic underflow'
+	                            _react2.default.createElement(
+	                                'span',
+	                                { itemProp: 'name' },
+	                                'arithmetic underflow'
+	                            )
 	                        )
 	                    ),
 	                    '.'
@@ -64965,65 +64973,79 @@ return /******/ (function(modules) { // webpackBootstrap
 	                { className: 'full-thesis reset-counter numbered-section' },
 	                _react2.default.createElement(
 	                    'section',
-	                    { style: {}, id: 'title-page' },
+	                    { id: 'title-page' },
 	                    _react2.default.createElement(
 	                        'div',
 	                        { itemScope: true,
+	                            itemRef: 'uu',
 	                            itemType: 'https://schema.org/CollegeOrUniversity' },
 	                        _react2.default.createElement(
 	                            'div',
-	                            { style: {},
-	                                itemProp: 'name',
+	                            { itemProp: 'name',
 	                                id: 'title-page-university-name' },
-	                            'Utrecht University'
+	                            _react2.default.createElement(
+	                                'span',
+	                                { itemProp: 'name' },
+	                                'Utrecht University'
+	                            )
 	                        ),
 	                        _react2.default.createElement(
 	                            'div',
 	                            { itemScope: true,
 	                                itemProp: 'department',
 	                                itemType: 'https://schema.org/EducationalOrganization',
-	                                style: {},
 	                                id: 'title-page-faculty-name' },
-	                            'Faculty of Humanities'
+	                            _react2.default.createElement(
+	                                'span',
+	                                { itemProp: 'name' },
+	                                'Faculty of Humanities'
+	                            ),
+	                            _react2.default.createElement('link', { itemProp: 'alumni', rel: '#title-page-author' })
 	                        )
 	                    ),
 	                    _react2.default.createElement(
 	                        'div',
-	                        { style: {}, id: 'title-page-msc-thesis' },
-	                        'Master of Science Thesis'
+	                        { id: 'title-page-msc-thesis' },
+	                        _react2.default.createElement(
+	                            'span',
+	                            { itemProp: 'inSupportOf' },
+	                            'Master of Science'
+	                        ),
+	                        ' Thesis'
 	                    ),
 	                    _react2.default.createElement(
 	                        'h1',
-	                        { style: {} },
+	                        null,
 	                        title
 	                    ),
 	                    _react2.default.createElement(
 	                        'div',
-	                        { style: {}, id: 'title-page-author' },
+	                        { itemScope: true,
+	                            itemProp: 'author',
+	                            itemType: 'https://schema.org/Person',
+	                            id: 'title-page-author' },
 	                        _react2.default.createElement(
 	                            'div',
-	                            { style: {}, id: 'title-page-author-author' },
+	                            { id: 'title-page-author-author' },
 	                            'by'
 	                        ),
 	                        _react2.default.createElement(
 	                            'div',
-	                            { itemScope: true,
-	                                itemProp: 'author',
-	                                itemType: 'https://schema.org/Person',
-	                                style: {},
+	                            {
+
 	                                id: 'title-page-author-name' },
 	                            _react2.default.createElement(
 	                                'span',
 	                                { itemProp: 'name' },
 	                                _react2.default.createElement(
 	                                    'span',
-	                                    { itemProp: 'firstName' },
+	                                    { itemProp: 'givenName' },
 	                                    'Maarten'
 	                                ),
 	                                ' ',
 	                                _react2.default.createElement(
 	                                    'span',
-	                                    { itemProp: 'lastName' },
+	                                    { itemProp: 'familyName' },
 	                                    'Trompper'
 	                                )
 	                            )
@@ -65031,44 +65053,104 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ),
 	                    _react2.default.createElement(
 	                        'div',
-	                        { style: {}, className: 'title-page-supervisor' },
+	                        { itemScope: true,
+	                            itemProp: 'contributor',
+	                            itemType: 'https://schema.org/Person',
+	                            className: 'title-page-supervisor' },
 	                        _react2.default.createElement(
 	                            'div',
-	                            { style: {}, id: 'title-page-supervisor-supervisor' },
-	                            'Supervisor Utrecht University:'
+	                            { id: 'title-page-supervisor-supervisor' },
+	                            'Supervisor ',
+	                            _react2.default.createElement(
+	                                'span',
+	                                { itemScope: true,
+	                                    itemType: 'https://schema.org/EducationalOrganization',
+	                                    itemRef: 'uu',
+	                                    itemProp: 'worksFor affiliation' },
+	                                _react2.default.createElement(
+	                                    'span',
+	                                    { itemProp: 'name' },
+	                                    'Utrecht University'
+	                                )
+	                            ),
+	                            ':'
 	                        ),
 	                        _react2.default.createElement(
 	                            'div',
-	                            { style: {}, className: 'name' },
-	                            'Ad Feelders'
+	                            { itemProp: 'name', className: 'name' },
+	                            _react2.default.createElement(
+	                                'span',
+	                                { itemProp: 'givenName' },
+	                                'Ad'
+	                            ),
+	                            ' ',
+	                            _react2.default.createElement(
+	                                'span',
+	                                { itemProp: 'familyName' },
+	                                'Feelders'
+	                            )
 	                        )
 	                    ),
 	                    _react2.default.createElement(
 	                        'div',
-	                        { style: {}, className: 'title-page-supervisor external' },
+	                        { itemScope: true,
+	                            itemProp: 'contributor',
+	                            itemType: 'https://schema.org/Person',
+	                            className: 'title-page-supervisor external' },
 	                        _react2.default.createElement(
 	                            'div',
-	                            { style: {}, id: 'title-page-supervisor-ext-supervisor' },
-	                            'Supervisor Leibniz Center for Law:'
+	                            { id: 'title-page-supervisor-ext-supervisor' },
+	                            'Supervisor ',
+	                            _react2.default.createElement(
+	                                'span',
+	                                { itemScope: true,
+	                                    itemType: 'https://schema.org/EducationalOrganization',
+	                                    itemProp: 'affiliation' },
+	                                _react2.default.createElement(
+	                                    'span',
+	                                    { itemProp: 'name' },
+	                                    'Leibniz Center for Law'
+	                                )
+	                            ),
+	                            ':'
 	                        ),
 	                        _react2.default.createElement(
 	                            'div',
-	                            { style: {}, className: 'name' },
-	                            'Radboud Winkels'
+	                            { itemProp: 'name', className: 'name' },
+	                            _react2.default.createElement(
+	                                'span',
+	                                { itemProp: 'givenName' },
+	                                'Radboud'
+	                            ),
+	                            ' ',
+	                            _react2.default.createElement(
+	                                'span',
+	                                { itemProp: 'familyName' },
+	                                'Winkels'
+	                            )
 	                        )
 	                    ),
 	                    _react2.default.createElement(
 	                        'div',
-	                        { style: {}, id: 'title-page-time-and-date' },
+	                        { id: 'title-page-time-and-date' },
 	                        _react2.default.createElement(
 	                            'span',
-	                            { style: {}, id: 'title-page-time' },
-	                            'Utrecht'
+	                            { id: 'title-page-time' },
+	                            _react2.default.createElement(
+	                                'span',
+	                                { itemScope: true, itemType: 'https://schema.org/Place', itemProp: 'locationCreated' },
+	                                _react2.default.createElement(
+	                                    'span',
+	                                    { itemProp: 'name' },
+	                                    'Utrecht'
+	                                ),
+	                                _react2.default.createElement('link', { rel: 'https://en.wikipedia.org/wiki/Utrecht' })
+	                            )
 	                        ),
 	                        ', ',
 	                        _react2.default.createElement(
 	                            'span',
-	                            { style: {}, id: 'title-page-date' },
+	                            { itemProp: 'dateCreated datePublished', id: 'title-page-date' },
 	                            '2016'
 	                        )
 	                    )
