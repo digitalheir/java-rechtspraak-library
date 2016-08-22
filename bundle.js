@@ -23562,7 +23562,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            null,
 	            _react2.default.createElement(
 	                'a',
-	                { hreflang: 'en', href: citation.href },
+	                { hrefLang: 'en', href: citation.href },
 	                _react2.default.createElement(
 	                    'span',
 	                    { itemProp: 'name' },
@@ -25936,7 +25936,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    { id: "github-link", className: "author-line" },
 	                    _react2.default.createElement(
 	                        "a",
-	                        { hreflang: "en", href: ghUrl,
+	                        { hrefLang: "en", href: ghUrl,
 	                            className: "icon no-decoration" },
 	                        _react2.default.createElement(
 	                            "i",
@@ -26034,7 +26034,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'A growing amount of Dutch case law is openly distributed on ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { hreflang: 'nl', href: 'http://www.rechtspraak.nl/' },
+	                        { hrefLang: 'nl', href: 'http://www.rechtspraak.nl/' },
 	                        'Rechtspraak.nl'
 	                    ),
 	                    '. Currently, many documents are not marked up or marked up only very sparsely, hampering our ability to process these documents automatically.'
@@ -26133,7 +26133,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    { className: this.props.singlePage ? "leaders" : "" },
 	                    this.props.showHome ? _react2.default.createElement(
 	                        'a',
-	                        { hreflang: 'en', href: relativeToRoot },
+	                        { hrefLang: 'en', href: relativeToRoot },
 	                        'Home'
 	                    ) : "",
 	                    _chapters2.default.inOrder.map(function (chapter) {
@@ -26159,7 +26159,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                        chapter.title
 	                                    ) : _react2.default.createElement(
 	                                        'a',
-	                                        { hreflang: 'en', itemProp: 'mainEntityOfPage url', href: urlSection,
+	                                        { hrefLang: 'en', itemProp: 'mainEntityOfPage url', href: urlSection,
 	                                            className: 'nav-link' },
 	                                        _react2.default.createElement(
 	                                            'span',
@@ -26203,7 +26203,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                { className: 'row' },
 	                                _react2.default.createElement(
 	                                    'a',
-	                                    { hreflang: 'en', itemProp: 'url', href: urlSection + "#" + section.id },
+	                                    { hrefLang: 'en', itemProp: 'url', href: urlSection + "#" + section.id },
 	                                    _react2.default.createElement(
 	                                        'span',
 	                                        { itemProp: 'name' },
@@ -26551,7 +26551,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        var header = _react2.default.createElement("h" + headerLevel, { className: "title" }, _react2.default.createElement('a', { className: 'link-up', href: '#' }), _react2.default.createElement(
 	            'span',
 	            { itemProp: 'name' },
-	            'section.title'
+	            section.title
 	        ));
 	        var subsubsections = '';
 	        if (!!SectionContent.getSections) {
@@ -26559,6 +26559,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            subsubsections = SectionContent.getSections().inOrder.map(getSubSubsections);
 	            //console.log(subsubsections);
 	        }
+	        var description = section.description ? _react2.default.createElement('meta', { itemProp: 'description', content: section.description }) : '';
 	        return _react2.default.createElement(
 	            'section',
 	            { className: 'numbered-section',
@@ -26568,8 +26569,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	                key: section.id,
 	                id: section.id },
 	            header,
-	            _react2.default.createElement(SectionContent, props),
-	            subsubsections
+	            description,
+	            _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(SectionContent, props),
+	                subsubsections
+	            )
 	        );
 	    };
 	}
@@ -26670,7 +26676,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        //                <section>
 	        //                    <h2>Counting terms</h2>
 	        //                    <p>Initial tokenization is performed server-side, using Alpino.</p>
-	        //                    <p>Then, in a MapReduce task we reduce these inflected words to lemmas and count lemma occurrences for each document. We use a<a hreflang="en" href="https://github.com/fortnightlabs/snowball-js">Javascript port</a> of the <a hreflang="en" href="http://snowball.tartarus.org/algorithms/dutch/stemmer.html">
+	        //                    <p>Then, in a MapReduce task we reduce these inflected words to lemmas and count lemma occurrences for each document. We use a<a hrefLang="en" href="https://github.com/fortnightlabs/snowball-js">Javascript port</a> of the <a hrefLang="en" href="http://snowball.tartarus.org/algorithms/dutch/stemmer.html">
 	        //                        Snowball stemming algorithm for
 	        //                        Dutch</a>, along with some additional normalization rules which mainly handle special characters (consider,
 	        //                        for example, that <code>'s ochtends</code> represents the same phrase as <code>`s ochtends</code>
@@ -26700,7 +26706,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        //                    <p><code>term_document_count</code> is useful to .</p>    https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation
 	        //                    <p><code>term_token_count</code> is useful when we want to know where a stemmed term comes
 	        //                        from, i.e., its manifestation in the source documents.
-	        //                    </p>    Refer to <a hreflang="en" href="http://rechtspraak.cloudant.com/ecli/_design/term_frequency">http://rechtspraak.cloudant.com/ecli/_design/term_frequency</a>    for the implemented design document.
+	        //                    </p>    Refer to <a hrefLang="en" href="http://rechtspraak.cloudant.com/ecli/_design/term_frequency">http://rechtspraak.cloudant.com/ecli/_design/term_frequency</a>    for the implemented design document.
 	        //                </section>
 	        value: function render() {
 
@@ -26950,7 +26956,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	            //   console.log(figs.markupStats);
 	            return _react2.default.createElement(
 	                'figure',
-	                { id: _figs2.default.markupStats.id },
+	                { itemProp: 'hasPart', itemScope: true, itemType: 'https://schema.org/Dataset',
+	                    id: _figs2.default.markupStats.id },
+	                _react2.default.createElement(
+	                    'div',
+	                    { itemProp: 'distribution', itemScope: true, itemType: 'https://schema.org/DataDownload' },
+	                    _react2.default.createElement('meta', { itemProp: 'contentUrl', content: _figs2.default.markupStats.url })
+	                ),
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: 'figure-container' },
@@ -26964,24 +26976,29 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    null,
 	                    _react2.default.createElement(
 	                        'span',
-	                        { className: 'figure-number' },
+	                        { itemProp: 'alternateName', className: 'figure-number' },
 	                        'Fig ',
-	                        _figs2.default.markupStats.num,
-	                        '.'
+	                        _figs2.default.markupStats.num
 	                    ),
-	                    ' Chart showing the number of documents with different kinds of markup. In particular, we are interested in the number of ',
+	                    '. ',
 	                    _react2.default.createElement(
-	                        'code',
-	                        null,
-	                        '*.info'
-	                    ),
-	                    ' tags, which are headers that contain metadata about the case, and ',
-	                    _react2.default.createElement(
-	                        'code',
-	                        null,
-	                        'section'
-	                    ),
-	                    ' tags, denoting sections.'
+	                        'span',
+	                        {
+	                            itemProp: 'description' },
+	                        'Chart showing the number of documents with different kinds of markup. In particular, we are interested in the number of ',
+	                        _react2.default.createElement(
+	                            'code',
+	                            null,
+	                            '*.info'
+	                        ),
+	                        ' tags, which are headers that contain metadata about the case, and ',
+	                        _react2.default.createElement(
+	                            'code',
+	                            null,
+	                            'section'
+	                        ),
+	                        ' tags, denoting sections.'
+	                    )
 	                )
 	            );
 	        }
@@ -45348,7 +45365,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -45367,41 +45384,54 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	var _class = function (_Component) {
-	  _inherits(_class, _Component);
+	    _inherits(_class, _Component);
 
-	  function _class() {
-	    _classCallCheck(this, _class);
+	    function _class() {
+	        _classCallCheck(this, _class);
 
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(_class).apply(this, arguments));
-	  }
-
-	  _createClass(_class, [{
-	    key: "render",
-	    value: function render() {
-	      var fig = this.props.fig;
-	      if (!fig) throw new Error("No fig set to refer to...");
-	      var href = "#" + fig.id;
-
-	      return _react2.default.createElement(
-	        "a",
-	        { href: href },
-	        "Figure ",
-	        fig.num
-	      );
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(_class).apply(this, arguments));
 	    }
-	  }], [{
-	    key: "propTypes",
-	    value: function propTypes() {
-	      return {
-	        fig: _react2.default.PropTypes.shape({
-	          id: _react2.default.PropTypes.string.isRequired,
-	          num: _react2.default.PropTypes.isRequired
-	        }).isRequired
-	      };
-	    }
-	  }]);
 
-	  return _class;
+	    _createClass(_class, [{
+	        key: "render",
+	        value: function render() {
+	            var fig = this.props.fig;
+	            if (!fig) throw new Error("No fig set to refer to...");
+	            var href = "#" + fig.id;
+
+	            // Note creating a dummy scope is an ugly solution, but valid
+	            // http://webmasters.stackexchange.com/questions/55489/microdata-with-nested-product-and-reviews/55494#55494
+	            return _react2.default.createElement(
+	                "span",
+	                { itemScope: true },
+	                _react2.default.createElement(
+	                    "a",
+	                    { itemRef: fig.id,
+	                        id: fig.id + '-ref',
+	                        itemScope: true,
+	                        href: href },
+	                    _react2.default.createElement(
+	                        "span",
+	                        { itemProp: "name" },
+	                        "Figure ",
+	                        fig.num
+	                    )
+	                )
+	            );
+	        }
+	    }], [{
+	        key: "propTypes",
+	        value: function propTypes() {
+	            return {
+	                fig: _react2.default.PropTypes.shape({
+	                    id: _react2.default.PropTypes.string.isRequired,
+	                    num: _react2.default.PropTypes.isRequired
+	                }).isRequired
+	            };
+	        }
+	    }]);
+
+	    return _class;
 	}(_react.Component);
 
 	exports.default = _class;
@@ -45564,7 +45594,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    null,
 	                    _react2.default.createElement(
 	                        'a',
-	                        { hreflang: 'nl', href: 'http://www.rechtspraak.nl/' },
+	                        { hrefLang: 'nl', href: 'http://www.rechtspraak.nl/' },
 	                        'Rechtspraak.nl'
 	                    ),
 	                    ' is the official website of the ',
@@ -45575,16 +45605,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        'Dutch judiciary'
 	                    ),
 	                    '. The website hosts an open data portal for Dutch case law, containing metadata for about 2 million court judgments',
-	                    _react2.default.createElement(_Source2.default, { hreflang: 'nl',
+	                    _react2.default.createElement(_Source2.default, { hrefLang: 'nl',
 	                        href: 'http://data.rechtspraak.nl/uitspraken/zoeken?' }),
 	                    ' and judgment texts for about 350.000 judgments in ',
 	                    _abbreviations2.default.xml,
 	                    _react2.default.createElement(_Source2.default, {
-	                        hreflang: 'nl', href: 'http://data.rechtspraak.nl/uitspraken/zoeken?return=doc' }),
+	                        hrefLang: 'nl', href: 'http://data.rechtspraak.nl/uitspraken/zoeken?return=doc' }),
 	                    '. In this thesis, we only consider those documents that contain text. The full data set of ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { hreflang: 'nl', href: 'http://www.rechtspraak.nl/' },
+	                        { hrefLang: 'nl', href: 'http://www.rechtspraak.nl/' },
 	                        'Rechtspraak.nl'
 	                    ),
 	                    ' court judgments contains only a fraction of all court judgments that exist in the Netherlands, but the collection is curated so that it is representative of all case law in the Netherlands.'
@@ -54645,7 +54675,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ' elements. Stemming is performed using the ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { hreflang: 'en', href: 'http://snowball.tartarus.org/algorithms/dutch/stemmer.html' },
+	                        { hrefLang: 'en', href: 'http://snowball.tartarus.org/algorithms/dutch/stemmer.html' },
 	                        'Snowball algorithm for Dutch'
 	                    ),
 	                    '.'
@@ -55257,7 +55287,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ' word stems in occurring section titles. Percentages are the percentage of titles texts that the word stem occurs in. Stemming is performed using the ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { hreflang: 'en', href: 'http://snowball.tartarus.org/algorithms/dutch/stemmer.html' },
+	                        { hrefLang: 'en', href: 'http://snowball.tartarus.org/algorithms/dutch/stemmer.html' },
 	                        'Snowball algorithm for Dutch'
 	                    ),
 	                    '.'
@@ -55426,7 +55456,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ' is \'section titles\'). Stemming is performed using the ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { hreflang: 'en', href: 'http://snowball.tartarus.org/algorithms/dutch/stemmer.html' },
+	                        { hrefLang: 'en', href: 'http://snowball.tartarus.org/algorithms/dutch/stemmer.html' },
 	                        'Snowball algorithm for Dutch'
 	                    ),
 	                    '. \'[NUMBER]\' and \'[de|het|een]\' are special classes for numbers and grammatical articles (i.e. the Dutch equivalent of the articles \'the\' and \'a\').'
@@ -55638,7 +55668,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ' tf-idf scores for stemmed words in section titles, per section role. Stemming is performed using the ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { hreflang: 'en', href: 'http://snowball.tartarus.org/algorithms/dutch/stemmer.html' },
+	                        { hrefLang: 'en', href: 'http://snowball.tartarus.org/algorithms/dutch/stemmer.html' },
 	                        'Snowball algorithm for Dutch'
 	                    ),
 	                    '. \'[NUMBER]\', \'[PUNCTUATION]\' and \'[de|het|een]\' are special classes for numbers, punctation, and grammatical articles (the Dutch equivalent of the articles \'the\' and \'a\').'
@@ -55794,11 +55824,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	            //<LineChart labelY='²log frequency' sourceHref={data.url} data={data.data}/>
 	            return _react2.default.createElement(
 	                'figure',
-	                { className: 'chart', id: _figs2.default.figTitleWordCount.id },
+	                { itemProp: 'hasPart',
+	                    itemScope: true,
+	                    itemType: 'https://schema.org/Dataset',
+	                    className: 'chart',
+	                    id: _figs2.default.figTitleWordCount.id },
 	                _react2.default.createElement(
-	                    'a',
-	                    { href: _data2.default.url },
-	                    'Data source'
+	                    'span',
+	                    { itemProp: 'distribution', itemScope: true, itemType: 'https://schema.org/DataDownload' },
+	                    _react2.default.createElement(
+	                        'a',
+	                        { itemProp: 'contentUrl', href: _data2.default.url },
+	                        'Data source'
+	                    )
 	                ),
 	                _react2.default.createElement(
 	                    'table',
@@ -55854,12 +55892,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    null,
 	                    _react2.default.createElement(
 	                        'span',
-	                        { className: 'figure-number' },
+	                        { itemProp: 'alternateName', className: 'figure-number' },
 	                        'Fig ',
-	                        _figs2.default.figTitleWordCount.num,
-	                        '.'
+	                        _figs2.default.figTitleWordCount.num
 	                    ),
-	                    ' Word count in section titles, excluding numbering.'
+	                    '. ',
+	                    _react2.default.createElement(
+	                        'span',
+	                        {
+	                            itemProp: 'description' },
+	                        'Word count in section titles, excluding numbering.'
+	                    )
 	                )
 	            );
 	        }
@@ -55970,7 +56013,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                'Regarding importing, we have created a separate library for mirroring the Rechtspraak.nl corpus from the web service to a CouchDB database. We mirror the data set in order to facilitate the collection of statistics of case law documents used in this thesis through MapReduce computations. Source code for this project is available ',
 	                _react2.default.createElement(
 	                    'a',
-	                    { hreflang: 'en', className: 'print-url',
+	                    { hrefLang: 'en', className: 'print-url',
 	                        href: 'https://github.com/digitalheir/dutch-case-law-to-couchdb' },
 	                    'on GitHub'
 	                ),
@@ -56236,7 +56279,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        'One library for mirroring the Rechtspraak.nl corpus to a CouchDB database, ',
 	                        _react2.default.createElement(
 	                            'a',
-	                            { hreflang: 'en', className: 'print-url',
+	                            { hrefLang: 'en', className: 'print-url',
 	                                href: 'https://github.com/digitalheir/dutch-case-law-to-couchdb' },
 	                            'on GitHub'
 	                        )
@@ -56256,7 +56299,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        'A Java library for converting XML to JSON, ',
 	                        _react2.default.createElement(
 	                            'a',
-	                            { hreflang: 'en', className: 'print-url',
+	                            { hrefLang: 'en', className: 'print-url',
 	                                href: 'https://github.com/digitalheir/java-xml-to-json' },
 	                            'on GitHub'
 	                        )
@@ -56267,7 +56310,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        'A Probabilistic Earley Parser for Java, ',
 	                        _react2.default.createElement(
 	                            'a',
-	                            { hreflang: 'en', className: 'print-url',
+	                            { hrefLang: 'en', className: 'print-url',
 	                                href: 'https://github.com/digitalheir/java-probabilistic-earley-parser' },
 	                            'on GitHub'
 	                        )
@@ -56492,7 +56535,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'Using this schema, we can utilize a technology called ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { hreflang: 'en', href: 'https://en.wikipedia.org/wiki/Java_Architecture_for_XML_Binding' },
+	                        { hrefLang: 'en', href: 'https://en.wikipedia.org/wiki/Java_Architecture_for_XML_Binding' },
 	                        'JAXB'
 	                    ),
 	                    ' to automatically marshall and demarshall Rechtspraak.nl ',
@@ -56500,7 +56543,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ' documents to and from Java objects. Source code and schema are available ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { hreflang: 'en', className: 'print-url', href: 'https://github.com/digitalheir/java-rechtspraak-library' },
+	                        { hrefLang: 'en', className: 'print-url', href: 'https://github.com/digitalheir/java-rechtspraak-library' },
 	                        'on Github'
 	                    ),
 	                    '.'
@@ -59731,7 +59774,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            null,
 	                            _react2.default.createElement(
 	                                'a',
-	                                { hreflang: 'en', href: _chapters2.default.pathTo(this.props.path, _chapters2.default.importing) + "#" + _sections2.default.importing.id },
+	                                { hrefLang: 'en', href: _chapters2.default.pathTo(this.props.path, _chapters2.default.importing) + "#" + _sections2.default.importing.id },
 	                                'Importing documents from the Rechtspraak.nl web service;'
 	                            )
 	                        ),
@@ -59740,7 +59783,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            null,
 	                            _react2.default.createElement(
 	                                'a',
-	                                { hreflang: 'en', href: _chapters2.default.pathTo(this.props.path, _chapters2.default.importing) + "#" + _sections2.default.importing.id },
+	                                { hrefLang: 'en', href: _chapters2.default.pathTo(this.props.path, _chapters2.default.importing) + "#" + _sections2.default.importing.id },
 	                                'Tokenizing relevant text elements;'
 	                            )
 	                        ),
@@ -59749,7 +59792,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            null,
 	                            _react2.default.createElement(
 	                                'a',
-	                                { hreflang: 'en', href: _chapters2.default.pathTo(this.props.path, _chapters2.default.tagging) },
+	                                { hrefLang: 'en', href: _chapters2.default.pathTo(this.props.path, _chapters2.default.tagging) },
 	                                'Labeling these text elements with their respective roles (i.e. ',
 	                                _react2.default.createElement(
 	                                    'code',
@@ -59782,7 +59825,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            null,
 	                            _react2.default.createElement(
 	                                'a',
-	                                { hreflang: 'en', href: _chapters2.default.pathTo(this.props.path, _chapters2.default.documentStructure) },
+	                                { hrefLang: 'en', href: _chapters2.default.pathTo(this.props.path, _chapters2.default.documentStructure) },
 	                                'Combining the tokens in such a way that they represent the most likely section hierarchy'
 	                            )
 	                        ),
@@ -59799,7 +59842,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'Tasks 1 and 2 are theoretically straightforward and mostly a problem of implementation, and the following chapter touches on both of these subjects briefly, mostly through a specification of the data set of court judgments from ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { hreflang: 'nl', href: 'http://www.rechspraak.nl' },
+	                        { hrefLang: 'nl', href: 'http://www.rechspraak.nl' },
 	                        'Rechtspraak.nl'
 	                    ),
 	                    '.'
@@ -60180,7 +60223,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ' can be represented as a graph, called a ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { hreflang: 'en', href: 'https://en.wikipedia.org/wiki/Factor_graph' },
+	                        { hrefLang: 'en', href: 'https://en.wikipedia.org/wiki/Factor_graph' },
 	                        'factor graph'
 	                    ),
 	                    ', which is illustrated in ',
@@ -60193,7 +60236,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'Factor graphs are ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { hreflang: 'en', className: 'wiki', href: 'https://en.wikipedia.org/wiki/Bipartite_graph' },
+	                        { hrefLang: 'en', className: 'wiki', href: 'https://en.wikipedia.org/wiki/Bipartite_graph' },
 	                        'bipartite graphs'
 	                    ),
 	                    ' ',
@@ -60917,7 +60960,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ', we can efficiently compute the Viterbi sequence through a dynamic programming algorithm called the Viterbi algorithm, which is very similar to the ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { hreflang: 'en', href: 'https://en.wikipedia.org/wiki/Forward%E2%80%93backward_algorithm' },
+	                        { hrefLang: 'en', href: 'https://en.wikipedia.org/wiki/Forward%E2%80%93backward_algorithm' },
 	                        'forward-backward algorithm'
 	                    ),
 	                    '.'
@@ -62081,7 +62124,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'In the ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { hreflang: 'en', href: urlToIntrochapter },
+	                        { hrefLang: 'en', href: urlToIntrochapter },
 	                        'previous chapter'
 	                    ),
 	                    ', we developed a way to import Rechtspraak.nl ',
@@ -62469,7 +62512,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'In the following, we provide a definition of Linear-Chain Conditional Random Fields, supported first by an introductory section on Directed Graphical Models, and specifically the conceptually simpler ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { hreflang: 'en', href: '#hmm' },
+	                        { hrefLang: 'en', href: '#hmm' },
 	                        'Hidden Markov Models'
 	                    ),
 	                    '. For a more thorough tutorial into ',
@@ -62610,7 +62653,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'Based on the metrics and observations on the data set from the ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { hreflang: 'en', href: rsMarkupUrl },
+	                        { hrefLang: 'en', href: rsMarkupUrl },
 	                        'previous chapter'
 	                    ),
 	                    ', we define about 250 binary features for our automatic tagger. The most prominent ones include:'
@@ -63082,7 +63125,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        'a',
 	                        { itemScope: true,
 	                            itemType: 'https://schema.org/TechArticle',
-	                            hreflang: 'en',
+	                            hrefLang: 'en',
 	                            href: 'http://www.johndcook.com/blog/2014/02/26/log-semiring/' },
 	                        _react2.default.createElement(
 	                            'span',
@@ -63099,7 +63142,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ' to avoid ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { hreflang: 'en', href: 'https://en.wikipedia.org/wiki/Arithmetic_underflow' },
+	                        { hrefLang: 'en', href: 'https://en.wikipedia.org/wiki/Arithmetic_underflow' },
 	                        _react2.default.createElement(
 	                            'span',
 	                            { itemScope: true,
@@ -64686,7 +64729,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        //     In this chapter, we introduce the problem
 	        //     of automatically assigning a section hierarchy
 	        //     to documents in the Dutch case law repository
-	        //     of <a hreflang="en" href="http://www.rechtspraak.nl/">Rechtspraak.nl</a> and why this is
+	        //     of <a hrefLang="en" href="http://www.rechtspraak.nl/">Rechtspraak.nl</a> and why this is
 	        //     useful.
 	        // </p>
 	        value: function render() {
@@ -64784,7 +64827,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            var standaloneChapter = !this.props.inline;
 	            var main = _react2.default.createElement(
 	                'section',
-	                { id: this.props.id ? this.props.id : '',
+	                { id: this.props.id ? this.props.id : this.props.chapterObject.id,
 	                    itemProp: 'hasPart',
 	                    itemScope: true,
 	                    itemType: 'https://schema.org/Chapter',
@@ -64795,8 +64838,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement('a', { className: 'link-up', href: '#' }),
 	                    this.props.title
 	                ),
-	                this.props.children,
-	                subsections
+	                _react2.default.createElement(
+	                    'div',
+	                    null,
+	                    this.props.children,
+	                    subsections
+	                )
 	            );
 	            return _react2.default.createElement(
 	                'div',
@@ -64834,7 +64881,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            'Next chapter: ',
 	                            _react2.default.createElement(
 	                                'a',
-	                                { hreflang: 'en', href: _chapters2.default.pathTo(this.props.path, chapter) },
+	                                { hrefLang: 'en', href: _chapters2.default.pathTo(this.props.path, chapter) },
 	                                chapter.title
 	                            )
 	                        );
@@ -64867,7 +64914,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                { className: 'link-to- home' },
 	                _react2.default.createElement(
 	                    'a',
-	                    { hreflang: 'en', href: relativeToRoot },
+	                    { hrefLang: 'en', href: relativeToRoot },
 	                    'Back to home'
 	                )
 	            );
@@ -64957,10 +65004,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	        //    The source code referred to in this thesis can be found in two repositories on GitHub:
 	        //</p>
 	        //<ul>
-	        //    <li><a hreflang="en" href="https://github.com/digitalheir/java-rechtspraak-library"
+	        //    <li><a hrefLang="en" href="https://github.com/digitalheir/java-rechtspraak-library"
 	        //    >https://github.com/digitalheir/java-rechtspraak-library</a>
 	        //    </li>
-	        //    <li><a hreflang="en" href="https://github.com/digitalheir/dutch-case-law-to-couchdb"
+	        //    <li><a hrefLang="en" href="https://github.com/digitalheir/dutch-case-law-to-couchdb"
 	        //    >https://github.com/digitalheir/dutch-case-law-to-couchdb</a>
 	        //    </li>
 	        //</ul>
@@ -64977,7 +65024,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(
 	                        'div',
 	                        { itemScope: true,
-	                            id: 'uu',
 	                            itemRef: 'uu',
 	                            itemType: 'https://schema.org/CollegeOrUniversity' },
 	                        _react2.default.createElement(
@@ -64988,6 +65034,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                'span',
 	                                { itemProp: 'name' },
 	                                'Utrecht University'
+	                            ),
+	                            _react2.default.createElement(
+	                                'div',
+	                                { itemProp: 'address', itemScope: true, itemType: 'https://schema.org/PostalAddress' },
+	                                _react2.default.createElement('meta', { itemProp: 'addressCountry', content: 'the Netherlands' }),
+	                                _react2.default.createElement('meta', { itemProp: 'addressLocality', content: 'Utrecht' }),
+	                                _react2.default.createElement('meta', { itemProp: 'postalCode', content: '3584 CS' }),
+	                                _react2.default.createElement('meta', { itemProp: 'addressLocality', content: 'De Uithof' }),
+	                                _react2.default.createElement('meta', { itemProp: 'streetAddress', content: 'Heidelberglaan 8' })
 	                            )
 	                        ),
 	                        _react2.default.createElement(
@@ -65139,13 +65194,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            { id: 'title-page-time' },
 	                            _react2.default.createElement(
 	                                'span',
-	                                { itemScope: true, itemType: 'https://schema.org/Place', itemProp: 'locationCreated' },
-	                                _react2.default.createElement(
-	                                    'span',
-	                                    { itemProp: 'name' },
-	                                    'Utrecht'
-	                                ),
-	                                _react2.default.createElement('link', { rel: 'https://en.wikipedia.org/wiki/Utrecht' })
+	                                { itemScope: true, itemProp: '' },
+	                                'Utrecht'
 	                            )
 	                        ),
 	                        ', ',
