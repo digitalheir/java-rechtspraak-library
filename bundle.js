@@ -22997,7 +22997,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Root2 = _interopRequireDefault(_Root);
 
-	var _Index = __webpack_require__(215);
+	var _Index = __webpack_require__(216);
 
 	var _Index2 = _interopRequireDefault(_Index);
 
@@ -23025,7 +23025,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _ImportingAndTokenizing2 = _interopRequireDefault(_ImportingAndTokenizing);
 
-	var _chapters = __webpack_require__(220);
+	var _chapters = __webpack_require__(215);
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
@@ -23101,6 +23101,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _License2 = _interopRequireDefault(_License);
 
+	var _chapters = __webpack_require__(215);
+
+	var _chapters2 = _interopRequireDefault(_chapters);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -23138,7 +23142,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	            var relativeToRoot = this.props.path.match(/\//g).slice(1).map(function (a) {
 	                return "../";
 	            }).join("");
-
 	            return _react2.default.createElement(
 	                'html',
 	                { lang: 'en' },
@@ -23152,7 +23155,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        null,
 	                        this.props.title
 	                    ),
-	                    _react2.default.createElement('meta', { name: 'description', content: this.props.description }),
+	                    _react2.default.createElement('meta', { name: 'description', content: this.getDescription(this.props.path) }),
 	                    _react2.default.createElement('meta', { name: 'viewport', content: 'width=device-width, initial-scale=1' }),
 	                    _react2.default.createElement('link', { rel: 'apple-touch-icon', href: 'apple-touch-icon.png' }),
 	                    _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Noto+Sans' }),
@@ -23192,6 +23195,28 @@ return /******/ (function(modules) { // webpackBootstrap
 	            // <GoogleAnalytics />
 	            // <script async src={relativeToRoot+'bundle.js'}></script>
 	        }
+	    }, {
+	        key: 'getDescription',
+	        value: function getDescription(path) {
+	            console.log(path);
+	            switch (path) {
+	                case _chapters2.default.introduction.route:
+	                    return 'Introduction to the problem of creating a document structure for documents of Dutch case law using Conditional Random Fields and Probabilistic Context-Free Grammars';
+	                case _chapters2.default.importing.route:
+	                    return 'Chapter on importing and tokenizing Dutch case law documents';
+	                case _chapters2.default.rechtspraakNl.route:
+	                    return 'Chapter on the Rechtspraak.nl open data set';
+	                case _chapters2.default.tagging.route:
+	                    return 'Chapter on macro tagging document elements with a Conditonal Random Field';
+	                case _chapters2.default.documentStructure.route:
+	                    return 'Chapter on creating a section hierarchy for a document with Probabilistic Context-Free Grammars';
+	                case _chapters2.default.conclusion.route:
+	                    return 'Review of results and information on dissemination';
+	                case '/full/':
+	                default:
+	                    return 'MSc thesis about creating structure documents of Dutch case law using Conditional Random Fields and Probabilistic Context-Free Grammars';
+	            }
+	        }
 	    }]);
 
 	    return Root;
@@ -23215,6 +23240,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	Root.propTypes = {
 	    path: _react2.default.PropTypes.string.isRequired
 	};
+
 	exports.default = Root;
 	// Html.propTypes = {
 	//     title: PropTypes.string,
@@ -25628,6 +25654,75 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 215 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	var chapters = {
+	    introduction: {
+	        page: '4',
+	        id: "chapter-introduction",
+	        title: "Introduction",
+	        route: '/introduction/'
+	    },
+	    importing: {
+	        page: '6',
+	        id: "chapter-importing-and-tokenizing",
+	        title: "Importing & Tokenizing Data",
+	        route: '/importing-and-tokenizing/'
+	    },
+	    rechtspraakNl: {
+	        page: 'X',
+	        id: "chapter-rechtspraak-nl",
+	        title: "Rechtspraak.nl Data Set",
+	        route: '/rechtspraak-nl/'
+	    },
+	    tagging: {
+	        page: 12,
+	        id: "tagging",
+	        title: "Tagging Elements",
+	        route: '/tagging/'
+	    },
+	    documentStructure: {
+	        page: 23,
+	        id: "parsing",
+	        title: "Inferring a Section Hierarchy",
+	        route: '/document-structure/'
+	    },
+	    conclusion: {
+	        page: 28,
+	        id: "conclusion",
+	        title: "Conclusion",
+	        route: '/conclusion/'
+	    },
+	    // presentation: {
+	    //     title: "Dissemination",
+	    //     route: '/dissemination/'
+	    // }
+
+	    pathTo: function pathTo(fromPath, toChapter) {
+	        var relativeToRoot = fromPath.match(/\//g).slice(1).map(function (_) {
+	            return "../";
+	        }).join("");
+	        return relativeToRoot + toChapter.route.replace('/', '');
+	    }
+	};
+
+	chapters.inOrder = [chapters.introduction, chapters.importing, chapters.tagging, chapters.documentStructure, chapters.conclusion];
+
+	chapters.inOrder.forEach(function (ch) {
+	    if (!ch) throw new Error("Chapters object contains null or undefined item.");
+	});
+	chapters.inOrder.forEach(function (ch, i) {
+	    return ch.number = i + 1;
+	});
+
+	//console.log(chapters)
+
+	module.exports = chapters;
+
+/***/ },
+/* 216 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25642,19 +25737,19 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _BrowserCheck = __webpack_require__(216);
+	var _BrowserCheck = __webpack_require__(217);
 
 	var _BrowserCheck2 = _interopRequireDefault(_BrowserCheck);
 
-	var _Author = __webpack_require__(217);
+	var _Author = __webpack_require__(218);
 
 	var _Author2 = _interopRequireDefault(_Author);
 
-	var _AbstractContent = __webpack_require__(218);
+	var _AbstractContent = __webpack_require__(219);
 
 	var _AbstractContent2 = _interopRequireDefault(_AbstractContent);
 
-	var _ToC = __webpack_require__(219);
+	var _ToC = __webpack_require__(220);
 
 	var _ToC2 = _interopRequireDefault(_ToC);
 
@@ -25703,6 +25798,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        _react2.default.createElement(_AbstractContent2.default, null)
 	                    ),
 	                    _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        _react2.default.createElement(
+	                            'a',
+	                            { style: { fontSize: 'small', textDecoration: 'underline' }, href: 'full/' },
+	                            'View this thesis as a single page, fit for printing'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
 	                        'section',
 	                        null,
 	                        _react2.default.createElement(
@@ -25723,7 +25827,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Index;
 
 /***/ },
-/* 216 */
+/* 217 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25769,7 +25873,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = BrowserCheck;
 
 /***/ },
-/* 217 */
+/* 218 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -25881,7 +25985,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = AuthorData;
 
 /***/ },
-/* 218 */
+/* 219 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25963,7 +26067,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = AbstractContent;
 
 /***/ },
-/* 219 */
+/* 220 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25978,7 +26082,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _chapters = __webpack_require__(220);
+	var _chapters = __webpack_require__(215);
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
@@ -26128,75 +26232,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	    path: _react2.default.PropTypes.string.isRequired
 	};
 	exports.default = ToC;
-
-/***/ },
-/* 220 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	var chapters = {
-	    introduction: {
-	        page: '4',
-	        id: "chapter-introduction",
-	        title: "Introduction",
-	        route: '/introduction/'
-	    },
-	    importing: {
-	        page: '6',
-	        id: "chapter-importing-and-tokenizing",
-	        title: "Importing & Tokenizing Data",
-	        route: '/importing-and-tokenizing/'
-	    },
-	    rechtspraakNl: {
-	        page: 'X',
-	        id: "chapter-rechtspraak-nl",
-	        title: "Rechtspraak.nl Data Set",
-	        route: '/rechtspraak-nl/'
-	    },
-	    tagging: {
-	        page: 12,
-	        id: "tagging",
-	        title: "Tagging Elements",
-	        route: '/tagging/'
-	    },
-	    documentStructure: {
-	        page: 23,
-	        id: "parsing",
-	        title: "Inferring a Section Hierarchy",
-	        route: '/document-structure/'
-	    },
-	    conclusion: {
-	        page: 28,
-	        id: "conclusion",
-	        title: "Conclusion",
-	        route: '/conclusion/'
-	    },
-	    // presentation: {
-	    //     title: "Dissemination",
-	    //     route: '/dissemination/'
-	    // }
-
-	    pathTo: function pathTo(fromPath, toChapter) {
-	        var relativeToRoot = fromPath.match(/\//g).slice(1).map(function (_) {
-	            return "../";
-	        }).join("");
-	        return relativeToRoot + toChapter.route.replace('/', '');
-	    }
-	};
-
-	chapters.inOrder = [chapters.introduction, chapters.importing, chapters.tagging, chapters.documentStructure, chapters.conclusion];
-
-	chapters.inOrder.forEach(function (ch) {
-	    if (!ch) throw new Error("Chapters object contains null or undefined item.");
-	});
-	chapters.inOrder.forEach(function (ch, i) {
-	    return ch.number = i + 1;
-	});
-
-	//console.log(chapters)
-
-	module.exports = chapters;
 
 /***/ },
 /* 221 */
@@ -26574,7 +26609,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _figs2 = _interopRequireDefault(_figs);
 
-	var _chapters = __webpack_require__(220);
+	var _chapters = __webpack_require__(215);
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
@@ -59633,7 +59668,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Source2 = _interopRequireDefault(_Source);
 
-	var _chapters = __webpack_require__(220);
+	var _chapters = __webpack_require__(215);
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
@@ -61812,7 +61847,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _chapters = __webpack_require__(220);
+	var _chapters = __webpack_require__(215);
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
@@ -61921,11 +61956,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _getSectionComponent2 = _interopRequireDefault(_getSectionComponent);
 
-	var _chapters = __webpack_require__(220);
+	var _chapters = __webpack_require__(215);
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
-	var _ToC = __webpack_require__(219);
+	var _ToC = __webpack_require__(220);
 
 	var _ToC2 = _interopRequireDefault(_ToC);
 
@@ -61991,7 +62026,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _chapters = __webpack_require__(220);
+	var _chapters = __webpack_require__(215);
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
@@ -62482,7 +62517,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _references2 = _interopRequireDefault(_references);
 
-	var _chapters = __webpack_require__(220);
+	var _chapters = __webpack_require__(215);
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
@@ -62800,7 +62835,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _ChapterSectionContent2 = _interopRequireDefault(_ChapterSectionContent);
 
-	var _chapters = __webpack_require__(220);
+	var _chapters = __webpack_require__(215);
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
@@ -64574,7 +64609,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _IntroMotivation2 = _interopRequireDefault(_IntroMotivation);
 
-	var _chapters = __webpack_require__(220);
+	var _chapters = __webpack_require__(215);
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
@@ -64672,11 +64707,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _getSectionComponent = __webpack_require__(221);
 
-	var _chapters = __webpack_require__(220);
+	var _chapters = __webpack_require__(215);
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
-	var _ToC = __webpack_require__(219);
+	var _ToC = __webpack_require__(220);
 
 	var _ToC2 = _interopRequireDefault(_ToC);
 
@@ -64832,7 +64867,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _chapters = __webpack_require__(220);
+	var _chapters = __webpack_require__(215);
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
@@ -64850,11 +64885,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _InferringDocumentStructure2 = _interopRequireDefault(_InferringDocumentStructure);
 
-	var _ToC = __webpack_require__(219);
+	var _ToC = __webpack_require__(220);
 
 	var _ToC2 = _interopRequireDefault(_ToC);
 
-	var _AbstractContent = __webpack_require__(218);
+	var _AbstractContent = __webpack_require__(219);
 
 	var _AbstractContent2 = _interopRequireDefault(_AbstractContent);
 
@@ -65066,7 +65101,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _FeatureSelection2 = _interopRequireDefault(_FeatureSelection);
 
-	var _chapters = __webpack_require__(220);
+	var _chapters = __webpack_require__(215);
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
@@ -65153,7 +65188,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Chapter2 = _interopRequireDefault(_Chapter);
 
-	var _chapters = __webpack_require__(220);
+	var _chapters = __webpack_require__(215);
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
@@ -65230,7 +65265,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Chapter2 = _interopRequireDefault(_Chapter);
 
-	var _chapters = __webpack_require__(220);
+	var _chapters = __webpack_require__(215);
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
@@ -65372,7 +65407,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Chapter2 = _interopRequireDefault(_Chapter);
 
-	var _chapters = __webpack_require__(220);
+	var _chapters = __webpack_require__(215);
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
