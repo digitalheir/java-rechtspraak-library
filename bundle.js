@@ -23138,6 +23138,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                __html: safeStringify(this.props)
 	            };
 
+	            // <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
 	            //if (!this.props.path) throw new Error("Define path");
 	            var relativeToRoot = this.props.path.match(/\//g).slice(1).map(function (a) {
 	                return "../";
@@ -23157,7 +23158,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ),
 	                    _react2.default.createElement('meta', { name: 'description', content: this.getDescription(this.props.path) }),
 	                    _react2.default.createElement('meta', { name: 'viewport', content: 'width=device-width, initial-scale=1' }),
-	                    _react2.default.createElement('link', { rel: 'apple-touch-icon', href: 'apple-touch-icon.png' }),
 	                    _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Noto+Sans' }),
 	                    _react2.default.createElement('link', { rel: 'stylesheet',
 	                        href: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' }),
@@ -23562,7 +23562,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            null,
 	            _react2.default.createElement(
 	                'a',
-	                { href: citation.href },
+	                { hreflang: 'en', href: citation.href },
 	                _react2.default.createElement(
 	                    'span',
 	                    { itemProp: 'name' },
@@ -25634,7 +25634,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    _createClass(License, [{
 	        key: 'render',
 	        value: function render() {
-	            var innerHtml = '<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">' + '<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />' + '</a>' + '<br/>' + '<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">' + _title2.default + '</span>' + ' by ' + '<a ' + 'xmlns:cc="http://creativecommons.org/ns#" ' + 'href="https://github.com/digitalheir/" ' + 'property="cc:attributionName" ' + 'rel="cc:attributionURL">Maarten Trompper</a>' + ' is licensed under a ' + '<a ' + 'rel="license" ' + 'href="http://creativecommons.org/licenses/by/4.0/">' + 'Creative Commons Attribution 4.0 International License' + '</a>' + '.<br />' + 'Based on a work at ' + '<a ' + 'xmlns:dct="http://purl.org/dc/terms/" ' + 'href="https://digitalheir.github.io/java-rechtspraak-library" ' + 'rel="dct:source">https://digitalheir.github.io/java-rechtspraak-library</a>' + '.';
+	            var innerHtml = '<a hreflang="en" rel="license" href="http://creativecommons.org/licenses/by/4.0/">' + '<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />' + '</a>' + '<br/>' + '<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">' + _title2.default + '</span>' + ' by ' + '<a hreflang="en" ' + 'xmlns:cc="http://creativecommons.org/ns#" ' + 'href="https://github.com/digitalheir/" ' + 'property="cc:attributionName" ' + 'rel="cc:attributionURL">Maarten Trompper</a>' + ' is licensed under a ' + '<a hreflang="en" ' + 'rel="license" ' + 'href="http://creativecommons.org/licenses/by/4.0/">' + 'Creative Commons Attribution 4.0 International License' + '</a>' + '.<br />' + 'Based on a work at ' + '<a hreflang="en" ' + 'xmlns:dct="http://purl.org/dc/terms/" ' + 'href="https://digitalheir.github.io/java-rechtspraak-library" ' + 'rel="dct:source">https://digitalheir.github.io/java-rechtspraak-library</a>' + '.';
 	            return _react2.default.createElement('div', { style: { textAlign: 'center' }, dangerouslySetInnerHTML: { __html: innerHtml } });
 	        }
 	    }]);
@@ -25863,7 +25863,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    _createClass(BrowserCheck, [{
 	        key: 'render',
 	        value: function render() {
-	            return _react2.default.createElement('div', { dangerouslySetInnerHTML: { __html: "<!--[if lt IE 8]>" + '<p class="browserupgrade">You are using an ' + '<strong>outdated</strong>' + ' browser. ' + 'Please ' + '<a href="http://browsehappy.com/">upgrade your browser</a>' + ' to improve your experience.</p>' + "<![endif]-->" } });
+	            return _react2.default.createElement('div', { dangerouslySetInnerHTML: { __html: "<!--[if lt IE 8]>" + '<p class="browserupgrade">You are using an ' + '<strong>outdated</strong>' + ' browser. ' + 'Please ' + '<a hreflang="en" href="http://browsehappy.com/">upgrade your browser</a>' + ' to improve your experience.</p>' + "<![endif]-->" } });
 	        }
 	    }]);
 
@@ -25936,7 +25936,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    { id: "github-link", className: "author-line" },
 	                    _react2.default.createElement(
 	                        "a",
-	                        { href: ghUrl,
+	                        { hreflang: "en", href: ghUrl,
 	                            className: "icon no-decoration" },
 	                        _react2.default.createElement(
 	                            "i",
@@ -26034,7 +26034,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'A growing amount of Dutch case law is openly distributed on ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { href: 'http://www.rechtspraak.nl/' },
+	                        { hreflang: 'nl', href: 'http://www.rechtspraak.nl/' },
 	                        'Rechtspraak.nl'
 	                    ),
 	                    '. Currently, many documents are not marked up or marked up only very sparsely, hampering our ability to process these documents automatically.'
@@ -26133,7 +26133,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    { className: this.props.singlePage ? "leaders" : "" },
 	                    this.props.showHome ? _react2.default.createElement(
 	                        'a',
-	                        { href: relativeToRoot },
+	                        { hreflang: 'en', href: relativeToRoot },
 	                        'Home'
 	                    ) : "",
 	                    _chapters2.default.inOrder.map(function (chapter) {
@@ -26159,7 +26159,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                        chapter.title
 	                                    ) : _react2.default.createElement(
 	                                        'a',
-	                                        { itemProp: 'mainEntityOfPage url', href: urlSection,
+	                                        { hreflang: 'en', itemProp: 'mainEntityOfPage url', href: urlSection,
 	                                            className: 'nav-link' },
 	                                        _react2.default.createElement(
 	                                            'span',
@@ -26202,7 +26202,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                { className: 'row' },
 	                                _react2.default.createElement(
 	                                    'a',
-	                                    { itemProp: 'url', href: urlSection + "#" + section.id },
+	                                    { hreflang: 'en', itemProp: 'url', href: urlSection + "#" + section.id },
 	                                    _react2.default.createElement(
 	                                        'span',
 	                                        { itemProp: 'name' },
@@ -26665,7 +26665,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        //                <section>
 	        //                    <h2>Counting terms</h2>
 	        //                    <p>Initial tokenization is performed server-side, using Alpino.</p>
-	        //                    <p>Then, in a MapReduce task we reduce these inflected words to lemmas and count lemma occurrences for each document. We use a<a href="https://github.com/fortnightlabs/snowball-js">Javascript port</a> of the <a href="http://snowball.tartarus.org/algorithms/dutch/stemmer.html">
+	        //                    <p>Then, in a MapReduce task we reduce these inflected words to lemmas and count lemma occurrences for each document. We use a<a hreflang="en" href="https://github.com/fortnightlabs/snowball-js">Javascript port</a> of the <a hreflang="en" href="http://snowball.tartarus.org/algorithms/dutch/stemmer.html">
 	        //                        Snowball stemming algorithm for
 	        //                        Dutch</a>, along with some additional normalization rules which mainly handle special characters (consider,
 	        //                        for example, that <code>'s ochtends</code> represents the same phrase as <code>`s ochtends</code>
@@ -26695,7 +26695,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        //                    <p><code>term_document_count</code> is useful to .</p>    https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation
 	        //                    <p><code>term_token_count</code> is useful when we want to know where a stemmed term comes
 	        //                        from, i.e., its manifestation in the source documents.
-	        //                    </p>    Refer to <a href="http://rechtspraak.cloudant.com/ecli/_design/term_frequency">http://rechtspraak.cloudant.com/ecli/_design/term_frequency</a>    for the implemented design document.
+	        //                    </p>    Refer to <a hreflang="en" href="http://rechtspraak.cloudant.com/ecli/_design/term_frequency">http://rechtspraak.cloudant.com/ecli/_design/term_frequency</a>    for the implemented design document.
 	        //                </section>
 	        value: function render() {
 
@@ -45559,19 +45559,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    null,
 	                    _react2.default.createElement(
 	                        'a',
-	                        { href: 'http://www.rechtspraak.nl/' },
+	                        { hreflang: 'nl', href: 'http://www.rechtspraak.nl/' },
 	                        'Rechtspraak.nl'
 	                    ),
 	                    ' is the official website of the Dutch judiciary. The website hosts an open data portal for Dutch case law, containing metadata for about 2 million court judgments',
-	                    _react2.default.createElement(_Source2.default, { href: 'http://data.rechtspraak.nl/uitspraken/zoeken?' }),
+	                    _react2.default.createElement(_Source2.default, { hreflang: 'nl', href: 'http://data.rechtspraak.nl/uitspraken/zoeken?' }),
 	                    ' and judgment texts for about 350.000 judgments in ',
 	                    _abbreviations2.default.xml,
 	                    _react2.default.createElement(_Source2.default, {
-	                        href: 'http://data.rechtspraak.nl/uitspraken/zoeken?return=doc' }),
+	                        hreflang: 'nl', href: 'http://data.rechtspraak.nl/uitspraken/zoeken?return=doc' }),
 	                    '. In this thesis, we only consider those documents that contain text. The full data set of ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { href: 'http://www.rechtspraak.nl/' },
+	                        { hreflang: 'nl', href: 'http://www.rechtspraak.nl/' },
 	                        'Rechtspraak.nl'
 	                    ),
 	                    ' court judgments contains only a fraction of all court judgments that exist in the Netherlands, but the collection is curated so that it is representative of all case law in the Netherlands.'
@@ -54632,7 +54632,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ' elements. Stemming is performed using the ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { href: 'http://snowball.tartarus.org/algorithms/dutch/stemmer.html' },
+	                        { hreflang: 'en', href: 'http://snowball.tartarus.org/algorithms/dutch/stemmer.html' },
 	                        'Snowball algorithm for Dutch'
 	                    ),
 	                    '.'
@@ -55244,7 +55244,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ' word stems in occurring section titles. Percentages are the percentage of titles texts that the word stem occurs in. Stemming is performed using the ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { href: 'http://snowball.tartarus.org/algorithms/dutch/stemmer.html' },
+	                        { hreflang: 'en', href: 'http://snowball.tartarus.org/algorithms/dutch/stemmer.html' },
 	                        'Snowball algorithm for Dutch'
 	                    ),
 	                    '.'
@@ -55413,7 +55413,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ' is \'section titles\'). Stemming is performed using the ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { href: 'http://snowball.tartarus.org/algorithms/dutch/stemmer.html' },
+	                        { hreflang: 'en', href: 'http://snowball.tartarus.org/algorithms/dutch/stemmer.html' },
 	                        'Snowball algorithm for Dutch'
 	                    ),
 	                    '. \'[NUMBER]\' and \'[de|het|een]\' are special classes for numbers and grammatical articles (i.e. the Dutch equivalent of the articles \'the\' and \'a\').'
@@ -55625,7 +55625,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ' tf-idf scores for stemmed words in section titles, per section role. Stemming is performed using the ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { href: 'http://snowball.tartarus.org/algorithms/dutch/stemmer.html' },
+	                        { hreflang: 'en', href: 'http://snowball.tartarus.org/algorithms/dutch/stemmer.html' },
 	                        'Snowball algorithm for Dutch'
 	                    ),
 	                    '. \'[NUMBER]\', \'[PUNCTUATION]\' and \'[de|het|een]\' are special classes for numbers, punctation, and grammatical articles (the Dutch equivalent of the articles \'the\' and \'a\').'
@@ -55957,7 +55957,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                'Regarding importing, we have created a separate library for mirroring the Rechtspraak.nl corpus from the web service to a CouchDB database. We mirror the data set in order to facilitate the collection of statistics of case law documents used in this thesis through MapReduce computations. Source code for this project is available ',
 	                _react2.default.createElement(
 	                    'a',
-	                    { className: 'print-url',
+	                    { hreflang: 'en', className: 'print-url',
 	                        href: 'https://github.com/digitalheir/dutch-case-law-to-couchdb' },
 	                    'on GitHub'
 	                ),
@@ -56223,7 +56223,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        'One library for mirroring the Rechtspraak.nl corpus to a CouchDB database, ',
 	                        _react2.default.createElement(
 	                            'a',
-	                            { className: 'print-url',
+	                            { hreflang: 'en', className: 'print-url',
 	                                href: 'https://github.com/digitalheir/dutch-case-law-to-couchdb' },
 	                            'on GitHub'
 	                        )
@@ -56243,7 +56243,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        'A Java library for converting XML to JSON, ',
 	                        _react2.default.createElement(
 	                            'a',
-	                            { className: 'print-url',
+	                            { hreflang: 'en', className: 'print-url',
 	                                href: 'https://github.com/digitalheir/java-xml-to-json' },
 	                            'on GitHub'
 	                        )
@@ -56254,7 +56254,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        'A Probabilistic Earley Parser for Java, ',
 	                        _react2.default.createElement(
 	                            'a',
-	                            { className: 'print-url',
+	                            { hreflang: 'en', className: 'print-url',
 	                                href: 'https://github.com/digitalheir/java-probabilistic-earley-parser' },
 	                            'on GitHub'
 	                        )
@@ -56479,7 +56479,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'Using this schema, we can utilize a technology called ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { href: 'https://en.wikipedia.org/wiki/Java_Architecture_for_XML_Binding' },
+	                        { hreflang: 'en', href: 'https://en.wikipedia.org/wiki/Java_Architecture_for_XML_Binding' },
 	                        'JAXB'
 	                    ),
 	                    ' to automatically marshall and demarshall Rechtspraak.nl ',
@@ -56487,7 +56487,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ' documents to and from Java objects. Source code and schema are available ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { className: 'print-url', href: 'https://github.com/digitalheir/java-rechtspraak-library' },
+	                        { hreflang: 'en', className: 'print-url', href: 'https://github.com/digitalheir/java-rechtspraak-library' },
 	                        'on Github'
 	                    ),
 	                    '.'
@@ -59718,7 +59718,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            null,
 	                            _react2.default.createElement(
 	                                'a',
-	                                { href: _chapters2.default.pathTo(this.props.path, _chapters2.default.importing) + "#" + _sections2.default.importing.id },
+	                                { hreflang: 'en', href: _chapters2.default.pathTo(this.props.path, _chapters2.default.importing) + "#" + _sections2.default.importing.id },
 	                                'Importing documents from the Rechtspraak.nl web service;'
 	                            )
 	                        ),
@@ -59727,7 +59727,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            null,
 	                            _react2.default.createElement(
 	                                'a',
-	                                { href: _chapters2.default.pathTo(this.props.path, _chapters2.default.importing) + "#" + _sections2.default.importing.id },
+	                                { hreflang: 'en', href: _chapters2.default.pathTo(this.props.path, _chapters2.default.importing) + "#" + _sections2.default.importing.id },
 	                                'Tokenizing relevant text elements;'
 	                            )
 	                        ),
@@ -59736,7 +59736,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            null,
 	                            _react2.default.createElement(
 	                                'a',
-	                                { href: _chapters2.default.pathTo(this.props.path, _chapters2.default.tagging) },
+	                                { hreflang: 'en', href: _chapters2.default.pathTo(this.props.path, _chapters2.default.tagging) },
 	                                'Labeling these text elements with their respective roles (i.e. ',
 	                                _react2.default.createElement(
 	                                    'code',
@@ -59769,7 +59769,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            null,
 	                            _react2.default.createElement(
 	                                'a',
-	                                { href: _chapters2.default.pathTo(this.props.path, _chapters2.default.documentStructure) },
+	                                { hreflang: 'en', href: _chapters2.default.pathTo(this.props.path, _chapters2.default.documentStructure) },
 	                                'Combining the tokens in such a way that they represent the most likely section hierarchy'
 	                            )
 	                        ),
@@ -59786,7 +59786,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'Tasks 1 and 2 are theoretically straightforward and mostly a problem of implementation, and the following chapter touches on both of these subjects briefly, mostly through a specification of the data set of court judgments from ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { href: 'http://www.rechspraak.nl' },
+	                        { hreflang: 'nl', href: 'http://www.rechspraak.nl' },
 	                        'Rechtspraak.nl'
 	                    ),
 	                    '.'
@@ -60167,7 +60167,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ' can be represented as a graph, called a ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { href: 'https://en.wikipedia.org/wiki/Factor_graph' },
+	                        { hreflang: 'en', href: 'https://en.wikipedia.org/wiki/Factor_graph' },
 	                        'factor graph'
 	                    ),
 	                    ', which is illustrated in ',
@@ -60180,7 +60180,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'Factor graphs are ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { className: 'wiki', href: 'https://en.wikipedia.org/wiki/Bipartite_graph' },
+	                        { hreflang: 'en', className: 'wiki', href: 'https://en.wikipedia.org/wiki/Bipartite_graph' },
 	                        'bipartite graphs'
 	                    ),
 	                    ' ',
@@ -60904,7 +60904,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ', we can efficiently compute the Viterbi sequence through a dynamic programming algorithm called the Viterbi algorithm, which is very similar to the ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { href: 'https://en.wikipedia.org/wiki/Forward%E2%80%93backward_algorithm' },
+	                        { hreflang: 'en', href: 'https://en.wikipedia.org/wiki/Forward%E2%80%93backward_algorithm' },
 	                        'forward-backward algorithm'
 	                    ),
 	                    '.'
@@ -62068,7 +62068,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'In the ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { href: urlToIntrochapter },
+	                        { hreflang: 'en', href: urlToIntrochapter },
 	                        'previous chapter'
 	                    ),
 	                    ', we developed a way to import Rechtspraak.nl ',
@@ -62456,7 +62456,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'In the following, we provide a definition of Linear-Chain Conditional Random Fields, supported first by an introductory section on Directed Graphical Models, and specifically the conceptually simpler ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { href: '#hmm' },
+	                        { hreflang: 'en', href: '#hmm' },
 	                        'Hidden Markov Models'
 	                    ),
 	                    '. For a more thorough tutorial into ',
@@ -62597,7 +62597,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'Based on the metrics and observations on the data set from the ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { href: rsMarkupUrl },
+	                        { hreflang: 'en', href: rsMarkupUrl },
 	                        'previous chapter'
 	                    ),
 	                    ', we define about 250 binary features for our automatic tagger. The most prominent ones include:'
@@ -63067,13 +63067,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ', with the common operations of multiplication and addition, but in implementation we use the ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { href: 'http://www.johndcook.com/blog/2014/02/26/log-semiring/' },
+	                        { hreflang: 'en', href: 'http://www.johndcook.com/blog/2014/02/26/log-semiring/' },
 	                        'Log semiring'
 	                    ),
 	                    ' to avoid ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { href: 'https://en.wikipedia.org/wiki/Arithmetic_underflow' },
+	                        { hreflang: 'en', href: 'https://en.wikipedia.org/wiki/Arithmetic_underflow' },
 	                        'arithmetic underflow'
 	                    ),
 	                    '.'
@@ -64649,7 +64649,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        //     In this chapter, we introduce the problem
 	        //     of automatically assigning a section hierarchy
 	        //     to documents in the Dutch case law repository
-	        //     of <a href="http://www.rechtspraak.nl/">Rechtspraak.nl</a> and why this is
+	        //     of <a hreflang="en" href="http://www.rechtspraak.nl/">Rechtspraak.nl</a> and why this is
 	        //     useful.
 	        // </p>
 	        value: function render() {
@@ -64797,7 +64797,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            'Next chapter: ',
 	                            _react2.default.createElement(
 	                                'a',
-	                                { href: _chapters2.default.pathTo(this.props.path, chapter) },
+	                                { hreflang: 'en', href: _chapters2.default.pathTo(this.props.path, chapter) },
 	                                chapter.title
 	                            )
 	                        );
@@ -64830,7 +64830,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                { className: 'link-to- home' },
 	                _react2.default.createElement(
 	                    'a',
-	                    { href: relativeToRoot },
+	                    { hreflang: 'en', href: relativeToRoot },
 	                    'Back to home'
 	                )
 	            );
@@ -64920,10 +64920,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	        //    The source code referred to in this thesis can be found in two repositories on GitHub:
 	        //</p>
 	        //<ul>
-	        //    <li><a href="https://github.com/digitalheir/java-rechtspraak-library"
+	        //    <li><a hreflang="en" href="https://github.com/digitalheir/java-rechtspraak-library"
 	        //    >https://github.com/digitalheir/java-rechtspraak-library</a>
 	        //    </li>
-	        //    <li><a href="https://github.com/digitalheir/dutch-case-law-to-couchdb"
+	        //    <li><a hreflang="en" href="https://github.com/digitalheir/dutch-case-law-to-couchdb"
 	        //    >https://github.com/digitalheir/dutch-case-law-to-couchdb</a>
 	        //    </li>
 	        //</ul>
