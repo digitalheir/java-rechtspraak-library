@@ -25155,7 +25155,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            full: "Bradley, Joseph K and Guestrin, Carlos"
 	        },
 	        booktitle: "Proceedings of the 27th International Conference on Machine Learning (ICML-10)",
-	        pages: "127—134",
+	        pages: "127‑134",
 	        year: 2010,
 	        href: 'http://select.cs.cmu.edu/publications/paperdir/icml2010-bradley-guestrin.pdf'
 	    },
@@ -25168,7 +25168,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            full: 'Zhu, Muhua and Zhang, Yue and Chen, Wenliang and Zhang, Min and Zhu, Jingbo'
 	        },
 	        booktitle: 'ACL (1)',
-	        pages: '434—443',
+	        pages: '434‑443',
 	        year: 2013,
 	        href: 'http://www.aclweb.org/anthology/P13-1043.pdf'
 	    },
@@ -25181,7 +25181,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        },
 	        booktitle: "Proceedings of the second meeting of the North American Chapter of the Association for Computational Linguistics on Language technologies",
 	        organization: 'Association for Computational Linguistics',
-	        pages: "1—8",
+	        pages: "1‑8",
 	        href: 'https://www.hlp.rochester.edu/resources/workshop_materials/EVELIN12/Hale01_NAACL_probabilistic%20early%20parser_N01-1021.pdf',
 	        year: 2001
 	    },
@@ -25194,7 +25194,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            full: 'Abolhassani, Mohammad and Fuhr, Norbert and Gövert, Norbert'
 	        },
 	        booktitle: 'Intelligent Search on XML Data',
-	        pages: '159—174',
+	        pages: '159‑174',
 	        year: 2003,
 	        publisher: 'Springer',
 	        href: 'http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.83.465&rep=rep1&type=pdf'
@@ -25209,7 +25209,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        },
 	        booktitle: 'Proceedings of the eighteenth international conference on machine learning, ICML',
 	        volume: '1',
-	        pages: '282—289',
+	        pages: '282‑289',
 	        year: 2001,
 	        href: 'http://nlp.cs.nyu.edu/nycnlp/lafferty01conditional.pdf'
 	    },
@@ -25222,7 +25222,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            lastName: 'Burr'
 	        },
 	        booktitle: 'Proceedings of the International Joint Workshop on Natural Language Processing in Biomedicine and its Applications',
-	        pages: '104—107',
+	        pages: '104‑107',
 	        year: 2004,
 	        href: 'http://burrsettles.com/pub/settles.nlpba04.pdf',
 	        organization: 'Association for Computational Linguistics'
@@ -25236,7 +25236,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            full: 'Sha, Fei and Pereira, Fernando'
 	        },
 	        booktitle: 'Proceedings of the 2003 Conference of the North American Chapter of the Association for Computational Linguistics on Human Language Technology-Volume 1',
-	        pages: '134—141',
+	        pages: '134‑141',
 	        year: 2003,
 	        href: 'http://www-bcf.usc.edu/~feisha/pubs/shallow03.pdf',
 	        organization: 'Association for Computational Linguistics'
@@ -25251,7 +25251,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        },
 	        journal: 'Large Scale Inverse Problems, Radon Ser. Comput. Appl. Math',
 	        volume: '13',
-	        pages: '181—203',
+	        pages: '181‑203',
 	        year: '2012'
 	    },
 	    nocedal1980updating: {
@@ -25264,7 +25264,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        journal: 'Mathematics of computation',
 	        volume: '35',
 	        number: '151',
-	        pages: '773—782',
+	        pages: '773‑782',
 	        year: '1980'
 	    },
 	    collins1997three: {
@@ -25275,7 +25275,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            lastName: 'Collins'
 	        },
 	        booktitle: "Proceedings of the 35th Annual Meeting of the Association for Computational Linguistics and Eighth Conference of the European Chapter of the Association for Computational Linguistics",
-	        pages: "16—23",
+	        pages: "16‑23",
 	        organization: 'Association for Computational Linguistics',
 	        year: 1997, href: 'http://www.aclweb.org/anthology/P/P97/P97-1003.pdf'
 	    },
@@ -25288,7 +25288,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            full: 'Abney, Steven and Flickenger, S and Gdaniec, Claudia and Grishman, C and Harrison, Philip and Hindle, Donald and Ingria, Robert and Jelinek, Frederick and Klavans, Judith and Liberman, Mark and others'
 	        },
 	        booktitle: 'Proceedings of the workshop on Speech and Natural Language',
-	        pages: '306—311',
+	        pages: '306‑311',
 	        year: 1991,
 	        organization: 'Association for Computational Linguistics',
 	        href: 'http://www.aclweb.org/anthology/H/H91/H91-1060.pdf'
@@ -25303,7 +25303,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        journal: 'Nucleic acids research',
 	        volume: '22',
 	        number: '23',
-	        pages: '5112—5120',
+	        pages: '5112‑5120',
 	        year: 1994,
 	        publisher: 'Oxford University Press',
 	        href: 'http://nar.oxfordjournals.org/content/22/23/5112.full.pdf?related-urls=yes&legid=nar;22/23/5112'
@@ -25331,7 +25331,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        journal: 'Information and control',
 	        volume: '10',
 	        number: '2',
-	        pages: '189—208',
+	        pages: '189‑208',
 	        year: 1967,
 	        publisher: 'Elsevier',
 	        href: 'http://www.sciencedirect.com/science/article/pii/S001999586780007X',
@@ -25372,7 +25372,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        journal: 'Information Sciences',
 	        volume: '3',
 	        number: '3',
-	        pages: '201—224',
+	        pages: '201‑224',
 	        year: 1971,
 	        publisher: 'Elsevier',
 	        href: 'http://dx.doi.org/10.1016/S0020-0255(71)80007-5'
@@ -25387,7 +25387,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        },
 	        journal: 'Informatica Didactica',
 	        volume: '8',
-	        pages: '2008—2010',
+	        pages: '2008‑2010',
 	        year: 2009, href: 'http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.378.2875&rep=rep1&type=pdf'
 	    },
 	    cocke1969programming: {
@@ -25430,7 +25430,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        },
 	        booktitle: "ICML",
 	        volume: "17",
-	        pages: "591—598",
+	        pages: "591‑598",
 	        year: 2000,
 	        href: "http://cseweb.ucsd.edu/~elkan/254spring02/gidofalvi.pdf"
 	    },
@@ -25467,7 +25467,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        journal: 'ELECTRON. PUBL.',
 	        volume: '2',
 	        number: '4',
-	        pages: '211—229',
+	        pages: '211‑229',
 	        year: 1989,
 	        href: 'http://cgis.cs.umd.edu/~ben/papers/Furuta1989Automatically.pdf'
 	    },
@@ -25480,7 +25480,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            full: 'Bacci, Lorenzo and Spinosa, Pierluigi and Marchetti, Carlo and Battistoni, Roberto and Florence, I and Senate, I and Rome, I'
 	        },
 	        booktitle: 'Proc. of LOAIT Workshop',
-	        pages: '45—54',
+	        pages: '45‑54',
 	        year: 2009,
 	        href: 'http://ceur-ws.org/Vol-465/paper6.pdf'
 	    },
@@ -25492,7 +25492,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        journal: 'IEEE transactions on signal processing',
 	        volume: '44',
 	        number: '11',
-	        pages: '2746—2756',
+	        pages: '2746‑2756',
 	        year: '1996',
 	        href: 'http://dx.doi.org/10.1109/78.542181',
 	        publisher: 'IEEE'
@@ -25506,7 +25506,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            full: "Sutton, Charles and McCallum, Andrew"
 	        },
 	        journal: "Introduction to statistical relational learning",
-	        pages: "93—128",
+	        pages: "93‑128",
 	        year: 2006, href: 'https://people.cs.umass.edu/~mccallum/papers/crf-tutorial.pdf',
 	        publisher: "MIT press"
 	    },
@@ -25519,7 +25519,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            abbr: "Finkel et al."
 	        },
 	        journal: "Proceedings of the International Joint Workshop on Natural Language Processing in Biomedicine and its Applications",
-	        pages: "88—91",
+	        pages: "88‑91",
 	        year: 2004, href: 'http://nlp.stanford.edu/~manning/papers/bionlp-camera.pdf',
 	        publisher: "Association for Computational Linguistics"
 	    },
@@ -25532,7 +25532,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            abbr: "Klinger et al."
 	        },
 	        journal: "RANLP", href: 'http://www.aclweb.org/anthology/R/R09/R09-1035.pdf',
-	        pages: "185—191",
+	        pages: "185‑191",
 	        year: 2009
 	    },
 	    krishnan2006effective: {
@@ -25544,7 +25544,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            abbr: "Krishnan et al."
 	        },
 	        journal: "Proceedings of the 21st International Conference on Computational Linguistics and the 44th annual meeting of the Association for Computational Linguistics",
-	        pages: "1121-1128",
+	        pages: "1121‑1128",
 	        year: 2006, href: 'http://i.stanford.edu/~kvijay/krishnan-manning-colacl06sub.pdf',
 	        publisher: "Association for Computational Linguistics"
 	    }
@@ -25562,7 +25562,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	//        full: "Sutton, Charles and McCallum, Andrew"
 	//    },
 	//    journal: "Introduction to statistical relational learning",
-	//    pages: "93—128",
+	//    pages: "93‑128",
 	//    year: 2006,
 	//    publisher: "MIT press"
 	//}
@@ -26155,19 +26155,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	        route: '/rechtspraak-nl/'
 	    },
 	    tagging: {
-	        page: '13',
+	        page: 12,
 	        id: "tagging",
 	        title: "Tagging Elements",
 	        route: '/tagging/'
 	    },
 	    documentStructure: {
-	        page: 22,
+	        page: 23,
 	        id: "parsing",
 	        title: "Inferring a Section Hierarchy",
 	        route: '/document-structure/'
 	    },
 	    conclusion: {
-	        page: 27,
+	        page: 28,
 	        id: "conclusion",
 	        title: "Conclusion",
 	        route: '/conclusion/'
@@ -55857,7 +55857,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	var rsSections = {
 	    xmlSchema: {
-	        page: '11',
+	        page: '10',
 	        id: 'xml-schema',
 	        title: "XML Schema"
 	    }
@@ -56510,22 +56510,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	var taggingSections = {
 	    taggingIntroduction: {
-	        page: 13,
+	        page: 12,
 	        id: 'tagging-introduction',
 	        title: 'Introduction'
 	    },
 	    taggingMethods: {
-	        page: 13,
+	        page: 12,
 	        id: 'tagging-methods',
 	        title: 'Methods'
 	    },
 	    taggingResults: {
-	        page: 20,
+	        page: 19,
 	        id: 'tagging-evaluation',
 	        title: 'Results'
 	    },
 	    taggingDiscussion: {
-	        page: 21,
+	        page: 22,
 	        id: 'tagging-discussion',
 	        title: 'Discussion'
 	    }
@@ -56545,7 +56545,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	var crfSections = {
 	    regularization: {
-	        page: 17,
+	        page: 18,
 	        id: 'regularization',
 	        title: 'Regularization'
 	    }
@@ -56566,17 +56566,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	var disseminationSections = {
 	    parseval: {
-	        page: 25,
+	        page: 26,
 	        id: 'parseval',
 	        title: 'PARSEVAL'
 	    },
 	    results: {
-	        page: 25,
+	        page: 26,
 	        id: 'parsing-results',
 	        title: 'Results'
 	    },
 	    futureWork: {
-	        page: 25,
+	        page: -666,
 	        id: 'future-work',
 	        title: 'Future Work'
 	    }
@@ -59142,7 +59142,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	var disseminationSections = {
 	    fScores: {
-	        page: 20,
+	        page: 19,
 	        id: 'f-scores',
 	        title: 'F-scores'
 	    },
@@ -59454,12 +59454,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	    //     component: Methods
 	    // },
 	    crf: {
-	        page: '14',
+	        page: '13',
 	        id: 'crf',
 	        title: "Conditional Random Fields"
 	    },
 	    featureSelection: {
-	        page: '13',
+	        page: '12',
 	        id: 'features',
 	        title: 'Features'
 	    },
@@ -59489,22 +59489,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	var inferringSections = {
 	    intro: {
-	        page: 22,
+	        page: 23,
 	        id: 'parse-tree-introduction',
 	        title: "Introduction"
 	    },
 	    methods: {
-	        page: 22,
+	        page: 23,
 	        id: 'parse-tree-methods',
 	        title: "Methods"
 	    },
 	    evaluation: {
-	        page: 25,
+	        page: 26,
 	        id: 'parse-tree-evaluation',
 	        title: 'Results'
 	    },
 	    discussion: {
-	        page: 26,
+	        page: 27,
 	        id: 'parse-discussion',
 	        title: 'Discussion'
 	    }
@@ -59524,12 +59524,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	var methodsSections = {
 	    scfg: {
-	        page: 22,
+	        page: 23,
 	        id: 'pcfg',
 	        title: 'Probabilistic Context-Free Grammars'
 	    },
 	    cyk: {
-	        page: 23,
+	        page: 24,
 	        id: 'cyk',
 	        title: 'CYK Algorithm'
 	    }
@@ -59549,21 +59549,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	var crfSections = {
 	    undirectedGraphicalModels: {
-	        page: '15',
+	        page: 14,
 	        id: 'undirected-graphical-models',
 	        title: 'Undirected Graphical Models'
 	    },
 	    hmm: {
-	        page: 15,
+	        page: 14,
 	        id: 'hmm',
 	        title: 'Directed Graphical Models'
-	    }, generativeDiscriminative: {
+	    },
+	    generativeDiscriminative: {
 	        page: 16,
 	        id: 'generative-discriminative',
 	        title: 'Generative-Discriminative Pairs'
 	    },
 	    linearChain: {
-	        page: 17,
+	        page: 16,
 	        id: 'linear-chain-crf',
 	        title: 'Linear-Chain Conditional Random Fields'
 	    },
@@ -59573,12 +59574,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	        title: 'Performance'
 	    },
 	    inference: {
-	        page: 19,
+	        page: 18,
 	        id: 'crf-inference',
 	        title: 'Inference'
 	    },
 	    parameterEstimation: {
-	        page: 18,
+	        page: 17,
 	        id: 'crf-parameter-estimation',
 	        title: 'Parameter Estimation'
 	    }
@@ -60632,9 +60633,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        'li',
 	                        null,
 	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'F=\\{\\Phi_1, \\ldots\\Phi_k\\}' })),
-	                        ' be a set of local functions from variables (observation and labels) to the real numbers, where each ',
+	                        ' be a set of local functions from variables (observation and labels) to the real numbers: ',
 	                        _react2.default.createElement(_Math2.default, {
-	                            l: '\\Phi_t: \\left\\{x_t, y_t, y_{t-1}\\right\\} \\rightarrow \\mathbb{R}^+' }),
+	                            l: 'V \\rightarrow\\ \\mathbb{R}^+' }),
 	                        '.'
 	                    )
 	                ),
@@ -63871,7 +63872,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            null,
 	                            'S'
 	                        ),
-	                        ' are marked in bold. The top of the triangle represents the substring ',
+	                        ' are underlined. The top of the triangle represents the substring ',
 	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '1' })),
 	                        ' to ',
 	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '4' })),
@@ -64524,11 +64525,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	var disseminationSections = {
 	    futureWork: {
-	        page: 27,
+	        page: 28,
 	        id: 'future-work',
 	        title: 'Future Work'
 	    }, dissemination: {
-	        page: 27,
+	        page: 28,
 	        id: 'dissemination',
 	        title: 'Dissemination'
 	    }

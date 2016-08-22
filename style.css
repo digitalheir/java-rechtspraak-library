@@ -1067,10 +1067,13 @@ abbr[title] {
     body {
         padding: 0.0in;
         font-size: 10pt;
-        color: #444;
+        color: #333;
+    }
+    .katex {
+        color: #111;
     }
     a, a:visited {
-        color: #444;
+        color: #333;
     }
     h1, h2, h3, h4, h5, h6 {}
 }
@@ -1138,7 +1141,8 @@ abbr[title] {
     color: #333;
 }
 #fig-parsing-triangle .bold {
-    font-weight: bolder;
+    //font-weight: bolder;
+    text-decoration: underline;
 }
 #fig-parsing-triangle .table-container {
     position: relative;
