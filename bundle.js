@@ -25914,7 +25914,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            //<meta content={ghUrl}/>
 	            return _react2.default.createElement(
 	                "div",
-	                { itemProp: "author copyrightHolder", itemScope: true,
+	                { itemProp: "author copyrightHolder", id: "maarten-trompper", itemScope: true,
 	                    itemType: "https://schema.org/Person", className: "author-data" },
 	                _react2.default.createElement(
 	                    "div",
@@ -64977,6 +64977,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(
 	                        'div',
 	                        { itemScope: true,
+	                            id: 'uu',
 	                            itemRef: 'uu',
 	                            itemType: 'https://schema.org/CollegeOrUniversity' },
 	                        _react2.default.createElement(
