@@ -533,10 +533,45 @@ textarea {
  * Media queries breakpoints
  * -------------------------------------------------------------------------- */
 .chapter {
+    counter-reset: maths;
+}
+.math.block {
+    position: relative;
+    display: block;
+}
+.math.block .math-numbering {
+    font-size: x-small;
+    position: absolute;
+    display: block;
+    left: 100%;
+    bottom: 0;
+    top: 0;
+}
+.math.block .math-numbering .math-numbering-content {
+    vertical-align: middle;
+}
+.math.block .math-numbering .math-numbering-content::after {
+    counter-increment: maths;
+    display: inline;
+    height: 100%;
+    line-height: 100%;
+    content: counter(maths) "";
+}
+.math.block .math-numbering::before {
+    content: '\200B';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.chapter {
     page-break-after: always;
+}
+#generative-discriminative {
+    page-break-inside: avoid;
 }
 div.full-thesis {
     counter-reset: subsect;
+    page-break-after: always;
 }
 div.full-thesis .leaders li .row {
     background: white;
@@ -570,23 +605,38 @@ div.full-thesis .numbered-section .title::before {
     font-size: 0.8em;
     //line-height: 1em;
 }
-#rechtspraak-nl-data-set .desc-title, #rechtspraak-nl-data-set .desc-section, #rechtspraak-nl-data-set .desc-info {
+.avoid-page-break {
+    page-break-inside: avoid;
+}
+.section-content {
+    page-break-before: avoid;
+}
+caption {
+    page-break-after: avoid;
+}
+#rechtspraak-nl-data-set .desc {
     list-style: none;
 }
-#rechtspraak-nl-data-set .desc-title:before, #rechtspraak-nl-data-set .desc-section:before, #rechtspraak-nl-data-set .desc-info:before {
+#rechtspraak-nl-data-set .desc p:first-child {
+    page-break-before: avoid;
+}
+#rechtspraak-nl-data-set .desc:before {
+    page-break-after: avoid;
+}
+#rechtspraak-nl-data-set .desc.title:before, #rechtspraak-nl-data-set .desc.section:before, #rechtspraak-nl-data-set .desc.info:before {
     font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
     color: #333;
     font-size: 12px;
     font-weight: bold;
 }
-#rechtspraak-nl-data-set .desc-title:before {
+#rechtspraak-nl-data-set .desc.title:before {
     content: 'title';
 }
-#rechtspraak-nl-data-set .desc-section:before {
+#rechtspraak-nl-data-set .desc.section:before {
     page-break-after: avoid;
     content: 'section';
 }
-#rechtspraak-nl-data-set .desc-info:before {
+#rechtspraak-nl-data-set .desc.info:before {
     content: '*.info';
 }
 #title-page {
@@ -624,7 +674,10 @@ figure {
 .nopadding {
     padding: 0;
 }
-#tbl-confusion-matrix th, #tbl-confusion-matrix td {
+.tbl-confusion-matrix {
+    page-break-inside: avoid;
+}
+.tbl-confusion-matrix th, .tbl-confusion-matrix td {
     border: none;
 }
 #fig-tfidf-sections .perc-text {
@@ -871,10 +924,17 @@ hr {
     display: none;
 }
 @media print {
+    #reference-list {
+        margin-bottom: 0;
+    }
     .print-spacer {
         display: block;
         height: 5em;
         width: 100%;
+    }
+    .math.block .math-numbering {
+        left: auto;
+        right: 0;
     }
 }
 @media print, screen and (max-width: 960px) {
@@ -1058,6 +1118,9 @@ abbr[title] {
 .inline-citation {
     color: "#4E4E4E";
 }
+.inline-citation .pages {
+    page-break-inside: avoid;
+}
 .axis path, .axis line {
     fill: none;
     stroke: #000;
@@ -1073,6 +1136,9 @@ abbr[title] {
 }
 .katex {
     color: #333;
+}
+#fig-parsing-triangle .bold {
+    font-weight: bolder;
 }
 #fig-parsing-triangle .table-container {
     position: relative;
@@ -1167,7 +1233,7 @@ abbr[title] {
     text-indent: 2px;
 }
 .tree-map .node:hover {
-    background: beige !important;
+    background: white !important;
     min-width: 65px !important;
     height: auto !important;
     z-index: 9999 !important;
@@ -1207,12 +1273,12 @@ abbr[title] {
     background: white;
 }
 .toc .nr {
+    float: right;
+    background: white;
     font-size: 11px;
 }
 .toc ol.leaders .row span + span {
-    float: right;
     padding-left: 0.33em;
-    background: white;
 }
 .toc ol {
     /* Creates a new instance of the section counter with each ol
