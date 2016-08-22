@@ -26185,6 +26185,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        value: function getSubSections(chapter, urlSection, depth, singlePage) {
 	            if (chapter.getSections && chapter.getSections()) {
 	                // console.log(chapter.getSections());
+	                // itemProp={"pageStart":''}
 	                return _react2.default.createElement(
 	                    'ol',
 	                    null,
@@ -26211,7 +26212,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                ),
 	                                singlePage ? _react2.default.createElement(
 	                                    'span',
-	                                    { itemProp: 'pageStart', className: 'nr' },
+	                                    { className: 'nr' },
 	                                    section.page
 	                                ) : ''
 	                            ),
@@ -26547,7 +26548,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	        if (!section || !section.id) throw new Error("Subsection was invalid: " + section);
 	        var SectionContent = getHandler(section.id);
 
-	        var header = _react2.default.createElement("h" + headerLevel, { className: "title" }, _react2.default.createElement('a', { className: 'link-up', href: '#' }), section.title);
+	        var header = _react2.default.createElement("h" + headerLevel, { className: "title" }, _react2.default.createElement('a', { className: 'link-up', href: '#' }), _react2.default.createElement(
+	            'span',
+	            { itemProp: 'name' },
+	            'section.title'
+	        ));
 	        var subsubsections = '';
 	        if (!!SectionContent.getSections) {
 	            var getSubSubsections = getSubSections(props, headerLevel + 1);
@@ -45562,8 +45567,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        { hreflang: 'nl', href: 'http://www.rechtspraak.nl/' },
 	                        'Rechtspraak.nl'
 	                    ),
-	                    ' is the official website of the Dutch judiciary. The website hosts an open data portal for Dutch case law, containing metadata for about 2 million court judgments',
-	                    _react2.default.createElement(_Source2.default, { hreflang: 'nl', href: 'http://data.rechtspraak.nl/uitspraken/zoeken?' }),
+	                    ' is the official website of the ',
+	                    _react2.default.createElement(
+	                        'span',
+	                        { itemScope: true,
+	                            itemType: 'https://schema.org/GovernmentOrganization' },
+	                        'Dutch judiciary'
+	                    ),
+	                    '. The website hosts an open data portal for Dutch case law, containing metadata for about 2 million court judgments',
+	                    _react2.default.createElement(_Source2.default, { hreflang: 'nl',
+	                        href: 'http://data.rechtspraak.nl/uitspraken/zoeken?' }),
 	                    ' and judgment texts for about 350.000 judgments in ',
 	                    _abbreviations2.default.xml,
 	                    _react2.default.createElement(_Source2.default, {
@@ -63067,14 +63080,28 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ', with the common operations of multiplication and addition, but in implementation we use the ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { hreflang: 'en', href: 'http://www.johndcook.com/blog/2014/02/26/log-semiring/' },
-	                        'Log semiring'
+	                        { itemScope: true,
+	                            itemType: 'https://schema.org/TechArticle',
+	                            hreflang: 'en',
+	                            href: 'http://www.johndcook.com/blog/2014/02/26/log-semiring/' },
+	                        _react2.default.createElement(
+	                            'span',
+	                            { itemScope: true,
+	                                itemType: 'https://schema.org/Intangible',
+	                                itemProp: 'about' },
+	                            'Log semiring'
+	                        )
 	                    ),
 	                    ' to avoid ',
 	                    _react2.default.createElement(
 	                        'a',
 	                        { hreflang: 'en', href: 'https://en.wikipedia.org/wiki/Arithmetic_underflow' },
-	                        'arithmetic underflow'
+	                        _react2.default.createElement(
+	                            'span',
+	                            { itemScope: true,
+	                                itemType: 'https://schema.org/Intangible' },
+	                            'arithmetic underflow'
+	                        )
 	                    ),
 	                    '.'
 	                ),
@@ -63100,7 +63127,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ' are non-terminal types, and ',
 	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 't' })),
 	                    ' is a terminal type. In the following, we use an extension of CNF with unary rules. In this extension, ',
-	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 't' })),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, {
+	                        l: 't' })),
 	                    ' is either a terminal or non-terminal type.'
 	                ),
 	                _react2.default.createElement(
@@ -63473,7 +63501,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text{SectionContent} \\rightarrow \\text{SectionContent SectionContent}' }))
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, {
+	                                        l: '\\text{SectionContent} \\rightarrow \\text{SectionContent SectionContent}' }))
 	                                ),
 	                                _react2.default.createElement(
 	                                    'td',
@@ -64930,6 +64959,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        value: function render() {
 	            var _this2 = this;
 
+	            // itemProp="alumniOf"
 	            return _react2.default.createElement(
 	                'div',
 	                { className: 'full-thesis reset-counter numbered-section' },
@@ -64938,13 +64968,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    { style: {}, id: 'title-page' },
 	                    _react2.default.createElement(
 	                        'div',
-	                        { style: {}, id: 'title-page-university-name' },
-	                        'Utrecht University'
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { style: {}, id: 'title-page-faculty-name' },
-	                        'Faculty of Humanities'
+	                        { itemScope: true,
+	                            itemType: 'https://schema.org/CollegeOrUniversity' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { style: {},
+	                                itemProp: 'name',
+	                                id: 'title-page-university-name' },
+	                            'Utrecht University'
+	                        ),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { itemScope: true,
+	                                itemProp: 'department',
+	                                itemType: 'https://schema.org/EducationalOrganization',
+	                                style: {},
+	                                id: 'title-page-faculty-name' },
+	                            'Faculty of Humanities'
+	                        )
 	                    ),
 	                    _react2.default.createElement(
 	                        'div',
@@ -64966,8 +65007,26 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        ),
 	                        _react2.default.createElement(
 	                            'div',
-	                            { style: {}, id: 'title-page-author-name' },
-	                            'Maarten Trompper'
+	                            { itemScope: true,
+	                                itemProp: 'author',
+	                                itemType: 'https://schema.org/Person',
+	                                style: {},
+	                                id: 'title-page-author-name' },
+	                            _react2.default.createElement(
+	                                'span',
+	                                { itemProp: 'name' },
+	                                _react2.default.createElement(
+	                                    'span',
+	                                    { itemProp: 'firstName' },
+	                                    'Maarten'
+	                                ),
+	                                ' ',
+	                                _react2.default.createElement(
+	                                    'span',
+	                                    { itemProp: 'lastName' },
+	                                    'Trompper'
+	                                )
+	                            )
 	                        )
 	                    ),
 	                    _react2.default.createElement(
