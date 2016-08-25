@@ -23166,19 +23166,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	                ),
 	                _react2.default.createElement(
 	                    'body',
-	                    { itemProp: 'mainEntity',
-	                        itemScope: true,
-	                        itemType: 'https://schema.org/Thesis',
+	                    { itemScope: true,
+	                        itemType: 'http://schema.org/WebPage',
 	                        className: 'p2' },
 	                    this.props.path == '/full/' ? '' : _react2.default.createElement(_Header2.default, this.props),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { itemProp: 'audience', itemScope: true, itemType: 'http://schema.org/EducationalAudience' },
-	                        _react2.default.createElement('meta', { content: 'student', itemProp: 'audienceType' }),
-	                        _react2.default.createElement('meta', { content: 'researcher', itemProp: 'audienceType' }),
-	                        _react2.default.createElement('meta', { content: 'computer scientist', itemProp: 'audienceType' }),
-	                        _react2.default.createElement('meta', { content: 'legal researcher', itemProp: 'audienceType' })
-	                    ),
 	                    _react2.default.createElement('meta', { content: 'en', itemProp: 'inLanguage' }),
 	                    _react2.default.createElement('meta', { content: 'true', itemProp: 'isFamilyFriendly' }),
 	                    _react2.default.createElement('meta', { content: '2016', itemProp: 'copyrightYear' }),
@@ -23292,20 +23283,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	    _createClass(Header, [{
 	        key: 'render',
 	        value: function render() {
-	            var relativeToRoot = this.props.path.match(/\//g).slice(1).map(function (a) {
-	                return "../";
-	            }).join("");
+	            var attrs = {
+	                id: 'thesis',
+	                itemScope: true,
+	                itemType: "https://schema.org/Thesis"
+	            };
+	            if (this.props.path.match(/\//)) attrs.itemProp = "mainEntity";
 
-	            return _react2.default.createElement(
-	                'header',
-	                {
-	                    className: 'py2' },
-	                _react2.default.createElement(
-	                    'h1',
-	                    { itemProp: 'name', className: 'mt0' },
-	                    this.props.title
-	                )
-	            );
+	            return _react2.default.createElement("header", attrs, _react2.default.createElement(
+	                'h1',
+	                { key: 'title', itemProp: 'name', className: 'mt0' },
+	                this.props.title
+	            ), _react2.default.createElement(
+	                'div',
+	                { key: 'audience', itemProp: 'audience', itemScope: true, itemType: 'http://schema.org/EducationalAudience' },
+	                _react2.default.createElement('meta', { content: 'student', itemProp: 'audienceType' }),
+	                _react2.default.createElement('meta', { content: 'researcher', itemProp: 'audienceType' }),
+	                _react2.default.createElement('meta', { content: 'computer scientist', itemProp: 'audienceType' }),
+	                _react2.default.createElement('meta', { content: 'legal researcher', itemProp: 'audienceType' })
+	            ));
 	        }
 	    }]);
 
@@ -25913,7 +25909,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            var ghUrl = "https://github.com/digitalheir";
 	            //<meta content={ghUrl}/>
 	            return _react2.default.createElement(
-	                "div",
+	                "address",
 	                { itemProp: "author copyrightHolder", id: "maarten-trompper", itemScope: true,
 	                    itemType: "https://schema.org/Person", className: "author-data" },
 	                _react2.default.createElement(

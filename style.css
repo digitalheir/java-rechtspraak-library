@@ -532,6 +532,9 @@ textarea {
 /*
  * Media queries breakpoints
  * -------------------------------------------------------------------------- */
+address {
+    font-style: normal;
+}
 .chapter {
     counter-reset: maths;
 }
