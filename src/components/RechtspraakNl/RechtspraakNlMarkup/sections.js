@@ -1,6 +1,6 @@
 const rsSections = {
     xmlSchema: {
-        page: '11',
+        page: '10',
         id: 'xml-schema',
         title: "XML Schema"
     },

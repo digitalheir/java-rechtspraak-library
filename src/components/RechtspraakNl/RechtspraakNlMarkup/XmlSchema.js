@@ -27,18 +27,18 @@ export default class XmlSchema extends Component {
                 In the absence of an official schema,
                 we have created a makeshift {abbrs.xml} schema
                 that was automatically generated from a random sample of
-                500 documents. The resulting schema was afterwards manually
-                corrected.
+                500 documents. The resulting schema was manually
+                corrected afterwards.
             </p>
             <p>
                 Using this schema,
                 we can utilize a technology
-                called <a href="https://en.wikipedia.org/wiki/Java_Architecture_for_XML_Binding">
+                called <a hrefLang="en" href="https://en.wikipedia.org/wiki/Java_Architecture_for_XML_Binding">
                 JAXB</a> to automatically marshall
                 and demarshall Rechtspraak.nl {abbrs.xml} documents to and from Java objects.
                 Source code and schema
-                are available <a className='print-url' href="https://github.com/digitalheir/java-rechtspraak-library">on
-                Github.</a>
+                are available <a hrefLang="en" className='print-url' href="https://github.com/digitalheir/java-rechtspraak-library">on
+                Github</a>.
             </p></div>;
     }
 }

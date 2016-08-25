@@ -14,7 +14,7 @@ export default class Importing extends Component {
                 how to split {abbrs.xml} texts from Rechtspraak.nl.
                 We assume a text to be decomposable into a list
                 of tokens, which correspond to the terminal nodes in a section hierarchy.
-                We use the following four terminal nodes in our section hierarchy:
+                We use the following four terminal types in our section hierarchy:
             </p>
 
             <ol>
@@ -26,14 +26,14 @@ export default class Importing extends Component {
             <p>
                 The selection of token types is rather arbitrary. These types were inspired
                 by the existing XML tags of Rechtspraak.nl, and what is useful for creating a section
-                structure. One may of course invent any other token type to suits one's needs.
+                structure. One may, of course, invent any other token type to suits one's needs.
             </p>
             <p>
                 We should obviously tokenize the source
                 documents to tokens that might be labeled with
                 any of the above token types.
                 In this regard, newlines are trivial to detect, and we assume
-                that Rechtspraak.nl has already done a job of splitting text blocks
+                that Rechtspraak.nl has already done the job of splitting text blocks
                 in <code>para</code> tags, which roughly demarcate
                 titles and text blocks,
                 but numberings often appear within these text nodes
@@ -53,12 +53,12 @@ export default class Importing extends Component {
 
                 On the other hand,
                 sometimes the specified paragraph grouping makes no sense.
-                Classifying a tree structures of tokens instead of a linear list
+                Classifying a tree structure of tokens instead of a linear list
                 can be done efficiently with {abbrs.crfs}, as in {ref.cite(bib.bradley2010learning)},
                 but working with tree structures requires
                 a much more complicated pipeline.
                 So for simplicity we ignore most of those 'higher-level' tags, at the cost of potentially
-                losing semantic mark up.
+                losing semantic markup.
             </p>
 
             <p>

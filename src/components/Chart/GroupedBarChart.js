@@ -163,6 +163,7 @@ class GroupedBarChart extends Component {
                 [0, xScale.rangeBand()]
             );
             return <g
+                key={d.title}
                 className="f-score-group"
                 transform={ "translate(" + xScale(d.title) + ",0)"}>
                 {

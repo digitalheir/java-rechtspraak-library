@@ -32,7 +32,7 @@ var MarkupComponent = React.createClass({
 
                 <tbody>
                 <tr>
-                    <td><a href="http://mallet.cs.umass.edu/">Mallet</a></td>
+                    <td><a hrefLang="en" href="http://mallet.cs.umass.edu/">Mallet</a></td>
                     <td>Machine learning framework</td>
                 </tr>
                 <tr>

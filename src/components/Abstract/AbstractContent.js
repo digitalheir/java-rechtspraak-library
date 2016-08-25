@@ -7,7 +7,7 @@ export default class AbstractContent extends React.Component {
             <div itemProp="description">
                 <p>
                     A growing amount of Dutch case law is openly distributed
-                    on <a href="http://www.rechtspraak.nl/">Rechtspraak.nl</a>.
+                    on <a hrefLang="nl" href="http://www.rechtspraak.nl/">Rechtspraak.nl</a>.
                     Currently, many documents are not marked up or marked up only very sparsely,
                     hampering our ability to process these documents automatically.
                 </p>
@@ -19,7 +19,7 @@ export default class AbstractContent extends React.Component {
                     experiment with Linear-Chain
                     Conditional Random Fields to label text elements with their roles in the document (text,
                     title or numbering). Given a list of labels, we experiment with
-                    probabilistic context free grammars
+                    probabilistic context-free grammars
                     to generate a parse tree which represents the section hierarchy of a document.
                 </p>
 

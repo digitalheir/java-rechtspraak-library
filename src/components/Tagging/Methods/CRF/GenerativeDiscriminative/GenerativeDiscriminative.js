@@ -16,7 +16,7 @@ export default class CRF extends Component {
     render() {
         const relativeToRoot = this.props.path.match(/\//g).slice(1).map(_ => "../").join("");
 
-        //and will be relevant when we define Linear Chain <abbr title="Conditional Random Fields">CRFs</abbr>.
+        //and will be relevant when we define Linear-Chain <abbr title="Conditional Random Fields">CRFs</abbr>.
         return <div>
             <p>
                 We define generative models as directed models in which all
@@ -47,13 +47,13 @@ export default class CRF extends Component {
                 l="p( \mathbf y|\mathbf x)"/> unburdens us of having to model the potentially very complicated
                 inter-dependencies of <F {...this.props} l="p(\mathbf x)"/>. In classification tasks,
                 this means that we are better able to use observations,
-                and so discriminative models tend to out-perform generative models in practice.
+                and so discriminative models tend to outperform generative models in practice.
             </p>
 
             <p>
                 One generative-discriminative pair is formed by Hidden Markov
                 Models ({abbrs.hmms}) and
-                Linear Chain {abbrs.crfs}, and the latter is introduced in the next section.
+                Linear-Chain {abbrs.crfs}, and the latter is introduced in the next section.
                 For a thorough explanation of the principle of generative-discriminative pairs,
                 see {ref.cite(bib.jordan2002discriminative)}.
             </p>

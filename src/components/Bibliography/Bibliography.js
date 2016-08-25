@@ -18,7 +18,7 @@ function getNameElement(citation) {
 
 function createCitation(citation, i) {
     if (!citation.id) throw new Error("Citation has no id: " + citation.title);
-    
+
     const name = getNameElement(citation);
     const publication = citation.journal ?
         <span><cite style={{fontStyle: 'normal'}}
@@ -26,14 +26,14 @@ function createCitation(citation, i) {
         : "";
     return <li itemProp="citation"
                itemScope={true}
-               itemType="https://schema.org/CreativeWork"
+               itemType="https://schema.org/ScholarlyArticle"
                key={i}
                id={citation.id.toString()}
                className="ref">
         {name} (
         <time dateTime={citation.year} className="ref-year">{citation.year}</time>
         ). <cite>
-        <a href={citation.href}><span itemProp="name">{citation.title}</span></a>
+        <a hrefLang="en" href={citation.href}><span itemProp="name">{citation.title}</span></a>
     </cite>. {publication}
     </li>;
 }

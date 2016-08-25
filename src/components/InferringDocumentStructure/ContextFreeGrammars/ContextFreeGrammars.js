@@ -12,26 +12,41 @@ import abbrs from  '../../abbreviations';
 export default class ContextFreeGrammars extends Component {
     render() {
         return <div>
-            <p>Context Free Grammars ({abbrs.cfgs}) are grammars where each rule is of the form</p>
+            <p>Context-Free Grammars ({abbrs.cfgs}) are grammars where each rule is of the form</p>
             <F {...this.props} l="A \rightarrow \alpha" display="true"/>
             <p>
-                where <F {...this.props} l="A"/> is a single non-terminal symbol and <F {...this.props} l="\alpha"/> is any string
+                where <F {...this.props} l="A"/> is a single non-terminal symbol and <F {...this.props} l="\alpha"/> is
+                any string
                 of terminals and non-terminals, including the empty string <F {...this.props} l="\epsilon"/>.
             </p>
             <p>
-                A Probabilistic Context Free Grammar ({abbrs.pcfg}) is then a Context Free Grammar in which each rule
+                A Probabilistic Context-Free Grammar ({abbrs.pcfg}) is then a Context-Free Grammar in which each rule
                 has a probability assigned to it.
                 A derivation
-                of a sequence with a {abbrs.pcfg} has a probility score attached to it, which is the product of
+                of a sequence with a {abbrs.pcfg} has a probability score attached to it, which is the product of
                 the probabilities of all of the applied rules.
             </p>
             <p>
                 In our discussions, we assume probability scores to be
-                real numbers between <F {...this.props} l="0"/> and <F {...this.props} l="1"/>, with the common operations
+                real numbers between <F {...this.props} l="0"/> and <F {...this.props} l="1"/>, with the common
+                operations
                 of multiplication and addition, but in implementation we use
-                the <a href="http://www.johndcook.com/blog/2014/02/26/log-semiring/">Log
-                semiring</a> to avoid <a href="https://en.wikipedia.org/wiki/Arithmetic_underflow">arithmetic
-                underflow</a>.
+                the <a itemScope={true}
+                       itemType="https://schema.org/TechArticle"
+                       hrefLang="en"
+                       href="http://www.johndcook.com/blog/2014/02/26/log-semiring/">
+                <span itemScope={true}
+                      itemType="https://schema.org/Intangible"
+                      itemProp="about">
+                    <span itemProp="name">Log semiring</span>
+                </span>
+            </a> to avoid <a hrefLang="en" href="https://en.wikipedia.org/wiki/Arithmetic_underflow">
+                  <span itemScope={true}
+                        itemType="https://schema.org/Intangible">
+                      <span itemProp="name">
+                      arithmetic underflow
+                  </span></span>
+            </a>.
             </p>
             <p>
                 {abbrs.cfgs} are said to be in Chomsky Normal Form ({abbrs.cnf}) if all rules are of the following form:
@@ -40,12 +55,11 @@ export default class ContextFreeGrammars extends Component {
             <F {...this.props} l="A\rightarrow B C" display="true"/>
             <F {...this.props} l="A\rightarrow t" display="true"/>
 
-            <p>Where <F {...this.props} l="A"/>, <F {...this.props} l="B"/> and <F {...this.props} l="C"/> are non-terminal types, and <F {...this.props} l="t"/> is a
+            <p>Where <F {...this.props} l="A"/>, <F {...this.props} l="B"/> and <F {...this.props} l="C"/> are
+                non-terminal types, and <F {...this.props} l="t"/> is a
                 terminal type.
-            </p>
-
-            <p>
-                In the following, we use an extension of CNF with unary rules. In this extension, <F {...this.props} l="t"/> is either
+                In the following, we use an extension of CNF with unary rules. In this extension, <F {...this.props}
+                    l="t"/> is either
                 a terminal or non-terminal type.
             </p>
 
@@ -172,7 +186,8 @@ export default class ContextFreeGrammars extends Component {
                         <td><F {...this.props} l="1.0"/></td>
                     </tr>
                     <tr>
-                        <td><F {...this.props} l="\text{SectionContent} \rightarrow \text{SectionContent SectionContent}"/></td>
+                        <td><F {...this.props}
+                            l="\text{SectionContent} \rightarrow \text{SectionContent SectionContent}"/></td>
                         <td><F {...this.props} l="1.0"/></td>
                     </tr>
                     </tbody>

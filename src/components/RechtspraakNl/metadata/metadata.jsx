@@ -120,7 +120,7 @@ export default class extends Component {
                                 edited and annotated)
                             "/>
                     <TableEntry name="dcterms:relation" type="Array of objects (reified statements)" description='Relations to other cases.
-                                <cite><a href="http://dublincore.org/documents/dcmi-terms/#terms-relation">Dublin Core
+                                <cite><a hreflang="en" href="http://dublincore.org/documents/dcmi-terms/#terms-relation">Dublin Core
                                     specification</a></cite> specifies:
                                 <blockquote>
                                     "Recommended best practice is to identify the related resource by means of a string
@@ -128,7 +128,7 @@ export default class extends Component {
                                 </blockquote>
                                 <strong>NOTE:</strong>this relation is reified so that we can make meta-statements about
                                 it.
-                                See <a href="http://stackoverflow.com/questions/5671227/ddg#5671407">stackoverflow.com/questions/5671227/ddg#5671407</a>.
+                                See <a hreflang="en" href="http://stackoverflow.com/questions/5671227/ddg#5671407">stackoverflow.com/questions/5671227/ddg#5671407</a>.
                                 This might not follow dcterms best practices.
                                 '/>
 
@@ -190,9 +190,9 @@ export default class extends Component {
                     <TableEntry name="@type" type="String (resource URI)" description="Fixed to <code>frbr:LegalWork</code>"/>
                     <TableEntry name="markedUpByRechtspraak" type="Boolean" description='Whether this document has rich markup, or consists only of <code>&lt;para&gt;</code> and
                             <code>&lt;paragroup&gt;</code> elements.' />
-                    <TableEntry name="owl:sameas" type="String (resource URI)" description='Deeplink to HTML manifestation of this document on <a href="http://www.rechtspraak.nl/">Rechtspraak.nl</a>'/>
+                    <TableEntry name="owl:sameas" type="String (resource URI)" description='Deeplink to HTML manifestation of this document on <a hreflang="en" href="http://www.rechtspraak.nl/">Rechtspraak.nl</a>'/>
                     <TableEntry name="tokens" type="Array of arrays of strings" 
-                        description='Tokenized version of judgment text with all XML tags stripped. Stemmed term count is implemented as a <a href="#term-frequency">MapReduce job</a>.'/>
+                        description='Tokenized version of judgment text with all XML tags stripped. Stemmed term count is implemented as a <a hreflang="en" href="#term-frequency">MapReduce job</a>.'/>
                     </tbody>
                 </table>
             </section>

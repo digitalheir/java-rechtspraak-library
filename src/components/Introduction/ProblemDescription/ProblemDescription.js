@@ -25,17 +25,17 @@ export default class ProblemDescription extends Component {
                     enrich the markup of scarcely marked up documents in Rechtspraak.nl by
                     automatically assigning a
                     section hierarchy to the text elements.
-                    We divide this problem in the following subtasks:
+                    We divide this problem into the following subtasks:
                 </p>
                 <ol>
-                    <li><a href={chapters.pathTo(this.props.path, chapters.importing)+"#"+introSections.importing.id}>Importing documents from the Rechtspraak.nl web
+                    <li><a hrefLang="en" href={chapters.pathTo(this.props.path, chapters.importing)+"#"+introSections.importing.id}>Importing documents from the Rechtspraak.nl web
                         service;</a></li>
-                    <li><a href={chapters.pathTo(this.props.path, chapters.importing)+"#"+introSections.importing.id}>Tokenizing relevant text elements;</a></li>
-                    <li><a href={chapters.pathTo(this.props.path, chapters.tagging)}>Labeling these text elements
+                    <li><a hrefLang="en" href={chapters.pathTo(this.props.path, chapters.importing)+"#"+introSections.importing.id}>Tokenizing relevant text elements;</a></li>
+                    <li><a hrefLang="en" href={chapters.pathTo(this.props.path, chapters.tagging)}>Labeling these text elements
                         with their respective roles (i.e. <code>section title</code>; <code>numbering</code>; <code>text
                             block</code>; <code>newline</code>);</a>
                     </li>
-                    <li><a href={chapters.pathTo(this.props.path, chapters.documentStructure)}>
+                    <li><a hrefLang="en" href={chapters.pathTo(this.props.path, chapters.documentStructure)}>
                         Combining the tokens in such a way that they represent the
                         most likely section hierarchy</a>
                     </li>
@@ -48,9 +48,9 @@ export default class ProblemDescription extends Component {
             <p>
                 Tasks 1 and 2 are theoretically straightforward and mostly a
                 problem of implementation, and the following chapter touches on
-                both of these subject briefly, mostly through
+                both of these subjects briefly, mostly through
                 a specification of the data set
-                of court judgments from <a href="http://www.rechspraak.nl">Rechtspraak.nl</a>.
+                of court judgments from <a hrefLang="nl" href="http://www.rechspraak.nl">Rechtspraak.nl</a>.
             </p>
 
             <p>
@@ -65,7 +65,7 @@ export default class ProblemDescription extends Component {
             <p>
                 Task 4, organizing the tagged elements into a section hierarchy,
                 is approached as a probabilistic parsing problem. We create a
-                Context Free Grammar which accepts text elements as tokens,
+                Context-Free Grammar which accepts text elements as tokens
                 and creates a parse tree which represents the section hierarchy.
                 This approach returns a desirable section hierarchy in most cases:
                 in our experiment we report an F<sub>1</sub> score of 0.92.

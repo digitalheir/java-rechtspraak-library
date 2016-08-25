@@ -1,37 +1,38 @@
 const crfSections = {
     undirectedGraphicalModels: {
-        page: '15',
+        page: 14,
         id: 'undirected-graphical-models',
-        title: 'Undirected Graphical Models',
+        title: 'Undirected Graphical Models'
     },
     hmm: {
-        page: 15,
+        page: 14,
         id: 'hmm',
-        title: 'Directed Graphical Models',
-    },   generativeDiscriminative: {
+        title: 'Directed Graphical Models'
+    }, 
+    generativeDiscriminative: {
         page: 16,
         id: 'generative-discriminative',
-        title: 'Generative-Discriminative Pairs',
+        title: 'Generative-Discriminative Pairs'
     },
     linearChain: {
-        page: 17,
+        page: 16,
         id: 'linear-chain-crf',
-        title: 'Linear Chain Conditional Random Fields',
+        title: 'Linear-Chain Conditional Random Fields'
     },
     crfPerformance: {
         page: 'x',
         id: 'crf-performance',
-        title: 'Performance',
+        title: 'Performance'
     },
     inference: {
-        page: 19,
+        page: 18,
         id: 'crf-inference',
-        title: 'Inference',
+        title: 'Inference'
     },
     parameterEstimation: {
-        page: 18,
+        page: 17,
         id: 'crf-parameter-estimation',
-        title: 'Parameter Estimation',
+        title: 'Parameter Estimation'
     }
 };
 

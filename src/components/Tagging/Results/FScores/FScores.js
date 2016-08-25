@@ -49,7 +49,7 @@ export default class FScorez extends Component {
                 false negative, we do not lose any information, which is acceptable. However,
                 in the case of a false positive we create
                 false information, which is very undesirable.
-                Precisely how much more important we deem precision to recall is rather arbitrary, however.
+                Precisely how much more important we deem precision to recall is rather arbitrary.
             </p>
         </div>;
     }

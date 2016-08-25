@@ -15,36 +15,90 @@ export default class FullThesis extends Component {
     //    The source code referred to in this thesis can be found in two repositories on GitHub:
     //</p>
     //<ul>
-    //    <li><a href="https://github.com/digitalheir/java-rechtspraak-library"
+    //    <li><a hrefLang="en" href="https://github.com/digitalheir/java-rechtspraak-library"
     //    >https://github.com/digitalheir/java-rechtspraak-library</a>
     //    </li>
-    //    <li><a href="https://github.com/digitalheir/dutch-case-law-to-couchdb"
+    //    <li><a hrefLang="en" href="https://github.com/digitalheir/dutch-case-law-to-couchdb"
     //    >https://github.com/digitalheir/dutch-case-law-to-couchdb</a>
     //    </li>
     //</ul>
     render() {
+        // itemProp="alumniOf"
         return <div className="full-thesis reset-counter numbered-section">
-            <section style={{}} id="title-page">
-                <div style={{}} id="title-page-university-name">Utrecht University</div>
-                <div style={{}} id="title-page-faculty-name">Faculty of Humanities</div>
-                <div style={{}} id="title-page-msc-thesis">Master of Science Thesis</div>
-                <h1 style={{}}>{title}</h1>
-                <div style={{}} id="title-page-author">
-                    <div style={{}} id="title-page-author-author">by</div>
-                    <div style={{}} id="title-page-author-name">Maarten Trompper</div>
+            <section id="title-page">
+                <div itemScope={true}
+                     itemRef="uu"
+                     itemType="https://schema.org/CollegeOrUniversity">
+                    <div itemProp="name"
+                         id="title-page-university-name">
+                        <span itemProp="name">Utrecht University</span>
+                        <div itemProp="address" itemScope={true} itemType="https://schema.org/PostalAddress">
+                            <meta itemProp="addressCountry" content="the Netherlands"/>
+                            <meta itemProp="addressLocality" content="Utrecht"/>
+                            <meta itemProp="postalCode" content="3584 CS"/>
+                            <meta itemProp="addressLocality" content="De Uithof"/>
+                            <meta itemProp="streetAddress" content="Heidelberglaan 8"/>
+                        </div>
+                    </div>
+                    <div itemScope={true}
+                         itemProp="department"
+                         itemType="https://schema.org/EducationalOrganization"
+                         id="title-page-faculty-name">
+                        <span itemProp="name">Faculty of Humanities</span>
+                        <link itemProp="alumni" rel="#title-page-author"/>
+                    </div>
                 </div>
-                <div style={{}} className="title-page-supervisor">
-                    <div style={{}} id="title-page-supervisor-supervisor">Supervisor Utrecht University:</div>
-                    <div style={{}} className="name">Ad Feelders</div>
+                <div id="title-page-msc-thesis"><span itemProp="inSupportOf">Master of Science</span> Thesis</div>
+                <h1 >{title}</h1>
+                <div itemScope={true}
+                     itemProp="author"
+                     itemType="https://schema.org/Person"
+                     id="title-page-author">
+                    <div id="title-page-author-author">by</div>
+                    <div
+
+                        id="title-page-author-name">
+                        <span itemProp="name">
+                            <span itemProp="givenName">Maarten</span> <span itemProp="familyName">Trompper</span>
+                        </span>
+                    </div>
                 </div>
-                <div style={{}} className="title-page-supervisor external">
-                    <div style={{}} id="title-page-supervisor-ext-supervisor">Supervisor Leibniz Center for Law:</div>
-                    <div style={{}} className="name">Radboud Winkels</div>
+                <div itemScope={true}
+                     itemProp="contributor"
+                     itemType="https://schema.org/Person"
+                     className="title-page-supervisor">
+                    <div id="title-page-supervisor-supervisor">Supervisor <span itemScope={true}
+                                                                                itemType="https://schema.org/EducationalOrganization"
+                                                                                itemRef="uu"
+                                                                                itemProp="worksFor affiliation">
+                            <span itemProp="name">Utrecht University</span>
+                        </span>
+                        :
+                    </div>
+                    <div itemProp="name" className="name">
+                        <span itemProp="givenName">Ad</span> <span itemProp="familyName">Feelders</span>
+                    </div>
                 </div>
-                <div style={{}} id="title-page-time-and-date">
-                    <span style={{}} id="title-page-time">
+                <div itemScope={true}
+                     itemProp="contributor"
+                     itemType="https://schema.org/Person"
+                     className="title-page-supervisor external">
+                    <div id="title-page-supervisor-ext-supervisor">Supervisor <span itemScope={true}
+                                                                                    itemType="https://schema.org/EducationalOrganization"
+                                                                                    itemProp="affiliation">
+                        <span itemProp="name">Leibniz Center for Law</span>
+                    </span>:
+                    </div>
+                    <div itemProp="name" className="name">
+                        <span itemProp="givenName">Radboud</span> <span itemProp="familyName">Winkels</span>
+                    </div>
+                </div>
+                <div id="title-page-time-and-date">
+                    <span id="title-page-time">
+                        <span itemScope={true} itemProp="">
                         Utrecht
-                    </span>, <span style={{}} id="title-page-date">2016</span>
+                            </span>
+                    </span>, <span itemProp="dateCreated datePublished" id="title-page-date">2016</span>
                 </div>
             </section>
 

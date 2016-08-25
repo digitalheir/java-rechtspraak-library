@@ -1,6 +1,6 @@
 const disseminationSections = {
     fScores: {
-        page: 20,
+        page: 19,
         id: 'f-scores',
         title: 'F-scores',
     },

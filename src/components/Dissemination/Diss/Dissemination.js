@@ -11,7 +11,7 @@ export default class Chapter extends React.Component {
                 in a CouchDB database, available at <a
                 href="https://rechtspraak.cloudant.com/docs/">http://rechtspraak.cloudant.com/docs/</a>. We also provide
                 the
-                enriched data set as a collection of {abbrs.html} pages, indexed for full text search.
+                enriched data set as a collection of {abbrs.html} pages, indexed for full-text search.
             </p>
             <p>
                 The main source code for this project is published as two separate Java libraries:
@@ -23,7 +23,7 @@ export default class Chapter extends React.Component {
                     GitHub</a>
                 </li>
                 <li>One library for mirroring the Rechtspraak.nl corpus
-                    to a CouchDB database, <a className='print-url'
+                    to a CouchDB database, <a hrefLang="en" className='print-url'
                                               href="https://github.com/digitalheir/dutch-case-law-to-couchdb">on
                         GitHub</a>
                 </li>
@@ -34,10 +34,10 @@ export default class Chapter extends React.Component {
                 that have been created during the course of writing this thesis:
             </p>
             <ul>
-                <li>A Java library for converting XML to JSON, <a className='print-url'
+                <li>A Java library for converting XML to JSON, <a hrefLang="en" className='print-url'
                                                                   href="https://github.com/digitalheir/java-xml-to-json">
                     on GitHub</a></li>
-                <li>A Probabilistic Earley Parser for Java, <a className='print-url'
+                <li>A Probabilistic Earley Parser for Java, <a hrefLang="en" className='print-url'
                                                                href="https://github.com/digitalheir/java-probabilistic-earley-parser">
                     on GitHub</a></li>
             </ul>

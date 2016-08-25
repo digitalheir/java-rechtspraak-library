@@ -14,7 +14,7 @@ export default class InferringDocumentStructureIntroduction extends Component {
                 of 'section' nodes.
                 This problem is very much akin to constituency parsing for natural languages,
                 and that is why we approach the problem as parsing a token sequence
-                with a Probabilistic Context Free Grammar ({abbrs.pcfg}).
+                with a Probabilistic Context-Free Grammar ({abbrs.pcfg}).
             </p>
             <p>
                 In this chapter, we introduce {abbrs.pcfgs} and the Cocke–Younger–Kasami

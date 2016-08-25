@@ -26,13 +26,17 @@ export default class ParameterEstimation extends Component {
 
             <p>
                 L2 regularization is an often used regularization method,
-                and put in contrast with the closely related L1 regularization.
+                which is put in contrast with the closely related L1 regularization.
                 L1 regularization is meant for dealing with truly sparse
                 inputs, and in practice rarely performs better than
                 L2 ({ref.cite(bib.van2012lost)}).
             </p>
             <div className="avoid-page-break">
-                <p>The log likelihood function with L2 regularization looks as follows:</p>
+                <p>
+                    The log likelihood function with L2 regularization
+                    is the same as that of <span>Eq. 3.11</span>, but with the
+                    term <F l="-\sum_{k=1}^K\frac{\lambda_{k}^2}{2\sigma^2}"/> added:
+                </p>
 
                 <F {...this.props} display="true"
                                    l="\ell(\Lambda) = \sum_{i=1}^N\sum_{t=1}^T\sum_{k=1}^K
@@ -41,7 +45,7 @@ export default class ParameterEstimation extends Component {
             </div>
 
             <p>
-                Where <F l="\sigma"/> is the regularization parameter, which is somewhat arbitrary depending on
+                Where <F l="\sigma"/> is the regularization parameter, which depends on
                 how much we wish to simplify the model.
             </p>
             <p>

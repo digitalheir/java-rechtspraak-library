@@ -11,7 +11,7 @@ export default class TaggingIntroduction extends Component {
         const urlToIntrochapter = relativeToRoot + chapter.introduction.route.replace('/', '');
         return <div>
             <p>
-                In the <a href={urlToIntrochapter}>previous chapter</a> we developed
+                In the <a hrefLang="en" href={urlToIntrochapter}>previous chapter</a>, we developed
                 a way to import
                 Rechtspraak.nl {abbrs.xml} documents and distill them into
                 a list of text elements, or tokens. In this chapter,
@@ -53,13 +53,13 @@ export default class TaggingIntroduction extends Component {
             <p>
                 In this chapter, we experiment
                 with {abbrs.crfs} for
-                labeling our tokens, and we compare the results
-                to a hand-written deterministic tagger that utilizes similar features.
+                labeling the tokens, and we compare the results
+                to a hand-written deterministic tagger that utilizes similar features to the {abbrs.crf} models.
                 It turns out that both models score around 1.0 on all labels
                 except section titles.
 
                 For section titles, {abbrs.crfs} significantly
-                out-perform the hand-written tagger
+                outperform the hand-written tagger
                 in terms of recall, while trading in some precision. For section titles,
                 the hand-written tagger
                 has a precision of 0.96 and recall of 0.74; the trained {abbrs.crfs} of 0.91 and 0.91, respectively.

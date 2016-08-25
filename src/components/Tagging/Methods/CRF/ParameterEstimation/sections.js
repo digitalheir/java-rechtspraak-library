@@ -1,6 +1,6 @@
 const crfSections = {
     regularization: {
-        page: 17,
+        page: 18,
         id: 'regularization',
         title: 'Regularization'
     }

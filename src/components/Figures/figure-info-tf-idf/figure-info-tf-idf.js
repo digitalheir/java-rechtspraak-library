@@ -41,7 +41,7 @@ export default class FigureTfIdf extends React.Component {
                 <span className="figure-number">Fig {figs.tfidf.num}.</span> Top {nTerms} tf-idf scores for stemmed
                 words in <code>*.info</code> elements.
                 Stemming is performed using
-                the <a href="http://snowball.tartarus.org/algorithms/dutch/stemmer.html">Snowball algorithm for
+                the <a hrefLang="en" href="http://snowball.tartarus.org/algorithms/dutch/stemmer.html">Snowball algorithm for
                 Dutch</a>.
             </figcaption>
         </figure>;

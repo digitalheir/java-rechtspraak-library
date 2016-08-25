@@ -20,6 +20,8 @@ export default class ParameterEstimation extends Component {
 
 
     render() {
+        const canonicalUnnormalizedCrf = "\\exp\\left \\{\\sum_{t=1}^T\\sum_{k=1}^{K} \\lambda_k f_k(y^i_t, y^i_{t-1}, x^i_t)\\right \\}";
+        const canonicalZ = "\\sum_{\\mathbf y'}\\exp\\left \\{\\sum_{t=1}^T\\sum_{k=1}^{K} \\lambda_k f_k(y^i_{t}', y'_{t-1}, x^i_t)\\right \\}";
         const relativeToRoot = this.props.path.match(/\//g).slice(1).map(_ => "../").join("");
         return <div>
             <p>
@@ -36,7 +38,7 @@ export default class ParameterEstimation extends Component {
             </p>
             <p>
                 The training process will maximize some
-                log likelihood function <F {...this.props} l="\ell(\Lambda)"/>.
+                likelihood function <F {...this.props} l="\ell(\Lambda)"/>.
                 We are modeling a conditional distribution, so it makes sense
                 to use the conditional log likelihood function:
             </p>
@@ -45,7 +47,7 @@ export default class ParameterEstimation extends Component {
 
             <p>
                 Where <F {...this.props} l="p"/> is the {abbrs.crf} distribution as
-                in equation 3.8:
+                in Eq. 3.8:
             </p>
 
             <F {...this.props} display="true"
@@ -59,7 +61,7 @@ export default class ParameterEstimation extends Component {
             <p>
                 Because it is generally
                 intractable to find the exact parameters <F
-                l="\Lambda"/> that maximize the likelihood function <F {...this.props} l="\ell"/>,
+                l="\Lambda"/> that maximize the log likelihood function <F {...this.props} l="\ell"/>,
                 we use a
                 hill-climbing algorithm.
                 The general idea of hill-climbing algorithms is to
@@ -106,7 +108,7 @@ export default class ParameterEstimation extends Component {
                 algorithm ({abbrs.lmbfgs})</a>,
                 which approximates Newton's Method (see eg. {ref.cite(bib.nocedal1980updating)}). This
                 algorithm is optimized
-                for the memory-contrained conditions in real-world computers,
+                for the memory-constrained conditions in real-world computers
                 and also converges much faster than a naive implementation
                 because it works on the second derivative of <F {...this.props} l="\ell"/>.
             </p>
@@ -117,11 +119,10 @@ export default class ParameterEstimation extends Component {
                 labels, <F {...this.props} l="N"/> in the number of training instances,
                 and <F {...this.props} l="G"/> is the number of gradient computations.
                 The number of gradient computations can be set to
-                a fixed number, or is otherwise unknown but guaranteed to be
-                converge in finite time (this is guaranteed because of the concavity of <F {...this.props} l="\ell"/>).
+                a fixed number, or is otherwise unknown but guaranteed to 
+                converge in finite time because of the concavity of <F {...this.props} l="\ell"/>.
             </p>
         </div>;
-        const canonicalUnnormalizedCrf = "\\exp\\left \\{\\sum_{t=1}^T\\sum_{k=1}^{K} \\lambda_k f_k(y^i_t, y^i_{t-1}, x^i_t)\\right \\}";
-        const canonicalZ = "\\sum_{\\mathbf y'}\\exp\\left \\{\\sum_{t=1}^T\\sum_{k=1}^{K} \\lambda_k f_k(y^i_{t}', y'_{t-1}, x^i_t)\\right \\}";
+        
     }
 }

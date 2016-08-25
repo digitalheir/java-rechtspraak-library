@@ -1,5 +1,9 @@
 @import 'variables.scss';
 
+address{
+  font-style: normal;
+}
+
 .chapter {
   counter-reset: maths;
 }
@@ -165,7 +169,7 @@ figure {
 }
 
 .tbl-confusion-matrix {
-  page-break-inside: avoid ;
+  page-break-inside: avoid;
   th, td {
     border: none;
   }
@@ -475,6 +479,10 @@ hr {
 }
 
 @media print {
+
+  #reference-list {
+    margin-bottom: 0;
+  }
   .print-spacer {
     display: block;
     height: 5em;
@@ -644,10 +652,13 @@ abbr[title] {
   body {
     padding: 0.0in;
     font-size: 10pt;
-    color: #444;
+    color: #333;
+  }
+  .katex {
+    color: #111;
   }
   a, a:visited {
-    color: #444;
+    color: #333;
   }
   h1, h2, h3, h4, h5, h6 {
   }

@@ -42,9 +42,9 @@ export default class FigureTitleTfIdf extends React.Component {
                 <span className="figure-number">Fig {figs.tfidf.num}.</span> Top {nTerms} tf-idf
                 scores for stemmed words in
                 section titles (<F {...this.props} l="D"/> is the collection
-                element types <F {...this.props} l="d"/> is 'section titles').
+                element types and <F {...this.props} l="d"/> is 'section titles').
                 Stemming is performed using
-                the <a href="http://snowball.tartarus.org/algorithms/dutch/stemmer.html">Snowball algorithm for
+                the <a hrefLang="en" href="http://snowball.tartarus.org/algorithms/dutch/stemmer.html">Snowball algorithm for
                 Dutch</a>. '[NUMBER]' and '[de|het|een]' are special classes for numbers and grammatical articles
                 (i.e. the Dutch equivalent of the articles 'the' and 'a').
             </figcaption>

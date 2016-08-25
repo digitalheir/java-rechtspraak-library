@@ -26,7 +26,7 @@ export default class FeatureSelection extends Component {
         return <div>
             <p>
                 Based on the metrics and observations on the data set from
-                the <a href={rsMarkupUrl}>previous chapter</a>
+                the <a hrefLang="en" href={rsMarkupUrl}>previous chapter</a>
                 , we define about 250
                 binary features for our automatic tagger.
                 The most prominent ones include:

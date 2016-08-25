@@ -39,7 +39,7 @@ export default class FigureRelativeTitleCountForTerms extends React.Component {
                 stems in occurring
                 section titles. Percentages are the percentage of titles texts that the word stem occurs in.
                 Stemming is performed using
-                the <a href="http://snowball.tartarus.org/algorithms/dutch/stemmer.html">Snowball algorithm for
+                the <a hrefLang="en" href="http://snowball.tartarus.org/algorithms/dutch/stemmer.html">Snowball algorithm for
                 Dutch</a>.
             </figcaption>
         </figure>;

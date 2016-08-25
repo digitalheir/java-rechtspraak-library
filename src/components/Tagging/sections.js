@@ -1,21 +1,21 @@
 const taggingSections = {
     taggingIntroduction: {
-        page: 13,
+        page: 12,
         id: 'tagging-introduction',
         title: 'Introduction'
     },
     taggingMethods: {
-        page: 13,
+        page: 12,
         id: 'tagging-methods',
         title: 'Methods'
     },
     taggingResults: {
-        page: 20,
+        page: 19,
         id: 'tagging-evaluation',
         title: 'Results'
     },
     taggingDiscussion: {
-        page: 21,
+        page: 22,
         id: 'tagging-discussion',
         title: 'Discussion'
     }

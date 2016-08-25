@@ -9,6 +9,7 @@ class ToC extends React.Component {
     static getSubSections(chapter, urlSection, depth, singlePage) {
         if (chapter.getSections && chapter.getSections()) {
             // console.log(chapter.getSections());
+            // itemProp={"pageStart":''}
             return <ol>
                 {chapter.getSections().inOrder.map(section => {
                     //console.log(JSON.stringify(section));
@@ -18,10 +19,10 @@ class ToC extends React.Component {
                         itemProp="hasPart"
                         itemType="https://schema.org/CreativeWork">
                                 <span className="row">
-                                    <a itemProp="url" href={urlSection+"#"+section.id}>
+                                    <a hrefLang="en" itemProp="url" href={urlSection+"#"+section.id}>
                                         <span itemProp="name">{section.title}</span>
                                     </a>
-                                    {singlePage ? <span itemProp="pageStart" className="nr">{section.page}</span> : ''}
+                                    {singlePage ? <span className="nr">{section.page}</span> : ''}
                                     </span>
                         {ToC.getSubSections(getSectionComponent(section.id), urlSection, depth + 1, singlePage)}
                     </li>;
@@ -43,7 +44,7 @@ class ToC extends React.Component {
         var props = this.props;
         return <nav className={'chapter toc'}>
             <ol className={this.props.singlePage?"leaders":""}>
-                {this.props.showHome ? <a href={relativeToRoot}>Home</a> : ""}
+                {this.props.showHome ? <a hrefLang="en" href={relativeToRoot}>Home</a> : ""}
                 {
                     chapters.inOrder.map((chapter) => {
                             let urlSection;
@@ -59,7 +60,7 @@ class ToC extends React.Component {
                                 <span >
                                 {path == chapter.route
                                     ? <strong itemProp="name">{chapter.title}</strong>
-                                    : <a itemProp="mainEntityOfPage url" href={urlSection}
+                                    : <a hrefLang="en" itemProp="mainEntityOfPage url" href={urlSection}
                                          className='nav-link'><span itemProp="name">{chapter.title}</span></a>}
                                     </span>
                                     {this.props.singlePage ?

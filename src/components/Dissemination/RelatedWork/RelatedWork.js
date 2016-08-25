@@ -19,26 +19,26 @@ export default class RelatedWork extends Component {
                 the general problem of automatic markup from digitally scanned
                 documents, and define parsing a section structure as a task in macro-level markup.
                 This is in contrast to micro-level markup, such as named entity recognition.
-                They review some general solutions,
+                They review some general solutions
                 but argue that general automatic markup <q cite={bib.abolhassani2003information.url}>will remain
                 a problem for a long time</q>.
             </p>
 
             <p>
-                Indeed, most approaches to automatic mark-up are domain-specific.
+                Indeed, most approaches to automatic markup are domain-specific.
                 Somewhat recently, the problem has been addressed
                 in legal informatics as well. {ref.cite(bib.bacci2009automatic)} have a similar set-up
                 to ours, applied to Italian law texts.
                 They successfully apply
-                Hidden Markov Models to distinguish header and footers
-                from body. Interestingly, they train a
+                Hidden Markov Models to distinguish headers and footers
+                from body elements. Interestingly, they train a
                 separate <abbr title="Hidden Markov Model">HMM</abbr> for
                 every law type. For parsing the section hierarchy
                 in the body, they use non-deterministic finite state machines,
                 which corresponds to the class of (non-deterministic) regular
                 expressions. The system shows some intolerance to
-                syntactical errors in the input, but can handle common
-                issues. It uses much less features than ours,
+                syntactical errors in the input but can handle common input
+                issues. The system uses much fewer features than ours,
                 which may be explained by the fact
                 that legislative
                 texts tend to have a more strict structure than case law, even

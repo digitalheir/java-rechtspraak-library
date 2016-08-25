@@ -37,7 +37,7 @@ export default class IntroductionRsNl extends Component {
     //                <section>
     //                    <h2>Counting terms</h2>
     //                    <p>Initial tokenization is performed server-side, using Alpino.</p>
-    //                    <p>Then, in a MapReduce task we reduce these inflected words to lemmas and count lemma occurrences for each document. We use a<a href="https://github.com/fortnightlabs/snowball-js">Javascript port</a> of the <a href="http://snowball.tartarus.org/algorithms/dutch/stemmer.html">
+    //                    <p>Then, in a MapReduce task we reduce these inflected words to lemmas and count lemma occurrences for each document. We use a<a hrefLang="en" href="https://github.com/fortnightlabs/snowball-js">Javascript port</a> of the <a hrefLang="en" href="http://snowball.tartarus.org/algorithms/dutch/stemmer.html">
     //                        Snowball stemming algorithm for
     //                        Dutch</a>, along with some additional normalization rules which mainly handle special characters (consider,
     //                        for example, that <code>'s ochtends</code> represents the same phrase as <code>`s ochtends</code>
@@ -67,7 +67,7 @@ export default class IntroductionRsNl extends Component {
     //                    <p><code>term_document_count</code> is useful to .</p>    https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation
     //                    <p><code>term_token_count</code> is useful when we want to know where a stemmed term comes
     //                        from, i.e., its manifestation in the source documents.
-    //                    </p>    Refer to <a href="http://rechtspraak.cloudant.com/ecli/_design/term_frequency">http://rechtspraak.cloudant.com/ecli/_design/term_frequency</a>    for the implemented design document.
+    //                    </p>    Refer to <a hrefLang="en" href="http://rechtspraak.cloudant.com/ecli/_design/term_frequency">http://rechtspraak.cloudant.com/ecli/_design/term_frequency</a>    for the implemented design document.
     //                </section>
     render() {
 

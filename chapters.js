@@ -18,19 +18,19 @@ const chapters = {
         route: '/rechtspraak-nl/'
     },
     tagging: {
-        page: '13',
+        page: 12,
         id: "tagging",
         title: "Tagging Elements",
         route: '/tagging/'
     },
     documentStructure: {
-        page: 22,
+        page: 23,
         id: "parsing",
         title: "Inferring a Section Hierarchy",
         route: '/document-structure/'
     },
     conclusion: {
-        page: 27,
+        page: 28,
         id: "conclusion",
         title: "Conclusion",
         route: '/conclusion/'

@@ -19,6 +19,10 @@ export default class Index extends Component {
                         <h2 >Abstract</h2>
                         <AbstractContent/>
                     </section>
+
+                    <p>
+                        <a style={{fontSize: 'small',textDecoration: 'underline'}}href="full/">View this thesis as a single page, fit for printing</a>
+                    </p>
                     <section>
                         <h2>Table of Contents</h2>
                         <ToC {...this.props}/>

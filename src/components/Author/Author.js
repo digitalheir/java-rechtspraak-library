@@ -7,12 +7,12 @@ export default class AuthorData extends Component {
         var ghUrl = "https://github.com/digitalheir";
         //<meta content={ghUrl}/>
         return (
-            <div itemProp="author copyrightHolder" itemScope={true}
+            <address itemProp="author copyrightHolder" id="maarten-trompper" itemScope={true}
                  itemType="https://schema.org/Person" className="author-data">
                 <div id="muh-name" itemProp="name" className="author-line">
                     <span itemProp="givenName">Maarten</span> <span itemProp="familyName">Trompper</span>
                 </div>
-                <div id="github-link" className="author-line"><a href={ghUrl}
+                <div id="github-link" className="author-line"><a hrefLang="en" href={ghUrl}
                                                                  className="icon no-decoration"><i
                     className="fa fa-github"> </i></a><a
                     itemProp="url"
@@ -23,7 +23,7 @@ export default class AuthorData extends Component {
                     className="fa fa-envelope"> </i></a><a
                     href="mailto:maarten.trompper@gmail.com" itemProp="email" className="author-value">maarten.trompper@gmail.com</a>
                 </div>
-            </div>
+            </address>
         );
     }
 }

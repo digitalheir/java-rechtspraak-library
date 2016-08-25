@@ -24,7 +24,7 @@ export default class PARSEVAL extends Component {
                 Like in the previous chapter, we evaluate our grammar using an F-score, but
                 notions of precision and recall are harder to define for constituency trees.
                 To evaluate the parser, we use a metric known as
-                PARSEVAL (due to {ref.cite(bib.abney1991procedure)}) with labelled precision and labelled
+                PARSEVAL (due to {ref.cite(bib.abney1991procedure)}) with labeled precision and labeled
                 recall as in {ref.cite(bib.collins1997three)}.
             </p>
             <p>
@@ -40,7 +40,7 @@ export default class PARSEVAL extends Component {
             </ul>
             <p>
                 Where 'correct constituent' means that each non-terminal node has the same label and the same yield,
-                and 'yield' means the ordered list of leaf nodes.
+                and yield is the ordered list of leaf nodes of a parse tree.
             </p>
         </div>;
     }

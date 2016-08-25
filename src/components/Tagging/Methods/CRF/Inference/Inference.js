@@ -27,7 +27,7 @@ export default class FScorez extends Component {
                 efficiently compute the Viterbi sequence through
                 a dynamic programming algorithm
                 called the Viterbi algorithm, which is very similar to
-                the <a href="https://en.wikipedia.org/wiki/Forward%E2%80%93backward_algorithm">forward-backward
+                the <a hrefLang="en" href="https://en.wikipedia.org/wiki/Forward%E2%80%93backward_algorithm">forward-backward
                 algorithm</a>.
             </p>
 
@@ -57,7 +57,7 @@ export default class FScorez extends Component {
                 and <F {...this.props} l="T"/> is the length of
                 the instance to label.
 
-                Luckily, Linear-Chain <abbr title="Conditional Random Fields">CRFs</abbr> fulfil the optimal
+                Luckily, linear-chain <abbr title="Conditional Random Fields">CRFs</abbr> fulfil the optimal
                 substructure property
                 which means that we can memoize optimal sub-results and avoid making the same
                 calculation many times.
@@ -67,12 +67,12 @@ export default class FScorez extends Component {
             </p>
 
             <F {...this.props} display="true"
-               l="\alpha_t(y_t) = \max_{y_{t-1}}\Phi_t(x_t, y_t, y_{t-1})\cdot \alpha_{t-1}(y_{t-1})"/>
+               l="\alpha_t(\mathbf y) = \max_{y_{t-1}}\Phi_t(x_t, y_t, y_{t-1})\cdot \alpha_{t-1}(\mathbf y)"/>
 
             <p>
                 where the base case
             </p>
-            <F {...this.props} display="truuuu" l="\alpha_1(y_1) = \Phi_1(x_1, y_1, y_0)"/>
+            <F {...this.props} display="truuuu" l="\alpha_1(\mathbf y) = \Phi_1(x_1, y_1, y_0)"/>
             <p>
                 We store the results in a table. (This sort of memoization
                 is what makes the Viterbi algorithm an example of dynamic programming.)

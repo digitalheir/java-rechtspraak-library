@@ -16,7 +16,7 @@ export default class CRF extends Component {
     render() {
         const relativeToRoot = this.props.path.match(/\//g).slice(1).map(_ => "../").join("");
 
-        //and will be relevant when we define Linear Chain <abbr title="Conditional Random Fields">CRFs</abbr>.
+        //and will be relevant when we define Linear-Chain <abbr title="Conditional Random Fields">CRFs</abbr>.
         return <div>
             <p>
                 Undirected Graphical Models are similar to directed
@@ -46,7 +46,7 @@ export default class CRF extends Component {
                         l="\mathbf y_A"/> denote only those assignments of variables in <F {...this.props} l="A"/>
                     </li>
                     <li>
-                        we consider <F {...this.props} l="V = X\cup Y"/> of
+                        we consider <F {...this.props} l="V = X\cup Y"/> the union of
                         a set of observation variables <F {...this.props} l="X"/> (for example, word features)
                         and a set of label variables <F {...this.props} l="Y"/> (for example, part-of-speech tags).
                     </li>
@@ -95,13 +95,13 @@ export default class CRF extends Component {
             <p>
                 The factorization of the function for <F
                 l="p(\mathbf x,\mathbf y)"/> can be represented
-                as a graph, called a <a href="https://en.wikipedia.org/wiki/Factor_graph">
+                as a graph, called a <a hrefLang="en" href="https://en.wikipedia.org/wiki/Factor_graph">
                 factor graph</a>, which is illustrated in <FigRef fig={figs.factorGraph}/>.
             </p>
 
 
             <p>
-                Factor graphs are <a className="wiki" href="https://en.wikipedia.org/wiki/Bipartite_graph">
+                Factor graphs are <a hrefLang="en" className="wiki" href="https://en.wikipedia.org/wiki/Bipartite_graph">
                 bipartite graphs</a> <F {...this.props} l="G=(V,F,E)"/> that link variable nodes <F
                 l="v_s\in V"/> to function nodes <F
                 l="\Phi_A\in F"/> through edge <F {...this.props} l={"e^{\\Phi_A}_{v_s}"}

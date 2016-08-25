@@ -7,7 +7,7 @@ const bib = {
             full: "Bradley, Joseph K and Guestrin, Carlos"
         },
         booktitle: "Proceedings of the 27th International Conference on Machine Learning (ICML-10)",
-        pages: "127—134",
+        pages: "127‑134",
         year: 2010,
         href: 'http://select.cs.cmu.edu/publications/paperdir/icml2010-bradley-guestrin.pdf'
     },
@@ -20,7 +20,7 @@ const bib = {
             full: 'Zhu, Muhua and Zhang, Yue and Chen, Wenliang and Zhang, Min and Zhu, Jingbo'
         },
         booktitle: 'ACL (1)',
-        pages: '434—443',
+        pages: '434‑443',
         year: 2013,
         href: 'http://www.aclweb.org/anthology/P13-1043.pdf'
     },
@@ -33,7 +33,7 @@ const bib = {
         },
         booktitle: "Proceedings of the second meeting of the North American Chapter of the Association for Computational Linguistics on Language technologies",
         organization: 'Association for Computational Linguistics',
-        pages: "1—8",
+        pages: "1‑8",
         href: 'https://www.hlp.rochester.edu/resources/workshop_materials/EVELIN12/Hale01_NAACL_probabilistic%20early%20parser_N01-1021.pdf',
         year: 2001
     },
@@ -46,7 +46,7 @@ const bib = {
             full: 'Abolhassani, Mohammad and Fuhr, Norbert and Gövert, Norbert'
         },
         booktitle: 'Intelligent Search on XML Data',
-        pages: '159—174',
+        pages: '159‑174',
         year: 2003,
         publisher: 'Springer',
         href: 'http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.83.465&rep=rep1&type=pdf'
@@ -61,7 +61,7 @@ const bib = {
         },
         booktitle: 'Proceedings of the eighteenth international conference on machine learning, ICML',
         volume: '1',
-        pages: '282—289',
+        pages: '282‑289',
         year: 2001,
         href: 'http://nlp.cs.nyu.edu/nycnlp/lafferty01conditional.pdf'
     },
@@ -74,7 +74,7 @@ const bib = {
             lastName: 'Burr'
         },
         booktitle: 'Proceedings of the International Joint Workshop on Natural Language Processing in Biomedicine and its Applications',
-        pages: '104—107',
+        pages: '104‑107',
         year: 2004,
         href: 'http://burrsettles.com/pub/settles.nlpba04.pdf',
         organization: 'Association for Computational Linguistics'
@@ -88,7 +88,7 @@ const bib = {
             full: 'Sha, Fei and Pereira, Fernando'
         },
         booktitle: 'Proceedings of the 2003 Conference of the North American Chapter of the Association for Computational Linguistics on Human Language Technology-Volume 1',
-        pages: '134—141',
+        pages: '134‑141',
         year: 2003,
         href: 'http://www-bcf.usc.edu/~feisha/pubs/shallow03.pdf',
         organization: 'Association for Computational Linguistics'
@@ -103,7 +103,7 @@ const bib = {
         },
         journal: 'Large Scale Inverse Problems, Radon Ser. Comput. Appl. Math',
         volume: '13',
-        pages: '181—203',
+        pages: '181‑203',
         year: '2012'
     },
     nocedal1980updating: {
@@ -116,7 +116,7 @@ const bib = {
         journal: 'Mathematics of computation',
         volume: '35',
         number: '151',
-        pages: '773—782',
+        pages: '773‑782',
         year: '1980'
     },
     collins1997three: {
@@ -127,7 +127,7 @@ const bib = {
             lastName: 'Collins'
         },
         booktitle: "Proceedings of the 35th Annual Meeting of the Association for Computational Linguistics and Eighth Conference of the European Chapter of the Association for Computational Linguistics",
-        pages: "16—23",
+        pages: "16‑23",
         organization: 'Association for Computational Linguistics',
         year: 1997, href: 'http://www.aclweb.org/anthology/P/P97/P97-1003.pdf'
     },
@@ -140,7 +140,7 @@ const bib = {
             full: 'Abney, Steven and Flickenger, S and Gdaniec, Claudia and Grishman, C and Harrison, Philip and Hindle, Donald and Ingria, Robert and Jelinek, Frederick and Klavans, Judith and Liberman, Mark and others'
         },
         booktitle: 'Proceedings of the workshop on Speech and Natural Language',
-        pages: '306—311',
+        pages: '306‑311',
         year: 1991,
         organization: 'Association for Computational Linguistics',
         href: 'http://www.aclweb.org/anthology/H/H91/H91-1060.pdf'
@@ -155,7 +155,7 @@ const bib = {
         journal: 'Nucleic acids research',
         volume: '22',
         number: '23',
-        pages: '5112—5120',
+        pages: '5112‑5120',
         year: 1994,
         publisher: 'Oxford University Press',
         href: 'http://nar.oxfordjournals.org/content/22/23/5112.full.pdf?related-urls=yes&legid=nar;22/23/5112'
@@ -183,7 +183,7 @@ const bib = {
         journal: 'Information and control',
         volume: '10',
         number: '2',
-        pages: '189—208',
+        pages: '189‑208',
         year: 1967,
         publisher: 'Elsevier',
         href: 'http://www.sciencedirect.com/science/article/pii/S001999586780007X',
@@ -224,7 +224,7 @@ const bib = {
         journal: 'Information Sciences',
         volume: '3',
         number: '3',
-        pages: '201—224',
+        pages: '201‑224',
         year: 1971,
         publisher: 'Elsevier',
         href: 'http://dx.doi.org/10.1016/S0020-0255(71)80007-5'
@@ -239,7 +239,7 @@ const bib = {
         },
         journal: 'Informatica Didactica',
         volume: '8',
-        pages: '2008—2010',
+        pages: '2008‑2010',
         year: 2009, href: 'http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.378.2875&rep=rep1&type=pdf'
     },
     cocke1969programming: {
@@ -282,7 +282,7 @@ const bib = {
         },
         booktitle: "ICML",
         volume: "17",
-        pages: "591—598",
+        pages: "591‑598",
         year: 2000,
         href: "http://cseweb.ucsd.edu/~elkan/254spring02/gidofalvi.pdf"
     },
@@ -319,7 +319,7 @@ const bib = {
         journal: 'ELECTRON. PUBL.',
         volume: '2',
         number: '4',
-        pages: '211—229',
+        pages: '211‑229',
         year: 1989,
         href: 'http://cgis.cs.umd.edu/~ben/papers/Furuta1989Automatically.pdf'
     },
@@ -332,7 +332,7 @@ const bib = {
             full: 'Bacci, Lorenzo and Spinosa, Pierluigi and Marchetti, Carlo and Battistoni, Roberto and Florence, I and Senate, I and Rome, I'
         },
         booktitle: 'Proc. of LOAIT Workshop',
-        pages: '45—54',
+        pages: '45‑54',
         year: 2009,
         href: 'http://ceur-ws.org/Vol-465/paper6.pdf'
     },
@@ -344,7 +344,7 @@ const bib = {
         journal: 'IEEE transactions on signal processing',
         volume: '44',
         number: '11',
-        pages: '2746—2756',
+        pages: '2746‑2756',
         year: '1996',
         href: 'http://dx.doi.org/10.1109/78.542181',
         publisher: 'IEEE'
@@ -358,7 +358,7 @@ const bib = {
             full: "Sutton, Charles and McCallum, Andrew"
         },
         journal: "Introduction to statistical relational learning",
-        pages: "93—128",
+        pages: "93‑128",
         year: 2006, href: 'https://people.cs.umass.edu/~mccallum/papers/crf-tutorial.pdf',
         publisher: "MIT press"
     },
@@ -371,7 +371,7 @@ const bib = {
             abbr: "Finkel et al."
         },
         journal: "Proceedings of the International Joint Workshop on Natural Language Processing in Biomedicine and its Applications",
-        pages: "88—91",
+        pages: "88‑91",
         year: 2004, href: 'http://nlp.stanford.edu/~manning/papers/bionlp-camera.pdf',
         publisher: "Association for Computational Linguistics"
     },
@@ -384,7 +384,7 @@ const bib = {
             abbr: "Klinger et al."
         },
         journal: "RANLP", href: 'http://www.aclweb.org/anthology/R/R09/R09-1035.pdf',
-        pages: "185—191",
+        pages: "185‑191",
         year: 2009
     },
     krishnan2006effective: {
@@ -396,7 +396,7 @@ const bib = {
             abbr: "Krishnan et al."
         },
         journal: "Proceedings of the 21st International Conference on Computational Linguistics and the 44th annual meeting of the Association for Computational Linguistics",
-        pages: "1121-1128",
+        pages: "1121‑1128",
         year: 2006, href: 'http://i.stanford.edu/~kvijay/krishnan-manning-colacl06sub.pdf',
         publisher: "Association for Computational Linguistics"
     }
@@ -414,7 +414,7 @@ export default bib;
 //        full: "Sutton, Charles and McCallum, Andrew"
 //    },
 //    journal: "Introduction to statistical relational learning",
-//    pages: "93—128",
+//    pages: "93‑128",
 //    year: 2006,
 //    publisher: "MIT press"
 //}

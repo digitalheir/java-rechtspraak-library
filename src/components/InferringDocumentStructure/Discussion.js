@@ -19,8 +19,8 @@ export default class Discussion extends Component {
             <p>
                 One way to improve parse quality is to incorporate more domain-specific knowledge
                 in the grammar. For example, sections
-                with titles like 'OVERWEGINGEN' (considerations) and
-                'CONCLUSIE' (conclusion) almost always appear as the first level of sectioning.
+                with titles like '<span  lang="nl">OVERWEGINGEN</span>' (considerations) and
+                '<span  lang="nl">CONCLUSIE</span>' (conclusion) almost always appear as the first level of sectioning.
             </p>
             <p>
                 Another possibility to improve the grammar is for the grammar
@@ -33,7 +33,7 @@ export default class Discussion extends Component {
             <p>
                 Owing to the brittleness of the current grammar,
                 we might benefit from implementing a
-                Conditional Probabilistic Context Free Grammar (Conditional {abbrs.pcfg}),
+                Conditional Probabilistic Context-Free Grammar (Conditional {abbrs.pcfg}),
                 as introduced in {ref.cite(bib.sutton2004conditional)}.
                 Conditional {abbrs.pcfgs} are similar to
                 Conditional Random Fields in
@@ -46,10 +46,10 @@ export default class Discussion extends Component {
 
             <p>
                 Another possibility is to implement a probabilistic version of the Earley parsing
-                algorithm, a more top down parser which easily allows to intervene during
-                parsing when some unexpected input is encountered. Although
-                the Earley parser has a worst-case complexity of <F {...this.props} l="O(n^3)"/>, it parses
-                left-recursive grammars in <F {...this.props} l="O(n)"/>, and is faster for certain grammars
+                algorithm. The Earley algorithm is a more top-down parser which easily allows to intervene during
+                parsing when some unexpected input is encountered. The Earley parser 
+                has a worst-case complexity of <F {...this.props} l="O(n^3)"/>, but parses
+                left-recursive grammars in <F {...this.props} l="O(n)"/>, and so is faster for certain grammars
                 than {abbrs.cyk}.
                 In our experiments, {abbrs.cyk} starts
                 to become noticeably slow for documents with more than 500 tokens, 

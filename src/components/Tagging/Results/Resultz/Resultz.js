@@ -30,7 +30,7 @@ export default class Resultz extends Component {
 
             <FigureResults url={relativeToRoot+"js/tagger-results.json"}/>
             <p>
-                We see that the {abbrs.crfs} out-perform the baseline task mostly by increasing the recall,
+                We see that the {abbrs.crfs} outperform the baseline task mostly by increasing the recall,
                 although the {abbrs.crfs} have
                 slightly worse precision (0.91 for {abbrs.crfs} contra 0.96 for hand-written).
             </p>

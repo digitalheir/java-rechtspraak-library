@@ -1,21 +1,21 @@
 const inferringSections = {
     intro: {
-        page: 22,
+        page: 23,
         id: 'parse-tree-introduction',
         title: "Introduction",
     },
     methods: {
-        page: 22,
+        page: 23,
         id: 'parse-tree-methods',
         title: "Methods",
     },
     evaluation: {
-        page: 25,
+        page: 26,
         id: 'parse-tree-evaluation',
         title: 'Results',
     },
     discussion: {
-        page: 26,
+        page: 27,
         id: 'parse-discussion',
         title: 'Discussion',
     }

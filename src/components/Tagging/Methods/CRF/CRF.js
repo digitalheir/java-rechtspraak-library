@@ -68,12 +68,12 @@ export default class CRF extends Component {
             <p>
                 In this thesis, we limit ourselves to a subclass of {abbrs.crfs} called Linear-Chain Conditional Random
                 Fields
-                ({abbrs.lccrfs} or Linear Chain {abbrs.crfs}),
+                ({abbrs.lccrfs} or linear-chain {abbrs.crfs}),
                 which is topologically very similar to {abbrs.hmms}: both model a probability distribution along a
                 chain of labels, where each label is also connected to a single observation.
             </p>
             <p>
-                To clarify: in our experiments we
+                To emphasize: in our experiments, we
                 consider an input document as a string of tokens which corresponds to a string of observations
                 vectors, and each token is linked to a label with a value
                 of either <code>title</code>, <code>nr</code>, <
@@ -90,7 +90,7 @@ export default class CRF extends Component {
                 part-of-speech tagging, since this kind of performance
                 appears to depend on extensive feature
                 engineering. As a downside, it is more likely that a model overfits
-                to a particular corpus, and so suffers in portability with respect to other copora.
+                to a particular corpus, and so suffers in portability with respect to other corpora.
                 Consider {ref.cite(bib.finkel2004exploiting)}. In our case, overfitting
                 is likely not a problem because we train explicitly for
                 one corpus, and do not aspire to full language abstraction.
@@ -100,7 +100,7 @@ export default class CRF extends Component {
                 we provide a definition of Linear-Chain Conditional Random Fields,
                 supported first by an introductory
                 section on Directed Graphical Models,
-                and specifically the conceptually simpler <a href="#hmm">Hidden Markov Models</a>.
+                and specifically the conceptually simpler <a hrefLang="en" href="#hmm">Hidden Markov Models</a>.
 
                 For a more thorough tutorial into {abbrs.crfs}, including skip-chain {abbrs.crfs}, one may refer
                 to {ref.cite(bib.sutton2006introduction)}.

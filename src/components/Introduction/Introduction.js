@@ -27,7 +27,7 @@ export default class IntroductionIntroduction extends Component {
             //     In this chapter, we introduce the problem
             //     of automatically assigning a section hierarchy
             //     to documents in the Dutch case law repository
-            //     of <a href="http://www.rechtspraak.nl/">Rechtspraak.nl</a> and why this is
+            //     of <a hrefLang="en" href="http://www.rechtspraak.nl/">Rechtspraak.nl</a> and why this is
             //     useful.
             // </p>
     render() {

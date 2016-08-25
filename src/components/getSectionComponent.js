@@ -148,7 +148,7 @@ function getHandler(route) {
             return FutureWork;
 
 
-      case sectionsParamEst.regularization.id:
+        case sectionsParamEst.regularization.id:
             return Regularization;
 
         default:
@@ -166,7 +166,7 @@ export function getSubSections(props, headerLevel) {
             "h" + headerLevel,
             {className: "title"},
             <a className="link-up" href="#"/>,
-            section.title
+            <span itemProp="name">{section.title}</span>
         );
         let subsubsections = '';
         if (!!SectionContent.getSections) {
@@ -174,6 +174,7 @@ export function getSubSections(props, headerLevel) {
             subsubsections = SectionContent.getSections().inOrder.map(getSubSubsections);
             //console.log(subsubsections);
         }
+        let description = section.description ? <meta itemProp="description" content={section.description}/> : '';
         return <section className="numbered-section"
                         itemScope={true}
                         itemProp="hasPart"
@@ -181,8 +182,11 @@ export function getSubSections(props, headerLevel) {
                         key={section.id}
                         id={section.id}>
             {header}
-            <SectionContent {...props}/>
-            {subsubsections}
+            {description}
+            <div>
+                <SectionContent {...props}/>
+                {subsubsections}
+            </div>
         </section>;
     }
 }

@@ -33,14 +33,14 @@ export default class Conclusion extends Component {
 
             <p>
                 We have described a procedure to assign types to document elements of
-                either <code>title</code>, <code>nr</code>, <code>newline</code> or <code>text block</code>
-                using Conditional Random Fields,
+                either <code>title</code>, <code>nr</code>, <code>newline</code> or <code>text 
+                block</code> using Conditional Random Fields,
                 reporting an F<sub>1</sub> score of 0.91 and F<sub>0.5</sub> score of 0.91.
             </p>
 
             <p>
-                Afterwards, have reviewed a procedure to organize those elements into a section hierarchy
-                using Probabilistic Context Free Grammars,
+                We have also reviewed a procedure to organize those elements into a section hierarchy
+                using Probabilistic Context-Free Grammars,
                 reporting an F<sub>1</sub> score of 0.92.
             </p>
 
@@ -51,7 +51,7 @@ export default class Conclusion extends Component {
                 rather than to produce false information,
                 so a low recall is preferable to low precision.
                 The scores obtained for the classifier and parser are promising,
-                but the procedures are not optimized extensively to the corpus, and can likely be improved to
+                but the procedures are not optimized extensively to the corpus, and may be improved to
                 perform within a 5% error margin.
                 In any case, mislabelings do not distort the text in such a way to render it illegible, so
                 we can be somewhat forgiving of errors.

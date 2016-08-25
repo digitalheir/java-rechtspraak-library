@@ -46,12 +46,12 @@ export default class Results extends Component {
             </ol>
 
             <p>
-                We include the newline condition, because including newlines could
+                We include the newline condition because including newlines could
                 either positively or negatively affect
                 performance.
-                On the one hand, newlines carry semantic information
+                On the one hand, newlines carry semantic
                 information: the author thought it appropriate to
-                demarcate something with whitespace. But on the other hand they
+                demarcate something with whitespace. But on the other hand, they
                 might obscure information about the previous label. Consider a
                 numbering, followed by a newline, followed by a section title.
                 Our <abbr title="Conditional Random Fields">CRFs</abbr> only consider one previous label, so the

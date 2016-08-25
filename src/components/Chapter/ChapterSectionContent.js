@@ -12,7 +12,7 @@ export default class Chapter extends React.Component {
         //         return <section key={section.id}
         //                         id={section.id}>
         //             <h4 className="title">
-        //                 <a className="link-up" href="#"/>
+        //                 <a hrefLang="en" className="link-up" href="#"/>
         //                 {section.title}
         //             </h4>
         //             <SectionContent {...this.props}/>

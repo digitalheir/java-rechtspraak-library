@@ -10,12 +10,12 @@ const taggingSections = {
     //     component: Methods
     // },
     crf: {
-        page: '14',
+        page: '13',
         id: 'crf',
         title: "Conditional Random Fields",
     },
     featureSelection: {
-        page: '13',
+        page: '12',
         id: 'features',
         title: 'Features',
     },

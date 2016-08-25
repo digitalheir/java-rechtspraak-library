@@ -35,15 +35,18 @@ export default class Introduction extends Component {
         var relativeToRoot = this.props.path.match(/\//g).slice(1).map(_ => "../").join("");
 
         return <div className="section-content">
-            <p><a href="http://www.rechtspraak.nl/">Rechtspraak.nl</a> is the official website of the Dutch
-                judiciary. The website hosts an open data portal for Dutch case law, containing metadata for
-                about 2 million court judgments<Source href="http://data.rechtspraak.nl/uitspraken/zoeken?"/> and
-                judgments texts for about 350.000 judgments in {abbrs.xml}<Source
-                    href="http://data.rechtspraak.nl/uitspraken/zoeken?return=doc"/>.
+            <p><a hrefLang="nl" href="http://www.rechtspraak.nl/">Rechtspraak.nl</a> is the official website of
+                the <span itemScope={true}
+                          itemType="https://schema.org/GovernmentOrganization">Dutch
+                judiciary</span>. The website hosts an open data portal for Dutch case law, containing metadata for
+                about 2 million court judgments<Source hrefLang="nl"
+                                                       href="http://data.rechtspraak.nl/uitspraken/zoeken?"/> and
+                judgment texts for about 350.000 judgments in {abbrs.xml}<Source
+                    hrefLang="nl" href="http://data.rechtspraak.nl/uitspraken/zoeken?return=doc"/>.
                 In this thesis, we only consider those documents that
                 contain text.
                 The full data set
-                of <a href="http://www.rechtspraak.nl/">Rechtspraak.nl</a> court
+                of <a hrefLang="nl" href="http://www.rechtspraak.nl/">Rechtspraak.nl</a> court
                 judgments contains
                 only a fraction of all court judgments that exist
                 in the Netherlands, but the collection is curated so that it is representative of
@@ -58,8 +61,8 @@ export default class Introduction extends Component {
             </p>
 
             <p>
-                We wish to automatically annotate documents in the corpus with some semantic mark
-                up, so it is helpful to see what is already done in this regard
+                We wish to automatically annotate documents in the corpus with some semantic markup,
+                so it is helpful to see what is already done in this regard
                 by <a href="http://www.rechtspraak.nl/">Rechtspraak.nl</a>.
                 As noted earlier, recent documents tend to be more richly marked up than older
                 documents. Indeed, most older documents consist exclusively
@@ -75,9 +78,9 @@ export default class Introduction extends Component {
                 <li className="desc info" id="info">
                     <p>
                         The first element in a document is typically a unique header element with
-                        a tagname of either <code>uitspraak.info</code> or <code>conclusie.info</code> for two types
+                        a tag name of either <code>uitspraak.info</code> or <code>conclusie.info</code> for two types
                         of case law (judgments and conclusions, respectively). We refer to
-                        either of these as <code>*.info</code>. <code>*.info</code> elements contain
+                        either of these as <code>*.info</code> elements. <code>*.info</code> elements contain
                         interesting metadata such as names and court location. The information is generally
                         not semantically marked up, but is reasonably easy to parse thanks
                         to style consistencies (e.g., most units of metadata are on a separate line).
@@ -133,7 +136,7 @@ export default class Introduction extends Component {
                         to create a section hierarchy.
                     </p>
                     <p>
-                        In practice we
+                        In practice, we
                         see three values for the <code>role</code> attribute.<Source
                         href=
                             "https://rechtspraak.cloudant.com/docs/_design/stats/_view/section_roles?group_level=1"
@@ -185,17 +188,17 @@ export default class Introduction extends Component {
 
                 <p>
                     Title texts have a number of patterns that often recur. See <FigRef
-                    fig={figs.figTitleTreemap}/> for a tree map of the distribution of
+                    fig={figs.figTitleTreemap}/> for a treemap of the distribution of
                     normalized title texts.
                 </p>
 
                 <FigTitlePattern/>
 
                 <p>
-                    From this figure we learn that most the section roles in use have some titles strings that
-                    are used very often, but there is also a greatly diverse set of title variation that occur
-                    less often. This figure encourages our use of CRFs: we notice clearly quantifiable patterns,
-                    such as the number of words and words used in titles.
+                    From this figure, we learn that most of the section roles in use have a number of title strings that
+                    are used very often, but there is also a greatly diverse set of variations that occur
+                    less often. This figure encourages our use of CRFs: there are clearly identifiable patterns,
+                    but too many variations to list exhaustively.
                 </p>
 
                 <p>
@@ -208,7 +211,7 @@ export default class Introduction extends Component {
                     <strike>
                         tf–idf is short for 'term frequency–inverse document frequency'.
                         It represents the importance of a given word by taking the number of times
-                        that word occurs in the document, and offsetting it against the amount of
+                        that word occurs in the document, and offsetting it against the number of
                         times that word occurs elsewhere in the corpus.
                     </strike>
                 </p>
@@ -217,33 +220,37 @@ export default class Introduction extends Component {
                 <F {...this.props} display={true} l="\text{tfidf}(t, d, D) = \text{tf}(t, d)\cdot \text{idf}(t, D)"/>
                 <p>where</p>
                 <ul>
-                    <li><F {...this.props} l="tf(t,d)"/> is some measure of the importance of a
+                    <li><F {...this.props} l="\text{tf}(t,d)"/> is some measure of the importance of a
                         term <F {...this.props} l="t"/> in a
-                        given document <F {...this.props} l="d"/>. Let the raw frequency <F {...this.props} l="f_{t,d}"/> be
+                        given document <F {...this.props} l="d"/>. Let the raw frequency <F {...this.props}
+                            l="f_{t,d}"/> be
                         the plain number of times the term <F {...this.props} l="t"/> in occurs in a
-                        given document <F {...this.props} l="d"/>. We use for <F {...this.props} l="tf(t,d)"/> the logarithmically
+                        given document <F {...this.props} l="d"/>. We use for <F {...this.props} l="\text{tf}(t,d)"/>
+                        the logarithmically
                         scaled term
-                        count: <F {...this.props} l="tf(t,d) = 1 + \log{f_{t,d}}"/>, or <F {...this.props} l="0"/> if <F {...this.props} l="f_{t,d} = 0"/>.
+                        count: <F {...this.props} l="\text{tf}(t,d) = 1 + \log{f_{t,d}}"/>, or <F {...this.props}
+                            l="0"/> if <F {...this.props} l="f_{t,d} = 0"/>.
                     </li>
-                    <li><F {...this.props} l="idf(t, D)"/> is some measure of how rare it is to find a
+                    <li><F {...this.props} l="\text{idf}(t, D)"/> is some measure of how rare it is to find a
                         term <F {...this.props} l="t"/> in a
                         given document corpus <F {...this.props} l="D"/>. We obtain this measure
                         by calculating the logarithmically scaled inverse
-                        fraction of documents in <F {...this.props} l="D"/> that contain the term <F {...this.props} l="t"/>.
+                        fraction of documents in <F {...this.props} l="D"/> that contain the term <F {...this.props}
+                            l="t"/>.
                         Let <F {...this.props} l="D"/> be the collection of documents, we then define
                         the standard idf measure as:
-                        <F {...this.props} display="true" l="idf(t, D) = \log{\frac{|D|}{|\{d \in D:t \in d\}|}}"/>
+                        <F {...this.props} display="true"
+                                           l="\text{idf}(t, D) = \log{\frac{|D|}{|\{d \in D:t \in d\}|}}"/>
                     </li>
                 </ul>
                 <p>
                     Because we
                     want to infer the most important words within
                     title elements specifically, we take as <F {...this.props} l="D"/> the collection
-                    of all element types (paragraphs, titles),
+                    of all element types (paragraphs, titles, &#8230;),
                     and compute the tf-idf score
-                    for each term in each title. Some classes of words, such as articles
-                    and numbers,
-                    are treated as a single term.
+                    for each term with the <code>title</code> type. Some classes of words, such as articles
+                    and numbers, are treated as a single term.
                 </p>
                 <TitleTfIdfFigure/>
                 <TitleTfIdfFigurePerSection/>
@@ -251,11 +258,10 @@ export default class Introduction extends Component {
                     We observe, not very surprisingly,
                     that numbers and articles are top terms
                     for section titles.
-                    Furthermore, again not surprisingly, we notice that a most terms in a section
+                    Furthermore, we notice that most terms in a section
                     title are semantically related to the section role.
                 </p>
             </ol>
-        </div>
-            ;
+        </div>;
     }
 }

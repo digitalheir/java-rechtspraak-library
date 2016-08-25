@@ -23,7 +23,7 @@ export default class CYK extends Component {
             <p>
                 The Cocke–Younger–Kasami ({abbrs.cyk}) algorithm is an
                 algorithm for parsing
-                Context Free Grammars that was separately discovered
+                Context-Free Grammars that was separately discovered
                 by {ref.cite(
                 bib.kasami1965efficient)}, {
                 ref.cite(bib.younger1967recognition)} and {ref.cite(bib.cocke1969programming)}.
@@ -36,7 +36,7 @@ export default class CYK extends Component {
             <p>The standard version of the {abbrs.cyk} algorithm is defined for
                 ordinary context
                 free grammars that are given in Chomsky normal form ({abbrs.cnf}),
-                but is is easy to extend the algorithm to include support
+                but is easy to extend to include support
                 for probabilistic and unary rules as well, as we do in this
                 section.
                 Note that any {abbrs.cfg} may be transformed into an equivalent
@@ -45,13 +45,13 @@ export default class CYK extends Component {
                 Also note that converting a grammar to {abbrs.cnf} is not without
                 cost: the increase in grammar size is <F
                     l="\mathrm O (\left | G \right |^2)"/> for the best
-                algorithm, but the increase is linear if we use a variation
+                algorithm. The increase is linear if we use a variation
                 of the CYK algorithm that works on grammars in binary normal form ({abbrs.twonf}):
                 see {ref.cite(bib.lange2009cnf)}.
             </p>
 
             <p>
-                The {abbrs.cyk} algorithm is a bottom-up parsing algorithm. The algorithm considers every
+                The {abbrs.cyk} algorithm is a bottom-up parsing algorithm. The standard algorithm considers every
                 substring from length <F {...this.props} l="1"/> to <F {...this.props} l="n"/>, and keeps
                 a list of all possible types for those substrings, along with their probabilities.
             </p>
@@ -67,9 +67,10 @@ export default class CYK extends Component {
             </p>
             <p>
                 In addition to binary production rules, we also allow unary rules in our grammar
-                of the form <F {...this.props} l="\text A \rightarrow \text B"/>, where <F {...this.props} l="\text A"/>
-                and <F {...this.props} l="\text B"/> are both
-                non-terminals.
+                of the
+                form <F {...this.props} l="\text A \rightarrow \text B"/>,
+                where <F {...this.props} l="\text A"/> and <F {...this.props} l="\text B"/> are
+                both non-terminals.
                 Extension of the algorithm is simple:
                 after ordinary type assignment for substrings, we add those
                 types to the list that result from applicable unary rules,
@@ -107,7 +108,7 @@ export default class CYK extends Component {
                     sentence
                     "fish people fish tanks", based on the grammar in <ListingRef listing={nlpGrammar}/>.
                     The constituents that make up the resulting parse
-                    to <code>S</code> are marked in bold.
+                    to <code>S</code> are underlined.
                     The top of the triangle represents the
                     substring <F {...this.props} l="1"/> to <F {...this.props} l="4"/>, i.e.
                     the entire sentence. We can derive <code>S</code> by
@@ -116,7 +117,7 @@ export default class CYK extends Component {
                     people</code>) and the substring
                     from <F {...this.props} l="3"/> to <F {...this.props} l="4"/> (<code>fish
                     tanks</code>) using the
-                    rule <code>S → NP VP</code>.
+                    rule <code className="avoid-page-break">S → NP VP</code>.
                 </figcaption>
             </figure>
             <figure id={nlpGrammar.id}>

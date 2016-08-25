@@ -63,7 +63,7 @@ export default class FigureSectionTitleTfIdf extends React.Component {
                 words in
                 section titles, per section role.
                 Stemming is performed using
-                the <a href="http://snowball.tartarus.org/algorithms/dutch/stemmer.html">Snowball algorithm for
+                the <a hrefLang="en" href="http://snowball.tartarus.org/algorithms/dutch/stemmer.html">Snowball algorithm for
                 Dutch</a>.
                 '[NUMBER]', '[PUNCTUATION]' and '[de|het|een]' are special classes for numbers, punctation, and
                 grammatical articles (the Dutch equivalent of the articles 'the' and 'a').

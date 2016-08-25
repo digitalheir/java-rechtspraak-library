@@ -10,13 +10,13 @@ import abbrs from  '../../../../abbreviations';
 
 export default class LinearChainCRF extends Component {
     render() {
-        const canonicalCrfFormula = "\\frac{\\exp\\left \\{\\sum_{t=1}^T\\sum_{k=1}^{K} \\lambda_k f_k(y_t, y_{t-1}, x_t)\\right \\}}{\\sum_{\\mathbf y'}\\exp\\left \\{\\sum_{t=1}^T\\sum_{k=1}^{K} \\lambda_k f_k(y_{t}', y'_{t-1}, x_t)\\right \\}}";
+        const canonicalCrfFormula = "\\frac{\\exp\\left \\{\\sum_{t=1}^T\\sum_{k=1}^{K} \\lambda_k f_k(x_t, y_t, y_{t-1})\\right \\}}{\\sum_{\\mathbf y'}\\exp\\left \\{\\sum_{t=1}^T\\sum_{k=1}^{K} \\lambda_k f_k(x_t, y_{t}', y'_{t-1})\\right \\}}";
         return <div>
             <p>
                 On the surface, linear-chain {abbrs.crfs} ({abbrs.lccrfs}) look much like Hidden Markov
                 Models: {abbrs.lccrfs} also model a sequence of observations along a
                 sequence of labels. As
-                explained earlier, the difference between {abbrs.hmms} and Linear Chain {abbrs.crfs} is that instead
+                explained earlier, the difference between {abbrs.hmms} and Linear-Chain {abbrs.crfs} is that instead
                 of modeling the joint probability <F {...this.props} latex="p(\mathbf x,\mathbf y)"/>, we model the
                 conditional
                 probability <F {...this.props} latex="p(\mathbf y|\mathbf x)"/>.
@@ -43,16 +43,15 @@ export default class LinearChainCRF extends Component {
                     and <F {...this.props} l="V = X\cup Y"/>
                 </li>
                 <li><F {...this.props} l="F=\{\Phi_1, \ldots\Phi_k\}"/> be a set of local functions from
-                    a subset of variables (observation and labels) to <F
-                        l="\mathbb{R}^+"/>. In the case of linear-chain CRFs, these variables are
-                    the current observation, the current label and the previous label.
+                    variables (observation and labels) to the real numbers: <F
+                        l="V \rightarrow\ \mathbb{R}^+"/>. 
                 </li>
             </ul>
 
             <p>
                 Each local function <F
                 display={false}
-                l="\Phi_{k}(x_t,y_t,y_{t-1}) = \lambda_{k} f_{k}(y_{t},y_{t-1},x_t)"
+                l="\Phi_{k}(x_t,y_t,y_{t-1}) = \lambda_{k} f_{k}(x_t,y_{t},y_{t-1})"
             /> where
             </p>
             <ul>
@@ -109,7 +108,7 @@ export default class LinearChainCRF extends Component {
                     l="p(\mathbf y|\mathbf x)=
                     \frac{1}{Z(\mathbf x)}\hat{p}(\mathbf x, \mathbf y)
                     =
-            \frac{1}{Z(\mathbf x)}\prod_{t=1}^T\prod_{k=1}^{K} \lambda_k f_k(y_t, y_{t-1}, x_t)"
+            \frac{1}{Z(\mathbf x)}\prod_{t=1}^T\prod_{k=1}^{K} \lambda_k f_k(x_t, y_t, y_{t-1})"
                     displayMode={true}/>
             </p>
 
@@ -130,7 +129,7 @@ export default class LinearChainCRF extends Component {
                 {ref.cite(bib.sutton2006introduction)} show that a logistic regression model is a simple {abbrs.crf},
                 and also
                 that rewriting
-                the probability distribution <F {...this.props} latex="p(\mathbf x,\mathbf y)"/> of a {abbrs.hmm} yields
+                the probability distribution <F {...this.props} latex="p(\mathbf x,\mathbf y)"/> of an {abbrs.hmm} yields
                 a Conditional
                 Random Field with a particular choice of feature functions.
             </p>
