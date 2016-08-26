@@ -2,6 +2,7 @@ package org.leibnizcenter.rechtspraak.tokens.text;
 
 import com.google.common.base.Strings;
 import com.google.common.collect.Sets;
+import org.leibnizcenter.cfg.token.Token;
 import org.leibnizcenter.rechtspraak.tokens.tokentree.TokenTreeVertex;
 import org.leibnizcenter.util.Regex;
 import org.leibnizcenter.util.Strings2;
@@ -15,7 +16,7 @@ import java.util.stream.Collectors;
 /**
  * Created by maarten on 3-4-16.
  */
-public abstract class TokenTreeLeaf implements TokenTreeVertex, Node {
+public abstract class TokenTreeLeaf extends Token<Node> implements TokenTreeVertex, Node {
     private static final String[] ZERO_STRINGS = new String[]{};
     private static final String EMPTY_STRING = "";
     private static final String SPACE = " ";
@@ -31,6 +32,7 @@ public abstract class TokenTreeLeaf implements TokenTreeVertex, Node {
     public final Element emphasis;
 
     public TokenTreeLeaf(Node n) {
+        super(n);
         this.node = n;
         String textContent = n.getTextContent();
         this.txt = textContent == null ? null : textContent.trim();
@@ -102,6 +104,7 @@ public abstract class TokenTreeLeaf implements TokenTreeVertex, Node {
         node.setNodeValue(nodeValue);
 
     }
+
 
     @Override
     public short getNodeType() {

@@ -272,10 +272,10 @@ public class Xml {
                 if (max > 0 && xmls.size() >= max) break;
             }
         }
-        if (max > 0 && max < xmls.size()) {
+        if (max > 0 && max < xmls.size())
             return xmls.subList(0, max);
-        }
-        for (File f : xmls) if (f == null || f.getName() == null) throw new Error();
+
+        for (File f : xmls) if (f == null) throw new Error();
         return xmls;
     }
 

@@ -44,6 +44,11 @@
             <version>0.9.2</version>
         </dependency>
         <dependency>
+            <groupId>org.leibnizcenter</groupId>
+            <artifactId>probabilistic-earley-parser</artifactId>
+            <version>0.9.2</version>
+        </dependency>
+        <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
             <version>2.6.2</version>

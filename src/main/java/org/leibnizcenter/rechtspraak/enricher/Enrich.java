@@ -1,18 +1,17 @@
 package org.leibnizcenter.rechtspraak.enricher;
 
 import cc.mallet.fst.CRF;
-import org.leibnizcenter.rechtspraak.enricher.cfg.CYK;
-import org.leibnizcenter.rechtspraak.enricher.cfg.Grammar;
-import org.leibnizcenter.rechtspraak.enricher.cfg.ScoreChart;
-import org.leibnizcenter.rechtspraak.enricher.cfg.rule.RightHandSide;
-import org.leibnizcenter.rechtspraak.enricher.cfg.rule.StandardRule;
-import org.leibnizcenter.rechtspraak.enricher.cfg.rule.TypeContainer;
-import org.leibnizcenter.rechtspraak.enricher.cfg.rule.type.NonTerminalImpl;
-import org.leibnizcenter.rechtspraak.enricher.cfg.rule.type.Terminal;
-import org.leibnizcenter.rechtspraak.enricher.cfg.rule.type.interfaces.Type;
+import org.leibnizcenter.cfg.Grammar;
+import org.leibnizcenter.cfg.category.terminal.Terminal;
+import org.leibnizcenter.cfg.earleyparser.ParseTreeWithScore;
+import org.leibnizcenter.cfg.earleyparser.Parser;
+import org.leibnizcenter.cfg.earleyparser.parse.ParseTree;
+import org.leibnizcenter.cfg.token.Token;
+import org.leibnizcenter.cfg.token.Tokens;
 import org.leibnizcenter.rechtspraak.tagging.DeterministicTagger;
 import org.leibnizcenter.rechtspraak.tagging.Label;
 import org.leibnizcenter.rechtspraak.tagging.crf.ApplyCrf;
+import org.leibnizcenter.rechtspraak.tokens.LabeledToken;
 import org.leibnizcenter.rechtspraak.tokens.RechtspraakElement;
 import org.leibnizcenter.rechtspraak.tokens.TokenList;
 import org.leibnizcenter.rechtspraak.tokens.text.TokenTreeLeaf;
@@ -36,18 +35,18 @@ import java.util.*;
  * Created by Maarten on 2016-04-01.
  */
 public class Enrich {
-    private final CRF crf;
+//    private final CRF crf;
 
     public Enrich() throws IOException, ClassNotFoundException, URISyntaxException {
-        this.crf = ApplyCrf.loadCrf(Enrich.class.getClassLoader()
-                .getResourceAsStream(Const.RECHTSPRAAK_MARKUP_TAGGER_CRF_TRAINED_ON_MANUALLY_ANNOTATED)
-        );
+//        this.crf = ApplyCrf.loadCrf(Enrich.class.getClassLoader()
+//                .getResourceAsStream(Const.RECHTSPRAAK_MARKUP_TAGGER_CRF_TRAINED_ON_MANUALLY_ANNOTATED)
+//        );
     }
 
     public Enrich(File crfModelFile) throws IOException, ClassNotFoundException {
         if (!crfModelFile.exists())
             throw new InvalidParameterException("CRF model not found at " + crfModelFile.getAbsolutePath());
-        this.crf = ApplyCrf.loadCrf(crfModelFile);
+//        this.crf = ApplyCrf.loadCrf(crfModelFile);
     }
 
     @SuppressWarnings("WeakerAccess")
@@ -66,56 +65,57 @@ public class Enrich {
         // Make sectioning tree if there is no section tag already
         //TODO
 //        if (!Xml.containsTag(contentRoot, "section")) {
-        Grammar dg = new DocumentGrammar();
+        Grammar dg = DocumentGrammar.grammar;
 
-        List<Terminal> words = new ArrayList<>(tags.size());
-        for (int i = 0; i < tags.size(); i++) {
-            words.add(new Terminal(tags.get(i), tokenList.get(i)));
-        }
-        ScoreChart.ParseTreeContainer bestParseTree = CYK.getBestParseTree(words, dg);
-        if (bestParseTree == null) throw new NullPointerException();
 
-        setNewXmlStructure(bestParseTree, contentRoot);
+        List<Token<LabeledToken>> words = new ArrayList<>(tokenList.size());
+        for (int i = 0; i < tags.size(); i++)
+            words.add(new Token<>(
+                    new LabeledToken(tokenList.get(i), tags.get(i))
+            ));
+        System.out.println(words.size());
+        ParseTreeWithScore viterbi = Parser.getViterbiParseWithScore(DocumentGrammar.DOCUMENT, dg, words);
+        System.out.println(words.size());
+        if (viterbi == null) throw new NullPointerException();
 
-        // Set tag values on elements (we can do this another way)
-        Collections3.zip(tokenList.stream(), tags.stream()).forEach(pair -> {
-            Label label = pair.getValue();
-            TokenTreeLeaf token = pair.getKey();
-            if (token instanceof RechtspraakElement) {
-                Element element = ((RechtspraakElement) token).getElement();
-                switch (label) {
-                    case NEWLINE:
-                        break;
-                    case NR:
-                        element = Xml.setElementNameTo(element, null, "nr");
-                        break;
-                    case SECTION_TITLE:
-                        element = Xml.setElementNameTo(element, null, "text");
-                        break;
-                    case TEXT_BLOCK:
-                        switch (element.getTagName()) {
-                            case LeibnizTags.TAG_POTENTIAL_NR:
-                            case LeibnizTags.TAG_QUOTE:
-                            case LeibnizTags.TAG_TEXT:
-                                Xml.dissolveTag(element);
-                                element = null;
-                                break;
-                            default:
-                                break;
-                        }
-                        break;
-                    default:
-                        throw new IllegalStateException();
-                }
-            }
-        });
-
-        // Dissolve intermediate tags
-        cleanUp(tokenList.getSource().getDocumentElement());
+//        setNewXmlStructure(viterbi, contentRoot);
+//
+//        // Set tag values on elements (we can do this another way)
+//        Collections3.zip(tokenList.stream(), tags.stream()).forEach(pair -> {
+//            Label label = pair.getValue();
+//            TokenTreeLeaf token = pair.getKey();
+//            if (token instanceof RechtspraakElement) {
+//                Element element = ((RechtspraakElement) token).getElement();
+//                switch (label) {
+//                    case NEWLINE:
+//                        break;
+//                    case NR:
+//                        element = Xml.setElementNameTo(element, null, "nr");
+//                        break;
+//                    case SECTION_TITLE:
+//                        element = Xml.setElementNameTo(element, null, "text");
+//                        break;
+//                    case TEXT_BLOCK:
+//                        switch (element.getTagName()) {
+//                            case LeibnizTags.TAG_POTENTIAL_NR:
+//                            case LeibnizTags.TAG_QUOTE:
+//                            case LeibnizTags.TAG_TEXT:
+//                                Xml.dissolveTag(element);
+//                                element = null;
+//                                break;
+//                            default:
+//                                break;
+//                        }
+//                        break;
+//                    default:
+//                        throw new IllegalStateException();
+//                }
+//            }
+//        });
+//
+//        // Dissolve intermediate tags
+//        cleanUp(tokenList.getSource().getDocumentElement());
     }
-
-    private static final NonTerminalImpl a = new NonTerminalImpl(" "); // placeholder
-    private static final StandardRule PLACE_HOLDER_RULE = new StandardRule(a, new RightHandSide(a, a), 1.0);
 
 //    private static CYK.ParseTreeContainer flattenTree(CYK.ParseTreeContainer t) {
 //        if(t==null)throw new NullPointerException();
@@ -178,7 +178,7 @@ public class Enrich {
      *
      * @param tree
      */
-    private static void setNewXmlStructure(ScoreChart.ParseTreeContainer tree, Element contentRoot) {
+    private static void setNewXmlStructure(ParseTreeWithScore tree, Element contentRoot) {
 //        for (Node n : Xml.getChildren(contentRoot))
 //            contentRoot.removeChild(n);
 
@@ -187,38 +187,39 @@ public class Enrich {
         Xml.copyAttributes(contentRoot, newContentRoot);
 
         // Add XML nodes
-        recursiveCreateXml(tree, newContentRoot);
+
+           recursiveCreateXml(tree.getParseTree(), newContentRoot);
 
         // Replace old <uitspraak>/<conclusie> with new one
         contentRoot.getParentNode().replaceChild(newContentRoot, contentRoot);
     }
 
-    private static void recursiveCreateXml(TypeContainer root, Node addTo) {
-        if (root instanceof ScoreChart.ParseTreeContainer) {
-            // Container
-            Type type = root.getType();
-            Element newElement;
-            if (type.equals(DocumentGrammar.SECTION)) {
-                newElement = addTo.getOwnerDocument().createElement("section");
-            } else if (type.equals(DocumentGrammar.SECTION_TITLE)) {
-                newElement = addTo.getOwnerDocument().createElement("title");
-            }else{
-                //addTo.getOwnerDocument().createElement("div");
-                newElement = null;
-            }
-            if(newElement!=null){
-                addTo.appendChild(newElement);
-                addTo = newElement;
-            }
-            for (TypeContainer inp : ((ScoreChart.ParseTreeContainer) root).getInputs()) {
-                recursiveCreateXml(inp, addTo);
-            }
-        } else if (root instanceof Terminal) {
-            TokenTreeLeaf data = (TokenTreeLeaf) ((Terminal) root).getData();
-            if (data == null) throw new NullPointerException();
-            addTo.appendChild(data.getNode());
-        } else
-            throw new InvalidParameterException();
+    private static void recursiveCreateXml(ParseTree root, Node addTo) {
+//        if (root instanceof ScoreChart.ParseTreeContainer) {
+//            // Container
+//            Type type = root.getType();
+//            Element newElement;
+//            if (type.equals(DocumentGrammar.SECTION)) {
+//                newElement = addTo.getOwnerDocument().createElement("section");
+//            } else if (type.equals(DocumentGrammar.SECTION_TITLE)) {
+//                newElement = addTo.getOwnerDocument().createElement("title");
+//            } else {
+//                //addTo.getOwnerDocument().createElement("div");
+//                newElement = null;
+//            }
+//            if (newElement != null) {
+//                addTo.appendChild(newElement);
+//                addTo = newElement;
+//            }
+//            for (TypeContainer inp : ((ScoreChart.ParseTreeContainer) root).getInputs()) {
+//                recursiveCreateXml(inp, addTo);
+//            }
+//        } else if (root instanceof Terminal) {
+//            TokenTreeLeaf data = (TokenTreeLeaf) ((Terminal) root).getData();
+//            if (data == null) throw new NullPointerException();
+//            addTo.appendChild(data.getNode());
+//        } else
+//            throw new InvalidParameterException();
     }
 
     /**

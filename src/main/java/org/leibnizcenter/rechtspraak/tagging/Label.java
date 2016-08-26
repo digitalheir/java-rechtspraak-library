@@ -15,7 +15,7 @@ public enum Label {
     NEWLINE,
     NR,
     SECTION_TITLE,
-    TEXT_BLOCK;
+    TEXT_BLOCK, label;
 
     public final static Map<String, Label> fromString;
 
