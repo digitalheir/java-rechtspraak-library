@@ -1,11 +1,6 @@
 //noinspection JSUnresolvedVariable
 import React, {Component} from 'react';
 
-import FigRef from './../../../../Figures/FigRef'
-import FigImg from './../../../../Figures/Image/Image'
-import figs from './../../../../Figures/figs'
-import ref from '../../../../Bibliography/References/references'
-import bib from  '../../../../Bibliography/bib';
 import F from  '../../../../Math/Math';
 import abbrs from  '../../../../abbreviations';
 
@@ -37,7 +32,7 @@ export default class FScorez extends Component {
             </p>
 
             <F {...this.props} display="true"
-               l="\mathbf y^*=\text{argmax}_{\mathbf y}\frac{1}{Z(\mathbf x)}\prod_{t=1}^T\prod_{k=1}^{K} \Phi_{k,t}"/>
+                               l="\mathbf y^*=\text{argmax}_{\mathbf y}\frac{1}{Z(\mathbf x)}\prod_{t=1}^T\prod_{k=1}^{K} \Phi_{k,t}"/>
 
             <p>
                 We can leave out the normalization factor <F {...this.props} l="\frac{1}{Z(\mathbf x)}"/>,
@@ -46,14 +41,14 @@ export default class FScorez extends Component {
             </p>
 
             <F {...this.props} display="true"
-               l="\mathbf y^* = \text{argmax}_{\mathbf y}\prod_{t=1}^T\prod_{k=1}^{K} \Phi_{k,t}"/>
+                               l="\mathbf y^* = \text{argmax}_{\mathbf y}\prod_{t=1}^T\prod_{k=1}^{K} \Phi_{k,t}"/>
 
             <p>
                 Note that to find <F {...this.props} l="\mathbf y^*"/>, we need to iterate over each possible
                 assignment to the label vector <F {...this.props} l="\mathbf y"/>,
                 which would implicate that in the general case, we
-                need an algorithm of <F {...this.props} l="O(M^T)"/>,
-                where <F {...this.props} l="M"/> is the number of possible labels,
+                need an algorithm of <F {...this.props} l="O(|K|^T)"/>,
+                where <F {...this.props} l="|K|"/> is the number of possible labels,
                 and <F {...this.props} l="T"/> is the length of
                 the instance to label.
 
@@ -61,34 +56,43 @@ export default class FScorez extends Component {
                 substructure property
                 which means that we can memoize optimal sub-results and avoid making the same
                 calculation many times.
-                We calculate the optimal path score <F {...this.props} l="\alpha_t(y_t)"/> at
-                time <F {...this.props} l="t"/> ending with <F {...this.props} l="y_t"/> recursively as follows,
-                for <F {...this.props} l="\Phi_t = \prod_{k=1}^{K} \Phi_{k,t}"/> and each <F {...this.props} l="y_t \in \mathbf y"/>:
+                We calculate the optimal path score <F {...this.props} l="\delta_t(y_t)"/> at
+                time <F {...this.props} l="t"/> ending with <F {...this.props} l="y_t"/> recursively
+                for <F {...this.props} l="\Phi_t = \prod_{k=1}^{K} \Phi_{k,t}"/>:
             </p>
 
             <F {...this.props} display="true"
-               l="\alpha_t(\mathbf y) = \max_{y_{t-1}}\Phi_t(x_t, y_t, y_{t-1})\cdot \alpha_{t-1}(\mathbf y)"/>
+                               l="\delta_t(y_t) = \max_{y_{t-1}}\Phi_t(x_t, y_t, y_{t-1})\cdot \delta_{t-1}(y_{t-1})"/>
 
             <p>
                 where the base case
             </p>
-            <F {...this.props} display="truuuu" l="\alpha_1(\mathbf y) = \Phi_1(x_1, y_1, y_0)"/>
+            <F {...this.props} display="truuuu" l="\delta_1(y_1) = \Phi_1(x_1, y_1, y_0)"/>
             <p>
                 We store the results in a table. (This sort of memoization
                 is what makes the Viterbi algorithm an example of dynamic programming.)
                 We find the optimal
-                sequence <F {...this.props} l="\mathbf y^*"/> by maximizing <F {...this.props} l="\alpha_t(y_t)"/> at the end of
+                sequence <F {...this.props} l="\mathbf y^*"/> by maximizing <F {...this.props} l="\delta_t(y_t)"/> at
+                the end of
                 the sequence, <span
                 className="avoid-page-break"><F {...this.props} l="t = T"/>:
                 </span>
             </p>
-            <F {...this.props} display={true} l="\mathbf y^* = \text{argmax}_{\mathbf y}\alpha_T(y_T)"/>
+            <F {...this.props} display={true} l="y^*_T = \text{argmax}_{y_T}\delta_T(y_T)"/>
+            <p>
+                And then count back from <F l="T-1"/> to <F l="1"/>:
+            </p>
+            <F {...this.props} display={true}
+                               l="y^*_t = \text{argmax}_{y_{t}}\Phi_{t}(x_{t+1},y_{t+1}^*,y_t)\delta_t(y_t)"/>
+            <p>
+                This gives us the best label for each <F l="t"/>, and so <F l="\mathbf y^*"/>.
+            </p>
             <p>
                 Using this trick, we
                 reduce the computational complexity
                 of finding the Viterbi path
                 to <span
-                style={{display:'inline-block'}}><F {...this.props} l="O(M^2 T)"/>.
+                style={{display:'inline-block'}}><F {...this.props} l="O(|K|^2 T)"/>.
                 </span>
             </p>
         </div>

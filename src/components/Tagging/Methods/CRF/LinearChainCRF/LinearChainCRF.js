@@ -25,7 +25,8 @@ export default class LinearChainCRF extends Component {
             <p>
                 This is a fundamental difference: we don't
                 assume that the labels generate observations, but rather that the observations provide support
-                for the probability of labels.
+                for the probability of labels. This means that the elements of <F l="x"/> do not need to be 
+                conditionally independent, and so we can encode much richer observation patterns.  
             </p>
 
             <p>
@@ -86,7 +87,7 @@ export default class LinearChainCRF extends Component {
                 We then define the un-normalized {abbrs.crf} distribution as:
 
                 <F {...this.props}
-                    l="\hat{p}(\mathbf x, \mathbf y)=\prod_{t=1}^T\prod_{k=1}^K\Phi_{k,t}(x_t, y_t, y_{t-1})"
+                    l="\hat{p}(\mathbf x, \mathbf y)=\prod_{t=1}^T\prod_{k=1}^K\Phi_k(x_t, y_t, y_{t-1})"
                     displayMode={true}/>
             </p>
 
