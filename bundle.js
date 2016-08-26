@@ -60691,7 +60691,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'This is a fundamental difference: we don\'t assume that the labels generate observations, but rather that the observations provide support for the probability of labels.'
+	                    'This is a fundamental difference: we don\'t assume that the labels generate observations, but rather that the observations provide support for the probability of labels. This means that the elements of ',
+	                    _react2.default.createElement(_Math2.default, { l: 'x' }),
+	                    ' do not need to be conditionally independent, and so we can encode much richer observation patterns.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
