@@ -1,9 +1,17 @@
 package org.leibnizcenter.rechtspraak.enricher;
 
-import org.leibnizcenter.cfg.Grammar;
-import org.leibnizcenter.cfg.category.nonterminal.NonTerminal;
-import org.leibnizcenter.cfg.category.terminal.Terminal;
-import org.leibnizcenter.cfg.algebra.semiring.dbl.LogSemiring;
+import com.google.common.collect.Lists;
+import org.leibnizcenter.rechtspraak.enricher.cfg.Grammar;
+import org.leibnizcenter.rechtspraak.enricher.cfg.ScoreChart;
+import org.leibnizcenter.rechtspraak.enricher.cfg.rule.RightHandSide;
+import org.leibnizcenter.rechtspraak.enricher.cfg.rule.StandardRule;
+import org.leibnizcenter.rechtspraak.enricher.cfg.rule.StochasticRule;
+import org.leibnizcenter.rechtspraak.enricher.cfg.rule.TypeContainer;
+import org.leibnizcenter.rechtspraak.enricher.cfg.rule.interfaces.Rule;
+import org.leibnizcenter.rechtspraak.enricher.cfg.rule.type.NonTerminalImpl;
+import org.leibnizcenter.rechtspraak.enricher.cfg.rule.type.Terminal;
+import org.leibnizcenter.rechtspraak.enricher.cfg.rule.type.interfaces.NonTerminal;
+import org.leibnizcenter.rechtspraak.enricher.cfg.rule.type.interfaces.Type;
 import org.leibnizcenter.rechtspraak.tagging.Label;
 import org.leibnizcenter.rechtspraak.tokens.LabeledToken;
 
