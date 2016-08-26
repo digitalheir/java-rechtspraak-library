@@ -25630,7 +25630,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    _createClass(License, [{
 	        key: 'render',
 	        value: function render() {
-	            var innerHtml = '<a hreflang="en" rel="license" href="http://creativecommons.org/licenses/by/4.0/">' + '<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />' + '</a>' + '<br/>' + '<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">' + _title2.default + '</span>' + ' by ' + '<a hreflang="en" ' + 'xmlns:cc="http://creativecommons.org/ns#" ' + 'href="https://github.com/digitalheir/" ' + 'property="cc:attributionName" ' + 'rel="cc:attributionURL">Maarten Trompper</a>' + ' is licensed under a ' + '<a hreflang="en" ' + 'rel="license" ' + 'href="http://creativecommons.org/licenses/by/4.0/">' + 'Creative Commons Attribution 4.0 International License' + '</a>' + '.<br />' + 'Based on a work at ' + '<a hreflang="en" ' + 'xmlns:dct="http://purl.org/dc/terms/" ' + 'href="https://digitalheir.github.io/java-rechtspraak-library" ' + 'rel="dct:source">https://digitalheir.github.io/java-rechtspraak-library</a>' + '.';
+	            var innerHtml = '<a hreflang="en" rel="license" href="http://creativecommons.org/licenses/by/4.0/">' + '<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />' + '</a>' + '<br/>' + '<span property="http://purl.org/dc/terms/title">' + _title2.default + '</span>' + ' by ' + '<a hreflang="en" ' + 'href="https://github.com/digitalheir/" ' + 'property="http://creativecommons.org/ns#attributionName" ' + 'rel="http://creativecommons.org/ns#attributionURL">Maarten Trompper</a>' + ' is licensed under a ' + '<a hreflang="en" ' + 'rel="license" ' + 'href="http://creativecommons.org/licenses/by/4.0/">' + 'Creative Commons Attribution 4.0 International License' + '</a>' + '.<br />' + 'Based on a work at ' + '<a hreflang="en" ' + 'href="https://digitalheir.github.io/java-rechtspraak-library" ' + 'rel="http://purl.org/dc/terms/source">https://digitalheir.github.io/java-rechtspraak-library</a>' + '.';
 	            return _react2.default.createElement('div', { style: { textAlign: 'center' }, dangerouslySetInnerHTML: { __html: innerHtml } });
 	        }
 	    }]);
@@ -60794,7 +60794,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _abbreviations2.default.crf,
 	                    ' distribution as:',
 	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, {
-	                        l: '\\hat{p}(\\mathbf x, \\mathbf y)=\\prod_{t=1}^T\\prod_{k=1}^K\\Phi_{k,t}(x_t, y_t, y_{t-1})',
+	                        l: '\\hat{p}(\\mathbf x, \\mathbf y)=\\prod_{t=1}^T\\prod_{k=1}^K\\Phi_k(x_t, y_t, y_{t-1})',
 	                        displayMode: true }))
 	                ),
 	                _react2.default.createElement(
@@ -60878,26 +60878,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _react = __webpack_require__(4);
 
 	var _react2 = _interopRequireDefault(_react);
-
-	var _FigRef = __webpack_require__(250);
-
-	var _FigRef2 = _interopRequireDefault(_FigRef);
-
-	var _Image = __webpack_require__(253);
-
-	var _Image2 = _interopRequireDefault(_Image);
-
-	var _figs = __webpack_require__(227);
-
-	var _figs2 = _interopRequireDefault(_figs);
-
-	var _references = __webpack_require__(224);
-
-	var _references2 = _interopRequireDefault(_references);
-
-	var _bib = __webpack_require__(212);
-
-	var _bib2 = _interopRequireDefault(_bib);
 
 	var _Math = __webpack_require__(254);
 
@@ -60991,9 +60971,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ', we need to iterate over each possible assignment to the label vector ',
 	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\mathbf y' })),
 	                    ', which would implicate that in the general case, we need an algorithm of ',
-	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'O(M^T)' })),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'O(|K|^T)' })),
 	                    ', where ',
-	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'M' })),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '|K|' })),
 	                    ' is the number of possible labels, and ',
 	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'T' })),
 	                    ' is the length of the instance to label. Luckily, linear-chain ',
@@ -61003,32 +60983,30 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        'CRFs'
 	                    ),
 	                    ' fulfil the optimal substructure property which means that we can memoize optimal sub-results and avoid making the same calculation many times. We calculate the optimal path score ',
-	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\alpha_t(y_t)' })),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\delta_t(y_t)' })),
 	                    ' at time ',
 	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 't' })),
 	                    ' ending with ',
 	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'y_t' })),
-	                    ' recursively as follows, for ',
+	                    ' recursively for ',
 	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\Phi_t = \\prod_{k=1}^{K} \\Phi_{k,t}' })),
-	                    ' and each ',
-	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'y_t \\in \\mathbf y' })),
 	                    ':'
 	                ),
 	                _react2.default.createElement(_Math2.default, _extends({}, this.props, { display: 'true',
-	                    l: '\\alpha_t(\\mathbf y) = \\max_{y_{t-1}}\\Phi_t(x_t, y_t, y_{t-1})\\cdot \\alpha_{t-1}(\\mathbf y)' })),
+	                    l: '\\delta_t(y_t) = \\max_{y_{t-1}}\\Phi_t(x_t, y_t, y_{t-1})\\cdot \\delta_{t-1}(y_{t-1})' })),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
 	                    'where the base case'
 	                ),
-	                _react2.default.createElement(_Math2.default, _extends({}, this.props, { display: 'truuuu', l: '\\alpha_1(\\mathbf y) = \\Phi_1(x_1, y_1, y_0)' })),
+	                _react2.default.createElement(_Math2.default, _extends({}, this.props, { display: 'truuuu', l: '\\delta_1(y_1) = \\Phi_1(x_1, y_1, y_0)' })),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
 	                    'We store the results in a table. (This sort of memoization is what makes the Viterbi algorithm an example of dynamic programming.) We find the optimal sequence ',
 	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\mathbf y^*' })),
 	                    ' by maximizing ',
-	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\alpha_t(y_t)' })),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\delta_t(y_t)' })),
 	                    ' at the end of the sequence, ',
 	                    _react2.default.createElement(
 	                        'span',
@@ -61038,7 +61016,27 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        ':'
 	                    )
 	                ),
-	                _react2.default.createElement(_Math2.default, _extends({}, this.props, { display: true, l: '\\mathbf y^* = \\text{argmax}_{\\mathbf y}\\alpha_T(y_T)' })),
+	                _react2.default.createElement(_Math2.default, _extends({}, this.props, { display: true, l: 'y^*_T = \\text{argmax}_{y_T}\\delta_T(y_T)' })),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'And then count back from ',
+	                    _react2.default.createElement(_Math2.default, { l: 'T-1' }),
+	                    ' to ',
+	                    _react2.default.createElement(_Math2.default, { l: '1' }),
+	                    ':'
+	                ),
+	                _react2.default.createElement(_Math2.default, _extends({}, this.props, { display: true,
+	                    l: 'y^*_t = \\text{argmax}_{y_{t}}\\Phi_{t}(x_{t+1},y_{t+1}^*,y_t)\\delta_t(y_t)' })),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'This gives us the best label for each ',
+	                    _react2.default.createElement(_Math2.default, { l: 't' }),
+	                    ', and so ',
+	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf y^*' }),
+	                    '.'
+	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
@@ -61047,7 +61045,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        'span',
 	                        {
 	                            style: { display: 'inline-block' } },
-	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'O(M^2 T)' })),
+	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'O(|K|^2 T)' })),
 	                        '.'
 	                    )
 	                )
