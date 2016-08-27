@@ -26051,7 +26051,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        null,
 	                        '1'
 	                    ),
-	                    ' scores of around 0.91 for tagging and 0.92 for parsing.'
+	                    ' scores of around 0.91 for tagging section titles (around 1.0 for other types) and 0.92 for parsing the tokens into a section hierarchy.'
 	                )
 	            );
 	        }
@@ -59119,7 +59119,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        null,
 	                        '1'
 	                    ),
-	                    '-score of 0.92 (precision 0.93; recall 092).'
+	                    '-score of 0.92 and F',
+	                    _react2.default.createElement(
+	                        'sub',
+	                        null,
+	                        '1'
+	                    ),
+	                    '-score of 0.93 (precision 0.93; recall 0.92).'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -60751,7 +60757,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\mathbf x' })),
 	                        ' and ',
 	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\mathbf y' })),
-	                        ' respectively, i.e.,',
+	                        ' respectively, i.e., ',
 	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'x_t' })),
 	                        ' is the current observation and ',
 	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'y_t' })),
@@ -60973,9 +60979,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ', we need to iterate over each possible assignment to the label vector ',
 	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\mathbf y' })),
 	                    ', which would implicate that in the general case, we need an algorithm of ',
-	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'O(|K|^T)' })),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'O(M^T)' })),
 	                    ', where ',
-	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '|K|' })),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'M' })),
 	                    ' is the number of possible labels, and ',
 	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'T' })),
 	                    ' is the length of the instance to label. Luckily, linear-chain ',
@@ -61049,7 +61055,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        'span',
 	                        {
 	                            style: { display: 'inline-block' } },
-	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'O(|K|^2 T)' })),
+	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'O(M^2 T)' })),
 	                        '.'
 	                    )
 	                )
@@ -61221,14 +61227,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	                ),
 	                _react2.default.createElement(_Math2.default, _extends({}, this.props, { display: 'true', l: '\\frac{\\partial\\ell}{\\partial\\lambda_k} =\r \\sum_{i=1}^N\\sum_{t=1}^Tf_k(y_t^i,y_{t-1}^i,x_t^i)\r -\\sum_{i=1}^N\\sum_{t=1}^T\\sum_{\\mathbf y,\\mathbf y\'}f_k(y,y,x_t^i)\r p(y,y\'|\\mathbf x^i)' })),
 	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'And then update parameter ',
-	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\lambda_i' })),
-	                    ' along this gradient:'
+	                    'div',
+	                    { className: 'avoid-page-break' },
+	                    _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        'And then update parameter ',
+	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\lambda_i' })),
+	                        ' along this gradient:'
+	                    ),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { display: 'true',
+	                        l: '\\lambda_i := \\lambda_i + \\alpha \\frac{\\partial\\ell}{\\partial\\lambda_i}' }))
 	                ),
-	                _react2.default.createElement(_Math2.default, _extends({}, this.props, { display: 'true',
-	                    l: '\\lambda_i := \\lambda_i + \\alpha \\frac{\\partial\\ell}{\\partial\\lambda_i}' })),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
