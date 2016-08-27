@@ -82,11 +82,11 @@ export default class ParameterEstimation extends Component {
 
             <div className="avoid-page-break">
                 <p>
-                    And then update parameter <F {...this.props} l="\lambda_i"/> along this
+                    And then update parameter <F {...this.props} l="\lambda_k"/> along this
                     gradient:
                 </p>
                 <F {...this.props} display="true"
-                                   l="\lambda_i := \lambda_i + \alpha \frac{\partial\ell}{\partial\lambda_i}"/>
+                                   l="\lambda_k := \lambda_k + \alpha \frac{\partial\ell}{\partial\lambda_k}"/>
             </div>
             <p>
                 Where <F {...this.props} l="\alpha"/> is some learning rate between <F {...this.props} l="0"/> and
