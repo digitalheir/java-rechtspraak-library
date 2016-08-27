@@ -61233,11 +61233,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        'p',
 	                        null,
 	                        'And then update parameter ',
-	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\lambda_i' })),
+	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\lambda_k' })),
 	                        ' along this gradient:'
 	                    ),
 	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { display: 'true',
-	                        l: '\\lambda_i := \\lambda_i + \\alpha \\frac{\\partial\\ell}{\\partial\\lambda_i}' }))
+	                        l: '\\lambda_k := \\lambda_k + \\alpha \\frac{\\partial\\ell}{\\partial\\lambda_k}' }))
 	                ),
 	                _react2.default.createElement(
 	                    'p',
