@@ -80,12 +80,14 @@ export default class ParameterEstimation extends Component {
             -\sum_{i=1}^N\sum_{t=1}^T\sum_{\mathbf y,\mathbf y'}f_k(y,y,x_t^i)
            p(y,y'|\mathbf x^i)"/>
 
-            <p>
-                And then update parameter <F {...this.props} l="\lambda_i"/> along this
-                gradient:
-            </p>
-            <F {...this.props} display="true"
-                               l="\lambda_i := \lambda_i + \alpha \frac{\partial\ell}{\partial\lambda_i}"/>
+            <div className="avoid-page-break">
+                <p>
+                    And then update parameter <F {...this.props} l="\lambda_i"/> along this
+                    gradient:
+                </p>
+                <F {...this.props} display="true"
+                                   l="\lambda_i := \lambda_i + \alpha \frac{\partial\ell}{\partial\lambda_i}"/>
+            </div>
             <p>
                 Where <F {...this.props} l="\alpha"/> is some learning rate between <F {...this.props} l="0"/> and
                 <F {...this.props} l="1"/>.
@@ -119,10 +121,10 @@ export default class ParameterEstimation extends Component {
                 labels, <F {...this.props} l="N"/> in the number of training instances,
                 and <F {...this.props} l="G"/> is the number of gradient computations.
                 The number of gradient computations can be set to
-                a fixed number, or is otherwise unknown but guaranteed to 
+                a fixed number, or is otherwise unknown but guaranteed to
                 converge in finite time because of the concavity of <F {...this.props} l="\ell"/>.
             </p>
         </div>;
-        
+
     }
 }

@@ -58,8 +58,8 @@ export default class LinearChainCRF extends Component {
             <ul>
                 <li>
                     <F {...this.props} l="x_t"/> and <F {...this.props} l="y_t"/> be elements
-                    of <F {...this.props} l="\mathbf x"/> and <F {...this.props} l="\mathbf y"/> respectively, i.e.,
-                    <F {...this.props} l="x_t"/> is
+                    of <F {...this.props} l="\mathbf x"/> and <F {...this.props} l="\mathbf y"/> respectively,
+                    i.e., <F {...this.props} l="x_t"/> is
                     the current
                     observation and <F {...this.props} l="y_t"/> is
                     the current label, and <F {...this.props} l="y_{t-1}"/> is the previous label,

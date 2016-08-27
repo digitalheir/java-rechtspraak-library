@@ -7,8 +7,8 @@ export default class ParsingEval extends Component {
     render() {
         return <div>
             <p>
-                Over a set of 10 random documents, we report an average F<sub>1</sub>-score of 0.92 (precision 0.93;
-                recall 092).
+                Over a set of 10 random documents, we report an average F<sub>1</sub>-score of 0.92 
+                and F<sub>1</sub>-score of 0.93 (precision 0.93; recall 0.92).
             </p>
             <p>
                 Delving deeper into problematic parses, we see that there are a number of recurring types
@@ -35,8 +35,6 @@ export default class ParsingEval extends Component {
                 should be subsections or not. Indeed, this can be difficult to determine based purely
                 on typography.
             </p>
-
-          
         </div>;
     }
 }

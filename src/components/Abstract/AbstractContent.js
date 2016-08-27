@@ -24,8 +24,8 @@ export default class AbstractContent extends React.Component {
                 </p>
 
                 <p>
-                    We report F<sub>1</sub> scores of around 0.91 for tagging
-                    and 0.92 for parsing.
+                    We report F<sub>1</sub> scores of around 0.91 for tagging section titles (around 1.0 for 
+                    other types) and 0.92 for parsing the tokens into a section hierarchy.
                 </p>
             </div>
         )

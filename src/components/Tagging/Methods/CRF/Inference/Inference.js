@@ -47,8 +47,8 @@ export default class FScorez extends Component {
                 Note that to find <F {...this.props} l="\mathbf y^*"/>, we need to iterate over each possible
                 assignment to the label vector <F {...this.props} l="\mathbf y"/>,
                 which would implicate that in the general case, we
-                need an algorithm of <F {...this.props} l="O(|K|^T)"/>,
-                where <F {...this.props} l="|K|"/> is the number of possible labels,
+                need an algorithm of <F {...this.props} l="O(M^T)"/>,
+                where <F {...this.props} l="M"/> is the number of possible labels,
                 and <F {...this.props} l="T"/> is the length of
                 the instance to label.
 
@@ -56,23 +56,23 @@ export default class FScorez extends Component {
                 substructure property
                 which means that we can memoize optimal sub-results and avoid making the same
                 calculation many times.
-                We calculate the optimal path score <F {...this.props} l="\delta_t(y_t)"/> at
-                time <F {...this.props} l="t"/> ending with <F {...this.props} l="y_t"/> recursively
+                We calculate the optimal path score <F {...this.props} l="\delta_t(j)"/> at
+                time <F {...this.props} l="t"/> ending with <F {...this.props} l="j"/> recursively
                 for <F {...this.props} l="\Phi_t = \prod_{k=1}^{K} \Phi_{k,t}"/>:
             </p>
 
             <F {...this.props} display="true"
-                               l="\delta_t(y_t) = \max_{y_{t-1}}\Phi_t(x_t, y_t, y_{t-1})\cdot \delta_{t-1}(y_{t-1})"/>
+                               l="\delta_t(j) = \max_{i}\Phi_t(x_t, j, i)\cdot \delta_{t-1}(i)"/>
 
             <p>
                 where the base case
             </p>
-            <F {...this.props} display="truuuu" l="\delta_1(y_1) = \Phi_1(x_1, y_1, y_0)"/>
+            <F {...this.props} display="truuuu" l="\delta_1(j) = \Phi_1(x_1, j, y_0)"/>
             <p>
                 We store the results in a table. (This sort of memoization
                 is what makes the Viterbi algorithm an example of dynamic programming.)
                 We find the optimal
-                sequence <F {...this.props} l="\mathbf y^*"/> by maximizing <F {...this.props} l="\delta_t(y_t)"/> at
+                sequence <F {...this.props} l="\mathbf y^*"/> by maximizing <F {...this.props} l="\delta_t(j)"/> at
                 the end of
                 the sequence, <span
                 className="avoid-page-break"><F {...this.props} l="t = T"/>:
@@ -83,16 +83,16 @@ export default class FScorez extends Component {
                 And then count back from <F l="T-1"/> to <F l="1"/>:
             </p>
             <F {...this.props} display={true}
-                               l="y^*_t = \text{argmax}_{y_{t}}\Phi_{t}(x_{t+1},y_{t+1}^*,y_t)\delta_t(y_t)"/>
+                               l="y^*_t = \text{argmax}_{j}\Phi_{t}(x_{t+1},y_{t+1}^*,j)\delta_t(j)"/>
             <p>
-                This gives us the best label for each <F l="t"/>, and so <F l="\mathbf y^*"/>.
+                This gives us the best label <F l="y_t^*"/> for each <F l="t"/>, and so <F l="\mathbf y^*"/>.
             </p>
             <p>
                 Using this trick, we
                 reduce the computational complexity
                 of finding the Viterbi path
                 to <span
-                style={{display:'inline-block'}}><F {...this.props} l="O(|K|^2 T)"/>.
+                style={{display:'inline-block'}}><F {...this.props} l="O(M^2 T)"/>.
                 </span>
             </p>
         </div>
