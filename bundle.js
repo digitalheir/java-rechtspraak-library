@@ -22991,35 +22991,35 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Root2 = _interopRequireDefault(_Root);
 
-	var _Index = __webpack_require__(215);
+	var _Index = __webpack_require__(216);
 
 	var _Index2 = _interopRequireDefault(_Index);
 
-	var _Introduction = __webpack_require__(347);
+	var _Introduction = __webpack_require__(350);
 
 	var _Introduction2 = _interopRequireDefault(_Introduction);
 
-	var _FullThesis = __webpack_require__(349);
+	var _FullThesis = __webpack_require__(352);
 
 	var _FullThesis2 = _interopRequireDefault(_FullThesis);
 
-	var _Tagging = __webpack_require__(350);
+	var _Tagging = __webpack_require__(353);
 
 	var _Tagging2 = _interopRequireDefault(_Tagging);
 
-	var _InferringDocumentStructure = __webpack_require__(351);
+	var _InferringDocumentStructure = __webpack_require__(354);
 
 	var _InferringDocumentStructure2 = _interopRequireDefault(_InferringDocumentStructure);
 
-	var _Dissemination = __webpack_require__(352);
+	var _Dissemination = __webpack_require__(355);
 
 	var _Dissemination2 = _interopRequireDefault(_Dissemination);
 
-	var _ImportingAndTokenizing = __webpack_require__(353);
+	var _ImportingAndTokenizing = __webpack_require__(356);
 
 	var _ImportingAndTokenizing2 = _interopRequireDefault(_ImportingAndTokenizing);
 
-	var _chapters = __webpack_require__(220);
+	var _chapters = __webpack_require__(215);
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
@@ -23032,8 +23032,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    Route,
 	    { handler: _Root2.default, path: '/' },
 	    _react2.default.createElement(DefaultRoute, { handler: _Index2.default }),
-	    _chapters2.default.inOrder.map(function (chapter) {
-	        return _react2.default.createElement(Route, { path: chapter.route, handler: getHandler(chapter.route) });
+	    _chapters2.default.inOrder.map(function (chapter, i) {
+	        return _react2.default.createElement(Route, {
+	            path: chapter.route,
+	            chapterObject: chapter,
+	            handler: getHandler(chapter.route) });
 	    }),
 	    _react2.default.createElement(Route, { path: '/full/', handler: _FullThesis2.default }),
 	    ')}'
@@ -23095,6 +23098,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _License2 = _interopRequireDefault(_License);
 
+	var _chapters = __webpack_require__(215);
+
+	var _chapters2 = _interopRequireDefault(_chapters);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -23129,14 +23136,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	                __html: safeStringify(this.props)
 	            };
 
+	            // <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
 	            //if (!this.props.path) throw new Error("Define path");
 	            var relativeToRoot = this.props.path.match(/\//g).slice(1).map(function (a) {
 	                return "../";
 	            }).join("");
-
 	            return _react2.default.createElement(
 	                'html',
-	                null,
+	                { lang: 'en' },
 	                _react2.default.createElement(
 	                    'head',
 	                    null,
@@ -23145,11 +23152,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(
 	                        'title',
 	                        null,
-	                        this.props.title
+	                        this.getTitle(this.props.path)
 	                    ),
-	                    _react2.default.createElement('meta', { name: 'description', content: this.props.description }),
+	                    _react2.default.createElement('meta', { name: 'description', content: this.getDescription(this.props.path) }),
 	                    _react2.default.createElement('meta', { name: 'viewport', content: 'width=device-width, initial-scale=1' }),
-	                    _react2.default.createElement('link', { rel: 'apple-touch-icon', href: 'apple-touch-icon.png' }),
 	                    _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Noto+Sans' }),
 	                    _react2.default.createElement('link', { rel: 'stylesheet',
 	                        href: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' }),
@@ -23158,19 +23164,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	                ),
 	                _react2.default.createElement(
 	                    'body',
-	                    { itemProp: 'mainEntity',
-	                        itemScope: true,
-	                        itemType: 'https://schema.org/Thesis',
+	                    { itemScope: true,
+	                        itemType: 'http://schema.org/WebPage',
 	                        className: 'p2' },
 	                    this.props.path == '/full/' ? '' : _react2.default.createElement(_Header2.default, this.props),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { itemProp: 'audience', itemScope: true, itemType: 'http://schema.org/EducationalAudience' },
-	                        _react2.default.createElement('meta', { content: 'student', itemProp: 'audienceType' }),
-	                        _react2.default.createElement('meta', { content: 'researcher', itemProp: 'audienceType' }),
-	                        _react2.default.createElement('meta', { content: 'computer scientist', itemProp: 'audienceType' }),
-	                        _react2.default.createElement('meta', { content: 'legal researcher', itemProp: 'audienceType' })
-	                    ),
 	                    _react2.default.createElement('meta', { content: 'en', itemProp: 'inLanguage' }),
 	                    _react2.default.createElement('meta', { content: 'true', itemProp: 'isFamilyFriendly' }),
 	                    _react2.default.createElement('meta', { content: '2016', itemProp: 'copyrightYear' }),
@@ -23186,6 +23183,34 @@ return /******/ (function(modules) { // webpackBootstrap
 	            );
 	            // <GoogleAnalytics />
 	            // <script async src={relativeToRoot+'bundle.js'}></script>
+	        }
+	    }, {
+	        key: 'getDescription',
+	        value: function getDescription(path) {
+	            switch (path) {
+	                case _chapters2.default.introduction.route:
+	                    return 'Introduction to the problem of creating a document structure for documents of Dutch case law using Conditional Random Fields and Probabilistic Context-Free Grammars';
+	                case _chapters2.default.importing.route:
+	                    return 'Chapter on importing and tokenizing Dutch case law documents';
+	                case _chapters2.default.rechtspraakNl.route:
+	                    return 'Chapter on the Rechtspraak.nl open data set';
+	                case _chapters2.default.tagging.route:
+	                    return 'Chapter on macro tagging document elements with a Conditonal Random Field';
+	                case _chapters2.default.documentStructure.route:
+	                    return 'Chapter on creating a section hierarchy for a document with Probabilistic Context-Free Grammars';
+	                case _chapters2.default.conclusion.route:
+	                    return 'Review of results and information on dissemination';
+	                case '/full/':
+	                default:
+	                    return 'MSc thesis about creating structure documents of Dutch case law using Conditional Random Fields and Probabilistic Context-Free Grammars';
+	            }
+	        }
+	    }, {
+	        key: 'getTitle',
+	        value: function getTitle(path) {
+	            for (var chapter in _chapters2.default) {
+	                if (_chapters2.default.hasOwnProperty(chapter)) if (_chapters2.default[chapter].route == path) return _chapters2.default[chapter].ttitle ? _chapters2.default[chapter].ttitle : _chapters2.default[chapter].title;
+	            }return this.props.title;
 	        }
 	    }]);
 
@@ -23210,6 +23235,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	Root.propTypes = {
 	    path: _react2.default.PropTypes.string.isRequired
 	};
+
 	exports.default = Root;
 	// Html.propTypes = {
 	//     title: PropTypes.string,
@@ -23261,20 +23287,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	    _createClass(Header, [{
 	        key: 'render',
 	        value: function render() {
-	            var relativeToRoot = this.props.path.match(/\//g).slice(1).map(function (a) {
-	                return "../";
-	            }).join("");
+	            var attrs = {
+	                id: 'thesis',
+	                itemScope: true,
+	                itemType: "https://schema.org/Thesis"
+	            };
+	            if (this.props.path.match(/\//)) attrs.itemProp = "mainEntity";
 
-	            return _react2.default.createElement(
-	                'header',
-	                {
-	                    className: 'py2' },
-	                _react2.default.createElement(
-	                    'h1',
-	                    { itemProp: 'name', className: 'mt0' },
-	                    this.props.title
-	                )
-	            );
+	            return _react2.default.createElement("header", attrs, _react2.default.createElement(
+	                'h1',
+	                { key: 'title', itemProp: 'name', className: 'mt0' },
+	                this.props.title
+	            ), _react2.default.createElement(
+	                'div',
+	                { key: 'audience', itemProp: 'audience', itemScope: true, itemType: 'http://schema.org/EducationalAudience' },
+	                _react2.default.createElement('meta', { content: 'student', itemProp: 'audienceType' }),
+	                _react2.default.createElement('meta', { content: 'researcher', itemProp: 'audienceType' }),
+	                _react2.default.createElement('meta', { content: 'computer scientist', itemProp: 'audienceType' }),
+	                _react2.default.createElement('meta', { content: 'legal researcher', itemProp: 'audienceType' })
+	            ));
 	        }
 	    }]);
 
@@ -23372,22 +23403,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	    ),
 	    cfgs: _react2.default.createElement(
 	        "abbr",
-	        { title: "Context Free Grammars" },
+	        { title: "Context-Free Grammars" },
 	        "CFGs"
 	    ),
 	    cfg: _react2.default.createElement(
 	        "abbr",
-	        { title: "Context Free Grammar" },
+	        { title: "Context-Free Grammar" },
 	        "CFG"
 	    ),
 	    pcfg: _react2.default.createElement(
 	        "abbr",
-	        { title: "Probabilistic Context Free Grammar" },
+	        { title: "Probabilistic Context-Free Grammar" },
 	        "PCFG"
 	    ),
 	    pcfgs: _react2.default.createElement(
 	        "abbr",
-	        { title: "Probabilistic Context Free Grammars" },
+	        { title: "Probabilistic Context-Free Grammars" },
 	        "PCFGs"
 	    ),
 	    cyk: _react2.default.createElement(
@@ -23514,7 +23545,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        'li',
 	        { itemProp: 'citation',
 	            itemScope: true,
-	            itemType: 'https://schema.org/CreativeWork',
+	            itemType: 'https://schema.org/ScholarlyArticle',
 	            key: i,
 	            id: citation.id.toString(),
 	            className: 'ref' },
@@ -23531,7 +23562,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            null,
 	            _react2.default.createElement(
 	                'a',
-	                { href: citation.href },
+	                { hrefLang: 'en', href: citation.href },
 	                _react2.default.createElement(
 	                    'span',
 	                    { itemProp: 'name' },
@@ -25150,7 +25181,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            full: "Bradley, Joseph K and Guestrin, Carlos"
 	        },
 	        booktitle: "Proceedings of the 27th International Conference on Machine Learning (ICML-10)",
-	        pages: "127—134",
+	        pages: "127‑134",
 	        year: 2010,
 	        href: 'http://select.cs.cmu.edu/publications/paperdir/icml2010-bradley-guestrin.pdf'
 	    },
@@ -25163,7 +25194,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            full: 'Zhu, Muhua and Zhang, Yue and Chen, Wenliang and Zhang, Min and Zhu, Jingbo'
 	        },
 	        booktitle: 'ACL (1)',
-	        pages: '434—443',
+	        pages: '434‑443',
 	        year: 2013,
 	        href: 'http://www.aclweb.org/anthology/P13-1043.pdf'
 	    },
@@ -25176,7 +25207,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        },
 	        booktitle: "Proceedings of the second meeting of the North American Chapter of the Association for Computational Linguistics on Language technologies",
 	        organization: 'Association for Computational Linguistics',
-	        pages: "1—8",
+	        pages: "1‑8",
 	        href: 'https://www.hlp.rochester.edu/resources/workshop_materials/EVELIN12/Hale01_NAACL_probabilistic%20early%20parser_N01-1021.pdf',
 	        year: 2001
 	    },
@@ -25189,7 +25220,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            full: 'Abolhassani, Mohammad and Fuhr, Norbert and Gövert, Norbert'
 	        },
 	        booktitle: 'Intelligent Search on XML Data',
-	        pages: '159—174',
+	        pages: '159‑174',
 	        year: 2003,
 	        publisher: 'Springer',
 	        href: 'http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.83.465&rep=rep1&type=pdf'
@@ -25204,7 +25235,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        },
 	        booktitle: 'Proceedings of the eighteenth international conference on machine learning, ICML',
 	        volume: '1',
-	        pages: '282—289',
+	        pages: '282‑289',
 	        year: 2001,
 	        href: 'http://nlp.cs.nyu.edu/nycnlp/lafferty01conditional.pdf'
 	    },
@@ -25217,7 +25248,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            lastName: 'Burr'
 	        },
 	        booktitle: 'Proceedings of the International Joint Workshop on Natural Language Processing in Biomedicine and its Applications',
-	        pages: '104—107',
+	        pages: '104‑107',
 	        year: 2004,
 	        href: 'http://burrsettles.com/pub/settles.nlpba04.pdf',
 	        organization: 'Association for Computational Linguistics'
@@ -25231,10 +25262,36 @@ return /******/ (function(modules) { // webpackBootstrap
 	            full: 'Sha, Fei and Pereira, Fernando'
 	        },
 	        booktitle: 'Proceedings of the 2003 Conference of the North American Chapter of the Association for Computational Linguistics on Human Language Technology-Volume 1',
-	        pages: '134—141',
+	        pages: '134‑141',
 	        year: 2003,
 	        href: 'http://www-bcf.usc.edu/~feisha/pubs/shallow03.pdf',
 	        organization: 'Association for Computational Linguistics'
+	    },
+	    van2012lost: {
+	        type: 'article',
+	        id: 'van2012lost',
+	        title: 'The lost honour of L2-based regularization',
+	        author: {
+	            abbr: "van den Doel et al.",
+	            full: 'van den Doel, Kees and Ascher, Uri and Haber, Eldad'
+	        },
+	        journal: 'Large Scale Inverse Problems, Radon Ser. Comput. Appl. Math',
+	        volume: '13',
+	        pages: '181‑203',
+	        year: '2012'
+	    },
+	    nocedal1980updating: {
+	        type: 'article', id: 'nocedal1980updating',
+	        title: 'Updating quasi-Newton matrices with limited storage',
+	        author: {
+	            firstName: 'Jorge',
+	            lastName: 'Nocedal'
+	        },
+	        journal: 'Mathematics of computation',
+	        volume: '35',
+	        number: '151',
+	        pages: '773‑782',
+	        year: '1980'
 	    },
 	    collins1997three: {
 	        id: 'collins1997three', type: 'inproceedings',
@@ -25244,7 +25301,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            lastName: 'Collins'
 	        },
 	        booktitle: "Proceedings of the 35th Annual Meeting of the Association for Computational Linguistics and Eighth Conference of the European Chapter of the Association for Computational Linguistics",
-	        pages: "16—23",
+	        pages: "16‑23",
 	        organization: 'Association for Computational Linguistics',
 	        year: 1997, href: 'http://www.aclweb.org/anthology/P/P97/P97-1003.pdf'
 	    },
@@ -25257,7 +25314,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            full: 'Abney, Steven and Flickenger, S and Gdaniec, Claudia and Grishman, C and Harrison, Philip and Hindle, Donald and Ingria, Robert and Jelinek, Frederick and Klavans, Judith and Liberman, Mark and others'
 	        },
 	        booktitle: 'Proceedings of the workshop on Speech and Natural Language',
-	        pages: '306—311',
+	        pages: '306‑311',
 	        year: 1991,
 	        organization: 'Association for Computational Linguistics',
 	        href: 'http://www.aclweb.org/anthology/H/H91/H91-1060.pdf'
@@ -25272,7 +25329,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        journal: 'Nucleic acids research',
 	        volume: '22',
 	        number: '23',
-	        pages: '5112—5120',
+	        pages: '5112‑5120',
 	        year: 1994,
 	        publisher: 'Oxford University Press',
 	        href: 'http://nar.oxfordjournals.org/content/22/23/5112.full.pdf?related-urls=yes&legid=nar;22/23/5112'
@@ -25300,7 +25357,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        journal: 'Information and control',
 	        volume: '10',
 	        number: '2',
-	        pages: '189—208',
+	        pages: '189‑208',
 	        year: 1967,
 	        publisher: 'Elsevier',
 	        href: 'http://www.sciencedirect.com/science/article/pii/S001999586780007X',
@@ -25341,7 +25398,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        journal: 'Information Sciences',
 	        volume: '3',
 	        number: '3',
-	        pages: '201—224',
+	        pages: '201‑224',
 	        year: 1971,
 	        publisher: 'Elsevier',
 	        href: 'http://dx.doi.org/10.1016/S0020-0255(71)80007-5'
@@ -25356,7 +25413,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        },
 	        journal: 'Informatica Didactica',
 	        volume: '8',
-	        pages: '2008—2010',
+	        pages: '2008‑2010',
 	        year: 2009, href: 'http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.378.2875&rep=rep1&type=pdf'
 	    },
 	    cocke1969programming: {
@@ -25399,7 +25456,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        },
 	        booktitle: "ICML",
 	        volume: "17",
-	        pages: "591—598",
+	        pages: "591‑598",
 	        year: 2000,
 	        href: "http://cseweb.ucsd.edu/~elkan/254spring02/gidofalvi.pdf"
 	    },
@@ -25436,7 +25493,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        journal: 'ELECTRON. PUBL.',
 	        volume: '2',
 	        number: '4',
-	        pages: '211—229',
+	        pages: '211‑229',
 	        year: 1989,
 	        href: 'http://cgis.cs.umd.edu/~ben/papers/Furuta1989Automatically.pdf'
 	    },
@@ -25449,7 +25506,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            full: 'Bacci, Lorenzo and Spinosa, Pierluigi and Marchetti, Carlo and Battistoni, Roberto and Florence, I and Senate, I and Rome, I'
 	        },
 	        booktitle: 'Proc. of LOAIT Workshop',
-	        pages: '45—54',
+	        pages: '45‑54',
 	        year: 2009,
 	        href: 'http://ceur-ws.org/Vol-465/paper6.pdf'
 	    },
@@ -25461,7 +25518,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        journal: 'IEEE transactions on signal processing',
 	        volume: '44',
 	        number: '11',
-	        pages: '2746—2756',
+	        pages: '2746‑2756',
 	        year: '1996',
 	        href: 'http://dx.doi.org/10.1109/78.542181',
 	        publisher: 'IEEE'
@@ -25475,7 +25532,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            full: "Sutton, Charles and McCallum, Andrew"
 	        },
 	        journal: "Introduction to statistical relational learning",
-	        pages: "93—128",
+	        pages: "93‑128",
 	        year: 2006, href: 'https://people.cs.umass.edu/~mccallum/papers/crf-tutorial.pdf',
 	        publisher: "MIT press"
 	    },
@@ -25488,7 +25545,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            abbr: "Finkel et al."
 	        },
 	        journal: "Proceedings of the International Joint Workshop on Natural Language Processing in Biomedicine and its Applications",
-	        pages: "88—91",
+	        pages: "88‑91",
 	        year: 2004, href: 'http://nlp.stanford.edu/~manning/papers/bionlp-camera.pdf',
 	        publisher: "Association for Computational Linguistics"
 	    },
@@ -25501,7 +25558,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            abbr: "Klinger et al."
 	        },
 	        journal: "RANLP", href: 'http://www.aclweb.org/anthology/R/R09/R09-1035.pdf',
-	        pages: "185—191",
+	        pages: "185‑191",
 	        year: 2009
 	    },
 	    krishnan2006effective: {
@@ -25513,7 +25570,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            abbr: "Krishnan et al."
 	        },
 	        journal: "Proceedings of the 21st International Conference on Computational Linguistics and the 44th annual meeting of the Association for Computational Linguistics",
-	        pages: "1121-1128",
+	        pages: "1121‑1128",
 	        year: 2006, href: 'http://i.stanford.edu/~kvijay/krishnan-manning-colacl06sub.pdf',
 	        publisher: "Association for Computational Linguistics"
 	    }
@@ -25531,7 +25588,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	//        full: "Sutton, Charles and McCallum, Andrew"
 	//    },
 	//    journal: "Introduction to statistical relational learning",
-	//    pages: "93—128",
+	//    pages: "93‑128",
 	//    year: 2006,
 	//    publisher: "MIT press"
 	//}
@@ -25577,7 +25634,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    _createClass(License, [{
 	        key: 'render',
 	        value: function render() {
-	            var innerHtml = '<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">' + '<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />' + '</a>' + '<br/>' + '<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">' + _title2.default + '</span>' + ' by ' + '<a ' + 'xmlns:cc="http://creativecommons.org/ns#" ' + 'href="https://github.com/digitalheir/" ' + 'property="cc:attributionName" ' + 'rel="cc:attributionURL">Maarten Trompper</a>' + ' is licensed under a ' + '<a ' + 'rel="license" ' + 'href="http://creativecommons.org/licenses/by/4.0/">' + 'Creative Commons Attribution 4.0 International License' + '</a>' + '.<br />' + 'Based on a work at ' + '<a ' + 'xmlns:dct="http://purl.org/dc/terms/" ' + 'href="https://digitalheir.github.io/java-rechtspraak-library" ' + 'rel="dct:source">https://digitalheir.github.io/java-rechtspraak-library</a>' + '.';
+	            var innerHtml = '<a hreflang="en" rel="license" href="http://creativecommons.org/licenses/by/4.0/">' + '<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />' + '</a>' + '<br/>' + '<span property="http://purl.org/dc/terms/title">' + _title2.default + '</span>' + ' by ' + '<a hreflang="en" ' + 'href="https://github.com/digitalheir/" ' + 'property="http://creativecommons.org/ns#attributionName" ' + 'rel="http://creativecommons.org/ns#attributionURL">Maarten Trompper</a>' + ' is licensed under a ' + '<a hreflang="en" ' + 'rel="license" ' + 'href="http://creativecommons.org/licenses/by/4.0/">' + 'Creative Commons Attribution 4.0 International License' + '</a>' + '.<br />' + 'Based on a work at ' + '<a hreflang="en" ' + 'href="https://digitalheir.github.io/java-rechtspraak-library" ' + 'rel="http://purl.org/dc/terms/source">https://digitalheir.github.io/java-rechtspraak-library</a>' + '.';
 	            return _react2.default.createElement('div', { style: { textAlign: 'center' }, dangerouslySetInnerHTML: { __html: innerHtml } });
 	        }
 	    }]);
@@ -25593,10 +25650,82 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	module.exports = 'Automatically Assigning A Section Hierarchy To Dutch Case Law';
+	module.exports = 'Automatic Assignment of Section Structure to Texts of Dutch Court Judgments';
 
 /***/ },
 /* 215 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	var chapters = {
+	    introduction: {
+	        page: '4',
+	        id: "chapter-introduction",
+	        title: "Introduction",
+	        route: '/introduction/'
+	    },
+	    importing: {
+	        page: '6',
+	        title: "Importing & Tokenizing Data",
+	        ttitle: "Importing & Tokenizing Data From Rechtspraak.nl",
+	        id: "chapter-importing-and-tokenizing",
+	        route: '/importing-and-tokenizing/'
+	    },
+	    rechtspraakNl: {
+	        page: 'X',
+	        id: "chapter-rechtspraak-nl",
+	        title: "Rechtspraak.nl Data Set",
+	        route: '/rechtspraak-nl/'
+	    },
+	    tagging: {
+	        page: 12,
+	        id: "tagging",
+	        title: "Tagging Elements",
+	        ttitle: "Tagging Elements with Conditional Random Fields",
+	        route: '/tagging/'
+	    },
+	    documentStructure: {
+	        page: 23,
+	        id: "parsing",
+	        title: "Inferring a Section Hierarchy",
+	        ttitle: "Inferring a Section Hierarchy with Probabilistic Context-Free Grammars",
+	        route: '/document-structure/'
+	    },
+	    conclusion: {
+	        page: 28,
+	        id: "conclusion",
+	        title: "Conclusion",
+	        route: '/conclusion/'
+	    },
+	    // presentation: {
+	    //     title: "Dissemination",
+	    //     route: '/dissemination/'
+	    // }
+
+	    pathTo: function pathTo(fromPath, toChapter) {
+	        var relativeToRoot = fromPath.match(/\//g).slice(1).map(function (_) {
+	            return "../";
+	        }).join("");
+	        return relativeToRoot + toChapter.route.replace('/', '');
+	    }
+	};
+
+	chapters.inOrder = [chapters.introduction, chapters.importing, chapters.tagging, chapters.documentStructure, chapters.conclusion];
+
+	chapters.inOrder.forEach(function (ch) {
+	    if (!ch) throw new Error("Chapters object contains null or undefined item.");
+	});
+	chapters.inOrder.forEach(function (ch, i) {
+	    return ch.number = i + 1;
+	});
+
+	//console.log(chapters)
+
+	module.exports = chapters;
+
+/***/ },
+/* 216 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25611,19 +25740,19 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _BrowserCheck = __webpack_require__(216);
+	var _BrowserCheck = __webpack_require__(217);
 
 	var _BrowserCheck2 = _interopRequireDefault(_BrowserCheck);
 
-	var _Author = __webpack_require__(217);
+	var _Author = __webpack_require__(218);
 
 	var _Author2 = _interopRequireDefault(_Author);
 
-	var _AbstractContent = __webpack_require__(218);
+	var _AbstractContent = __webpack_require__(219);
 
 	var _AbstractContent2 = _interopRequireDefault(_AbstractContent);
 
-	var _ToC = __webpack_require__(219);
+	var _ToC = __webpack_require__(220);
 
 	var _ToC2 = _interopRequireDefault(_ToC);
 
@@ -25672,6 +25801,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        _react2.default.createElement(_AbstractContent2.default, null)
 	                    ),
 	                    _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        _react2.default.createElement(
+	                            'a',
+	                            { style: { fontSize: 'small', textDecoration: 'underline' }, href: 'full/' },
+	                            'View this thesis as a single page, fit for printing'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
 	                        'section',
 	                        null,
 	                        _react2.default.createElement(
@@ -25692,7 +25830,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Index;
 
 /***/ },
-/* 216 */
+/* 217 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25728,7 +25866,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    _createClass(BrowserCheck, [{
 	        key: 'render',
 	        value: function render() {
-	            return _react2.default.createElement('div', { dangerouslySetInnerHTML: { __html: "<!--[if lt IE 8]>" + '<p class="browserupgrade">You are using an ' + '<strong>outdated</strong>' + ' browser. ' + 'Please ' + '<a href="http://browsehappy.com/">upgrade your browser</a>' + ' to improve your experience.</p>' + "<![endif]-->" } });
+	            return _react2.default.createElement('div', { dangerouslySetInnerHTML: { __html: "<!--[if lt IE 8]>" + '<p class="browserupgrade">You are using an ' + '<strong>outdated</strong>' + ' browser. ' + 'Please ' + '<a hreflang="en" href="http://browsehappy.com/">upgrade your browser</a>' + ' to improve your experience.</p>' + "<![endif]-->" } });
 	        }
 	    }]);
 
@@ -25738,7 +25876,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = BrowserCheck;
 
 /***/ },
-/* 217 */
+/* 218 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -25778,8 +25916,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	            var ghUrl = "https://github.com/digitalheir";
 	            //<meta content={ghUrl}/>
 	            return _react2.default.createElement(
-	                "div",
-	                { itemProp: "author copyrightHolder", itemScope: true,
+	                "address",
+	                { itemProp: "author copyrightHolder", id: "maarten-trompper", itemScope: true,
 	                    itemType: "https://schema.org/Person", className: "author-data" },
 	                _react2.default.createElement(
 	                    "div",
@@ -25801,7 +25939,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    { id: "github-link", className: "author-line" },
 	                    _react2.default.createElement(
 	                        "a",
-	                        { href: ghUrl,
+	                        { hrefLang: "en", href: ghUrl,
 	                            className: "icon no-decoration" },
 	                        _react2.default.createElement(
 	                            "i",
@@ -25850,7 +25988,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = AuthorData;
 
 /***/ },
-/* 218 */
+/* 219 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25899,7 +26037,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'A growing amount of Dutch case law is openly distributed on ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { href: 'http://www.rechtspraak.nl/' },
+	                        { hrefLang: 'nl', href: 'http://www.rechtspraak.nl/' },
 	                        'Rechtspraak.nl'
 	                    ),
 	                    '. Currently, many documents are not marked up or marked up only very sparsely, hampering our ability to process these documents automatically.'
@@ -25907,9 +26045,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'In this thesis, we explore the problem of automatically assigning a section structure to the texts of Dutch court judgments. To this end, we develop a database that mirrors the ',
+	                    'In this thesis, we explore the problem of automatic assignment of a section structure to the texts of Dutch court judgments. To this end, we develop a database that mirrors the ',
 	                    _abbreviations2.default.xml,
-	                    ' data offering of Rechtspraak.nl. We experiment with Linear-Chain Conditional Random Fields to label text elements with their role in the document (text, title or numbering). Given a list of labels, we experiment with probabilistic context free grammars to generate a parse tree to represent the section hierarchy of a document.'
+	                    ' data offering of Rechtspraak.nl. We experiment with Linear-Chain Conditional Random Fields to label text elements with their roles in the document (text, title or numbering). Given a list of labels, we experiment with probabilistic context-free grammars to generate a parse tree which represents the section hierarchy of a document.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -25920,7 +26058,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        null,
 	                        '1'
 	                    ),
-	                    ' scores of around 0.91 for tagging and 0.92 for parsing.'
+	                    ' scores of around 0.91 for tagging section titles (around 1.0 for other types) and 0.92 for parsing the tokens into a section hierarchy.'
 	                )
 	            );
 	        }
@@ -25932,7 +26070,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = AbstractContent;
 
 /***/ },
-/* 219 */
+/* 220 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25947,7 +26085,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _chapters = __webpack_require__(220);
+	var _chapters = __webpack_require__(215);
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
@@ -25998,7 +26136,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    { className: this.props.singlePage ? "leaders" : "" },
 	                    this.props.showHome ? _react2.default.createElement(
 	                        'a',
-	                        { href: relativeToRoot },
+	                        { hrefLang: 'en', href: relativeToRoot },
 	                        'Home'
 	                    ) : "",
 	                    _chapters2.default.inOrder.map(function (chapter) {
@@ -26024,7 +26162,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                        chapter.title
 	                                    ) : _react2.default.createElement(
 	                                        'a',
-	                                        { itemProp: 'mainEntityOfPage url', href: urlSection,
+	                                        { hrefLang: 'en', itemProp: 'mainEntityOfPage url', href: urlSection,
 	                                            className: 'nav-link' },
 	                                        _react2.default.createElement(
 	                                            'span',
@@ -26050,6 +26188,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        value: function getSubSections(chapter, urlSection, depth, singlePage) {
 	            if (chapter.getSections && chapter.getSections()) {
 	                // console.log(chapter.getSections());
+	                // itemProp={"pageStart":''}
 	                return _react2.default.createElement(
 	                    'ol',
 	                    null,
@@ -26058,6 +26197,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        if (!!section) return _react2.default.createElement(
 	                            'li',
 	                            {
+	                                key: section.id,
 	                                itemScope: true,
 	                                itemProp: 'hasPart',
 	                                itemType: 'https://schema.org/CreativeWork' },
@@ -26066,7 +26206,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                { className: 'row' },
 	                                _react2.default.createElement(
 	                                    'a',
-	                                    { itemProp: 'url', href: urlSection + "#" + section.id },
+	                                    { hrefLang: 'en', itemProp: 'url', href: urlSection + "#" + section.id },
 	                                    _react2.default.createElement(
 	                                        'span',
 	                                        { itemProp: 'name' },
@@ -26075,7 +26215,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                ),
 	                                singlePage ? _react2.default.createElement(
 	                                    'span',
-	                                    { itemProp: 'pageStart', className: 'nr' },
+	                                    { className: 'nr' },
 	                                    section.page
 	                                ) : ''
 	                            ),
@@ -26096,71 +26236,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	    path: _react2.default.PropTypes.string.isRequired
 	};
 	exports.default = ToC;
-
-/***/ },
-/* 220 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	var chapters = {
-	    introduction: {
-	        page: '4',
-	        id: "chapter-introduction",
-	        title: "Introduction",
-	        route: '/introduction/'
-	    },
-
-	    importing: {
-	        page: '6',
-	        id: "chapter-importing-and-tokenizing",
-	        title: "Importing & Tokenizing Data",
-	        route: '/importing-and-tokenizing/'
-	    },
-	    rechtspraakNl: {
-	        page: 'X',
-	        id: "chapter-rechtspraak-nl",
-	        title: "Rechtspraak.nl Data Set",
-	        route: '/rechtspraak-nl/'
-	    },
-	    tagging: {
-	        page: '13',
-	        id: "tagging",
-	        title: "Tagging Elements",
-	        route: '/tagging/'
-	    },
-	    documentStructure: {
-	        page: 22,
-	        id: "parsing",
-	        title: "Inferring a Section Hierarchy",
-	        route: '/document-structure/'
-	    },
-	    conclusion: {
-	        page: 27,
-	        id: "conclusion",
-	        title: "Conclusion",
-	        route: '/conclusion/'
-	    },
-	    // presentation: {
-	    //     title: "Dissemination",
-	    //     route: '/dissemination/'
-	    // }
-
-	    pathTo: function pathTo(fromPath, toChapter) {
-	        var relativeToRoot = fromPath.match(/\//g).slice(1).map(function (_) {
-	            return "../";
-	        }).join("");
-	        return relativeToRoot + toChapter.route.replace('/', '');
-	    }
-	};
-
-	chapters.inOrder = [chapters.introduction, chapters.importing, chapters.tagging, chapters.documentStructure, chapters.conclusion];
-
-	chapters.inOrder.forEach(function (ch) {
-	    if (!ch) throw new Error("Chapters object contains null or undefined item.");
-	});
-
-	module.exports = chapters;
 
 /***/ },
 /* 221 */
@@ -26225,33 +26300,33 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _sections10 = _interopRequireDefault(_sections9);
 
-	var _PARSEVAL = __webpack_require__(306);
-
-	var _PARSEVAL2 = _interopRequireDefault(_PARSEVAL);
-
-	var _Results = __webpack_require__(311);
-
-	var _Results2 = _interopRequireDefault(_Results);
-
-	var _FutureWork = __webpack_require__(312);
-
-	var _FutureWork2 = _interopRequireDefault(_FutureWork);
-
-	var _sections11 = __webpack_require__(313);
+	var _sections11 = __webpack_require__(306);
 
 	var _sections12 = _interopRequireDefault(_sections11);
 
-	var _FScores = __webpack_require__(314);
+	var _PARSEVAL = __webpack_require__(307);
+
+	var _PARSEVAL2 = _interopRequireDefault(_PARSEVAL);
+
+	var _Results = __webpack_require__(312);
+
+	var _Results2 = _interopRequireDefault(_Results);
+
+	var _FutureWork = __webpack_require__(313);
+
+	var _FutureWork2 = _interopRequireDefault(_FutureWork);
+
+	var _sections13 = __webpack_require__(314);
+
+	var _sections14 = _interopRequireDefault(_sections13);
+
+	var _FScores = __webpack_require__(315);
 
 	var _FScores2 = _interopRequireDefault(_FScores);
 
-	var _Resultz = __webpack_require__(315);
+	var _Resultz = __webpack_require__(316);
 
 	var _Resultz2 = _interopRequireDefault(_Resultz);
-
-	var _sections13 = __webpack_require__(316);
-
-	var _sections14 = _interopRequireDefault(_sections13);
 
 	var _sections15 = __webpack_require__(317);
 
@@ -26265,102 +26340,113 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _sections20 = _interopRequireDefault(_sections19);
 
-	var _ProblemDescription = __webpack_require__(320);
+	var _sections21 = __webpack_require__(320);
+
+	var _sections22 = _interopRequireDefault(_sections21);
+
+	var _ProblemDescription = __webpack_require__(321);
 
 	var _ProblemDescription2 = _interopRequireDefault(_ProblemDescription);
 
-	var _IntroMotivation = __webpack_require__(321);
+	var _IntroMotivation = __webpack_require__(322);
 
 	var _IntroMotivation2 = _interopRequireDefault(_IntroMotivation);
 
-	var _GraphicalModels = __webpack_require__(322);
+	var _GraphicalModels = __webpack_require__(323);
 
 	var _GraphicalModels2 = _interopRequireDefault(_GraphicalModels);
 
-	var _HMMs = __webpack_require__(323);
+	var _GenerativeDiscriminative = __webpack_require__(324);
+
+	var _GenerativeDiscriminative2 = _interopRequireDefault(_GenerativeDiscriminative);
+
+	var _HMMs = __webpack_require__(325);
 
 	var _HMMs2 = _interopRequireDefault(_HMMs);
 
-	var _LinearChainCRF = __webpack_require__(324);
+	var _LinearChainCRF = __webpack_require__(326);
 
 	var _LinearChainCRF2 = _interopRequireDefault(_LinearChainCRF);
 
-	var _Inference = __webpack_require__(325);
+	var _Inference = __webpack_require__(327);
 
 	var _Inference2 = _interopRequireDefault(_Inference);
 
-	var _ParameterEstimation = __webpack_require__(326);
+	var _ParameterEstimation = __webpack_require__(328);
 
 	var _ParameterEstimation2 = _interopRequireDefault(_ParameterEstimation);
 
-	var _Performance = __webpack_require__(327);
+	var _Regularization = __webpack_require__(329);
+
+	var _Regularization2 = _interopRequireDefault(_Regularization);
+
+	var _Performance = __webpack_require__(330);
 
 	var _Performance2 = _interopRequireDefault(_Performance);
 
-	var _Results3 = __webpack_require__(328);
+	var _Results3 = __webpack_require__(331);
 
 	var _Results4 = _interopRequireDefault(_Results3);
 
-	var _Discussion = __webpack_require__(329);
+	var _Discussion = __webpack_require__(332);
 
 	var _Discussion2 = _interopRequireDefault(_Discussion);
 
-	var _Discussion3 = __webpack_require__(330);
+	var _Discussion3 = __webpack_require__(333);
 
 	var _Discussion4 = _interopRequireDefault(_Discussion3);
 
-	var _Methods = __webpack_require__(331);
+	var _Methods = __webpack_require__(334);
 
 	var _Methods2 = _interopRequireDefault(_Methods);
 
-	var _Introduction = __webpack_require__(333);
+	var _Introduction = __webpack_require__(336);
 
 	var _Introduction2 = _interopRequireDefault(_Introduction);
 
-	var _DeterministicTagger = __webpack_require__(334);
+	var _DeterministicTagger = __webpack_require__(337);
 
 	var _DeterministicTagger2 = _interopRequireDefault(_DeterministicTagger);
 
-	var _CRF = __webpack_require__(335);
+	var _CRF = __webpack_require__(338);
 
 	var _CRF2 = _interopRequireDefault(_CRF);
 
-	var _FeatureSelection = __webpack_require__(336);
+	var _FeatureSelection = __webpack_require__(339);
 
 	var _FeatureSelection2 = _interopRequireDefault(_FeatureSelection);
 
-	var _Introduction3 = __webpack_require__(337);
+	var _Introduction3 = __webpack_require__(340);
 
 	var _Introduction4 = _interopRequireDefault(_Introduction3);
 
-	var _Methods3 = __webpack_require__(338);
+	var _Methods3 = __webpack_require__(341);
 
 	var _Methods4 = _interopRequireDefault(_Methods3);
 
-	var _Evaluation = __webpack_require__(339);
+	var _Evaluation = __webpack_require__(342);
 
 	var _Evaluation2 = _interopRequireDefault(_Evaluation);
 
-	var _ContextFreeGrammars = __webpack_require__(340);
+	var _ContextFreeGrammars = __webpack_require__(343);
 
 	var _ContextFreeGrammars2 = _interopRequireDefault(_ContextFreeGrammars);
 
-	var _AdditionalEnrichment = __webpack_require__(343);
+	var _AdditionalEnrichment = __webpack_require__(346);
 
 	var _AdditionalEnrichment2 = _interopRequireDefault(_AdditionalEnrichment);
 
-	var _CYK = __webpack_require__(344);
+	var _CYK = __webpack_require__(347);
 
 	var _CYK2 = _interopRequireDefault(_CYK);
 
-	var _sections21 = __webpack_require__(346);
+	var _sections23 = __webpack_require__(349);
 
-	var _sections22 = _interopRequireDefault(_sections21);
+	var _sections24 = _interopRequireDefault(_sections23);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	// import ManualTagger from './Tagging/Methods/ManualTagger/ManualTagger';
-	//noinspection JSUnresolvedVariable
 
 
 	function getHandler(route) {
@@ -26389,11 +26475,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	            return _Introduction2.default;
 	        case _sections8.default.taggingMethods.id:
 	            return _Methods2.default;
-	        case _sections14.default.featureSelection.id:
+	        case _sections16.default.featureSelection.id:
 	            return _FeatureSelection2.default;
-	        case _sections14.default.crf.id:
+	        case _sections16.default.crf.id:
 	            return _CRF2.default;
-	        case _sections14.default.deterministic.id:
+	        case _sections16.default.deterministic.id:
 	            return _DeterministicTagger2.default;
 	        //case sectionsTaggingMethods.manual.id:
 	        // return ManualTagger;
@@ -26403,72 +26489,83 @@ return /******/ (function(modules) { // webpackBootstrap
 	            return _Discussion4.default;
 
 	        // CRF
-	        case _sections20.default.undirectedGraphicalModels.id:
+	        case _sections22.default.generativeDiscriminative.id:
+	            return _GenerativeDiscriminative2.default;
+	        case _sections22.default.undirectedGraphicalModels.id:
 	            return _GraphicalModels2.default;
-	        case _sections20.default.crfPerformance.id:
+	        case _sections22.default.crfPerformance.id:
 	            return _Performance2.default;
-	        case _sections20.default.linearChain.id:
+	        case _sections22.default.linearChain.id:
 	            return _LinearChainCRF2.default;
-	        case _sections20.default.inference.id:
+	        case _sections22.default.inference.id:
 	            return _Inference2.default;
-	        case _sections20.default.parameterEstimation.id:
+	        case _sections22.default.parameterEstimation.id:
 	            return _ParameterEstimation2.default;
-	        case _sections20.default.hmm.id:
+	        case _sections22.default.hmm.id:
 	            return _HMMs2.default;
 
 	        // evaluation
-	        case _sections12.default.fScores.id:
+	        case _sections14.default.fScores.id:
 	            return _FScores2.default;
-	        case _sections12.default.results.id:
+	        case _sections14.default.results.id:
 	            return _Resultz2.default;
 
 	        // sectionsParsingEvaluation
-	        case _sections16.default.discussion.id:
+	        case _sections18.default.discussion.id:
 	            return _Discussion2.default;
-	        case _sections10.default.parseval.id:
+	        case _sections12.default.parseval.id:
 	            return _PARSEVAL2.default;
-	        case _sections10.default.results.id:
+	        case _sections12.default.results.id:
 	            return _Results2.default;
-	        case _sections10.default.futureWork.id:
+	        case _sections12.default.futureWork.id:
 	            return _FutureWork2.default;
 
 	        // InferringDocumentStructure
-	        case _sections16.default.intro.id:
+	        case _sections18.default.intro.id:
 	            return _Introduction4.default;
-	        case _sections16.default.methods.id:
+	        case _sections18.default.methods.id:
 	            return _Methods4.default;
-	        case _sections18.default.scfg.id:
+	        case _sections20.default.scfg.id:
 	            return _ContextFreeGrammars2.default;
-	        case _sections18.default.cyk.id:
+	        case _sections20.default.cyk.id:
 	            return _CYK2.default;
-	        case _sections16.default.evaluation.id:
+	        case _sections18.default.evaluation.id:
 	            return _Evaluation2.default;
 
 	        //  Dissemination
-	        case _sections22.default.dissemination.id:
+	        case _sections24.default.dissemination.id:
 	            return _Dissemination2.default;
 	        case _sections6.default.relatedWork.id:
 	            return _RelatedWork2.default;
-	        case _sections22.default.futureWork.id:
+	        case _sections24.default.futureWork.id:
 	            return _AdditionalEnrichment2.default;
+
+	        case _sections10.default.regularization.id:
+	            return _Regularization2.default;
 
 	        default:
 	            throw Error("No handler for route " + route + ". You should edit getSectionComponent.js");
 	    }
-	}
+	} //noinspection JSUnresolvedVariable
+
 	exports.default = getHandler;
 	function getSubSections(props, headerLevel) {
 	    return function (section) {
 	        if (!section || !section.id) throw new Error("Subsection was invalid: " + section);
 	        var SectionContent = getHandler(section.id);
 
-	        var header = _react2.default.createElement("h" + headerLevel, { className: "title" }, _react2.default.createElement('a', { className: 'link-up', href: '#' }), section.title);
+	        var header = _react2.default.createElement("h" + headerLevel, { className: "title" }, _react2.default.createElement('a', { className: 'link-up', href: '#' }), _react2.default.createElement(
+	            'span',
+	            { itemProp: 'name' },
+	            section.title
+	        ));
 	        var subsubsections = '';
 	        if (!!SectionContent.getSections) {
 	            var getSubSubsections = getSubSections(props, headerLevel + 1);
 	            subsubsections = SectionContent.getSections().inOrder.map(getSubSubsections);
 	            //console.log(subsubsections);
 	        }
+	        var description = section.description ? _react2.default.createElement('meta', { itemProp: 'description', content: section.description }) : '';
 	        return _react2.default.createElement(
 	            'section',
 	            { className: 'numbered-section',
@@ -26478,8 +26575,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	                key: section.id,
 	                id: section.id },
 	            header,
-	            _react2.default.createElement(SectionContent, props),
-	            subsubsections
+	            description,
+	            _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(SectionContent, props),
+	                subsubsections
+	            )
 	        );
 	    };
 	}
@@ -26524,7 +26626,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _figs2 = _interopRequireDefault(_figs);
 
-	var _chapters = __webpack_require__(220);
+	var _chapters = __webpack_require__(215);
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
@@ -26580,7 +26682,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        //                <section>
 	        //                    <h2>Counting terms</h2>
 	        //                    <p>Initial tokenization is performed server-side, using Alpino.</p>
-	        //                    <p>Then, in a MapReduce task we reduce these inflected words to lemmas and count lemma occurrences for each document. We use a<a href="https://github.com/fortnightlabs/snowball-js">Javascript port</a> of the <a href="http://snowball.tartarus.org/algorithms/dutch/stemmer.html">
+	        //                    <p>Then, in a MapReduce task we reduce these inflected words to lemmas and count lemma occurrences for each document. We use a<a hrefLang="en" href="https://github.com/fortnightlabs/snowball-js">Javascript port</a> of the <a hrefLang="en" href="http://snowball.tartarus.org/algorithms/dutch/stemmer.html">
 	        //                        Snowball stemming algorithm for
 	        //                        Dutch</a>, along with some additional normalization rules which mainly handle special characters (consider,
 	        //                        for example, that <code>'s ochtends</code> represents the same phrase as <code>`s ochtends</code>
@@ -26610,7 +26712,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        //                    <p><code>term_document_count</code> is useful to .</p>    https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation
 	        //                    <p><code>term_token_count</code> is useful when we want to know where a stemmed term comes
 	        //                        from, i.e., its manifestation in the source documents.
-	        //                    </p>    Refer to <a href="http://rechtspraak.cloudant.com/ecli/_design/term_frequency">http://rechtspraak.cloudant.com/ecli/_design/term_frequency</a>    for the implemented design document.
+	        //                    </p>    Refer to <a hrefLang="en" href="http://rechtspraak.cloudant.com/ecli/_design/term_frequency">http://rechtspraak.cloudant.com/ecli/_design/term_frequency</a>    for the implemented design document.
 	        //                </section>
 	        value: function render() {
 
@@ -26726,7 +26828,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	    value: true
+	        value: true
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -26747,59 +26849,62 @@ return /******/ (function(modules) { // webpackBootstrap
 	var bibliography = __webpack_require__(212);
 
 	var _class = function (_Component) {
-	    _inherits(_class, _Component);
+	        _inherits(_class, _Component);
 
-	    function _class() {
-	        _classCallCheck(this, _class);
+	        function _class() {
+	                _classCallCheck(this, _class);
 
-	        return _possibleConstructorReturn(this, Object.getPrototypeOf(_class).apply(this, arguments));
-	    }
-
-	    _createClass(_class, [{
-	        key: 'render',
-	        value: function render() {
-	            var refId = this.props.refId;
-	            var page = this.props.page;
-
-	            var reference = refId;
-	            if (typeof refId == 'string') {
-	                reference = bibliography[refId];
-	            }
-
-	            if (!reference) {
-	                throw new Error("Reference not found: " + refId);
-	            }
-
-	            // Create string for page
-	            var strPage = reference.pages ? ", pp. " + reference.pages : "";
-	            page = page ? page : reference.page;
-	            if (page) {
-	                strPage = ", p. " + page;
-	            }
-
-	            //Create string for name
-	            var name = reference.author.lastName ? reference.author.lastName.toString() : reference.author.abbr;
-
-	            //Create element
-	            return _react2.default.createElement(
-	                'a',
-	                { className: 'inline-citation',
-	                    href: "#" + reference.id.toString()
-	                },
-	                name,
-	                ' (',
-	                _react2.default.createElement(
-	                    'time',
-	                    { dateTime: reference.year.toString(), className: 'ref-year' },
-	                    reference.year.toString()
-	                ),
-	                strPage.toString(),
-	                ')'
-	            );
+	                return _possibleConstructorReturn(this, Object.getPrototypeOf(_class).apply(this, arguments));
 	        }
-	    }]);
 
-	    return _class;
+	        _createClass(_class, [{
+	                key: 'render',
+	                value: function render() {
+	                        var refId = this.props.refId;
+	                        var page = this.props.page;
+
+	                        var reference = refId;
+	                        if (typeof refId == 'string') {
+	                                reference = bibliography[refId];
+	                        }
+
+	                        if (!reference) {
+	                                throw new Error("Reference not found: " + refId);
+	                        }
+
+	                        // Create string for page
+	                        var strPage = reference.pages ? ", pp. " + reference.pages : "";
+	                        page = page ? page : reference.page;
+	                        if (page) strPage = ", p. " + page;
+	                        var pages = strPage.length <= 0 ? '' : _react2.default.createElement(
+	                                'span',
+	                                { className: 'pages' },
+	                                strPage
+	                        );
+
+	                        //Create string for name
+	                        var name = reference.author.lastName ? reference.author.lastName.toString() : reference.author.abbr;
+
+	                        //Create element
+	                        return _react2.default.createElement(
+	                                'a',
+	                                { className: 'inline-citation',
+	                                        href: "#" + reference.id.toString()
+	                                },
+	                                name,
+	                                ' (',
+	                                _react2.default.createElement(
+	                                        'time',
+	                                        { dateTime: reference.year.toString(), className: 'ref-year' },
+	                                        reference.year.toString()
+	                                ),
+	                                pages,
+	                                ')'
+	                        );
+	                }
+	        }]);
+
+	        return _class;
 	}(_react.Component);
 
 	exports.default = _class;
@@ -26857,7 +26962,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	            //   console.log(figs.markupStats);
 	            return _react2.default.createElement(
 	                'figure',
-	                { id: _figs2.default.markupStats.id },
+	                { itemProp: 'hasPart', itemScope: true, itemType: 'https://schema.org/Dataset',
+	                    id: _figs2.default.markupStats.id },
+	                _react2.default.createElement(
+	                    'div',
+	                    { itemProp: 'distribution', itemScope: true, itemType: 'https://schema.org/DataDownload' },
+	                    _react2.default.createElement('meta', { itemProp: 'contentUrl', content: _figs2.default.markupStats.url })
+	                ),
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: 'figure-container' },
@@ -26871,24 +26982,29 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    null,
 	                    _react2.default.createElement(
 	                        'span',
-	                        { className: 'figure-number' },
+	                        { itemProp: 'alternateName', className: 'figure-number' },
 	                        'Fig ',
-	                        _figs2.default.markupStats.num,
-	                        '.'
+	                        _figs2.default.markupStats.num
 	                    ),
-	                    ' Chart showing the number of documents with different kinds of markup. In particular, we are interested in the number of ',
+	                    '. ',
 	                    _react2.default.createElement(
-	                        'code',
-	                        null,
-	                        '*.info'
-	                    ),
-	                    ' tags, which are headers that contain metadata about the case, and ',
-	                    _react2.default.createElement(
-	                        'code',
-	                        null,
-	                        'section'
-	                    ),
-	                    ' tags, denoting sections.'
+	                        'span',
+	                        {
+	                            itemProp: 'description' },
+	                        'Chart showing the number of documents with different kinds of markup. In particular, we are interested in the number of ',
+	                        _react2.default.createElement(
+	                            'code',
+	                            null,
+	                            '*.info'
+	                        ),
+	                        ' tags, which are headers that contain metadata about the case, and ',
+	                        _react2.default.createElement(
+	                            'code',
+	                            null,
+	                            'section'
+	                        ),
+	                        ' tags, denoting sections.'
+	                    )
 	                )
 	            );
 	        }
@@ -26951,7 +27067,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    },
 	    graphicalModels: function () {
 	        var id = "fig-models-relationships";
-	        var src = "/img/graphical-models.svg"; // TODO relativeurl
+	        var src = "/img/graphical-models.svg";
 	        var alt = "Diagram of the relationship between naive Bayes, logistic regression, HMMs, linear-chain CRFs, " + "generative models, and general CRFs";
 	        var num = 6;
 	        return {
@@ -45254,7 +45370,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -45273,41 +45389,54 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	var _class = function (_Component) {
-	  _inherits(_class, _Component);
+	    _inherits(_class, _Component);
 
-	  function _class() {
-	    _classCallCheck(this, _class);
+	    function _class() {
+	        _classCallCheck(this, _class);
 
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(_class).apply(this, arguments));
-	  }
-
-	  _createClass(_class, [{
-	    key: "render",
-	    value: function render() {
-	      var fig = this.props.fig;
-	      if (!fig) throw new Error("No fig set to refer to...");
-	      var href = "#" + fig.id;
-
-	      return _react2.default.createElement(
-	        "a",
-	        { href: href },
-	        "Figure ",
-	        fig.num
-	      );
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(_class).apply(this, arguments));
 	    }
-	  }], [{
-	    key: "propTypes",
-	    value: function propTypes() {
-	      return {
-	        fig: _react2.default.PropTypes.shape({
-	          id: _react2.default.PropTypes.string.isRequired,
-	          num: _react2.default.PropTypes.isRequired
-	        }).isRequired
-	      };
-	    }
-	  }]);
 
-	  return _class;
+	    _createClass(_class, [{
+	        key: "render",
+	        value: function render() {
+	            var fig = this.props.fig;
+	            if (!fig) throw new Error("No fig set to refer to...");
+	            var href = "#" + fig.id;
+
+	            // Note creating a dummy scope is an ugly solution, but valid
+	            // http://webmasters.stackexchange.com/questions/55489/microdata-with-nested-product-and-reviews/55494#55494
+	            return _react2.default.createElement(
+	                "span",
+	                { itemScope: true },
+	                _react2.default.createElement(
+	                    "a",
+	                    { itemRef: fig.id,
+	                        id: fig.id + '-ref',
+	                        itemScope: true,
+	                        href: href },
+	                    _react2.default.createElement(
+	                        "span",
+	                        { itemProp: "name" },
+	                        "Figure ",
+	                        fig.num
+	                    )
+	                )
+	            );
+	        }
+	    }], [{
+	        key: "propTypes",
+	        value: function propTypes() {
+	            return {
+	                fig: _react2.default.PropTypes.shape({
+	                    id: _react2.default.PropTypes.string.isRequired,
+	                    num: _react2.default.PropTypes.isRequired
+	                }).isRequired
+	            };
+	        }
+	    }]);
+
+	    return _class;
 	}(_react.Component);
 
 	exports.default = _class;
@@ -45360,6 +45489,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -45462,25 +45593,33 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	            return _react2.default.createElement(
 	                'div',
-	                null,
+	                { className: 'section-content' },
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
 	                    _react2.default.createElement(
 	                        'a',
-	                        { href: 'http://www.rechtspraak.nl/' },
+	                        { hrefLang: 'nl', href: 'http://www.rechtspraak.nl/' },
 	                        'Rechtspraak.nl'
 	                    ),
-	                    ' is the official website of the Dutch judiciary. The website hosts an open data portal for Dutch case law, containing metadata for about 2 million court judgments',
-	                    _react2.default.createElement(_Source2.default, { href: 'http://data.rechtspraak.nl/uitspraken/zoeken?' }),
-	                    ' and judgments texts for about 350.000 judgments in ',
+	                    ' is the official website of the ',
+	                    _react2.default.createElement(
+	                        'span',
+	                        { itemScope: true,
+	                            itemType: 'https://schema.org/GovernmentOrganization' },
+	                        'Dutch judiciary'
+	                    ),
+	                    '. The website hosts an open data portal for Dutch case law, containing metadata for about 2 million court judgments',
+	                    _react2.default.createElement(_Source2.default, { hrefLang: 'nl',
+	                        href: 'http://data.rechtspraak.nl/uitspraken/zoeken?' }),
+	                    ' and judgment texts for about 350.000 judgments in ',
 	                    _abbreviations2.default.xml,
 	                    _react2.default.createElement(_Source2.default, {
-	                        href: 'http://data.rechtspraak.nl/uitspraken/zoeken?return=doc' }),
+	                        hrefLang: 'nl', href: 'http://data.rechtspraak.nl/uitspraken/zoeken?return=doc' }),
 	                    '. In this thesis, we only consider those documents that contain text. The full data set of ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { href: 'http://www.rechtspraak.nl/' },
+	                        { hrefLang: 'nl', href: 'http://www.rechtspraak.nl/' },
 	                        'Rechtspraak.nl'
 	                    ),
 	                    ' court judgments contains only a fraction of all court judgments that exist in the Netherlands, but the collection is curated so that it is representative of all case law in the Netherlands.'
@@ -45497,7 +45636,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'We wish to automatically annotate documents in the corpus with some semantic mark up, so it is helpful to see what is already done in this regard by ',
+	                    'We wish to automatically annotate documents in the corpus with some semantic markup, so it is helpful to see what is already done in this regard by ',
 	                    _react2.default.createElement(
 	                        'a',
 	                        { href: 'http://www.rechtspraak.nl/' },
@@ -45527,11 +45666,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    { className: 'nomargin nopadding' },
 	                    _react2.default.createElement(
 	                        'li',
-	                        { className: 'desc-info', id: 'info' },
+	                        { className: 'desc info', id: 'info' },
 	                        _react2.default.createElement(
 	                            'p',
 	                            null,
-	                            'The first element in a document is typically a unique header element with a tagname of either ',
+	                            'The first element in a document is typically a unique header element with a tag name of either ',
 	                            _react2.default.createElement(
 	                                'code',
 	                                null,
@@ -45549,7 +45688,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                null,
 	                                '*.info'
 	                            ),
-	                            '. ',
+	                            ' elements. ',
 	                            _react2.default.createElement(
 	                                'code',
 	                                null,
@@ -45641,19 +45780,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        _react2.default.createElement(
 	                            'p',
 	                            null,
-	                            'Automatically marking up text portions with ',
+	                            'Automatically marking up text portions within ',
 	                            _react2.default.createElement(
 	                                'code',
 	                                null,
 	                                '*.info'
 	                            ),
-	                            ' tags is outside of the scope of this thesis, although it can easily be achieved by extending the label set to include a ',
+	                            ' tags is outside of the scope of this thesis. For our further purposes, we do not distinguish header elements from generic sections, although this can easily be achieved by extending the label set to include a ',
 	                            _react2.default.createElement(
 	                                'code',
 	                                null,
 	                                '*.info'
 	                            ),
-	                            ' tag.'
+	                            ' label.'
 	                        ),
 	                        _react2.default.createElement(
 	                            'p',
@@ -45675,7 +45814,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ),
 	                    _react2.default.createElement(
 	                        'li',
-	                        { className: 'desc-section' },
+	                        { className: 'desc section' },
 	                        _react2.default.createElement(
 	                            'p',
 	                            null,
@@ -45695,7 +45834,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        _react2.default.createElement(
 	                            'p',
 	                            null,
-	                            'In practice we see three values for the ',
+	                            'In practice, we see three values for the ',
 	                            _react2.default.createElement(
 	                                'code',
 	                                null,
@@ -45757,140 +45896,158 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                'feiten'
 	                            ),
 	                            ' (facts). Assigning roles to sections is an interesting avenue of research, but we do not explore this in this thesis. Instead, we limit ourselves to demarcating sections and assigning some hierarchical section structure.'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'li',
+	                        { className: 'desc title avoid-page-break' },
+	                        _react2.default.createElement(
+	                            'p',
+	                            null,
+	                            _react2.default.createElement(
+	                                'code',
+	                                null,
+	                                'title'
+	                            ),
+	                            ' elements typically occur as the first descendant of a ',
+	                            _react2.default.createElement(
+	                                'code',
+	                                null,
+	                                'section'
+	                            ),
+	                            ' element, and contain either a numbering or some text, or both. ',
+	                            _react2.default.createElement(
+	                                'code',
+	                                null,
+	                                'title'
+	                            ),
+	                            ' elements may occur elsewhere, for example as labels for figures, but we only consider section titles in this thesis.'
 	                        ),
 	                        _react2.default.createElement(
-	                            'ol',
-	                            { className: 'nomargin nopadding' },
+	                            'p',
+	                            null,
+	                            'Titles are the most difficult elements to label, so we make a special effort to describe common title patterns. In ',
+	                            _react2.default.createElement(_FigRef2.default, { fig: _figs2.default.figTitleWordCount }),
+	                            ' we see that if a ',
 	                            _react2.default.createElement(
-	                                'li',
-	                                { className: 'desc-title' },
-	                                _react2.default.createElement(
-	                                    'p',
-	                                    null,
-	                                    _react2.default.createElement(
-	                                        'code',
-	                                        null,
-	                                        'title'
-	                                    ),
-	                                    ' elements typically occur as the first descendant of a ',
-	                                    _react2.default.createElement(
-	                                        'code',
-	                                        null,
-	                                        'section'
-	                                    ),
-	                                    ' element, and contain either a numbering or some text, or both. ',
-	                                    _react2.default.createElement(
-	                                        'code',
-	                                        null,
-	                                        'title'
-	                                    ),
-	                                    ' elements may occur elsewhere, for example as labels for figures, but we only consider section titles in this thesis.'
-	                                ),
-	                                _react2.default.createElement(
-	                                    'p',
-	                                    null,
-	                                    'Titles are the most difficult elements to label, so we make a special effort to describe common title patterns. In ',
-	                                    _react2.default.createElement(_FigRef2.default, { fig: _figs2.default.figTitleWordCount }),
-	                                    ', we see that if a ',
-	                                    _react2.default.createElement(
-	                                        'code',
-	                                        null,
-	                                        'title'
-	                                    ),
-	                                    ' element contains text, it usually contains only a handful of words, with close to 99% of section titles containing 10 words or less.'
-	                                ),
-	                                _react2.default.createElement(_figureTitleWordCount2.default, null),
-	                                _react2.default.createElement(
-	                                    'p',
-	                                    null,
-	                                    'Title texts have a number of patterns that often recur. See ',
-	                                    _react2.default.createElement(_FigRef2.default, {
-	                                        fig: _figs2.default.figTitleTreemap }),
-	                                    ' for a tree map of the distribution of normalized title texts.'
-	                                ),
-	                                _react2.default.createElement(_figTitlePattern2.default, null),
-	                                _react2.default.createElement(
-	                                    'p',
-	                                    null,
-	                                    _react2.default.createElement(_FigRef2.default, { fig: _figs2.default.tfidf }),
-	                                    ' and ',
-	                                    _react2.default.createElement(_FigRef2.default, { fig: _figs2.default.sectionsTfidf }),
-	                                    ' list terms within section title elements by tf–idf score, which is a number that reflects how important a given word is in a document with respect to all other documents in the corpus.'
-	                                ),
-	                                _react2.default.createElement(
-	                                    'p',
-	                                    null,
-	                                    _react2.default.createElement(
-	                                        'strike',
-	                                        null,
-	                                        'tf–idf is short for \'term frequency–inverse document frequency\'. It represents the importance of a given word by taking the number of times that word occurs in the document, and offsetting it against the amount of times that word occurs elsewhere in the corpus.'
-	                                    )
-	                                ),
-	                                _react2.default.createElement(
-	                                    'p',
-	                                    null,
-	                                    'tf–idf is defined as follows: '
-	                                ),
-	                                _react2.default.createElement(_Math2.default, { display: true, l: '\\text{tfidf}(t, d, D) = \\text{tf}(t, d)\\cdot \\text{idf}(t, D)' }),
-	                                _react2.default.createElement(
-	                                    'p',
-	                                    null,
-	                                    'where'
-	                                ),
-	                                _react2.default.createElement(
-	                                    'ul',
-	                                    null,
-	                                    _react2.default.createElement(
-	                                        'li',
-	                                        null,
-	                                        _react2.default.createElement(_Math2.default, { l: 'tf(t,d)' }),
-	                                        ' is some measure of the importance of a term ',
-	                                        _react2.default.createElement(_Math2.default, { l: 't' }),
-	                                        ' in a given document ',
-	                                        _react2.default.createElement(_Math2.default, { l: 'd' }),
-	                                        '. Let the raw frequency ',
-	                                        _react2.default.createElement(_Math2.default, { l: 'f_{t,d}' }),
-	                                        ' be the plain number of times the term ',
-	                                        _react2.default.createElement(_Math2.default, { l: 't' }),
-	                                        ' in occurs in a given document ',
-	                                        _react2.default.createElement(_Math2.default, { l: 'd' }),
-	                                        '. We use for ',
-	                                        _react2.default.createElement(_Math2.default, { l: 'tf(t,d)' }),
-	                                        ' the logarithmically scaled term count: ',
-	                                        _react2.default.createElement(_Math2.default, { l: 'tf(t,d) = 1 + \\log{f_{t,d}}' }),
-	                                        ', or ',
-	                                        _react2.default.createElement(_Math2.default, { l: '0' }),
-	                                        ' if ',
-	                                        _react2.default.createElement(_Math2.default, { l: 'f_{t,d} = 0' }),
-	                                        '.'
-	                                    ),
-	                                    _react2.default.createElement(
-	                                        'li',
-	                                        null,
-	                                        _react2.default.createElement(_Math2.default, { l: 'idf(t, D)' }),
-	                                        ' is some measure of how rare it is to find a term ',
-	                                        _react2.default.createElement(_Math2.default, { l: 't' }),
-	                                        ' in a given document corpus ',
-	                                        _react2.default.createElement(_Math2.default, { l: 'D' }),
-	                                        '. We obtain this measure by calculating the logarithmically scaled inverse fraction of documents in ',
-	                                        _react2.default.createElement(_Math2.default, { l: 'D' }),
-	                                        ' that contain the term ',
-	                                        _react2.default.createElement(_Math2.default, { l: 't' }),
-	                                        '. Let ',
-	                                        _react2.default.createElement(_Math2.default, { l: 'D' }),
-	                                        ' be the collection of documents, we then define the standard idf measure as:',
-	                                        _react2.default.createElement(_Math2.default, { display: 'true', l: 'idf(t, D) = \\log{\\frac{|D|}{|\\{d \\in D:t \\in d\\}|}}' })
-	                                    )
-	                                ),
-	                                _react2.default.createElement(
-	                                    'p',
-	                                    null,
-	                                    'Because we want to infer the most important words within title elements specifically, we take as a document the various text elements (such as a paragraph or title), and compute the tf-idf score for each word in each title.'
-	                                ),
-	                                _react2.default.createElement(_figureTitleTfIdf2.default, null),
-	                                _react2.default.createElement(_figureSectionTfIdf2.default, null)
-	                            )
+	                                'code',
+	                                null,
+	                                'title'
+	                            ),
+	                            ' element contains text, it usually contains only a handful of words. Close to 99% of section titles contain 10 words or less.'
 	                        )
+	                    ),
+	                    _react2.default.createElement(_figureTitleWordCount2.default, null),
+	                    _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        'Title texts have a number of patterns that often recur. See ',
+	                        _react2.default.createElement(_FigRef2.default, {
+	                            fig: _figs2.default.figTitleTreemap }),
+	                        ' for a treemap of the distribution of normalized title texts.'
+	                    ),
+	                    _react2.default.createElement(_figTitlePattern2.default, null),
+	                    _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        'From this figure, we learn that most of the section roles in use have a number of title strings that are used very often, but there is also a greatly diverse set of variations that occur less often. This figure encourages our use of CRFs: there are clearly identifiable patterns, but too many variations to list exhaustively.'
+	                    ),
+	                    _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        _react2.default.createElement(_FigRef2.default, { fig: _figs2.default.tfidf }),
+	                        ' and ',
+	                        _react2.default.createElement(_FigRef2.default, { fig: _figs2.default.sectionsTfidf }),
+	                        ' list terms within section title elements by tf–idf score, which is a number that reflects how important a given term is in an element with respect to all other elements in the corpus.'
+	                    ),
+	                    _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        _react2.default.createElement(
+	                            'strike',
+	                            null,
+	                            'tf–idf is short for \'term frequency–inverse document frequency\'. It represents the importance of a given word by taking the number of times that word occurs in the document, and offsetting it against the number of times that word occurs elsewhere in the corpus.'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        'tf–idf is defined as follows: '
+	                    ),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { display: true, l: '\\text{tfidf}(t, d, D) = \\text{tf}(t, d)\\cdot \\text{idf}(t, D)' })),
+	                    _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        'where'
+	                    ),
+	                    _react2.default.createElement(
+	                        'ul',
+	                        null,
+	                        _react2.default.createElement(
+	                            'li',
+	                            null,
+	                            _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text{tf}(t,d)' })),
+	                            ' is some measure of the importance of a term ',
+	                            _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 't' })),
+	                            ' in a given document ',
+	                            _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'd' })),
+	                            '. Let the raw frequency ',
+	                            _react2.default.createElement(_Math2.default, _extends({}, this.props, {
+	                                l: 'f_{t,d}' })),
+	                            ' be the plain number of times the term ',
+	                            _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 't' })),
+	                            ' in occurs in a given document ',
+	                            _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'd' })),
+	                            '. We use for ',
+	                            _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text{tf}(t,d)' })),
+	                            'the logarithmically scaled term count: ',
+	                            _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text{tf}(t,d) = 1 + \\log{f_{t,d}}' })),
+	                            ', or ',
+	                            _react2.default.createElement(_Math2.default, _extends({}, this.props, {
+	                                l: '0' })),
+	                            ' if ',
+	                            _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'f_{t,d} = 0' })),
+	                            '.'
+	                        ),
+	                        _react2.default.createElement(
+	                            'li',
+	                            null,
+	                            _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text{idf}(t, D)' })),
+	                            ' is some measure of how rare it is to find a term ',
+	                            _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 't' })),
+	                            ' in a given document corpus ',
+	                            _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'D' })),
+	                            '. We obtain this measure by calculating the logarithmically scaled inverse fraction of documents in ',
+	                            _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'D' })),
+	                            ' that contain the term ',
+	                            _react2.default.createElement(_Math2.default, _extends({}, this.props, {
+	                                l: 't' })),
+	                            '. Let ',
+	                            _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'D' })),
+	                            ' be the collection of documents, we then define the standard idf measure as:',
+	                            _react2.default.createElement(_Math2.default, _extends({}, this.props, { display: 'true',
+	                                l: '\\text{idf}(t, D) = \\log{\\frac{|D|}{|\\{d \\in D:t \\in d\\}|}}' }))
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        'Because we want to infer the most important words within title elements specifically, we take as ',
+	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'D' })),
+	                        ' the collection of all element types (paragraphs, titles, …), and compute the tf-idf score for each term with the ',
+	                        _react2.default.createElement(
+	                            'code',
+	                            null,
+	                            'title'
+	                        ),
+	                        ' type. Some classes of words, such as articles and numbers, are treated as a single term.'
+	                    ),
+	                    _react2.default.createElement(_figureTitleTfIdf2.default, null),
+	                    _react2.default.createElement(_figureSectionTfIdf2.default, null),
+	                    _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        'We observe, not very surprisingly, that numbers and articles are top terms for section titles. Furthermore, we notice that most terms in a section title are semantically related to the section role.'
 	                    )
 	                )
 	            );
@@ -46039,10 +46196,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	            //    {displayMode: this.props.displayMode}));
 	            var latex = this.props.latex || this.props.l;
 	            var displayMode = this.props.displayMode || this.props.display;
-
-	            return _react2.default.createElement('span', { dangerouslySetInnerHTML: {
-	                    __html: _katex2.default.renderToString(latex, { displayMode: displayMode })
-	                } });
+	            var clss = "math " + (displayMode ? "block" : "");
+	            var chapterNumDot = this.props.chapterObject ? '<span class="math-numbering-chapter">' + this.props.chapterObject.number + '</span>' + '.' : '';
+	            var html = _katex2.default.renderToString(latex, { displayMode: displayMode }) + (displayMode ? '<span class="math-numbering"><span class="math-numbering-content">Eq.&nbsp;' + chapterNumDot + '</span></span>' : '');
+	            return _react2.default.createElement('span', { className: clss, dangerouslySetInnerHTML: { __html: html } });
 	        }
 	    }]);
 
@@ -54523,7 +54680,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ' elements. Stemming is performed using the ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { href: 'http://snowball.tartarus.org/algorithms/dutch/stemmer.html' },
+	                        { hrefLang: 'en', href: 'http://snowball.tartarus.org/algorithms/dutch/stemmer.html' },
 	                        'Snowball algorithm for Dutch'
 	                    ),
 	                    '.'
@@ -54665,7 +54822,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            var txt = this.props.text ? this.props.text : this.props.percentage;
 	            return _react2.default.createElement(
 	                "svg",
-	                { width: "80", height: "10" },
+	                { width: "60", height: "10" },
 	                _react2.default.createElement(
 	                    "rect",
 	                    { className: "perc-bar bg", width: "100%", height: "100%" },
@@ -55135,7 +55292,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ' word stems in occurring section titles. Percentages are the percentage of titles texts that the word stem occurs in. Stemming is performed using the ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { href: 'http://snowball.tartarus.org/algorithms/dutch/stemmer.html' },
+	                        { hrefLang: 'en', href: 'http://snowball.tartarus.org/algorithms/dutch/stemmer.html' },
 	                        'Snowball algorithm for Dutch'
 	                    ),
 	                    '.'
@@ -55173,6 +55330,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: true
 	});
 
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _getTermFrequencyData = __webpack_require__(288);
@@ -55190,6 +55349,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _figs = __webpack_require__(227);
 
 	var _figs2 = _interopRequireDefault(_figs);
+
+	var _Math = __webpack_require__(254);
+
+	var _Math2 = _interopRequireDefault(_Math);
 
 	var _PercentageBar = __webpack_require__(281);
 
@@ -55251,7 +55414,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        'tbody',
 	                        null,
 	                        _underscore2.default.map(tfIdfScores, function (term, o) {
-	                            var tfIdfScoreStr = term[1].toFixed(2);return _react2.default.createElement(
+	                            var tfIdfScoreStr = term[1].toFixed(2);
+	                            return _react2.default.createElement(
 	                                'tr',
 	                                { key: term[0] },
 	                                _react2.default.createElement(
@@ -55290,10 +55454,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ),
 	                    ' Top ',
 	                    nTerms,
-	                    ' tf-idf scores for stemmed words in section titles. Stemming is performed using the ',
+	                    ' tf-idf scores for stemmed words in section titles (',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'D' })),
+	                    ' is the collection element types and ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'd' })),
+	                    ' is \'section titles\'). Stemming is performed using the ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { href: 'http://snowball.tartarus.org/algorithms/dutch/stemmer.html' },
+	                        { hrefLang: 'en', href: 'http://snowball.tartarus.org/algorithms/dutch/stemmer.html' },
 	                        'Snowball algorithm for Dutch'
 	                    ),
 	                    '. \'[NUMBER]\' and \'[de|het|een]\' are special classes for numbers and grammatical articles (i.e. the Dutch equivalent of the articles \'the\' and \'a\').'
@@ -55505,7 +55673,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ' tf-idf scores for stemmed words in section titles, per section role. Stemming is performed using the ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { href: 'http://snowball.tartarus.org/algorithms/dutch/stemmer.html' },
+	                        { hrefLang: 'en', href: 'http://snowball.tartarus.org/algorithms/dutch/stemmer.html' },
 	                        'Snowball algorithm for Dutch'
 	                    ),
 	                    '. \'[NUMBER]\', \'[PUNCTUATION]\' and \'[de|het|een]\' are special classes for numbers, punctation, and grammatical articles (the Dutch equivalent of the articles \'the\' and \'a\').'
@@ -55661,11 +55829,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	            //<LineChart labelY='²log frequency' sourceHref={data.url} data={data.data}/>
 	            return _react2.default.createElement(
 	                'figure',
-	                { className: 'chart', id: _figs2.default.figTitleWordCount.id },
+	                { itemProp: 'hasPart',
+	                    itemScope: true,
+	                    itemType: 'https://schema.org/Dataset',
+	                    className: 'chart',
+	                    id: _figs2.default.figTitleWordCount.id },
 	                _react2.default.createElement(
-	                    'a',
-	                    { href: _data2.default.url },
-	                    'Data source'
+	                    'span',
+	                    { itemProp: 'distribution', itemScope: true, itemType: 'https://schema.org/DataDownload' },
+	                    _react2.default.createElement(
+	                        'a',
+	                        { itemProp: 'contentUrl', href: _data2.default.url },
+	                        'Data source'
+	                    )
 	                ),
 	                _react2.default.createElement(
 	                    'table',
@@ -55721,12 +55897,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    null,
 	                    _react2.default.createElement(
 	                        'span',
-	                        { className: 'figure-number' },
+	                        { itemProp: 'alternateName', className: 'figure-number' },
 	                        'Fig ',
-	                        _figs2.default.figTitleWordCount.num,
-	                        '.'
+	                        _figs2.default.figTitleWordCount.num
 	                    ),
-	                    ' Word count in section titles, excluding numbering.'
+	                    '. ',
+	                    _react2.default.createElement(
+	                        'span',
+	                        {
+	                            itemProp: 'description' },
+	                        'Word count in section titles, excluding numbering.'
+	                    )
 	                )
 	            );
 	        }
@@ -55772,7 +55953,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	var rsSections = {
 	    xmlSchema: {
-	        page: '11',
+	        page: '10',
 	        id: 'xml-schema',
 	        title: "XML Schema"
 	    }
@@ -55837,7 +56018,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                'Regarding importing, we have created a separate library for mirroring the Rechtspraak.nl corpus from the web service to a CouchDB database. We mirror the data set in order to facilitate the collection of statistics of case law documents used in this thesis through MapReduce computations. Source code for this project is available ',
 	                _react2.default.createElement(
 	                    'a',
-	                    { className: 'print-url',
+	                    { hrefLang: 'en', className: 'print-url',
 	                        href: 'https://github.com/digitalheir/dutch-case-law-to-couchdb' },
 	                    'on GitHub'
 	                ),
@@ -55912,7 +56093,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    null,
 	                    'Regarding tokenization, we need to do some forward thinking in order to determine how to split ',
 	                    _abbreviations2.default.xml,
-	                    ' texts from Rechtspraak.nl. We assume a text to be decomposable into a list of tokens, which correspond to the terminal nodes in a section hierarchy. We use the following four terminal nodes in our section hierarchy:'
+	                    ' texts from Rechtspraak.nl. We assume a text to be decomposable into a list of tokens, which correspond to the terminal nodes in a section hierarchy. We use the following four terminal types in our section hierarchy:'
 	                ),
 	                _react2.default.createElement(
 	                    'ol',
@@ -55961,18 +56142,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'One may of course invent any other token type.'
+	                    'The selection of token types is rather arbitrary. These types were inspired by the existing XML tags of Rechtspraak.nl, and what is useful for creating a section structure. One may, of course, invent any other token type to suits one\'s needs.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'We should obviously tokenize the source documents to tokens that might be labeled with any of the above token types. In this regard, newlines are trivial to detect, and we assume that Rechtspraak.nl has already done a job of splitting text blocks in ',
+	                    'We should obviously tokenize the source documents to tokens that might be labeled with any of the above token types. In this regard, newlines are trivial to detect, and we assume that Rechtspraak.nl has already done the job of splitting text blocks in ',
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
 	                        'para'
 	                    ),
-	                    ' tags, which roughly demarcate titles and text blocks, but numberings often appear within these text nodes unannotated. So in our parsing algorithm, we assume that numberings occur as the beginning of a text block and represent Arabic or Roman numerals or an alphabetic numbering. In this manner, we tokenize potential numberings.'
+	                    ' tags, which roughly demarcate titles and text blocks, but numberings often appear within these text nodes unannotated. So in our tokenization algorithm, we assume that numberings occur as the beginning of a text block and represent Arabic or Roman numerals or an alphabetic numbering. In this manner, we tokenize potential numberings.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -55991,11 +56172,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        null,
 	                        'paragroup'
 	                    ),
-	                    ' tag, which sometimes represents a coherent set of paragraphs. On the other hand, sometimes the specified paragraph grouping makes no sense. Classifying a tree structures of tokens instead of a linear list can be done efficiently with ',
+	                    ' tag, which sometimes represents a coherent set of paragraphs. On the other hand, sometimes the specified paragraph grouping makes no sense. Classifying a tree structure of tokens instead of a linear list can be done efficiently with ',
 	                    _abbreviations2.default.crfs,
 	                    ', as in ',
 	                    _references2.default.cite(_bib2.default.bradley2010learning),
-	                    ', but working with tree structures requires a much more complicated pipeline. So for simplicity we ignore most of those \'higher-level\' tags, at the cost of potentially losing semantic mark up.'
+	                    ', but working with tree structures requires a much more complicated pipeline. So for simplicity we ignore most of those \'higher-level\' tags, at the cost of potentially losing semantic markup.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -56066,7 +56247,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'We present an enriched set of',
+	                    'We present an enriched set of ',
 	                    _abbreviations2.default.xml,
 	                    ' documents in a CouchDB database, available at ',
 	                    _react2.default.createElement(
@@ -56077,12 +56258,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ),
 	                    '. We also provide the enriched data set as a collection of ',
 	                    _abbreviations2.default.html,
-	                    ' pages, indexed for full text search.'
+	                    ' pages, indexed for full-text search.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'The source code for this project is published in two separate Java libraries:'
+	                    'The main source code for this project is published as two separate Java libraries:'
 	                ),
 	                _react2.default.createElement(
 	                    'ul',
@@ -56104,8 +56285,39 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        'One library for mirroring the Rechtspraak.nl corpus to a CouchDB database, ',
 	                        _react2.default.createElement(
 	                            'a',
-	                            { className: 'print-url',
+	                            { hrefLang: 'en', className: 'print-url',
 	                                href: 'https://github.com/digitalheir/dutch-case-law-to-couchdb' },
+	                            'on GitHub'
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'The above Java projects make use of a number of general purpose libraries that have been created during the course of writing this thesis:'
+	                ),
+	                _react2.default.createElement(
+	                    'ul',
+	                    null,
+	                    _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        'A Java library for converting XML to JSON, ',
+	                        _react2.default.createElement(
+	                            'a',
+	                            { hrefLang: 'en', className: 'print-url',
+	                                href: 'https://github.com/digitalheir/java-xml-to-json' },
+	                            'on GitHub'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        'A Probabilistic Earley Parser for Java, ',
+	                        _react2.default.createElement(
+	                            'a',
+	                            { hrefLang: 'en', className: 'print-url',
+	                                href: 'https://github.com/digitalheir/java-probabilistic-earley-parser' },
 	                            'on GitHub'
 	                        )
 	                    )
@@ -56176,7 +56388,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    null,
 	                    'The problem of automatically assigning semantic markup to plain-text documents has existed since the rise of hypertext in the late 1980s: see ',
 	                    _references2.default.cite(_bib2.default.furuta1989automatically),
-	                    ' for one historic example that pre-dates ',
+	                    ' for one historic example that predates ',
 	                    _abbreviations2.default.xml,
 	                    '.'
 	                ),
@@ -56184,7 +56396,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'p',
 	                    null,
 	                    _references2.default.cite(_bib2.default.abolhassani2003information),
-	                    ' discuss the general problem of automatic markup from digitally scanned documents, and define parsing a section structure as a task in macro-level markup. This is in contrast to micro-level markup, such as named entity recognition. They review some general solutions, but argue that general automatic markup ',
+	                    ' discuss the general problem of automatic markup from digitally scanned documents, and define parsing a section structure as a task in macro-level markup. This is in contrast to micro-level markup, such as named entity recognition. They review some general solutions but argue that general automatic markup ',
 	                    _react2.default.createElement(
 	                        'q',
 	                        { cite: _bib2.default.abolhassani2003information.url },
@@ -56195,15 +56407,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'Indeed, most approaches to automatic mark-up are domain-specific. Somewhat recently, the problem has been addressed in legal informatics as well. ',
+	                    'Indeed, most approaches to automatic markup are domain-specific. Somewhat recently, the problem has been addressed in legal informatics as well. ',
 	                    _references2.default.cite(_bib2.default.bacci2009automatic),
-	                    ' have a similar set-up to ours, applied to Italian law texts. They successfully apply Hidden Markov Models to distinguish header and footers from body. Interestingly, they train a separate ',
+	                    ' have a similar set-up to ours, applied to Italian law texts. They successfully apply Hidden Markov Models to distinguish headers and footers from body elements. Interestingly, they train a separate ',
 	                    _react2.default.createElement(
 	                        'abbr',
 	                        { title: 'Hidden Markov Model' },
 	                        'HMM'
 	                    ),
-	                    ' for every law type. For parsing the section hierarchy in the body, they use non-deterministic finite state machines, which corresponds to the class of (non-deterministic) regular expressions. The system shows some intolerance to syntactical errors in the input, but can handle common issues. It uses much less features than ours, which may be explained by the fact that legislative texts tend to have a more strict structure than case law, even though it also tends to be more deeply nested.'
+	                    ' for every law type. For parsing the section hierarchy in the body, they use non-deterministic finite state machines, which corresponds to the class of (non-deterministic) regular expressions. The system shows some intolerance to syntactical errors in the input but can handle common input issues. The system uses much fewer features than ours, which may be explained by the fact that legislative texts tend to have a more strict structure than judgment texts, even though it also tends to be more deeply nested.'
 	                )
 	            );
 	        }
@@ -56321,7 +56533,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _abbreviations2.default.xml,
 	                    ' documents. In the absence of an official schema, we have created a makeshift ',
 	                    _abbreviations2.default.xml,
-	                    ' schema that was automatically generated from a random sample of 500 documents. The resulting schema was afterwards manually corrected.'
+	                    ' schema that was automatically generated from a random sample of 500 documents. The resulting schema was manually corrected afterwards.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -56329,7 +56541,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'Using this schema, we can utilize a technology called ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { href: 'https://en.wikipedia.org/wiki/Java_Architecture_for_XML_Binding' },
+	                        { hrefLang: 'en', href: 'https://en.wikipedia.org/wiki/Java_Architecture_for_XML_Binding' },
 	                        'JAXB'
 	                    ),
 	                    ' to automatically marshall and demarshall Rechtspraak.nl ',
@@ -56337,9 +56549,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ' documents to and from Java objects. Source code and schema are available ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { className: 'print-url', href: 'https://github.com/digitalheir/java-rechtspraak-library' },
-	                        'on Github.'
-	                    )
+	                        { hrefLang: 'en', className: 'print-url', href: 'https://github.com/digitalheir/java-rechtspraak-library' },
+	                        'on Github'
+	                    ),
+	                    '.'
 	                )
 	            );
 	        }
@@ -56394,22 +56607,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	var taggingSections = {
 	    taggingIntroduction: {
-	        page: 13,
+	        page: 12,
 	        id: 'tagging-introduction',
 	        title: 'Introduction'
 	    },
 	    taggingMethods: {
-	        page: 13,
+	        page: 12,
 	        id: 'tagging-methods',
 	        title: 'Methods'
 	    },
 	    taggingResults: {
-	        page: 20,
+	        page: 19,
 	        id: 'tagging-evaluation',
 	        title: 'Results'
 	    },
 	    taggingDiscussion: {
-	        page: 21,
+	        page: 22,
 	        id: 'tagging-discussion',
 	        title: 'Discussion'
 	    }
@@ -56427,19 +56640,40 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+	var crfSections = {
+	    regularization: {
+	        page: 18,
+	        id: 'regularization',
+	        title: 'Regularization'
+	    }
+	};
+
+	crfSections.inOrder = [crfSections.regularization];
+
+	exports.default = crfSections;
+
+/***/ },
+/* 306 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
 	var disseminationSections = {
 	    parseval: {
-	        page: 25,
+	        page: 26,
 	        id: 'parseval',
 	        title: 'PARSEVAL'
 	    },
 	    results: {
-	        page: 25,
+	        page: 26,
 	        id: 'parsing-results',
 	        title: 'Results'
 	    },
 	    futureWork: {
-	        page: 25,
+	        page: -666,
 	        id: 'future-work',
 	        title: 'Future Work'
 	    }
@@ -56450,7 +56684,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = disseminationSections;
 
 /***/ },
-/* 306 */
+/* 307 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -56489,11 +56723,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Math2 = _interopRequireDefault(_Math);
 
-	var _FigureResults = __webpack_require__(307);
+	var _FigureResults = __webpack_require__(308);
 
 	var _FigureResults2 = _interopRequireDefault(_FigureResults);
 
-	var _ConfusionMatrix = __webpack_require__(310);
+	var _ConfusionMatrix = __webpack_require__(311);
 
 	var _ConfusionMatrix2 = _interopRequireDefault(_ConfusionMatrix);
 
@@ -56530,7 +56764,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    null,
 	                    'Evaluating performance on a parse tree is not as straightforward as it is for classification. Like in the previous chapter, we evaluate our grammar using an F-score, but notions of precision and recall are harder to define for constituency trees. To evaluate the parser, we use a metric known as PARSEVAL (due to ',
 	                    _references2.default.cite(_bib2.default.abney1991procedure),
-	                    ') with labelled precision and labelled recall as in ',
+	                    ') with labeled precision and labeled recall as in ',
 	                    _references2.default.cite(_bib2.default.collins1997three),
 	                    '.'
 	                ),
@@ -56556,7 +56790,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'Where \'correct constituent\' means that each non-terminal node has the same label and the same yield (where \'yield\' means: the ordered list of leaf nodes).'
+	                    'Where \'correct constituent\' means that each non-terminal node has the same label and the same yield, and yield is the ordered list of leaf nodes of a parse tree.'
 	                )
 	            );
 	        }
@@ -56573,7 +56807,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = PARSEVAL;
 
 /***/ },
-/* 307 */
+/* 308 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -56584,7 +56818,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _data = __webpack_require__(308);
+	var _data = __webpack_require__(309);
 
 	var _data2 = _interopRequireDefault(_data);
 
@@ -56600,7 +56834,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _figs2 = _interopRequireDefault(_figs);
 
-	var _GroupedBarChart = __webpack_require__(309);
+	var _GroupedBarChart = __webpack_require__(310);
 
 	var _GroupedBarChart2 = _interopRequireDefault(_GroupedBarChart);
 
@@ -56699,7 +56933,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = FigureResults;
 
 /***/ },
-/* 308 */
+/* 309 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -58273,7 +58507,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 309 */
+/* 310 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -58364,12 +58598,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	                return _react2.default.createElement(
 	                    'g',
 	                    {
+	                        key: d.title,
 	                        className: 'f-score-group',
 	                        transform: "translate(" + xScale(d.title) + ",0)" },
 	                    d.data.map(function (data) {
 	                        //console.log(data);
 	                        data.title = d.x;
 	                        return _react2.default.createElement(_Bar2.default, { xScale: x1,
+	                            key: 'x-' + data.x + '-y' + data.y,
 	                            yScale: yScale,
 	                            fill: color(data.x),
 	                            height: innerHeight - yScale(data.y),
@@ -58510,6 +58746,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            return _react2.default.createElement(
 	                'g',
 	                {
+	                    key: 'legend',
 	                    width: innerWidth - 18,
 	                    className: 'legend' },
 	                legendItems
@@ -58555,7 +58792,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = GroupedBarChart;
 
 /***/ },
-/* 310 */
+/* 311 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -58566,7 +58803,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _data = __webpack_require__(308);
+	var _data = __webpack_require__(309);
 
 	var _data2 = _interopRequireDefault(_data);
 
@@ -58594,80 +58831,205 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var labels = _underscore2.default.map(d.confusionMatrix, function (val, k) {
 	        return k;
 	    });
-
+	    var labelsNum = labels.length;
 	    return _react2.default.createElement(
-	        'table',
-	        { style: { margin: '0 0 ' + (false ? '2' : '8') + '0px 0' }, key: key },
+	        'div',
+	        { key: key, className: 'tbl-confusion-matrix',
+	            style: { border: "1px solid #eee", margin: '0 auto 20px auto' } },
 	        _react2.default.createElement(
-	            'caption',
-	            null,
-	            key
-	        ),
-	        _react2.default.createElement(
-	            'thead',
-	            null,
+	            'table',
+	            { style: { border: 'none', margin: '0 auto 20px auto' }, key: key },
 	            _react2.default.createElement(
-	                'tr',
-	                null,
-	                _react2.default.createElement('td', null),
-	                _react2.default.createElement('td', null),
-	                _react2.default.createElement(
-	                    'th',
-	                    { style: { textAlign: 'center', fontWeight: 'normal' }, colSpan: labels.length },
-	                    'Predicted'
-	                )
+	                'caption',
+	                { style: { fontWeight: 'bold' } },
+	                key
 	            ),
 	            _react2.default.createElement(
-	                'tr',
+	                'tbody',
 	                null,
-	                _react2.default.createElement('td', null),
-	                _react2.default.createElement('td', null),
-	                labels.map(function (l) {
-	                    return _react2.default.createElement(
-	                        'th',
-	                        null,
-	                        l
-	                    );
-	                })
-	            )
-	        ),
-	        _react2.default.createElement(
-	            'tbody',
-	            null,
-	            labels.map(function (l, i) {
-	                var children = [_react2.default.createElement(
-	                    'th',
-	                    { key: i + '-' + l },
-	                    l
-	                )];
-	                if (i == 0) {
-	                    children.push(_react2.default.createElement(
-	                        'th',
-	                        { style: { fontWeight: 'normal' },
-	                            key: "head-90",
-	                            rowSpan: labels.length },
-	                        _react2.default.createElement(
-	                            'div',
-	                            {
-	                                className: 'minus90' },
-	                            'Actual'
-	                        )
-	                    ));
-	                }
-	                children = children.concat(labels.map(function (l2) {
-	                    return _react2.default.createElement(
-	                        'td',
-	                        {
-	                            key: i + '-' + l + '-' + l2 },
-	                        d.confusionMatrix[l].m[l2] ? d.confusionMatrix[l].m[l2] : 0
-	                    );
-	                }));
-	                return _react2.default.createElement(
+	                _react2.default.createElement(
 	                    'tr',
-	                    { key: 'row' + i + '-' + l },
-	                    children
-	                );
-	            })
+	                    null,
+	                    _react2.default.createElement(
+	                        'td',
+	                        { style: { border: 'none' } },
+	                        _react2.default.createElement(
+	                            'table',
+	                            null,
+	                            _react2.default.createElement(
+	                                'caption',
+	                                { style: { fontWeight: 'bold' } },
+	                                'Confusion Matrix'
+	                            ),
+	                            _react2.default.createElement(
+	                                'thead',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'tr',
+	                                    null,
+	                                    _react2.default.createElement('td', { style: {} }),
+	                                    _react2.default.createElement('td', { style: {} }),
+	                                    _react2.default.createElement(
+	                                        'th',
+	                                        { style: { borderBottom: '1px solid #eee', textAlign: 'center', fontWeight: 'normal' },
+	                                            colSpan: labels.length },
+	                                        'Predicted'
+	                                    )
+	                                ),
+	                                _react2.default.createElement(
+	                                    'tr',
+	                                    null,
+	                                    _react2.default.createElement('td', { style: {} }),
+	                                    _react2.default.createElement('td', { style: {} }),
+	                                    labels.map(function (l, i) {
+	                                        return _react2.default.createElement(
+	                                            'th',
+	                                            { key: "th-" + i + l },
+	                                            l
+	                                        );
+	                                    })
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'tbody',
+	                                null,
+	                                labels.map(function (l, i) {
+	                                    var children = [_react2.default.createElement(
+	                                        'th',
+	                                        { key: i + '-' + l },
+	                                        l
+	                                    )];
+	                                    if (i == 0) {
+	                                        children.push(_react2.default.createElement(
+	                                            'th',
+	                                            { style: { fontWeight: 'normal' },
+	                                                key: "head-90",
+	                                                rowSpan: labels.length },
+	                                            _react2.default.createElement(
+	                                                'div',
+	                                                {
+	                                                    className: 'minus90' },
+	                                                'Actual'
+	                                            )
+	                                        ));
+	                                    }
+	                                    children = children.concat(labels.map(function (l2) {
+	                                        return _react2.default.createElement(
+	                                            'td',
+	                                            {
+	                                                style: { border: 'none' },
+	                                                key: i + '-' + l + '-' + l2 },
+	                                            d.confusionMatrix[l].m[l2] ? d.confusionMatrix[l].m[l2] : 0
+	                                        );
+	                                    }));
+	                                    return _react2.default.createElement(
+	                                        'tr',
+	                                        { key: 'row' + i + '-' + l },
+	                                        children
+	                                    );
+	                                })
+	                            )
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'tr',
+	                    null,
+	                    _react2.default.createElement(
+	                        'td',
+	                        { style: {} },
+	                        _react2.default.createElement(
+	                            'table',
+	                            { style: { margin: '0 auto ' + (false ? '2' : '2') + '0px auto' } },
+	                            _react2.default.createElement(
+	                                'caption',
+	                                { style: { fontWeight: 'bold' } },
+	                                'F-scores'
+	                            ),
+	                            _react2.default.createElement(
+	                                'thead',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'tr',
+	                                    null,
+	                                    _react2.default.createElement(
+	                                        'th',
+	                                        null,
+	                                        'Type'
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'th',
+	                                        null,
+	                                        'Precision'
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'th',
+	                                        null,
+	                                        'Recall'
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'th',
+	                                        null,
+	                                        'F',
+	                                        _react2.default.createElement(
+	                                            'sub',
+	                                            null,
+	                                            '1'
+	                                        ),
+	                                        '-score'
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'th',
+	                                        null,
+	                                        'F',
+	                                        _react2.default.createElement(
+	                                            'sub',
+	                                            null,
+	                                            '0.5'
+	                                        ),
+	                                        '-score'
+	                                    )
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'tbody',
+	                                null,
+	                                labels.map(function (label, i) {
+	                                    return _react2.default.createElement(
+	                                        'tr',
+	                                        { key: "f1-" + i },
+	                                        _react2.default.createElement(
+	                                            'td',
+	                                            null,
+	                                            label
+	                                        ),
+	                                        _react2.default.createElement(
+	                                            'td',
+	                                            null,
+	                                            d.scores[label].precision.toFixed(2)
+	                                        ),
+	                                        _react2.default.createElement(
+	                                            'td',
+	                                            null,
+	                                            d.scores[label].recall.toFixed(2)
+	                                        ),
+	                                        _react2.default.createElement(
+	                                            'td',
+	                                            null,
+	                                            d.scores[label].f1.toFixed(2)
+	                                        ),
+	                                        _react2.default.createElement(
+	                                            'td',
+	                                            null,
+	                                            d.scores[label].f0_5.toFixed(2)
+	                                        )
+	                                    );
+	                                })
+	                            )
+	                        )
+	                    )
+	                )
+	            )
 	        )
 	    );
 	}
@@ -58711,7 +59073,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = ConfusionMatrix;
 
 /***/ },
-/* 311 */
+/* 312 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -58767,7 +59129,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        null,
 	                        '1'
 	                    ),
-	                    '-score of 0.92 (precision 0.93; recall 092).'
+	                    '-score of 0.92 and F',
+	                    _react2.default.createElement(
+	                        'sub',
+	                        null,
+	                        '1'
+	                    ),
+	                    '-score of 0.93 (precision 0.93; recall 0.92).'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -58794,7 +59162,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'Another issue is that the grammar has difficulty in deciding whether non-numbered sections should be subsections or not. Indeed, this can be difficult to determine purely on typography.'
+	                    'Another issue is that the grammar has difficulty in deciding whether non-numbered sections should be subsections or not. Indeed, this can be difficult to determine based purely on typography.'
 	                )
 	            );
 	        }
@@ -58806,7 +59174,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = ParsingEval;
 
 /***/ },
-/* 312 */
+/* 313 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -58867,7 +59235,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = FutureWork;
 
 /***/ },
-/* 313 */
+/* 314 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -58877,7 +59245,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	var disseminationSections = {
 	    fScores: {
-	        page: 20,
+	        page: 19,
 	        id: 'f-scores',
 	        title: 'F-scores'
 	    },
@@ -58893,7 +59261,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = disseminationSections;
 
 /***/ },
-/* 314 */
+/* 315 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -58901,6 +59269,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -59012,22 +59382,28 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ),
 	                    '-measure as:'
 	                ),
-	                _react2.default.createElement(_Math2.default, { l: 'F_\\beta = (1+\\beta^2)\\cdot\\frac{\\text{precision}\\cdot\\text{recall}}{(\\beta^2\\cdot\\text{precision})+\\text{recall}}',
-	                    display: 'true' }),
+	                _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'F_\\beta = (1+\\beta^2)\\cdot\\frac{\\text{precision}\\cdot\\text{recall}}{(\\beta^2\\cdot\\text{precision})+\\text{recall}}',
+	                    display: 'true' })),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
 	                    'Where ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\beta\\in\\mathbb{R}' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\beta\\in\\mathbb{R}' })),
 	                    ' is a number that represents the number of times we place the importance of the recall metric above that of precision. For ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\beta = 1' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\beta = 1' })),
 	                    ', precision is equally as important as recall, and so ',
-	                    _react2.default.createElement(_Math2.default, { l: 'F_1' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'F_1' })),
 	                    ' describes the harmonic mean of precision and recall (',
-	                    _react2.default.createElement(_Math2.default, { l: 'F_1 = 2\\cdot\\frac{\\text{precision}\\cdot\\text{recall}}{\\text{precision}+\\text{recall}}' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'F_1 = 2\\cdot\\frac{\\text{precision}\\cdot\\text{recall}}{\\text{precision}+\\text{recall}}' })),
 	                    '). For ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\beta = 0.5' }),
-	                    ', precision is twice as important as recall.'
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\beta = 0.5' })),
+	                    ', precision is twice as important as recall. We argue that in the case of section titles, precision ',
+	                    _react2.default.createElement(
+	                        'em',
+	                        null,
+	                        'is'
+	                    ),
+	                    ' more important than recall. The reasoning is that in case of a false negative, we do not lose any information because the title is likely seen as a text node (it is very improbable that it is falsely flagged as a newline or numbering). However, in the case of a false positive for section titles we create false information, which is very undesirable. Precisely how much more important we deem precision to recall is rather arbitrary.'
 	                )
 	            );
 	        }
@@ -59044,7 +59420,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = FScorez;
 
 /***/ },
-/* 315 */
+/* 316 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59087,11 +59463,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _abbreviations2 = _interopRequireDefault(_abbreviations);
 
-	var _FigureResults = __webpack_require__(307);
+	var _FigureResults = __webpack_require__(308);
 
 	var _FigureResults2 = _interopRequireDefault(_FigureResults);
 
-	var _ConfusionMatrix = __webpack_require__(310);
+	var _ConfusionMatrix = __webpack_require__(311);
 
 	var _ConfusionMatrix2 = _interopRequireDefault(_ConfusionMatrix);
 
@@ -59129,17 +59505,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    null,
 	                    'For all tokens except for section titles, all models yield F-scores between 0.98 and 1.0. (See the confusion matrix in ',
 	                    _react2.default.createElement(_FigRef2.default, { fig: _figs2.default.confusionMatrix }),
-	                    '. Section titles are harder to label, so in ',
+	                    '.) Section titles are harder to label, so in ',
 	                    _react2.default.createElement(_FigRef2.default, { fig: _figs2.default.taggingResults }),
-	                    ', we consider the F-score for these. We can see that the ',
+	                    ', we consider the F-score for these.'
+	                ),
+	                _react2.default.createElement(_FigureResults2.default, { url: relativeToRoot + "js/tagger-results.json" }),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'We see that the ',
 	                    _abbreviations2.default.crfs,
-	                    ' out-perform the baseline task mostly by increasing the recall, although the ',
+	                    ' outperform the baseline task mostly by increasing the recall, although the ',
 	                    _abbreviations2.default.crfs,
 	                    ' have slightly worse precision (0.91 for ',
 	                    _abbreviations2.default.crfs,
 	                    ' contra 0.96 for hand-written).'
 	                ),
-	                _react2.default.createElement(_FigureResults2.default, { url: relativeToRoot + "js/tagger-results.json" }),
 	                _react2.default.createElement(_ConfusionMatrix2.default, null)
 	            );
 	        }
@@ -59156,7 +59537,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Resultz;
 
 /***/ },
-/* 316 */
+/* 317 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -59176,12 +59557,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	    //     component: Methods
 	    // },
 	    crf: {
-	        page: '14',
+	        page: '13',
 	        id: 'crf',
 	        title: "Conditional Random Fields"
 	    },
 	    featureSelection: {
-	        page: '13',
+	        page: '12',
 	        id: 'features',
 	        title: 'Features'
 	    },
@@ -59201,7 +59582,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = taggingSections;
 
 /***/ },
-/* 317 */
+/* 318 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -59211,22 +59592,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	var inferringSections = {
 	    intro: {
-	        page: 22,
+	        page: 23,
 	        id: 'parse-tree-introduction',
 	        title: "Introduction"
 	    },
 	    methods: {
-	        page: 22,
+	        page: 23,
 	        id: 'parse-tree-methods',
 	        title: "Methods"
 	    },
 	    evaluation: {
-	        page: 25,
+	        page: 26,
 	        id: 'parse-tree-evaluation',
 	        title: 'Results'
 	    },
 	    discussion: {
-	        page: 26,
+	        page: 27,
 	        id: 'parse-discussion',
 	        title: 'Discussion'
 	    }
@@ -59234,31 +59615,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	inferringSections.inOrder = [inferringSections.intro, inferringSections.methods, inferringSections.evaluation, inferringSections.discussion];
 	exports.default = inferringSections;
-
-/***/ },
-/* 318 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	var methodsSections = {
-	    scfg: {
-	        page: 22,
-	        id: 'pcfg',
-	        title: 'Probabilistic Context Free Grammars'
-	    },
-	    cyk: {
-	        page: 23,
-	        id: 'cyk',
-	        title: 'CYK Algorithm'
-	    }
-	};
-
-	methodsSections.inOrder = [methodsSections.scfg, methodsSections.cyk];
-	exports.default = methodsSections;
 
 /***/ },
 /* 319 */
@@ -59269,21 +59625,51 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+	var methodsSections = {
+	    scfg: {
+	        page: 23,
+	        id: 'pcfg',
+	        title: 'Probabilistic Context-Free Grammars'
+	    },
+	    cyk: {
+	        page: 24,
+	        id: 'cyk',
+	        title: 'CYK Algorithm'
+	    }
+	};
+
+	methodsSections.inOrder = [methodsSections.scfg, methodsSections.cyk];
+	exports.default = methodsSections;
+
+/***/ },
+/* 320 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
 	var crfSections = {
 	    undirectedGraphicalModels: {
-	        page: '15',
+	        page: 14,
 	        id: 'undirected-graphical-models',
 	        title: 'Undirected Graphical Models'
 	    },
 	    hmm: {
-	        page: 15,
+	        page: 14,
 	        id: 'hmm',
 	        title: 'Directed Graphical Models'
 	    },
+	    generativeDiscriminative: {
+	        page: 16,
+	        id: 'generative-discriminative',
+	        title: 'Generative-Discriminative Pairs'
+	    },
 	    linearChain: {
-	        page: 17,
+	        page: 16,
 	        id: 'linear-chain-crf',
-	        title: 'Linear Chain Conditional Random Fields'
+	        title: 'Linear-Chain Conditional Random Fields'
 	    },
 	    crfPerformance: {
 	        page: 'x',
@@ -59291,23 +59677,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	        title: 'Performance'
 	    },
 	    inference: {
-	        page: 19,
+	        page: 18,
 	        id: 'crf-inference',
 	        title: 'Inference'
 	    },
 	    parameterEstimation: {
-	        page: 18,
+	        page: 17,
 	        id: 'crf-parameter-estimation',
 	        title: 'Parameter Estimation'
 	    }
 	};
 
-	crfSections.inOrder = [crfSections.hmm, crfSections.undirectedGraphicalModels, crfSections.linearChain, crfSections.parameterEstimation, crfSections.inference];
+	crfSections.inOrder = [crfSections.hmm, crfSections.undirectedGraphicalModels, crfSections.generativeDiscriminative, crfSections.linearChain, crfSections.parameterEstimation, crfSections.inference];
 
 	exports.default = crfSections;
 
 /***/ },
-/* 320 */
+/* 321 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59350,7 +59736,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Source2 = _interopRequireDefault(_Source);
 
-	var _chapters = __webpack_require__(220);
+	var _chapters = __webpack_require__(215);
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
@@ -59390,7 +59776,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(
 	                        'p',
 	                        null,
-	                        'The problem that we investigate in this thesis, then, is whether we can enrich the markup of scarcely marked up documents in Rechtspraak.nl by automatically assigning a section hierarchy to the text elements. We divide this problem in the following subtasks:'
+	                        'The problem that we investigate in this thesis, then, is whether we can enrich the markup of scarcely marked up documents in Rechtspraak.nl by automatically assigning a section hierarchy to the text elements. We divide this problem into the following subtasks:'
 	                    ),
 	                    _react2.default.createElement(
 	                        'ol',
@@ -59400,7 +59786,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            null,
 	                            _react2.default.createElement(
 	                                'a',
-	                                { href: _chapters2.default.pathTo(this.props.path, _chapters2.default.importing) + "#" + _sections2.default.importing.id },
+	                                { hrefLang: 'en', href: _chapters2.default.pathTo(this.props.path, _chapters2.default.importing) + "#" + _sections2.default.importing.id },
 	                                'Importing documents from the Rechtspraak.nl web service;'
 	                            )
 	                        ),
@@ -59409,7 +59795,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            null,
 	                            _react2.default.createElement(
 	                                'a',
-	                                { href: _chapters2.default.pathTo(this.props.path, _chapters2.default.importing) + "#" + _sections2.default.importing.id },
+	                                { hrefLang: 'en', href: _chapters2.default.pathTo(this.props.path, _chapters2.default.importing) + "#" + _sections2.default.importing.id },
 	                                'Tokenizing relevant text elements;'
 	                            )
 	                        ),
@@ -59418,7 +59804,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            null,
 	                            _react2.default.createElement(
 	                                'a',
-	                                { href: _chapters2.default.pathTo(this.props.path, _chapters2.default.tagging) },
+	                                { hrefLang: 'en', href: _chapters2.default.pathTo(this.props.path, _chapters2.default.tagging) },
 	                                'Labeling these text elements with their respective roles (i.e. ',
 	                                _react2.default.createElement(
 	                                    'code',
@@ -59451,7 +59837,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            null,
 	                            _react2.default.createElement(
 	                                'a',
-	                                { href: _chapters2.default.pathTo(this.props.path, _chapters2.default.documentStructure) },
+	                                { hrefLang: 'en', href: _chapters2.default.pathTo(this.props.path, _chapters2.default.documentStructure) },
 	                                'Combining the tokens in such a way that they represent the most likely section hierarchy'
 	                            )
 	                        ),
@@ -59465,13 +59851,35 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'Tasks 1 and 2 are theoretically straightforward and mostly a problem of implementation, and the following chapter touches on both of these subject briefly, mostly through a specification of the data set of court judgments from ',
+	                    'Tasks 1 and 2 are theoretically straightforward and mostly a problem of implementation, and the following chapter touches on both of these subjects briefly, mostly through a specification of the data set of court judgments from ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { href: 'http://www.rechspraak.nl' },
+	                        { hrefLang: 'nl', href: 'http://www.rechspraak.nl' },
 	                        'Rechtspraak.nl'
 	                    ),
 	                    '.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Task 3 describes labeling the text elements with their roles in the text, which we translate into the relevant markup tags. This is achieved by training a Conditional Random Field on a set of manually labeled documents. The trained model is then able to correctly label most elements: for all labels we report F',
+	                    _react2.default.createElement(
+	                        'sub',
+	                        null,
+	                        '1'
+	                    ),
+	                    ' scores of around 1.0, except for section titles: for these we report 0.91.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Task 4, organizing the tagged elements into a section hierarchy, is approached as a probabilistic parsing problem. We create a Context-Free Grammar which accepts a list of text elements as tokens and creates a parse tree which represents the section hierarchy. This approach returns a desirable section hierarchy in most cases: in our experiment we report an F',
+	                    _react2.default.createElement(
+	                        'sub',
+	                        null,
+	                        '1'
+	                    ),
+	                    ' score of 0.92.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -59493,7 +59901,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = ProblemDescription;
 
 /***/ },
-/* 321 */
+/* 322 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59586,7 +59994,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'It is useful to have such a section hierarchy, however. It is obviously useful for rendering documents to human users: a clear section hierarchy allows us to display a table of contents and to style section titles. Furthermore, because sections usually chunk similar kinds of information together, a good section hierarchy also allows search engines to better index texts by localizing semantic units, which in turn makes these documents better searchable for legal users. It is also a stepping stone to make the documents machine readable. A richly marked up document enables advanced text mining operations, such as automatically extracting the final judgment, extracting the judge\'s considerations, etcetera.'
+	                    'It is useful to have such a section hierarchy, however. It is obviously useful for rendering documents to human users: a clear section hierarchy allows us to display a table of contents and to style section titles. Furthermore, because sections usually chunk similar kinds of information together, a good section hierarchy also allows search engines to better index texts by localizing semantic units, which in turn makes these documents better searchable for legal users. It is also a stepping stone to make the documents machine readable. A richly marked up document facilitates advanced text mining operations, such as automatically extracting the final judgment, extracting the judge\'s considerations, etcetera.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -59594,13 +60002,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'There is a recent trend on Rechtspraak.nl towards publishing more richly marked up documents, as we can see in ',
 	                    _react2.default.createElement(_FigRef2.default, {
 	                        fig: _figs2.default.markupStats }),
-	                    '. Still, an overwhelmingly large portion remains of documents which contain no or only sparse markup. To illustrate: at the time of writing, 78.7% of all judgment texts on Rechtspraak.nl do not contain any ',
+	                    '. Still, there is an overwhelmingly large portion of documents which contain no or only sparse markup. To illustrate: at the time of writing, 78.7% of all judgment texts on Rechtspraak.nl do not contain any ',
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
 	                        'section'
 	                    ),
-	                    ' tag, implying that a large number of documents are barely marked up. These documents are mostly made up of documents from before ',
+	                    ' tag, implying that a large number of documents are barely marked up. These documents are mostly from before ',
 	                    _react2.default.createElement(
 	                        'span',
 	                        { dateTime: '2013' },
@@ -59624,7 +60032,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = IntroMotivation;
 
 /***/ },
-/* 322 */
+/* 323 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59632,6 +60040,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -59692,68 +60102,78 @@ return /******/ (function(modules) { // webpackBootstrap
 	                return "../";
 	            }).join("");
 
-	            //and will be relevant when we define Linear Chain <abbr title="Conditional Random Fields">CRFs</abbr>.
+	            //and will be relevant when we define Linear-Chain <abbr title="Conditional Random Fields">CRFs</abbr>.
 	            return _react2.default.createElement(
 	                'div',
 	                null,
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'Undirected Graphical Models are similar to directed graphical models, except we imagine the underlying graph to be an undirected graph. This means that Undirected Graphical Models factorize slightly different:',
-	                    _react2.default.createElement(_Math2.default, {
+	                    'Undirected Graphical Models are similar to directed graphical models, except we the underlying graph is an undirected graph. This means that Undirected Graphical Models factorize in a slightly different manner:',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, {
 	                        l: 'p( \\mathbf x, \\mathbf y)=\\frac{1}{Z}\\prod _A \\Phi_A( \\mathbf x_A,\\mathbf y_A)',
-	                        displayMode: true }),
+	                        displayMode: true })),
 	                    'where ',
-	                    _react2.default.createElement(_Math2.default, {
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, {
 	                        l: 'Z=\\sum _{\\mathbf x, \\mathbf y} ( \\prod _A \\Phi_A( \\mathbf x_A,\\mathbf y_A))',
-	                        displayMode: true })
+	                        displayMode: true }))
 	                ),
 	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'and'
-	                ),
-	                _react2.default.createElement(
-	                    'ul',
-	                    null,
+	                    'div',
+	                    { className: 'avoid-page-break' },
 	                    _react2.default.createElement(
-	                        'li',
+	                        'p',
 	                        null,
-	                        _react2.default.createElement(_Math2.default, {
-	                            l: 'A' }),
-	                        ' is the set of all cliques in the underlying graph'
+	                        'and'
 	                    ),
 	                    _react2.default.createElement(
-	                        'li',
+	                        'ul',
 	                        null,
-	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf x' }),
-	                        ' and ',
-	                        _react2.default.createElement(_Math2.default, {
-	                            l: '\\mathbf y' }),
-	                        ' denote an assignment to ',
-	                        _react2.default.createElement(_Math2.default, { l: 'X' }),
-	                        ' and ',
-	                        _react2.default.createElement(_Math2.default, { l: 'Y' }),
-	                        ', respectively'
-	                    ),
-	                    _react2.default.createElement(
-	                        'li',
-	                        null,
-	                        'and we consider ',
-	                        _react2.default.createElement(_Math2.default, { l: 'V = X\\cup Y' }),
-	                        ' of a set of input variables ',
-	                        _react2.default.createElement(_Math2.default, { l: 'X' }),
-	                        ' (for example, word features) and a set of output variables ',
-	                        _react2.default.createElement(_Math2.default, { l: 'Y' }),
-	                        ' (for example, part-of-speech tags).'
+	                        _react2.default.createElement(
+	                            'li',
+	                            null,
+	                            _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'A' })),
+	                            ' is the set of all cliques in the underlying graph'
+	                        ),
+	                        _react2.default.createElement(
+	                            'li',
+	                            null,
+	                            _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\mathbf x' })),
+	                            ' and ',
+	                            _react2.default.createElement(_Math2.default, {
+	                                l: '\\mathbf y' }),
+	                            ' denote an assignment to ',
+	                            _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'X' })),
+	                            ' and ',
+	                            _react2.default.createElement(_Math2.default, _extends({}, this.props, {
+	                                l: 'Y' })),
+	                            ', respectively, and so ',
+	                            _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\mathbf x_A' })),
+	                            ' and ',
+	                            _react2.default.createElement(_Math2.default, {
+	                                l: '\\mathbf y_A' }),
+	                            ' denote only those assignments of variables in ',
+	                            _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'A' }))
+	                        ),
+	                        _react2.default.createElement(
+	                            'li',
+	                            null,
+	                            'we consider ',
+	                            _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'V = X\\cup Y' })),
+	                            ' the union of a set of observation variables ',
+	                            _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'X' })),
+	                            ' (for example, word features) and a set of label variables ',
+	                            _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'Y' })),
+	                            ' (for example, part-of-speech tags).'
+	                        )
 	                    )
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
 	                    'Intuitively, ',
-	                    _react2.default.createElement(_Math2.default, { l: 'p( \\mathbf x, \\mathbf y)' }),
-	                    ' describes the joint probability of input and output vectors in terms of some set of functions ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'p( \\mathbf x, \\mathbf y)' })),
+	                    ' describes the joint probability of observation and label vectors in terms of some set of functions ',
 	                    _react2.default.createElement(
 	                        'span',
 	                        null,
@@ -59761,47 +60181,49 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            l: 'F = \\{  \\Phi_A\\}' })
 	                    ),
 	                    ', collectively known as the factors. The normalization term ',
-	                    _react2.default.createElement(_Math2.default, { l: 'Z' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'Z' })),
 	                    ' ensures that the probability function ranges between ',
-	                    _react2.default.createElement(_Math2.default, { l: '0' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '0' })),
 	                    ' and ',
-	                    _react2.default.createElement(_Math2.default, { l: '1' }),
-	                    ': it sums every possible value of the the multiplied factors. In general, ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\Phi_A \\in F' }),
-	                    ' can be any function with parameters taken from the set of input and output variables ',
-	                    _react2.default.createElement(_Math2.default, { l: 'A \\subset V' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '1' })),
+	                    ': it sums every possible value of the multiplied factors. In general, ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\Phi_A \\in F' })),
+	                    ' can be any function with parameters taken from the set of observation and label variables ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, {
+	                        l: 'A \\subset V' })),
 	                    ' to a positive real number, i.e. ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\Phi_A:A\\rightarrow\\ \\mathbb{R}^+' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\Phi_A:A\\rightarrow\\ \\mathbb{R}^+' })),
 	                    ', but we will use these factors simply to multiply feature values by some weight constant. Individually the functions ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\Phi_A \\in F' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\Phi_A \\in F' })),
 	                    ' are known as local functions or compatibility functions.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
 	                    'It is important to note that ',
-	                    _react2.default.createElement(_Math2.default, { l: 'F' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'F' })),
 	                    ' is specific to the modeling application. Our choice of factors is what distinguishes models from each other; they are the functions that determine the probability of a given input to have a certain output.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    _react2.default.createElement(_Math2.default, { l: 'Z' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'Z' })),
 	                    ' is called the partition function, because it normalizes the function ',
-	                    _react2.default.createElement(_Math2.default, { l: 'p' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'p' })),
 	                    ' to ensure that ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\sum_{\\mathbf x,\\mathbf y} p(\\mathbf x,\\mathbf y)' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, {
+	                        l: '\\sum_{\\mathbf x,\\mathbf y} p(\\mathbf x,\\mathbf y)' })),
 	                    ' sums to ',
 	                    _react2.default.createElement(_Math2.default, {
 	                        l: '1' }),
 	                    '. In general, computing ',
-	                    _react2.default.createElement(_Math2.default, { l: 'Z' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'Z' })),
 	                    ' is intractable, because we need to sum over all possible assignments ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf x' }),
-	                    ' of input vectors and all possible assignments ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf y' }),
-	                    ' of output vectors. However, efficient methods to estimate ',
-	                    _react2.default.createElement(_Math2.default, { l: 'Z' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\mathbf x' })),
+	                    ' of observation vectors and all possible assignments ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\mathbf y' })),
+	                    ' of label vectors. However, efficient methods to estimate ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'Z' })),
 	                    ' exist.'
 	                ),
 	                _react2.default.createElement(
@@ -59813,7 +60235,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ' can be represented as a graph, called a ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { href: 'https://en.wikipedia.org/wiki/Factor_graph' },
+	                        { hrefLang: 'en', href: 'https://en.wikipedia.org/wiki/Factor_graph' },
 	                        'factor graph'
 	                    ),
 	                    ', which is illustrated in ',
@@ -59826,11 +60248,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'Factor graphs are ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { className: 'wiki', href: 'https://en.wikipedia.org/wiki/Bipartite_graph' },
+	                        { hrefLang: 'en', className: 'wiki', href: 'https://en.wikipedia.org/wiki/Bipartite_graph' },
 	                        'bipartite graphs'
 	                    ),
 	                    ' ',
-	                    _react2.default.createElement(_Math2.default, { l: 'G=(V,F,E)' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'G=(V,F,E)' })),
 	                    ' that link variable nodes ',
 	                    _react2.default.createElement(_Math2.default, {
 	                        l: 'v_s\\in V' }),
@@ -59838,62 +60260,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(_Math2.default, {
 	                        l: '\\Phi_A\\in F' }),
 	                    ' through edge ',
-	                    _react2.default.createElement(_Math2.default, { l: "e^{\\Phi_A}_{v_s}"
-	                    }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: "e^{\\Phi_A}_{v_s}"
+	                    })),
 	                    ' iff ',
-	                    _react2.default.createElement(_Math2.default, { l: 'v_s\\in \\mathbf{arg} ( \\Phi_A )' }),
-	                    '. The graph thus allows us to graphically represent how input and output variables interact with our local functions to generate a probability distribution.'
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'v_s\\in \\mathbf{arg} ( \\Phi_A )' })),
+	                    '. The graph thus allows us to graphically represent how the variables interact with local functions to generate a probability distribution.'
 	                ),
-	                _react2.default.createElement(_Image2.default, { relativeToRoot: relativeToRoot, width: '55%', fig: _figs2.default.factorGraph }),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'We define generative models as directed models in which all label variables ',
-	                    _react2.default.createElement(_Math2.default, { l: 'y \\in Y' }),
-	                    ' are parents of the input variables ',
-	                    _react2.default.createElement(_Math2.default, { l: 'x\\in X' }),
-	                    '. This name is due to the labels "generating" the output: the labels are the contingencies upon which the probability of the output depends.'
-	                ),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'When we describe the probability distribution ',
-	                    _react2.default.createElement(_Math2.default, { l: 'p( \\mathbf y|\\mathbf x)' }),
-	                    ', we speak of a discriminative model. Every generative model has a discriminative counterpart. In the words of ',
-	                    _references2.default.cite(_bib2.default.jordan2002discriminative),
-	                    ', we call these generative-discriminative pairs. Training a generative model to maximize ',
-	                    _react2.default.createElement(_Math2.default, { latex: 'p(\\mathbf y|\\mathbf x)' }),
-	                    ' yields the same model as training its discriminative counterpart. Conversely, training a discriminative model to maximize the joint probability ',
-	                    _react2.default.createElement(_Math2.default, { l: 'p(\\mathbf x,\\mathbf y)' }),
-	                    ' (instead of ',
-	                    _react2.default.createElement(_Math2.default, { latex: 'p(\\mathbf y|\\mathbf x)' }),
-	                    ') results in the same model as training the generative counterpart.'
-	                ),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'It turns out that when we model a conditional distribution, we have more parameter freedom for ',
-	                    _react2.default.createElement(_Math2.default, { l: 'p(\\mathbf y)' }),
-	                    ', because we are not interested in parameter values for ',
-	                    _react2.default.createElement(_Math2.default, { l: 'p( \\mathbf x)' }),
-	                    '. Modeling ',
-	                    _react2.default.createElement(_Math2.default, {
-	                        l: 'p( \\mathbf y|\\mathbf x)' }),
-	                    ' unburdens us of having to model the potentially very complicated inter-dependencies of ',
-	                    _react2.default.createElement(_Math2.default, { l: 'p(\\mathbf x)' }),
-	                    '. In classification tasks, this means that we are better able to use observations, and so discriminative models tend to out-perform generative models in practice.'
-	                ),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'One generative-discriminative pair is formed by Hidden Markov Models (',
-	                    _abbreviations2.default.hmms,
-	                    ') and Linear Chain ',
-	                    _abbreviations2.default.crfs,
-	                    ', and the latter is introduced in the next section. For a thorough explanation of the principle of generative-discriminative pairs, see ',
-	                    _references2.default.cite(_bib2.default.jordan2002discriminative),
-	                    '.'
-	                )
+	                _react2.default.createElement(_Image2.default, { relativeToRoot: relativeToRoot, width: '55%', fig: _figs2.default.factorGraph })
 	            );
 	        }
 	    }], [{
@@ -59909,7 +60282,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = CRF;
 
 /***/ },
-/* 323 */
+/* 324 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59917,6 +60290,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -59973,38 +60348,209 @@ return /******/ (function(modules) { // webpackBootstrap
 	    _createClass(CRF, [{
 	        key: 'render',
 	        value: function render() {
+	            var relativeToRoot = this.props.path.match(/\//g).slice(1).map(function (_) {
+	                return "../";
+	            }).join("");
+
+	            //and will be relevant when we define Linear-Chain <abbr title="Conditional Random Fields">CRFs</abbr>.
 	            return _react2.default.createElement(
 	                'div',
 	                null,
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'Directed Graphical Models (or Bayesian Networks) are statistical models that model some probability distribution over variables in a set ',
-	                    _react2.default.createElement(_Math2.default, { l: 'V' }),
+	                    'We define generative models as directed models in which all label variables ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'y \\in Y' })),
+	                    ' are parents of the observation variables ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'x\\in X' })),
+	                    '. This name is due to the labels "generating" the observations: the labels are the contingencies upon which the probability of the output depends.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'When we describe the probability distribution ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'p( \\mathbf y|\\mathbf x)' })),
+	                    ', we speak of a discriminative model. Every generative model has a discriminative counterpart. In the words of ',
+	                    _references2.default.cite(_bib2.default.jordan2002discriminative),
+	                    ', we call these generative-discriminative pairs. Training a generative model to maximize ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { latex: 'p(\\mathbf y|\\mathbf x)' })),
+	                    ' yields the same model as training its discriminative counterpart. Conversely, training a discriminative model to maximize the joint probability ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'p(\\mathbf x,\\mathbf y)' })),
+	                    ' (instead of ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { latex: 'p(\\mathbf y|\\mathbf x)' })),
+	                    ') results in the same model as training the generative counterpart.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'It turns out that when we model a conditional distribution, we have more parameter freedom for ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'p(\\mathbf y)' })),
+	                    ', because we are not interested in parameter values for ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'p( \\mathbf x)' })),
+	                    '. Modeling ',
+	                    _react2.default.createElement(_Math2.default, {
+	                        l: 'p( \\mathbf y|\\mathbf x)' }),
+	                    ' unburdens us of having to model the potentially very complicated inter-dependencies of ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'p(\\mathbf x)' })),
+	                    '. In classification tasks, this means that we are better able to use observations, and so discriminative models tend to outperform generative models in practice.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'One generative-discriminative pair is formed by Hidden Markov Models (',
+	                    _abbreviations2.default.hmms,
+	                    ') and Linear-Chain ',
+	                    _abbreviations2.default.crfs,
+	                    ', and the latter is introduced in the next section. For a thorough explanation of the principle of generative-discriminative pairs, see ',
+	                    _references2.default.cite(_bib2.default.jordan2002discriminative),
+	                    '.'
+	                )
+	            );
+	        }
+	    }], [{
+	        key: 'id',
+	        value: function id() {
+	            return "graphical-models";
+	        }
+	    }]);
+
+	    return CRF;
+	}(_react.Component);
+
+	exports.default = CRF;
+
+/***/ },
+/* 325 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(4);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _FigRef = __webpack_require__(250);
+
+	var _FigRef2 = _interopRequireDefault(_FigRef);
+
+	var _Image = __webpack_require__(253);
+
+	var _Image2 = _interopRequireDefault(_Image);
+
+	var _figs = __webpack_require__(227);
+
+	var _figs2 = _interopRequireDefault(_figs);
+
+	var _references = __webpack_require__(224);
+
+	var _references2 = _interopRequireDefault(_references);
+
+	var _bib = __webpack_require__(212);
+
+	var _bib2 = _interopRequireDefault(_bib);
+
+	var _Math = __webpack_require__(254);
+
+	var _Math2 = _interopRequireDefault(_Math);
+
+	var _chapters = __webpack_require__(215);
+
+	var _chapters2 = _interopRequireDefault(_chapters);
+
+	var _abbreviations = __webpack_require__(207);
+
+	var _abbreviations2 = _interopRequireDefault(_abbreviations);
+
+	var _sections = __webpack_require__(320);
+
+	var _sections2 = _interopRequireDefault(_sections);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } //noinspection JSUnresolvedVariable
+
+
+	var CRF = function (_Component) {
+	    _inherits(CRF, _Component);
+
+	    function CRF() {
+	        _classCallCheck(this, CRF);
+
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(CRF).apply(this, arguments));
+	    }
+
+	    _createClass(CRF, [{
+	        key: 'render',
+	        value: function render() {
+	            var relativeToRoot = this.props.path.match(/\//g).slice(1).map(function (_) {
+	                return "../";
+	            }).join("");
+	            var toThisChapter = relativeToRoot + _chapters2.default.tagging.route;
+
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Directed Graphical Models (or Bayesian Networks) are statistical models that model some probability distribution over variables ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'v' })),
+	                    ' in a set ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'V' })),
 	                    ' which take values from a set ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\mathcal{V}' }),
-	                    '. Directed Graphical Models can be represented as a directed graph where nodes represent the variables in ',
-	                    _react2.default.createElement(_Math2.default, { l: 'V' }),
-	                    ', and the edges represent conditional dependencies. Directed graphical models factorize as follows:',
-	                    _react2.default.createElement(_Math2.default, { l: 'p( \\mathbf x, \\mathbf y)=\\prod _{v\\in V}p(v|\\pi(v))', display: 'true' }),
-	                    'where ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\pi(v)' }),
-	                    ' are the parents of ',
-	                    _react2.default.createElement(_Math2.default, { l: 'v' }),
-	                    ' in ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\mathcal{V}' })),
+	                    '. Loosely speaking, Directed Graphical Models can be represented as a directed graph ',
 	                    _react2.default.createElement(_Math2.default, { l: 'G' }),
+	                    ' where nodes represent the variables ',
+	                    _react2.default.createElement(
+	                        'span',
+	                        {
+	                            className: 'avoid-line-break' },
+	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'v \\in V' })),
+	                        ','
+	                    ),
+	                    ' and the edges represent dependencies. Directed graphical models factorize as follows:',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'p(V)=\\prod _{v\\in V}p(v|\\pi(v))', display: 'true' })),
+	                    'where ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\pi(v)' })),
+	                    ' are the parents of node ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'v' })),
+	                    ' in graph ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'G' })),
 	                    '.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'Hidden Markov Models (',
+	                    'The class of Hidden Markov Models (',
 	                    _abbreviations2.default.hmms,
-	                    ') are one instance of directed models in which we have a linear sequence of observations ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf x=\\{\\mathbf x_t\\}_{t=1}^T' }),
-	                    ' that is assumed to be generated by a sequence of hidden states ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf y=\\{\\mathbf y_t\\}_{t=1}^T' }),
-	                    '. One example of an application would be speech recognition, in which samples of the sound waves can be seen as observations, and the actual phonemes as the hidden states.'
+	                    ') is one instance of directed models. HMMs have a linear sequences of observations ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\mathbf x=\\{x_t\\}_{t=1}^T' })),
+	                    ' and a linear sequence of labels ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\mathbf y=\\{y_t\\}_{t=1}^T' })),
+	                    ' (in ',
+	                    _abbreviations2.default.hmm,
+	                    ' parlance, \'hidden states\'), which are assignments of random vectors ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'X' })),
+	                    ' and ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'Y' })),
+	                    ' respectively, and ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'V = X\\cup Y' })),
+	                    '. In HMMs, the observations ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\mathbf x=\\{x_t\\}_{t=1}^T' })),
+	                    ' are assumed to be generated by the labels. One example of an application would be speech recognition, in which samples of the sound waves can be seen as observations and the actual phonemes as the labels.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -60019,38 +60565,26 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(
 	                        'li',
 	                        null,
-	                        'any output variable (or ',
-	                        _react2.default.createElement(
-	                            'em',
-	                            null,
-	                            'label'
-	                        ),
-	                        ') ',
-	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf y_t' }),
+	                        'any label ',
+	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'y_t' })),
 	                        ' only depends on ',
-	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf y_{t-1}' }),
+	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'y_{t-1}' })),
 	                        ', where the initial probability ',
-	                        _react2.default.createElement(_Math2.default, { l: 'p(\\mathbf y_{1})' }),
+	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'p(y_{1})' })),
 	                        ' is given'
 	                    ),
 	                    _react2.default.createElement(
 	                        'li',
 	                        null,
-	                        'any input variable (or ',
-	                        _react2.default.createElement(
-	                            'em',
-	                            null,
-	                            'observation'
-	                        ),
-	                        ') ',
-	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf x_t' }),
+	                        'any observation ',
+	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'x_t' })),
 	                        ' only depends on the label ',
 	                        _react2.default.createElement(_Math2.default, {
-	                            l: '\\mathbf y_t' }),
+	                            l: 'y_t' }),
 	                        '; the observation ',
-	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf x_t' }),
+	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'x_t' })),
 	                        ' is generated by label ',
-	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf y_t' }),
+	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'y_t' })),
 	                        '.'
 	                    )
 	                ),
@@ -60060,8 +60594,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'A ',
 	                    _abbreviations2.default.hmm,
 	                    ' then factorizes as follows:',
-	                    _react2.default.createElement(_Math2.default, { display: 'true',
-	                        l: 'p\\left ( \\mathbf x, \\mathbf y\\right ) = \\prod _{t=1}^T p(x_t)p(y_t) = \\prod _{t=1}^T p(x_t|y_t)p(y_t|y_{t-1})' })
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { display: 'true',
+	                        l: 'p\\left (\\mathbf x,\\mathbf y \\right )= \\prod _{t=1}^T p(x_t)p(y_t) = \\prod _{t=1}^T p(x_t|y_t)p(y_t|y_{t-1})' }))
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -60070,21 +60604,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _abbreviations2.default.hmms,
 	                    ' in ',
 	                    _react2.default.createElement(_FigRef2.default, { fig: _figs2.default.graphicalModels }),
-	                    ', we see that the white nodes represent labels and the grey nodes the observations. Typically, observations are given, but the labels need to be guessed. This is done by looping over all ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf y\\in Y' }),
+	                    ', we see that the white nodes represent labels and the grey nodes represent the observations. Typically, observations are given and the labels need to be inferred. This is done from a given HMM by looping over all assignment vectors ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\mathbf y\\in Y' })),
 	                    ' and selecting ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf y^*\\in Y' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\mathbf y^*\\in Y' })),
 	                    ' with the highest likelihood.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'To find plausible values of ',
-	                    _react2.default.createElement(_Math2.default, { l: 'p(\\mathbf x_t|\\mathbf y_t)' }),
+	                    'To find a model with plausible values of ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'p(x_t|y_t)' })),
 	                    ' and ',
 	                    _react2.default.createElement(_Math2.default, {
-	                        l: 'p(\\mathbf y_t|\\mathbf y_{t-1})' }),
-	                    ', we typically use a set of pre-tagged observation-label sequences and perform a parameter estimation method such as the ',
+	                        l: 'p(y_t|y_{t-1})' }),
+	                    ', we typically perform a parameter estimation method such as the ',
 	                    _react2.default.createElement(
 	                        'a',
 	                        {
@@ -60092,9 +60626,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            href: 'https://en.wikipedia.org/wiki/Baum%E2%80%93Welch_algorithm' },
 	                        'Baum-Welch algorithm'
 	                    ),
-	                    ' (',
+	                    ' on a set of pre-tagged observation-label sequences (',
 	                    _references2.default.cite(_bib2.default.lucke1996stochastic),
-	                    ').'
+	                    '). This is called training the model.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'The procedures for inference and parameter estimation for ',
+	                    _abbreviations2.default.hmms,
+	                    ' are very similar to those for ',
+	                    _abbreviations2.default.lccrfs,
+	                    ' and are explain in more depth ',
+	                    _react2.default.createElement(
+	                        'a',
+	                        { href: toThisChapter + "#" + _sections2.default.linearChain },
+	                        'in the section on ',
+	                        _abbreviations2.default.lccrfs
+	                    ),
+	                    '.'
 	                )
 	            );
 	        }
@@ -60106,7 +60656,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = CRF;
 
 /***/ },
-/* 324 */
+/* 326 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60114,6 +60664,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -60168,14 +60720,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	    _createClass(LinearChainCRF, [{
 	        key: 'render',
 	        value: function render() {
-	            var canonicalCrfFormula = "\\frac{\\exp\\left \\{\\sum_{t=1}^T\\sum_{k=1}^{K} \\lambda_k f_k(\\mathbf y_t, \\mathbf y_{t-1}, \\mathbf x_t)\\right \\}}{\\sum_{\\mathbf y'}\\exp\\left \\{\\sum_{t=1}^T\\sum_{k=1}^{K} \\lambda_k f_k(\\mathbf y_{t}', y'_{t-1}, \\mathbf x_t)\\right \\}}";
+	            var canonicalCrfFormula = "\\frac{\\exp\\left \\{\\sum_{t=1}^T\\sum_{k=1}^{K} \\lambda_k f_k(x_t, y_t, y_{t-1})\\right \\}}{\\sum_{\\mathbf y'}\\exp\\left \\{\\sum_{t=1}^T\\sum_{k=1}^{K} \\lambda_k f_k(x_t, y_{t}', y'_{t-1})\\right \\}}";
 	            return _react2.default.createElement(
 	                'div',
 	                null,
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'On the surface, linear-chain  ',
+	                    'On the surface, linear-chain ',
 	                    _abbreviations2.default.crfs,
 	                    ' (',
 	                    _abbreviations2.default.lccrfs,
@@ -60183,23 +60735,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _abbreviations2.default.lccrfs,
 	                    ' also model a sequence of observations along a sequence of labels. As explained earlier, the difference between ',
 	                    _abbreviations2.default.hmms,
-	                    ' and Linear Chain ',
+	                    ' and Linear-Chain ',
 	                    _abbreviations2.default.crfs,
 	                    ' is that instead of modeling the joint probability ',
-	                    _react2.default.createElement(_Math2.default, { latex: 'p(\\mathbf x,\\mathbf y)' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { latex: 'p(\\mathbf x,\\mathbf y)' })),
 	                    ', we model the conditional probability ',
-	                    _react2.default.createElement(_Math2.default, { latex: 'p(\\mathbf y|\\mathbf x)' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { latex: 'p(\\mathbf y|\\mathbf x)' })),
 	                    '.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'This is a fundamental difference: we don\'t assume that the labels generate observations, but rather that the observations provide support for the probability of labels.'
+	                    'This is a fundamental difference: we don\'t assume that the labels generate observations, but rather that the observations provide support for the probability of labels. This means that the elements of ',
+	                    _react2.default.createElement(_Math2.default, { l: 'x' }),
+	                    ' do not need to be conditionally independent, and so we can encode much richer observation patterns.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'We define a linear-chain conditional random field as follows:'
+	                    'We define a linear-chain Conditional Random Field as follows:'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -60212,19 +60766,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(
 	                        'li',
 	                        null,
-	                        _react2.default.createElement(_Math2.default, { l: 'Y, X' }),
-	                        ' still be random vectors taking valuations from ',
-	                        _react2.default.createElement(_Math2.default, { l: '\\mathcal{V}' }),
+	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'X, Y' })),
+	                        ' be random vectors taking values from ',
+	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, {
+	                            l: '\\mathcal{V}' })),
 	                        ', and ',
-	                        _react2.default.createElement(_Math2.default, { l: 'V=Y\\cup X' })
+	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'V = X\\cup Y' }))
 	                    ),
 	                    _react2.default.createElement(
 	                        'li',
 	                        null,
-	                        _react2.default.createElement(_Math2.default, { l: 'F=\\{\\Phi_1, \\ldots\\Phi_k\\}' }),
-	                        ' be a set of local functions ',
+	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'F=\\{\\Phi_1, \\ldots\\Phi_k\\}' })),
+	                        ' be a set of local functions from variables (observation and labels) to the real numbers: ',
 	                        _react2.default.createElement(_Math2.default, {
-	                            l: 'V^n\\rightarrow \\mathbb{R}^+' })
+	                            l: 'V \\rightarrow\\ \\mathbb{R}^+' }),
+	                        '.'
 	                    )
 	                ),
 	                _react2.default.createElement(
@@ -60233,7 +60789,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'Each local function ',
 	                    _react2.default.createElement(_Math2.default, {
 	                        display: false,
-	                        l: '\\Phi_{k}(\\mathbf x_t,\\mathbf y_t,\\mathbf y_{t-1}) = \\lambda_{k} f_{k}(\\mathbf y_{t},\\mathbf y_{t-1},\\mathbf x_t)'
+	                        l: '\\Phi_{k}(x_t,y_t,y_{t-1}) = \\lambda_{k} f_{k}(x_t,y_{t},y_{t-1})'
 	                    }),
 	                    ' where'
 	                ),
@@ -60243,35 +60799,35 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(
 	                        'li',
 	                        null,
-	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf x_t' }),
+	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'x_t' })),
 	                        ' and ',
-	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf y_t' }),
+	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'y_t' })),
 	                        ' be elements of ',
-	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf x' }),
+	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\mathbf x' })),
 	                        ' and ',
-	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf y' }),
+	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\mathbf y' })),
 	                        ' respectively, i.e., ',
-	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf x_t' }),
+	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'x_t' })),
 	                        ' is the current observation and ',
-	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf y_t' }),
+	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'y_t' })),
 	                        ' is the current label, and ',
-	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf y_{t-1}' }),
+	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'y_{t-1}' })),
 	                        ' is the previous label, with some null value for ',
-	                        _react2.default.createElement(_Math2.default, { l: '\\mathbf y_0' }),
+	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'y_0' })),
 	                        '.'
 	                    ),
 	                    _react2.default.createElement(
 	                        'li',
 	                        null,
-	                        _react2.default.createElement(_Math2.default, { l: '\\mathcal F=\\{f_k(y, y\', x)\\}' }),
-	                        ' be a set of feature functions that give a real-valued score given a current label, the previous label and the current output token. These functions are defined by the ',
+	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\mathcal F=\\{f_k(y, y\', x)\\}' })),
+	                        ' be a set of feature functions that give a real-valued score given a current label, the previous label and the current observation. These functions are defined by the ',
 	                        _abbreviations2.default.crf,
 	                        ' designer.'
 	                    ),
 	                    _react2.default.createElement(
 	                        'li',
 	                        null,
-	                        _react2.default.createElement(_Math2.default, { l: '\\Lambda=\\{\\lambda_k\\} \\in \\mathbb{R}^K' }),
+	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\Lambda=\\{\\lambda_k\\} \\in \\mathbb{R}^K' })),
 	                        ' be a vector of weight parameters that give a measure of how important a given feature function is. The values of these parameters are found by training the ',
 	                        _abbreviations2.default.crf,
 	                        '.'
@@ -60282,7 +60838,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    null,
 	                    'For notational ease, we may shorten ',
 	                    _react2.default.createElement(_Math2.default, {
-	                        l: '\\Phi_{k}(\\mathbf x_t,\\mathbf y_t,\\mathbf y_{t-1})' }),
+	                        l: '\\Phi_{k}(x_t,y_t,y_{t-1})' }),
 	                    ' as ',
 	                    _react2.default.createElement(_Math2.default, {
 	                        l: '\\Phi_{k,t}' }),
@@ -60294,9 +60850,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'We then define the un-normalized ',
 	                    _abbreviations2.default.crf,
 	                    ' distribution as:',
-	                    _react2.default.createElement(_Math2.default, {
-	                        l: '\\hat{p}(\\mathbf x, \\mathbf y)=\\prod_{t=1}^T\\prod_{k=1}^K\\Phi_{k,t}(\\mathbf x_t, \\mathbf y_t, \\mathbf y_{t-1})',
-	                        displayMode: true })
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, {
+	                        l: '\\hat{p}(\\mathbf x, \\mathbf y)=\\prod_{t=1}^T\\prod_{k=1}^K\\Phi_k(x_t, y_t, y_{t-1})',
+	                        displayMode: true }))
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -60305,24 +60861,26 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(
 	                        'a',
 	                        {
-	                            href: "#graphical-models" },
-	                        'our introduction on graphical models'
+	                            href: "#undirected-graphical-models" },
+	                        'our introduction on undirected graphical models'
 	                    ),
 	                    ' that we need a normalizing constant to ensure that our probability distribution adds up to ',
-	                    _react2.default.createElement(_Math2.default, { l: '1' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, {
+	                        l: '1' })),
 	                    '. We are interested in representing ',
 	                    _react2.default.createElement(_Math2.default, {
 	                        l: 'p(\\mathbf y|\\mathbf x)' }),
 	                    ', so we use a normalization function that assumes ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf x' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, {
+	                        l: '\\mathbf x' })),
 	                    ' is given and sums over every possible string of labels ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf{y}' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\mathbf{y}' })),
 	                    ', i.e.:',
-	                    _react2.default.createElement(_Math2.default, { l: 'Z(\\mathbf x)=\\sum_{\\mathbf{y}}\\hat{p}(\\mathbf x, \\mathbf y)', displayMode: true }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'Z(\\mathbf x)=\\sum_{\\mathbf{y}}\\hat{p}(\\mathbf x, \\mathbf y)', displayMode: true })),
 	                    'and so',
-	                    _react2.default.createElement(_Math2.default, {
-	                        l: 'p(\\mathbf y|\\mathbf x)=\r \\frac{1}{Z(\\mathbf x)}\\hat{p}(\\mathbf x, \\mathbf y)\r =\r \\frac{1}{Z(\\mathbf x)}\\prod_{t=1}^T\\prod_{k=1}^{K} \\lambda_k f_k(\\mathbf y_t, \\mathbf y_{t-1}, \\mathbf x_t)',
-	                        displayMode: true })
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, {
+	                        l: 'p(\\mathbf y|\\mathbf x)=\r \\frac{1}{Z(\\mathbf x)}\\hat{p}(\\mathbf x, \\mathbf y)\r =\r \\frac{1}{Z(\\mathbf x)}\\prod_{t=1}^T\\prod_{k=1}^{K} \\lambda_k f_k(x_t, y_t, y_{t-1})',
+	                        displayMode: true }))
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -60332,8 +60890,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        l: 'p(\\mathbf y|\\mathbf x)' }),
 	                    ' as'
 	                ),
-	                _react2.default.createElement(_Math2.default, { display: 'true',
-	                    l: "p(\\mathbf y|\\mathbf x) = " + canonicalCrfFormula }),
+	                _react2.default.createElement(_Math2.default, _extends({}, this.props, { display: 'true',
+	                    l: "p(\\mathbf y|\\mathbf x) = " + canonicalCrfFormula })),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
@@ -60346,8 +60904,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ' show that a logistic regression model is a simple ',
 	                    _abbreviations2.default.crf,
 	                    ', and also that rewriting the probability distribution ',
-	                    _react2.default.createElement(_Math2.default, { latex: 'p(\\mathbf x,\\mathbf y)' }),
-	                    ' of a ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { latex: 'p(\\mathbf x,\\mathbf y)' })),
+	                    ' of an ',
 	                    _abbreviations2.default.hmm,
 	                    ' yields a Conditional Random Field with a particular choice of feature functions.'
 	                )
@@ -60361,7 +60919,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = LinearChainCRF;
 
 /***/ },
-/* 325 */
+/* 327 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60370,31 +60928,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: true
 	});
 
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(4);
 
 	var _react2 = _interopRequireDefault(_react);
-
-	var _FigRef = __webpack_require__(250);
-
-	var _FigRef2 = _interopRequireDefault(_FigRef);
-
-	var _Image = __webpack_require__(253);
-
-	var _Image2 = _interopRequireDefault(_Image);
-
-	var _figs = __webpack_require__(227);
-
-	var _figs2 = _interopRequireDefault(_figs);
-
-	var _references = __webpack_require__(224);
-
-	var _references2 = _interopRequireDefault(_references);
-
-	var _bib = __webpack_require__(212);
-
-	var _bib2 = _interopRequireDefault(_bib);
 
 	var _Math = __webpack_require__(254);
 
@@ -60438,12 +60978,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'Given a trained ',
 	                    _abbreviations2.default.crf,
 	                    ' and an observation vector ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf x' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\mathbf x' })),
 	                    ', we wish to compute the most likely label sequence ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf y^*' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\mathbf y^*' })),
 	                    ', i.e. ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf y^* = \\text{argmax}_{\\mathbf y}p(\\mathbf y|\\mathbf x)'
-	                    }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\mathbf y^* = \\text{argmax}_{\\mathbf y}p(\\mathbf y|\\mathbf x)'
+	                    })),
 	                    '. This label sequence is known as the Viterbi sequence. Thanks to the structure of linear-chain ',
 	                    _react2.default.createElement(
 	                        'abbr',
@@ -60453,7 +60993,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ', we can efficiently compute the Viterbi sequence through a dynamic programming algorithm called the Viterbi algorithm, which is very similar to the ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { href: 'https://en.wikipedia.org/wiki/Forward%E2%80%93backward_algorithm' },
+	                        { hrefLang: 'en', href: 'https://en.wikipedia.org/wiki/Forward%E2%80%93backward_algorithm' },
 	                        'forward-backward algorithm'
 	                    ),
 	                    '.'
@@ -60464,76 +61004,112 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'Substituting the canonical ',
 	                    _abbreviations2.default.crf,
 	                    ' representation of ',
-	                    _react2.default.createElement(_Math2.default, { l: 'p(\\mathbf y|\\mathbf x)' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'p(\\mathbf y|\\mathbf x)' })),
 	                    ', we get:'
 	                ),
-	                _react2.default.createElement(_Math2.default, { display: 'true',
-	                    l: '\\mathbf y^*=\\text{argmax}_{\\mathbf y}\\frac{1}{Z(\\mathbf x)}\\prod_{t=1}^T\\prod_{k=1}^{K} \\Phi_{k,t}' }),
+	                _react2.default.createElement(_Math2.default, _extends({}, this.props, { display: 'true',
+	                    l: '\\mathbf y^*=\\text{argmax}_{\\mathbf y}\\frac{1}{Z(\\mathbf x)}\\prod_{t=1}^T\\prod_{k=1}^{K} \\Phi_{k,t}' })),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
 	                    'We can leave out the normalization factor ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\frac{1}{Z(\\mathbf x)}' }),
-	                    ', because the ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\text{argmax}' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\frac{1}{Z(\\mathbf x)}' })),
+	                    ', because ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text{argmax}' })),
 	                    ' will be the same with or without:'
 	                ),
-	                _react2.default.createElement(_Math2.default, { display: 'true',
-	                    l: '\\mathbf y^* = \\text{argmax}_{\\mathbf y}\\prod_{t=1}^T\\prod_{k=1}^{K} \\Phi_{k,t}' }),
+	                _react2.default.createElement(_Math2.default, _extends({}, this.props, { display: 'true',
+	                    l: '\\mathbf y^* = \\text{argmax}_{\\mathbf y}\\prod_{t=1}^T\\prod_{k=1}^{K} \\Phi_{k,t}' })),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
 	                    'Note that to find ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf y^*' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\mathbf y^*' })),
 	                    ', we need to iterate over each possible assignment to the label vector ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf y' }),
-	                    ', which would implicate that in the general case, we need an algorithm of ',
-	                    _react2.default.createElement(_Math2.default, { l: 'O(M^T)' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\mathbf y' })),
+	                    ', which would implicate that computed naively, we need an algorithm of ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'O(M^T)' })),
 	                    ', where ',
-	                    _react2.default.createElement(_Math2.default, { l: 'M' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'M' })),
 	                    ' is the number of possible labels, and ',
-	                    _react2.default.createElement(_Math2.default, { l: 'T' }),
-	                    ' is the length of the instance to label. Luckily, Linear-Chain ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'T' })),
+	                    ' is the length of the instance to label. Luckily, linear-chain ',
 	                    _react2.default.createElement(
 	                        'abbr',
 	                        { title: 'Conditional Random Fields' },
 	                        'CRFs'
 	                    ),
-	                    ' fulfil the optimal substructure property, which means that we can memoize optimal sub-results and avoid making the same calculation many times. We calculate the optimal path ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\delta_t(j)' }),
+	                    ' fulfil the optimal substructure property which means that we can memoize optimal sub-results and avoid making the same calculation many times, making the algorithm an example of dynamic programming. We calculate the optimal path score ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\delta_t(j)' })),
 	                    ' at time ',
-	                    _react2.default.createElement(_Math2.default, { l: 't' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 't' })),
 	                    ' ending with ',
-	                    _react2.default.createElement(_Math2.default, { l: 'j' }),
-	                    ' recursively as follows:'
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'j' })),
+	                    ' recursively for ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\Phi_t = \\prod_{k=1}^{K} \\Phi_{k,t}' })),
+	                    ':'
 	                ),
-	                _react2.default.createElement(_Math2.default, { display: 'truuu',
-	                    l: '\\delta_t(j) = \\max_{i \\in \\mathbf y}\\Phi_t(j,i,x_t)\\cdot \\delta_{t-1}(i)' }),
+	                _react2.default.createElement(_Math2.default, _extends({}, this.props, { display: 'true',
+	                    l: '\\delta_t(j) = \\max_{i}\\Phi_t(x_t, j, i)\\cdot \\delta_{t-1}(i)' })),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
 	                    'where the base case'
 	                ),
-	                _react2.default.createElement(_Math2.default, { display: 'truuuu', l: '\\delta_0(j) = \\max_{i \\in \\mathbf y}\\Phi_t(j,i,x_t)' }),
+	                _react2.default.createElement(_Math2.default, _extends({}, this.props, { display: 'truuuu', l: '\\delta_1(j) = \\Phi_1(x_1, j, y_0)' })),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'And store the results in a table. We then find the optimal sequence by maximizing ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\delta_t(j)' }),
+	                    'We store the results in a table. We find the optimal sequence ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\mathbf y^*' })),
+	                    ' by maximizing ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\delta_t(j)' })),
 	                    ' at the end of the sequence, ',
-	                    _react2.default.createElement(_Math2.default, { l: 't = T' }),
+	                    _react2.default.createElement(
+	                        'span',
+	                        {
+	                            className: 'avoid-page-break' },
+	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 't = T' })),
+	                        ':'
+	                    )
+	                ),
+	                _react2.default.createElement(_Math2.default, _extends({}, this.props, { display: true, l: 'y^*_T = \\text{argmax}_{y_T}\\delta_T(y_T)' })),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'And then count back from ',
+	                    _react2.default.createElement(_Math2.default, { l: 'T-1' }),
+	                    ' to ',
+	                    _react2.default.createElement(_Math2.default, { l: '1' }),
 	                    ':'
 	                ),
-	                _react2.default.createElement(_Math2.default, { display: true, l: 'y^*_T = \\text{argmax}_{j\\in y}\\delta_T(j)' }),
+	                _react2.default.createElement(_Math2.default, _extends({}, this.props, { display: true,
+	                    l: 'y^*_t = \\text{argmax}_{j}\\Phi_{t}(x_{t+1},y_{t+1}^*,j)\\delta_t(j)' })),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'This gives us the best label ',
+	                    _react2.default.createElement(_Math2.default, { l: 'y_t^*' }),
+	                    ' for each ',
+	                    _react2.default.createElement(_Math2.default, { l: 't' }),
+	                    ', and so ',
+	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf y^*' }),
+	                    '.'
+	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
 	                    'Using this trick, we reduce the computational complexity of finding the Viterbi path to ',
-	                    _react2.default.createElement(_Math2.default, { l: 'O(M^2 T)' }),
-	                    '.'
-	                ),
-	                _react2.default.createElement('div', { className: 'print-spacer' })
+	                    _react2.default.createElement(
+	                        'span',
+	                        {
+	                            style: { display: 'inline-block' } },
+	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'O(M^2 T)' })),
+	                        '.'
+	                    )
+	                )
 	            );
+	            // <div className="print-spacer"></div>
 	        }
 	    }], [{
 	        key: 'id',
@@ -60548,7 +61124,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = FScorez;
 
 /***/ },
-/* 326 */
+/* 328 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60556,6 +61132,249 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(4);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _FigRef = __webpack_require__(250);
+
+	var _FigRef2 = _interopRequireDefault(_FigRef);
+
+	var _Image = __webpack_require__(253);
+
+	var _Image2 = _interopRequireDefault(_Image);
+
+	var _figs = __webpack_require__(227);
+
+	var _figs2 = _interopRequireDefault(_figs);
+
+	var _references = __webpack_require__(224);
+
+	var _references2 = _interopRequireDefault(_references);
+
+	var _bib = __webpack_require__(212);
+
+	var _bib2 = _interopRequireDefault(_bib);
+
+	var _Math = __webpack_require__(254);
+
+	var _Math2 = _interopRequireDefault(_Math);
+
+	var _abbreviations = __webpack_require__(207);
+
+	var _abbreviations2 = _interopRequireDefault(_abbreviations);
+
+	var _sections = __webpack_require__(305);
+
+	var _sections2 = _interopRequireDefault(_sections);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } //noinspection JSUnresolvedVariable
+
+
+	var ParameterEstimation = function (_Component) {
+	    _inherits(ParameterEstimation, _Component);
+
+	    function ParameterEstimation() {
+	        _classCallCheck(this, ParameterEstimation);
+
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(ParameterEstimation).apply(this, arguments));
+	    }
+
+	    _createClass(ParameterEstimation, [{
+	        key: 'render',
+	        value: function render() {
+	            var canonicalUnnormalizedCrf = "\\exp\\left \\{\\sum_{t=1}^T\\sum_{k=1}^{K} \\lambda_k f_k(y^i_t, y^i_{t-1}, x^i_t)\\right \\}";
+	            var canonicalZ = "\\sum_{\\mathbf y'}\\exp\\left \\{\\sum_{t=1}^T\\sum_{k=1}^{K} \\lambda_k f_k(y^i_{t}', y'_{t-1}, x^i_t)\\right \\}";
+	            var relativeToRoot = this.props.path.match(/\//g).slice(1).map(function (_) {
+	                return "../";
+	            }).join("");
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'As discussed in the previous section, we obtain parameters ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\Lambda' })),
+	                    ' by training our ',
+	                    _abbreviations2.default.crf,
+	                    ' on a pre-labeled training set of pairs ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\mathcal D=\\{\\mathbf{x}^{i},\\mathbf{y}^{i}\\}_{i=1}^N'
+	                    })),
+	                    ' where each ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'i' })),
+	                    ' indexes an example instance: ',
+	                    _react2.default.createElement(_Math2.default, {
+	                        l: '\\mathbf{x}^{i}=\\{x^{i}_1, x^{i}_2, \\cdots, x^{i}_T\\}'
+	                    }),
+	                    ' is a set of observation vectors, and ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\mathbf{y}^{i}=\\{y^{i}_1, y^{i}_2, \\cdots, y^{i}_T\\}'
+	                    })),
+	                    ' is a set of labels for instance length ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'T' })),
+	                    '.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'The training process will maximize some likelihood function ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\ell(\\Lambda)' })),
+	                    '. We are modeling a conditional distribution, so it makes sense to use the conditional log likelihood function:'
+	                ),
+	                _react2.default.createElement(_Math2.default, _extends({}, this.props, { display: 'true', l: '\\ell(\\Lambda)=\\sum_{i=1}^N \\log{p(\\mathbf y^{i}|\\mathbf x^{i}})' })),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Where ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'p' })),
+	                    ' is the ',
+	                    _abbreviations2.default.crf,
+	                    ' distribution as in Eq. 3.8:'
+	                ),
+	                _react2.default.createElement(_Math2.default, _extends({}, this.props, { display: 'true',
+	                    l: "\\ell(\\Lambda) = \\sum_{i=1}^N\\log{\\frac{" + canonicalUnnormalizedCrf + "}{" + canonicalZ + "}" + "}" })),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Simplifying, we have:'
+	                ),
+	                _react2.default.createElement(_Math2.default, _extends({}, this.props, { display: 'true',
+	                    l: '\\ell(\\Lambda) = \\sum_{i=1}^N\\sum_{t=1}^T\\sum_{k=1}^K\r \\lambda_kf_k(y^i_t,y^i_{t-1},x^i_t)-\\sum_{i=1}^N\\log{Z(\\mathbf x^i})' })),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Because it is generally intractable to find the exact parameters ',
+	                    _react2.default.createElement(_Math2.default, {
+	                        l: '\\Lambda' }),
+	                    ' that maximize the log likelihood function ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\ell' })),
+	                    ', we use a hill-climbing algorithm. The general idea of hill-climbing algorithms is to start out with some random assignment to the parameters ',
+	                    _react2.default.createElement(_Math2.default, {
+	                        l: '\\Lambda' }),
+	                    ', and estimate the parameters that maximize ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\ell' })),
+	                    ' by iteratively moving along the gradient toward the global maximum. We find the direction to move in by taking the derivative of ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\ell' })),
+	                    ' with respect to ',
+	                    _react2.default.createElement(
+	                        'span',
+	                        { style: { display: 'inline-block' } },
+	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\Lambda' })),
+	                        ':'
+	                    )
+	                ),
+	                _react2.default.createElement(_Math2.default, _extends({}, this.props, { display: 'true', l: '\\frac{\\partial\\ell}{\\partial\\lambda_k} =\r \\sum_{i=1}^N\\sum_{t=1}^Tf_k(y_t^i,y_{t-1}^i,x_t^i)\r -\\sum_{i=1}^N\\sum_{t=1}^T\\sum_{\\mathbf y,\\mathbf y\'}f_k(y,y,x_t^i)\r p(y,y\'|\\mathbf x^i)' })),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'avoid-page-break' },
+	                    _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        'And then update parameter ',
+	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\lambda_k' })),
+	                        ' along this gradient:'
+	                    ),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { display: 'true',
+	                        l: '\\lambda_k := \\lambda_k + \\alpha \\frac{\\partial\\ell}{\\partial\\lambda_k}' }))
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Where ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\alpha' })),
+	                    ' is some learning rate between ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '0' })),
+	                    ' and ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '1' })),
+	                    '.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Thanks to the fact that the distribution ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'p(\\mathbf{y}^{i}|\\mathbf{x}^{i})' })),
+	                    ' is concave, the function ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\ell(\\Lambda)' })),
+	                    ' is also concave. This ensures that any local optimum will be a global optimum.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'In our experiment, we use the ',
+	                    _react2.default.createElement(
+	                        'a',
+	                        {
+	                            href: 'https://en.wikipedia.org/wiki/Limited-memory_BFGS' },
+	                        'Limited-memory Broyden–Fletcher–Goldfarb–Shannon algorithm (',
+	                        _abbreviations2.default.lmbfgs,
+	                        ')'
+	                    ),
+	                    ', which approximates Newton\'s Method (see eg. ',
+	                    _references2.default.cite(_bib2.default.nocedal1980updating),
+	                    '). This algorithm is optimized for the memory-constrained conditions in real-world computers and also converges much faster than a naive implementation because it works on the second derivative of ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\ell' })),
+	                    '.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'The algorithmic complexity of the ',
+	                    _abbreviations2.default.lmbfgs,
+	                    ' algorithm is ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'O(TM^2NG)' })),
+	                    ', where ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'T' })),
+	                    ' is the length of the longest training instance, ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'M' })),
+	                    ' is the number of possible labels, ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'N' })),
+	                    ' in the number of training instances, and ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'G' })),
+	                    ' is the number of gradient computations. The number of gradient computations can be set to a fixed number, or is otherwise unknown. It is however guaranteed to converge within finite time, because of the concavity of ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\ell' })),
+	                    '.'
+	                )
+	            );
+	        }
+	    }], [{
+	        key: 'id',
+	        value: function id() {
+	            return "f-scores";
+	        }
+	    }, {
+	        key: 'getSections',
+	        value: function getSections() {
+	            return _sections2.default;
+	        }
+	    }]);
+
+	    return ParameterEstimation;
+	}(_react.Component);
+
+	exports.default = ParameterEstimation;
+
+/***/ },
+/* 329 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -60615,158 +61434,67 @@ return /******/ (function(modules) { // webpackBootstrap
 	            var relativeToRoot = this.props.path.match(/\//g).slice(1).map(function (_) {
 	                return "../";
 	            }).join("");
-	            var canonicalUnnormalizedCrf = "\\exp\\left \\{\\sum_{t=1}^T\\sum_{k=1}^{K} \\lambda_k f_k(\\mathbf y^i_t, \\mathbf y^i_{t-1}, \\mathbf x^i_t)\\right \\}";
-	            var canonicalZ = "\\sum_{\\mathbf y'}\\exp\\left \\{\\sum_{t=1}^T\\sum_{k=1}^{K} \\lambda_k f_k(\\mathbf y^i_{t}', y'_{t-1}, \\mathbf x^i_t)\\right \\}";
 	            return _react2.default.createElement(
 	                'div',
 	                null,
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'As we saw in the previous section, we obtain parameters ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\Lambda' }),
-	                    ' by training our ',
-	                    _abbreviations2.default.crf,
-	                    ' on a pre-labeled training set of pairs ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\mathcal D=\\{\\mathbf{x}^{i},\\mathbf{y}^{i}\\}_{i=1}^N'
-	                    }),
-	                    ' where each ',
-	                    _react2.default.createElement(_Math2.default, { l: 'i' }),
-	                    ' indexes an example instance: ',
-	                    _react2.default.createElement(_Math2.default, {
-	                        l: '\\mathbf{x}^{i}=\\{\\mathbf x^{i}_1, \\mathbf x^{i}_2, \\cdots, \\mathbf x^{i}_T\\}'
-	                    }),
-	                    ' is a set of input tokens, and ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\mathbf{y}^{i}=\\{\\mathbf y^{i}_1, \\mathbf y^{i}_2, \\cdots, \\mathbf y^{i}_T\\}'
-	                    }),
-	                    ' is a set of output tags for instance length ',
-	                    _react2.default.createElement(_Math2.default, { l: 'T' }),
-	                    '.'
+	                    'To avoid overfitting, a penalty term can be added to the log likelihood function. This is called regularization, and L2 regularization is one often used version. In this work, we do not worry about overfitting to the corpus, so do not include a regularization term. Still, it is relevant review briefly.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'The training process will maximize some likelihood function ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\ell(\\Lambda)' }),
-	                    '. We are modeling a conditional distribution, so it makes sense to use the conditional log likelihood function:'
-	                ),
-	                _react2.default.createElement(_Math2.default, { display: 'true', l: '\\ell(\\Lambda)=\\sum_{i=1}^N \\log{p(\\mathbf y^{i}|\\mathbf x^{i}})' }),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'Where ',
-	                    _react2.default.createElement(_Math2.default, { l: 'p' }),
-	                    ' is the ',
-	                    _abbreviations2.default.crf,
-	                    ' distribution as we saw in the previous section:'
-	                ),
-	                _react2.default.createElement(_Math2.default, { display: 'true',
-	                    l: "\\ell(\\Lambda) = \\sum_{i=1}^N\\log{\\frac{" + canonicalUnnormalizedCrf + "}{" + canonicalZ + "}" + "}" }),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'Simplifying, we have:'
-	                ),
-	                _react2.default.createElement(_Math2.default, { display: 'true',
-	                    l: '\\ell(\\Lambda) = \\sum_{i=1}^N\\sum_{t=1}^T\\sum_{k=1}^K\r \\lambda_kf_k(\\mathbf y^i_t,\\mathbf y^i_{t-1},\\mathbf x^i_t)-\\sum_{i=1}^N\\log{Z(\\mathbf x^i})' }),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'We also add a penalty term to the likelihood function to avoid overfitting. This is called regularization, and in this particular instance we use L2 regularization:'
-	                ),
-	                _react2.default.createElement(_Math2.default, { display: 'true',
-	                    l: '\\ell(\\Lambda) = \\sum_{i=1}^N\\sum_{t=1}^T\\sum_{k=1}^K\r \\lambda_kf_k(y^i_t,y^i_{t-1},\\mathbf x^i_t)-\\sum_{i=1}^N\\log{Z(\\mathbf x^i)}\r - \\sum_{k=1}^K\\frac{\\lambda_{k}^2}{2\\sigma^2}' }),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'Because it is generally intractable to find the exact parameters ',
-	                    _react2.default.createElement(_Math2.default, {
-	                        l: '\\Lambda' }),
-	                    ' that maximize the likelihood function ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\ell' }),
-	                    ', we use a hill-climbing algorithm. The general idea of hill-climbing algorithms is that we start out with some random assignment to the parameters ',
-	                    _react2.default.createElement(_Math2.default, {
-	                        l: '\\Lambda' }),
-	                    ', and estimate the parameters that maximize ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\ell' }),
-	                    ' by iteratively moving along the gradient toward the global maximum. We find the direction to move in by taking the derivative of ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\ell' }),
-	                    ' with respect to ',
-	                    _react2.default.createElement(
-	                        'span',
-	                        { style: { display: 'inline-block' } },
-	                        _react2.default.createElement(_Math2.default, { l: '\\Lambda' }),
-	                        ':'
-	                    )
-	                ),
-	                _react2.default.createElement(_Math2.default, { display: 'true', l: '\\frac{\\partial\\ell}{\\partial\\lambda_k} =\r \\sum_{i=1}^N\\sum_{t=1}^Tf_k(\\mathbf y_t^i,\\mathbf y_{t-1}^i,\\mathbf x_t^i)\r -\\sum_{i=1}^N\\sum_{t=1}^T\\sum_{\\mathbf y,\\mathbf y\'}f_k(y,y,\\mathbf x_t^i)\r p(y,y\'|\\mathbf x^i)-\\sum_{k=1}^K\\frac{\\lambda_k}{\\sigma^2}\r ' }),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'And then update parameter ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\lambda_i' }),
-	                    ' along this gradient:'
-	                ),
-	                _react2.default.createElement(_Math2.default, { display: 'true', l: '\\lambda_i := \\lambda_i + \\alpha \\frac{\\partial\\ell}{\\partial\\lambda_k}' }),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'Where ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\alpha' }),
-	                    ' is some learning rate between ',
-	                    _react2.default.createElement(_Math2.default, { l: '0' }),
-	                    ' and ',
-	                    _react2.default.createElement(_Math2.default, { l: '1' }),
-	                    '.'
-	                ),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'Thanks to the fact that the distribution ',
-	                    _react2.default.createElement(_Math2.default, { l: 'p(\\mathbf{y}^{i}|\\mathbf{x}^{i})' }),
-	                    ' is concave, the function ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\ell(\\Lambda)' }),
-	                    ' is also concave. This ensures that any local optimum will be a global optimum. The regularization term ensures that any global optimum is a unique optimum, in addition to avoiding overfitting.'
-	                ),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'In our experiment, we use the ',
-	                    _react2.default.createElement(
-	                        'a',
-	                        {
-	                            href: 'https://en.wikipedia.org/wiki/Limited-memory_BFGS' },
-	                        'Limited-memory Broyden–Fletcher–Goldfarb–Shanno algorithm (',
-	                        _abbreviations2.default.lmbvfgs,
-	                        ')'
-	                    ),
-	                    ', which approximates Newton\'s Method. This algorithm is optimized for the memory-contrained conditions in real-world computers, and also converges much faster than a naive implementation because it works on the double derivative of ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\ell' }),
-	                    '.'
-	                ),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'The algorithmic complexity of this algorithm is ',
-	                    _react2.default.createElement(_Math2.default, { l: 'O(TM^2NG)' }),
-	                    ', where ',
-	                    _react2.default.createElement(_Math2.default, { l: 'T' }),
-	                    ' is the length of the longest training instance, ',
-	                    _react2.default.createElement(_Math2.default, { l: 'M' }),
-	                    ' is the number of possible labels, ',
-	                    _react2.default.createElement(_Math2.default, { l: 'N' }),
-	                    ' in the number of trianing instances, and ',
-	                    _react2.default.createElement(_Math2.default, { l: 'G' }),
-	                    ' is the number of gradient computations. The number of gradient computations can be set to a fixed number, or is otherwise unknown (in which case the algorithm trains to convergence, which is guaranteed because of the concavity of ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\ell' }),
+	                    'L2 regularization is put in contrast with the closely related L1 regularization. L1 regularization is meant for dealing with truly sparse inputs, and in practice rarely performs better than L2 (',
+	                    _references2.default.cite(_bib2.default.van2012lost),
 	                    ').'
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'avoid-page-break' },
+	                    _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        'The log likelihood function with L2 regularization is the same as that of ',
+	                        _react2.default.createElement(
+	                            'span',
+	                            null,
+	                            'Eq. 3.11'
+	                        ),
+	                        ', but with the ',
+	                        _react2.default.createElement(
+	                            'span',
+	                            {
+	                                className: 'avoid-page-break' },
+	                            'term ',
+	                            _react2.default.createElement(_Math2.default, _extends({}, this.props, {
+	                                l: '-\\sum_{k=1}^K\\frac{\\lambda_{k}^2}{2\\sigma^2}' }))
+	                        ),
+	                        ' added:'
+	                    ),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { display: 'true',
+	                        l: '\\ell(\\Lambda) = \\sum_{i=1}^N\\sum_{t=1}^T\\sum_{k=1}^K\r \\lambda_kf_k(y^i_t,y^i_{t-1},x^i_t)-\\sum_{i=1}^N\\log{Z(x^i)}\r - \\sum_{k=1}^K\\frac{\\lambda_{k}^2}{2\\sigma^2}' }))
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Where ',
+	                    _react2.default.createElement(_Math2.default, { l: '\\sigma' }),
+	                    ' is the regularization parameter, which signifies how much we wish to simplify the model.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Intuitively, the regularization term can be understood as a penalty on the complexity of ',
+	                    _react2.default.createElement(_Math2.default, { l: '\\ell(\\Lambda)' }),
+	                    ', i.e. a term that makes the function more smooth and the resulting model sparser.'
 	                )
 	            );
 	        }
 	    }], [{
 	        key: 'id',
 	        value: function id() {
-	            return "f-scores";
+	            return "regularization";
 	        }
 	    }]);
 
@@ -60776,7 +61504,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = ParameterEstimation;
 
 /***/ },
-/* 327 */
+/* 330 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60855,7 +61583,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = CRF;
 
 /***/ },
-/* 328 */
+/* 331 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60894,7 +61622,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Math2 = _interopRequireDefault(_Math);
 
-	var _sections = __webpack_require__(313);
+	var _sections = __webpack_require__(314);
 
 	var _sections2 = _interopRequireDefault(_sections);
 
@@ -60994,7 +61722,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'We include the newline condition, because including newlines could either positively or negatively affect performance. On the one hand, newlines carry semantic information information: the author thought it appropriate to demarcate something with whitespace. But on the other hand they might obscure information about the previous label. Consider a numbering, followed by a newline, followed by a section title. Our ',
+	                    'We include the newline condition because including newlines could either positively or negatively affect performance. On the one hand, newlines carry semantic information: the author thought it appropriate to demarcate something with whitespace. But on the other hand, they might obscure information about the previous label. Consider a numbering, followed by a newline, followed by a section title. Our ',
 	                    _react2.default.createElement(
 	                        'abbr',
 	                        { title: 'Conditional Random Fields' },
@@ -61022,7 +61750,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Results;
 
 /***/ },
-/* 329 */
+/* 332 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61030,6 +61758,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -61088,36 +61818,50 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'One way to improve parse quality is to incorporate more domain-specific knowledge in the grammar. For example, sections with titles like \'OVERWEGINGEN\' (considerations) and \'CONCLUSIE\' (conclusion) almost always appear as the first level of sectioning.'
+	                    'One way to improve parse quality is to incorporate more domain-specific knowledge in the grammar. For example, sections with titles like \'',
+	                    _react2.default.createElement(
+	                        'span',
+	                        { lang: 'nl' },
+	                        'OVERWEGINGEN'
+	                    ),
+	                    '\' (considerations) and \'',
+	                    _react2.default.createElement(
+	                        'span',
+	                        { lang: 'nl' },
+	                        'CONCLUSIE'
+	                    ),
+	                    '\' (conclusion) almost always appear as the first level of sectioning.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'Another possibility to improve the grammar is for the grammar to recognize different \'modes\': section siblings often share a typography that is internally consistent, but not the same between documents. For example: all section are bold and capitalized, sub-sections are italic and sub-sub-sections are underlined.'
+	                    'Another possibility to improve the grammar is for the grammar to recognize different \'modes\': section siblings often share a typography that is internally consistent within a document, but not among documents. For example: in one document all sections are bold and capitalized, sub-sections are italic and sub-sub-sections are underlined, and another document might have no formatting at all.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'Owing to the brittleness of the current grammar, we might benefit from implementing a Conditional Probabilistic Context Free Grammar (Conditional ',
+	                    'Owing to the brittleness of the current grammar, we might benefit from implementing a Conditional Probabilistic Context-Free Grammar (Conditional ',
 	                    _abbreviations2.default.pcfg,
 	                    '), as introduced in ',
 	                    _references2.default.cite(_bib2.default.sutton2004conditional),
 	                    '. Conditional ',
 	                    _abbreviations2.default.pcfgs,
 	                    ' are similar to Conditional Random Fields in that we describe a conditional model instead of a generative one (so the probability distribution ',
-	                    _react2.default.createElement(_Math2.default, { l: 'P(\\mathbf y|\\mathbf x)' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'P(\\mathbf y|\\mathbf x)' })),
 	                    ' instead of ',
-	                    _react2.default.createElement(_Math2.default, { l: 'P(\\mathbf x,\\mathbf y)' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'P(\\mathbf x,\\mathbf y)' })),
 	                    '), and this allows us to use a large feature set.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'Another possibility is to implement a probabilistic version of the Earley parsing algorithm, a more top down parser which easily allows to intervene during parsing when some unexpected input is encountered. Although Earley parsers also have a worst-case complexity of ',
-	                    _react2.default.createElement(_Math2.default, { l: 'O(n^3)' }),
-	                    ', it parses left-recursive grammars in ',
-	                    _react2.default.createElement(_Math2.default, { l: 'O(n)' }),
-	                    ', and is faster for certain grammars than ',
+	                    'Another possibility is to implement a probabilistic version of the Earley parsing algorithm. The Earley algorithm is a more top-down parser which easily allows to intervene during parsing when some unexpected input is encountered. The Earley parser has a worst-case complexity of ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'O(n^3)' })),
+	                    ', but parses unambiguous grammars in ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'O(n^2)' })),
+	                    ' and left-recursive grammars in ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'O(n)' })),
+	                    ', and so can be faster than ',
 	                    _abbreviations2.default.cyk,
 	                    '. In our experiments, ',
 	                    _abbreviations2.default.cyk,
@@ -61133,7 +61877,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Discussion;
 
 /***/ },
-/* 330 */
+/* 333 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61183,19 +61927,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	            return _react2.default.createElement(
 	                'p',
 	                null,
-	                'Taking a closer look at faulty labels, we observe that most errors are snippets of text that contain only a noun phrase, and it is easy to imagine how the ',
+	                'Taking a closer look at faulty labels, we observe that most errors are snippets of text that contain only a noun phrase. Because of the sometimes very staccato paragraphs in case law, it is easy to imagine how the ',
 	                _react2.default.createElement(
 	                    'abbr',
 	                    { title: 'Conditional Random Field' },
 	                    'CRF'
 	                ),
-	                ' assigns such a text block as a title or vice versa. Furthermore, due to the sometimes very staccato paragraphs in case law, it can be hard even for humans to distinguish section titles and running text. Still, the ',
+	                ' might confuse text blocks and titles. it can be hard even for humans to distinguish section titles and running text. Still, the ',
 	                _react2.default.createElement(
 	                    'abbr',
 	                    { title: 'Conditional Random Field' },
 	                    'CRF'
 	                ),
-	                ' is not currently tuned to target problematic cases, and doing so is likely a fruitful way to improve classifier performance.'
+	                ' is not currently tuned to target problematic cases, and doing so is likely to be a fruitful way to improve classifier performance.'
 	            );
 	        }
 	    }]);
@@ -61206,7 +61950,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Discussion;
 
 /***/ },
-/* 331 */
+/* 334 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61223,11 +61967,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _chapters = __webpack_require__(220);
+	var _chapters = __webpack_require__(215);
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
-	var _ChapterSectionContent = __webpack_require__(332);
+	var _ChapterSectionContent = __webpack_require__(335);
 
 	var _ChapterSectionContent2 = _interopRequireDefault(_ChapterSectionContent);
 
@@ -61243,7 +61987,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _abbreviations2 = _interopRequireDefault(_abbreviations);
 
-	var _sections = __webpack_require__(316);
+	var _sections = __webpack_require__(317);
 
 	var _sections2 = _interopRequireDefault(_sections);
 
@@ -61288,9 +62032,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _references2.default.cite(_bib2.default.sha2003shallow),
 	                    ') and named entity recognition (',
 	                    _references2.default.cite(_bib2.default.settles2004biomedical),
-	                    '). One downside to ',
-	                    _abbreviations2.default.crfs,
-	                    ' is that models commonly overfit to a single corpus. In our case, this is not a problem because we expressly train for only one particular corpus.'
+	                    ').'
 	                )
 	            );
 	        }
@@ -61315,7 +62057,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Tagging;
 
 /***/ },
-/* 332 */
+/* 335 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61334,11 +62076,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _getSectionComponent2 = _interopRequireDefault(_getSectionComponent);
 
-	var _chapters = __webpack_require__(220);
+	var _chapters = __webpack_require__(215);
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
-	var _ToC = __webpack_require__(219);
+	var _ToC = __webpack_require__(220);
 
 	var _ToC2 = _interopRequireDefault(_ToC);
 
@@ -61390,7 +62132,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = Chapter;
 
 /***/ },
-/* 333 */
+/* 336 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61405,7 +62147,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _chapters = __webpack_require__(220);
+	var _chapters = __webpack_require__(215);
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
@@ -61447,10 +62189,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'In the ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { href: urlToIntrochapter },
+	                        { hrefLang: 'en', href: urlToIntrochapter },
 	                        'previous chapter'
 	                    ),
-	                    ' we developed a way to import Rechtspraak.nl ',
+	                    ', we developed a way to import Rechtspraak.nl ',
 	                    _abbreviations2.default.xml,
 	                    ' documents and distill them into a list of text elements, or tokens. In this chapter, we consider how to label these tokens with any of four labels:'
 	                ),
@@ -61530,9 +62272,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    null,
 	                    'In this chapter, we experiment with ',
 	                    _abbreviations2.default.crfs,
-	                    ' for labeling our tokens, and we compare the results to a hand-written deterministic tagger that utilizes similar features. It turns out that both models score around 1.0 on all labels except section titles. For section titles, ',
+	                    ' for labeling the tokens, and we compare the results to a hand-written deterministic tagger that utilizes features that are largely the same as those used by the ',
+	                    _abbreviations2.default.crf,
+	                    ' models. It turns out that both approaches score around 1.0 on all labels except section titles. For section titles, ',
 	                    _abbreviations2.default.crfs,
-	                    ' significantly out-perform the hand-written tagger in terms of recall, while trading in some precision. For section titles, the hand-written tagger has a precision of 0.96 and recall of 0.74; the trained ',
+	                    ' significantly outperform the hand-written tagger in terms of recall, while trading in some precision. For section titles, the hand-written tagger has a precision of 0.96 and recall of 0.74; the trained ',
 	                    _abbreviations2.default.crfs,
 	                    ' of 0.91 and 0.91, respectively.'
 	                )
@@ -61546,7 +62290,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = TaggingIntroduction;
 
 /***/ },
-/* 334 */
+/* 337 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61616,7 +62360,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = DeterministicTagger;
 
 /***/ },
-/* 335 */
+/* 338 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61624,6 +62368,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -61655,11 +62401,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Math2 = _interopRequireDefault(_Math);
 
-	var _GraphicalModels = __webpack_require__(322);
-
-	var _GraphicalModels2 = _interopRequireDefault(_GraphicalModels);
-
-	var _sections = __webpack_require__(319);
+	var _sections = __webpack_require__(320);
 
 	var _sections2 = _interopRequireDefault(_sections);
 
@@ -61698,6 +62440,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            var relativeToRoot = this.props.path.match(/\//g).slice(1).map(function (_) {
 	                return "../";
 	            }).join("");
+
 	            return _react2.default.createElement(
 	                'div',
 	                null,
@@ -61749,7 +62492,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _abbreviations2.default.crfs,
 	                    '. Image adapted from ',
 	                    _references2.default.cite(_bib2.default.sutton2006introduction),
-	                    '.'
+	                    '. For the conditional models, the white nodes are conditioned on the grey nodes. Depending on the application, white nodes are called dependent variables (in logistic regression), hidden variables (in HMMs), output variables or labels (in HMMs and CRFs). Likewise, the grey nodes are called explanatory variables (in logistic regression), observed variables, input variables or observations (in HMMs and CRFs). We stick to the terminology of \'labels\', and \'observations\', since those terms seem closest to our application.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -61758,25 +62501,30 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement(_FigRef2.default, { fig: _figs2.default.graphicalModels }),
 	                    ', ',
 	                    _abbreviations2.default.crfs,
-	                    ' can be understood as a graphical version of logistic regression, in which we have an arbitrary number of dependent variables that are conditioned on a number of explanatory variables (instead of just one dependent variable).'
+	                    ' can be understood as a graphical version of logistic regression, in which we have an arbitrary number of labels ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\mathbf y' })),
+	                    ' that are conditioned on a number of observations ',
+	                    _react2.default.createElement(_Math2.default, {
+	                        l: '\\mathbf x' }),
+	                    ' (instead of just one label conditioned on a number of observations as in logisitic regression).'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
 	                    'In this thesis, we limit ourselves to a subclass of ',
 	                    _abbreviations2.default.crfs,
-	                    ' called Linear-Chain Conditional Random Fields (',
+	                    ' called linear-chain Conditional Random Fields (',
 	                    _abbreviations2.default.lccrfs,
-	                    ' or Linear Chain ',
+	                    ' or linear-chain ',
 	                    _abbreviations2.default.crfs,
 	                    '), which is topologically very similar to ',
 	                    _abbreviations2.default.hmms,
-	                    ': both model a probability distribution along a chain of input variables, where each input variable is also connected to a single output variable.'
+	                    ': both model a probability distribution along a chain of labels, where each label is also connected to a single observation.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'To clarify: in our experiments we consider an input document as a string of tokens which corresponds to the set of input variables, where each token is linked to one output variable of either ',
+	                    'To emphasize: in our experiments, we consider an input document as a string of tokens which corresponds to a string of observations vectors, and each token is linked to a label with a value of either ',
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -61807,7 +62555,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    null,
 	                    'Because of the freedom that ',
 	                    _abbreviations2.default.crfs,
-	                    ' permit for the input vector, ',
+	                    ' permit for the observation vectors, ',
 	                    _abbreviations2.default.crfs,
 	                    ' tend to have many features: ',
 	                    _references2.default.cite(_bib2.default.klinger2009feature),
@@ -61818,9 +62566,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    null,
 	                    'This abundance of features likely explains that ',
 	                    _abbreviations2.default.crfs,
-	                    ' tend to have state-of-the-art performance on ',
+	                    ' have state-of-the-art performance on ',
 	                    _abbreviations2.default.nlp,
-	                    ' tasks such as part-of-speech tagging, since this kind of performance appears to depend on extensive feature engineering. As a downside, it is more likely that a model overfits to a particular corpus, and so suffers in portability with respect to other copora. Consider ',
+	                    ' tasks such as part-of-speech tagging, since this kind of performance appears to depend on extensive feature engineering. As a downside, it is more likely that a model overfits to a particular corpus, and so suffers in portability with respect to other corpora. Consider ',
 	                    _references2.default.cite(_bib2.default.finkel2004exploiting),
 	                    '. In our case, overfitting is likely not a problem because we train explicitly for one corpus, and do not aspire to full language abstraction.'
 	                ),
@@ -61830,7 +62578,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'In the following, we provide a definition of Linear-Chain Conditional Random Fields, supported first by an introductory section on Directed Graphical Models, and specifically the conceptually simpler ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { href: '#hmm' },
+	                        { hrefLang: 'en', href: '#hmm' },
 	                        'Hidden Markov Models'
 	                    ),
 	                    '. For a more thorough tutorial into ',
@@ -61860,7 +62608,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = CRF;
 
 /***/ },
-/* 336 */
+/* 339 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61891,7 +62639,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _references2 = _interopRequireDefault(_references);
 
-	var _chapters = __webpack_require__(220);
+	var _chapters = __webpack_require__(215);
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
@@ -61971,7 +62719,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'Based on the metrics and observations on the data set from the ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { href: rsMarkupUrl },
+	                        { hrefLang: 'en', href: rsMarkupUrl },
 	                        'previous chapter'
 	                    ),
 	                    ', we define about 250 binary features for our automatic tagger. The most prominent ones include:'
@@ -62017,7 +62765,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'We use these features in a probabilistic tagger for which we train a ',
 	                    _react2.default.createElement(
 	                        'abbr',
-	                        { title: 'Conditional Random Field' },
+	                        {
+	                            title: 'Conditional Random Field' },
 	                        'CRF'
 	                    ),
 	                    ' model. We now introduce the class of ',
@@ -62120,7 +62869,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = FeatureSelection;
 
 /***/ },
-/* 337 */
+/* 340 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62166,7 +62915,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'After we have labeled a sequence of text elements, we wish to infer the section hierarchy. That is: we need to invent some procedure of creating a tree structure in which these tagged text elements are the leaf nodes, and may be children of \'section\' nodes. This problem is very much akin to constituency parsing for natural languages, and that is why we approach the problem as parsing a terminal sequence with a Probabilistic Context Free Grammar (',
+	                    'After we have labeled a sequence of text elements, we wish to infer the section hierarchy. That is: we need to invent some procedure of creating a tree structure in which these tagged text elements are the leaf nodes, and may be children of \'section\' nodes. This problem is very much akin to constituency parsing for natural languages, and that is why we approach the problem as parsing a token sequence with a Probabilistic Context-Free Grammar (',
 	                    _abbreviations2.default.pcfg,
 	                    ').'
 	                ),
@@ -62189,7 +62938,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = InferringDocumentStructureIntroduction;
 
 /***/ },
-/* 338 */
+/* 341 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62204,15 +62953,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _ChapterSectionContent = __webpack_require__(332);
+	var _ChapterSectionContent = __webpack_require__(335);
 
 	var _ChapterSectionContent2 = _interopRequireDefault(_ChapterSectionContent);
 
-	var _chapters = __webpack_require__(220);
+	var _chapters = __webpack_require__(215);
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
-	var _sections = __webpack_require__(318);
+	var _sections = __webpack_require__(319);
 
 	var _sections2 = _interopRequireDefault(_sections);
 
@@ -62260,7 +63009,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Methods;
 
 /***/ },
-/* 339 */
+/* 342 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62283,7 +63032,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _bib2 = _interopRequireDefault(_bib);
 
-	var _sections = __webpack_require__(305);
+	var _sections = __webpack_require__(306);
 
 	var _sections2 = _interopRequireDefault(_sections);
 
@@ -62329,7 +63078,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Evaluation;
 
 /***/ },
-/* 340 */
+/* 343 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62337,6 +63086,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -62364,11 +63115,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _figs2 = _interopRequireDefault(_figs);
 
-	var _listings = __webpack_require__(341);
+	var _listings = __webpack_require__(344);
 
 	var _listings2 = _interopRequireDefault(_listings);
 
-	var _ListingRef = __webpack_require__(342);
+	var _ListingRef = __webpack_require__(345);
 
 	var _ListingRef2 = _interopRequireDefault(_ListingRef);
 
@@ -62403,49 +63154,71 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'Context Free Grammars (',
+	                    'Context-Free Grammars (',
 	                    _abbreviations2.default.cfgs,
 	                    ') are grammars where each rule is of the form'
 	                ),
-	                _react2.default.createElement(_Math2.default, { l: 'A \\rightarrow \\alpha', display: 'true' }),
+	                _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'A \\rightarrow \\alpha', display: 'true' })),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
 	                    'where ',
-	                    _react2.default.createElement(_Math2.default, { l: 'A' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'A' })),
 	                    ' is a single non-terminal symbol and ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\alpha' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\alpha' })),
 	                    ' is any string of terminals and non-terminals, including the empty string ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\epsilon' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\epsilon' })),
 	                    '.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'A Probabilistic Context Free Grammar (',
+	                    'A Probabilistic Context-Free Grammar (',
 	                    _abbreviations2.default.pcfg,
-	                    ') is then a Context Free Grammar in which each rule has a probability assigned to it. In general, the probability can take the form of any semiring (i.e., a set of elements with notions of addition and multiplication). A derivation of a sequence with a ',
+	                    ') is then a Context-Free Grammar in which each rule has a probability assigned to it. A derivation of a sequence with a ',
 	                    _abbreviations2.default.pcfg,
-	                    ' has a probility score attached to it, which is the product of the probabilities of all of the applied rules.'
+	                    ' has a probability score attached to it, which is the product of the probabilities of all of the applied rules.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'In our discussions, we assume probability scores to be the real numbers between ',
-	                    _react2.default.createElement(_Math2.default, { l: '0' }),
+	                    'In our discussions, we assume probability scores to be real numbers between ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '0' })),
 	                    ' and ',
-	                    _react2.default.createElement(_Math2.default, { l: '1' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '1' })),
 	                    ', with the common operations of multiplication and addition, but in implementation we use the ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { href: 'http://www.johndcook.com/blog/2014/02/26/log-semiring/' },
-	                        'Log semiring'
+	                        { itemScope: true,
+	                            itemType: 'https://schema.org/TechArticle',
+	                            hrefLang: 'en',
+	                            href: 'http://www.johndcook.com/blog/2014/02/26/log-semiring/' },
+	                        _react2.default.createElement(
+	                            'span',
+	                            { itemScope: true,
+	                                itemType: 'https://schema.org/Intangible',
+	                                itemProp: 'about' },
+	                            _react2.default.createElement(
+	                                'span',
+	                                { itemProp: 'name' },
+	                                'Log semiring'
+	                            )
+	                        )
 	                    ),
 	                    ' to avoid ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { href: 'https://en.wikipedia.org/wiki/Arithmetic_underflow' },
-	                        'arithmetic underflow'
+	                        { hrefLang: 'en', href: 'https://en.wikipedia.org/wiki/Arithmetic_underflow' },
+	                        _react2.default.createElement(
+	                            'span',
+	                            { itemScope: true,
+	                                itemType: 'https://schema.org/Intangible' },
+	                            _react2.default.createElement(
+	                                'span',
+	                                { itemProp: 'name' },
+	                                'arithmetic underflow'
+	                            )
+	                        )
 	                    ),
 	                    '.'
 	                ),
@@ -62457,20 +63230,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _abbreviations2.default.cnf,
 	                    ') if all rules are of the following form:'
 	                ),
-	                _react2.default.createElement(_Math2.default, { l: 'A\\rightarrow B C', display: 'true' }),
-	                _react2.default.createElement(_Math2.default, { l: 'A\\rightarrow t', display: 'true' }),
+	                _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'A\\rightarrow B C', display: 'true' })),
+	                _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'A\\rightarrow t', display: 'true' })),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
 	                    'Where ',
-	                    _react2.default.createElement(_Math2.default, { l: 'A' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'A' })),
 	                    ', ',
-	                    _react2.default.createElement(_Math2.default, { l: 'B' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'B' })),
 	                    ' and ',
-	                    _react2.default.createElement(_Math2.default, { l: 'C' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'C' })),
 	                    ' are non-terminal types, and ',
-	                    _react2.default.createElement(_Math2.default, { l: 't' }),
-	                    ' is a terminal type.'
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 't' })),
+	                    ' is a terminal type. In the following, we use an extension of CNF with unary rules. In this extension, ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, {
+	                        l: 't' })),
+	                    ' is either a terminal or non-terminal type.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -62487,7 +63263,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    'p',
 	                    null,
 	                    _react2.default.createElement(_ListingRef2.default, { listing: _listings2.default.figGrammar }),
-	                    ' show a simplified version of the grammar that we use to create the section hierarchy.'
+	                    ' shows a simplified version of the grammar that we use to create the section hierarchy.'
 	                ),
 	                _react2.default.createElement(
 	                    'figure',
@@ -62513,12 +63289,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '\\text{Text} \\rightarrow \\text{text}' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text{Text} \\rightarrow \\text{text}' }))
 	                                ),
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '1.0' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '1.0' }))
 	                                )
 	                            ),
 	                            _react2.default.createElement(
@@ -62527,12 +63303,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '\\text{Text} \\rightarrow \\text{newline}' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text{Text} \\rightarrow \\text{newline}' }))
 	                                ),
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '1.0' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '1.0' }))
 	                                )
 	                            ),
 	                            _react2.default.createElement(
@@ -62541,12 +63317,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '\\text{Numbering} \\rightarrow \\text{numbering}' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text{Numbering} \\rightarrow \\text{numbering}' }))
 	                                ),
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '1.0' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '1.0' }))
 	                                )
 	                            ),
 	                            _react2.default.createElement(
@@ -62555,12 +63331,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '\\text{TitleText} \\rightarrow \\text{section-title}' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text{TitleText} \\rightarrow \\text{section-title}' }))
 	                                ),
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '1.0' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '1.0' }))
 	                                )
 	                            ),
 	                            _react2.default.createElement(
@@ -62583,12 +63359,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '\\text{Document} \\rightarrow \\text{Header DocumentContent}' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text{Document} \\rightarrow \\text{Header DocumentContent}' }))
 	                                ),
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '1.0' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '1.0' }))
 	                                )
 	                            ),
 	                            _react2.default.createElement(
@@ -62597,73 +63373,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '\\text{Document} \\rightarrow \\text{DocumentContent}' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text{Document} \\rightarrow \\text{DocumentContent}' }))
 	                                ),
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '1.0' })
-	                                )
-	                            ),
-	                            _react2.default.createElement(
-	                                'tr',
-	                                null,
-	                                _react2.default.createElement('td', { colSpan: '2' })
-	                            ),
-	                            _react2.default.createElement(
-	                                'tr',
-	                                null,
-	                                _react2.default.createElement(
-	                                    'td',
-	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '\\text{DocumentContent} \\rightarrow \\text{Sections}' })
-	                                ),
-	                                _react2.default.createElement(
-	                                    'td',
-	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '1.0' })
-	                                )
-	                            ),
-	                            _react2.default.createElement(
-	                                'tr',
-	                                null,
-	                                _react2.default.createElement(
-	                                    'td',
-	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '\\text{DocumentContent} \\rightarrow \\text{Text Sections}' })
-	                                ),
-	                                _react2.default.createElement(
-	                                    'td',
-	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '0.8' })
-	                                )
-	                            ),
-	                            _react2.default.createElement(
-	                                'tr',
-	                                null,
-	                                _react2.default.createElement(
-	                                    'td',
-	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '\\text{DocumentContent} \\rightarrow \\text{Sections Text}' })
-	                                ),
-	                                _react2.default.createElement(
-	                                    'td',
-	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '0.8' })
-	                                )
-	                            ),
-	                            _react2.default.createElement(
-	                                'tr',
-	                                null,
-	                                _react2.default.createElement(
-	                                    'td',
-	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '\\text{DocumentContent} \\rightarrow \\text{Text Sections Text}' })
-	                                ),
-	                                _react2.default.createElement(
-	                                    'td',
-	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '0.8' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '1.0' }))
 	                                )
 	                            ),
 	                            _react2.default.createElement(
@@ -62677,12 +63392,54 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '\\text{Text} \\rightarrow \\text{Text Text}' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text{DocumentContent} \\rightarrow \\text{Sections}' }))
 	                                ),
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '1.0' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '1.0' }))
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'tr',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text{DocumentContent} \\rightarrow \\text{Text Sections}' }))
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '0.8' }))
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'tr',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text{DocumentContent} \\rightarrow \\text{Sections Text}' }))
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '0.8' }))
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'tr',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text{DocumentContent} \\rightarrow \\text{Text Sections Text}' }))
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '0.8' }))
 	                                )
 	                            ),
 	                            _react2.default.createElement(
@@ -62696,7 +63453,26 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '\\text{Sections} \\rightarrow \\text{Sections Sections}' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text{Text} \\rightarrow \\text{Text Text}' }))
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '1.0' }))
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'tr',
+	                                null,
+	                                _react2.default.createElement('td', { colSpan: '2' })
+	                            ),
+	                            _react2.default.createElement(
+	                                'tr',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text{Sections} \\rightarrow \\text{Sections Sections}' }))
 	                                ),
 	                                _react2.default.createElement(
 	                                    'td',
@@ -62711,12 +63487,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '\\text{Sections} \\rightarrow \\text{Section}' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text{Sections} \\rightarrow \\text{Section}' }))
 	                                ),
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '1.0' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '1.0' }))
 	                                )
 	                            ),
 	                            _react2.default.createElement(
@@ -62725,12 +63501,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '\\text{Sections} \\rightarrow \\text{Section Text}' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text{Sections} \\rightarrow \\text{Section Text}' }))
 	                                ),
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '0.9' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '0.9' }))
 	                                )
 	                            ),
 	                            _react2.default.createElement(
@@ -62739,12 +63515,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '\\text{Sections} \\rightarrow \\text{Text Section}' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text{Sections} \\rightarrow \\text{Text Section}' }))
 	                                ),
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '0.8' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '0.8' }))
 	                                )
 	                            ),
 	                            _react2.default.createElement(
@@ -62753,12 +63529,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '\\text{Section} \\rightarrow \\text{SectionTitle SectionContent}' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text{Section} \\rightarrow \\text{SectionTitle SectionContent}' }))
 	                                ),
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '1.0' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '1.0' }))
 	                                )
 	                            ),
 	                            _react2.default.createElement(
@@ -62772,12 +63548,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '\\text{SectionTitle} \\rightarrow \\text{Numbering}' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text{SectionTitle} \\rightarrow \\text{Numbering}' }))
 	                                ),
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '1.0' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '1.0' }))
 	                                )
 	                            ),
 	                            _react2.default.createElement(
@@ -62786,12 +63562,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '\\text{SectionTitle} \\rightarrow \\text{TitleText}' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text{SectionTitle} \\rightarrow \\text{TitleText}' }))
 	                                ),
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '1.0' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '1.0' }))
 	                                )
 	                            ),
 	                            _react2.default.createElement(
@@ -62800,12 +63576,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '\\text{SectionTitle} \\rightarrow \\text{Numbering TitleText}' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text{SectionTitle} \\rightarrow \\text{Numbering TitleText}' }))
 	                                ),
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '1.0' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '1.0' }))
 	                                )
 	                            ),
 	                            _react2.default.createElement(
@@ -62814,12 +63590,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '\\text{SectionContent} \\rightarrow \\text{Text}' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text{SectionContent} \\rightarrow \\text{Text}' }))
 	                                ),
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '1.0' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '1.0' }))
 	                                )
 	                            ),
 	                            _react2.default.createElement(
@@ -62828,12 +63604,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '\\text{SectionContent} \\rightarrow \\text{Sections}' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text{SectionContent} \\rightarrow \\text{Sections}' }))
 	                                ),
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '1.0' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '1.0' }))
 	                                )
 	                            ),
 	                            _react2.default.createElement(
@@ -62842,12 +63618,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '\\text{SectionContent} \\rightarrow \\text{SectionContent SectionContent}' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, {
+	                                        l: '\\text{SectionContent} \\rightarrow \\text{SectionContent SectionContent}' }))
 	                                ),
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '1.0' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '1.0' }))
 	                                )
 	                            )
 	                        )
@@ -62877,7 +63654,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = ContextFreeGrammars;
 
 /***/ },
-/* 341 */
+/* 344 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62903,7 +63680,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = listings;
 
 /***/ },
-/* 342 */
+/* 345 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -62969,7 +63746,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	;
 
 /***/ },
-/* 343 */
+/* 346 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -63047,7 +63824,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = AdditionalEnrichment;
 
 /***/ },
-/* 344 */
+/* 347 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -63055,6 +63832,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -63074,7 +63853,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Math2 = _interopRequireDefault(_Math);
 
-	var _InlineBlockSpan = __webpack_require__(345);
+	var _InlineBlockSpan = __webpack_require__(348);
 
 	var _InlineBlockSpan2 = _interopRequireDefault(_InlineBlockSpan);
 
@@ -63086,11 +63865,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _figs2 = _interopRequireDefault(_figs);
 
-	var _listings = __webpack_require__(341);
+	var _listings = __webpack_require__(344);
 
 	var _listings2 = _interopRequireDefault(_listings);
 
-	var _ListingRef = __webpack_require__(342);
+	var _ListingRef = __webpack_require__(345);
 
 	var _ListingRef2 = _interopRequireDefault(_ListingRef);
 
@@ -63134,19 +63913,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    null,
 	                    'The Cocke–Younger–Kasami (',
 	                    _abbreviations2.default.cyk,
-	                    ') algorithm is an algorithm for parsing Context Free Grammars that was separately discovered by ',
+	                    ') algorithm is an algorithm for parsing Context-Free Grammars that was separately discovered by ',
 	                    _references2.default.cite(_bib2.default.kasami1965efficient),
 	                    ', ',
 	                    _references2.default.cite(_bib2.default.younger1967recognition),
 	                    ' and ',
 	                    _references2.default.cite(_bib2.default.cocke1969programming),
-	                    '. The algorithm has worst case complexity of ',
+	                    '. The algorithm has time complexity of ',
 	                    _react2.default.createElement(_Math2.default, {
 	                        l: '\\Theta (n^3\\cdot \\left | G \\right |)' }),
 	                    ', where ',
-	                    _react2.default.createElement(_Math2.default, { l: 'n' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'n' })),
 	                    ' is the length of the input string and ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\left | G \\right |' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\left | G \\right |' })),
 	                    ' is the size of the grammar.'
 	                ),
 	                _react2.default.createElement(
@@ -63156,7 +63935,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _abbreviations2.default.cyk,
 	                    ' algorithm is defined for ordinary context free grammars that are given in Chomsky normal form (',
 	                    _abbreviations2.default.cnf,
-	                    '), but is is easy to extend the algorithm to include support for probabilistic and unary rules as well, as we do in this section. Note that any ',
+	                    '), but is easy to extend to include support for probabilistic and unary rules as well, as we do in this section. Note that any ',
 	                    _abbreviations2.default.cfg,
 	                    ' may be transformed into an equivalent grammar in Chomsky normal form, and this also holds for probabilistic ',
 	                    _abbreviations2.default.cfgs,
@@ -63167,7 +63946,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ' is not without cost: the increase in grammar size is ',
 	                    _react2.default.createElement(_Math2.default, {
 	                        l: '\\mathrm O (\\left | G \\right |^2)' }),
-	                    ' for the best algorithm, but the increase is linear if we use a variation of the algorithm that works on grammars in binary normal form (',
+	                    ' for the best algorithm. The increase is linear if we use a variation of the CYK algorithm that works on grammars in binary normal form (',
 	                    _abbreviations2.default.twonf,
 	                    '): see ',
 	                    _references2.default.cite(_bib2.default.lange2009cnf),
@@ -63176,35 +63955,37 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'The algorithm is a bottom-up parsing algorithm. The algorithm considers every substring from length ',
-	                    _react2.default.createElement(_Math2.default, { l: '1' }),
+	                    'The ',
+	                    _abbreviations2.default.cyk,
+	                    ' algorithm is a bottom-up parsing algorithm. The standard algorithm considers every substring from length ',
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '1' })),
 	                    ' to ',
-	                    _react2.default.createElement(_Math2.default, { l: 'n' }),
-	                    ', and keeps a list of all possible types for that substring, along with its probability.'
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'n' })),
+	                    ', and keeps a list of all possible types for those substrings, along with their probabilities.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
 	                    'For substrings of length ',
-	                    _react2.default.createElement(_Math2.default, { l: '1' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '1' })),
 	                    ' (individual words), we use the terminal rules in the grammar. For substrings of length ',
-	                    _react2.default.createElement(_Math2.default, { l: 'l>1' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'l>1' })),
 	                    ' (word sequences), we apply the production rules to every possible combination of two substrings of length ',
-	                    _react2.default.createElement(_Math2.default, { l: 'l-1' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: 'l-1' })),
 	                    '. This works, because ',
 	                    _abbreviations2.default.cnf,
-	                    ' mandates that all production rules have 2 non-terminals. Every time we apply a rule, we multiply the probability attached to the rule and the probabilities of the constituent substrings.'
+	                    ' mandates that all production rules have 2 non-terminals. Every time we apply a rule, we multiply the probability attached to that rule and the probabilities of the constituent substrings.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
 	                    'In addition to binary production rules, we also allow unary rules in our grammar of the form ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\text A \\rightarrow \\text B' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text A \\rightarrow \\text B' })),
 	                    ', where ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\text A' }),
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text A' })),
 	                    ' and ',
-	                    _react2.default.createElement(_Math2.default, { l: '\\text B' }),
-	                    ' are both non-terminals. Extension of the algorithm is simple: at the end of every substring type assignment, we add those types to the list that result from applicable unary rules, if that rule produces a non-terminal that does yet not exist in the table with at least that probability. We repeat until the cell does not change anymore.'
+	                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text B' })),
+	                    ' are both non-terminals. Extension of the algorithm is simple: after ordinary type assignment for substrings, we add those types to the list that result from applicable unary rules, if they produce a non-terminal that does not yet exist in the table with at least as much probability. We repeat until the cell does not change anymore.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -63272,10 +64053,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            null,
 	                            'S'
 	                        ),
-	                        ' are marked in bold. The top of the triangle represents the substring ',
-	                        _react2.default.createElement(_Math2.default, { l: '1' }),
+	                        ' are underlined. The top of the triangle represents the substring ',
+	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '1' })),
 	                        ' to ',
-	                        _react2.default.createElement(_Math2.default, { l: '4' }),
+	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '4' })),
 	                        ', i.e. the entire sentence. We can derive ',
 	                        _react2.default.createElement(
 	                            'code',
@@ -63283,9 +64064,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            'S'
 	                        ),
 	                        ' by combining the substring from ',
-	                        _react2.default.createElement(_Math2.default, { l: '1' }),
+	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '1' })),
 	                        ' to ',
-	                        _react2.default.createElement(_Math2.default, { l: '2' }),
+	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '2' })),
 	                        ' (',
 	                        _react2.default.createElement(
 	                            'code',
@@ -63293,9 +64074,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            'fish people'
 	                        ),
 	                        ') and the substring from ',
-	                        _react2.default.createElement(_Math2.default, { l: '3' }),
+	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '3' })),
 	                        ' to ',
-	                        _react2.default.createElement(_Math2.default, { l: '4' }),
+	                        _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '4' })),
 	                        ' (',
 	                        _react2.default.createElement(
 	                            'code',
@@ -63305,7 +64086,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        ') using the rule ',
 	                        _react2.default.createElement(
 	                            'code',
-	                            null,
+	                            { className: 'avoid-page-break' },
 	                            'S → NP VP'
 	                        ),
 	                        '.'
@@ -63326,12 +64107,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '\\text{S} \\rightarrow \\text{NP VP}' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text{S} \\rightarrow \\text{NP VP}' }))
 	                                ),
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '0.9' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '0.9' }))
 	                                )
 	                            ),
 	                            _react2.default.createElement(
@@ -63340,12 +64121,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '\\text{S} \\rightarrow \\text{VP}' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text{S} \\rightarrow \\text{VP}' }))
 	                                ),
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '0.1' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '0.1' }))
 	                                )
 	                            ),
 	                            _react2.default.createElement(
@@ -63354,12 +64135,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '\\text{VP} \\rightarrow \\text{V NP}' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text{VP} \\rightarrow \\text{V NP}' }))
 	                                ),
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '0.5' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '0.5' }))
 	                                )
 	                            ),
 	                            _react2.default.createElement(
@@ -63368,12 +64149,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '\\text{VP} \\rightarrow \\text{V}' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text{VP} \\rightarrow \\text{V}' }))
 	                                ),
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '0.1' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '0.1' }))
 	                                )
 	                            ),
 	                            _react2.default.createElement(
@@ -63382,12 +64163,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '\\text{NP} \\rightarrow \\text{NP NP}' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text{NP} \\rightarrow \\text{NP NP}' }))
 	                                ),
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '0.1' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '0.1' }))
 	                                )
 	                            ),
 	                            _react2.default.createElement(
@@ -63396,12 +64177,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '\\text{NP} \\rightarrow \\text{N}' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text{NP} \\rightarrow \\text{N}' }))
 	                                ),
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '0.7' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '0.7' }))
 	                                )
 	                            ),
 	                            _react2.default.createElement('tr', null),
@@ -63411,12 +64192,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '\\text{N} \\rightarrow \\text{fish}' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text{N} \\rightarrow \\text{fish}' }))
 	                                ),
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '0.2' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '0.2' }))
 	                                )
 	                            ),
 	                            _react2.default.createElement(
@@ -63425,12 +64206,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '\\text{N} \\rightarrow \\text{people}' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text{N} \\rightarrow \\text{people}' }))
 	                                ),
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '0.5' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '0.5' }))
 	                                )
 	                            ),
 	                            _react2.default.createElement(
@@ -63439,12 +64220,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '\\text{N} \\rightarrow \\text{tanks}' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text{N} \\rightarrow \\text{tanks}' }))
 	                                ),
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '0.2' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '0.2' }))
 	                                )
 	                            ),
 	                            _react2.default.createElement(
@@ -63453,12 +64234,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '\\text{V} \\rightarrow \\text{people}' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text{V} \\rightarrow \\text{people}' }))
 	                                ),
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '0.1' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '0.1' }))
 	                                )
 	                            ),
 	                            _react2.default.createElement(
@@ -63467,12 +64248,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '\\text{V} \\rightarrow \\text{fish}' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text{V} \\rightarrow \\text{fish}' }))
 	                                ),
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '0.6' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '0.6' }))
 	                                )
 	                            ),
 	                            _react2.default.createElement(
@@ -63481,12 +64262,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '\\text{V} \\rightarrow \\text{tanks}' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text{V} \\rightarrow \\text{tanks}' }))
 	                                ),
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    _react2.default.createElement(_Math2.default, { l: '0.3' })
+	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '0.3' }))
 	                                )
 	                            )
 	                        )
@@ -63506,7 +64287,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            _InlineBlockSpan2.default,
 	                            null,
 	                            '(',
-	                            _react2.default.createElement(_Math2.default, { l: '\\text{NP}' }),
+	                            _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text{NP}' })),
 	                            ')'
 	                        ),
 	                        ' and verb phrases ',
@@ -63514,7 +64295,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            _InlineBlockSpan2.default,
 	                            null,
 	                            '(',
-	                            _react2.default.createElement(_Math2.default, { l: '\\text{VP}' }),
+	                            _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '\\text{VP}' })),
 	                            ')'
 	                        ),
 	                        ' together to create a sentence ',
@@ -63536,7 +64317,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            if (rowNum == 0) {
 	                if (colNum == 0) return [_react2.default.createElement(
 	                    'li',
-	                    null,
+	                    { key: 'getItems-0' },
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -63544,7 +64325,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    )
 	                ), _react2.default.createElement(
 	                    'li',
-	                    null,
+	                    { key: 'getItems-1' },
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -63552,19 +64333,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    )
 	                ), _react2.default.createElement(
 	                    'li',
-	                    null,
+	                    { key: 'getItems-2' },
 	                    _react2.default.createElement(
 	                        'code',
-	                        null,
-	                        _react2.default.createElement(
-	                            'strong',
-	                            null,
-	                            'NP (14%)'
-	                        )
+	                        { className: 'bold' },
+	                        'NP (14%)'
 	                    )
 	                ), _react2.default.createElement(
 	                    'li',
-	                    null,
+	                    { key: 'getItems-3' },
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -63572,7 +64349,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    )
 	                ), _react2.default.createElement(
 	                    'li',
-	                    null,
+	                    { key: 'getItems-4' },
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -63581,19 +64358,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	                )];
 	                if (colNum == 1) return [_react2.default.createElement(
 	                    'li',
-	                    null,
+	                    { key: 'getItems1-0' },
 	                    _react2.default.createElement(
 	                        'code',
-	                        null,
-	                        _react2.default.createElement(
-	                            'strong',
-	                            null,
-	                            'NP (0.49%)'
-	                        )
+	                        { className: 'bold' },
+	                        'NP (0.49%)'
 	                    )
 	                ), _react2.default.createElement(
 	                    'li',
-	                    null,
+	                    { key: 'getItems1-1' },
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -63601,7 +64374,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    )
 	                ), _react2.default.createElement(
 	                    'li',
-	                    null,
+	                    { key: 'getItems1-2' },
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -63610,7 +64383,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                )];
 	                if (colNum == 2) return [_react2.default.createElement(
 	                    'li',
-	                    null,
+	                    { key: 'getItems2-0' },
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -63618,7 +64391,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    )
 	                ), _react2.default.createElement(
 	                    'li',
-	                    null,
+	                    { key: 'getItems2-1' },
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -63626,7 +64399,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    )
 	                ), _react2.default.createElement(
 	                    'li',
-	                    null,
+	                    { key: 'getItems2-2' },
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -63635,7 +64408,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                )];
 	                if (colNum == 3) return [_react2.default.createElement(
 	                    'li',
-	                    null,
+	                    { key: 'getItems3-0' },
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -63643,7 +64416,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    )
 	                ), _react2.default.createElement(
 	                    'li',
-	                    null,
+	                    { key: 'getItems3-1' },
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -63651,21 +64424,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    )
 	                ), _react2.default.createElement(
 	                    'li',
-	                    null,
+	                    { key: 'getItems3-2' },
 	                    _react2.default.createElement(
 	                        'code',
-	                        null,
-	                        _react2.default.createElement(
-	                            'strong',
-	                            null,
-	                            'S (0.019%)'
-	                        )
+	                        { className: 'bold' },
+	                        'S (0.019%)'
 	                    )
 	                )];
 	            } else if (rowNum == 1) {
 	                if (colNum == 1) return [_react2.default.createElement(
 	                    'li',
-	                    null,
+	                    { key: 'getItems-110' },
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -63673,7 +64442,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    )
 	                ), _react2.default.createElement(
 	                    'li',
-	                    null,
+	                    { key: 'getItems-111' },
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -63681,19 +64450,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    )
 	                ), _react2.default.createElement(
 	                    'li',
-	                    null,
+	                    { key: 'getItems-112' },
 	                    _react2.default.createElement(
 	                        'code',
-	                        null,
-	                        _react2.default.createElement(
-	                            'strong',
-	                            null,
-	                            'NP (35%)'
-	                        )
+	                        { className: 'bold' },
+	                        'NP (35%)'
 	                    )
 	                ), _react2.default.createElement(
 	                    'li',
-	                    null,
+	                    { key: 'getItems-113' },
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -63701,7 +64466,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    )
 	                ), _react2.default.createElement(
 	                    'li',
-	                    null,
+	                    { key: 'getItems-114' },
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -63710,7 +64475,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                )];
 	                if (colNum == 2) return [_react2.default.createElement(
 	                    'li',
-	                    null,
+	                    { key: 'getItems-120' },
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -63718,7 +64483,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    )
 	                ), _react2.default.createElement(
 	                    'li',
-	                    null,
+	                    { key: 'getItems-121' },
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -63726,7 +64491,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    )
 	                ), _react2.default.createElement(
 	                    'li',
-	                    null,
+	                    { key: 'getItems-122' },
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -63735,7 +64500,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                )];
 	                if (colNum == 3) return [_react2.default.createElement(
 	                    'li',
-	                    null,
+	                    { key: 'getItems-130' },
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -63743,7 +64508,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    )
 	                ), _react2.default.createElement(
 	                    'li',
-	                    null,
+	                    { key: 'getItems-131' },
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -63751,7 +64516,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    )
 	                ), _react2.default.createElement(
 	                    'li',
-	                    null,
+	                    { key: 'getItems-132' },
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -63761,7 +64526,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            } else if (rowNum == 2 && colNum == 2) {
 	                return [_react2.default.createElement(
 	                    'li',
-	                    null,
+	                    { key: 'getItems-220' },
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -63769,19 +64534,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    )
 	                ), _react2.default.createElement(
 	                    'li',
-	                    null,
+	                    { key: 'getItems-221' },
 	                    _react2.default.createElement(
 	                        'code',
-	                        null,
-	                        _react2.default.createElement(
-	                            'strong',
-	                            null,
-	                            'V (60%)'
-	                        )
+	                        { className: 'bold' },
+	                        'V (60%)'
 	                    )
 	                ), _react2.default.createElement(
 	                    'li',
-	                    null,
+	                    { key: 'getItems-222' },
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -63789,7 +64550,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    )
 	                ), _react2.default.createElement(
 	                    'li',
-	                    null,
+	                    { key: 'getItems-223' },
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -63797,7 +64558,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    )
 	                ), _react2.default.createElement(
 	                    'li',
-	                    null,
+	                    { key: 'getItems-224' },
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -63807,7 +64568,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            } else if (rowNum == 2 && colNum == 3) {
 	                return [_react2.default.createElement(
 	                    'li',
-	                    null,
+	                    { key: 'getItems-230' },
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -63815,19 +64576,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    )
 	                ), _react2.default.createElement(
 	                    'li',
-	                    null,
+	                    { key: 'getItems-231' },
 	                    _react2.default.createElement(
 	                        'code',
-	                        null,
-	                        _react2.default.createElement(
-	                            'strong',
-	                            null,
-	                            'VP (4.2%)'
-	                        )
+	                        { className: 'bold' },
+	                        'VP (4.2%)'
 	                    )
 	                ), _react2.default.createElement(
 	                    'li',
-	                    null,
+	                    { key: 'getItems-232' },
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -63837,7 +64594,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            } else if (rowNum == 3 && colNum == 3) {
 	                return [_react2.default.createElement(
 	                    'li',
-	                    null,
+	                    { key: 'getItems-330' },
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -63845,7 +64602,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    )
 	                ), _react2.default.createElement(
 	                    'li',
-	                    null,
+	                    { key: 'getItems-331' },
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -63853,19 +64610,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    )
 	                ), _react2.default.createElement(
 	                    'li',
-	                    null,
+	                    { key: 'getItems-332' },
 	                    _react2.default.createElement(
 	                        'code',
-	                        null,
-	                        _react2.default.createElement(
-	                            'strong',
-	                            null,
-	                            'NP (14%)'
-	                        )
+	                        { className: 'bold' },
+	                        'NP (14%)'
 	                    )
 	                ), _react2.default.createElement(
 	                    'li',
-	                    null,
+	                    { key: 'getItems-333' },
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -63873,7 +64626,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    )
 	                ), _react2.default.createElement(
 	                    'li',
-	                    null,
+	                    { key: 'getItems-334' },
 	                    _react2.default.createElement(
 	                        'code',
 	                        null,
@@ -63891,7 +64644,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = CYK;
 
 /***/ },
-/* 345 */
+/* 348 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -63943,7 +64696,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = InlineBlockSpan;
 
 /***/ },
-/* 346 */
+/* 349 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -63953,11 +64706,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	var disseminationSections = {
 	    futureWork: {
-	        page: 27,
+	        page: 28,
 	        id: 'future-work',
 	        title: 'Future Work'
 	    }, dissemination: {
-	        page: 27,
+	        page: 28,
 	        id: 'dissemination',
 	        title: 'Dissemination'
 	    }
@@ -63967,7 +64720,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = disseminationSections;
 
 /***/ },
-/* 347 */
+/* 350 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -63994,15 +64747,19 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Importing2 = _interopRequireDefault(_Importing);
 
-	var _Chapter = __webpack_require__(348);
+	var _Chapter = __webpack_require__(351);
 
 	var _Chapter2 = _interopRequireDefault(_Chapter);
 
-	var _IntroMotivation = __webpack_require__(321);
+	var _IntroMotivation = __webpack_require__(322);
 
 	var _IntroMotivation2 = _interopRequireDefault(_IntroMotivation);
 
-	var _ProblemDescription = __webpack_require__(320);
+	var _chapters = __webpack_require__(215);
+
+	var _chapters2 = _interopRequireDefault(_chapters);
+
+	var _ProblemDescription = __webpack_require__(321);
 
 	var _ProblemDescription2 = _interopRequireDefault(_ProblemDescription);
 
@@ -64038,7 +64795,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        //     In this chapter, we introduce the problem
 	        //     of automatically assigning a section hierarchy
 	        //     to documents in the Dutch case law repository
-	        //     of <a href="http://www.rechtspraak.nl/">Rechtspraak.nl</a> and why this is
+	        //     of <a hrefLang="en" href="http://www.rechtspraak.nl/">Rechtspraak.nl</a> and why this is
 	        //     useful.
 	        // </p>
 	        value: function render() {
@@ -64046,7 +64803,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	            return _react2.default.createElement(
 	                _Chapter2.default,
-	                (_React$createElement = { chapter: true, inline: !!this.props.inline, path: this.props.path,
+	                (_React$createElement = { chapter: true,
+	                    chapterObject: _chapters2.default.introduction,
+	                    inline: !!this.props.inline,
+	                    path: this.props.path,
 	                    id: this.props.id
 	                }, _defineProperty(_React$createElement, 'inline', !!this.props.inline), _defineProperty(_React$createElement, 'title', IntroductionIntroduction.title()), _defineProperty(_React$createElement, 'sections', _sections2.default.inOrder), _React$createElement),
 	                _react2.default.createElement(_IntroMotivation2.default, this.props),
@@ -64074,7 +64834,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = IntroductionIntroduction;
 
 /***/ },
-/* 348 */
+/* 351 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -64093,11 +64853,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _getSectionComponent = __webpack_require__(221);
 
-	var _chapters = __webpack_require__(220);
+	var _chapters = __webpack_require__(215);
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
-	var _ToC = __webpack_require__(219);
+	var _ToC = __webpack_require__(220);
 
 	var _ToC2 = _interopRequireDefault(_ToC);
 
@@ -64134,7 +64894,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            var standaloneChapter = !this.props.inline;
 	            var main = _react2.default.createElement(
 	                'section',
-	                { id: this.props.id ? this.props.id : '',
+	                { id: this.props.id ? this.props.id : this.props.chapterObject.id,
 	                    itemProp: 'hasPart',
 	                    itemScope: true,
 	                    itemType: 'https://schema.org/Chapter',
@@ -64145,8 +64905,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement('a', { className: 'link-up', href: '#' }),
 	                    this.props.title
 	                ),
-	                this.props.children,
-	                subsections
+	                _react2.default.createElement(
+	                    'div',
+	                    null,
+	                    this.props.children,
+	                    subsections
+	                )
 	            );
 	            return _react2.default.createElement(
 	                'div',
@@ -64184,7 +64948,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            'Next chapter: ',
 	                            _react2.default.createElement(
 	                                'a',
-	                                { href: _chapters2.default.pathTo(this.props.path, chapter) },
+	                                { hrefLang: 'en', href: _chapters2.default.pathTo(this.props.path, chapter) },
 	                                chapter.title
 	                            )
 	                        );
@@ -64217,7 +64981,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                { className: 'link-to- home' },
 	                _react2.default.createElement(
 	                    'a',
-	                    { href: relativeToRoot },
+	                    { hrefLang: 'en', href: relativeToRoot },
 	                    'Back to home'
 	                )
 	            );
@@ -64231,13 +64995,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	Chapter.propTypes = {
 	    title: _react2.default.PropTypes.string.isRequired,
-	    sections: _react2.default.PropTypes.arrayOf(_react2.default.PropTypes.shape({})).isRequired
+	    sections: _react2.default.PropTypes.array.isRequired
 	};
 
 	module.exports = Chapter;
 
 /***/ },
-/* 349 */
+/* 352 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -64254,29 +65018,29 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _chapters = __webpack_require__(220);
+	var _chapters = __webpack_require__(215);
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
 	var _Routes = __webpack_require__(204);
 
-	var _Introduction = __webpack_require__(347);
+	var _Introduction = __webpack_require__(350);
 
 	var _Introduction2 = _interopRequireDefault(_Introduction);
 
-	var _Tagging = __webpack_require__(350);
+	var _Tagging = __webpack_require__(353);
 
 	var _Tagging2 = _interopRequireDefault(_Tagging);
 
-	var _InferringDocumentStructure = __webpack_require__(351);
+	var _InferringDocumentStructure = __webpack_require__(354);
 
 	var _InferringDocumentStructure2 = _interopRequireDefault(_InferringDocumentStructure);
 
-	var _ToC = __webpack_require__(219);
+	var _ToC = __webpack_require__(220);
 
 	var _ToC2 = _interopRequireDefault(_ToC);
 
-	var _AbstractContent = __webpack_require__(218);
+	var _AbstractContent = __webpack_require__(219);
 
 	var _AbstractContent2 = _interopRequireDefault(_AbstractContent);
 
@@ -64307,96 +65071,204 @@ return /******/ (function(modules) { // webpackBootstrap
 	        //    The source code referred to in this thesis can be found in two repositories on GitHub:
 	        //</p>
 	        //<ul>
-	        //    <li><a href="https://github.com/digitalheir/java-rechtspraak-library"
+	        //    <li><a hrefLang="en" href="https://github.com/digitalheir/java-rechtspraak-library"
 	        //    >https://github.com/digitalheir/java-rechtspraak-library</a>
 	        //    </li>
-	        //    <li><a href="https://github.com/digitalheir/dutch-case-law-to-couchdb"
+	        //    <li><a hrefLang="en" href="https://github.com/digitalheir/dutch-case-law-to-couchdb"
 	        //    >https://github.com/digitalheir/dutch-case-law-to-couchdb</a>
 	        //    </li>
 	        //</ul>
 	        value: function render() {
 	            var _this2 = this;
 
+	            // itemProp="alumniOf"
 	            return _react2.default.createElement(
 	                'div',
 	                { className: 'full-thesis reset-counter numbered-section' },
 	                _react2.default.createElement(
 	                    'section',
-	                    { style: {}, id: 'title-page' },
+	                    { id: 'title-page' },
 	                    _react2.default.createElement(
 	                        'div',
-	                        { style: {}, id: 'title-page-university-name' },
-	                        'Utrecht University'
+	                        { itemScope: true,
+	                            itemRef: 'uu',
+	                            itemType: 'https://schema.org/CollegeOrUniversity' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { itemProp: 'name',
+	                                id: 'title-page-university-name' },
+	                            _react2.default.createElement(
+	                                'span',
+	                                { itemProp: 'name' },
+	                                'Utrecht University'
+	                            ),
+	                            _react2.default.createElement(
+	                                'div',
+	                                { itemProp: 'address', itemScope: true, itemType: 'https://schema.org/PostalAddress' },
+	                                _react2.default.createElement('meta', { itemProp: 'addressCountry', content: 'the Netherlands' }),
+	                                _react2.default.createElement('meta', { itemProp: 'addressLocality', content: 'Utrecht' }),
+	                                _react2.default.createElement('meta', { itemProp: 'postalCode', content: '3584 CS' }),
+	                                _react2.default.createElement('meta', { itemProp: 'addressLocality', content: 'De Uithof' }),
+	                                _react2.default.createElement('meta', { itemProp: 'streetAddress', content: 'Heidelberglaan 8' })
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { itemScope: true,
+	                                itemProp: 'department',
+	                                itemType: 'https://schema.org/EducationalOrganization',
+	                                id: 'title-page-faculty-name' },
+	                            _react2.default.createElement(
+	                                'span',
+	                                { itemProp: 'name' },
+	                                'Faculty of Humanities'
+	                            ),
+	                            _react2.default.createElement('link', { itemProp: 'alumni', rel: '#title-page-author' })
+	                        )
 	                    ),
 	                    _react2.default.createElement(
 	                        'div',
-	                        { style: {}, id: 'title-page-faculty-name' },
-	                        'Faculty of Humanities'
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { style: {}, id: 'title-page-msc-thesis' },
-	                        'Master of Science Thesis'
+	                        { id: 'title-page-msc-thesis' },
+	                        _react2.default.createElement(
+	                            'span',
+	                            { itemProp: 'inSupportOf' },
+	                            'Master of Science'
+	                        ),
+	                        ' Thesis'
 	                    ),
 	                    _react2.default.createElement(
 	                        'h1',
-	                        { style: {} },
+	                        null,
 	                        title
 	                    ),
 	                    _react2.default.createElement(
 	                        'div',
-	                        { style: {}, id: 'title-page-author' },
+	                        { itemScope: true,
+	                            itemProp: 'author',
+	                            itemType: 'https://schema.org/Person',
+	                            id: 'title-page-author' },
 	                        _react2.default.createElement(
 	                            'div',
-	                            { style: {}, id: 'title-page-author-author' },
+	                            { id: 'title-page-author-author' },
 	                            'by'
 	                        ),
 	                        _react2.default.createElement(
 	                            'div',
-	                            { style: {}, id: 'title-page-author-name' },
-	                            'Maarten Trompper'
+	                            {
+
+	                                id: 'title-page-author-name' },
+	                            _react2.default.createElement(
+	                                'span',
+	                                { itemProp: 'name' },
+	                                _react2.default.createElement(
+	                                    'span',
+	                                    { itemProp: 'givenName' },
+	                                    'Maarten'
+	                                ),
+	                                ' ',
+	                                _react2.default.createElement(
+	                                    'span',
+	                                    { itemProp: 'familyName' },
+	                                    'Trompper'
+	                                )
+	                            )
 	                        )
 	                    ),
 	                    _react2.default.createElement(
 	                        'div',
-	                        { style: {}, className: 'title-page-supervisor' },
+	                        { itemScope: true,
+	                            itemProp: 'contributor',
+	                            itemType: 'https://schema.org/Person',
+	                            className: 'title-page-supervisor' },
 	                        _react2.default.createElement(
 	                            'div',
-	                            { style: {}, id: 'title-page-supervisor-supervisor' },
-	                            'Supervisor Utrecht University:'
+	                            { id: 'title-page-supervisor-supervisor' },
+	                            'Supervisor ',
+	                            _react2.default.createElement(
+	                                'span',
+	                                { itemScope: true,
+	                                    itemType: 'https://schema.org/EducationalOrganization',
+	                                    itemRef: 'uu',
+	                                    itemProp: 'worksFor affiliation' },
+	                                _react2.default.createElement(
+	                                    'span',
+	                                    { itemProp: 'name' },
+	                                    'Utrecht University'
+	                                )
+	                            ),
+	                            ':'
 	                        ),
 	                        _react2.default.createElement(
 	                            'div',
-	                            { style: {}, className: 'name' },
-	                            'Ad Feelders'
+	                            { itemProp: 'name', className: 'name' },
+	                            _react2.default.createElement(
+	                                'span',
+	                                { itemProp: 'givenName' },
+	                                'Ad'
+	                            ),
+	                            ' ',
+	                            _react2.default.createElement(
+	                                'span',
+	                                { itemProp: 'familyName' },
+	                                'Feelders'
+	                            )
 	                        )
 	                    ),
 	                    _react2.default.createElement(
 	                        'div',
-	                        { style: {}, className: 'title-page-supervisor external' },
+	                        { itemScope: true,
+	                            itemProp: 'contributor',
+	                            itemType: 'https://schema.org/Person',
+	                            className: 'title-page-supervisor external' },
 	                        _react2.default.createElement(
 	                            'div',
-	                            { style: {}, id: 'title-page-supervisor-ext-supervisor' },
-	                            'Supervisor Leibniz Center for Law:'
+	                            { id: 'title-page-supervisor-ext-supervisor' },
+	                            'Supervisor ',
+	                            _react2.default.createElement(
+	                                'span',
+	                                { itemScope: true,
+	                                    itemType: 'https://schema.org/EducationalOrganization',
+	                                    itemProp: 'affiliation' },
+	                                _react2.default.createElement(
+	                                    'span',
+	                                    { itemProp: 'name' },
+	                                    'Leibniz Center for Law'
+	                                )
+	                            ),
+	                            ':'
 	                        ),
 	                        _react2.default.createElement(
 	                            'div',
-	                            { style: {}, className: 'name' },
-	                            'Radboud Winkels'
+	                            { itemProp: 'name', className: 'name' },
+	                            _react2.default.createElement(
+	                                'span',
+	                                { itemProp: 'givenName' },
+	                                'Radboud'
+	                            ),
+	                            ' ',
+	                            _react2.default.createElement(
+	                                'span',
+	                                { itemProp: 'familyName' },
+	                                'Winkels'
+	                            )
 	                        )
 	                    ),
 	                    _react2.default.createElement(
 	                        'div',
-	                        { style: {}, id: 'title-page-time-and-date' },
+	                        { id: 'title-page-time-and-date' },
 	                        _react2.default.createElement(
 	                            'span',
-	                            { style: {}, id: 'title-page-time' },
-	                            'Utrecht'
+	                            { id: 'title-page-time' },
+	                            _react2.default.createElement(
+	                                'span',
+	                                { itemScope: true, itemProp: '' },
+	                                'Utrecht'
+	                            )
 	                        ),
 	                        ', ',
 	                        _react2.default.createElement(
 	                            'span',
-	                            { style: {}, id: 'title-page-date' },
+	                            { itemProp: 'dateCreated datePublished', id: 'title-page-date' },
 	                            '2016'
 	                        )
 	                    )
@@ -64410,7 +65282,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        'Abstract'
 	                    ),
 	                    _react2.default.createElement(_AbstractContent2.default, null),
-	                    _react2.default.createElement('hr', { style: { marginTop: '60em' } }),
+	                    _react2.default.createElement('hr', { style: { marginTop: '58em' } }),
 	                    _react2.default.createElement(
 	                        'p',
 	                        null,
@@ -64437,7 +65309,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                ),
 	                _chapters2.default.inOrder.map(function (chapter) {
 	                    var ChapterContent = (0, _Routes.getHandler)(chapter.route);
-	                    return _react2.default.createElement(ChapterContent, _extends({ id: chapter.id, inline: true }, _this2.props));
+	                    return _react2.default.createElement(ChapterContent, _extends({ key: chapter.route, id: chapter.id, inline: true }, _this2.props));
 	                })
 	            );
 	        }
@@ -64449,7 +65321,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = FullThesis;
 
 /***/ },
-/* 350 */
+/* 353 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -64464,31 +65336,31 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Chapter = __webpack_require__(348);
+	var _Chapter = __webpack_require__(351);
 
 	var _Chapter2 = _interopRequireDefault(_Chapter);
 
-	var _Methods = __webpack_require__(331);
+	var _Methods = __webpack_require__(334);
 
 	var _Methods2 = _interopRequireDefault(_Methods);
 
-	var _Results = __webpack_require__(328);
+	var _Results = __webpack_require__(331);
 
 	var _Results2 = _interopRequireDefault(_Results);
 
-	var _DeterministicTagger = __webpack_require__(334);
+	var _DeterministicTagger = __webpack_require__(337);
 
 	var _DeterministicTagger2 = _interopRequireDefault(_DeterministicTagger);
 
-	var _CRF = __webpack_require__(335);
+	var _CRF = __webpack_require__(338);
 
 	var _CRF2 = _interopRequireDefault(_CRF);
 
-	var _FeatureSelection = __webpack_require__(336);
+	var _FeatureSelection = __webpack_require__(339);
 
 	var _FeatureSelection2 = _interopRequireDefault(_FeatureSelection);
 
-	var _chapters = __webpack_require__(220);
+	var _chapters = __webpack_require__(215);
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
@@ -64523,6 +65395,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                return "../";
 	            }).join("");
 	            return _react2.default.createElement(_Chapter2.default, { id: this.props.id,
+	                chapterObject: _chapters2.default.tagging,
 	                chapter: true,
 	                inline: !!this.props.inline,
 	                path: this.props.path,
@@ -64555,7 +65428,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Tagging;
 
 /***/ },
-/* 351 */
+/* 354 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -64570,15 +65443,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Chapter = __webpack_require__(348);
+	var _Chapter = __webpack_require__(351);
 
 	var _Chapter2 = _interopRequireDefault(_Chapter);
 
-	var _chapters = __webpack_require__(220);
+	var _chapters = __webpack_require__(215);
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
-	var _sections = __webpack_require__(317);
+	var _sections = __webpack_require__(318);
 
 	var _sections2 = _interopRequireDefault(_sections);
 
@@ -64605,6 +65478,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        value: function render() {
 	            return _react2.default.createElement(_Chapter2.default, { id: this.props.id,
 	                chapter: true,
+	                chapterObject: _chapters2.default.documentStructure,
 	                path: this.props.path,
 	                inline: !!this.props.inline,
 	                title: Inferring.title(),
@@ -64631,7 +65505,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Inferring;
 
 /***/ },
-/* 352 */
+/* 355 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -64646,15 +65520,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Chapter = __webpack_require__(348);
+	var _Chapter = __webpack_require__(351);
 
 	var _Chapter2 = _interopRequireDefault(_Chapter);
 
-	var _chapters = __webpack_require__(220);
+	var _chapters = __webpack_require__(215);
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
-	var _sections = __webpack_require__(346);
+	var _sections = __webpack_require__(349);
 
 	var _sections2 = _interopRequireDefault(_sections);
 
@@ -64684,15 +65558,72 @@ return /******/ (function(modules) { // webpackBootstrap
 	                { id: this.props.id,
 	                    inline: !!this.props.inline,
 	                    path: this.props.path,
+	                    chapter: true,
+	                    chapterObject: _chapters2.default.conclusion,
 	                    title: Conclusion.title(),
 	                    sections: _sections2.default.inOrder },
-	                'We have successfully demonstrated a method for assigning a section hierarchy to Dutch case law documents, reporting F',
 	                _react2.default.createElement(
-	                    'sub',
+	                    'p',
 	                    null,
-	                    '1'
+	                    'We have successfully demonstrated a method to assign a section hierarchy to documents of Dutch court judgments.'
 	                ),
-	                ' scores of 0.95 and 0.91 for tagging and parsing, respectively. Although these scores are good, they can likely be improved.'
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'We have described a procedure to assign types to document elements of either ',
+	                    _react2.default.createElement(
+	                        'code',
+	                        null,
+	                        'title'
+	                    ),
+	                    ', ',
+	                    _react2.default.createElement(
+	                        'code',
+	                        null,
+	                        'nr'
+	                    ),
+	                    ', ',
+	                    _react2.default.createElement(
+	                        'code',
+	                        null,
+	                        'newline'
+	                    ),
+	                    ' or ',
+	                    _react2.default.createElement(
+	                        'code',
+	                        null,
+	                        'text block'
+	                    ),
+	                    ' using Conditional Random Fields, reporting an F',
+	                    _react2.default.createElement(
+	                        'sub',
+	                        null,
+	                        '1'
+	                    ),
+	                    ' score of 0.91 and F',
+	                    _react2.default.createElement(
+	                        'sub',
+	                        null,
+	                        '0.5'
+	                    ),
+	                    ' score of 0.91.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'We have also reviewed a procedure to organize those elements into a section hierarchy using Probabilistic Context-Free Grammars, reporting an F',
+	                    _react2.default.createElement(
+	                        'sub',
+	                        null,
+	                        '1'
+	                    ),
+	                    ' score of 0.92.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Whether these results are good enough to be used in practice depends on one\'s tolerance to inaccuracies. As discussed, we rather miss opportunities to enrich data rather than to produce false information, so a low recall is preferable to low precision. The scores obtained for the classifier and parser are promising, but the procedures are not optimized extensively to the corpus, and may be improved to perform within a 5% error margin. In any case, mislabelings do not distort the text in such a way to render it illegible, so we can be somewhat forgiving of errors.'
+	                )
 	            );
 	        }
 	    }], [{
@@ -64716,7 +65647,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Conclusion;
 
 /***/ },
-/* 353 */
+/* 356 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -64731,11 +65662,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Chapter = __webpack_require__(348);
+	var _Chapter = __webpack_require__(351);
 
 	var _Chapter2 = _interopRequireDefault(_Chapter);
 
-	var _chapters = __webpack_require__(220);
+	var _chapters = __webpack_require__(215);
 
 	var _chapters2 = _interopRequireDefault(_chapters);
 
@@ -64764,17 +65695,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	    _createClass(ImportingAndTokenizing, [{
 	        key: 'render',
 	        value: function render() {
+	            var chapterObject = _chapters2.default.importing;
 	            return _react2.default.createElement(
 	                _Chapter2.default,
 	                { path: this.props.path,
-	                    title: ImportingAndTokenizing.title(),
+	                    title: chapterObject.title,
+	                    chapter: true,
+	                    chapterObject: chapterObject,
 	                    inline: !!this.props.inline,
 	                    id: this.props.id,
 	                    sections: _sections2.default.inOrder },
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'In this chapter, we provide an introduction to the Rechtspraak.nl data set that we experiment on. We then make a number of remarks on the necessary steps of importing and tokenization that we perform on documents in the corpus. Importing and tokenization are necessary pre-processing steps which result in a collection of token sequences. These token sequences then serve as input for the labeling task, and eventually the tokens are assigned as leaf nodes in a section tree.'
+	                    'In this chapter, we provide an introduction to the Rechtspraak.nl data set that we use in our experiments. We then make a number of remarks on the necessary steps of importing and tokenization that we perform on documents in the corpus. Importing and tokenization are necessary pre-processing steps which result in a collection of token sequences, where each token corresponds to an XML node in a document. These token sequences then serve as input for the labeling process. Eventually, after the tokens are assigned a type, they serve as leaf nodes for the section hierarchy by analyzing their order according to some formal grammar.'
 	                )
 	            );
 	        }
