@@ -106,7 +106,7 @@ export default class FullThesis extends Component {
                 <h2>Abstract</h2>
                 <AbstractContent/>
 
-                <hr style={{marginTop: '60em'}}/>
+                <hr style={{marginTop: '58em'}}/>
                 <p>
                     This is a print version
                     of a web site.
