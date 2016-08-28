@@ -6,17 +6,26 @@ import figs from './../../../../Figures/figs'
 import ref from '../../../../Bibliography/References/references'
 import bib from  '../../../../Bibliography/bib';
 import F from  '../../../../Math/Math';
+import chapters from  '../../../../../../chapters';
 import abbrs from  '../../../../abbreviations';
+import sectionz from '../sections';
 
 export default class CRF extends Component {
     render() {
+        const relativeToRoot = this.props.path.match(/\//g).slice(1).map(_ => "../").join("");
+        const toThisChapter = relativeToRoot + chapters.tagging.route;
+                
         return <div>
             <p>
                 Directed Graphical Models (or Bayesian Networks)
                 are statistical models that model some probability distribution
                 over variables <F {...this.props} l="v"/> in a set <F {...this.props} l="V"/> which take values from a set <F {...this.props} l="\mathcal{V}"/>.
-                Loosely speaking, Directed Graphical Models can be represented as a directed graph where
-                nodes represent the variables <F {...this.props} l="v \in V"/>, and the edges represent dependencies.
+                Loosely speaking, Directed Graphical Models can be represented as a directed graph <F l="G"/> where
+                nodes represent the 
+                variables <span 
+                className="avoid-line-break"><F 
+                {...this.props} l="v \in V"/>,</span> and 
+                the edges represent dependencies.
                 Directed graphical models
                 factorize as follows:
                 <F {...this.props} l="p(V)=\prod _{v\in V}p(v|\pi(v))" display="true"/>
@@ -26,8 +35,8 @@ export default class CRF extends Component {
                 The class of Hidden Markov Models ({abbrs.hmms}) is one instance of directed models.
                 HMMs have a linear sequences of
                 observations <F {...this.props} l="\mathbf x=\{x_t\}_{t=1}^T"/> and a linear sequence of
-                labels (in HMM parlance, 'hidden
-                states') <F {...this.props} l="\mathbf y=\{y_t\}_{t=1}^T"/>, which are assignments
+                labels <F {...this.props} l="\mathbf y=\{y_t\}_{t=1}^T"/> (in {abbrs.hmm} parlance, 'hidden
+                states'), which are assignments
                 of random vectors <F {...this.props} l="X"/> and <F {...this.props} l="Y"/> respectively, 
                 and <F {...this.props} l="V = X\cup Y"/>.
                 In HMMs, the observations <F {...this.props} l="\mathbf x=\{x_t\}_{t=1}^T"/> are assumed
@@ -78,6 +87,13 @@ export default class CRF extends Component {
                 algorithm</a> on a set of pre-tagged
                 observation-label sequences ({ref.cite(bib.lucke1996stochastic)}). This is called training
                 the model.
+            </p>
+            
+            <p>
+            The procedures for inference and parameter 
+            estimation for {abbrs.hmms} are very 
+            similar to those for {abbrs.lccrfs} and are explain in more
+            depth <a href={toThisChapter+"#"+sectionz.linearChain}>in the section on {abbrs.lccrfs}</a>.
             </p>
         </div>;
     }

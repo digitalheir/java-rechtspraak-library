@@ -24,6 +24,7 @@ export default class CRF extends Component {
 
     render() {
         const relativeToRoot = this.props.path.match(/\//g).slice(1).map(_ => "../").join("");
+        
         return <div>
             <p>Conditional Random Fields ({abbrs.crfs}) are a class of statistical modelling methods that were first
                 introduced
@@ -61,14 +62,13 @@ export default class CRF extends Component {
             <p>
                 As illustrated in <FigRef fig={figs.graphicalModels}/>, {abbrs.crfs} can
                 be understood as a graphical version of logistic regression, in which we have an arbitrary
-                number of labels <F {...this.props} l="\mathbf y"/> that are conditioned on a number observations <F
-                l="\mathbf x"/> (instead of just one label).
+                number of labels <F {...this.props} l="\mathbf y"/> that are conditioned on a number of observations <F
+                l="\mathbf x"/> (instead of just one label conditioned on a number of observations as in logisitic regression).
             </p>
 
             <p>
-                In this thesis, we limit ourselves to a subclass of {abbrs.crfs} called Linear-Chain Conditional Random
-                Fields
-                ({abbrs.lccrfs} or linear-chain {abbrs.crfs}),
+                In this thesis, we limit ourselves to a subclass of {abbrs.crfs} called linear-chain Conditional Random
+                Fields ({abbrs.lccrfs} or linear-chain {abbrs.crfs}),
                 which is topologically very similar to {abbrs.hmms}: both model a probability distribution along a
                 chain of labels, where each label is also connected to a single observation.
             </p>
@@ -86,7 +86,7 @@ export default class CRF extends Component {
             </p>
             <p>
                 This abundance of features likely explains
-                that {abbrs.crfs} tend to have state-of-the-art performance on {abbrs.nlp} tasks such as
+                that {abbrs.crfs} have state-of-the-art performance on {abbrs.nlp} tasks such as
                 part-of-speech tagging, since this kind of performance
                 appears to depend on extensive feature
                 engineering. As a downside, it is more likely that a model overfits

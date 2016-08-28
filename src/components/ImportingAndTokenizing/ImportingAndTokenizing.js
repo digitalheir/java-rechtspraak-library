@@ -33,9 +33,12 @@ export default class ImportingAndTokenizing extends Component {
                 remarks on the necessary steps of importing and
                 tokenization that we perform on documents in the corpus.
                 Importing and tokenization are necessary pre-processing steps which
-                result in a collection of token sequences. These token sequences then serve as input
-                for the labeling task,
-                and eventually the tokens are assigned as leaf nodes in a section tree.
+                result in a collection of token sequences, where each token corresponds 
+                to an XML node in a document. 
+                These token sequences then serve as input
+                for the labeling process. Eventually, after the tokens
+                are assigned a type, they serve as leaf nodes for the section
+                hierarchy by analyzing their order according to some formal grammar.
             </p>
         </Chapter>
     }

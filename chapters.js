@@ -7,8 +7,9 @@ const chapters = {
     },
     importing: {
         page: '6',
-        id: "chapter-importing-and-tokenizing",
         title: "Importing & Tokenizing Data",
+        ttitle: "Importing & Tokenizing Data From Rechtspraak.nl",
+        id: "chapter-importing-and-tokenizing",
         route: '/importing-and-tokenizing/'
     },
     rechtspraakNl: {
@@ -21,12 +22,14 @@ const chapters = {
         page: 12,
         id: "tagging",
         title: "Tagging Elements",
+        ttitle: "Tagging Elements with Conditional Random Fields",
         route: '/tagging/'
     },
     documentStructure: {
         page: 23,
         id: "parsing",
         title: "Inferring a Section Hierarchy",
+        ttitle: "Inferring a Section Hierarchy with Probabilistic Context-Free Grammars",
         route: '/document-structure/'
     },
     conclusion: {

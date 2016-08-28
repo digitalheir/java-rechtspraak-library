@@ -43,13 +43,15 @@ export default class FScorez extends Component {
                 as recall, and so <F {...this.props} l="F_1"/> describes the harmonic mean of precision and
                 recall (<F {...this.props} l="F_1 = 2\cdot\frac{\text{precision}\cdot\text{recall}}{\text{precision}+\text{recall}}"/>).
                 For <F {...this.props} l="\beta = 0.5"/>, precision is twice as important as recall.
-                We argue that in our application,
+                We argue that in the case of section titles,
                 precision <em>is</em> more important than recall.
                 The reasoning is that in case of a
-                false negative, we do not lose any information, which is acceptable. However,
-                in the case of a false positive we create
+                false negative, we do not lose any information because the title is likely
+                seen as a text node (it is very improbable that it is falsely flagged as a newline or numbering). 
+                However, in the case of a false positive for section titles we create
                 false information, which is very undesirable.
-                Precisely how much more important we deem precision to recall is rather arbitrary.
+                Precisely how much more important we deem precision to recall is
+                rather arbitrary.
             </p>
         </div>;
     }

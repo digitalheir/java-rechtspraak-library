@@ -17,7 +17,13 @@ let DefaultRoute = Router.DefaultRoute;
 let Routes = <Route handler={Root} path='/'>
     <DefaultRoute handler={Index}/>
     {
-        chapters.inOrder.map((chapter,i) => <Route path={chapter.route} chapterObject={chapter} handler={getHandler(chapter.route)}/>)
+        chapters.inOrder.map(
+            (chapter,i) => 
+            <Route 
+                path={chapter.route} 
+                chapterObject={chapter} 
+                handler={getHandler(chapter.route)}/>
+        )
     }
     <Route path={'/full/'} handler={FullThesis}/>
     )}

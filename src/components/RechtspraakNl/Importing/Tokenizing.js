@@ -37,7 +37,7 @@ export default class Importing extends Component {
                 in <code>para</code> tags, which roughly demarcate
                 titles and text blocks,
                 but numberings often appear within these text nodes
-                unannotated. So in our parsing algorithm, we
+                unannotated. So in our tokenization algorithm, we
                 assume that numberings occur as the beginning of a text block and
                 represent Arabic or Roman
                 numerals or an alphabetic numbering. In this manner, we tokenize potential numberings.

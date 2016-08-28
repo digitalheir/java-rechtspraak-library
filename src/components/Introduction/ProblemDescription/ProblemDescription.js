@@ -54,18 +54,20 @@ export default class ProblemDescription extends Component {
             </p>
 
             <p>
-                Task 3, labeling the text elements with their roles in the text,
-                is achieved by training a Conditional Random Field model on
+                Task 3 describes labeling the text elements with their roles in the text,
+                which we translate into the relevant markup tags.
+                This is achieved by training a Conditional Random Field on
                 a set of manually labeled documents. The trained model
                 is then able to correctly label most elements:
-                we report an F<sub>1</sub> score of 0.91
-                in our experiment.
+                for all labels we report F<sub>1</sub> scores of around
+                1.0, except for section titles: for these we 
+                report 0.91.
             </p>
 
             <p>
                 Task 4, organizing the tagged elements into a section hierarchy,
                 is approached as a probabilistic parsing problem. We create a
-                Context-Free Grammar which accepts text elements as tokens
+                Context-Free Grammar which accepts a list of text elements as tokens
                 and creates a parse tree which represents the section hierarchy.
                 This approach returns a desirable section hierarchy in most cases:
                 in our experiment we report an F<sub>1</sub> score of 0.92.

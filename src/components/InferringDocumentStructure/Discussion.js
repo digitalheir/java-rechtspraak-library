@@ -49,11 +49,12 @@ export default class Discussion extends Component {
                 algorithm. The Earley algorithm is a more top-down parser which easily allows to intervene during
                 parsing when some unexpected input is encountered. The Earley parser 
                 has a worst-case complexity of <F {...this.props} l="O(n^3)"/>, but parses
-                left-recursive grammars in <F {...this.props} l="O(n)"/>, and so is faster for certain grammars
-                than {abbrs.cyk}.
+                unambiguous grammars in <F {...this.props} l="O(n^2)"/> and 
+                left-recursive grammars in <F {...this.props} l="O(n)"/>, 
+                and so can be faster than {abbrs.cyk}.
                 In our experiments, {abbrs.cyk} starts
-                to become noticeably slow for documents with more than 500 tokens, 
-                even after optimizing the algorithm for resource re-use
+                to become noticeably slow for documents with more than 500 
+                tokens, even after optimizing the algorithm for resource re-use
                 and parallellizing calculation of the table cells.
             </p>
         </div>;

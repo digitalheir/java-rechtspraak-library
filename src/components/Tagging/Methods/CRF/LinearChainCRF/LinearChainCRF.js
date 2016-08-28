@@ -31,7 +31,7 @@ export default class LinearChainCRF extends Component {
 
             <p>
                 We define a linear-chain
-                conditional random field as follows:
+                Conditional Random Field as follows:
             </p>
 
             <p>
@@ -93,7 +93,7 @@ export default class LinearChainCRF extends Component {
 
             <p>
                 Recall from <a
-                href={"#graphical-models"}>our introduction on graphical models</a> that we
+                href={"#undirected-graphical-models"}>our introduction on undirected graphical models</a> that we
                 need a normalizing constant to ensure that our probability distribution adds up to <F {...this.props}
                 l="1"/>.
                 We are interested in representing <F

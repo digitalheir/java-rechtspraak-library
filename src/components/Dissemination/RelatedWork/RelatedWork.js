@@ -41,7 +41,7 @@ export default class RelatedWork extends Component {
                 issues. The system uses much fewer features than ours,
                 which may be explained by the fact
                 that legislative
-                texts tend to have a more strict structure than case law, even
+                texts tend to have a more strict structure than judgment texts, even
                 though it also tends to be more deeply nested.
             </p>
         </div>

@@ -41,7 +41,7 @@ const figs = {
     },
     graphicalModels: function () {
         const id = "fig-models-relationships";
-        const src = "/img/graphical-models.svg"; // TODO relativeurl
+        const src = "/img/graphical-models.svg"; 
         const alt = "Diagram of the relationship between naive Bayes, logistic regression, HMMs, linear-chain CRFs, " +
             "generative models, and general CRFs";
         const num = 6;

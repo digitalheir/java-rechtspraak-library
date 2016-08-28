@@ -12,7 +12,7 @@ export default class ParameterEstimation extends Component {
     static id() {
         return "regularization";
     }
-
+     
     render() {
         const relativeToRoot = this.props.path.match(/\//g).slice(1).map(_ => "../").join("");
         return <div>
@@ -25,8 +25,8 @@ export default class ParameterEstimation extends Component {
             </p>
 
             <p>
-                L2 regularization is an often used regularization method,
-                which is put in contrast with the closely related L1 regularization.
+                L2 regularization is put in contrast with the closely related 
+                L1 regularization.
                 L1 regularization is meant for dealing with truly sparse
                 inputs, and in practice rarely performs better than
                 L2 ({ref.cite(bib.van2012lost)}).
@@ -35,7 +35,10 @@ export default class ParameterEstimation extends Component {
                 <p>
                     The log likelihood function with L2 regularization
                     is the same as that of <span>Eq. 3.11</span>, but with the
-                    term <F l="-\sum_{k=1}^K\frac{\lambda_{k}^2}{2\sigma^2}"/> added:
+                    <span 
+                    className="avoid-page-break">term <F 
+                    l="-\sum_{k=1}^K\frac{\lambda_{k}^2}{2\sigma^2}"/>
+                    </span> added:
                 </p>
 
                 <F {...this.props} display="true"
@@ -45,7 +48,8 @@ export default class ParameterEstimation extends Component {
             </div>
 
             <p>
-                Where <F l="\sigma"/> is the regularization parameter, which depends on
+                Where <F l="\sigma"/> is the regularization parameter, which 
+                signifies 
                 how much we wish to simplify the model.
             </p>
             <p>

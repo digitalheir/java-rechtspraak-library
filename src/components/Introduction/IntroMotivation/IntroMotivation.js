@@ -37,7 +37,7 @@ export default class IntroMotivation extends Component {
                 which in turn makes these documents better searchable for legal users.
                 It is also a stepping
                 stone to make the documents machine readable.
-                A richly marked up document enables advanced text mining operations,
+                A richly marked up document facilitates advanced text mining operations,
                 such as automatically extracting the final judgment,
                 extracting the judge's considerations,
                 etcetera.
@@ -53,7 +53,7 @@ export default class IntroMotivation extends Component {
                 To illustrate: at the time of writing, 78.7% of all judgment texts on Rechtspraak.nl do not
                 contain any <code>section</code> tag, implying that a large number of
                 documents are barely marked up.
-                These documents are mostly made up of documents from before <span dateTime="2013">2013</span>.
+                These documents are mostly from before <span dateTime="2013">2013</span>.
                 Older case law documents still produce
                 legal knowledge, so it is desirable to have these older documents in good
                 shape as well.

@@ -1,6 +1,5 @@
 var StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 var data = require('./data');
-var basscss = require('postcss-basscss');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var precss = require('precss');
 var autoprefixer = require('autoprefixer');
@@ -37,7 +36,7 @@ module.exports = {
         new ExtractTextPlugin('style.css')
     ],
     postcss: function () {
-        return [basscss, precss, autoprefixer];
+        return [precss, autoprefixer];
     },
     context: path.join(__dirname),
     cssnext: {

@@ -27,7 +27,7 @@ export default class CYK extends Component {
                 by {ref.cite(
                 bib.kasami1965efficient)}, {
                 ref.cite(bib.younger1967recognition)} and {ref.cite(bib.cocke1969programming)}.
-                The algorithm has worst case complexity of <F
+                The algorithm has time complexity of <F
                 l="\Theta (n^3\cdot \left | G \right |)"/>
                 , where <F {...this.props} l="n"/> is the length of the input string
                 and <F {...this.props} l="\left | G \right |"/> is the size of the grammar.

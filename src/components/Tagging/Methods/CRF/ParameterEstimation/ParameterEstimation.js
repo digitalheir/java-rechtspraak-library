@@ -89,8 +89,9 @@ export default class ParameterEstimation extends Component {
                                    l="\lambda_k := \lambda_k + \alpha \frac{\partial\ell}{\partial\lambda_k}"/>
             </div>
             <p>
-                Where <F {...this.props} l="\alpha"/> is some learning rate between <F {...this.props} l="0"/> and
-                <F {...this.props} l="1"/>.
+                Where <F {...this.props} l="\alpha"/> is some learning rate 
+                between <F {...this.props} l="0"/> and <F 
+                {...this.props} l="1"/>.
             </p>
             <p>
                 Thanks to the fact that the
@@ -99,9 +100,6 @@ export default class ParameterEstimation extends Component {
                 the function <F {...this.props} l="\ell(\Lambda)"/> is also concave.
                 This ensures that any local optimum will be a global
                 optimum.
-                The regularization term
-                ensures that any global optimum is a unique optimum,
-                in addition to avoiding overfitting.
             </p>
             <p>
                 In our experiment, we use the <a
@@ -121,8 +119,8 @@ export default class ParameterEstimation extends Component {
                 labels, <F {...this.props} l="N"/> in the number of training instances,
                 and <F {...this.props} l="G"/> is the number of gradient computations.
                 The number of gradient computations can be set to
-                a fixed number, or is otherwise unknown but guaranteed to
-                converge in finite time because of the concavity of <F {...this.props} l="\ell"/>.
+                a fixed number, or is otherwise unknown. It is however guaranteed to
+                converge within finite time, because of the concavity of <F {...this.props} l="\ell"/>.
             </p>
         </div>;
 

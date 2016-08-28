@@ -32,7 +32,7 @@ class Root extends React.Component {
             <head>
                 <meta charSet="utf-8"/>
                 <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
-                <title>{this.props.title}</title>
+                <title>{this.getTitle(this.props.path)}</title>
                 <meta name="description" content={this.getDescription(this.props.path)}/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans"/>
@@ -64,7 +64,6 @@ class Root extends React.Component {
     }
 
     getDescription(path) {
-        console.log(path);
         switch (path) {
             case chapters.introduction.route:
                 return 'Introduction to the problem of creating a document structure for documents of Dutch case law using Conditional Random Fields and Probabilistic Context-Free Grammars';
@@ -82,6 +81,15 @@ class Root extends React.Component {
             default:
                 return 'MSc thesis about creating structure documents of Dutch case law using Conditional Random Fields and Probabilistic Context-Free Grammars';
         }
+    }
+    
+    getTitle(path) {
+        for(let chapter in chapters)
+            if(chapters.hasOwnProperty(chapter))
+                if(chapters[chapter].route == path) 
+                    return chapters[chapter].ttitle?chapters[chapter].ttitle:chapters[chapter].title;
+        
+        return this.props.title;
     }
 }
 // <Footer/> //TODO

@@ -36,8 +36,7 @@ export default class FScorez extends Component {
 
             <p>
                 We can leave out the normalization factor <F {...this.props} l="\frac{1}{Z(\mathbf x)}"/>,
-                because
-                the <F {...this.props} l="\text{argmax}"/> will be the same with or without:
+                because <F {...this.props} l="\text{argmax}"/> will be the same with or without:
             </p>
 
             <F {...this.props} display="true"
@@ -46,7 +45,7 @@ export default class FScorez extends Component {
             <p>
                 Note that to find <F {...this.props} l="\mathbf y^*"/>, we need to iterate over each possible
                 assignment to the label vector <F {...this.props} l="\mathbf y"/>,
-                which would implicate that in the general case, we
+                which would implicate that computed naively, we
                 need an algorithm of <F {...this.props} l="O(M^T)"/>,
                 where <F {...this.props} l="M"/> is the number of possible labels,
                 and <F {...this.props} l="T"/> is the length of
@@ -55,7 +54,7 @@ export default class FScorez extends Component {
                 Luckily, linear-chain <abbr title="Conditional Random Fields">CRFs</abbr> fulfil the optimal
                 substructure property
                 which means that we can memoize optimal sub-results and avoid making the same
-                calculation many times.
+                calculation many times, making the algorithm an example of dynamic programming.
                 We calculate the optimal path score <F {...this.props} l="\delta_t(j)"/> at
                 time <F {...this.props} l="t"/> ending with <F {...this.props} l="j"/> recursively
                 for <F {...this.props} l="\Phi_t = \prod_{k=1}^{K} \Phi_{k,t}"/>:
@@ -69,8 +68,7 @@ export default class FScorez extends Component {
             </p>
             <F {...this.props} display="truuuu" l="\delta_1(j) = \Phi_1(x_1, j, y_0)"/>
             <p>
-                We store the results in a table. (This sort of memoization
-                is what makes the Viterbi algorithm an example of dynamic programming.)
+                We store the results in a table. 
                 We find the optimal
                 sequence <F {...this.props} l="\mathbf y^*"/> by maximizing <F {...this.props} l="\delta_t(j)"/> at
                 the end of

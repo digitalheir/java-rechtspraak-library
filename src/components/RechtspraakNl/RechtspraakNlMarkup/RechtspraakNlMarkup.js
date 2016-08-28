@@ -120,9 +120,11 @@ export default class Introduction extends Component {
                     </div>
 
                     <p>
-                        Automatically marking up text portions with <code>*.info</code> tags is outside of the scope of
-                        this thesis, although it can easily be achieved by extending the label set
-                        to include a <code>*.info</code> tag.
+                        Automatically marking up text portions within <code>*.info</code> tags is outside of the scope of
+                        this thesis. For our further purposes, we do not distinguish header elements from
+                        generic sections,
+                        although this can easily be achieved by extending the label set
+                        to include a <code>*.info</code> label.
                     </p>
                     <p>
                         A <code>*.info</code> element is generally followed by any number of <code>section</code> tags.
@@ -204,8 +206,8 @@ export default class Introduction extends Component {
                 <p>
                     <FigRef fig={figs.tfidf}/> and <FigRef fig={figs.sectionsTfidf}/> list terms within
                     section title elements by tf–idf score,
-                    which is a number that reflects how important a given word is
-                    in a document with respect to all other documents in the corpus.
+                    which is a number that reflects how important a given term is
+                    in an element with respect to all other elements in the corpus.
                 </p>
                 <p>
                     <strike>

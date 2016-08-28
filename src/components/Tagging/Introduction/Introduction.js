@@ -54,15 +54,17 @@ export default class TaggingIntroduction extends Component {
                 In this chapter, we experiment
                 with {abbrs.crfs} for
                 labeling the tokens, and we compare the results
-                to a hand-written deterministic tagger that utilizes similar features to the {abbrs.crf} models.
-                It turns out that both models score around 1.0 on all labels
+                to a hand-written deterministic tagger that utilizes features 
+                that are largely the same as those used by the {abbrs.crf} models.
+                It turns out that both approaches score around 1.0 on all labels
                 except section titles.
 
                 For section titles, {abbrs.crfs} significantly
                 outperform the hand-written tagger
                 in terms of recall, while trading in some precision. For section titles,
                 the hand-written tagger
-                has a precision of 0.96 and recall of 0.74; the trained {abbrs.crfs} of 0.91 and 0.91, respectively.
+                has a precision of 0.96 and recall of 0.74; the trained {abbrs.crfs} of 
+                0.91 and 0.91, respectively.
             </p>
         </div>;
     }
