@@ -20,7 +20,7 @@ export default React.createClass({
         const style = {
             
         };
-        const closed = (this.props.clientRendered && this.state && this.state.closed);
+        const closed = (/*this.props.clientRendered &&*/ this.state && this.state.closed);
         if (this.props.clientRendered)
             style.cursor = 'pointer';
         return <div className={("chapter-toc")+(closed?' closed':'')}>

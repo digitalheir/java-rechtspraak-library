@@ -49,7 +49,7 @@ class Root extends React.Component {
             <meta content="true" itemProp="isFamilyFriendly"/>
             <meta content="2016" itemProp="copyrightYear"/>
             <meta content="expositive" itemProp="interactivityType"/>
-            
+            <RouteHandler {...this.props} />
             <footer>
                 <Bibliography/>
                 {this.props.path == '/full/' ? '' : <License {...this.props} />}
@@ -58,7 +58,7 @@ class Root extends React.Component {
                     type='application/json'
                     dangerouslySetInnerHTML={initialProps}></script>
             </footer>
-            <script async={true} src={relativeToRoot+'app.js'}></script>
+            <script src={relativeToRoot+'app.js'}></script>
             </body>
             </html>
         );
