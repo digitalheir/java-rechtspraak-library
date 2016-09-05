@@ -20,12 +20,13 @@ let Routes = <Route handler={Root} path='/'>
         chapters.inOrder.map(
             (chapter,i) => 
             <Route 
+                key={"route-"+i}
                 path={chapter.route} 
                 chapterObject={chapter} 
                 handler={getHandler(chapter.route)}/>
         )
     }
-    <Route path={'/full/'} handler={FullThesis}/>
+    <Route key={"route-full"} path={'/full/'} handler={FullThesis}/>
     )}
 </Route>;
 

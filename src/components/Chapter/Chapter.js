@@ -1,7 +1,7 @@
 import React from 'react';
 import {getSubSections} from '../getSectionComponent';
 import chapters from '../../../chapters';
-import ToC from '../ToC/ToC'
+import ChapterToc from '../ChapterToc'
 import abbrs  from '../abbreviations'
 /**
  * A component for a chapter page on our website.
@@ -24,8 +24,7 @@ export default class Chapter extends React.Component {
         </section>;
         return (
             <div>
-                {standaloneChapter ? <h2>Table of Contents</h2> : ''}
-                {standaloneChapter ? <ToC showHome={true} {...this.props} /> : ''}
+                {standaloneChapter ? <div id="mount-point-chapter-toc"><ChapterToc {...this.props}/></div> : ''}
                 {standaloneChapter ? <main>{main}</main> : main}
                 {standaloneChapter ? this.linkToNextChapter(this.props.title) : ''}
             </div>

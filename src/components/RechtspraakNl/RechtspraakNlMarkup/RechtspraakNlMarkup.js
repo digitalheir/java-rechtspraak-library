@@ -35,7 +35,7 @@ export default class Introduction extends Component {
         var relativeToRoot = this.props.path.match(/\//g).slice(1).map(_ => "../").join("");
 
         return <div className="section-content">
-            <p><a hrefLang="nl" href="http://www.rechtspraak.nl/">Rechtspraak.nl</a> is the official website of
+            <p><a hrefLang="nl" href="http://www.rechtspraak.nl/">Rechtspraak.nl</a> is the official website for
                 the <span itemScope={true}
                           itemType="https://schema.org/GovernmentOrganization">Dutch
                 judiciary</span>. The website hosts an open data portal for Dutch case law, containing metadata for

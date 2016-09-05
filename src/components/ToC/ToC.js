@@ -10,7 +10,7 @@ class ToC extends React.Component {
         if (chapter.getSections && chapter.getSections()) {
             // console.log(chapter.getSections());
             // itemProp={"pageStart":''}
-            return <ol>
+            return <ol key="subsections">
                 {chapter.getSections().inOrder.map(section => {
                     //console.log(JSON.stringify(section));
                     if (!!section) return <li
@@ -18,16 +18,15 @@ class ToC extends React.Component {
                         itemScope={true}
                         itemProp="hasPart"
                         itemType="https://schema.org/CreativeWork">
-                                <span className="row">
-                                    <a hrefLang="en" itemProp="url" href={urlSection+"#"+section.id}>
-                                        <span itemProp="name">{section.title}</span>
+                                <span key="row" className="row">
+                                    <a key="title" hrefLang="en" itemProp="url" href={urlSection+"#"+section.id}>
+                                        <span key="title" itemProp="name">{section.title}</span>
                                     </a>
-                                    {singlePage ? <span className="nr">{section.page}</span> : ''}
+                                    {singlePage ? <span key="nr" className="nr">{section.page}</span> : ''}
                                     </span>
                         {ToC.getSubSections(getSectionComponent(section.id), urlSection, depth + 1, singlePage)}
                     </li>;
-                    else throw Error("Null section found in " + JSON.stringify(chapter.getSections()
-                        ))
+                    else throw Error("Null section found in " + JSON.stringify(chapter.getSections()));
                 })}
             </ol>
         } else {
@@ -52,19 +51,21 @@ class ToC extends React.Component {
                             if (!this.props.singlePage)  urlSection = relativeToRoot + chapter.route.replace('/', '');
                             else  urlSection = "#" + chapter.id;
 
-                        return <li itemProp="hasPart"
-                                   itemScope={true}
-                                   itemType="https://schema.org/Chapter"
-                                   key={chapter.route}>
-                                <span className="row">
-                                <span >
+                            return <li itemProp="hasPart"
+                                       itemScope={true}
+                                       itemType="https://schema.org/Chapter"
+                                       key={chapter.route}>
+                                <span key="row" className="row">
+                                <span key="span">
                                 {path == chapter.route
-                                    ? <strong itemProp="name">{chapter.title}</strong>
-                                    : <a hrefLang="en" itemProp="mainEntityOfPage url" href={urlSection}
-                                         className='nav-link'><span itemProp="name">{chapter.title}</span></a>}
+                                    ? <strong key="title" itemProp="name">{chapter.title}</strong>
+                                    : <a key="title" hrefLang="en" itemProp="mainEntityOfPage url" href={urlSection}
+                                         className='nav-link'><span key='title'
+                                                                    itemProp="name">{chapter.title}</span></a>}
                                     </span>
                                     {this.props.singlePage ?
-                                        <span itemProp="pageStart" className="nr">{chapter.page}</span> : ''}
+                                        <span key='pagenr' itemProp="pageStart"
+                                              className="nr">{chapter.page}</span> : ''}
                                     </span>
                                 {ToC.getSubSections(getHandler(chapter.route), props.singlePage ? '' : urlSection, 1, this.props.singlePage)}
                             </li>

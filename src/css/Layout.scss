@@ -1,11 +1,40 @@
 @import 'variables.scss';
 
-address{
+address {
   font-style: normal;
 }
 
 .chapter {
   counter-reset: maths;
+}
+
+.chapter-toc {
+  background: #eee;
+  .toc-title {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin: 0;
+    position: relative;
+    &::before {
+      content: '▼';
+      /*left: -24px;*/
+      top: 0;
+      line-height: 24px;
+      position: relative;
+      font-size: 16px;
+      width: 24px;
+      display: inline-block;
+      text-align: center;
+    }
+  }
+  &.closed {
+    h2::before {
+      content: '▶';
+    }
+    .toc {
+      display: none;
+    }
+  }
 }
 
 .math.block {
@@ -446,8 +475,8 @@ section {
 }
 
 section {
-  padding-top: 20px;
-  /*padding-bottom: 20px;*/
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 footer {
@@ -639,6 +668,7 @@ abbr[title] {
 @media print {
   nav.toc {
     font-size: 12pt;
+
   }
   strike {
     display: none; /*TODO remove*/

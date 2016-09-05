@@ -267,7 +267,7 @@ const bib = {
         id: "trompper2014",
         type: "web",
         title: "NL open legal data survey: Rechtspraak.nl",
-        href: "http://leibniz-internship-report.herokuapp.com/eu-legal-data-survey/nl#rechtspraak.nl",
+        href: "https://leibniz-internship-report.herokuapp.com/eu-legal-data-survey/nl#rechtspraak.nl",
         author: {
             lastName: "Trompper"
         },

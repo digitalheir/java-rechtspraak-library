@@ -56,11 +56,11 @@ class Root extends React.Component {
                 id='initial-props'
                 type='application/json'
                 dangerouslySetInnerHTML={initialProps}></script>
+            <script async={true} src={relativeToRoot+'app.js'}></script>
             </body>
             </html>
         );
         // <GoogleAnalytics />
-        // <script async src={relativeToRoot+'bundle.js'}></script>
     }
 
     getDescription(path) {
@@ -82,13 +82,13 @@ class Root extends React.Component {
                 return 'MSc thesis about creating structure documents of Dutch case law using Conditional Random Fields and Probabilistic Context-Free Grammars';
         }
     }
-    
+
     getTitle(path) {
-        for(let chapter in chapters)
-            if(chapters.hasOwnProperty(chapter))
-                if(chapters[chapter].route == path) 
-                    return chapters[chapter].ttitle?chapters[chapter].ttitle:chapters[chapter].title;
-        
+        for (let chapter in chapters)
+            if (chapters.hasOwnProperty(chapter))
+                if (chapters[chapter].route == path)
+                    return chapters[chapter].ttitle ? chapters[chapter].ttitle : chapters[chapter].title;
+
         return this.props.title;
     }
 }

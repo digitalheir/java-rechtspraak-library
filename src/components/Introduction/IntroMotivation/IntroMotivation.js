@@ -16,12 +16,14 @@ export default class IntroMotivation extends Component {
     }
 
     render() {
-        const relativeToRoot = this.props.path.match(/\//g).slice(1).map(_ => "../").join("");
+       // const relativeToRoot = this.props.path.match(/\//g).slice(1).map(_ => "../").join("");
 
         return <div>
             <p>
-                Rechtspraak.nl publishes an open data set of Dutch case law
-                in {abbrs.xml} and {abbrs.html} dating back to about <span dateTime="1970">1970</span>. Most documents
+                The Council for the Judiciary in the Netherlands (Raad voor de Rechtspraak) publishes an open data set
+                of Dutch case law
+                in {abbrs.xml} and {abbrs.html} on <a href="http://www.rechtspraak.nl">Rechtspraak.nl</a>,
+                dating back to about <span dateTime="1970">1970</span>. Most documents
                 contain little semantic markup,
                 such as element tags detailing the structure
                 of (sub-)sections in a document.

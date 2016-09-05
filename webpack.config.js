@@ -10,11 +10,12 @@ var path = require('path');
 
 module.exports = {
     entry: {
-        main: './src/entry.js',
+        bundle: './src/bundle.js',
+        app: './src/app.js',
         css: './src/css/base.scss'
     },
     output: {
-        filename: 'bundle.js',
+        filename: '[name].js',
         path: "dist",
         libraryTarget: 'umd'
     },
