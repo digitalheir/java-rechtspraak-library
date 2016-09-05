@@ -538,6 +538,32 @@ address {
 .chapter {
     counter-reset: maths;
 }
+.chapter-toc {
+    background: #eee;
+}
+.chapter-toc .toc-title {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin: 0;
+    position: relative;
+}
+.chapter-toc .toc-title::before {
+    content: '\25BC';
+    /*left: -24px;*/
+    top: 0;
+    line-height: 24px;
+    position: relative;
+    font-size: 16px;
+    width: 24px;
+    display: inline-block;
+    text-align: center;
+}
+.chapter-toc.closed h2::before {
+    content: '\25B6';
+}
+.chapter-toc.closed .toc {
+    display: none;
+}
 .math.block {
     position: relative;
     display: block;
@@ -901,8 +927,8 @@ section {
     border-top-width: 1px;
 }
 section {
-    padding-top: 20px;
-    /*padding-bottom: 20px;*/
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 footer {
     border-top-width: 1px;
