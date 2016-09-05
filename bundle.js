@@ -23479,7 +23479,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            type: 'application/json',
 	                            dangerouslySetInnerHTML: initialProps })
 	                    ),
-	                    _react2.default.createElement('script', { async: true, src: relativeToRoot + 'app.js' })
+	                    _react2.default.createElement('script', { src: relativeToRoot + 'app.js' })
 	                )
 	            );
 	            // <GoogleAnalytics />
