@@ -245,6 +245,7 @@ export default class Introduction extends Component {
                                            l="\text{idf}(t, D) = \log{\frac{|D|}{|\{d \in D:t \in d\}|}}"/>
                     </li>
                 </ul>
+            </ol>
                 <p>
                     Because we
                     want to infer the most important words within
@@ -263,7 +264,6 @@ export default class Introduction extends Component {
                     Furthermore, we notice that most terms in a section
                     title are semantically related to the section role.
                 </p>
-            </ol>
         </div>;
     }
 }

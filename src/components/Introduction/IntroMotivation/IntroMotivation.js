@@ -23,7 +23,7 @@ export default class IntroMotivation extends Component {
                 The Council for the Judiciary in the Netherlands (Raad voor de Rechtspraak) publishes an open data set
                 of Dutch case law
                 in {abbrs.xml} and {abbrs.html} on <a href="http://www.rechtspraak.nl">Rechtspraak.nl</a>,
-                dating back to about <span dateTime="1970">1970</span>. Most documents
+                dating back to about <time dateTime="1970">1970</time>. Most documents
                 contain little semantic markup,
                 such as element tags detailing the structure
                 of (sub-)sections in a document.
@@ -55,7 +55,7 @@ export default class IntroMotivation extends Component {
                 To illustrate: at the time of writing, 78.7% of all judgment texts on Rechtspraak.nl do not
                 contain any <code>section</code> tag, implying that a large number of
                 documents are barely marked up.
-                These documents are mostly from before <span dateTime="2013">2013</span>.
+                These documents are mostly from before <time dateTime="2013">2013</time>.
                 Older case law documents still produce
                 legal knowledge, so it is desirable to have these older documents in good
                 shape as well.
