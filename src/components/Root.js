@@ -49,13 +49,15 @@ class Root extends React.Component {
             <meta content="true" itemProp="isFamilyFriendly"/>
             <meta content="2016" itemProp="copyrightYear"/>
             <meta content="expositive" itemProp="interactivityType"/>
-            <RouteHandler {...this.props} />
-            <Bibliography/>
-            {this.props.path == '/full/' ? '' : <License {...this.props} />}
-            <script
-                id='initial-props'
-                type='application/json'
-                dangerouslySetInnerHTML={initialProps}></script>
+            
+            <footer>
+                <Bibliography/>
+                {this.props.path == '/full/' ? '' : <License {...this.props} />}
+                <script
+                    id='initial-props'
+                    type='application/json'
+                    dangerouslySetInnerHTML={initialProps}></script>
+            </footer>
             <script async={true} src={relativeToRoot+'app.js'}></script>
             </body>
             </html>
