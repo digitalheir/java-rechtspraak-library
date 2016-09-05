@@ -19762,7 +19762,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    render: function render() {
 	        var style = {};
-	        var closed = this.props.clientRendered && this.state && this.state.closed;
+	        var closed = /*this.props.clientRendered &&*/this.state && this.state.closed;
 	        if (this.props.clientRendered) style.cursor = 'pointer';
 	        return _react2.default.createElement(
 	            'div',
