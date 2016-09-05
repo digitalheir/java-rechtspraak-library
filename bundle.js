@@ -23468,6 +23468,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement('meta', { content: 'true', itemProp: 'isFamilyFriendly' }),
 	                    _react2.default.createElement('meta', { content: '2016', itemProp: 'copyrightYear' }),
 	                    _react2.default.createElement('meta', { content: 'expositive', itemProp: 'interactivityType' }),
+	                    _react2.default.createElement(RouteHandler, this.props),
 	                    _react2.default.createElement(
 	                        'footer',
 	                        null,
