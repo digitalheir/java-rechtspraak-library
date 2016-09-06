@@ -19762,7 +19762,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        var closed = /*this.props.clientRendered &&*/this.state && this.state.closed;
 	        if (this.props.clientRendered) style.cursor = 'pointer';
 	        return _react2.default.createElement(
-	            'div',
+	            'nav',
 	            { className: "chapter-toc" + (closed ? ' closed' : '') },
 	            _react2.default.createElement(
 	                'h2',
@@ -19835,16 +19835,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	            var props = this.props;
 	            return _react2.default.createElement(
-	                'nav',
+	                'div',
 	                { className: 'chapter toc' },
 	                _react2.default.createElement(
 	                    'ol',
 	                    { className: this.props.singlePage ? "leaders" : "" },
-	                    this.props.showHome ? _react2.default.createElement(
-	                        'a',
-	                        { hrefLang: 'en', href: relativeToRoot },
-	                        'Home'
-	                    ) : "",
 	                    _chapters2.default.inOrder.map(function (chapter) {
 	                        var urlSection = void 0;
 
@@ -23584,6 +23579,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    _createClass(Header, [{
 	        key: 'render',
 	        value: function render() {
+	            var relativeToRoot = this.props.path.match(/\//g).slice(1).map(function (a) {
+	                return "../";
+	            }).join("");
 	            var attrs = {
 	                id: 'thesis',
 	                itemScope: true,
@@ -23591,10 +23589,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	            };
 	            if (this.props.path.match(/\//)) attrs.itemProp = "mainEntity";
 
+	            var title = relativeToRoot.length > 0 ? _react2.default.createElement(
+	                'a',
+	                { hrefLang: 'en', href: relativeToRoot },
+	                this.props.title
+	            ) : this.props.title;
 	            return _react2.default.createElement("header", attrs, _react2.default.createElement(
 	                'h1',
 	                { key: 'title', itemProp: 'name', className: 'mt0' },
-	                this.props.title
+	                title
 	            ), _react2.default.createElement(
 	                'div',
 	                { key: 'audience', itemProp: 'audience', itemScope: true, itemType: 'http://schema.org/EducationalAudience' },
@@ -26035,7 +26038,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        )
 	                    ),
 	                    _react2.default.createElement(
-	                        'section',
+	                        'nav',
 	                        { style: { background: '#eee' } },
 	                        _react2.default.createElement(
 	                            'h2',
@@ -26272,7 +26275,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    null,
 	                    'In this thesis, we explore the problem of automatic assignment of a section structure to the texts of Dutch court judgments. To this end, we develop a database that mirrors the ',
 	                    _abbreviations2.default.xml,
-	                    ' data offering of Rechtspraak.nl. We experiment with Linear-Chain Conditional Random Fields to label text elements with their roles in the document (text, title or numbering). Given a list of labels, we experiment with probabilistic context-free grammars to generate a parse tree which represents the section hierarchy of a document.'
+	                    ' data offering of Rechtspraak.nl. We experiment with Linear-Chain Conditional Random Fields to label text elements with their roles in the document (text, title or numbering). Given a list of labels, we experiment with Probabilistic Context-Free Grammars to generate a parse tree which represents the section hierarchy of a document.'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
@@ -45235,7 +45238,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    "a",
 	                    { itemRef: fig.id,
-	                        id: fig.id + '-ref',
+	                        className: fig.id + '-ref',
 	                        itemScope: true,
 	                        href: href },
 	                    _react2.default.createElement(
@@ -59471,7 +59474,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'Delving deeper into problematic parses, we see that there are a number of recurring types of errors that our parsing grammar makes. Firstly, it often occurs that subsections are not preceded by a full numbering. For example, consider the following section sequence:'
+	                    'Delving deeper into problematic parses, we see that there are a number of recurring types of errors that our parsing grammar makes. Firstly, it often occurs that subsections are not preceded by a full numbering. For example, consider a section numbering sequence such as the following:'
 	                ),
 	                _react2.default.createElement(
 	                    'pre',
@@ -59664,7 +59667,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'We measure classifier performance with the oft-used F',
+	                    'We measure classifier performance with the often-used F',
 	                    _react2.default.createElement(
 	                        'sub',
 	                        null,
@@ -59734,7 +59737,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        null,
 	                        'is'
 	                    ),
-	                    ' more important than recall. The reasoning is that in case of a false negative, we do not lose any information because the title is likely seen as a text node (it is very improbable that it is falsely flagged as a newline or numbering). However, in the case of a false positive for section titles we create false information, which is very undesirable. Precisely how much more important we deem precision to recall is rather arbitrary.'
+	                    ' more important than recall. The reasoning is that in case of a false negative, we do not lose any information because the title is likely seen as a text node (it is very improbable that it is falsely flagged as a newline or numbering). However, in the case of a false positive for section titles we create false information, which is very undesirable. Precisely how much more important we deem precision to recall is subjective.'
 	                )
 	            );
 	        }
@@ -60318,7 +60321,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        { href: 'http://www.rechtspraak.nl' },
 	                        'Rechtspraak.nl'
 	                    ),
-	                    ', dating back to about ',
+	                    ', with cases dating back to about ',
 	                    _react2.default.createElement(
 	                        'time',
 	                        { dateTime: '1970' },
@@ -60334,7 +60337,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'There is a recent trend on Rechtspraak.nl towards publishing more richly marked up documents, as we can see in ',
+	                    'Recently,  more richly marked up documents have been published on ',
+	                    _react2.default.createElement(
+	                        'a',
+	                        { href: 'https://www.rechtspraak.nl/' },
+	                        'Rechtspraak.nl'
+	                    ),
+	                    ', as we can see in ',
 	                    _react2.default.createElement(_FigRef2.default, {
 	                        fig: _figs2.default.markupStats }),
 	                    '. Still, there is an overwhelmingly large portion of documents which contain no or only sparse markup. To illustrate: at the time of writing, 78.7% of all judgment texts on Rechtspraak.nl do not contain any ',
@@ -60832,7 +60841,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            var relativeToRoot = this.props.path.match(/\//g).slice(1).map(function (_) {
 	                return "../";
 	            }).join("");
-	            var toThisChapter = relativeToRoot + _chapters2.default.tagging.route;
+	            var toThisChapter = relativeToRoot + _chapters2.default.tagging.route.slice(1);
 
 	            return _react2.default.createElement(
 	                'div',
@@ -60975,7 +60984,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    ' and are explain in more depth ',
 	                    _react2.default.createElement(
 	                        'a',
-	                        { href: toThisChapter + "#" + _sections2.default.linearChain },
+	                        { href: toThisChapter + "#" + _sections2.default.linearChain.id },
 	                        'in the section on ',
 	                        _abbreviations2.default.lccrfs
 	                    ),
@@ -62599,8 +62608,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    null,
 	                    'Labeling a string of tokens is a task that has been widely covered in literature, mostly in the application of part-of-speech tagging in natural language. Popular methods include graphical models, which model the probability distributions of labels and observations occurring together. These include Hidden Markov Models (',
 	                    _abbreviations2.default.hmms,
-	                    ') and the closely related Conditional Random Fields (',
-	                    _abbreviations2.default.crfs,
+	                    ') and the closely related Linear-Chain Conditional Random Fields (',
+	                    _abbreviations2.default.lccrfs,
 	                    ').'
 	                ),
 	                _react2.default.createElement(
@@ -64521,7 +64530,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                    _react2.default.createElement(_Math2.default, _extends({}, this.props, { l: '0.7' }))
 	                                )
 	                            ),
-	                            _react2.default.createElement('tr', null),
 	                            _react2.default.createElement(
 	                                'tr',
 	                                null,
