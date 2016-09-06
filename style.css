@@ -607,6 +607,7 @@ div.full-thesis .leaders li .row {
 }
 div.full-thesis .leaders li .nr {
     background: white;
+    font-size: 8pt;
 }
 div.full-thesis .leaders li:before {
     background: white;

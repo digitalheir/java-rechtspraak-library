@@ -65360,7 +65360,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement('hr', { style: { marginTop: '58em' } }),
 	                    _react2.default.createElement(
 	                        'p',
-	                        null,
+	                        { style: { marginBottom: 0 } },
 	                        'This is a print version of a web site. Visit ',
 	                        _react2.default.createElement(
 	                            'a',
