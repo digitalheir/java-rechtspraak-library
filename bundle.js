@@ -65357,7 +65357,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        'Abstract'
 	                    ),
 	                    _react2.default.createElement(_AbstractContent2.default, null),
-	                    _react2.default.createElement('hr', { style: { marginTop: '58em' } }),
+	                    _react2.default.createElement('hr', { style: { marginTop: '59em' } }),
 	                    _react2.default.createElement(
 	                        'p',
 	                        { style: { marginBottom: 0 } },

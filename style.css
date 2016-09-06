@@ -956,6 +956,9 @@ hr {
     display: none;
 }
 @media print {
+    footer a {
+        color: #333;
+    }
     #reference-list {
         margin-bottom: 0;
     }
