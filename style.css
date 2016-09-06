@@ -957,7 +957,7 @@ hr {
 }
 @media print {
     footer a {
-        color: #333;
+        color: #333 !important;
     }
     #reference-list {
         margin-bottom: 0;
