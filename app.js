@@ -19837,9 +19837,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	            return _react2.default.createElement(
 	                'div',
 	                { className: 'chapter toc' },
+	                this.props.showHome ? _react2.default.createElement(
+	                    'li',
+	                    { key: 'home' },
+	                    _react2.default.createElement(
+	                        'a',
+	                        { hrefLang: 'en', href: relativeToRoot },
+	                        'Home'
+	                    )
+	                ) : "",
 	                _react2.default.createElement(
 	                    'ol',
-	                    { className: this.props.singlePage ? "leaders" : "" },
+	                    { key: 'list', className: this.props.singlePage ? "leaders" : "" },
 	                    _chapters2.default.inOrder.map(function (chapter) {
 	                        var urlSection = void 0;
 
