@@ -13,7 +13,7 @@ import sectionz from '../sections';
 export default class CRF extends Component {
     render() {
         const relativeToRoot = this.props.path.match(/\//g).slice(1).map(_ => "../").join("");
-        const toThisChapter = relativeToRoot + chapters.tagging.route;
+        const toThisChapter = relativeToRoot + chapters.tagging.route.slice(1);
                 
         return <div>
             <p>
@@ -93,7 +93,7 @@ export default class CRF extends Component {
             The procedures for inference and parameter 
             estimation for {abbrs.hmms} are very 
             similar to those for {abbrs.lccrfs} and are explain in more
-            depth <a href={toThisChapter+"#"+sectionz.linearChain}>in the section on {abbrs.lccrfs}</a>.
+            depth <a href={toThisChapter+"#"+sectionz.linearChain.id}>in the section on {abbrs.lccrfs}</a>.
             </p>
         </div>;
     }

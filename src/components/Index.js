@@ -24,10 +24,10 @@ export default class Index extends Component {
                         <a style={{fontSize: 'small',textDecoration: 'underline'}} href="full/">View this thesis as a
                             single page, fit for printing</a>
                     </p>
-                    <section style={{    background: '#eee'}}>
+                    <nav style={{background: '#eee'}}>
                         <h2>Table of Contents</h2>
                         <ToC {...this.props}/>
-                    </section>
+                    </nav>
                 </main>
             </div>
         );

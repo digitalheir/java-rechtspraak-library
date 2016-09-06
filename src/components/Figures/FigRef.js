@@ -22,7 +22,7 @@ export default class extends Component {
         return (
             <span itemScope={true}>
                 <a itemRef={fig.id}
-                   id={fig.id+'-ref'}
+                   className={fig.id+'-ref'}
                    itemScope={true}
                    href={href}><span itemProp="name">Figure {fig.num}</span></a>
             </span>

@@ -147,7 +147,6 @@ export default class CYK extends Component {
                         <td><F {...this.props} l="\text{NP} \rightarrow \text{N}"/></td>
                         <td><F {...this.props} l="0.7"/></td>
                     </tr>
-                    <tr/>
                     <tr>
                         <td><F {...this.props} l="\text{N} \rightarrow \text{fish}"/></td>
                         <td><F {...this.props} l="0.2"/></td>

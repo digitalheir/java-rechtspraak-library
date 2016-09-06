@@ -329,11 +329,13 @@ a:hover, header a:visited:hover, footer a:visited:hover {
 }
 
 a:visited {
-  color: rgb(100, 79, 139);
+  color: #39c;
+  /*color: rgb(100, 79, 139);*/
 }
 
 a:visited:hover {
-  color: rgb(83, 50, 139);
+  color: #069;
+  /*color: rgb(83, 50, 139);*/
 }
 
 a small {

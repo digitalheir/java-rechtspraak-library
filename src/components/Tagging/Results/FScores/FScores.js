@@ -17,7 +17,7 @@ export default class FScorez extends Component {
 
         return <div>
             <p>
-                We measure classifier performance with the oft-used F<sub>1</sub> and F<sub>0.5</sub> scores.
+                We measure classifier performance with the often-used F<sub>1</sub> and F<sub>0.5</sub> scores.
                 F<sub>β</sub>-scores are composite metrics that combine the precision and recall of a
                 classifier, where
             </p>
@@ -51,7 +51,7 @@ export default class FScorez extends Component {
                 However, in the case of a false positive for section titles we create
                 false information, which is very undesirable.
                 Precisely how much more important we deem precision to recall is
-                rather arbitrary.
+                subjective.
             </p>
         </div>;
     }

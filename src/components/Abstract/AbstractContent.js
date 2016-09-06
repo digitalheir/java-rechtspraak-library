@@ -19,7 +19,7 @@ export default class AbstractContent extends React.Component {
                     experiment with Linear-Chain
                     Conditional Random Fields to label text elements with their roles in the document (text,
                     title or numbering). Given a list of labels, we experiment with
-                    probabilistic context-free grammars
+                    Probabilistic Context-Free Grammars
                     to generate a parse tree which represents the section hierarchy of a document.
                 </p>
 

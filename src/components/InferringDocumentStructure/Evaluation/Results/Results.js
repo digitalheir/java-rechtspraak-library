@@ -13,7 +13,7 @@ export default class ParsingEval extends Component {
             <p>
                 Delving deeper into problematic parses, we see that there are a number of recurring types
                 of errors that our parsing grammar makes. Firstly, it often occurs that subsections are not preceded
-                by a full numbering. For example, consider the following section sequence:
+                by a full numbering. For example, consider a section numbering sequence such as the following:
             </p>
 <pre>
 1.<br/>

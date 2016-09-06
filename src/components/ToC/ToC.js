@@ -41,9 +41,10 @@ class ToC extends React.Component {
 
 
         var props = this.props;
-        return <nav className={'chapter toc'}>
-            <ol className={this.props.singlePage?"leaders":""}>
-                {this.props.showHome ? <a hrefLang="en" href={relativeToRoot}>Home</a> : ""}
+        return <div className={'chapter toc'}>
+            {this.props.showHome ? <li key="home"><a hrefLang="en" href={relativeToRoot}>Home</a></li> : ""}
+            <ol key="list" className={this.props.singlePage?"leaders":""}>
+                
                 {
                     chapters.inOrder.map((chapter) => {
                             let urlSection;
@@ -73,7 +74,7 @@ class ToC extends React.Component {
                     )
                 }
             </ol>
-        </nav>;
+        </div>;
     }
 
 }

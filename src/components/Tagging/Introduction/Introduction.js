@@ -48,13 +48,14 @@ export default class TaggingIntroduction extends Component {
                 mostly in the application of part-of-speech tagging in natural language.
                 Popular methods include graphical models, which model the probability distributions
                 of labels and observations occurring together. These include Hidden
-                Markov Models ({abbrs.hmms}) and the closely related Conditional Random Fields ({abbrs.crfs}).
+                Markov Models ({abbrs.hmms}) and the closely related Linear-Chain Conditional
+                Random Fields ({abbrs.lccrfs}).
             </p>
             <p>
                 In this chapter, we experiment
                 with {abbrs.crfs} for
                 labeling the tokens, and we compare the results
-                to a hand-written deterministic tagger that utilizes features 
+                to a hand-written deterministic tagger that utilizes features
                 that are largely the same as those used by the {abbrs.crf} models.
                 It turns out that both approaches score around 1.0 on all labels
                 except section titles.
@@ -63,7 +64,7 @@ export default class TaggingIntroduction extends Component {
                 outperform the hand-written tagger
                 in terms of recall, while trading in some precision. For section titles,
                 the hand-written tagger
-                has a precision of 0.96 and recall of 0.74; the trained {abbrs.crfs} of 
+                has a precision of 0.96 and recall of 0.74; the trained {abbrs.crfs} of
                 0.91 and 0.91, respectively.
             </p>
         </div>;

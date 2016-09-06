@@ -23,10 +23,10 @@ export default React.createClass({
         const closed = (/*this.props.clientRendered &&*/ this.state && this.state.closed);
         if (this.props.clientRendered)
             style.cursor = 'pointer';
-        return <div className={("chapter-toc")+(closed?' closed':'')}>
+        return <nav className={("chapter-toc")+(closed?' closed':'')}>
             <h2 key="h2" style={style}
                 onClick={this.toggleState} className="toc-title">Table of Contents</h2>
             <ToC key="toc" showHome={true} {...this.props} />
-        </div>;
+        </nav>;
     }
 });

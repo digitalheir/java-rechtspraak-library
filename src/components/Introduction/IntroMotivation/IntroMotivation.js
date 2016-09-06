@@ -23,6 +23,7 @@ export default class IntroMotivation extends Component {
                 The Council for the Judiciary in the Netherlands (Raad voor de Rechtspraak) publishes an open data set
                 of Dutch case law
                 in {abbrs.xml} and {abbrs.html} on <a href="http://www.rechtspraak.nl">Rechtspraak.nl</a>,
+                with cases
                 dating back to about <time dateTime="1970">1970</time>. Most documents
                 contain little semantic markup,
                 such as element tags detailing the structure
@@ -46,8 +47,9 @@ export default class IntroMotivation extends Component {
             </p>
 
             <p>
-                There is a recent trend on Rechtspraak.nl
-                towards publishing more richly marked up documents, as we can see in <FigRef
+                Recently,  more richly marked up documents have been published
+                on <a href="https://www.rechtspraak.nl/">Rechtspraak.nl</a>,
+                as we can see in <FigRef
                 fig={figs.markupStats}/>.
                 Still, there is
                 an overwhelmingly large portion of documents which contain no or
