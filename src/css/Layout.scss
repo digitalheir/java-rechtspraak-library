@@ -87,6 +87,7 @@ div.full-thesis {
       }
       .nr {
         background: white;
+        font-size: 8pt;
       }
     }
   }
@@ -510,7 +511,9 @@ hr {
 }
 
 @media print {
-
+  footer a {
+    color: #333 !important;
+  }
   #reference-list {
     margin-bottom: 0;
   }
