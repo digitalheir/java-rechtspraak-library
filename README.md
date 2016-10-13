@@ -28,6 +28,35 @@ or Gradle:
 compile 'org.leibnizcenter:rechtspraak:2.0.2'
 ```
 
+You can access the Rechtspraak.nl search API through `org.leibnizcenter.rechtspraak.SearchRequest.Builder` and `org.leibnizcenter.rechtspraak.SearchResult`. All builder options are optional. For instance:
+
+```java
+        SearchResult iterator = new SearchRequest.Builder()
+                .max(1000) // Results per page. Cannot be larger than and defaults to 1000
+                .returnType(ReturnType.DOC) // Return documents for which Rechtspraak.nl lists at least metadata (META) or metadata and a transcription of the case (DOC)
+                .from(0) // Offset in results, used for pagination
+                .sort(Sort.ASC) //Sort results on modification date ascending or descending. Default is ascending (oldest first).
+                .build().execute();
+
+        Assert.assertTrue(iterator.hasNext());
+        iterator = iterator.next();
+        Assert.assertTrue(iterator.hasNext());
+        iterator = iterator.next();
+```
+
+For all options, see the [JavaDoc for SearchRequest.Builder](http://phil.uu.nl/~trompper/rechtspraak-2.0.0-javadoc/org/leibnizcenter/rechtspraak/SearchRequest.Builder.html)
+
+Search results contain judgment metadata (accessed through `SearchResult#getJudgments()`). For fetching and parsing the actual documents, use `org.leibnizcenter.rechtspraak.RechtspraakNlInterface`. For example, given an ECLI:
+
+```java
+            OpenRechtspraak doc = parseXml(
+                        // For purists that don't trust the parsing scheme (there is no official doctype), you can work with the raw XML stream as well
+                        requestXmlForEcli("ECLI:NL:RBNNE:2014:1005").body().byteStream() 
+            );
+```
+
+`OpenRechtspraak` is a Java object which represents the unmarshalled XML document at http://data.rechtspraak.nl/uitspraken/content?id=ECLI:NL:RBNNE:2014:1005 
+
 ## Requirements
 * Versions 1.X.X require Java 7
 * Versions 2.X.X require Java 8
