@@ -1,17 +1,10 @@
 package org.leibnizcenter.rechtspraak.enricher;
 
-import com.google.common.collect.Lists;
-import org.leibnizcenter.rechtspraak.enricher.cfg.Grammar;
-import org.leibnizcenter.rechtspraak.enricher.cfg.ScoreChart;
-import org.leibnizcenter.rechtspraak.enricher.cfg.rule.RightHandSide;
-import org.leibnizcenter.rechtspraak.enricher.cfg.rule.StandardRule;
-import org.leibnizcenter.rechtspraak.enricher.cfg.rule.StochasticRule;
-import org.leibnizcenter.rechtspraak.enricher.cfg.rule.TypeContainer;
-import org.leibnizcenter.rechtspraak.enricher.cfg.rule.interfaces.Rule;
-import org.leibnizcenter.rechtspraak.enricher.cfg.rule.type.NonTerminalImpl;
-import org.leibnizcenter.rechtspraak.enricher.cfg.rule.type.Terminal;
-import org.leibnizcenter.rechtspraak.enricher.cfg.rule.type.interfaces.NonTerminal;
-import org.leibnizcenter.rechtspraak.enricher.cfg.rule.type.interfaces.Type;
+import org.leibnizcenter.cfg.Grammar;
+import org.leibnizcenter.cfg.algebra.semiring.dbl.LogSemiring;
+import org.leibnizcenter.cfg.category.nonterminal.NonTerminal;
+import org.leibnizcenter.cfg.category.terminal.Terminal;
+import org.leibnizcenter.cfg.token.Token;
 import org.leibnizcenter.rechtspraak.tagging.Label;
 import org.leibnizcenter.rechtspraak.tokens.LabeledToken;
 
@@ -24,7 +17,7 @@ import org.leibnizcenter.rechtspraak.tokens.LabeledToken;
 public final class DocumentGrammar {
     public static final NonTerminal DOCUMENT = new NonTerminal("#root");
     public static final NonTerminal HEADER = new NonTerminal("Header");
-    public static final NonTerminal DOCUMENT_CONTENT = new NonTerminal("DocumentContent");
+    public static final NonTerminal DOCUMENT_BODY = new NonTerminal("DocumentContent");
 
     /**
      * 1 or more sections in sequence
@@ -35,18 +28,24 @@ public final class DocumentGrammar {
     public static final NonTerminal SECTION_TITLE = new NonTerminal("SectionTitle");
     public static final NonTerminal NEWLINE_AND_TITLE_TEXT = new NonTerminal("NEWLINE_AND_TITLE_TEXT");
     public static final NonTerminal SECTION_CONTENT = new NonTerminal("SectionContent");
-    public static final NonTerminal COMPLETE_SECTION_BLOB = new NonTerminal("COMPLETE_SECTION_BLOB");
+    public static final NonTerminal SECTION_SEQUENCE = new NonTerminal("SECTION_SEQUENCE");
     public static final NonTerminal COMPLETE_SECTION_BLOB_W_TRAILING_TEXT = new NonTerminal("COMPLETE_SECTION_BLOB_W_TRAILING_TEXT");
 
     public static final NonTerminal TEXT_BLOB = new NonTerminal("Text");
     public static final NonTerminal SECTION_TITLE_TEXT = new NonTerminal("SECTION_TITLE_TEXT");
     public static final NonTerminal SINGLE_TITLE_TEXT = new NonTerminal("SINGLE_TITLE_TEXT");
     public static final NonTerminal SINGLE_NUMBERING = new NonTerminal("SINGLE_NUMBERING");
-    public static final NonTerminal COMPLETE_SECTION_CONTENT = new NonTerminal("COMPLETE_SECTION_CONTENT");
     public static final NonTerminal NONTERMINAL_NEWLINE = new NonTerminal("NONTERMINAL_NEWLINE");
 
 
     public static final Terminal<LabeledToken> TERMINAL_NUMBERING = new LabelRecognizer(Label.NR);
+    //TODO make grammar a bit smarter
+//    public static final Terminal<LabeledToken> TERMINAL_NUMBERING_IN_SEQUENCE = new Terminal<LabeledToken>() {
+//        @Override
+//        public boolean hasCategory(Token<LabeledToken> token) {
+//            return ;
+//        }
+//    };
     public static final Terminal<LabeledToken> TERMINAL_SECTION_TITLE = new LabelRecognizer(Label.SECTION_TITLE);
     public static final Terminal<LabeledToken> TERMINAL_TEXT = new LabelRecognizer(Label.TEXT_BLOCK);
     public static final Terminal<LabeledToken> TERMINAL_NEWLINE = new LabelRecognizer(Label.NEWLINE);
@@ -54,29 +53,27 @@ public final class DocumentGrammar {
 
     public final static Grammar grammar = new Grammar.Builder()
             .setSemiring(new LogSemiring())
-            //.addRule(1.0, DOCUMENT, /* -> */ HEADER, DOCUMENT_CONTENT) // TODO
-            .addRule(1.0, DOCUMENT, /* -> */ DOCUMENT_CONTENT)
+            //.addRule(1.0, DOCUMENT, /* -> */ HEADER, DOCUMENT_BODY) // TODO
+            .addRule(1.0, DOCUMENT, /* -> */ DOCUMENT_BODY)
 
-            .addRule(1.0, DOCUMENT_CONTENT, /* -> */ COMPLETE_SECTION_BLOB)
-//            .addRule(0.8, DOCUMENT_CONTENT, /* -> */ TEXT_BLOB, COMPLETE_SECTION_BLOB)
-//            .addRule(0.8, DOCUMENT_CONTENT, /* -> */ COMPLETE_SECTION_BLOB, TEXT_BLOB)
-//            .addRule(0.7, DOCUMENT_CONTENT, /* -> */ TEXT_BLOB, COMPLETE_SECTION_BLOB, TEXT_BLOB)
+            .addRule(0.7, DOCUMENT_BODY, /* -> */ SECTION_SEQUENCE)
+            .addRule(0.1, DOCUMENT_BODY, /* -> */ TEXT_BLOB, SECTION_SEQUENCE)
+            .addRule(0.1, DOCUMENT_BODY, /* -> */ SECTION_SEQUENCE, TEXT_BLOB)
+            .addRule(0.1, DOCUMENT_BODY, /* -> */ TEXT_BLOB, SECTION_SEQUENCE, TEXT_BLOB)
 //
-            .addRule(1.0, COMPLETE_SECTION_BLOB, SECTION_BLOB) // TODO CompletedSectionBlob
+            .addRule(1.0, SECTION_SEQUENCE, SECTION_BLOB)
 //
             .addRule(0.3, SECTION_BLOB, /* -> */ SECTION_BLOB, SECTION_BLOB)
             .addRule(0.3, SECTION_BLOB, /* -> */ SECTION)
             .addRule(0.2, SECTION_BLOB, /* -> */ SECTION, TEXT_BLOB)
             .addRule(0.2, SECTION_BLOB, /* -> */ TEXT_BLOB, SECTION)
 
-            // TODO allow newlines in title?
-            .addRule(1.0, SECTION, /* -> */ SECTION_TITLE, COMPLETE_SECTION_CONTENT)
+            .addRule(0.99, SECTION, /* -> */ SECTION_TITLE, SECTION_CONTENT)
+            .addRule(1-0.99, SECTION, /* -> */ SECTION_TITLE)
 
-            .addRule(1.0, COMPLETE_SECTION_CONTENT, /* -> */ SECTION_CONTENT)
-
-            .addRule(0.3, SECTION_CONTENT, /* -> */ TEXT_BLOB)
-            .addRule(0.4, SECTION_CONTENT, /* -> */ COMPLETE_SECTION_BLOB)
-            .addRule(0.3, SECTION_CONTENT, /* -> */ SECTION_CONTENT, SECTION_CONTENT)
+            .addRule(0.4, SECTION_CONTENT, /* -> */ SECTION_CONTENT, SECTION_CONTENT)
+            .addRule(0.4, SECTION_CONTENT, /* -> */ TEXT_BLOB)
+            .addRule(0.2, SECTION_CONTENT, /* -> */ SECTION_SEQUENCE)
 
             .addRule(0.5, TEXT_BLOB, /* -> */ TEXT_BLOB, TEXT_BLOB)
             .addRule(0.3, TEXT_BLOB, /* -> */ TERMINAL_TEXT)
@@ -135,7 +132,7 @@ public final class DocumentGrammar {
 //    }
 //
 //    /**
-//     * SECTION_CONTENT -> COMPLETE_SECTION_BLOB
+//     * SECTION_CONTENT -> SECTION_SEQUENCE
 //     */
 //    private static class  extends StochasticRule {
 //        public (NonTerminal lhs, RightHandSide rhs) {
@@ -355,7 +352,7 @@ public final class DocumentGrammar {
 //                CYK.ParseTreeContainer container = (CYK.ParseTreeContainer) input;
 //                if (container.getType().equals(SECTION_CONTENT)) {
 //                    buildContents(acc, container);
-//                } else if (container.getType().equals(TEXT_BLOB) || container.getType().equals(COMPLETE_SECTION_BLOB)) {
+//                } else if (container.getType().equals(TEXT_BLOB) || container.getType().equals(SECTION_SEQUENCE)) {
 //                    acc.push(container);
 //                } else
 //                    throw new InvalidParameterException("Input SECTION_BLOB should consist of only {SECTION, SECTION_BLOB}, not " + input.getType());
@@ -509,7 +506,7 @@ public final class DocumentGrammar {
 ////                ScoreChart.ParseTreeContainer container = (ScoreChart.ParseTreeContainer) input;
 ////                if (container.getType().equals(SECTION)) acc.add(container);
 ////                else if (container.getType().equals(SECTION_BLOB)) getSections(acc, container.getInputs());
-////                else if (container.getType().equals(COMPLETE_SECTION_BLOB))
+////                else if (container.getType().equals(SECTION_SEQUENCE))
 ////                    getSections(acc, container.getInputs());
 ////                else if (container.getType().equals(SECTION_CONTENT)) getSections(acc, container.getInputs());
 ////                else //noinspection StatementWithEmptyBody

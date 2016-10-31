@@ -3,8 +3,28 @@
                 xmlns:rs="http://www.rechtspraak.nl/schema/rechtspraak-1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
     <xsl:output method="html" encoding="UTF-8" indent="yes"/>
-    <xsl:template match="open-rechtspraak">
-        <xsl:apply-templates select="node()"/>
+
+    <xsl:template match="/open-rechtspraak/rs:uitspraak">
+        <xsl:call-template name="makeElement">
+            <xsl:with-param name="element">article</xsl:with-param>
+        </xsl:call-template>
+    </xsl:template>
+    <xsl:template match="/open-rechtspraak/rs:conclusie">
+        <xsl:call-template name="makeElement">
+            <xsl:with-param name="element">article</xsl:with-param>
+        </xsl:call-template>
+    </xsl:template>
+    <xsl:template match="/open-rechtspraak[not(rs:conclusie|rs:uitspraak)]">
+        <article class="mount-point-rs-no-content">
+            Dit document bevat geen inhoud.
+        </article>
+    </xsl:template>
+    <xsl:template match="/open-rechtspraak/inhoudsindicatie">
+        <header>
+            <div class="rs-abstract">
+                <xsl:apply-templates select="node()"/>
+            </div>
+        </header>
     </xsl:template>
 
     <!-- If we have no match, make a div and pass through. For instance, for:
@@ -31,12 +51,6 @@
     <xsl:template match="rs:subscript">
         <xsl:call-template name="makeElement">
             <xsl:with-param name="element">sub</xsl:with-param>
-        </xsl:call-template>
-    </xsl:template>
-
-    <xsl:template match="rs:uitspraak|rs:conclusie">
-        <xsl:call-template name="makeElement">
-            <xsl:with-param name="element">article</xsl:with-param>
         </xsl:call-template>
     </xsl:template>
 

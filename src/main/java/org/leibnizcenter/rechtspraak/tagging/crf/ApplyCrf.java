@@ -55,6 +55,7 @@ public class ApplyCrf {
 
     public static CRF loadCrf(InputStream fis) throws IOException, ClassNotFoundException {
         ObjectInputStream ois = new ObjectInputStream(fis);
+
         return (CRF) ois.readObject();
     }
 

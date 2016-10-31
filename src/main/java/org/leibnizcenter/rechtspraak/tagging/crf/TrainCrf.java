@@ -289,13 +289,13 @@ public class TrainCrf {
         return new Instance(ts, null, null, null);
     }
 
-    public static TokenSequence getTokenSequence(List<TokenTreeLeaf> doc, boolean preserveInfo) {
-        TokenSequence ts = new TokenSequence(doc.size());
-        for (int i = 0; i < doc.size(); i++) {
-            TokenTreeLeaf token = doc.get(i);
+    public static TokenSequence getTokenSequence(List<TokenTreeLeaf> tokenlist, boolean preserveInfo) {
+        TokenSequence ts = new TokenSequence(tokenlist.size());
+        for (int i = 0; i < tokenlist.size(); i++) {
+            TokenTreeLeaf token = tokenlist.get(i);
             Token t = new Token(null);
 
-            Features.setAllFeatures(t, doc, i);
+            Features.setAllFeatures(t, tokenlist, i);
 
             if (preserveInfo) {
                 String txt = Strings.isNullOrEmpty(token.getTextContent()) ? "" : token.getTextContent().trim();

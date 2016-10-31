@@ -461,8 +461,18 @@ public class Xml {
         List<Element> l = new ArrayList<>(children.getLength());
         for (int i = 0; i < children.getLength(); i++) {
             Node candidate = children.item(i);
-            if(candidate.getNodeType()==Node.ELEMENT_NODE) l.add((Element) candidate);
+            if (candidate.getNodeType() == Node.ELEMENT_NODE) l.add((Element) candidate);
         }
         return l;
+    }
+
+    public static Element setName(Element el, String newName) {
+        if (el.getTagName().equals(newName)) return el;
+        Node[] children = getChildren(el);
+        Element newElement = el.getOwnerDocument().createElement(newName);
+        for (Node n : children) newElement.appendChild(n);
+        copyAttributes(el, newElement);
+        el.getParentNode().replaceChild(newElement,el);
+        return newElement;
     }
 }

@@ -21,15 +21,15 @@ public class EnrichTest {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
 
+//        for (int i = 0; i < 1000; i++) {
 //        InputStream is = XmlTest.class.getResourceAsStream("/docs/ECLI.NL.RVS.2015.3394.xml");//longdoc
-        InputStream is = XmlTest.class.getResourceAsStream("/docs/ECLI.NL.CBB.2013.345.xml");//shortweirddoc
+//        InputStream is = XmlTest.class.getResourceAsStream("/docs/ECLI.NL.CBB.2013.345.xml");//shortweirddoc
 //        InputStream is = XmlTest.class.getResourceAsStream("/docs/ECLI.NL.RBGEL.2015.6991.xml");//shortdoc
-//        InputStream is = XmlTest.class.getResourceAsStream("/docs/simple-example.xml");//shortdoc
+        InputStream is = XmlTest.class.getResourceAsStream("/docs/simple-example.xml");//shortdoc
         Document doc = builder.parse(new InputSource(new InputStreamReader(is)));
 
         new Enrich().enrich("someecli", doc);
-
-//        Xml.writeToStream(doc, new OutputStreamWriter(System.out));
+        Xml.writeToStream(doc, new OutputStreamWriter(System.out));
     }
 
     @Test

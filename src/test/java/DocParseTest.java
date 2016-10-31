@@ -45,7 +45,7 @@ public class DocParseTest {
 
     @Test
     public void testDoc() {
-        ArrayList<String> list = new ArrayList<String>();
+        ArrayList<String> list = new ArrayList<>();
         list.add("ECLI:NL:GHSHE:2014:1641");
         list.add("ECLI:NL:CBB:1997:ZG2071");
 

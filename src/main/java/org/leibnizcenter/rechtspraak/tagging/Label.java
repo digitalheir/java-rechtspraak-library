@@ -11,7 +11,7 @@ import java.util.*;
  * Created by maarten on 1-4-16.
  */
 public enum Label {
-//    QUOTE,
+    //    QUOTE,
     NEWLINE,
     NR,
     SECTION_TITLE,
@@ -28,8 +28,8 @@ public enum Label {
     }
 
     public static Label getNumberingType(List<TokenTreeLeaf> tokens, int i) {
-            if (i + 1 > tokens.size()) return Label.TEXT_BLOCK;
-            else return Label.NR;
+        if (i + 1 > tokens.size()) return Label.TEXT_BLOCK;
+        else return Label.NR;
     }
 
     public static boolean isNumbering(Label label) {

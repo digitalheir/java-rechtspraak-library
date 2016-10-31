@@ -25,7 +25,7 @@ import java.util.List;
 //[<start>
 //        [#root
 //            [DocumentContent
-//                [COMPLETE_SECTION_BLOB
+//                [SECTION_SEQUENCE
 //                    [Sections
 //                        [Section
 //                            [SectionTitle
@@ -35,7 +35,7 @@ import java.util.List;
 //                            ]
 //                            [COMPLETE_SECTION_CONTENT
 //                                [SectionContent
-//                                    [COMPLETE_SECTION_BLOB
+//                                    [SECTION_SEQUENCE
 //                                        [Sections
 //                                            [Text
 //                                                [Text
@@ -50,7 +50,7 @@ import java.util.List;
 //            [SECTION_TITLE_TEXT[SECTION_TITLE]]
 //        ]
 //        [COMPLETE_SECTION_CONTENT[SectionContent[
-//                                    COMPLETE_SECTION_BLOB[Sections[Text[Text[Text[NEWLINE]]
+//                                    SECTION_SEQUENCE[Sections[Text[Text[Text[NEWLINE]]
 //                                    [Text[Text[TEXT_BLOCK]][Text[TEXT_BLOCK]]]][Text[TEXT_BLOCK]]][Section[SectionTitle[SECTION_TITLE_TEXT[SECTION_TITLE]]]
 //                                    [COMPLETE_SECTION_CONTENT[SectionContent[Text[NEWLINE]]]]
 //        ]]]]

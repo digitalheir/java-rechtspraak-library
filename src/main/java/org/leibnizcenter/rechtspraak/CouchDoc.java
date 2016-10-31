@@ -6,17 +6,23 @@ import com.google.gson.annotations.SerializedName;
 import generated.OpenRechtspraak;
 import nl.rechtspraak.psi.Procedure;
 import org.joda.time.DateTime;
+import org.leibnizcenter.rechtspraak.enricher.Enrich;
+import org.leibnizcenter.util.Xml;
 import org.leibnizcenter.xml.NotImplemented;
 import org.leibnizcenter.xml.TerseJson;
 import org.leibnizcenter.xml.helpers.DomHelper;
 import org.purl.dc.terms.*;
 import org.w3._1999._02._22_rdf_syntax_ns_.Description;
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
+import java.io.*;
 import java.net.URISyntaxException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
@@ -28,7 +34,7 @@ import static org.leibnizcenter.rechtspraak.RechtspraakNlInterface.xmlToHtml;
 
 /**
  * To serialize in JSON for use in CouchDB
- * <p/>
+ * <p>
  * Created by Maarten on 29/09/2015.
  */
 @SuppressWarnings("WeakerAccess")
@@ -77,9 +83,7 @@ public class CouchDoc {
     protected List<RechtsResource> references;
     protected Object xml;
 
-    public CouchDoc(OpenRechtspraak doc, String xmlStr) throws TransformerException, URISyntaxException, IOException, SAXException, ParserConfigurationException, NotImplemented {
-        //Set attachments
-        this._attachments = new Attachments(xmlStr);
+    public CouchDoc(OpenRechtspraak doc, String xmlStr, Enrich enricher, DocumentBuilderFactory factory) throws TransformerException, URISyntaxException, IOException, SAXException, ParserConfigurationException, NotImplemented, IllegalAccessException, InstantiationException, ClassNotFoundException {
 
         //Set content json
         //RechtspraakContent content = RechtspraakNlInterface.getUitspraakOrConclusie(doc);
@@ -101,6 +105,10 @@ public class CouchDoc {
 
         ecli = getEcli(desc1);
         _id = ecli;
+
+        //Set attachments
+        this._attachments = new Attachments(xmlStr, enricher, factory, ecli);
+
         couchDbUpdated = new DateTime().toString();
         sameAs = getSameAs(desc1, desc2, ecli);
 
@@ -568,8 +576,16 @@ public class CouchDoc {
         @SerializedName("data.htm")
         Attachment htm;
 
-        public Attachments(String xmlStr) throws TransformerException, URISyntaxException {
+        public Attachments(String xmlStr, Enrich enricher, DocumentBuilderFactory factory, String ecli) throws TransformerException, URISyntaxException, IllegalAccessException, ClassNotFoundException, InstantiationException, IOException, SAXException, ParserConfigurationException {
             this.xml = new Attachment(xmlStr, "text/xml;charset=utf-8");
+            DocumentBuilder builder = factory.newDocumentBuilder();
+            Document doc = builder.parse(new InputSource(new StringReader(xmlStr)));
+            if (!Xml.containsTag(Xml.getContentRoot(doc), "section")) {
+                System.out.println(ecli);
+                enricher.enrich(ecli, doc);
+                xmlStr = Xml.toString(doc);
+            }
+
             this.htm = new Attachment(xmlToHtml(xmlStr), "text/html;charset=utf-8");
         }
 

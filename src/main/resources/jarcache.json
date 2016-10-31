@@ -1,0 +1,7 @@
+[
+  {
+    "Content-Location": "https://rechtspraak.cloudant.com/assets/assets/context.jsonld",
+    "X-Classpath": "contexts/context.jsonld",
+    "Content-Type": "application/ld+json"
+  }
+]
