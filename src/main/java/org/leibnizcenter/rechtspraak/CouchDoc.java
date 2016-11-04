@@ -581,7 +581,7 @@ public class CouchDoc {
             DocumentBuilder builder = factory.newDocumentBuilder();
             Document doc = builder.parse(new InputSource(new StringReader(xmlStr)));
             if (!Xml.containsTag(Xml.getContentRoot(doc), "section")) {
-                System.out.println(ecli);
+                //System.out.println(ecli);
                 enricher.enrich(ecli, doc);
                 xmlStr = Xml.toString(doc);
             }

@@ -33,13 +33,13 @@ public class ToJsonTest {
 
     {
         testDocs.add("ECLI:NL:GHSHE:2014:1641");
-        testDocs.add("ECLI:NL:GHAMS:2013:2283");
-        testDocs.add("ECLI:NL:CRVB:2013:1886");
-        testDocs.add("ECLI:NL:RBDHA:2013:15631");
+//        testDocs.add("ECLI:NL:GHAMS:2013:2283");
+//        testDocs.add("ECLI:NL:CRVB:2013:1886");
+//        testDocs.add("ECLI:NL:RBDHA:2013:15631");
     }
 
     {
-        testDocsToEnrich.add("ECLI:NL:CBB:1996:ZG0749");
+//        testDocsToEnrich.add("ECLI:NL:CBB:1996:ZG0749");
 //        testDocsToEnrich.add("ECLI:NL:CBB:1997:ZG2071");
 //        testDocsToEnrich.add("ECLI:NL:CBB:1998:AA3411");
 //        testDocsToEnrich.add("ECLI:NL:CBB:1998:AA3430");
