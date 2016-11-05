@@ -16,14 +16,14 @@ Download [the latest JAR](https://github.com/digitalheir/java-rechtspraak-librar
         <dependency>
             <groupId>org.leibnizcenter</groupId>
             <artifactId>rechtspraak</artifactId>
-            <version>2.0.3</version>
+            <version>2.0.4</version>
         </dependency>
 </dependencies>
 ```
 
 or Gradle:
 ```groovy
-compile 'org.leibnizcenter:rechtspraak:2.0.3'
+compile 'org.leibnizcenter:rechtspraak:2.0.4'
 ```
 
 You can access the Rechtspraak.nl search API through `org.leibnizcenter.rechtspraak.SearchRequest.Builder` and `org.leibnizcenter.rechtspraak.SearchResult`. All builder options are optional. For instance:
@@ -42,7 +42,7 @@ You can access the Rechtspraak.nl search API through `org.leibnizcenter.rechtspr
         iterator = iterator.next();
 ```
 
-For all options, see the [JavaDoc for SearchRequest.Builder](http://phil.uu.nl/~trompper/rechtspraak-2.0.3-javadoc/org/leibnizcenter/rechtspraak/SearchRequest.Builder.html)
+For all options, see the [JavaDoc for SearchRequest.Builder](http://phil.uu.nl/~trompper/rechtspraak-2.0.0-javadoc/org/leibnizcenter/rechtspraak/SearchRequest.Builder.html)
 
 Search results contain judgment metadata (accessed through `SearchResult#getJudgments()`). For fetching and parsing the actual documents, use `org.leibnizcenter.rechtspraak.RechtspraakNlInterface`. For example, given an ECLI:
 
