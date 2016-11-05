@@ -472,7 +472,7 @@ public class Xml {
         Element newElement = el.getOwnerDocument().createElement(newName);
         for (Node n : children) newElement.appendChild(n);
         copyAttributes(el, newElement);
-        el.getParentNode().replaceChild(newElement,el);
+        el.getParentNode().replaceChild(newElement, el);
         return newElement;
     }
 }

@@ -7,7 +7,6 @@ import java.util.regex.Pattern;
  */
 public class Regex {
     public static final Pattern BRACKET_OPEN = Pattern.compile("[\\[\\(<]");
-
     public static final Pattern DOTDOT_ = Pattern.compile("(\\.\\.?|-|\\(?\\))");
 
     public static final Pattern ENDS_WITH_NON_ALPHANUMERIC_OR_BRACKET = Pattern.compile("[^\\p{L}0-9\\]\\)]$");
