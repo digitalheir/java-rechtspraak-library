@@ -46,7 +46,7 @@
         <dependency>
             <groupId>org.leibnizcenter</groupId>
             <artifactId>probabilistic-earley-parser</artifactId>
-            <version>0.9.6</version>
+            <version>0.9.7</version>
         </dependency>
         <dependency>
             <groupId>com.github.jsonld-java</groupId>
@@ -189,6 +189,7 @@
                     <serverId>ossrh</serverId>
                     <nexusUrl>https://oss.sonatype.org/</nexusUrl>
                     <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                    <stagingProgressTimeoutMinutes>30</stagingProgressTimeoutMinutes>
                 </configuration>
             </plugin>
             <plugin>

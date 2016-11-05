@@ -79,20 +79,20 @@ public class Enrich {
         Grammar dg = DocumentGrammar.grammar;
 
         List<Token<LabeledToken>> words = new ArrayList<>(tokenList.size());
-        long start = System.currentTimeMillis();
+//        long start = System.currentTimeMillis();
         for (int i = 0; i < tags.size(); i++)
             words.add(new Token<>(
                     new LabeledToken(tokenList.get(i), tags.get(i))
             ));
         int wordsNr = words.size();
-        words.stream().map(w->w.obj.getTag().toString()).forEach(System.out::println);
+//        words.stream().map(w->w.obj.getTag().toString()).forEach(System.out::println);
         ParseTreeWithScore viterbi = Parser.getViterbiParseWithScore(DocumentGrammar.DOCUMENT, dg, words);
         if (viterbi == null)
             throw new NullPointerException("Could not find parse for given document. Please update the document grammar.");
 
         setNewXmlStructure(viterbi, contentRoot);
-        long end = System.currentTimeMillis();
-        System.out.println(wordsNr + "," + (end - start));
+//        long end = System.currentTimeMillis();
+        //System.out.println(wordsNr + "," + (end - start));
 //        // Set tag values on elements (we can do this another way)
 //        Collections3.zip(tokenList.stream(), tags.stream()).forEach(pair -> {
 //            Label label = pair.getValue();

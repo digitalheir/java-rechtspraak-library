@@ -22,7 +22,7 @@ public class SearchRequestTest {
         Assert.assertTrue(iterator.hasNext());
         iterator = iterator.next();
         Assert.assertTrue(iterator.hasNext());
-        iterator = iterator.next();
-        Assert.assertTrue(iterator.hasNext());
+//        iterator = iterator.next();
+//        Assert.assertTrue(iterator.hasNext());
     }
 }
