@@ -22,20 +22,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 import com.google.gson.annotations.SerializedName;
 import nl.rechtspraak.psi.Procedure;
 import nl.rechtspraak.psi.Zaaknummer;
-import org.purl.dc.terms.Abstract;
-import org.purl.dc.terms.Creator;
-import org.purl.dc.terms.Date;
-import org.purl.dc.terms.HasVersion;
-import org.purl.dc.terms.Issued;
-import org.purl.dc.terms.Publisher;
-import org.purl.dc.terms.References;
-import org.purl.dc.terms.Relation;
-import org.purl.dc.terms.Replaces;
-import org.purl.dc.terms.Spatial;
-import org.purl.dc.terms.Subject;
-import org.purl.dc.terms.Temporal;
-import org.purl.dc.terms.Title;
-import org.purl.dc.terms.Type;
+import org.purl.dc.terms.*;
 
 
 /**
@@ -49,6 +36,7 @@ import org.purl.dc.terms.Type;
         "accessRights",
         "coverage",
         "creator",
+        "contributor",
         "date",
         "format",
         "hasVersion",
@@ -59,6 +47,7 @@ import org.purl.dc.terms.Type;
         "publisher",
         "references",
         "replaces",
+        "isReplacedBy",
         "relation",
         "spatial",
         "subject",
@@ -82,6 +71,8 @@ public class Description {
     @XmlElement(namespace = "http://purl.org/dc/terms/")
     protected Creator creator;
     @XmlElement(namespace = "http://purl.org/dc/terms/")
+    protected List<Contributor> contributor;
+    @XmlElement(namespace = "http://purl.org/dc/terms/")
     protected Date date;
     @XmlElement(namespace = "http://purl.org/dc/terms/")
     protected String format;
@@ -103,6 +94,8 @@ public class Description {
     protected List<References> references;
     @XmlElement(namespace = "http://purl.org/dc/terms/")
     protected List<Replaces> replaces;
+    @XmlElement(namespace = "http://purl.org/dc/terms/")
+    protected String isReplacedBy;
     @XmlElement(namespace = "http://purl.org/dc/terms/")
     protected List<Relation> relation;
     @XmlElement(namespace = "http://purl.org/dc/terms/")
@@ -182,6 +175,15 @@ public class Description {
     public void setCoverage(String value) {
         this.coverage = value;
     }
+    /**
+     * Sets the value of the isReplacedBy property.
+     *
+     * @param isReplacedBy allowed object is
+     *              {@link String }
+     */
+    public void setIsReplacedBy(String isReplacedBy) {
+        this.isReplacedBy = isReplacedBy;
+    }
 
     /**
      * Gets the value of the creator property.
@@ -201,6 +203,13 @@ public class Description {
      */
     public void setCreator(Creator value) {
         this.creator = value;
+    }
+
+    public List<Contributor> getContributor() {
+        if (contributor == null) {
+            contributor= new ArrayList<>();
+        }
+        return contributor;
     }
 
     /**
@@ -397,6 +406,13 @@ public class Description {
             replaces = new ArrayList<>();
         }
         return this.replaces;
+    }
+
+    /**
+     * @return ECLI number that replaced this
+     */
+    public String getIsReplacedBy() {
+        return this.isReplacedBy;
     }
 
     /**
