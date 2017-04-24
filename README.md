@@ -1,3 +1,6 @@
+###  This library is no longer actively maintained in favor of [Rechtspraak.js](https://github.com/digitalheir/rechtspraak-js)
+It may still be of use for XSD files and Java bindings to the Rechtspraak.nl API
+
 # Rechtspraak.nl library
 [![GitHub version](https://badge.fury.io/gh/digitalheir%2Fjava-rechtspraak-library.svg)](http://badge.fury.io/gh/digitalheir%2Fjava-rechtspraak-library)
 [![Build Status](https://travis-ci.org/digitalheir/java-rechtspraak-library.svg?branch=master)](https://travis-ci.org/digitalheir/java-rechtspraak-library)
