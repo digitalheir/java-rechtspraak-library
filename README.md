@@ -1,4 +1,4 @@
-### ⚠ This library is no longer actively maintained, in favor of [Rechtspraak.js](https://github.com/digitalheir/rechtspraak-js)
+### ⚠ This library moslty superseded ny [Rechtspraak.js](https://github.com/digitalheir/rechtspraak-js) and no longer actively maintained
 It may still be of use for XSD files and Java bindings to the Rechtspraak.nl API
 
 # Rechtspraak.nl library
