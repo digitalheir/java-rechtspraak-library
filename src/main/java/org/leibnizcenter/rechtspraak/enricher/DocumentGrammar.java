@@ -1,10 +1,11 @@
 package org.leibnizcenter.rechtspraak.enricher;
 
-import org.leibnizcenter.cfg.Grammar;
+
 import org.leibnizcenter.cfg.algebra.semiring.dbl.LogSemiring;
 import org.leibnizcenter.cfg.category.nonterminal.NonTerminal;
 import org.leibnizcenter.cfg.category.terminal.Terminal;
-import org.leibnizcenter.cfg.token.Token;
+
+import org.leibnizcenter.cfg.grammar.Grammar;
 import org.leibnizcenter.rechtspraak.tagging.Label;
 import org.leibnizcenter.rechtspraak.tokens.LabeledToken;
 
@@ -52,7 +53,7 @@ public final class DocumentGrammar {
 
 
     public final static Grammar grammar = new Grammar.Builder()
-            .setSemiring(new LogSemiring())
+            .setSemiring(LogSemiring.get())
             //.addRule(1.0, DOCUMENT, /* -> */ HEADER, DOCUMENT_BODY) // TODO
             .addRule(1.0, DOCUMENT, /* -> */ DOCUMENT_BODY)
 

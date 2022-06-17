@@ -3,13 +3,13 @@ package org.leibnizcenter.rechtspraak.enricher;
 import cc.mallet.fst.CRF;
 import cc.mallet.types.Instance;
 import cc.mallet.types.Sequence;
-import org.leibnizcenter.cfg.Grammar;
+
 import org.leibnizcenter.cfg.category.Category;
 import org.leibnizcenter.cfg.category.nonterminal.NonTerminal;
+import org.leibnizcenter.cfg.earleyparser.ParseTree;
 import org.leibnizcenter.cfg.earleyparser.ParseTreeWithScore;
 import org.leibnizcenter.cfg.earleyparser.Parser;
-import org.leibnizcenter.cfg.earleyparser.parse.ParseTree;
-import org.leibnizcenter.cfg.earleyparser.parse.ScanProbability;
+import org.leibnizcenter.cfg.grammar.Grammar;
 import org.leibnizcenter.cfg.token.Token;
 import org.leibnizcenter.rechtspraak.tagging.Label;
 import org.leibnizcenter.rechtspraak.tagging.crf.ApplyCrf;

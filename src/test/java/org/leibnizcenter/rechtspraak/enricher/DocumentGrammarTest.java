@@ -2,9 +2,9 @@ package org.leibnizcenter.rechtspraak.enricher;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.leibnizcenter.cfg.Grammar;
 import org.leibnizcenter.cfg.earleyparser.ParseTreeWithScore;
 import org.leibnizcenter.cfg.earleyparser.Parser;
+import org.leibnizcenter.cfg.grammar.Grammar;
 import org.leibnizcenter.cfg.token.Token;
 import org.leibnizcenter.cfg.token.Tokens;
 import org.leibnizcenter.rechtspraak.tagging.Label;
