@@ -60,6 +60,3 @@ Search results contain judgment metadata (accessed through `SearchResult#getJudg
 ## Requirements
 * Versions 1.X.X require Java 7
 * Versions 2.X.X require Java 8
-
-## More
-Inquiries go to maarten.trompper@gmail.com.
