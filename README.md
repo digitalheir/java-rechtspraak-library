@@ -8,8 +8,7 @@ It may still be of use for XSD files and Java bindings to the Rechtspraak.nl API
 A Java interface to the judgment database of [rechtspraak.nl](http://www.rechtspraak.nl/).
 
 ## Documentation
-This project is part of my master's thesis in Artificial Intelligence. A HTML copy of my thesis is available 
-at [here](https://digitalheir.github.io/java-rechtspraak-library/).
+A HTML copy of my thesis is available [here](https://cacfd3a.github.io/java-rechtspraak-library/).
 
 ## Usage
 Download [the latest JAR](https://github.com/digitalheir/java-rechtspraak-library/releases/latest) or grab from Maven:
